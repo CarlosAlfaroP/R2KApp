@@ -1,0 +1,2 @@
+
+<R2KApp:common>:com.example.r2kapp.common:*com.example.r2kapp.common.screens.category:&com.example.r2kapp.common.screens.home:+com.example.r2kapp.common.screens.loggedout:&com.example.r2kapp.common.screens.main:)com.example.r2kapp.common.screens.profile:"com.example.r2kapp.common.ui.theme

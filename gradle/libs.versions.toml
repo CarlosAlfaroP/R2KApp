@@ -1,0 +1,28 @@
+[versions]
+agp = "8.2.0-alpha12"
+kotlin = "1.9.10"
+compose = "1.5.10-beta02"
+activity-compose = "1.8.0"
+appyx = "2.0.0-alpha09"
+bumble-appyx-navigation = "2.0.0-alpha09"
+coroutines = "1.7.3"
+
+[libraries]
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose"}
+bumble-appyx-navigation = { module = "com.bumble.appyx:appyx-navigation", version.ref = "bumble-appyx-navigation" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+compose-mulitplatform = { id = "org.jetbrains.compose", version.ref = "compose" }
+#Kotlin Corrutinas
+kotlin-coroutines-core = { id = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlin-coroutines-swing = { id = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "coroutines"}
+#Appyx Navigation
+appyx-components-backstack = { id = "com.bumble.appyx:backstack", version.ref = "appyx" }
+appyx-mutable-ui-processor = { id = "com.bumble.appyx:mutable-ui-processor", version.ref = "appyx" }
+appyx-navigation = { id = "com.bumble.appyx:appyx-navigation-android", version.ref = "appyx" }
+appyx-interactions = { id = "com.bumble.appyx:appyx-interactions-android", version.ref = "appyx" }
+appyx-backstack = { id = "com.bumble.appyx:backstack-android", version.ref = "appyx" }
