@@ -1,5 +1,5 @@
 <!-- # R2KApp -->
-[![Banner](https://repository-images.githubusercontent.com/725126516/f2a07de4-9a5f-4dc8-a622-7dec4fb00c81)](https://github.com/CarlosAlfaroP/R2KApp)
+[![Banner](https://repository-images.githubusercontent.com/725254872/668d9791-0620-42d2-aebc-e0d031692e31)](https://github.com/CarlosAlfaroP/R2KApp)
 
 **R2K: El Derecho a Saber**  
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
