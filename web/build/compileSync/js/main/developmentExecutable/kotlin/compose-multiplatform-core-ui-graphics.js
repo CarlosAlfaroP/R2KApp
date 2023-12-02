@@ -26,85 +26,85 @@
   //region block: imports
   var imul = Math.imul;
   var sign = Math.sign;
-  var protoOf = kotlin_kotlin.$_$.jd;
-  var objectMeta = kotlin_kotlin.$_$.id;
-  var VOID = kotlin_kotlin.$_$.li;
-  var setMetadataFor = kotlin_kotlin.$_$.kd;
-  var THROW_CCE = kotlin_kotlin.$_$.xg;
-  var classMeta = kotlin_kotlin.$_$.xb;
+  var protoOf = kotlin_kotlin.$_$.rd;
+  var objectMeta = kotlin_kotlin.$_$.qd;
+  var VOID = kotlin_kotlin.$_$.bj;
+  var setMetadataFor = kotlin_kotlin.$_$.sd;
+  var THROW_CCE = kotlin_kotlin.$_$.lh;
+  var classMeta = kotlin_kotlin.$_$.ec;
+  var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u1;
+  var Size__isEmpty_impl_o9ye97 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.m1;
+  var equals = kotlin_kotlin.$_$.ic;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
-  var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.s1;
+  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.s1;
   var Offset = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.e;
   var Offset_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.d;
-  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.i4;
-  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u1;
-  var Size__isEmpty_impl_o9ye97 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.m1;
-  var equals = kotlin_kotlin.$_$.bc;
+  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.l4;
   var _Offset___get_x__impl__xvi35n = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.i1;
-  var isFinite = kotlin_kotlin.$_$.qh;
+  var isFinite = kotlin_kotlin.$_$.fi;
   var _Offset___get_y__impl__8bzhra = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.j1;
   var Size = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.k;
   var _Size___get_width__impl__58y75t = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.p1;
   var _Size___get_height__impl__a04p02 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l1;
-  var hashCode = kotlin_kotlin.$_$.jc;
+  var hashCode = kotlin_kotlin.$_$.qc;
   var Offset__hashCode_impl_hbql41 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.c1;
   var get_isFinite = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.o;
   var get_center = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.n;
   var get_isUnspecified = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.r;
   var _Size___get_minDimension__impl__4iso0r = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.n1;
-  var getNumberHashCode = kotlin_kotlin.$_$.fc;
+  var getNumberHashCode = kotlin_kotlin.$_$.mc;
   var get_isSpecified = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.q;
-  var Unit_getInstance = kotlin_kotlin.$_$.v4;
-  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.o3;
+  var Unit_getInstance = kotlin_kotlin.$_$.z4;
+  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s3;
   var IntSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x;
   var IntOffset = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w;
   var IntSize_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.y;
-  var interfaceMeta = kotlin_kotlin.$_$.lc;
-  var _ULong___get_data__impl__fggpzb = kotlin_kotlin.$_$.n3;
-  var Long = kotlin_kotlin.$_$.qg;
-  var _ULong___init__impl__c78o9k = kotlin_kotlin.$_$.m3;
-  var ulongToDouble = kotlin_kotlin.$_$.ki;
-  var toString = kotlin_kotlin.$_$.od;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.t1;
-  var ULong__hashCode_impl_6hv2lb = kotlin_kotlin.$_$.o3;
-  var numberToInt = kotlin_kotlin.$_$.fd;
-  var toLong = kotlin_kotlin.$_$.md;
+  var interfaceMeta = kotlin_kotlin.$_$.sc;
+  var _ULong___get_data__impl__fggpzb = kotlin_kotlin.$_$.q3;
+  var Long = kotlin_kotlin.$_$.eh;
+  var _ULong___init__impl__c78o9k = kotlin_kotlin.$_$.p3;
+  var ulongToDouble = kotlin_kotlin.$_$.aj;
+  var toString = kotlin_kotlin.$_$.wd;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.v1;
+  var ULong__hashCode_impl_6hv2lb = kotlin_kotlin.$_$.r3;
+  var numberToInt = kotlin_kotlin.$_$.nd;
+  var toLong = kotlin_kotlin.$_$.ud;
   var lerp = kotlin_org_jetbrains_compose_ui_ui_util.$_$.a;
-  var fill = kotlin_kotlin.$_$.n7;
-  var arrayCopy = kotlin_kotlin.$_$.c6;
-  var get_PI = kotlin_kotlin.$_$.pd;
-  var toRawBits = kotlin_kotlin.$_$.gi;
-  var toShort = kotlin_kotlin.$_$.nd;
-  var toByte = kotlin_kotlin.$_$.ld;
-  var numberToLong = kotlin_kotlin.$_$.gd;
-  var floatFromBits = kotlin_kotlin.$_$.dc;
-  var compareTo = kotlin_kotlin.$_$.yb;
-  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.h1;
-  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.m2;
-  var toString_0 = kotlin_kotlin.$_$.zf;
-  var Regex_init_$Create$ = kotlin_kotlin.$_$.f1;
-  var Comparable = kotlin_kotlin.$_$.jg;
+  var fill = kotlin_kotlin.$_$.r7;
+  var arrayCopy = kotlin_kotlin.$_$.g6;
+  var get_PI = kotlin_kotlin.$_$.xd;
+  var toRawBits = kotlin_kotlin.$_$.vi;
+  var toShort = kotlin_kotlin.$_$.vd;
+  var toByte = kotlin_kotlin.$_$.td;
+  var numberToLong = kotlin_kotlin.$_$.od;
+  var floatFromBits = kotlin_kotlin.$_$.kc;
+  var compareTo = kotlin_kotlin.$_$.fc;
+  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.i1;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.o2;
+  var toString_0 = kotlin_kotlin.$_$.mg;
+  var Regex_init_$Create$ = kotlin_kotlin.$_$.g1;
+  var Comparable = kotlin_kotlin.$_$.xg;
   var Rect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.h;
-  var trimIndent = kotlin_kotlin.$_$.bg;
+  var trimIndent = kotlin_kotlin.$_$.pg;
   var get_boundingRect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.m;
   var _CornerRadius___get_x__impl__1594cn = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.v;
   var _CornerRadius___get_y__impl__tyvleu = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.w;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.wh;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.li;
   var CornerRadius = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.a;
   var toRect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u;
   var lerp_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.s;
-  var objectCreate = kotlin_kotlin.$_$.hd;
-  var charSequenceLength = kotlin_kotlin.$_$.vb;
-  var toBits = kotlin_kotlin.$_$.ei;
+  var objectCreate = kotlin_kotlin.$_$.pd;
+  var charSequenceLength = kotlin_kotlin.$_$.cc;
+  var toBits = kotlin_kotlin.$_$.ti;
   var getKClassFromExpression = kotlin_kotlin.$_$.b;
-  var getStringHashCode = kotlin_kotlin.$_$.ic;
-  var withSign = kotlin_kotlin.$_$.yd;
-  var coerceIn = kotlin_kotlin.$_$.ge;
-  var coerceIn_0 = kotlin_kotlin.$_$.fe;
-  var contentEquals = kotlin_kotlin.$_$.r6;
-  var contentHashCode = kotlin_kotlin.$_$.u6;
-  var isNaN_0 = kotlin_kotlin.$_$.th;
-  var LayoutDirection_Ltr_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v1;
+  var getStringHashCode = kotlin_kotlin.$_$.pc;
+  var withSign = kotlin_kotlin.$_$.he;
+  var coerceIn = kotlin_kotlin.$_$.pe;
+  var coerceIn_0 = kotlin_kotlin.$_$.oe;
+  var contentEquals = kotlin_kotlin.$_$.v6;
+  var contentHashCode = kotlin_kotlin.$_$.y6;
+  var isNaN_0 = kotlin_kotlin.$_$.ii;
+  var LayoutDirection_Ltr_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w1;
   var Size_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l;
   var Size__hashCode_impl_2h1qpd = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.k1;
   var toPx = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i;
@@ -124,11 +124,33 @@
   var Companion_getInstance_2 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.r1;
   var CornerRadius_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.b;
   var Density_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q;
-  var Annotation = kotlin_kotlin.$_$.fg;
-  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.i2;
+  var Annotation = kotlin_kotlin.$_$.tg;
+  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.k2;
+  var _IntSize___get_height__impl__prv63b = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w2;
+  var _IntSize___get_width__impl__d9yl4o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x2;
+  var _IntOffset___get_y__impl__2avpwj = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u2;
+  var _IntOffset___get_x__impl__qiqr5o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t2;
+  var roundToInt = kotlin_kotlin.$_$.ce;
+  var toSize_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v1;
+  var IntOffset__hashCode_impl_w5rrxs = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s2;
+  var IntSize__hashCode_impl_gm9mta = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v2;
   var Rect_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.g;
+  var longArrayOf = kotlin_kotlin.$_$.hd;
+  var _ULongArray___init__impl__twm1l3 = kotlin_kotlin.$_$.t3;
+  var charSequenceGet = kotlin_kotlin.$_$.bc;
+  var Char__minus_impl_a2frrh = kotlin_kotlin.$_$.r2;
+  var numberToChar = kotlin_kotlin.$_$.ld;
+  var Char__toInt_impl_vasixd = kotlin_kotlin.$_$.t2;
+  var ulongCompare = kotlin_kotlin.$_$.zi;
+  var toDouble = kotlin_kotlin.$_$.ig;
+  var ULongArray__get_impl_pr71q9 = kotlin_kotlin.$_$.u3;
+  var countLeadingZeroBits = kotlin_kotlin.$_$.zh;
+  var DoubleCompanionObject_getInstance = kotlin_kotlin.$_$.k4;
+  var doubleFromBits = kotlin_kotlin.$_$.hc;
   var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
-  var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.a2;
+  var Char = kotlin_kotlin.$_$.vg;
+  var Char__compareTo_impl_ypi4mb = kotlin_kotlin.$_$.p2;
+  var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.c2;
   var BlendMode_SRC_OVER_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.r1;
   var BlendMode_LUMINOSITY_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.g1;
   var BlendMode_COLOR_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.u;
@@ -158,25 +180,21 @@
   var BlendMode_DST_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.b1;
   var BlendMode_SRC_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.s1;
   var BlendMode_CLEAR_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.r;
-  var Matrix33 = kotlin_org_jetbrains_skiko_skiko.$_$.z8;
-  var Companion_getInstance_3 = kotlin_org_jetbrains_skiko_skiko.$_$.f8;
-  var Companion_getInstance_4 = kotlin_org_jetbrains_skiko_skiko.$_$.e8;
+  var Matrix33 = kotlin_org_jetbrains_skiko_skiko.$_$.a9;
+  var Companion_getInstance_3 = kotlin_org_jetbrains_skiko_skiko.$_$.g8;
+  var Companion_getInstance_4 = kotlin_org_jetbrains_skiko_skiko.$_$.f8;
   var Companion_getInstance_5 = kotlin_org_jetbrains_skiko_skiko.$_$.a8;
-  var until = kotlin_kotlin.$_$.le;
-  var step = kotlin_kotlin.$_$.ke;
+  var until = kotlin_kotlin.$_$.ve;
+  var step = kotlin_kotlin.$_$.ue;
   var ClipMode_INTERSECT_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.v1;
   var ClipMode_DIFFERENCE_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.u1;
-  var Matrix44 = kotlin_org_jetbrains_skiko_skiko.$_$.a9;
+  var Matrix44 = kotlin_org_jetbrains_skiko_skiko.$_$.b9;
   var FilterMode_NEAREST_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.e2;
   var MipmapMode_NONE_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.k2;
-  var FilterMipmap = kotlin_org_jetbrains_skiko_skiko.$_$.w8;
-  var CubicResampler = kotlin_org_jetbrains_skiko_skiko.$_$.v8;
+  var FilterMipmap = kotlin_org_jetbrains_skiko_skiko.$_$.x8;
+  var CubicResampler = kotlin_org_jetbrains_skiko_skiko.$_$.w8;
   var FilterMode_LINEAR_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.d2;
   var MipmapMode_NEAREST_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.j2;
-  var _IntOffset___get_x__impl__qiqr5o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q2;
-  var _IntOffset___get_y__impl__2avpwj = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.r2;
-  var _IntSize___get_width__impl__d9yl4o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u2;
-  var _IntSize___get_height__impl__prv63b = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t2;
   var Canvas_init_$Create$ = kotlin_org_jetbrains_skiko_skiko.$_$.k7;
   var PaintMode_FILL_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.l2;
   var PaintMode_STROKE_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.m2;
@@ -196,33 +214,34 @@
   var PathFillMode_WINDING_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.y2;
   var PathFillMode_EVEN_ODD_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.x2;
   var PathDirection_COUNTER_CLOCKWISE_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.t2;
-  var Companion_getInstance_6 = kotlin_org_jetbrains_skiko_skiko.$_$.b8;
-  var Companion_getInstance_7 = kotlin_org_jetbrains_skiko_skiko.$_$.c8;
-  var UnsupportedOperationException_init_$Create$_0 = kotlin_kotlin.$_$.j2;
-  var Companion_getInstance_8 = kotlin_org_jetbrains_skiko_skiko.$_$.d8;
+  var Companion_getInstance_6 = kotlin_org_jetbrains_skiko_skiko.$_$.c8;
+  var Companion_getInstance_7 = kotlin_org_jetbrains_skiko_skiko.$_$.d8;
+  var UnsupportedOperationException_init_$Create$_0 = kotlin_kotlin.$_$.l2;
+  var Companion_getInstance_8 = kotlin_org_jetbrains_skiko_skiko.$_$.e8;
   var Style_TRANSLATE_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.w2;
   var Style_ROTATE_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.v2;
   var Style_MORPH_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.u2;
   var PathMeasure_init_$Create$ = kotlin_org_jetbrains_skiko_skiko.$_$.o7;
   var Companion_getInstance_9 = kotlin_org_jetbrains_skiko_skiko.$_$.t7;
-  var ColorMatrix = kotlin_org_jetbrains_skiko_skiko.$_$.u8;
+  var ColorMatrix = kotlin_org_jetbrains_skiko_skiko.$_$.v8;
   var ColorAlphaType_OPAQUE_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.w1;
   var ColorAlphaType_PREMUL_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.x1;
-  var ColorInfo = kotlin_org_jetbrains_skiko_skiko.$_$.t8;
-  var ImageInfo = kotlin_org_jetbrains_skiko_skiko.$_$.y8;
+  var ColorInfo = kotlin_org_jetbrains_skiko_skiko.$_$.u8;
+  var ImageInfo = kotlin_org_jetbrains_skiko_skiko.$_$.z8;
   var Bitmap_init_$Create$ = kotlin_org_jetbrains_skiko_skiko.$_$.j7;
   var Companion_getInstance_10 = kotlin_org_jetbrains_skiko_skiko.$_$.v7;
   var ColorType_RGBA_F16_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.b2;
   var ColorType_RGB_565_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.c2;
   var ColorType_ALPHA_8_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.z1;
   var Companion_getInstance_11 = kotlin_org_jetbrains_skiko_skiko.$_$.u7;
-  var abs = kotlin_kotlin.$_$.qd;
+  var abs = kotlin_kotlin.$_$.yd;
   var ColorType_BGRA_8888_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.a2;
   var ColorAlphaType_UNPREMUL_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.y1;
-  var ensureNotNull = kotlin_kotlin.$_$.oh;
-  var Companion_getInstance_12 = kotlin_org_jetbrains_skiko_skiko.$_$.g8;
-  var toFloatArray = kotlin_kotlin.$_$.u9;
-  var GradientStyle = kotlin_org_jetbrains_skiko_skiko.$_$.x8;
+  var ensureNotNull = kotlin_kotlin.$_$.di;
+  var Companion_getInstance_12 = kotlin_org_jetbrains_skiko_skiko.$_$.b8;
+  var Companion_getInstance_13 = kotlin_org_jetbrains_skiko_skiko.$_$.h8;
+  var toFloatArray = kotlin_kotlin.$_$.ba;
+  var GradientStyle = kotlin_org_jetbrains_skiko_skiko.$_$.y8;
   var FilterTileMode_CLAMP_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.f2;
   var FilterTileMode_DECAL_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.g2;
   var FilterTileMode_MIRROR_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.h2;
@@ -234,9 +253,9 @@
   //region block: pre-declaration
   setMetadataFor(Companion, 'Companion', objectMeta);
   setMetadataFor(BlendMode, 'BlendMode', classMeta);
-  setMetadataFor(Companion_0, 'Companion', objectMeta);
   setMetadataFor(Brush, 'Brush', classMeta);
   setMetadataFor(ShaderBrush, 'ShaderBrush', classMeta, Brush);
+  setMetadataFor(Companion_0, 'Companion', objectMeta);
   setMetadataFor(SolidColor, 'SolidColor', classMeta, Brush);
   setMetadataFor(LinearGradient, 'LinearGradient', classMeta, ShaderBrush);
   setMetadataFor(RadialGradient, 'RadialGradient', classMeta, ShaderBrush);
@@ -259,7 +278,7 @@
     return this.clipRect_si0ig1_k$(rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), clipOp);
   }
   function clipRect$default(rect, clipOp, $super) {
-    clipOp = clipOp === VOID ? Companion_getInstance_15().get_Intersect_ow3v69_k$() : clipOp;
+    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_ow3v69_k$() : clipOp;
     var tmp;
     if ($super === VOID) {
       this.clipRect_5p7fgn_k$(rect, clipOp);
@@ -271,7 +290,7 @@
     return tmp;
   }
   function clipRect$default_0(left, top, right, bottom, clipOp, $super) {
-    clipOp = clipOp === VOID ? Companion_getInstance_15().get_Intersect_ow3v69_k$() : clipOp;
+    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_ow3v69_k$() : clipOp;
     var tmp;
     if ($super === VOID) {
       this.clipRect_si0ig1_k$(left, top, right, bottom, clipOp);
@@ -282,7 +301,7 @@
     return tmp;
   }
   function clipPath$default(path, clipOp, $super) {
-    clipOp = clipOp === VOID ? Companion_getInstance_15().get_Intersect_ow3v69_k$() : clipOp;
+    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_ow3v69_k$() : clipOp;
     var tmp;
     if ($super === VOID) {
       this.clipPath_kn87dc_k$(path, clipOp);
@@ -365,7 +384,7 @@
     this.arcTo_948klo_k$(rect, degrees(startAngleRadians), degrees(sweepAngleRadians), forceMoveTo);
   }
   function addPath$default(path, offset, $super) {
-    offset = offset === VOID ? Companion_getInstance().get_Zero_sctq3f_k$() : offset;
+    offset = offset === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : offset;
     var tmp;
     if ($super === VOID) {
       this.addPath_9947vg_k$(path, offset);
@@ -456,17 +475,17 @@
   function drawLine$default(brush, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode, $super) {
     var tmp;
     if (strokeWidth === VOID) {
-      Companion_getInstance_44();
+      Companion_getInstance_45();
       tmp = 0.0;
     } else {
       tmp = strokeWidth;
     }
     strokeWidth = tmp;
-    cap = cap === VOID ? Companion_getInstance_44().DefaultCap_1 : cap;
+    cap = cap === VOID ? Companion_getInstance_45().DefaultCap_1 : cap;
     pathEffect = pathEffect === VOID ? null : pathEffect;
     alpha = alpha === VOID ? 1.0 : alpha;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp_0;
     if ($super === VOID) {
       this.drawLine_94tzv7_k$(brush, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode);
@@ -479,17 +498,17 @@
   function drawLine$default_0(color, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode, $super) {
     var tmp;
     if (strokeWidth === VOID) {
-      Companion_getInstance_44();
+      Companion_getInstance_45();
       tmp = 0.0;
     } else {
       tmp = strokeWidth;
     }
     strokeWidth = tmp;
-    cap = cap === VOID ? Companion_getInstance_44().DefaultCap_1 : cap;
+    cap = cap === VOID ? Companion_getInstance_45().DefaultCap_1 : cap;
     pathEffect = pathEffect === VOID ? null : pathEffect;
     alpha = alpha === VOID ? 1.0 : alpha;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp_0;
     if ($super === VOID) {
       this.drawLine_qcvbii_k$(color, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode);
@@ -500,12 +519,12 @@
     return tmp_0;
   }
   function drawRect$default(brush, topLeft, size, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_sctq3f_k$() : topLeft;
+    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
     size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawRect_4jm64w_k$(brush, topLeft, size, alpha, style, colorFilter, blendMode);
@@ -516,12 +535,12 @@
     return tmp;
   }
   function drawRect$default_0(color, topLeft, size, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_sctq3f_k$() : topLeft;
+    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
     size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawRect_srg7q1_k$(color, topLeft, size, alpha, style, colorFilter, blendMode);
@@ -532,11 +551,11 @@
     return tmp;
   }
   function drawImage$default(image, topLeft, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_sctq3f_k$() : topLeft;
+    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawImage_bk8e6s_k$(image, topLeft, alpha, style, colorFilter, blendMode);
@@ -554,7 +573,7 @@
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawImage_td6jz_k$(image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode);
@@ -575,8 +594,8 @@
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
-    filterQuality = filterQuality === VOID ? Companion_getInstance_43().DefaultFilterQuality_1 : filterQuality;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
+    filterQuality = filterQuality === VOID ? Companion_getInstance_44().DefaultFilterQuality_1 : filterQuality;
     var tmp;
     if ($super === VOID) {
       this.drawImage_riofdh_k$(image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode, filterQuality);
@@ -588,13 +607,13 @@
     return tmp;
   }
   function drawRoundRect$default(brush, topLeft, size, cornerRadius, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_sctq3f_k$() : topLeft;
+    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
     size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
     cornerRadius = cornerRadius === VOID ? Companion_getInstance_2().get_Zero_5wbciv_k$() : cornerRadius;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawRoundRect_nkvmol_k$(brush, topLeft, size, cornerRadius, alpha, style, colorFilter, blendMode);
@@ -605,13 +624,13 @@
     return tmp;
   }
   function drawRoundRect$default_0(color, topLeft, size, cornerRadius, style, alpha, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_sctq3f_k$() : topLeft;
+    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
     size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
     cornerRadius = cornerRadius === VOID ? Companion_getInstance_2().get_Zero_5wbciv_k$() : cornerRadius;
     style = style === VOID ? Fill_getInstance() : style;
     alpha = alpha === VOID ? 1.0 : alpha;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawRoundRect_q7amlu_k$(color, topLeft, size, cornerRadius, style, alpha, colorFilter, blendMode);
@@ -627,7 +646,7 @@
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawCircle_sp46sp_k$(brush, radius, center, alpha, style, colorFilter, blendMode);
@@ -643,7 +662,7 @@
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawCircle_n7txn6_k$(color, radius, center, alpha, style, colorFilter, blendMode);
@@ -654,12 +673,12 @@
     return tmp;
   }
   function drawOval$default(brush, topLeft, size, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_sctq3f_k$() : topLeft;
+    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
     size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawOval_poyb4u_k$(brush, topLeft, size, alpha, style, colorFilter, blendMode);
@@ -670,12 +689,12 @@
     return tmp;
   }
   function drawOval$default_0(color, topLeft, size, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_sctq3f_k$() : topLeft;
+    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
     size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawOval_1h49jp_k$(color, topLeft, size, alpha, style, colorFilter, blendMode);
@@ -686,12 +705,12 @@
     return tmp;
   }
   function drawArc$default(brush, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_sctq3f_k$() : topLeft;
+    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
     size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawArc_vjjneq_k$(brush, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode);
@@ -702,12 +721,12 @@
     return tmp;
   }
   function drawArc$default_0(color, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_sctq3f_k$() : topLeft;
+    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
     size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawArc_y7e861_k$(color, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode);
@@ -721,7 +740,7 @@
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawPath_vpl0ok_k$(path, color, alpha, style, colorFilter, blendMode);
@@ -735,7 +754,7 @@
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
       this.drawPath_vsb9f_k$(path, brush, alpha, style, colorFilter, blendMode);
@@ -748,17 +767,17 @@
   function drawPoints$default(points, pointMode, color, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode, $super) {
     var tmp;
     if (strokeWidth === VOID) {
-      Companion_getInstance_44();
+      Companion_getInstance_45();
       tmp = 0.0;
     } else {
       tmp = strokeWidth;
     }
     strokeWidth = tmp;
-    cap = cap === VOID ? Companion_getInstance_31().get_Butt_vf89me_k$() : cap;
+    cap = cap === VOID ? Companion_getInstance_32().get_Butt_vf89me_k$() : cap;
     pathEffect = pathEffect === VOID ? null : pathEffect;
     alpha = alpha === VOID ? 1.0 : alpha;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp_0;
     if ($super === VOID) {
       this.drawPoints_tvcs0g_k$(points, pointMode, color, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode);
@@ -771,17 +790,17 @@
   function drawPoints$default_0(points, pointMode, brush, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode, $super) {
     var tmp;
     if (strokeWidth === VOID) {
-      Companion_getInstance_44();
+      Companion_getInstance_45();
       tmp = 0.0;
     } else {
       tmp = strokeWidth;
     }
     strokeWidth = tmp;
-    cap = cap === VOID ? Companion_getInstance_31().get_Butt_vf89me_k$() : cap;
+    cap = cap === VOID ? Companion_getInstance_32().get_Butt_vf89me_k$() : cap;
     pathEffect = pathEffect === VOID ? null : pathEffect;
     alpha = alpha === VOID ? 1.0 : alpha;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().DefaultBlendMode_1 : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp_0;
     if ($super === VOID) {
       this.drawPoints_yexgjr_k$(points, pointMode, brush, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode);
@@ -801,7 +820,7 @@
     top = top === VOID ? 0.0 : top;
     right = right === VOID ? _Size___get_width__impl__58y75t(this.get_size_x9ctfw_k$()) : right;
     bottom = bottom === VOID ? _Size___get_height__impl__a04p02(this.get_size_x9ctfw_k$()) : bottom;
-    clipOp = clipOp === VOID ? Companion_getInstance_15().get_Intersect_ow3v69_k$() : clipOp;
+    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_ow3v69_k$() : clipOp;
     var tmp;
     if ($super === VOID) {
       this.clipRect_si0ig1_k$(left, top, right, bottom, clipOp);
@@ -812,7 +831,7 @@
     return tmp;
   }
   function clipPath$default_0(path, clipOp, $super) {
-    clipOp = clipOp === VOID ? Companion_getInstance_15().get_Intersect_ow3v69_k$() : clipOp;
+    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_ow3v69_k$() : clipOp;
     var tmp;
     if ($super === VOID) {
       this.clipPath_kn87dc_k$(path, clipOp);
@@ -867,6 +886,10 @@
   setMetadataFor(DrawScopeMarker, 'DrawScopeMarker', classMeta, VOID, [Annotation]);
   setMetadataFor(EmptyCanvas, 'EmptyCanvas', classMeta, VOID, [Canvas]);
   setMetadataFor(Painter, 'Painter', classMeta);
+  setMetadataFor(BitmapPainter, 'BitmapPainter', classMeta, Painter);
+  setMetadataFor(Companion_31, 'Companion', objectMeta);
+  setMetadataFor(FastFloatParser, 'FastFloatParser', classMeta);
+  setMetadataFor(FloatResult, 'FloatResult', classMeta);
   setMetadataFor(PathBuilder, 'PathBuilder', classMeta);
   setMetadataFor(PathNode, 'PathNode', classMeta);
   setMetadataFor(Close, 'Close', objectMeta, PathNode);
@@ -888,6 +911,7 @@
   setMetadataFor(ReflectiveQuadTo, 'ReflectiveQuadTo', classMeta, PathNode);
   setMetadataFor(RelativeArcTo, 'RelativeArcTo', classMeta, PathNode);
   setMetadataFor(ArcTo, 'ArcTo', classMeta, PathNode);
+  setMetadataFor(PathParser, 'PathParser', classMeta);
   setMetadataFor(NoOp, 'NoOp', classMeta, VOID, [Annotation]);
   setMetadataFor(SkiaBackedCanvas, 'SkiaBackedCanvas', classMeta, VOID, [Canvas]);
   setMetadataFor(SkiaBackedPaint, 'SkiaBackedPaint', classMeta, VOID, [Paint]);
@@ -1023,13 +1047,13 @@
     return this.Luminosity_1;
   };
   var Companion_instance;
-  function Companion_getInstance_13() {
+  function Companion_getInstance_14() {
     if (Companion_instance == null)
       new Companion();
     return Companion_instance;
   }
   function BlendMode__toString_impl_uuibkd($this) {
-    return $this === Companion_getInstance_13().Clear_1 ? 'Clear' : $this === Companion_getInstance_13().Src_1 ? 'Src' : $this === Companion_getInstance_13().Dst_1 ? 'Dst' : $this === Companion_getInstance_13().SrcOver_1 ? 'SrcOver' : $this === Companion_getInstance_13().DstOver_1 ? 'DstOver' : $this === Companion_getInstance_13().SrcIn_1 ? 'SrcIn' : $this === Companion_getInstance_13().DstIn_1 ? 'DstIn' : $this === Companion_getInstance_13().SrcOut_1 ? 'SrcOut' : $this === Companion_getInstance_13().DstOut_1 ? 'DstOut' : $this === Companion_getInstance_13().SrcAtop_1 ? 'SrcAtop' : $this === Companion_getInstance_13().DstAtop_1 ? 'DstAtop' : $this === Companion_getInstance_13().Xor_1 ? 'Xor' : $this === Companion_getInstance_13().Plus_1 ? 'Plus' : $this === Companion_getInstance_13().Modulate_1 ? 'Modulate' : $this === Companion_getInstance_13().Screen_1 ? 'Screen' : $this === Companion_getInstance_13().Overlay_1 ? 'Overlay' : $this === Companion_getInstance_13().Darken_1 ? 'Darken' : $this === Companion_getInstance_13().Lighten_1 ? 'Lighten' : $this === Companion_getInstance_13().ColorDodge_1 ? 'ColorDodge' : $this === Companion_getInstance_13().ColorBurn_1 ? 'ColorBurn' : $this === Companion_getInstance_13().Hardlight_1 ? 'HardLight' : $this === Companion_getInstance_13().Softlight_1 ? 'Softlight' : $this === Companion_getInstance_13().Difference_1 ? 'Difference' : $this === Companion_getInstance_13().Exclusion_1 ? 'Exclusion' : $this === Companion_getInstance_13().Multiply_1 ? 'Multiply' : $this === Companion_getInstance_13().Hue_1 ? 'Hue' : $this === Companion_getInstance_13().Saturation_1 ? 'Saturation' : $this === Companion_getInstance_13().Color_1 ? 'Color' : $this === Companion_getInstance_13().Luminosity_1 ? 'Luminosity' : 'Unknown';
+    return $this === Companion_getInstance_14().Clear_1 ? 'Clear' : $this === Companion_getInstance_14().Src_1 ? 'Src' : $this === Companion_getInstance_14().Dst_1 ? 'Dst' : $this === Companion_getInstance_14().SrcOver_1 ? 'SrcOver' : $this === Companion_getInstance_14().DstOver_1 ? 'DstOver' : $this === Companion_getInstance_14().SrcIn_1 ? 'SrcIn' : $this === Companion_getInstance_14().DstIn_1 ? 'DstIn' : $this === Companion_getInstance_14().SrcOut_1 ? 'SrcOut' : $this === Companion_getInstance_14().DstOut_1 ? 'DstOut' : $this === Companion_getInstance_14().SrcAtop_1 ? 'SrcAtop' : $this === Companion_getInstance_14().DstAtop_1 ? 'DstAtop' : $this === Companion_getInstance_14().Xor_1 ? 'Xor' : $this === Companion_getInstance_14().Plus_1 ? 'Plus' : $this === Companion_getInstance_14().Modulate_1 ? 'Modulate' : $this === Companion_getInstance_14().Screen_1 ? 'Screen' : $this === Companion_getInstance_14().Overlay_1 ? 'Overlay' : $this === Companion_getInstance_14().Darken_1 ? 'Darken' : $this === Companion_getInstance_14().Lighten_1 ? 'Lighten' : $this === Companion_getInstance_14().ColorDodge_1 ? 'ColorDodge' : $this === Companion_getInstance_14().ColorBurn_1 ? 'ColorBurn' : $this === Companion_getInstance_14().Hardlight_1 ? 'HardLight' : $this === Companion_getInstance_14().Softlight_1 ? 'Softlight' : $this === Companion_getInstance_14().Difference_1 ? 'Difference' : $this === Companion_getInstance_14().Exclusion_1 ? 'Exclusion' : $this === Companion_getInstance_14().Multiply_1 ? 'Multiply' : $this === Companion_getInstance_14().Hue_1 ? 'Hue' : $this === Companion_getInstance_14().Saturation_1 ? 'Saturation' : $this === Companion_getInstance_14().Color_1 ? 'Color' : $this === Companion_getInstance_14().Luminosity_1 ? 'Luminosity' : 'Unknown';
   }
   function BlendMode__hashCode_impl_93ceri($this) {
     return $this;
@@ -1042,7 +1066,7 @@
     return true;
   }
   function BlendMode(value) {
-    Companion_getInstance_13();
+    Companion_getInstance_14();
     this.value_1 = value;
   }
   protoOf(BlendMode).toString = function () {
@@ -1053,6 +1077,50 @@
   };
   protoOf(BlendMode).equals = function (other) {
     return BlendMode__equals_impl_1tm25i(this.value_1, other);
+  };
+  function _set_internalShader__t1be7f($this, _set____db54di) {
+    $this.internalShader_1 = _set____db54di;
+  }
+  function _get_internalShader__3i7y5z($this) {
+    return $this.internalShader_1;
+  }
+  function _set_createdSize__u0arks($this, _set____db54di) {
+    $this.createdSize_1 = _set____db54di;
+  }
+  function _get_createdSize__aqf42g($this) {
+    return $this.createdSize_1;
+  }
+  function ShaderBrush() {
+    Brush.call(this);
+    this.internalShader_1 = null;
+    this.createdSize_1 = Companion_getInstance().get_Unspecified_o59ai8_k$();
+  }
+  protoOf(ShaderBrush).applyTo_w34vc_k$ = function (size, p, alpha) {
+    var shader = this.internalShader_1;
+    if (shader == null ? true : !equals(this.createdSize_1, size)) {
+      if (Size__isEmpty_impl_o9ye97(size)) {
+        shader = null;
+        this.internalShader_1 = null;
+        this.createdSize_1 = Companion_getInstance().get_Unspecified_o59ai8_k$();
+      } else {
+        // Inline function 'kotlin.also' call
+        var tmp0_also = this.createShader_myfnlm_k$(size);
+        // Inline function 'kotlin.contracts.contract' call
+        // Inline function 'androidx.compose.ui.graphics.ShaderBrush.applyTo.<anonymous>' call
+        this.internalShader_1 = tmp0_also;
+        shader = tmp0_also;
+        this.createdSize_1 = size;
+      }
+    }
+    if (!equals(p.get_color_v34vrz_k$(), Companion_getInstance_17().get_Black_wh3yn9_k$())) {
+      p.set_color_b5evhd_k$(Companion_getInstance_17().get_Black_wh3yn9_k$());
+    }
+    if (!equals(p.get_shader_jgtazy_k$(), shader)) {
+      p.set_shader_bd5o0m_k$(shader);
+    }
+    if (!(p.get_alpha_iooth1_k$() === alpha)) {
+      p.set_alpha_k1tx50_k$(alpha);
+    }
   };
   function Companion_0() {
     Companion_instance_0 = this;
@@ -1098,18 +1166,18 @@
     return new LinearGradient(tmp, list_0, start, end, tileMode);
   };
   protoOf(Companion_0).linearGradient$default_n2weej_k$ = function (colorStops, start, end, tileMode, $super) {
-    start = start === VOID ? Companion_getInstance().get_Zero_sctq3f_k$() : start;
-    end = end === VOID ? Companion_getInstance().get_Infinite_oe4l7z_k$() : end;
-    tileMode = tileMode === VOID ? Companion_getInstance_33().get_Clamp_q8g1jp_k$() : tileMode;
+    start = start === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : start;
+    end = end === VOID ? Companion_getInstance_0().get_Infinite_oe4l7z_k$() : end;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
     return $super === VOID ? this.linearGradient_hzla25_k$(colorStops, start, end, tileMode) : $super.linearGradient_hzla25_k$.call(this, colorStops, new Offset(start), new Offset(end), new TileMode(tileMode));
   };
   protoOf(Companion_0).linearGradient_shb1il_k$ = function (colors, start, end, tileMode) {
     return new LinearGradient(colors, null, start, end, tileMode);
   };
   protoOf(Companion_0).linearGradient$default_idz3kv_k$ = function (colors, start, end, tileMode, $super) {
-    start = start === VOID ? Companion_getInstance().get_Zero_sctq3f_k$() : start;
-    end = end === VOID ? Companion_getInstance().get_Infinite_oe4l7z_k$() : end;
-    tileMode = tileMode === VOID ? Companion_getInstance_33().get_Clamp_q8g1jp_k$() : tileMode;
+    start = start === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : start;
+    end = end === VOID ? Companion_getInstance_0().get_Infinite_oe4l7z_k$() : end;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
     return $super === VOID ? this.linearGradient_shb1il_k$(colors, start, end, tileMode) : $super.linearGradient_shb1il_k$.call(this, colors, new Offset(start), new Offset(end), new TileMode(tileMode));
   };
   protoOf(Companion_0).horizontalGradient_tfs9xe_k$ = function (colors, startX, endX, tileMode) {
@@ -1118,7 +1186,7 @@
   protoOf(Companion_0).horizontalGradient$default_d80ehs_k$ = function (colors, startX, endX, tileMode, $super) {
     startX = startX === VOID ? 0.0 : startX;
     endX = endX === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : endX;
-    tileMode = tileMode === VOID ? Companion_getInstance_33().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
     return $super === VOID ? this.horizontalGradient_tfs9xe_k$(colors, startX, endX, tileMode) : $super.horizontalGradient_tfs9xe_k$.call(this, colors, startX, endX, new TileMode(tileMode));
   };
   protoOf(Companion_0).horizontalGradient_i469mu_k$ = function (colorStops, startX, endX, tileMode) {
@@ -1127,7 +1195,7 @@
   protoOf(Companion_0).horizontalGradient$default_mfit2q_k$ = function (colorStops, startX, endX, tileMode, $super) {
     startX = startX === VOID ? 0.0 : startX;
     endX = endX === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : endX;
-    tileMode = tileMode === VOID ? Companion_getInstance_33().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
     return $super === VOID ? this.horizontalGradient_i469mu_k$(colorStops, startX, endX, tileMode) : $super.horizontalGradient_i469mu_k$.call(this, colorStops, startX, endX, new TileMode(tileMode));
   };
   protoOf(Companion_0).verticalGradient_d79o9c_k$ = function (colors, startY, endY, tileMode) {
@@ -1136,7 +1204,7 @@
   protoOf(Companion_0).verticalGradient$default_ic5ss2_k$ = function (colors, startY, endY, tileMode, $super) {
     startY = startY === VOID ? 0.0 : startY;
     endY = endY === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : endY;
-    tileMode = tileMode === VOID ? Companion_getInstance_33().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
     return $super === VOID ? this.verticalGradient_d79o9c_k$(colors, startY, endY, tileMode) : $super.verticalGradient_d79o9c_k$.call(this, colors, startY, endY, new TileMode(tileMode));
   };
   protoOf(Companion_0).verticalGradient_inf80c_k$ = function (colorStops, startY, endY, tileMode) {
@@ -1145,7 +1213,7 @@
   protoOf(Companion_0).verticalGradient$default_cxjvk4_k$ = function (colorStops, startY, endY, tileMode, $super) {
     startY = startY === VOID ? 0.0 : startY;
     endY = endY === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : endY;
-    tileMode = tileMode === VOID ? Companion_getInstance_33().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
     return $super === VOID ? this.verticalGradient_inf80c_k$(colorStops, startY, endY, tileMode) : $super.verticalGradient_inf80c_k$.call(this, colorStops, startY, endY, new TileMode(tileMode));
   };
   protoOf(Companion_0).radialGradient_ge8bks_k$ = function (colorStops, center, radius, tileMode) {
@@ -1189,18 +1257,18 @@
     return new RadialGradient(tmp, list_0, center, radius, tileMode);
   };
   protoOf(Companion_0).radialGradient$default_qhhcp2_k$ = function (colorStops, center, radius, tileMode, $super) {
-    center = center === VOID ? Companion_getInstance().get_Unspecified_ooyrpa_k$() : center;
+    center = center === VOID ? Companion_getInstance_0().get_Unspecified_ooyrpa_k$() : center;
     radius = radius === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : radius;
-    tileMode = tileMode === VOID ? Companion_getInstance_33().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
     return $super === VOID ? this.radialGradient_ge8bks_k$(colorStops, center, radius, tileMode) : $super.radialGradient_ge8bks_k$.call(this, colorStops, new Offset(center), radius, new TileMode(tileMode));
   };
   protoOf(Companion_0).radialGradient_x8fw6i_k$ = function (colors, center, radius, tileMode) {
     return new RadialGradient(colors, null, center, radius, tileMode);
   };
   protoOf(Companion_0).radialGradient$default_sd2nry_k$ = function (colors, center, radius, tileMode, $super) {
-    center = center === VOID ? Companion_getInstance().get_Unspecified_ooyrpa_k$() : center;
+    center = center === VOID ? Companion_getInstance_0().get_Unspecified_ooyrpa_k$() : center;
     radius = radius === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : radius;
-    tileMode = tileMode === VOID ? Companion_getInstance_33().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
     return $super === VOID ? this.radialGradient_x8fw6i_k$(colors, center, radius, tileMode) : $super.radialGradient_x8fw6i_k$.call(this, colors, new Offset(center), radius, new TileMode(tileMode));
   };
   protoOf(Companion_0).sweepGradient_nrx7hj_k$ = function (colorStops, center) {
@@ -1243,72 +1311,28 @@
     return new SweepGradient(center, list, list_0);
   };
   protoOf(Companion_0).sweepGradient$default_7o0bdt_k$ = function (colorStops, center, $super) {
-    center = center === VOID ? Companion_getInstance().get_Unspecified_ooyrpa_k$() : center;
+    center = center === VOID ? Companion_getInstance_0().get_Unspecified_ooyrpa_k$() : center;
     return $super === VOID ? this.sweepGradient_nrx7hj_k$(colorStops, center) : $super.sweepGradient_nrx7hj_k$.call(this, colorStops, new Offset(center));
   };
   protoOf(Companion_0).sweepGradient_uggmap_k$ = function (colors, center) {
     return new SweepGradient(center, colors, null);
   };
   protoOf(Companion_0).sweepGradient$default_ccaoht_k$ = function (colors, center, $super) {
-    center = center === VOID ? Companion_getInstance().get_Unspecified_ooyrpa_k$() : center;
+    center = center === VOID ? Companion_getInstance_0().get_Unspecified_ooyrpa_k$() : center;
     return $super === VOID ? this.sweepGradient_uggmap_k$(colors, center) : $super.sweepGradient_uggmap_k$.call(this, colors, new Offset(center));
   };
   var Companion_instance_0;
-  function Companion_getInstance_14() {
+  function Companion_getInstance_15() {
     if (Companion_instance_0 == null)
       new Companion_0();
     return Companion_instance_0;
   }
   function Brush() {
-    Companion_getInstance_14();
-    this.intrinsicSize_1 = Companion_getInstance_0().get_Unspecified_o59ai8_k$();
+    Companion_getInstance_15();
+    this.intrinsicSize_1 = Companion_getInstance().get_Unspecified_o59ai8_k$();
   }
   protoOf(Brush).get_intrinsicSize_x61on3_k$ = function () {
     return this.intrinsicSize_1;
-  };
-  function _set_internalShader__t1be7f($this, _set____db54di) {
-    $this.internalShader_1 = _set____db54di;
-  }
-  function _get_internalShader__3i7y5z($this) {
-    return $this.internalShader_1;
-  }
-  function _set_createdSize__u0arks($this, _set____db54di) {
-    $this.createdSize_1 = _set____db54di;
-  }
-  function _get_createdSize__aqf42g($this) {
-    return $this.createdSize_1;
-  }
-  function ShaderBrush() {
-    Brush.call(this);
-    this.internalShader_1 = null;
-    this.createdSize_1 = Companion_getInstance_0().get_Unspecified_o59ai8_k$();
-  }
-  protoOf(ShaderBrush).applyTo_w34vc_k$ = function (size, p, alpha) {
-    var shader = this.internalShader_1;
-    if (shader == null ? true : !equals(this.createdSize_1, size)) {
-      if (Size__isEmpty_impl_o9ye97(size)) {
-        shader = null;
-        this.internalShader_1 = null;
-        this.createdSize_1 = Companion_getInstance_0().get_Unspecified_o59ai8_k$();
-      } else {
-        // Inline function 'kotlin.also' call
-        var tmp0_also = this.createShader_myfnlm_k$(size);
-        // Inline function 'kotlin.contracts.contract' call
-        // Inline function 'androidx.compose.ui.graphics.ShaderBrush.applyTo.<anonymous>' call
-        this.internalShader_1 = tmp0_also;
-        shader = tmp0_also;
-        this.createdSize_1 = size;
-      }
-    }
-    if (!equals(p.get_color_v34vrz_k$(), Companion_getInstance_16().get_Black_wh3yn9_k$())) {
-      p.set_color_b5evhd_k$(Companion_getInstance_16().get_Black_wh3yn9_k$());
-    }
-    if (!equals(p.get_shader_jgtazy_k$(), shader)) {
-      p.set_shader_bd5o0m_k$(shader);
-    }
-    if (!(p.get_alpha_iooth1_k$() === alpha)) {
-      p.set_alpha_k1tx50_k$(alpha);
-    }
   };
   function SolidColor(value) {
     Brush.call(this);
@@ -1362,7 +1386,7 @@
   }
   function LinearGradient(colors, stops, start, end, tileMode) {
     stops = stops === VOID ? null : stops;
-    tileMode = tileMode === VOID ? Companion_getInstance_33().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
     ShaderBrush.call(this);
     this.colors_1 = colors;
     this.stops_1 = stops;
@@ -1452,7 +1476,7 @@
   }
   function RadialGradient(colors, stops, center, radius, tileMode) {
     stops = stops === VOID ? null : stops;
-    tileMode = tileMode === VOID ? Companion_getInstance_33().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
     ShaderBrush.call(this);
     this.colors_1 = colors;
     this.stops_1 = stops;
@@ -1461,7 +1485,7 @@
     this.tileMode_1 = tileMode;
   }
   protoOf(RadialGradient).get_intrinsicSize_x61on3_k$ = function () {
-    return isFinite(this.radius_1) ? Size(this.radius_1 * 2, this.radius_1 * 2) : Companion_getInstance_0().get_Unspecified_o59ai8_k$();
+    return isFinite(this.radius_1) ? Size(this.radius_1 * 2, this.radius_1 * 2) : Companion_getInstance().get_Unspecified_o59ai8_k$();
   };
   protoOf(RadialGradient).createShader_myfnlm_k$ = function (size) {
     var centerX;
@@ -1596,13 +1620,13 @@
     return this.Intersect_1;
   };
   var Companion_instance_1;
-  function Companion_getInstance_15() {
+  function Companion_getInstance_16() {
     if (Companion_instance_1 == null)
       new Companion_1();
     return Companion_instance_1;
   }
   function ClipOp__toString_impl_vwrlao($this) {
-    return $this === Companion_getInstance_15().Difference_1 ? 'Difference' : $this === Companion_getInstance_15().Intersect_1 ? 'Intersect' : 'Unknown';
+    return $this === Companion_getInstance_16().Difference_1 ? 'Difference' : $this === Companion_getInstance_16().Intersect_1 ? 'Intersect' : 'Unknown';
   }
   function ClipOp__hashCode_impl_hd6jvl($this) {
     return $this;
@@ -1615,7 +1639,7 @@
     return true;
   }
   function ClipOp(value) {
-    Companion_getInstance_15();
+    Companion_getInstance_16();
     this.value_1 = value;
   }
   protoOf(ClipOp).toString = function () {
@@ -1911,7 +1935,7 @@
     return $super === VOID ? this.hsl_k9g3wz_k$(hue, saturation, lightness, alpha, colorSpace) : $super.hsl_k9g3wz_k$.call(this, hue, saturation, lightness, alpha, colorSpace).value_1;
   };
   var Companion_instance_2;
-  function Companion_getInstance_16() {
+  function Companion_getInstance_17() {
     if (Companion_instance_2 == null)
       new Companion_2();
     return Companion_instance_2;
@@ -1928,7 +1952,7 @@
     return true;
   }
   function Color(value) {
-    Companion_getInstance_16();
+    Companion_getInstance_17();
     this.value_1 = value;
   }
   protoOf(Color).toString = function () {
@@ -1941,12 +1965,12 @@
     return Color__equals_impl_k06uqz(this.value_1, other);
   };
   function get_isSpecified_0(_this__u8e3s4) {
-    return !equals(_Color___get_value__impl__1pls5m(_this__u8e3s4), _Color___get_value__impl__1pls5m(Companion_getInstance_16().Unspecified_1));
+    return !equals(_Color___get_value__impl__1pls5m(_this__u8e3s4), _Color___get_value__impl__1pls5m(Companion_getInstance_17().Unspecified_1));
   }
   function takeOrElse(_this__u8e3s4, block) {
     var tmp;
     // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-    if (!equals(_Color___get_value__impl__1pls5m(_this__u8e3s4), _Color___get_value__impl__1pls5m(Companion_getInstance_16().Unspecified_1))) {
+    if (!equals(_Color___get_value__impl__1pls5m(_this__u8e3s4), _Color___get_value__impl__1pls5m(Companion_getInstance_17().Unspecified_1))) {
       tmp = _this__u8e3s4;
     } else {
       tmp = block().value_1;
@@ -2012,7 +2036,7 @@
     var id = colorSpace.get_id_kntnx8_k$();
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!!(id === Companion_getInstance_37().get_MinId_idmyf8_k$())) {
+    if (!!(id === Companion_getInstance_38().get_MinId_idmyf8_k$())) {
       // Inline function 'androidx.compose.ui.graphics.Color.<anonymous>' call
       var message_1 = 'Unknown color space, please use a color space in ColorSpaces';
       throw IllegalArgumentException_init_$Create$(toString(message_1));
@@ -2082,7 +2106,7 @@
     var colorSpace = _Color___get_colorSpace__impl__jqqozk(_this__u8e3s4);
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!equals(colorSpace.get_model_rk6821_k$(), Companion_getInstance_36().get_Rgb_hxm2yj_k$())) {
+    if (!equals(colorSpace.get_model_rk6821_k$(), Companion_getInstance_37().get_Rgb_hxm2yj_k$())) {
       // Inline function 'androidx.compose.ui.graphics.luminance.<anonymous>' call
       var message = 'The specified color must be encoded in an RGB color space. ' + ('The supplied color space is ' + new ColorModel(colorSpace.get_model_rk6821_k$()));
       throw IllegalArgumentException_init_$Create$(toString(message));
@@ -2153,7 +2177,7 @@
   function ColorProducer() {
   }
   function get_isUnspecified_0(_this__u8e3s4) {
-    return equals(_Color___get_value__impl__1pls5m(_this__u8e3s4), _Color___get_value__impl__1pls5m(Companion_getInstance_16().Unspecified_1));
+    return equals(_Color___get_value__impl__1pls5m(_this__u8e3s4), _Color___get_value__impl__1pls5m(Companion_getInstance_17().Unspecified_1));
   }
   function Companion_3() {
     Companion_instance_3 = this;
@@ -2162,7 +2186,7 @@
     return actualTintColorFilter(color, blendMode);
   };
   protoOf(Companion_3).tint$default_or1h4c_k$ = function (color, blendMode, $super) {
-    blendMode = blendMode === VOID ? Companion_getInstance_13().get_SrcIn_yyf2fo_k$() : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_14().get_SrcIn_yyf2fo_k$() : blendMode;
     return $super === VOID ? this.tint_oz42r0_k$(color, blendMode) : $super.tint_oz42r0_k$.call(this, new Color(color), new BlendMode(blendMode));
   };
   protoOf(Companion_3).colorMatrix_16db4l_k$ = function (colorMatrix) {
@@ -2172,13 +2196,13 @@
     return actualLightingColorFilter(multiply, add);
   };
   var Companion_instance_3;
-  function Companion_getInstance_17() {
+  function Companion_getInstance_18() {
     if (Companion_instance_3 == null)
       new Companion_3();
     return Companion_instance_3;
   }
   function ColorFilter(nativeColorFilter) {
-    Companion_getInstance_17();
+    Companion_getInstance_18();
     this.nativeColorFilter_1 = nativeColorFilter;
   }
   protoOf(ColorFilter).get_nativeColorFilter_tol2md_k$ = function () {
@@ -2577,13 +2601,13 @@
     return this.High_1;
   };
   var Companion_instance_4;
-  function Companion_getInstance_18() {
+  function Companion_getInstance_19() {
     if (Companion_instance_4 == null)
       new Companion_4();
     return Companion_instance_4;
   }
   function FilterQuality__toString_impl_i5cfty($this) {
-    return $this === Companion_getInstance_18().None_1 ? 'None' : $this === Companion_getInstance_18().Low_1 ? 'Low' : $this === Companion_getInstance_18().Medium_1 ? 'Medium' : $this === Companion_getInstance_18().High_1 ? 'High' : 'Unknown';
+    return $this === Companion_getInstance_19().None_1 ? 'None' : $this === Companion_getInstance_19().Low_1 ? 'Low' : $this === Companion_getInstance_19().Medium_1 ? 'Medium' : $this === Companion_getInstance_19().High_1 ? 'High' : 'Unknown';
   }
   function FilterQuality__hashCode_impl_v4lpcb($this) {
     return $this;
@@ -2596,7 +2620,7 @@
     return true;
   }
   function FilterQuality(value) {
-    Companion_getInstance_18();
+    Companion_getInstance_19();
     this.value_1 = value;
   }
   protoOf(FilterQuality).toString = function () {
@@ -2711,7 +2735,7 @@
     return $this;
   }
   function _Float16___init__impl__fckrew_0(value) {
-    return _Float16___init__impl__fckrew(floatToHalf(Companion_getInstance_19(), value));
+    return _Float16___init__impl__fckrew(floatToHalf(Companion_getInstance_20(), value));
   }
   function _Float16___init__impl__fckrew_1(value) {
     return _Float16___init__impl__fckrew_0(value);
@@ -2730,13 +2754,13 @@
   }
   function Float16__toFloat_impl_6i8dal($this) {
     var bits = _Float16___get_halfValue__impl__89tmwx($this) & 65535;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var s = bits & 32768;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var tmp = bits >>> 10 | 0;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var e = tmp & 31;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var m = bits & 1023;
     var outE = 0;
     var outM = 0;
@@ -2744,10 +2768,10 @@
       if (!(m === 0)) {
         // Inline function 'kotlin.fromBits' call
         FloatCompanionObject_getInstance();
-        Companion_getInstance_19();
+        Companion_getInstance_20();
         var tmp1_fromBits = 1056964608 + m | 0;
         var o = floatFromBits(tmp1_fromBits);
-        o = o - Companion_getInstance_19().FP32_DENORMAL_FLOAT_1;
+        o = o - Companion_getInstance_20().FP32_DENORMAL_FLOAT_1;
         return s === 0 ? o : -o;
       }
     } else {
@@ -2756,19 +2780,19 @@
         outE = 255;
         if (!(outM === 0)) {
           var tmp_0 = outM;
-          Companion_getInstance_19();
+          Companion_getInstance_20();
           outM = tmp_0 | 4194304;
         }
       } else {
-        Companion_getInstance_19();
+        Companion_getInstance_20();
         var tmp_1 = e - 15 | 0;
-        Companion_getInstance_19();
+        Companion_getInstance_20();
         outE = tmp_1 + 127 | 0;
       }
     }
     var tmp_2 = s << 16;
     var tmp_3 = outE;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var out = tmp_2 | tmp_3 << 23 | outM;
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
@@ -2780,7 +2804,7 @@
   function Float16__toBits_impl_k7yqp7($this) {
     var tmp;
     if (Float16__isNaN_impl_8e8jh($this)) {
-      tmp = _Float16___get_halfValue__impl__89tmwx(Companion_getInstance_19().NaN_1);
+      tmp = _Float16___get_halfValue__impl__89tmwx(Companion_getInstance_20().NaN_1);
     } else {
       tmp = _Float16___get_halfValue__impl__89tmwx($this) & 65535;
     }
@@ -2798,7 +2822,7 @@
     } else if (Float16__isNaN_impl_8e8jh(other)) {
       return -1;
     }
-    return compareTo(toCompareValue(Companion_getInstance_19(), _Float16___get_halfValue__impl__89tmwx($this)), toCompareValue(Companion_getInstance_19(), _Float16___get_halfValue__impl__89tmwx(other)));
+    return compareTo(toCompareValue(Companion_getInstance_20(), _Float16___get_halfValue__impl__89tmwx($this)), toCompareValue(Companion_getInstance_20(), _Float16___get_halfValue__impl__89tmwx(other)));
   }
   function Float16__compareTo_impl_vr2ku_0($this, other) {
     var tmp = $this.halfValue_1;
@@ -2806,26 +2830,26 @@
   }
   function _Float16___get_sign__impl__t10b9g($this) {
     if (Float16__isNaN_impl_8e8jh($this)) {
-      return Companion_getInstance_19().NaN_1;
+      return Companion_getInstance_20().NaN_1;
     }
-    if (Float16__compareTo_impl_vr2ku($this, Companion_getInstance_19().NegativeZero_1) < 0)
-      return Companion_getInstance_19().NegativeOne_1;
-    else if (Float16__compareTo_impl_vr2ku($this, Companion_getInstance_19().PositiveZero_1) > 0)
-      return Companion_getInstance_19().One_1;
+    if (Float16__compareTo_impl_vr2ku($this, Companion_getInstance_20().NegativeZero_1) < 0)
+      return Companion_getInstance_20().NegativeOne_1;
+    else if (Float16__compareTo_impl_vr2ku($this, Companion_getInstance_20().PositiveZero_1) > 0)
+      return Companion_getInstance_20().One_1;
     else
       return $this;
   }
   function Float16__withSign_impl_b0tr55($this, sign) {
     var tmp = _Float16___get_halfValue__impl__89tmwx(sign);
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var tmp_0 = tmp & 32768;
     var tmp_1 = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     return _Float16___init__impl__fckrew(toShort(tmp_0 | tmp_1 & 32767));
   }
   function Float16__absoluteValue_impl_nv6ulo($this) {
     var tmp = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     return _Float16___init__impl__fckrew(toShort(tmp & 32767));
   }
   function Float16__round_impl_4qwlz4($this) {
@@ -2834,7 +2858,7 @@
     var result = bits;
     if (e < 15360) {
       var tmp = result;
-      Companion_getInstance_19();
+      Companion_getInstance_20();
       result = tmp & 32768;
       result = result | 15360 & (e >= 14336 ? 65535 : 0);
     } else if (e < 25600) {
@@ -2851,7 +2875,7 @@
     var result = bits;
     if (e < 15360) {
       var tmp = result;
-      Companion_getInstance_19();
+      Companion_getInstance_20();
       result = tmp & 32768;
       result = result | 15360 & (-(~(bits >> 15) & (!(e === 0) ? 1 : 0)) | 0);
     } else if (e < 25600) {
@@ -2868,7 +2892,7 @@
     var result = bits;
     if (e < 15360) {
       var tmp = result;
-      Companion_getInstance_19();
+      Companion_getInstance_20();
       result = tmp & 32768;
       result = result | 15360 & (bits > 32768 ? 65535 : 0);
     } else if (e < 25600) {
@@ -2885,7 +2909,7 @@
     var result = bits;
     if (e < 15360) {
       var tmp = result;
-      Companion_getInstance_19();
+      Companion_getInstance_20();
       result = tmp & 32768;
     } else if (e < 25600) {
       e = 25 - (e >> 10) | 0;
@@ -2896,48 +2920,48 @@
   }
   function _Float16___get_exponent__impl__3tixn6($this) {
     var tmp = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var tmp_0 = tmp >>> 10 | 0;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var tmp_1 = tmp_0 & 31;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     return tmp_1 - 15 | 0;
   }
   function _Float16___get_significand__impl__ku8yuy($this) {
     var tmp = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     return tmp & 1023;
   }
   function Float16__isNaN_impl_8e8jh($this) {
     var tmp = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var tmp_0 = tmp & 32767;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     return tmp_0 > 31744;
   }
   function Float16__isInfinite_impl_9h5mgi($this) {
     var tmp = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var tmp_0 = tmp & 32767;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     return tmp_0 === 31744;
   }
   function Float16__isFinite_impl_8t6ust($this) {
     var tmp = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var tmp_0 = tmp & 32767;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     return !(tmp_0 === 31744);
   }
   function Float16__isNormalized_impl_l312k5($this) {
     var tmp;
     var tmp_0 = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     if (!((tmp_0 & 31744) === 0)) {
       var tmp_1 = _Float16___get_halfValue__impl__89tmwx($this);
-      Companion_getInstance_19();
+      Companion_getInstance_20();
       var tmp_2 = tmp_1 & 31744;
-      Companion_getInstance_19();
+      Companion_getInstance_20();
       tmp = !(tmp_2 === 31744);
     } else {
       tmp = false;
@@ -2947,13 +2971,13 @@
   function Float16__toHexString_impl_o1d02l($this) {
     var o = StringBuilder_init_$Create$();
     var bits = _Float16___get_halfValue__impl__89tmwx($this) & 65535;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var s = bits >>> 15 | 0;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var tmp = bits >>> 10 | 0;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var e = tmp & 31;
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     var m = bits & 1023;
     if (e === 31) {
       if (m === 0) {
@@ -2990,7 +3014,7 @@
         tmp$ret$3 = Regex_init_$Create$('0{2,}$').replaceFirst_hwe6o0_k$(significand_0, '');
         o.append_ssq29y_k$(tmp$ret$3);
         o.append_t8oh9e_k$(_Char___init__impl__6a9atx(112));
-        Companion_getInstance_19();
+        Companion_getInstance_20();
         o.append_ssq29y_k$((e - 15 | 0).toString());
       }
     }
@@ -3074,7 +3098,7 @@
     return this.PositiveZero_1;
   };
   var Companion_instance_5;
-  function Companion_getInstance_19() {
+  function Companion_getInstance_20() {
     if (Companion_instance_5 == null)
       new Companion_5();
     return Companion_instance_5;
@@ -3090,7 +3114,7 @@
     return true;
   }
   function Float16(halfValue) {
-    Companion_getInstance_19();
+    Companion_getInstance_20();
     this.halfValue_1 = halfValue;
   }
   protoOf(Float16).toString = function () {
@@ -3112,7 +3136,7 @@
     Companion_instance_6 = this;
   }
   var Companion_instance_6;
-  function Companion_getInstance_20() {
+  function Companion_getInstance_21() {
     if (Companion_instance_6 == null)
       new Companion_6();
     return Companion_instance_6;
@@ -3120,7 +3144,7 @@
   function ImageBitmap() {
   }
   function ImageBitmap_0(width, height, config, hasAlpha, colorSpace) {
-    config = config === VOID ? Companion_getInstance_21().Argb8888__1 : config;
+    config = config === VOID ? Companion_getInstance_22().Argb8888__1 : config;
     hasAlpha = hasAlpha === VOID ? true : hasAlpha;
     colorSpace = colorSpace === VOID ? ColorSpaces_getInstance().get_Srgb_woa2g3_k$() : colorSpace;
     return ActualImageBitmap(width, height, config, hasAlpha, colorSpace);
@@ -3155,13 +3179,13 @@
     return this.Gpu_1;
   };
   var Companion_instance_7;
-  function Companion_getInstance_21() {
+  function Companion_getInstance_22() {
     if (Companion_instance_7 == null)
       new Companion_7();
     return Companion_instance_7;
   }
   function ImageBitmapConfig__toString_impl_dfv42d($this) {
-    return $this === Companion_getInstance_21().Argb8888__1 ? 'Argb8888' : $this === Companion_getInstance_21().Alpha8__1 ? 'Alpha8' : $this === Companion_getInstance_21().Rgb565__1 ? 'Rgb565' : $this === Companion_getInstance_21().F16__1 ? 'F16' : $this === Companion_getInstance_21().Gpu_1 ? 'Gpu' : 'Unknown';
+    return $this === Companion_getInstance_22().Argb8888__1 ? 'Argb8888' : $this === Companion_getInstance_22().Alpha8__1 ? 'Alpha8' : $this === Companion_getInstance_22().Rgb565__1 ? 'Rgb565' : $this === Companion_getInstance_22().F16__1 ? 'F16' : $this === Companion_getInstance_22().Gpu_1 ? 'Gpu' : 'Unknown';
   }
   function ImageBitmapConfig__hashCode_impl_8basqi($this) {
     return $this;
@@ -3174,7 +3198,7 @@
     return true;
   }
   function ImageBitmapConfig(value) {
-    Companion_getInstance_21();
+    Companion_getInstance_22();
     this.value_1 = value;
   }
   protoOf(ImageBitmapConfig).toString = function () {
@@ -3861,7 +3885,7 @@
     return this.Perspective2__1;
   };
   var Companion_instance_8;
-  function Companion_getInstance_22() {
+  function Companion_getInstance_23() {
     if (Companion_instance_8 == null)
       new Companion_8();
     return Companion_instance_8;
@@ -3878,7 +3902,7 @@
     return true;
   }
   function Matrix(values) {
-    Companion_getInstance_22();
+    Companion_getInstance_23();
     this.values_1 = values;
   }
   protoOf(Matrix).toString = function () {
@@ -4023,7 +4047,7 @@
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().get_DefaultBlendMode_8kor9s_k$() : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().get_DefaultBlendMode_8kor9s_k$() : blendMode;
     // Inline function 'androidx.compose.ui.graphics.drawOutlineHelper' call
     var tmp;
     if (outline instanceof Rectangle) {
@@ -4063,7 +4087,7 @@
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_43().get_DefaultBlendMode_8kor9s_k$() : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().get_DefaultBlendMode_8kor9s_k$() : blendMode;
     // Inline function 'androidx.compose.ui.graphics.drawOutlineHelper' call
     var tmp;
     if (outline instanceof Rectangle) {
@@ -4156,13 +4180,13 @@
     return this.Stroke_1;
   };
   var Companion_instance_9;
-  function Companion_getInstance_23() {
+  function Companion_getInstance_24() {
     if (Companion_instance_9 == null)
       new Companion_9();
     return Companion_instance_9;
   }
   function PaintingStyle__toString_impl_anxeq4($this) {
-    return $this === Companion_getInstance_23().Fill_1 ? 'Fill' : $this === Companion_getInstance_23().Stroke_1 ? 'Stroke' : 'Unknown';
+    return $this === Companion_getInstance_24().Fill_1 ? 'Fill' : $this === Companion_getInstance_24().Stroke_1 ? 'Stroke' : 'Unknown';
   }
   function PaintingStyle__hashCode_impl_wf3biz($this) {
     return $this;
@@ -4175,7 +4199,7 @@
     return true;
   }
   function PaintingStyle(value) {
-    Companion_getInstance_23();
+    Companion_getInstance_24();
     this.value_1 = value;
   }
   protoOf(PaintingStyle).toString = function () {
@@ -4198,7 +4222,7 @@
     throw IllegalArgumentException_init_$Create$('Path.combine() failed.  This may be due an invalid path; in particular, check for NaN values.');
   };
   var Companion_instance_10;
-  function Companion_getInstance_24() {
+  function Companion_getInstance_25() {
     if (Companion_instance_10 == null)
       new Companion_10();
     return Companion_instance_10;
@@ -4225,7 +4249,7 @@
     return actualStampedPathEffect(shape, advance, phase, style);
   };
   var Companion_instance_11;
-  function Companion_getInstance_25() {
+  function Companion_getInstance_26() {
     if (Companion_instance_11 == null)
       new Companion_11();
     return Companion_instance_11;
@@ -4254,13 +4278,13 @@
     return this.Morph_1;
   };
   var Companion_instance_12;
-  function Companion_getInstance_26() {
+  function Companion_getInstance_27() {
     if (Companion_instance_12 == null)
       new Companion_12();
     return Companion_instance_12;
   }
   function StampedPathEffectStyle__toString_impl_nfgepk($this) {
-    return $this === Companion_getInstance_26().Translate_1 ? 'Translate' : $this === Companion_getInstance_26().Rotate_1 ? 'Rotate' : $this === Companion_getInstance_26().Morph_1 ? 'Morph' : 'Unknown';
+    return $this === Companion_getInstance_27().Translate_1 ? 'Translate' : $this === Companion_getInstance_27().Rotate_1 ? 'Rotate' : $this === Companion_getInstance_27().Morph_1 ? 'Morph' : 'Unknown';
   }
   function StampedPathEffectStyle__hashCode_impl_puhqgp($this) {
     return $this;
@@ -4273,7 +4297,7 @@
     return true;
   }
   function StampedPathEffectStyle(value) {
-    Companion_getInstance_26();
+    Companion_getInstance_27();
     this.value_1 = value;
   }
   protoOf(StampedPathEffectStyle).toString = function () {
@@ -4303,13 +4327,13 @@
     return this.EvenOdd_1;
   };
   var Companion_instance_13;
-  function Companion_getInstance_27() {
+  function Companion_getInstance_28() {
     if (Companion_instance_13 == null)
       new Companion_13();
     return Companion_instance_13;
   }
   function PathFillType__toString_impl_nw7h1d($this) {
-    return $this === Companion_getInstance_27().NonZero_1 ? 'NonZero' : $this === Companion_getInstance_27().EvenOdd_1 ? 'EvenOdd' : 'Unknown';
+    return $this === Companion_getInstance_28().NonZero_1 ? 'NonZero' : $this === Companion_getInstance_28().EvenOdd_1 ? 'EvenOdd' : 'Unknown';
   }
   function PathFillType__hashCode_impl_pdqo4w($this) {
     return $this;
@@ -4322,7 +4346,7 @@
     return true;
   }
   function PathFillType(value) {
-    Companion_getInstance_27();
+    Companion_getInstance_28();
     this.value_1 = value;
   }
   protoOf(PathFillType).toString = function () {
@@ -4366,13 +4390,13 @@
     return this.ReverseDifference_1;
   };
   var Companion_instance_14;
-  function Companion_getInstance_28() {
+  function Companion_getInstance_29() {
     if (Companion_instance_14 == null)
       new Companion_14();
     return Companion_instance_14;
   }
   function PathOperation__toString_impl_z2c7a9($this) {
-    return $this === Companion_getInstance_28().Difference_1 ? 'Difference' : $this === Companion_getInstance_28().Intersect_1 ? 'Intersect' : $this === Companion_getInstance_28().Union_1 ? 'Union' : $this === Companion_getInstance_28().Xor_1 ? 'Xor' : $this === Companion_getInstance_28().ReverseDifference_1 ? 'ReverseDifference' : 'Unknown';
+    return $this === Companion_getInstance_29().Difference_1 ? 'Difference' : $this === Companion_getInstance_29().Intersect_1 ? 'Intersect' : $this === Companion_getInstance_29().Union_1 ? 'Union' : $this === Companion_getInstance_29().Xor_1 ? 'Xor' : $this === Companion_getInstance_29().ReverseDifference_1 ? 'ReverseDifference' : 'Unknown';
   }
   function PathOperation__hashCode_impl_e7lxw0($this) {
     return $this;
@@ -4385,7 +4409,7 @@
     return true;
   }
   function PathOperation(value) {
-    Companion_getInstance_28();
+    Companion_getInstance_29();
     this.value_1 = value;
   }
   protoOf(PathOperation).toString = function () {
@@ -4419,13 +4443,13 @@
     return this.Polygon_1;
   };
   var Companion_instance_15;
-  function Companion_getInstance_29() {
+  function Companion_getInstance_30() {
     if (Companion_instance_15 == null)
       new Companion_15();
     return Companion_instance_15;
   }
   function PointMode__toString_impl_nuk5g2($this) {
-    return $this === Companion_getInstance_29().Points_1 ? 'Points' : $this === Companion_getInstance_29().Lines_1 ? 'Lines' : $this === Companion_getInstance_29().Polygon_1 ? 'Polygon' : 'Unknown';
+    return $this === Companion_getInstance_30().Points_1 ? 'Points' : $this === Companion_getInstance_30().Lines_1 ? 'Lines' : $this === Companion_getInstance_30().Polygon_1 ? 'Polygon' : 'Unknown';
   }
   function PointMode__hashCode_impl_pfdzq7($this) {
     return $this;
@@ -4438,7 +4462,7 @@
     return true;
   }
   function PointMode(value) {
-    Companion_getInstance_29();
+    Companion_getInstance_30();
     this.value_1 = value;
   }
   protoOf(PointMode).toString = function () {
@@ -4472,12 +4496,12 @@
   }
   function LinearGradientShader(from, to, colors, colorStops, tileMode) {
     colorStops = colorStops === VOID ? null : colorStops;
-    tileMode = tileMode === VOID ? Companion_getInstance_33().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
     return ActualLinearGradientShader(from, to, colors, colorStops, tileMode);
   }
   function RadialGradientShader(center, radius, colors, colorStops, tileMode) {
     colorStops = colorStops === VOID ? null : colorStops;
-    tileMode = tileMode === VOID ? Companion_getInstance_33().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
     return ActualRadialGradientShader(center, radius, colors, colorStops, tileMode);
   }
   function SweepGradientShader(center, colors, colorStops) {
@@ -4492,15 +4516,15 @@
     return this.None_1;
   };
   var Companion_instance_16;
-  function Companion_getInstance_30() {
+  function Companion_getInstance_31() {
     if (Companion_instance_16 == null)
       new Companion_16();
     return Companion_instance_16;
   }
   function Shadow(color, offset, blurRadius) {
-    Companion_getInstance_30();
+    Companion_getInstance_31();
     color = color === VOID ? Color_1(new Long(-16777216, 0)) : color;
-    offset = offset === VOID ? Companion_getInstance().get_Zero_sctq3f_k$() : offset;
+    offset = offset === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : offset;
     blurRadius = blurRadius === VOID ? 0.0 : blurRadius;
     this.color_1 = color;
     this.offset_1 = offset;
@@ -4573,13 +4597,13 @@
     return this.Square_1;
   };
   var Companion_instance_17;
-  function Companion_getInstance_31() {
+  function Companion_getInstance_32() {
     if (Companion_instance_17 == null)
       new Companion_17();
     return Companion_instance_17;
   }
   function StrokeCap__toString_impl_3xn0rd($this) {
-    return $this === Companion_getInstance_31().Butt_1 ? 'Butt' : $this === Companion_getInstance_31().Round_1 ? 'Round' : $this === Companion_getInstance_31().Square_1 ? 'Square' : 'Unknown';
+    return $this === Companion_getInstance_32().Butt_1 ? 'Butt' : $this === Companion_getInstance_32().Round_1 ? 'Round' : $this === Companion_getInstance_32().Square_1 ? 'Square' : 'Unknown';
   }
   function StrokeCap__hashCode_impl_posxk8($this) {
     return $this;
@@ -4592,7 +4616,7 @@
     return true;
   }
   function StrokeCap(value) {
-    Companion_getInstance_31();
+    Companion_getInstance_32();
     this.value_1 = value;
   }
   protoOf(StrokeCap).toString = function () {
@@ -4626,13 +4650,13 @@
     return this.Bevel_1;
   };
   var Companion_instance_18;
-  function Companion_getInstance_32() {
+  function Companion_getInstance_33() {
     if (Companion_instance_18 == null)
       new Companion_18();
     return Companion_instance_18;
   }
   function StrokeJoin__toString_impl_ph4e1r($this) {
-    return $this === Companion_getInstance_32().Miter_1 ? 'Miter' : $this === Companion_getInstance_32().Round_1 ? 'Round' : $this === Companion_getInstance_32().Bevel_1 ? 'Bevel' : 'Unknown';
+    return $this === Companion_getInstance_33().Miter_1 ? 'Miter' : $this === Companion_getInstance_33().Round_1 ? 'Round' : $this === Companion_getInstance_33().Bevel_1 ? 'Bevel' : 'Unknown';
   }
   function StrokeJoin__hashCode_impl_3pyh8w($this) {
     return $this;
@@ -4645,7 +4669,7 @@
     return true;
   }
   function StrokeJoin(value) {
-    Companion_getInstance_32();
+    Companion_getInstance_33();
     this.value_1 = value;
   }
   protoOf(StrokeJoin).toString = function () {
@@ -4683,13 +4707,13 @@
     return this.Decal_1;
   };
   var Companion_instance_19;
-  function Companion_getInstance_33() {
+  function Companion_getInstance_34() {
     if (Companion_instance_19 == null)
       new Companion_19();
     return Companion_instance_19;
   }
   function TileMode__toString_impl_tlb7f4($this) {
-    return $this === Companion_getInstance_33().Clamp_1 ? 'Clamp' : $this === Companion_getInstance_33().Repeated_1 ? 'Repeated' : $this === Companion_getInstance_33().Mirror_1 ? 'Mirror' : $this === Companion_getInstance_33().Decal_1 ? 'Decal' : 'Unknown';
+    return $this === Companion_getInstance_34().Clamp_1 ? 'Clamp' : $this === Companion_getInstance_34().Repeated_1 ? 'Repeated' : $this === Companion_getInstance_34().Mirror_1 ? 'Mirror' : $this === Companion_getInstance_34().Decal_1 ? 'Decal' : 'Unknown';
   }
   function TileMode__hashCode_impl_7u5am9($this) {
     return $this;
@@ -4702,7 +4726,7 @@
     return true;
   }
   function TileMode(value) {
-    Companion_getInstance_33();
+    Companion_getInstance_34();
     this.value_1 = value;
   }
   protoOf(TileMode).toString = function () {
@@ -4736,13 +4760,13 @@
     return this.TriangleFan_1;
   };
   var Companion_instance_20;
-  function Companion_getInstance_34() {
+  function Companion_getInstance_35() {
     if (Companion_instance_20 == null)
       new Companion_20();
     return Companion_instance_20;
   }
   function VertexMode__toString_impl_ujymw6($this) {
-    return $this === Companion_getInstance_34().Triangles_1 ? 'Triangles' : $this === Companion_getInstance_34().TriangleStrip_1 ? 'TriangleStrip' : $this === Companion_getInstance_34().TriangleFan_1 ? 'TriangleFan' : 'Unknown';
+    return $this === Companion_getInstance_35().Triangles_1 ? 'Triangles' : $this === Companion_getInstance_35().TriangleStrip_1 ? 'TriangleStrip' : $this === Companion_getInstance_35().TriangleFan_1 ? 'TriangleFan' : 'Unknown';
   }
   function VertexMode__hashCode_impl_ipzia3($this) {
     return $this;
@@ -4755,7 +4779,7 @@
     return true;
   }
   function VertexMode(value) {
-    Companion_getInstance_34();
+    Companion_getInstance_35();
     this.value_1 = value;
   }
   protoOf(VertexMode).toString = function () {
@@ -4908,13 +4932,13 @@
     return this.Ciecat02__1;
   };
   var Companion_instance_21;
-  function Companion_getInstance_35() {
+  function Companion_getInstance_36() {
     if (Companion_instance_21 == null)
       new Companion_21();
     return Companion_instance_21;
   }
   function Adaptation(transform) {
-    Companion_getInstance_35();
+    Companion_getInstance_36();
     this.transform_1 = transform;
   }
   protoOf(Adaptation).get_transform_px941v_k$ = function () {
@@ -4966,13 +4990,13 @@
     return this.Cmyk_1;
   };
   var Companion_instance_22;
-  function Companion_getInstance_36() {
+  function Companion_getInstance_37() {
     if (Companion_instance_22 == null)
       new Companion_22();
     return Companion_instance_22;
   }
   function ColorModel__toString_impl_msukd7($this) {
-    return equals($this, Companion_getInstance_36().Rgb_1) ? 'Rgb' : equals($this, Companion_getInstance_36().Xyz_1) ? 'Xyz' : equals($this, Companion_getInstance_36().Lab_1) ? 'Lab' : equals($this, Companion_getInstance_36().Cmyk_1) ? 'Cmyk' : 'Unknown';
+    return equals($this, Companion_getInstance_37().Rgb_1) ? 'Rgb' : equals($this, Companion_getInstance_37().Xyz_1) ? 'Xyz' : equals($this, Companion_getInstance_37().Lab_1) ? 'Lab' : equals($this, Companion_getInstance_37().Cmyk_1) ? 'Cmyk' : 'Unknown';
   }
   function ColorModel__hashCode_impl_11onkc($this) {
     return $this.hashCode();
@@ -4986,7 +5010,7 @@
     return true;
   }
   function ColorModel(packedValue) {
-    Companion_getInstance_36();
+    Companion_getInstance_37();
     this.packedValue_1 = packedValue;
   }
   protoOf(ColorModel).toString = function () {
@@ -4999,7 +5023,7 @@
     return ColorModel__equals_impl_dbkfqg(this.packedValue_1, other);
   };
   function ColorSpace_init_$Init$(name, model, $this) {
-    Companion_getInstance_37();
+    Companion_getInstance_38();
     ColorSpace.call($this, name, model, -1);
     return $this;
   }
@@ -5018,13 +5042,13 @@
     return this.MaxId_1;
   };
   var Companion_instance_23;
-  function Companion_getInstance_37() {
+  function Companion_getInstance_38() {
     if (Companion_instance_23 == null)
       new Companion_23();
     return Companion_instance_23;
   }
   function ColorSpace(name, model, id) {
-    Companion_getInstance_37();
+    Companion_getInstance_38();
     this.name_1 = name;
     this.model_1 = model;
     this.id_1 = id;
@@ -5034,16 +5058,16 @@
       throw IllegalArgumentException_init_$Create$('The name of a color space cannot be null and must contain at least 1 character');
     }
     var tmp;
-    Companion_getInstance_37();
+    Companion_getInstance_38();
     if (this.id_1 < -1) {
       tmp = true;
     } else {
-      Companion_getInstance_37();
+      Companion_getInstance_38();
       tmp = this.id_1 > 63;
     }
     if (tmp) {
-      Companion_getInstance_37();
-      Companion_getInstance_37();
+      Companion_getInstance_38();
+      Companion_getInstance_38();
       throw IllegalArgumentException_init_$Create$('The id must be between ' + -1 + ' and ' + 63);
     }
   }
@@ -5115,22 +5139,22 @@
   };
   function connect(_this__u8e3s4, destination, intent) {
     destination = destination === VOID ? ColorSpaces_getInstance().get_Srgb_woa2g3_k$() : destination;
-    intent = intent === VOID ? Companion_getInstance_41().get_Perceptual_20219r_k$() : intent;
+    intent = intent === VOID ? Companion_getInstance_42().get_Perceptual_20219r_k$() : intent;
     if (_this__u8e3s4 === ColorSpaces_getInstance().get_Srgb_woa2g3_k$()) {
       if (destination === ColorSpaces_getInstance().get_Srgb_woa2g3_k$()) {
-        return Companion_getInstance_38().get_SrgbIdentity_7ohf7j_k$();
+        return Companion_getInstance_39().get_SrgbIdentity_7ohf7j_k$();
       }
-      if (destination === ColorSpaces_getInstance().get_Oklab_ierso8_k$() ? intent === Companion_getInstance_41().get_Perceptual_20219r_k$() : false) {
-        return Companion_getInstance_38().get_SrgbToOklabPerceptual_ubj5w0_k$();
+      if (destination === ColorSpaces_getInstance().get_Oklab_ierso8_k$() ? intent === Companion_getInstance_42().get_Perceptual_20219r_k$() : false) {
+        return Companion_getInstance_39().get_SrgbToOklabPerceptual_ubj5w0_k$();
       }
-    } else if ((_this__u8e3s4 === ColorSpaces_getInstance().get_Oklab_ierso8_k$() ? destination === ColorSpaces_getInstance().get_Srgb_woa2g3_k$() : false) ? intent === Companion_getInstance_41().get_Perceptual_20219r_k$() : false) {
-      return Companion_getInstance_38().get_OklabToSrgbPerceptual_iguhs6_k$();
+    } else if ((_this__u8e3s4 === ColorSpaces_getInstance().get_Oklab_ierso8_k$() ? destination === ColorSpaces_getInstance().get_Srgb_woa2g3_k$() : false) ? intent === Companion_getInstance_42().get_Perceptual_20219r_k$() : false) {
+      return Companion_getInstance_39().get_OklabToSrgbPerceptual_iguhs6_k$();
     }
     if (_this__u8e3s4 === destination) {
-      return Companion_getInstance_38().identity_orxv0l_k$(_this__u8e3s4);
+      return Companion_getInstance_39().identity_orxv0l_k$(_this__u8e3s4);
     }
     var tmp;
-    if (equals(_this__u8e3s4.model_1, Companion_getInstance_36().get_Rgb_hxm2yj_k$()) ? equals(destination.model_1, Companion_getInstance_36().get_Rgb_hxm2yj_k$()) : false) {
+    if (equals(_this__u8e3s4.model_1, Companion_getInstance_37().get_Rgb_hxm2yj_k$()) ? equals(destination.model_1, Companion_getInstance_37().get_Rgb_hxm2yj_k$()) : false) {
       var tmp_0 = _this__u8e3s4 instanceof Rgb ? _this__u8e3s4 : THROW_CCE();
       tmp = new RgbConnector(tmp_0, destination instanceof Rgb ? destination : THROW_CCE(), intent);
     } else {
@@ -5145,8 +5169,8 @@
     return withSign(response(x < 0.0 ? -x : x, a, b, c, d, g), x);
   }
   function adapt(_this__u8e3s4, whitePoint, adaptation) {
-    adaptation = adaptation === VOID ? Companion_getInstance_35().get_Bradford_vb0mll_k$() : adaptation;
-    if (equals(_this__u8e3s4.model_1, Companion_getInstance_36().get_Rgb_hxm2yj_k$())) {
+    adaptation = adaptation === VOID ? Companion_getInstance_36().get_Bradford_vb0mll_k$() : adaptation;
+    if (equals(_this__u8e3s4.model_1, Companion_getInstance_37().get_Rgb_hxm2yj_k$())) {
       var rgb = _this__u8e3s4 instanceof Rgb ? _this__u8e3s4 : THROW_CCE();
       if (compare_1(rgb.get_whitePoint_g4n5ow_k$(), whitePoint)) {
         return _this__u8e3s4;
@@ -5528,7 +5552,7 @@
     while (inductionVariable < last) {
       var colorSpace = indexedObject[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      if (equals(colorSpace.get_model_rk6821_k$(), Companion_getInstance_36().get_Rgb_hxm2yj_k$())) {
+      if (equals(colorSpace.get_model_rk6821_k$(), Companion_getInstance_37().get_Rgb_hxm2yj_k$())) {
         var tmp = adapt(colorSpace, Illuminant_getInstance().get_D50_18jwcq_k$());
         var rgb = tmp instanceof Rgb ? tmp : THROW_CCE();
         if (compare(toXYZD50, rgb.get_transform_px941v_k$()) ? compare_0(function_0, rgb.get_transferParameters_ak703m_k$()) : false) {
@@ -5568,7 +5592,7 @@
       var srcXYZ = source.get_whitePoint_g4n5ow_k$().toXyz_1tswm6_k$();
       var dstXYZ = destination.get_whitePoint_g4n5ow_k$().toXyz_1tswm6_k$();
       if (!compare_1(source.get_whitePoint_g4n5ow_k$(), Illuminant_getInstance().get_D50_18jwcq_k$())) {
-        var tmp = Companion_getInstance_35().get_Bradford_vb0mll_k$().get_transform_px941v_k$();
+        var tmp = Companion_getInstance_36().get_Bradford_vb0mll_k$().get_transform_px941v_k$();
         var tmp$ret$1;
         // Inline function 'kotlin.collections.copyOf' call
         // Inline function 'kotlin.js.asDynamic' call
@@ -5577,7 +5601,7 @@
         transform = mul3x3(srcAdaptation, source.get_transform_px941v_k$());
       }
       if (!compare_1(destination.get_whitePoint_g4n5ow_k$(), Illuminant_getInstance().get_D50_18jwcq_k$())) {
-        var tmp_0 = Companion_getInstance_35().get_Bradford_vb0mll_k$().get_transform_px941v_k$();
+        var tmp_0 = Companion_getInstance_36().get_Bradford_vb0mll_k$().get_transform_px941v_k$();
         var tmp$ret$3;
         // Inline function 'kotlin.collections.copyOf' call
         // Inline function 'kotlin.js.asDynamic' call
@@ -5585,7 +5609,7 @@
         var dstAdaptation = chromaticAdaptation(tmp_0, dstXYZ, tmp$ret$3);
         inverseTransform = inverse3x3(mul3x3(dstAdaptation, destination.get_transform_px941v_k$()));
       }
-      if (intent === Companion_getInstance_41().get_Absolute_4abvrf_k$()) {
+      if (intent === Companion_getInstance_42().get_Absolute_4abvrf_k$()) {
         var tmp$ret$4;
         // Inline function 'kotlin.floatArrayOf' call
         tmp$ret$4 = new Float32Array([srcXYZ[0] / dstXYZ[0], srcXYZ[1] / dstXYZ[1], srcXYZ[2] / dstXYZ[2]]);
@@ -5595,10 +5619,10 @@
     }
   }
   function computeTransform_0($this, source, destination, intent) {
-    if (!(intent === Companion_getInstance_41().get_Absolute_4abvrf_k$()))
+    if (!(intent === Companion_getInstance_42().get_Absolute_4abvrf_k$()))
       return null;
-    var srcRGB = equals(source.get_model_rk6821_k$(), Companion_getInstance_36().get_Rgb_hxm2yj_k$());
-    var dstRGB = equals(destination.get_model_rk6821_k$(), Companion_getInstance_36().get_Rgb_hxm2yj_k$());
+    var srcRGB = equals(source.get_model_rk6821_k$(), Companion_getInstance_37().get_Rgb_hxm2yj_k$());
+    var dstRGB = equals(destination.get_model_rk6821_k$(), Companion_getInstance_37().get_Rgb_hxm2yj_k$());
     if (srcRGB ? dstRGB : false)
       return null;
     if (srcRGB ? true : dstRGB) {
@@ -5612,7 +5636,7 @@
     return null;
   }
   function Connector$Companion$identity$1($source) {
-    Connector_init_$Init$($source, $source, Companion_getInstance_41().get_Relative_yydwow_k$(), this);
+    Connector_init_$Init$($source, $source, Companion_getInstance_42().get_Relative_yydwow_k$(), this);
   }
   protoOf(Connector$Companion$identity$1).transform_aitls9_k$ = function (v) {
     return v;
@@ -5630,14 +5654,14 @@
     return $this.transform_1;
   }
   function Connector_init_$Init$(source, destination, intent, $this) {
-    var tmp = equals(source.get_model_rk6821_k$(), Companion_getInstance_36().get_Rgb_hxm2yj_k$()) ? adapt(source, Illuminant_getInstance().get_D50_18jwcq_k$()) : source;
+    var tmp = equals(source.get_model_rk6821_k$(), Companion_getInstance_37().get_Rgb_hxm2yj_k$()) ? adapt(source, Illuminant_getInstance().get_D50_18jwcq_k$()) : source;
     var tmp_0;
-    if (equals(destination.get_model_rk6821_k$(), Companion_getInstance_36().get_Rgb_hxm2yj_k$())) {
+    if (equals(destination.get_model_rk6821_k$(), Companion_getInstance_37().get_Rgb_hxm2yj_k$())) {
       tmp_0 = adapt(destination, Illuminant_getInstance().get_D50_18jwcq_k$());
     } else {
       tmp_0 = destination;
     }
-    Connector.call($this, source, destination, tmp, tmp_0, intent, computeTransform_0(Companion_getInstance_38(), source, destination, intent));
+    Connector.call($this, source, destination, tmp, tmp_0, intent, computeTransform_0(Companion_getInstance_39(), source, destination, intent));
     return $this;
   }
   function Connector_init_$Create$(source, destination, intent) {
@@ -5674,8 +5698,8 @@
   function Companion_24() {
     Companion_instance_24 = this;
     this.SrgbIdentity_1 = this.identity_orxv0l_k$(ColorSpaces_getInstance().get_Srgb_woa2g3_k$());
-    this.SrgbToOklabPerceptual_1 = Connector_init_$Create$(ColorSpaces_getInstance().get_Srgb_woa2g3_k$(), ColorSpaces_getInstance().get_Oklab_ierso8_k$(), Companion_getInstance_41().get_Perceptual_20219r_k$());
-    this.OklabToSrgbPerceptual_1 = Connector_init_$Create$(ColorSpaces_getInstance().get_Oklab_ierso8_k$(), ColorSpaces_getInstance().get_Srgb_woa2g3_k$(), Companion_getInstance_41().get_Perceptual_20219r_k$());
+    this.SrgbToOklabPerceptual_1 = Connector_init_$Create$(ColorSpaces_getInstance().get_Srgb_woa2g3_k$(), ColorSpaces_getInstance().get_Oklab_ierso8_k$(), Companion_getInstance_42().get_Perceptual_20219r_k$());
+    this.OklabToSrgbPerceptual_1 = Connector_init_$Create$(ColorSpaces_getInstance().get_Oklab_ierso8_k$(), ColorSpaces_getInstance().get_Srgb_woa2g3_k$(), Companion_getInstance_42().get_Perceptual_20219r_k$());
   }
   protoOf(Companion_24).identity_orxv0l_k$ = function (source) {
     return new Connector$Companion$identity$1(source);
@@ -5690,13 +5714,13 @@
     return this.OklabToSrgbPerceptual_1;
   };
   var Companion_instance_24;
-  function Companion_getInstance_38() {
+  function Companion_getInstance_39() {
     if (Companion_instance_24 == null)
       new Companion_24();
     return Companion_instance_24;
   }
   function Connector(source, destination, transformSource, transformDestination, renderIntent, transform) {
-    Companion_getInstance_38();
+    Companion_getInstance_39();
     this.source_1 = source;
     this.destination_1 = destination;
     this.transformSource_1 = transformSource;
@@ -5819,14 +5843,14 @@
     this.D_1 = 0.20689656;
   }
   var Companion_instance_25;
-  function Companion_getInstance_39() {
+  function Companion_getInstance_40() {
     if (Companion_instance_25 == null)
       new Companion_25();
     return Companion_instance_25;
   }
   function Lab(name, id) {
-    Companion_getInstance_39();
-    ColorSpace.call(this, name, Companion_getInstance_36().get_Lab_uzchff_k$(), id);
+    Companion_getInstance_40();
+    ColorSpace.call(this, name, Companion_getInstance_37().get_Lab_uzchff_k$(), id);
   }
   protoOf(Lab).get_isWideGamut_oxj4to_k$ = function () {
     return true;
@@ -5845,35 +5869,35 @@
     var fx = fy + v[1] * 0.002;
     var fz = fy - v[2] * 0.005;
     var tmp;
-    Companion_getInstance_39();
+    Companion_getInstance_40();
     if (fx > 0.20689656) {
       tmp = fx * fx * fx;
     } else {
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       var tmp_0 = 1.0 / 7.787037;
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       tmp = tmp_0 * (fx - 0.13793103);
     }
     var x = tmp;
     var tmp_1;
-    Companion_getInstance_39();
+    Companion_getInstance_40();
     if (fy > 0.20689656) {
       tmp_1 = fy * fy * fy;
     } else {
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       var tmp_2 = 1.0 / 7.787037;
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       tmp_1 = tmp_2 * (fy - 0.13793103);
     }
     var y = tmp_1;
     var tmp_3;
-    Companion_getInstance_39();
+    Companion_getInstance_40();
     if (fz > 0.20689656) {
       tmp_3 = fz * fz * fz;
     } else {
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       var tmp_4 = 1.0 / 7.787037;
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       tmp_3 = tmp_4 * (fz - 0.13793103);
     }
     var z = tmp_3;
@@ -5888,24 +5912,24 @@
     var fy = (v00 + 16.0) / 116.0;
     var fx = fy + v10 * 0.002;
     var tmp;
-    Companion_getInstance_39();
+    Companion_getInstance_40();
     if (fx > 0.20689656) {
       tmp = fx * fx * fx;
     } else {
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       var tmp_0 = 1.0 / 7.787037;
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       tmp = tmp_0 * (fx - 0.13793103);
     }
     var x = tmp;
     var tmp_1;
-    Companion_getInstance_39();
+    Companion_getInstance_40();
     if (fy > 0.20689656) {
       tmp_1 = fy * fy * fy;
     } else {
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       var tmp_2 = 1.0 / 7.787037;
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       tmp_1 = tmp_2 * (fy - 0.13793103);
     }
     var y = tmp_1;
@@ -5922,13 +5946,13 @@
     var fy = (v00 + 16.0) / 116.0;
     var fz = fy - v20 * 0.005;
     var tmp;
-    Companion_getInstance_39();
+    Companion_getInstance_40();
     if (fz > 0.20689656) {
       tmp = fz * fz * fz;
     } else {
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       var tmp_0 = 1.0 / 7.787037;
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       tmp = tmp_0 * (fz - 0.13793103);
     }
     var z = tmp;
@@ -5939,41 +5963,41 @@
     var y1 = y / Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[1];
     var z1 = z / Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[2];
     var tmp;
-    Companion_getInstance_39();
+    Companion_getInstance_40();
     if (x1 > 0.008856452) {
       // Inline function 'kotlin.math.pow' call
       var tmp0_pow = 1.0 / 3.0;
       tmp = Math.pow(x1, tmp0_pow);
     } else {
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       var tmp_0 = 7.787037 * x1;
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       tmp = tmp_0 + 0.13793103;
     }
     var fx = tmp;
     var tmp_1;
-    Companion_getInstance_39();
+    Companion_getInstance_40();
     if (y1 > 0.008856452) {
       // Inline function 'kotlin.math.pow' call
       var tmp1_pow = 1.0 / 3.0;
       tmp_1 = Math.pow(y1, tmp1_pow);
     } else {
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       var tmp_2 = 7.787037 * y1;
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       tmp_1 = tmp_2 + 0.13793103;
     }
     var fy = tmp_1;
     var tmp_3;
-    Companion_getInstance_39();
+    Companion_getInstance_40();
     if (z1 > 0.008856452) {
       // Inline function 'kotlin.math.pow' call
       var tmp2_pow = 1.0 / 3.0;
       tmp_3 = Math.pow(z1, tmp2_pow);
     } else {
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       var tmp_4 = 7.787037 * z1;
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       tmp_3 = tmp_4 + 0.13793103;
     }
     var fz = tmp_3;
@@ -5987,41 +6011,41 @@
     var y = v[1] / Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[1];
     var z = v[2] / Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[2];
     var tmp;
-    Companion_getInstance_39();
+    Companion_getInstance_40();
     if (x > 0.008856452) {
       // Inline function 'kotlin.math.pow' call
       var tmp0_pow = 1.0 / 3.0;
       tmp = Math.pow(x, tmp0_pow);
     } else {
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       var tmp_0 = 7.787037 * x;
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       tmp = tmp_0 + 0.13793103;
     }
     var fx = tmp;
     var tmp_1;
-    Companion_getInstance_39();
+    Companion_getInstance_40();
     if (y > 0.008856452) {
       // Inline function 'kotlin.math.pow' call
       var tmp1_pow = 1.0 / 3.0;
       tmp_1 = Math.pow(y, tmp1_pow);
     } else {
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       var tmp_2 = 7.787037 * y;
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       tmp_1 = tmp_2 + 0.13793103;
     }
     var fy = tmp_1;
     var tmp_3;
-    Companion_getInstance_39();
+    Companion_getInstance_40();
     if (z > 0.008856452) {
       // Inline function 'kotlin.math.pow' call
       var tmp2_pow = 1.0 / 3.0;
       tmp_3 = Math.pow(z, tmp2_pow);
     } else {
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       var tmp_4 = 7.787037 * z;
-      Companion_getInstance_39();
+      Companion_getInstance_40();
       tmp_3 = tmp_4 + 0.13793103;
     }
     var fz = tmp_3;
@@ -6051,7 +6075,7 @@
     var tmp$ret$0;
     // Inline function 'kotlin.floatArrayOf' call
     tmp$ret$0 = new Float32Array([0.818933, 0.032984544, 0.0482003, 0.36186674, 0.9293119, 0.26436627, -0.12885971, 0.03614564, 0.6338517]);
-    tmp.M1__1 = mul3x3(tmp$ret$0, chromaticAdaptation(Companion_getInstance_35().get_Bradford_vb0mll_k$().get_transform_px941v_k$(), Illuminant_getInstance().get_D50_18jwcq_k$().toXyz_1tswm6_k$(), Illuminant_getInstance().get_D65_18jwbq_k$().toXyz_1tswm6_k$()));
+    tmp.M1__1 = mul3x3(tmp$ret$0, chromaticAdaptation(Companion_getInstance_36().get_Bradford_vb0mll_k$().get_transform_px941v_k$(), Illuminant_getInstance().get_D50_18jwcq_k$().toXyz_1tswm6_k$(), Illuminant_getInstance().get_D65_18jwbq_k$().toXyz_1tswm6_k$()));
     var tmp_0 = this;
     // Inline function 'kotlin.floatArrayOf' call
     tmp_0.M2__1 = new Float32Array([0.21045426, 1.9779985, 0.025904037, 0.7936178, -2.4285922, 0.78277177, -0.004072047, 0.4505937, -0.80867577]);
@@ -6059,14 +6083,14 @@
     this.InverseM2__1 = inverse3x3(this.M2__1);
   }
   var Companion_instance_26;
-  function Companion_getInstance_40() {
+  function Companion_getInstance_41() {
     if (Companion_instance_26 == null)
       new Companion_26();
     return Companion_instance_26;
   }
   function Oklab(name, id) {
-    Companion_getInstance_40();
-    ColorSpace.call(this, name, Companion_getInstance_36().get_Lab_uzchff_k$(), id);
+    Companion_getInstance_41();
+    ColorSpace.call(this, name, Companion_getInstance_37().get_Lab_uzchff_k$(), id);
   }
   protoOf(Oklab).get_isWideGamut_oxj4to_k$ = function () {
     return true;
@@ -6081,25 +6105,25 @@
     v[0] = coerceIn(v[0], 0.0, 1.0);
     v[1] = coerceIn(v[1], -0.5, 0.5);
     v[2] = coerceIn(v[2], -0.5, 0.5);
-    mul3x3Float3(Companion_getInstance_40().InverseM2__1, v);
+    mul3x3Float3(Companion_getInstance_41().InverseM2__1, v);
     v[0] = v[0] * v[0] * v[0];
     v[1] = v[1] * v[1] * v[1];
     v[2] = v[2] * v[2] * v[2];
-    mul3x3Float3(Companion_getInstance_40().InverseM1__1, v);
+    mul3x3Float3(Companion_getInstance_41().InverseM1__1, v);
     return v;
   };
   protoOf(Oklab).toXy_sdu2b2_k$ = function (v0, v1, v2) {
     var v00 = coerceIn(v0, 0.0, 1.0);
     var v10 = coerceIn(v1, -0.5, 0.5);
     var v20 = coerceIn(v2, -0.5, 0.5);
-    var v01 = mul3x3Float3_0(Companion_getInstance_40().InverseM2__1, v00, v10, v20);
-    var v11 = mul3x3Float3_1(Companion_getInstance_40().InverseM2__1, v00, v10, v20);
-    var v21 = mul3x3Float3_2(Companion_getInstance_40().InverseM2__1, v00, v10, v20);
+    var v01 = mul3x3Float3_0(Companion_getInstance_41().InverseM2__1, v00, v10, v20);
+    var v11 = mul3x3Float3_1(Companion_getInstance_41().InverseM2__1, v00, v10, v20);
+    var v21 = mul3x3Float3_2(Companion_getInstance_41().InverseM2__1, v00, v10, v20);
     var v02 = v01 * v01 * v01;
     var v12 = v11 * v11 * v11;
     var v22 = v21 * v21 * v21;
-    var v03 = mul3x3Float3_0(Companion_getInstance_40().InverseM1__1, v02, v12, v22);
-    var v13 = mul3x3Float3_1(Companion_getInstance_40().InverseM1__1, v02, v12, v22);
+    var v03 = mul3x3Float3_0(Companion_getInstance_41().InverseM1__1, v02, v12, v22);
+    var v13 = mul3x3Float3_1(Companion_getInstance_41().InverseM1__1, v02, v12, v22);
     // Inline function 'androidx.compose.ui.util.packFloats' call
     var v1_0 = toLong(toBits(v03));
     var v2_0 = toLong(toBits(v13));
@@ -6109,19 +6133,19 @@
     var v00 = coerceIn(v0, 0.0, 1.0);
     var v10 = coerceIn(v1, -0.5, 0.5);
     var v20 = coerceIn(v2, -0.5, 0.5);
-    var v01 = mul3x3Float3_0(Companion_getInstance_40().InverseM2__1, v00, v10, v20);
-    var v11 = mul3x3Float3_1(Companion_getInstance_40().InverseM2__1, v00, v10, v20);
-    var v21 = mul3x3Float3_2(Companion_getInstance_40().InverseM2__1, v00, v10, v20);
+    var v01 = mul3x3Float3_0(Companion_getInstance_41().InverseM2__1, v00, v10, v20);
+    var v11 = mul3x3Float3_1(Companion_getInstance_41().InverseM2__1, v00, v10, v20);
+    var v21 = mul3x3Float3_2(Companion_getInstance_41().InverseM2__1, v00, v10, v20);
     var v02 = v01 * v01 * v01;
     var v12 = v11 * v11 * v11;
     var v22 = v21 * v21 * v21;
-    var v23 = mul3x3Float3_2(Companion_getInstance_40().InverseM1__1, v02, v12, v22);
+    var v23 = mul3x3Float3_2(Companion_getInstance_41().InverseM1__1, v02, v12, v22);
     return v23;
   };
   protoOf(Oklab).xyzaToColor_orha54_k$ = function (x, y, z, a, colorSpace) {
-    var v0 = mul3x3Float3_0(Companion_getInstance_40().M1__1, x, y, z);
-    var v1 = mul3x3Float3_1(Companion_getInstance_40().M1__1, x, y, z);
-    var v2 = mul3x3Float3_2(Companion_getInstance_40().M1__1, x, y, z);
+    var v0 = mul3x3Float3_0(Companion_getInstance_41().M1__1, x, y, z);
+    var v1 = mul3x3Float3_1(Companion_getInstance_41().M1__1, x, y, z);
+    var v2 = mul3x3Float3_2(Companion_getInstance_41().M1__1, x, y, z);
     // Inline function 'kotlin.math.sign' call
     var tmp0_sign = v0;
     var tmp = sign(tmp0_sign);
@@ -6149,13 +6173,13 @@
     var tmp10_pow = Math.abs(tmp9_abs);
     var tmp11_pow = 1.0 / 3.0;
     v2 = tmp_1 * Math.pow(tmp10_pow, tmp11_pow);
-    var v01 = mul3x3Float3_0(Companion_getInstance_40().M2__1, v0, v1, v2);
-    var v11 = mul3x3Float3_1(Companion_getInstance_40().M2__1, v0, v1, v2);
-    var v21 = mul3x3Float3_2(Companion_getInstance_40().M2__1, v0, v1, v2);
+    var v01 = mul3x3Float3_0(Companion_getInstance_41().M2__1, v0, v1, v2);
+    var v11 = mul3x3Float3_1(Companion_getInstance_41().M2__1, v0, v1, v2);
+    var v21 = mul3x3Float3_2(Companion_getInstance_41().M2__1, v0, v1, v2);
     return Color_0(v01, v11, v21, a, colorSpace);
   };
   protoOf(Oklab).fromXyz_idrdie_k$ = function (v) {
-    mul3x3Float3(Companion_getInstance_40().M1__1, v);
+    mul3x3Float3(Companion_getInstance_41().M1__1, v);
     // Inline function 'kotlin.math.sign' call
     var tmp0_sign = v[0];
     var tmp = sign(tmp0_sign);
@@ -6183,7 +6207,7 @@
     var tmp10_pow = Math.abs(tmp9_abs);
     var tmp11_pow = 1.0 / 3.0;
     v[2] = tmp_1 * Math.pow(tmp10_pow, tmp11_pow);
-    mul3x3Float3(Companion_getInstance_40().M2__1, v);
+    mul3x3Float3(Companion_getInstance_41().M2__1, v);
     return v;
   };
   function _RenderIntent___init__impl__jceahd(value) {
@@ -6212,13 +6236,13 @@
     return this.Absolute_1;
   };
   var Companion_instance_27;
-  function Companion_getInstance_41() {
+  function Companion_getInstance_42() {
     if (Companion_instance_27 == null)
       new Companion_27();
     return Companion_instance_27;
   }
   function RenderIntent__toString_impl_b479rl($this) {
-    return $this === Companion_getInstance_41().Perceptual_1 ? 'Perceptual' : $this === Companion_getInstance_41().Relative_1 ? 'Relative' : $this === Companion_getInstance_41().Saturation_1 ? 'Saturation' : $this === Companion_getInstance_41().Absolute_1 ? 'Absolute' : 'Unknown';
+    return $this === Companion_getInstance_42().Perceptual_1 ? 'Perceptual' : $this === Companion_getInstance_42().Relative_1 ? 'Relative' : $this === Companion_getInstance_42().Saturation_1 ? 'Saturation' : $this === Companion_getInstance_42().Absolute_1 ? 'Absolute' : 'Unknown';
   }
   function RenderIntent__hashCode_impl_wvd6kg($this) {
     return $this;
@@ -6231,7 +6255,7 @@
     return true;
   }
   function RenderIntent(value) {
-    Companion_getInstance_41();
+    Companion_getInstance_42();
     this.value_1 = value;
   }
   protoOf(RenderIntent).toString = function () {
@@ -6380,12 +6404,12 @@
     return $this.max_1;
   }
   function Rgb_init_$Init$(name, toXYZ, oetf, eotf, $this) {
-    var tmp = Companion_getInstance_42().computePrimaries_bmzsl0_k$(toXYZ);
-    var tmp_0 = computeWhitePoint(Companion_getInstance_42(), toXYZ);
+    var tmp = Companion_getInstance_43().computePrimaries_bmzsl0_k$(toXYZ);
+    var tmp_0 = computeWhitePoint(Companion_getInstance_43(), toXYZ);
     var tmp_1 = Rgb$_init_$lambda_yyl4se(oetf);
     var tmp_2 = new sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_3(tmp_1);
     var tmp_3 = Rgb$_init_$lambda_yyl4se_0(eotf);
-    Rgb.call($this, name, tmp, tmp_0, null, tmp_2, new sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_3(tmp_3), 0.0, 1.0, null, Companion_getInstance_37().get_MinId_idmyf8_k$());
+    Rgb.call($this, name, tmp, tmp_0, null, tmp_2, new sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_3(tmp_3), 0.0, 1.0, null, Companion_getInstance_38().get_MinId_idmyf8_k$());
     return $this;
   }
   function Rgb_init_$Create$(name, toXYZ, oetf, eotf) {
@@ -6395,21 +6419,21 @@
     var tmp = Rgb$_init_$lambda_yyl4se_1(oetf);
     var tmp_0 = new sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_4(tmp);
     var tmp_1 = Rgb$_init_$lambda_yyl4se_2(eotf);
-    Rgb.call($this, name, primaries, whitePoint, null, tmp_0, new sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_4(tmp_1), min, max, null, Companion_getInstance_37().get_MinId_idmyf8_k$());
+    Rgb.call($this, name, primaries, whitePoint, null, tmp_0, new sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_4(tmp_1), min, max, null, Companion_getInstance_38().get_MinId_idmyf8_k$());
     return $this;
   }
   function Rgb_init_$Create$_0(name, primaries, whitePoint, oetf, eotf, min, max) {
     return Rgb_init_$Init$_0(name, primaries, whitePoint, oetf, eotf, min, max, objectCreate(protoOf(Rgb)));
   }
   function Rgb_init_$Init$_1(name, toXYZ, function_0, $this) {
-    Rgb_init_$Init$_3(name, Companion_getInstance_42().computePrimaries_bmzsl0_k$(toXYZ), computeWhitePoint(Companion_getInstance_42(), toXYZ), function_0, Companion_getInstance_37().get_MinId_idmyf8_k$(), $this);
+    Rgb_init_$Init$_3(name, Companion_getInstance_43().computePrimaries_bmzsl0_k$(toXYZ), computeWhitePoint(Companion_getInstance_43(), toXYZ), function_0, Companion_getInstance_38().get_MinId_idmyf8_k$(), $this);
     return $this;
   }
   function Rgb_init_$Create$_1(name, toXYZ, function_0) {
     return Rgb_init_$Init$_1(name, toXYZ, function_0, objectCreate(protoOf(Rgb)));
   }
   function Rgb_init_$Init$_2(name, primaries, whitePoint, function_0, $this) {
-    Rgb_init_$Init$_3(name, primaries, whitePoint, function_0, Companion_getInstance_37().get_MinId_idmyf8_k$(), $this);
+    Rgb_init_$Init$_3(name, primaries, whitePoint, function_0, Companion_getInstance_38().get_MinId_idmyf8_k$(), $this);
     return $this;
   }
   function Rgb_init_$Create$_2(name, primaries, whitePoint, function_0) {
@@ -6440,14 +6464,14 @@
     return Rgb_init_$Init$_3(name, primaries, whitePoint, function_0, id, objectCreate(protoOf(Rgb)));
   }
   function Rgb_init_$Init$_4(name, toXYZ, gamma, $this) {
-    Rgb_init_$Init$_6(name, Companion_getInstance_42().computePrimaries_bmzsl0_k$(toXYZ), computeWhitePoint(Companion_getInstance_42(), toXYZ), gamma, 0.0, 1.0, Companion_getInstance_37().get_MinId_idmyf8_k$(), $this);
+    Rgb_init_$Init$_6(name, Companion_getInstance_43().computePrimaries_bmzsl0_k$(toXYZ), computeWhitePoint(Companion_getInstance_43(), toXYZ), gamma, 0.0, 1.0, Companion_getInstance_38().get_MinId_idmyf8_k$(), $this);
     return $this;
   }
   function Rgb_init_$Create$_4(name, toXYZ, gamma) {
     return Rgb_init_$Init$_4(name, toXYZ, gamma, objectCreate(protoOf(Rgb)));
   }
   function Rgb_init_$Init$_5(name, primaries, whitePoint, gamma, $this) {
-    Rgb_init_$Init$_6(name, primaries, whitePoint, gamma, 0.0, 1.0, Companion_getInstance_37().get_MinId_idmyf8_k$(), $this);
+    Rgb_init_$Init$_6(name, primaries, whitePoint, gamma, 0.0, 1.0, Companion_getInstance_38().get_MinId_idmyf8_k$(), $this);
     return $this;
   }
   function Rgb_init_$Create$_5(name, primaries, whitePoint, gamma) {
@@ -6456,7 +6480,7 @@
   function Rgb_init_$Init$_6(name, primaries, whitePoint, gamma, min, max, id, $this) {
     var tmp;
     if (gamma === 1.0) {
-      tmp = Companion_getInstance_42().DoubleIdentity_1;
+      tmp = Companion_getInstance_43().DoubleIdentity_1;
     } else {
       var tmp_0 = Rgb$_init_$lambda_yyl4se_7(gamma);
       tmp = new sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_6(tmp_0);
@@ -6464,7 +6488,7 @@
     var tmp_1 = tmp;
     var tmp_2;
     if (gamma === 1.0) {
-      tmp_2 = Companion_getInstance_42().DoubleIdentity_1;
+      tmp_2 = Companion_getInstance_43().DoubleIdentity_1;
     } else {
       var tmp_3 = Rgb$_init_$lambda_yyl4se_8(gamma);
       tmp_2 = new sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_6(tmp_3);
@@ -6476,7 +6500,7 @@
     return Rgb_init_$Init$_6(name, primaries, whitePoint, gamma, min, max, id, objectCreate(protoOf(Rgb)));
   }
   function Rgb_init_$Init$_7(colorSpace, transform, whitePoint, $this) {
-    Rgb.call($this, colorSpace.get_name_woqyms_k$(), colorSpace.primaries_1, whitePoint, transform, colorSpace.oetfOrig_1, colorSpace.eotfOrig_1, colorSpace.min_1, colorSpace.max_1, colorSpace.transferParameters_1, Companion_getInstance_37().get_MinId_idmyf8_k$());
+    Rgb.call($this, colorSpace.get_name_woqyms_k$(), colorSpace.primaries_1, whitePoint, transform, colorSpace.oetfOrig_1, colorSpace.eotfOrig_1, colorSpace.min_1, colorSpace.max_1, colorSpace.transferParameters_1, Companion_getInstance_38().get_MinId_idmyf8_k$());
     return $this;
   }
   function Rgb_init_$Create$_7(colorSpace, transform, whitePoint) {
@@ -6508,7 +6532,7 @@
     return new Float32Array([r[0] / rSum, r[1] / rSum, g[0] / gSum, g[1] / gSum, b[0] / bSum, b[1] / bSum]);
   };
   var Companion_instance_28;
-  function Companion_getInstance_42() {
+  function Companion_getInstance_43() {
     if (Companion_instance_28 == null)
       new Companion_28();
     return Companion_instance_28;
@@ -6629,8 +6653,8 @@
     };
   }
   function Rgb(name, primaries, whitePoint, transform, oetf, eotf, min, max, transferParameters, id) {
-    Companion_getInstance_42();
-    ColorSpace.call(this, name, Companion_getInstance_36().get_Rgb_hxm2yj_k$(), id);
+    Companion_getInstance_43();
+    ColorSpace.call(this, name, Companion_getInstance_37().get_Rgb_hxm2yj_k$(), id);
     this.whitePoint_1 = whitePoint;
     this.min_1 = min;
     this.max_1 = max;
@@ -6653,9 +6677,9 @@
     if (this.min_1 >= this.max_1) {
       throw IllegalArgumentException_init_$Create$('Invalid range: min=' + this.min_1 + ', max=' + this.max_1 + '; min must ' + 'be strictly < max');
     }
-    this.primaries_1 = xyPrimaries(Companion_getInstance_42(), primaries);
+    this.primaries_1 = xyPrimaries(Companion_getInstance_43(), primaries);
     if (transform == null) {
-      this.transform_1 = computeXYZMatrix(Companion_getInstance_42(), this.primaries_1, this.whitePoint_1);
+      this.transform_1 = computeXYZMatrix(Companion_getInstance_43(), this.primaries_1, this.whitePoint_1);
     } else {
       if (!(transform.length === 9)) {
         throw IllegalArgumentException_init_$Create$('Transform must have 9 entries! Has ' + ('' + transform.length));
@@ -6663,8 +6687,8 @@
       this.transform_1 = transform;
     }
     this.inverseTransform_1 = inverse3x3(this.transform_1);
-    this.isWideGamut_1 = isWideGamut(Companion_getInstance_42(), this.primaries_1, this.min_1, this.max_1);
-    this.isSrgb_1 = isSrgb(Companion_getInstance_42(), this.primaries_1, this.whitePoint_1, oetf, eotf, this.min_1, this.max_1, id);
+    this.isWideGamut_1 = isWideGamut(Companion_getInstance_43(), this.primaries_1, this.min_1, this.max_1);
+    this.isSrgb_1 = isSrgb(Companion_getInstance_43(), this.primaries_1, this.whitePoint_1, oetf, eotf, this.min_1, this.max_1, id);
   }
   protoOf(Rgb).get_whitePoint_g4n5ow_k$ = function () {
     return this.whitePoint_1;
@@ -7052,7 +7076,7 @@
     return coerceIn(x, -2.0, 2.0);
   }
   function Xyz(name, id) {
-    ColorSpace.call(this, name, Companion_getInstance_36().get_Xyz_dr76iv_k$(), id);
+    ColorSpace.call(this, name, Companion_getInstance_37().get_Xyz_dr76iv_k$(), id);
   }
   protoOf(Xyz).get_isWideGamut_oxj4to_k$ = function () {
     return true;
@@ -7115,7 +7139,7 @@
       var tmp0_apply = Paint_0();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.obtainFillPaint.<anonymous>' call
-      tmp0_apply.set_style_yrvwzh_k$(Companion_getInstance_23().get_Fill_xeknbt_k$());
+      tmp0_apply.set_style_yrvwzh_k$(Companion_getInstance_24().get_Fill_xeknbt_k$());
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.obtainFillPaint.<anonymous>' call
       $this.fillPaint_1 = tmp0_apply;
@@ -7134,7 +7158,7 @@
       var tmp0_apply = Paint_0();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.obtainStrokePaint.<anonymous>' call
-      tmp0_apply.set_style_yrvwzh_k$(Companion_getInstance_23().get_Stroke_dv2xoc_k$());
+      tmp0_apply.set_style_yrvwzh_k$(Companion_getInstance_24().get_Stroke_dv2xoc_k$());
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.obtainStrokePaint.<anonymous>' call
       $this.strokePaint_1 = tmp0_apply;
@@ -7198,7 +7222,7 @@
     return tmp0_apply;
   }
   function configurePaint$default($this, brush, style, alpha, colorFilter, blendMode, filterQuality, $super) {
-    filterQuality = filterQuality === VOID ? Companion_getInstance_43().get_DefaultFilterQuality_lpc3m8_k$() : filterQuality;
+    filterQuality = filterQuality === VOID ? Companion_getInstance_44().get_DefaultFilterQuality_lpc3m8_k$() : filterQuality;
     return configurePaint($this, brush, style, alpha, colorFilter, blendMode, filterQuality);
   }
   function configurePaint_0($this, color, style, alpha, colorFilter, blendMode, filterQuality) {
@@ -7225,7 +7249,7 @@
     return tmp0_apply;
   }
   function configurePaint$default_0($this, color, style, alpha, colorFilter, blendMode, filterQuality, $super) {
-    filterQuality = filterQuality === VOID ? Companion_getInstance_43().get_DefaultFilterQuality_lpc3m8_k$() : filterQuality;
+    filterQuality = filterQuality === VOID ? Companion_getInstance_44().get_DefaultFilterQuality_lpc3m8_k$() : filterQuality;
     return configurePaint_0($this, color, style, alpha, colorFilter, blendMode, filterQuality);
   }
   function configureStrokePaint($this, color, strokeWidth, miter, cap, join, pathEffect, alpha, colorFilter, blendMode, filterQuality) {
@@ -7267,7 +7291,7 @@
     return tmp0_apply;
   }
   function configureStrokePaint$default($this, color, strokeWidth, miter, cap, join, pathEffect, alpha, colorFilter, blendMode, filterQuality, $super) {
-    filterQuality = filterQuality === VOID ? Companion_getInstance_43().get_DefaultFilterQuality_lpc3m8_k$() : filterQuality;
+    filterQuality = filterQuality === VOID ? Companion_getInstance_44().get_DefaultFilterQuality_lpc3m8_k$() : filterQuality;
     return configureStrokePaint($this, color, strokeWidth, miter, cap, join, pathEffect, alpha, colorFilter, blendMode, filterQuality);
   }
   function configureStrokePaint_0($this, brush, strokeWidth, miter, cap, join, pathEffect, alpha, colorFilter, blendMode, filterQuality) {
@@ -7307,7 +7331,7 @@
     return tmp0_apply;
   }
   function configureStrokePaint$default_0($this, brush, strokeWidth, miter, cap, join, pathEffect, alpha, colorFilter, blendMode, filterQuality, $super) {
-    filterQuality = filterQuality === VOID ? Companion_getInstance_43().get_DefaultFilterQuality_lpc3m8_k$() : filterQuality;
+    filterQuality = filterQuality === VOID ? Companion_getInstance_44().get_DefaultFilterQuality_lpc3m8_k$() : filterQuality;
     return configureStrokePaint_0($this, brush, strokeWidth, miter, cap, join, pathEffect, alpha, colorFilter, blendMode, filterQuality);
   }
   function modulate(_this__u8e3s4, $this, alpha) {
@@ -7323,7 +7347,7 @@
     density = density === VOID ? get_DefaultDensity() : density;
     layoutDirection = layoutDirection === VOID ? LayoutDirection_Ltr_getInstance() : layoutDirection;
     canvas = canvas === VOID ? new EmptyCanvas() : canvas;
-    size = size === VOID ? Companion_getInstance_0().get_Zero_mv7bl9_k$() : size;
+    size = size === VOID ? Companion_getInstance().get_Zero_mv7bl9_k$() : size;
     this.density_1 = density;
     this.layoutDirection_1 = layoutDirection;
     this.canvas_1 = canvas;
@@ -7440,10 +7464,10 @@
     return this.drawContext_1;
   };
   protoOf(CanvasDrawScope).drawLine_94tzv7_k$ = function (brush, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawLine_uyv0nw_k$(start, end, configureStrokePaint$default_0(this, brush, strokeWidth, Companion_getInstance_44().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_32().get_Miter_rcwd8a_k$(), pathEffect, alpha, colorFilter, blendMode));
+    return this.drawParams_1.canvas_1.drawLine_uyv0nw_k$(start, end, configureStrokePaint$default_0(this, brush, strokeWidth, Companion_getInstance_45().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_33().get_Miter_rcwd8a_k$(), pathEffect, alpha, colorFilter, blendMode));
   };
   protoOf(CanvasDrawScope).drawLine_qcvbii_k$ = function (color, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawLine_uyv0nw_k$(start, end, configureStrokePaint$default(this, color, strokeWidth, Companion_getInstance_44().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_32().get_Miter_rcwd8a_k$(), pathEffect, alpha, colorFilter, blendMode));
+    return this.drawParams_1.canvas_1.drawLine_uyv0nw_k$(start, end, configureStrokePaint$default(this, color, strokeWidth, Companion_getInstance_45().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_33().get_Miter_rcwd8a_k$(), pathEffect, alpha, colorFilter, blendMode));
   };
   protoOf(CanvasDrawScope).drawRect_4jm64w_k$ = function (brush, topLeft, size, alpha, style, colorFilter, blendMode) {
     return this.drawParams_1.canvas_1.drawRect_iwqaze_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
@@ -7491,10 +7515,10 @@
     return this.drawParams_1.canvas_1.drawPath_843lu1_k$(path, configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
   };
   protoOf(CanvasDrawScope).drawPoints_tvcs0g_k$ = function (points, pointMode, color, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawPoints_7nk41w_k$(pointMode, points, configureStrokePaint$default(this, color, strokeWidth, Companion_getInstance_44().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_32().get_Miter_rcwd8a_k$(), pathEffect, alpha, colorFilter, blendMode));
+    return this.drawParams_1.canvas_1.drawPoints_7nk41w_k$(pointMode, points, configureStrokePaint$default(this, color, strokeWidth, Companion_getInstance_45().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_33().get_Miter_rcwd8a_k$(), pathEffect, alpha, colorFilter, blendMode));
   };
   protoOf(CanvasDrawScope).drawPoints_yexgjr_k$ = function (points, pointMode, brush, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawPoints_7nk41w_k$(pointMode, points, configureStrokePaint$default_0(this, brush, strokeWidth, Companion_getInstance_44().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_32().get_Miter_rcwd8a_k$(), pathEffect, alpha, colorFilter, blendMode));
+    return this.drawParams_1.canvas_1.drawPoints_7nk41w_k$(pointMode, points, configureStrokePaint$default_0(this, brush, strokeWidth, Companion_getInstance_45().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_33().get_Miter_rcwd8a_k$(), pathEffect, alpha, colorFilter, blendMode));
   };
   protoOf(CanvasDrawScope).draw_3qpj3e_k$ = function (density, layoutDirection, canvas, size, block) {
     var tmp0_container = this.drawParams_1;
@@ -7598,8 +7622,8 @@
   }
   function Companion_29() {
     Companion_instance_29 = this;
-    this.DefaultBlendMode_1 = Companion_getInstance_13().get_SrcOver_uyf80z_k$();
-    this.DefaultFilterQuality_1 = Companion_getInstance_18().get_Low_lx4az0_k$();
+    this.DefaultBlendMode_1 = Companion_getInstance_14().get_SrcOver_uyf80z_k$();
+    this.DefaultFilterQuality_1 = Companion_getInstance_19().get_Low_lx4az0_k$();
   }
   protoOf(Companion_29).get_DefaultBlendMode_8kor9s_k$ = function () {
     return this.DefaultBlendMode_1;
@@ -7608,7 +7632,7 @@
     return this.DefaultFilterQuality_1;
   };
   var Companion_instance_29;
-  function Companion_getInstance_43() {
+  function Companion_getInstance_44() {
     if (Companion_instance_29 == null)
       new Companion_29();
     return Companion_instance_29;
@@ -7629,8 +7653,8 @@
     Companion_instance_30 = this;
     this.HairlineWidth_1 = 0.0;
     this.DefaultMiter_1 = 4.0;
-    this.DefaultCap_1 = Companion_getInstance_31().get_Butt_vf89me_k$();
-    this.DefaultJoin_1 = Companion_getInstance_32().get_Miter_rcwd8a_k$();
+    this.DefaultCap_1 = Companion_getInstance_32().get_Butt_vf89me_k$();
+    this.DefaultJoin_1 = Companion_getInstance_33().get_Miter_rcwd8a_k$();
   }
   protoOf(Companion_30).get_HairlineWidth_tck213_k$ = function () {
     return this.HairlineWidth_1;
@@ -7645,24 +7669,24 @@
     return this.DefaultJoin_1;
   };
   var Companion_instance_30;
-  function Companion_getInstance_44() {
+  function Companion_getInstance_45() {
     if (Companion_instance_30 == null)
       new Companion_30();
     return Companion_instance_30;
   }
   function Stroke(width, miter, cap, join, pathEffect) {
-    Companion_getInstance_44();
+    Companion_getInstance_45();
     width = width === VOID ? 0.0 : width;
     var tmp;
     if (miter === VOID) {
-      Companion_getInstance_44();
+      Companion_getInstance_45();
       tmp = 4.0;
     } else {
       tmp = miter;
     }
     miter = tmp;
-    cap = cap === VOID ? Companion_getInstance_44().DefaultCap_1 : cap;
-    join = join === VOID ? Companion_getInstance_44().DefaultJoin_1 : join;
+    cap = cap === VOID ? Companion_getInstance_45().DefaultCap_1 : cap;
+    join = join === VOID ? Companion_getInstance_45().DefaultJoin_1 : join;
     pathEffect = pathEffect === VOID ? null : pathEffect;
     DrawStyle.call(this);
     this.width_1 = width;
@@ -7725,7 +7749,7 @@
     top = top === VOID ? 0.0 : top;
     right = right === VOID ? _Size___get_width__impl__58y75t(_this__u8e3s4.get_size_x9ctfw_k$()) : right;
     bottom = bottom === VOID ? _Size___get_height__impl__a04p02(_this__u8e3s4.get_size_x9ctfw_k$()) : bottom;
-    clipOp = clipOp === VOID ? Companion_getInstance_15().get_Intersect_ow3v69_k$() : clipOp;
+    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_ow3v69_k$() : clipOp;
     // Inline function 'androidx.compose.ui.graphics.drawscope.withTransform' call
     // Inline function 'kotlin.with' call
     var tmp0_with = _this__u8e3s4.get_drawContext_ffwztu_k$();
@@ -7868,6 +7892,106 @@
   protoOf(EmptyCanvas).disableZ_14frxd_k$ = function () {
     throw UnsupportedOperationException_init_$Create$();
   };
+  function _get_image__g3aecq($this) {
+    return $this.image_1;
+  }
+  function _get_srcOffset__o9rlgm($this) {
+    return $this.srcOffset_1;
+  }
+  function _get_srcSize__s1twoc($this) {
+    return $this.srcSize_1;
+  }
+  function _get_size__ddoh9m($this) {
+    return $this.size_1;
+  }
+  function _set_alpha__c56vtz($this, _set____db54di) {
+    $this.alpha_2 = _set____db54di;
+  }
+  function _get_alpha__jvxknh($this) {
+    return $this.alpha_2;
+  }
+  function _set_colorFilter__ke9voq($this, _set____db54di) {
+    $this.colorFilter_2 = _set____db54di;
+  }
+  function _get_colorFilter__kcfzyi($this) {
+    return $this.colorFilter_2;
+  }
+  function validateSize($this, srcOffset, srcSize) {
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(((((_IntOffset___get_x__impl__qiqr5o(srcOffset) >= 0 ? _IntOffset___get_y__impl__2avpwj(srcOffset) >= 0 : false) ? _IntSize___get_width__impl__d9yl4o(srcSize) >= 0 : false) ? _IntSize___get_height__impl__prv63b(srcSize) >= 0 : false) ? _IntSize___get_width__impl__d9yl4o(srcSize) <= $this.image_1.get_width_j0q4yl_k$() : false) ? _IntSize___get_height__impl__prv63b(srcSize) <= $this.image_1.get_height_e7t92o_k$() : false)) {
+      // Inline function 'kotlin.require.<anonymous>' call
+      var message = 'Failed requirement.';
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    return srcSize;
+  }
+  function BitmapPainter(image, srcOffset, srcSize) {
+    srcOffset = srcOffset === VOID ? Companion_getInstance_1().get_Zero_c6qc7y_k$() : srcOffset;
+    srcSize = srcSize === VOID ? IntSize(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()) : srcSize;
+    Painter.call(this);
+    this.image_1 = image;
+    this.srcOffset_1 = srcOffset;
+    this.srcSize_1 = srcSize;
+    this.filterQuality_1 = Companion_getInstance_19().get_Low_lx4az0_k$();
+    this.size_1 = validateSize(this, this.srcOffset_1, this.srcSize_1);
+    this.alpha_2 = 1.0;
+    this.colorFilter_2 = null;
+  }
+  protoOf(BitmapPainter).set_filterQuality_8e157j_k$ = function (_set____db54di) {
+    this.filterQuality_1 = _set____db54di;
+  };
+  protoOf(BitmapPainter).get_filterQuality_2xbue9_k$ = function () {
+    return this.filterQuality_1;
+  };
+  protoOf(BitmapPainter).onDraw_lvum79_k$ = function (_this__u8e3s4) {
+    // Inline function 'kotlin.math.roundToInt' call
+    var tmp0_roundToInt = _Size___get_width__impl__58y75t(_this__u8e3s4.get_size_x9ctfw_k$());
+    var tmp = roundToInt(tmp0_roundToInt);
+    var tmp$ret$1;
+    // Inline function 'kotlin.math.roundToInt' call
+    var tmp1_roundToInt = _Size___get_height__impl__a04p02(_this__u8e3s4.get_size_x9ctfw_k$());
+    tmp$ret$1 = roundToInt(tmp1_roundToInt);
+    _this__u8e3s4.drawImage$default_q3yuzr_k$(this.image_1, this.srcOffset_1, this.srcSize_1, VOID, IntSize(tmp, tmp$ret$1), this.alpha_2, VOID, this.colorFilter_2, VOID, this.filterQuality_1);
+  };
+  protoOf(BitmapPainter).get_intrinsicSize_x61on3_k$ = function () {
+    return toSize_0(this.size_1);
+  };
+  protoOf(BitmapPainter).applyAlpha_luh7xa_k$ = function (alpha) {
+    this.alpha_2 = alpha;
+    return true;
+  };
+  protoOf(BitmapPainter).applyColorFilter_lr96qs_k$ = function (colorFilter) {
+    this.colorFilter_2 = colorFilter;
+    return true;
+  };
+  protoOf(BitmapPainter).equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof BitmapPainter))
+      return false;
+    if (!equals(this.image_1, other.image_1))
+      return false;
+    if (!equals(this.srcOffset_1, other.srcOffset_1))
+      return false;
+    if (!equals(this.srcSize_1, other.srcSize_1))
+      return false;
+    if (!(this.filterQuality_1 === other.filterQuality_1))
+      return false;
+    return true;
+  };
+  protoOf(BitmapPainter).hashCode = function () {
+    var result = hashCode(this.image_1);
+    result = imul(31, result) + IntOffset__hashCode_impl_w5rrxs(this.srcOffset_1) | 0;
+    result = imul(31, result) + IntSize__hashCode_impl_gm9mta(this.srcSize_1) | 0;
+    result = imul(31, result) + FilterQuality__hashCode_impl_v4lpcb(this.filterQuality_1) | 0;
+    return result;
+  };
+  protoOf(BitmapPainter).toString = function () {
+    return 'BitmapPainter(image=' + this.image_1 + ', srcOffset=' + new IntOffset(this.srcOffset_1) + ', srcSize=' + new IntSize_0(this.srcSize_1) + ', ' + ('filterQuality=' + new FilterQuality(this.filterQuality_1) + ')');
+  };
   function _set_layerPaint__n08z3e($this, _set____db54di) {
     $this.layerPaint_1 = _set____db54di;
   }
@@ -7888,10 +8012,10 @@
   function _get_useLayer__c5v5z5($this) {
     return $this.useLayer_1;
   }
-  function _set_colorFilter__ke9voq($this, _set____db54di) {
+  function _set_colorFilter__ke9voq_0($this, _set____db54di) {
     $this.colorFilter_1 = _set____db54di;
   }
-  function _get_colorFilter__kcfzyi($this) {
+  function _get_colorFilter__kcfzyi_0($this) {
     return $this.colorFilter_1;
   }
   function configureColorFilter($this, colorFilter) {
@@ -7912,10 +8036,10 @@
       $this.colorFilter_1 = colorFilter;
     }
   }
-  function _set_alpha__c56vtz($this, _set____db54di) {
+  function _set_alpha__c56vtz_0($this, _set____db54di) {
     $this.alpha_1 = _set____db54di;
   }
-  function _get_alpha__jvxknh($this) {
+  function _get_alpha__jvxknh_0($this) {
     return $this.alpha_1;
   }
   function configureAlpha($this, alpha) {
@@ -7986,7 +8110,7 @@
     // Inline function 'androidx.compose.ui.graphics.painter.Painter.draw.<anonymous>' call
     if ((alpha > 0.0 ? _Size___get_width__impl__58y75t(size) > 0 : false) ? _Size___get_height__impl__a04p02(size) > 0 : false) {
       if (this.useLayer_1) {
-        var layerRect = Rect_0(Companion_getInstance().get_Zero_sctq3f_k$(), Size(_Size___get_width__impl__58y75t(size), _Size___get_height__impl__a04p02(size)));
+        var layerRect = Rect_0(Companion_getInstance_0().get_Zero_sctq3f_k$(), Size(_Size___get_width__impl__58y75t(size), _Size___get_height__impl__a04p02(size)));
         // Inline function 'androidx.compose.ui.graphics.drawscope.drawIntoCanvas' call
         var tmp0_anonymous = _this__u8e3s4.get_drawContext_ffwztu_k$().get_canvas_bshgm9_k$();
         var tmp0_withSaveLayer = obtainPaint(this);
@@ -8016,6 +8140,563 @@
     }
     return tmp;
   };
+  function _get_FloatMinExponent__y7f6zq($this) {
+    return $this.FloatMinExponent_1;
+  }
+  function _get_FloatMaxExponent__qcylhw($this) {
+    return $this.FloatMaxExponent_1;
+  }
+  function _get_FloatSmallestExponent__u3o43r($this) {
+    return $this.FloatSmallestExponent_1;
+  }
+  function _get_FloatMaxExponentNumber__ak8wi3($this) {
+    return $this.FloatMaxExponentNumber_1;
+  }
+  function _get_PowersOfTen__211sbr($this) {
+    return $this.PowersOfTen_1;
+  }
+  function _get_Mantissa64__cfgrff($this) {
+    return $this.Mantissa64__1;
+  }
+  function Companion_31() {
+    Companion_instance_31 = this;
+    this.FloatMinExponent_1 = -10;
+    this.FloatMaxExponent_1 = 10;
+    this.FloatSmallestExponent_1 = -325;
+    this.FloatMaxExponentNumber_1 = 1024;
+    var tmp = this;
+    // Inline function 'kotlin.floatArrayOf' call
+    tmp.PowersOfTen_1 = new Float32Array([1.0, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0, 1.0E7, 1.0E8, 1.0E9, 1.0E10]);
+    var tmp_0 = this;
+    // Inline function 'kotlin.ulongArrayOf' call
+    tmp_0.Mantissa64__1 = _ULongArray___init__impl__twm1l3(longArrayOf([_ULong___init__impl__c78o9k(new Long(2118029704, -1513171909)), _ULong___init__impl__c78o9k(new Long(1573795306, -817723062)), _ULong___init__impl__c78o9k(new Long(2057363890, -2121689650)), _ULong___init__impl__c78o9k(new Long(424221215, -1578370238)), _ULong___init__impl__c78o9k(new Long(-1617207130, -899220974)), _ULong___init__impl__c78o9k(new Long(1199716560, -50284393)), _ULong___init__impl__c78o9k(new Long(-1934531710, -1642040482)), _ULong___init__impl__c78o9k(new Long(803060834, -978808778)), _ULong___init__impl__c78o9k(new Long(-1143657605, -149769149)), _ULong___init__impl__c78o9k(new Long(1432697645, -1704218454)), _ULong___init__impl__c78o9k(new Long(-356611592, -1056531244)), _ULong___init__impl__c78o9k(new Long(627977334, -246922230)), _ULong___init__impl__c78o9k(new Long(1466227658, -1764939130)), _ULong___init__impl__c78o9k(new Long(-314699076, -1132432089)), _ULong___init__impl__c78o9k(new Long(-393373845, -341798287)), _ULong___init__impl__c78o9k(new Long(827883171, -1824236665)), _ULong___init__impl__c78o9k(new Long(-38887860, -1206554008)), _ULong___init__impl__c78o9k(new Long(1025131999, -434450685)), _ULong___init__impl__c78o9k(new Long(103836587, -1882144414)), _ULong___init__impl__c78o9k(new Long(-2017687914, -1278938694)), _ULong___init__impl__c78o9k(new Long(699115580, -524931543)), _ULong___init__impl__c78o9k(new Long(-1173665499, -1938694951)), _ULong___init__impl__c78o9k(new Long(680401775, -1349626864)), _ULong___init__impl__c78o9k(new Long(850502218, -613291756)), _ULong___init__impl__c78o9k(new Long(-1615919762, -1993920084)), _ULong___init__impl__c78o9k(new Long(-946157878, -1418658281)), _ULong___init__impl__c78o9k(new Long(-1182697347, -699581027)), _ULong___init__impl__c78o9k(new Long(-1812927666, -2047850878)), _ULong___init__impl__c78o9k(new Long(955065889, -1486071773)), _ULong___init__impl__c78o9k(new Long(120090538, -783847892)), _ULong___init__impl__c78o9k(new Long(-2072427062, -2100517669)), _ULong___init__impl__c78o9k(new Long(1704433468, -1551905262)), _ULong___init__impl__c78o9k(new Long(-16941812, -866139754)), _ULong___init__impl__c78o9k(new Long(-1094919089, -8932868)), _ULong___init__impl__c78o9k(new Long(-147453519, -1616195779)), _ULong___init__impl__c78o9k(new Long(1963166749, -946502899)), _ULong___init__impl__c78o9k(new Long(-767267035, -109386800)), _ULong___init__impl__c78o9k(new Long(-2090154633, -1678979486)), _ULong___init__impl__c78o9k(new Long(608532181, -1024982533)), _ULong___init__impl__c78o9k(new Long(-313076598, -207486343)), _ULong___init__impl__c78o9k(new Long(878068950, -1740291700)), _ULong___init__impl__c78o9k(new Long(1097586188, -1101622801)), _ULong___init__impl__c78o9k(new Long(298240911, -303286677)), _ULong___init__impl__c78o9k(new Long(-350470343, -1800166910)), _ULong___init__impl__c78o9k(new Long(-1511829753, -1176466813)), _ULong___init__impl__c78o9k(new Long(-1889787191, -396841692)), _ULong___init__impl__c78o9k(new Long(-644246082, -1858638794)), _ULong___init__impl__c78o9k(new Long(-1879049427, -1249556668)), _ULong___init__impl__c78o9k(new Long(-1275069959, -488204011)), _ULong___init__impl__c78o9k(new Long(-1870660549, -1915740243)), _ULong___init__impl__c78o9k(new Long(-190842038, -1320933480)), _ULong___init__impl__c78o9k(new Long(835189277, -577425025)), _ULong___init__impl__c78o9k(new Long(2132606034, -1971503377)), _ULong___init__impl__c78o9k(new Long(1592015718, -1390637397)), _ULong___init__impl__c78o9k(new Long(916277824, -664554922)), _ULong___init__impl__c78o9k(new Long(-501068184, -2025959563)), _ULong___init__impl__c78o9k(new Long(1521148418, -1458707629)), _ULong___init__impl__c78o9k(new Long(827693699, -749642712)), _ULong___init__impl__c78o9k(new Long(517308561, -2079139431)), _ULong___init__impl__c78o9k(new Long(1720377526, -1525182465)), _ULong___init__impl__c78o9k(new Long(1076730083, -832736257)), _ULong___init__impl__c78o9k(new Long(-2011398258, -2131072897)), _ULong___init__impl__c78o9k(new Long(1780719474, -1590099297)), _ULong___init__impl__c78o9k(new Long(1152157518, -913882297)), _ULong___init__impl__c78o9k(new Long(366455074, -68611047)), _ULong___init__impl__c78o9k(new Long(-1381578315, -1653494641)), _ULong___init__impl__c78o9k(new Long(-1726972894, -993126477)), _ULong___init__impl__c78o9k(new Long(2136251179, -167666272)), _ULong___init__impl__c78o9k(new Long(1335156987, -1715404156)), _ULong___init__impl__c78o9k(new Long(1668946233, -1070513371)), _ULong___init__impl__c78o9k(new Long(-1135042680, -264399890)), _ULong___init__impl__c78o9k(new Long(901211061, -1775862667)), _ULong___init__impl__c78o9k(new Long(-2094711646, -1146086510)), _ULong___init__impl__c78o9k(new Long(602835915, -358866313)), _ULong___init__impl__c78o9k(new Long(1987385183, -1834904182)), _ULong___init__impl__c78o9k(new Long(336747830, -1219888403)), _ULong___init__impl__c78o9k(new Long(1494676612, -451118680)), _ULong___init__impl__c78o9k(new Long(934172882, -1892561911)), _ULong___init__impl__c78o9k(new Long(-2053509369, -1291960565)), _ULong___init__impl__c78o9k(new Long(1728080585, -541208882)), _ULong___init__impl__c78o9k(new Long(6308541, -1948868287)), _ULong___init__impl__c78o9k(new Long(1081627501, -1362343535)), _ULong___init__impl__c78o9k(new Long(-1869191096, -629187595)), _ULong___init__impl__c78o9k(new Long(2052981037, -2003854983)), _ULong___init__impl__c78o9k(new Long(-654999176, -1431076905)), _ULong___init__impl__c78o9k(new Long(-818748970, -715104307)), _ULong___init__impl__c78o9k(new Long(-1585459930, -2057552928)), _ULong___init__impl__c78o9k(new Long(-908083089, -1498199336)), _ULong___init__impl__c78o9k(new Long(-61362037, -799007346)), _ULong___init__impl__c78o9k(new Long(1572261463, -2109992327)), _ULong___init__impl__c78o9k(new Long(-1255898643, -1563748585)), _ULong___init__impl__c78o9k(new Long(-1569873304, -880943907)), _ULong___init__impl__c78o9k(new Long(185142018, -27438059)), _ULong___init__impl__c78o9k(new Long(652584673, -1627761523)), _ULong___init__impl__c78o9k(new Long(1889472666, -960960080)), _ULong___init__impl__c78o9k(new Long(-1933126464, -127458276)), _ULong___init__impl__c78o9k(new Long(-671333128, -1690274159)), _ULong___init__impl__c78o9k(new Long(1308317238, -1039100874)), _ULong___init__impl__c78o9k(new Long(-512087100, -225134269)), _ULong___init__impl__c78o9k(new Long(1827429210, -1751321654)), _ULong___init__impl__c78o9k(new Long(136802865, -1115410243)), _ULong___init__impl__c78o9k(new Long(1244745405, -320520980)), _ULong___init__impl__c78o9k(new Long(-1369517770, -1810938349)), _ULong___init__impl__c78o9k(new Long(-1711897212, -1189931112)), _ULong___init__impl__c78o9k(new Long(-1066129691, -413672066)), _ULong___init__impl__c78o9k(new Long(944281679, -1869157777)), _ULong___init__impl__c78o9k(new Long(106610275, -1262705397)), _ULong___init__impl__c78o9k(new Long(-940478981, -504639923)), _ULong___init__impl__c78o9k(new Long(-1661541187, -1926012688)), _ULong___init__impl__c78o9k(new Long(-1003184660, -1333774036)), _ULong___init__impl__c78o9k(new Long(-180239001, -593475721)), _ULong___init__impl__c78o9k(new Long(-112649376, -1981535062)), _ULong___init__impl__c78o9k(new Long(-1214553543, -1403177003)), _ULong___init__impl__c78o9k(new Long(629291719, -680229429)), _ULong___init__impl__c78o9k(new Long(-143563588, -2035756130)), _ULong___init__impl__c78o9k(new Long(-1253196309, -1470953338)), _ULong___init__impl__c78o9k(new Long(1654730086, -764949848)), _ULong___init__impl__c78o9k(new Long(1034206304, -2088706391)), _ULong___init__impl__c78o9k(new Long(-1928467592, -1537141165)), _ULong___init__impl__c78o9k(new Long(1884382806, -847684632)), _ULong___init__impl__c78o9k(new Long(1177739254, -2140415631)), _ULong___init__impl__c78o9k(new Long(-1749051405, -1601777715)), _ULong___init__impl__c78o9k(new Long(-38830608, -928480320)), _ULong___init__impl__c78o9k(new Long(1025203564, -86858575)), _ULong___init__impl__c78o9k(new Long(-969860509, -1664899346)), _ULong___init__impl__c78o9k(new Long(2008899836, -1007382358)), _ULong___init__impl__c78o9k(new Long(363641147, -185486123)), _ULong___init__impl__c78o9k(new Long(764146629, -1726541563)), _ULong___init__impl__c78o9k(new Long(2028925110, -1084435130)), _ULong___init__impl__c78o9k(new Long(388672740, -281802088)), _ULong___init__impl__c78o9k(new Long(242920462, -1786739041)), _ULong___init__impl__c78o9k(new Long(-770091246, -1159681978)), _ULong___init__impl__c78o9k(new Long(-2036355881, -375860648)), _ULong___init__impl__c78o9k(new Long(1411632134, -1845525641)), _ULong___init__impl__c78o9k(new Long(690798344, -1233165227)), _ULong___init__impl__c78o9k(new Long(1937239754, -467714710)), _ULong___init__impl__c78o9k(new Long(-2010450626, -1902934430)), _ULong___init__impl__c78o9k(new Long(708162189, -1304926213)), _ULong___init__impl__c78o9k(new Long(-188539087, -557415943)), _ULong___init__impl__c78o9k(new Long(955904894, -1958997700)), _ULong___init__impl__c78o9k(new Long(1194881118, -1375005301)), _ULong___init__impl__c78o9k(new Long(419859574, -645014802)), _ULong___init__impl__c78o9k(new Long(-811329591, -2013746988)), _ULong___init__impl__c78o9k(new Long(59579836, -1443441910)), _ULong___init__impl__c78o9k(new Long(-2073008853, -730560564)), _ULong___init__impl__c78o9k(new Long(-758759621, -2067213089)), _ULong___init__impl__c78o9k(new Long(-948449527, -1510274537)), _ULong___init__impl__c78o9k(new Long(-1185561908, -814101347)), _ULong___init__impl__c78o9k(new Long(-1814718017, -2119426078)), _ULong___init__impl__c78o9k(new Long(952827951, -1575540773)), _ULong___init__impl__c78o9k(new Long(117293115, -895684142)), _ULong___init__impl__c78o9k(new Long(-2000867254, -45863354)), _ULong___init__impl__c78o9k(new Long(360070702, -1639277332)), _ULong___init__impl__c78o9k(new Long(450088378, -975354841)), _ULong___init__impl__c78o9k(new Long(-511131352, -145451728)), _ULong___init__impl__c78o9k(new Long(-1930069831, -1701520066)), _ULong___init__impl__c78o9k(new Long(808638183, -1053158258)), _ULong___init__impl__c78o9k(new Long(-1136685919, -242705999)), _ULong___init__impl__c78o9k(new Long(363313125, -1762303985)), _ULong___init__impl__c78o9k(new Long(-619600418, -1129138158)), _ULong___init__impl__c78o9k(new Long(-1848242346, -337680873)), _ULong___init__impl__c78o9k(new Long(-1155151467, -1821663282)), _ULong___init__impl__c78o9k(new Long(1777286139, -1203337278)), _ULong___init__impl__c78o9k(new Long(74124026, -430429773)), _ULong___init__impl__c78o9k(new Long(-490543396, -1879631345)), _ULong___init__impl__c78o9k(new Long(-613179245, -1275797357)), _ULong___init__impl__c78o9k(new Long(-766474056, -521004872)), _ULong___init__impl__c78o9k(new Long(-2089659021, -1936240781)), _ULong___init__impl__c78o9k(new Long(1682893519, -1346559152)), _ULong___init__impl__c78o9k(new Long(2103616899, -609457116)), _ULong___init__impl__c78o9k(new Long(-832723086, -1991523434)), _ULong___init__impl__c78o9k(new Long(-2114645681, -1415662468)), _ULong___init__impl__c78o9k(new Long(-1569565278, -695836261)), _ULong___init__impl__c78o9k(new Long(1166505349, -2045510399)), _ULong___init__impl__c78o9k(new Long(-1763093785, -1483146175)), _ULong___init__impl__c78o9k(new Long(-56383584, -780190895)), _ULong___init__impl__c78o9k(new Long(1038502084, -2098232045)), _ULong___init__impl__c78o9k(new Long(224385781, -1549048232)), _ULong___init__impl__c78o9k(new Long(280482227, -862568466)), _ULong___init__impl__c78o9k(new Long(-1796880865, -4468759)), _ULong___init__impl__c78o9k(new Long(-49308717, -1613405711)), _ULong___init__impl__c78o9k(new Long(2085847752, -943015314)), _ULong___init__impl__c78o9k(new Long(459826043, -105027318)), _ULong___init__impl__c78o9k(new Long(1361133101, -1676254810)), _ULong___init__impl__c78o9k(new Long(-446067272, -1021576689)), _ULong___init__impl__c78o9k(new Long(-557584090, -203229037)), _ULong___init__impl__c78o9k(new Long(1798993591, -1737630884)), _ULong___init__impl__c78o9k(new Long(-2046225307, -1098296781)), _ULong___init__impl__c78o9k(new Long(1737185663, -299129152)), _ULong___init__impl__c78o9k(new Long(1085741039, -1797568456)), _ULong___init__impl__c78o9k(new Long(1357176299, -1173218746)), _ULong___init__impl__c78o9k(new Long(-451013274, -392781609)), _ULong___init__impl__c78o9k(new Long(-281883296, -1856101242)), _ULong___init__impl__c78o9k(new Long(-1426095944, -1246384728)), _ULong___init__impl__c78o9k(new Long(-708878106, -484239086)), _ULong___init__impl__c78o9k(new Long(-979919729, -1913262165)), _ULong___init__impl__c78o9k(new Long(-1224899661, -1317835882)), _ULong___init__impl__c78o9k(new Long(1690100896, -573553028)), _ULong___init__impl__c78o9k(new Long(-1091170588, -1969083379)), _ULong___init__impl__c78o9k(new Long(783520413, -1387612399)), _ULong___init__impl__c78o9k(new Long(2053142340, -660773675)), _ULong___init__impl__c78o9k(new Long(1820084875, -2023596283)), _ULong___init__impl__c78o9k(new Long(-946119379, -1455753530)), _ULong___init__impl__c78o9k(new Long(2038576249, -745950088)), _ULong___init__impl__c78o9k(new Long(1274110155, -2076831541)), _ULong___init__impl__c78o9k(new Long(518895870, -1522297602)), _ULong___init__impl__c78o9k(new Long(-1498863810, -829130179)), _ULong___init__impl__c78o9k(new Long(-2010531705, -2128819098)), _ULong___init__impl__c78o9k(new Long(708060840, -1587282048)), _ULong___init__impl__c78o9k(new Long(885076050, -910360736)), _ULong___init__impl__c78o9k(new Long(1106345063, -64209096)), _ULong___init__impl__c78o9k(new Long(691465664, -1650743421)), _ULong___init__impl__c78o9k(new Long(-209409743, -989687453)), _ULong___init__impl__c78o9k(new Long(-261762179, -163367492)), _ULong___init__impl__c78o9k(new Long(373269550, -1712717418)), _ULong___init__impl__c78o9k(new Long(-1680896711, -1067154949)), _ULong___init__impl__c78o9k(new Long(-2101120888, -260201862)), _ULong___init__impl__c78o9k(new Long(-1850071467, -1773238900)), _ULong___init__impl__c78o9k(new Long(-1238847510, -1142806801)), _ULong___init__impl__c78o9k(new Long(-1548559387, -354766677)), _ULong___init__impl__c78o9k(new Long(1179634031, -1832341909)), _ULong___init__impl__c78o9k(new Long(400800715, -1216685562)), _ULong___init__impl__c78o9k(new Long(-1646482755, -447115129)), _ULong___init__impl__c78o9k(new Long(-1029051722, -1890059692)), _ULong___init__impl__c78o9k(new Long(-212572828, -1288832791)), _ULong___init__impl__c78o9k(new Long(1881767613, -537299164)), _ULong___init__impl__c78o9k(new Long(-971378890, -1946424714)), _ULong___init__impl__c78o9k(new Long(2007001859, -1359289068)), _ULong___init__impl__c78o9k(new Long(-1786214972, -625369511)), _ULong___init__impl__c78o9k(new Long(-42642533, -2001468681)), _ULong___init__impl__c78o9k(new Long(-53303167, -1428094027)), _ULong___init__impl__c78o9k(new Long(2080854690, -711375709)), _ULong___init__impl__c78o9k(new Long(763663269, -2055222554)), _ULong___init__impl__c78o9k(new Long(-1192904562, -1495286369)), _ULong___init__impl__c78o9k(new Long(-1491130702, -795366137)), _ULong___init__impl__c78o9k(new Long(-931956689, -2107716572)), _ULong___init__impl__c78o9k(new Long(-91204037, -1560903891)), _ULong___init__impl__c78o9k(new Long(2033478602, -877388039)), _ULong___init__impl__c78o9k(new Long(-679377220, -22993225)), _ULong___init__impl__c78o9k(new Long(-424610762, -1624983502)), _ULong___init__impl__c78o9k(new Long(-1604505277, -957487553)), _ULong___init__impl__c78o9k(new Long(-2005631596, -123117617)), _ULong___init__impl__c78o9k(new Long(-1253519748, -1687561247)), _ULong___init__impl__c78o9k(new Long(580583963, -1035709734)), _ULong___init__impl__c78o9k(new Long(-1421753694, -220895344)), _ULong___init__impl__c78o9k(new Long(1795758501, -1748672326)), _ULong___init__impl__c78o9k(new Long(97214479, -1112098583)), _ULong___init__impl__c78o9k(new Long(1195259923, -316381405)), _ULong___init__impl__c78o9k(new Long(210166539, -1808351114)), _ULong___init__impl__c78o9k(new Long(-1884775474, -1186697069)), _ULong___init__impl__c78o9k(new Long(1938997954, -409629512)), _ULong___init__impl__c78o9k(new Long(1211873721, -1866631181)), _ULong___init__impl__c78o9k(new Long(441100328, -1259547152)), _ULong___init__impl__c78o9k(new Long(551375410, -500692116)), _ULong___init__impl__c78o9k(new Long(-1802874017, -1923545309)), _ULong___init__impl__c78o9k(new Long(2041374775, -1330689812)), _ULong___init__impl__c78o9k(new Long(-1743248828, -589620441)), _ULong___init__impl__c78o9k(new Long(-1089530517, -1979125512)), _ULong___init__impl__c78o9k(new Long(-288171323, -1400165066)), _ULong___init__impl__c78o9k(new Long(-1433955977, -676464508)), _ULong___init__impl__c78o9k(new Long(-359351574, -2033403054)), _ULong___init__impl__c78o9k(new Long(-1522931291, -1468011993)), _ULong___init__impl__c78o9k(new Long(-1903664114, -761273167)), _ULong___init__impl__c78o9k(new Long(-116048247, -2086408466)), _ULong___init__impl__c78o9k(new Long(-1218802133, -1534268758)), _ULong___init__impl__c78o9k(new Long(1697722806, -844094123)), _ULong___init__impl__c78o9k(new Long(1597947665, -2138171563)), _ULong___init__impl__c78o9k(new Long(-1223790890, -1598972630)), _ULong___init__impl__c78o9k(new Long(1691486859, -924973963)), _ULong___init__impl__c78o9k(new Long(-1106866898, -82475630)), _ULong___init__impl__c78o9k(new Long(-1228662723, -1662160005)), _ULong___init__impl__c78o9k(new Long(-1535828404, -1003958182)), _ULong___init__impl__c78o9k(new Long(1301439967, -181205903)), _ULong___init__impl__c78o9k(new Long(-797212757, -1723866426)), _ULong___init__impl__c78o9k(new Long(-2070257770, -1081091208)), _ULong___init__impl__c78o9k(new Long(-1514080388, -277622186)), _ULong___init__impl__c78o9k(new Long(664312493, -1784126602)), _ULong___init__impl__c78o9k(new Long(-1317093031, -1156416429)), _ULong___init__impl__c78o9k(new Long(-1646366289, -371778712)), _ULong___init__impl__c78o9k(new Long(1655375629, -1842974431)), _ULong___init__impl__c78o9k(new Long(-1152005935, -1229976215)), _ULong___init__impl__c78o9k(new Long(707476229, -463728444)), _ULong___init__impl__c78o9k(new Long(-1705311005, -1900443014)), _ULong___init__impl__c78o9k(new Long(1089586716, -1301811943)), _ULong___init__impl__c78o9k(new Long(-1859242077, -553523105)), _ULong___init__impl__c78o9k(new Long(-1162026298, -1956564677)), _ULong___init__impl__c78o9k(new Long(-1452532873, -1371964022)), _ULong___init__impl__c78o9k(new Long(1405559381, -641213203)), _ULong___init__impl__c78o9k(new Long(1415345525, -2011370988)), _ULong___init__impl__c78o9k(new Long(1769181906, -1440471911)), _ULong___init__impl__c78o9k(new Long(-1009748089, -726848065)), _ULong___init__impl__c78o9k(new Long(-631092556, -2064892777)), _ULong___init__impl__c78o9k(new Long(-788865695, -1507374147)), _ULong___init__impl__c78o9k(new Long(1161401530, -810475859)), _ULong___init__impl__c78o9k(new Long(1262746868, -2117160148)), _ULong___init__impl__c78o9k(new Long(1578433585, -1572708361)), _ULong___init__impl__c78o9k(new Long(899300158, -892143627)), _ULong___init__impl__c78o9k(new Long(-2097100275, -41437710)), _ULong___init__impl__c78o9k(new Long(-1847558584, -1636511305)), _ULong___init__impl__c78o9k(new Long(1985519066, -971897307)), _ULong___init__impl__c78o9k(new Long(-739326639, -141129810)), _ULong___init__impl__c78o9k(new Long(1148533586, -1698818867)), _ULong___init__impl__c78o9k(new Long(-1785558489, -1049781760)), _ULong___init__impl__c78o9k(new Long(-1158206287, -238485376)), _ULong___init__impl__c78o9k(new Long(1960475630, -1759666096)), _ULong___init__impl__c78o9k(new Long(-1844372758, -1125840796)), _ULong___init__impl__c78o9k(new Long(-1231724123, -333559171)), _ULong___init__impl__c78o9k(new Long(-1843569401, -1819087218)), _ULong___init__impl__c78o9k(new Long(916763721, -1200117198)), _ULong___init__impl__c78o9k(new Long(-1001528997, -426404674)), _ULong___init__impl__c78o9k(new Long(984657113, -1877115657)), _ULong___init__impl__c78o9k(new Long(157079567, -1272652747)), _ULong___init__impl__c78o9k(new Long(1270091283, -517074110)), _ULong___init__impl__c78o9k(new Long(1867548875, -1933784055)), _ULong___init__impl__c78o9k(new Long(-886789378, -1343488245)), _ULong___init__impl__c78o9k(new Long(-1108486722, -605618482)), _ULong___init__impl__c78o9k(new Long(917808535, -1989124287)), _ULong___init__impl__c78o9k(new Long(-2073964804, -1412663535)), _ULong___init__impl__c78o9k(new Long(-444972356, -692087595)), _ULong___init__impl__c78o9k(new Long(-1351849547, -2043167483)), _ULong___init__impl__c78o9k(new Long(457671715, -1480217529)), _ULong___init__impl__c78o9k(new Long(-501652181, -776530088)), _ULong___init__impl__c78o9k(new Long(-1924145349, -2095944041)), _ULong___init__impl__c78o9k(new Long(1889785610, -1546188227)), _ULong___init__impl__c78o9k(new Long(-858993460, -858993460)), _ULong___init__impl__c78o9k(new Long(0, -2147483648)), _ULong___init__impl__c78o9k(new Long(0, -1610612736)), _ULong___init__impl__c78o9k(new Long(0, -939524096)), _ULong___init__impl__c78o9k(new Long(0, -100663296)), _ULong___init__impl__c78o9k(new Long(0, -1673527296)), _ULong___init__impl__c78o9k(new Long(0, -1018167296)), _ULong___init__impl__c78o9k(new Long(0, -198967296)), _ULong___init__impl__c78o9k(new Long(0, -1734967296)), _ULong___init__impl__c78o9k(new Long(0, -1094967296)), _ULong___init__impl__c78o9k(new Long(0, -294967296)), _ULong___init__impl__c78o9k(new Long(0, -1794967296)), _ULong___init__impl__c78o9k(new Long(0, -1169967296)), _ULong___init__impl__c78o9k(new Long(0, -388717296)), _ULong___init__impl__c78o9k(new Long(0, -1853561046)), _ULong___init__impl__c78o9k(new Long(-2147483648, -1243209484)), _ULong___init__impl__c78o9k(new Long(-1610612736, -480270031)), _ULong___init__impl__c78o9k(new Long(67108864, -1910781505)), _ULong___init__impl__c78o9k(new Long(-989855744, -1314735058)), _ULong___init__impl__c78o9k(new Long(1983905792, -569676998)), _ULong___init__impl__c78o9k(new Long(-1981284352, -1966660860)), _ULong___init__impl__c78o9k(new Long(-1402863616, -1384584251)), _ULong___init__impl__c78o9k(new Long(393904128, -656988489)), _ULong___init__impl__c78o9k(new Long(1856802816, -2021230542)), _ULong___init__impl__c78o9k(new Long(173519872, -1452796353)), _ULong___init__impl__c78o9k(new Long(-856841984, -742253618)), _ULong___init__impl__c78o9k(new Long(1075086496, -2074521247)), _ULong___init__impl__c78o9k(new Long(-1877367352, -1519409735)), _ULong___init__impl__c78o9k(new Long(-199225542, -825520345)), _ULong___init__impl__c78o9k(new Long(-124515964, -2126562952)), _ULong___init__impl__c78o9k(new Long(918096869, -1584461865)), _ULong___init__impl__c78o9k(new Long(73879262, -906835507)), _ULong___init__impl__c78o9k(new Long(1166090902, -59802560)), _ULong___init__impl__c78o9k(new Long(728806813, -1647989336)), _ULong___init__impl__c78o9k(new Long(911008517, -986244846)), _ULong___init__impl__c78o9k(new Long(-1008723002, -159064234)), _ULong___init__impl__c78o9k(new Long(980160860, -1710027882)), _ULong___init__impl__c78o9k(new Long(-922282573, -1063793029)), _ULong___init__impl__c78o9k(new Long(-1152853216, -255999462)), _ULong___init__impl__c78o9k(new Long(-1257404172, -1770612400)), _ULong___init__impl__c78o9k(new Long(-498013391, -1139523676)), _ULong___init__impl__c78o9k(new Long(451225085, -350662770)), _ULong___init__impl__c78o9k(new Long(-791726146, -1829776968)), _ULong___init__impl__c78o9k(new Long(84084141, -1213479385)), _ULong___init__impl__c78o9k(new Long(-968636647, -443107408)), _ULong___init__impl__c78o9k(new Long(2078956655, -1887554866)), _ULong___init__impl__c78o9k(new Long(451212171, -1285701758)), _ULong___init__impl__c78o9k(new Long(-1583468434, -533385374)), _ULong___init__impl__c78o9k(new Long(-1526538683, -1943978595)), _ULong___init__impl__c78o9k(new Long(239310294, -1356231419)), _ULong___init__impl__c78o9k(new Long(1372879692, -621547450)), _ULong___init__impl__c78o9k(new Long(-215692017, -1999079893)), _ULong___init__impl__c78o9k(new Long(-269615021, -1425108042)), _ULong___init__impl__c78o9k(new Long(-1410760600, -707643228)), _ULong___init__impl__c78o9k(new Long(-344854463, -2052889754)), _ULong___init__impl__c78o9k(new Long(-1504809903, -1492370368)), _ULong___init__impl__c78o9k(new Long(-807270555, -791721136)), _ULong___init__impl__c78o9k(new Long(-2115156833, -2105438446)), _ULong___init__impl__c78o9k(new Long(577279431, -1558056233)), _ULong___init__impl__c78o9k(new Long(-352142535, -873828468)), _ULong___init__impl__c78o9k(new Long(633563656, -18543760)), _ULong___init__impl__c78o9k(new Long(395977285, -1622202586)), _ULong___init__impl__c78o9k(new Long(-1652512042, -954011409)), _ULong___init__impl__c78o9k(new Long(-2065640053, -118772437)), _ULong___init__impl__c78o9k(new Long(856458615, -1684845509)), _ULong___init__impl__c78o9k(new Long(-3168555, -1032315063)), _ULong___init__impl__c78o9k(new Long(2143522954, -216652004)), _ULong___init__impl__c78o9k(new Long(-807781802, -1746020239)), _ULong___init__impl__c78o9k(new Long(1137756396, -1108783474)), _ULong___init__impl__c78o9k(new Long(-725288153, -312237519)), _ULong___init__impl__c78o9k(new Long(620436728, -1805761185)), _ULong___init__impl__c78o9k(new Long(-298195914, -1183459658)), _ULong___init__impl__c78o9k(new Long(-1446486716, -405582748)), _ULong___init__impl__c78o9k(new Long(-367183286, -1864101954)), _ULong___init__impl__c78o9k(new Long(-1532720931, -1256385618)), _ULong___init__impl__c78o9k(new Long(1305324308, -496740198)), _ULong___init__impl__c78o9k(new Long(1889569516, -1921075360)), _ULong___init__impl__c78o9k(new Long(-1933005400, -1327602376)), _ULong___init__impl__c78o9k(new Long(-1342514926, -585761146)), _ULong___init__impl__c78o9k(new Long(771540907, -1976713452)), _ULong___init__impl__c78o9k(new Long(964426134, -1397149991)), _ULong___init__impl__c78o9k(new Long(-2015692805, -672695665)), _ULong___init__impl__c78o9k(new Long(-1259808003, -2031047527)), _ULong___init__impl__c78o9k(new Long(572723644, -1465067584)), _ULong___init__impl__c78o9k(new Long(715904555, -757592656)), _ULong___init__impl__c78o9k(new Long(447440347, -2084108146)), _ULong___init__impl__c78o9k(new Long(-1588183214, -1531393359)), _ULong___init__impl__c78o9k(new Long(162254630, -840499874)), _ULong___init__impl__c78o9k(new Long(-972332680, -2135925158)), _ULong___init__impl__c78o9k(new Long(2005809622, -1596164623)), _ULong___init__impl__c78o9k(new Long(-713963444, -921463955)), _ULong___init__impl__c78o9k(new Long(1255029343, -78088119)), _ULong___init__impl__c78o9k(new Long(-826219397, -1659417811)), _ULong___init__impl__c78o9k(new Long(1114709402, -1000530439)), _ULong___init__impl__c78o9k(new Long(-1827838720, -176921225)), _ULong___init__impl__c78o9k(new Long(-1142399200, -1721188502)), _ULong___init__impl__c78o9k(new Long(1793226472, -1077743803)), _ULong___init__impl__c78o9k(new Long(-979692382, -273437930)), _ULong___init__impl__c78o9k(new Long(998304997, -1781511442)), _ULong___init__impl__c78o9k(new Long(-899602401, -1153147479)), _ULong___init__impl__c78o9k(new Long(1022980646, -367692524)), _ULong___init__impl__c78o9k(new Long(-1508120744, -1840420564)), _ULong___init__impl__c78o9k(new Long(-811409106, -1226783881)), _ULong___init__impl__c78o9k(new Long(-1014261382, -459738027)), _ULong___init__impl__c78o9k(new Long(-1707655188, -1897949003)), _ULong___init__impl__c78o9k(new Long(12914663, -1298694429)), _ULong___init__impl__c78o9k(new Long(-1057598495, -549626213)), _ULong___init__impl__c78o9k(new Long(1486484588, -1954129119)), _ULong___init__impl__c78o9k(new Long(-1363119737, -1368919575)), _ULong___init__impl__c78o9k(new Long(443583977, -637407644)), _ULong___init__impl__c78o9k(new Long(-1870243662, -2008992514)), _ULong___init__impl__c78o9k(new Long(883420894, -1437498818)), _ULong___init__impl__c78o9k(new Long(-1043207530, -723131699)), _ULong___init__impl__c78o9k(new Long(-1725746530, -2062570048)), _ULong___init__impl__c78o9k(new Long(-1083441339, -1504470736)), _ULong___init__impl__c78o9k(new Long(-280559850, -806846596)), _ULong___init__impl__c78o9k(new Long(361521006, -2114891858)), _ULong___init__impl__c78o9k(new Long(-1695582391, -1569872999)), _ULong___init__impl__c78o9k(new Long(28005660, -888599424)), _ULong___init__impl__c78o9k(new Long(35007075, -37007456)), _ULong___init__impl__c78o9k(new Long(21879422, -1633742396)), _ULong___init__impl__c78o9k(new Long(27349277, -968436171)), _ULong___init__impl__c78o9k(new Long(1107928421, -136803390)), _ULong___init__impl__c78o9k(new Long(1766197087, -1696114855)), _ULong___init__impl__c78o9k(new Long(-1013479113, -1046401745)), _ULong___init__impl__c78o9k(new Long(-1266848892, -234260357)), _ULong___init__impl__c78o9k(new Long(1355703090, -1757025459)), _ULong___init__impl__c78o9k(new Long(-1526596609, -1122540000)), _ULong___init__impl__c78o9k(new Long(-834503937, -329433176)), _ULong___init__impl__c78o9k(new Long(-2132177697, -1816508471)), _ULong___init__impl__c78o9k(new Long(-517738473, -1196893765)), _ULong___init__impl__c78o9k(new Long(-647173091, -422375382)), _ULong___init__impl__c78o9k(new Long(-941354094, -1874597350)), _ULong___init__impl__c78o9k(new Long(2044532855, -1269504863)), _ULong___init__impl__c78o9k(new Long(-665559404, -513139255)), _ULong___init__impl__c78o9k(new Long(657767197, -1931324770)), _ULong___init__impl__c78o9k(new Long(-1325274652, -1340414139)), _ULong___init__impl__c78o9k(new Long(490890333, -601775849)), _ULong___init__impl__c78o9k(new Long(1917419194, -1986722642)), _ULong___init__impl__c78o9k(new Long(249290345, -1409661478)), _ULong___init__impl__c78o9k(new Long(-1835870717, -688335024)), _ULong___init__impl__c78o9k(new Long(1536935362, -2040822126)), _ULong___init__impl__c78o9k(new Long(-226314446, -1477285834)), _ULong___init__impl__c78o9k(new Long(-1356634881, -772865468)), _ULong___init__impl__c78o9k(new Long(-311025889, -2093653654)), _ULong___init__impl__c78o9k(new Long(-1462524185, -1543325243)), _ULong___init__impl__c78o9k(new Long(319328417, -855414729)), _ULong___init__impl__c78o9k(new Long(1810192996, -2145246942)), _ULong___init__impl__c78o9k(new Long(115257597, -1607816853)), _ULong___init__impl__c78o9k(new Long(-929669827, -936029243)), _ULong___init__impl__c78o9k(new Long(985396364, -96294729)), _ULong___init__impl__c78o9k(new Long(-2068481833, -1670796942)), _ULong___init__impl__c78o9k(new Long(635623181, -1014754353)), _ULong___init__impl__c78o9k(new Long(-279212847, -194701118)), _ULong___init__impl__c78o9k(new Long(-711378942, -1732300935)), _ULong___init__impl__c78o9k(new Long(1258259971, -1091634344)), _ULong___init__impl__c78o9k(new Long(1572824964, -290801106)), _ULong___init__impl__c78o9k(new Long(-90726222, -1792363428)), _ULong___init__impl__c78o9k(new Long(960334047, -1166712460)), _ULong___init__impl__c78o9k(new Long(1200417559, -384648751)), _ULong___init__impl__c78o9k(new Long(-860351762, -1851018206)), _ULong___init__impl__c78o9k(new Long(2145785770, -1240030933)), _ULong___init__impl__c78o9k(new Long(1608490388, -476296842)), _ULong___init__impl__c78o9k(new Long(-68435331, -1908298263)), _ULong___init__impl__c78o9k(new Long(2061939484, -1311631004)), _ULong___init__impl__c78o9k(new Long(-1717542941, -565796931)), _ULong___init__impl__c78o9k(new Long(-2147206162, -1964235818)), _ULong___init__impl__c78o9k(new Long(537217769, -1381552948)), _ULong___init__impl__c78o9k(new Long(671522212, -653199361)), _ULong___init__impl__c78o9k(new Long(2030314118, -2018862337)), _ULong___init__impl__c78o9k(new Long(1464150824, -1449836097)), _ULong___init__impl__c78o9k(new Long(756446706, -738553297)), _ULong___init__impl__c78o9k(new Long(2083391927, -2072208547)), _ULong___init__impl__c78o9k(new Long(-616985563, -1516518860)), _ULong___init__impl__c78o9k(new Long(302509870, -821906750)), _ULong___init__impl__c78o9k(new Long(1262810493, -2124304455)), _ULong___init__impl__c78o9k(new Long(-1642712356, -1581638745)), _ULong___init__impl__c78o9k(new Long(-2053390445, -903306607)), _ULong___init__impl__c78o9k(new Long(-419254408, -55391435)), _ULong___init__impl__c78o9k(new Long(-1335775829, -1645232383)), _ULong___init__impl__c78o9k(new Long(477763862, -982798654)), _ULong___init__impl__c78o9k(new Long(-1550278821, -154756494)), _ULong___init__impl__c78o9k(new Long(-1505795175, -1707335545)), _ULong___init__impl__c78o9k(new Long(-1882243969, -1060427607)), _ULong___init__impl__c78o9k(new Long(-205321313, -251792685)), _ULong___init__impl__c78o9k(new Long(2019157827, -1767983164)), _ULong___init__impl__c78o9k(new Long(-1771020012, -1136237131)), _ULong___init__impl__c78o9k(new Long(-66291367, -346554590)), _ULong___init__impl__c78o9k(new Long(-578303016, -1827209355)), _ULong___init__impl__c78o9k(new Long(1424604878, -1210269869)), _ULong___init__impl__c78o9k(new Long(707014273, -439095512)), _ULong___init__impl__c78o9k(new Long(441883920, -1885047431)), _ULong___init__impl__c78o9k(new Long(1626096725, -1282567465)), _ULong___init__impl__c78o9k(new Long(958879082, -529467507)), _ULong___init__impl__c78o9k(new Long(1136170338, -1941529928)), _ULong___init__impl__c78o9k(new Long(1420212923, -1353170586)), _ULong___init__impl__c78o9k(new Long(-372217494, -617721409)), _ULong___init__impl__c78o9k(new Long(-232635934, -1996688617)), _ULong___init__impl__c78o9k(new Long(-290794918, -1422118947)), _ULong___init__impl__c78o9k(new Long(1783990001, -703906859)), _ULong___init__impl__c78o9k(new Long(1651864662, -2050554523)), _ULong___init__impl__c78o9k(new Long(-1156394644, -1489451330)), _ULong___init__impl__c78o9k(new Long(1775732167, -788072338)), _ULong___init__impl__c78o9k(new Long(36090780, -2103157947)), _ULong___init__impl__c78o9k(new Long(1118855300, -1555205610)), _ULong___init__impl__c78o9k(new Long(-748914523, -870265189)), _ULong___init__impl__c78o9k(new Long(-936143154, -14089662)), _ULong___init__impl__c78o9k(new Long(-1121960383, -1619418775)), _ULong___init__impl__c78o9k(new Long(745033169, -950531644)), _ULong___init__impl__c78o9k(new Long(931291461, -114422731)), _ULong___init__impl__c78o9k(new Long(1118928075, -1682126943)), _ULong___init__impl__c78o9k(new Long(-1822565378, -1028916855)), _ULong___init__impl__c78o9k(new Long(-130723074, -212404245)), _ULong___init__impl__c78o9k(new Long(2065781726, -1743365389)), _ULong___init__impl__c78o9k(new Long(1508485334, -1105464912)), _ULong___init__impl__c78o9k(new Long(1885606668, -308089316)), _ULong___init__impl__c78o9k(new Long(-968979481, -1803168559)), _ULong___init__impl__c78o9k(new Long(936259297, -1180218874)), _ULong___init__impl__c78o9k(new Long(-977159527, -401531769)), _ULong___init__impl__c78o9k(new Long(-610724704, -1861570092)), _ULong___init__impl__c78o9k(new Long(310335944, -1253220790)), _ULong___init__impl__c78o9k(new Long(-1759563718, -492784164)), _ULong___init__impl__c78o9k(new Long(-562856412, -1918602839)), _ULong___init__impl__c78o9k(new Long(1443913133, -1324511724)), _ULong___init__impl__c78o9k(new Long(1804891416, -581897831)), _ULong___init__impl__c78o9k(new Long(-482555601, -1974298881)), _ULong___init__impl__c78o9k(new Long(-603194501, -1394131777)), _ULong___init__impl__c78o9k(new Long(-753993126, -668922897)), _ULong___init__impl__c78o9k(new Long(-471245704, -2028689547)), _ULong___init__impl__c78o9k(new Long(1558426518, -1462120109)), _ULong___init__impl__c78o9k(new Long(874291324, -753908312)), _ULong___init__impl__c78o9k(new Long(546432077, -2081805431)), _ULong___init__impl__c78o9k(new Long(1756781920, -1528514965)), _ULong___init__impl__c78o9k(new Long(1122235577, -836901882)), _ULong___init__impl__c78o9k(new Long(-372344589, -2133676413)), _ULong___init__impl__c78o9k(new Long(-465430736, -1593353692)), _ULong___init__impl__c78o9k(new Long(491953404, -917950290)), _ULong___init__impl__c78o9k(new Long(-1532541892, -73696039)), _ULong___init__impl__c78o9k(new Long(115903141, -1656672760)), _ULong___init__impl__c78o9k(new Long(144878926, -997099126)), _ULong___init__impl__c78o9k(new Long(-1966384990, -172632084)), _ULong___init__impl__c78o9k(new Long(-692119707, -1718507789)), _ULong___init__impl__c78o9k(new Long(-865149633, -1074392912)), _ULong___init__impl__c78o9k(new Long(-7695218, -269249316)), _ULong___init__impl__c78o9k(new Long(532061401, -1778893558)), _ULong___init__impl__c78o9k(new Long(-1482406897, -1149875124)), _ULong___init__impl__c78o9k(new Long(-779266797, -363602081)), _ULong___init__impl__c78o9k(new Long(-487041748, -1837864037)), _ULong___init__impl__c78o9k(new Long(-608802185, -1223588222)), _ULong___init__impl__c78o9k(new Long(-1834744555, -455743453)), _ULong___init__impl__c78o9k(new Long(1000768301, -1895452394)), _ULong___init__impl__c78o9k(new Long(-896523272, -1295573669)), _ULong___init__impl__c78o9k(new Long(-1120654090, -545725262)), _ULong___init__impl__c78o9k(new Long(-1237279718, -1951691025)), _ULong___init__impl__c78o9k(new Long(-1546599648, -1365871957)), _ULong___init__impl__c78o9k(new Long(-1933249560, -633598122)), _ULong___init__impl__c78o9k(new Long(402331761, -2006611562)), _ULong___init__impl__c78o9k(new Long(-1644568947, -1434522629)), _ULong___init__impl__c78o9k(new Long(-2055711183, -719411462)), _ULong___init__impl__c78o9k(new Long(-1821690402, -2060244900)), _ULong___init__impl__c78o9k(new Long(-1203371178, -1501564301)), _ULong___init__impl__c78o9k(new Long(-1504213972, -803213552)), _ULong___init__impl__c78o9k(new Long(1744220827, -2112621206)), _ULong___init__impl__c78o9k(new Long(32792386, -1567034683)), _ULong___init__impl__c78o9k(new Long(1114732307, -885051530)), _ULong___init__impl__c78o9k(new Long(-754068265, -32572589)), _ULong___init__impl__c78o9k(new Long(1676190982, -1630970604)), _ULong___init__impl__c78o9k(new Long(2095238728, -964971431)), _ULong___init__impl__c78o9k(new Long(-602177062, -132472465)), _ULong___init__impl__c78o9k(new Long(-376360664, -1693408027)), _ULong___init__impl__c78o9k(new Long(1677032818, -1043018209)), _ULong___init__impl__c78o9k(new Long(1022549199, -230030937)), _ULong___init__impl__c78o9k(new Long(-2045261311, -1754382072)), _ULong___init__impl__c78o9k(new Long(-1482834814, -1119235766)), _ULong___init__impl__c78o9k(new Long(1367681954, -325302883)), _ULong___init__impl__c78o9k(new Long(1391672133, -1813927038)), _ULong___init__impl__c78o9k(new Long(-407893481, -1193666974)), _ULong___init__impl__c78o9k(new Long(-1583608675, -418341893)), _ULong___init__impl__c78o9k(new Long(1157728226, -1872076419)), _ULong___init__impl__c78o9k(new Long(-1774065190, -1266353700)), _ULong___init__impl__c78o9k(new Long(-1143839663, -509200301)), _ULong___init__impl__c78o9k(new Long(1432583858, -1928862924)), _ULong___init__impl__c78o9k(new Long(1790729823, -1337336831)), _ULong___init__impl__c78o9k(new Long(-982813193, -597929215)), _ULong___init__impl__c78o9k(new Long(459483578, -1984318495)), _ULong___init__impl__c78o9k(new Long(1648096297, -1406656295)), _ULong___init__impl__c78o9k(new Long(-1161105101, -684578545)), _ULong___init__impl__c78o9k(new Long(-725690688, -2038474327)), _ULong___init__impl__c78o9k(new Long(1240370288, -1474351084)), _ULong___init__impl__c78o9k(new Long(1550462860, -769197031)), _ULong___init__impl__c78o9k(new Long(-641573449, -2091360881)), _ULong___init__impl__c78o9k(new Long(-801966811, -1540459277)), _ULong___init__impl__c78o9k(new Long(-1002458513, -851832272)), _ULong___init__impl__c78o9k(new Long(2057817989, -2143007906)), _ULong___init__impl__c78o9k(new Long(424788838, -1605018058)), _ULong___init__impl__c78o9k(new Long(-1616497600, -932530749)), _ULong___init__impl__c78o9k(new Long(-2020622000, -91921612)), _ULong___init__impl__c78o9k(new Long(-726017838, -1668063744)), _ULong___init__impl__c78o9k(new Long(166219527, -1011337855)), _ULong___init__impl__c78o9k(new Long(1281516232, -190430495)), _ULong___init__impl__c78o9k(new Long(-809665091, -1729631796)), _ULong___init__impl__c78o9k(new Long(61660460, -1088297920)), _ULong___init__impl__c78o9k(new Long(77075576, -286630576)), _ULong___init__impl__c78o9k(new Long(48172235, -1789756846)), _ULong___init__impl__c78o9k(new Long(-2087268355, -1163454234)), _ULong___init__impl__c78o9k(new Long(612140029, -380575968)), _ULong___init__impl__c78o9k(new Long(382587518, -1848472716)), _ULong___init__impl__c78o9k(new Long(478234397, -1236849071)), _ULong___init__impl__c78o9k(new Long(1671534821, -472319515)), _ULong___init__impl__c78o9k(new Long(1581580175, -1905812433))]));
+  }
+  protoOf(Companion_31).nextFloat_vwre9r_k$ = function (s, start, end, result) {
+    result.value_1 = FloatCompanionObject_getInstance().get_NaN_18jnv2_k$();
+    result.isValid_1 = false;
+    if (start === end)
+      return start;
+    var index = start;
+    var c = charSequenceGet(s, index);
+    var isNegative = c === _Char___init__impl__6a9atx(45);
+    if (isNegative) {
+      index = index + 1 | 0;
+      if (index === end)
+        return index;
+      c = charSequenceGet(s, index);
+      var tmp;
+      // Inline function 'androidx.compose.ui.graphics.vector.isDigit' call
+      var tmp0_get_isDigit_522t0m = c;
+      // Inline function 'kotlin.code' call
+      var tmp0_get_code_gknlva = numberToChar(Char__minus_impl_a2frrh(tmp0_get_isDigit_522t0m, _Char___init__impl__6a9atx(48)));
+      if (!(Char__toInt_impl_vasixd(tmp0_get_code_gknlva) < 10)) {
+        tmp = !(c === _Char___init__impl__6a9atx(46));
+      } else {
+        tmp = false;
+      }
+      if (tmp)
+        return index;
+    }
+    var significand = new Long(0, 0);
+    var significandStartIndex = index;
+    $l$loop: while (true) {
+      var tmp_0;
+      if (!(index === end)) {
+        // Inline function 'androidx.compose.ui.graphics.vector.isDigit' call
+        var tmp1_get_isDigit_7e5t3 = c;
+        // Inline function 'kotlin.code' call
+        var tmp0_get_code_gknlva_0 = numberToChar(Char__minus_impl_a2frrh(tmp1_get_isDigit_7e5t3, _Char___init__impl__6a9atx(48)));
+        tmp_0 = Char__toInt_impl_vasixd(tmp0_get_code_gknlva_0) < 10;
+      } else {
+        tmp_0 = false;
+      }
+      if (!tmp_0) {
+        break $l$loop;
+      }
+      var tmp_1 = (new Long(10, 0)).times_2zfqpc_k$(significand);
+      // Inline function 'kotlin.code' call
+      var tmp2_get_code_n2njg8 = c;
+      var tmp_2 = Char__toInt_impl_vasixd(tmp2_get_code_n2njg8);
+      // Inline function 'kotlin.code' call
+      significand = tmp_1.plus_u6jwas_k$(toLong(tmp_2 - 48 | 0));
+      // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
+      index = index + 1 | 0;
+      var tmp3_charAt = index;
+      var tmp_3;
+      if (tmp3_charAt < charSequenceLength(s)) {
+        tmp_3 = charSequenceGet(s, tmp3_charAt);
+      } else {
+        tmp_3 = _Char___init__impl__6a9atx(0);
+      }
+      c = tmp_3;
+    }
+    var significandEndIndex = index;
+    var digitCount = index - significandStartIndex | 0;
+    var exponent = 0;
+    var exponentStartIndex = index;
+    var exponentEndIndex = index;
+    if (!(index === end) ? c === _Char___init__impl__6a9atx(46) : false) {
+      index = index + 1 | 0;
+      exponentStartIndex = index;
+      $l$loop_0: while ((end - index | 0) >= 4) {
+        // Inline function 'androidx.compose.ui.graphics.vector.parseFourDigits' call
+        var tmp4_parseFourDigits = index;
+        var tmp$ret$7;
+        // Inline function 'kotlin.code' call
+        var tmp0_get_code_gknlva_1 = charSequenceGet(s, tmp4_parseFourDigits);
+        tmp$ret$7 = Char__toInt_impl_vasixd(tmp0_get_code_gknlva_1);
+        var tmp_4 = toLong(tmp$ret$7);
+        var tmp$ret$8;
+        // Inline function 'kotlin.code' call
+        var tmp1_get_code_jtnknr = charSequenceGet(s, tmp4_parseFourDigits + 1 | 0);
+        tmp$ret$8 = Char__toInt_impl_vasixd(tmp1_get_code_jtnknr);
+        var tmp_5 = tmp_4.or_s401rn_k$(toLong(tmp$ret$8).shl_po5ip6_k$(16));
+        var tmp$ret$9;
+        // Inline function 'kotlin.code' call
+        var tmp2_get_code_n2njg8_0 = charSequenceGet(s, tmp4_parseFourDigits + 2 | 0);
+        tmp$ret$9 = Char__toInt_impl_vasixd(tmp2_get_code_n2njg8_0);
+        var tmp_6 = tmp_5.or_s401rn_k$(toLong(tmp$ret$9).shl_po5ip6_k$(32));
+        var tmp$ret$10;
+        // Inline function 'kotlin.code' call
+        var tmp3_get_code_qbni8p = charSequenceGet(s, tmp4_parseFourDigits + 3 | 0);
+        tmp$ret$10 = Char__toInt_impl_vasixd(tmp3_get_code_qbni8p);
+        var v = tmp_6.or_s401rn_k$(toLong(tmp$ret$10).shl_po5ip6_k$(48));
+        var base = v.minus_llf5ei_k$(new Long(3145776, 3145776));
+        var predicate = v.plus_u6jwas_k$(new Long(4587590, 4587590)).or_s401rn_k$(base);
+        var tmp_7;
+        var tmp$ret$11;
+        // Inline function 'kotlin.ULong.toLong' call
+        tmp$ret$11 = _ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(-8323200, -8323200)));
+        if (!predicate.and_jhajnj_k$(tmp$ret$11).equals(new Long(0, 0))) {
+          tmp_7 = -1;
+        } else {
+          tmp_7 = base.times_2zfqpc_k$(new Long(655361, 65536100)).ushr_rr8rvr_k$(48).toInt_1tsl84_k$();
+        }
+        var digits = tmp_7;
+        if (digits < 0)
+          break $l$loop_0;
+        significand = (new Long(10000, 0)).times_2zfqpc_k$(significand).plus_u6jwas_k$(toLong(digits));
+        index = index + 4 | 0;
+      }
+      // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
+      var tmp5_charAt = index;
+      var tmp_8;
+      if (tmp5_charAt < charSequenceLength(s)) {
+        tmp_8 = charSequenceGet(s, tmp5_charAt);
+      } else {
+        tmp_8 = _Char___init__impl__6a9atx(0);
+      }
+      c = tmp_8;
+      $l$loop_1: while (true) {
+        var tmp_9;
+        if (!(index === end)) {
+          // Inline function 'androidx.compose.ui.graphics.vector.isDigit' call
+          var tmp6_get_isDigit_o2128k = c;
+          // Inline function 'kotlin.code' call
+          var tmp0_get_code_gknlva_2 = numberToChar(Char__minus_impl_a2frrh(tmp6_get_isDigit_o2128k, _Char___init__impl__6a9atx(48)));
+          tmp_9 = Char__toInt_impl_vasixd(tmp0_get_code_gknlva_2) < 10;
+        } else {
+          tmp_9 = false;
+        }
+        if (!tmp_9) {
+          break $l$loop_1;
+        }
+        var tmp_10 = (new Long(10, 0)).times_2zfqpc_k$(significand);
+        // Inline function 'kotlin.code' call
+        var tmp7_get_code_vpgokj = c;
+        var tmp_11 = Char__toInt_impl_vasixd(tmp7_get_code_vpgokj);
+        // Inline function 'kotlin.code' call
+        significand = tmp_10.plus_u6jwas_k$(toLong(tmp_11 - 48 | 0));
+        // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
+        index = index + 1 | 0;
+        var tmp8_charAt = index;
+        var tmp_12;
+        if (tmp8_charAt < charSequenceLength(s)) {
+          tmp_12 = charSequenceGet(s, tmp8_charAt);
+        } else {
+          tmp_12 = _Char___init__impl__6a9atx(0);
+        }
+        c = tmp_12;
+      }
+      exponent = exponentStartIndex - index | 0;
+      exponentEndIndex = index;
+      digitCount = digitCount - exponent | 0;
+    }
+    if (digitCount === 0)
+      return index;
+    var exponentNumber = 0;
+    // Inline function 'kotlin.code' call
+    var tmp9_get_code_p7gqzl = c;
+    var tmp_13 = Char__toInt_impl_vasixd(tmp9_get_code_p7gqzl) | 32;
+    // Inline function 'kotlin.code' call
+    if (tmp_13 === 101) {
+      // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
+      index = index + 1 | 0;
+      var tmp10_charAt = index;
+      var tmp_14;
+      if (tmp10_charAt < charSequenceLength(s)) {
+        tmp_14 = charSequenceGet(s, tmp10_charAt);
+      } else {
+        tmp_14 = _Char___init__impl__6a9atx(0);
+      }
+      c = tmp_14;
+      var isExponentNegative = c === _Char___init__impl__6a9atx(45);
+      if (isExponentNegative ? true : c === _Char___init__impl__6a9atx(43)) {
+        index = index + 1 | 0;
+      }
+      c = charSequenceGet(s, index);
+      $l$loop_2: while (true) {
+        var tmp_15;
+        if (!(index === end)) {
+          // Inline function 'androidx.compose.ui.graphics.vector.isDigit' call
+          var tmp11_get_isDigit_acg0t8 = c;
+          // Inline function 'kotlin.code' call
+          var tmp0_get_code_gknlva_3 = numberToChar(Char__minus_impl_a2frrh(tmp11_get_isDigit_acg0t8, _Char___init__impl__6a9atx(48)));
+          tmp_15 = Char__toInt_impl_vasixd(tmp0_get_code_gknlva_3) < 10;
+        } else {
+          tmp_15 = false;
+        }
+        if (!tmp_15) {
+          break $l$loop_2;
+        }
+        if (exponentNumber < 1024) {
+          var tmp_16 = imul(10, exponentNumber);
+          // Inline function 'kotlin.code' call
+          var tmp12_get_code_3qabkl = c;
+          var tmp_17 = Char__toInt_impl_vasixd(tmp12_get_code_3qabkl);
+          // Inline function 'kotlin.code' call
+          exponentNumber = tmp_16 + (tmp_17 - 48 | 0) | 0;
+        }
+        // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
+        index = index + 1 | 0;
+        var tmp13_charAt = index;
+        var tmp_18;
+        if (tmp13_charAt < charSequenceLength(s)) {
+          tmp_18 = charSequenceGet(s, tmp13_charAt);
+        } else {
+          tmp_18 = _Char___init__impl__6a9atx(0);
+        }
+        c = tmp_18;
+      }
+      if (isExponentNegative)
+        exponentNumber = -exponentNumber | 0;
+      exponent = exponent + exponentNumber | 0;
+    }
+    var tooManyDigits = false;
+    if (digitCount > 19) {
+      var retryIndex = significandStartIndex;
+      c = charSequenceGet(s, retryIndex);
+      while (!(index === end) ? c === _Char___init__impl__6a9atx(48) ? true : c === _Char___init__impl__6a9atx(46) : false) {
+        if (c === _Char___init__impl__6a9atx(48)) {
+          digitCount = digitCount - 1 | 0;
+        }
+        // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
+        retryIndex = retryIndex + 1 | 0;
+        var tmp14_charAt = retryIndex;
+        var tmp_19;
+        if (tmp14_charAt < charSequenceLength(s)) {
+          tmp_19 = charSequenceGet(s, tmp14_charAt);
+        } else {
+          tmp_19 = _Char___init__impl__6a9atx(0);
+        }
+        c = tmp_19;
+      }
+      if (digitCount > 19) {
+        tooManyDigits = true;
+        significand = new Long(0, 0);
+        retryIndex = significandStartIndex;
+        c = charSequenceGet(s, retryIndex);
+        $l$loop_3: while (true) {
+          var tmp_20;
+          if (!(retryIndex === significandEndIndex)) {
+            // Inline function 'kotlin.ULong.compareTo' call
+            // Inline function 'kotlin.toULong' call
+            var tmp15_toULong = significand;
+            var tmp16_compareTo = _ULong___init__impl__c78o9k(tmp15_toULong);
+            tmp_20 = ulongCompare(_ULong___get_data__impl__fggpzb(tmp16_compareTo), _ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(-1486618624, 232830643)))) < 0;
+          } else {
+            tmp_20 = false;
+          }
+          if (!tmp_20) {
+            break $l$loop_3;
+          }
+          var tmp_21 = (new Long(10, 0)).times_2zfqpc_k$(significand);
+          // Inline function 'kotlin.code' call
+          var tmp17_get_code_jza5iy = c;
+          var tmp_22 = Char__toInt_impl_vasixd(tmp17_get_code_jza5iy);
+          // Inline function 'kotlin.code' call
+          significand = tmp_21.plus_u6jwas_k$(toLong(tmp_22 - 48 | 0));
+          // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
+          retryIndex = retryIndex + 1 | 0;
+          var tmp18_charAt = retryIndex;
+          var tmp_23;
+          if (tmp18_charAt < charSequenceLength(s)) {
+            tmp_23 = charSequenceGet(s, tmp18_charAt);
+          } else {
+            tmp_23 = _Char___init__impl__6a9atx(0);
+          }
+          c = tmp_23;
+        }
+        // Inline function 'kotlin.ULong.compareTo' call
+        // Inline function 'kotlin.toULong' call
+        var tmp19_toULong = significand;
+        var tmp20_compareTo = _ULong___init__impl__c78o9k(tmp19_toULong);
+        if (ulongCompare(_ULong___get_data__impl__fggpzb(tmp20_compareTo), _ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(-1486618624, 232830643)))) >= 0) {
+          exponent = (significandEndIndex - retryIndex | 0) + exponentNumber | 0;
+        } else {
+          retryIndex = exponentStartIndex;
+          c = charSequenceGet(s, retryIndex);
+          $l$loop_4: while (true) {
+            var tmp_24;
+            if (!(retryIndex === exponentEndIndex)) {
+              // Inline function 'kotlin.ULong.compareTo' call
+              // Inline function 'kotlin.toULong' call
+              var tmp21_toULong = significand;
+              var tmp22_compareTo = _ULong___init__impl__c78o9k(tmp21_toULong);
+              tmp_24 = ulongCompare(_ULong___get_data__impl__fggpzb(tmp22_compareTo), _ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(-1486618624, 232830643)))) < 0;
+            } else {
+              tmp_24 = false;
+            }
+            if (!tmp_24) {
+              break $l$loop_4;
+            }
+            var tmp_25 = (new Long(10, 0)).times_2zfqpc_k$(significand);
+            // Inline function 'kotlin.code' call
+            var tmp23_get_code_ybyv2j = c;
+            var tmp_26 = Char__toInt_impl_vasixd(tmp23_get_code_ybyv2j);
+            // Inline function 'kotlin.code' call
+            significand = tmp_25.plus_u6jwas_k$(toLong(tmp_26 - 48 | 0));
+            // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
+            retryIndex = retryIndex + 1 | 0;
+            var tmp24_charAt = retryIndex;
+            var tmp_27;
+            if (tmp24_charAt < charSequenceLength(s)) {
+              tmp_27 = charSequenceGet(s, tmp24_charAt);
+            } else {
+              tmp_27 = _Char___init__impl__6a9atx(0);
+            }
+            c = tmp_27;
+          }
+          exponent = (exponentStartIndex - retryIndex | 0) + exponentNumber | 0;
+        }
+      }
+    }
+    var tmp_28;
+    var tmp_29;
+    if (exponent <= 10 ? -10 <= exponent : false) {
+      tmp_29 = !tooManyDigits;
+    } else {
+      tmp_29 = false;
+    }
+    if (tmp_29) {
+      // Inline function 'kotlin.ULong.compareTo' call
+      // Inline function 'kotlin.toULong' call
+      var tmp25_toULong = significand;
+      var tmp26_compareTo = _ULong___init__impl__c78o9k(tmp25_toULong);
+      // Inline function 'kotlin.ULong.shl' call
+      var tmp27_compareTo = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(1, 0))).shl_po5ip6_k$(24));
+      tmp_28 = ulongCompare(_ULong___get_data__impl__fggpzb(tmp26_compareTo), _ULong___get_data__impl__fggpzb(tmp27_compareTo)) <= 0;
+    } else {
+      tmp_28 = false;
+    }
+    if (tmp_28) {
+      var f = significand.toFloat_jhbgwv_k$();
+      if (exponent < 0) {
+        f = f / this.PowersOfTen_1[-exponent | 0];
+      } else {
+        f = f * this.PowersOfTen_1[exponent];
+      }
+      result.isValid_1 = true;
+      result.value_1 = isNegative ? -f : f;
+      return index;
+    }
+    if (significand.equals(new Long(0, 0))) {
+      result.isValid_1 = true;
+      result.value_1 = isNegative ? -0.0 : 0.0;
+      return index;
+    }
+    if (!(-126 <= exponent ? exponent <= 127 : false)) {
+      try {
+        var tmp_30 = result;
+        // Inline function 'kotlin.text.toFloat' call
+        // Inline function 'kotlin.text.substring' call
+        var tmp28_substring = index;
+        // Inline function 'kotlin.js.asDynamic' call
+        var tmp29_toFloat = s.substring(start, tmp28_substring);
+        // Inline function 'kotlin.js.unsafeCast' call
+        // Inline function 'kotlin.js.asDynamic' call
+        tmp_30.value_1 = toDouble(tmp29_toFloat);
+      }finally {
+        result.isValid_1 = true;
+      }
+      return index;
+    }
+    // Inline function 'kotlin.ULong.toLong' call
+    var tmp30_toLong = ULongArray__get_impl_pr71q9(this.Mantissa64__1, exponent - -325 | 0);
+    var significandFactor = _ULong___get_data__impl__fggpzb(tmp30_toLong);
+    var lz = countLeadingZeroBits(significand);
+    significand = significand.shl_po5ip6_k$(lz);
+    // Inline function 'androidx.compose.ui.graphics.vector.fullMultiplicationHighBits' call
+    var tmp31_fullMultiplicationHighBits = significand;
+    var xLo = tmp31_fullMultiplicationHighBits.and_jhajnj_k$(new Long(-1, 0));
+    var xHi = tmp31_fullMultiplicationHighBits.ushr_rr8rvr_k$(32);
+    var yLo = significandFactor.and_jhajnj_k$(new Long(-1, 0));
+    var yHi = significandFactor.ushr_rr8rvr_k$(32);
+    var xTimesYHi = xHi.times_2zfqpc_k$(yHi);
+    var xTimesYMid = xLo.times_2zfqpc_k$(yHi);
+    var yTimesXMid = xHi.times_2zfqpc_k$(yLo);
+    var xTimesYLo = xLo.times_2zfqpc_k$(yLo);
+    var carry = yTimesXMid.plus_u6jwas_k$(xTimesYLo.ushr_rr8rvr_k$(32)).plus_u6jwas_k$(xTimesYMid.and_jhajnj_k$(new Long(-1, 0)));
+    var upper = xTimesYHi.plus_u6jwas_k$(carry.ushr_rr8rvr_k$(32)).plus_u6jwas_k$(xTimesYMid.ushr_rr8rvr_k$(32));
+    var upperBit = upper.ushr_rr8rvr_k$(63).toInt_1tsl84_k$();
+    var mantissa = upper.ushr_rr8rvr_k$(upperBit + 9 | 0);
+    lz = lz + (1 ^ upperBit) | 0;
+    if (upper.and_jhajnj_k$(new Long(511, 0)).equals(new Long(511, 0)) ? true : upper.and_jhajnj_k$(new Long(511, 0)).equals(new Long(0, 0)) ? mantissa.and_jhajnj_k$(new Long(3, 0)).equals(new Long(1, 0)) : false) {
+      try {
+        var tmp_31 = result;
+        // Inline function 'kotlin.text.toFloat' call
+        // Inline function 'kotlin.text.substring' call
+        var tmp32_substring = index;
+        // Inline function 'kotlin.js.asDynamic' call
+        var tmp33_toFloat = s.substring(start, tmp32_substring);
+        // Inline function 'kotlin.js.unsafeCast' call
+        // Inline function 'kotlin.js.asDynamic' call
+        tmp_31.value_1 = toDouble(tmp33_toFloat);
+      }finally {
+        result.isValid_1 = true;
+      }
+      return index;
+    }
+    // Inline function 'kotlin.Long.plus' call
+    mantissa = mantissa.plus_u6jwas_k$(new Long(1, 0));
+    mantissa = mantissa.ushr_rr8rvr_k$(1);
+    if (mantissa.compareTo_n4fqi2_k$(new Long(0, 2097152)) >= 0) {
+      mantissa = new Long(0, 1048576);
+      lz = lz - 1 | 0;
+    }
+    mantissa = mantissa.and_jhajnj_k$(new Long(-1, -1048577));
+    // Inline function 'kotlin.Long.plus' call
+    // Inline function 'kotlin.Long.plus' call
+    // Inline function 'kotlin.Long.times' call
+    var tmp35_times = new Long(217706, 0);
+    var tmp36_times = exponent;
+    var adjustedExponent = tmp35_times.times_2zfqpc_k$(toLong(tmp36_times)).shr_wjue3g_k$(16).plus_u6jwas_k$(new Long(1024, 0)).plus_u6jwas_k$(new Long(63, 0));
+    // Inline function 'kotlin.Long.minus' call
+    var tmp39_minus = lz;
+    var realExponent = adjustedExponent.minus_llf5ei_k$(toLong(tmp39_minus));
+    if (realExponent.compareTo_n4fqi2_k$(new Long(1, 0)) < 0 ? true : realExponent.compareTo_n4fqi2_k$(new Long(2046, 0)) > 0) {
+      try {
+        var tmp_32 = result;
+        // Inline function 'kotlin.text.toFloat' call
+        // Inline function 'kotlin.text.substring' call
+        var tmp40_substring = index;
+        // Inline function 'kotlin.js.asDynamic' call
+        var tmp41_toFloat = s.substring(start, tmp40_substring);
+        // Inline function 'kotlin.js.unsafeCast' call
+        // Inline function 'kotlin.js.asDynamic' call
+        tmp_32.value_1 = toDouble(tmp41_toFloat);
+      }finally {
+        result.isValid_1 = true;
+      }
+      return index;
+    }
+    mantissa = mantissa.or_s401rn_k$(realExponent.shl_po5ip6_k$(52));
+    mantissa = mantissa.or_s401rn_k$(isNegative ? new Long(0, -2147483648) : new Long(0, 0));
+    result.isValid_1 = true;
+    var tmp_33 = result;
+    // Inline function 'kotlin.fromBits' call
+    DoubleCompanionObject_getInstance();
+    var tmp43_fromBits = mantissa;
+    tmp_33.value_1 = doubleFromBits(tmp43_fromBits);
+    return index;
+  };
+  var Companion_instance_31;
+  function Companion_getInstance_46() {
+    if (Companion_instance_31 == null)
+      new Companion_31();
+    return Companion_instance_31;
+  }
+  function FastFloatParser() {
+    Companion_getInstance_46();
+  }
+  function FloatResult(value, isValid) {
+    value = value === VOID ? FloatCompanionObject_getInstance().get_NaN_18jnv2_k$() : value;
+    isValid = isValid === VOID ? false : isValid;
+    this.value_1 = value;
+    this.isValid_1 = isValid;
+  }
+  protoOf(FloatResult).set_value_j3l5mx_k$ = function (_set____db54di) {
+    this.value_1 = _set____db54di;
+  };
+  protoOf(FloatResult).get_value_j01efc_k$ = function () {
+    return this.value_1;
+  };
+  protoOf(FloatResult).set_isValid_at1w3w_k$ = function (_set____db54di) {
+    this.isValid_1 = _set____db54di;
+  };
+  protoOf(FloatResult).get_isValid_zh4f7b_k$ = function () {
+    return this.isValid_1;
+  };
+  function get_isDigit(_this__u8e3s4) {
+    // Inline function 'kotlin.code' call
+    var tmp0_get_code_gknlva = numberToChar(Char__minus_impl_a2frrh(_this__u8e3s4, _Char___init__impl__6a9atx(48)));
+    return Char__toInt_impl_vasixd(tmp0_get_code_gknlva) < 10;
+  }
+  function charAt(s, index) {
+    var tmp;
+    if (index < charSequenceLength(s)) {
+      tmp = charSequenceGet(s, index);
+    } else {
+      tmp = _Char___init__impl__6a9atx(0);
+    }
+    return tmp;
+  }
+  function parseFourDigits(str, offset) {
+    var tmp$ret$0;
+    // Inline function 'kotlin.code' call
+    var tmp0_get_code_gknlva = charSequenceGet(str, offset);
+    tmp$ret$0 = Char__toInt_impl_vasixd(tmp0_get_code_gknlva);
+    var tmp = toLong(tmp$ret$0);
+    var tmp$ret$1;
+    // Inline function 'kotlin.code' call
+    var tmp1_get_code_jtnknr = charSequenceGet(str, offset + 1 | 0);
+    tmp$ret$1 = Char__toInt_impl_vasixd(tmp1_get_code_jtnknr);
+    var tmp_0 = tmp.or_s401rn_k$(toLong(tmp$ret$1).shl_po5ip6_k$(16));
+    var tmp$ret$2;
+    // Inline function 'kotlin.code' call
+    var tmp2_get_code_n2njg8 = charSequenceGet(str, offset + 2 | 0);
+    tmp$ret$2 = Char__toInt_impl_vasixd(tmp2_get_code_n2njg8);
+    var tmp_1 = tmp_0.or_s401rn_k$(toLong(tmp$ret$2).shl_po5ip6_k$(32));
+    var tmp$ret$3;
+    // Inline function 'kotlin.code' call
+    var tmp3_get_code_qbni8p = charSequenceGet(str, offset + 3 | 0);
+    tmp$ret$3 = Char__toInt_impl_vasixd(tmp3_get_code_qbni8p);
+    var v = tmp_1.or_s401rn_k$(toLong(tmp$ret$3).shl_po5ip6_k$(48));
+    var base = v.minus_llf5ei_k$(new Long(3145776, 3145776));
+    var predicate = v.plus_u6jwas_k$(new Long(4587590, 4587590)).or_s401rn_k$(base);
+    var tmp_2;
+    var tmp$ret$4;
+    // Inline function 'kotlin.ULong.toLong' call
+    tmp$ret$4 = _ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(-8323200, -8323200)));
+    if (!predicate.and_jhajnj_k$(tmp$ret$4).equals(new Long(0, 0))) {
+      tmp_2 = -1;
+    } else {
+      tmp_2 = base.times_2zfqpc_k$(new Long(655361, 65536100)).ushr_rr8rvr_k$(48).toInt_1tsl84_k$();
+    }
+    return tmp_2;
+  }
+  function fullMultiplicationHighBits(x, y) {
+    var xLo = x.and_jhajnj_k$(new Long(-1, 0));
+    var xHi = x.ushr_rr8rvr_k$(32);
+    var yLo = y.and_jhajnj_k$(new Long(-1, 0));
+    var yHi = y.ushr_rr8rvr_k$(32);
+    var xTimesYHi = xHi.times_2zfqpc_k$(yHi);
+    var xTimesYMid = xLo.times_2zfqpc_k$(yHi);
+    var yTimesXMid = xHi.times_2zfqpc_k$(yLo);
+    var xTimesYLo = xLo.times_2zfqpc_k$(yLo);
+    var carry = yTimesXMid.plus_u6jwas_k$(xTimesYLo.ushr_rr8rvr_k$(32)).plus_u6jwas_k$(xTimesYMid.and_jhajnj_k$(new Long(-1, 0)));
+    return xTimesYHi.plus_u6jwas_k$(carry.ushr_rr8rvr_k$(32)).plus_u6jwas_k$(xTimesYMid.ushr_rr8rvr_k$(32));
+  }
   function _get_nodes__dowtds($this) {
     return $this.nodes_1;
   }
@@ -8088,6 +8769,606 @@
   protoOf(PathBuilder).arcToRelative_ghjikr_k$ = function (a, b, theta, isMoreThanHalf, isPositiveArc, dx1, dy1) {
     return addNode(this, new RelativeArcTo(a, b, theta, isMoreThanHalf, isPositiveArc, dx1, dy1));
   };
+  function addPathNodes(_this__u8e3s4, nodes, args, count) {
+    if (_this__u8e3s4 === _Char___init__impl__6a9atx(122) ? true : _this__u8e3s4 === _Char___init__impl__6a9atx(90)) {
+      nodes.add_1j60pz_k$(Close_getInstance());
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(109)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end = count - 2 | 0;
+      var index = 0;
+      while (index <= end) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp1_anonymous = index;
+        var node = new RelativeMoveTo(args[tmp1_anonymous], args[tmp1_anonymous + 1 | 0]);
+        var tmp;
+        var tmp_0;
+        if (node instanceof MoveTo) {
+          tmp_0 = index > 0;
+        } else {
+          tmp_0 = false;
+        }
+        if (tmp_0) {
+          tmp = new LineTo(args[index], args[index + 1 | 0]);
+        } else {
+          var tmp_1;
+          if (node instanceof RelativeMoveTo) {
+            tmp_1 = index > 0;
+          } else {
+            tmp_1 = false;
+          }
+          if (tmp_1) {
+            tmp = new RelativeLineTo(args[index], args[index + 1 | 0]);
+          } else {
+            tmp = node;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp);
+        index = index + 2 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(77)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_0 = count - 2 | 0;
+      var index_0 = 0;
+      while (index_0 <= end_0) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp3_anonymous = index_0;
+        var node_0 = new MoveTo(args[tmp3_anonymous], args[tmp3_anonymous + 1 | 0]);
+        var tmp_2;
+        var tmp_3;
+        if (node_0 instanceof MoveTo) {
+          tmp_3 = index_0 > 0;
+        } else {
+          tmp_3 = false;
+        }
+        if (tmp_3) {
+          tmp_2 = new LineTo(args[index_0], args[index_0 + 1 | 0]);
+        } else {
+          var tmp_4;
+          if (node_0 instanceof RelativeMoveTo) {
+            tmp_4 = index_0 > 0;
+          } else {
+            tmp_4 = false;
+          }
+          if (tmp_4) {
+            tmp_2 = new RelativeLineTo(args[index_0], args[index_0 + 1 | 0]);
+          } else {
+            tmp_2 = node_0;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_2);
+        index_0 = index_0 + 2 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(108)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_1 = count - 2 | 0;
+      var index_1 = 0;
+      while (index_1 <= end_1) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp5_anonymous = index_1;
+        var node_1 = new RelativeLineTo(args[tmp5_anonymous], args[tmp5_anonymous + 1 | 0]);
+        var tmp_5;
+        var tmp_6;
+        if (node_1 instanceof MoveTo) {
+          tmp_6 = index_1 > 0;
+        } else {
+          tmp_6 = false;
+        }
+        if (tmp_6) {
+          tmp_5 = new LineTo(args[index_1], args[index_1 + 1 | 0]);
+        } else {
+          var tmp_7;
+          if (node_1 instanceof RelativeMoveTo) {
+            tmp_7 = index_1 > 0;
+          } else {
+            tmp_7 = false;
+          }
+          if (tmp_7) {
+            tmp_5 = new RelativeLineTo(args[index_1], args[index_1 + 1 | 0]);
+          } else {
+            tmp_5 = node_1;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_5);
+        index_1 = index_1 + 2 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(76)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_2 = count - 2 | 0;
+      var index_2 = 0;
+      while (index_2 <= end_2) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp7_anonymous = index_2;
+        var node_2 = new LineTo(args[tmp7_anonymous], args[tmp7_anonymous + 1 | 0]);
+        var tmp_8;
+        var tmp_9;
+        if (node_2 instanceof MoveTo) {
+          tmp_9 = index_2 > 0;
+        } else {
+          tmp_9 = false;
+        }
+        if (tmp_9) {
+          tmp_8 = new LineTo(args[index_2], args[index_2 + 1 | 0]);
+        } else {
+          var tmp_10;
+          if (node_2 instanceof RelativeMoveTo) {
+            tmp_10 = index_2 > 0;
+          } else {
+            tmp_10 = false;
+          }
+          if (tmp_10) {
+            tmp_8 = new RelativeLineTo(args[index_2], args[index_2 + 1 | 0]);
+          } else {
+            tmp_8 = node_2;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_8);
+        index_2 = index_2 + 2 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(104)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_3 = count - 1 | 0;
+      var index_3 = 0;
+      while (index_3 <= end_3) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp9_anonymous = index_3;
+        var node_3 = new RelativeHorizontalTo(args[tmp9_anonymous]);
+        var tmp_11;
+        var tmp_12;
+        if (node_3 instanceof MoveTo) {
+          tmp_12 = index_3 > 0;
+        } else {
+          tmp_12 = false;
+        }
+        if (tmp_12) {
+          tmp_11 = new LineTo(args[index_3], args[index_3 + 1 | 0]);
+        } else {
+          var tmp_13;
+          if (node_3 instanceof RelativeMoveTo) {
+            tmp_13 = index_3 > 0;
+          } else {
+            tmp_13 = false;
+          }
+          if (tmp_13) {
+            tmp_11 = new RelativeLineTo(args[index_3], args[index_3 + 1 | 0]);
+          } else {
+            tmp_11 = node_3;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_11);
+        index_3 = index_3 + 1 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(72)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_4 = count - 1 | 0;
+      var index_4 = 0;
+      while (index_4 <= end_4) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp11_anonymous = index_4;
+        var node_4 = new HorizontalTo(args[tmp11_anonymous]);
+        var tmp_14;
+        var tmp_15;
+        if (node_4 instanceof MoveTo) {
+          tmp_15 = index_4 > 0;
+        } else {
+          tmp_15 = false;
+        }
+        if (tmp_15) {
+          tmp_14 = new LineTo(args[index_4], args[index_4 + 1 | 0]);
+        } else {
+          var tmp_16;
+          if (node_4 instanceof RelativeMoveTo) {
+            tmp_16 = index_4 > 0;
+          } else {
+            tmp_16 = false;
+          }
+          if (tmp_16) {
+            tmp_14 = new RelativeLineTo(args[index_4], args[index_4 + 1 | 0]);
+          } else {
+            tmp_14 = node_4;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_14);
+        index_4 = index_4 + 1 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(118)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_5 = count - 1 | 0;
+      var index_5 = 0;
+      while (index_5 <= end_5) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp13_anonymous = index_5;
+        var node_5 = new RelativeVerticalTo(args[tmp13_anonymous]);
+        var tmp_17;
+        var tmp_18;
+        if (node_5 instanceof MoveTo) {
+          tmp_18 = index_5 > 0;
+        } else {
+          tmp_18 = false;
+        }
+        if (tmp_18) {
+          tmp_17 = new LineTo(args[index_5], args[index_5 + 1 | 0]);
+        } else {
+          var tmp_19;
+          if (node_5 instanceof RelativeMoveTo) {
+            tmp_19 = index_5 > 0;
+          } else {
+            tmp_19 = false;
+          }
+          if (tmp_19) {
+            tmp_17 = new RelativeLineTo(args[index_5], args[index_5 + 1 | 0]);
+          } else {
+            tmp_17 = node_5;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_17);
+        index_5 = index_5 + 1 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(86)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_6 = count - 1 | 0;
+      var index_6 = 0;
+      while (index_6 <= end_6) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp15_anonymous = index_6;
+        var node_6 = new VerticalTo(args[tmp15_anonymous]);
+        var tmp_20;
+        var tmp_21;
+        if (node_6 instanceof MoveTo) {
+          tmp_21 = index_6 > 0;
+        } else {
+          tmp_21 = false;
+        }
+        if (tmp_21) {
+          tmp_20 = new LineTo(args[index_6], args[index_6 + 1 | 0]);
+        } else {
+          var tmp_22;
+          if (node_6 instanceof RelativeMoveTo) {
+            tmp_22 = index_6 > 0;
+          } else {
+            tmp_22 = false;
+          }
+          if (tmp_22) {
+            tmp_20 = new RelativeLineTo(args[index_6], args[index_6 + 1 | 0]);
+          } else {
+            tmp_20 = node_6;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_20);
+        index_6 = index_6 + 1 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(99)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_7 = count - 6 | 0;
+      var index_7 = 0;
+      while (index_7 <= end_7) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp17_anonymous = index_7;
+        var node_7 = new RelativeCurveTo(args[tmp17_anonymous], args[tmp17_anonymous + 1 | 0], args[tmp17_anonymous + 2 | 0], args[tmp17_anonymous + 3 | 0], args[tmp17_anonymous + 4 | 0], args[tmp17_anonymous + 5 | 0]);
+        var tmp_23;
+        var tmp_24;
+        if (node_7 instanceof MoveTo) {
+          tmp_24 = index_7 > 0;
+        } else {
+          tmp_24 = false;
+        }
+        if (tmp_24) {
+          tmp_23 = new LineTo(args[index_7], args[index_7 + 1 | 0]);
+        } else {
+          var tmp_25;
+          if (node_7 instanceof RelativeMoveTo) {
+            tmp_25 = index_7 > 0;
+          } else {
+            tmp_25 = false;
+          }
+          if (tmp_25) {
+            tmp_23 = new RelativeLineTo(args[index_7], args[index_7 + 1 | 0]);
+          } else {
+            tmp_23 = node_7;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_23);
+        index_7 = index_7 + 6 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(67)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_8 = count - 6 | 0;
+      var index_8 = 0;
+      while (index_8 <= end_8) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp19_anonymous = index_8;
+        var node_8 = new CurveTo(args[tmp19_anonymous], args[tmp19_anonymous + 1 | 0], args[tmp19_anonymous + 2 | 0], args[tmp19_anonymous + 3 | 0], args[tmp19_anonymous + 4 | 0], args[tmp19_anonymous + 5 | 0]);
+        var tmp_26;
+        var tmp_27;
+        if (node_8 instanceof MoveTo) {
+          tmp_27 = index_8 > 0;
+        } else {
+          tmp_27 = false;
+        }
+        if (tmp_27) {
+          tmp_26 = new LineTo(args[index_8], args[index_8 + 1 | 0]);
+        } else {
+          var tmp_28;
+          if (node_8 instanceof RelativeMoveTo) {
+            tmp_28 = index_8 > 0;
+          } else {
+            tmp_28 = false;
+          }
+          if (tmp_28) {
+            tmp_26 = new RelativeLineTo(args[index_8], args[index_8 + 1 | 0]);
+          } else {
+            tmp_26 = node_8;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_26);
+        index_8 = index_8 + 6 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(115)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_9 = count - 4 | 0;
+      var index_9 = 0;
+      while (index_9 <= end_9) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp21_anonymous = index_9;
+        var node_9 = new RelativeReflectiveCurveTo(args[tmp21_anonymous], args[tmp21_anonymous + 1 | 0], args[tmp21_anonymous + 2 | 0], args[tmp21_anonymous + 3 | 0]);
+        var tmp_29;
+        var tmp_30;
+        if (node_9 instanceof MoveTo) {
+          tmp_30 = index_9 > 0;
+        } else {
+          tmp_30 = false;
+        }
+        if (tmp_30) {
+          tmp_29 = new LineTo(args[index_9], args[index_9 + 1 | 0]);
+        } else {
+          var tmp_31;
+          if (node_9 instanceof RelativeMoveTo) {
+            tmp_31 = index_9 > 0;
+          } else {
+            tmp_31 = false;
+          }
+          if (tmp_31) {
+            tmp_29 = new RelativeLineTo(args[index_9], args[index_9 + 1 | 0]);
+          } else {
+            tmp_29 = node_9;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_29);
+        index_9 = index_9 + 4 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(83)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_10 = count - 4 | 0;
+      var index_10 = 0;
+      while (index_10 <= end_10) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp23_anonymous = index_10;
+        var node_10 = new ReflectiveCurveTo(args[tmp23_anonymous], args[tmp23_anonymous + 1 | 0], args[tmp23_anonymous + 2 | 0], args[tmp23_anonymous + 3 | 0]);
+        var tmp_32;
+        var tmp_33;
+        if (node_10 instanceof MoveTo) {
+          tmp_33 = index_10 > 0;
+        } else {
+          tmp_33 = false;
+        }
+        if (tmp_33) {
+          tmp_32 = new LineTo(args[index_10], args[index_10 + 1 | 0]);
+        } else {
+          var tmp_34;
+          if (node_10 instanceof RelativeMoveTo) {
+            tmp_34 = index_10 > 0;
+          } else {
+            tmp_34 = false;
+          }
+          if (tmp_34) {
+            tmp_32 = new RelativeLineTo(args[index_10], args[index_10 + 1 | 0]);
+          } else {
+            tmp_32 = node_10;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_32);
+        index_10 = index_10 + 4 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(113)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_11 = count - 4 | 0;
+      var index_11 = 0;
+      while (index_11 <= end_11) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp25_anonymous = index_11;
+        var node_11 = new RelativeQuadTo(args[tmp25_anonymous], args[tmp25_anonymous + 1 | 0], args[tmp25_anonymous + 2 | 0], args[tmp25_anonymous + 3 | 0]);
+        var tmp_35;
+        var tmp_36;
+        if (node_11 instanceof MoveTo) {
+          tmp_36 = index_11 > 0;
+        } else {
+          tmp_36 = false;
+        }
+        if (tmp_36) {
+          tmp_35 = new LineTo(args[index_11], args[index_11 + 1 | 0]);
+        } else {
+          var tmp_37;
+          if (node_11 instanceof RelativeMoveTo) {
+            tmp_37 = index_11 > 0;
+          } else {
+            tmp_37 = false;
+          }
+          if (tmp_37) {
+            tmp_35 = new RelativeLineTo(args[index_11], args[index_11 + 1 | 0]);
+          } else {
+            tmp_35 = node_11;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_35);
+        index_11 = index_11 + 4 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(81)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_12 = count - 4 | 0;
+      var index_12 = 0;
+      while (index_12 <= end_12) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp27_anonymous = index_12;
+        var node_12 = new QuadTo(args[tmp27_anonymous], args[tmp27_anonymous + 1 | 0], args[tmp27_anonymous + 2 | 0], args[tmp27_anonymous + 3 | 0]);
+        var tmp_38;
+        var tmp_39;
+        if (node_12 instanceof MoveTo) {
+          tmp_39 = index_12 > 0;
+        } else {
+          tmp_39 = false;
+        }
+        if (tmp_39) {
+          tmp_38 = new LineTo(args[index_12], args[index_12 + 1 | 0]);
+        } else {
+          var tmp_40;
+          if (node_12 instanceof RelativeMoveTo) {
+            tmp_40 = index_12 > 0;
+          } else {
+            tmp_40 = false;
+          }
+          if (tmp_40) {
+            tmp_38 = new RelativeLineTo(args[index_12], args[index_12 + 1 | 0]);
+          } else {
+            tmp_38 = node_12;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_38);
+        index_12 = index_12 + 4 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(116)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_13 = count - 2 | 0;
+      var index_13 = 0;
+      while (index_13 <= end_13) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp29_anonymous = index_13;
+        var node_13 = new RelativeReflectiveQuadTo(args[tmp29_anonymous], args[tmp29_anonymous + 1 | 0]);
+        var tmp_41;
+        var tmp_42;
+        if (node_13 instanceof MoveTo) {
+          tmp_42 = index_13 > 0;
+        } else {
+          tmp_42 = false;
+        }
+        if (tmp_42) {
+          tmp_41 = new LineTo(args[index_13], args[index_13 + 1 | 0]);
+        } else {
+          var tmp_43;
+          if (node_13 instanceof RelativeMoveTo) {
+            tmp_43 = index_13 > 0;
+          } else {
+            tmp_43 = false;
+          }
+          if (tmp_43) {
+            tmp_41 = new RelativeLineTo(args[index_13], args[index_13 + 1 | 0]);
+          } else {
+            tmp_41 = node_13;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_41);
+        index_13 = index_13 + 2 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(84)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_14 = count - 2 | 0;
+      var index_14 = 0;
+      while (index_14 <= end_14) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp31_anonymous = index_14;
+        var node_14 = new ReflectiveQuadTo(args[tmp31_anonymous], args[tmp31_anonymous + 1 | 0]);
+        var tmp_44;
+        var tmp_45;
+        if (node_14 instanceof MoveTo) {
+          tmp_45 = index_14 > 0;
+        } else {
+          tmp_45 = false;
+        }
+        if (tmp_45) {
+          tmp_44 = new LineTo(args[index_14], args[index_14 + 1 | 0]);
+        } else {
+          var tmp_46;
+          if (node_14 instanceof RelativeMoveTo) {
+            tmp_46 = index_14 > 0;
+          } else {
+            tmp_46 = false;
+          }
+          if (tmp_46) {
+            tmp_44 = new RelativeLineTo(args[index_14], args[index_14 + 1 | 0]);
+          } else {
+            tmp_44 = node_14;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_44);
+        index_14 = index_14 + 2 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(97)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_15 = count - 7 | 0;
+      var index_15 = 0;
+      while (index_15 <= end_15) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp33_anonymous = index_15;
+        var node_15 = new RelativeArcTo(args[tmp33_anonymous], args[tmp33_anonymous + 1 | 0], args[tmp33_anonymous + 2 | 0], !(compareTo(args[tmp33_anonymous + 3 | 0], 0.0) === 0), !(compareTo(args[tmp33_anonymous + 4 | 0], 0.0) === 0), args[tmp33_anonymous + 5 | 0], args[tmp33_anonymous + 6 | 0]);
+        var tmp_47;
+        var tmp_48;
+        if (node_15 instanceof MoveTo) {
+          tmp_48 = index_15 > 0;
+        } else {
+          tmp_48 = false;
+        }
+        if (tmp_48) {
+          tmp_47 = new LineTo(args[index_15], args[index_15 + 1 | 0]);
+        } else {
+          var tmp_49;
+          if (node_15 instanceof RelativeMoveTo) {
+            tmp_49 = index_15 > 0;
+          } else {
+            tmp_49 = false;
+          }
+          if (tmp_49) {
+            tmp_47 = new RelativeLineTo(args[index_15], args[index_15 + 1 | 0]);
+          } else {
+            tmp_47 = node_15;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_47);
+        index_15 = index_15 + 7 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(65)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_16 = count - 7 | 0;
+      var index_16 = 0;
+      while (index_16 <= end_16) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var tmp35_anonymous = index_16;
+        var node_16 = new ArcTo(args[tmp35_anonymous], args[tmp35_anonymous + 1 | 0], args[tmp35_anonymous + 2 | 0], !(compareTo(args[tmp35_anonymous + 3 | 0], 0.0) === 0), !(compareTo(args[tmp35_anonymous + 4 | 0], 0.0) === 0), args[tmp35_anonymous + 5 | 0], args[tmp35_anonymous + 6 | 0]);
+        var tmp_50;
+        var tmp_51;
+        if (node_16 instanceof MoveTo) {
+          tmp_51 = index_16 > 0;
+        } else {
+          tmp_51 = false;
+        }
+        if (tmp_51) {
+          tmp_50 = new LineTo(args[index_16], args[index_16 + 1 | 0]);
+        } else {
+          var tmp_52;
+          if (node_16 instanceof RelativeMoveTo) {
+            tmp_52 = index_16 > 0;
+          } else {
+            tmp_52 = false;
+          }
+          if (tmp_52) {
+            tmp_50 = new RelativeLineTo(args[index_16], args[index_16 + 1 | 0]);
+          } else {
+            tmp_50 = node_16;
+          }
+        }
+        nodes.add_1j60pz_k$(tmp_50);
+        index_16 = index_16 + 7 | 0;
+      }
+    } else
+      throw IllegalArgumentException_init_$Create$('Unknown command for: ' + new Char(_this__u8e3s4));
+  }
   function Close() {
     Close_instance = this;
     PathNode.call(this);
@@ -9158,11 +10439,297 @@
   protoOf(PathNode).get_isQuad_ew4yai_k$ = function () {
     return this.isQuad_1;
   };
+  function get_RelativeCloseKey() {
+    return RelativeCloseKey;
+  }
+  var RelativeCloseKey;
+  function get_CloseKey() {
+    return CloseKey;
+  }
+  var CloseKey;
+  function get_RelativeMoveToKey() {
+    return RelativeMoveToKey;
+  }
+  var RelativeMoveToKey;
+  function pathNodesFromArgs(nodes, args, count, numArgs, nodeFor) {
+    var end = count - numArgs | 0;
+    var index = 0;
+    while (index <= end) {
+      var node = nodeFor(args, index);
+      var tmp;
+      var tmp_0;
+      if (node instanceof MoveTo) {
+        tmp_0 = index > 0;
+      } else {
+        tmp_0 = false;
+      }
+      if (tmp_0) {
+        tmp = new LineTo(args[index], args[index + 1 | 0]);
+      } else {
+        var tmp_1;
+        if (node instanceof RelativeMoveTo) {
+          tmp_1 = index > 0;
+        } else {
+          tmp_1 = false;
+        }
+        if (tmp_1) {
+          tmp = new RelativeLineTo(args[index], args[index + 1 | 0]);
+        } else {
+          tmp = node;
+        }
+      }
+      nodes.add_1j60pz_k$(tmp);
+      index = index + numArgs | 0;
+    }
+  }
+  function get_NUM_MOVE_TO_ARGS() {
+    return NUM_MOVE_TO_ARGS;
+  }
+  var NUM_MOVE_TO_ARGS;
+  function get_MoveToKey() {
+    return MoveToKey;
+  }
+  var MoveToKey;
+  function get_RelativeLineToKey() {
+    return RelativeLineToKey;
+  }
+  var RelativeLineToKey;
+  function get_NUM_LINE_TO_ARGS() {
+    return NUM_LINE_TO_ARGS;
+  }
+  var NUM_LINE_TO_ARGS;
+  function get_LineToKey() {
+    return LineToKey;
+  }
+  var LineToKey;
+  function get_RelativeHorizontalToKey() {
+    return RelativeHorizontalToKey;
+  }
+  var RelativeHorizontalToKey;
+  function get_NUM_HORIZONTAL_TO_ARGS() {
+    return NUM_HORIZONTAL_TO_ARGS;
+  }
+  var NUM_HORIZONTAL_TO_ARGS;
+  function get_HorizontalToKey() {
+    return HorizontalToKey;
+  }
+  var HorizontalToKey;
+  function get_RelativeVerticalToKey() {
+    return RelativeVerticalToKey;
+  }
+  var RelativeVerticalToKey;
+  function get_NUM_VERTICAL_TO_ARGS() {
+    return NUM_VERTICAL_TO_ARGS;
+  }
+  var NUM_VERTICAL_TO_ARGS;
+  function get_VerticalToKey() {
+    return VerticalToKey;
+  }
+  var VerticalToKey;
+  function get_RelativeCurveToKey() {
+    return RelativeCurveToKey;
+  }
+  var RelativeCurveToKey;
+  function get_NUM_CURVE_TO_ARGS() {
+    return NUM_CURVE_TO_ARGS;
+  }
+  var NUM_CURVE_TO_ARGS;
+  function get_CurveToKey() {
+    return CurveToKey;
+  }
+  var CurveToKey;
+  function get_RelativeReflectiveCurveToKey() {
+    return RelativeReflectiveCurveToKey;
+  }
+  var RelativeReflectiveCurveToKey;
+  function get_NUM_REFLECTIVE_CURVE_TO_ARGS() {
+    return NUM_REFLECTIVE_CURVE_TO_ARGS;
+  }
+  var NUM_REFLECTIVE_CURVE_TO_ARGS;
+  function get_ReflectiveCurveToKey() {
+    return ReflectiveCurveToKey;
+  }
+  var ReflectiveCurveToKey;
+  function get_RelativeQuadToKey() {
+    return RelativeQuadToKey;
+  }
+  var RelativeQuadToKey;
+  function get_NUM_QUAD_TO_ARGS() {
+    return NUM_QUAD_TO_ARGS;
+  }
+  var NUM_QUAD_TO_ARGS;
+  function get_QuadToKey() {
+    return QuadToKey;
+  }
+  var QuadToKey;
+  function get_RelativeReflectiveQuadToKey() {
+    return RelativeReflectiveQuadToKey;
+  }
+  var RelativeReflectiveQuadToKey;
+  function get_NUM_REFLECTIVE_QUAD_TO_ARGS() {
+    return NUM_REFLECTIVE_QUAD_TO_ARGS;
+  }
+  var NUM_REFLECTIVE_QUAD_TO_ARGS;
+  function get_ReflectiveQuadToKey() {
+    return ReflectiveQuadToKey;
+  }
+  var ReflectiveQuadToKey;
+  function get_RelativeArcToKey() {
+    return RelativeArcToKey;
+  }
+  var RelativeArcToKey;
+  function get_NUM_ARC_TO_ARGS() {
+    return NUM_ARC_TO_ARGS;
+  }
+  var NUM_ARC_TO_ARGS;
+  function get_ArcToKey() {
+    return ArcToKey;
+  }
+  var ArcToKey;
   function get_EmptyArray() {
     _init_properties_PathParser_kt__xn6mis();
     return EmptyArray;
   }
   var EmptyArray;
+  function _get_nodes__dowtds_0($this) {
+    return $this.nodes_1;
+  }
+  function _get_floatResult__5mtus8($this) {
+    return $this.floatResult_1;
+  }
+  function _set_nodeData__qft5rp($this, _set____db54di) {
+    $this.nodeData_1 = _set____db54di;
+  }
+  function _get_nodeData__vsekqn($this) {
+    return $this.nodeData_1;
+  }
+  function resizeNodeData($this, dataCount) {
+    if (dataCount >= $this.nodeData_1.length) {
+      var src = $this.nodeData_1;
+      $this.nodeData_1 = new Float32Array(imul(dataCount, 2));
+      // Inline function 'kotlin.collections.copyInto' call
+      var tmp0_copyInto = $this.nodeData_1;
+      var tmp1_copyInto = src.length;
+      // Inline function 'kotlin.js.unsafeCast' call
+      // Inline function 'kotlin.js.asDynamic' call
+      var tmp = src;
+      // Inline function 'kotlin.js.unsafeCast' call
+      // Inline function 'kotlin.js.asDynamic' call
+      arrayCopy(tmp, tmp0_copyInto, 0, 0, tmp1_copyInto);
+    }
+  }
+  function addNodes($this, cmd, args, count) {
+    addPathNodes(cmd, $this.nodes_1, args, count);
+  }
+  function PathParser() {
+    var tmp = this;
+    // Inline function 'kotlin.collections.mutableListOf' call
+    tmp.nodes_1 = ArrayList_init_$Create$_0();
+    this.floatResult_1 = new FloatResult();
+    this.nodeData_1 = new Float32Array(64);
+  }
+  protoOf(PathParser).clear_j9y8zo_k$ = function () {
+    this.nodes_1.clear_j9y8zo_k$();
+  };
+  protoOf(PathParser).parsePathString_obiteg_k$ = function (pathData) {
+    this.nodes_1.clear_j9y8zo_k$();
+    var start = 0;
+    var end = pathData.length;
+    var dataCount = 0;
+    while (start < end ? Char__compareTo_impl_ypi4mb(charSequenceGet(pathData, start), _Char___init__impl__6a9atx(32)) <= 0 : false) {
+      start = start + 1 | 0;
+    }
+    while (end > start ? Char__compareTo_impl_ypi4mb(charSequenceGet(pathData, end - 1 | 0), _Char___init__impl__6a9atx(32)) <= 0 : false) {
+      end = end - 1 | 0;
+    }
+    var index = start;
+    while (index < end) {
+      var c;
+      var command = _Char___init__impl__6a9atx(0);
+      $l$loop: do {
+        var tmp2 = index;
+        index = tmp2 + 1 | 0;
+        c = charSequenceGet(pathData, tmp2);
+        // Inline function 'kotlin.code' call
+        var lowerChar = Char__toInt_impl_vasixd(c) | 32;
+        var tmp;
+        // Inline function 'kotlin.code' call
+        var tmp_0 = lowerChar - 97 | 0;
+        // Inline function 'kotlin.code' call
+        if (imul(tmp_0, lowerChar - 122 | 0) <= 0) {
+          // Inline function 'kotlin.code' call
+          tmp = !(lowerChar === 101);
+        } else {
+          tmp = false;
+        }
+        if (tmp) {
+          command = c;
+          break $l$loop;
+        }
+      }
+       while (index < end);
+      if (!(command === _Char___init__impl__6a9atx(0))) {
+        // Inline function 'kotlin.code' call
+        var tmp1_get_code_jtnknr = command;
+        var tmp_1 = Char__toInt_impl_vasixd(tmp1_get_code_jtnknr) | 32;
+        // Inline function 'kotlin.code' call
+        if (!(tmp_1 === 122)) {
+          dataCount = 0;
+          do {
+            while (index < end ? Char__compareTo_impl_ypi4mb(charSequenceGet(pathData, index), _Char___init__impl__6a9atx(32)) <= 0 : false) {
+              index = index + 1 | 0;
+            }
+            index = Companion_getInstance_46().nextFloat_vwre9r_k$(pathData, index, end, this.floatResult_1);
+            if (this.floatResult_1.get_isValid_zh4f7b_k$()) {
+              var tmp_2 = this.nodeData_1;
+              var tmp4 = dataCount;
+              dataCount = tmp4 + 1 | 0;
+              tmp_2[tmp4] = this.floatResult_1.get_value_j01efc_k$();
+              // Inline function 'androidx.compose.ui.graphics.vector.PathParser.resizeNodeData' call
+              var tmp2_resizeNodeData = dataCount;
+              if (tmp2_resizeNodeData >= this.nodeData_1.length) {
+                var src = this.nodeData_1;
+                this.nodeData_1 = new Float32Array(imul(tmp2_resizeNodeData, 2));
+                // Inline function 'kotlin.collections.copyInto' call
+                var tmp0_copyInto = this.nodeData_1;
+                var tmp1_copyInto = src.length;
+                // Inline function 'kotlin.js.unsafeCast' call
+                // Inline function 'kotlin.js.asDynamic' call
+                var tmp_3 = src;
+                // Inline function 'kotlin.js.unsafeCast' call
+                // Inline function 'kotlin.js.asDynamic' call
+                arrayCopy(tmp_3, tmp0_copyInto, 0, 0, tmp1_copyInto);
+              }
+            }
+            while (index < end ? charSequenceGet(pathData, index) === _Char___init__impl__6a9atx(44) : false) {
+              index = index + 1 | 0;
+            }
+          }
+           while (index < end ? this.floatResult_1.get_isValid_zh4f7b_k$() : false);
+        }
+        // Inline function 'androidx.compose.ui.graphics.vector.PathParser.addNodes' call
+        var tmp3_addNodes = command;
+        var tmp4_addNodes = this.nodeData_1;
+        var tmp5_addNodes = dataCount;
+        addPathNodes(tmp3_addNodes, this.nodes_1, tmp4_addNodes, tmp5_addNodes);
+      }
+    }
+    return this;
+  };
+  protoOf(PathParser).addPathNodes_kbkq3a_k$ = function (nodes) {
+    this.nodes_1.addAll_oxxjjk_k$(nodes);
+    return this;
+  };
+  protoOf(PathParser).toNodes_jcvf9m_k$ = function () {
+    return this.nodes_1;
+  };
+  protoOf(PathParser).toPath_uv3z80_k$ = function (target) {
+    return toPath(this.nodes_1, target);
+  };
+  protoOf(PathParser).toPath$default_y4c96b_k$ = function (target, $super) {
+    target = target === VOID ? Path_0() : target;
+    return $super === VOID ? this.toPath_uv3z80_k$(target) : $super.toPath_uv3z80_k$.call(this, target);
+  };
   function toPath(_this__u8e3s4, target) {
     target = target === VOID ? Path_0() : target;
     _init_properties_PathParser_kt__xn6mis();
@@ -9526,7 +11093,7 @@
        while (inductionVariable < length);
   }
   function toSkia(_this__u8e3s4) {
-    return _this__u8e3s4 === Companion_getInstance_13().get_Clear_9hhqh4_k$() ? BlendMode_CLEAR_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Src_o7e167_k$() ? BlendMode_SRC_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Dst_o5v574_k$() ? BlendMode_DST_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_SrcOver_uyf80z_k$() ? BlendMode_SRC_OVER_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_DstOver_h25nrw_k$() ? BlendMode_DST_OVER_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_SrcIn_yyf2fo_k$() ? BlendMode_SRC_IN_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_DstIn_7c3x3p_k$() ? BlendMode_DST_IN_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_SrcOut_78cqo7_k$() ? BlendMode_SRC_OUT_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_DstOut_3e3t2e_k$() ? BlendMode_DST_OUT_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_SrcAtop_erwkkd_k$() ? BlendMode_SRC_ATOP_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_DstAtop_88mllw_k$() ? BlendMode_DST_ATOP_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Xor_7r0wg6_k$() ? BlendMode_XOR_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Plus_sl45pl_k$() ? BlendMode_PLUS_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Modulate_xd1sfq_k$() ? BlendMode_MODULATE_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Screen_76rbx3_k$() ? BlendMode_SCREEN_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Overlay_2mxasb_k$() ? BlendMode_OVERLAY_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Darken_1ojojo_k$() ? BlendMode_DARKEN_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Lighten_afcpbe_k$() ? BlendMode_LIGHTEN_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_ColorDodge_gwt0pb_k$() ? BlendMode_COLOR_DODGE_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_ColorBurn_55chr1_k$() ? BlendMode_COLOR_BURN_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Hardlight_ie4bsm_k$() ? BlendMode_HARD_LIGHT_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Softlight_3emetl_k$() ? BlendMode_SOFT_LIGHT_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Difference_k61r8m_k$() ? BlendMode_DIFFERENCE_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Exclusion_cabql5_k$() ? BlendMode_EXCLUSION_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Multiply_bawk0x_k$() ? BlendMode_MULTIPLY_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Hue_1rhqm5_k$() ? BlendMode_HUE_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Saturation_y5o6lt_k$() ? BlendMode_SATURATION_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Color_2ootbm_k$() ? BlendMode_COLOR_getInstance() : _this__u8e3s4 === Companion_getInstance_13().get_Luminosity_99tf6q_k$() ? BlendMode_LUMINOSITY_getInstance() : BlendMode_SRC_OVER_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_14().get_Clear_9hhqh4_k$() ? BlendMode_CLEAR_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Src_o7e167_k$() ? BlendMode_SRC_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Dst_o5v574_k$() ? BlendMode_DST_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_SrcOver_uyf80z_k$() ? BlendMode_SRC_OVER_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_DstOver_h25nrw_k$() ? BlendMode_DST_OVER_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_SrcIn_yyf2fo_k$() ? BlendMode_SRC_IN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_DstIn_7c3x3p_k$() ? BlendMode_DST_IN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_SrcOut_78cqo7_k$() ? BlendMode_SRC_OUT_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_DstOut_3e3t2e_k$() ? BlendMode_DST_OUT_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_SrcAtop_erwkkd_k$() ? BlendMode_SRC_ATOP_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_DstAtop_88mllw_k$() ? BlendMode_DST_ATOP_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Xor_7r0wg6_k$() ? BlendMode_XOR_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Plus_sl45pl_k$() ? BlendMode_PLUS_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Modulate_xd1sfq_k$() ? BlendMode_MODULATE_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Screen_76rbx3_k$() ? BlendMode_SCREEN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Overlay_2mxasb_k$() ? BlendMode_OVERLAY_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Darken_1ojojo_k$() ? BlendMode_DARKEN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Lighten_afcpbe_k$() ? BlendMode_LIGHTEN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_ColorDodge_gwt0pb_k$() ? BlendMode_COLOR_DODGE_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_ColorBurn_55chr1_k$() ? BlendMode_COLOR_BURN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Hardlight_ie4bsm_k$() ? BlendMode_HARD_LIGHT_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Softlight_3emetl_k$() ? BlendMode_SOFT_LIGHT_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Difference_k61r8m_k$() ? BlendMode_DIFFERENCE_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Exclusion_cabql5_k$() ? BlendMode_EXCLUSION_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Multiply_bawk0x_k$() ? BlendMode_MULTIPLY_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Hue_1rhqm5_k$() ? BlendMode_HUE_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Saturation_y5o6lt_k$() ? BlendMode_SATURATION_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Color_2ootbm_k$() ? BlendMode_COLOR_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Luminosity_99tf6q_k$() ? BlendMode_LUMINOSITY_getInstance() : BlendMode_SRC_OVER_getInstance();
   }
   function identityMatrix33() {
     return new Matrix33(new Float32Array([1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]));
@@ -9650,7 +11217,7 @@
     }
   }
   function toSkia_0(_this__u8e3s4, $this) {
-    return _this__u8e3s4 === Companion_getInstance_15().get_Difference_tu92bl_k$() ? ClipMode_DIFFERENCE_getInstance() : _this__u8e3s4 === Companion_getInstance_15().get_Intersect_ow3v69_k$() ? ClipMode_INTERSECT_getInstance() : ClipMode_INTERSECT_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_16().get_Difference_tu92bl_k$() ? ClipMode_DIFFERENCE_getInstance() : _this__u8e3s4 === Companion_getInstance_16().get_Intersect_ow3v69_k$() ? ClipMode_INTERSECT_getInstance() : ClipMode_INTERSECT_getInstance();
   }
   function toSkia_1(_this__u8e3s4, $this) {
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
@@ -9689,7 +11256,7 @@
     return new Matrix44(new Float32Array([tmp, tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp_5, tmp_6, tmp_7, tmp_8, tmp_9, tmp_10, tmp_11, tmp_12, tmp_13, tmp$ret$15]));
   }
   function toSkia_2(_this__u8e3s4, $this) {
-    return _this__u8e3s4 === Companion_getInstance_18().get_Low_lx4az0_k$() ? new FilterMipmap(FilterMode_LINEAR_getInstance(), MipmapMode_NONE_getInstance()) : _this__u8e3s4 === Companion_getInstance_18().get_Medium_l95upr_k$() ? new FilterMipmap(FilterMode_LINEAR_getInstance(), MipmapMode_NEAREST_getInstance()) : _this__u8e3s4 === Companion_getInstance_18().get_High_utfc24_k$() ? new CubicResampler(1 / 3.0, 1 / 3.0) : new FilterMipmap(FilterMode_NEAREST_getInstance(), MipmapMode_NONE_getInstance());
+    return _this__u8e3s4 === Companion_getInstance_19().get_Low_lx4az0_k$() ? new FilterMipmap(FilterMode_LINEAR_getInstance(), MipmapMode_NONE_getInstance()) : _this__u8e3s4 === Companion_getInstance_19().get_Medium_l95upr_k$() ? new FilterMipmap(FilterMode_LINEAR_getInstance(), MipmapMode_NEAREST_getInstance()) : _this__u8e3s4 === Companion_getInstance_19().get_High_utfc24_k$() ? new CubicResampler(1 / 3.0, 1 / 3.0) : new FilterMipmap(FilterMode_NEAREST_getInstance(), MipmapMode_NONE_getInstance());
   }
   function SkiaBackedCanvas(skia) {
     this.skia_1 = skia;
@@ -9761,17 +11328,17 @@
   };
   protoOf(SkiaBackedCanvas).drawImage_wbfair_k$ = function (image, topLeftOffset, paint) {
     var size = Size(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$());
-    drawImageRect(this, image, Companion_getInstance().get_Zero_sctq3f_k$(), size, topLeftOffset, size, paint);
+    drawImageRect(this, image, Companion_getInstance_0().get_Zero_sctq3f_k$(), size, topLeftOffset, size, paint);
   };
   protoOf(SkiaBackedCanvas).drawImageRect_pn8joi_k$ = function (image, srcOffset, srcSize, dstOffset, dstSize, paint) {
     drawImageRect(this, image, Offset_0(_IntOffset___get_x__impl__qiqr5o(srcOffset), _IntOffset___get_y__impl__2avpwj(srcOffset)), Size(_IntSize___get_width__impl__d9yl4o(srcSize), _IntSize___get_height__impl__prv63b(srcSize)), Offset_0(_IntOffset___get_x__impl__qiqr5o(dstOffset), _IntOffset___get_y__impl__2avpwj(dstOffset)), Size(_IntSize___get_width__impl__d9yl4o(dstSize), _IntSize___get_height__impl__prv63b(dstSize)), paint);
   };
   protoOf(SkiaBackedCanvas).drawPoints_7nk41w_k$ = function (pointMode, points, paint) {
-    if (pointMode === Companion_getInstance_29().get_Lines_pf6qy3_k$()) {
+    if (pointMode === Companion_getInstance_30().get_Lines_pf6qy3_k$()) {
       drawLines(this, points, paint, 2);
-    } else if (pointMode === Companion_getInstance_29().get_Polygon_n5et2y_k$()) {
+    } else if (pointMode === Companion_getInstance_30().get_Polygon_n5et2y_k$()) {
       drawLines(this, points, paint, 1);
-    } else if (pointMode === Companion_getInstance_29().get_Points_g9arr3_k$()) {
+    } else if (pointMode === Companion_getInstance_30().get_Points_g9arr3_k$()) {
       drawPoints(this, points, paint);
     }
   };
@@ -9785,11 +11352,11 @@
     if (!((points.length % 2 | 0) === 0)) {
       throw IllegalArgumentException_init_$Create$('points must have an even number of values');
     }
-    if (pointMode === Companion_getInstance_29().get_Lines_pf6qy3_k$()) {
+    if (pointMode === Companion_getInstance_30().get_Lines_pf6qy3_k$()) {
       drawRawLines(this, points, paint, 2);
-    } else if (pointMode === Companion_getInstance_29().get_Polygon_n5et2y_k$()) {
+    } else if (pointMode === Companion_getInstance_30().get_Polygon_n5et2y_k$()) {
       drawRawLines(this, points, paint, 1);
-    } else if (pointMode === Companion_getInstance_29().get_Points_g9arr3_k$()) {
+    } else if (pointMode === Companion_getInstance_30().get_Points_g9arr3_k$()) {
       drawRawPoints(this, points, paint, 2);
     }
   };
@@ -9828,24 +11395,24 @@
     return updateAlpha($this, alpha, multiplier);
   }
   function toSkia_3(_this__u8e3s4, $this) {
-    return _this__u8e3s4 === Companion_getInstance_23().get_Fill_xeknbt_k$() ? PaintMode_FILL_getInstance() : _this__u8e3s4 === Companion_getInstance_23().get_Stroke_dv2xoc_k$() ? PaintMode_STROKE_getInstance() : PaintMode_FILL_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_24().get_Fill_xeknbt_k$() ? PaintMode_FILL_getInstance() : _this__u8e3s4 === Companion_getInstance_24().get_Stroke_dv2xoc_k$() ? PaintMode_STROKE_getInstance() : PaintMode_FILL_getInstance();
   }
   function toSkia_4(_this__u8e3s4, $this) {
-    return _this__u8e3s4 === Companion_getInstance_31().get_Butt_vf89me_k$() ? PaintStrokeCap_BUTT_getInstance() : _this__u8e3s4 === Companion_getInstance_31().get_Round_x6oq4t_k$() ? PaintStrokeCap_ROUND_getInstance() : _this__u8e3s4 === Companion_getInstance_31().get_Square_xmkdw4_k$() ? PaintStrokeCap_SQUARE_getInstance() : PaintStrokeCap_BUTT_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_32().get_Butt_vf89me_k$() ? PaintStrokeCap_BUTT_getInstance() : _this__u8e3s4 === Companion_getInstance_32().get_Round_x6oq4t_k$() ? PaintStrokeCap_ROUND_getInstance() : _this__u8e3s4 === Companion_getInstance_32().get_Square_xmkdw4_k$() ? PaintStrokeCap_SQUARE_getInstance() : PaintStrokeCap_BUTT_getInstance();
   }
   function toSkia_5(_this__u8e3s4, $this) {
-    return _this__u8e3s4 === Companion_getInstance_32().get_Miter_rcwd8a_k$() ? PaintStrokeJoin_MITER_getInstance() : _this__u8e3s4 === Companion_getInstance_32().get_Round_ybuhov_k$() ? PaintStrokeJoin_ROUND_getInstance() : _this__u8e3s4 === Companion_getInstance_32().get_Bevel_1szraz_k$() ? PaintStrokeJoin_BEVEL_getInstance() : PaintStrokeJoin_MITER_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_33().get_Miter_rcwd8a_k$() ? PaintStrokeJoin_MITER_getInstance() : _this__u8e3s4 === Companion_getInstance_33().get_Round_ybuhov_k$() ? PaintStrokeJoin_ROUND_getInstance() : _this__u8e3s4 === Companion_getInstance_33().get_Bevel_1szraz_k$() ? PaintStrokeJoin_BEVEL_getInstance() : PaintStrokeJoin_MITER_getInstance();
   }
   function SkiaBackedPaint(skia) {
     skia = skia === VOID ? Paint_init_$Create$() : skia;
     this.skia_1 = skia;
     this.mAlphaMultiplier_1 = 1.0;
-    this.blendMode_1 = Companion_getInstance_13().get_SrcOver_uyf80z_k$();
-    this.style_1 = Companion_getInstance_23().get_Fill_xeknbt_k$();
-    this.strokeCap_1 = Companion_getInstance_31().get_Butt_vf89me_k$();
-    this.strokeJoin_1 = Companion_getInstance_32().get_Round_ybuhov_k$();
+    this.blendMode_1 = Companion_getInstance_14().get_SrcOver_uyf80z_k$();
+    this.style_1 = Companion_getInstance_24().get_Fill_xeknbt_k$();
+    this.strokeCap_1 = Companion_getInstance_32().get_Butt_vf89me_k$();
+    this.strokeJoin_1 = Companion_getInstance_33().get_Round_ybuhov_k$();
     this.strokeMiterLimit_1 = 0.0;
-    this.filterQuality_1 = Companion_getInstance_18().get_Medium_l95upr_k$();
+    this.filterQuality_1 = Companion_getInstance_19().get_Medium_l95upr_k$();
     this.shader_1 = null;
     this.colorFilter_1 = null;
     this.pathEffect_1 = null;
@@ -9958,7 +11525,7 @@
     $this.internalPath_1 = _set____db54di;
   }
   function toSkiaOperation(_this__u8e3s4, $this) {
-    return _this__u8e3s4 === Companion_getInstance_28().get_Difference_61syb0_k$() ? PathOp_DIFFERENCE_getInstance() : _this__u8e3s4 === Companion_getInstance_28().get_Intersect_pr81lo_k$() ? PathOp_INTERSECT_getInstance() : _this__u8e3s4 === Companion_getInstance_28().get_Union_6aiks4_k$() ? PathOp_UNION_getInstance() : _this__u8e3s4 === Companion_getInstance_28().get_Xor_ja5law_k$() ? PathOp_XOR_getInstance() : _this__u8e3s4 === Companion_getInstance_28().get_ReverseDifference_yow8fw_k$() ? PathOp_REVERSE_DIFFERENCE_getInstance() : PathOp_XOR_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_29().get_Difference_61syb0_k$() ? PathOp_DIFFERENCE_getInstance() : _this__u8e3s4 === Companion_getInstance_29().get_Intersect_pr81lo_k$() ? PathOp_INTERSECT_getInstance() : _this__u8e3s4 === Companion_getInstance_29().get_Union_6aiks4_k$() ? PathOp_UNION_getInstance() : _this__u8e3s4 === Companion_getInstance_29().get_Xor_ja5law_k$() ? PathOp_XOR_getInstance() : _this__u8e3s4 === Companion_getInstance_29().get_ReverseDifference_yow8fw_k$() ? PathOp_REVERSE_DIFFERENCE_getInstance() : PathOp_XOR_getInstance();
   }
   function SkiaBackedPath(internalPath) {
     internalPath = internalPath === VOID ? Path_init_$Create$() : internalPath;
@@ -9970,7 +11537,7 @@
   protoOf(SkiaBackedPath).set_fillType_288nii_k$ = function (value) {
     var tmp = this.internalPath_1;
     var tmp_0;
-    if (value === Companion_getInstance_27().get_EvenOdd_pai4nq_k$()) {
+    if (value === Companion_getInstance_28().get_EvenOdd_pai4nq_k$()) {
       tmp_0 = PathFillMode_EVEN_ODD_getInstance();
     } else {
       tmp_0 = PathFillMode_WINDING_getInstance();
@@ -9979,9 +11546,9 @@
   };
   protoOf(SkiaBackedPath).get_fillType_qtoiy8_k$ = function () {
     if (this.internalPath_1.get_fillMode_r5zfyn_k$().equals(PathFillMode_EVEN_ODD_getInstance())) {
-      return Companion_getInstance_27().get_EvenOdd_pai4nq_k$();
+      return Companion_getInstance_28().get_EvenOdd_pai4nq_k$();
     } else {
-      return Companion_getInstance_27().get_NonZero_j4d1fu_k$();
+      return Companion_getInstance_28().get_NonZero_j4d1fu_k$();
     }
   };
   protoOf(SkiaBackedPath).moveTo_ga4oez_k$ = function (x, y) {
@@ -10119,18 +11686,18 @@
       var message = 'Matrix33 does not support arbitrary transforms';
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    var scaleX = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_22().get_ScaleX_48mlbr_k$()];
-    var skewY = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_22().get_SkewY_igyudi_k$()];
+    var scaleX = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_23().get_ScaleX_48mlbr_k$()];
+    var skewY = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_23().get_SkewY_igyudi_k$()];
     var v2 = _Matrix___get_values__impl__fblr7b(matrix)[2];
-    var persp0 = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_22().get_Perspective0_s6kzs3_k$()];
-    var skewX = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_22().get_SkewX_igyudh_k$()];
-    var scaleY = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_22().get_ScaleY_48mlbs_k$()];
+    var persp0 = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_23().get_Perspective0_s6kzs3_k$()];
+    var skewX = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_23().get_SkewX_igyudh_k$()];
+    var scaleY = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_23().get_ScaleY_48mlbs_k$()];
     var v6 = _Matrix___get_values__impl__fblr7b(matrix)[6];
-    var persp1 = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_22().get_Perspective1_s6kzs2_k$()];
+    var persp1 = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_23().get_Perspective1_s6kzs2_k$()];
     var v8 = _Matrix___get_values__impl__fblr7b(matrix)[8];
-    var translateX = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_22().get_TranslateX_folfnx_k$()];
-    var translateY = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_22().get_TranslateY_folfnw_k$()];
-    var persp2 = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_22().get_Perspective2_s6kzs1_k$()];
+    var translateX = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_23().get_TranslateX_folfnx_k$()];
+    var translateY = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_23().get_TranslateY_folfnw_k$()];
+    var persp2 = _Matrix___get_values__impl__fblr7b(matrix)[Companion_getInstance_23().get_Perspective2_s6kzs1_k$()];
     var v = _Matrix___get_values__impl__fblr7b(matrix);
     v[0] = scaleX;
     v[1] = skewX;
@@ -10149,14 +11716,14 @@
         _this__u8e3s4.get_mat_18j0uh_k$()[i] = v[i];
       }
        while (inductionVariable <= 8);
-    v[Companion_getInstance_22().get_ScaleX_48mlbr_k$()] = scaleX;
-    v[Companion_getInstance_22().get_SkewY_igyudi_k$()] = skewY;
+    v[Companion_getInstance_23().get_ScaleX_48mlbr_k$()] = scaleX;
+    v[Companion_getInstance_23().get_SkewY_igyudi_k$()] = skewY;
     v[2] = v2;
-    v[Companion_getInstance_22().get_Perspective0_s6kzs3_k$()] = persp0;
-    v[Companion_getInstance_22().get_SkewX_igyudh_k$()] = skewX;
-    v[Companion_getInstance_22().get_ScaleY_48mlbs_k$()] = scaleY;
+    v[Companion_getInstance_23().get_Perspective0_s6kzs3_k$()] = persp0;
+    v[Companion_getInstance_23().get_SkewX_igyudh_k$()] = skewX;
+    v[Companion_getInstance_23().get_ScaleY_48mlbs_k$()] = scaleY;
     v[6] = v6;
-    v[Companion_getInstance_22().get_Perspective1_s6kzs2_k$()] = persp1;
+    v[Companion_getInstance_23().get_Perspective1_s6kzs2_k$()] = persp1;
     v[8] = v8;
   };
   function asSkiaPath(_this__u8e3s4) {
@@ -10190,7 +11757,7 @@
     return new SkiaBackedPathEffect(Companion_getInstance_8().makePath1D_ivleto_k$(asSkiaPath(shape), advance, phase, toSkiaStampedPathEffectStyle(style)));
   }
   function toSkiaStampedPathEffectStyle(_this__u8e3s4) {
-    return _this__u8e3s4 === Companion_getInstance_26().get_Morph_35mk00_k$() ? Style_MORPH_getInstance() : _this__u8e3s4 === Companion_getInstance_26().get_Rotate_t1fpff_k$() ? Style_ROTATE_getInstance() : _this__u8e3s4 === Companion_getInstance_26().get_Translate_oyad1i_k$() ? Style_TRANSLATE_getInstance() : Style_TRANSLATE_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_27().get_Morph_35mk00_k$() ? Style_MORPH_getInstance() : _this__u8e3s4 === Companion_getInstance_27().get_Rotate_t1fpff_k$() ? Style_ROTATE_getInstance() : _this__u8e3s4 === Companion_getInstance_27().get_Translate_oyad1i_k$() ? Style_TRANSLATE_getInstance() : Style_TRANSLATE_getInstance();
   }
   function PathMeasure_0() {
     return new SkiaBackedPathMeasure();
@@ -10217,7 +11784,7 @@
     if (!(result == null)) {
       tmp = Offset_0(result.get_x_1mhr67_k$(), result.get_y_1mhr68_k$());
     } else {
-      tmp = Companion_getInstance().get_Unspecified_ooyrpa_k$();
+      tmp = Companion_getInstance_0().get_Unspecified_ooyrpa_k$();
     }
     return tmp;
   };
@@ -10227,7 +11794,7 @@
     if (!(result == null)) {
       tmp = Offset_0(result.get_x_1mhr67_k$(), result.get_y_1mhr68_k$());
     } else {
-      tmp = Companion_getInstance().get_Unspecified_ooyrpa_k$();
+      tmp = Companion_getInstance_0().get_Unspecified_ooyrpa_k$();
     }
     return tmp;
   };
@@ -10296,8 +11863,11 @@
     }
     return tmp;
   }
+  function toComposeImageBitmap(_this__u8e3s4) {
+    return new SkiaBackedImageBitmap(toBitmap(_this__u8e3s4));
+  }
   function toSkiaColorType(_this__u8e3s4) {
-    return _this__u8e3s4 === Companion_getInstance_21().get_Argb8888_tpu17z_k$() ? Companion_getInstance_10().get_N32_18jozg_k$() : _this__u8e3s4 === Companion_getInstance_21().get_Alpha8_zceb6n_k$() ? ColorType_ALPHA_8_getInstance() : _this__u8e3s4 === Companion_getInstance_21().get_Rgb565_i09itw_k$() ? ColorType_RGB_565_getInstance() : _this__u8e3s4 === Companion_getInstance_21().get_F16_f3achu_k$() ? ColorType_RGBA_F16_getInstance() : Companion_getInstance_10().get_N32_18jozg_k$();
+    return _this__u8e3s4 === Companion_getInstance_22().get_Argb8888_tpu17z_k$() ? Companion_getInstance_10().get_N32_18jozg_k$() : _this__u8e3s4 === Companion_getInstance_22().get_Alpha8_zceb6n_k$() ? ColorType_ALPHA_8_getInstance() : _this__u8e3s4 === Companion_getInstance_22().get_Rgb565_i09itw_k$() ? ColorType_RGB_565_getInstance() : _this__u8e3s4 === Companion_getInstance_22().get_F16_f3achu_k$() ? ColorType_RGBA_F16_getInstance() : Companion_getInstance_10().get_N32_18jozg_k$();
   }
   function toSkiaColorSpace(_this__u8e3s4) {
     return _this__u8e3s4.equals(ColorSpaces_getInstance().get_Srgb_woa2g3_k$()) ? Companion_getInstance_11().get_sRGB_wottib_k$() : _this__u8e3s4.equals(ColorSpaces_getInstance().get_LinearSrgb_gaeay0_k$()) ? Companion_getInstance_11().get_sRGBLinear_5cyq1k_k$() : _this__u8e3s4.equals(ColorSpaces_getInstance().get_DisplayP3_pa2gtg_k$()) ? Companion_getInstance_11().get_displayP3_clxlks_k$() : Companion_getInstance_11().get_sRGB_wottib_k$();
@@ -10391,15 +11961,23 @@
     var bytes = ensureNotNull(this.bitmap_1.readPixels_bwiudk_k$(imageInfo, imul(stride, bytesPerPixel), startX, startY));
     putBytesInto(bytes, buffer, bufferOffset, bytes.length / bytesPerPixel | 0);
   };
+  function toBitmap(_this__u8e3s4) {
+    var bitmap = Bitmap_init_$Create$();
+    bitmap.allocPixels_jyyvpm_k$(Companion_getInstance_12().makeN32_mr767_k$(_this__u8e3s4.get_width_j0q4yl_k$(), _this__u8e3s4.get_height_e7t92o_k$(), ColorAlphaType_PREMUL_getInstance()));
+    var canvas = Canvas_init_$Create$(bitmap);
+    canvas.drawImage_w8dm7b_k$(_this__u8e3s4, 0.0, 0.0);
+    bitmap.setImmutable_j5sn28_k$();
+    return bitmap;
+  }
   function toComposeColorSpace(_this__u8e3s4) {
     return equals(_this__u8e3s4, Companion_getInstance_11().get_sRGB_wottib_k$()) ? ColorSpaces_getInstance().get_Srgb_woa2g3_k$() : equals(_this__u8e3s4, Companion_getInstance_11().get_sRGBLinear_5cyq1k_k$()) ? ColorSpaces_getInstance().get_LinearSrgb_gaeay0_k$() : equals(_this__u8e3s4, Companion_getInstance_11().get_displayP3_clxlks_k$()) ? ColorSpaces_getInstance().get_DisplayP3_pa2gtg_k$() : ColorSpaces_getInstance().get_Srgb_woa2g3_k$();
   }
   function toComposeConfig(_this__u8e3s4) {
-    return _this__u8e3s4.equals(Companion_getInstance_10().get_N32_18jozg_k$()) ? Companion_getInstance_21().get_Argb8888_tpu17z_k$() : _this__u8e3s4.equals(ColorType_ALPHA_8_getInstance()) ? Companion_getInstance_21().get_Alpha8_zceb6n_k$() : _this__u8e3s4.equals(ColorType_RGB_565_getInstance()) ? Companion_getInstance_21().get_Rgb565_i09itw_k$() : _this__u8e3s4.equals(ColorType_RGBA_F16_getInstance()) ? Companion_getInstance_21().get_F16_f3achu_k$() : Companion_getInstance_21().get_Argb8888_tpu17z_k$();
+    return _this__u8e3s4.equals(Companion_getInstance_10().get_N32_18jozg_k$()) ? Companion_getInstance_22().get_Argb8888_tpu17z_k$() : _this__u8e3s4.equals(ColorType_ALPHA_8_getInstance()) ? Companion_getInstance_22().get_Alpha8_zceb6n_k$() : _this__u8e3s4.equals(ColorType_RGB_565_getInstance()) ? Companion_getInstance_22().get_Rgb565_i09itw_k$() : _this__u8e3s4.equals(ColorType_RGBA_F16_getInstance()) ? Companion_getInstance_22().get_F16_f3achu_k$() : Companion_getInstance_22().get_Argb8888_tpu17z_k$();
   }
   function ActualLinearGradientShader(from, to, colors, colorStops, tileMode) {
     validateColorStops(colors, colorStops);
-    var tmp = Companion_getInstance_12();
+    var tmp = Companion_getInstance_13();
     var tmp_0 = _Offset___get_x__impl__xvi35n(from);
     var tmp_1 = _Offset___get_y__impl__8bzhra(from);
     var tmp_2 = _Offset___get_x__impl__xvi35n(to);
@@ -10409,7 +11987,7 @@
   }
   function ActualRadialGradientShader(center, radius, colors, colorStops, tileMode) {
     validateColorStops(colors, colorStops);
-    var tmp = Companion_getInstance_12();
+    var tmp = Companion_getInstance_13();
     var tmp_0 = _Offset___get_x__impl__xvi35n(center);
     var tmp_1 = _Offset___get_y__impl__8bzhra(center);
     var tmp_2 = toIntArray(colors);
@@ -10417,7 +11995,7 @@
   }
   function ActualSweepGradientShader(center, colors, colorStops) {
     validateColorStops(colors, colorStops);
-    var tmp = Companion_getInstance_12();
+    var tmp = Companion_getInstance_13();
     var tmp_0 = _Offset___get_x__impl__xvi35n(center);
     var tmp_1 = _Offset___get_y__impl__8bzhra(center);
     var tmp_2 = toIntArray(colors);
@@ -10444,10 +12022,10 @@
     return tmp_1;
   }
   function toSkiaTileMode(_this__u8e3s4) {
-    return _this__u8e3s4 === Companion_getInstance_33().get_Clamp_q8g1jp_k$() ? FilterTileMode_CLAMP_getInstance() : _this__u8e3s4 === Companion_getInstance_33().get_Repeated_k0uuck_k$() ? FilterTileMode_REPEAT_getInstance() : _this__u8e3s4 === Companion_getInstance_33().get_Mirror_3kopi9_k$() ? FilterTileMode_MIRROR_getInstance() : _this__u8e3s4 === Companion_getInstance_33().get_Decal_z0hn4z_k$() ? FilterTileMode_DECAL_getInstance() : FilterTileMode_CLAMP_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_34().get_Clamp_q8g1jp_k$() ? FilterTileMode_CLAMP_getInstance() : _this__u8e3s4 === Companion_getInstance_34().get_Repeated_k0uuck_k$() ? FilterTileMode_REPEAT_getInstance() : _this__u8e3s4 === Companion_getInstance_34().get_Mirror_3kopi9_k$() ? FilterTileMode_MIRROR_getInstance() : _this__u8e3s4 === Companion_getInstance_34().get_Decal_z0hn4z_k$() ? FilterTileMode_DECAL_getInstance() : FilterTileMode_CLAMP_getInstance();
   }
   function toSkiaVertexMode(_this__u8e3s4) {
-    return _this__u8e3s4 === Companion_getInstance_34().get_Triangles_3v3h75_k$() ? VertexMode_TRIANGLES_getInstance() : _this__u8e3s4 === Companion_getInstance_34().get_TriangleStrip_fj1wve_k$() ? VertexMode_TRIANGLE_STRIP_getInstance() : _this__u8e3s4 === Companion_getInstance_34().get_TriangleFan_hugsxb_k$() ? VertexMode_TRIANGLE_FAN_getInstance() : VertexMode_TRIANGLES_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_35().get_Triangles_3v3h75_k$() ? VertexMode_TRIANGLES_getInstance() : _this__u8e3s4 === Companion_getInstance_35().get_TriangleStrip_fj1wve_k$() ? VertexMode_TRIANGLE_STRIP_getInstance() : _this__u8e3s4 === Companion_getInstance_35().get_TriangleFan_hugsxb_k$() ? VertexMode_TRIANGLE_FAN_getInstance() : VertexMode_TRIANGLES_getInstance();
   }
   //region block: post-declaration
   protoOf(CanvasDrawScope).drawLine$default_o97yr2_k$ = drawLine$default;
@@ -10519,6 +12097,35 @@
   //region block: init
   RadiansToDegrees = 57.29578;
   DefaultAlpha = 1.0;
+  RelativeCloseKey = _Char___init__impl__6a9atx(122);
+  CloseKey = _Char___init__impl__6a9atx(90);
+  RelativeMoveToKey = _Char___init__impl__6a9atx(109);
+  NUM_MOVE_TO_ARGS = 2;
+  MoveToKey = _Char___init__impl__6a9atx(77);
+  RelativeLineToKey = _Char___init__impl__6a9atx(108);
+  NUM_LINE_TO_ARGS = 2;
+  LineToKey = _Char___init__impl__6a9atx(76);
+  RelativeHorizontalToKey = _Char___init__impl__6a9atx(104);
+  NUM_HORIZONTAL_TO_ARGS = 1;
+  HorizontalToKey = _Char___init__impl__6a9atx(72);
+  RelativeVerticalToKey = _Char___init__impl__6a9atx(118);
+  NUM_VERTICAL_TO_ARGS = 1;
+  VerticalToKey = _Char___init__impl__6a9atx(86);
+  RelativeCurveToKey = _Char___init__impl__6a9atx(99);
+  NUM_CURVE_TO_ARGS = 6;
+  CurveToKey = _Char___init__impl__6a9atx(67);
+  RelativeReflectiveCurveToKey = _Char___init__impl__6a9atx(115);
+  NUM_REFLECTIVE_CURVE_TO_ARGS = 4;
+  ReflectiveCurveToKey = _Char___init__impl__6a9atx(83);
+  RelativeQuadToKey = _Char___init__impl__6a9atx(113);
+  NUM_QUAD_TO_ARGS = 4;
+  QuadToKey = _Char___init__impl__6a9atx(81);
+  RelativeReflectiveQuadToKey = _Char___init__impl__6a9atx(116);
+  NUM_REFLECTIVE_QUAD_TO_ARGS = 2;
+  ReflectiveQuadToKey = _Char___init__impl__6a9atx(84);
+  RelativeArcToKey = _Char___init__impl__6a9atx(97);
+  NUM_ARC_TO_ARGS = 7;
+  ArcToKey = _Char___init__impl__6a9atx(65);
   //endregion
   //region block: exports
   _.$_$ = _.$_$ || {};
@@ -10526,109 +12133,116 @@
   _.$_$.b = ContentDrawScope;
   _.$_$.c = DrawScope;
   _.$_$.d = Stroke;
-  _.$_$.e = Painter;
-  _.$_$.f = PathBuilder;
-  _.$_$.g = toPath;
-  _.$_$.h = BlendMode;
-  _.$_$.i = Canvas_0;
-  _.$_$.j = ColorProducer;
-  _.$_$.k = Color_2;
-  _.$_$.l = Color_0;
-  _.$_$.m = Color_1;
-  _.$_$.n = Color;
-  _.$_$.o = get_DefaultAlpha;
-  _.$_$.p = ImageBitmapConfig;
-  _.$_$.q = ImageBitmap_0;
-  _.$_$.r = Matrix;
-  _.$_$.s = Generic;
-  _.$_$.t = Rectangle;
-  _.$_$.u = Rounded;
-  _.$_$.v = Paint_0;
-  _.$_$.w = PathFillType;
-  _.$_$.x = PathMeasure_0;
-  _.$_$.y = Path_0;
-  _.$_$.z = get_RectangleShape;
-  _.$_$.a1 = ShaderBrush;
-  _.$_$.b1 = Shadow;
-  _.$_$.c1 = Shape;
-  _.$_$.d1 = SolidColor;
-  _.$_$.e1 = StrokeCap;
-  _.$_$.f1 = StrokeJoin;
-  _.$_$.g1 = set_alphaMultiplier;
-  _.$_$.h1 = asComposeCanvas;
-  _.$_$.i1 = asComposePaint;
-  _.$_$.j1 = asSkiaPath;
-  _.$_$.k1 = compositeOver;
-  _.$_$.l1 = drawOutline;
-  _.$_$.m1 = drawOutline_0;
-  _.$_$.n1 = lerp_2;
-  _.$_$.o1 = lerp_1;
-  _.$_$.p1 = luminance;
-  _.$_$.q1 = get_nativeCanvas;
-  _.$_$.r1 = toArgb;
-  _.$_$.s1 = toComposeRect;
-  _.$_$.t1 = toSkiaRRect;
-  _.$_$.u1 = toSkiaRect;
-  _.$_$.v1 = drawArc$default;
-  _.$_$.w1 = drawArc$default_0;
-  _.$_$.x1 = drawCircle$default;
-  _.$_$.y1 = drawCircle$default_0;
-  _.$_$.z1 = drawImage$default_0;
-  _.$_$.a2 = drawImage$default;
-  _.$_$.b2 = drawImage$default_1;
-  _.$_$.c2 = drawLine$default;
-  _.$_$.d2 = drawLine$default_0;
-  _.$_$.e2 = drawOval$default;
-  _.$_$.f2 = drawOval$default_0;
-  _.$_$.g2 = drawPath$default_0;
-  _.$_$.h2 = drawPath$default;
-  _.$_$.i2 = drawPoints$default_0;
-  _.$_$.j2 = drawPoints$default;
-  _.$_$.k2 = drawRect$default;
-  _.$_$.l2 = drawRect$default_0;
-  _.$_$.m2 = drawRoundRect$default;
-  _.$_$.n2 = drawRoundRect$default_0;
-  _.$_$.o2 = BlendMode__hashCode_impl_93ceri;
-  _.$_$.p2 = _Color___init__impl__r6cqi2;
-  _.$_$.q2 = _Color___get_alpha__impl__wcfyv1;
-  _.$_$.r2 = _Color___get_colorSpace__impl__jqqozk;
-  _.$_$.s2 = Color__component1_impl_lz80qe;
-  _.$_$.t2 = Color__component2_impl_mg9n4l;
-  _.$_$.u2 = Color__component3_impl_mxb9is;
-  _.$_$.v2 = Color__component4_impl_necvwz;
-  _.$_$.w2 = Color__convert_impl_so5m8t;
-  _.$_$.x2 = Color__hashCode_impl_vjyivj;
-  _.$_$.y2 = _Color___get_value__impl__1pls5m;
-  _.$_$.z2 = _Matrix___init__impl__q3kp4w;
-  _.$_$.a3 = Matrix__map_impl_7meu7m;
-  _.$_$.b3 = Matrix__map_impl_7meu7m_1;
-  _.$_$.c3 = Matrix__reset_impl_4l49i7;
-  _.$_$.d3 = Matrix__rotateX_impl_3e5y7j;
-  _.$_$.e3 = Matrix__rotateY_impl_2x4btc;
-  _.$_$.f3 = Matrix__rotateZ_impl_2g2pf5;
-  _.$_$.g3 = Matrix__scale_impl_6w89a4;
-  _.$_$.h3 = Matrix__timesAssign_impl_oas521;
-  _.$_$.i3 = _Matrix___get_values__impl__fblr7b;
-  _.$_$.j3 = PathFillType__hashCode_impl_pdqo4w;
-  _.$_$.k3 = StrokeCap__hashCode_impl_posxk8;
-  _.$_$.l3 = StrokeJoin__hashCode_impl_3pyh8w;
-  _.$_$.m3 = Color__copy$default_impl_ectz3s;
-  _.$_$.n3 = Matrix__scale$default_impl_snaws9;
-  _.$_$.o3 = Matrix__translate$default_impl_10t8ql;
-  _.$_$.p3 = ColorSpaces_getInstance;
-  _.$_$.q3 = Companion_getInstance_43;
-  _.$_$.r3 = Fill_getInstance;
-  _.$_$.s3 = Companion_getInstance_13;
-  _.$_$.t3 = Companion_getInstance_15;
-  _.$_$.u3 = Companion_getInstance_16;
-  _.$_$.v3 = Companion_getInstance_17;
-  _.$_$.w3 = Companion_getInstance_21;
-  _.$_$.x3 = Companion_getInstance_23;
-  _.$_$.y3 = Companion_getInstance_27;
-  _.$_$.z3 = Companion_getInstance_28;
-  _.$_$.a4 = Companion_getInstance_30;
-  _.$_$.b4 = Companion_getInstance_31;
-  _.$_$.c4 = Companion_getInstance_32;
+  _.$_$.e = BitmapPainter;
+  _.$_$.f = Painter;
+  _.$_$.g = PathBuilder;
+  _.$_$.h = PathParser;
+  _.$_$.i = toPath;
+  _.$_$.j = BlendMode;
+  _.$_$.k = Canvas_0;
+  _.$_$.l = ColorProducer;
+  _.$_$.m = Color_2;
+  _.$_$.n = Color_3;
+  _.$_$.o = Color_0;
+  _.$_$.p = Color_1;
+  _.$_$.q = Color;
+  _.$_$.r = get_DefaultAlpha;
+  _.$_$.s = ImageBitmapConfig;
+  _.$_$.t = ImageBitmap_0;
+  _.$_$.u = Matrix;
+  _.$_$.v = Generic;
+  _.$_$.w = Rectangle;
+  _.$_$.x = Rounded;
+  _.$_$.y = Paint_0;
+  _.$_$.z = PathFillType;
+  _.$_$.a1 = PathMeasure_0;
+  _.$_$.b1 = Path_0;
+  _.$_$.c1 = get_RectangleShape;
+  _.$_$.d1 = ShaderBrush;
+  _.$_$.e1 = Shadow;
+  _.$_$.f1 = Shape;
+  _.$_$.g1 = SolidColor;
+  _.$_$.h1 = StrokeCap;
+  _.$_$.i1 = StrokeJoin;
+  _.$_$.j1 = TileMode;
+  _.$_$.k1 = set_alphaMultiplier;
+  _.$_$.l1 = asComposeCanvas;
+  _.$_$.m1 = asComposePaint;
+  _.$_$.n1 = asSkiaPath;
+  _.$_$.o1 = compositeOver;
+  _.$_$.p1 = drawOutline;
+  _.$_$.q1 = drawOutline_0;
+  _.$_$.r1 = lerp_2;
+  _.$_$.s1 = lerp_1;
+  _.$_$.t1 = luminance;
+  _.$_$.u1 = get_nativeCanvas;
+  _.$_$.v1 = toArgb;
+  _.$_$.w1 = toComposeImageBitmap;
+  _.$_$.x1 = toComposeRect;
+  _.$_$.y1 = toSkiaRRect;
+  _.$_$.z1 = toSkiaRect;
+  _.$_$.a2 = drawArc$default;
+  _.$_$.b2 = drawArc$default_0;
+  _.$_$.c2 = drawCircle$default;
+  _.$_$.d2 = drawCircle$default_0;
+  _.$_$.e2 = drawImage$default_0;
+  _.$_$.f2 = drawImage$default;
+  _.$_$.g2 = drawImage$default_1;
+  _.$_$.h2 = drawLine$default;
+  _.$_$.i2 = drawLine$default_0;
+  _.$_$.j2 = drawOval$default;
+  _.$_$.k2 = drawOval$default_0;
+  _.$_$.l2 = drawPath$default_0;
+  _.$_$.m2 = drawPath$default;
+  _.$_$.n2 = drawPoints$default_0;
+  _.$_$.o2 = drawPoints$default;
+  _.$_$.p2 = drawRect$default;
+  _.$_$.q2 = drawRect$default_0;
+  _.$_$.r2 = drawRoundRect$default;
+  _.$_$.s2 = drawRoundRect$default_0;
+  _.$_$.t2 = BlendMode__hashCode_impl_93ceri;
+  _.$_$.u2 = _Color___init__impl__r6cqi2;
+  _.$_$.v2 = _Color___get_alpha__impl__wcfyv1;
+  _.$_$.w2 = _Color___get_colorSpace__impl__jqqozk;
+  _.$_$.x2 = Color__component1_impl_lz80qe;
+  _.$_$.y2 = Color__component2_impl_mg9n4l;
+  _.$_$.z2 = Color__component3_impl_mxb9is;
+  _.$_$.a3 = Color__component4_impl_necvwz;
+  _.$_$.b3 = Color__convert_impl_so5m8t;
+  _.$_$.c3 = Color__hashCode_impl_vjyivj;
+  _.$_$.d3 = _Color___get_value__impl__1pls5m;
+  _.$_$.e3 = _Matrix___init__impl__q3kp4w;
+  _.$_$.f3 = Matrix__map_impl_7meu7m;
+  _.$_$.g3 = Matrix__map_impl_7meu7m_1;
+  _.$_$.h3 = Matrix__reset_impl_4l49i7;
+  _.$_$.i3 = Matrix__rotateX_impl_3e5y7j;
+  _.$_$.j3 = Matrix__rotateY_impl_2x4btc;
+  _.$_$.k3 = Matrix__rotateZ_impl_2g2pf5;
+  _.$_$.l3 = Matrix__scale_impl_6w89a4;
+  _.$_$.m3 = Matrix__timesAssign_impl_oas521;
+  _.$_$.n3 = _Matrix___get_values__impl__fblr7b;
+  _.$_$.o3 = PathFillType__hashCode_impl_pdqo4w;
+  _.$_$.p3 = StrokeCap__hashCode_impl_posxk8;
+  _.$_$.q3 = StrokeJoin__hashCode_impl_3pyh8w;
+  _.$_$.r3 = Color__copy$default_impl_ectz3s;
+  _.$_$.s3 = Matrix__scale$default_impl_snaws9;
+  _.$_$.t3 = Matrix__translate$default_impl_10t8ql;
+  _.$_$.u3 = ColorSpaces_getInstance;
+  _.$_$.v3 = Companion_getInstance_44;
+  _.$_$.w3 = Fill_getInstance;
+  _.$_$.x3 = Companion_getInstance_14;
+  _.$_$.y3 = Companion_getInstance_15;
+  _.$_$.z3 = Companion_getInstance_16;
+  _.$_$.a4 = Companion_getInstance_17;
+  _.$_$.b4 = Companion_getInstance_18;
+  _.$_$.c4 = Companion_getInstance_22;
+  _.$_$.d4 = Companion_getInstance_24;
+  _.$_$.e4 = Companion_getInstance_28;
+  _.$_$.f4 = Companion_getInstance_29;
+  _.$_$.g4 = Companion_getInstance_31;
+  _.$_$.h4 = Companion_getInstance_32;
+  _.$_$.i4 = Companion_getInstance_33;
+  _.$_$.j4 = Companion_getInstance_34;
   //endregion
   return _;
 }));

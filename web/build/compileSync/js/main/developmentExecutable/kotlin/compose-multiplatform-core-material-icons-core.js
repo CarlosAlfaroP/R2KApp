@@ -21,20 +21,20 @@
 }(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_compose_ui_ui_unit, kotlin_org_jetbrains_compose_ui_ui, kotlin_org_jetbrains_compose_ui_ui_graphics) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.jd;
-  var objectMeta = kotlin_kotlin.$_$.id;
-  var VOID = kotlin_kotlin.$_$.li;
-  var setMetadataFor = kotlin_kotlin.$_$.kd;
-  var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.h2;
-  var Builder = kotlin_org_jetbrains_compose_ui_ui.$_$.u;
+  var protoOf = kotlin_kotlin.$_$.rd;
+  var objectMeta = kotlin_kotlin.$_$.qd;
+  var VOID = kotlin_kotlin.$_$.bj;
+  var setMetadataFor = kotlin_kotlin.$_$.sd;
+  var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i2;
+  var Builder = kotlin_org_jetbrains_compose_ui_ui.$_$.c1;
   var get_DefaultFillType = kotlin_org_jetbrains_compose_ui_ui.$_$.s;
-  var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.u3;
-  var SolidColor = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d1;
-  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.b4;
-  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.c4;
+  var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a4;
+  var SolidColor = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g1;
+  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.h4;
+  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i4;
   var get_DefaultPathName = kotlin_org_jetbrains_compose_ui_ui.$_$.t;
-  var PathBuilder = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.f;
-  var ensureNotNull = kotlin_kotlin.$_$.oh;
+  var PathBuilder = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g;
+  var ensureNotNull = kotlin_kotlin.$_$.di;
   //endregion
   //region block: pre-declaration
   setMetadataFor(Filled, 'Filled', objectMeta);

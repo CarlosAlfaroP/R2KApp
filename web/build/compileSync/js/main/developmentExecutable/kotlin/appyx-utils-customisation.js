@@ -12,12 +12,12 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.jd;
-  var interfaceMeta = kotlin_kotlin.$_$.lc;
-  var VOID = kotlin_kotlin.$_$.li;
-  var setMetadataFor = kotlin_kotlin.$_$.kd;
+  var protoOf = kotlin_kotlin.$_$.rd;
+  var interfaceMeta = kotlin_kotlin.$_$.sc;
+  var VOID = kotlin_kotlin.$_$.bj;
+  var setMetadataFor = kotlin_kotlin.$_$.sd;
   var getKClassFromExpression = kotlin_kotlin.$_$.b;
-  var classMeta = kotlin_kotlin.$_$.xb;
+  var classMeta = kotlin_kotlin.$_$.ec;
   //endregion
   //region block: pre-declaration
   function getRecursivelyOrDefault(default_0) {

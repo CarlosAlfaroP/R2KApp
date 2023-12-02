@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5630565075603486356.xml:2:13-83
-INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5630565075603486356.xml:2:13-83
+ADDED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest11190563582067040977.xml:2:13-83
+INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest11190563582067040977.xml:2:13-83
 	package
-		INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5630565075603486356.xml
+		INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest11190563582067040977.xml
 	xmlns:android
-		ADDED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5630565075603486356.xml:2:23-81
+		ADDED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest11190563582067040977.xml:2:23-81
 uses-sdk
-INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5630565075603486356.xml reason: use-sdk injection requested
-INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5630565075603486356.xml
-INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5630565075603486356.xml
+INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest11190563582067040977.xml reason: use-sdk injection requested
+INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest11190563582067040977.xml
+INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest11190563582067040977.xml
 	android:targetSdkVersion
-		INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5630565075603486356.xml
+		INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest11190563582067040977.xml
 	android:minSdkVersion
-		INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5630565075603486356.xml
+		INJECTED from C:\ProyectosIntelliJ\R2KApp\common\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest11190563582067040977.xml

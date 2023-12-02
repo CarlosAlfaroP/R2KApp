@@ -1,14 +1,63 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js', './compose-multiplatform-core-ui-unit.js', './compose-multiplatform-core-ui.js', './compose-multiplatform-core-ui-graphics.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports);
-  else
-    root['compose-multiplatform-core-material-icons-core'] = factory(typeof this['compose-multiplatform-core-material-icons-core'] === 'undefined' ? {} : this['compose-multiplatform-core-material-icons-core']);
-}(this, function (_) {
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./compose-multiplatform-core-ui.js'), require('./compose-multiplatform-core-ui-graphics.js'));
+  else {
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-material-icons-core'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'compose-multiplatform-core-material-icons-core'.");
+    }
+    if (typeof this['compose-multiplatform-core-ui-unit'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-material-icons-core'. Its dependency 'compose-multiplatform-core-ui-unit' was not found. Please, check whether 'compose-multiplatform-core-ui-unit' is loaded prior to 'compose-multiplatform-core-material-icons-core'.");
+    }
+    if (typeof this['compose-multiplatform-core-ui'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-material-icons-core'. Its dependency 'compose-multiplatform-core-ui' was not found. Please, check whether 'compose-multiplatform-core-ui' is loaded prior to 'compose-multiplatform-core-material-icons-core'.");
+    }
+    if (typeof this['compose-multiplatform-core-ui-graphics'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-material-icons-core'. Its dependency 'compose-multiplatform-core-ui-graphics' was not found. Please, check whether 'compose-multiplatform-core-ui-graphics' is loaded prior to 'compose-multiplatform-core-material-icons-core'.");
+    }
+    root['compose-multiplatform-core-material-icons-core'] = factory(typeof this['compose-multiplatform-core-material-icons-core'] === 'undefined' ? {} : this['compose-multiplatform-core-material-icons-core'], this['kotlin-kotlin-stdlib'], this['compose-multiplatform-core-ui-unit'], this['compose-multiplatform-core-ui'], this['compose-multiplatform-core-ui-graphics']);
+  }
+}(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_compose_ui_ui_unit, kotlin_org_jetbrains_compose_ui_ui, kotlin_org_jetbrains_compose_ui_ui_graphics) {
   'use strict';
-  //region block: pre-declaration
+  //region block: imports
+  var protoOf = kotlin_kotlin.$_$.r9;
+  var objectMeta = kotlin_kotlin.$_$.q9;
+  var setMetadataFor = kotlin_kotlin.$_$.s9;
+  var ensureNotNull = kotlin_kotlin.$_$.id;
+  var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.z1;
+  var Builder = kotlin_org_jetbrains_compose_ui_ui.$_$.b1;
+  var get_DefaultFillType = kotlin_org_jetbrains_compose_ui_ui.$_$.r;
+  var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.m3;
+  var SolidColor = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d1;
+  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.t3;
+  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.u3;
+  var get_DefaultPathName = kotlin_org_jetbrains_compose_ui_ui.$_$.s;
+  var PathBuilder = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.f;
+  var Unit_instance = kotlin_kotlin.$_$.e3;
   //endregion
+  //region block: pre-declaration
+  setMetadataFor(Filled, 'Filled', objectMeta);
+  setMetadataFor(Outlined, 'Outlined', objectMeta);
+  //endregion
+  function Filled() {
+    this.ucy_1 = 0;
+  }
+  var Filled_instance;
+  function Filled_getInstance() {
+    return Filled_instance;
+  }
+  function Outlined() {
+    this.vcy_1 = 0;
+  }
+  var Outlined_instance;
+  function Outlined_getInstance() {
+    return Outlined_instance;
+  }
+  function get_MaterialIconDimension() {
+    return MaterialIconDimension;
+  }
+  var MaterialIconDimension;
   var _accountBox;
   var _accountCircle;
   var _add;
@@ -33,6 +82,49 @@
   var _favorite;
   var _favoriteBorder;
   var _home;
+  function get_Home(_this__u8e3s4) {
+    if (!(_home == null)) {
+      return ensureNotNull(_home);
+    }
+    // Inline function 'androidx.compose.material.icons.materialIcon' call
+    var name = 'Filled.Home';
+    // Inline function 'androidx.compose.material.icons.filled.<get-Home>.<anonymous>' call
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var this_0 = get_MaterialIconDimension();
+    var tmp = _Dp___init__impl__ms3zkb(this_0);
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var this_1 = get_MaterialIconDimension();
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(this_1);
+    // Inline function 'androidx.compose.material.icons.materialPath' call
+    var this_2 = new Builder(name, tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var pathFillType = get_DefaultFillType();
+    // Inline function 'androidx.compose.ui.graphics.vector.path' call
+    var fill = new SolidColor(Companion_getInstance().y41_1);
+    var strokeLineCap = Companion_getInstance_0().v4a_1;
+    var strokeLineJoin = Companion_getInstance_1().b4b_1;
+    var name_0 = get_DefaultPathName();
+    // Inline function 'androidx.compose.ui.graphics.vector.PathData' call
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
+    var $this$with = new PathBuilder();
+    // Inline function 'androidx.compose.material.icons.filled.<get-Home>.<anonymous>.<anonymous>' call
+    $this$with.b3n(10.0, 20.0);
+    $this$with.a4i(-6.0);
+    $this$with.y4h(4.0);
+    $this$with.a4i(6.0);
+    $this$with.y4h(5.0);
+    $this$with.a4i(-8.0);
+    $this$with.y4h(3.0);
+    $this$with.d3n(12.0, 3.0);
+    $this$with.d3n(2.0, 12.0);
+    $this$with.y4h(3.0);
+    $this$with.a4i(8.0);
+    $this$with.u4h();
+    var tmp$ret$4 = $this$with.t4h();
+    _home = this_2.u66(tmp$ret$4, pathFillType, name_0, fill, 1.0, null, 1.0, 1.0, strokeLineCap, strokeLineJoin, 1.0).v24();
+    return ensureNotNull(_home);
+  }
   var _info;
   var _keyboardArrowDown;
   var _keyboardArrowLeft;
@@ -43,9 +135,102 @@
   var _lock;
   var _mailOutline;
   var _menu;
+  function get_Menu(_this__u8e3s4) {
+    if (!(_menu == null)) {
+      return ensureNotNull(_menu);
+    }
+    // Inline function 'androidx.compose.material.icons.materialIcon' call
+    var name = 'Filled.Menu';
+    // Inline function 'androidx.compose.material.icons.filled.<get-Menu>.<anonymous>' call
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var this_0 = get_MaterialIconDimension();
+    var tmp = _Dp___init__impl__ms3zkb(this_0);
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var this_1 = get_MaterialIconDimension();
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(this_1);
+    // Inline function 'androidx.compose.material.icons.materialPath' call
+    var this_2 = new Builder(name, tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var pathFillType = get_DefaultFillType();
+    // Inline function 'androidx.compose.ui.graphics.vector.path' call
+    var fill = new SolidColor(Companion_getInstance().y41_1);
+    var strokeLineCap = Companion_getInstance_0().v4a_1;
+    var strokeLineJoin = Companion_getInstance_1().b4b_1;
+    var name_0 = get_DefaultPathName();
+    // Inline function 'androidx.compose.ui.graphics.vector.PathData' call
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
+    var $this$with = new PathBuilder();
+    // Inline function 'androidx.compose.material.icons.filled.<get-Menu>.<anonymous>.<anonymous>' call
+    $this$with.b3n(3.0, 18.0);
+    $this$with.y4h(18.0);
+    $this$with.a4i(-2.0);
+    $this$with.d3n(3.0, 16.0);
+    $this$with.a4i(2.0);
+    $this$with.u4h();
+    $this$with.b3n(3.0, 13.0);
+    $this$with.y4h(18.0);
+    $this$with.a4i(-2.0);
+    $this$with.d3n(3.0, 11.0);
+    $this$with.a4i(2.0);
+    $this$with.u4h();
+    $this$with.b3n(3.0, 6.0);
+    $this$with.a4i(2.0);
+    $this$with.y4h(18.0);
+    $this$with.d3n(21.0, 6.0);
+    $this$with.d3n(3.0, 6.0);
+    $this$with.u4h();
+    var tmp$ret$4 = $this$with.t4h();
+    _menu = this_2.u66(tmp$ret$4, pathFillType, name_0, fill, 1.0, null, 1.0, 1.0, strokeLineCap, strokeLineJoin, 1.0).v24();
+    return ensureNotNull(_menu);
+  }
   var _moreVert;
   var _notifications;
   var _person;
+  function get_Person(_this__u8e3s4) {
+    if (!(_person == null)) {
+      return ensureNotNull(_person);
+    }
+    // Inline function 'androidx.compose.material.icons.materialIcon' call
+    var name = 'Filled.Person';
+    // Inline function 'androidx.compose.material.icons.filled.<get-Person>.<anonymous>' call
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var this_0 = get_MaterialIconDimension();
+    var tmp = _Dp___init__impl__ms3zkb(this_0);
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var this_1 = get_MaterialIconDimension();
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(this_1);
+    // Inline function 'androidx.compose.material.icons.materialPath' call
+    var this_2 = new Builder(name, tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var pathFillType = get_DefaultFillType();
+    // Inline function 'androidx.compose.ui.graphics.vector.path' call
+    var fill = new SolidColor(Companion_getInstance().y41_1);
+    var strokeLineCap = Companion_getInstance_0().v4a_1;
+    var strokeLineJoin = Companion_getInstance_1().b4b_1;
+    var name_0 = get_DefaultPathName();
+    // Inline function 'androidx.compose.ui.graphics.vector.PathData' call
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
+    var $this$with = new PathBuilder();
+    // Inline function 'androidx.compose.material.icons.filled.<get-Person>.<anonymous>.<anonymous>' call
+    $this$with.b3n(12.0, 12.0);
+    $this$with.c4i(2.21, 0.0, 4.0, -1.79, 4.0, -4.0);
+    $this$with.d4i(-1.79, -4.0, -4.0, -4.0);
+    $this$with.d4i(-4.0, 1.79, -4.0, 4.0);
+    $this$with.d4i(1.79, 4.0, 4.0, 4.0);
+    $this$with.u4h();
+    $this$with.b3n(12.0, 14.0);
+    $this$with.c4i(-2.67, 0.0, -8.0, 1.34, -8.0, 4.0);
+    $this$with.a4i(2.0);
+    $this$with.y4h(16.0);
+    $this$with.a4i(-2.0);
+    $this$with.c4i(0.0, -2.66, -5.33, -4.0, -8.0, -4.0);
+    $this$with.u4h();
+    var tmp$ret$4 = $this$with.t4h();
+    _person = this_2.u66(tmp$ret$4, pathFillType, name_0, fill, 1.0, null, 1.0, 1.0, strokeLineCap, strokeLineJoin, 1.0).v24();
+    return ensureNotNull(_person);
+  }
   var _phone;
   var _place;
   var _playArrow;
@@ -82,6 +267,60 @@
   var _favorite_0;
   var _favoriteBorder_0;
   var _home_0;
+  function get_Home_0(_this__u8e3s4) {
+    if (!(_home_0 == null)) {
+      return ensureNotNull(_home_0);
+    }
+    // Inline function 'androidx.compose.material.icons.materialIcon' call
+    var name = 'Outlined.Home';
+    // Inline function 'androidx.compose.material.icons.outlined.<get-Home>.<anonymous>' call
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var this_0 = get_MaterialIconDimension();
+    var tmp = _Dp___init__impl__ms3zkb(this_0);
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var this_1 = get_MaterialIconDimension();
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(this_1);
+    // Inline function 'androidx.compose.material.icons.materialPath' call
+    var this_2 = new Builder(name, tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var pathFillType = get_DefaultFillType();
+    // Inline function 'androidx.compose.ui.graphics.vector.path' call
+    var fill = new SolidColor(Companion_getInstance().y41_1);
+    var strokeLineCap = Companion_getInstance_0().v4a_1;
+    var strokeLineJoin = Companion_getInstance_1().b4b_1;
+    var name_0 = get_DefaultPathName();
+    // Inline function 'androidx.compose.ui.graphics.vector.PathData' call
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
+    var $this$with = new PathBuilder();
+    // Inline function 'androidx.compose.material.icons.outlined.<get-Home>.<anonymous>.<anonymous>' call
+    $this$with.b3n(12.0, 5.69);
+    $this$with.w4h(5.0, 4.5);
+    $this$with.z4h(18.0);
+    $this$with.y4h(-2.0);
+    $this$with.a4i(-6.0);
+    $this$with.x4h(9.0);
+    $this$with.a4i(6.0);
+    $this$with.x4h(7.0);
+    $this$with.a4i(-7.81);
+    $this$with.w4h(5.0, -4.5);
+    $this$with.b3n(12.0, 3.0);
+    $this$with.d3n(2.0, 12.0);
+    $this$with.y4h(3.0);
+    $this$with.a4i(8.0);
+    $this$with.y4h(6.0);
+    $this$with.a4i(-6.0);
+    $this$with.y4h(2.0);
+    $this$with.a4i(6.0);
+    $this$with.y4h(6.0);
+    $this$with.a4i(-8.0);
+    $this$with.y4h(3.0);
+    $this$with.d3n(12.0, 3.0);
+    $this$with.u4h();
+    var tmp$ret$4 = $this$with.t4h();
+    _home_0 = this_2.u66(tmp$ret$4, pathFillType, name_0, fill, 1.0, null, 1.0, 1.0, strokeLineCap, strokeLineJoin, 1.0).v24();
+    return ensureNotNull(_home_0);
+  }
   var _info_0;
   var _keyboardArrowDown_0;
   var _keyboardArrowLeft_0;
@@ -92,9 +331,111 @@
   var _lock_0;
   var _mailOutline_0;
   var _menu_0;
+  function get_Menu_0(_this__u8e3s4) {
+    if (!(_menu_0 == null)) {
+      return ensureNotNull(_menu_0);
+    }
+    // Inline function 'androidx.compose.material.icons.materialIcon' call
+    var name = 'Outlined.Menu';
+    // Inline function 'androidx.compose.material.icons.outlined.<get-Menu>.<anonymous>' call
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var this_0 = get_MaterialIconDimension();
+    var tmp = _Dp___init__impl__ms3zkb(this_0);
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var this_1 = get_MaterialIconDimension();
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(this_1);
+    // Inline function 'androidx.compose.material.icons.materialPath' call
+    var this_2 = new Builder(name, tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var pathFillType = get_DefaultFillType();
+    // Inline function 'androidx.compose.ui.graphics.vector.path' call
+    var fill = new SolidColor(Companion_getInstance().y41_1);
+    var strokeLineCap = Companion_getInstance_0().v4a_1;
+    var strokeLineJoin = Companion_getInstance_1().b4b_1;
+    var name_0 = get_DefaultPathName();
+    // Inline function 'androidx.compose.ui.graphics.vector.PathData' call
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
+    var $this$with = new PathBuilder();
+    // Inline function 'androidx.compose.material.icons.outlined.<get-Menu>.<anonymous>.<anonymous>' call
+    $this$with.b3n(3.0, 18.0);
+    $this$with.y4h(18.0);
+    $this$with.a4i(-2.0);
+    $this$with.d3n(3.0, 16.0);
+    $this$with.a4i(2.0);
+    $this$with.u4h();
+    $this$with.b3n(3.0, 13.0);
+    $this$with.y4h(18.0);
+    $this$with.a4i(-2.0);
+    $this$with.d3n(3.0, 11.0);
+    $this$with.a4i(2.0);
+    $this$with.u4h();
+    $this$with.b3n(3.0, 6.0);
+    $this$with.a4i(2.0);
+    $this$with.y4h(18.0);
+    $this$with.d3n(21.0, 6.0);
+    $this$with.d3n(3.0, 6.0);
+    $this$with.u4h();
+    var tmp$ret$4 = $this$with.t4h();
+    _menu_0 = this_2.u66(tmp$ret$4, pathFillType, name_0, fill, 1.0, null, 1.0, 1.0, strokeLineCap, strokeLineJoin, 1.0).v24();
+    return ensureNotNull(_menu_0);
+  }
   var _moreVert_0;
   var _notifications_0;
   var _person_0;
+  function get_Person_0(_this__u8e3s4) {
+    if (!(_person_0 == null)) {
+      return ensureNotNull(_person_0);
+    }
+    // Inline function 'androidx.compose.material.icons.materialIcon' call
+    var name = 'Outlined.Person';
+    // Inline function 'androidx.compose.material.icons.outlined.<get-Person>.<anonymous>' call
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var this_0 = get_MaterialIconDimension();
+    var tmp = _Dp___init__impl__ms3zkb(this_0);
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var this_1 = get_MaterialIconDimension();
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(this_1);
+    // Inline function 'androidx.compose.material.icons.materialPath' call
+    var this_2 = new Builder(name, tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var pathFillType = get_DefaultFillType();
+    // Inline function 'androidx.compose.ui.graphics.vector.path' call
+    var fill = new SolidColor(Companion_getInstance().y41_1);
+    var strokeLineCap = Companion_getInstance_0().v4a_1;
+    var strokeLineJoin = Companion_getInstance_1().b4b_1;
+    var name_0 = get_DefaultPathName();
+    // Inline function 'androidx.compose.ui.graphics.vector.PathData' call
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
+    var $this$with = new PathBuilder();
+    // Inline function 'androidx.compose.material.icons.outlined.<get-Person>.<anonymous>.<anonymous>' call
+    $this$with.b3n(12.0, 6.0);
+    $this$with.c4i(1.1, 0.0, 2.0, 0.9, 2.0, 2.0);
+    $this$with.d4i(-0.9, 2.0, -2.0, 2.0);
+    $this$with.d4i(-2.0, -0.9, -2.0, -2.0);
+    $this$with.d4i(0.9, -2.0, 2.0, -2.0);
+    $this$with.v4h(0.0, 10.0);
+    $this$with.c4i(2.7, 0.0, 5.8, 1.29, 6.0, 2.0);
+    $this$with.d3n(6.0, 18.0);
+    $this$with.c4i(0.23, -0.72, 3.31, -2.0, 6.0, -2.0);
+    $this$with.v4h(0.0, -12.0);
+    $this$with.b4i(9.79, 4.0, 8.0, 5.79, 8.0, 8.0);
+    $this$with.d4i(1.79, 4.0, 4.0, 4.0);
+    $this$with.d4i(4.0, -1.79, 4.0, -4.0);
+    $this$with.d4i(-1.79, -4.0, -4.0, -4.0);
+    $this$with.u4h();
+    $this$with.b3n(12.0, 14.0);
+    $this$with.c4i(-2.67, 0.0, -8.0, 1.34, -8.0, 4.0);
+    $this$with.a4i(2.0);
+    $this$with.y4h(16.0);
+    $this$with.a4i(-2.0);
+    $this$with.c4i(0.0, -2.66, -5.33, -4.0, -8.0, -4.0);
+    $this$with.u4h();
+    var tmp$ret$4 = $this$with.t4h();
+    _person_0 = this_2.u66(tmp$ret$4, pathFillType, name_0, fill, 1.0, null, 1.0, 1.0, strokeLineCap, strokeLineJoin, 1.0).v24();
+    return ensureNotNull(_person_0);
+  }
   var _phone_0;
   var _place_0;
   var _playArrow_0;
@@ -255,6 +596,9 @@
   var _thumbUp_3;
   var _warning_3;
   //region block: init
+  Filled_instance = new Filled();
+  Outlined_instance = new Outlined();
+  MaterialIconDimension = 24.0;
   _accountBox = null;
   _accountCircle = null;
   _add = null;
@@ -500,6 +844,17 @@
   _star_3 = null;
   _thumbUp_3 = null;
   _warning_3 = null;
+  //endregion
+  //region block: exports
+  _.$_$ = _.$_$ || {};
+  _.$_$.a = get_Home;
+  _.$_$.b = get_Menu;
+  _.$_$.c = get_Person;
+  _.$_$.d = get_Home_0;
+  _.$_$.e = get_Menu_0;
+  _.$_$.f = get_Person_0;
+  _.$_$.g = Filled_instance;
+  _.$_$.h = Outlined_instance;
   //endregion
   return _;
 }));

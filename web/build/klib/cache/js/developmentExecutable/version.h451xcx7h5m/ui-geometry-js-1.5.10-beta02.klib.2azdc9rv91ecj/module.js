@@ -16,25 +16,25 @@
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.i4;
-  var floatFromBits = kotlin_kotlin.$_$.dc;
-  var Long = kotlin_kotlin.$_$.qg;
-  var VOID = kotlin_kotlin.$_$.li;
-  var protoOf = kotlin_kotlin.$_$.jd;
-  var objectMeta = kotlin_kotlin.$_$.id;
-  var setMetadataFor = kotlin_kotlin.$_$.kd;
-  var THROW_CCE = kotlin_kotlin.$_$.xg;
-  var classMeta = kotlin_kotlin.$_$.xb;
-  var toBits = kotlin_kotlin.$_$.ei;
-  var toLong = kotlin_kotlin.$_$.md;
-  var numberToInt = kotlin_kotlin.$_$.fd;
-  var toString = kotlin_kotlin.$_$.od;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.y1;
-  var isNaN_0 = kotlin_kotlin.$_$.sh;
-  var isFinite = kotlin_kotlin.$_$.qh;
+  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.l4;
+  var floatFromBits = kotlin_kotlin.$_$.kc;
+  var Long = kotlin_kotlin.$_$.eh;
+  var VOID = kotlin_kotlin.$_$.bj;
+  var protoOf = kotlin_kotlin.$_$.rd;
+  var objectMeta = kotlin_kotlin.$_$.qd;
+  var setMetadataFor = kotlin_kotlin.$_$.sd;
+  var THROW_CCE = kotlin_kotlin.$_$.lh;
+  var classMeta = kotlin_kotlin.$_$.ec;
+  var toBits = kotlin_kotlin.$_$.ti;
+  var toLong = kotlin_kotlin.$_$.ud;
+  var numberToInt = kotlin_kotlin.$_$.nd;
+  var toString = kotlin_kotlin.$_$.wd;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.a2;
+  var isNaN_0 = kotlin_kotlin.$_$.hi;
+  var isFinite = kotlin_kotlin.$_$.fi;
   var lerp = kotlin_org_jetbrains_compose_ui_ui_util.$_$.a;
-  var getNumberHashCode = kotlin_kotlin.$_$.fc;
-  var equals = kotlin_kotlin.$_$.bc;
+  var getNumberHashCode = kotlin_kotlin.$_$.mc;
+  var equals = kotlin_kotlin.$_$.ic;
   //endregion
   //region block: pre-declaration
   setMetadataFor(Companion, 'Companion', objectMeta);

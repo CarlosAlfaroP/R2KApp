@@ -12,15 +12,15 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var Long = kotlin_kotlin.$_$.qg;
-  var toLong = kotlin_kotlin.$_$.md;
-  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.i4;
-  var floatFromBits = kotlin_kotlin.$_$.dc;
-  var toBits = kotlin_kotlin.$_$.ei;
+  var Long = kotlin_kotlin.$_$.eh;
+  var toLong = kotlin_kotlin.$_$.ud;
+  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.l4;
+  var floatFromBits = kotlin_kotlin.$_$.kc;
+  var toBits = kotlin_kotlin.$_$.ti;
+  var get_lastIndex = kotlin_kotlin.$_$.q8;
+  var compareTo = kotlin_kotlin.$_$.fc;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
-  var get_lastIndex = kotlin_kotlin.$_$.l8;
-  var compareTo = kotlin_kotlin.$_$.yb;
-  var roundToInt = kotlin_kotlin.$_$.ud;
+  var roundToInt = kotlin_kotlin.$_$.ce;
   //endregion
   //region block: pre-declaration
   //endregion
@@ -49,6 +49,28 @@
     var v1 = toLong(toBits(val1));
     var v2 = toLong(toBits(val2));
     return v1.shl_po5ip6_k$(32).or_s401rn_k$(v2.and_jhajnj_k$(new Long(-1, 0)));
+  }
+  function fastMaxBy(_this__u8e3s4, selector) {
+    // Inline function 'kotlin.contracts.contract' call
+    if (_this__u8e3s4.isEmpty_y1axqb_k$())
+      return null;
+    var maxElem = _this__u8e3s4.get_fkrdnv_k$(0);
+    var maxValue = selector(maxElem);
+    var inductionVariable = 1;
+    var last = get_lastIndex(_this__u8e3s4);
+    if (inductionVariable <= last)
+      do {
+        var i = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        var e = _this__u8e3s4.get_fkrdnv_k$(i);
+        var v = selector(e);
+        if (compareTo(maxValue, v) < 0) {
+          maxElem = e;
+          maxValue = v;
+        }
+      }
+       while (!(i === last));
+    return maxElem;
   }
   function fastForEach(_this__u8e3s4, action) {
     // Inline function 'kotlin.contracts.contract' call
@@ -81,6 +103,49 @@
        while (inductionVariable <= last);
     return false;
   }
+  function fastForEachReversed(_this__u8e3s4, action) {
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = _this__u8e3s4.get_size_woubt6_k$() - 1 | 0;
+    if (0 <= inductionVariable)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + -1 | 0;
+        var item = _this__u8e3s4.get_fkrdnv_k$(index);
+        action(item);
+      }
+       while (0 <= inductionVariable);
+  }
+  function fastForEachIndexed(_this__u8e3s4, action) {
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    var last = _this__u8e3s4.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable <= last)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        var item = _this__u8e3s4.get_fkrdnv_k$(index);
+        action(index, item);
+      }
+       while (inductionVariable <= last);
+  }
+  function fastAll(_this__u8e3s4, predicate) {
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.ui.util.fastForEach' call
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    var last = _this__u8e3s4.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable <= last)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        var item = _this__u8e3s4.get_fkrdnv_k$(index);
+        // Inline function 'androidx.compose.ui.util.fastAll.<anonymous>' call
+        if (!predicate(item))
+          return false;
+      }
+       while (inductionVariable <= last);
+    return true;
+  }
   function fastMap(_this__u8e3s4, transform) {
     // Inline function 'kotlin.contracts.contract' call
     var target = ArrayList_init_$Create$(_this__u8e3s4.get_size_woubt6_k$());
@@ -101,36 +166,6 @@
        while (inductionVariable <= last);
     return target;
   }
-  function fastForEachReversed(_this__u8e3s4, action) {
-    // Inline function 'kotlin.contracts.contract' call
-    var inductionVariable = _this__u8e3s4.get_size_woubt6_k$() - 1 | 0;
-    if (0 <= inductionVariable)
-      do {
-        var index = inductionVariable;
-        inductionVariable = inductionVariable + -1 | 0;
-        var item = _this__u8e3s4.get_fkrdnv_k$(index);
-        action(item);
-      }
-       while (0 <= inductionVariable);
-  }
-  function fastAll(_this__u8e3s4, predicate) {
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.ui.util.fastForEach' call
-    // Inline function 'kotlin.contracts.contract' call
-    var inductionVariable = 0;
-    var last = _this__u8e3s4.get_size_woubt6_k$() - 1 | 0;
-    if (inductionVariable <= last)
-      do {
-        var index = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        var item = _this__u8e3s4.get_fkrdnv_k$(index);
-        // Inline function 'androidx.compose.ui.util.fastAll.<anonymous>' call
-        if (!predicate(item))
-          return false;
-      }
-       while (inductionVariable <= last);
-    return true;
-  }
   function fastFirstOrNull(_this__u8e3s4, predicate) {
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.util.fastForEach' call
@@ -149,7 +184,10 @@
        while (inductionVariable <= last);
     return null;
   }
-  function fastForEachIndexed(_this__u8e3s4, action) {
+  function fastSumBy(_this__u8e3s4, selector) {
+    // Inline function 'kotlin.contracts.contract' call
+    var sum = 0;
+    // Inline function 'androidx.compose.ui.util.fastForEach' call
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
     var last = _this__u8e3s4.get_size_woubt6_k$() - 1 | 0;
@@ -158,31 +196,11 @@
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
         var item = _this__u8e3s4.get_fkrdnv_k$(index);
-        action(index, item);
+        // Inline function 'androidx.compose.ui.util.fastSumBy.<anonymous>' call
+        sum = sum + selector(item) | 0;
       }
        while (inductionVariable <= last);
-  }
-  function fastMaxBy(_this__u8e3s4, selector) {
-    // Inline function 'kotlin.contracts.contract' call
-    if (_this__u8e3s4.isEmpty_y1axqb_k$())
-      return null;
-    var maxElem = _this__u8e3s4.get_fkrdnv_k$(0);
-    var maxValue = selector(maxElem);
-    var inductionVariable = 1;
-    var last = get_lastIndex(_this__u8e3s4);
-    if (inductionVariable <= last)
-      do {
-        var i = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        var e = _this__u8e3s4.get_fkrdnv_k$(i);
-        var v = selector(e);
-        if (compareTo(maxValue, v) < 0) {
-          maxElem = e;
-          maxValue = v;
-        }
-      }
-       while (!(i === last));
-    return maxElem;
+    return sum;
   }
   function lerp(start, stop, fraction) {
     return start + roundToInt((stop - start | 0) * fraction) | 0;

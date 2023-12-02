@@ -12,10 +12,10 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.jd;
-  var classMeta = kotlin_kotlin.$_$.xb;
-  var VOID = kotlin_kotlin.$_$.li;
-  var setMetadataFor = kotlin_kotlin.$_$.kd;
+  var protoOf = kotlin_kotlin.$_$.rd;
+  var classMeta = kotlin_kotlin.$_$.ec;
+  var VOID = kotlin_kotlin.$_$.bj;
+  var setMetadataFor = kotlin_kotlin.$_$.sd;
   //endregion
   //region block: pre-declaration
   setMetadataFor(EventListenerHandler, 'EventListenerHandler', classMeta);
@@ -38,6 +38,11 @@
   protoOf(EventListenerHandler).toString = function () {
     return 'EventListenerHandler(' + this.handler_1 + ')';
   };
+  function get_ARRAYBUFFER(_this__u8e3s4) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'arraybuffer';
+  }
   //region block: exports
   _.$_$ = _.$_$ || {};
   _.$_$.a = EventListener;

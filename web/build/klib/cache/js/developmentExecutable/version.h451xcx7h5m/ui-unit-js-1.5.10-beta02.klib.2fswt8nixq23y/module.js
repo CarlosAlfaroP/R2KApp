@@ -19,47 +19,47 @@
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.t1;
-  var Long = kotlin_kotlin.$_$.qg;
-  var toString = kotlin_kotlin.$_$.od;
-  var VOID = kotlin_kotlin.$_$.li;
-  var protoOf = kotlin_kotlin.$_$.jd;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.y1;
-  var toLong = kotlin_kotlin.$_$.md;
-  var objectMeta = kotlin_kotlin.$_$.id;
-  var setMetadataFor = kotlin_kotlin.$_$.kd;
-  var THROW_CCE = kotlin_kotlin.$_$.xg;
-  var classMeta = kotlin_kotlin.$_$.xb;
-  var coerceAtLeast = kotlin_kotlin.$_$.ae;
-  var coerceIn = kotlin_kotlin.$_$.he;
-  var roundToInt = kotlin_kotlin.$_$.ud;
-  var isInfinite = kotlin_kotlin.$_$.rh;
-  var equals = kotlin_kotlin.$_$.bc;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.v1;
+  var Long = kotlin_kotlin.$_$.eh;
+  var toString = kotlin_kotlin.$_$.wd;
+  var VOID = kotlin_kotlin.$_$.bj;
+  var protoOf = kotlin_kotlin.$_$.rd;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.a2;
+  var toLong = kotlin_kotlin.$_$.ud;
+  var objectMeta = kotlin_kotlin.$_$.qd;
+  var setMetadataFor = kotlin_kotlin.$_$.sd;
+  var THROW_CCE = kotlin_kotlin.$_$.lh;
+  var classMeta = kotlin_kotlin.$_$.ec;
+  var coerceAtLeast = kotlin_kotlin.$_$.je;
+  var coerceIn = kotlin_kotlin.$_$.qe;
+  var roundToInt = kotlin_kotlin.$_$.ce;
+  var isInfinite = kotlin_kotlin.$_$.gi;
+  var equals = kotlin_kotlin.$_$.ic;
   var Rect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.h;
   var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u1;
   var Size = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.k;
   var _Size___get_packedValue__impl__7rlt1o = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.o1;
   var _Size___get_width__impl__58y75t = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.p1;
   var _Size___get_height__impl__a04p02 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l1;
-  var interfaceMeta = kotlin_kotlin.$_$.lc;
-  var getNumberHashCode = kotlin_kotlin.$_$.fc;
-  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.i4;
-  var floatFromBits = kotlin_kotlin.$_$.dc;
-  var compareTo = kotlin_kotlin.$_$.yb;
-  var isNaN_0 = kotlin_kotlin.$_$.sh;
-  var Comparable = kotlin_kotlin.$_$.jg;
-  var objectCreate = kotlin_kotlin.$_$.hd;
-  var toBits = kotlin_kotlin.$_$.ei;
-  var coerceAtLeast_0 = kotlin_kotlin.$_$.be;
+  var interfaceMeta = kotlin_kotlin.$_$.sc;
+  var getNumberHashCode = kotlin_kotlin.$_$.mc;
+  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.l4;
+  var floatFromBits = kotlin_kotlin.$_$.kc;
+  var compareTo = kotlin_kotlin.$_$.fc;
+  var isNaN_0 = kotlin_kotlin.$_$.hi;
+  var Comparable = kotlin_kotlin.$_$.xg;
+  var objectCreate = kotlin_kotlin.$_$.pd;
+  var toBits = kotlin_kotlin.$_$.ti;
+  var coerceAtLeast_0 = kotlin_kotlin.$_$.ke;
   var lerp = kotlin_org_jetbrains_compose_ui_ui_util.$_$.a;
-  var Annotation = kotlin_kotlin.$_$.fg;
+  var Annotation = kotlin_kotlin.$_$.tg;
+  var Offset = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.d;
   var _Offset___get_x__impl__xvi35n = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.i1;
   var _Offset___get_y__impl__8bzhra = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.j1;
-  var Offset = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.d;
-  var abs = kotlin_kotlin.$_$.qd;
-  var THROW_ISE = kotlin_kotlin.$_$.yg;
-  var Unit_getInstance = kotlin_kotlin.$_$.v4;
-  var Enum = kotlin_kotlin.$_$.lg;
+  var abs = kotlin_kotlin.$_$.yd;
+  var THROW_ISE = kotlin_kotlin.$_$.mh;
+  var Unit_getInstance = kotlin_kotlin.$_$.z4;
+  var Enum = kotlin_kotlin.$_$.zg;
   //endregion
   //region block: pre-declaration
   setMetadataFor(Companion, 'Companion', objectMeta);
@@ -175,7 +175,7 @@
   setMetadataFor(DpOffset, 'DpOffset', classMeta);
   setMetadataFor(ExperimentalUnitApi, 'ExperimentalUnitApi', classMeta, VOID, [Annotation]);
   setMetadataFor(Companion_4, 'Companion', objectMeta);
-  setMetadataFor(IntOffset, 'IntOffset', classMeta);
+  setMetadataFor(IntOffset_0, 'IntOffset', classMeta);
   setMetadataFor(Companion_5, 'Companion', objectMeta);
   setMetadataFor(IntRect, 'IntRect', classMeta);
   setMetadataFor(Companion_6, 'Companion', objectMeta);
@@ -1207,6 +1207,15 @@
   protoOf(ExperimentalUnitApi).toString = function () {
     return '@androidx.compose.ui.unit.ExperimentalUnitApi()';
   };
+  function toOffset(_this__u8e3s4) {
+    return Offset(_IntOffset___get_x__impl__qiqr5o(_this__u8e3s4), _IntOffset___get_y__impl__2avpwj(_this__u8e3s4));
+  }
+  function IntOffset(x, y) {
+    var tmp$ret$0;
+    // Inline function 'androidx.compose.ui.util.packInts' call
+    tmp$ret$0 = toLong(x).shl_po5ip6_k$(32).or_s401rn_k$(toLong(y).and_jhajnj_k$(new Long(-1, 0)));
+    return _IntOffset___init__impl__rq8h7b(tmp$ret$0);
+  }
   function _IntOffset___init__impl__rq8h7b(packedValue) {
     return packedValue;
   }
@@ -1228,7 +1237,7 @@
     return _IntOffset___get_y__impl__2avpwj($this);
   }
   function IntOffset__copy_impl_pmdgk6($this, x, y) {
-    return IntOffset_0(x, y);
+    return IntOffset(x, y);
   }
   function IntOffset__copy$default_impl_1y5pbb($this, x, y, $super) {
     x = x === VOID ? _IntOffset___get_x__impl__qiqr5o($this) : x;
@@ -1237,20 +1246,20 @@
     if ($super === VOID) {
       tmp = IntOffset__copy_impl_pmdgk6($this, x, y);
     } else {
-      var tmp_0 = new IntOffset($this);
+      var tmp_0 = new IntOffset_0($this);
       var tmp_1 = $super;
-      tmp = (tmp_1 == null ? null : new IntOffset(tmp_1)).copy_b61kim_k$.call(tmp_0, x, y).packedValue_1;
+      tmp = (tmp_1 == null ? null : new IntOffset_0(tmp_1)).copy_b61kim_k$.call(tmp_0, x, y).packedValue_1;
     }
     return tmp;
   }
   function IntOffset__minus_impl_4m69hb($this, other) {
-    return IntOffset_0(_IntOffset___get_x__impl__qiqr5o($this) - _IntOffset___get_x__impl__qiqr5o(other) | 0, _IntOffset___get_y__impl__2avpwj($this) - _IntOffset___get_y__impl__2avpwj(other) | 0);
+    return IntOffset(_IntOffset___get_x__impl__qiqr5o($this) - _IntOffset___get_x__impl__qiqr5o(other) | 0, _IntOffset___get_y__impl__2avpwj($this) - _IntOffset___get_y__impl__2avpwj(other) | 0);
   }
   function IntOffset__plus_impl_nqoa9b($this, other) {
-    return IntOffset_0(_IntOffset___get_x__impl__qiqr5o($this) + _IntOffset___get_x__impl__qiqr5o(other) | 0, _IntOffset___get_y__impl__2avpwj($this) + _IntOffset___get_y__impl__2avpwj(other) | 0);
+    return IntOffset(_IntOffset___get_x__impl__qiqr5o($this) + _IntOffset___get_x__impl__qiqr5o(other) | 0, _IntOffset___get_y__impl__2avpwj($this) + _IntOffset___get_y__impl__2avpwj(other) | 0);
   }
   function IntOffset__unaryMinus_impl_7xzl6y($this) {
-    return IntOffset_0(-_IntOffset___get_x__impl__qiqr5o($this) | 0, -_IntOffset___get_y__impl__2avpwj($this) | 0);
+    return IntOffset(-_IntOffset___get_x__impl__qiqr5o($this) | 0, -_IntOffset___get_y__impl__2avpwj($this) | 0);
   }
   function IntOffset__times_impl_2bnp7t($this, operand) {
     // Inline function 'kotlin.math.roundToInt' call
@@ -1260,7 +1269,7 @@
     // Inline function 'kotlin.math.roundToInt' call
     var tmp1_roundToInt = _IntOffset___get_y__impl__2avpwj($this) * operand;
     tmp$ret$1 = roundToInt(tmp1_roundToInt);
-    return IntOffset_0(tmp, tmp$ret$1);
+    return IntOffset(tmp, tmp$ret$1);
   }
   function IntOffset__div_impl_wnk4u6($this, operand) {
     // Inline function 'kotlin.math.roundToInt' call
@@ -1270,17 +1279,17 @@
     // Inline function 'kotlin.math.roundToInt' call
     var tmp1_roundToInt = _IntOffset___get_y__impl__2avpwj($this) / operand;
     tmp$ret$1 = roundToInt(tmp1_roundToInt);
-    return IntOffset_0(tmp, tmp$ret$1);
+    return IntOffset(tmp, tmp$ret$1);
   }
   function IntOffset__rem_impl_i1qrdh($this, operand) {
-    return IntOffset_0(_IntOffset___get_x__impl__qiqr5o($this) % operand | 0, _IntOffset___get_y__impl__2avpwj($this) % operand | 0);
+    return IntOffset(_IntOffset___get_x__impl__qiqr5o($this) % operand | 0, _IntOffset___get_y__impl__2avpwj($this) % operand | 0);
   }
   function IntOffset__toString_impl_h46d8h($this) {
     return '(' + _IntOffset___get_x__impl__qiqr5o($this) + ', ' + _IntOffset___get_y__impl__2avpwj($this) + ')';
   }
   function Companion_4() {
     Companion_instance_4 = this;
-    this.Zero_1 = IntOffset_0(0, 0);
+    this.Zero_1 = IntOffset(0, 0);
   }
   protoOf(Companion_4).get_Zero_c6qc7y_k$ = function () {
     return this.Zero_1;
@@ -1295,38 +1304,26 @@
     return $this.hashCode();
   }
   function IntOffset__equals_impl_45wak4($this, other) {
-    if (!(other instanceof IntOffset))
+    if (!(other instanceof IntOffset_0))
       return false;
-    var tmp0_other_with_cast = other instanceof IntOffset ? other.packedValue_1 : THROW_CCE();
+    var tmp0_other_with_cast = other instanceof IntOffset_0 ? other.packedValue_1 : THROW_CCE();
     if (!$this.equals(tmp0_other_with_cast))
       return false;
     return true;
   }
-  function IntOffset(packedValue) {
+  function IntOffset_0(packedValue) {
     Companion_getInstance_5();
     this.packedValue_1 = packedValue;
   }
-  protoOf(IntOffset).toString = function () {
+  protoOf(IntOffset_0).toString = function () {
     return IntOffset__toString_impl_h46d8h(this.packedValue_1);
   };
-  protoOf(IntOffset).hashCode = function () {
+  protoOf(IntOffset_0).hashCode = function () {
     return IntOffset__hashCode_impl_w5rrxs(this.packedValue_1);
   };
-  protoOf(IntOffset).equals = function (other) {
+  protoOf(IntOffset_0).equals = function (other) {
     return IntOffset__equals_impl_45wak4(this.packedValue_1, other);
   };
-  function plus(_this__u8e3s4, offset) {
-    return Offset(_Offset___get_x__impl__xvi35n(_this__u8e3s4) + _IntOffset___get_x__impl__qiqr5o(offset), _Offset___get_y__impl__8bzhra(_this__u8e3s4) + _IntOffset___get_y__impl__2avpwj(offset));
-  }
-  function minus(_this__u8e3s4, offset) {
-    return Offset(_Offset___get_x__impl__xvi35n(_this__u8e3s4) - _IntOffset___get_x__impl__qiqr5o(offset), _Offset___get_y__impl__8bzhra(_this__u8e3s4) - _IntOffset___get_y__impl__2avpwj(offset));
-  }
-  function IntOffset_0(x, y) {
-    var tmp$ret$0;
-    // Inline function 'androidx.compose.ui.util.packInts' call
-    tmp$ret$0 = toLong(x).shl_po5ip6_k$(32).or_s401rn_k$(toLong(y).and_jhajnj_k$(new Long(-1, 0)));
-    return _IntOffset___init__impl__rq8h7b(tmp$ret$0);
-  }
   function round(_this__u8e3s4) {
     // Inline function 'kotlin.math.roundToInt' call
     var tmp0_roundToInt = _Offset___get_x__impl__xvi35n(_this__u8e3s4);
@@ -1335,10 +1332,13 @@
     // Inline function 'kotlin.math.roundToInt' call
     var tmp1_roundToInt = _Offset___get_y__impl__8bzhra(_this__u8e3s4);
     tmp$ret$1 = roundToInt(tmp1_roundToInt);
-    return IntOffset_0(tmp, tmp$ret$1);
+    return IntOffset(tmp, tmp$ret$1);
   }
-  function toOffset(_this__u8e3s4) {
-    return Offset(_IntOffset___get_x__impl__qiqr5o(_this__u8e3s4), _IntOffset___get_y__impl__2avpwj(_this__u8e3s4));
+  function plus(_this__u8e3s4, offset) {
+    return Offset(_Offset___get_x__impl__xvi35n(_this__u8e3s4) + _IntOffset___get_x__impl__qiqr5o(offset), _Offset___get_y__impl__8bzhra(_this__u8e3s4) + _IntOffset___get_y__impl__2avpwj(offset));
+  }
+  function minus(_this__u8e3s4, offset) {
+    return Offset(_Offset___get_x__impl__xvi35n(_this__u8e3s4) - _IntOffset___get_x__impl__qiqr5o(offset), _Offset___get_y__impl__8bzhra(_this__u8e3s4) - _IntOffset___get_y__impl__2avpwj(offset));
   }
   function Companion_5() {
     Companion_instance_5 = this;
@@ -1448,31 +1448,31 @@
     return Math.max(tmp2_max, tmp3_max);
   };
   protoOf(IntRect).get_topLeft_hafo2o_k$ = function () {
-    return IntOffset_0(this.left_1, this.top_1);
+    return IntOffset(this.left_1, this.top_1);
   };
   protoOf(IntRect).get_topCenter_jnouvm_k$ = function () {
-    return IntOffset_0(this.left_1 + (this.get_width_j0q4yl_k$() / 2 | 0) | 0, this.top_1);
+    return IntOffset(this.left_1 + (this.get_width_j0q4yl_k$() / 2 | 0) | 0, this.top_1);
   };
   protoOf(IntRect).get_topRight_cpuk3n_k$ = function () {
-    return IntOffset_0(this.right_1, this.top_1);
+    return IntOffset(this.right_1, this.top_1);
   };
   protoOf(IntRect).get_centerLeft_l0g502_k$ = function () {
-    return IntOffset_0(this.left_1, this.top_1 + (this.get_height_e7t92o_k$() / 2 | 0) | 0);
+    return IntOffset(this.left_1, this.top_1 + (this.get_height_e7t92o_k$() / 2 | 0) | 0);
   };
   protoOf(IntRect).get_center_tfozt7_k$ = function () {
-    return IntOffset_0(this.left_1 + (this.get_width_j0q4yl_k$() / 2 | 0) | 0, this.top_1 + (this.get_height_e7t92o_k$() / 2 | 0) | 0);
+    return IntOffset(this.left_1 + (this.get_width_j0q4yl_k$() / 2 | 0) | 0, this.top_1 + (this.get_height_e7t92o_k$() / 2 | 0) | 0);
   };
   protoOf(IntRect).get_centerRight_vnfyob_k$ = function () {
-    return IntOffset_0(this.right_1, this.top_1 + (this.get_height_e7t92o_k$() / 2 | 0) | 0);
+    return IntOffset(this.right_1, this.top_1 + (this.get_height_e7t92o_k$() / 2 | 0) | 0);
   };
   protoOf(IntRect).get_bottomLeft_3k4m3s_k$ = function () {
-    return IntOffset_0(this.left_1, this.bottom_1);
+    return IntOffset(this.left_1, this.bottom_1);
   };
   protoOf(IntRect).get_bottomCenter_35u7t6_k$ = function () {
-    return IntOffset_0(this.left_1 + (this.get_width_j0q4yl_k$() / 2 | 0) | 0, this.bottom_1);
+    return IntOffset(this.left_1 + (this.get_width_j0q4yl_k$() / 2 | 0) | 0, this.bottom_1);
   };
   protoOf(IntRect).get_bottomRight_c6oxaj_k$ = function () {
-    return IntOffset_0(this.right_1, this.bottom_1);
+    return IntOffset(this.right_1, this.bottom_1);
   };
   protoOf(IntRect).contains_4xg8pb_k$ = function (offset) {
     return ((_IntOffset___get_x__impl__qiqr5o(offset) >= this.left_1 ? _IntOffset___get_x__impl__qiqr5o(offset) < this.right_1 : false) ? _IntOffset___get_y__impl__2avpwj(offset) >= this.top_1 : false) ? _IntOffset___get_y__impl__2avpwj(offset) < this.bottom_1 : false;
@@ -1607,7 +1607,7 @@
     return IntRect_0(Companion_getInstance_5().get_Zero_c6qc7y_k$(), _this__u8e3s4);
   }
   function get_center(_this__u8e3s4) {
-    return IntOffset_0(_IntSize___get_width__impl__d9yl4o(_this__u8e3s4) / 2 | 0, _IntSize___get_height__impl__prv63b(_this__u8e3s4) / 2 | 0);
+    return IntOffset(_IntSize___get_width__impl__d9yl4o(_this__u8e3s4) / 2 | 0, _IntSize___get_height__impl__prv63b(_this__u8e3s4) / 2 | 0);
   }
   var LayoutDirection_Ltr_instance;
   var LayoutDirection_Rtl_instance;
@@ -2038,8 +2038,8 @@
   _.$_$.s = DpOffset;
   _.$_$.t = DpSize_0;
   _.$_$.u = Dp;
-  _.$_$.v = IntOffset_0;
-  _.$_$.w = IntOffset;
+  _.$_$.v = IntOffset;
+  _.$_$.w = IntOffset_0;
   _.$_$.x = IntSize_0;
   _.$_$.y = IntSize;
   _.$_$.z = TextUnitType;
@@ -2060,60 +2060,65 @@
   _.$_$.o1 = offset;
   _.$_$.p1 = pack;
   _.$_$.q1 = plus;
-  _.$_$.r1 = get_sp_0;
-  _.$_$.s1 = get_sp;
-  _.$_$.t1 = toIntRect;
-  _.$_$.u1 = toSize_0;
-  _.$_$.v1 = LayoutDirection_Ltr_getInstance;
-  _.$_$.w1 = LayoutDirection_Rtl_getInstance;
-  _.$_$.x1 = DpRect_init_$Create$;
-  _.$_$.y1 = _Constraints___get_hasBoundedHeight__impl__bsh4rw;
-  _.$_$.z1 = _Constraints___get_hasBoundedWidth__impl__7hd0wr;
-  _.$_$.a2 = _Constraints___get_hasFixedHeight__impl__y56fxx;
-  _.$_$.b2 = _Constraints___get_hasFixedWidth__impl__4p17wc;
-  _.$_$.c2 = Constraints__hashCode_impl_ij7484;
-  _.$_$.d2 = _Constraints___get_maxHeight__impl__dt3e8z;
-  _.$_$.e2 = _Constraints___get_maxWidth__impl__uuyqc;
-  _.$_$.f2 = _Constraints___get_minHeight__impl__ev4bgx;
-  _.$_$.g2 = _Constraints___get_minWidth__impl__hi9lfi;
-  _.$_$.h2 = _Dp___init__impl__ms3zkb;
-  _.$_$.i2 = Dp__compareTo_impl_tlg3dl;
-  _.$_$.j2 = Dp__hashCode_impl_sxkrra;
-  _.$_$.k2 = _Dp___get_value__impl__geb1vb;
-  _.$_$.l2 = _DpOffset___get_x__impl__uauqb5;
-  _.$_$.m2 = _DpOffset___get_y__impl__1h898y;
-  _.$_$.n2 = DpSize__hashCode_impl_jvpgaj;
-  _.$_$.o2 = _DpSize___get_height__impl__5xueo2;
-  _.$_$.p2 = _DpSize___get_width__impl__o3d5gt;
-  _.$_$.q2 = _IntOffset___get_x__impl__qiqr5o;
-  _.$_$.r2 = _IntOffset___get_y__impl__2avpwj;
-  _.$_$.s2 = IntSize__hashCode_impl_gm9mta;
-  _.$_$.t2 = _IntSize___get_height__impl__prv63b;
-  _.$_$.u2 = _IntSize___get_width__impl__d9yl4o;
-  _.$_$.v2 = _TextUnit___init__impl__r5fj1s;
-  _.$_$.w2 = TextUnit__hashCode_impl_qsmeov;
-  _.$_$.x2 = _TextUnit___get_isEm__impl__esrmtl;
-  _.$_$.y2 = _TextUnit___get_isSp__impl__8c3r6q;
-  _.$_$.z2 = _TextUnit___get_packedValue__impl__it60w4;
-  _.$_$.a3 = _TextUnit___get_rawType__impl__tu8yq5;
-  _.$_$.b3 = _TextUnit___get_type__impl__uc2olt;
-  _.$_$.c3 = _TextUnit___get_value__impl__hpbx0k;
-  _.$_$.d3 = Velocity__minus_impl_w0cg92;
-  _.$_$.e3 = Velocity__plus_impl_9g3s6u;
-  _.$_$.f3 = Velocity__times_impl_yav0ik;
-  _.$_$.g3 = _Velocity___get_x__impl__qqcikv;
-  _.$_$.h3 = _Velocity___get_y__impl__239yhc;
-  _.$_$.i3 = Constraints__copy$default_impl_f452rp;
-  _.$_$.j3 = Velocity__copy$default_impl_eql69u;
-  _.$_$.k3 = Companion_getInstance_0;
-  _.$_$.l3 = Companion_getInstance_2;
-  _.$_$.m3 = Companion_getInstance_4;
-  _.$_$.n3 = Companion_getInstance_1;
-  _.$_$.o3 = Companion_getInstance_5;
-  _.$_$.p3 = Companion_getInstance_6;
-  _.$_$.q3 = Companion_getInstance_7;
-  _.$_$.r3 = Companion_getInstance_8;
-  _.$_$.s3 = Companion_getInstance_10;
+  _.$_$.r1 = get_sp_1;
+  _.$_$.s1 = get_sp_0;
+  _.$_$.t1 = get_sp;
+  _.$_$.u1 = toIntRect;
+  _.$_$.v1 = toSize_0;
+  _.$_$.w1 = LayoutDirection_Ltr_getInstance;
+  _.$_$.x1 = LayoutDirection_Rtl_getInstance;
+  _.$_$.y1 = DpRect_init_$Create$;
+  _.$_$.z1 = _Constraints___get_hasBoundedHeight__impl__bsh4rw;
+  _.$_$.a2 = _Constraints___get_hasBoundedWidth__impl__7hd0wr;
+  _.$_$.b2 = _Constraints___get_hasFixedHeight__impl__y56fxx;
+  _.$_$.c2 = _Constraints___get_hasFixedWidth__impl__4p17wc;
+  _.$_$.d2 = Constraints__hashCode_impl_ij7484;
+  _.$_$.e2 = _Constraints___get_maxHeight__impl__dt3e8z;
+  _.$_$.f2 = _Constraints___get_maxWidth__impl__uuyqc;
+  _.$_$.g2 = _Constraints___get_minHeight__impl__ev4bgx;
+  _.$_$.h2 = _Constraints___get_minWidth__impl__hi9lfi;
+  _.$_$.i2 = _Dp___init__impl__ms3zkb;
+  _.$_$.j2 = Dp__compareTo_impl_tlg3dl;
+  _.$_$.k2 = Dp__hashCode_impl_sxkrra;
+  _.$_$.l2 = _Dp___get_value__impl__geb1vb;
+  _.$_$.m2 = _DpOffset___get_x__impl__uauqb5;
+  _.$_$.n2 = _DpOffset___get_y__impl__1h898y;
+  _.$_$.o2 = DpSize__hashCode_impl_jvpgaj;
+  _.$_$.p2 = _DpSize___get_height__impl__5xueo2;
+  _.$_$.q2 = _DpSize___get_packedValue__impl__jx4au8;
+  _.$_$.r2 = _DpSize___get_width__impl__o3d5gt;
+  _.$_$.s2 = IntOffset__hashCode_impl_w5rrxs;
+  _.$_$.t2 = _IntOffset___get_x__impl__qiqr5o;
+  _.$_$.u2 = _IntOffset___get_y__impl__2avpwj;
+  _.$_$.v2 = IntSize__hashCode_impl_gm9mta;
+  _.$_$.w2 = _IntSize___get_height__impl__prv63b;
+  _.$_$.x2 = _IntSize___get_width__impl__d9yl4o;
+  _.$_$.y2 = _TextUnit___init__impl__r5fj1s;
+  _.$_$.z2 = TextUnit__hashCode_impl_qsmeov;
+  _.$_$.a3 = _TextUnit___get_isEm__impl__esrmtl;
+  _.$_$.b3 = _TextUnit___get_isSp__impl__8c3r6q;
+  _.$_$.c3 = _TextUnit___get_packedValue__impl__it60w4;
+  _.$_$.d3 = _TextUnit___get_rawType__impl__tu8yq5;
+  _.$_$.e3 = _TextUnit___get_type__impl__uc2olt;
+  _.$_$.f3 = _TextUnit___get_value__impl__hpbx0k;
+  _.$_$.g3 = Velocity__minus_impl_w0cg92;
+  _.$_$.h3 = Velocity__plus_impl_9g3s6u;
+  _.$_$.i3 = Velocity__times_impl_yav0ik;
+  _.$_$.j3 = _Velocity___get_x__impl__qqcikv;
+  _.$_$.k3 = _Velocity___get_y__impl__239yhc;
+  _.$_$.l3 = Constraints__copy$default_impl_f452rp;
+  _.$_$.m3 = IntOffset__copy$default_impl_1y5pbb;
+  _.$_$.n3 = Velocity__copy$default_impl_eql69u;
+  _.$_$.o3 = Companion_getInstance_0;
+  _.$_$.p3 = Companion_getInstance_2;
+  _.$_$.q3 = Companion_getInstance_4;
+  _.$_$.r3 = Companion_getInstance_1;
+  _.$_$.s3 = Companion_getInstance_5;
+  _.$_$.t3 = Companion_getInstance_6;
+  _.$_$.u3 = Companion_getInstance_7;
+  _.$_$.v3 = Companion_getInstance_8;
+  _.$_$.w3 = Companion_getInstance_9;
+  _.$_$.x3 = Companion_getInstance_10;
   //endregion
   return _;
 }));

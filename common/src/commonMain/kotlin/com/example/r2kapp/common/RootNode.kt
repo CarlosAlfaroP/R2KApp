@@ -18,7 +18,6 @@ import com.example.r2kapp.common.RootNode.NavTarget
 import com.example.r2kapp.common.screens.loggedout.LoggedOutNode
 import com.example.r2kapp.common.screens.main.MainNode
 import com.example.r2kapp.common.screens.profile.User
-
 class RootNode(
     buildContext: BuildContext,
     autoLogin: Boolean = false, // TODO: Login class
@@ -74,12 +73,9 @@ class RootNode(
 
         }
     }
-
     /*** Operation: [A, B, C] + Replace(D) = [A, B, D] */
-
     private fun onLogin(user: User): RootNode {
         backStack.replace(NavTarget.Main(user))
         return this
     }
-
 }

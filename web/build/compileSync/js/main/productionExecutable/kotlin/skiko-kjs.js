@@ -1,95 +1,96 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin-kotlin-stdlib-js-ir.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'));
   else {
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'skiko-kjs'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'skiko-kjs'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'skiko-kjs'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'skiko-kjs'.");
     }
-    root['skiko-kjs'] = factory(typeof this['skiko-kjs'] === 'undefined' ? {} : this['skiko-kjs'], this['kotlin-kotlin-stdlib-js-ir']);
+    root['skiko-kjs'] = factory(typeof this['skiko-kjs'] === 'undefined' ? {} : this['skiko-kjs'], this['kotlin-kotlin-stdlib']);
   }
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var protoOf = kotlin_kotlin.$_$.f7;
-  var objectMeta = kotlin_kotlin.$_$.e7;
-  var VOID = kotlin_kotlin.$_$.na;
-  var setMetadataFor = kotlin_kotlin.$_$.g7;
-  var classMeta = kotlin_kotlin.$_$.g6;
-  var objectCreate = kotlin_kotlin.$_$.d7;
-  var Unit_getInstance = kotlin_kotlin.$_$.m2;
-  var ensureNotNull = kotlin_kotlin.$_$.t9;
-  var Enum = kotlin_kotlin.$_$.d9;
-  var equals = kotlin_kotlin.$_$.j6;
-  var hashCode = kotlin_kotlin.$_$.r6;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.z9;
-  var toBits = kotlin_kotlin.$_$.ga;
-  var compareTo = kotlin_kotlin.$_$.h6;
-  var THROW_CCE = kotlin_kotlin.$_$.m9;
-  var isCharSequence = kotlin_kotlin.$_$.v6;
-  var trim = kotlin_kotlin.$_$.x8;
-  var toString = kotlin_kotlin.$_$.j7;
-  var split = kotlin_kotlin.$_$.s8;
-  var getOrNull = kotlin_kotlin.$_$.d4;
-  var toIntOrNull = kotlin_kotlin.$_$.t8;
-  var _UInt___init__impl__l7qpdl = kotlin_kotlin.$_$.z1;
-  var fillArrayVal = kotlin_kotlin.$_$.k6;
-  var splitToSequence = kotlin_kotlin.$_$.r8;
-  var mapNotNull = kotlin_kotlin.$_$.e8;
-  var toList = kotlin_kotlin.$_$.i8;
-  var copyToArray = kotlin_kotlin.$_$.r3;
-  var _UInt___get_data__impl__f0vqqw = kotlin_kotlin.$_$.a2;
-  var uintCompare = kotlin_kotlin.$_$.la;
-  var Companion_getInstance = kotlin_kotlin.$_$.l2;
-  var UInt = kotlin_kotlin.$_$.o9;
-  var isNaN_0 = kotlin_kotlin.$_$.v9;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.c1;
-  var charSequenceGet = kotlin_kotlin.$_$.d6;
-  var Char__toInt_impl_vasixd = kotlin_kotlin.$_$.u1;
-  var numberToChar = kotlin_kotlin.$_$.a7;
-  var charArrayOf = kotlin_kotlin.$_$.c6;
-  var concatToString = kotlin_kotlin.$_$.k8;
-  var interfaceMeta = kotlin_kotlin.$_$.t6;
-  var RuntimeException_init_$Create$ = kotlin_kotlin.$_$.m1;
-  var decodeToString = kotlin_kotlin.$_$.m8;
-  var contentEquals = kotlin_kotlin.$_$.l3;
-  var contentHashCode = kotlin_kotlin.$_$.n3;
-  var contentHashCode_0 = kotlin_kotlin.$_$.m3;
-  var NoSuchElementException_init_$Create$ = kotlin_kotlin.$_$.j1;
-  var NotImplementedError = kotlin_kotlin.$_$.j9;
-  var last = kotlin_kotlin.$_$.m4;
-  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.g2;
-  var floatFromBits = kotlin_kotlin.$_$.l6;
-  var joinToString = kotlin_kotlin.$_$.h4;
-  var Error_init_$Create$ = kotlin_kotlin.$_$.z;
-  var IllegalArgumentException_init_$Create$_0 = kotlin_kotlin.$_$.b1;
-  var until = kotlin_kotlin.$_$.x7;
-  var collectionSizeOrDefault = kotlin_kotlin.$_$.i3;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.f;
-  var toBits_0 = kotlin_kotlin.$_$.ha;
-  var getNumberHashCode = kotlin_kotlin.$_$.n6;
-  var Long = kotlin_kotlin.$_$.h9;
-  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.g;
-  var getStringHashCode = kotlin_kotlin.$_$.q6;
-  var listOf = kotlin_kotlin.$_$.n4;
-  var RuntimeException = kotlin_kotlin.$_$.l9;
-  var RuntimeException_init_$Init$ = kotlin_kotlin.$_$.n1;
-  var captureStack = kotlin_kotlin.$_$.b6;
-  var Regex_init_$Create$ = kotlin_kotlin.$_$.u;
-  var charSequenceLength = kotlin_kotlin.$_$.e6;
-  var lazy = kotlin_kotlin.$_$.y9;
+  var Unit_instance = kotlin_kotlin.$_$.e3;
+  var protoOf = kotlin_kotlin.$_$.r9;
+  var objectMeta = kotlin_kotlin.$_$.q9;
+  var setMetadataFor = kotlin_kotlin.$_$.s9;
+  var classMeta = kotlin_kotlin.$_$.p8;
+  var objectCreate = kotlin_kotlin.$_$.p9;
+  var ensureNotNull = kotlin_kotlin.$_$.id;
+  var Enum = kotlin_kotlin.$_$.mc;
+  var VOID = kotlin_kotlin.$_$.d;
+  var charSequenceGet = kotlin_kotlin.$_$.m8;
+  var Char__toInt_impl_vasixd = kotlin_kotlin.$_$.f2;
+  var toShort = kotlin_kotlin.$_$.u9;
+  var RuntimeException_init_$Create$ = kotlin_kotlin.$_$.v1;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.j1;
+  var equals = kotlin_kotlin.$_$.t8;
+  var hashCode = kotlin_kotlin.$_$.c9;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.qd;
+  var toBits = kotlin_kotlin.$_$.yd;
+  var compareTo = kotlin_kotlin.$_$.q8;
+  var THROW_CCE = kotlin_kotlin.$_$.xc;
+  var isCharSequence = kotlin_kotlin.$_$.g9;
+  var trim = kotlin_kotlin.$_$.fc;
+  var toString = kotlin_kotlin.$_$.v9;
+  var split = kotlin_kotlin.$_$.xb;
+  var getOrNull = kotlin_kotlin.$_$.e5;
+  var toIntOrNull = kotlin_kotlin.$_$.ac;
+  var _UInt___init__impl__l7qpdl = kotlin_kotlin.$_$.l2;
+  var fillArrayVal = kotlin_kotlin.$_$.u8;
+  var splitToSequence = kotlin_kotlin.$_$.wb;
+  var mapNotNull = kotlin_kotlin.$_$.db;
+  var toList = kotlin_kotlin.$_$.hb;
+  var copyToArray = kotlin_kotlin.$_$.p4;
+  var _UInt___get_data__impl__f0vqqw = kotlin_kotlin.$_$.m2;
+  var uintCompare = kotlin_kotlin.$_$.de;
+  var Companion_getInstance = kotlin_kotlin.$_$.d3;
+  var UInt = kotlin_kotlin.$_$.ad;
+  var isNaN_0 = kotlin_kotlin.$_$.md;
+  var numberToChar = kotlin_kotlin.$_$.m9;
+  var charArrayOf = kotlin_kotlin.$_$.k8;
+  var concatToString = kotlin_kotlin.$_$.jb;
+  var interfaceMeta = kotlin_kotlin.$_$.e9;
+  var decodeToString = kotlin_kotlin.$_$.lb;
+  var contentEquals = kotlin_kotlin.$_$.j4;
+  var contentHashCode = kotlin_kotlin.$_$.l4;
+  var contentHashCode_0 = kotlin_kotlin.$_$.k4;
+  var NoSuchElementException_init_$Create$ = kotlin_kotlin.$_$.q1;
+  var NotImplementedError = kotlin_kotlin.$_$.tc;
+  var last = kotlin_kotlin.$_$.w5;
+  var FloatCompanionObject_instance = kotlin_kotlin.$_$.v2;
+  var floatFromBits = kotlin_kotlin.$_$.v8;
+  var joinToString = kotlin_kotlin.$_$.m5;
+  var Error_init_$Create$ = kotlin_kotlin.$_$.f1;
+  var IllegalArgumentException_init_$Create$_0 = kotlin_kotlin.$_$.i1;
+  var until = kotlin_kotlin.$_$.sa;
+  var collectionSizeOrDefault = kotlin_kotlin.$_$.g4;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
+  var toBits_0 = kotlin_kotlin.$_$.zd;
+  var getNumberHashCode = kotlin_kotlin.$_$.y8;
+  var Long = kotlin_kotlin.$_$.rc;
+  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
+  var getStringHashCode = kotlin_kotlin.$_$.b9;
+  var listOf = kotlin_kotlin.$_$.z5;
+  var getBooleanHashCode = kotlin_kotlin.$_$.w8;
+  var RuntimeException = kotlin_kotlin.$_$.wc;
+  var RuntimeException_init_$Init$ = kotlin_kotlin.$_$.w1;
+  var captureStack = kotlin_kotlin.$_$.j8;
+  var Regex_init_$Create$ = kotlin_kotlin.$_$.a1;
+  var charSequenceLength = kotlin_kotlin.$_$.n8;
+  var lazy = kotlin_kotlin.$_$.pd;
   var getKClassFromExpression = kotlin_kotlin.$_$.a;
-  var arrayIterator = kotlin_kotlin.$_$.a6;
-  var toIntArray = kotlin_kotlin.$_$.b5;
-  var plus = kotlin_kotlin.$_$.aa;
-  var toString_0 = kotlin_kotlin.$_$.v8;
-  var numberToLong = kotlin_kotlin.$_$.c7;
-  var numberToInt = kotlin_kotlin.$_$.b7;
-  var setOf = kotlin_kotlin.$_$.w4;
-  var contains = kotlin_kotlin.$_$.l8;
-  var defineProp = kotlin_kotlin.$_$.i6;
+  var toIntArray = kotlin_kotlin.$_$.a7;
+  var plus = kotlin_kotlin.$_$.rd;
+  var toString_0 = kotlin_kotlin.$_$.cc;
+  var numberToLong = kotlin_kotlin.$_$.o9;
+  var numberToInt = kotlin_kotlin.$_$.n9;
+  var setOf = kotlin_kotlin.$_$.p6;
+  var contains = kotlin_kotlin.$_$.kb;
+  var defineProp = kotlin_kotlin.$_$.r8;
   //endregion
   //region block: pre-declaration
   setMetadataFor(Companion, 'Companion', objectMeta);
@@ -100,153 +101,170 @@
   setMetadataFor(Companion_0, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_0, '_FinalizerHolder', objectMeta);
   function get_width() {
-    return this.y24().e25_1;
+    return this.j3d().q3d_1;
   }
   function get_height() {
-    return this.y24().f25_1;
+    return this.j3d().r3d_1;
   }
   function get_colorType() {
-    return this.y24().d25_1.g25_1;
+    return this.j3d().p3d_1.s3d_1;
   }
   function get_colorSpace() {
-    return this.y24().d25_1.i25_1;
+    return this.j3d().p3d_1.u3d_1;
   }
   function get_isOpaque() {
-    return this.y24().d25_1.n25();
+    return this.j3d().p3d_1.z3d();
   }
   setMetadataFor(IHasImageInfo, 'IHasImageInfo', interfaceMeta);
-  setMetadataFor(Bitmap, 'Bitmap', classMeta, Managed, [Managed, IHasImageInfo]);
+  setMetadataFor(Bitmap, 'Bitmap', classMeta, Managed, [Managed, IHasImageInfo], Bitmap_init_$Create$);
   setMetadataFor(BlendMode, 'BlendMode', classMeta, Enum);
   setMetadataFor(Companion_1, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_1, '_FinalizerHolder', objectMeta);
+  setMetadataFor(BreakIterator, 'BreakIterator', classMeta, Managed);
+  setMetadataFor(Companion_2, 'Companion', objectMeta);
+  setMetadataFor(_FinalizerHolder_2, '_FinalizerHolder', objectMeta);
   setMetadataFor(Canvas, 'Canvas', classMeta, Managed);
   setMetadataFor(ClipMode, 'ClipMode', classMeta, Enum);
   setMetadataFor(Color, 'Color', objectMeta);
   setMetadataFor(ColorAlphaType, 'ColorAlphaType', classMeta, Enum);
-  setMetadataFor(Companion_2, 'Companion', objectMeta);
+  setMetadataFor(Companion_3, 'Companion', objectMeta);
   setMetadataFor(RefCnt, 'RefCnt', classMeta, Managed);
   setMetadataFor(ColorFilter, 'ColorFilter', classMeta, RefCnt);
-  setMetadataFor(Companion_3, 'Companion', objectMeta);
-  setMetadataFor(ColorInfo, 'ColorInfo', classMeta);
   setMetadataFor(Companion_4, 'Companion', objectMeta);
-  setMetadataFor(_FinalizerHolder_2, '_FinalizerHolder', objectMeta);
-  setMetadataFor(ColorSpace, 'ColorSpace', classMeta, Managed);
+  setMetadataFor(ColorInfo, 'ColorInfo', classMeta);
   setMetadataFor(Companion_5, 'Companion', objectMeta);
+  setMetadataFor(_FinalizerHolder_3, '_FinalizerHolder', objectMeta);
+  setMetadataFor(ColorSpace, 'ColorSpace', classMeta, Managed);
+  setMetadataFor(Companion_6, 'Companion', objectMeta);
   setMetadataFor(ColorType, 'ColorType', classMeta, Enum);
   setMetadataFor(CubicResampler, 'CubicResampler', classMeta);
-  setMetadataFor(Companion_6, 'Companion', objectMeta);
-  setMetadataFor(_FinalizerHolder_3, '_FinalizerHolder', objectMeta);
-  setMetadataFor(Data, 'Data', classMeta, Managed);
   setMetadataFor(Companion_7, 'Companion', objectMeta);
+  setMetadataFor(_FinalizerHolder_4, '_FinalizerHolder', objectMeta);
+  setMetadataFor(Data, 'Data', classMeta, Managed);
+  setMetadataFor(Companion_8, 'Companion', objectMeta);
   setMetadataFor(DirectContext, 'DirectContext', classMeta, RefCnt);
   setMetadataFor(FilterMipmap, 'FilterMipmap', classMeta);
   setMetadataFor(FilterMode, 'FilterMode', classMeta, Enum);
-  setMetadataFor(Companion_8, 'Companion', objectMeta);
-  setMetadataFor(_FinalizerHolder_4, '_FinalizerHolder', objectMeta);
-  setMetadataFor(Font, 'Font', classMeta, Managed);
+  setMetadataFor(FilterTileMode, 'FilterTileMode', classMeta, Enum);
   setMetadataFor(Companion_9, 'Companion', objectMeta);
-  setMetadataFor(FontFeature, 'FontFeature', classMeta);
+  setMetadataFor(_FinalizerHolder_5, '_FinalizerHolder', objectMeta);
+  setMetadataFor(Font, 'Font', classMeta, Managed, VOID, Font_init_$Create$);
   setMetadataFor(Companion_10, 'Companion', objectMeta);
-  setMetadataFor(FontMetrics, 'FontMetrics', classMeta);
+  setMetadataFor(FontFeature, 'FontFeature', classMeta);
   setMetadataFor(Companion_11, 'Companion', objectMeta);
+  setMetadataFor(FontMetrics, 'FontMetrics', classMeta);
+  setMetadataFor(Companion_12, 'Companion', objectMeta);
   setMetadataFor(FontMgr, 'FontMgr', classMeta, RefCnt);
   setMetadataFor(FontSlant, 'FontSlant', classMeta, Enum);
-  setMetadataFor(Companion_12, 'Companion', objectMeta);
-  setMetadataFor(FontStyle, 'FontStyle', classMeta);
   setMetadataFor(Companion_13, 'Companion', objectMeta);
+  setMetadataFor(FontStyle, 'FontStyle', classMeta);
   setMetadataFor(Companion_14, 'Companion', objectMeta);
   setMetadataFor(Companion_15, 'Companion', objectMeta);
   setMetadataFor(Companion_16, 'Companion', objectMeta);
-  setMetadataFor(Image, 'Image', classMeta, RefCnt, [RefCnt, IHasImageInfo]);
   setMetadataFor(Companion_17, 'Companion', objectMeta);
-  setMetadataFor(ImageInfo, 'ImageInfo', classMeta);
+  setMetadataFor(GradientStyle, 'GradientStyle', classMeta);
   setMetadataFor(Companion_18, 'Companion', objectMeta);
-  setMetadataFor(_FinalizerHolder_5, '_FinalizerHolder', objectMeta);
-  setMetadataFor(ManagedString, 'ManagedString', classMeta, Managed);
+  setMetadataFor(IRange, 'IRange', classMeta);
   setMetadataFor(Companion_19, 'Companion', objectMeta);
-  setMetadataFor(Matrix33, 'Matrix33', classMeta);
+  setMetadataFor(Image, 'Image', classMeta, RefCnt, [RefCnt, IHasImageInfo]);
   setMetadataFor(Companion_20, 'Companion', objectMeta);
-  setMetadataFor(Matrix44, 'Matrix44', classMeta);
-  setMetadataFor(MipmapMode, 'MipmapMode', classMeta, Enum);
+  setMetadataFor(ImageInfo, 'ImageInfo', classMeta);
   setMetadataFor(Companion_21, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_6, '_FinalizerHolder', objectMeta);
-  setMetadataFor(Paint, 'Paint', classMeta, Managed);
+  setMetadataFor(ManagedString, 'ManagedString', classMeta, Managed);
+  setMetadataFor(Companion_22, 'Companion', objectMeta);
+  setMetadataFor(Matrix33, 'Matrix33', classMeta);
+  setMetadataFor(Companion_23, 'Companion', objectMeta);
+  setMetadataFor(Matrix44, 'Matrix44', classMeta);
+  setMetadataFor(MipmapMode, 'MipmapMode', classMeta, Enum);
+  setMetadataFor(Companion_24, 'Companion', objectMeta);
+  setMetadataFor(_FinalizerHolder_7, '_FinalizerHolder', objectMeta);
+  setMetadataFor(Paint, 'Paint', classMeta, Managed, VOID, Paint_init_$Create$);
   setMetadataFor(PaintMode, 'PaintMode', classMeta, Enum);
   setMetadataFor(PaintStrokeCap, 'PaintStrokeCap', classMeta, Enum);
   setMetadataFor(PaintStrokeJoin, 'PaintStrokeJoin', classMeta, Enum);
-  setMetadataFor(Companion_22, 'Companion', objectMeta);
-  setMetadataFor(_FinalizerHolder_7, '_FinalizerHolder', objectMeta);
-  setMetadataFor(Path, 'Path', classMeta, Managed);
-  setMetadataFor(PathDirection, 'PathDirection', classMeta, Enum);
-  setMetadataFor(PathFillMode, 'PathFillMode', classMeta, Enum);
-  setMetadataFor(PathOp, 'PathOp', classMeta, Enum);
-  setMetadataFor(PathSegment, 'PathSegment', classMeta);
-  setMetadataFor(Companion_23, 'Companion', objectMeta);
-  setMetadataFor(PathSegmentIterator, 'PathSegmentIterator', classMeta, Managed);
-  setMetadataFor(PathVerb, 'PathVerb', classMeta, Enum);
-  setMetadataFor(Companion_24, 'Companion', objectMeta);
-  setMetadataFor(Picture, 'Picture', classMeta, RefCnt);
   setMetadataFor(Companion_25, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_8, '_FinalizerHolder', objectMeta);
-  setMetadataFor(PictureRecorder, 'PictureRecorder', classMeta, Managed);
-  setMetadataFor(PixelGeometry, 'PixelGeometry', classMeta, Enum);
+  setMetadataFor(Path, 'Path', classMeta, Managed, VOID, Path_init_$Create$);
+  setMetadataFor(PathDirection, 'PathDirection', classMeta, Enum);
+  setMetadataFor(PathFillMode, 'PathFillMode', classMeta, Enum);
   setMetadataFor(Companion_26, 'Companion', objectMeta);
+  setMetadataFor(_FinalizerHolder_9, '_FinalizerHolder', objectMeta);
+  setMetadataFor(PathMeasure, 'PathMeasure', classMeta, Managed, VOID, PathMeasure_init_$Create$);
+  setMetadataFor(PathOp, 'PathOp', classMeta, Enum);
+  setMetadataFor(PathSegment, 'PathSegment', classMeta, VOID, VOID, PathSegment);
+  setMetadataFor(Companion_27, 'Companion', objectMeta);
+  setMetadataFor(PathSegmentIterator, 'PathSegmentIterator', classMeta, Managed);
+  setMetadataFor(PathVerb, 'PathVerb', classMeta, Enum);
+  setMetadataFor(Companion_28, 'Companion', objectMeta);
+  setMetadataFor(Picture, 'Picture', classMeta, RefCnt);
+  setMetadataFor(Companion_29, 'Companion', objectMeta);
+  setMetadataFor(_FinalizerHolder_10, '_FinalizerHolder', objectMeta);
+  setMetadataFor(PictureRecorder, 'PictureRecorder', classMeta, Managed, VOID, PictureRecorder_init_$Create$);
+  setMetadataFor(PixelGeometry, 'PixelGeometry', classMeta, Enum);
+  setMetadataFor(Companion_30, 'Companion', objectMeta);
   setMetadataFor(Point, 'Point', classMeta);
   setMetadataFor(Point3, 'Point3', classMeta);
-  setMetadataFor(Companion_27, 'Companion', objectMeta);
+  setMetadataFor(Companion_31, 'Companion', objectMeta);
   setMetadataFor(Rect, 'Rect', classMeta);
   setMetadataFor(RRect, 'RRect', classMeta, Rect);
-  setMetadataFor(Companion_28, 'Companion', objectMeta);
+  setMetadataFor(Companion_32, 'Companion', objectMeta);
+  setMetadataFor(Companion_33, 'Companion', objectMeta);
+  setMetadataFor(Companion_34, 'Companion', objectMeta);
+  setMetadataFor(Shader, 'Shader', classMeta, RefCnt);
   setMetadataFor(ShadowUtils, 'ShadowUtils', objectMeta);
   setMetadataFor(ArrayDecoder, 'ArrayDecoder', classMeta);
-  setMetadataFor(Companion_29, 'Companion', objectMeta);
+  setMetadataFor(Companion_35, 'Companion', objectMeta);
   setMetadataFor(Surface, 'Surface', classMeta, RefCnt);
   setMetadataFor(SurfaceColorFormat, 'SurfaceColorFormat', classMeta, Enum);
   setMetadataFor(SurfaceOrigin, 'SurfaceOrigin', classMeta, Enum);
-  setMetadataFor(SurfaceProps, 'SurfaceProps', classMeta);
-  setMetadataFor(Companion_30, 'Companion', objectMeta);
+  setMetadataFor(SurfaceProps, 'SurfaceProps', classMeta, VOID, VOID, SurfaceProps);
+  setMetadataFor(Companion_36, 'Companion', objectMeta);
   setMetadataFor(Typeface, 'Typeface', classMeta, RefCnt);
+  setMetadataFor(Companion_37, 'Companion', objectMeta);
+  setMetadataFor(_FinalizerHolder_11, '_FinalizerHolder', objectMeta);
+  setMetadataFor(U16String, 'U16String', classMeta, Managed);
   setMetadataFor(CharDirection, 'CharDirection', objectMeta);
   setMetadataFor(Affinity, 'Affinity', classMeta, Enum);
   setMetadataFor(Alignment, 'Alignment', classMeta, Enum);
   setMetadataFor(BaselineMode, 'BaselineMode', classMeta, Enum);
   setMetadataFor(DecorationLineStyle, 'DecorationLineStyle', classMeta, Enum);
-  setMetadataFor(Companion_31, 'Companion', objectMeta);
+  setMetadataFor(Companion_38, 'Companion', objectMeta);
   setMetadataFor(DecorationStyle, 'DecorationStyle', classMeta);
   setMetadataFor(Direction, 'Direction', classMeta, Enum);
-  setMetadataFor(Companion_32, 'Companion', objectMeta);
-  setMetadataFor(FontCollection, 'FontCollection', classMeta, RefCnt);
-  setMetadataFor(Companion_33, 'Companion', objectMeta);
+  setMetadataFor(Companion_39, 'Companion', objectMeta);
+  setMetadataFor(FontCollection, 'FontCollection', classMeta, RefCnt, VOID, FontCollection_init_$Create$);
+  setMetadataFor(Companion_40, 'Companion', objectMeta);
   setMetadataFor(LineMetrics, 'LineMetrics', classMeta);
-  setMetadataFor(Companion_34, 'Companion', objectMeta);
-  setMetadataFor(_FinalizerHolder_9, '_FinalizerHolder', objectMeta);
+  setMetadataFor(Companion_41, 'Companion', objectMeta);
+  setMetadataFor(_FinalizerHolder_12, '_FinalizerHolder', objectMeta);
   setMetadataFor(Paragraph, 'Paragraph', classMeta, Managed);
-  setMetadataFor(Companion_35, 'Companion', objectMeta);
-  setMetadataFor(_FinalizerHolder_10, '_FinalizerHolder', objectMeta);
+  setMetadataFor(Companion_42, 'Companion', objectMeta);
+  setMetadataFor(_FinalizerHolder_13, '_FinalizerHolder', objectMeta);
   setMetadataFor(ParagraphBuilder, 'ParagraphBuilder', classMeta, Managed);
-  setMetadataFor(Companion_36, 'Companion', objectMeta);
-  setMetadataFor(_FinalizerHolder_11, '_FinalizerHolder', objectMeta);
-  setMetadataFor(ParagraphStyle, 'ParagraphStyle', classMeta, Managed);
+  setMetadataFor(Companion_43, 'Companion', objectMeta);
+  setMetadataFor(_FinalizerHolder_14, '_FinalizerHolder', objectMeta);
+  setMetadataFor(ParagraphStyle, 'ParagraphStyle', classMeta, Managed, VOID, ParagraphStyle);
   setMetadataFor(PlaceholderAlignment, 'PlaceholderAlignment', classMeta, Enum);
   setMetadataFor(PlaceholderStyle, 'PlaceholderStyle', classMeta);
   setMetadataFor(PositionWithAffinity, 'PositionWithAffinity', classMeta);
   setMetadataFor(RectHeightMode, 'RectHeightMode', classMeta, Enum);
   setMetadataFor(RectWidthMode, 'RectWidthMode', classMeta, Enum);
-  setMetadataFor(Companion_37, 'Companion', objectMeta);
+  setMetadataFor(Companion_44, 'Companion', objectMeta);
   setMetadataFor(Shadow, 'Shadow', classMeta);
-  setMetadataFor(Companion_38, 'Companion', objectMeta);
-  setMetadataFor(_FinalizerHolder_12, '_FinalizerHolder', objectMeta);
-  setMetadataFor(StrutStyle, 'StrutStyle', classMeta, Managed);
-  setMetadataFor(Companion_39, 'Companion', objectMeta);
+  setMetadataFor(Companion_45, 'Companion', objectMeta);
+  setMetadataFor(_FinalizerHolder_15, '_FinalizerHolder', objectMeta);
+  setMetadataFor(StrutStyle, 'StrutStyle', classMeta, Managed, VOID, StrutStyle_init_$Create$);
+  setMetadataFor(Companion_46, 'Companion', objectMeta);
   setMetadataFor(TextBox, 'TextBox', classMeta);
-  setMetadataFor(TextIndent, 'TextIndent', classMeta);
-  setMetadataFor(Companion_40, 'Companion', objectMeta);
-  setMetadataFor(_FinalizerHolder_13, '_FinalizerHolder', objectMeta);
-  setMetadataFor(TextStyle, 'TextStyle', classMeta, Managed);
-  setMetadataFor(Companion_41, 'Companion', objectMeta);
-  setMetadataFor(TypefaceFontProvider, 'TypefaceFontProvider', classMeta, FontMgr);
+  setMetadataFor(TextIndent, 'TextIndent', classMeta, VOID, VOID, TextIndent);
+  setMetadataFor(Companion_47, 'Companion', objectMeta);
+  setMetadataFor(_FinalizerHolder_16, '_FinalizerHolder', objectMeta);
+  setMetadataFor(TextStyle, 'TextStyle', classMeta, Managed, VOID, TextStyle_init_$Create$);
+  setMetadataFor(Companion_48, 'Companion', objectMeta);
+  setMetadataFor(TypefaceFontProvider, 'TypefaceFontProvider', classMeta, FontMgr, VOID, TypefaceFontProvider);
   setMetadataFor(SkikoKeyboardEvent, 'SkikoKeyboardEvent', classMeta);
-  setMetadataFor(Companion_42, 'Companion', objectMeta);
+  setMetadataFor(Companion_49, 'Companion', objectMeta);
   setMetadataFor(SkikoInputModifiers, 'SkikoInputModifiers', classMeta);
   setMetadataFor(SkikoKeyboardEventKind, 'SkikoKeyboardEventKind', classMeta, Enum);
   setMetadataFor(SkikoInputEvent, 'SkikoInputEvent', classMeta);
@@ -254,48 +272,48 @@
   setMetadataFor(SkikoPointerEventKind, 'SkikoPointerEventKind', classMeta, Enum);
   setMetadataFor(SkikoPointer, 'SkikoPointer', classMeta);
   setMetadataFor(SkikoPointerDevice, 'SkikoPointerDevice', classMeta, Enum);
-  setMetadataFor(Companion_43, 'Companion', objectMeta);
+  setMetadataFor(Companion_50, 'Companion', objectMeta);
   setMetadataFor(SkikoMouseButtons, 'SkikoMouseButtons', classMeta);
   setMetadataFor(GraphicsApi, 'GraphicsApi', classMeta, Enum);
   setMetadataFor(OS, 'OS', classMeta, Enum);
   setMetadataFor(Arch, 'Arch', classMeta, Enum);
-  setMetadataFor(ClipboardManager, 'ClipboardManager', classMeta);
-  setMetadataFor(URIManager, 'URIManager', classMeta);
-  setMetadataFor(RenderException, 'RenderException', classMeta, RuntimeException);
+  setMetadataFor(ClipboardManager, 'ClipboardManager', classMeta, VOID, VOID, ClipboardManager);
+  setMetadataFor(URIManager, 'URIManager', classMeta, VOID, VOID, URIManager);
+  setMetadataFor(RenderException, 'RenderException', classMeta, RuntimeException, VOID, RenderException);
   function onKeyboardEvent(event) {
-    return Unit_getInstance();
+    return Unit_instance;
   }
   function onPointerEvent(event) {
-    return Unit_getInstance();
+    return Unit_instance;
   }
   function get_input() {
-    return Empty_getInstance();
+    return Empty_instance;
   }
   setMetadataFor(SkikoView, 'SkikoView', interfaceMeta);
   setMetadataFor(SystemTheme, 'SystemTheme', classMeta, Enum);
   setMetadataFor(Pattern, 'Pattern', classMeta);
-  setMetadataFor(Companion_44, 'Companion', objectMeta);
+  setMetadataFor(Companion_51, 'Companion', objectMeta);
   setMetadataFor(FinalizationThunk, 'FinalizationThunk', classMeta);
-  setMetadataFor(InteropScope, 'InteropScope', classMeta);
-  setMetadataFor(Companion_45, 'Companion', objectMeta);
+  setMetadataFor(InteropScope, 'InteropScope', classMeta, VOID, VOID, InteropScope);
+  setMetadataFor(Companion_52, 'Companion', objectMeta);
   setMetadataFor(NativePointerArray, 'NativePointerArray', classMeta);
-  setMetadataFor(Companion_46, 'Companion', objectMeta);
-  setMetadataFor(_FinalizerHolder_14, '_FinalizerHolder', objectMeta);
+  setMetadataFor(Companion_53, 'Companion', objectMeta);
+  setMetadataFor(_FinalizerHolder_17, '_FinalizerHolder', objectMeta);
   setMetadataFor(Stats, 'Stats', objectMeta);
   setMetadataFor(CanvasRenderer, 'CanvasRenderer', classMeta);
   setMetadataFor(SkiaLayer$attachTo$1, VOID, classMeta, CanvasRenderer);
-  setMetadataFor(SkiaLayer, 'SkiaLayer', classMeta);
+  setMetadataFor(SkiaLayer, 'SkiaLayer', classMeta, VOID, VOID, SkiaLayer);
   setMetadataFor(Empty, 'Empty', objectMeta);
-  setMetadataFor(Companion_47, 'Companion', objectMeta);
+  setMetadataFor(Companion_54, 'Companion', objectMeta);
   setMetadataFor(SkikoKey, 'SkikoKey', classMeta, Enum);
   setMetadataFor(createWebGLContext$contextAttributes$1, VOID, classMeta);
   //endregion
   function Companion() {
     Companion_instance = this;
-    Companion_getInstance_45().m24();
+    Companion_instance_51.x3c();
   }
-  protoOf(Companion).n24 = function (width, height, sampleCnt, stencilBits, fbId, fbFormat) {
-    Stats_getInstance().o24();
+  protoOf(Companion).y3c = function (width, height, sampleCnt, stencilBits, fbId, fbFormat) {
+    Stats_instance.z3c();
     return new BackendRenderTarget(org_jetbrains_skia_BackendRenderTarget__1nMakeGL(width, height, sampleCnt, stencilBits, fbId, fbFormat));
   };
   var Companion_instance;
@@ -306,7 +324,7 @@
   }
   function _FinalizerHolder() {
     _FinalizerHolder_instance = this;
-    this.p24_1 = org_jetbrains_skia_BackendRenderTarget__1nGetFinalizer();
+    this.a3d_1 = org_jetbrains_skia_BackendRenderTarget__1nGetFinalizer();
   }
   var _FinalizerHolder_instance;
   function _FinalizerHolder_getInstance() {
@@ -316,11 +334,11 @@
   }
   function BackendRenderTarget(ptr) {
     Companion_getInstance_0();
-    Managed.call(this, ptr, _FinalizerHolder_getInstance().p24_1);
+    Managed.call(this, ptr, _FinalizerHolder_getInstance().a3d_1);
   }
   function Companion_0() {
     Companion_instance_0 = this;
-    Companion_getInstance_45().m24();
+    Companion_instance_51.x3c();
   }
   var Companion_instance_0;
   function Companion_getInstance_1() {
@@ -330,7 +348,7 @@
   }
   function Bitmap_init_$Init$($this) {
     Bitmap.call($this, org_jetbrains_skia_Bitmap__1nMake());
-    Stats_getInstance().o24();
+    Stats_instance.z3c();
     return $this;
   }
   function Bitmap_init_$Create$() {
@@ -338,7 +356,7 @@
   }
   function _FinalizerHolder_0() {
     _FinalizerHolder_instance_0 = this;
-    this.u24_1 = org_jetbrains_skia_Bitmap__1nGetFinalizer();
+    this.f3d_1 = org_jetbrains_skia_Bitmap__1nGetFinalizer();
   }
   var _FinalizerHolder_instance_0;
   function _FinalizerHolder_getInstance_0() {
@@ -349,55 +367,60 @@
   function _nGetImageInfo$ref() {
     var l = function (p0, p1, p2) {
       org_jetbrains_skia_Bitmap__1nGetImageInfo(p0, p1, p2);
-      return Unit_getInstance();
+      return Unit_instance;
     };
     l.callableName = '_nGetImageInfo';
     return l;
   }
   function Bitmap(ptr) {
     Companion_getInstance_1();
-    Managed.call(this, ptr, _FinalizerHolder_getInstance_0().u24_1);
-    this.x24_1 = null;
+    Managed.call(this, ptr, _FinalizerHolder_getInstance_0().f3d_1);
+    this.i3d_1 = null;
   }
-  protoOf(Bitmap).y24 = function () {
+  protoOf(Bitmap).j3d = function () {
     var tmp;
     try {
-      if (this.x24_1 == null) {
+      if (this.i3d_1 == null) {
         var tmp_0 = this;
-        var tmp_1 = Companion_getInstance_18();
-        var tmp_2 = this.s24_1;
-        tmp_0.x24_1 = tmp_1.a25(tmp_2, _nGetImageInfo$ref());
+        var tmp_1 = Companion_getInstance_21();
+        var tmp_2 = this.d3d_1;
+        tmp_0.i3d_1 = tmp_1.l3d(tmp_2, _nGetImageInfo$ref());
       }
-      tmp = ensureNotNull(this.x24_1);
+      tmp = ensureNotNull(this.i3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Bitmap).b25 = function () {
+  protoOf(Bitmap).m3d = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_Bitmap__1nIsImmutable(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_Bitmap__1nIsImmutable(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Bitmap).c25 = function (info, rowBytes) {
+  protoOf(Bitmap).n3d = function () {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Bitmap__1nSetImmutable(this.d3d_1);
+    return this;
+  };
+  protoOf(Bitmap).o3d = function (info, rowBytes) {
     var tmp;
     try {
-      this.x24_1 = null;
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_Bitmap__1nAllocPixelsRowBytes(this.s24_1, info.e25_1, info.f25_1, info.d25_1.g25_1.w4_1, info.d25_1.h25_1.w4_1, getPtr(info.d25_1.i25_1), rowBytes);
+      this.i3d_1 = null;
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_Bitmap__1nAllocPixelsRowBytes(this.d3d_1, info.q3d_1, info.r3d_1, info.p3d_1.s3d_1.j9_1, info.p3d_1.t3d_1.j9_1, getPtr(info.p3d_1.u3d_1), rowBytes);
     }finally {
       reachabilityBarrier(this);
-      reachabilityBarrier(info.d25_1.i25_1);
+      reachabilityBarrier(info.p3d_1.u3d_1);
     }
     return tmp;
   };
-  protoOf(Bitmap).j25 = function (imageInfo) {
-    return this.c25(imageInfo, imageInfo.k25());
+  protoOf(Bitmap).v3d = function (imageInfo) {
+    return this.o3d(imageInfo, imageInfo.w3d());
   };
   var BlendMode_CLEAR_instance;
   var BlendMode_SRC_instance;
@@ -434,7 +457,7 @@
   var BlendMode_entriesInitialized;
   function BlendMode_initEntries() {
     if (BlendMode_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     BlendMode_entriesInitialized = true;
     BlendMode_CLEAR_instance = new BlendMode('CLEAR', 0);
     BlendMode_SRC_instance = new BlendMode('SRC', 1);
@@ -585,29 +608,43 @@
     BlendMode_initEntries();
     return BlendMode_LUMINOSITY_instance;
   }
+  function BreakIterator$Companion$makeCharacterInstance$lambda($locale) {
+    return function ($this$withErrorGuard, it) {
+      return org_jetbrains_skia_BreakIterator__1nMake(0, $this$withErrorGuard.c3e($locale), it);
+    };
+  }
   function Companion_1() {
     Companion_instance_1 = this;
-    Companion_getInstance_45().m24();
+    this.d3e_1 = -1;
+    this.e3e_1 = 0;
+    this.f3e_1 = 100;
+    this.g3e_1 = 100;
+    this.h3e_1 = 200;
+    this.i3e_1 = 200;
+    this.j3e_1 = 300;
+    this.k3e_1 = 300;
+    this.l3e_1 = 400;
+    this.m3e_1 = 400;
+    this.n3e_1 = 500;
+    Companion_instance_51.x3c();
   }
+  protoOf(Companion_1).o3e = function (locale) {
+    Stats_instance.z3c();
+    return new BreakIterator(withErrorGuard('Failed to create character iterator', BreakIterator$Companion$makeCharacterInstance$lambda(locale)));
+  };
+  protoOf(Companion_1).p3e = function (locale, $super) {
+    locale = locale === VOID ? null : locale;
+    return $super === VOID ? this.o3e(locale) : $super.o3e.call(this, locale);
+  };
   var Companion_instance_1;
   function Companion_getInstance_2() {
     if (Companion_instance_1 == null)
       new Companion_1();
     return Companion_instance_1;
   }
-  function Canvas_init_$Init$(bitmap, surfaceProps, $this) {
-    surfaceProps = surfaceProps === VOID ? new SurfaceProps() : surfaceProps;
-    Canvas.call($this, org_jetbrains_skia_Canvas__1nMakeFromBitmap(bitmap.s24_1, surfaceProps.q25(), surfaceProps.p25_1.w4_1), true, bitmap);
-    Stats_getInstance().o24();
-    reachabilityBarrier(bitmap);
-    return $this;
-  }
-  function Canvas_init_$Create$(bitmap, surfaceProps) {
-    return Canvas_init_$Init$(bitmap, surfaceProps, objectCreate(protoOf(Canvas)));
-  }
   function _FinalizerHolder_1() {
     _FinalizerHolder_instance_1 = this;
-    this.r25_1 = org_jetbrains_skia_Canvas__1nGetFinalizer();
+    this.q3e_1 = org_jetbrains_skia_BreakIterator__1nGetFinalizer();
   }
   var _FinalizerHolder_instance_1;
   function _FinalizerHolder_getInstance_1() {
@@ -615,37 +652,195 @@
       new _FinalizerHolder_1();
     return _FinalizerHolder_instance_1;
   }
-  function Canvas(ptr, managed, _owner) {
-    Companion_getInstance_2();
-    Managed.call(this, ptr, _FinalizerHolder_getInstance_1().r25_1, managed);
-    this.u25_1 = _owner;
+  function BreakIterator$setText$lambda(this$0, $text) {
+    return function ($this$withErrorGuard, it) {
+      var tmp = this$0.d3d_1;
+      var tmp_0;
+      if ($text == null) {
+        tmp_0 = null;
+      } else {
+        // Inline function 'kotlin.let' call
+        // Inline function 'kotlin.contracts.contract' call
+        // Inline function 'org.jetbrains.skia.BreakIterator.setText.<anonymous>.<anonymous>' call
+        var tmp_1 = 0;
+        var tmp_2 = $text.length;
+        var tmp_3 = new Int16Array(tmp_2);
+        while (tmp_1 < tmp_2) {
+          var tmp_4 = tmp_1;
+          // Inline function 'kotlin.code' call
+          var this_0 = charSequenceGet($text, tmp_4);
+          var tmp$ret$0 = Char__toInt_impl_vasixd(this_0);
+          tmp_3[tmp_4] = toShort(tmp$ret$0);
+          tmp_1 = tmp_1 + 1 | 0;
+        }
+        tmp_0 = tmp_3;
+      }
+      var tmp_5 = $this$withErrorGuard.r3e(tmp_0);
+      var tmp1_safe_receiver = $text;
+      var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.length;
+      return org_jetbrains_skia_BreakIterator__1nSetText(tmp, tmp_5, tmp2_elvis_lhs == null ? 0 : tmp2_elvis_lhs, it);
+    };
   }
-  protoOf(Canvas).v25 = function (r, paint) {
-    Stats_getInstance().o24();
+  function BreakIterator(ptr) {
+    Companion_getInstance_2();
+    Managed.call(this, ptr, _FinalizerHolder_getInstance_1().q3e_1);
+    this.u3e_1 = null;
+  }
+  protoOf(BreakIterator).j24 = function () {
+    protoOf(Managed).j24.call(this);
+    var tmp0_safe_receiver = this.u3e_1;
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.j24();
+    }
+  };
+  protoOf(BreakIterator).v3e = function (offset) {
+    var tmp;
     try {
-      org_jetbrains_skia_Canvas__1nDrawRect(this.s24_1, r.w25_1, r.x25_1, r.y25_1, r.z25_1, getPtr(paint));
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_BreakIterator__1nPreceding(this.d3d_1, offset);
+    }finally {
+      reachabilityBarrier(this);
+    }
+    return tmp;
+  };
+  protoOf(BreakIterator).w3e = function (offset) {
+    var tmp;
+    try {
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_BreakIterator__1nFollowing(this.d3d_1, offset);
+    }finally {
+      reachabilityBarrier(this);
+    }
+    return tmp;
+  };
+  protoOf(BreakIterator).x3e = function (text) {
+    try {
+      Stats_instance.z3c();
+      var tmp0_safe_receiver = this.u3e_1;
+      if (tmp0_safe_receiver == null)
+        null;
+      else {
+        tmp0_safe_receiver.j24();
+      }
+      var tmp = this;
+      tmp.u3e_1 = new U16String(withErrorGuard('Failed to setText', BreakIterator$setText$lambda(this, text)));
+    }finally {
+      reachabilityBarrier(this);
+      reachabilityBarrier(this.u3e_1);
+    }
+  };
+  function withErrorGuard(message, block) {
+    var errorCode = new Int32Array(1);
+    $l$block: {
+      // Inline function 'org.jetbrains.skia.impl.interopScope' call
+      try {
+        var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
+        _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
+        // Inline function 'org.jetbrains.skia.withErrorGuard.<anonymous>' call
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.y3e(errorCode);
+        var res = block($this$interopScope, handle);
+        $this$interopScope.z3e(handle, errorCode);
+        if (errorCode[0] > 0) {
+          throw RuntimeException_init_$Create$(message + '; operation failed with status ' + errorCode);
+        }
+        if (res === Companion_instance_53.a3f()) {
+          throw IllegalArgumentException_init_$Create$(message);
+        }
+        break $l$block;
+      }finally {
+        var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
+        _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
+        if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
+        }
+      }
+    }
+    return res;
+  }
+  function Companion_2() {
+    Companion_instance_2 = this;
+    Companion_instance_51.x3c();
+  }
+  var Companion_instance_2;
+  function Companion_getInstance_3() {
+    if (Companion_instance_2 == null)
+      new Companion_2();
+    return Companion_instance_2;
+  }
+  function Canvas_init_$Init$(bitmap, surfaceProps, $this) {
+    surfaceProps = surfaceProps === VOID ? new SurfaceProps() : surfaceProps;
+    Canvas.call($this, org_jetbrains_skia_Canvas__1nMakeFromBitmap(bitmap.d3d_1, surfaceProps.d3f(), surfaceProps.c3f_1.j9_1), true, bitmap);
+    Stats_instance.z3c();
+    reachabilityBarrier(bitmap);
+    return $this;
+  }
+  function Canvas_init_$Create$(bitmap, surfaceProps) {
+    return Canvas_init_$Init$(bitmap, surfaceProps, objectCreate(protoOf(Canvas)));
+  }
+  function _FinalizerHolder_2() {
+    _FinalizerHolder_instance_2 = this;
+    this.e3f_1 = org_jetbrains_skia_Canvas__1nGetFinalizer();
+  }
+  var _FinalizerHolder_instance_2;
+  function _FinalizerHolder_getInstance_2() {
+    if (_FinalizerHolder_instance_2 == null)
+      new _FinalizerHolder_2();
+    return _FinalizerHolder_instance_2;
+  }
+  function Canvas(ptr, managed, _owner) {
+    Companion_getInstance_3();
+    Managed.call(this, ptr, _FinalizerHolder_getInstance_2().e3f_1, managed);
+    this.h3f_1 = _owner;
+  }
+  protoOf(Canvas).i3f = function (x0, y0, x1, y1, paint) {
+    Stats_instance.z3c();
+    try {
+      org_jetbrains_skia_Canvas__1nDrawLine(this.d3d_1, x0, y0, x1, y1, getPtr(paint));
+    }finally {
+      reachabilityBarrier(paint);
+      reachabilityBarrier(this);
+    }
+    return this;
+  };
+  protoOf(Canvas).j3f = function (r, paint) {
+    Stats_instance.z3c();
+    try {
+      org_jetbrains_skia_Canvas__1nDrawRect(this.d3d_1, r.k3f_1, r.l3f_1, r.m3f_1, r.n3f_1, getPtr(paint));
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(paint);
     }
     return this;
   };
-  protoOf(Canvas).a26 = function (r, paint) {
-    Stats_getInstance().o24();
+  protoOf(Canvas).o3f = function (x, y, radius, paint) {
+    Stats_instance.z3c();
+    try {
+      org_jetbrains_skia_Canvas__1nDrawOval(this.d3d_1, x - radius, y - radius, x + radius, y + radius, getPtr(paint));
+    }finally {
+      reachabilityBarrier(paint);
+      reachabilityBarrier(this);
+    }
+    return this;
+  };
+  protoOf(Canvas).p3f = function (r, paint) {
+    Stats_instance.z3c();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_Canvas__1nDrawRRect(this.s24_1, r.w25_1, r.x25_1, r.y25_1, r.z25_1, tmp0_anonymous.i26(r.f26_1), r.f26_1.length, getPtr(paint));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_Canvas__1nDrawRRect(this.d3d_1, r.k3f_1, r.l3f_1, r.m3f_1, r.n3f_1, $this$interopScope.v3f(r.u3f_1), r.u3f_1.length, getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
           }
         }
       }
@@ -655,10 +850,10 @@
     }
     return this;
   };
-  protoOf(Canvas).j26 = function (path, paint) {
-    Stats_getInstance().o24();
+  protoOf(Canvas).w3f = function (path, paint) {
+    Stats_instance.z3c();
     try {
-      org_jetbrains_skia_Canvas__1nDrawPath(this.s24_1, getPtr(path), getPtr(paint));
+      org_jetbrains_skia_Canvas__1nDrawPath(this.d3d_1, getPtr(path), getPtr(paint));
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(path);
@@ -666,10 +861,13 @@
     }
     return this;
   };
-  protoOf(Canvas).k26 = function (image, src, dst, samplingMode, paint, strict) {
-    Stats_getInstance().o24();
+  protoOf(Canvas).x3f = function (image, left, top) {
+    return this.e3g(image, Companion_instance_32.y3f(image.k39(), image.l39()), Companion_instance_32.z3f(left, top, image.k39(), image.l39()), Companion_getInstance_34().a3g_1, null, true);
+  };
+  protoOf(Canvas).e3g = function (image, src, dst, samplingMode, paint, strict) {
+    Stats_instance.z3c();
     try {
-      org_jetbrains_skia_Canvas__1nDrawImageRect(this.s24_1, getPtr(image), src.w25_1, src.x25_1, src.y25_1, src.z25_1, dst.w25_1, dst.x25_1, dst.y25_1, dst.z25_1, samplingMode.l26(), samplingMode.m26(), getPtr(paint), strict);
+      org_jetbrains_skia_Canvas__1nDrawImageRect(this.d3d_1, getPtr(image), src.k3f_1, src.l3f_1, src.m3f_1, src.n3f_1, dst.k3f_1, dst.l3f_1, dst.m3f_1, dst.n3f_1, samplingMode.f3g(), samplingMode.g3g(), getPtr(paint), strict);
     }finally {
       reachabilityBarrier(image);
       reachabilityBarrier(paint);
@@ -677,24 +875,24 @@
     }
     return this;
   };
-  protoOf(Canvas).n26 = function (picture, matrix, paint) {
-    Stats_getInstance().o24();
+  protoOf(Canvas).h3g = function (picture, matrix, paint) {
+    Stats_instance.z3c();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var tmp = this.s24_1;
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var tmp = this.d3d_1;
           var tmp_0 = getPtr(picture);
-          org_jetbrains_skia_Canvas__1nDrawPicture(tmp, tmp_0, tmp0_anonymous.i26(matrix == null ? null : matrix.o26_1), getPtr(paint));
+          org_jetbrains_skia_Canvas__1nDrawPicture(tmp, tmp_0, $this$interopScope.v3f(matrix == null ? null : matrix.i3g_1), getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
           }
         }
       }
@@ -705,139 +903,139 @@
     }
     return this;
   };
-  protoOf(Canvas).e1s = function (color) {
-    Stats_getInstance().o24();
+  protoOf(Canvas).e2z = function (color) {
+    Stats_instance.z3c();
     try {
-      org_jetbrains_skia_Canvas__1nClear(this.s24_1, color);
+      org_jetbrains_skia_Canvas__1nClear(this.d3d_1, color);
     }finally {
       reachabilityBarrier(this);
     }
     return this;
   };
-  protoOf(Canvas).p26 = function () {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_Canvas__1nResetMatrix(this.s24_1);
+  protoOf(Canvas).j3g = function () {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Canvas__1nResetMatrix(this.d3d_1);
     return this;
   };
-  protoOf(Canvas).q26 = function (r, mode, antiAlias) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_Canvas__1nClipRect(this.s24_1, r.w25_1, r.x25_1, r.y25_1, r.z25_1, mode.w4_1, antiAlias);
+  protoOf(Canvas).k3g = function (r, mode, antiAlias) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Canvas__1nClipRect(this.d3d_1, r.k3f_1, r.l3f_1, r.m3f_1, r.n3f_1, mode.j9_1, antiAlias);
     return this;
   };
-  protoOf(Canvas).r26 = function (r, mode, antiAlias) {
-    Stats_getInstance().o24();
+  protoOf(Canvas).l3g = function (r, mode, antiAlias) {
+    Stats_instance.z3c();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_Canvas__1nClipRRect(this.s24_1, r.w25_1, r.x25_1, r.y25_1, r.z25_1, tmp0_anonymous.i26(r.f26_1), r.f26_1.length, mode.w4_1, antiAlias);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_Canvas__1nClipRRect(this.d3d_1, r.k3f_1, r.l3f_1, r.m3f_1, r.n3f_1, $this$interopScope.v3f(r.u3f_1), r.u3f_1.length, mode.j9_1, antiAlias);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
     return this;
   };
-  protoOf(Canvas).s26 = function (p, mode, antiAlias) {
-    Stats_getInstance().o24();
+  protoOf(Canvas).m3g = function (p, mode, antiAlias) {
+    Stats_instance.z3c();
     try {
-      org_jetbrains_skia_Canvas__1nClipPath(this.s24_1, getPtr(p), mode.w4_1, antiAlias);
+      org_jetbrains_skia_Canvas__1nClipPath(this.d3d_1, getPtr(p), mode.j9_1, antiAlias);
     }finally {
       reachabilityBarrier(p);
       reachabilityBarrier(this);
     }
     return this;
   };
-  protoOf(Canvas).w21 = function (dx, dy) {
+  protoOf(Canvas).o39 = function (dx, dy) {
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        Stats_getInstance().o24();
-        org_jetbrains_skia_Canvas__1nTranslate(this.s24_1, dx, dy);
+        Stats_instance.z3c();
+        org_jetbrains_skia_Canvas__1nTranslate(this.d3d_1, dx, dy);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
     return this;
   };
-  protoOf(Canvas).t26 = function (sx, sy) {
+  protoOf(Canvas).n3g = function (sx, sy) {
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        Stats_getInstance().o24();
-        org_jetbrains_skia_Canvas__1nScale(this.s24_1, sx, sy);
+        Stats_instance.z3c();
+        org_jetbrains_skia_Canvas__1nScale(this.d3d_1, sx, sy);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
     return this;
   };
-  protoOf(Canvas).u26 = function (matrix) {
+  protoOf(Canvas).o3g = function (matrix) {
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        Stats_getInstance().o24();
-        org_jetbrains_skia_Canvas__1nConcat44(this.s24_1, tmp0_anonymous.i26(matrix.v26_1));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        Stats_instance.z3c();
+        org_jetbrains_skia_Canvas__1nConcat44(this.d3d_1, $this$interopScope.v3f(matrix.p3g_1));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
     return this;
   };
-  protoOf(Canvas).w26 = function () {
+  protoOf(Canvas).q3g = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_Canvas__1nSave(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_Canvas__1nSave(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Canvas).x26 = function (left, top, right, bottom, paint) {
+  protoOf(Canvas).r3g = function (left, top, right, bottom, paint) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_Canvas__1nSaveLayerRect(this.s24_1, left, top, right, bottom, getPtr(paint));
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_Canvas__1nSaveLayerRect(this.d3d_1, left, top, right, bottom, getPtr(paint));
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(paint);
     }
     return tmp;
   };
-  protoOf(Canvas).y26 = function () {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_Canvas__1nRestore(this.s24_1);
+  protoOf(Canvas).s3g = function () {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Canvas__1nRestore(this.d3d_1);
     return this;
   };
   var ClipMode_DIFFERENCE_instance;
@@ -845,7 +1043,7 @@
   var ClipMode_entriesInitialized;
   function ClipMode_initEntries() {
     if (ClipMode_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     ClipMode_entriesInitialized = true;
     ClipMode_DIFFERENCE_instance = new ClipMode('DIFFERENCE', 0);
     ClipMode_INTERSECT_instance = new ClipMode('INTERSECT', 1);
@@ -862,21 +1060,18 @@
     return ClipMode_INTERSECT_instance;
   }
   function Color() {
-    Color_instance = this;
-    this.z26_1 = 0;
-    this.a27_1 = -16777216;
-    this.b27_1 = -1;
-    this.c27_1 = -65536;
-    this.d27_1 = -16711936;
-    this.e27_1 = -16776961;
-    this.f27_1 = -256;
-    this.g27_1 = -16711681;
-    this.h27_1 = -65281;
+    this.t3g_1 = 0;
+    this.u3g_1 = -16777216;
+    this.v3g_1 = -1;
+    this.w3g_1 = -65536;
+    this.x3g_1 = -16711936;
+    this.y3g_1 = -16776961;
+    this.z3g_1 = -256;
+    this.a3h_1 = -16711681;
+    this.b3h_1 = -65281;
   }
   var Color_instance;
   function Color_getInstance() {
-    if (Color_instance == null)
-      new Color();
     return Color_instance;
   }
   var ColorAlphaType_UNKNOWN_instance;
@@ -889,7 +1084,7 @@
   var ColorAlphaType_entriesInitialized;
   function ColorAlphaType_initEntries() {
     if (ColorAlphaType_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     ColorAlphaType_entriesInitialized = true;
     ColorAlphaType_UNKNOWN_instance = new ColorAlphaType('UNKNOWN', 0);
     ColorAlphaType_OPAQUE_instance = new ColorAlphaType('OPAQUE', 1);
@@ -915,21 +1110,21 @@
     ColorAlphaType_initEntries();
     return ColorAlphaType_UNPREMUL_instance;
   }
-  function Companion_2() {
-    Companion_instance_2 = this;
-    Companion_getInstance_45().m24();
-    this.i27_1 = ColorFilter_init_$Create$_0(org_jetbrains_skia_ColorFilter__1nGetSRGBToLinearGamma(), false);
-    this.j27_1 = ColorFilter_init_$Create$_0(org_jetbrains_skia_ColorFilter__1nGetLuma(), false);
+  function Companion_3() {
+    Companion_instance_3 = this;
+    Companion_instance_51.x3c();
+    this.c3h_1 = ColorFilter_init_$Create$_0(org_jetbrains_skia_ColorFilter__1nGetSRGBToLinearGamma(), false);
+    this.d3h_1 = ColorFilter_init_$Create$_0(org_jetbrains_skia_ColorFilter__1nGetLuma(), false);
   }
-  protoOf(Companion_2).k27 = function (color, mode) {
-    Stats_getInstance().o24();
-    return ColorFilter_init_$Create$(org_jetbrains_skia_ColorFilter__1nMakeBlend(color, mode.w4_1));
+  protoOf(Companion_3).e3h = function (color, mode) {
+    Stats_instance.z3c();
+    return ColorFilter_init_$Create$(org_jetbrains_skia_ColorFilter__1nMakeBlend(color, mode.j9_1));
   };
-  var Companion_instance_2;
-  function Companion_getInstance_3() {
-    if (Companion_instance_2 == null)
-      new Companion_2();
-    return Companion_instance_2;
+  var Companion_instance_3;
+  function Companion_getInstance_4() {
+    if (Companion_instance_3 == null)
+      new Companion_3();
+    return Companion_instance_3;
   }
   function ColorFilter_init_$Init$(ptr, $this) {
     RefCnt_init_$Init$(ptr, $this);
@@ -948,62 +1143,11 @@
     return ColorFilter_init_$Init$_0(ptr, allowClose, objectCreate(protoOf(ColorFilter)));
   }
   function ColorFilter() {
-    Companion_getInstance_3();
-  }
-  function Companion_3() {
-    Companion_instance_3 = this;
-    this.o27_1 = new ColorInfo(ColorType_UNKNOWN_getInstance(), ColorAlphaType_UNKNOWN_getInstance(), null);
-  }
-  var Companion_instance_3;
-  function Companion_getInstance_4() {
-    if (Companion_instance_3 == null)
-      new Companion_3();
-    return Companion_instance_3;
-  }
-  function ColorInfo(colorType, alphaType, colorSpace) {
     Companion_getInstance_4();
-    this.g25_1 = colorType;
-    this.h25_1 = alphaType;
-    this.i25_1 = colorSpace;
   }
-  protoOf(ColorInfo).n25 = function () {
-    return this.h25_1.equals(ColorAlphaType_OPAQUE_getInstance()) ? true : this.g25_1.r27();
-  };
-  protoOf(ColorInfo).s27 = function () {
-    return this.g25_1.s27();
-  };
-  protoOf(ColorInfo).equals = function (other) {
-    if (other === this)
-      return true;
-    if (!(other instanceof ColorInfo))
-      return false;
-    if (!this.g25_1.equals(other.g25_1))
-      return false;
-    if (!this.h25_1.equals(other.h25_1))
-      return false;
-    return equals(this.i25_1, other.i25_1);
-  };
-  protoOf(ColorInfo).hashCode = function () {
-    var prime = 59;
-    var result = 1;
-    result = imul(result, prime) + this.g25_1.hashCode() | 0;
-    result = imul(result, prime) + this.h25_1.hashCode() | 0;
-    var tmp = imul(result, prime);
-    // Inline function 'kotlin.hashCode' call
-    var tmp0_safe_receiver = this.i25_1;
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : hashCode(tmp0_safe_receiver);
-    result = tmp + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
-    return result;
-  };
-  protoOf(ColorInfo).toString = function () {
-    return 'ColorInfo(_colorType=' + this.g25_1 + ', _alphaType=' + this.h25_1 + ', _colorSpace=' + this.i25_1 + ')';
-  };
   function Companion_4() {
     Companion_instance_4 = this;
-    Companion_getInstance_45().m24();
-    this.t27_1 = ColorSpace_init_$Create$_0(org_jetbrains_skia_ColorSpace__1nMakeSRGB(), false);
-    this.u27_1 = ColorSpace_init_$Create$_0(org_jetbrains_skia_ColorSpace__1nMakeSRGBLinear(), false);
-    this.v27_1 = ColorSpace_init_$Create$_0(org_jetbrains_skia_ColorSpace__1nMakeDisplayP3(), false);
+    this.i3h_1 = new ColorInfo(ColorType_UNKNOWN_getInstance(), ColorAlphaType_UNKNOWN_getInstance(), null);
   }
   var Companion_instance_4;
   function Companion_getInstance_5() {
@@ -1011,8 +1155,59 @@
       new Companion_4();
     return Companion_instance_4;
   }
+  function ColorInfo(colorType, alphaType, colorSpace) {
+    Companion_getInstance_5();
+    this.s3d_1 = colorType;
+    this.t3d_1 = alphaType;
+    this.u3d_1 = colorSpace;
+  }
+  protoOf(ColorInfo).z3d = function () {
+    return this.t3d_1.equals(ColorAlphaType_OPAQUE_getInstance()) ? true : this.s3d_1.l3h();
+  };
+  protoOf(ColorInfo).m3h = function () {
+    return this.s3d_1.m3h();
+  };
+  protoOf(ColorInfo).equals = function (other) {
+    if (other === this)
+      return true;
+    if (!(other instanceof ColorInfo))
+      return false;
+    if (!this.s3d_1.equals(other.s3d_1))
+      return false;
+    if (!this.t3d_1.equals(other.t3d_1))
+      return false;
+    return equals(this.u3d_1, other.u3d_1);
+  };
+  protoOf(ColorInfo).hashCode = function () {
+    var prime = 59;
+    var result = 1;
+    result = imul(result, prime) + this.s3d_1.hashCode() | 0;
+    result = imul(result, prime) + this.t3d_1.hashCode() | 0;
+    var tmp = imul(result, prime);
+    // Inline function 'kotlin.hashCode' call
+    var tmp0_safe_receiver = this.u3d_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : hashCode(tmp0_safe_receiver);
+    result = tmp + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
+    return result;
+  };
+  protoOf(ColorInfo).toString = function () {
+    return 'ColorInfo(_colorType=' + this.s3d_1 + ', _alphaType=' + this.t3d_1 + ', _colorSpace=' + this.u3d_1 + ')';
+  };
+  function Companion_5() {
+    Companion_instance_5 = this;
+    Companion_instance_51.x3c();
+    this.n3h_1 = ColorSpace_init_$Create$_0(org_jetbrains_skia_ColorSpace__1nMakeSRGB(), false);
+    this.o3h_1 = ColorSpace_init_$Create$_0(org_jetbrains_skia_ColorSpace__1nMakeSRGBLinear(), false);
+    this.p3h_1 = ColorSpace_init_$Create$_0(org_jetbrains_skia_ColorSpace__1nMakeDisplayP3(), false);
+  }
+  var Companion_instance_5;
+  function Companion_getInstance_6() {
+    if (Companion_instance_5 == null)
+      new Companion_5();
+    return Companion_instance_5;
+  }
   function ColorSpace_init_$Init$(ptr, $this) {
-    Managed.call($this, ptr, _FinalizerHolder_getInstance_2().w27_1, true);
+    Managed.call($this, ptr, _FinalizerHolder_getInstance_3().q3h_1, true);
     ColorSpace.call($this);
     return $this;
   }
@@ -1020,25 +1215,25 @@
     return ColorSpace_init_$Init$(ptr, objectCreate(protoOf(ColorSpace)));
   }
   function ColorSpace_init_$Init$_0(ptr, managed, $this) {
-    Managed.call($this, ptr, _FinalizerHolder_getInstance_2().w27_1, managed);
+    Managed.call($this, ptr, _FinalizerHolder_getInstance_3().q3h_1, managed);
     ColorSpace.call($this);
     return $this;
   }
   function ColorSpace_init_$Create$_0(ptr, managed) {
     return ColorSpace_init_$Init$_0(ptr, managed, objectCreate(protoOf(ColorSpace)));
   }
-  function _FinalizerHolder_2() {
-    _FinalizerHolder_instance_2 = this;
-    this.w27_1 = org_jetbrains_skia_ColorSpace__1nGetFinalizer();
+  function _FinalizerHolder_3() {
+    _FinalizerHolder_instance_3 = this;
+    this.q3h_1 = org_jetbrains_skia_ColorSpace__1nGetFinalizer();
   }
-  var _FinalizerHolder_instance_2;
-  function _FinalizerHolder_getInstance_2() {
-    if (_FinalizerHolder_instance_2 == null)
-      new _FinalizerHolder_2();
-    return _FinalizerHolder_instance_2;
+  var _FinalizerHolder_instance_3;
+  function _FinalizerHolder_getInstance_3() {
+    if (_FinalizerHolder_instance_3 == null)
+      new _FinalizerHolder_3();
+    return _FinalizerHolder_instance_3;
   }
   function ColorSpace() {
-    Companion_getInstance_5();
+    Companion_getInstance_6();
   }
   var ColorType_UNKNOWN_instance;
   var ColorType_ALPHA_8_instance;
@@ -1061,16 +1256,16 @@
   var ColorType_A16_UNORM_instance;
   var ColorType_R16G16_UNORM_instance;
   var ColorType_R16G16B16A16_UNORM_instance;
-  function Companion_5() {
-    Companion_instance_5 = this;
-    this.x27_1 = ColorType_BGRA_8888_getInstance();
+  function Companion_6() {
+    Companion_instance_6 = this;
+    this.r3h_1 = ColorType_BGRA_8888_getInstance();
   }
-  var Companion_instance_5;
-  function Companion_getInstance_6() {
+  var Companion_instance_6;
+  function Companion_getInstance_7() {
     ColorType_initEntries();
-    if (Companion_instance_5 == null)
-      new Companion_5();
-    return Companion_instance_5;
+    if (Companion_instance_6 == null)
+      new Companion_6();
+    return Companion_instance_6;
   }
   function values_1() {
     return [ColorType_UNKNOWN_getInstance(), ColorType_ALPHA_8_getInstance(), ColorType_RGB_565_getInstance(), ColorType_ARGB_4444_getInstance(), ColorType_RGBA_8888_getInstance(), ColorType_RGB_888X_getInstance(), ColorType_BGRA_8888_getInstance(), ColorType_RGBA_1010102_getInstance(), ColorType_BGRA_1010102_getInstance(), ColorType_RGB_101010X_getInstance(), ColorType_BGR_101010X_getInstance(), ColorType_GRAY_8_getInstance(), ColorType_RGBA_F16NORM_getInstance(), ColorType_RGBA_F16_getInstance(), ColorType_RGBA_F32_getInstance(), ColorType_R8G8_UNORM_getInstance(), ColorType_A16_FLOAT_getInstance(), ColorType_R16G16_FLOAT_getInstance(), ColorType_A16_UNORM_getInstance(), ColorType_R16G16_UNORM_getInstance(), ColorType_R16G16B16A16_UNORM_getInstance()];
@@ -1078,7 +1273,7 @@
   var ColorType_entriesInitialized;
   function ColorType_initEntries() {
     if (ColorType_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     ColorType_entriesInitialized = true;
     ColorType_UNKNOWN_instance = new ColorType('UNKNOWN', 0);
     ColorType_ALPHA_8_instance = new ColorType('ALPHA_8', 1);
@@ -1101,14 +1296,14 @@
     ColorType_A16_UNORM_instance = new ColorType('A16_UNORM', 18);
     ColorType_R16G16_UNORM_instance = new ColorType('R16G16_UNORM', 19);
     ColorType_R16G16B16A16_UNORM_instance = new ColorType('R16G16B16A16_UNORM', 20);
-    Companion_getInstance_6();
+    Companion_getInstance_7();
   }
   function ColorType(name, ordinal) {
     Enum.call(this, name, ordinal);
   }
-  protoOf(ColorType).s27 = function () {
+  protoOf(ColorType).m3h = function () {
     var tmp;
-    switch (this.w4_1) {
+    switch (this.j9_1) {
       case 0:
         tmp = 0;
         break;
@@ -1178,8 +1373,8 @@
     }
     return tmp;
   };
-  protoOf(ColorType).r27 = function () {
-    return org_jetbrains_skia_ColorType__1nIsAlwaysOpaque(this.w4_1);
+  protoOf(ColorType).l3h = function () {
+    return org_jetbrains_skia_ColorType__1nIsAlwaysOpaque(this.j9_1);
   };
   function ColorType_UNKNOWN_getInstance() {
     ColorType_initEntries();
@@ -1266,40 +1461,40 @@
     return ColorType_R16G16B16A16_UNORM_instance;
   }
   function CubicResampler(b, c) {
-    this.y27_1 = b;
-    this.z27_1 = c;
+    this.s3h_1 = b;
+    this.t3h_1 = c;
   }
-  protoOf(CubicResampler).l26 = function () {
-    return toBits(this.y27_1) | -2147483648;
+  protoOf(CubicResampler).f3g = function () {
+    return toBits(this.s3h_1) | -2147483648;
   };
-  protoOf(CubicResampler).m26 = function () {
-    return toBits(this.z27_1);
+  protoOf(CubicResampler).g3g = function () {
+    return toBits(this.t3h_1);
   };
   protoOf(CubicResampler).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof CubicResampler))
       return false;
-    if (!(compareTo(this.y27_1, other.y27_1) === 0))
+    if (!(compareTo(this.s3h_1, other.s3h_1) === 0))
       return false;
-    return compareTo(this.z27_1, other.z27_1) === 0;
+    return compareTo(this.t3h_1, other.t3h_1) === 0;
   };
   protoOf(CubicResampler).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + toBits(this.y27_1) | 0;
-    result = imul(result, PRIME) + toBits(this.z27_1) | 0;
+    result = imul(result, PRIME) + toBits(this.s3h_1) | 0;
+    result = imul(result, PRIME) + toBits(this.t3h_1) | 0;
     return result;
   };
   protoOf(CubicResampler).toString = function () {
-    return 'CubicResampler(_B=' + this.y27_1 + ', _C=' + this.z27_1 + ')';
+    return 'CubicResampler(_B=' + this.s3h_1 + ', _C=' + this.t3h_1 + ')';
   };
-  function Companion_6() {
-    Companion_instance_6 = this;
-    Companion_getInstance_45().m24();
+  function Companion_7() {
+    Companion_instance_7 = this;
+    Companion_instance_51.x3c();
   }
-  protoOf(Companion_6).a28 = function (bytes, offset, length) {
-    Stats_getInstance().o24();
+  protoOf(Companion_7).u3h = function (bytes, offset, length) {
+    Stats_instance.z3c();
     var tmp$ret$1;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -1307,44 +1502,44 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeFromBytes.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = org_jetbrains_skia_Data__1nMakeFromBytes(tmp0_anonymous.b28(bytes), offset, length);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = org_jetbrains_skia_Data__1nMakeFromBytes($this$interopScope.v3h(bytes), offset, length);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
     return new Data(tmp$ret$1);
   };
-  protoOf(Companion_6).c28 = function (bytes, offset, length, $super) {
+  protoOf(Companion_7).w3h = function (bytes, offset, length, $super) {
     offset = offset === VOID ? 0 : offset;
     length = length === VOID ? bytes.length : length;
-    return $super === VOID ? this.a28(bytes, offset, length) : $super.a28.call(this, bytes, offset, length);
+    return $super === VOID ? this.u3h(bytes, offset, length) : $super.u3h.call(this, bytes, offset, length);
   };
-  var Companion_instance_6;
-  function Companion_getInstance_7() {
-    if (Companion_instance_6 == null)
-      new Companion_6();
-    return Companion_instance_6;
+  var Companion_instance_7;
+  function Companion_getInstance_8() {
+    if (Companion_instance_7 == null)
+      new Companion_7();
+    return Companion_instance_7;
   }
-  function _FinalizerHolder_3() {
-    _FinalizerHolder_instance_3 = this;
-    this.d28_1 = org_jetbrains_skia_Data__1nGetFinalizer();
+  function _FinalizerHolder_4() {
+    _FinalizerHolder_instance_4 = this;
+    this.x3h_1 = org_jetbrains_skia_Data__1nGetFinalizer();
   }
-  var _FinalizerHolder_instance_3;
-  function _FinalizerHolder_getInstance_3() {
-    if (_FinalizerHolder_instance_3 == null)
-      new _FinalizerHolder_3();
-    return _FinalizerHolder_instance_3;
+  var _FinalizerHolder_instance_4;
+  function _FinalizerHolder_getInstance_4() {
+    if (_FinalizerHolder_instance_4 == null)
+      new _FinalizerHolder_4();
+    return _FinalizerHolder_instance_4;
   }
   function Data(ptr) {
-    Companion_getInstance_7();
-    Managed.call(this, ptr, _FinalizerHolder_getInstance_3().d28_1);
-    this.g28_1 = null;
+    Companion_getInstance_8();
+    Managed.call(this, ptr, _FinalizerHolder_getInstance_4().x3h_1);
+    this.a3i_1 = null;
   }
   protoOf(Data).equals = function (other) {
     var tmp0_elvis_lhs = other instanceof Data ? other : null;
@@ -1355,78 +1550,78 @@
       tmp = tmp0_elvis_lhs;
     }
     var otherData = tmp;
-    return this.t24(otherData);
+    return this.e3d(otherData);
   };
-  protoOf(Data).t24 = function (other) {
+  protoOf(Data).e3d = function (other) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_Data__1nEquals(this.s24_1, getPtr(other));
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_Data__1nEquals(this.d3d_1, getPtr(other));
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(other);
     }
     return tmp;
   };
-  function Companion_7() {
-    Companion_instance_7 = this;
-    Companion_getInstance_45().m24();
+  function Companion_8() {
+    Companion_instance_8 = this;
+    Companion_instance_51.x3c();
   }
-  protoOf(Companion_7).h28 = function () {
-    Stats_getInstance().o24();
+  protoOf(Companion_8).b3i = function () {
+    Stats_instance.z3c();
     return new DirectContext(org_jetbrains_skia_DirectContext__1nMakeGL());
   };
-  var Companion_instance_7;
-  function Companion_getInstance_8() {
-    if (Companion_instance_7 == null)
-      new Companion_7();
-    return Companion_instance_7;
+  var Companion_instance_8;
+  function Companion_getInstance_9() {
+    if (Companion_instance_8 == null)
+      new Companion_8();
+    return Companion_instance_8;
   }
   function DirectContext(ptr) {
-    Companion_getInstance_8();
+    Companion_getInstance_9();
     RefCnt_init_$Init$(ptr, this);
   }
-  protoOf(DirectContext).k28 = function () {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_DirectContext__1nFlush(this.s24_1);
+  protoOf(DirectContext).e3i = function () {
+    Stats_instance.z3c();
+    org_jetbrains_skia_DirectContext__1nFlush(this.d3d_1);
     return this;
   };
   function FilterMipmap(filterMode, mipmapMode) {
     mipmapMode = mipmapMode === VOID ? MipmapMode_NONE_getInstance() : mipmapMode;
-    this.l28_1 = filterMode;
-    this.m28_1 = mipmapMode;
+    this.f3i_1 = filterMode;
+    this.g3i_1 = mipmapMode;
   }
-  protoOf(FilterMipmap).l26 = function () {
-    return this.l28_1.w4_1;
+  protoOf(FilterMipmap).f3g = function () {
+    return this.f3i_1.j9_1;
   };
-  protoOf(FilterMipmap).m26 = function () {
-    return this.m28_1.w4_1;
+  protoOf(FilterMipmap).g3g = function () {
+    return this.g3i_1.j9_1;
   };
   protoOf(FilterMipmap).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof FilterMipmap))
       return false;
-    if (!this.l28_1.equals(other.l28_1))
+    if (!this.f3i_1.equals(other.f3i_1))
       return false;
-    return this.m28_1.equals(other.m28_1);
+    return this.g3i_1.equals(other.g3i_1);
   };
   protoOf(FilterMipmap).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + this.l28_1.hashCode() | 0;
-    result = imul(result, PRIME) + this.m28_1.hashCode() | 0;
+    result = imul(result, PRIME) + this.f3i_1.hashCode() | 0;
+    result = imul(result, PRIME) + this.g3i_1.hashCode() | 0;
     return result;
   };
   protoOf(FilterMipmap).toString = function () {
-    return 'FilterMipmap(_filterMode=' + this.l28_1 + ', _mipmapMode=' + this.m28_1 + ')';
+    return 'FilterMipmap(_filterMode=' + this.f3i_1 + ', _mipmapMode=' + this.g3i_1 + ')';
   };
   var FilterMode_NEAREST_instance;
   var FilterMode_LINEAR_instance;
   var FilterMode_entriesInitialized;
   function FilterMode_initEntries() {
     if (FilterMode_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     FilterMode_entriesInitialized = true;
     FilterMode_NEAREST_instance = new FilterMode('NEAREST', 0);
     FilterMode_LINEAR_instance = new FilterMode('LINEAR', 1);
@@ -1442,61 +1637,102 @@
     FilterMode_initEntries();
     return FilterMode_LINEAR_instance;
   }
-  function Companion_8() {
-    Companion_instance_8 = this;
-    Companion_getInstance_45().m24();
+  var FilterTileMode_CLAMP_instance;
+  var FilterTileMode_REPEAT_instance;
+  var FilterTileMode_MIRROR_instance;
+  var FilterTileMode_DECAL_instance;
+  var FilterTileMode_entriesInitialized;
+  function FilterTileMode_initEntries() {
+    if (FilterTileMode_entriesInitialized)
+      return Unit_instance;
+    FilterTileMode_entriesInitialized = true;
+    FilterTileMode_CLAMP_instance = new FilterTileMode('CLAMP', 0);
+    FilterTileMode_REPEAT_instance = new FilterTileMode('REPEAT', 1);
+    FilterTileMode_MIRROR_instance = new FilterTileMode('MIRROR', 2);
+    FilterTileMode_DECAL_instance = new FilterTileMode('DECAL', 3);
   }
-  var Companion_instance_8;
-  function Companion_getInstance_9() {
-    if (Companion_instance_8 == null)
-      new Companion_8();
-    return Companion_instance_8;
+  function FilterTileMode(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
+  function FilterTileMode_CLAMP_getInstance() {
+    FilterTileMode_initEntries();
+    return FilterTileMode_CLAMP_instance;
+  }
+  function FilterTileMode_REPEAT_getInstance() {
+    FilterTileMode_initEntries();
+    return FilterTileMode_REPEAT_instance;
+  }
+  function FilterTileMode_MIRROR_getInstance() {
+    FilterTileMode_initEntries();
+    return FilterTileMode_MIRROR_instance;
+  }
+  function FilterTileMode_DECAL_getInstance() {
+    FilterTileMode_initEntries();
+    return FilterTileMode_DECAL_instance;
+  }
+  function Companion_9() {
+    Companion_instance_9 = this;
+    Companion_instance_51.x3c();
+  }
+  var Companion_instance_9;
+  function Companion_getInstance_10() {
+    if (Companion_instance_9 == null)
+      new Companion_9();
+    return Companion_instance_9;
   }
   function Font_init_$Init$(ptr, $this) {
-    Managed.call($this, ptr, _FinalizerHolder_getInstance_4().n28_1);
+    Managed.call($this, ptr, _FinalizerHolder_getInstance_5().h3i_1);
     Font.call($this);
     return $this;
   }
-  function Font_init_$Init$_0(typeface, size, $this) {
+  function Font_init_$Init$_0($this) {
+    Font_init_$Init$(org_jetbrains_skia_Font__1nMakeDefault(), $this);
+    Stats_instance.z3c();
+    return $this;
+  }
+  function Font_init_$Create$() {
+    return Font_init_$Init$_0(objectCreate(protoOf(Font)));
+  }
+  function Font_init_$Init$_1(typeface, size, $this) {
     Font_init_$Init$(org_jetbrains_skia_Font__1nMakeTypefaceSize(getPtr(typeface), size), $this);
-    Stats_getInstance().o24();
+    Stats_instance.z3c();
     reachabilityBarrier(typeface);
     return $this;
   }
-  function Font_init_$Create$(typeface, size) {
-    return Font_init_$Init$_0(typeface, size, objectCreate(protoOf(Font)));
+  function Font_init_$Create$_0(typeface, size) {
+    return Font_init_$Init$_1(typeface, size, objectCreate(protoOf(Font)));
   }
-  function _FinalizerHolder_4() {
-    _FinalizerHolder_instance_4 = this;
-    this.n28_1 = org_jetbrains_skia_Font__1nGetFinalizer();
+  function _FinalizerHolder_5() {
+    _FinalizerHolder_instance_5 = this;
+    this.h3i_1 = org_jetbrains_skia_Font__1nGetFinalizer();
   }
-  var _FinalizerHolder_instance_4;
-  function _FinalizerHolder_getInstance_4() {
-    if (_FinalizerHolder_instance_4 == null)
-      new _FinalizerHolder_4();
-    return _FinalizerHolder_instance_4;
+  var _FinalizerHolder_instance_5;
+  function _FinalizerHolder_getInstance_5() {
+    if (_FinalizerHolder_instance_5 == null)
+      new _FinalizerHolder_5();
+    return _FinalizerHolder_instance_5;
   }
   function Font$_get_metrics_$lambda_bxy7iq(this$0) {
     return function ($this$fromInteropPointer, it) {
-      org_jetbrains_skia_Font__1nGetMetrics(this$0.s24_1, it);
-      return Unit_getInstance();
+      org_jetbrains_skia_Font__1nGetMetrics(this$0.d3d_1, it);
+      return Unit_instance;
     };
   }
-  protoOf(Font).t24 = function (other) {
+  protoOf(Font).e3d = function (other) {
     var tmp;
     try {
-      tmp = org_jetbrains_skia_Font__1nEquals(this.s24_1, getPtr(other));
+      tmp = org_jetbrains_skia_Font__1nEquals(this.d3d_1, getPtr(other));
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(other);
     }
     return tmp;
   };
-  protoOf(Font).q28 = function () {
+  protoOf(Font).k3i = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      var tmp_0 = Companion_getInstance_11();
+      Stats_instance.z3c();
+      var tmp_0 = Companion_instance_11;
       tmp = fromInteropPointer(tmp_0, Font$_get_metrics_$lambda_bxy7iq(this));
     }finally {
       reachabilityBarrier(this);
@@ -1504,14 +1740,13 @@
     return tmp;
   };
   function Font() {
-    Companion_getInstance_9();
+    Companion_getInstance_10();
   }
   function FontFeature$Companion$parseW3$lambda(it) {
-    var tmp$ret$0;
     // Inline function 'kotlin.text.trim' call
-    tmp$ret$0 = toString(trim(isCharSequence(it) ? it : THROW_CCE()));
+    var tmp$ret$0 = toString(trim(isCharSequence(it) ? it : THROW_CCE()));
     var parts = split(tmp$ret$0, [' ']);
-    var name = parts.l(0);
+    var name = parts.i1(0);
     var value = getOrNull(parts, 1);
     var tmp;
     switch (value) {
@@ -1531,84 +1766,82 @@
     return name.length === 4 ? FontFeature_init_$Create$(name, value_0) : null;
   }
   function FontFeature_init_$Init$(feature, value, $this) {
-    var tmp = Companion_getInstance_16().r28(feature);
-    Companion_getInstance_10();
-    var tmp_0 = _UInt___init__impl__l7qpdl(0);
-    Companion_getInstance_10();
-    FontFeature.call($this, tmp, value, tmp_0, _UInt___init__impl__l7qpdl(-1));
+    FontFeature.call($this, Companion_instance_16.l3i(feature), value, _UInt___init__impl__l7qpdl(0), _UInt___init__impl__l7qpdl(-1));
     return $this;
   }
   function FontFeature_init_$Create$(feature, value) {
     return FontFeature_init_$Init$(feature, value, objectCreate(protoOf(FontFeature)));
   }
-  function Companion_9() {
-    Companion_instance_9 = this;
-    this.s28_1 = _UInt___init__impl__l7qpdl(0);
-    this.t28_1 = _UInt___init__impl__l7qpdl(-1);
+  function Companion_10() {
+    Companion_instance_10 = this;
+    this.m3i_1 = _UInt___init__impl__l7qpdl(0);
+    this.n3i_1 = _UInt___init__impl__l7qpdl(-1);
     var tmp = this;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp.u28_1 = fillArrayVal(Array(0), null);
-    this.v28_1 = compilePattern('\\s+');
-    this.w28_1 = compilePattern('([-+])?([a-z0-9]{4})(?:\\[(\\d+)?:(\\d+)?\\])?(?:=(\\d+))?');
-    this.x28_1 = 1;
-    this.y28_1 = 2;
-    this.z28_1 = 3;
-    this.a29_1 = 4;
-    this.b29_1 = 5;
+    tmp.o3i_1 = fillArrayVal(Array(0), null);
+    this.p3i_1 = compilePattern('\\s+');
+    this.q3i_1 = compilePattern('([-+])?([a-z0-9]{4})(?:\\[(\\d+)?:(\\d+)?\\])?(?:=(\\d+))?');
+    this.r3i_1 = 1;
+    this.s3i_1 = 2;
+    this.t3i_1 = 3;
+    this.u3i_1 = 4;
+    this.v3i_1 = 5;
   }
-  protoOf(Companion_9).c29 = function (str) {
+  protoOf(Companion_10).w3i = function (str) {
     // Inline function 'kotlin.collections.toTypedArray' call
     var tmp = splitToSequence(str, [',']);
-    var tmp0_toTypedArray = toList(mapNotNull(tmp, FontFeature$Companion$parseW3$lambda));
-    return copyToArray(tmp0_toTypedArray);
+    var this_0 = toList(mapNotNull(tmp, FontFeature$Companion$parseW3$lambda));
+    return copyToArray(this_0);
   };
-  var Companion_instance_9;
-  function Companion_getInstance_10() {
-    if (Companion_instance_9 == null)
-      new Companion_9();
-    return Companion_instance_9;
+  var Companion_instance_10;
+  function Companion_getInstance_11() {
+    if (Companion_instance_10 == null)
+      new Companion_10();
+    return Companion_instance_10;
   }
   function FontFeature(_tag, value, start, end) {
-    Companion_getInstance_10();
-    this.d29_1 = _tag;
-    this.e29_1 = value;
-    this.f29_1 = start;
-    this.g29_1 = end;
+    Companion_getInstance_11();
+    this.x3i_1 = _tag;
+    this.y3i_1 = value;
+    this.z3i_1 = start;
+    this.a3j_1 = end;
   }
-  protoOf(FontFeature).h29 = function () {
-    return Companion_getInstance_16().i29(this.d29_1);
+  protoOf(FontFeature).b3j = function () {
+    return Companion_instance_16.c3j(this.x3i_1);
   };
   protoOf(FontFeature).toString = function () {
     var range = '';
     var tmp;
     // Inline function 'kotlin.UInt.compareTo' call
-    var tmp0_compareTo = this.f29_1;
-    if (uintCompare(_UInt___get_data__impl__f0vqqw(tmp0_compareTo), _UInt___get_data__impl__f0vqqw(_UInt___init__impl__l7qpdl(0))) > 0) {
+    var this_0 = this.z3i_1;
+    var other = _UInt___init__impl__l7qpdl(0);
+    if (uintCompare(_UInt___get_data__impl__f0vqqw(this_0), _UInt___get_data__impl__f0vqqw(other)) > 0) {
       tmp = true;
     } else {
       // Inline function 'kotlin.UInt.compareTo' call
-      var tmp1_compareTo = this.g29_1;
+      var this_1 = this.a3j_1;
       Companion_getInstance();
-      var tmp2_compareTo = _UInt___init__impl__l7qpdl(-1);
-      tmp = uintCompare(_UInt___get_data__impl__f0vqqw(tmp1_compareTo), _UInt___get_data__impl__f0vqqw(tmp2_compareTo)) < 0;
+      var other_0 = _UInt___init__impl__l7qpdl(-1);
+      tmp = uintCompare(_UInt___get_data__impl__f0vqqw(this_1), _UInt___get_data__impl__f0vqqw(other_0)) < 0;
     }
     if (tmp) {
       var tmp_0;
       // Inline function 'kotlin.UInt.compareTo' call
-      var tmp3_compareTo = this.f29_1;
-      if (uintCompare(_UInt___get_data__impl__f0vqqw(tmp3_compareTo), _UInt___get_data__impl__f0vqqw(_UInt___init__impl__l7qpdl(0))) > 0) {
-        tmp_0 = new UInt(this.f29_1);
+      var this_2 = this.z3i_1;
+      var other_1 = _UInt___init__impl__l7qpdl(0);
+      if (uintCompare(_UInt___get_data__impl__f0vqqw(this_2), _UInt___get_data__impl__f0vqqw(other_1)) > 0) {
+        tmp_0 = new UInt(this.z3i_1);
       } else {
         tmp_0 = '';
       }
       var tmp_1 = '[' + tmp_0 + ':';
       var tmp_2;
       // Inline function 'kotlin.UInt.compareTo' call
-      var tmp4_compareTo = this.g29_1;
+      var this_3 = this.a3j_1;
       Companion_getInstance();
-      var tmp5_compareTo = _UInt___init__impl__l7qpdl(-1);
-      if (uintCompare(_UInt___get_data__impl__f0vqqw(tmp4_compareTo), _UInt___get_data__impl__f0vqqw(tmp5_compareTo)) < 0) {
-        tmp_2 = new UInt(this.g29_1);
+      var other_2 = _UInt___init__impl__l7qpdl(-1);
+      if (uintCompare(_UInt___get_data__impl__f0vqqw(this_3), _UInt___get_data__impl__f0vqqw(other_2)) < 0) {
+        tmp_2 = new UInt(this.a3j_1);
       } else {
         tmp_2 = '';
       }
@@ -1616,179 +1849,175 @@
     }
     var valuePrefix = '';
     var valueSuffix = '';
-    if (this.e29_1 === 0)
+    if (this.y3i_1 === 0)
       valuePrefix = '-';
-    else if (this.e29_1 === 1)
+    else if (this.y3i_1 === 1)
       valuePrefix = '+';
     else
-      valueSuffix = '=' + this.e29_1;
-    return 'FontFeature(' + valuePrefix + this.d29_1 + range + valueSuffix + ')';
+      valueSuffix = '=' + this.y3i_1;
+    return 'FontFeature(' + valuePrefix + this.x3i_1 + range + valueSuffix + ')';
   };
   protoOf(FontFeature).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof FontFeature))
       return false;
-    if (!(this.h29() === other.h29()))
+    if (!(this.b3j() === other.b3j()))
       return false;
-    if (!(this.e29_1 === other.e29_1))
+    if (!(this.y3i_1 === other.y3i_1))
       return false;
-    if (!(this.f29_1 === other.f29_1))
+    if (!(this.z3i_1 === other.z3i_1))
       return false;
-    return this.g29_1 === other.g29_1;
+    return this.a3j_1 === other.a3j_1;
   };
   protoOf(FontFeature).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + this.d29_1 | 0;
-    result = imul(result, PRIME) + this.e29_1 | 0;
+    result = imul(result, PRIME) + this.x3i_1 | 0;
+    result = imul(result, PRIME) + this.y3i_1 | 0;
     var tmp = imul(result, PRIME);
     // Inline function 'kotlin.UInt.toInt' call
     // Inline function 'kotlin.UInt.xor' call
     // Inline function 'kotlin.UInt.shr' call
-    var tmp0_shr = this.f29_1;
-    var tmp1_xor = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(tmp0_shr) >>> 16 | 0);
-    var tmp2_xor = this.f29_1;
-    var tmp3_toInt = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(tmp1_xor) ^ _UInt___get_data__impl__f0vqqw(tmp2_xor));
-    result = tmp + _UInt___get_data__impl__f0vqqw(tmp3_toInt) | 0;
+    var this_0 = this.z3i_1;
+    var this_1 = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(this_0) >>> 16 | 0);
+    var other = this.z3i_1;
+    var this_2 = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(this_1) ^ _UInt___get_data__impl__f0vqqw(other));
+    result = tmp + _UInt___get_data__impl__f0vqqw(this_2) | 0;
     var tmp_0 = imul(result, PRIME);
     // Inline function 'kotlin.UInt.toInt' call
     // Inline function 'kotlin.UInt.xor' call
     // Inline function 'kotlin.UInt.shr' call
-    var tmp4_shr = this.g29_1;
-    var tmp5_xor = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(tmp4_shr) >>> 16 | 0);
-    var tmp6_xor = this.g29_1;
-    var tmp7_toInt = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(tmp5_xor) ^ _UInt___get_data__impl__f0vqqw(tmp6_xor));
-    result = tmp_0 + _UInt___get_data__impl__f0vqqw(tmp7_toInt) | 0;
+    var this_3 = this.a3j_1;
+    var this_4 = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(this_3) >>> 16 | 0);
+    var other_0 = this.a3j_1;
+    var this_5 = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(this_4) ^ _UInt___get_data__impl__f0vqqw(other_0));
+    result = tmp_0 + _UInt___get_data__impl__f0vqqw(this_5) | 0;
     return result;
   };
-  function Companion_10() {
-    Companion_instance_10 = this;
+  function Companion_11() {
   }
-  var Companion_instance_10;
-  function Companion_getInstance_11() {
-    if (Companion_instance_10 == null)
-      new Companion_10();
-    return Companion_instance_10;
+  var Companion_instance_11;
+  function Companion_getInstance_12() {
+    return Companion_instance_11;
   }
   function FontMetrics(top, ascent, descent, bottom, leading, avgCharWidth, maxCharWidth, xMin, xMax, xHeight, capHeight, underlineThickness, underlinePosition, strikeoutThickness, strikeoutPosition) {
-    Companion_getInstance_11();
-    this.j29_1 = top;
-    this.k29_1 = ascent;
-    this.l29_1 = descent;
-    this.m29_1 = bottom;
-    this.n29_1 = leading;
-    this.o29_1 = avgCharWidth;
-    this.p29_1 = maxCharWidth;
-    this.q29_1 = xMin;
-    this.r29_1 = xMax;
-    this.s29_1 = xHeight;
-    this.t29_1 = capHeight;
-    this.u29_1 = underlineThickness;
-    this.v29_1 = underlinePosition;
-    this.w29_1 = strikeoutThickness;
-    this.x29_1 = strikeoutPosition;
+    this.d3j_1 = top;
+    this.e3j_1 = ascent;
+    this.f3j_1 = descent;
+    this.g3j_1 = bottom;
+    this.h3j_1 = leading;
+    this.i3j_1 = avgCharWidth;
+    this.j3j_1 = maxCharWidth;
+    this.k3j_1 = xMin;
+    this.l3j_1 = xMax;
+    this.m3j_1 = xHeight;
+    this.n3j_1 = capHeight;
+    this.o3j_1 = underlineThickness;
+    this.p3j_1 = underlinePosition;
+    this.q3j_1 = strikeoutThickness;
+    this.r3j_1 = strikeoutPosition;
   }
-  protoOf(FontMetrics).u21 = function () {
-    return this.l29_1 - this.k29_1;
+  protoOf(FontMetrics).l39 = function () {
+    return this.f3j_1 - this.e3j_1;
   };
   protoOf(FontMetrics).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof FontMetrics))
       return false;
-    if (!(compareTo(this.j29_1, other.j29_1) === 0))
+    if (!(compareTo(this.d3j_1, other.d3j_1) === 0))
       return false;
-    if (!(compareTo(this.k29_1, other.k29_1) === 0))
+    if (!(compareTo(this.e3j_1, other.e3j_1) === 0))
       return false;
-    if (!(compareTo(this.l29_1, other.l29_1) === 0))
+    if (!(compareTo(this.f3j_1, other.f3j_1) === 0))
       return false;
-    if (!(compareTo(this.m29_1, other.m29_1) === 0))
+    if (!(compareTo(this.g3j_1, other.g3j_1) === 0))
       return false;
-    if (!(compareTo(this.n29_1, other.n29_1) === 0))
+    if (!(compareTo(this.h3j_1, other.h3j_1) === 0))
       return false;
-    if (!(compareTo(this.o29_1, other.o29_1) === 0))
+    if (!(compareTo(this.i3j_1, other.i3j_1) === 0))
       return false;
-    if (!(compareTo(this.p29_1, other.p29_1) === 0))
+    if (!(compareTo(this.j3j_1, other.j3j_1) === 0))
       return false;
-    if (!(compareTo(this.q29_1, other.q29_1) === 0))
+    if (!(compareTo(this.k3j_1, other.k3j_1) === 0))
       return false;
-    if (!(compareTo(this.r29_1, other.r29_1) === 0))
+    if (!(compareTo(this.l3j_1, other.l3j_1) === 0))
       return false;
-    if (!(compareTo(this.s29_1, other.s29_1) === 0))
+    if (!(compareTo(this.m3j_1, other.m3j_1) === 0))
       return false;
-    if (!(compareTo(this.t29_1, other.t29_1) === 0))
+    if (!(compareTo(this.n3j_1, other.n3j_1) === 0))
       return false;
-    if (this.u29_1 == null ? !(other.u29_1 == null) : !(this.u29_1 == other.u29_1))
+    if (this.o3j_1 == null ? !(other.o3j_1 == null) : !(this.o3j_1 == other.o3j_1))
       return false;
-    if (this.v29_1 == null ? !(other.v29_1 == null) : !(this.v29_1 == other.v29_1))
+    if (this.p3j_1 == null ? !(other.p3j_1 == null) : !(this.p3j_1 == other.p3j_1))
       return false;
-    if (this.w29_1 == null ? !(other.w29_1 == null) : !(this.w29_1 == other.w29_1))
+    if (this.q3j_1 == null ? !(other.q3j_1 == null) : !(this.q3j_1 == other.q3j_1))
       return false;
-    return !(this.x29_1 == null ? !(other.x29_1 == null) : !(this.x29_1 == other.x29_1));
+    return !(this.r3j_1 == null ? !(other.r3j_1 == null) : !(this.r3j_1 == other.r3j_1));
   };
   protoOf(FontMetrics).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + toBits(this.j29_1) | 0;
-    result = imul(result, PRIME) + toBits(this.k29_1) | 0;
-    result = imul(result, PRIME) + toBits(this.l29_1) | 0;
-    result = imul(result, PRIME) + toBits(this.m29_1) | 0;
-    result = imul(result, PRIME) + toBits(this.n29_1) | 0;
-    result = imul(result, PRIME) + toBits(this.o29_1) | 0;
-    result = imul(result, PRIME) + toBits(this.p29_1) | 0;
-    result = imul(result, PRIME) + toBits(this.q29_1) | 0;
-    result = imul(result, PRIME) + toBits(this.r29_1) | 0;
-    result = imul(result, PRIME) + toBits(this.s29_1) | 0;
-    result = imul(result, PRIME) + toBits(this.t29_1) | 0;
+    result = imul(result, PRIME) + toBits(this.d3j_1) | 0;
+    result = imul(result, PRIME) + toBits(this.e3j_1) | 0;
+    result = imul(result, PRIME) + toBits(this.f3j_1) | 0;
+    result = imul(result, PRIME) + toBits(this.g3j_1) | 0;
+    result = imul(result, PRIME) + toBits(this.h3j_1) | 0;
+    result = imul(result, PRIME) + toBits(this.i3j_1) | 0;
+    result = imul(result, PRIME) + toBits(this.j3j_1) | 0;
+    result = imul(result, PRIME) + toBits(this.k3j_1) | 0;
+    result = imul(result, PRIME) + toBits(this.l3j_1) | 0;
+    result = imul(result, PRIME) + toBits(this.m3j_1) | 0;
+    result = imul(result, PRIME) + toBits(this.n3j_1) | 0;
     var tmp = imul(result, PRIME);
     // Inline function 'kotlin.hashCode' call
-    var tmp0_safe_receiver = this.u29_1;
+    var tmp0_safe_receiver = this.o3j_1;
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : hashCode(tmp0_safe_receiver);
     result = tmp + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
     var tmp_0 = imul(result, PRIME);
     // Inline function 'kotlin.hashCode' call
-    var tmp0_safe_receiver_0 = this.v29_1;
+    var tmp0_safe_receiver_0 = this.p3j_1;
     var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : hashCode(tmp0_safe_receiver_0);
     result = tmp_0 + (tmp1_elvis_lhs_0 == null ? 0 : tmp1_elvis_lhs_0) | 0;
     var tmp_1 = imul(result, PRIME);
     // Inline function 'kotlin.hashCode' call
-    var tmp0_safe_receiver_1 = this.w29_1;
+    var tmp0_safe_receiver_1 = this.q3j_1;
     var tmp1_elvis_lhs_1 = tmp0_safe_receiver_1 == null ? null : hashCode(tmp0_safe_receiver_1);
     result = tmp_1 + (tmp1_elvis_lhs_1 == null ? 0 : tmp1_elvis_lhs_1) | 0;
     var tmp_2 = imul(result, PRIME);
     // Inline function 'kotlin.hashCode' call
-    var tmp0_safe_receiver_2 = this.x29_1;
+    var tmp0_safe_receiver_2 = this.r3j_1;
     var tmp1_elvis_lhs_2 = tmp0_safe_receiver_2 == null ? null : hashCode(tmp0_safe_receiver_2);
     result = tmp_2 + (tmp1_elvis_lhs_2 == null ? 0 : tmp1_elvis_lhs_2) | 0;
     return result;
   };
   protoOf(FontMetrics).toString = function () {
-    return 'FontMetrics(_top=' + this.j29_1 + ', _ascent=' + this.k29_1 + ', _descent=' + this.l29_1 + ', _bottom=' + this.m29_1 + ', _leading=' + this.n29_1 + ', _avgCharWidth=' + this.o29_1 + ', _maxCharWidth=' + this.p29_1 + ', _xMin=' + this.q29_1 + ', _xMax=' + this.r29_1 + ', _xHeight=' + this.s29_1 + ', _capHeight=' + this.t29_1 + ', _underlineThickness=' + this.u29_1 + ', _underlinePosition=' + this.v29_1 + ', _strikeoutThickness=' + this.w29_1 + ', _strikeoutPosition=' + this.x29_1 + ')';
+    return 'FontMetrics(_top=' + this.d3j_1 + ', _ascent=' + this.e3j_1 + ', _descent=' + this.f3j_1 + ', _bottom=' + this.g3j_1 + ', _leading=' + this.h3j_1 + ', _avgCharWidth=' + this.i3j_1 + ', _maxCharWidth=' + this.j3j_1 + ', _xMin=' + this.k3j_1 + ', _xMax=' + this.l3j_1 + ', _xHeight=' + this.m3j_1 + ', _capHeight=' + this.n3j_1 + ', _underlineThickness=' + this.o3j_1 + ', _underlinePosition=' + this.p3j_1 + ', _strikeoutThickness=' + this.q3j_1 + ', _strikeoutPosition=' + this.r3j_1 + ')';
   };
   function fromInteropPointer(_this__u8e3s4, block) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Float32Array(15);
+    var result = new Float32Array(15);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.y29(tmp0_withResult);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.z29(handle, tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.s3j(result);
+        block($this$interopScope, handle);
+        $this$interopScope.t3j(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
-    return fromRawData(_this__u8e3s4, tmp0_withResult);
+    return fromRawData(_this__u8e3s4, result);
   }
   function fromRawData(_this__u8e3s4, rawData) {
     var tmp = rawData[0];
@@ -1803,30 +2032,29 @@
     var tmp_8 = rawData[9];
     var tmp_9 = rawData[10];
     // Inline function 'org.jetbrains.skia.asNumberOrNull' call
-    var tmp0_asNumberOrNull = rawData[11];
-    var tmp_10 = isNaN_0(tmp0_asNumberOrNull) ? null : tmp0_asNumberOrNull;
+    var this_0 = rawData[11];
+    var tmp_10 = isNaN_0(this_0) ? null : this_0;
     // Inline function 'org.jetbrains.skia.asNumberOrNull' call
-    var tmp1_asNumberOrNull = rawData[12];
-    var tmp_11 = isNaN_0(tmp1_asNumberOrNull) ? null : tmp1_asNumberOrNull;
+    var this_1 = rawData[12];
+    var tmp_11 = isNaN_0(this_1) ? null : this_1;
     // Inline function 'org.jetbrains.skia.asNumberOrNull' call
-    var tmp2_asNumberOrNull = rawData[13];
-    var tmp_12 = isNaN_0(tmp2_asNumberOrNull) ? null : tmp2_asNumberOrNull;
-    var tmp$ret$3;
+    var this_2 = rawData[13];
+    var tmp_12 = isNaN_0(this_2) ? null : this_2;
     // Inline function 'org.jetbrains.skia.asNumberOrNull' call
-    var tmp3_asNumberOrNull = rawData[14];
-    tmp$ret$3 = isNaN_0(tmp3_asNumberOrNull) ? null : tmp3_asNumberOrNull;
+    var this_3 = rawData[14];
+    var tmp$ret$3 = isNaN_0(this_3) ? null : this_3;
     return new FontMetrics(tmp, tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp_5, tmp_6, tmp_7, tmp_8, tmp_9, tmp_10, tmp_11, tmp_12, tmp$ret$3);
   }
-  function Companion_11() {
-    Companion_instance_11 = this;
-    Companion_getInstance_45().m24();
-    this.a2a_1 = FontMgr_init_$Create$(org_jetbrains_skia_FontMgr__1nDefault(), false);
+  function Companion_12() {
+    Companion_instance_12 = this;
+    Companion_instance_51.x3c();
+    this.u3j_1 = FontMgr_init_$Create$(org_jetbrains_skia_FontMgr__1nDefault(), false);
   }
-  var Companion_instance_11;
-  function Companion_getInstance_12() {
-    if (Companion_instance_11 == null)
-      new Companion_11();
-    return Companion_instance_11;
+  var Companion_instance_12;
+  function Companion_getInstance_13() {
+    if (Companion_instance_12 == null)
+      new Companion_12();
+    return Companion_instance_12;
   }
   function FontMgr_init_$Init$(ptr, $this) {
     RefCnt_init_$Init$(ptr, $this);
@@ -1842,7 +2070,7 @@
     return FontMgr_init_$Init$_0(ptr, allowClose, objectCreate(protoOf(FontMgr)));
   }
   function FontMgr() {
-    Companion_getInstance_12();
+    Companion_getInstance_13();
   }
   var FontSlant_UPRIGHT_instance;
   var FontSlant_ITALIC_instance;
@@ -1853,7 +2081,7 @@
   var FontSlant_entriesInitialized;
   function FontSlant_initEntries() {
     if (FontSlant_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     FontSlant_entriesInitialized = true;
     FontSlant_UPRIGHT_instance = new FontSlant('UPRIGHT', 0);
     FontSlant_ITALIC_instance = new FontSlant('ITALIC', 1);
@@ -1876,7 +2104,7 @@
   }
   function FontStyle_init_$Init$(weight, width, slant, $this) {
     FontStyle.call($this);
-    $this.b2a_1 = weight & 65535 | (width & 255) << 16 | slant.w4_1 << 24;
+    $this.v3j_1 = weight & 65535 | (width & 255) << 16 | slant.j9_1 << 24;
     return $this;
   }
   function FontStyle_init_$Create$(weight, width, slant) {
@@ -1884,81 +2112,22 @@
   }
   function FontStyle_init_$Init$_0(value, $this) {
     FontStyle.call($this);
-    $this.b2a_1 = value;
+    $this.v3j_1 = value;
     return $this;
   }
   function FontStyle_init_$Create$_0(value) {
     return FontStyle_init_$Init$_0(value, objectCreate(protoOf(FontStyle)));
   }
-  function Companion_12() {
-    Companion_instance_12 = this;
-    var tmp = this;
-    Companion_getInstance_14();
-    Companion_getInstance_15();
-    tmp.c2a_1 = FontStyle_init_$Create$(400, 5, FontSlant_UPRIGHT_getInstance());
-    var tmp_0 = this;
-    Companion_getInstance_14();
-    Companion_getInstance_15();
-    tmp_0.d2a_1 = FontStyle_init_$Create$(700, 5, FontSlant_UPRIGHT_getInstance());
-    var tmp_1 = this;
-    Companion_getInstance_14();
-    Companion_getInstance_15();
-    tmp_1.e2a_1 = FontStyle_init_$Create$(400, 5, FontSlant_ITALIC_getInstance());
-    var tmp_2 = this;
-    Companion_getInstance_14();
-    Companion_getInstance_15();
-    tmp_2.f2a_1 = FontStyle_init_$Create$(700, 5, FontSlant_ITALIC_getInstance());
-  }
-  var Companion_instance_12;
-  function Companion_getInstance_13() {
-    if (Companion_instance_12 == null)
-      new Companion_12();
-    return Companion_instance_12;
-  }
-  protoOf(FontStyle).g2a = function () {
-    return this.b2a_1 & 65535;
-  };
-  protoOf(FontStyle).h2a = function (weight) {
-    return FontStyle_init_$Create$(weight, this.t21(), this.i2a());
-  };
-  protoOf(FontStyle).t21 = function () {
-    return this.b2a_1 >> 16 & 255;
-  };
-  protoOf(FontStyle).i2a = function () {
-    return values_2()[this.b2a_1 >> 24 & 255];
-  };
-  protoOf(FontStyle).toString = function () {
-    return 'FontStyle(weight=' + this.g2a() + ', width=' + this.t21() + ', slant=' + this.i2a() + ')';
-  };
-  protoOf(FontStyle).equals = function (other) {
-    if (other === this)
-      return true;
-    if (!(other instanceof FontStyle))
-      return false;
-    return this.b2a_1 === other.b2a_1;
-  };
-  protoOf(FontStyle).hashCode = function () {
-    var PRIME = 59;
-    var result = 1;
-    result = imul(result, PRIME) + this.b2a_1 | 0;
-    return result;
-  };
-  function FontStyle() {
-    Companion_getInstance_13();
-  }
   function Companion_13() {
     Companion_instance_13 = this;
-    this.j2a_1 = 0;
-    this.k2a_1 = 100;
-    this.l2a_1 = 200;
-    this.m2a_1 = 300;
-    this.n2a_1 = 400;
-    this.o2a_1 = 500;
-    this.p2a_1 = 600;
-    this.q2a_1 = 700;
-    this.r2a_1 = 800;
-    this.s2a_1 = 900;
-    this.t2a_1 = 1000;
+    var tmp = this;
+    tmp.w3j_1 = FontStyle_init_$Create$(400, 5, FontSlant_UPRIGHT_getInstance());
+    var tmp_0 = this;
+    tmp_0.x3j_1 = FontStyle_init_$Create$(700, 5, FontSlant_UPRIGHT_getInstance());
+    var tmp_1 = this;
+    tmp_1.y3j_1 = FontStyle_init_$Create$(400, 5, FontSlant_ITALIC_getInstance());
+    var tmp_2 = this;
+    tmp_2.z3j_1 = FontStyle_init_$Create$(700, 5, FontSlant_ITALIC_getInstance());
   }
   var Companion_instance_13;
   function Companion_getInstance_14() {
@@ -1966,28 +2135,72 @@
       new Companion_13();
     return Companion_instance_13;
   }
+  protoOf(FontStyle).a3k = function () {
+    return this.v3j_1 & 65535;
+  };
+  protoOf(FontStyle).b3k = function (weight) {
+    return FontStyle_init_$Create$(weight, this.k39(), this.c3k());
+  };
+  protoOf(FontStyle).k39 = function () {
+    return this.v3j_1 >> 16 & 255;
+  };
+  protoOf(FontStyle).c3k = function () {
+    return values_2()[this.v3j_1 >> 24 & 255];
+  };
+  protoOf(FontStyle).toString = function () {
+    return 'FontStyle(weight=' + this.a3k() + ', width=' + this.k39() + ', slant=' + this.c3k() + ')';
+  };
+  protoOf(FontStyle).equals = function (other) {
+    if (other === this)
+      return true;
+    if (!(other instanceof FontStyle))
+      return false;
+    return this.v3j_1 === other.v3j_1;
+  };
+  protoOf(FontStyle).hashCode = function () {
+    var PRIME = 59;
+    var result = 1;
+    result = imul(result, PRIME) + this.v3j_1 | 0;
+    return result;
+  };
+  function FontStyle() {
+    Companion_getInstance_14();
+  }
   function Companion_14() {
-    Companion_instance_14 = this;
-    this.u2a_1 = 1;
-    this.v2a_1 = 2;
-    this.w2a_1 = 3;
-    this.x2a_1 = 4;
-    this.y2a_1 = 5;
-    this.z2a_1 = 6;
-    this.a2b_1 = 7;
-    this.b2b_1 = 8;
-    this.c2b_1 = 9;
+    this.d3k_1 = 0;
+    this.e3k_1 = 100;
+    this.f3k_1 = 200;
+    this.g3k_1 = 300;
+    this.h3k_1 = 400;
+    this.i3k_1 = 500;
+    this.j3k_1 = 600;
+    this.k3k_1 = 700;
+    this.l3k_1 = 800;
+    this.m3k_1 = 900;
+    this.n3k_1 = 1000;
   }
   var Companion_instance_14;
   function Companion_getInstance_15() {
-    if (Companion_instance_14 == null)
-      new Companion_14();
     return Companion_instance_14;
   }
   function Companion_15() {
-    Companion_instance_15 = this;
+    this.o3k_1 = 1;
+    this.p3k_1 = 2;
+    this.q3k_1 = 3;
+    this.r3k_1 = 4;
+    this.s3k_1 = 5;
+    this.t3k_1 = 6;
+    this.u3k_1 = 7;
+    this.v3k_1 = 8;
+    this.w3k_1 = 9;
   }
-  protoOf(Companion_15).r28 = function (name) {
+  var Companion_instance_15;
+  function Companion_getInstance_16() {
+    return Companion_instance_15;
+  }
+  function Companion_16() {
+  }
+  protoOf(Companion_16).l3i = function (name) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(name.length === 4)) {
@@ -1996,42 +2209,142 @@
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     // Inline function 'kotlin.code' call
-    var tmp1_get_code_jtnknr = charSequenceGet(name, 0);
-    var tmp = (Char__toInt_impl_vasixd(tmp1_get_code_jtnknr) & 255) << 24;
+    var this_0 = charSequenceGet(name, 0);
+    var tmp = (Char__toInt_impl_vasixd(this_0) & 255) << 24;
     // Inline function 'kotlin.code' call
-    var tmp2_get_code_n2njg8 = charSequenceGet(name, 1);
-    var tmp_0 = tmp | (Char__toInt_impl_vasixd(tmp2_get_code_n2njg8) & 255) << 16;
+    var this_1 = charSequenceGet(name, 1);
+    var tmp_0 = tmp | (Char__toInt_impl_vasixd(this_1) & 255) << 16;
     // Inline function 'kotlin.code' call
-    var tmp3_get_code_qbni8p = charSequenceGet(name, 2);
-    var tmp_1 = tmp_0 | (Char__toInt_impl_vasixd(tmp3_get_code_qbni8p) & 255) << 8;
+    var this_2 = charSequenceGet(name, 2);
+    var tmp_1 = tmp_0 | (Char__toInt_impl_vasixd(this_2) & 255) << 8;
     // Inline function 'kotlin.code' call
-    var tmp4_get_code_tknh16 = charSequenceGet(name, 3);
-    return tmp_1 | Char__toInt_impl_vasixd(tmp4_get_code_tknh16) & 255;
+    var this_3 = charSequenceGet(name, 3);
+    return tmp_1 | Char__toInt_impl_vasixd(this_3) & 255;
   };
-  protoOf(Companion_15).i29 = function (tag) {
-    var tmp$ret$0;
+  protoOf(Companion_16).c3j = function (tag) {
     // Inline function 'kotlin.charArrayOf' call
-    tmp$ret$0 = charArrayOf([numberToChar(tag >> 24 & 255), numberToChar(tag >> 16 & 255), numberToChar(tag >> 8 & 255), numberToChar(tag & 255)]);
+    var tmp$ret$0 = charArrayOf([numberToChar(tag >> 24 & 255), numberToChar(tag >> 16 & 255), numberToChar(tag >> 8 & 255), numberToChar(tag & 255)]);
     return concatToString(tmp$ret$0);
   };
-  var Companion_instance_15;
-  function Companion_getInstance_16() {
-    if (Companion_instance_15 == null)
-      new Companion_15();
-    return Companion_instance_15;
+  var Companion_instance_16;
+  function Companion_getInstance_17() {
+    return Companion_instance_16;
   }
+  function Companion_17() {
+    Companion_instance_17 = this;
+    this.x3k_1 = 1;
+    this.y3k_1 = new GradientStyle(FilterTileMode_CLAMP_getInstance(), true, null);
+  }
+  var Companion_instance_17;
+  function Companion_getInstance_18() {
+    if (Companion_instance_17 == null)
+      new Companion_17();
+    return Companion_instance_17;
+  }
+  function GradientStyle(tileMode, isPremul, localMatrix) {
+    Companion_getInstance_18();
+    this.z3k_1 = tileMode;
+    this.a3l_1 = isPremul;
+    this.b3l_1 = localMatrix;
+  }
+  protoOf(GradientStyle).d3f = function () {
+    return 0 | (this.a3l_1 ? Companion_getInstance_18().x3k_1 : 0);
+  };
+  protoOf(GradientStyle).c3l = function () {
+    var tmp0_safe_receiver = this.b3l_1;
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.i3g_1;
+  };
+  protoOf(GradientStyle).equals = function (other) {
+    if (other === this)
+      return true;
+    if (!(other instanceof GradientStyle))
+      return false;
+    if (!(this.a3l_1 === other.a3l_1))
+      return false;
+    if (!this.z3k_1.equals(other.z3k_1))
+      return false;
+    return !(this.b3l_1 == null ? !(other.b3l_1 == null) : !equals(this.b3l_1, other.b3l_1));
+  };
+  protoOf(GradientStyle).hashCode = function () {
+    var PRIME = 59;
+    var result = 1;
+    result = imul(result, PRIME) + (this.a3l_1 ? 79 : 97) | 0;
+    result = imul(result, PRIME) + this.z3k_1.hashCode() | 0;
+    var tmp = imul(result, PRIME);
+    var tmp0_safe_receiver = this.b3l_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.hashCode();
+    result = tmp + (tmp1_elvis_lhs == null ? 43 : tmp1_elvis_lhs) | 0;
+    return result;
+  };
+  protoOf(GradientStyle).toString = function () {
+    return 'GradientStyle(_tileMode=' + this.z3k_1 + ', _premul=' + this.a3l_1 + ', _localMatrix=' + this.b3l_1 + ')';
+  };
   function IHasImageInfo() {
   }
-  function Companion_16() {
-    Companion_instance_16 = this;
-    Companion_getInstance_45().m24();
+  function Companion_18() {
   }
-  protoOf(Companion_16).d2b = function (bitmap) {
+  var Companion_instance_18;
+  function Companion_getInstance_19() {
+    return Companion_instance_18;
+  }
+  function IRange(start, end) {
+    this.d3l_1 = start;
+    this.e3l_1 = end;
+  }
+  protoOf(IRange).equals = function (other) {
+    if (other === this)
+      return true;
+    if (!(other instanceof IRange))
+      return false;
+    if (!(this.d3l_1 === other.d3l_1))
+      return false;
+    return this.e3l_1 === other.e3l_1;
+  };
+  protoOf(IRange).hashCode = function () {
+    var PRIME = 59;
+    var result = 1;
+    result = imul(result, PRIME) + this.d3l_1 | 0;
+    result = imul(result, PRIME) + this.e3l_1 | 0;
+    return result;
+  };
+  protoOf(IRange).toString = function () {
+    return 'IRange(_start=' + this.d3l_1 + ', _end=' + this.e3l_1 + ')';
+  };
+  function fromInteropPointer_0(_this__u8e3s4, block) {
+    // Inline function 'org.jetbrains.skia.impl.withResult' call
+    var result = new Int32Array(2);
+    $l$block: {
+      // Inline function 'org.jetbrains.skia.impl.interopScope' call
+      try {
+        var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
+        _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
+        // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.f3l(result);
+        block($this$interopScope, handle);
+        $this$interopScope.z3e(handle, result);
+        break $l$block;
+      }finally {
+        var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
+        _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
+        if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
+        }
+      }
+    }
+    var result_0 = result;
+    return new IRange(result_0[0], result_0[1]);
+  }
+  function Companion_19() {
+    Companion_instance_19 = this;
+    Companion_instance_51.x3c();
+  }
+  protoOf(Companion_19).g3l = function (bitmap) {
     var tmp;
     try {
-      Stats_getInstance().o24();
+      Stats_instance.z3c();
       var ptr = org_jetbrains_skia_Image__1nMakeFromBitmap(getPtr(bitmap));
-      if (ptr === Companion_getInstance_47().e2b())
+      if (ptr === Companion_instance_53.a3f())
         throw RuntimeException_init_$Create$('Failed to Image::makeFromBitmap ' + bitmap);
       tmp = new Image(ptr);
     }finally {
@@ -2039,16 +2352,46 @@
     }
     return tmp;
   };
-  var Companion_instance_16;
-  function Companion_getInstance_17() {
-    if (Companion_instance_16 == null)
-      new Companion_16();
-    return Companion_instance_16;
+  protoOf(Companion_19).h3l = function (bytes) {
+    Stats_instance.z3c();
+    var tmp$ret$1;
+    $l$block: {
+      // Inline function 'org.jetbrains.skia.impl.interopScope' call
+      try {
+        var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
+        _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
+        // Inline function 'org.jetbrains.skia.Companion.makeFromEncoded.<anonymous>' call
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = org_jetbrains_skia_Image__1nMakeFromEncoded($this$interopScope.v3h(bytes), bytes.length);
+        break $l$block;
+      }finally {
+        var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
+        _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
+        if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
+        }
+      }
+    }
+    var ptr = tmp$ret$1;
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!!(ptr === Companion_instance_53.a3f())) {
+      // Inline function 'org.jetbrains.skia.Companion.makeFromEncoded.<anonymous>' call
+      var message = 'Failed to Image::makeFromEncoded';
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    return new Image(ptr);
+  };
+  var Companion_instance_19;
+  function Companion_getInstance_20() {
+    if (Companion_instance_19 == null)
+      new Companion_19();
+    return Companion_instance_19;
   }
   function Image_nGetImageInfo$ref() {
     var l = function (p0, p1, p2) {
       org_jetbrains_skia_Image__1nGetImageInfo(p0, p1, p2);
-      return Unit_getInstance();
+      return Unit_instance;
     };
     l.callableName = 'Image_nGetImageInfo';
     return l;
@@ -2056,28 +2399,28 @@
   function Image$_get_imageInfo_$lambda_c2a05w(this$0) {
     return function () {
       var tmp;
-      if (this$0.h2b_1 == null) {
+      if (this$0.k3l_1 == null) {
         var tmp_0 = this$0;
-        var tmp_1 = Companion_getInstance_18();
-        var tmp_2 = this$0.s24_1;
-        tmp_0.h2b_1 = tmp_1.a25(tmp_2, Image_nGetImageInfo$ref());
-        tmp = Unit_getInstance();
+        var tmp_1 = Companion_getInstance_21();
+        var tmp_2 = this$0.d3d_1;
+        tmp_0.k3l_1 = tmp_1.l3d(tmp_2, Image_nGetImageInfo$ref());
+        tmp = Unit_instance;
       }
-      return Unit_getInstance();
+      return Unit_instance;
     };
   }
   function Image(ptr) {
-    Companion_getInstance_17();
+    Companion_getInstance_20();
     RefCnt_init_$Init$(ptr, this);
-    this.h2b_1 = null;
+    this.k3l_1 = null;
   }
-  protoOf(Image).y24 = function () {
+  protoOf(Image).j3d = function () {
     var tmp;
     try {
-      if (this.h2b_1 == null) {
+      if (this.k3l_1 == null) {
         commonSynchronized(this, Image$_get_imageInfo_$lambda_c2a05w(this));
       }
-      tmp = ensureNotNull(this.h2b_1);
+      tmp = ensureNotNull(this.k3l_1);
     }finally {
       reachabilityBarrier(this);
     }
@@ -2088,117 +2431,120 @@
     return $this;
   }
   function ImageInfo_init_$Init$_0(width, height, colorType, alphaType, colorSpace, $this) {
-    ImageInfo_init_$Init$(width, height, values_1()[colorType], values_0()[alphaType], colorSpace === Companion_getInstance_47().e2b() ? null : ColorSpace_init_$Create$(colorSpace), $this);
+    ImageInfo_init_$Init$(width, height, values_1()[colorType], values_0()[alphaType], colorSpace === Companion_instance_53.a3f() ? null : ColorSpace_init_$Create$(colorSpace), $this);
     return $this;
   }
   function ImageInfo_init_$Create$(width, height, colorType, alphaType, colorSpace) {
     return ImageInfo_init_$Init$_0(width, height, colorType, alphaType, colorSpace, objectCreate(protoOf(ImageInfo)));
   }
-  function Companion_17() {
-    Companion_instance_17 = this;
-    this.z24_1 = new ImageInfo(Companion_getInstance_4().o27_1, 0, 0);
+  function Companion_20() {
+    Companion_instance_20 = this;
+    this.k3d_1 = new ImageInfo(Companion_getInstance_5().i3h_1, 0, 0);
   }
-  protoOf(Companion_17).a25 = function (_ptr, _nGetImageInfo) {
-    Stats_getInstance().o24();
+  protoOf(Companion_20).l3l = function (width, height, alphaType) {
+    return new ImageInfo(new ColorInfo(Companion_getInstance_7().r3h_1, alphaType, null), width, height);
+  };
+  protoOf(Companion_20).l3d = function (_ptr, _nGetImageInfo) {
+    Stats_instance.z3c();
     var colorSpacePtr = null;
     // Inline function 'kotlin.let' call
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Int32Array(4);
+    var result = new Int32Array(4);
     $l$block_0: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.i2b(tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.f3l(result);
         // Inline function 'org.jetbrains.skia.Companion.createUsing.<anonymous>' call
         // Inline function 'org.jetbrains.skia.impl.withResult' call
-        var tmp0_withResult_0 = new NativePointerArray(1);
+        var result_0 = new NativePointerArray(1);
         $l$block: {
           // Inline function 'org.jetbrains.skia.impl.interopScope' call
           try {
             var tmp0_0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0_0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-            var tmp0_anonymous_0 = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-            var handle_0 = tmp0_anonymous_0.j2b(tmp0_withResult_0);
+            var $this$interopScope_0 = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var handle_0 = $this$interopScope_0.m3l(result_0);
             // Inline function 'org.jetbrains.skia.Companion.createUsing.<anonymous>.<anonymous>' call
             _nGetImageInfo(_ptr, handle, handle_0);
-            tmp0_anonymous_0.k2b(handle_0, tmp0_withResult_0);
+            $this$interopScope_0.n3l(handle_0, result_0);
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
             }
           }
         }
-        colorSpacePtr = tmp0_withResult_0.l(0);
-        tmp0_anonymous.m2b(handle, tmp0_withResult);
+        colorSpacePtr = result_0.i1(0);
+        $this$interopScope.z3e(handle, result);
         break $l$block_0;
       }finally {
         var tmp1_0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1_0 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'org.jetbrains.skia.Companion.createUsing.<anonymous>' call
-    return ImageInfo_init_$Create$(tmp0_withResult[0], tmp0_withResult[1], tmp0_withResult[2], tmp0_withResult[3], ensureNotNull(colorSpacePtr));
+    return ImageInfo_init_$Create$(result[0], result[1], result[2], result[3], ensureNotNull(colorSpacePtr));
   };
-  var Companion_instance_17;
-  function Companion_getInstance_18() {
-    if (Companion_instance_17 == null)
-      new Companion_17();
-    return Companion_instance_17;
+  var Companion_instance_20;
+  function Companion_getInstance_21() {
+    if (Companion_instance_20 == null)
+      new Companion_20();
+    return Companion_instance_20;
   }
   function ImageInfo(colorInfo, width, height) {
-    Companion_getInstance_18();
-    this.d25_1 = colorInfo;
-    this.e25_1 = width;
-    this.f25_1 = height;
+    Companion_getInstance_21();
+    this.p3d_1 = colorInfo;
+    this.q3d_1 = width;
+    this.r3d_1 = height;
   }
-  protoOf(ImageInfo).k25 = function () {
-    return imul(this.e25_1, this.s27());
+  protoOf(ImageInfo).w3d = function () {
+    return imul(this.q3d_1, this.m3h());
   };
-  protoOf(ImageInfo).s27 = function () {
-    return this.d25_1.s27();
+  protoOf(ImageInfo).m3h = function () {
+    return this.p3d_1.m3h();
   };
   protoOf(ImageInfo).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof ImageInfo))
       return false;
-    if (!(this.e25_1 === other.e25_1))
+    if (!(this.q3d_1 === other.q3d_1))
       return false;
-    if (!(this.f25_1 === other.f25_1))
+    if (!(this.r3d_1 === other.r3d_1))
       return false;
-    return this.d25_1.equals(other.d25_1);
+    return this.p3d_1.equals(other.p3d_1);
   };
   protoOf(ImageInfo).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + this.e25_1 | 0;
-    result = imul(result, PRIME) + this.f25_1 | 0;
-    result = imul(result, PRIME) + this.d25_1.hashCode() | 0;
+    result = imul(result, PRIME) + this.q3d_1 | 0;
+    result = imul(result, PRIME) + this.r3d_1 | 0;
+    result = imul(result, PRIME) + this.p3d_1.hashCode() | 0;
     return result;
   };
   protoOf(ImageInfo).toString = function () {
-    return 'ImageInfo(_colorInfo=' + this.d25_1 + ', _width=' + this.e25_1 + ', _height=' + this.f25_1 + ')';
+    return 'ImageInfo(_colorInfo=' + this.p3d_1 + ', _width=' + this.q3d_1 + ', _height=' + this.r3d_1 + ')';
   };
-  function Companion_18() {
-    Companion_instance_18 = this;
-    Companion_getInstance_45().m24();
+  function Companion_21() {
+    Companion_instance_21 = this;
+    Companion_instance_51.x3c();
   }
-  var Companion_instance_18;
-  function Companion_getInstance_19() {
-    if (Companion_instance_18 == null)
-      new Companion_18();
-    return Companion_instance_18;
+  var Companion_instance_21;
+  function Companion_getInstance_22() {
+    if (Companion_instance_21 == null)
+      new Companion_21();
+    return Companion_instance_21;
   }
   function ManagedString_init_$Init$(s, $this) {
     var tmp$ret$1;
@@ -2208,107 +2554,107 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.ManagedString.<init>.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = org_jetbrains_skia_ManagedString__1nMake(tmp0_anonymous.n2b(s));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = org_jetbrains_skia_ManagedString__1nMake($this$interopScope.c3e(s));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
     ManagedString.call($this, tmp$ret$1);
-    Stats_getInstance().o24();
+    Stats_instance.z3c();
     return $this;
   }
   function ManagedString_init_$Create$(s) {
     return ManagedString_init_$Init$(s, objectCreate(protoOf(ManagedString)));
   }
-  function _FinalizerHolder_5() {
-    _FinalizerHolder_instance_5 = this;
-    this.o2b_1 = org_jetbrains_skia_ManagedString__1nGetFinalizer();
+  function _FinalizerHolder_6() {
+    _FinalizerHolder_instance_6 = this;
+    this.p3l_1 = org_jetbrains_skia_ManagedString__1nGetFinalizer();
   }
-  var _FinalizerHolder_instance_5;
-  function _FinalizerHolder_getInstance_5() {
-    if (_FinalizerHolder_instance_5 == null)
-      new _FinalizerHolder_5();
-    return _FinalizerHolder_instance_5;
+  var _FinalizerHolder_instance_6;
+  function _FinalizerHolder_getInstance_6() {
+    if (_FinalizerHolder_instance_6 == null)
+      new _FinalizerHolder_6();
+    return _FinalizerHolder_instance_6;
   }
   function ManagedString(ptr, managed) {
-    Companion_getInstance_19();
+    Companion_getInstance_22();
     managed = managed === VOID ? true : managed;
-    Managed.call(this, ptr, _FinalizerHolder_getInstance_5().o2b_1, managed);
+    Managed.call(this, ptr, _FinalizerHolder_getInstance_6().p3l_1, managed);
   }
   protoOf(ManagedString).toString = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      var size = org_jetbrains_skia_ManagedString__nStringSize(this.s24_1);
+      Stats_instance.z3c();
+      var size = org_jetbrains_skia_ManagedString__nStringSize(this.d3d_1);
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Int8Array(size);
+      var result = new Int8Array(size);
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.p2b(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.q3l(result);
           // Inline function 'org.jetbrains.skia.ManagedString.toString.<anonymous>' call
-          org_jetbrains_skia_ManagedString__nStringData(this.s24_1, handle, size);
-          tmp0_anonymous.q2b(handle, tmp0_withResult);
+          org_jetbrains_skia_ManagedString__nStringData(this.d3d_1, handle, size);
+          $this$interopScope.r3l(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
           }
         }
       }
-      tmp = decodeToString(tmp0_withResult);
+      tmp = decodeToString(result);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ManagedString).t2b = function (s) {
-    Stats_getInstance().o24();
+  protoOf(ManagedString).u3l = function (s) {
+    Stats_instance.z3c();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_ManagedString__1nAppend(this.s24_1, tmp0_anonymous.n2b(s));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_ManagedString__1nAppend(this.d3d_1, $this$interopScope.c3e(s));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
     return this;
   };
-  function Companion_19() {
-    Companion_instance_19 = this;
-    this.u2b_1 = this.v2b(0.0, 0.0);
+  function Companion_22() {
+    Companion_instance_22 = this;
+    this.v3l_1 = this.w3l(0.0, 0.0);
   }
-  protoOf(Companion_19).v2b = function (dx, dy) {
+  protoOf(Companion_22).w3l = function (dx, dy) {
     return new Matrix33(new Float32Array([1.0, 0.0, dx, 0.0, 1.0, dy, 0.0, 0.0, 1.0]));
   };
-  var Companion_instance_19;
-  function Companion_getInstance_20() {
-    if (Companion_instance_19 == null)
-      new Companion_19();
-    return Companion_instance_19;
+  var Companion_instance_22;
+  function Companion_getInstance_23() {
+    if (Companion_instance_22 == null)
+      new Companion_22();
+    return Companion_instance_22;
   }
   function Matrix33(mat) {
-    Companion_getInstance_20();
+    Companion_getInstance_23();
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(mat.length === 9)) {
@@ -2316,36 +2662,36 @@
       var message = 'Expected 9 elements, got ' + mat.length;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    this.o26_1 = mat;
+    this.i3g_1 = mat;
   }
   protoOf(Matrix33).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof Matrix33))
       return false;
-    return contentEquals(this.o26_1, other.o26_1);
+    return contentEquals(this.i3g_1, other.i3g_1);
   };
   protoOf(Matrix33).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + contentHashCode(this.o26_1) | 0;
+    result = imul(result, PRIME) + contentHashCode(this.i3g_1) | 0;
     return result;
   };
   protoOf(Matrix33).toString = function () {
-    return 'Matrix33(_mat=' + this.o26_1 + ')';
+    return 'Matrix33(_mat=' + this.i3g_1 + ')';
   };
-  function Companion_20() {
-    Companion_instance_20 = this;
-    this.w2b_1 = new Matrix44(new Float32Array([1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0]));
+  function Companion_23() {
+    Companion_instance_23 = this;
+    this.x3l_1 = new Matrix44(new Float32Array([1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0]));
   }
-  var Companion_instance_20;
-  function Companion_getInstance_21() {
-    if (Companion_instance_20 == null)
-      new Companion_20();
-    return Companion_instance_20;
+  var Companion_instance_23;
+  function Companion_getInstance_24() {
+    if (Companion_instance_23 == null)
+      new Companion_23();
+    return Companion_instance_23;
   }
   function Matrix44(mat) {
-    Companion_getInstance_21();
+    Companion_getInstance_24();
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(mat.length === 16)) {
@@ -2353,23 +2699,23 @@
       var message = 'Expected 16 elements, got ' + mat.length;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    this.v26_1 = mat;
+    this.p3g_1 = mat;
   }
   protoOf(Matrix44).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof Matrix44))
       return false;
-    return contentEquals(this.v26_1, other.v26_1);
+    return contentEquals(this.p3g_1, other.p3g_1);
   };
   protoOf(Matrix44).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + contentHashCode(this.v26_1) | 0;
+    result = imul(result, PRIME) + contentHashCode(this.p3g_1) | 0;
     return result;
   };
   protoOf(Matrix44).toString = function () {
-    return 'Matrix44(_mat=' + this.v26_1 + ')';
+    return 'Matrix44(_mat=' + this.p3g_1 + ')';
   };
   var MipmapMode_NONE_instance;
   var MipmapMode_NEAREST_instance;
@@ -2377,7 +2723,7 @@
   var MipmapMode_entriesInitialized;
   function MipmapMode_initEntries() {
     if (MipmapMode_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     MipmapMode_entriesInitialized = true;
     MipmapMode_NONE_instance = new MipmapMode('NONE', 0);
     MipmapMode_NEAREST_instance = new MipmapMode('NEAREST', 1);
@@ -2394,197 +2740,208 @@
     MipmapMode_initEntries();
     return MipmapMode_NEAREST_instance;
   }
-  function Companion_21() {
-    Companion_instance_21 = this;
-    Companion_getInstance_45().m24();
+  function Companion_24() {
+    Companion_instance_24 = this;
+    Companion_instance_51.x3c();
   }
-  var Companion_instance_21;
-  function Companion_getInstance_22() {
-    if (Companion_instance_21 == null)
-      new Companion_21();
-    return Companion_instance_21;
+  var Companion_instance_24;
+  function Companion_getInstance_25() {
+    if (Companion_instance_24 == null)
+      new Companion_24();
+    return Companion_instance_24;
   }
-  function _FinalizerHolder_6() {
-    _FinalizerHolder_instance_6 = this;
-    this.x2b_1 = org_jetbrains_skia_Paint__1nGetFinalizer();
+  function _FinalizerHolder_7() {
+    _FinalizerHolder_instance_7 = this;
+    this.y3l_1 = org_jetbrains_skia_Paint__1nGetFinalizer();
   }
-  var _FinalizerHolder_instance_6;
-  function _FinalizerHolder_getInstance_6() {
-    if (_FinalizerHolder_instance_6 == null)
-      new _FinalizerHolder_6();
-    return _FinalizerHolder_instance_6;
+  var _FinalizerHolder_instance_7;
+  function _FinalizerHolder_getInstance_7() {
+    if (_FinalizerHolder_instance_7 == null)
+      new _FinalizerHolder_7();
+    return _FinalizerHolder_instance_7;
   }
   function Paint_init_$Init$($this) {
-    Managed.call($this, org_jetbrains_skia_Paint__1nMake(), _FinalizerHolder_getInstance_6().x2b_1);
+    Managed.call($this, org_jetbrains_skia_Paint__1nMake(), _FinalizerHolder_getInstance_7().y3l_1);
     Paint.call($this);
-    Stats_getInstance().o24();
+    Stats_instance.z3c();
     return $this;
   }
   function Paint_init_$Create$() {
     return Paint_init_$Init$(objectCreate(protoOf(Paint)));
   }
-  protoOf(Paint).t24 = function (other) {
+  protoOf(Paint).e3d = function (other) {
     var tmp;
     try {
-      tmp = org_jetbrains_skia_Paint__1nEquals(this.s24_1, getPtr(other));
+      tmp = org_jetbrains_skia_Paint__1nEquals(this.d3d_1, getPtr(other));
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(other);
     }
     return tmp;
   };
-  protoOf(Paint).a2c = function (value) {
+  protoOf(Paint).b3m = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Paint__1nSetMode(this.s24_1, value.w4_1);
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_Paint__1nSetAntiAlias(this.d3d_1, value);
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).b2c = function (value) {
+  protoOf(Paint).c3m = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Paint__1nSetColor(this.s24_1, value);
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_Paint__1nSetMode(this.d3d_1, value.j9_1);
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).c2c = function () {
+  protoOf(Paint).d3m = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_Paint__1nGetColor(this.s24_1);
+      Stats_instance.z3c();
+      org_jetbrains_skia_Paint__1nSetColor(this.d3d_1, value);
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).d2c = function (value) {
+  protoOf(Paint).e3m = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Paint__1nSetStrokeWidth(this.s24_1, value);
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_Paint__1nGetColor(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).e2c = function () {
+  protoOf(Paint).f3m = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_Paint__1nGetStrokeWidth(this.s24_1);
+      Stats_instance.z3c();
+      org_jetbrains_skia_Paint__1nSetStrokeWidth(this.d3d_1, value);
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).f2c = function (value) {
+  protoOf(Paint).g3m = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Paint__1nSetStrokeMiter(this.s24_1, value);
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_Paint__1nGetStrokeWidth(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).g2c = function (value) {
+  protoOf(Paint).h3m = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Paint__1nSetStrokeCap(this.s24_1, value.w4_1);
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_Paint__1nSetStrokeMiter(this.d3d_1, value);
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).h2c = function (value) {
+  protoOf(Paint).i3m = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Paint__1nSetStrokeJoin(this.s24_1, value.w4_1);
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_Paint__1nSetStrokeCap(this.d3d_1, value.j9_1);
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).i2c = function (value) {
+  protoOf(Paint).j3m = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Paint__1nSetShader(this.s24_1, getPtr(value));
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_Paint__1nSetStrokeJoin(this.d3d_1, value.j9_1);
+      tmp = Unit_instance;
+    }finally {
+      reachabilityBarrier(this);
+    }
+    return tmp;
+  };
+  protoOf(Paint).k3m = function (value) {
+    var tmp;
+    try {
+      Stats_instance.z3c();
+      org_jetbrains_skia_Paint__1nSetShader(this.d3d_1, getPtr(value));
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(value);
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).j2c = function (value) {
+  protoOf(Paint).l3m = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Paint__1nSetColorFilter(this.s24_1, getPtr(value));
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_Paint__1nSetColorFilter(this.d3d_1, getPtr(value));
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(value);
     }
     return tmp;
   };
-  protoOf(Paint).k2c = function (value) {
+  protoOf(Paint).m3m = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Paint__1nSetBlendMode(this.s24_1, value.w4_1);
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_Paint__1nSetBlendMode(this.d3d_1, value.j9_1);
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).l2c = function () {
+  protoOf(Paint).n3m = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = values()[org_jetbrains_skia_Paint__1nGetBlendMode(this.s24_1)];
+      Stats_instance.z3c();
+      tmp = values()[org_jetbrains_skia_Paint__1nGetBlendMode(this.d3d_1)];
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).m2c = function () {
-    return this.l2c().equals(BlendMode_SRC_OVER_getInstance());
+  protoOf(Paint).o3m = function () {
+    return this.n3m().equals(BlendMode_SRC_OVER_getInstance());
   };
-  protoOf(Paint).n2c = function (value) {
+  protoOf(Paint).p3m = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Paint__1nSetPathEffect(this.s24_1, getPtr(value));
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_Paint__1nSetPathEffect(this.d3d_1, getPtr(value));
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(value);
     }
     return tmp;
   };
-  protoOf(Paint).o2c = function (value) {
+  protoOf(Paint).q3m = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Paint__1nSetImageFilter(this.s24_1, getPtr(value));
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_Paint__1nSetImageFilter(this.d3d_1, getPtr(value));
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(value);
@@ -2592,7 +2949,7 @@
     return tmp;
   };
   function Paint() {
-    Companion_getInstance_22();
+    Companion_getInstance_25();
   }
   var PaintMode_FILL_instance;
   var PaintMode_STROKE_instance;
@@ -2600,7 +2957,7 @@
   var PaintMode_entriesInitialized;
   function PaintMode_initEntries() {
     if (PaintMode_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     PaintMode_entriesInitialized = true;
     PaintMode_FILL_instance = new PaintMode('FILL', 0);
     PaintMode_STROKE_instance = new PaintMode('STROKE', 1);
@@ -2623,7 +2980,7 @@
   var PaintStrokeCap_entriesInitialized;
   function PaintStrokeCap_initEntries() {
     if (PaintStrokeCap_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     PaintStrokeCap_entriesInitialized = true;
     PaintStrokeCap_BUTT_instance = new PaintStrokeCap('BUTT', 0);
     PaintStrokeCap_ROUND_instance = new PaintStrokeCap('ROUND', 1);
@@ -2650,7 +3007,7 @@
   var PaintStrokeJoin_entriesInitialized;
   function PaintStrokeJoin_initEntries() {
     if (PaintStrokeJoin_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     PaintStrokeJoin_entriesInitialized = true;
     PaintStrokeJoin_MITER_instance = new PaintStrokeJoin('MITER', 0);
     PaintStrokeJoin_ROUND_instance = new PaintStrokeJoin('ROUND', 1);
@@ -2671,41 +3028,41 @@
     PaintStrokeJoin_initEntries();
     return PaintStrokeJoin_BEVEL_instance;
   }
-  function Companion_22() {
-    Companion_instance_22 = this;
-    Companion_getInstance_45().m24();
+  function Companion_25() {
+    Companion_instance_25 = this;
+    Companion_instance_51.x3c();
   }
-  protoOf(Companion_22).p2c = function (one, two, op) {
+  protoOf(Companion_25).r3m = function (one, two, op) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      var ptr = org_jetbrains_skia_Path__1nMakeCombining(getPtr(one), getPtr(two), op.w4_1);
-      tmp = ptr === Companion_getInstance_47().e2b() ? null : new Path(ptr);
+      Stats_instance.z3c();
+      var ptr = org_jetbrains_skia_Path__1nMakeCombining(getPtr(one), getPtr(two), op.j9_1);
+      tmp = ptr === Companion_instance_53.a3f() ? null : new Path(ptr);
     }finally {
       reachabilityBarrier(one);
       reachabilityBarrier(two);
     }
     return tmp;
   };
-  var Companion_instance_22;
-  function Companion_getInstance_23() {
-    if (Companion_instance_22 == null)
-      new Companion_22();
-    return Companion_instance_22;
+  var Companion_instance_25;
+  function Companion_getInstance_26() {
+    if (Companion_instance_25 == null)
+      new Companion_25();
+    return Companion_instance_25;
   }
-  function _FinalizerHolder_7() {
-    _FinalizerHolder_instance_7 = this;
-    this.q2c_1 = org_jetbrains_skia_Path__1nGetFinalizer();
+  function _FinalizerHolder_8() {
+    _FinalizerHolder_instance_8 = this;
+    this.s3m_1 = org_jetbrains_skia_Path__1nGetFinalizer();
   }
-  var _FinalizerHolder_instance_7;
-  function _FinalizerHolder_getInstance_7() {
-    if (_FinalizerHolder_instance_7 == null)
-      new _FinalizerHolder_7();
-    return _FinalizerHolder_instance_7;
+  var _FinalizerHolder_instance_8;
+  function _FinalizerHolder_getInstance_8() {
+    if (_FinalizerHolder_instance_8 == null)
+      new _FinalizerHolder_8();
+    return _FinalizerHolder_instance_8;
   }
   function Path_init_$Init$($this) {
     Path.call($this, org_jetbrains_skia_Path__1nMake());
-    Stats_getInstance().o24();
+    Stats_instance.z3c();
     return $this;
   }
   function Path_init_$Create$() {
@@ -2713,111 +3070,161 @@
   }
   function Path$_get_bounds_$lambda_qr8ora(this$0) {
     return function ($this$fromInteropPointer, it) {
-      org_jetbrains_skia_Path__1nGetBounds(this$0.s24_1, it);
-      return Unit_getInstance();
+      org_jetbrains_skia_Path__1nGetBounds(this$0.d3d_1, it);
+      return Unit_instance;
     };
   }
   function Path(ptr) {
-    Companion_getInstance_23();
-    Managed.call(this, ptr, _FinalizerHolder_getInstance_7().q2c_1);
+    Companion_getInstance_26();
+    Managed.call(this, ptr, _FinalizerHolder_getInstance_8().s3m_1);
   }
-  protoOf(Path).t24 = function (other) {
+  protoOf(Path).e3d = function (other) {
     var tmp;
     try {
-      tmp = org_jetbrains_skia_Path__1nEquals(this.s24_1, getPtr(other));
+      tmp = org_jetbrains_skia_Path__1nEquals(this.d3d_1, getPtr(other));
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(other);
     }
     return tmp;
   };
-  protoOf(Path).t2c = function (value) {
+  protoOf(Path).v3m = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Path__1nSetFillMode(this.s24_1, value.w4_1);
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_Path__1nSetFillMode(this.d3d_1, value.j9_1);
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Path).u2c = function () {
+  protoOf(Path).w3m = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = values_3()[org_jetbrains_skia_Path__1nGetFillMode(this.s24_1)];
+      Stats_instance.z3c();
+      tmp = values_3()[org_jetbrains_skia_Path__1nGetFillMode(this.d3d_1)];
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Path).v2c = function () {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_Path__1nReset(this.s24_1);
+  protoOf(Path).x3m = function () {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Path__1nReset(this.d3d_1);
     return this;
   };
-  protoOf(Path).rk = function () {
-    var tmp;
-    try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_Path__1nIsEmpty(this.s24_1);
-    }finally {
-      reachabilityBarrier(this);
-    }
-    return tmp;
-  };
-  protoOf(Path).w2c = function () {
-    var tmp;
-    try {
-      Stats_getInstance().o24();
-      var tmp_0 = Companion_getInstance_29();
-      tmp = tmp_0.x2c(Path$_get_bounds_$lambda_qr8ora(this));
-    }finally {
-      reachabilityBarrier(this);
-    }
-    return tmp;
-  };
-  protoOf(Path).y2c = function (rect, dir, start) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_Path__1nAddRect(this.s24_1, rect.w25_1, rect.x25_1, rect.y25_1, rect.z25_1, dir.w4_1, start);
+  protoOf(Path).y3m = function () {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Path__1nRewind(this.d3d_1);
     return this;
   };
-  protoOf(Path).z2c = function (rect, dir, start, $super) {
+  protoOf(Path).n26 = function () {
+    var tmp;
+    try {
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_Path__1nIsEmpty(this.d3d_1);
+    }finally {
+      reachabilityBarrier(this);
+    }
+    return tmp;
+  };
+  protoOf(Path).z3m = function () {
+    var tmp;
+    try {
+      Stats_instance.z3c();
+      var tmp_0 = Companion_instance_32;
+      tmp = tmp_0.a3n(Path$_get_bounds_$lambda_qr8ora(this));
+    }finally {
+      reachabilityBarrier(this);
+    }
+    return tmp;
+  };
+  protoOf(Path).b3n = function (x, y) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Path__1nMoveTo(this.d3d_1, x, y);
+    return this;
+  };
+  protoOf(Path).c3n = function (dx, dy) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Path__1nRMoveTo(this.d3d_1, dx, dy);
+    return this;
+  };
+  protoOf(Path).d3n = function (x, y) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Path__1nLineTo(this.d3d_1, x, y);
+    return this;
+  };
+  protoOf(Path).e3n = function (dx, dy) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Path__1nRLineTo(this.d3d_1, dx, dy);
+    return this;
+  };
+  protoOf(Path).f3n = function (x1, y1, x2, y2) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Path__1nQuadTo(this.d3d_1, x1, y1, x2, y2);
+    return this;
+  };
+  protoOf(Path).g3n = function (dx1, dy1, dx2, dy2) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Path__1nRQuadTo(this.d3d_1, dx1, dy1, dx2, dy2);
+    return this;
+  };
+  protoOf(Path).h3n = function (x1, y1, x2, y2, x3, y3) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Path__1nCubicTo(this.d3d_1, x1, y1, x2, y2, x3, y3);
+    return this;
+  };
+  protoOf(Path).i3n = function (dx1, dy1, dx2, dy2, dx3, dy3) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Path__1nRCubicTo(this.d3d_1, dx1, dy1, dx2, dy2, dx3, dy3);
+    return this;
+  };
+  protoOf(Path).j3n = function () {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Path__1nClosePath(this.d3d_1);
+    return this;
+  };
+  protoOf(Path).k3n = function (rect, dir, start) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_Path__1nAddRect(this.d3d_1, rect.k3f_1, rect.l3f_1, rect.m3f_1, rect.n3f_1, dir.j9_1, start);
+    return this;
+  };
+  protoOf(Path).l3n = function (rect, dir, start, $super) {
     dir = dir === VOID ? PathDirection_CLOCKWISE_getInstance() : dir;
     start = start === VOID ? 0 : start;
-    return $super === VOID ? this.y2c(rect, dir, start) : $super.y2c.call(this, rect, dir, start);
+    return $super === VOID ? this.k3n(rect, dir, start) : $super.k3n.call(this, rect, dir, start);
   };
-  protoOf(Path).a2d = function (rrect, dir, start) {
-    Stats_getInstance().o24();
+  protoOf(Path).m3n = function (rrect, dir, start) {
+    Stats_instance.z3c();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_Path__1nAddRRect(this.s24_1, rrect.w25_1, rrect.x25_1, rrect.y25_1, rrect.z25_1, tmp0_anonymous.i26(rrect.f26_1), rrect.f26_1.length, dir.w4_1, start);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_Path__1nAddRRect(this.d3d_1, rrect.k3f_1, rrect.l3f_1, rrect.m3f_1, rrect.n3f_1, $this$interopScope.v3f(rrect.u3f_1), rrect.u3f_1.length, dir.j9_1, start);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
     return this;
   };
-  protoOf(Path).b2d = function (rrect, dir, start, $super) {
+  protoOf(Path).n3n = function (rrect, dir, start, $super) {
     dir = dir === VOID ? PathDirection_CLOCKWISE_getInstance() : dir;
     start = start === VOID ? 6 : start;
-    return $super === VOID ? this.a2d(rrect, dir, start) : $super.a2d.call(this, rrect, dir, start);
+    return $super === VOID ? this.m3n(rrect, dir, start) : $super.m3n.call(this, rrect, dir, start);
   };
-  protoOf(Path).c2d = function (src, dx, dy, extend) {
+  protoOf(Path).o3n = function (src, dx, dy, extend) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Path__1nAddPathOffset(this.s24_1, getPtr(src), dx, dy, extend);
+      Stats_instance.z3c();
+      org_jetbrains_skia_Path__1nAddPathOffset(this.d3d_1, getPtr(src), dx, dy, extend);
       tmp = this;
     }finally {
       reachabilityBarrier(this);
@@ -2825,27 +3232,27 @@
     }
     return tmp;
   };
-  protoOf(Path).d2d = function (src, dx, dy, extend, $super) {
+  protoOf(Path).p3n = function (src, dx, dy, extend, $super) {
     extend = extend === VOID ? false : extend;
-    return $super === VOID ? this.c2d(src, dx, dy, extend) : $super.c2d.call(this, src, dx, dy, extend);
+    return $super === VOID ? this.o3n(src, dx, dy, extend) : $super.o3n.call(this, src, dx, dy, extend);
   };
-  protoOf(Path).e2d = function (matrix, dst, applyPerspectiveClip) {
+  protoOf(Path).q3n = function (matrix, dst, applyPerspectiveClip) {
     var tmp;
     try {
-      Stats_getInstance().o24();
+      Stats_instance.z3c();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_Path__1nTransform(this.s24_1, tmp0_anonymous.i26(matrix.o26_1), getPtr(dst), applyPerspectiveClip);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_Path__1nTransform(this.d3d_1, $this$interopScope.v3f(matrix.i3g_1), getPtr(dst), applyPerspectiveClip);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
           }
         }
       }
@@ -2856,23 +3263,23 @@
     }
     return tmp;
   };
-  protoOf(Path).f2d = function (matrix, dst, applyPerspectiveClip, $super) {
+  protoOf(Path).r3n = function (matrix, dst, applyPerspectiveClip, $super) {
     dst = dst === VOID ? null : dst;
     applyPerspectiveClip = applyPerspectiveClip === VOID ? true : applyPerspectiveClip;
-    return $super === VOID ? this.e2d(matrix, dst, applyPerspectiveClip) : $super.e2d.call(this, matrix, dst, applyPerspectiveClip);
+    return $super === VOID ? this.q3n(matrix, dst, applyPerspectiveClip) : $super.q3n.call(this, matrix, dst, applyPerspectiveClip);
   };
-  protoOf(Path).c = function () {
-    return this.g2d(false);
+  protoOf(Path).v = function () {
+    return this.s3n(false);
   };
-  protoOf(Path).g2d = function (forceClose) {
-    return Companion_getInstance_24().h2d(this, forceClose);
+  protoOf(Path).s3n = function (forceClose) {
+    return Companion_getInstance_28().t3n(this, forceClose);
   };
   var PathDirection_CLOCKWISE_instance;
   var PathDirection_COUNTER_CLOCKWISE_instance;
   var PathDirection_entriesInitialized;
   function PathDirection_initEntries() {
     if (PathDirection_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     PathDirection_entriesInitialized = true;
     PathDirection_CLOCKWISE_instance = new PathDirection('CLOCKWISE', 0);
     PathDirection_COUNTER_CLOCKWISE_instance = new PathDirection('COUNTER_CLOCKWISE', 1);
@@ -2898,7 +3305,7 @@
   var PathFillMode_entriesInitialized;
   function PathFillMode_initEntries() {
     if (PathFillMode_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     PathFillMode_entriesInitialized = true;
     PathFillMode_WINDING_instance = new PathFillMode('WINDING', 0);
     PathFillMode_EVEN_ODD_instance = new PathFillMode('EVEN_ODD', 1);
@@ -2924,6 +3331,70 @@
     PathFillMode_initEntries();
     return PathFillMode_INVERSE_EVEN_ODD_instance;
   }
+  function Companion_26() {
+    Companion_instance_26 = this;
+    Companion_instance_51.x3c();
+  }
+  var Companion_instance_26;
+  function Companion_getInstance_27() {
+    if (Companion_instance_26 == null)
+      new Companion_26();
+    return Companion_instance_26;
+  }
+  function PathMeasure_init_$Init$($this) {
+    PathMeasure.call($this, org_jetbrains_skia_PathMeasure__1nMake());
+    return $this;
+  }
+  function PathMeasure_init_$Create$() {
+    return PathMeasure_init_$Init$(objectCreate(protoOf(PathMeasure)));
+  }
+  function _FinalizerHolder_9() {
+    _FinalizerHolder_instance_9 = this;
+    this.u3n_1 = org_jetbrains_skia_PathMeasure__1nGetFinalizer();
+  }
+  var _FinalizerHolder_instance_9;
+  function _FinalizerHolder_getInstance_9() {
+    if (_FinalizerHolder_instance_9 == null)
+      new _FinalizerHolder_9();
+    return _FinalizerHolder_instance_9;
+  }
+  function PathMeasure(ptr) {
+    Companion_getInstance_27();
+    Managed.call(this, ptr, _FinalizerHolder_getInstance_9().u3n_1);
+  }
+  protoOf(PathMeasure).x3n = function (path, forceClosed) {
+    var tmp;
+    try {
+      Stats_instance.z3c();
+      org_jetbrains_skia_PathMeasure__1nSetPath(this.d3d_1, getPtr(path), forceClosed);
+      tmp = this;
+    }finally {
+      reachabilityBarrier(this);
+      reachabilityBarrier(path);
+    }
+    return tmp;
+  };
+  protoOf(PathMeasure).a = function () {
+    var tmp;
+    try {
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_PathMeasure__1nGetLength(this.d3d_1);
+    }finally {
+      reachabilityBarrier(this);
+    }
+    return tmp;
+  };
+  protoOf(PathMeasure).y3n = function (startD, endD, dst, startWithMoveTo) {
+    var tmp;
+    try {
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_PathMeasure__1nGetSegment(this.d3d_1, startD, endD, getPtr(dst), startWithMoveTo);
+    }finally {
+      reachabilityBarrier(this);
+      reachabilityBarrier(dst);
+    }
+    return tmp;
+  };
   var PathOp_DIFFERENCE_instance;
   var PathOp_INTERSECT_instance;
   var PathOp_UNION_instance;
@@ -2932,7 +3403,7 @@
   var PathOp_entriesInitialized;
   function PathOp_initEntries() {
     if (PathOp_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     PathOp_entriesInitialized = true;
     PathOp_DIFFERENCE_instance = new PathOp('DIFFERENCE', 0);
     PathOp_INTERSECT_instance = new PathOp('INTERSECT', 1);
@@ -2967,7 +3438,7 @@
     PathSegment.call($this, values_4()[verbOrdinal], new Point(x0, y0), null, null, null, 0.0, false, isClosedContour);
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(verbOrdinal === PathVerb_MOVE_getInstance().w4_1 ? true : verbOrdinal === PathVerb_CLOSE_getInstance().w4_1)) {
+    if (!(verbOrdinal === PathVerb_MOVE_getInstance().j9_1 ? true : verbOrdinal === PathVerb_CLOSE_getInstance().j9_1)) {
       // Inline function 'org.jetbrains.skia.PathSegment.<init>.<anonymous>' call
       var message = 'Expected MOVE or CLOSE, got ' + values_4()[verbOrdinal];
       throw IllegalArgumentException_init_$Create$(toString(message));
@@ -3014,45 +3485,45 @@
     conicWeight = conicWeight === VOID ? 0.0 : conicWeight;
     isCloseLine = isCloseLine === VOID ? false : isCloseLine;
     isClosedContour = isClosedContour === VOID ? false : isClosedContour;
-    this.i2d_1 = verb;
-    this.j2d_1 = p0;
-    this.k2d_1 = p1;
-    this.l2d_1 = p2;
-    this.m2d_1 = p3;
-    this.n2d_1 = conicWeight;
-    this.o2d_1 = isCloseLine;
-    this.p2d_1 = isClosedContour;
+    this.z3n_1 = verb;
+    this.a3o_1 = p0;
+    this.b3o_1 = p1;
+    this.c3o_1 = p2;
+    this.d3o_1 = p3;
+    this.e3o_1 = conicWeight;
+    this.f3o_1 = isCloseLine;
+    this.g3o_1 = isClosedContour;
   }
   protoOf(PathSegment).toString = function () {
-    return 'Segment(verb=' + this.i2d_1 + (!this.i2d_1.equals(PathVerb_DONE_getInstance()) ? ', p0=' + this.j2d_1 : '') + ((((this.i2d_1.equals(PathVerb_LINE_getInstance()) ? true : this.i2d_1.equals(PathVerb_QUAD_getInstance())) ? true : this.i2d_1.equals(PathVerb_CONIC_getInstance())) ? true : this.i2d_1.equals(PathVerb_CUBIC_getInstance())) ? ', p1=' + this.k2d_1 : '') + (((this.i2d_1.equals(PathVerb_QUAD_getInstance()) ? true : this.i2d_1.equals(PathVerb_CONIC_getInstance())) ? true : this.i2d_1.equals(PathVerb_CUBIC_getInstance())) ? ', p2=' + this.l2d_1 : '') + (this.i2d_1.equals(PathVerb_CUBIC_getInstance()) ? ', p3=' + this.m2d_1 : '') + (this.i2d_1.equals(PathVerb_CONIC_getInstance()) ? ', conicWeight=' + this.n2d_1 : '') + (this.i2d_1.equals(PathVerb_LINE_getInstance()) ? ', closeLine=' + this.o2d_1 : '') + (!this.i2d_1.equals(PathVerb_DONE_getInstance()) ? ', closedContour=' + this.p2d_1 : '') + ')';
+    return 'Segment(verb=' + this.z3n_1 + (!this.z3n_1.equals(PathVerb_DONE_getInstance()) ? ', p0=' + this.a3o_1 : '') + ((((this.z3n_1.equals(PathVerb_LINE_getInstance()) ? true : this.z3n_1.equals(PathVerb_QUAD_getInstance())) ? true : this.z3n_1.equals(PathVerb_CONIC_getInstance())) ? true : this.z3n_1.equals(PathVerb_CUBIC_getInstance())) ? ', p1=' + this.b3o_1 : '') + (((this.z3n_1.equals(PathVerb_QUAD_getInstance()) ? true : this.z3n_1.equals(PathVerb_CONIC_getInstance())) ? true : this.z3n_1.equals(PathVerb_CUBIC_getInstance())) ? ', p2=' + this.c3o_1 : '') + (this.z3n_1.equals(PathVerb_CUBIC_getInstance()) ? ', p3=' + this.d3o_1 : '') + (this.z3n_1.equals(PathVerb_CONIC_getInstance()) ? ', conicWeight=' + this.e3o_1 : '') + (this.z3n_1.equals(PathVerb_LINE_getInstance()) ? ', closeLine=' + this.f3o_1 : '') + (!this.z3n_1.equals(PathVerb_DONE_getInstance()) ? ', closedContour=' + this.g3o_1 : '') + ')';
   };
   protoOf(PathSegment).equals = function (other) {
     if (this === other)
       return true;
     if (!(other instanceof PathSegment))
       return false;
-    return ((((((this.i2d_1.equals(other.i2d_1) ? !this.i2d_1.equals(PathVerb_DONE_getInstance()) ? equals(this.j2d_1, other.j2d_1) : true : false) ? (((this.i2d_1.equals(PathVerb_LINE_getInstance()) ? true : this.i2d_1.equals(PathVerb_QUAD_getInstance())) ? true : this.i2d_1.equals(PathVerb_CONIC_getInstance())) ? true : this.i2d_1.equals(PathVerb_CUBIC_getInstance())) ? equals(this.k2d_1, other.k2d_1) : true : false) ? ((this.i2d_1.equals(PathVerb_QUAD_getInstance()) ? true : this.i2d_1.equals(PathVerb_CONIC_getInstance())) ? true : this.i2d_1.equals(PathVerb_CUBIC_getInstance())) ? equals(this.l2d_1, other.l2d_1) : true : false) ? this.i2d_1.equals(PathVerb_CUBIC_getInstance()) ? equals(this.m2d_1, other.m2d_1) : true : false) ? this.i2d_1.equals(PathVerb_CONIC_getInstance()) ? compareTo(other.n2d_1, this.n2d_1) === 0 : true : false) ? this.i2d_1.equals(PathVerb_LINE_getInstance()) ? this.o2d_1 === other.o2d_1 : true : false) ? !this.i2d_1.equals(PathVerb_DONE_getInstance()) ? this.p2d_1 === other.p2d_1 : true : false;
+    return ((((((this.z3n_1.equals(other.z3n_1) ? !this.z3n_1.equals(PathVerb_DONE_getInstance()) ? equals(this.a3o_1, other.a3o_1) : true : false) ? (((this.z3n_1.equals(PathVerb_LINE_getInstance()) ? true : this.z3n_1.equals(PathVerb_QUAD_getInstance())) ? true : this.z3n_1.equals(PathVerb_CONIC_getInstance())) ? true : this.z3n_1.equals(PathVerb_CUBIC_getInstance())) ? equals(this.b3o_1, other.b3o_1) : true : false) ? ((this.z3n_1.equals(PathVerb_QUAD_getInstance()) ? true : this.z3n_1.equals(PathVerb_CONIC_getInstance())) ? true : this.z3n_1.equals(PathVerb_CUBIC_getInstance())) ? equals(this.c3o_1, other.c3o_1) : true : false) ? this.z3n_1.equals(PathVerb_CUBIC_getInstance()) ? equals(this.d3o_1, other.d3o_1) : true : false) ? this.z3n_1.equals(PathVerb_CONIC_getInstance()) ? compareTo(other.e3o_1, this.e3o_1) === 0 : true : false) ? this.z3n_1.equals(PathVerb_LINE_getInstance()) ? this.f3o_1 === other.f3o_1 : true : false) ? !this.z3n_1.equals(PathVerb_DONE_getInstance()) ? this.g3o_1 === other.g3o_1 : true : false;
   };
   protoOf(PathSegment).hashCode = function () {
     var tmp;
-    switch (this.i2d_1.w4_1) {
+    switch (this.z3n_1.j9_1) {
       case 6:
-        tmp = objectHashes([this.i2d_1]);
+        tmp = objectHashes([this.z3n_1]);
         break;
       case 0:
-        tmp = objectHashes([this.i2d_1, this.j2d_1, this.p2d_1]);
+        tmp = objectHashes([this.z3n_1, this.a3o_1, this.g3o_1]);
         break;
       case 1:
-        tmp = objectHashes([this.i2d_1, this.j2d_1, this.k2d_1, this.o2d_1, this.p2d_1]);
+        tmp = objectHashes([this.z3n_1, this.a3o_1, this.b3o_1, this.f3o_1, this.g3o_1]);
         break;
       case 2:
-        tmp = objectHashes([this.i2d_1, this.j2d_1, this.k2d_1, this.l2d_1, this.p2d_1]);
+        tmp = objectHashes([this.z3n_1, this.a3o_1, this.b3o_1, this.c3o_1, this.g3o_1]);
         break;
       case 3:
-        tmp = objectHashes([this.i2d_1, this.j2d_1, this.k2d_1, this.l2d_1, this.n2d_1, this.p2d_1]);
+        tmp = objectHashes([this.z3n_1, this.a3o_1, this.b3o_1, this.c3o_1, this.e3o_1, this.g3o_1]);
         break;
       case 4:
-        tmp = objectHashes([this.i2d_1, this.j2d_1, this.k2d_1, this.l2d_1, this.m2d_1, this.p2d_1]);
+        tmp = objectHashes([this.z3n_1, this.a3o_1, this.b3o_1, this.c3o_1, this.d3o_1, this.g3o_1]);
         break;
       default:
         throw RuntimeException_init_$Create$('Unreachable');
@@ -3062,80 +3533,81 @@
   function objectHashes(args) {
     return contentHashCode_0(args);
   }
-  function Companion_23() {
-    Companion_instance_23 = this;
-    Companion_getInstance_45().m24();
+  function Companion_27() {
+    Companion_instance_27 = this;
+    Companion_instance_51.x3c();
   }
-  protoOf(Companion_23).h2d = function (path, forceClose) {
+  protoOf(Companion_27).t3n = function (path, forceClose) {
     var tmp;
     try {
       var i = new PathSegmentIterator(path, org_jetbrains_skia_PathSegmentIterator__1nMake(getPtr(path), forceClose));
-      i.t2d_1 = nextSegment(i);
+      i.k3o_1 = nextSegment(i);
       tmp = i;
     }finally {
       reachabilityBarrier(path);
     }
     return tmp;
   };
-  var Companion_instance_23;
-  function Companion_getInstance_24() {
-    if (Companion_instance_23 == null)
-      new Companion_23();
-    return Companion_instance_23;
+  var Companion_instance_27;
+  function Companion_getInstance_28() {
+    if (Companion_instance_27 == null)
+      new Companion_27();
+    return Companion_instance_27;
   }
   function nextSegment($this) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Int32Array(10);
+    var result = new Int32Array(10);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.i2b(tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.f3l(result);
         // Inline function 'org.jetbrains.skia.PathSegmentIterator.nextSegment.<anonymous>' call
-        org_jetbrains_skia_PathSegmentIterator__1nNext($this.s24_1, handle);
-        tmp0_anonymous.m2b(handle, tmp0_withResult);
+        org_jetbrains_skia_PathSegmentIterator__1nNext($this.d3d_1, handle);
+        $this$interopScope.z3e(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
-    return pathSegmentFromIntArray(tmp0_withResult);
+    return pathSegmentFromIntArray(result);
   }
   function PathSegmentIterator(_path, ptr) {
-    Companion_getInstance_24();
+    Companion_getInstance_28();
     Managed.call(this, ptr, org_jetbrains_skia_PathSegmentIterator__1nGetFinalizer());
-    this.s2d_1 = _path;
-    this.t2d_1 = null;
-    Stats_getInstance().o24();
+    this.j3o_1 = _path;
+    this.k3o_1 = null;
+    Stats_instance.z3c();
   }
-  protoOf(PathSegmentIterator).e = function () {
+  protoOf(PathSegmentIterator).y = function () {
     var tmp;
     try {
-      var tmp0_safe_receiver = this.t2d_1;
-      if (equals(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.i2d_1, PathVerb_DONE_getInstance()))
+      var tmp0_safe_receiver = this.k3o_1;
+      if (equals(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.z3n_1, PathVerb_DONE_getInstance()))
         throw NoSuchElementException_init_$Create$();
-      var res = this.t2d_1;
-      this.t2d_1 = nextSegment(this);
+      var res = this.k3o_1;
+      this.k3o_1 = nextSegment(this);
       tmp = res;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(PathSegmentIterator).d = function () {
-    var tmp0_safe_receiver = this.t2d_1;
-    return !equals(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.i2d_1, PathVerb_DONE_getInstance());
+  protoOf(PathSegmentIterator).w = function () {
+    var tmp0_safe_receiver = this.k3o_1;
+    return !equals(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.z3n_1, PathVerb_DONE_getInstance());
   };
-  protoOf(PathSegmentIterator).e7 = function () {
+  protoOf(PathSegmentIterator).x = function () {
     // Inline function 'kotlin.TODO' call
-    throw new NotImplementedError('An operation is not implemented: Not yet implemented');
+    var reason = 'Not yet implemented';
+    throw new NotImplementedError('An operation is not implemented: ' + reason);
   };
   function pathSegmentFromIntArray(points) {
     var context = last(points);
@@ -3144,161 +3616,129 @@
     var isClosedLineBit = context >> 6 & 1;
     var isClosed = !(isClosedBit === 0);
     var tmp;
-    switch (values_4()[verb].w4_1) {
+    switch (values_4()[verb].j9_1) {
       case 0:
       case 5:
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp1_fromBits = points[0];
-        var tmp_0 = floatFromBits(tmp1_fromBits);
-        var tmp$ret$1;
+        var bits = points[0];
+        var tmp_0 = floatFromBits(bits);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp3_fromBits = points[1];
-        tmp$ret$1 = floatFromBits(tmp3_fromBits);
+        var bits_0 = points[1];
+        var tmp$ret$1 = floatFromBits(bits_0);
         tmp = PathSegment_init_$Create$(verb, tmp_0, tmp$ret$1, isClosed);
         break;
       case 1:
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp5_fromBits = points[0];
-        var tmp_1 = floatFromBits(tmp5_fromBits);
+        var bits_1 = points[0];
+        var tmp_1 = floatFromBits(bits_1);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp7_fromBits = points[1];
-        var tmp_2 = floatFromBits(tmp7_fromBits);
+        var bits_2 = points[1];
+        var tmp_2 = floatFromBits(bits_2);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp9_fromBits = points[2];
-        var tmp_3 = floatFromBits(tmp9_fromBits);
-        var tmp$ret$5;
+        var bits_3 = points[2];
+        var tmp_3 = floatFromBits(bits_3);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp11_fromBits = points[3];
-        tmp$ret$5 = floatFromBits(tmp11_fromBits);
+        var bits_4 = points[3];
+        var tmp$ret$5 = floatFromBits(bits_4);
         tmp = PathSegment_init_$Create$_0(tmp_1, tmp_2, tmp_3, tmp$ret$5, !(isClosedLineBit === 0), isClosed);
         break;
       case 2:
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp13_fromBits = points[0];
-        var tmp_4 = floatFromBits(tmp13_fromBits);
+        var bits_5 = points[0];
+        var tmp_4 = floatFromBits(bits_5);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp15_fromBits = points[1];
-        var tmp_5 = floatFromBits(tmp15_fromBits);
+        var bits_6 = points[1];
+        var tmp_5 = floatFromBits(bits_6);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp17_fromBits = points[2];
-        var tmp_6 = floatFromBits(tmp17_fromBits);
+        var bits_7 = points[2];
+        var tmp_6 = floatFromBits(bits_7);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp19_fromBits = points[3];
-        var tmp_7 = floatFromBits(tmp19_fromBits);
+        var bits_8 = points[3];
+        var tmp_7 = floatFromBits(bits_8);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp21_fromBits = points[4];
-        var tmp_8 = floatFromBits(tmp21_fromBits);
-        var tmp$ret$11;
+        var bits_9 = points[4];
+        var tmp_8 = floatFromBits(bits_9);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp23_fromBits = points[5];
-        tmp$ret$11 = floatFromBits(tmp23_fromBits);
+        var bits_10 = points[5];
+        var tmp$ret$11 = floatFromBits(bits_10);
         tmp = PathSegment_init_$Create$_1(tmp_4, tmp_5, tmp_6, tmp_7, tmp_8, tmp$ret$11, isClosed);
         break;
       case 3:
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp25_fromBits = points[0];
-        var tmp_9 = floatFromBits(tmp25_fromBits);
+        var bits_11 = points[0];
+        var tmp_9 = floatFromBits(bits_11);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp27_fromBits = points[1];
-        var tmp_10 = floatFromBits(tmp27_fromBits);
+        var bits_12 = points[1];
+        var tmp_10 = floatFromBits(bits_12);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp29_fromBits = points[2];
-        var tmp_11 = floatFromBits(tmp29_fromBits);
+        var bits_13 = points[2];
+        var tmp_11 = floatFromBits(bits_13);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp31_fromBits = points[3];
-        var tmp_12 = floatFromBits(tmp31_fromBits);
+        var bits_14 = points[3];
+        var tmp_12 = floatFromBits(bits_14);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp33_fromBits = points[4];
-        var tmp_13 = floatFromBits(tmp33_fromBits);
+        var bits_15 = points[4];
+        var tmp_13 = floatFromBits(bits_15);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp35_fromBits = points[5];
-        var tmp_14 = floatFromBits(tmp35_fromBits);
-        var tmp$ret$18;
+        var bits_16 = points[5];
+        var tmp_14 = floatFromBits(bits_16);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp37_fromBits = points[8];
-        tmp$ret$18 = floatFromBits(tmp37_fromBits);
+        var bits_17 = points[8];
+        var tmp$ret$18 = floatFromBits(bits_17);
         tmp = PathSegment_init_$Create$_2(tmp_9, tmp_10, tmp_11, tmp_12, tmp_13, tmp_14, tmp$ret$18, isClosed);
         break;
       case 4:
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp39_fromBits = points[0];
-        var tmp_15 = floatFromBits(tmp39_fromBits);
+        var bits_18 = points[0];
+        var tmp_15 = floatFromBits(bits_18);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp41_fromBits = points[1];
-        var tmp_16 = floatFromBits(tmp41_fromBits);
+        var bits_19 = points[1];
+        var tmp_16 = floatFromBits(bits_19);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp43_fromBits = points[2];
-        var tmp_17 = floatFromBits(tmp43_fromBits);
+        var bits_20 = points[2];
+        var tmp_17 = floatFromBits(bits_20);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp45_fromBits = points[3];
-        var tmp_18 = floatFromBits(tmp45_fromBits);
+        var bits_21 = points[3];
+        var tmp_18 = floatFromBits(bits_21);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp47_fromBits = points[4];
-        var tmp_19 = floatFromBits(tmp47_fromBits);
+        var bits_22 = points[4];
+        var tmp_19 = floatFromBits(bits_22);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp49_fromBits = points[5];
-        var tmp_20 = floatFromBits(tmp49_fromBits);
+        var bits_23 = points[5];
+        var tmp_20 = floatFromBits(bits_23);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp51_fromBits = points[6];
-        var tmp_21 = floatFromBits(tmp51_fromBits);
-        var tmp$ret$26;
+        var bits_24 = points[6];
+        var tmp_21 = floatFromBits(bits_24);
         // Inline function 'kotlin.fromBits' call
 
-        FloatCompanionObject_getInstance();
-        var tmp53_fromBits = points[7];
-        tmp$ret$26 = floatFromBits(tmp53_fromBits);
+        var bits_25 = points[7];
+        var tmp$ret$26 = floatFromBits(bits_25);
         tmp = PathSegment_init_$Create$_3(tmp_15, tmp_16, tmp_17, tmp_18, tmp_19, tmp_20, tmp_21, tmp$ret$26, isClosed);
         break;
       case 6:
@@ -3323,7 +3763,7 @@
   var PathVerb_entriesInitialized;
   function PathVerb_initEntries() {
     if (PathVerb_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     PathVerb_entriesInitialized = true;
     PathVerb_MOVE_instance = new PathVerb('MOVE', 0);
     PathVerb_LINE_instance = new PathVerb('LINE', 1);
@@ -3364,67 +3804,67 @@
     PathVerb_initEntries();
     return PathVerb_DONE_instance;
   }
-  function Companion_24() {
-    Companion_instance_24 = this;
-    Companion_getInstance_45().m24();
+  function Companion_28() {
+    Companion_instance_28 = this;
+    Companion_instance_51.x3c();
   }
-  var Companion_instance_24;
-  function Companion_getInstance_25() {
-    if (Companion_instance_24 == null)
-      new Companion_24();
-    return Companion_instance_24;
+  var Companion_instance_28;
+  function Companion_getInstance_29() {
+    if (Companion_instance_28 == null)
+      new Companion_28();
+    return Companion_instance_28;
   }
   function Picture(ptr) {
-    Companion_getInstance_25();
+    Companion_getInstance_29();
     RefCnt_init_$Init$(ptr, this);
   }
-  function Companion_25() {
-    Companion_instance_25 = this;
-    Companion_getInstance_45().m24();
+  function Companion_29() {
+    Companion_instance_29 = this;
+    Companion_instance_51.x3c();
   }
-  var Companion_instance_25;
-  function Companion_getInstance_26() {
-    if (Companion_instance_25 == null)
-      new Companion_25();
-    return Companion_instance_25;
+  var Companion_instance_29;
+  function Companion_getInstance_30() {
+    if (Companion_instance_29 == null)
+      new Companion_29();
+    return Companion_instance_29;
   }
   function PictureRecorder_init_$Init$($this) {
     PictureRecorder.call($this, org_jetbrains_skia_PictureRecorder__1nMake());
-    Stats_getInstance().o24();
+    Stats_instance.z3c();
     return $this;
   }
   function PictureRecorder_init_$Create$() {
     return PictureRecorder_init_$Init$(objectCreate(protoOf(PictureRecorder)));
   }
-  function _FinalizerHolder_8() {
-    _FinalizerHolder_instance_8 = this;
-    this.u2d_1 = org_jetbrains_skia_PictureRecorder__1nGetFinalizer();
+  function _FinalizerHolder_10() {
+    _FinalizerHolder_instance_10 = this;
+    this.l3o_1 = org_jetbrains_skia_PictureRecorder__1nGetFinalizer();
   }
-  var _FinalizerHolder_instance_8;
-  function _FinalizerHolder_getInstance_8() {
-    if (_FinalizerHolder_instance_8 == null)
-      new _FinalizerHolder_8();
-    return _FinalizerHolder_instance_8;
+  var _FinalizerHolder_instance_10;
+  function _FinalizerHolder_getInstance_10() {
+    if (_FinalizerHolder_instance_10 == null)
+      new _FinalizerHolder_10();
+    return _FinalizerHolder_instance_10;
   }
   function PictureRecorder(ptr) {
-    Companion_getInstance_26();
-    Managed.call(this, ptr, _FinalizerHolder_getInstance_8().u2d_1);
+    Companion_getInstance_30();
+    Managed.call(this, ptr, _FinalizerHolder_getInstance_10().l3o_1);
   }
-  protoOf(PictureRecorder).x2d = function (bounds) {
+  protoOf(PictureRecorder).o3o = function (bounds) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = new Canvas(org_jetbrains_skia_PictureRecorder__1nBeginRecording(this.s24_1, bounds.w25_1, bounds.x25_1, bounds.y25_1, bounds.z25_1), false, this);
+      Stats_instance.z3c();
+      tmp = new Canvas(org_jetbrains_skia_PictureRecorder__1nBeginRecording(this.d3d_1, bounds.k3f_1, bounds.l3f_1, bounds.m3f_1, bounds.n3f_1), false, this);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(PictureRecorder).y2d = function () {
+  protoOf(PictureRecorder).p3o = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = new Picture(org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPicture(this.s24_1));
+      Stats_instance.z3c();
+      tmp = new Picture(org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPicture(this.d3d_1));
     }finally {
       reachabilityBarrier(this);
     }
@@ -3438,7 +3878,7 @@
   var PixelGeometry_entriesInitialized;
   function PixelGeometry_initEntries() {
     if (PixelGeometry_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     PixelGeometry_entriesInitialized = true;
     PixelGeometry_UNKNOWN_instance = new PixelGeometry('UNKNOWN', 0);
     PixelGeometry_RGB_H_instance = new PixelGeometry('RGB_H', 1);
@@ -3453,92 +3893,87 @@
     PixelGeometry_initEntries();
     return PixelGeometry_UNKNOWN_instance;
   }
-  function Companion_26() {
-    Companion_instance_26 = this;
-    this.z2d_1 = new Point(0.0, 0.0);
+  function Companion_30() {
+    Companion_instance_30 = this;
+    this.q3o_1 = new Point(0.0, 0.0);
   }
-  var Companion_instance_26;
-  function Companion_getInstance_27() {
-    if (Companion_instance_26 == null)
-      new Companion_26();
-    return Companion_instance_26;
+  var Companion_instance_30;
+  function Companion_getInstance_31() {
+    if (Companion_instance_30 == null)
+      new Companion_30();
+    return Companion_instance_30;
   }
   function Point(x, y) {
-    Companion_getInstance_27();
-    this.a2e_1 = x;
-    this.b2e_1 = y;
+    Companion_getInstance_31();
+    this.r3o_1 = x;
+    this.s3o_1 = y;
   }
   protoOf(Point).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof Point))
       return false;
-    if (!(compareTo(this.a2e_1, other.a2e_1) === 0))
+    if (!(compareTo(this.r3o_1, other.r3o_1) === 0))
       return false;
-    return compareTo(this.b2e_1, other.b2e_1) === 0;
+    return compareTo(this.s3o_1, other.s3o_1) === 0;
   };
   protoOf(Point).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + toBits(this.a2e_1) | 0;
-    result = imul(result, PRIME) + toBits(this.b2e_1) | 0;
+    result = imul(result, PRIME) + toBits(this.r3o_1) | 0;
+    result = imul(result, PRIME) + toBits(this.s3o_1) | 0;
     return result;
   };
   protoOf(Point).toString = function () {
-    return 'Point(_x=' + this.a2e_1 + ', _y=' + this.b2e_1 + ')';
+    return 'Point(_x=' + this.r3o_1 + ', _y=' + this.s3o_1 + ')';
   };
   function Point3(x, y, z) {
-    this.c2e_1 = x;
-    this.d2e_1 = y;
-    this.e2e_1 = z;
+    this.t3o_1 = x;
+    this.u3o_1 = y;
+    this.v3o_1 = z;
   }
   protoOf(Point3).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof Point3))
       return false;
-    if (!(compareTo(this.c2e_1, other.c2e_1) === 0))
+    if (!(compareTo(this.t3o_1, other.t3o_1) === 0))
       return false;
-    if (!(compareTo(this.d2e_1, other.d2e_1) === 0))
+    if (!(compareTo(this.u3o_1, other.u3o_1) === 0))
       return false;
-    return compareTo(this.e2e_1, other.e2e_1) === 0;
+    return compareTo(this.v3o_1, other.v3o_1) === 0;
   };
   protoOf(Point3).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + toBits(this.c2e_1) | 0;
-    result = imul(result, PRIME) + toBits(this.d2e_1) | 0;
-    result = imul(result, PRIME) + toBits(this.e2e_1) | 0;
+    result = imul(result, PRIME) + toBits(this.t3o_1) | 0;
+    result = imul(result, PRIME) + toBits(this.u3o_1) | 0;
+    result = imul(result, PRIME) + toBits(this.v3o_1) | 0;
     return result;
   };
   protoOf(Point3).toString = function () {
-    return 'Point3(_x=' + this.c2e_1 + ', _y=' + this.d2e_1 + ', _z=' + this.e2e_1 + ')';
+    return 'Point3(_x=' + this.t3o_1 + ', _y=' + this.u3o_1 + ', _z=' + this.v3o_1 + ')';
   };
-  function Companion_27() {
-    Companion_instance_27 = this;
+  function Companion_31() {
   }
-  protoOf(Companion_27).f2e = function (l, t, r, b, xRad, yRad) {
-    var tmp$ret$0;
+  protoOf(Companion_31).w3o = function (l, t, r, b, xRad, yRad) {
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([xRad, yRad]);
+    var tmp$ret$0 = new Float32Array([xRad, yRad]);
     return new RRect(l, t, r, b, tmp$ret$0);
   };
-  protoOf(Companion_27).g2e = function (l, t, r, b, radii) {
+  protoOf(Companion_31).x3o = function (l, t, r, b, radii) {
     return new RRect(l, t, r, b, radii);
   };
-  var Companion_instance_27;
-  function Companion_getInstance_28() {
-    if (Companion_instance_27 == null)
-      new Companion_27();
-    return Companion_instance_27;
+  var Companion_instance_31;
+  function Companion_getInstance_32() {
+    return Companion_instance_31;
   }
   function RRect(l, t, r, b, radii) {
-    Companion_getInstance_28();
     Rect.call(this, l, t, r, b);
-    this.f26_1 = radii;
+    this.u3f_1 = radii;
   }
   protoOf(RRect).toString = function () {
-    return 'RRect(_left=' + this.w25_1 + ', _top=' + this.x25_1 + ', _right=' + this.y25_1 + ', _bottom=' + this.z25_1 + ', _radii=' + joinToString(this.f26_1) + ')';
+    return 'RRect(_left=' + this.k3f_1 + ', _top=' + this.l3f_1 + ', _right=' + this.m3f_1 + ', _bottom=' + this.n3f_1 + ', _radii=' + joinToString(this.u3f_1) + ')';
   };
   protoOf(RRect).equals = function (other) {
     if (other === this)
@@ -3548,17 +3983,17 @@
     if (!protoOf(Rect).equals.call(this, other))
       return false;
     var tmp;
-    if (this.f26_1.length === other.f26_1.length) {
-      tmp = contentEquals(this.f26_1, other.f26_1);
+    if (this.u3f_1.length === other.u3f_1.length) {
+      tmp = contentEquals(this.u3f_1, other.u3f_1);
     } else {
-      tmp = contentEquals(normalizeRadii(this.f26_1), normalizeRadii(other.f26_1));
+      tmp = contentEquals(normalizeRadii(this.u3f_1), normalizeRadii(other.u3f_1));
     }
     return tmp;
   };
   protoOf(RRect).hashCode = function () {
     var PRIME = 59;
     var result = protoOf(Rect).hashCode.call(this);
-    result = imul(result, PRIME) + contentHashCode(this.f26_1) | 0;
+    result = imul(result, PRIME) + contentHashCode(this.u3f_1) | 0;
     return result;
   };
   function normalizeRadii(radii) {
@@ -3614,10 +4049,9 @@
     }
     return tmp;
   }
-  function Companion_28() {
-    Companion_instance_28 = this;
+  function Companion_32() {
   }
-  protoOf(Companion_28).h2e = function (l, t, r, b) {
+  protoOf(Companion_32).y3o = function (l, t, r, b) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(l <= r)) {
@@ -3634,99 +4068,230 @@
     }
     return new Rect(l, t, r, b);
   };
-  protoOf(Companion_28).i2e = function (l, t, w, h) {
+  protoOf(Companion_32).y3f = function (w, h) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(w >= 0)) {
+    if (!(w >= 0.0)) {
+      // Inline function 'org.jetbrains.skia.Companion.makeWH.<anonymous>' call
+      var message = 'Rect::makeWH expected w >= 0, got: ' + w;
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(h >= 0.0)) {
+      // Inline function 'org.jetbrains.skia.Companion.makeWH.<anonymous>' call
+      var message_0 = 'Rect::makeWH expected h >= 0, got: ' + h;
+      throw IllegalArgumentException_init_$Create$(toString(message_0));
+    }
+    return new Rect(0.0, 0.0, w, h);
+  };
+  protoOf(Companion_32).z3f = function (l, t, w, h) {
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(w >= 0.0)) {
       // Inline function 'org.jetbrains.skia.Companion.makeXYWH.<anonymous>' call
       var message = 'Rect::makeXYWH expected w >= 0, got: ' + w;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(h >= 0)) {
+    if (!(h >= 0.0)) {
       // Inline function 'org.jetbrains.skia.Companion.makeXYWH.<anonymous>' call
       var message_0 = 'Rect::makeXYWH expected h >= 0, got: ' + h;
       throw IllegalArgumentException_init_$Create$(toString(message_0));
     }
     return new Rect(l, t, l + w, t + h);
   };
-  protoOf(Companion_28).x2c = function (block) {
+  protoOf(Companion_32).a3n = function (block) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Float32Array(4);
+    var result = new Float32Array(4);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.y29(tmp0_withResult);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.z29(handle, tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.s3j(result);
+        block($this$interopScope, handle);
+        $this$interopScope.t3j(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
-    var result = tmp0_withResult;
-    return new Rect(result[0], result[1], result[2], result[3]);
+    var result_0 = result;
+    return new Rect(result_0[0], result_0[1], result_0[2], result_0[3]);
   };
-  var Companion_instance_28;
-  function Companion_getInstance_29() {
-    if (Companion_instance_28 == null)
-      new Companion_28();
-    return Companion_instance_28;
+  var Companion_instance_32;
+  function Companion_getInstance_33() {
+    return Companion_instance_32;
   }
   function Rect(left, top, right, bottom) {
-    Companion_getInstance_29();
-    this.w25_1 = left;
-    this.x25_1 = top;
-    this.y25_1 = right;
-    this.z25_1 = bottom;
+    this.k3f_1 = left;
+    this.l3f_1 = top;
+    this.m3f_1 = right;
+    this.n3f_1 = bottom;
   }
   protoOf(Rect).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof Rect))
       return false;
-    if (!(compareTo(this.w25_1, other.w25_1) === 0))
+    if (!(compareTo(this.k3f_1, other.k3f_1) === 0))
       return false;
-    if (!(compareTo(this.x25_1, other.x25_1) === 0))
+    if (!(compareTo(this.l3f_1, other.l3f_1) === 0))
       return false;
-    if (!(compareTo(this.y25_1, other.y25_1) === 0))
+    if (!(compareTo(this.m3f_1, other.m3f_1) === 0))
       return false;
-    return compareTo(this.z25_1, other.z25_1) === 0;
+    return compareTo(this.n3f_1, other.n3f_1) === 0;
   };
   protoOf(Rect).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + toBits(this.w25_1) | 0;
-    result = imul(result, PRIME) + toBits(this.x25_1) | 0;
-    result = imul(result, PRIME) + toBits(this.y25_1) | 0;
-    result = imul(result, PRIME) + toBits(this.z25_1) | 0;
+    result = imul(result, PRIME) + toBits(this.k3f_1) | 0;
+    result = imul(result, PRIME) + toBits(this.l3f_1) | 0;
+    result = imul(result, PRIME) + toBits(this.m3f_1) | 0;
+    result = imul(result, PRIME) + toBits(this.n3f_1) | 0;
     return result;
   };
   protoOf(Rect).toString = function () {
-    return 'Rect(_left=' + this.w25_1 + ', _top=' + this.x25_1 + ', _right=' + this.y25_1 + ', _bottom=' + this.z25_1 + ')';
+    return 'Rect(_left=' + this.k3f_1 + ', _top=' + this.l3f_1 + ', _right=' + this.m3f_1 + ', _bottom=' + this.n3f_1 + ')';
   };
+  function Companion_33() {
+    Companion_instance_33 = this;
+    this.a3g_1 = new FilterMipmap(FilterMode_NEAREST_getInstance(), MipmapMode_NONE_getInstance());
+    this.b3g_1 = new FilterMipmap(FilterMode_LINEAR_getInstance(), MipmapMode_NONE_getInstance());
+    this.c3g_1 = new CubicResampler(0.33333334, 0.33333334);
+    this.d3g_1 = new CubicResampler(0.0, 0.5);
+  }
+  var Companion_instance_33;
+  function Companion_getInstance_34() {
+    if (Companion_instance_33 == null)
+      new Companion_33();
+    return Companion_instance_33;
+  }
+  function Companion_34() {
+    Companion_instance_34 = this;
+    Companion_instance_51.x3c();
+  }
+  protoOf(Companion_34).z3o = function (x0, y0, x1, y1, colors, positions, style) {
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(positions == null ? true : colors.length === positions.length)) {
+      // Inline function 'org.jetbrains.skia.Companion.makeLinearGradient.<anonymous>' call
+      var message = 'colors.length ' + colors.length + '!= positions.length ' + ensureNotNull(positions).length;
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    Stats_instance.z3c();
+    var tmp$ret$2;
+    $l$block: {
+      // Inline function 'org.jetbrains.skia.impl.interopScope' call
+      try {
+        var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
+        _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
+        // Inline function 'org.jetbrains.skia.Companion.makeLinearGradient.<anonymous>' call
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeLinearGradient(x0, y0, x1, y1, $this$interopScope.y3e(colors), $this$interopScope.v3f(positions), colors.length, style.z3k_1.j9_1, style.d3f(), $this$interopScope.v3f(style.c3l()));
+        break $l$block;
+      }finally {
+        var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
+        _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
+        if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
+        }
+      }
+    }
+    return new Shader(tmp$ret$2);
+  };
+  protoOf(Companion_34).a3p = function (x, y, r, colors, positions, style) {
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(positions == null ? true : colors.length === positions.length)) {
+      // Inline function 'org.jetbrains.skia.Companion.makeRadialGradient.<anonymous>' call
+      var message = 'colors.length ' + colors.length + '!= positions.length ' + ensureNotNull(positions).length;
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    Stats_instance.z3c();
+    var tmp$ret$2;
+    $l$block: {
+      // Inline function 'org.jetbrains.skia.impl.interopScope' call
+      try {
+        var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
+        _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
+        // Inline function 'org.jetbrains.skia.Companion.makeRadialGradient.<anonymous>' call
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeRadialGradient(x, y, r, $this$interopScope.y3e(colors), $this$interopScope.v3f(positions), colors.length, style.z3k_1.j9_1, style.d3f(), $this$interopScope.v3f(style.c3l()));
+        break $l$block;
+      }finally {
+        var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
+        _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
+        if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
+        }
+      }
+    }
+    return new Shader(tmp$ret$2);
+  };
+  protoOf(Companion_34).b3p = function (x, y, colors, positions) {
+    return this.c3p(x, y, 0.0, 360.0, colors, positions, Companion_getInstance_18().y3k_1);
+  };
+  protoOf(Companion_34).c3p = function (x, y, startAngle, endAngle, colors, positions, style) {
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(positions == null ? true : colors.length === positions.length)) {
+      // Inline function 'org.jetbrains.skia.Companion.makeSweepGradient.<anonymous>' call
+      var message = 'colors.length ' + colors.length + '!= positions.length ' + ensureNotNull(positions).length;
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    Stats_instance.z3c();
+    var tmp$ret$2;
+    $l$block: {
+      // Inline function 'org.jetbrains.skia.impl.interopScope' call
+      try {
+        var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
+        _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
+        // Inline function 'org.jetbrains.skia.Companion.makeSweepGradient.<anonymous>' call
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeSweepGradient(x, y, startAngle, endAngle, $this$interopScope.y3e(colors), $this$interopScope.v3f(positions), colors.length, style.z3k_1.j9_1, style.d3f(), $this$interopScope.v3f(style.c3l()));
+        break $l$block;
+      }finally {
+        var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
+        _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
+        if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
+        }
+      }
+    }
+    return new Shader(tmp$ret$2);
+  };
+  var Companion_instance_34;
+  function Companion_getInstance_35() {
+    if (Companion_instance_34 == null)
+      new Companion_34();
+    return Companion_instance_34;
+  }
+  function Shader(ptr) {
+    Companion_getInstance_35();
+    RefCnt_init_$Init$(ptr, this);
+  }
   function ShadowUtils() {
     ShadowUtils_instance = this;
-    Companion_getInstance_45().m24();
+    Companion_instance_51.x3c();
   }
-  protoOf(ShadowUtils).j2e = function (canvas, path, zPlaneParams, lightPos, lightRadius, ambientColor, spotColor, transparentOccluder, geometricOnly) {
-    Stats_getInstance().o24();
+  protoOf(ShadowUtils).d3p = function (canvas, path, zPlaneParams, lightPos, lightRadius, ambientColor, spotColor, transparentOccluder, geometricOnly) {
+    Stats_instance.z3c();
     var flags = 0;
     if (transparentOccluder)
       flags = flags | 1;
     if (geometricOnly)
       flags = flags | 2;
     try {
-      org_jetbrains_skia_ShadowUtils__1nDrawShadow(getPtr(canvas), getPtr(path), zPlaneParams.c2e_1, zPlaneParams.d2e_1, zPlaneParams.e2e_1, lightPos.c2e_1, lightPos.d2e_1, lightPos.e2e_1, lightRadius, ambientColor, spotColor, flags);
+      org_jetbrains_skia_ShadowUtils__1nDrawShadow(getPtr(canvas), getPtr(path), zPlaneParams.t3o_1, zPlaneParams.u3o_1, zPlaneParams.v3o_1, lightPos.t3o_1, lightPos.u3o_1, lightPos.v3o_1, lightRadius, ambientColor, spotColor, flags);
     }finally {
       reachabilityBarrier(canvas);
       reachabilityBarrier(path);
@@ -3739,26 +4304,26 @@
     return ShadowUtils_instance;
   }
   function ArrayDecoder(ptr, disposePtr) {
-    this.k2e_1 = ptr;
-    this.l2e_1 = disposePtr;
+    this.e3p_1 = ptr;
+    this.f3p_1 = disposePtr;
   }
-  protoOf(ArrayDecoder).dj = function () {
-    org_jetbrains_skia_StdVectorDecoder__1nDisposeArray(this.k2e_1, this.l2e_1);
+  protoOf(ArrayDecoder).gk = function () {
+    org_jetbrains_skia_StdVectorDecoder__1nDisposeArray(this.e3p_1, this.f3p_1);
   };
-  protoOf(ArrayDecoder).m2e = function (index) {
-    return org_jetbrains_skia_StdVectorDecoder__1nReleaseElement(this.k2e_1, index);
+  protoOf(ArrayDecoder).g3p = function (index) {
+    return org_jetbrains_skia_StdVectorDecoder__1nReleaseElement(this.e3p_1, index);
   };
-  protoOf(ArrayDecoder).f = function () {
-    return org_jetbrains_skia_StdVectorDecoder__1nGetArraySize(this.k2e_1);
+  protoOf(ArrayDecoder).n = function () {
+    return org_jetbrains_skia_StdVectorDecoder__1nGetArraySize(this.e3p_1);
   };
-  function Companion_29() {
-    Companion_instance_29 = this;
-    Companion_getInstance_45().m24();
+  function Companion_35() {
+    Companion_instance_35 = this;
+    Companion_instance_51.x3c();
   }
-  protoOf(Companion_29).n2e = function (context, rt, origin, colorFormat, colorSpace, surfaceProps) {
+  protoOf(Companion_35).h3p = function (context, rt, origin, colorFormat, colorSpace, surfaceProps) {
     var tmp;
     try {
-      Stats_getInstance().o24();
+      Stats_instance.z3c();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -3766,22 +4331,22 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeFromBackendRenderTarget.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(context);
           var tmp_1 = getPtr(rt);
           var tmp_2 = getPtr(colorSpace);
-          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeFromBackendRenderTarget(tmp_0, tmp_1, origin.w4_1, colorFormat.w4_1, tmp_2, tmp0_anonymous.p2e(surfaceProps == null ? null : surfaceProps.o2e()));
+          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeFromBackendRenderTarget(tmp_0, tmp_1, origin.j9_1, colorFormat.j9_1, tmp_2, $this$interopScope.y3e(surfaceProps == null ? null : surfaceProps.i3p()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
           }
         }
       }
       var ptr = tmp$ret$1;
-      tmp = ptr === Companion_getInstance_47().e2b() ? null : Surface_init_$Create$(ptr, context, rt);
+      tmp = ptr === Companion_instance_53.a3f() ? null : Surface_init_$Create$(ptr, context, rt);
     }finally {
       reachabilityBarrier(context);
       reachabilityBarrier(rt);
@@ -3789,29 +4354,29 @@
     }
     return tmp;
   };
-  var Companion_instance_29;
-  function Companion_getInstance_30() {
-    if (Companion_instance_29 == null)
-      new Companion_29();
-    return Companion_instance_29;
+  var Companion_instance_35;
+  function Companion_getInstance_36() {
+    if (Companion_instance_35 == null)
+      new Companion_35();
+    return Companion_instance_35;
   }
   function Surface_init_$Init$(ptr, context, renderTarget, $this) {
     RefCnt_init_$Init$(ptr, $this);
     Surface.call($this);
-    $this.s2e_1 = context;
-    $this.t2e_1 = renderTarget;
+    $this.l3p_1 = context;
+    $this.m3p_1 = renderTarget;
     return $this;
   }
   function Surface_init_$Create$(ptr, context, renderTarget) {
     return Surface_init_$Init$(ptr, context, renderTarget, objectCreate(protoOf(Surface)));
   }
-  protoOf(Surface).u2e = function () {
+  protoOf(Surface).n3p = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      var ptr = org_jetbrains_skia_Surface__1nGetCanvas(this.s24_1);
+      Stats_instance.z3c();
+      var ptr = org_jetbrains_skia_Surface__1nGetCanvas(this.d3d_1);
       var tmp_0;
-      if (ptr === Companion_getInstance_47().e2b()) {
+      if (ptr === Companion_instance_53.a3f()) {
         throw IllegalArgumentException_init_$Create$_0();
       } else {
         tmp_0 = new Canvas(ptr, false, this);
@@ -3822,16 +4387,16 @@
     }
     return tmp;
   };
-  protoOf(Surface).v2e = function () {
+  protoOf(Surface).o3p = function () {
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_Surface__1nFlushAndSubmit(this.s24_1, false);
+      Stats_instance.z3c();
+      org_jetbrains_skia_Surface__1nFlushAndSubmit(this.d3d_1, false);
     }finally {
       reachabilityBarrier(this);
     }
   };
   function Surface() {
-    Companion_getInstance_30();
+    Companion_getInstance_36();
   }
   var SurfaceColorFormat_UNKNOWN_instance;
   var SurfaceColorFormat_ALPHA_8_instance;
@@ -3855,7 +4420,7 @@
   var SurfaceColorFormat_entriesInitialized;
   function SurfaceColorFormat_initEntries() {
     if (SurfaceColorFormat_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     SurfaceColorFormat_entriesInitialized = true;
     SurfaceColorFormat_UNKNOWN_instance = new SurfaceColorFormat('UNKNOWN', 0);
     SurfaceColorFormat_ALPHA_8_instance = new SurfaceColorFormat('ALPHA_8', 1);
@@ -3889,7 +4454,7 @@
   var SurfaceOrigin_entriesInitialized;
   function SurfaceOrigin_initEntries() {
     if (SurfaceOrigin_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     SurfaceOrigin_entriesInitialized = true;
     SurfaceOrigin_TOP_LEFT_instance = new SurfaceOrigin('TOP_LEFT', 0);
     SurfaceOrigin_BOTTOM_LEFT_instance = new SurfaceOrigin('BOTTOM_LEFT', 1);
@@ -3902,52 +4467,52 @@
     return SurfaceOrigin_BOTTOM_LEFT_instance;
   }
   function _getPixelGeometryOrdinal($this) {
-    return $this.p25_1.w4_1;
+    return $this.c3f_1.j9_1;
   }
   function SurfaceProps(isDeviceIndependentFonts, pixelGeometry) {
     isDeviceIndependentFonts = isDeviceIndependentFonts === VOID ? false : isDeviceIndependentFonts;
     pixelGeometry = pixelGeometry === VOID ? PixelGeometry_UNKNOWN_getInstance() : pixelGeometry;
-    this.o25_1 = isDeviceIndependentFonts;
-    this.p25_1 = pixelGeometry;
+    this.b3f_1 = isDeviceIndependentFonts;
+    this.c3f_1 = pixelGeometry;
   }
-  protoOf(SurfaceProps).q25 = function () {
-    return 0 | (this.o25_1 ? 1 : 0);
+  protoOf(SurfaceProps).d3f = function () {
+    return 0 | (this.b3f_1 ? 1 : 0);
   };
   protoOf(SurfaceProps).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof SurfaceProps))
       return false;
-    if (!(this.o25_1 === other.o25_1))
+    if (!(this.b3f_1 === other.b3f_1))
       return false;
-    return this.p25_1.equals(other.p25_1);
+    return this.c3f_1.equals(other.c3f_1);
   };
   protoOf(SurfaceProps).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + (this.o25_1 ? 79 : 97) | 0;
-    result = imul(result, PRIME) + this.p25_1.hashCode() | 0;
+    result = imul(result, PRIME) + (this.b3f_1 ? 79 : 97) | 0;
+    result = imul(result, PRIME) + this.c3f_1.hashCode() | 0;
     return result;
   };
   protoOf(SurfaceProps).toString = function () {
-    return 'SurfaceProps(_deviceIndependentFonts=' + this.o25_1 + ', _pixelGeometry=' + this.p25_1 + ')';
+    return 'SurfaceProps(_deviceIndependentFonts=' + this.b3f_1 + ', _pixelGeometry=' + this.c3f_1 + ')';
   };
-  protoOf(SurfaceProps).o2e = function () {
+  protoOf(SurfaceProps).i3p = function () {
     // Inline function 'kotlin.intArrayOf' call
-    return new Int32Array([this.q25(), _getPixelGeometryOrdinal(this)]);
+    return new Int32Array([this.d3f(), _getPixelGeometryOrdinal(this)]);
   };
-  function Companion_30() {
-    Companion_instance_30 = this;
-    Companion_getInstance_45().m24();
+  function Companion_36() {
+    Companion_instance_36 = this;
+    Companion_instance_51.x3c();
   }
-  protoOf(Companion_30).w2e = function (data, index) {
+  protoOf(Companion_36).p3p = function (data, index) {
     var tmp;
     try {
-      Stats_getInstance().o24();
+      Stats_instance.z3c();
       var ptr = org_jetbrains_skia_Typeface__1nMakeFromData(getPtr(data), index);
       // Inline function 'kotlin.require' call
       // Inline function 'kotlin.contracts.contract' call
-      if (!!(ptr === Companion_getInstance_47().e2b())) {
+      if (!!(ptr === Companion_instance_53.a3f())) {
         // Inline function 'org.jetbrains.skia.Companion.makeFromData.<anonymous>' call
         var message = 'Failed to create Typeface from data ' + data;
         throw IllegalArgumentException_init_$Create$(toString(message));
@@ -3958,66 +4523,65 @@
     }
     return tmp;
   };
-  protoOf(Companion_30).x2e = function (data, index, $super) {
+  protoOf(Companion_36).q3p = function (data, index, $super) {
     index = index === VOID ? 0 : index;
-    return $super === VOID ? this.w2e(data, index) : $super.w2e.call(this, data, index);
+    return $super === VOID ? this.p3p(data, index) : $super.p3p.call(this, data, index);
   };
-  var Companion_instance_30;
-  function Companion_getInstance_31() {
-    if (Companion_instance_30 == null)
-      new Companion_30();
-    return Companion_instance_30;
+  var Companion_instance_36;
+  function Companion_getInstance_37() {
+    if (Companion_instance_36 == null)
+      new Companion_36();
+    return Companion_instance_36;
   }
   function Typeface(ptr) {
-    Companion_getInstance_31();
+    Companion_getInstance_37();
     RefCnt_init_$Init$(ptr, this);
   }
-  protoOf(Typeface).a2f = function () {
+  protoOf(Typeface).t3p = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = FontStyle_init_$Create$_0(org_jetbrains_skia_Typeface__1nGetFontStyle(this.s24_1));
+      Stats_instance.z3c();
+      tmp = FontStyle_init_$Create$_0(org_jetbrains_skia_Typeface__1nGetFontStyle(this.d3d_1));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Typeface).b2f = function () {
+  protoOf(Typeface).u3p = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_Typeface__1nGetUniqueId(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_Typeface__1nGetUniqueId(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Typeface).t24 = function (other) {
+  protoOf(Typeface).e3d = function (other) {
     var tmp;
     try {
-      tmp = org_jetbrains_skia_Typeface__1nEquals(this.s24_1, getPtr(other));
+      tmp = org_jetbrains_skia_Typeface__1nEquals(this.d3d_1, getPtr(other));
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(other);
     }
     return tmp;
   };
-  protoOf(Typeface).c2f = function () {
+  protoOf(Typeface).v3p = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
+      Stats_instance.z3c();
       // Inline function 'org.jetbrains.skia.impl.withStringResult' call
       // Inline function 'org.jetbrains.skia.impl.use' call
-      var tmp$ret$0;
       // Inline function 'org.jetbrains.skia.Typeface.<get-familyName>.<anonymous>' call
-      tmp$ret$0 = org_jetbrains_skia_Typeface__1nGetFamilyName(this.s24_1);
-      var tmp0_use = new ManagedString(tmp$ret$0);
+      var tmp$ret$0 = org_jetbrains_skia_Typeface__1nGetFamilyName(this.d3d_1);
+      var this_0 = new ManagedString(tmp$ret$0);
       var tmp_0;
       try {
         // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
-        tmp_0 = tmp0_use.toString();
+        tmp_0 = this_0.toString();
       }finally {
-        tmp0_use.y13();
+        this_0.j24();
       }
       tmp = tmp_0;
     }finally {
@@ -4026,36 +4590,60 @@
     return tmp;
   };
   protoOf(Typeface).toString = function () {
-    return "Typeface(familyName='" + this.c2f() + "', fontStyle=" + this.a2f() + ', uniqueId=' + this.b2f() + ')';
+    return "Typeface(familyName='" + this.v3p() + "', fontStyle=" + this.t3p() + ', uniqueId=' + this.u3p() + ')';
   };
+  function Companion_37() {
+    Companion_instance_37 = this;
+    Companion_instance_51.x3c();
+  }
+  var Companion_instance_37;
+  function Companion_getInstance_38() {
+    if (Companion_instance_37 == null)
+      new Companion_37();
+    return Companion_instance_37;
+  }
+  function _FinalizerHolder_11() {
+    _FinalizerHolder_instance_11 = this;
+    this.w3p_1 = org_jetbrains_skia_U16String__1nGetFinalizer();
+  }
+  var _FinalizerHolder_instance_11;
+  function _FinalizerHolder_getInstance_11() {
+    if (_FinalizerHolder_instance_11 == null)
+      new _FinalizerHolder_11();
+    return _FinalizerHolder_instance_11;
+  }
+  function U16String(ptr) {
+    Companion_getInstance_38();
+    Managed.call(this, ptr, _FinalizerHolder_getInstance_11().w3p_1);
+  }
   function CharDirection() {
     CharDirection_instance = this;
-    Companion_getInstance_45().m24();
-    this.d2f_1 = 0;
-    this.e2f_1 = 1;
-    this.f2f_1 = 2;
-    this.g2f_1 = 3;
-    this.h2f_1 = 4;
-    this.i2f_1 = 5;
-    this.j2f_1 = 6;
-    this.k2f_1 = 7;
-    this.l2f_1 = 8;
-    this.m2f_1 = 9;
-    this.n2f_1 = 10;
-    this.o2f_1 = 11;
-    this.p2f_1 = 12;
-    this.q2f_1 = 13;
-    this.r2f_1 = 14;
-    this.s2f_1 = 15;
-    this.t2f_1 = 16;
-    this.u2f_1 = 17;
-    this.v2f_1 = 18;
-    this.w2f_1 = 19;
-    this.x2f_1 = 20;
-    this.y2f_1 = 21;
-    this.z2f_1 = 22;
+    Companion_instance_51.x3c();
+    this.x3p_1 = 0;
+    this.y3p_1 = 1;
+    this.z3p_1 = 2;
+    this.a3q_1 = 3;
+    this.b3q_1 = 4;
+    this.c3q_1 = 5;
+    this.d3q_1 = 6;
+    this.e3q_1 = 7;
+    this.f3q_1 = 8;
+    this.g3q_1 = 9;
+    this.h3q_1 = 10;
+    this.i3q_1 = 11;
+    this.j3q_1 = 12;
+    this.k3q_1 = 13;
+    this.l3q_1 = 14;
+    this.m3q_1 = 15;
+    this.n3q_1 = 16;
+    this.o3q_1 = 17;
+    this.p3q_1 = 18;
+    this.q3q_1 = 19;
+    this.r3q_1 = 20;
+    this.s3q_1 = 21;
+    this.t3q_1 = 22;
   }
-  protoOf(CharDirection).a2g = function (codePoint) {
+  protoOf(CharDirection).u3q = function (codePoint) {
     return org_jetbrains_skia_icu_Unicode_charDirection(codePoint);
   };
   var CharDirection_instance;
@@ -4065,15 +4653,15 @@
     return CharDirection_instance;
   }
   function getPtr(n) {
-    var tmp1_elvis_lhs = n == null ? null : n.s24_1;
-    return tmp1_elvis_lhs == null ? Companion_getInstance_47().e2b() : tmp1_elvis_lhs;
+    var tmp1_elvis_lhs = n == null ? null : n.d3d_1;
+    return tmp1_elvis_lhs == null ? Companion_instance_53.a3f() : tmp1_elvis_lhs;
   }
   var Affinity_UPSTREAM_instance;
   var Affinity_DOWNSTREAM_instance;
   var Affinity_entriesInitialized;
   function Affinity_initEntries() {
     if (Affinity_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     Affinity_entriesInitialized = true;
     Affinity_UPSTREAM_instance = new Affinity('UPSTREAM', 0);
     Affinity_DOWNSTREAM_instance = new Affinity('DOWNSTREAM', 1);
@@ -4098,7 +4686,7 @@
   var Alignment_entriesInitialized;
   function Alignment_initEntries() {
     if (Alignment_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     Alignment_entriesInitialized = true;
     Alignment_LEFT_instance = new Alignment('LEFT', 0);
     Alignment_RIGHT_instance = new Alignment('RIGHT', 1);
@@ -4139,7 +4727,7 @@
   var BaselineMode_entriesInitialized;
   function BaselineMode_initEntries() {
     if (BaselineMode_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     BaselineMode_entriesInitialized = true;
     BaselineMode_ALPHABETIC_instance = new BaselineMode('ALPHABETIC', 0);
     BaselineMode_IDEOGRAPHIC_instance = new BaselineMode('IDEOGRAPHIC', 1);
@@ -4159,7 +4747,7 @@
   var DecorationLineStyle_entriesInitialized;
   function DecorationLineStyle_initEntries() {
     if (DecorationLineStyle_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     DecorationLineStyle_entriesInitialized = true;
     DecorationLineStyle_SOLID_instance = new DecorationLineStyle('SOLID', 0);
     DecorationLineStyle_DOUBLE_instance = new DecorationLineStyle('DOUBLE', 1);
@@ -4174,62 +4762,62 @@
     DecorationLineStyle_initEntries();
     return DecorationLineStyle_SOLID_instance;
   }
-  function Companion_31() {
-    Companion_instance_31 = this;
-    this.b2g_1 = new DecorationStyle(false, false, false, true, -16777216, DecorationLineStyle_SOLID_getInstance(), 1.0);
+  function Companion_38() {
+    Companion_instance_38 = this;
+    this.v3q_1 = new DecorationStyle(false, false, false, true, -16777216, DecorationLineStyle_SOLID_getInstance(), 1.0);
   }
-  var Companion_instance_31;
-  function Companion_getInstance_32() {
-    if (Companion_instance_31 == null)
-      new Companion_31();
-    return Companion_instance_31;
+  var Companion_instance_38;
+  function Companion_getInstance_39() {
+    if (Companion_instance_38 == null)
+      new Companion_38();
+    return Companion_instance_38;
   }
   function DecorationStyle(_underline, _overline, _lineThrough, _gaps, color, lineStyle, thicknessMultiplier) {
-    Companion_getInstance_32();
-    this.c2g_1 = _underline;
-    this.d2g_1 = _overline;
-    this.e2g_1 = _lineThrough;
-    this.f2g_1 = _gaps;
-    this.g2g_1 = color;
-    this.h2g_1 = lineStyle;
-    this.i2g_1 = thicknessMultiplier;
+    Companion_getInstance_39();
+    this.w3q_1 = _underline;
+    this.x3q_1 = _overline;
+    this.y3q_1 = _lineThrough;
+    this.z3q_1 = _gaps;
+    this.a3r_1 = color;
+    this.b3r_1 = lineStyle;
+    this.c3r_1 = thicknessMultiplier;
   }
-  protoOf(DecorationStyle).j2g = function () {
-    return this.h2g_1;
+  protoOf(DecorationStyle).d3r = function () {
+    return this.b3r_1;
   };
   protoOf(DecorationStyle).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof DecorationStyle))
       return false;
-    if (!(this.c2g_1 === other.c2g_1))
+    if (!(this.w3q_1 === other.w3q_1))
       return false;
-    if (!(this.d2g_1 === other.d2g_1))
+    if (!(this.x3q_1 === other.x3q_1))
       return false;
-    if (!(this.e2g_1 === other.e2g_1))
+    if (!(this.y3q_1 === other.y3q_1))
       return false;
-    if (!(this.f2g_1 === other.f2g_1))
+    if (!(this.z3q_1 === other.z3q_1))
       return false;
-    if (!(this.g2g_1 === other.g2g_1))
+    if (!(this.a3r_1 === other.a3r_1))
       return false;
-    if (!(compareTo(this.i2g_1, other.i2g_1) === 0))
+    if (!(compareTo(this.c3r_1, other.c3r_1) === 0))
       return false;
-    return this.j2g().equals(other.j2g());
+    return this.d3r().equals(other.d3r());
   };
   protoOf(DecorationStyle).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + (this.c2g_1 ? 79 : 97) | 0;
-    result = imul(result, PRIME) + (this.d2g_1 ? 79 : 97) | 0;
-    result = imul(result, PRIME) + (this.e2g_1 ? 79 : 97) | 0;
-    result = imul(result, PRIME) + (this.f2g_1 ? 79 : 97) | 0;
-    result = imul(result, PRIME) + this.g2g_1 | 0;
-    result = imul(result, PRIME) + toBits(this.i2g_1) | 0;
-    result = imul(result, PRIME) + this.j2g().hashCode() | 0;
+    result = imul(result, PRIME) + (this.w3q_1 ? 79 : 97) | 0;
+    result = imul(result, PRIME) + (this.x3q_1 ? 79 : 97) | 0;
+    result = imul(result, PRIME) + (this.y3q_1 ? 79 : 97) | 0;
+    result = imul(result, PRIME) + (this.z3q_1 ? 79 : 97) | 0;
+    result = imul(result, PRIME) + this.a3r_1 | 0;
+    result = imul(result, PRIME) + toBits(this.c3r_1) | 0;
+    result = imul(result, PRIME) + this.d3r().hashCode() | 0;
     return result;
   };
   protoOf(DecorationStyle).toString = function () {
-    return 'DecorationStyle(_underline=' + this.c2g_1 + ', _overline=' + this.d2g_1 + ', _lineThrough=' + this.e2g_1 + ', _gaps=' + this.f2g_1 + ', _color=' + this.g2g_1 + ', _lineStyle=' + this.j2g() + ', _thicknessMultiplier=' + this.i2g_1 + ')';
+    return 'DecorationStyle(_underline=' + this.w3q_1 + ', _overline=' + this.x3q_1 + ', _lineThrough=' + this.y3q_1 + ', _gaps=' + this.z3q_1 + ', _color=' + this.a3r_1 + ', _lineStyle=' + this.d3r() + ', _thicknessMultiplier=' + this.c3r_1 + ')';
   };
   var Direction_RTL_instance;
   var Direction_LTR_instance;
@@ -4239,7 +4827,7 @@
   var Direction_entriesInitialized;
   function Direction_initEntries() {
     if (Direction_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     Direction_entriesInitialized = true;
     Direction_RTL_instance = new Direction('RTL', 0);
     Direction_LTR_instance = new Direction('LTR', 1);
@@ -4255,33 +4843,33 @@
     Direction_initEntries();
     return Direction_LTR_instance;
   }
-  function Companion_32() {
-    Companion_instance_32 = this;
-    Companion_getInstance_45().m24();
+  function Companion_39() {
+    Companion_instance_39 = this;
+    Companion_instance_51.x3c();
   }
-  var Companion_instance_32;
-  function Companion_getInstance_33() {
-    if (Companion_instance_32 == null)
-      new Companion_32();
-    return Companion_instance_32;
+  var Companion_instance_39;
+  function Companion_getInstance_40() {
+    if (Companion_instance_39 == null)
+      new Companion_39();
+    return Companion_instance_39;
   }
   function FontCollection_init_$Init$($this) {
     FontCollection.call($this, org_jetbrains_skia_paragraph_FontCollection__1nMake());
-    Stats_getInstance().o24();
+    Stats_instance.z3c();
     return $this;
   }
   function FontCollection_init_$Create$() {
     return FontCollection_init_$Init$(objectCreate(protoOf(FontCollection)));
   }
   function FontCollection(ptr) {
-    Companion_getInstance_33();
+    Companion_getInstance_40();
     RefCnt_init_$Init$(ptr, this);
   }
-  protoOf(FontCollection).m2g = function (fontMgr) {
+  protoOf(FontCollection).g3r = function (fontMgr) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_paragraph_FontCollection__1nSetAssetFontManager(this.s24_1, getPtr(fontMgr), Companion_getInstance_47().e2b());
+      Stats_instance.z3c();
+      org_jetbrains_skia_paragraph_FontCollection__1nSetAssetFontManager(this.d3d_1, getPtr(fontMgr), Companion_instance_53.a3f());
       tmp = this;
     }finally {
       reachabilityBarrier(this);
@@ -4289,26 +4877,26 @@
     }
     return tmp;
   };
-  protoOf(FontCollection).n2g = function (fontMgr) {
-    return this.o2g(fontMgr, null);
+  protoOf(FontCollection).h3r = function (fontMgr) {
+    return this.i3r(fontMgr, null);
   };
-  protoOf(FontCollection).o2g = function (fontMgr, defaultFamilyName) {
+  protoOf(FontCollection).i3r = function (fontMgr, defaultFamilyName) {
     var tmp;
     try {
-      Stats_getInstance().o24();
+      Stats_instance.z3c();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_paragraph_FontCollection__1nSetDefaultFontManager(this.s24_1, getPtr(fontMgr), tmp0_anonymous.n2b(defaultFamilyName));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_paragraph_FontCollection__1nSetDefaultFontManager(this.d3d_1, getPtr(fontMgr), $this$interopScope.c3e(defaultFamilyName));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
           }
         }
       }
@@ -4319,10 +4907,10 @@
     }
     return tmp;
   };
-  protoOf(FontCollection).p2g = function (familyNames, style) {
+  protoOf(FontCollection).j3r = function (familyNames, style) {
     var tmp;
     try {
-      Stats_getInstance().o24();
+      Stats_instance.z3c();
       // Inline function 'org.jetbrains.skia.arrayDecoderScope' call
       var arrayDecoder = null;
       var tmp_0;
@@ -4335,47 +4923,42 @@
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.paragraph.FontCollection.findTypefaces.<anonymous>.<anonymous>' call
-            var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-            var tmp_1 = this.s24_1;
-            var tmp_2 = tmp0_anonymous.q2g(familyNames);
+            var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var tmp_1 = this.d3d_1;
+            var tmp_2 = $this$interopScope.k3r(familyNames);
             var tmp1_elvis_lhs = familyNames == null ? null : familyNames.length;
-            tmp$ret$1 = org_jetbrains_skia_paragraph_FontCollection__1nFindTypefaces(tmp_1, tmp_2, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, style.b2a_1);
+            tmp$ret$1 = org_jetbrains_skia_paragraph_FontCollection__1nFindTypefaces(tmp_1, tmp_2, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, style.v3j_1);
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
             }
           }
         }
         arrayDecoder = new ArrayDecoder(tmp$ret$1, org_jetbrains_skia_impl_RefCnt__getFinalizer());
         // Inline function 'org.jetbrains.skia.paragraph.FontCollection.findTypefaces.<anonymous>' call
-        var tmp0_anonymous_0 = arrayDecoder;
+        var arrayDecoder_0 = arrayDecoder;
         // Inline function 'kotlin.collections.toTypedArray' call
         // Inline function 'kotlin.collections.map' call
-        var tmp0_map = until(0, tmp0_anonymous_0.f());
+        var this_0 = until(0, arrayDecoder_0.n());
         // Inline function 'kotlin.collections.mapTo' call
-        var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp0_map, 10));
-        var inductionVariable = tmp0_map.t_1;
-        var last = tmp0_map.u_1;
-        if (inductionVariable <= last)
-          do {
-            var item = inductionVariable;
-            inductionVariable = inductionVariable + 1 | 0;
-            var tmp$ret$3;
-            // Inline function 'org.jetbrains.skia.paragraph.FontCollection.findTypefaces.<anonymous>.<anonymous>' call
-            tmp$ret$3 = new Typeface(tmp0_anonymous_0.m2e(item));
-            tmp0_mapTo.a(tmp$ret$3);
-          }
-           while (!(item === last));
-        tmp_0 = copyToArray(tmp0_mapTo);
+        var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+        var tmp0_iterator = this_0.v();
+        while (tmp0_iterator.w()) {
+          var item = tmp0_iterator.y();
+          // Inline function 'org.jetbrains.skia.paragraph.FontCollection.findTypefaces.<anonymous>.<anonymous>' call
+          var tmp$ret$3 = new Typeface(arrayDecoder_0.g3p(item));
+          destination.s(tmp$ret$3);
+        }
+        tmp_0 = copyToArray(destination);
       }finally {
         var tmp0_safe_receiver = arrayDecoder;
         if (tmp0_safe_receiver == null)
           null;
         else {
-          tmp0_safe_receiver.dj();
+          tmp0_safe_receiver.gk();
         }
       }
       tmp = tmp_0;
@@ -4384,16 +4967,15 @@
     }
     return tmp;
   };
-  function Companion_33() {
-    Companion_instance_33 = this;
+  function Companion_40() {
   }
-  protoOf(Companion_33).r2g = function (array) {
+  protoOf(Companion_40).l3r = function (array) {
     return org_jetbrains_skia_paragraph_LineMetrics__1nGetArraySize(array);
   };
-  protoOf(Companion_33).s2g = function (array) {
+  protoOf(Companion_40).m3r = function (array) {
     return org_jetbrains_skia_paragraph_LineMetrics__1nDisposeArray(array);
   };
-  protoOf(Companion_33).t2g = function (array, index) {
+  protoOf(Companion_40).n3r = function (array, index) {
     var intArray = new Int32Array(6);
     var doubleArray = new Float64Array(7);
     $l$block: {
@@ -4401,189 +4983,192 @@
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_paragraph_LineMetrics__1nGetArrayElement(array, index, tmp0_anonymous.p2e(intArray), tmp0_anonymous.u2g(doubleArray));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_paragraph_LineMetrics__1nGetArrayElement(array, index, $this$interopScope.y3e(intArray), $this$interopScope.o3r(doubleArray));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
     return new LineMetrics(intArray[0], intArray[1], intArray[2], intArray[3], !(intArray[4] === 0), doubleArray[0], doubleArray[1], doubleArray[2], doubleArray[3], doubleArray[4], doubleArray[5], doubleArray[6], intArray[5]);
   };
-  var Companion_instance_33;
-  function Companion_getInstance_34() {
-    if (Companion_instance_33 == null)
-      new Companion_33();
-    return Companion_instance_33;
+  var Companion_instance_40;
+  function Companion_getInstance_41() {
+    return Companion_instance_40;
   }
   function LineMetrics(startIndex, endIndex, endExcludingWhitespaces, endIncludingNewline, isHardBreak, ascent, descent, unscaledAscent, height, width, left, baseline, lineNumber) {
-    Companion_getInstance_34();
-    this.v2g_1 = startIndex;
-    this.w2g_1 = endIndex;
-    this.x2g_1 = endExcludingWhitespaces;
-    this.y2g_1 = endIncludingNewline;
-    this.z2g_1 = isHardBreak;
-    this.a2h_1 = ascent;
-    this.b2h_1 = descent;
-    this.c2h_1 = unscaledAscent;
-    this.d2h_1 = height;
-    this.e2h_1 = width;
-    this.f2h_1 = left;
-    this.g2h_1 = baseline;
-    this.h2h_1 = lineNumber;
+    this.p3r_1 = startIndex;
+    this.q3r_1 = endIndex;
+    this.r3r_1 = endExcludingWhitespaces;
+    this.s3r_1 = endIncludingNewline;
+    this.t3r_1 = isHardBreak;
+    this.u3r_1 = ascent;
+    this.v3r_1 = descent;
+    this.w3r_1 = unscaledAscent;
+    this.x3r_1 = height;
+    this.y3r_1 = width;
+    this.z3r_1 = left;
+    this.a3s_1 = baseline;
+    this.b3s_1 = lineNumber;
   }
-  protoOf(LineMetrics).i2h = function () {
-    return this.f2h_1 + this.e2h_1;
+  protoOf(LineMetrics).c3s = function () {
+    return this.z3r_1 + this.y3r_1;
   };
   protoOf(LineMetrics).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof LineMetrics))
       return false;
-    if (!(this.v2g_1 === other.v2g_1))
+    if (!(this.p3r_1 === other.p3r_1))
       return false;
-    if (!(this.w2g_1 === other.w2g_1))
+    if (!(this.q3r_1 === other.q3r_1))
       return false;
-    if (!(this.x2g_1 === other.x2g_1))
+    if (!(this.r3r_1 === other.r3r_1))
       return false;
-    if (!(this.y2g_1 === other.y2g_1))
+    if (!(this.s3r_1 === other.s3r_1))
       return false;
-    if (!(this.z2g_1 === other.z2g_1))
+    if (!(this.t3r_1 === other.t3r_1))
       return false;
-    if (!(compareTo(this.a2h_1, other.a2h_1) === 0))
+    if (!(compareTo(this.u3r_1, other.u3r_1) === 0))
       return false;
-    if (!(compareTo(this.b2h_1, other.b2h_1) === 0))
+    if (!(compareTo(this.v3r_1, other.v3r_1) === 0))
       return false;
-    if (!(compareTo(this.c2h_1, other.c2h_1) === 0))
+    if (!(compareTo(this.w3r_1, other.w3r_1) === 0))
       return false;
-    if (!(compareTo(this.d2h_1, other.d2h_1) === 0))
+    if (!(compareTo(this.x3r_1, other.x3r_1) === 0))
       return false;
-    if (!(compareTo(this.e2h_1, other.e2h_1) === 0))
+    if (!(compareTo(this.y3r_1, other.y3r_1) === 0))
       return false;
-    if (!(compareTo(this.f2h_1, other.f2h_1) === 0))
+    if (!(compareTo(this.z3r_1, other.z3r_1) === 0))
       return false;
-    if (!(compareTo(this.g2h_1, other.g2h_1) === 0))
+    if (!(compareTo(this.a3s_1, other.a3s_1) === 0))
       return false;
-    return this.h2h_1 === other.h2h_1;
+    return this.b3s_1 === other.b3s_1;
   };
   protoOf(LineMetrics).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + this.v2g_1 | 0;
-    result = imul(result, PRIME) + this.w2g_1 | 0;
-    result = imul(result, PRIME) + this.x2g_1 | 0;
-    result = imul(result, PRIME) + this.y2g_1 | 0;
-    result = imul(result, PRIME) + (this.z2g_1 ? 79 : 97) | 0;
-    result = imul(result, PRIME) + toBits_0(this.a2h_1).z5() | 0;
-    result = imul(result, PRIME) + toBits_0(this.b2h_1).z5() | 0;
-    result = imul(result, PRIME) + toBits_0(this.c2h_1).z5() | 0;
-    result = imul(result, PRIME) + toBits_0(this.d2h_1).z5() | 0;
-    result = imul(result, PRIME) + toBits_0(this.e2h_1).z5() | 0;
-    result = imul(result, PRIME) + toBits_0(this.f2h_1).z5() | 0;
-    result = imul(result, PRIME) + toBits_0(this.g2h_1).z5() | 0;
-    result = imul(result, PRIME) + this.h2h_1 | 0;
+    result = imul(result, PRIME) + this.p3r_1 | 0;
+    result = imul(result, PRIME) + this.q3r_1 | 0;
+    result = imul(result, PRIME) + this.r3r_1 | 0;
+    result = imul(result, PRIME) + this.s3r_1 | 0;
+    result = imul(result, PRIME) + (this.t3r_1 ? 79 : 97) | 0;
+    result = imul(result, PRIME) + toBits_0(this.u3r_1).db() | 0;
+    result = imul(result, PRIME) + toBits_0(this.v3r_1).db() | 0;
+    result = imul(result, PRIME) + toBits_0(this.w3r_1).db() | 0;
+    result = imul(result, PRIME) + toBits_0(this.x3r_1).db() | 0;
+    result = imul(result, PRIME) + toBits_0(this.y3r_1).db() | 0;
+    result = imul(result, PRIME) + toBits_0(this.z3r_1).db() | 0;
+    result = imul(result, PRIME) + toBits_0(this.a3s_1).db() | 0;
+    result = imul(result, PRIME) + this.b3s_1 | 0;
     return result;
   };
   protoOf(LineMetrics).toString = function () {
-    return 'LineMetrics(_startIndex=' + this.v2g_1 + ', _endIndex=' + this.w2g_1 + ', _endExcludingWhitespaces=' + this.x2g_1 + ', _endIncludingNewline=' + this.y2g_1 + ', _hardBreak=' + this.z2g_1 + ', _ascent=' + this.a2h_1 + ', _descent=' + this.b2h_1 + ', _unscaledAscent=' + this.c2h_1 + ', _height=' + this.d2h_1 + ', _width=' + this.e2h_1 + ', _left=' + this.f2h_1 + ', _baseline=' + this.g2h_1 + ', _lineNumber=' + this.h2h_1 + ')';
+    return 'LineMetrics(_startIndex=' + this.p3r_1 + ', _endIndex=' + this.q3r_1 + ', _endExcludingWhitespaces=' + this.r3r_1 + ', _endIncludingNewline=' + this.s3r_1 + ', _hardBreak=' + this.t3r_1 + ', _ascent=' + this.u3r_1 + ', _descent=' + this.v3r_1 + ', _unscaledAscent=' + this.w3r_1 + ', _height=' + this.x3r_1 + ', _width=' + this.y3r_1 + ', _left=' + this.z3r_1 + ', _baseline=' + this.a3s_1 + ', _lineNumber=' + this.b3s_1 + ')';
   };
-  function Companion_34() {
-    Companion_instance_34 = this;
-    Companion_getInstance_45().m24();
+  function Companion_41() {
+    Companion_instance_41 = this;
+    Companion_instance_51.x3c();
   }
-  var Companion_instance_34;
-  function Companion_getInstance_35() {
-    if (Companion_instance_34 == null)
-      new Companion_34();
-    return Companion_instance_34;
+  var Companion_instance_41;
+  function Companion_getInstance_42() {
+    if (Companion_instance_41 == null)
+      new Companion_41();
+    return Companion_instance_41;
   }
-  function _FinalizerHolder_9() {
-    _FinalizerHolder_instance_9 = this;
-    this.j2h_1 = org_jetbrains_skia_paragraph_Paragraph__1nGetFinalizer();
+  function _FinalizerHolder_12() {
+    _FinalizerHolder_instance_12 = this;
+    this.d3s_1 = org_jetbrains_skia_paragraph_Paragraph__1nGetFinalizer();
   }
-  var _FinalizerHolder_instance_9;
-  function _FinalizerHolder_getInstance_9() {
-    if (_FinalizerHolder_instance_9 == null)
-      new _FinalizerHolder_9();
-    return _FinalizerHolder_instance_9;
+  var _FinalizerHolder_instance_12;
+  function _FinalizerHolder_getInstance_12() {
+    if (_FinalizerHolder_instance_12 == null)
+      new _FinalizerHolder_12();
+    return _FinalizerHolder_instance_12;
+  }
+  function Paragraph$getWordBoundary$lambda(this$0, $offset) {
+    return function ($this$fromInteropPointer, it) {
+      org_jetbrains_skia_paragraph_Paragraph__1nGetWordBoundary(this$0.d3d_1, $offset, it);
+      return Unit_instance;
+    };
   }
   function Paragraph(ptr, text) {
-    Companion_getInstance_35();
-    Managed.call(this, ptr, _FinalizerHolder_getInstance_9().j2h_1);
-    Stats_getInstance().o24();
-    this.m2h_1 = text;
+    Companion_getInstance_42();
+    Managed.call(this, ptr, _FinalizerHolder_getInstance_12().d3s_1);
+    Stats_instance.z3c();
+    this.g3s_1 = text;
   }
-  protoOf(Paragraph).y13 = function () {
-    if (!(this.m2h_1 == null)) {
-      ensureNotNull(this.m2h_1).y13();
-      this.m2h_1 = null;
+  protoOf(Paragraph).j24 = function () {
+    if (!(this.g3s_1 == null)) {
+      ensureNotNull(this.g3s_1).j24();
+      this.g3s_1 = null;
     }
-    protoOf(Managed).y13.call(this);
+    protoOf(Managed).j24.call(this);
   };
-  protoOf(Paragraph).u21 = function () {
+  protoOf(Paragraph).l39 = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetHeight(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetHeight(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paragraph).n2h = function () {
+  protoOf(Paragraph).h3s = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetMinIntrinsicWidth(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetMinIntrinsicWidth(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paragraph).o2h = function () {
+  protoOf(Paragraph).i3s = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetMaxIntrinsicWidth(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetMaxIntrinsicWidth(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paragraph).p2h = function () {
+  protoOf(Paragraph).j3s = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetAlphabeticBaseline(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetAlphabeticBaseline(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paragraph).q2h = function () {
+  protoOf(Paragraph).k3s = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_Paragraph__1nDidExceedMaxLines(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_Paragraph__1nDidExceedMaxLines(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paragraph).r2h = function (width) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_paragraph_Paragraph__1nLayout(this.s24_1, width);
+  protoOf(Paragraph).l3s = function (width) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_paragraph_Paragraph__1nLayout(this.d3d_1, width);
     return this;
   };
-  protoOf(Paragraph).s2h = function (canvas, x, y) {
+  protoOf(Paragraph).m3s = function (canvas, x, y) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_paragraph_Paragraph__1nPaint(this.s24_1, getPtr(canvas), x, y);
+      Stats_instance.z3c();
+      org_jetbrains_skia_paragraph_Paragraph__1nPaint(this.d3d_1, getPtr(canvas), x, y);
       tmp = this;
     }finally {
       reachabilityBarrier(this);
@@ -4591,37 +5176,36 @@
     }
     return tmp;
   };
-  protoOf(Paragraph).t2h = function (start, end, rectHeightMode, rectWidthMode) {
+  protoOf(Paragraph).n3s = function (start, end, rectHeightMode, rectWidthMode) {
     var tmp;
     try {
-      Stats_getInstance().o24();
+      Stats_instance.z3c();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.paragraph.Paragraph.getRectsForRange.<anonymous>' call
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           // Inline function 'org.jetbrains.skia.impl.InteropScope.fromInterop' call
-          var tmp0_fromInterop = org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForRange(this.s24_1, start, end, rectHeightMode.w4_1, rectWidthMode.w4_1);
-          var tmp1_fromInterop = Companion_getInstance_40();
-          var size = tmp1_fromInterop.r2g(tmp0_fromInterop);
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var this_0 = org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForRange(this.d3d_1, start, end, rectHeightMode.j9_1, rectWidthMode.j9_1);
+          var size = Companion_instance_46.l3r(this_0);
           var tmp_0 = 0;
           // Inline function 'kotlin.arrayOfNulls' call
           var tmp_1 = fillArrayVal(Array(size), null);
           while (tmp_0 < size) {
             var tmp_2 = tmp_0;
-            tmp_1[tmp_2] = tmp1_fromInterop.t2g(tmp0_fromInterop, tmp_2);
+            tmp_1[tmp_2] = Companion_instance_46.n3r(this_0, tmp_2);
             tmp_0 = tmp_0 + 1 | 0;
           }
           var result = tmp_1;
-          tmp1_fromInterop.s2g(tmp0_fromInterop);
+          Companion_instance_46.m3r(this_0);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
           }
         }
       }
@@ -4631,37 +5215,36 @@
     }
     return tmp;
   };
-  protoOf(Paragraph).u2h = function () {
+  protoOf(Paragraph).o3s = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
+      Stats_instance.z3c();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.paragraph.Paragraph.<get-rectsForPlaceholders>.<anonymous>' call
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           // Inline function 'org.jetbrains.skia.impl.InteropScope.fromInterop' call
-          var tmp0_fromInterop = org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForPlaceholders(this.s24_1);
-          var tmp1_fromInterop = Companion_getInstance_40();
-          var size = tmp1_fromInterop.r2g(tmp0_fromInterop);
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var this_0 = org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForPlaceholders(this.d3d_1);
+          var size = Companion_instance_46.l3r(this_0);
           var tmp_0 = 0;
           // Inline function 'kotlin.arrayOfNulls' call
           var tmp_1 = fillArrayVal(Array(size), null);
           while (tmp_0 < size) {
             var tmp_2 = tmp_0;
-            tmp_1[tmp_2] = tmp1_fromInterop.t2g(tmp0_fromInterop, tmp_2);
+            tmp_1[tmp_2] = Companion_instance_46.n3r(this_0, tmp_2);
             tmp_0 = tmp_0 + 1 | 0;
           }
           var result = tmp_1;
-          tmp1_fromInterop.s2g(tmp0_fromInterop);
+          Companion_instance_46.m3r(this_0);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
           }
         }
       }
@@ -4671,55 +5254,65 @@
     }
     return tmp;
   };
-  protoOf(Paragraph).v2h = function (dx, dy) {
+  protoOf(Paragraph).p3s = function (dx, dy) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      var res = org_jetbrains_skia_paragraph_Paragraph__1nGetGlyphPositionAtCoordinate(this.s24_1, dx, dy);
+      Stats_instance.z3c();
+      var res = org_jetbrains_skia_paragraph_Paragraph__1nGetGlyphPositionAtCoordinate(this.d3d_1, dx, dy);
       tmp = res >= 0 ? new PositionWithAffinity(res, Affinity_DOWNSTREAM_getInstance()) : new PositionWithAffinity((-res | 0) - 1 | 0, Affinity_UPSTREAM_getInstance());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paragraph).w2h = function () {
+  protoOf(Paragraph).q3s = function (offset) {
+    var tmp;
+    try {
+      Stats_instance.z3c();
+      var tmp_0 = Companion_instance_18;
+      tmp = fromInteropPointer_0(tmp_0, Paragraph$getWordBoundary$lambda(this, offset));
+    }finally {
+      reachabilityBarrier(this);
+    }
+    return tmp;
+  };
+  protoOf(Paragraph).r3s = function () {
     var tmp;
     try {
       var tmp_0;
-      if (this.m2h_1 == null) {
+      if (this.g3s_1 == null) {
         // Inline function 'kotlin.arrayOf' call
         // Inline function 'kotlin.js.unsafeCast' call
         // Inline function 'kotlin.js.asDynamic' call
         tmp_0 = [];
       } else {
-        Stats_getInstance().o24();
+        Stats_instance.z3c();
         $l$block: {
           // Inline function 'org.jetbrains.skia.impl.interopScope' call
           try {
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.paragraph.Paragraph.<get-lineMetrics>.<anonymous>' call
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
             // Inline function 'org.jetbrains.skia.impl.InteropScope.fromInterop' call
-            var tmp0_fromInterop = org_jetbrains_skia_paragraph_Paragraph__1nGetLineMetrics(this.s24_1, getPtr(this.m2h_1));
-            var tmp1_fromInterop = Companion_getInstance_34();
-            var size = tmp1_fromInterop.r2g(tmp0_fromInterop);
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var this_0 = org_jetbrains_skia_paragraph_Paragraph__1nGetLineMetrics(this.d3d_1, getPtr(this.g3s_1));
+            var size = Companion_instance_40.l3r(this_0);
             var tmp_1 = 0;
             // Inline function 'kotlin.arrayOfNulls' call
             var tmp_2 = fillArrayVal(Array(size), null);
             while (tmp_1 < size) {
               var tmp_3 = tmp_1;
-              tmp_2[tmp_3] = tmp1_fromInterop.t2g(tmp0_fromInterop, tmp_3);
+              tmp_2[tmp_3] = Companion_instance_40.n3r(this_0, tmp_3);
               tmp_1 = tmp_1 + 1 | 0;
             }
             var result = tmp_2;
-            tmp1_fromInterop.s2g(tmp0_fromInterop);
+            Companion_instance_40.m3r(this_0);
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
             }
           }
         }
@@ -4728,96 +5321,96 @@
       tmp = tmp_0;
     }finally {
       reachabilityBarrier(this);
-      reachabilityBarrier(this.m2h_1);
+      reachabilityBarrier(this.g3s_1);
     }
     return tmp;
   };
-  protoOf(Paragraph).x2h = function () {
+  protoOf(Paragraph).s3s = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetLineNumber(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetLineNumber(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  function Companion_35() {
-    Companion_instance_35 = this;
-    Companion_getInstance_45().m24();
+  function Companion_42() {
+    Companion_instance_42 = this;
+    Companion_instance_51.x3c();
   }
-  var Companion_instance_35;
-  function Companion_getInstance_36() {
-    if (Companion_instance_35 == null)
-      new Companion_35();
-    return Companion_instance_35;
+  var Companion_instance_42;
+  function Companion_getInstance_43() {
+    if (Companion_instance_42 == null)
+      new Companion_42();
+    return Companion_instance_42;
   }
-  function _FinalizerHolder_10() {
-    _FinalizerHolder_instance_10 = this;
-    this.y2h_1 = org_jetbrains_skia_paragraph_ParagraphBuilder__1nGetFinalizer();
+  function _FinalizerHolder_13() {
+    _FinalizerHolder_instance_13 = this;
+    this.t3s_1 = org_jetbrains_skia_paragraph_ParagraphBuilder__1nGetFinalizer();
   }
-  var _FinalizerHolder_instance_10;
-  function _FinalizerHolder_getInstance_10() {
-    if (_FinalizerHolder_instance_10 == null)
-      new _FinalizerHolder_10();
-    return _FinalizerHolder_instance_10;
+  var _FinalizerHolder_instance_13;
+  function _FinalizerHolder_getInstance_13() {
+    if (_FinalizerHolder_instance_13 == null)
+      new _FinalizerHolder_13();
+    return _FinalizerHolder_instance_13;
   }
   function ParagraphBuilder(style, fc) {
-    Companion_getInstance_36();
-    Managed.call(this, makeParagraphBuilder(style, fc), _FinalizerHolder_getInstance_10().y2h_1);
-    this.b2i_1 = null;
+    Companion_getInstance_43();
+    Managed.call(this, makeParagraphBuilder(style, fc), _FinalizerHolder_getInstance_13().t3s_1);
+    this.w3s_1 = null;
   }
-  protoOf(ParagraphBuilder).c2i = function (style) {
+  protoOf(ParagraphBuilder).x3s = function (style) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_paragraph_ParagraphBuilder__1nPushStyle(this.s24_1, getPtr(style));
+      Stats_instance.z3c();
+      org_jetbrains_skia_paragraph_ParagraphBuilder__1nPushStyle(this.d3d_1, getPtr(style));
       tmp = this;
     }finally {
       reachabilityBarrier(style);
     }
     return tmp;
   };
-  protoOf(ParagraphBuilder).d2i = function (text) {
-    Stats_getInstance().o24();
+  protoOf(ParagraphBuilder).y3s = function (text) {
+    Stats_instance.z3c();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddText(this.s24_1, tmp0_anonymous.n2b(text));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddText(this.d3d_1, $this$interopScope.c3e(text));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
           }
         }
       }
     }finally {
       reachabilityBarrier(this);
     }
-    if (this.b2i_1 == null)
-      this.b2i_1 = ManagedString_init_$Create$(text);
+    if (this.w3s_1 == null)
+      this.w3s_1 = ManagedString_init_$Create$(text);
     else {
-      ensureNotNull(this.b2i_1).t2b(text);
+      ensureNotNull(this.w3s_1).u3l(text);
     }
     return this;
   };
-  protoOf(ParagraphBuilder).e2i = function (style) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddPlaceholder(this.s24_1, style.f2i_1, style.g2i_1, style.k2i().w4_1, style.l2i().w4_1, style.j2i_1);
+  protoOf(ParagraphBuilder).z3s = function (style) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddPlaceholder(this.d3d_1, style.a3t_1, style.b3t_1, style.f3t().j9_1, style.g3t().j9_1, style.e3t_1);
     return this;
   };
-  protoOf(ParagraphBuilder).ia = function () {
+  protoOf(ParagraphBuilder).v24 = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      var paragraph = new Paragraph(org_jetbrains_skia_paragraph_ParagraphBuilder__1nBuild(this.s24_1), this.b2i_1);
-      this.b2i_1 = null;
+      Stats_instance.z3c();
+      var paragraph = new Paragraph(org_jetbrains_skia_paragraph_ParagraphBuilder__1nBuild(this.d3d_1), this.w3s_1);
+      this.w3s_1 = null;
       tmp = paragraph;
     }finally {
       reachabilityBarrier(this);
@@ -4825,7 +5418,7 @@
     return tmp;
   };
   function makeParagraphBuilder(style, fc) {
-    Stats_getInstance().o24();
+    Stats_instance.z3c();
     var tmp;
     try {
       tmp = org_jetbrains_skia_paragraph_ParagraphBuilder__1nMake(getPtr(style), getPtr(fc));
@@ -4835,141 +5428,141 @@
     }
     return tmp;
   }
-  function Companion_36() {
-    Companion_instance_36 = this;
-    Companion_getInstance_45().m24();
+  function Companion_43() {
+    Companion_instance_43 = this;
+    Companion_instance_51.x3c();
   }
-  var Companion_instance_36;
-  function Companion_getInstance_37() {
-    if (Companion_instance_36 == null)
-      new Companion_36();
-    return Companion_instance_36;
+  var Companion_instance_43;
+  function Companion_getInstance_44() {
+    if (Companion_instance_43 == null)
+      new Companion_43();
+    return Companion_instance_43;
   }
-  function _FinalizerHolder_11() {
-    _FinalizerHolder_instance_11 = this;
-    this.m2i_1 = org_jetbrains_skia_paragraph_ParagraphStyle__1nGetFinalizer();
+  function _FinalizerHolder_14() {
+    _FinalizerHolder_instance_14 = this;
+    this.h3t_1 = org_jetbrains_skia_paragraph_ParagraphStyle__1nGetFinalizer();
   }
-  var _FinalizerHolder_instance_11;
-  function _FinalizerHolder_getInstance_11() {
-    if (_FinalizerHolder_instance_11 == null)
-      new _FinalizerHolder_11();
-    return _FinalizerHolder_instance_11;
+  var _FinalizerHolder_instance_14;
+  function _FinalizerHolder_getInstance_14() {
+    if (_FinalizerHolder_instance_14 == null)
+      new _FinalizerHolder_14();
+    return _FinalizerHolder_instance_14;
   }
   function ParagraphStyle() {
-    Companion_getInstance_37();
-    Managed.call(this, org_jetbrains_skia_paragraph_ParagraphStyle__1nMake(), _FinalizerHolder_getInstance_11().m2i_1);
-    Stats_getInstance().o24();
+    Companion_getInstance_44();
+    Managed.call(this, org_jetbrains_skia_paragraph_ParagraphStyle__1nMake(), _FinalizerHolder_getInstance_14().h3t_1);
+    Stats_instance.z3c();
   }
-  protoOf(ParagraphStyle).t24 = function (other) {
+  protoOf(ParagraphStyle).e3d = function (other) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_ParagraphStyle__1nEquals(this.s24_1, getPtr(other));
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_ParagraphStyle__1nEquals(this.d3d_1, getPtr(other));
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(other);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).p2i = function (value) {
+  protoOf(ParagraphStyle).k3t = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_paragraph_ParagraphStyle__1nSetStrutStyle(this.s24_1, getPtr(value));
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_paragraph_ParagraphStyle__1nSetStrutStyle(this.d3d_1, getPtr(value));
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(value);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).q2i = function () {
+  protoOf(ParagraphStyle).l3t = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = new StrutStyle(org_jetbrains_skia_paragraph_ParagraphStyle__1nGetStrutStyle(this.s24_1));
+      Stats_instance.z3c();
+      tmp = new StrutStyle(org_jetbrains_skia_paragraph_ParagraphStyle__1nGetStrutStyle(this.d3d_1));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).r2i = function (value) {
+  protoOf(ParagraphStyle).m3t = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_paragraph_ParagraphStyle__1nSetTextStyle(this.s24_1, getPtr(value));
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_paragraph_ParagraphStyle__1nSetTextStyle(this.d3d_1, getPtr(value));
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(value);
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).s2i = function (value) {
+  protoOf(ParagraphStyle).n3t = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_paragraph_ParagraphStyle__1nSetDirection(this.s24_1, value.w4_1);
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_paragraph_ParagraphStyle__1nSetDirection(this.d3d_1, value.j9_1);
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).t2i = function (value) {
+  protoOf(ParagraphStyle).o3t = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_paragraph_ParagraphStyle__1nSetAlignment(this.s24_1, value.w4_1);
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_paragraph_ParagraphStyle__1nSetAlignment(this.d3d_1, value.j9_1);
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).u2i = function (value) {
+  protoOf(ParagraphStyle).p3t = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_paragraph_ParagraphStyle__1nSetMaxLinesCount(this.s24_1, value);
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_paragraph_ParagraphStyle__1nSetMaxLinesCount(this.d3d_1, value);
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).v2i = function (value) {
+  protoOf(ParagraphStyle).q3t = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
+      Stats_instance.z3c();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_paragraph_ParagraphStyle__1nSetEllipsis(this.s24_1, tmp0_anonymous.n2b(value));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_paragraph_ParagraphStyle__1nSetEllipsis(this.d3d_1, $this$interopScope.c3e(value));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
           }
         }
       }
-      tmp = Unit_getInstance();
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).w2i = function (value) {
+  protoOf(ParagraphStyle).r3t = function (value) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_paragraph_ParagraphStyle__1nSetTextIndent(this.s24_1, value.x2i_1, value.y2i_1);
-      tmp = Unit_getInstance();
+      Stats_instance.z3c();
+      org_jetbrains_skia_paragraph_ParagraphStyle__1nSetTextIndent(this.d3d_1, value.s3t_1, value.t3t_1);
+      tmp = Unit_instance;
     }finally {
       reachabilityBarrier(this);
     }
@@ -4984,7 +5577,7 @@
   var PlaceholderAlignment_entriesInitialized;
   function PlaceholderAlignment_initEntries() {
     if (PlaceholderAlignment_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     PlaceholderAlignment_entriesInitialized = true;
     PlaceholderAlignment_BASELINE_instance = new PlaceholderAlignment('BASELINE', 0);
     PlaceholderAlignment_ABOVE_BASELINE_instance = new PlaceholderAlignment('ABOVE_BASELINE', 1);
@@ -5013,71 +5606,71 @@
     return PlaceholderAlignment_MIDDLE_instance;
   }
   function PlaceholderStyle(width, height, alignment, baselineMode, baseline) {
-    this.f2i_1 = width;
-    this.g2i_1 = height;
-    this.h2i_1 = alignment;
-    this.i2i_1 = baselineMode;
-    this.j2i_1 = baseline;
+    this.a3t_1 = width;
+    this.b3t_1 = height;
+    this.c3t_1 = alignment;
+    this.d3t_1 = baselineMode;
+    this.e3t_1 = baseline;
   }
-  protoOf(PlaceholderStyle).k2i = function () {
-    return this.h2i_1;
+  protoOf(PlaceholderStyle).f3t = function () {
+    return this.c3t_1;
   };
-  protoOf(PlaceholderStyle).l2i = function () {
-    return this.i2i_1;
+  protoOf(PlaceholderStyle).g3t = function () {
+    return this.d3t_1;
   };
   protoOf(PlaceholderStyle).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof PlaceholderStyle))
       return false;
-    if (!(compareTo(this.f2i_1, other.f2i_1) === 0))
+    if (!(compareTo(this.a3t_1, other.a3t_1) === 0))
       return false;
-    if (!(compareTo(this.g2i_1, other.g2i_1) === 0))
+    if (!(compareTo(this.b3t_1, other.b3t_1) === 0))
       return false;
-    if (!(compareTo(this.j2i_1, other.j2i_1) === 0))
+    if (!(compareTo(this.e3t_1, other.e3t_1) === 0))
       return false;
-    if (!this.k2i().equals(other.k2i()))
+    if (!this.f3t().equals(other.f3t()))
       return false;
-    return this.l2i().equals(other.l2i());
+    return this.g3t().equals(other.g3t());
   };
   protoOf(PlaceholderStyle).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + toBits(this.f2i_1) | 0;
-    result = imul(result, PRIME) + toBits(this.g2i_1) | 0;
-    result = imul(result, PRIME) + toBits(this.j2i_1) | 0;
-    result = imul(result, PRIME) + this.k2i().hashCode() | 0;
-    result = imul(result, PRIME) + this.l2i().hashCode() | 0;
+    result = imul(result, PRIME) + toBits(this.a3t_1) | 0;
+    result = imul(result, PRIME) + toBits(this.b3t_1) | 0;
+    result = imul(result, PRIME) + toBits(this.e3t_1) | 0;
+    result = imul(result, PRIME) + this.f3t().hashCode() | 0;
+    result = imul(result, PRIME) + this.g3t().hashCode() | 0;
     return result;
   };
   protoOf(PlaceholderStyle).toString = function () {
-    return 'PlaceholderStyle(_width=' + this.f2i_1 + ', _height=' + this.g2i_1 + ', _alignment=' + this.k2i() + ', _baselineMode=' + this.l2i() + ', _baseline=' + this.j2i_1 + ')';
+    return 'PlaceholderStyle(_width=' + this.a3t_1 + ', _height=' + this.b3t_1 + ', _alignment=' + this.f3t() + ', _baselineMode=' + this.g3t() + ', _baseline=' + this.e3t_1 + ')';
   };
   function PositionWithAffinity(position, affinity) {
-    this.z2i_1 = position;
-    this.a2j_1 = affinity;
+    this.u3t_1 = position;
+    this.v3t_1 = affinity;
   }
-  protoOf(PositionWithAffinity).b2j = function () {
-    return this.a2j_1;
+  protoOf(PositionWithAffinity).w3t = function () {
+    return this.v3t_1;
   };
   protoOf(PositionWithAffinity).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof PositionWithAffinity))
       return false;
-    if (!(this.z2i_1 === other.z2i_1))
+    if (!(this.u3t_1 === other.u3t_1))
       return false;
-    return this.b2j().equals(other.b2j());
+    return this.w3t().equals(other.w3t());
   };
   protoOf(PositionWithAffinity).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + this.z2i_1 | 0;
-    result = imul(result, PRIME) + this.b2j().hashCode() | 0;
+    result = imul(result, PRIME) + this.u3t_1 | 0;
+    result = imul(result, PRIME) + this.w3t().hashCode() | 0;
     return result;
   };
   protoOf(PositionWithAffinity).toString = function () {
-    return 'PositionWithAffinity(_position=' + this.z2i_1 + ', _affinity=' + this.b2j() + ')';
+    return 'PositionWithAffinity(_position=' + this.u3t_1 + ', _affinity=' + this.w3t() + ')';
   };
   var RectHeightMode_TIGHT_instance;
   var RectHeightMode_MAX_instance;
@@ -5088,7 +5681,7 @@
   var RectHeightMode_entriesInitialized;
   function RectHeightMode_initEntries() {
     if (RectHeightMode_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     RectHeightMode_entriesInitialized = true;
     RectHeightMode_TIGHT_instance = new RectHeightMode('TIGHT', 0);
     RectHeightMode_MAX_instance = new RectHeightMode('MAX', 1);
@@ -5113,7 +5706,7 @@
   var RectWidthMode_entriesInitialized;
   function RectWidthMode_initEntries() {
     if (RectWidthMode_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     RectWidthMode_entriesInitialized = true;
     RectWidthMode_TIGHT_instance = new RectWidthMode('TIGHT', 0);
     RectWidthMode_MAX_instance = new RectWidthMode('MAX', 1);
@@ -5125,184 +5718,179 @@
     RectWidthMode_initEntries();
     return RectWidthMode_TIGHT_instance;
   }
-  function Companion_37() {
-    Companion_instance_37 = this;
+  function Companion_44() {
   }
-  var Companion_instance_37;
-  function Companion_getInstance_38() {
-    if (Companion_instance_37 == null)
-      new Companion_37();
-    return Companion_instance_37;
+  var Companion_instance_44;
+  function Companion_getInstance_45() {
+    return Companion_instance_44;
   }
   function Shadow(color, offsetX, offsetY, blurSigma) {
-    Companion_getInstance_38();
-    this.c2j_1 = color;
-    this.d2j_1 = offsetX;
-    this.e2j_1 = offsetY;
-    this.f2j_1 = blurSigma;
+    this.x3t_1 = color;
+    this.y3t_1 = offsetX;
+    this.z3t_1 = offsetY;
+    this.a3u_1 = blurSigma;
   }
   protoOf(Shadow).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof Shadow))
       return false;
-    if (!(this.c2j_1 === other.c2j_1))
+    if (!(this.x3t_1 === other.x3t_1))
       return false;
-    if (!(compareTo(this.d2j_1, other.d2j_1) === 0))
+    if (!(compareTo(this.y3t_1, other.y3t_1) === 0))
       return false;
-    if (!(compareTo(this.e2j_1, other.e2j_1) === 0))
+    if (!(compareTo(this.z3t_1, other.z3t_1) === 0))
       return false;
-    return compareTo(this.f2j_1, other.f2j_1) === 0;
+    return compareTo(this.a3u_1, other.a3u_1) === 0;
   };
   protoOf(Shadow).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + this.c2j_1 | 0;
-    result = imul(result, PRIME) + toBits(this.d2j_1) | 0;
-    result = imul(result, PRIME) + toBits(this.e2j_1) | 0;
-    var blurSigma = toBits_0(this.f2j_1);
-    result = imul(result, PRIME) + blurSigma.p6(32).td(blurSigma).z5() | 0;
+    result = imul(result, PRIME) + this.x3t_1 | 0;
+    result = imul(result, PRIME) + toBits(this.y3t_1) | 0;
+    result = imul(result, PRIME) + toBits(this.z3t_1) | 0;
+    var blurSigma = toBits_0(this.a3u_1);
+    result = imul(result, PRIME) + blurSigma.ya(32).bb(blurSigma).db() | 0;
     return result;
   };
   protoOf(Shadow).toString = function () {
-    return 'Shadow(_color=' + this.c2j_1 + ', _offsetX=' + this.d2j_1 + ', _offsetY=' + this.e2j_1 + ', _blurSigma=' + this.f2j_1 + ')';
+    return 'Shadow(_color=' + this.x3t_1 + ', _offsetX=' + this.y3t_1 + ', _offsetY=' + this.z3t_1 + ', _blurSigma=' + this.a3u_1 + ')';
   };
-  function Companion_38() {
-    Companion_instance_38 = this;
-    Companion_getInstance_45().m24();
+  function Companion_45() {
+    Companion_instance_45 = this;
+    Companion_instance_51.x3c();
   }
-  var Companion_instance_38;
-  function Companion_getInstance_39() {
-    if (Companion_instance_38 == null)
-      new Companion_38();
-    return Companion_instance_38;
+  var Companion_instance_45;
+  function Companion_getInstance_46() {
+    if (Companion_instance_45 == null)
+      new Companion_45();
+    return Companion_instance_45;
   }
   function StrutStyle_init_$Init$($this) {
     StrutStyle.call($this, org_jetbrains_skia_paragraph_StrutStyle__1nMake());
-    Stats_getInstance().o24();
+    Stats_instance.z3c();
     return $this;
   }
   function StrutStyle_init_$Create$() {
     return StrutStyle_init_$Init$(objectCreate(protoOf(StrutStyle)));
   }
-  function _FinalizerHolder_12() {
-    _FinalizerHolder_instance_12 = this;
-    this.g2j_1 = org_jetbrains_skia_paragraph_StrutStyle__1nGetFinalizer();
+  function _FinalizerHolder_15() {
+    _FinalizerHolder_instance_15 = this;
+    this.b3u_1 = org_jetbrains_skia_paragraph_StrutStyle__1nGetFinalizer();
   }
-  var _FinalizerHolder_instance_12;
-  function _FinalizerHolder_getInstance_12() {
-    if (_FinalizerHolder_instance_12 == null)
-      new _FinalizerHolder_12();
-    return _FinalizerHolder_instance_12;
+  var _FinalizerHolder_instance_15;
+  function _FinalizerHolder_getInstance_15() {
+    if (_FinalizerHolder_instance_15 == null)
+      new _FinalizerHolder_15();
+    return _FinalizerHolder_instance_15;
   }
   function StrutStyle(ptr) {
-    Companion_getInstance_39();
-    Managed.call(this, ptr, _FinalizerHolder_getInstance_12().g2j_1);
+    Companion_getInstance_46();
+    Managed.call(this, ptr, _FinalizerHolder_getInstance_15().b3u_1);
   }
-  protoOf(StrutStyle).t24 = function (other) {
+  protoOf(StrutStyle).e3d = function (other) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_StrutStyle__1nEquals(this.s24_1, getPtr(other));
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_StrutStyle__1nEquals(this.d3d_1, getPtr(other));
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(other);
     }
     return tmp;
   };
-  protoOf(StrutStyle).j2j = function (value) {
-    this.k2j(value);
+  protoOf(StrutStyle).e3u = function (value) {
+    this.f3u(value);
   };
-  protoOf(StrutStyle).l2j = function () {
+  protoOf(StrutStyle).g3u = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_StrutStyle__1nGetFontSize(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_StrutStyle__1nGetFontSize(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(StrutStyle).k2j = function (value) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_paragraph_StrutStyle__1nSetFontSize(this.s24_1, value);
+  protoOf(StrutStyle).f3u = function (value) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_paragraph_StrutStyle__1nSetFontSize(this.d3d_1, value);
     return this;
   };
-  protoOf(StrutStyle).m2j = function (value) {
-    this.n2j(value);
+  protoOf(StrutStyle).h3u = function (value) {
+    this.i3u(value);
   };
-  protoOf(StrutStyle).u21 = function () {
+  protoOf(StrutStyle).l39 = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_StrutStyle__1nGetHeight(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_StrutStyle__1nGetHeight(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(StrutStyle).n2j = function (value) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_paragraph_StrutStyle__1nSetHeight(this.s24_1, value);
+  protoOf(StrutStyle).i3u = function (value) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_paragraph_StrutStyle__1nSetHeight(this.d3d_1, value);
     return this;
   };
-  protoOf(StrutStyle).o2j = function (value) {
-    this.p2j(value);
+  protoOf(StrutStyle).j3u = function (value) {
+    this.k3u(value);
   };
-  protoOf(StrutStyle).q2j = function () {
+  protoOf(StrutStyle).l3u = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_StrutStyle__1nIsEnabled(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_StrutStyle__1nIsEnabled(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(StrutStyle).p2j = function (value) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_paragraph_StrutStyle__1nSetEnabled(this.s24_1, value);
+  protoOf(StrutStyle).k3u = function (value) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_paragraph_StrutStyle__1nSetEnabled(this.d3d_1, value);
     return this;
   };
-  protoOf(StrutStyle).r2j = function () {
+  protoOf(StrutStyle).m3u = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightForced(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightForced(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(StrutStyle).s2j = function (value) {
-    this.t2j(value);
+  protoOf(StrutStyle).n3u = function (value) {
+    this.o3u(value);
   };
-  protoOf(StrutStyle).u2j = function () {
+  protoOf(StrutStyle).p3u = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightOverridden(this.s24_1);
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightOverridden(this.d3d_1);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(StrutStyle).t2j = function (value) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightOverridden(this.s24_1, value);
+  protoOf(StrutStyle).o3u = function (value) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightOverridden(this.d3d_1, value);
     return this;
   };
   function TextBox_init_$Init$(l, t, r, b, direction, $this) {
-    TextBox.call($this, Companion_getInstance_29().h2e(l, t, r, b), values_5()[direction]);
+    TextBox.call($this, Companion_instance_32.y3o(l, t, r, b), values_5()[direction]);
     return $this;
   }
   function TextBox_init_$Create$(l, t, r, b, direction) {
     return TextBox_init_$Init$(l, t, r, b, direction, objectCreate(protoOf(TextBox)));
   }
-  function Companion_39() {
-    Companion_instance_39 = this;
+  function Companion_46() {
   }
-  protoOf(Companion_39).t2g = function (array, index) {
+  protoOf(Companion_46).n3r = function (array, index) {
     var rect = new Float32Array(4);
     var direction = new Int32Array(1);
     $l$block: {
@@ -5310,74 +5898,71 @@
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var rectPtr = tmp0_anonymous.i26(rect);
-        var directionPtr = tmp0_anonymous.p2e(direction);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var rectPtr = $this$interopScope.v3f(rect);
+        var directionPtr = $this$interopScope.y3e(direction);
         org_jetbrains_skia_paragraph_TextBox__1nGetArrayElement(array, index, rectPtr, directionPtr);
-        tmp0_anonymous.z29(rectPtr, rect);
-        tmp0_anonymous.m2b(directionPtr, direction);
+        $this$interopScope.t3j(rectPtr, rect);
+        $this$interopScope.z3e(directionPtr, direction);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
     return TextBox_init_$Create$(rect[0], rect[1], rect[2], rect[3], direction[0]);
   };
-  protoOf(Companion_39).r2g = function (array) {
+  protoOf(Companion_46).l3r = function (array) {
     return org_jetbrains_skia_paragraph_TextBox__1nGetArraySize(array);
   };
-  protoOf(Companion_39).s2g = function (array) {
+  protoOf(Companion_46).m3r = function (array) {
     return org_jetbrains_skia_paragraph_TextBox__1nDisposeArray(array);
   };
-  var Companion_instance_39;
-  function Companion_getInstance_40() {
-    if (Companion_instance_39 == null)
-      new Companion_39();
-    return Companion_instance_39;
+  var Companion_instance_46;
+  function Companion_getInstance_47() {
+    return Companion_instance_46;
   }
   function TextBox(rect, direction) {
-    Companion_getInstance_40();
-    this.v2j_1 = rect;
-    this.w2j_1 = direction;
+    this.q3u_1 = rect;
+    this.r3u_1 = direction;
   }
-  protoOf(TextBox).x2j = function () {
-    return this.w2j_1;
+  protoOf(TextBox).s3u = function () {
+    return this.r3u_1;
   };
   protoOf(TextBox).equals = function (other) {
     if (other === this)
       return true;
     if (!(other instanceof TextBox))
       return false;
-    if (!this.v2j_1.equals(other.v2j_1))
+    if (!this.q3u_1.equals(other.q3u_1))
       return false;
-    return this.x2j().equals(other.x2j());
+    return this.s3u().equals(other.s3u());
   };
   protoOf(TextBox).hashCode = function () {
     var PRIME = 59;
     var result = 1;
-    result = imul(result, PRIME) + this.v2j_1.hashCode() | 0;
-    result = imul(result, PRIME) + this.x2j().hashCode() | 0;
+    result = imul(result, PRIME) + this.q3u_1.hashCode() | 0;
+    result = imul(result, PRIME) + this.s3u().hashCode() | 0;
     return result;
   };
   protoOf(TextBox).toString = function () {
-    return 'TextBox(_rect=' + this.v2j_1 + ', _direction=' + this.x2j() + ')';
+    return 'TextBox(_rect=' + this.q3u_1 + ', _direction=' + this.s3u() + ')';
   };
   function TextIndent(firstLine, restLine) {
     firstLine = firstLine === VOID ? 0.0 : firstLine;
     restLine = restLine === VOID ? 0.0 : restLine;
-    this.x2i_1 = firstLine;
-    this.y2i_1 = restLine;
+    this.s3t_1 = firstLine;
+    this.t3t_1 = restLine;
   }
   protoOf(TextIndent).toString = function () {
-    return 'TextIndent(firstLine=' + this.x2i_1 + ', restLine=' + this.y2i_1 + ')';
+    return 'TextIndent(firstLine=' + this.s3t_1 + ', restLine=' + this.t3t_1 + ')';
   };
   protoOf(TextIndent).hashCode = function () {
-    var result = getNumberHashCode(this.x2i_1);
-    result = imul(result, 31) + getNumberHashCode(this.y2i_1) | 0;
+    var result = getNumberHashCode(this.s3t_1);
+    result = imul(result, 31) + getNumberHashCode(this.t3t_1) | 0;
     return result;
   };
   protoOf(TextIndent).equals = function (other) {
@@ -5386,77 +5971,77 @@
     if (!(other instanceof TextIndent))
       return false;
     var tmp0_other_with_cast = other instanceof TextIndent ? other : THROW_CCE();
-    if (!equals(this.x2i_1, tmp0_other_with_cast.x2i_1))
+    if (!equals(this.s3t_1, tmp0_other_with_cast.s3t_1))
       return false;
-    if (!equals(this.y2i_1, tmp0_other_with_cast.y2i_1))
+    if (!equals(this.t3t_1, tmp0_other_with_cast.t3t_1))
       return false;
     return true;
   };
-  function Companion_40() {
-    Companion_instance_40 = this;
-    Companion_getInstance_45().m24();
+  function Companion_47() {
+    Companion_instance_47 = this;
+    Companion_instance_51.x3c();
   }
-  var Companion_instance_40;
-  function Companion_getInstance_41() {
-    if (Companion_instance_40 == null)
-      new Companion_40();
-    return Companion_instance_40;
+  var Companion_instance_47;
+  function Companion_getInstance_48() {
+    if (Companion_instance_47 == null)
+      new Companion_47();
+    return Companion_instance_47;
   }
   function TextStyle_init_$Init$($this) {
     TextStyle.call($this, org_jetbrains_skia_paragraph_TextStyle__1nMake());
-    Stats_getInstance().o24();
+    Stats_instance.z3c();
     return $this;
   }
   function TextStyle_init_$Create$() {
     return TextStyle_init_$Init$(objectCreate(protoOf(TextStyle)));
   }
-  function _FinalizerHolder_13() {
-    _FinalizerHolder_instance_13 = this;
-    this.y2j_1 = org_jetbrains_skia_paragraph_TextStyle__1nGetFinalizer();
+  function _FinalizerHolder_16() {
+    _FinalizerHolder_instance_16 = this;
+    this.t3u_1 = org_jetbrains_skia_paragraph_TextStyle__1nGetFinalizer();
   }
-  var _FinalizerHolder_instance_13;
-  function _FinalizerHolder_getInstance_13() {
-    if (_FinalizerHolder_instance_13 == null)
-      new _FinalizerHolder_13();
-    return _FinalizerHolder_instance_13;
+  var _FinalizerHolder_instance_16;
+  function _FinalizerHolder_getInstance_16() {
+    if (_FinalizerHolder_instance_16 == null)
+      new _FinalizerHolder_16();
+    return _FinalizerHolder_instance_16;
   }
   function TextStyle$_get_fontMetrics_$lambda_9osnwy(this$0) {
     return function ($this$fromInteropPointer, it) {
-      org_jetbrains_skia_paragraph_TextStyle__1nGetFontMetrics(this$0.s24_1, it);
-      return Unit_getInstance();
+      org_jetbrains_skia_paragraph_TextStyle__1nGetFontMetrics(this$0.d3d_1, it);
+      return Unit_instance;
     };
   }
   function TextStyle(ptr) {
-    Companion_getInstance_41();
-    Managed.call(this, ptr, _FinalizerHolder_getInstance_13().y2j_1);
+    Companion_getInstance_48();
+    Managed.call(this, ptr, _FinalizerHolder_getInstance_16().t3u_1);
   }
-  protoOf(TextStyle).t24 = function (other) {
+  protoOf(TextStyle).e3d = function (other) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = org_jetbrains_skia_paragraph_TextStyle__1nEquals(this.s24_1, getPtr(other));
+      Stats_instance.z3c();
+      tmp = org_jetbrains_skia_paragraph_TextStyle__1nEquals(this.d3d_1, getPtr(other));
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(other);
     }
     return tmp;
   };
-  protoOf(TextStyle).b2c = function (value) {
-    this.b2k(value);
+  protoOf(TextStyle).d3m = function (value) {
+    this.w3u(value);
   };
-  protoOf(TextStyle).b2k = function (color) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_paragraph_TextStyle__1nSetColor(this.s24_1, color);
+  protoOf(TextStyle).w3u = function (color) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_paragraph_TextStyle__1nSetColor(this.d3d_1, color);
     return this;
   };
-  protoOf(TextStyle).c2k = function (value) {
-    this.d2k(value);
+  protoOf(TextStyle).x3u = function (value) {
+    this.y3u(value);
   };
-  protoOf(TextStyle).d2k = function (paint) {
+  protoOf(TextStyle).y3u = function (paint) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_paragraph_TextStyle__1nSetForeground(this.s24_1, getPtr(paint));
+      Stats_instance.z3c();
+      org_jetbrains_skia_paragraph_TextStyle__1nSetForeground(this.d3d_1, getPtr(paint));
       tmp = this;
     }finally {
       reachabilityBarrier(this);
@@ -5464,14 +6049,14 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).e2k = function (value) {
-    this.f2k(value);
+  protoOf(TextStyle).z3u = function (value) {
+    this.a3v(value);
   };
-  protoOf(TextStyle).f2k = function (paint) {
+  protoOf(TextStyle).a3v = function (paint) {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      org_jetbrains_skia_paragraph_TextStyle__1nSetBackground(this.s24_1, getPtr(paint));
+      Stats_instance.z3c();
+      org_jetbrains_skia_paragraph_TextStyle__1nSetBackground(this.d3d_1, getPtr(paint));
       tmp = this;
     }finally {
       reachabilityBarrier(this);
@@ -5479,88 +6064,88 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).g2k = function (value) {
-    this.h2k(value);
+  protoOf(TextStyle).b3v = function (value) {
+    this.c3v(value);
   };
-  protoOf(TextStyle).h2k = function (d) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_paragraph_TextStyle__1nSetDecorationStyle(this.s24_1, d.c2g_1, d.d2g_1, d.e2g_1, d.f2g_1, d.g2g_1, d.h2g_1.w4_1, d.i2g_1);
+  protoOf(TextStyle).c3v = function (d) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_paragraph_TextStyle__1nSetDecorationStyle(this.d3d_1, d.w3q_1, d.x3q_1, d.y3q_1, d.z3q_1, d.a3r_1, d.b3r_1.j9_1, d.c3r_1);
     return this;
   };
-  protoOf(TextStyle).i2k = function (value) {
-    this.j2k(value);
+  protoOf(TextStyle).d3v = function (value) {
+    this.e3v(value);
   };
-  protoOf(TextStyle).a2f = function () {
+  protoOf(TextStyle).t3p = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      tmp = FontStyle_init_$Create$_0(org_jetbrains_skia_paragraph_TextStyle__1nGetFontStyle(this.s24_1));
+      Stats_instance.z3c();
+      tmp = FontStyle_init_$Create$_0(org_jetbrains_skia_paragraph_TextStyle__1nGetFontStyle(this.d3d_1));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextStyle).j2k = function (s) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_paragraph_TextStyle__1nSetFontStyle(this.s24_1, s.b2a_1);
+  protoOf(TextStyle).e3v = function (s) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_paragraph_TextStyle__1nSetFontStyle(this.d3d_1, s.v3j_1);
     return this;
   };
-  protoOf(TextStyle).k2k = function (s) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_paragraph_TextStyle__1nAddShadow(this.s24_1, s.c2j_1, s.d2j_1, s.e2j_1, s.f2j_1);
+  protoOf(TextStyle).f3v = function (s) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_paragraph_TextStyle__1nAddShadow(this.d3d_1, s.x3t_1, s.y3t_1, s.z3t_1, s.a3u_1);
     return this;
   };
-  protoOf(TextStyle).l2k = function (f) {
-    Stats_getInstance().o24();
+  protoOf(TextStyle).g3v = function (f) {
+    Stats_instance.z3c();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_paragraph_TextStyle__1nAddFontFeature(this.s24_1, tmp0_anonymous.n2b(f.h29()), f.e29_1);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_paragraph_TextStyle__1nAddFontFeature(this.d3d_1, $this$interopScope.c3e(f.b3j()), f.y3i_1);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
     return this;
   };
-  protoOf(TextStyle).m2k = function (FontFeatures) {
+  protoOf(TextStyle).h3v = function (FontFeatures) {
     var inductionVariable = 0;
     var last = FontFeatures.length;
     while (inductionVariable < last) {
       var s = FontFeatures[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      this.l2k(s);
+      this.g3v(s);
     }
     return this;
   };
-  protoOf(TextStyle).j2j = function (value) {
-    this.k2j(value);
+  protoOf(TextStyle).e3u = function (value) {
+    this.f3u(value);
   };
-  protoOf(TextStyle).k2j = function (size) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_paragraph_TextStyle__1nSetFontSize(this.s24_1, size);
+  protoOf(TextStyle).f3u = function (size) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_paragraph_TextStyle__1nSetFontSize(this.d3d_1, size);
     return this;
   };
-  protoOf(TextStyle).n2k = function (value) {
-    this.o2k(value);
+  protoOf(TextStyle).i3v = function (value) {
+    this.j3v(value);
   };
-  protoOf(TextStyle).o2k = function (families) {
-    Stats_getInstance().o24();
+  protoOf(TextStyle).j3v = function (families) {
+    Stats_instance.z3c();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var tmp = this.s24_1;
-        var tmp_0 = tmp0_anonymous.q2g(families);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var tmp = this.d3d_1;
+        var tmp_0 = $this$interopScope.k3r(families);
         var tmp1_elvis_lhs = families == null ? null : families.length;
         org_jetbrains_skia_paragraph_TextStyle__1nSetFontFamilies(tmp, tmp_0, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs);
         break $l$block;
@@ -5568,71 +6153,71 @@
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
         }
       }
     }
     return this;
   };
-  protoOf(TextStyle).p2k = function (value) {
-    this.q2k(value);
+  protoOf(TextStyle).k3v = function (value) {
+    this.l3v(value);
   };
-  protoOf(TextStyle).q2k = function (letterSpacing) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_paragraph_TextStyle__1nSetLetterSpacing(this.s24_1, letterSpacing);
+  protoOf(TextStyle).l3v = function (letterSpacing) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_paragraph_TextStyle__1nSetLetterSpacing(this.d3d_1, letterSpacing);
     return this;
   };
-  protoOf(TextStyle).r2k = function (value) {
-    this.s2k(value);
+  protoOf(TextStyle).m3v = function (value) {
+    this.n3v(value);
   };
-  protoOf(TextStyle).s2k = function (baselineShift) {
-    Stats_getInstance().o24();
-    org_jetbrains_skia_paragraph_TextStyle__1nSetBaselineShift(this.s24_1, baselineShift);
+  protoOf(TextStyle).n3v = function (baselineShift) {
+    Stats_instance.z3c();
+    org_jetbrains_skia_paragraph_TextStyle__1nSetBaselineShift(this.d3d_1, baselineShift);
     return this;
   };
-  protoOf(TextStyle).t2k = function () {
+  protoOf(TextStyle).o3v = function () {
     var tmp;
     try {
-      Stats_getInstance().o24();
-      var tmp_0 = Companion_getInstance_11();
+      Stats_instance.z3c();
+      var tmp_0 = Companion_instance_11;
       tmp = fromInteropPointer(tmp_0, TextStyle$_get_fontMetrics_$lambda_9osnwy(this));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  function Companion_41() {
-    Companion_instance_41 = this;
-    Companion_getInstance_45().m24();
+  function Companion_48() {
+    Companion_instance_48 = this;
+    Companion_instance_51.x3c();
   }
-  var Companion_instance_41;
-  function Companion_getInstance_42() {
-    if (Companion_instance_41 == null)
-      new Companion_41();
-    return Companion_instance_41;
+  var Companion_instance_48;
+  function Companion_getInstance_49() {
+    if (Companion_instance_48 == null)
+      new Companion_48();
+    return Companion_instance_48;
   }
   function TypefaceFontProvider() {
-    Companion_getInstance_42();
+    Companion_getInstance_49();
     FontMgr_init_$Init$(org_jetbrains_skia_paragraph_TypefaceFontProvider__1nMake(), this);
-    Stats_getInstance().o24();
+    Stats_instance.z3c();
   }
-  protoOf(TypefaceFontProvider).w2k = function (typeface, alias) {
+  protoOf(TypefaceFontProvider).r3v = function (typeface, alias) {
     var tmp;
     try {
-      Stats_getInstance().o24();
+      Stats_instance.z3c();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_paragraph_TypefaceFontProvider__1nRegisterTypeface(this.s24_1, getPtr(typeface), tmp0_anonymous.n2b(alias));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_paragraph_TypefaceFontProvider__1nRegisterTypeface(this.d3d_1, getPtr(typeface), $this$interopScope.c3e(alias));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().ak();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().fp();
           }
         }
       }
@@ -5644,23 +6229,23 @@
     return tmp;
   };
   function SkikoKeyboardEvent(key, modifiers, kind, timestamp, platform) {
-    modifiers = modifiers === VOID ? Companion_getInstance_43().x2k_1 : modifiers;
+    modifiers = modifiers === VOID ? Companion_getInstance_50().s3v_1 : modifiers;
     timestamp = timestamp === VOID ? new Long(0, 0) : timestamp;
-    this.c2l_1 = key;
-    this.d2l_1 = modifiers;
-    this.e2l_1 = kind;
-    this.f2l_1 = timestamp;
-    this.g2l_1 = platform;
+    this.x3v_1 = key;
+    this.y3v_1 = modifiers;
+    this.z3v_1 = kind;
+    this.a3w_1 = timestamp;
+    this.b3w_1 = platform;
   }
   protoOf(SkikoKeyboardEvent).toString = function () {
-    return 'SkikoKeyboardEvent(key=' + this.c2l_1 + ', modifiers=' + new SkikoInputModifiers(this.d2l_1) + ', kind=' + this.e2l_1 + ', timestamp=' + toString(this.f2l_1) + ', platform=' + this.g2l_1 + ')';
+    return 'SkikoKeyboardEvent(key=' + this.x3v_1 + ', modifiers=' + new SkikoInputModifiers(this.y3v_1) + ', kind=' + this.z3v_1 + ', timestamp=' + this.a3w_1.toString() + ', platform=' + this.b3w_1 + ')';
   };
   protoOf(SkikoKeyboardEvent).hashCode = function () {
-    var result = this.c2l_1.hashCode();
-    result = imul(result, 31) + SkikoInputModifiers__hashCode_impl_dkoeid(this.d2l_1) | 0;
-    result = imul(result, 31) + this.e2l_1.hashCode() | 0;
-    result = imul(result, 31) + this.f2l_1.hashCode() | 0;
-    result = imul(result, 31) + (this.g2l_1 == null ? 0 : hashCode(this.g2l_1)) | 0;
+    var result = this.x3v_1.hashCode();
+    result = imul(result, 31) + SkikoInputModifiers__hashCode_impl_dkoeid(this.y3v_1) | 0;
+    result = imul(result, 31) + this.z3v_1.hashCode() | 0;
+    result = imul(result, 31) + this.a3w_1.hashCode() | 0;
+    result = imul(result, 31) + (this.b3w_1 == null ? 0 : hashCode(this.b3w_1)) | 0;
     return result;
   };
   protoOf(SkikoKeyboardEvent).equals = function (other) {
@@ -5669,15 +6254,15 @@
     if (!(other instanceof SkikoKeyboardEvent))
       return false;
     var tmp0_other_with_cast = other instanceof SkikoKeyboardEvent ? other : THROW_CCE();
-    if (!this.c2l_1.equals(tmp0_other_with_cast.c2l_1))
+    if (!this.x3v_1.equals(tmp0_other_with_cast.x3v_1))
       return false;
-    if (!(this.d2l_1 === tmp0_other_with_cast.d2l_1))
+    if (!(this.y3v_1 === tmp0_other_with_cast.y3v_1))
       return false;
-    if (!this.e2l_1.equals(tmp0_other_with_cast.e2l_1))
+    if (!this.z3v_1.equals(tmp0_other_with_cast.z3v_1))
       return false;
-    if (!this.f2l_1.equals(tmp0_other_with_cast.f2l_1))
+    if (!this.a3w_1.equals(tmp0_other_with_cast.a3w_1))
       return false;
-    if (!equals(this.g2l_1, tmp0_other_with_cast.g2l_1))
+    if (!equals(this.b3w_1, tmp0_other_with_cast.b3w_1))
       return false;
     return true;
   };
@@ -5687,19 +6272,19 @@
   function _SkikoInputModifiers___get_value__impl__13eq4a($this) {
     return $this;
   }
-  function Companion_42() {
-    Companion_instance_42 = this;
-    this.x2k_1 = _SkikoInputModifiers___init__impl__z8g2zy(0);
-    this.y2k_1 = _SkikoInputModifiers___init__impl__z8g2zy(1);
-    this.z2k_1 = _SkikoInputModifiers___init__impl__z8g2zy(2);
-    this.a2l_1 = _SkikoInputModifiers___init__impl__z8g2zy(4);
-    this.b2l_1 = _SkikoInputModifiers___init__impl__z8g2zy(8);
+  function Companion_49() {
+    Companion_instance_49 = this;
+    this.s3v_1 = _SkikoInputModifiers___init__impl__z8g2zy(0);
+    this.t3v_1 = _SkikoInputModifiers___init__impl__z8g2zy(1);
+    this.u3v_1 = _SkikoInputModifiers___init__impl__z8g2zy(2);
+    this.v3v_1 = _SkikoInputModifiers___init__impl__z8g2zy(4);
+    this.w3v_1 = _SkikoInputModifiers___init__impl__z8g2zy(8);
   }
-  var Companion_instance_42;
-  function Companion_getInstance_43() {
-    if (Companion_instance_42 == null)
-      new Companion_42();
-    return Companion_instance_42;
+  var Companion_instance_49;
+  function Companion_getInstance_50() {
+    if (Companion_instance_49 == null)
+      new Companion_49();
+    return Companion_instance_49;
   }
   function SkikoInputModifiers__has_impl_qg30o6($this, value) {
     if (!((_SkikoInputModifiers___get_value__impl__13eq4a(value) & _SkikoInputModifiers___get_value__impl__13eq4a($this)) === 0)) {
@@ -5710,23 +6295,23 @@
   function SkikoInputModifiers__toString_impl_86hiai($this) {
     // Inline function 'kotlin.apply' call
     // Inline function 'kotlin.collections.mutableListOf' call
-    var tmp0_apply = ArrayList_init_$Create$_0();
+    var this_0 = ArrayList_init_$Create$_0();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'org.jetbrains.skiko.SkikoInputModifiers.toString.<anonymous>' call
-    if (SkikoInputModifiers__has_impl_qg30o6($this, Companion_getInstance_43().y2k_1)) {
-      tmp0_apply.a('META');
+    if (SkikoInputModifiers__has_impl_qg30o6($this, Companion_getInstance_50().t3v_1)) {
+      this_0.s('META');
     }
-    if (SkikoInputModifiers__has_impl_qg30o6($this, Companion_getInstance_43().z2k_1)) {
-      tmp0_apply.a('CONTROL');
+    if (SkikoInputModifiers__has_impl_qg30o6($this, Companion_getInstance_50().u3v_1)) {
+      this_0.s('CONTROL');
     }
-    if (SkikoInputModifiers__has_impl_qg30o6($this, Companion_getInstance_43().a2l_1)) {
-      tmp0_apply.a('ALT');
+    if (SkikoInputModifiers__has_impl_qg30o6($this, Companion_getInstance_50().v3v_1)) {
+      this_0.s('ALT');
     }
-    if (SkikoInputModifiers__has_impl_qg30o6($this, Companion_getInstance_43().b2l_1)) {
-      tmp0_apply.a('SHIFT');
+    if (SkikoInputModifiers__has_impl_qg30o6($this, Companion_getInstance_50().w3v_1)) {
+      this_0.s('SHIFT');
     }
-    var result = tmp0_apply;
-    return !result.k() ? toString(result) : '';
+    var result = this_0;
+    return !result.e1() ? toString(result) : '';
   }
   function SkikoInputModifiers__hashCode_impl_dkoeid($this) {
     return $this;
@@ -5734,22 +6319,22 @@
   function SkikoInputModifiers__equals_impl_tcfkiv($this, other) {
     if (!(other instanceof SkikoInputModifiers))
       return false;
-    if (!($this === (other instanceof SkikoInputModifiers ? other.h2l_1 : THROW_CCE())))
+    if (!($this === (other instanceof SkikoInputModifiers ? other.c3w_1 : THROW_CCE())))
       return false;
     return true;
   }
   function SkikoInputModifiers(value) {
-    Companion_getInstance_43();
-    this.h2l_1 = value;
+    Companion_getInstance_50();
+    this.c3w_1 = value;
   }
   protoOf(SkikoInputModifiers).toString = function () {
-    return SkikoInputModifiers__toString_impl_86hiai(this.h2l_1);
+    return SkikoInputModifiers__toString_impl_86hiai(this.c3w_1);
   };
   protoOf(SkikoInputModifiers).hashCode = function () {
-    return SkikoInputModifiers__hashCode_impl_dkoeid(this.h2l_1);
+    return SkikoInputModifiers__hashCode_impl_dkoeid(this.c3w_1);
   };
   protoOf(SkikoInputModifiers).equals = function (other) {
-    return SkikoInputModifiers__equals_impl_tcfkiv(this.h2l_1, other);
+    return SkikoInputModifiers__equals_impl_tcfkiv(this.c3w_1, other);
   };
   var SkikoKeyboardEventKind_UNKNOWN_instance;
   var SkikoKeyboardEventKind_UP_instance;
@@ -5758,7 +6343,7 @@
   var SkikoKeyboardEventKind_entriesInitialized;
   function SkikoKeyboardEventKind_initEntries() {
     if (SkikoKeyboardEventKind_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     SkikoKeyboardEventKind_entriesInitialized = true;
     SkikoKeyboardEventKind_UNKNOWN_instance = new SkikoKeyboardEventKind('UNKNOWN', 0);
     SkikoKeyboardEventKind_UP_instance = new SkikoKeyboardEventKind('UP', 1);
@@ -5769,22 +6354,22 @@
     Enum.call(this, name, ordinal);
   }
   function SkikoInputEvent(input, key, modifiers, kind, platform) {
-    modifiers = modifiers === VOID ? Companion_getInstance_43().x2k_1 : modifiers;
-    this.i2l_1 = input;
-    this.j2l_1 = key;
-    this.k2l_1 = modifiers;
-    this.l2l_1 = kind;
-    this.m2l_1 = platform;
+    modifiers = modifiers === VOID ? Companion_getInstance_50().s3v_1 : modifiers;
+    this.d3w_1 = input;
+    this.e3w_1 = key;
+    this.f3w_1 = modifiers;
+    this.g3w_1 = kind;
+    this.h3w_1 = platform;
   }
   protoOf(SkikoInputEvent).toString = function () {
-    return 'SkikoInputEvent(input=' + this.i2l_1 + ', key=' + this.j2l_1 + ', modifiers=' + new SkikoInputModifiers(this.k2l_1) + ', kind=' + this.l2l_1 + ', platform=' + this.m2l_1 + ')';
+    return 'SkikoInputEvent(input=' + this.d3w_1 + ', key=' + this.e3w_1 + ', modifiers=' + new SkikoInputModifiers(this.f3w_1) + ', kind=' + this.g3w_1 + ', platform=' + this.h3w_1 + ')';
   };
   protoOf(SkikoInputEvent).hashCode = function () {
-    var result = getStringHashCode(this.i2l_1);
-    result = imul(result, 31) + this.j2l_1.hashCode() | 0;
-    result = imul(result, 31) + SkikoInputModifiers__hashCode_impl_dkoeid(this.k2l_1) | 0;
-    result = imul(result, 31) + this.l2l_1.hashCode() | 0;
-    result = imul(result, 31) + (this.m2l_1 == null ? 0 : hashCode(this.m2l_1)) | 0;
+    var result = getStringHashCode(this.d3w_1);
+    result = imul(result, 31) + this.e3w_1.hashCode() | 0;
+    result = imul(result, 31) + SkikoInputModifiers__hashCode_impl_dkoeid(this.f3w_1) | 0;
+    result = imul(result, 31) + this.g3w_1.hashCode() | 0;
+    result = imul(result, 31) + (this.h3w_1 == null ? 0 : hashCode(this.h3w_1)) | 0;
     return result;
   };
   protoOf(SkikoInputEvent).equals = function (other) {
@@ -5793,54 +6378,54 @@
     if (!(other instanceof SkikoInputEvent))
       return false;
     var tmp0_other_with_cast = other instanceof SkikoInputEvent ? other : THROW_CCE();
-    if (!(this.i2l_1 === tmp0_other_with_cast.i2l_1))
+    if (!(this.d3w_1 === tmp0_other_with_cast.d3w_1))
       return false;
-    if (!this.j2l_1.equals(tmp0_other_with_cast.j2l_1))
+    if (!this.e3w_1.equals(tmp0_other_with_cast.e3w_1))
       return false;
-    if (!(this.k2l_1 === tmp0_other_with_cast.k2l_1))
+    if (!(this.f3w_1 === tmp0_other_with_cast.f3w_1))
       return false;
-    if (!this.l2l_1.equals(tmp0_other_with_cast.l2l_1))
+    if (!this.g3w_1.equals(tmp0_other_with_cast.g3w_1))
       return false;
-    if (!equals(this.m2l_1, tmp0_other_with_cast.m2l_1))
+    if (!equals(this.h3w_1, tmp0_other_with_cast.h3w_1))
       return false;
     return true;
   };
   function SkikoPointerEvent(x, y, kind, deltaX, deltaY, pressedButtons, button, modifiers, timestamp, pointers, platform) {
     deltaX = deltaX === VOID ? 0.0 : deltaX;
     deltaY = deltaY === VOID ? 0.0 : deltaY;
-    pressedButtons = pressedButtons === VOID ? Companion_getInstance_44().n2l_1 : pressedButtons;
-    button = button === VOID ? Companion_getInstance_44().n2l_1 : button;
-    modifiers = modifiers === VOID ? Companion_getInstance_43().x2k_1 : modifiers;
+    pressedButtons = pressedButtons === VOID ? Companion_getInstance_51().i3w_1 : pressedButtons;
+    button = button === VOID ? Companion_getInstance_51().i3w_1 : button;
+    modifiers = modifiers === VOID ? Companion_getInstance_50().s3v_1 : modifiers;
     timestamp = timestamp === VOID ? new Long(0, 0) : timestamp;
-    pointers = pointers === VOID ? listOf(new SkikoPointer(new Long(0, 0), x, y, SkikoMouseButtons__has_impl_481exw(pressedButtons, Companion_getInstance_44().o2l_1))) : pointers;
+    pointers = pointers === VOID ? listOf(new SkikoPointer(new Long(0, 0), x, y, SkikoMouseButtons__has_impl_481exw(pressedButtons, Companion_getInstance_51().j3w_1))) : pointers;
     platform = platform === VOID ? null : platform;
-    this.z2l_1 = x;
-    this.a2m_1 = y;
-    this.b2m_1 = kind;
-    this.c2m_1 = deltaX;
-    this.d2m_1 = deltaY;
-    this.e2m_1 = pressedButtons;
-    this.f2m_1 = button;
-    this.g2m_1 = modifiers;
-    this.h2m_1 = timestamp;
-    this.i2m_1 = pointers;
-    this.j2m_1 = platform;
+    this.u3w_1 = x;
+    this.v3w_1 = y;
+    this.w3w_1 = kind;
+    this.x3w_1 = deltaX;
+    this.y3w_1 = deltaY;
+    this.z3w_1 = pressedButtons;
+    this.a3x_1 = button;
+    this.b3x_1 = modifiers;
+    this.c3x_1 = timestamp;
+    this.d3x_1 = pointers;
+    this.e3x_1 = platform;
   }
   protoOf(SkikoPointerEvent).toString = function () {
-    return 'SkikoPointerEvent(x=' + this.z2l_1 + ', y=' + this.a2m_1 + ', kind=' + this.b2m_1 + ', deltaX=' + this.c2m_1 + ', deltaY=' + this.d2m_1 + ', pressedButtons=' + new SkikoMouseButtons(this.e2m_1) + ', button=' + new SkikoMouseButtons(this.f2m_1) + ', modifiers=' + new SkikoInputModifiers(this.g2m_1) + ', timestamp=' + toString(this.h2m_1) + ', pointers=' + this.i2m_1 + ', platform=' + this.j2m_1 + ')';
+    return 'SkikoPointerEvent(x=' + this.u3w_1 + ', y=' + this.v3w_1 + ', kind=' + this.w3w_1 + ', deltaX=' + this.x3w_1 + ', deltaY=' + this.y3w_1 + ', pressedButtons=' + new SkikoMouseButtons(this.z3w_1) + ', button=' + new SkikoMouseButtons(this.a3x_1) + ', modifiers=' + new SkikoInputModifiers(this.b3x_1) + ', timestamp=' + this.c3x_1.toString() + ', pointers=' + this.d3x_1 + ', platform=' + this.e3x_1 + ')';
   };
   protoOf(SkikoPointerEvent).hashCode = function () {
-    var result = getNumberHashCode(this.z2l_1);
-    result = imul(result, 31) + getNumberHashCode(this.a2m_1) | 0;
-    result = imul(result, 31) + this.b2m_1.hashCode() | 0;
-    result = imul(result, 31) + getNumberHashCode(this.c2m_1) | 0;
-    result = imul(result, 31) + getNumberHashCode(this.d2m_1) | 0;
-    result = imul(result, 31) + SkikoMouseButtons__hashCode_impl_7jywqn(this.e2m_1) | 0;
-    result = imul(result, 31) + SkikoMouseButtons__hashCode_impl_7jywqn(this.f2m_1) | 0;
-    result = imul(result, 31) + SkikoInputModifiers__hashCode_impl_dkoeid(this.g2m_1) | 0;
-    result = imul(result, 31) + this.h2m_1.hashCode() | 0;
-    result = imul(result, 31) + hashCode(this.i2m_1) | 0;
-    result = imul(result, 31) + (this.j2m_1 == null ? 0 : hashCode(this.j2m_1)) | 0;
+    var result = getNumberHashCode(this.u3w_1);
+    result = imul(result, 31) + getNumberHashCode(this.v3w_1) | 0;
+    result = imul(result, 31) + this.w3w_1.hashCode() | 0;
+    result = imul(result, 31) + getNumberHashCode(this.x3w_1) | 0;
+    result = imul(result, 31) + getNumberHashCode(this.y3w_1) | 0;
+    result = imul(result, 31) + SkikoMouseButtons__hashCode_impl_7jywqn(this.z3w_1) | 0;
+    result = imul(result, 31) + SkikoMouseButtons__hashCode_impl_7jywqn(this.a3x_1) | 0;
+    result = imul(result, 31) + SkikoInputModifiers__hashCode_impl_dkoeid(this.b3x_1) | 0;
+    result = imul(result, 31) + this.c3x_1.hashCode() | 0;
+    result = imul(result, 31) + hashCode(this.d3x_1) | 0;
+    result = imul(result, 31) + (this.e3x_1 == null ? 0 : hashCode(this.e3x_1)) | 0;
     return result;
   };
   protoOf(SkikoPointerEvent).equals = function (other) {
@@ -5849,27 +6434,27 @@
     if (!(other instanceof SkikoPointerEvent))
       return false;
     var tmp0_other_with_cast = other instanceof SkikoPointerEvent ? other : THROW_CCE();
-    if (!equals(this.z2l_1, tmp0_other_with_cast.z2l_1))
+    if (!equals(this.u3w_1, tmp0_other_with_cast.u3w_1))
       return false;
-    if (!equals(this.a2m_1, tmp0_other_with_cast.a2m_1))
+    if (!equals(this.v3w_1, tmp0_other_with_cast.v3w_1))
       return false;
-    if (!this.b2m_1.equals(tmp0_other_with_cast.b2m_1))
+    if (!this.w3w_1.equals(tmp0_other_with_cast.w3w_1))
       return false;
-    if (!equals(this.c2m_1, tmp0_other_with_cast.c2m_1))
+    if (!equals(this.x3w_1, tmp0_other_with_cast.x3w_1))
       return false;
-    if (!equals(this.d2m_1, tmp0_other_with_cast.d2m_1))
+    if (!equals(this.y3w_1, tmp0_other_with_cast.y3w_1))
       return false;
-    if (!(this.e2m_1 === tmp0_other_with_cast.e2m_1))
+    if (!(this.z3w_1 === tmp0_other_with_cast.z3w_1))
       return false;
-    if (!(this.f2m_1 === tmp0_other_with_cast.f2m_1))
+    if (!(this.a3x_1 === tmp0_other_with_cast.a3x_1))
       return false;
-    if (!(this.g2m_1 === tmp0_other_with_cast.g2m_1))
+    if (!(this.b3x_1 === tmp0_other_with_cast.b3x_1))
       return false;
-    if (!this.h2m_1.equals(tmp0_other_with_cast.h2m_1))
+    if (!this.c3x_1.equals(tmp0_other_with_cast.c3x_1))
       return false;
-    if (!equals(this.i2m_1, tmp0_other_with_cast.i2m_1))
+    if (!equals(this.d3x_1, tmp0_other_with_cast.d3x_1))
       return false;
-    if (!equals(this.j2m_1, tmp0_other_with_cast.j2m_1))
+    if (!equals(this.e3x_1, tmp0_other_with_cast.e3x_1))
       return false;
     return true;
   };
@@ -5884,7 +6469,7 @@
   var SkikoPointerEventKind_entriesInitialized;
   function SkikoPointerEventKind_initEntries() {
     if (SkikoPointerEventKind_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     SkikoPointerEventKind_entriesInitialized = true;
     SkikoPointerEventKind_UNKNOWN_instance = new SkikoPointerEventKind('UNKNOWN', 0);
     SkikoPointerEventKind_UP_instance = new SkikoPointerEventKind('UP', 1);
@@ -5901,23 +6486,23 @@
   function SkikoPointer(id, x, y, pressed, device, pressure) {
     device = device === VOID ? SkikoPointerDevice_MOUSE_getInstance() : device;
     pressure = pressure === VOID ? 1.0 : pressure;
-    this.k2m_1 = id;
-    this.l2m_1 = x;
-    this.m2m_1 = y;
-    this.n2m_1 = pressed;
-    this.o2m_1 = device;
-    this.p2m_1 = pressure;
+    this.f3x_1 = id;
+    this.g3x_1 = x;
+    this.h3x_1 = y;
+    this.i3x_1 = pressed;
+    this.j3x_1 = device;
+    this.k3x_1 = pressure;
   }
   protoOf(SkikoPointer).toString = function () {
-    return 'SkikoPointer(id=' + toString(this.k2m_1) + ', x=' + this.l2m_1 + ', y=' + this.m2m_1 + ', pressed=' + this.n2m_1 + ', device=' + this.o2m_1 + ', pressure=' + this.p2m_1 + ')';
+    return 'SkikoPointer(id=' + this.f3x_1.toString() + ', x=' + this.g3x_1 + ', y=' + this.h3x_1 + ', pressed=' + this.i3x_1 + ', device=' + this.j3x_1 + ', pressure=' + this.k3x_1 + ')';
   };
   protoOf(SkikoPointer).hashCode = function () {
-    var result = this.k2m_1.hashCode();
-    result = imul(result, 31) + getNumberHashCode(this.l2m_1) | 0;
-    result = imul(result, 31) + getNumberHashCode(this.m2m_1) | 0;
-    result = imul(result, 31) + (this.n2m_1 | 0) | 0;
-    result = imul(result, 31) + this.o2m_1.hashCode() | 0;
-    result = imul(result, 31) + getNumberHashCode(this.p2m_1) | 0;
+    var result = this.f3x_1.hashCode();
+    result = imul(result, 31) + getNumberHashCode(this.g3x_1) | 0;
+    result = imul(result, 31) + getNumberHashCode(this.h3x_1) | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.i3x_1) | 0;
+    result = imul(result, 31) + this.j3x_1.hashCode() | 0;
+    result = imul(result, 31) + getNumberHashCode(this.k3x_1) | 0;
     return result;
   };
   protoOf(SkikoPointer).equals = function (other) {
@@ -5926,17 +6511,17 @@
     if (!(other instanceof SkikoPointer))
       return false;
     var tmp0_other_with_cast = other instanceof SkikoPointer ? other : THROW_CCE();
-    if (!this.k2m_1.equals(tmp0_other_with_cast.k2m_1))
+    if (!this.f3x_1.equals(tmp0_other_with_cast.f3x_1))
       return false;
-    if (!equals(this.l2m_1, tmp0_other_with_cast.l2m_1))
+    if (!equals(this.g3x_1, tmp0_other_with_cast.g3x_1))
       return false;
-    if (!equals(this.m2m_1, tmp0_other_with_cast.m2m_1))
+    if (!equals(this.h3x_1, tmp0_other_with_cast.h3x_1))
       return false;
-    if (!(this.n2m_1 === tmp0_other_with_cast.n2m_1))
+    if (!(this.i3x_1 === tmp0_other_with_cast.i3x_1))
       return false;
-    if (!this.o2m_1.equals(tmp0_other_with_cast.o2m_1))
+    if (!this.j3x_1.equals(tmp0_other_with_cast.j3x_1))
       return false;
-    if (!equals(this.p2m_1, tmp0_other_with_cast.p2m_1))
+    if (!equals(this.k3x_1, tmp0_other_with_cast.k3x_1))
       return false;
     return true;
   };
@@ -5946,7 +6531,7 @@
   var SkikoPointerDevice_entriesInitialized;
   function SkikoPointerDevice_initEntries() {
     if (SkikoPointerDevice_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     SkikoPointerDevice_entriesInitialized = true;
     SkikoPointerDevice_UNKNOWN_instance = new SkikoPointerDevice('UNKNOWN', 0);
     SkikoPointerDevice_MOUSE_instance = new SkikoPointerDevice('MOUSE', 1);
@@ -5961,26 +6546,26 @@
   function _SkikoMouseButtons___get_value__impl__ltkvwc($this) {
     return $this;
   }
-  function Companion_43() {
-    Companion_instance_43 = this;
-    this.n2l_1 = _SkikoMouseButtons___init__impl__kylsco(0);
-    this.o2l_1 = _SkikoMouseButtons___init__impl__kylsco(1);
-    this.p2l_1 = _SkikoMouseButtons___init__impl__kylsco(2);
-    this.q2l_1 = _SkikoMouseButtons___init__impl__kylsco(4);
-    this.r2l_1 = _SkikoMouseButtons___init__impl__kylsco(1);
-    this.s2l_1 = _SkikoMouseButtons___init__impl__kylsco(2);
-    this.t2l_1 = _SkikoMouseButtons___init__impl__kylsco(4);
-    this.u2l_1 = _SkikoMouseButtons___init__impl__kylsco(8);
-    this.v2l_1 = _SkikoMouseButtons___init__impl__kylsco(16);
-    this.w2l_1 = _SkikoMouseButtons___init__impl__kylsco(32);
-    this.x2l_1 = _SkikoMouseButtons___init__impl__kylsco(64);
-    this.y2l_1 = _SkikoMouseButtons___init__impl__kylsco(128);
+  function Companion_50() {
+    Companion_instance_50 = this;
+    this.i3w_1 = _SkikoMouseButtons___init__impl__kylsco(0);
+    this.j3w_1 = _SkikoMouseButtons___init__impl__kylsco(1);
+    this.k3w_1 = _SkikoMouseButtons___init__impl__kylsco(2);
+    this.l3w_1 = _SkikoMouseButtons___init__impl__kylsco(4);
+    this.m3w_1 = _SkikoMouseButtons___init__impl__kylsco(1);
+    this.n3w_1 = _SkikoMouseButtons___init__impl__kylsco(2);
+    this.o3w_1 = _SkikoMouseButtons___init__impl__kylsco(4);
+    this.p3w_1 = _SkikoMouseButtons___init__impl__kylsco(8);
+    this.q3w_1 = _SkikoMouseButtons___init__impl__kylsco(16);
+    this.r3w_1 = _SkikoMouseButtons___init__impl__kylsco(32);
+    this.s3w_1 = _SkikoMouseButtons___init__impl__kylsco(64);
+    this.t3w_1 = _SkikoMouseButtons___init__impl__kylsco(128);
   }
-  var Companion_instance_43;
-  function Companion_getInstance_44() {
-    if (Companion_instance_43 == null)
-      new Companion_43();
-    return Companion_instance_43;
+  var Companion_instance_50;
+  function Companion_getInstance_51() {
+    if (Companion_instance_50 == null)
+      new Companion_50();
+    return Companion_instance_50;
   }
   function SkikoMouseButtons__has_impl_481exw($this, value) {
     if (!((_SkikoMouseButtons___get_value__impl__ltkvwc(value) & _SkikoMouseButtons___get_value__impl__ltkvwc($this)) === 0)) {
@@ -5991,35 +6576,35 @@
   function SkikoMouseButtons__toString_impl_e77028($this) {
     // Inline function 'kotlin.apply' call
     // Inline function 'kotlin.collections.mutableListOf' call
-    var tmp0_apply = ArrayList_init_$Create$_0();
+    var this_0 = ArrayList_init_$Create$_0();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'org.jetbrains.skiko.SkikoMouseButtons.toString.<anonymous>' call
-    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_44().o2l_1)) {
-      tmp0_apply.a('LEFT');
+    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_51().j3w_1)) {
+      this_0.s('LEFT');
     }
-    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_44().p2l_1)) {
-      tmp0_apply.a('RIGHT');
+    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_51().k3w_1)) {
+      this_0.s('RIGHT');
     }
-    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_44().q2l_1)) {
-      tmp0_apply.a('MIDDLE');
+    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_51().l3w_1)) {
+      this_0.s('MIDDLE');
     }
-    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_44().u2l_1)) {
-      tmp0_apply.a('BUTTON_4');
+    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_51().p3w_1)) {
+      this_0.s('BUTTON_4');
     }
-    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_44().v2l_1)) {
-      tmp0_apply.a('BUTTON_5');
+    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_51().q3w_1)) {
+      this_0.s('BUTTON_5');
     }
-    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_44().w2l_1)) {
-      tmp0_apply.a('BUTTON_6');
+    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_51().r3w_1)) {
+      this_0.s('BUTTON_6');
     }
-    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_44().x2l_1)) {
-      tmp0_apply.a('BUTTON_7');
+    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_51().s3w_1)) {
+      this_0.s('BUTTON_7');
     }
-    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_44().y2l_1)) {
-      tmp0_apply.a('BUTTON_8');
+    if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_51().t3w_1)) {
+      this_0.s('BUTTON_8');
     }
-    var result = tmp0_apply;
-    return !result.k() ? toString(result) : '';
+    var result = this_0;
+    return !result.e1() ? toString(result) : '';
   }
   function SkikoMouseButtons__hashCode_impl_7jywqn($this) {
     return $this;
@@ -6027,22 +6612,22 @@
   function SkikoMouseButtons__equals_impl_jnid9f($this, other) {
     if (!(other instanceof SkikoMouseButtons))
       return false;
-    if (!($this === (other instanceof SkikoMouseButtons ? other.q2m_1 : THROW_CCE())))
+    if (!($this === (other instanceof SkikoMouseButtons ? other.l3x_1 : THROW_CCE())))
       return false;
     return true;
   }
   function SkikoMouseButtons(value) {
-    Companion_getInstance_44();
-    this.q2m_1 = value;
+    Companion_getInstance_51();
+    this.l3x_1 = value;
   }
   protoOf(SkikoMouseButtons).toString = function () {
-    return SkikoMouseButtons__toString_impl_e77028(this.q2m_1);
+    return SkikoMouseButtons__toString_impl_e77028(this.l3x_1);
   };
   protoOf(SkikoMouseButtons).hashCode = function () {
-    return SkikoMouseButtons__hashCode_impl_7jywqn(this.q2m_1);
+    return SkikoMouseButtons__hashCode_impl_7jywqn(this.l3x_1);
   };
   protoOf(SkikoMouseButtons).equals = function (other) {
-    return SkikoMouseButtons__equals_impl_jnid9f(this.q2m_1, other);
+    return SkikoMouseButtons__equals_impl_jnid9f(this.l3x_1, other);
   };
   function SkikoKeyboardEventKind_UP_getInstance() {
     SkikoKeyboardEventKind_initEntries();
@@ -6091,7 +6676,7 @@
   var GraphicsApi_entriesInitialized;
   function GraphicsApi_initEntries() {
     if (GraphicsApi_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     GraphicsApi_entriesInitialized = true;
     GraphicsApi_UNKNOWN_instance = new GraphicsApi('UNKNOWN', 0);
     GraphicsApi_SOFTWARE_FAST_instance = new GraphicsApi('SOFTWARE_FAST', 1);
@@ -6119,7 +6704,7 @@
   var OS_entriesInitialized;
   function OS_initEntries() {
     if (OS_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     OS_entriesInitialized = true;
     OS_Android_instance = new OS('Android', 0, 'android');
     OS_Linux_instance = new OS('Linux', 1, 'linux');
@@ -6131,7 +6716,7 @@
   }
   function OS(name, ordinal, id) {
     Enum.call(this, name, ordinal);
-    this.t2m_1 = id;
+    this.o3x_1 = id;
   }
   var Arch_X64_instance;
   var Arch_Arm64_instance;
@@ -6141,7 +6726,7 @@
   var Arch_entriesInitialized;
   function Arch_initEntries() {
     if (Arch_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     Arch_entriesInitialized = true;
     Arch_X64_instance = new Arch('X64', 0, 'x64');
     Arch_Arm64_instance = new Arch('Arm64', 1, 'arm64');
@@ -6151,7 +6736,7 @@
   }
   function Arch(name, ordinal, id) {
     Enum.call(this, name, ordinal);
-    this.w2m_1 = id;
+    this.r3x_1 = id;
   }
   function OS_Android_getInstance() {
     OS_initEntries();
@@ -6183,6 +6768,15 @@
   }
   function ClipboardManager() {
   }
+  protoOf(ClipboardManager).s3x = function (text) {
+    return ClipboardManager_setText(text);
+  };
+  protoOf(ClipboardManager).t3x = function () {
+    return ClipboardManager_getText();
+  };
+  protoOf(ClipboardManager).u3x = function () {
+    return ClipboardManager_hasText();
+  };
   function URIManager() {
   }
   function RenderException(message, cause) {
@@ -6199,7 +6793,7 @@
   var SystemTheme_entriesInitialized;
   function SystemTheme_initEntries() {
     if (SystemTheme_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     SystemTheme_entriesInitialized = true;
     SystemTheme_DARK_instance = new SystemTheme('DARK', 0);
     SystemTheme_LIGHT_instance = new SystemTheme('LIGHT', 1);
@@ -6214,7 +6808,7 @@
   }
   var LANG$delegate;
   function Pattern(regex) {
-    this.b2n_1 = Regex_init_$Create$(regex);
+    this.z3x_1 = Regex_init_$Create$(regex);
   }
   function compilePattern(regex) {
     _init_properties_Actuals_js_kt__v403ki();
@@ -6249,16 +6843,13 @@
       LANG$delegate = lazy(LANG$delegate$lambda);
     }
   }
-  function Companion_44() {
-    Companion_instance_44 = this;
+  function Companion_51() {
   }
-  protoOf(Companion_44).m24 = function () {
+  protoOf(Companion_51).x3c = function () {
   };
-  var Companion_instance_44;
-  function Companion_getInstance_45() {
-    if (Companion_instance_44 == null)
-      new Companion_44();
-    return Companion_instance_44;
+  var Companion_instance_51;
+  function Companion_getInstance_52() {
+    return Companion_instance_51;
   }
   function get_registry() {
     _init_properties_Managed_js_kt__4ok5rc();
@@ -6266,19 +6857,19 @@
   }
   var registry;
   function FinalizationThunk(finalizer, obj) {
-    this.c2n_1 = finalizer;
-    this.d2n_1 = obj;
+    this.a3y_1 = finalizer;
+    this.b3y_1 = obj;
   }
-  protoOf(FinalizationThunk).e2n = function () {
-    if (!(this.d2n_1 === 0)) {
-      org_jetbrains_skia_impl_Managed__invokeFinalizer(this.c2n_1, this.d2n_1);
+  protoOf(FinalizationThunk).c3y = function () {
+    if (!(this.b3y_1 === 0)) {
+      org_jetbrains_skia_impl_Managed__invokeFinalizer(this.a3y_1, this.b3y_1);
     }
-    this.d2n_1 = 0;
+    this.b3y_1 = 0;
   };
   function Managed(ptr, finalizer, managed) {
     managed = managed === VOID ? true : managed;
     Native.call(this, ptr);
-    this.r24_1 = null;
+    this.c3d_1 = null;
     if (managed) {
       // Inline function 'kotlin.require' call
       // Inline function 'kotlin.contracts.contract' call
@@ -6296,19 +6887,19 @@
       }
       var thunk = new FinalizationThunk(finalizer, ptr);
       register(this, thunk);
-      this.r24_1 = thunk;
+      this.c3d_1 = thunk;
     }
   }
-  protoOf(Managed).y13 = function () {
-    if (Companion_getInstance_47().e2b() === this.s24_1)
-      throw RuntimeException_init_$Create$('Object already closed: ' + getKClassFromExpression(this).va() + ', _ptr=' + this.s24_1);
-    else if (null == this.r24_1)
-      throw RuntimeException_init_$Create$("Object is not managed, can't close(): " + getKClassFromExpression(this).va() + ', _ptr=' + this.s24_1);
+  protoOf(Managed).j24 = function () {
+    if (Companion_instance_53.a3f() === this.d3d_1)
+      throw RuntimeException_init_$Create$('Object already closed: ' + getKClassFromExpression(this).d7() + ', _ptr=' + this.d3d_1);
+    else if (null == this.c3d_1)
+      throw RuntimeException_init_$Create$("Object is not managed, can't close(): " + getKClassFromExpression(this).d7() + ', _ptr=' + this.d3d_1);
     else {
       unregister(this);
-      ensureNotNull(this.r24_1).e2n();
-      this.r24_1 = null;
-      this.s24_1 = 0;
+      ensureNotNull(this.c3d_1).c3y();
+      this.c3d_1 = null;
+      this.d3d_1 = 0;
     }
   };
   function unregister(managed) {
@@ -6322,8 +6913,8 @@
   function registry$lambda(it) {
     _init_properties_Managed_js_kt__4ok5rc();
     var thunk = it instanceof FinalizationThunk ? it : THROW_CCE();
-    thunk.e2n();
-    return Unit_getInstance();
+    thunk.c3y();
+    return Unit_instance;
   }
   var properties_initialized_Managed_js_kt_llxy4m;
   function _init_properties_Managed_js_kt__4ok5rc() {
@@ -6358,7 +6949,7 @@
     }
     if (tmp_0) {
       var data = _malloc(array.length);
-      $this.g26_1.a(data);
+      $this.a3e_1.s(data);
       if (copyArrayToWasm) {
         toWasm(data, array);
       }
@@ -6379,8 +6970,8 @@
       tmp_0 = false;
     }
     if (tmp_0) {
-      var data = _malloc(imul(array.length, 4));
-      $this.g26_1.a(data);
+      var data = _malloc(imul(array.length, 2));
+      $this.a3e_1.s(data);
       if (copyArrayToWasm) {
         toWasm_0(data, array);
       }
@@ -6402,7 +6993,7 @@
     }
     if (tmp_0) {
       var data = _malloc(imul(array.length, 4));
-      $this.g26_1.a(data);
+      $this.a3e_1.s(data);
       if (copyArrayToWasm) {
         toWasm_1(data, array);
       }
@@ -6423,8 +7014,8 @@
       tmp_0 = false;
     }
     if (tmp_0) {
-      var data = _malloc(imul(array.length, 8));
-      $this.g26_1.a(data);
+      var data = _malloc(imul(array.length, 4));
+      $this.a3e_1.s(data);
       if (copyArrayToWasm) {
         toWasm_2(data, array);
       }
@@ -6436,11 +7027,33 @@
   }
   function toInterop_3($this, array, copyArrayToWasm) {
     var tmp;
-    if (!(array == null) ? array.f() > 0 : false) {
-      var data = _malloc(imul(array.f(), 4));
-      $this.g26_1.a(data);
+    var tmp_0;
+    if (!(array == null)) {
+      // Inline function 'kotlin.collections.isNotEmpty' call
+      // Inline function 'kotlin.collections.isEmpty' call
+      tmp_0 = !(array.length === 0);
+    } else {
+      tmp_0 = false;
+    }
+    if (tmp_0) {
+      var data = _malloc(imul(array.length, 8));
+      $this.a3e_1.s(data);
       if (copyArrayToWasm) {
-        toWasm_0(data, array.l2b_1);
+        toWasm_3(data, array);
+      }
+      tmp = data;
+    } else {
+      tmp = 0;
+    }
+    return tmp;
+  }
+  function toInterop_4($this, array, copyArrayToWasm) {
+    var tmp;
+    if (!(array == null) ? array.n() > 0 : false) {
+      var data = _malloc(imul(array.n(), 4));
+      $this.a3e_1.s(data);
+      if (copyArrayToWasm) {
+        toWasm_1(data, array.o3l_1);
       }
       tmp = data;
     } else {
@@ -6451,58 +7064,61 @@
   function InteropScope() {
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.g26_1 = ArrayList_init_$Create$_0();
-    this.h26_1 = false;
+    tmp.a3e_1 = ArrayList_init_$Create$_0();
+    this.b3e_1 = false;
   }
-  protoOf(InteropScope).n2b = function (string) {
+  protoOf(InteropScope).c3e = function (string) {
     var tmp;
     if (!(string == null)) {
       var data = _malloc(imul(string.length, 4));
       stringToUTF8(string, data, imul(string.length, 4));
-      this.g26_1.a(data);
+      this.a3e_1.s(data);
       tmp = data;
     } else {
       tmp = 0;
     }
     return tmp;
   };
-  protoOf(InteropScope).b28 = function (array) {
+  protoOf(InteropScope).v3h = function (array) {
     return toInterop(this, array, true);
   };
-  protoOf(InteropScope).p2b = function (array) {
+  protoOf(InteropScope).q3l = function (array) {
     return toInterop(this, array, false);
   };
-  protoOf(InteropScope).m2b = function (_this__u8e3s4, result) {
-    fromWasm(_this__u8e3s4, result);
-  };
-  protoOf(InteropScope).p2e = function (array) {
+  protoOf(InteropScope).r3e = function (array) {
     return toInterop_0(this, array, true);
   };
-  protoOf(InteropScope).i2b = function (array) {
-    return toInterop_0(this, array, false);
+  protoOf(InteropScope).z3e = function (_this__u8e3s4, result) {
+    fromWasm(_this__u8e3s4, result);
   };
-  protoOf(InteropScope).z29 = function (_this__u8e3s4, result) {
-    fromWasm_0(_this__u8e3s4, result);
-  };
-  protoOf(InteropScope).i26 = function (array) {
+  protoOf(InteropScope).y3e = function (array) {
     return toInterop_1(this, array, true);
   };
-  protoOf(InteropScope).y29 = function (array) {
+  protoOf(InteropScope).f3l = function (array) {
     return toInterop_1(this, array, false);
   };
-  protoOf(InteropScope).u2g = function (array) {
+  protoOf(InteropScope).t3j = function (_this__u8e3s4, result) {
+    fromWasm_0(_this__u8e3s4, result);
+  };
+  protoOf(InteropScope).v3f = function (array) {
     return toInterop_2(this, array, true);
   };
-  protoOf(InteropScope).q2b = function (_this__u8e3s4, result) {
+  protoOf(InteropScope).s3j = function (array) {
+    return toInterop_2(this, array, false);
+  };
+  protoOf(InteropScope).o3r = function (array) {
+    return toInterop_3(this, array, true);
+  };
+  protoOf(InteropScope).r3l = function (_this__u8e3s4, result) {
     fromWasm_1(_this__u8e3s4, result);
   };
-  protoOf(InteropScope).j2b = function (array) {
-    return toInterop_3(this, array, false);
+  protoOf(InteropScope).m3l = function (array) {
+    return toInterop_4(this, array, false);
   };
-  protoOf(InteropScope).k2b = function (_this__u8e3s4, result) {
-    return fromWasm(_this__u8e3s4, result.l2b_1);
+  protoOf(InteropScope).n3l = function (_this__u8e3s4, result) {
+    return fromWasm(_this__u8e3s4, result.o3l_1);
   };
-  protoOf(InteropScope).q2g = function (stringArray) {
+  protoOf(InteropScope).k3r = function (stringArray) {
     var tmp;
     var tmp_0;
     if (!(stringArray == null)) {
@@ -6515,40 +7131,45 @@
     if (tmp_0) {
       // Inline function 'kotlin.collections.map' call
       // Inline function 'kotlin.collections.mapTo' call
-      var tmp0_mapTo = ArrayList_init_$Create$(stringArray.length);
-      var tmp0_iterator = arrayIterator(stringArray);
-      while (tmp0_iterator.d()) {
-        var item = tmp0_iterator.e();
-        var tmp$ret$2;
+      var destination = ArrayList_init_$Create$(stringArray.length);
+      var inductionVariable = 0;
+      var last = stringArray.length;
+      while (inductionVariable < last) {
+        var item = stringArray[inductionVariable];
+        inductionVariable = inductionVariable + 1 | 0;
         // Inline function 'org.jetbrains.skia.impl.InteropScope.toInterop.<anonymous>' call
-        tmp$ret$2 = this.n2b(item);
-        tmp0_mapTo.a(tmp$ret$2);
+        var tmp$ret$2 = this.c3e(item);
+        destination.s(tmp$ret$2);
       }
-      var ptrs = toIntArray(tmp0_mapTo);
-      tmp = this.p2e(ptrs);
+      var ptrs = toIntArray(destination);
+      tmp = this.y3e(ptrs);
     } else {
       tmp = 0;
     }
     return tmp;
   };
-  protoOf(InteropScope).ak = function () {
+  protoOf(InteropScope).fp = function () {
     // Inline function 'kotlin.collections.forEach' call
-    var tmp0_iterator = this.g26_1.c();
-    while (tmp0_iterator.d()) {
-      var element = tmp0_iterator.e();
+    var tmp0_iterator = this.a3e_1.v();
+    while (tmp0_iterator.w()) {
+      var element = tmp0_iterator.y();
       // Inline function 'org.jetbrains.skia.impl.InteropScope.release.<anonymous>' call
       _free(element);
     }
-    this.g26_1.f7();
+    this.a3e_1.c1();
     // Inline function 'org.jetbrains.skia.impl.InteropScope.releaseCallbacks' call
-    if (this.h26_1) {
+    if (this.b3e_1) {
       _releaseLocalCallbackScope$accessor$wmqves();
-      this.h26_1 = false;
+      this.b3e_1 = false;
     }
   };
   function toWasm(dest, src) {
     _init_properties_Native_js_kt__80argu();
     return HEAPU8.set(src, dest);
+  }
+  function toWasm_0(dest, src) {
+    _init_properties_Native_js_kt__80argu();
+    return HEAPU16.set(src, dest / 2 | 0);
   }
   function fromWasm(src, result) {
     _init_properties_Native_js_kt__80argu();
@@ -6556,7 +7177,7 @@
     // Inline function 'kotlin.js.asDynamic' call
     result.set(HEAPU32.subarray(startIndex, startIndex + result.length | 0));
   }
-  function toWasm_0(dest, src) {
+  function toWasm_1(dest, src) {
     _init_properties_Native_js_kt__80argu();
     return HEAPU32.set(src, dest / 4 | 0);
   }
@@ -6566,11 +7187,11 @@
     // Inline function 'kotlin.js.asDynamic' call
     result.set(HEAPF32.subarray(startIndex, startIndex + result.length | 0));
   }
-  function toWasm_1(dest, src) {
+  function toWasm_2(dest, src) {
     _init_properties_Native_js_kt__80argu();
     return HEAPF32.set(src, dest / 4 | 0);
   }
-  function toWasm_2(dest, src) {
+  function toWasm_3(dest, src) {
     _init_properties_Native_js_kt__80argu();
     return HEAPF64.set(src, dest / 8 | 0);
   }
@@ -6579,42 +7200,34 @@
     // Inline function 'kotlin.js.asDynamic' call
     result.set(HEAPU8.subarray(src, src + result.length | 0));
   }
-  function Companion_45() {
-    Companion_instance_45 = this;
+  function Companion_52() {
   }
-  var Companion_instance_45;
-  function Companion_getInstance_46() {
-    if (Companion_instance_45 == null)
-      new Companion_45();
-    return Companion_instance_45;
+  var Companion_instance_52;
+  function Companion_getInstance_53() {
+    return Companion_instance_52;
   }
   function NativePointerArray(size) {
-    Companion_getInstance_46();
-    this.l2b_1 = new Int32Array(size);
+    this.o3l_1 = new Int32Array(size);
   }
-  protoOf(NativePointerArray).l = function (index) {
-    return this.l2b_1[index];
+  protoOf(NativePointerArray).i1 = function (index) {
+    return this.o3l_1[index];
   };
-  protoOf(NativePointerArray).f = function () {
-    return this.l2b_1.length;
+  protoOf(NativePointerArray).n = function () {
+    return this.o3l_1.length;
   };
-  function Companion_46() {
-    Companion_instance_46 = this;
+  function Companion_53() {
   }
-  protoOf(Companion_46).e2b = function () {
+  protoOf(Companion_53).a3f = function () {
     return 0;
   };
-  var Companion_instance_46;
-  function Companion_getInstance_47() {
-    if (Companion_instance_46 == null)
-      new Companion_46();
-    return Companion_instance_46;
+  var Companion_instance_53;
+  function Companion_getInstance_54() {
+    return Companion_instance_53;
   }
   function Native(ptr) {
-    Companion_getInstance_47();
-    if (ptr === Companion_getInstance_47().e2b())
+    if (ptr === Companion_instance_53.a3f())
       throw RuntimeException_init_$Create$("Can't wrap nullptr");
-    this.s24_1 = ptr;
+    this.d3d_1 = ptr;
   }
   protoOf(Native).equals = function (other) {
     if (this === other)
@@ -6623,16 +7236,16 @@
       return false;
     if (!(other instanceof Native))
       return false;
-    return this.s24_1 === other.s24_1 ? true : this.t24(other);
+    return this.d3d_1 === other.d3d_1 ? true : this.e3d(other);
   };
   protoOf(Native).hashCode = function () {
-    return this.s24_1;
+    return this.d3d_1;
   };
-  protoOf(Native).t24 = function (other) {
+  protoOf(Native).e3d = function (other) {
     return false;
   };
   protoOf(Native).toString = function () {
-    return plus(getKClassFromExpression(this).va(), '(_ptr=0x') + toString_0(this.s24_1, 16) + ')';
+    return plus(getKClassFromExpression(this).d7(), '(_ptr=0x') + toString_0(this.d3d_1, 16) + ')';
   };
   function reachabilityBarrier(obj) {
     _init_properties_Native_js_kt__80argu();
@@ -6666,132 +7279,140 @@
     }
   }
   function RefCnt_init_$Init$(ptr, $this) {
-    Managed.call($this, ptr, _FinalizerHolder_getInstance_14().f2n_1, true);
+    Managed.call($this, ptr, _FinalizerHolder_getInstance_17().d3y_1, true);
     RefCnt.call($this);
     return $this;
   }
   function RefCnt_init_$Init$_0(ptr, allowClose, $this) {
-    Managed.call($this, ptr, _FinalizerHolder_getInstance_14().f2n_1, allowClose);
+    Managed.call($this, ptr, _FinalizerHolder_getInstance_17().d3y_1, allowClose);
     RefCnt.call($this);
     return $this;
   }
-  protoOf(RefCnt).n27 = function () {
-    Stats_getInstance().o24();
-    return org_jetbrains_skia_impl_RefCnt__getRefCount(this.s24_1);
+  protoOf(RefCnt).h3h = function () {
+    Stats_instance.z3c();
+    return org_jetbrains_skia_impl_RefCnt__getRefCount(this.d3d_1);
   };
   protoOf(RefCnt).toString = function () {
     var s = protoOf(Managed).toString.call(this);
     // Inline function 'kotlin.text.substring' call
-    var tmp0_substring = s.length - 1 | 0;
+    var endIndex = s.length - 1 | 0;
     // Inline function 'kotlin.js.asDynamic' call
-    return s.substring(0, tmp0_substring) + ', refCount=' + this.n27() + ')';
+    return s.substring(0, endIndex) + ', refCount=' + this.h3h() + ')';
   };
   function RefCnt() {
   }
-  function _FinalizerHolder_14() {
-    _FinalizerHolder_instance_14 = this;
-    this.f2n_1 = org_jetbrains_skia_impl_RefCnt__getFinalizer();
+  function _FinalizerHolder_17() {
+    _FinalizerHolder_instance_17 = this;
+    this.d3y_1 = org_jetbrains_skia_impl_RefCnt__getFinalizer();
   }
-  var _FinalizerHolder_instance_14;
-  function _FinalizerHolder_getInstance_14() {
-    if (_FinalizerHolder_instance_14 == null)
-      new _FinalizerHolder_14();
-    return _FinalizerHolder_instance_14;
+  var _FinalizerHolder_instance_17;
+  function _FinalizerHolder_getInstance_17() {
+    if (_FinalizerHolder_instance_17 == null)
+      new _FinalizerHolder_17();
+    return _FinalizerHolder_instance_17;
   }
   function Stats() {
-    Stats_instance = this;
   }
-  protoOf(Stats).o24 = function () {
+  protoOf(Stats).z3c = function () {
   };
   var Stats_instance;
   function Stats_getInstance() {
-    if (Stats_instance == null)
-      new Stats();
     return Stats_instance;
   }
   function currentNanoTime() {
     return numberToLong(window.performance.now() * 1000000);
   }
+  function ClipboardManager_setText(text) {
+    window.navigator.clipboard.writeText(text);
+  }
+  function ClipboardManager_getText() {
+    return null;
+  }
+  function ClipboardManager_hasText() {
+    // Inline function 'kotlin.text.isNullOrEmpty' call
+    var this_0 = ClipboardManager_getText();
+    // Inline function 'kotlin.contracts.contract' call
+    return !(this_0 == null ? true : charSequenceLength(this_0) === 0);
+  }
   function disposeCanvas($this) {
-    var tmp0_safe_receiver = $this.j2n_1;
+    var tmp0_safe_receiver = $this.h3y_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.y13();
+      tmp0_safe_receiver.j24();
     }
-    $this.j2n_1 = null;
-    var tmp1_safe_receiver = $this.k2n_1;
+    $this.h3y_1 = null;
+    var tmp1_safe_receiver = $this.i3y_1;
     if (tmp1_safe_receiver == null)
       null;
     else {
-      tmp1_safe_receiver.y13();
+      tmp1_safe_receiver.j24();
     }
-    $this.k2n_1 = null;
+    $this.i3y_1 = null;
   }
   function CanvasRenderer$needRedraw$lambda(this$0) {
     return function (timestamp) {
-      this$0.m2n_1 = false;
-      GL.makeContextCurrent(this$0.h2n_1);
-      var tmp0_safe_receiver = this$0.l2n_1;
+      this$0.k3y_1 = false;
+      GL.makeContextCurrent(this$0.f3y_1);
+      var tmp0_safe_receiver = this$0.j3y_1;
       if (tmp0_safe_receiver == null)
         null;
       else {
-        Color_getInstance();
-        tmp0_safe_receiver.e1s(-1);
+        tmp0_safe_receiver.e2z(-1);
       }
-      var tmp1_safe_receiver = this$0.l2n_1;
+      var tmp1_safe_receiver = this$0.j3y_1;
       if (tmp1_safe_receiver == null)
         null;
       else
-        tmp1_safe_receiver.p26();
-      this$0.n2n(timestamp);
-      var tmp2_safe_receiver = this$0.j2n_1;
+        tmp1_safe_receiver.j3g();
+      this$0.l3y(timestamp);
+      var tmp2_safe_receiver = this$0.h3y_1;
       if (tmp2_safe_receiver == null)
         null;
       else {
-        tmp2_safe_receiver.v2e();
+        tmp2_safe_receiver.o3p();
       }
-      this$0.i2n_1.k28();
-      return Unit_getInstance();
+      this$0.g3y_1.e3i();
+      return Unit_instance;
     };
   }
   function CanvasRenderer(htmlCanvas) {
-    this.g2n_1 = htmlCanvas;
-    this.h2n_1 = createWebGLContext(this.g2n_1);
-    this.j2n_1 = null;
-    this.k2n_1 = null;
-    this.l2n_1 = null;
-    GL.makeContextCurrent(this.h2n_1);
-    this.i2n_1 = Companion_getInstance_8().h28();
-    this.m2n_1 = false;
+    this.e3y_1 = htmlCanvas;
+    this.f3y_1 = createWebGLContext(this.e3y_1);
+    this.h3y_1 = null;
+    this.i3y_1 = null;
+    this.j3y_1 = null;
+    GL.makeContextCurrent(this.f3y_1);
+    this.g3y_1 = Companion_getInstance_9().b3i();
+    this.k3y_1 = false;
   }
-  protoOf(CanvasRenderer).t21 = function () {
-    return this.g2n_1.width;
+  protoOf(CanvasRenderer).k39 = function () {
+    return this.e3y_1.width;
   };
-  protoOf(CanvasRenderer).u21 = function () {
-    return this.g2n_1.height;
+  protoOf(CanvasRenderer).l39 = function () {
+    return this.e3y_1.height;
   };
-  protoOf(CanvasRenderer).o2n = function (desiredWidth, desiredHeight, scale, pixelGeometry) {
+  protoOf(CanvasRenderer).m3y = function (desiredWidth, desiredHeight, scale, pixelGeometry) {
     disposeCanvas(this);
-    this.g2n_1.width = numberToInt(desiredWidth * scale);
-    this.g2n_1.height = numberToInt(desiredHeight * scale);
-    this.k2n_1 = Companion_getInstance_0().n24(this.t21(), this.u21(), 1, 8, 0, 32856);
+    this.e3y_1.width = numberToInt(desiredWidth * scale);
+    this.e3y_1.height = numberToInt(desiredHeight * scale);
+    this.i3y_1 = Companion_getInstance_0().y3c(this.k39(), this.l39(), 1, 8, 0, 32856);
     var tmp = this;
-    var tmp0_elvis_lhs = Companion_getInstance_30().n2e(this.i2n_1, ensureNotNull(this.k2n_1), SurfaceOrigin_BOTTOM_LEFT_getInstance(), SurfaceColorFormat_RGBA_8888_getInstance(), Companion_getInstance_5().t27_1, new SurfaceProps(VOID, pixelGeometry));
+    var tmp0_elvis_lhs = Companion_getInstance_36().h3p(this.g3y_1, ensureNotNull(this.i3y_1), SurfaceOrigin_BOTTOM_LEFT_getInstance(), SurfaceColorFormat_RGBA_8888_getInstance(), Companion_getInstance_6().n3h_1, new SurfaceProps(VOID, pixelGeometry));
     var tmp_0;
     if (tmp0_elvis_lhs == null) {
       throw new RenderException('Cannot create surface');
     } else {
       tmp_0 = tmp0_elvis_lhs;
     }
-    tmp.j2n_1 = tmp_0;
-    this.l2n_1 = ensureNotNull(this.j2n_1).u2e();
+    tmp.h3y_1 = tmp_0;
+    this.j3y_1 = ensureNotNull(this.h3y_1).n3p();
   };
-  protoOf(CanvasRenderer).p2n = function () {
-    if (this.m2n_1) {
-      return Unit_getInstance();
+  protoOf(CanvasRenderer).n3y = function () {
+    if (this.k3y_1) {
+      return Unit_instance;
     }
-    this.m2n_1 = true;
+    this.k3y_1 = true;
     var tmp = window;
     tmp.requestAnimationFrame(CanvasRenderer$needRedraw$lambda(this));
   };
@@ -6837,7 +7458,7 @@
     var tmp2_deltaX = event.deltaX;
     var tmp3_deltaY = event.deltaY;
     var tmp4_pressedButtons = _SkikoMouseButtons___init__impl__kylsco(get_buttonsFlags());
-    var tmp5_button = Companion_getInstance_44().n2l_1;
+    var tmp5_button = Companion_getInstance_51().i3w_1;
     var tmp6_modifiers = toSkikoModifiers(event);
     var tmp7_kind = SkikoPointerEventKind_SCROLL_getInstance();
     var tmp8_timestamp = numberToLong(event.timeStamp);
@@ -6845,12 +7466,12 @@
   }
   function toSkikoEvent_0(event, kind) {
     _init_properties_Convertors_js_kt__upzh8o();
-    return new SkikoKeyboardEvent(Companion_getInstance_48().q2n(toSkikoKey(event)), toSkikoModifiers_0(event), kind, numberToLong(event.timeStamp), event);
+    return new SkikoKeyboardEvent(Companion_instance_54.o3y(toSkikoKey(event)), toSkikoModifiers_0(event), kind, numberToLong(event.timeStamp), event);
   }
   function toSkikoTypeEvent(character, event) {
     _init_properties_Convertors_js_kt__upzh8o();
     var tmp;
-    if (get_SPECIAL_KEYS().m(character)) {
+    if (get_SPECIAL_KEYS().r(character)) {
       tmp = null;
     } else {
       var input;
@@ -6865,8 +7486,8 @@
           input = character;
           break;
       }
-      var key = !(event == null) ? Companion_getInstance_48().q2n(event.keyCode) : SkikoKey_KEY_UNKNOWN_getInstance();
-      var modifiers = !(event == null) ? toSkikoModifiers_0(event) : Companion_getInstance_43().x2k_1;
+      var key = !(event == null) ? Companion_instance_54.o3y(event.keyCode) : SkikoKey_KEY_UNKNOWN_getInstance();
+      var modifiers = !(event == null) ? toSkikoModifiers_0(event) : Companion_getInstance_50().s3v_1;
       tmp = new SkikoInputEvent(input, key, modifiers, SkikoKeyboardEventKind_TYPE_getInstance(), event);
     }
     return tmp;
@@ -6889,16 +7510,16 @@
     _init_properties_Convertors_js_kt__upzh8o();
     var result = 0;
     if (event.altKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_43().a2l_1);
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_50().v3v_1);
     }
     if (event.shiftKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_43().b2l_1);
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_50().w3v_1);
     }
     if (event.ctrlKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_43().z2k_1);
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_50().u3v_1);
     }
     if (event.metaKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_43().y2k_1);
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_50().t3v_1);
     }
     return _SkikoInputModifiers___init__impl__z8g2zy(result);
   }
@@ -6907,7 +7528,7 @@
     var key = event.keyCode;
     var side = event.location;
     if (side === KeyboardEvent.DOM_KEY_LOCATION_RIGHT) {
-      if ((key === SkikoKey_KEY_LEFT_CONTROL_getInstance().t2n_1 ? true : key === SkikoKey_KEY_LEFT_SHIFT_getInstance().t2n_1) ? true : key === SkikoKey_KEY_LEFT_META_getInstance().t2n_1)
+      if ((key === SkikoKey_KEY_LEFT_CONTROL_getInstance().r3y_1 ? true : key === SkikoKey_KEY_LEFT_SHIFT_getInstance().r3y_1) ? true : key === SkikoKey_KEY_LEFT_META_getInstance().r3y_1)
         key = key | -2147483648;
     }
     return key;
@@ -6916,16 +7537,16 @@
     _init_properties_Convertors_js_kt__upzh8o();
     var result = 0;
     if (event.altKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_43().a2l_1);
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_50().v3v_1);
     }
     if (event.shiftKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_43().b2l_1);
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_50().w3v_1);
     }
     if (event.ctrlKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_43().z2k_1);
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_50().u3v_1);
     }
     if (event.metaKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_43().y2k_1);
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_50().t3v_1);
     }
     return _SkikoInputModifiers___init__impl__z8g2zy(result);
   }
@@ -6933,15 +7554,15 @@
     _init_properties_Convertors_js_kt__upzh8o();
     switch (button) {
       case 0:
-        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_44().o2l_1);
+        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_51().j3w_1);
       case 1:
-        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_44().q2l_1);
+        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_51().l3w_1);
       case 2:
-        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_44().p2l_1);
+        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_51().k3w_1);
       case 3:
-        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_44().u2l_1);
+        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_51().p3w_1);
       case 4:
-        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_44().v2l_1);
+        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_51().q3w_1);
       default:
         return 0;
     }
@@ -6968,13 +7589,13 @@
   function detectHostOs() {
     _init_properties_OsArch_js_kt__jkqwph();
     // Inline function 'kotlin.takeIf' call
-    var tmp0_takeIf = getNavigatorInfo();
+    var this_0 = getNavigatorInfo();
     // Inline function 'kotlin.contracts.contract' call
     var tmp;
     // Inline function 'org.jetbrains.skiko.detectHostOs.<anonymous>' call
     // Inline function 'kotlin.text.isNotEmpty' call
-    if (charSequenceLength(tmp0_takeIf) > 0) {
-      tmp = tmp0_takeIf;
+    if (charSequenceLength(this_0) > 0) {
+      tmp = this_0;
     } else {
       tmp = null;
     }
@@ -6989,7 +7610,7 @@
   }
   function hostId$delegate$lambda() {
     _init_properties_OsArch_js_kt__jkqwph();
-    return get_hostOs().t2m_1 + '-' + get_hostArch().w2m_1;
+    return get_hostOs().o3x_1 + '-' + get_hostArch().r3x_1;
   }
   var properties_initialized_OsArch_js_kt_ik094d;
   function _init_properties_OsArch_js_kt__jkqwph() {
@@ -7002,197 +7623,183 @@
   }
   var onContentScaleChanged;
   function setOnChangeScaleNotifier($this) {
-    var tmp0_safe_receiver = $this.u2n_1;
+    var tmp0_safe_receiver = $this.s3y_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.o2n($this.y2n_1, $this.z2n_1, $this.b2o(), $this.c2o());
+      tmp0_safe_receiver.m3y($this.w3y_1, $this.x3y_1, $this.z3y(), $this.a3z());
     }
-    var tmp = window.matchMedia('(resolution: ' + $this.b2o() + 'dppx)');
+    var tmp = window.matchMedia('(resolution: ' + $this.z3y() + 'dppx)');
     tmp.addEventListener('change', SkiaLayer$setOnChangeScaleNotifier$lambda($this), true);
     var tmp1_safe_receiver = onContentScaleChanged;
     if (tmp1_safe_receiver == null)
       null;
     else
-      tmp1_safe_receiver($this.b2o());
+      tmp1_safe_receiver($this.z3y());
   }
   function SkiaLayer$attachTo$1($htmlCanvas, this$0) {
-    this.k2o_1 = this$0;
+    this.i3z_1 = this$0;
     CanvasRenderer.call(this, $htmlCanvas);
   }
-  protoOf(SkiaLayer$attachTo$1).n2n = function (currentTimestamp) {
+  protoOf(SkiaLayer$attachTo$1).l3y = function (currentTimestamp) {
     var currentNanos = currentTimestamp * 1000000;
-    var tmp0_safe_receiver = this.k2o_1.w2n_1;
+    var tmp0_safe_receiver = this.i3z_1.u3y_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.a2n(ensureNotNull(this.l2n_1), this.t21(), this.u21(), numberToLong(currentNanos));
+      tmp0_safe_receiver.y3x(ensureNotNull(this.j3y_1), this.k39(), this.l39(), numberToLong(currentNanos));
     }
   };
   function SkiaLayer$attachTo$lambda(this$0) {
     return function (event) {
-      if (event instanceof MouseEvent)
-        event;
-      else
+      if (!(event instanceof MouseEvent))
         THROW_CCE();
-      this$0.x2n_1 = true;
-      var tmp0_safe_receiver = this$0.w2n_1;
+      this$0.v3y_1 = true;
+      var tmp0_safe_receiver = this$0.u3y_1;
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.y2m(toSkikoEvent(event, SkikoPointerEventKind_DOWN_getInstance()));
+        tmp0_safe_receiver.w3x(toSkikoEvent(event, SkikoPointerEventKind_DOWN_getInstance()));
       }
-      return Unit_getInstance();
+      return Unit_instance;
     };
   }
   function SkiaLayer$attachTo$lambda_0(this$0) {
     return function (event) {
-      if (event instanceof MouseEvent)
-        event;
-      else
+      if (!(event instanceof MouseEvent))
         THROW_CCE();
-      this$0.x2n_1 = false;
-      var tmp0_safe_receiver = this$0.w2n_1;
+      this$0.v3y_1 = false;
+      var tmp0_safe_receiver = this$0.u3y_1;
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.y2m(toSkikoEvent(event, SkikoPointerEventKind_UP_getInstance()));
+        tmp0_safe_receiver.w3x(toSkikoEvent(event, SkikoPointerEventKind_UP_getInstance()));
       }
-      return Unit_getInstance();
+      return Unit_instance;
     };
   }
   function SkiaLayer$attachTo$lambda_1(this$0) {
     return function (event) {
-      if (event instanceof MouseEvent)
-        event;
-      else
+      if (!(event instanceof MouseEvent))
         THROW_CCE();
       var tmp;
-      if (this$0.x2n_1) {
-        var tmp0_safe_receiver = this$0.w2n_1;
+      if (this$0.v3y_1) {
+        var tmp0_safe_receiver = this$0.u3y_1;
         if (tmp0_safe_receiver == null)
           null;
         else {
-          tmp0_safe_receiver.y2m(toSkikoDragEvent(event));
+          tmp0_safe_receiver.w3x(toSkikoDragEvent(event));
         }
-        tmp = Unit_getInstance();
+        tmp = Unit_instance;
       } else {
-        var tmp1_safe_receiver = this$0.w2n_1;
+        var tmp1_safe_receiver = this$0.u3y_1;
         if (tmp1_safe_receiver == null)
           null;
         else {
-          tmp1_safe_receiver.y2m(toSkikoEvent(event, SkikoPointerEventKind_MOVE_getInstance()));
+          tmp1_safe_receiver.w3x(toSkikoEvent(event, SkikoPointerEventKind_MOVE_getInstance()));
         }
-        tmp = Unit_getInstance();
+        tmp = Unit_instance;
       }
-      return Unit_getInstance();
+      return Unit_instance;
     };
   }
   function SkiaLayer$attachTo$lambda_2(this$0) {
     return function (event) {
-      if (event instanceof WheelEvent)
-        event;
-      else
+      if (!(event instanceof WheelEvent))
         THROW_CCE();
-      var tmp0_safe_receiver = this$0.w2n_1;
+      var tmp0_safe_receiver = this$0.u3y_1;
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.y2m(toSkikoScrollEvent(event));
+        tmp0_safe_receiver.w3x(toSkikoScrollEvent(event));
       }
-      return Unit_getInstance();
+      return Unit_instance;
     };
   }
   function SkiaLayer$attachTo$lambda_3(event) {
     event.preventDefault();
-    return Unit_getInstance();
+    return Unit_instance;
   }
   function SkiaLayer$attachTo$lambda_4(this$0) {
     return function (event) {
-      if (event instanceof KeyboardEvent)
-        event;
-      else
+      if (!(event instanceof KeyboardEvent))
         THROW_CCE();
-      var tmp0_safe_receiver = this$0.w2n_1;
+      var tmp0_safe_receiver = this$0.u3y_1;
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.x2m(toSkikoEvent_0(event, SkikoKeyboardEventKind_DOWN_getInstance()));
+        tmp0_safe_receiver.v3x(toSkikoEvent_0(event, SkikoKeyboardEventKind_DOWN_getInstance()));
       }
       var tmp1_safe_receiver = toSkikoTypeEvent(event.key, event);
       if (tmp1_safe_receiver == null)
         null;
       else {
-        var tmp$ret$0;
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
-        var tmp0_safe_receiver_0 = this$0.w2n_1;
-        var tmp1_safe_receiver_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.z2m();
+        var tmp0_safe_receiver_0 = this$0.u3y_1;
+        var tmp1_safe_receiver_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.x3x();
         if (tmp1_safe_receiver_0 == null)
           null;
         else {
-          tmp1_safe_receiver_0.l2o(tmp1_safe_receiver);
+          tmp1_safe_receiver_0.j3z(tmp1_safe_receiver);
         }
-        tmp$ret$0 = Unit_getInstance();
       }
-      return Unit_getInstance();
+      return Unit_instance;
     };
   }
   function SkiaLayer$attachTo$lambda_5(this$0) {
     return function (event) {
-      if (event instanceof KeyboardEvent)
-        event;
-      else
+      if (!(event instanceof KeyboardEvent))
         THROW_CCE();
-      var tmp0_safe_receiver = this$0.w2n_1;
+      var tmp0_safe_receiver = this$0.u3y_1;
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.x2m(toSkikoEvent_0(event, SkikoKeyboardEventKind_UP_getInstance()));
+        tmp0_safe_receiver.v3x(toSkikoEvent_0(event, SkikoKeyboardEventKind_UP_getInstance()));
       }
-      return Unit_getInstance();
+      return Unit_instance;
     };
   }
   function SkiaLayer$setOnChangeScaleNotifier$lambda(this$0) {
     return function (it) {
       setOnChangeScaleNotifier(this$0);
-      return Unit_getInstance();
+      return Unit_instance;
     };
   }
   function SkiaLayer() {
-    this.u2n_1 = null;
-    this.v2n_1 = GraphicsApi_WEBGL_getInstance();
-    this.w2n_1 = null;
-    this.x2n_1 = false;
-    this.y2n_1 = 0;
-    this.z2n_1 = 0;
-    this.a2o_1 = null;
+    this.s3y_1 = null;
+    this.t3y_1 = GraphicsApi_WEBGL_getInstance();
+    this.u3y_1 = null;
+    this.v3y_1 = false;
+    this.w3y_1 = 0;
+    this.x3y_1 = 0;
+    this.y3y_1 = null;
   }
-  protoOf(SkiaLayer).b2o = function () {
+  protoOf(SkiaLayer).z3y = function () {
     return window.devicePixelRatio;
   };
-  protoOf(SkiaLayer).p2n = function () {
-    var tmp0_safe_receiver = this.u2n_1;
+  protoOf(SkiaLayer).n3y = function () {
+    var tmp0_safe_receiver = this.s3y_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.p2n();
+      tmp0_safe_receiver.n3y();
     }
   };
-  protoOf(SkiaLayer).m2o = function (htmlCanvas, autoDetach) {
-    this.a2o_1 = htmlCanvas;
-    this.y2n_1 = htmlCanvas.width;
-    this.z2n_1 = htmlCanvas.height;
-    htmlCanvas.style.width = '' + this.y2n_1 + 'px';
-    htmlCanvas.style.height = '' + this.z2n_1 + 'px';
+  protoOf(SkiaLayer).k3z = function (htmlCanvas, autoDetach) {
+    this.y3y_1 = htmlCanvas;
+    this.w3y_1 = htmlCanvas.width;
+    this.x3y_1 = htmlCanvas.height;
+    htmlCanvas.style.width = '' + this.w3y_1 + 'px';
+    htmlCanvas.style.height = '' + this.x3y_1 + 'px';
     setOnChangeScaleNotifier(this);
     var tmp = this;
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = new SkiaLayer$attachTo$1(htmlCanvas, this);
+    var this_0 = new SkiaLayer$attachTo$1(htmlCanvas, this);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'org.jetbrains.skiko.SkiaLayer.attachTo.<anonymous>' call
-    tmp0_apply.o2n(this.y2n_1, this.z2n_1, this.b2o(), this.c2o());
-    tmp.u2n_1 = tmp0_apply;
+    this_0.m3y(this.w3y_1, this.x3y_1, this.z3y(), this.a3z());
+    tmp.s3y_1 = this_0;
     htmlCanvas.addEventListener('mousedown', SkiaLayer$attachTo$lambda(this));
     htmlCanvas.addEventListener('mouseup', SkiaLayer$attachTo$lambda_0(this));
     htmlCanvas.addEventListener('mousemove', SkiaLayer$attachTo$lambda_1(this));
@@ -7201,30 +7808,27 @@
     htmlCanvas.addEventListener('keydown', SkiaLayer$attachTo$lambda_4(this));
     htmlCanvas.addEventListener('keyup', SkiaLayer$attachTo$lambda_5(this));
   };
-  protoOf(SkiaLayer).n2o = function (htmlCanvas, autoDetach, $super) {
+  protoOf(SkiaLayer).l3z = function (htmlCanvas, autoDetach, $super) {
     autoDetach = autoDetach === VOID ? true : autoDetach;
     var tmp;
     if ($super === VOID) {
-      this.m2o(htmlCanvas, autoDetach);
-      tmp = Unit_getInstance();
+      this.k3z(htmlCanvas, autoDetach);
+      tmp = Unit_instance;
     } else {
-      tmp = $super.m2o.call(this, htmlCanvas, autoDetach);
+      tmp = $super.k3z.call(this, htmlCanvas, autoDetach);
     }
     return tmp;
   };
-  protoOf(SkiaLayer).c2o = function () {
+  protoOf(SkiaLayer).a3z = function () {
     return PixelGeometry_UNKNOWN_getInstance();
   };
   function Empty() {
-    Empty_instance = this;
   }
-  protoOf(Empty).l2o = function (event) {
-    return Unit_getInstance();
+  protoOf(Empty).j3z = function (event) {
+    return Unit_instance;
   };
   var Empty_instance;
   function Empty_getInstance() {
-    if (Empty_instance == null)
-      new Empty();
     return Empty_instance;
   }
   var SkikoKey_KEY_UNKNOWN_instance;
@@ -7332,10 +7936,9 @@
   var SkikoKey_KEY_NUMPAD_MULTIPLY_instance;
   var SkikoKey_KEY_NUMPAD_DIVIDE_instance;
   var SkikoKey_KEY_NUMPAD_DECIMAL_instance;
-  function Companion_47() {
-    Companion_instance_47 = this;
+  function Companion_54() {
   }
-  protoOf(Companion_47).q2n = function (platformKeyCode) {
+  protoOf(Companion_54).o3y = function (platformKeyCode) {
     var tmp$ret$1;
     $l$block: {
       // Inline function 'kotlin.collections.firstOrNull' call
@@ -7346,7 +7949,7 @@
         var element = indexedObject[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
         // Inline function 'org.jetbrains.skiko.Companion.valueOf.<anonymous>' call
-        if (element.t2n_1 === platformKeyCode) {
+        if (element.r3y_1 === platformKeyCode) {
           tmp$ret$1 = element;
           break $l$block;
         }
@@ -7356,12 +7959,9 @@
     var tmp0_elvis_lhs = tmp$ret$1;
     return tmp0_elvis_lhs == null ? SkikoKey_KEY_UNKNOWN_getInstance() : tmp0_elvis_lhs;
   };
-  var Companion_instance_47;
-  function Companion_getInstance_48() {
-    SkikoKey_initEntries();
-    if (Companion_instance_47 == null)
-      new Companion_47();
-    return Companion_instance_47;
+  var Companion_instance_54;
+  function Companion_getInstance_55() {
+    return Companion_instance_54;
   }
   function values_6() {
     return [SkikoKey_KEY_UNKNOWN_getInstance(), SkikoKey_KEY_A_getInstance(), SkikoKey_KEY_S_getInstance(), SkikoKey_KEY_D_getInstance(), SkikoKey_KEY_F_getInstance(), SkikoKey_KEY_H_getInstance(), SkikoKey_KEY_G_getInstance(), SkikoKey_KEY_Z_getInstance(), SkikoKey_KEY_X_getInstance(), SkikoKey_KEY_C_getInstance(), SkikoKey_KEY_V_getInstance(), SkikoKey_KEY_B_getInstance(), SkikoKey_KEY_Q_getInstance(), SkikoKey_KEY_W_getInstance(), SkikoKey_KEY_E_getInstance(), SkikoKey_KEY_R_getInstance(), SkikoKey_KEY_Y_getInstance(), SkikoKey_KEY_T_getInstance(), SkikoKey_KEY_U_getInstance(), SkikoKey_KEY_I_getInstance(), SkikoKey_KEY_P_getInstance(), SkikoKey_KEY_L_getInstance(), SkikoKey_KEY_J_getInstance(), SkikoKey_KEY_K_getInstance(), SkikoKey_KEY_N_getInstance(), SkikoKey_KEY_M_getInstance(), SkikoKey_KEY_O_getInstance(), SkikoKey_KEY_1_getInstance(), SkikoKey_KEY_2_getInstance(), SkikoKey_KEY_3_getInstance(), SkikoKey_KEY_4_getInstance(), SkikoKey_KEY_5_getInstance(), SkikoKey_KEY_6_getInstance(), SkikoKey_KEY_7_getInstance(), SkikoKey_KEY_8_getInstance(), SkikoKey_KEY_9_getInstance(), SkikoKey_KEY_0_getInstance(), SkikoKey_KEY_CLOSE_BRACKET_getInstance(), SkikoKey_KEY_OPEN_BRACKET_getInstance(), SkikoKey_KEY_QUOTE_getInstance(), SkikoKey_KEY_SEMICOLON_getInstance(), SkikoKey_KEY_SLASH_getInstance(), SkikoKey_KEY_COMMA_getInstance(), SkikoKey_KEY_BACKSLASH_getInstance(), SkikoKey_KEY_PERIOD_getInstance(), SkikoKey_KEY_BACK_QUOTE_getInstance(), SkikoKey_KEY_EQUALS_getInstance(), SkikoKey_KEY_MINUS_getInstance(), SkikoKey_KEY_ENTER_getInstance(), SkikoKey_KEY_ESCAPE_getInstance(), SkikoKey_KEY_TAB_getInstance(), SkikoKey_KEY_BACKSPACE_getInstance(), SkikoKey_KEY_SPACE_getInstance(), SkikoKey_KEY_CAPSLOCK_getInstance(), SkikoKey_KEY_LEFT_META_getInstance(), SkikoKey_KEY_LEFT_SHIFT_getInstance(), SkikoKey_KEY_LEFT_ALT_getInstance(), SkikoKey_KEY_LEFT_CONTROL_getInstance(), SkikoKey_KEY_RIGHT_META_getInstance(), SkikoKey_KEY_RIGHT_SHIFT_getInstance(), SkikoKey_KEY_RIGHT_ALT_getInstance(), SkikoKey_KEY_RIGHT_CONTROL_getInstance(), SkikoKey_KEY_MENU_getInstance(), SkikoKey_KEY_UP_getInstance(), SkikoKey_KEY_DOWN_getInstance(), SkikoKey_KEY_LEFT_getInstance(), SkikoKey_KEY_RIGHT_getInstance(), SkikoKey_KEY_F1_getInstance(), SkikoKey_KEY_F2_getInstance(), SkikoKey_KEY_F3_getInstance(), SkikoKey_KEY_F4_getInstance(), SkikoKey_KEY_F5_getInstance(), SkikoKey_KEY_F6_getInstance(), SkikoKey_KEY_F7_getInstance(), SkikoKey_KEY_F8_getInstance(), SkikoKey_KEY_F9_getInstance(), SkikoKey_KEY_F10_getInstance(), SkikoKey_KEY_F11_getInstance(), SkikoKey_KEY_F12_getInstance(), SkikoKey_KEY_PRINTSCEEN_getInstance(), SkikoKey_KEY_SCROLL_LOCK_getInstance(), SkikoKey_KEY_PAUSE_getInstance(), SkikoKey_KEY_INSERT_getInstance(), SkikoKey_KEY_HOME_getInstance(), SkikoKey_KEY_PGUP_getInstance(), SkikoKey_KEY_DELETE_getInstance(), SkikoKey_KEY_END_getInstance(), SkikoKey_KEY_PGDOWN_getInstance(), SkikoKey_KEY_NUM_LOCK_getInstance(), SkikoKey_KEY_NUMPAD_0_getInstance(), SkikoKey_KEY_NUMPAD_1_getInstance(), SkikoKey_KEY_NUMPAD_2_getInstance(), SkikoKey_KEY_NUMPAD_3_getInstance(), SkikoKey_KEY_NUMPAD_4_getInstance(), SkikoKey_KEY_NUMPAD_5_getInstance(), SkikoKey_KEY_NUMPAD_6_getInstance(), SkikoKey_KEY_NUMPAD_7_getInstance(), SkikoKey_KEY_NUMPAD_8_getInstance(), SkikoKey_KEY_NUMPAD_9_getInstance(), SkikoKey_KEY_NUMPAD_ENTER_getInstance(), SkikoKey_KEY_NUMPAD_ADD_getInstance(), SkikoKey_KEY_NUMPAD_SUBTRACT_getInstance(), SkikoKey_KEY_NUMPAD_MULTIPLY_getInstance(), SkikoKey_KEY_NUMPAD_DIVIDE_getInstance(), SkikoKey_KEY_NUMPAD_DECIMAL_getInstance()];
@@ -7369,7 +7969,7 @@
   var SkikoKey_entriesInitialized;
   function SkikoKey_initEntries() {
     if (SkikoKey_entriesInitialized)
-      return Unit_getInstance();
+      return Unit_instance;
     SkikoKey_entriesInitialized = true;
     SkikoKey_KEY_UNKNOWN_instance = new SkikoKey('KEY_UNKNOWN', 0, -1);
     SkikoKey_KEY_A_instance = new SkikoKey('KEY_A', 1, 65);
@@ -7476,11 +8076,10 @@
     SkikoKey_KEY_NUMPAD_MULTIPLY_instance = new SkikoKey('KEY_NUMPAD_MULTIPLY', 102, 106);
     SkikoKey_KEY_NUMPAD_DIVIDE_instance = new SkikoKey('KEY_NUMPAD_DIVIDE', 103, 111);
     SkikoKey_KEY_NUMPAD_DECIMAL_instance = new SkikoKey('KEY_NUMPAD_DECIMAL', 104, 110);
-    Companion_getInstance_48();
   }
   function SkikoKey(name, ordinal, platformKeyCode) {
     Enum.call(this, name, ordinal);
-    this.t2n_1 = platformKeyCode;
+    this.r3y_1 = platformKeyCode;
   }
   function SkikoKey_KEY_UNKNOWN_getInstance() {
     SkikoKey_initEntries();
@@ -8001,122 +8600,141 @@
   function createWebGLContext$contextAttributes$1($attr) {
     var tmp = this;
     var tmp1_elvis_lhs = $attr == null ? null : $attr.alpha;
-    tmp.o2o_1 = tmp1_elvis_lhs == null ? 1 : tmp1_elvis_lhs;
+    tmp.m3z_1 = tmp1_elvis_lhs == null ? 1 : tmp1_elvis_lhs;
     var tmp_0 = this;
     var tmp1_elvis_lhs_0 = $attr == null ? null : $attr.depth;
-    tmp_0.p2o_1 = tmp1_elvis_lhs_0 == null ? 1 : tmp1_elvis_lhs_0;
+    tmp_0.n3z_1 = tmp1_elvis_lhs_0 == null ? 1 : tmp1_elvis_lhs_0;
     var tmp_1 = this;
     var tmp1_elvis_lhs_1 = $attr == null ? null : $attr.stencil;
-    tmp_1.q2o_1 = tmp1_elvis_lhs_1 == null ? 8 : tmp1_elvis_lhs_1;
+    tmp_1.o3z_1 = tmp1_elvis_lhs_1 == null ? 8 : tmp1_elvis_lhs_1;
     var tmp_2 = this;
     var tmp1_elvis_lhs_2 = $attr == null ? null : $attr.antialias;
-    tmp_2.r2o_1 = tmp1_elvis_lhs_2 == null ? 0 : tmp1_elvis_lhs_2;
+    tmp_2.p3z_1 = tmp1_elvis_lhs_2 == null ? 0 : tmp1_elvis_lhs_2;
     var tmp_3 = this;
     var tmp1_elvis_lhs_3 = $attr == null ? null : $attr.premultipliedAlpha;
-    tmp_3.s2o_1 = tmp1_elvis_lhs_3 == null ? 1 : tmp1_elvis_lhs_3;
+    tmp_3.q3z_1 = tmp1_elvis_lhs_3 == null ? 1 : tmp1_elvis_lhs_3;
     var tmp_4 = this;
     var tmp1_elvis_lhs_4 = $attr == null ? null : $attr.preserveDrawingBuffer;
-    tmp_4.t2o_1 = tmp1_elvis_lhs_4 == null ? 0 : tmp1_elvis_lhs_4;
+    tmp_4.r3z_1 = tmp1_elvis_lhs_4 == null ? 0 : tmp1_elvis_lhs_4;
     var tmp_5 = this;
     var tmp1_elvis_lhs_5 = $attr == null ? null : $attr.preferLowPowerToHighPerformance;
-    tmp_5.u2o_1 = tmp1_elvis_lhs_5 == null ? 0 : tmp1_elvis_lhs_5;
+    tmp_5.s3z_1 = tmp1_elvis_lhs_5 == null ? 0 : tmp1_elvis_lhs_5;
     var tmp_6 = this;
     var tmp1_elvis_lhs_6 = $attr == null ? null : $attr.failIfMajorPerformanceCaveat;
-    tmp_6.v2o_1 = tmp1_elvis_lhs_6 == null ? 0 : tmp1_elvis_lhs_6;
+    tmp_6.t3z_1 = tmp1_elvis_lhs_6 == null ? 0 : tmp1_elvis_lhs_6;
     var tmp_7 = this;
     var tmp1_elvis_lhs_7 = $attr == null ? null : $attr.enableExtensionsByDefault;
-    tmp_7.w2o_1 = tmp1_elvis_lhs_7 == null ? 1 : tmp1_elvis_lhs_7;
+    tmp_7.u3z_1 = tmp1_elvis_lhs_7 == null ? 1 : tmp1_elvis_lhs_7;
     var tmp_8 = this;
     var tmp1_elvis_lhs_8 = $attr == null ? null : $attr.explicitSwapControl;
-    tmp_8.x2o_1 = tmp1_elvis_lhs_8 == null ? 0 : tmp1_elvis_lhs_8;
+    tmp_8.v3z_1 = tmp1_elvis_lhs_8 == null ? 0 : tmp1_elvis_lhs_8;
     var tmp_9 = this;
     var tmp1_elvis_lhs_9 = $attr == null ? null : $attr.renderViaOffscreenBackBuffer;
-    tmp_9.y2o_1 = tmp1_elvis_lhs_9 == null ? 0 : tmp1_elvis_lhs_9;
+    tmp_9.w3z_1 = tmp1_elvis_lhs_9 == null ? 0 : tmp1_elvis_lhs_9;
     var tmp_10 = this;
     var tmp1_elvis_lhs_10 = $attr == null ? null : $attr.majorVersion;
-    tmp_10.z2o_1 = tmp1_elvis_lhs_10 == null ? 1 : tmp1_elvis_lhs_10;
+    tmp_10.x3z_1 = tmp1_elvis_lhs_10 == null ? 1 : tmp1_elvis_lhs_10;
   }
-  protoOf(createWebGLContext$contextAttributes$1).a2p = function () {
-    return this.o2o_1;
+  protoOf(createWebGLContext$contextAttributes$1).y3z = function () {
+    return this.m3z_1;
   };
-  protoOf(createWebGLContext$contextAttributes$1).b2p = function () {
-    return this.p2o_1;
+  protoOf(createWebGLContext$contextAttributes$1).z3z = function () {
+    return this.n3z_1;
   };
-  protoOf(createWebGLContext$contextAttributes$1).c2p = function () {
-    return this.q2o_1;
+  protoOf(createWebGLContext$contextAttributes$1).a40 = function () {
+    return this.o3z_1;
   };
-  protoOf(createWebGLContext$contextAttributes$1).d2p = function () {
-    return this.r2o_1;
+  protoOf(createWebGLContext$contextAttributes$1).b40 = function () {
+    return this.p3z_1;
   };
-  protoOf(createWebGLContext$contextAttributes$1).e2p = function () {
-    return this.s2o_1;
+  protoOf(createWebGLContext$contextAttributes$1).c40 = function () {
+    return this.q3z_1;
   };
-  protoOf(createWebGLContext$contextAttributes$1).f2p = function () {
-    return this.t2o_1;
+  protoOf(createWebGLContext$contextAttributes$1).d40 = function () {
+    return this.r3z_1;
   };
-  protoOf(createWebGLContext$contextAttributes$1).g2p = function () {
-    return this.u2o_1;
+  protoOf(createWebGLContext$contextAttributes$1).e40 = function () {
+    return this.s3z_1;
   };
-  protoOf(createWebGLContext$contextAttributes$1).h2p = function () {
-    return this.v2o_1;
+  protoOf(createWebGLContext$contextAttributes$1).f40 = function () {
+    return this.t3z_1;
   };
-  protoOf(createWebGLContext$contextAttributes$1).i2p = function () {
-    return this.w2o_1;
+  protoOf(createWebGLContext$contextAttributes$1).g40 = function () {
+    return this.u3z_1;
   };
-  protoOf(createWebGLContext$contextAttributes$1).j2p = function () {
-    return this.x2o_1;
+  protoOf(createWebGLContext$contextAttributes$1).h40 = function () {
+    return this.v3z_1;
   };
-  protoOf(createWebGLContext$contextAttributes$1).k2p = function () {
-    return this.y2o_1;
+  protoOf(createWebGLContext$contextAttributes$1).i40 = function () {
+    return this.w3z_1;
   };
-  protoOf(createWebGLContext$contextAttributes$1).l2p = function () {
-    return this.z2o_1;
+  protoOf(createWebGLContext$contextAttributes$1).j40 = function () {
+    return this.x3z_1;
   };
   //region block: post-declaration
-  protoOf(Bitmap).t21 = get_width;
-  protoOf(Bitmap).u21 = get_height;
-  protoOf(Bitmap).l25 = get_colorType;
-  protoOf(Bitmap).m25 = get_colorSpace;
-  protoOf(Bitmap).n25 = get_isOpaque;
+  protoOf(Bitmap).k39 = get_width;
+  protoOf(Bitmap).l39 = get_height;
+  protoOf(Bitmap).x3d = get_colorType;
+  protoOf(Bitmap).y3d = get_colorSpace;
+  protoOf(Bitmap).z3d = get_isOpaque;
+  protoOf(Image).k39 = get_width;
+  protoOf(Image).l39 = get_height;
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'alpha', function () {
-    return this.a2p();
-  }, VOID);
+    return this.y3z();
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'depth', function () {
-    return this.b2p();
-  }, VOID);
+    return this.z3z();
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'stencil', function () {
-    return this.c2p();
-  }, VOID);
+    return this.a40();
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'antialias', function () {
-    return this.d2p();
-  }, VOID);
+    return this.b40();
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'premultipliedAlpha', function () {
-    return this.e2p();
-  }, VOID);
+    return this.c40();
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'preserveDrawingBuffer', function () {
-    return this.f2p();
-  }, VOID);
+    return this.d40();
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'preferLowPowerToHighPerformance', function () {
-    return this.g2p();
-  }, VOID);
+    return this.e40();
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'failIfMajorPerformanceCaveat', function () {
-    return this.h2p();
-  }, VOID);
+    return this.f40();
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'enableExtensionsByDefault', function () {
-    return this.i2p();
-  }, VOID);
+    return this.g40();
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'explicitSwapControl', function () {
-    return this.j2p();
-  }, VOID);
+    return this.h40();
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'renderViaOffscreenBackBuffer', function () {
-    return this.k2p();
-  }, VOID);
+    return this.i40();
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'majorVersion', function () {
-    return this.l2p();
-  }, VOID);
+    return this.j40();
+  });
   //endregion
   //region block: init
+  Color_instance = new Color();
+  Companion_instance_11 = new Companion_11();
+  Companion_instance_14 = new Companion_14();
+  Companion_instance_15 = new Companion_15();
+  Companion_instance_16 = new Companion_16();
+  Companion_instance_18 = new Companion_18();
+  Companion_instance_31 = new Companion_31();
+  Companion_instance_32 = new Companion_32();
+  Companion_instance_40 = new Companion_40();
+  Companion_instance_44 = new Companion_44();
+  Companion_instance_46 = new Companion_46();
+  Companion_instance_51 = new Companion_51();
+  Companion_instance_52 = new Companion_52();
+  Companion_instance_53 = new Companion_53();
+  Stats_instance = new Stats();
   onContentScaleChanged = null;
+  Empty_instance = new Empty();
+  Companion_instance_54 = new Companion_54();
   //endregion
   //region block: exports
   _.$_$ = _.$_$ || {};
@@ -8175,175 +8793,186 @@
   _.$_$.a2 = ColorType_RGB_565_getInstance;
   _.$_$.b2 = FilterMode_LINEAR_getInstance;
   _.$_$.c2 = FilterMode_NEAREST_getInstance;
-  _.$_$.d2 = MipmapMode_NEAREST_getInstance;
-  _.$_$.e2 = MipmapMode_NONE_getInstance;
-  _.$_$.f2 = PaintMode_FILL_getInstance;
-  _.$_$.g2 = PaintMode_STROKE_getInstance;
-  _.$_$.h2 = PaintStrokeCap_BUTT_getInstance;
-  _.$_$.i2 = PaintStrokeCap_ROUND_getInstance;
-  _.$_$.j2 = PaintStrokeCap_SQUARE_getInstance;
-  _.$_$.k2 = PaintStrokeJoin_BEVEL_getInstance;
-  _.$_$.l2 = PaintStrokeJoin_MITER_getInstance;
-  _.$_$.m2 = PaintStrokeJoin_ROUND_getInstance;
-  _.$_$.n2 = PathDirection_COUNTER_CLOCKWISE_getInstance;
-  _.$_$.o2 = PathFillMode_EVEN_ODD_getInstance;
-  _.$_$.p2 = PathFillMode_WINDING_getInstance;
-  _.$_$.q2 = PathOp_DIFFERENCE_getInstance;
-  _.$_$.r2 = PathOp_INTERSECT_getInstance;
-  _.$_$.s2 = PathOp_REVERSE_DIFFERENCE_getInstance;
-  _.$_$.t2 = PathOp_UNION_getInstance;
-  _.$_$.u2 = PathOp_XOR_getInstance;
-  _.$_$.v2 = SkikoKey_KEY_0_getInstance;
-  _.$_$.w2 = SkikoKey_KEY_1_getInstance;
-  _.$_$.x2 = SkikoKey_KEY_2_getInstance;
-  _.$_$.y2 = SkikoKey_KEY_3_getInstance;
-  _.$_$.z2 = SkikoKey_KEY_4_getInstance;
-  _.$_$.a3 = SkikoKey_KEY_5_getInstance;
-  _.$_$.b3 = SkikoKey_KEY_6_getInstance;
-  _.$_$.c3 = SkikoKey_KEY_7_getInstance;
-  _.$_$.d3 = SkikoKey_KEY_8_getInstance;
-  _.$_$.e3 = SkikoKey_KEY_9_getInstance;
-  _.$_$.f3 = SkikoKey_KEY_A_getInstance;
-  _.$_$.g3 = SkikoKey_KEY_BACKSLASH_getInstance;
-  _.$_$.h3 = SkikoKey_KEY_BACKSPACE_getInstance;
-  _.$_$.i3 = SkikoKey_KEY_BACK_QUOTE_getInstance;
-  _.$_$.j3 = SkikoKey_KEY_B_getInstance;
-  _.$_$.k3 = SkikoKey_KEY_CAPSLOCK_getInstance;
-  _.$_$.l3 = SkikoKey_KEY_CLOSE_BRACKET_getInstance;
-  _.$_$.m3 = SkikoKey_KEY_COMMA_getInstance;
-  _.$_$.n3 = SkikoKey_KEY_C_getInstance;
-  _.$_$.o3 = SkikoKey_KEY_DELETE_getInstance;
-  _.$_$.p3 = SkikoKey_KEY_DOWN_getInstance;
-  _.$_$.q3 = SkikoKey_KEY_D_getInstance;
-  _.$_$.r3 = SkikoKey_KEY_END_getInstance;
-  _.$_$.s3 = SkikoKey_KEY_ENTER_getInstance;
-  _.$_$.t3 = SkikoKey_KEY_EQUALS_getInstance;
-  _.$_$.u3 = SkikoKey_KEY_ESCAPE_getInstance;
-  _.$_$.v3 = SkikoKey_KEY_E_getInstance;
-  _.$_$.w3 = SkikoKey_KEY_F10_getInstance;
-  _.$_$.x3 = SkikoKey_KEY_F11_getInstance;
-  _.$_$.y3 = SkikoKey_KEY_F12_getInstance;
-  _.$_$.z3 = SkikoKey_KEY_F1_getInstance;
-  _.$_$.a4 = SkikoKey_KEY_F2_getInstance;
-  _.$_$.b4 = SkikoKey_KEY_F3_getInstance;
-  _.$_$.c4 = SkikoKey_KEY_F4_getInstance;
-  _.$_$.d4 = SkikoKey_KEY_F5_getInstance;
-  _.$_$.e4 = SkikoKey_KEY_F6_getInstance;
-  _.$_$.f4 = SkikoKey_KEY_F7_getInstance;
-  _.$_$.g4 = SkikoKey_KEY_F8_getInstance;
-  _.$_$.h4 = SkikoKey_KEY_F9_getInstance;
-  _.$_$.i4 = SkikoKey_KEY_F_getInstance;
-  _.$_$.j4 = SkikoKey_KEY_G_getInstance;
-  _.$_$.k4 = SkikoKey_KEY_HOME_getInstance;
-  _.$_$.l4 = SkikoKey_KEY_H_getInstance;
-  _.$_$.m4 = SkikoKey_KEY_INSERT_getInstance;
-  _.$_$.n4 = SkikoKey_KEY_I_getInstance;
-  _.$_$.o4 = SkikoKey_KEY_J_getInstance;
-  _.$_$.p4 = SkikoKey_KEY_K_getInstance;
-  _.$_$.q4 = SkikoKey_KEY_LEFT_ALT_getInstance;
-  _.$_$.r4 = SkikoKey_KEY_LEFT_CONTROL_getInstance;
-  _.$_$.s4 = SkikoKey_KEY_LEFT_META_getInstance;
-  _.$_$.t4 = SkikoKey_KEY_LEFT_SHIFT_getInstance;
-  _.$_$.u4 = SkikoKey_KEY_LEFT_getInstance;
-  _.$_$.v4 = SkikoKey_KEY_L_getInstance;
-  _.$_$.w4 = SkikoKey_KEY_MINUS_getInstance;
-  _.$_$.x4 = SkikoKey_KEY_M_getInstance;
-  _.$_$.y4 = SkikoKey_KEY_NUMPAD_0_getInstance;
-  _.$_$.z4 = SkikoKey_KEY_NUMPAD_1_getInstance;
-  _.$_$.a5 = SkikoKey_KEY_NUMPAD_2_getInstance;
-  _.$_$.b5 = SkikoKey_KEY_NUMPAD_3_getInstance;
-  _.$_$.c5 = SkikoKey_KEY_NUMPAD_4_getInstance;
-  _.$_$.d5 = SkikoKey_KEY_NUMPAD_5_getInstance;
-  _.$_$.e5 = SkikoKey_KEY_NUMPAD_6_getInstance;
-  _.$_$.f5 = SkikoKey_KEY_NUMPAD_7_getInstance;
-  _.$_$.g5 = SkikoKey_KEY_NUMPAD_8_getInstance;
-  _.$_$.h5 = SkikoKey_KEY_NUMPAD_9_getInstance;
-  _.$_$.i5 = SkikoKey_KEY_NUMPAD_ADD_getInstance;
-  _.$_$.j5 = SkikoKey_KEY_NUMPAD_DIVIDE_getInstance;
-  _.$_$.k5 = SkikoKey_KEY_NUMPAD_ENTER_getInstance;
-  _.$_$.l5 = SkikoKey_KEY_NUMPAD_MULTIPLY_getInstance;
-  _.$_$.m5 = SkikoKey_KEY_NUMPAD_SUBTRACT_getInstance;
-  _.$_$.n5 = SkikoKey_KEY_NUM_LOCK_getInstance;
-  _.$_$.o5 = SkikoKey_KEY_N_getInstance;
-  _.$_$.p5 = SkikoKey_KEY_OPEN_BRACKET_getInstance;
-  _.$_$.q5 = SkikoKey_KEY_O_getInstance;
-  _.$_$.r5 = SkikoKey_KEY_PERIOD_getInstance;
-  _.$_$.s5 = SkikoKey_KEY_PGDOWN_getInstance;
-  _.$_$.t5 = SkikoKey_KEY_PGUP_getInstance;
-  _.$_$.u5 = SkikoKey_KEY_PRINTSCEEN_getInstance;
-  _.$_$.v5 = SkikoKey_KEY_P_getInstance;
-  _.$_$.w5 = SkikoKey_KEY_Q_getInstance;
-  _.$_$.x5 = SkikoKey_KEY_RIGHT_ALT_getInstance;
-  _.$_$.y5 = SkikoKey_KEY_RIGHT_CONTROL_getInstance;
-  _.$_$.z5 = SkikoKey_KEY_RIGHT_META_getInstance;
-  _.$_$.a6 = SkikoKey_KEY_RIGHT_SHIFT_getInstance;
-  _.$_$.b6 = SkikoKey_KEY_RIGHT_getInstance;
-  _.$_$.c6 = SkikoKey_KEY_R_getInstance;
-  _.$_$.d6 = SkikoKey_KEY_SCROLL_LOCK_getInstance;
-  _.$_$.e6 = SkikoKey_KEY_SEMICOLON_getInstance;
-  _.$_$.f6 = SkikoKey_KEY_SLASH_getInstance;
-  _.$_$.g6 = SkikoKey_KEY_SPACE_getInstance;
-  _.$_$.h6 = SkikoKey_KEY_S_getInstance;
-  _.$_$.i6 = SkikoKey_KEY_TAB_getInstance;
-  _.$_$.j6 = SkikoKey_KEY_T_getInstance;
-  _.$_$.k6 = SkikoKey_KEY_UNKNOWN_getInstance;
-  _.$_$.l6 = SkikoKey_KEY_UP_getInstance;
-  _.$_$.m6 = SkikoKey_KEY_U_getInstance;
-  _.$_$.n6 = SkikoKey_KEY_V_getInstance;
-  _.$_$.o6 = SkikoKey_KEY_W_getInstance;
-  _.$_$.p6 = SkikoKey_KEY_X_getInstance;
-  _.$_$.q6 = SkikoKey_KEY_Y_getInstance;
-  _.$_$.r6 = SkikoKey_KEY_Z_getInstance;
-  _.$_$.s6 = SkikoPointerEventKind_SCROLL_getInstance;
-  _.$_$.t6 = FontCollection_init_$Create$;
-  _.$_$.u6 = StrutStyle_init_$Create$;
-  _.$_$.v6 = TextStyle_init_$Create$;
-  _.$_$.w6 = Bitmap_init_$Create$;
-  _.$_$.x6 = Canvas_init_$Create$;
-  _.$_$.y6 = Font_init_$Create$;
-  _.$_$.z6 = Paint_init_$Create$;
-  _.$_$.a7 = Path_init_$Create$;
-  _.$_$.b7 = PictureRecorder_init_$Create$;
-  _.$_$.c7 = SkikoInputModifiers__has_impl_qg30o6;
-  _.$_$.d7 = CharDirection_getInstance;
-  _.$_$.e7 = Companion_getInstance_3;
-  _.$_$.f7 = Companion_getInstance_5;
-  _.$_$.g7 = Companion_getInstance_6;
-  _.$_$.h7 = Companion_getInstance_7;
-  _.$_$.i7 = Companion_getInstance_10;
-  _.$_$.j7 = Companion_getInstance_12;
-  _.$_$.k7 = Companion_getInstance_13;
-  _.$_$.l7 = Companion_getInstance_17;
-  _.$_$.m7 = Companion_getInstance_20;
-  _.$_$.n7 = Companion_getInstance_23;
-  _.$_$.o7 = Companion_getInstance_28;
-  _.$_$.p7 = Companion_getInstance_29;
-  _.$_$.q7 = ShadowUtils_getInstance;
-  _.$_$.r7 = Companion_getInstance_31;
-  _.$_$.s7 = Companion_getInstance_43;
-  _.$_$.t7 = DecorationStyle;
-  _.$_$.u7 = LineMetrics;
-  _.$_$.v7 = ParagraphBuilder;
-  _.$_$.w7 = ParagraphStyle;
-  _.$_$.x7 = PlaceholderStyle;
-  _.$_$.y7 = Shadow;
-  _.$_$.z7 = TextBox;
-  _.$_$.a8 = TextIndent;
-  _.$_$.b8 = TypefaceFontProvider;
-  _.$_$.c8 = ColorInfo;
-  _.$_$.d8 = CubicResampler;
-  _.$_$.e8 = FilterMipmap;
-  _.$_$.f8 = ImageInfo;
-  _.$_$.g8 = Matrix44;
-  _.$_$.h8 = Point3;
-  _.$_$.i8 = Rect;
-  _.$_$.j8 = ClipboardManager;
-  _.$_$.k8 = SkiaLayer;
-  _.$_$.l8 = SkikoView;
-  _.$_$.m8 = URIManager;
-  _.$_$.n8 = currentNanoTime;
-  _.$_$.o8 = get_currentSystemTheme;
-  _.$_$.p8 = get_hostOs;
+  _.$_$.d2 = FilterTileMode_CLAMP_getInstance;
+  _.$_$.e2 = FilterTileMode_DECAL_getInstance;
+  _.$_$.f2 = FilterTileMode_MIRROR_getInstance;
+  _.$_$.g2 = FilterTileMode_REPEAT_getInstance;
+  _.$_$.h2 = MipmapMode_NEAREST_getInstance;
+  _.$_$.i2 = MipmapMode_NONE_getInstance;
+  _.$_$.j2 = PaintMode_FILL_getInstance;
+  _.$_$.k2 = PaintMode_STROKE_getInstance;
+  _.$_$.l2 = PaintStrokeCap_BUTT_getInstance;
+  _.$_$.m2 = PaintStrokeCap_ROUND_getInstance;
+  _.$_$.n2 = PaintStrokeCap_SQUARE_getInstance;
+  _.$_$.o2 = PaintStrokeJoin_BEVEL_getInstance;
+  _.$_$.p2 = PaintStrokeJoin_MITER_getInstance;
+  _.$_$.q2 = PaintStrokeJoin_ROUND_getInstance;
+  _.$_$.r2 = PathDirection_COUNTER_CLOCKWISE_getInstance;
+  _.$_$.s2 = PathFillMode_EVEN_ODD_getInstance;
+  _.$_$.t2 = PathFillMode_WINDING_getInstance;
+  _.$_$.u2 = PathOp_DIFFERENCE_getInstance;
+  _.$_$.v2 = PathOp_INTERSECT_getInstance;
+  _.$_$.w2 = PathOp_REVERSE_DIFFERENCE_getInstance;
+  _.$_$.x2 = PathOp_UNION_getInstance;
+  _.$_$.y2 = PathOp_XOR_getInstance;
+  _.$_$.z2 = SkikoKey_KEY_0_getInstance;
+  _.$_$.a3 = SkikoKey_KEY_1_getInstance;
+  _.$_$.b3 = SkikoKey_KEY_2_getInstance;
+  _.$_$.c3 = SkikoKey_KEY_3_getInstance;
+  _.$_$.d3 = SkikoKey_KEY_4_getInstance;
+  _.$_$.e3 = SkikoKey_KEY_5_getInstance;
+  _.$_$.f3 = SkikoKey_KEY_6_getInstance;
+  _.$_$.g3 = SkikoKey_KEY_7_getInstance;
+  _.$_$.h3 = SkikoKey_KEY_8_getInstance;
+  _.$_$.i3 = SkikoKey_KEY_9_getInstance;
+  _.$_$.j3 = SkikoKey_KEY_A_getInstance;
+  _.$_$.k3 = SkikoKey_KEY_BACKSLASH_getInstance;
+  _.$_$.l3 = SkikoKey_KEY_BACKSPACE_getInstance;
+  _.$_$.m3 = SkikoKey_KEY_BACK_QUOTE_getInstance;
+  _.$_$.n3 = SkikoKey_KEY_B_getInstance;
+  _.$_$.o3 = SkikoKey_KEY_CAPSLOCK_getInstance;
+  _.$_$.p3 = SkikoKey_KEY_CLOSE_BRACKET_getInstance;
+  _.$_$.q3 = SkikoKey_KEY_COMMA_getInstance;
+  _.$_$.r3 = SkikoKey_KEY_C_getInstance;
+  _.$_$.s3 = SkikoKey_KEY_DELETE_getInstance;
+  _.$_$.t3 = SkikoKey_KEY_DOWN_getInstance;
+  _.$_$.u3 = SkikoKey_KEY_D_getInstance;
+  _.$_$.v3 = SkikoKey_KEY_END_getInstance;
+  _.$_$.w3 = SkikoKey_KEY_ENTER_getInstance;
+  _.$_$.x3 = SkikoKey_KEY_EQUALS_getInstance;
+  _.$_$.y3 = SkikoKey_KEY_ESCAPE_getInstance;
+  _.$_$.z3 = SkikoKey_KEY_E_getInstance;
+  _.$_$.a4 = SkikoKey_KEY_F10_getInstance;
+  _.$_$.b4 = SkikoKey_KEY_F11_getInstance;
+  _.$_$.c4 = SkikoKey_KEY_F12_getInstance;
+  _.$_$.d4 = SkikoKey_KEY_F1_getInstance;
+  _.$_$.e4 = SkikoKey_KEY_F2_getInstance;
+  _.$_$.f4 = SkikoKey_KEY_F3_getInstance;
+  _.$_$.g4 = SkikoKey_KEY_F4_getInstance;
+  _.$_$.h4 = SkikoKey_KEY_F5_getInstance;
+  _.$_$.i4 = SkikoKey_KEY_F6_getInstance;
+  _.$_$.j4 = SkikoKey_KEY_F7_getInstance;
+  _.$_$.k4 = SkikoKey_KEY_F8_getInstance;
+  _.$_$.l4 = SkikoKey_KEY_F9_getInstance;
+  _.$_$.m4 = SkikoKey_KEY_F_getInstance;
+  _.$_$.n4 = SkikoKey_KEY_G_getInstance;
+  _.$_$.o4 = SkikoKey_KEY_HOME_getInstance;
+  _.$_$.p4 = SkikoKey_KEY_H_getInstance;
+  _.$_$.q4 = SkikoKey_KEY_INSERT_getInstance;
+  _.$_$.r4 = SkikoKey_KEY_I_getInstance;
+  _.$_$.s4 = SkikoKey_KEY_J_getInstance;
+  _.$_$.t4 = SkikoKey_KEY_K_getInstance;
+  _.$_$.u4 = SkikoKey_KEY_LEFT_ALT_getInstance;
+  _.$_$.v4 = SkikoKey_KEY_LEFT_CONTROL_getInstance;
+  _.$_$.w4 = SkikoKey_KEY_LEFT_META_getInstance;
+  _.$_$.x4 = SkikoKey_KEY_LEFT_SHIFT_getInstance;
+  _.$_$.y4 = SkikoKey_KEY_LEFT_getInstance;
+  _.$_$.z4 = SkikoKey_KEY_L_getInstance;
+  _.$_$.a5 = SkikoKey_KEY_MINUS_getInstance;
+  _.$_$.b5 = SkikoKey_KEY_M_getInstance;
+  _.$_$.c5 = SkikoKey_KEY_NUMPAD_0_getInstance;
+  _.$_$.d5 = SkikoKey_KEY_NUMPAD_1_getInstance;
+  _.$_$.e5 = SkikoKey_KEY_NUMPAD_2_getInstance;
+  _.$_$.f5 = SkikoKey_KEY_NUMPAD_3_getInstance;
+  _.$_$.g5 = SkikoKey_KEY_NUMPAD_4_getInstance;
+  _.$_$.h5 = SkikoKey_KEY_NUMPAD_5_getInstance;
+  _.$_$.i5 = SkikoKey_KEY_NUMPAD_6_getInstance;
+  _.$_$.j5 = SkikoKey_KEY_NUMPAD_7_getInstance;
+  _.$_$.k5 = SkikoKey_KEY_NUMPAD_8_getInstance;
+  _.$_$.l5 = SkikoKey_KEY_NUMPAD_9_getInstance;
+  _.$_$.m5 = SkikoKey_KEY_NUMPAD_ADD_getInstance;
+  _.$_$.n5 = SkikoKey_KEY_NUMPAD_DIVIDE_getInstance;
+  _.$_$.o5 = SkikoKey_KEY_NUMPAD_ENTER_getInstance;
+  _.$_$.p5 = SkikoKey_KEY_NUMPAD_MULTIPLY_getInstance;
+  _.$_$.q5 = SkikoKey_KEY_NUMPAD_SUBTRACT_getInstance;
+  _.$_$.r5 = SkikoKey_KEY_NUM_LOCK_getInstance;
+  _.$_$.s5 = SkikoKey_KEY_N_getInstance;
+  _.$_$.t5 = SkikoKey_KEY_OPEN_BRACKET_getInstance;
+  _.$_$.u5 = SkikoKey_KEY_O_getInstance;
+  _.$_$.v5 = SkikoKey_KEY_PERIOD_getInstance;
+  _.$_$.w5 = SkikoKey_KEY_PGDOWN_getInstance;
+  _.$_$.x5 = SkikoKey_KEY_PGUP_getInstance;
+  _.$_$.y5 = SkikoKey_KEY_PRINTSCEEN_getInstance;
+  _.$_$.z5 = SkikoKey_KEY_P_getInstance;
+  _.$_$.a6 = SkikoKey_KEY_Q_getInstance;
+  _.$_$.b6 = SkikoKey_KEY_RIGHT_ALT_getInstance;
+  _.$_$.c6 = SkikoKey_KEY_RIGHT_CONTROL_getInstance;
+  _.$_$.d6 = SkikoKey_KEY_RIGHT_META_getInstance;
+  _.$_$.e6 = SkikoKey_KEY_RIGHT_SHIFT_getInstance;
+  _.$_$.f6 = SkikoKey_KEY_RIGHT_getInstance;
+  _.$_$.g6 = SkikoKey_KEY_R_getInstance;
+  _.$_$.h6 = SkikoKey_KEY_SCROLL_LOCK_getInstance;
+  _.$_$.i6 = SkikoKey_KEY_SEMICOLON_getInstance;
+  _.$_$.j6 = SkikoKey_KEY_SLASH_getInstance;
+  _.$_$.k6 = SkikoKey_KEY_SPACE_getInstance;
+  _.$_$.l6 = SkikoKey_KEY_S_getInstance;
+  _.$_$.m6 = SkikoKey_KEY_TAB_getInstance;
+  _.$_$.n6 = SkikoKey_KEY_T_getInstance;
+  _.$_$.o6 = SkikoKey_KEY_UNKNOWN_getInstance;
+  _.$_$.p6 = SkikoKey_KEY_UP_getInstance;
+  _.$_$.q6 = SkikoKey_KEY_U_getInstance;
+  _.$_$.r6 = SkikoKey_KEY_V_getInstance;
+  _.$_$.s6 = SkikoKey_KEY_W_getInstance;
+  _.$_$.t6 = SkikoKey_KEY_X_getInstance;
+  _.$_$.u6 = SkikoKey_KEY_Y_getInstance;
+  _.$_$.v6 = SkikoKey_KEY_Z_getInstance;
+  _.$_$.w6 = SkikoKeyboardEventKind_DOWN_getInstance;
+  _.$_$.x6 = SkikoPointerEventKind_SCROLL_getInstance;
+  _.$_$.y6 = FontCollection_init_$Create$;
+  _.$_$.z6 = StrutStyle_init_$Create$;
+  _.$_$.a7 = TextStyle_init_$Create$;
+  _.$_$.b7 = Bitmap_init_$Create$;
+  _.$_$.c7 = Canvas_init_$Create$;
+  _.$_$.d7 = Font_init_$Create$_0;
+  _.$_$.e7 = Paint_init_$Create$;
+  _.$_$.f7 = Path_init_$Create$;
+  _.$_$.g7 = PathMeasure_init_$Create$;
+  _.$_$.h7 = PictureRecorder_init_$Create$;
+  _.$_$.i7 = SkikoInputModifiers__has_impl_qg30o6;
+  _.$_$.j7 = CharDirection_getInstance;
+  _.$_$.k7 = Companion_getInstance_2;
+  _.$_$.l7 = Companion_getInstance_4;
+  _.$_$.m7 = Companion_getInstance_6;
+  _.$_$.n7 = Companion_getInstance_7;
+  _.$_$.o7 = Companion_getInstance_8;
+  _.$_$.p7 = Companion_getInstance_11;
+  _.$_$.q7 = Companion_getInstance_13;
+  _.$_$.r7 = Companion_getInstance_14;
+  _.$_$.s7 = Companion_getInstance_20;
+  _.$_$.t7 = Companion_getInstance_21;
+  _.$_$.u7 = Companion_getInstance_23;
+  _.$_$.v7 = Companion_getInstance_26;
+  _.$_$.w7 = Companion_instance_31;
+  _.$_$.x7 = Companion_instance_32;
+  _.$_$.y7 = Companion_getInstance_35;
+  _.$_$.z7 = ShadowUtils_getInstance;
+  _.$_$.a8 = Companion_getInstance_37;
+  _.$_$.b8 = Companion_getInstance_50;
+  _.$_$.c8 = DecorationStyle;
+  _.$_$.d8 = LineMetrics;
+  _.$_$.e8 = ParagraphBuilder;
+  _.$_$.f8 = ParagraphStyle;
+  _.$_$.g8 = PlaceholderStyle;
+  _.$_$.h8 = Shadow;
+  _.$_$.i8 = TextBox;
+  _.$_$.j8 = TextIndent;
+  _.$_$.k8 = TypefaceFontProvider;
+  _.$_$.l8 = ColorInfo;
+  _.$_$.m8 = CubicResampler;
+  _.$_$.n8 = FilterMipmap;
+  _.$_$.o8 = GradientStyle;
+  _.$_$.p8 = ImageInfo;
+  _.$_$.q8 = Matrix33;
+  _.$_$.r8 = Matrix44;
+  _.$_$.s8 = Point3;
+  _.$_$.t8 = Rect;
+  _.$_$.u8 = ClipboardManager;
+  _.$_$.v8 = SkiaLayer;
+  _.$_$.w8 = SkikoView;
+  _.$_$.x8 = URIManager;
+  _.$_$.y8 = currentNanoTime;
+  _.$_$.z8 = get_currentSystemTheme;
+  _.$_$.a9 = get_hostOs;
   //endregion
   return _;
 }));

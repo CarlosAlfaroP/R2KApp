@@ -1,8 +1,8 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './compose-multiplatform-core-ui-graphics.js', './kotlin-kotlin-stdlib-js-ir.js', './compose-multiplatform-core-ui.js', './compose-multiplatform-core-ui-geometry.js', './compose-multiplatform-core-ui-unit.js', './kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js', './compose-multiplatform-core-runtime.js', './compose-multiplatform-core-animation-core.js', './compose-multiplatform-core-ui-text.js', './compose-multiplatform-core-runtime-saveable.js', './compose-multiplatform-core-foundation-layout.js', './skiko-kjs.js', './compose-multiplatform-core-animation.js'], factory);
+    define(['exports', './compose-multiplatform-core-ui-graphics.js', './kotlin-kotlin-stdlib-js-ir.js', './compose-multiplatform-core-ui.js', './compose-multiplatform-core-ui-geometry.js', './compose-multiplatform-core-ui-unit.js', './kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js', './compose-multiplatform-core-runtime.js', './compose-multiplatform-core-animation-core.js', './compose-multiplatform-core-foundation-layout.js', './compose-multiplatform-core-runtime-saveable.js', './compose-multiplatform-core-ui-text.js', './skiko-kjs.js', './compose-multiplatform-core-animation.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./compose-multiplatform-core-ui-graphics.js'), require('./kotlin-kotlin-stdlib-js-ir.js'), require('./compose-multiplatform-core-ui.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js'), require('./compose-multiplatform-core-runtime.js'), require('./compose-multiplatform-core-animation-core.js'), require('./compose-multiplatform-core-ui-text.js'), require('./compose-multiplatform-core-runtime-saveable.js'), require('./compose-multiplatform-core-foundation-layout.js'), require('./skiko-kjs.js'), require('./compose-multiplatform-core-animation.js'));
+    factory(module.exports, require('./compose-multiplatform-core-ui-graphics.js'), require('./kotlin-kotlin-stdlib-js-ir.js'), require('./compose-multiplatform-core-ui.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js'), require('./compose-multiplatform-core-runtime.js'), require('./compose-multiplatform-core-animation-core.js'), require('./compose-multiplatform-core-foundation-layout.js'), require('./compose-multiplatform-core-runtime-saveable.js'), require('./compose-multiplatform-core-ui-text.js'), require('./skiko-kjs.js'), require('./compose-multiplatform-core-animation.js'));
   else {
     if (typeof this['compose-multiplatform-core-ui-graphics'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-foundation'. Its dependency 'compose-multiplatform-core-ui-graphics' was not found. Please, check whether 'compose-multiplatform-core-ui-graphics' is loaded prior to 'compose-multiplatform-core-foundation'.");
@@ -28,14 +28,14 @@
     if (typeof this['compose-multiplatform-core-animation-core'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-foundation'. Its dependency 'compose-multiplatform-core-animation-core' was not found. Please, check whether 'compose-multiplatform-core-animation-core' is loaded prior to 'compose-multiplatform-core-foundation'.");
     }
-    if (typeof this['compose-multiplatform-core-ui-text'] === 'undefined') {
-      throw new Error("Error loading module 'compose-multiplatform-core-foundation'. Its dependency 'compose-multiplatform-core-ui-text' was not found. Please, check whether 'compose-multiplatform-core-ui-text' is loaded prior to 'compose-multiplatform-core-foundation'.");
+    if (typeof this['compose-multiplatform-core-foundation-layout'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-foundation'. Its dependency 'compose-multiplatform-core-foundation-layout' was not found. Please, check whether 'compose-multiplatform-core-foundation-layout' is loaded prior to 'compose-multiplatform-core-foundation'.");
     }
     if (typeof this['compose-multiplatform-core-runtime-saveable'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-foundation'. Its dependency 'compose-multiplatform-core-runtime-saveable' was not found. Please, check whether 'compose-multiplatform-core-runtime-saveable' is loaded prior to 'compose-multiplatform-core-foundation'.");
     }
-    if (typeof this['compose-multiplatform-core-foundation-layout'] === 'undefined') {
-      throw new Error("Error loading module 'compose-multiplatform-core-foundation'. Its dependency 'compose-multiplatform-core-foundation-layout' was not found. Please, check whether 'compose-multiplatform-core-foundation-layout' is loaded prior to 'compose-multiplatform-core-foundation'.");
+    if (typeof this['compose-multiplatform-core-ui-text'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-foundation'. Its dependency 'compose-multiplatform-core-ui-text' was not found. Please, check whether 'compose-multiplatform-core-ui-text' is loaded prior to 'compose-multiplatform-core-foundation'.");
     }
     if (typeof this['skiko-kjs'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-foundation'. Its dependency 'skiko-kjs' was not found. Please, check whether 'skiko-kjs' is loaded prior to 'compose-multiplatform-core-foundation'.");
@@ -43,293 +43,437 @@
     if (typeof this['compose-multiplatform-core-animation'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-foundation'. Its dependency 'compose-multiplatform-core-animation' was not found. Please, check whether 'compose-multiplatform-core-animation' is loaded prior to 'compose-multiplatform-core-foundation'.");
     }
-    root['compose-multiplatform-core-foundation'] = factory(typeof this['compose-multiplatform-core-foundation'] === 'undefined' ? {} : this['compose-multiplatform-core-foundation'], this['compose-multiplatform-core-ui-graphics'], this['kotlin-kotlin-stdlib-js-ir'], this['compose-multiplatform-core-ui'], this['compose-multiplatform-core-ui-geometry'], this['compose-multiplatform-core-ui-unit'], this['kotlinx.coroutines-kotlinx-coroutines-core-js-ir'], this['compose-multiplatform-core-runtime'], this['compose-multiplatform-core-animation-core'], this['compose-multiplatform-core-ui-text'], this['compose-multiplatform-core-runtime-saveable'], this['compose-multiplatform-core-foundation-layout'], this['skiko-kjs'], this['compose-multiplatform-core-animation']);
+    root['compose-multiplatform-core-foundation'] = factory(typeof this['compose-multiplatform-core-foundation'] === 'undefined' ? {} : this['compose-multiplatform-core-foundation'], this['compose-multiplatform-core-ui-graphics'], this['kotlin-kotlin-stdlib-js-ir'], this['compose-multiplatform-core-ui'], this['compose-multiplatform-core-ui-geometry'], this['compose-multiplatform-core-ui-unit'], this['kotlinx.coroutines-kotlinx-coroutines-core-js-ir'], this['compose-multiplatform-core-runtime'], this['compose-multiplatform-core-animation-core'], this['compose-multiplatform-core-foundation-layout'], this['compose-multiplatform-core-runtime-saveable'], this['compose-multiplatform-core-ui-text'], this['skiko-kjs'], this['compose-multiplatform-core-animation']);
   }
-}(this, function (_, kotlin_org_jetbrains_compose_ui_ui_graphics, kotlin_kotlin, kotlin_org_jetbrains_compose_ui_ui, kotlin_org_jetbrains_compose_ui_ui_geometry, kotlin_org_jetbrains_compose_ui_ui_unit, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_org_jetbrains_compose_animation_animation_core, kotlin_org_jetbrains_compose_ui_ui_text, kotlin_org_jetbrains_compose_runtime_runtime_saveable, kotlin_org_jetbrains_compose_foundation_foundation_layout, kotlin_org_jetbrains_skiko_skiko, kotlin_org_jetbrains_compose_animation_animation) {
+}(this, function (_, kotlin_org_jetbrains_compose_ui_ui_graphics, kotlin_kotlin, kotlin_org_jetbrains_compose_ui_ui, kotlin_org_jetbrains_compose_ui_ui_geometry, kotlin_org_jetbrains_compose_ui_ui_unit, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_org_jetbrains_compose_animation_animation_core, kotlin_org_jetbrains_compose_foundation_foundation_layout, kotlin_org_jetbrains_compose_runtime_runtime_saveable, kotlin_org_jetbrains_compose_ui_ui_text, kotlin_org_jetbrains_skiko_skiko, kotlin_org_jetbrains_compose_animation_animation) {
   'use strict';
   //region block: imports
   var imul = Math.imul;
   var sign = Math.sign;
-  var get_RectangleShape = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.z;
-  var VOID = kotlin_kotlin.$_$.li;
-  var get_NoInspectorInfo = kotlin_org_jetbrains_compose_ui_ui.$_$.l5;
-  var get_isDebugInspectorInfoEnabled = kotlin_org_jetbrains_compose_ui_ui.$_$.n5;
-  var ModifierNodeElement = kotlin_org_jetbrains_compose_ui_ui.$_$.f4;
-  var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.u3;
-  var protoOf = kotlin_kotlin.$_$.jd;
-  var THROW_CCE = kotlin_kotlin.$_$.xg;
-  var Color__hashCode_impl_vjyivj = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.x2;
-  var hashCode = kotlin_kotlin.$_$.jc;
-  var getNumberHashCode = kotlin_kotlin.$_$.fc;
-  var equals = kotlin_kotlin.$_$.bc;
-  var foldIn = kotlin_org_jetbrains_compose_ui_ui.$_$.w6;
-  var foldOut = kotlin_org_jetbrains_compose_ui_ui.$_$.x6;
-  var any = kotlin_org_jetbrains_compose_ui_ui.$_$.v6;
-  var all = kotlin_org_jetbrains_compose_ui_ui.$_$.u6;
-  var then = kotlin_org_jetbrains_compose_ui_ui.$_$.z6;
-  var classMeta = kotlin_kotlin.$_$.xb;
-  var setMetadataFor = kotlin_kotlin.$_$.kd;
-  var Unit_getInstance = kotlin_kotlin.$_$.v4;
+  var get_RectangleShape = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.c1;
+  var VOID = kotlin_kotlin.$_$.bj;
+  var get_NoInspectorInfo = kotlin_org_jetbrains_compose_ui_ui.$_$.g6;
+  var get_isDebugInspectorInfoEnabled = kotlin_org_jetbrains_compose_ui_ui.$_$.i6;
+  var ModifierNodeElement = kotlin_org_jetbrains_compose_ui_ui.$_$.a5;
+  var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a4;
+  var protoOf = kotlin_kotlin.$_$.rd;
+  var THROW_CCE = kotlin_kotlin.$_$.lh;
+  var Color__hashCode_impl_vjyivj = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.c3;
+  var hashCode = kotlin_kotlin.$_$.qc;
+  var getNumberHashCode = kotlin_kotlin.$_$.mc;
+  var equals = kotlin_kotlin.$_$.ic;
+  var foldIn = kotlin_org_jetbrains_compose_ui_ui.$_$.a8;
+  var foldOut = kotlin_org_jetbrains_compose_ui_ui.$_$.b8;
+  var any = kotlin_org_jetbrains_compose_ui_ui.$_$.z7;
+  var all = kotlin_org_jetbrains_compose_ui_ui.$_$.y7;
+  var then = kotlin_org_jetbrains_compose_ui_ui.$_$.d8;
+  var classMeta = kotlin_kotlin.$_$.ec;
+  var setMetadataFor = kotlin_kotlin.$_$.sd;
+  var Unit_getInstance = kotlin_kotlin.$_$.z4;
   var Size = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l;
-  var ensureNotNull = kotlin_kotlin.$_$.oh;
-  var drawOutline = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.l1;
-  var drawOutline_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.m1;
-  var Node = kotlin_org_jetbrains_compose_ui_ui.$_$.y6;
-  var onMeasureResultChanged = kotlin_org_jetbrains_compose_ui_ui.$_$.v3;
-  var DrawModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.w3;
-  var Color = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.n;
-  var roundToInt = kotlin_kotlin.$_$.ud;
-  var objectMeta = kotlin_kotlin.$_$.id;
-  var interfaceMeta = kotlin_kotlin.$_$.lc;
-  var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.h2;
+  var ensureNotNull = kotlin_kotlin.$_$.di;
+  var drawOutline = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.p1;
+  var drawOutline_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.q1;
+  var Node = kotlin_org_jetbrains_compose_ui_ui.$_$.c8;
+  var onMeasureResultChanged = kotlin_org_jetbrains_compose_ui_ui.$_$.q4;
+  var DrawModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.r4;
+  var Color = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.q;
+  var roundToInt = kotlin_kotlin.$_$.ce;
+  var objectMeta = kotlin_kotlin.$_$.qd;
+  var interfaceMeta = kotlin_kotlin.$_$.sc;
+  var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i2;
   var Dp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u;
-  var SolidColor = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d1;
-  var Dp__hashCode_impl_sxkrra = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.j2;
-  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.w3;
-  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.v3;
-  var Companion_getInstance_2 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.z3;
-  var numberToInt = kotlin_kotlin.$_$.fd;
+  var SolidColor = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g1;
+  var Dp__hashCode_impl_sxkrra = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.k2;
+  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.c4;
+  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.b4;
+  var Companion_getInstance_2 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.f4;
+  var numberToInt = kotlin_kotlin.$_$.nd;
   var IntSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x;
-  var ImageBitmapConfig = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.p;
-  var _IntSize___get_width__impl__d9yl4o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u2;
-  var _IntSize___get_height__impl__prv63b = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t2;
-  var ImageBitmap = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.q;
-  var Canvas = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i;
+  var ImageBitmapConfig = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.s;
+  var _IntSize___get_width__impl__d9yl4o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x2;
+  var _IntSize___get_height__impl__prv63b = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w2;
+  var ImageBitmap = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.t;
+  var Canvas = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.k;
   var _Size___get_height__impl__a04p02 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l1;
   var _Size___get_width__impl__58y75t = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.p1;
   var CanvasDrawScope = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a;
-  var toSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u1;
-  var Companion_getInstance_3 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.s3;
+  var toSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v1;
+  var Companion_getInstance_3 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.x3;
   var Stroke = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d;
   var get_isSimple = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.p;
   var _Size___get_minDimension__impl__4iso0r = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.n1;
-  var Companion_getInstance_4 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.l3;
+  var Companion_getInstance_4 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.p3;
   var Offset = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.d;
   var Size_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.k;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.wh;
-  var Rectangle = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.t;
-  var Rounded = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.u;
-  var Generic = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.s;
-  var Companion_getInstance_5 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.t3;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.li;
+  var Rectangle = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.w;
+  var Rounded = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.x;
+  var Generic = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.v;
+  var Companion_getInstance_5 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.z3;
   var _CornerRadius___get_x__impl__1594cn = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.v;
-  var DelegatingNode = kotlin_org_jetbrains_compose_ui_ui.$_$.u3;
+  var DelegatingNode = kotlin_org_jetbrains_compose_ui_ui.$_$.p4;
   var CacheDrawModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.a;
-  var Path = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.y;
+  var Path = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.b1;
   var Companion_getInstance_6 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.s1;
-  var Fill_getInstance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.r3;
+  var Fill_getInstance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.w3;
   var _CornerRadius___get_y__impl__tyvleu = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.w;
   var CornerRadius = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.a;
   var RoundRect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.j;
-  var Companion_getInstance_7 = kotlin_org_jetbrains_compose_ui_ui.$_$.i8;
-  var inspectableWrapper = kotlin_org_jetbrains_compose_ui_ui.$_$.m5;
+  var _Constraints___get_maxWidth__impl__uuyqc = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.f2;
+  var Companion_getInstance_7 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.o3;
+  var toString = kotlin_kotlin.$_$.wd;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.a2;
+  var _Constraints___get_maxHeight__impl__dt3e8z = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.e2;
+  var Companion_getInstance_8 = kotlin_org_jetbrains_compose_ui_ui.$_$.o9;
+  var inspectableWrapper = kotlin_org_jetbrains_compose_ui_ui.$_$.h6;
   var getKClassFromExpression = kotlin_kotlin.$_$.b;
-  var Role = kotlin_org_jetbrains_compose_ui_ui.$_$.o5;
-  var getStringHashCode = kotlin_kotlin.$_$.ic;
-  var Role__hashCode_impl_ucjza4 = kotlin_org_jetbrains_compose_ui_ui.$_$.s7;
-  var interceptOutOfBoundsChildEvents = kotlin_org_jetbrains_compose_ui_ui.$_$.i4;
-  var sharePointerInputWithSiblings = kotlin_org_jetbrains_compose_ui_ui.$_$.l4;
-  var onDensityChange = kotlin_org_jetbrains_compose_ui_ui.$_$.j4;
-  var onViewConfigurationChange = kotlin_org_jetbrains_compose_ui_ui.$_$.k4;
+  var Role = kotlin_org_jetbrains_compose_ui_ui.$_$.k6;
+  var getStringHashCode = kotlin_kotlin.$_$.pc;
+  var Role__hashCode_impl_ucjza4 = kotlin_org_jetbrains_compose_ui_ui.$_$.x8;
+  var interceptOutOfBoundsChildEvents = kotlin_org_jetbrains_compose_ui_ui.$_$.d5;
+  var sharePointerInputWithSiblings = kotlin_org_jetbrains_compose_ui_ui.$_$.g5;
+  var onDensityChange = kotlin_org_jetbrains_compose_ui_ui.$_$.e5;
+  var onViewConfigurationChange = kotlin_org_jetbrains_compose_ui_ui.$_$.f5;
   var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.v;
-  var CoroutineImpl = kotlin_kotlin.$_$.eb;
+  var CoroutineImpl = kotlin_kotlin.$_$.lb;
   var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.b2;
-  var isInterface = kotlin_kotlin.$_$.uc;
-  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.oa;
-  var get_key = kotlin_org_jetbrains_compose_ui_ui.$_$.i1;
-  var Key = kotlin_org_jetbrains_compose_ui_ui.$_$.d1;
+  var isInterface = kotlin_kotlin.$_$.bd;
+  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.va;
+  var get_key = kotlin_org_jetbrains_compose_ui_ui.$_$.r1;
+  var Key = kotlin_org_jetbrains_compose_ui_ui.$_$.m1;
   var launch = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.q2;
-  var PointerInputModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.m4;
-  var KeyInputModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.c1;
-  var set_role = kotlin_org_jetbrains_compose_ui_ui.$_$.j6;
-  var onClick = kotlin_org_jetbrains_compose_ui_ui.$_$.d6;
-  var onLongClick = kotlin_org_jetbrains_compose_ui_ui.$_$.e6;
-  var disabled = kotlin_org_jetbrains_compose_ui_ui.$_$.v5;
-  var get_shouldClearDescendantSemantics = kotlin_org_jetbrains_compose_ui_ui.$_$.n4;
-  var SemanticsModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.p4;
+  var PointerInputModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.h5;
+  var KeyInputModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.l1;
+  var set_role = kotlin_org_jetbrains_compose_ui_ui.$_$.k7;
+  var onClick = kotlin_org_jetbrains_compose_ui_ui.$_$.e7;
+  var onLongClick = kotlin_org_jetbrains_compose_ui_ui.$_$.f7;
+  var disabled = kotlin_org_jetbrains_compose_ui_ui.$_$.t6;
+  var get_shouldClearDescendantSemantics = kotlin_org_jetbrains_compose_ui_ui.$_$.i5;
+  var SemanticsModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.k5;
   var Offset_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.e;
   var get_center = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.e1;
-  var _IntOffset___get_x__impl__qiqr5o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q2;
-  var _IntOffset___get_y__impl__2avpwj = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.r2;
-  var get_providedValues = kotlin_org_jetbrains_compose_ui_ui.$_$.n3;
-  var provide = kotlin_org_jetbrains_compose_ui_ui.$_$.o3;
-  var get_current = kotlin_org_jetbrains_compose_ui_ui.$_$.m3;
-  var PointerInputScope = kotlin_org_jetbrains_compose_ui_ui.$_$.v1;
-  var SuspendingPointerInputModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.w1;
-  var ModifierLocalModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.p3;
-  var CompositionLocalConsumerModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.t3;
+  var _IntOffset___get_x__impl__qiqr5o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t2;
+  var _IntOffset___get_y__impl__2avpwj = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u2;
+  var get_providedValues = kotlin_org_jetbrains_compose_ui_ui.$_$.i4;
+  var provide = kotlin_org_jetbrains_compose_ui_ui.$_$.j4;
+  var get_current = kotlin_org_jetbrains_compose_ui_ui.$_$.h4;
+  var PointerInputScope = kotlin_org_jetbrains_compose_ui_ui.$_$.e2;
+  var SuspendingPointerInputModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.f2;
+  var ModifierLocalModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.k4;
+  var CompositionLocalConsumerModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.o4;
   var FocusRequesterModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.l;
   var requestFocus = kotlin_org_jetbrains_compose_ui_ui.$_$.r;
   var coroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.k;
   var delay = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.l;
   var cancelAndJoin = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.j;
-  var SuspendFunction1 = kotlin_kotlin.$_$.gb;
-  var SuspendFunction2 = kotlin_kotlin.$_$.hb;
+  var SuspendFunction1 = kotlin_kotlin.$_$.nb;
+  var SuspendFunction2 = kotlin_kotlin.$_$.ob;
   var Rect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.h;
-  var Shape = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.c1;
+  var Shape = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.f1;
   var clip = kotlin_org_jetbrains_compose_ui_ui.$_$.e;
-  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a2;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m1;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
-  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z1;
-  var Annotation = kotlin_kotlin.$_$.fg;
-  var get_LocalInputModeManager = kotlin_org_jetbrains_compose_ui_ui.$_$.g5;
-  var currentValueOf = kotlin_org_jetbrains_compose_ui_ui.$_$.q4;
-  var Companion_getInstance_8 = kotlin_org_jetbrains_compose_ui_ui.$_$.b8;
+  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c2;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o1;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
+  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
+  var Annotation = kotlin_kotlin.$_$.tg;
+  var get_LocalInputModeManager = kotlin_org_jetbrains_compose_ui_ui.$_$.b6;
+  var currentValueOf = kotlin_org_jetbrains_compose_ui_ui.$_$.l5;
+  var Companion_getInstance_9 = kotlin_org_jetbrains_compose_ui_ui.$_$.g9;
   var FocusPropertiesModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.k;
   var focusTarget = kotlin_org_jetbrains_compose_ui_ui.$_$.p;
-  var invalidateSemantics = kotlin_org_jetbrains_compose_ui_ui.$_$.u4;
-  var onRemeasured = kotlin_org_jetbrains_compose_ui_ui.$_$.y3;
-  var get_shouldMergeDescendantSemantics = kotlin_org_jetbrains_compose_ui_ui.$_$.o4;
+  var invalidateSemantics = kotlin_org_jetbrains_compose_ui_ui.$_$.p5;
+  var onRemeasured = kotlin_org_jetbrains_compose_ui_ui.$_$.t4;
+  var get_shouldMergeDescendantSemantics = kotlin_org_jetbrains_compose_ui_ui.$_$.j5;
   var FocusEventModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.j;
-  var LayoutAwareModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.z3;
-  var GlobalPositionAwareModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.x3;
-  var SemanticsConfiguration = kotlin_org_jetbrains_compose_ui_ui.$_$.p5;
-  var set_focused = kotlin_org_jetbrains_compose_ui_ui.$_$.y5;
-  var requestFocus_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.i6;
-  var observeReads = kotlin_org_jetbrains_compose_ui_ui.$_$.v4;
-  var get_LocalPinnableContainer = kotlin_org_jetbrains_compose_ui_ui.$_$.s2;
-  var ObserverModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.g4;
+  var LayoutAwareModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.u4;
+  var GlobalPositionAwareModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.s4;
+  var SemanticsConfiguration = kotlin_org_jetbrains_compose_ui_ui.$_$.m6;
+  var set_focused = kotlin_org_jetbrains_compose_ui_ui.$_$.w6;
+  var requestFocus_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.j7;
+  var observeReads = kotlin_org_jetbrains_compose_ui_ui.$_$.q5;
+  var get_LocalPinnableContainer = kotlin_org_jetbrains_compose_ui_ui.$_$.d3;
+  var ObserverModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.b5;
   var focusProperties = kotlin_org_jetbrains_compose_ui_ui.$_$.n;
-  var identityHashCode = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k1;
-  var InspectableModifier = kotlin_org_jetbrains_compose_ui_ui.$_$.w4;
-  var to = kotlin_kotlin.$_$.ii;
-  var modifierLocalMapOf = kotlin_org_jetbrains_compose_ui_ui.$_$.r3;
-  var modifierLocalOf = kotlin_org_jetbrains_compose_ui_ui.$_$.s3;
+  var identityHashCode = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m1;
+  var InspectableModifier = kotlin_org_jetbrains_compose_ui_ui.$_$.r5;
+  var to = kotlin_kotlin.$_$.xi;
+  var modifierLocalMapOf = kotlin_org_jetbrains_compose_ui_ui.$_$.m4;
+  var modifierLocalOf = kotlin_org_jetbrains_compose_ui_ui.$_$.n4;
   var CoroutineStart_UNDISPATCHED_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.b;
-  var Companion_getInstance_9 = kotlin_org_jetbrains_compose_ui_ui.$_$.z7;
-  var PointerEventPass_Main_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.h7;
-  var Color__copy$default_impl_ectz3s = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.m3;
+  var Companion_getInstance_10 = kotlin_org_jetbrains_compose_ui_ui.$_$.e9;
+  var PointerEventPass_Main_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.l8;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
+  var Companion_getInstance_11 = kotlin_org_jetbrains_compose_ui_ui.$_$.n9;
+  var Companion_getInstance_12 = kotlin_org_jetbrains_compose_ui_ui.$_$.j9;
+  var get_DefaultAlpha = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.r;
+  var Companion_getInstance_13 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q2;
+  var isObject = kotlin_kotlin.$_$.dd;
+  var semantics = kotlin_org_jetbrains_compose_ui_ui.$_$.p7;
+  var clipToBounds = kotlin_org_jetbrains_compose_ui_ui.$_$.d;
+  var paint = kotlin_org_jetbrains_compose_ui_ui.$_$.h;
+  var $get_currentCompositeKeyHash$$composable_u3vbzj = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h;
+  var Companion_getInstance_14 = kotlin_org_jetbrains_compose_ui_ui.$_$.k9;
+  var materializerOf = kotlin_org_jetbrains_compose_ui_ui.$_$.c4;
+  var invalidApplier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n1;
+  var Applier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m;
+  var _Updater___init__impl__rbfxm8 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m2;
+  var Updater__set_impl_v7kwss = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
+  var _Updater___get_composer__impl__9ty7av = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n2;
+  var _SkippableUpdater___init__impl__4ft0t9 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k2;
+  var SkippableUpdater = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d1;
+  var Constraints = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.b;
+  var minIntrinsicWidth = kotlin_org_jetbrains_compose_ui_ui.$_$.h3;
+  var minIntrinsicHeight = kotlin_org_jetbrains_compose_ui_ui.$_$.g3;
+  var maxIntrinsicWidth = kotlin_org_jetbrains_compose_ui_ui.$_$.f3;
+  var maxIntrinsicHeight = kotlin_org_jetbrains_compose_ui_ui.$_$.e3;
+  var MeasurePolicy = kotlin_org_jetbrains_compose_ui_ui.$_$.i3;
+  var set_contentDescription = kotlin_org_jetbrains_compose_ui_ui.$_$.q6;
+  var Companion_getInstance_15 = kotlin_org_jetbrains_compose_ui_ui.$_$.m9;
+  var _Constraints___get_minWidth__impl__hi9lfi = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.h2;
+  var _Constraints___get_minHeight__impl__ev4bgx = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.g2;
+  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i2;
+  var Color__copy$default_impl_ectz3s = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.r3;
   var illegalDecoyCallException = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
-  var Companion_getInstance_10 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
-  var isObject = kotlin_kotlin.$_$.wc;
-  var composed$composable = kotlin_org_jetbrains_compose_ui_ui.$_$.c7;
+  var composed$composable = kotlin_org_jetbrains_compose_ui_ui.$_$.g8;
   var DrawModifier = kotlin_org_jetbrains_compose_ui_ui.$_$.b;
   var FlowCollector = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.d1;
   var Flow = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.e1;
-  var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c2;
-  var THROW_ISE = kotlin_kotlin.$_$.yg;
-  var Enum = kotlin_kotlin.$_$.lg;
-  var CancellationException_init_$Create$ = kotlin_kotlin.$_$.b1;
+  var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
+  var THROW_ISE = kotlin_kotlin.$_$.mh;
+  var Enum = kotlin_kotlin.$_$.zg;
+  var CancellationException_init_$Create$ = kotlin_kotlin.$_$.c1;
   var Key_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.y;
-  var AtomicReference = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m;
+  var AtomicReference = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n;
   var Mutex = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.v1;
-  var captureStack = kotlin_kotlin.$_$.rb;
-  var fillArrayVal = kotlin_kotlin.$_$.cc;
+  var captureStack = kotlin_kotlin.$_$.yb;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
+  var fillArrayVal = kotlin_kotlin.$_$.jc;
   var MutableVector = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a;
-  var Companion_getInstance_11 = kotlin_kotlin.$_$.q4;
-  var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.s2;
-  var numberRangeToNumber = kotlin_kotlin.$_$.bd;
-  var isArray = kotlin_kotlin.$_$.mc;
-  var toString = kotlin_kotlin.$_$.od;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.y1;
-  var println = kotlin_kotlin.$_$.nb;
+  var Companion_getInstance_16 = kotlin_kotlin.$_$.u4;
+  var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.v2;
+  var numberRangeToNumber = kotlin_kotlin.$_$.jd;
+  var isArray = kotlin_kotlin.$_$.tc;
+  var println = kotlin_kotlin.$_$.ub;
   var cancel = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.m2;
-  var Companion_getInstance_12 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q3;
+  var Companion_getInstance_17 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u3;
   var Offset__unaryMinus_impl_ssu2iv = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.h1;
-  var compareTo = kotlin_kotlin.$_$.yb;
+  var compareTo = kotlin_kotlin.$_$.fc;
   var Key_getInstance_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.w;
-  var toString_0 = kotlin_kotlin.$_$.zf;
+  var toString_0 = kotlin_kotlin.$_$.mg;
   var get_job = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.p2;
-  var CancellationException = kotlin_kotlin.$_$.na;
-  var printStackTrace = kotlin_kotlin.$_$.yh;
-  var intercepted = kotlin_kotlin.$_$.ra;
+  var CancellationException = kotlin_kotlin.$_$.ua;
+  var printStackTrace = kotlin_kotlin.$_$.ni;
+  var intercepted = kotlin_kotlin.$_$.ya;
   var get_MODE_CANCELLABLE = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.f2;
   var CancellableContinuationImpl = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.w1;
   var returnIfSuspended = kotlin_kotlin.$_$.h;
   var IntSize_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.y;
-  var OnRemeasuredModifier = kotlin_org_jetbrains_compose_ui_ui.$_$.z2;
-  var OnPlacedModifier = kotlin_org_jetbrains_compose_ui_ui.$_$.y2;
-  var Companion_getInstance_13 = kotlin_org_jetbrains_compose_ui_ui.$_$.a8;
+  var OnRemeasuredModifier = kotlin_org_jetbrains_compose_ui_ui.$_$.o3;
+  var OnPlacedModifier = kotlin_org_jetbrains_compose_ui_ui.$_$.n3;
+  var Companion_getInstance_18 = kotlin_org_jetbrains_compose_ui_ui.$_$.f9;
   var _Offset___get_x__impl__xvi35n = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.i1;
   var _Offset___get_y__impl__8bzhra = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.j1;
-  var positionChange = kotlin_org_jetbrains_compose_ui_ui.$_$.i2;
-  var AwaitPointerEventScope = kotlin_org_jetbrains_compose_ui_ui.$_$.t1;
-  var changedToUp = kotlin_org_jetbrains_compose_ui_ui.$_$.a2;
-  var changedToUpIgnoreConsumed = kotlin_org_jetbrains_compose_ui_ui.$_$.z1;
-  var isOutOfBounds = kotlin_org_jetbrains_compose_ui_ui.$_$.b2;
-  var PointerEventPass_Final_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.f7;
+  var positionChange = kotlin_org_jetbrains_compose_ui_ui.$_$.r2;
+  var AwaitPointerEventScope = kotlin_org_jetbrains_compose_ui_ui.$_$.c2;
+  var changedToUp = kotlin_org_jetbrains_compose_ui_ui.$_$.j2;
+  var changedToUpIgnoreConsumed = kotlin_org_jetbrains_compose_ui_ui.$_$.i2;
+  var isOutOfBounds = kotlin_org_jetbrains_compose_ui_ui.$_$.k2;
+  var PointerEventPass_Final_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.j8;
   var Offset__getDistance_impl_pclvxn = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.b1;
   var Offset__div_impl_eaxtg1 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.z;
   var Offset__times_impl_jz1mli = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.g1;
   var Offset__minus_impl_hoj2c0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.e1;
-  var PointerEventTimeoutCancellationException = kotlin_org_jetbrains_compose_ui_ui.$_$.u1;
-  var positionChangedIgnoreConsumed = kotlin_org_jetbrains_compose_ui_ui.$_$.h2;
-  var _Dp___get_value__impl__geb1vb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.k2;
+  var PointerEventTimeoutCancellationException = kotlin_org_jetbrains_compose_ui_ui.$_$.d2;
+  var positionChangedIgnoreConsumed = kotlin_org_jetbrains_compose_ui_ui.$_$.q2;
+  var _Dp___get_value__impl__geb1vb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.l2;
   var get_isActive = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.o2;
-  var Velocity__times_impl_yav0ik = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.f3;
+  var Velocity__times_impl_yav0ik = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i3;
   var Velocity = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.d1;
-  var Companion_getInstance_14 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s3;
-  var VelocityTracker = kotlin_org_jetbrains_compose_ui_ui.$_$.r1;
+  var Companion_getInstance_19 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x3;
+  var VelocityTracker = kotlin_org_jetbrains_compose_ui_ui.$_$.a2;
   var Factory_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.t;
   var Channel = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.a1;
-  var addPointerInputChange = kotlin_org_jetbrains_compose_ui_ui.$_$.s1;
-  var positionChangeIgnoreConsumed = kotlin_org_jetbrains_compose_ui_ui.$_$.g2;
-  var PointerEventPass_Initial_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.g7;
-  var CancellationException_init_$Init$ = kotlin_kotlin.$_$.a1;
+  var addPointerInputChange = kotlin_org_jetbrains_compose_ui_ui.$_$.b2;
+  var positionChangeIgnoreConsumed = kotlin_org_jetbrains_compose_ui_ui.$_$.p2;
+  var PointerEventPass_Initial_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.k8;
+  var CancellationException_init_$Init$ = kotlin_kotlin.$_$.b1;
   var get_isActive_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.n2;
-  var toList = kotlin_kotlin.$_$.cf;
-  var sum = kotlin_kotlin.$_$.r9;
-  var sequence = kotlin_kotlin.$_$.bf;
+  var toList = kotlin_kotlin.$_$.mf;
+  var sum = kotlin_kotlin.$_$.y9;
+  var sequence = kotlin_kotlin.$_$.lf;
   var _ChannelResult___get_isSuccess__impl__odq1z9 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.s;
   var ChannelResult__getOrNull_impl_f5e07h = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.r;
-  var SequenceScope = kotlin_kotlin.$_$.ue;
+  var SequenceScope = kotlin_kotlin.$_$.ef;
   var get_LinearEasing = kotlin_org_jetbrains_compose_animation_animation_core.$_$.l;
-  var tween = kotlin_org_jetbrains_compose_animation_animation_core.$_$.b1;
-  var animateTo = kotlin_org_jetbrains_compose_animation_animation_core.$_$.e1;
+  var tween = kotlin_org_jetbrains_compose_animation_animation_core.$_$.d1;
+  var animateTo = kotlin_org_jetbrains_compose_animation_animation_core.$_$.g1;
   var AnimationState = kotlin_org_jetbrains_compose_animation_animation_core.$_$.c;
-  var coerceAtMost = kotlin_kotlin.$_$.ee;
-  var ModifierLocalProvider = kotlin_org_jetbrains_compose_ui_ui.$_$.q3;
-  var NestedScrollDispatcher = kotlin_org_jetbrains_compose_ui_ui.$_$.p1;
-  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s1;
-  var rememberUpdatedState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w1;
-  var get_LocalDensity = kotlin_org_jetbrains_compose_ui_ui.$_$.c5;
-  var nestedScroll = kotlin_org_jetbrains_compose_ui_ui.$_$.q1;
-  var LayoutDirection_Rtl_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w1;
-  var Velocity__minus_impl_w0cg92 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.d3;
+  var coerceAtMost = kotlin_kotlin.$_$.ne;
+  var spring = kotlin_org_jetbrains_compose_animation_animation_core.$_$.c1;
+  var animate = kotlin_org_jetbrains_compose_animation_animation_core.$_$.h1;
+  var Velocity__minus_impl_w0cg92 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.g3;
   var Offset__plus_impl_c78cg0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.f1;
-  var Companion_getInstance_15 = kotlin_org_jetbrains_compose_ui_ui.$_$.x7;
+  var Companion_getInstance_20 = kotlin_org_jetbrains_compose_ui_ui.$_$.c9;
+  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u1;
   var Offset__copy$default_impl_bmwjg8 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.q1;
-  var _Velocity___get_y__impl__239yhc = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.h3;
-  var _Velocity___get_x__impl__qqcikv = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.g3;
-  var Velocity__copy$default_impl_eql69u = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.j3;
-  var animateDecay = kotlin_org_jetbrains_compose_animation_animation_core.$_$.d1;
+  var _Velocity___get_y__impl__239yhc = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.k3;
+  var _Velocity___get_x__impl__qqcikv = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.j3;
+  var Velocity__copy$default_impl_eql69u = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.n3;
+  var LayoutDirection_Rtl_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x1;
+  var animateDecay = kotlin_org_jetbrains_compose_animation_animation_core.$_$.f1;
   var withContext = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.n;
-  var get_key_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.a7;
-  var get = kotlin_kotlin.$_$.za;
-  var fold = kotlin_kotlin.$_$.ya;
-  var minusKey = kotlin_kotlin.$_$.ab;
-  var plus = kotlin_kotlin.$_$.db;
-  var MotionDurationScale = kotlin_org_jetbrains_compose_ui_ui.$_$.b7;
-  var EmptyCoroutineContext_getInstance = kotlin_kotlin.$_$.e4;
-  var createCompositionCoroutineScope = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i1;
-  var CompositionScopedCoroutineScopeCanceller = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
-  var onPreFling = kotlin_org_jetbrains_compose_ui_ui.$_$.l7;
-  var NestedScrollConnection = kotlin_org_jetbrains_compose_ui_ui.$_$.o1;
-  var isNaN_0 = kotlin_kotlin.$_$.sh;
+  var ModifierLocalProvider = kotlin_org_jetbrains_compose_ui_ui.$_$.l4;
+  var NestedScrollDispatcher = kotlin_org_jetbrains_compose_ui_ui.$_$.y1;
+  var rememberUpdatedState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y1;
+  var get_LocalDensity = kotlin_org_jetbrains_compose_ui_ui.$_$.x5;
+  var nestedScroll = kotlin_org_jetbrains_compose_ui_ui.$_$.z1;
+  var get_key_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.e8;
+  var get = kotlin_kotlin.$_$.gb;
+  var fold = kotlin_kotlin.$_$.fb;
+  var minusKey = kotlin_kotlin.$_$.hb;
+  var plus = kotlin_kotlin.$_$.kb;
+  var MotionDurationScale = kotlin_org_jetbrains_compose_ui_ui.$_$.f8;
+  var EmptyCoroutineContext_getInstance = kotlin_kotlin.$_$.h4;
+  var createCompositionCoroutineScope = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j1;
+  var CompositionScopedCoroutineScopeCanceller = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
+  var onPreFling = kotlin_org_jetbrains_compose_ui_ui.$_$.p8;
+  var NestedScrollConnection = kotlin_org_jetbrains_compose_ui_ui.$_$.x1;
+  var isNaN_0 = kotlin_kotlin.$_$.hi;
   var Density = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q;
-  var changedToDownIgnoreConsumed = kotlin_org_jetbrains_compose_ui_ui.$_$.x1;
-  var changedToDown = kotlin_org_jetbrains_compose_ui_ui.$_$.y1;
-  var get_isPrimaryPressed = kotlin_org_jetbrains_compose_ui_ui.$_$.c2;
+  var changedToDownIgnoreConsumed = kotlin_org_jetbrains_compose_ui_ui.$_$.g2;
+  var changedToDown = kotlin_org_jetbrains_compose_ui_ui.$_$.h2;
+  var get_isPrimaryPressed = kotlin_org_jetbrains_compose_ui_ui.$_$.l2;
   var AnimationVector1D = kotlin_org_jetbrains_compose_animation_animation_core.$_$.d;
-  var spring = kotlin_org_jetbrains_compose_animation_animation_core.$_$.a1;
-  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.i4;
-  var get_VectorConverter = kotlin_org_jetbrains_compose_animation_animation_core.$_$.q;
-  var AnimationConstants_getInstance = kotlin_org_jetbrains_compose_animation_animation_core.$_$.f1;
-  var roundToLong = kotlin_kotlin.$_$.vd;
-  var Key_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui.$_$.j8;
-  var withFrameNanos = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
-  var LaunchedEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.k;
+  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.l4;
+  var get_VectorConverter = kotlin_org_jetbrains_compose_animation_animation_core.$_$.r;
+  var AnimationConstants_getInstance = kotlin_org_jetbrains_compose_animation_animation_core.$_$.i1;
+  var roundToLong = kotlin_kotlin.$_$.de;
+  var Key_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui.$_$.p9;
+  var withFrameNanos = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j2;
+  var LaunchedEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
+  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
   var BufferOverflow_DROP_OLDEST_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.a;
   var MutableSharedFlow = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.f1;
-  var Spring_getInstance = kotlin_org_jetbrains_compose_animation_animation_core.$_$.g1;
-  var Companion_getInstance_16 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.o3;
-  var get_VisibilityThreshold = kotlin_org_jetbrains_compose_animation_animation_core.$_$.r;
+  var PaddingValues = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.c;
+  var Arrangement_getInstance = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.f1;
+  var Spring_getInstance = kotlin_org_jetbrains_compose_animation_animation_core.$_$.j1;
+  var Companion_getInstance_21 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s3;
+  var get_VisibilityThreshold = kotlin_org_jetbrains_compose_animation_animation_core.$_$.s;
   var IntOffset = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w;
-  var onPreScroll = kotlin_org_jetbrains_compose_ui_ui.$_$.n1;
-  var emptyList = kotlin_kotlin.$_$.j7;
+  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.m4;
+  var mutableIntStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q1;
+  var Constraints_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.a;
+  var minIntrinsicWidth_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.y4;
+  var minIntrinsicHeight_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.x4;
+  var maxIntrinsicWidth_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.w4;
+  var maxIntrinsicHeight_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.v4;
+  var LayoutModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.z4;
+  var ParentDataModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.c5;
+  var CollectionInfo = kotlin_org_jetbrains_compose_ui_ui.$_$.j6;
+  var get_LocalLayoutDirection = kotlin_org_jetbrains_compose_ui_ui.$_$.c6;
+  var constrainWidth = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.h1;
+  var constrainHeight = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.g1;
+  var emptyMap = kotlin_kotlin.$_$.o7;
+  var calculateStartPadding = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.h;
+  var calculateEndPadding = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.g;
+  var offset = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.o1;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.v1;
+  var IntOffset_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v;
+  var Companion_getInstance_22 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.p2;
+  var lastOrNull = kotlin_kotlin.$_$.t8;
+  var abs = kotlin_kotlin.$_$.yd;
+  var last = kotlin_kotlin.$_$.v8;
+  var first = kotlin_kotlin.$_$.y7;
+  var get_lastIndex = kotlin_kotlin.$_$.q8;
+  var emptyList = kotlin_kotlin.$_$.n7;
+  var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
+  var IntOffset__copy$default_impl_1y5pbb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.m3;
+  var Comparator = kotlin_kotlin.$_$.yg;
+  var compareValues = kotlin_kotlin.$_$.pa;
+  var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.y;
+  var firstOrNull = kotlin_kotlin.$_$.u7;
+  var sortWith = kotlin_kotlin.$_$.u9;
+  var referentialEqualityPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w1;
+  var derivedStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k1;
+  var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c;
+  var KProperty0 = kotlin_kotlin.$_$.ze;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.oc;
+  var ArrayDeque_init_$Create$ = kotlin_kotlin.$_$.i;
+  var coerceAtLeast = kotlin_kotlin.$_$.je;
+  var get_sign = kotlin_kotlin.$_$.ge;
+  var LayoutDirection_Ltr_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w1;
+  var get_indices = kotlin_kotlin.$_$.i8;
+  var reversed = kotlin_kotlin.$_$.te;
+  var MeasureResult = kotlin_org_jetbrains_compose_ui_ui.$_$.j3;
+  var KMutableProperty1 = kotlin_kotlin.$_$.ye;
+  var rememberSaveable$composable = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.i;
+  var listOf = kotlin_kotlin.$_$.a9;
+  var listSaver = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.g;
+  var RemeasurementModifier = kotlin_org_jetbrains_compose_ui_ui.$_$.s3;
+  var Density_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.p;
+  var KProperty1 = kotlin_kotlin.$_$.af;
+  var SafeContinuation_init_$Create$ = kotlin_kotlin.$_$.f1;
+  var OnGloballyPositionedModifier = kotlin_org_jetbrains_compose_ui_ui.$_$.m3;
+  var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.c2;
+  var CancellationException_init_$Init$_0 = kotlin_kotlin.$_$.a1;
+  var coerceAtLeast_0 = kotlin_kotlin.$_$.ke;
+  var coerceAtMost_0 = kotlin_kotlin.$_$.me;
+  var copy = kotlin_org_jetbrains_compose_animation_animation_core.$_$.x;
+  var SubcomposeSlotReusePolicy = kotlin_org_jetbrains_compose_ui_ui.$_$.w3;
+  var SubcomposeLayoutState = kotlin_org_jetbrains_compose_ui_ui.$_$.v3;
+  var SubcomposeLayout$composable = kotlin_org_jetbrains_compose_ui_ui.$_$.u3;
+  var SpringSpec = kotlin_org_jetbrains_compose_animation_animation_core.$_$.m;
+  var get_VectorConverter_0 = kotlin_org_jetbrains_compose_animation_animation_core.$_$.p;
+  var Animatable = kotlin_org_jetbrains_compose_animation_animation_core.$_$.b;
+  var BeyondBoundsScope = kotlin_org_jetbrains_compose_ui_ui.$_$.s2;
+  var Companion_getInstance_23 = kotlin_org_jetbrains_compose_ui_ui.$_$.i9;
+  var get_ModifierLocalBeyondBoundsLayout = kotlin_org_jetbrains_compose_ui_ui.$_$.l3;
+  var BeyondBoundsLayout = kotlin_org_jetbrains_compose_ui_ui.$_$.t2;
+  var Companion_getInstance_24 = kotlin_kotlin.$_$.p4;
+  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
+  var get_reuseKey = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z1;
+  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
+  var HashMap_init_$Create$ = kotlin_kotlin.$_$.n;
+  var get_lastIndex_0 = kotlin_kotlin.$_$.r8;
+  var _TextUnit___get_type__impl__uc2olt = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.e3;
+  var Companion_getInstance_25 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w3;
+  var _TextUnit___get_value__impl__hpbx0k = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.f3;
+  var get_sp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.r1;
+  var _DpSize___get_packedValue__impl__jx4au8 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q2;
+  var Companion_getInstance_26 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.r3;
+  var Companion_getInstance_27 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u1;
+  var _DpSize___get_width__impl__o3d5gt = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.r2;
+  var _DpSize___get_height__impl__5xueo2 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.p2;
+  var _Size___get_packedValue__impl__7rlt1o = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.o1;
+  var DpSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t;
+  var MeasureScope = kotlin_org_jetbrains_compose_ui_ui.$_$.k3;
+  var layout$default = kotlin_org_jetbrains_compose_ui_ui.$_$.q8;
+  var until = kotlin_kotlin.$_$.ve;
+  var structuralEqualityPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
+  var State = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f1;
+  var SnapshotStateList = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f;
+  var objectCreate = kotlin_kotlin.$_$.pd;
+  var List = kotlin_kotlin.$_$.t5;
+  var CompositionLocalProvider$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q;
+  var PinnableContainer = kotlin_org_jetbrains_compose_ui_ui.$_$.q3;
+  var PinnedHandle = kotlin_org_jetbrains_compose_ui_ui.$_$.p3;
+  var ScrollAxisRange = kotlin_org_jetbrains_compose_ui_ui.$_$.l6;
+  var set_isTraversalGroup = kotlin_org_jetbrains_compose_ui_ui.$_$.d7;
+  var indexForKey = kotlin_org_jetbrains_compose_ui_ui.$_$.a7;
+  var set_horizontalScrollAxisRange = kotlin_org_jetbrains_compose_ui_ui.$_$.y6;
+  var set_verticalScrollAxisRange = kotlin_org_jetbrains_compose_ui_ui.$_$.u7;
+  var scrollBy = kotlin_org_jetbrains_compose_ui_ui.$_$.l7;
+  var scrollToIndex = kotlin_org_jetbrains_compose_ui_ui.$_$.m7;
+  var set_collectionInfo = kotlin_org_jetbrains_compose_ui_ui.$_$.p6;
+  var get_LocalSaveableStateRegistry = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.a;
+  var SaveableStateRegistry = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.c;
+  var Saver = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.f;
+  var SaveableStateRegistry_0 = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.d;
+  var SaveableStateHolder = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.b;
+  var rememberSaveableStateHolder$composable = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.k;
+  var onPreScroll = kotlin_org_jetbrains_compose_ui_ui.$_$.w1;
   var toPx = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i;
   var toPx_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.j;
   var roundToPx = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.c;
@@ -344,255 +488,205 @@
   var toSize_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.l;
   var toDpSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.e;
   var toRect_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u;
-  var semantics = kotlin_org_jetbrains_compose_ui_ui.$_$.m6;
-  var set_selected = kotlin_org_jetbrains_compose_ui_ui.$_$.l6;
-  var selectableGroup = kotlin_org_jetbrains_compose_ui_ui.$_$.k6;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.t1;
-  var get_inspectableElements = kotlin_org_jetbrains_compose_ui_ui.$_$.x4;
-  var get_nameFallback = kotlin_org_jetbrains_compose_ui_ui.$_$.y4;
-  var InspectableValue = kotlin_org_jetbrains_compose_ui_ui.$_$.z4;
-  var LayoutDirection_Ltr_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v1;
+  var set_selected = kotlin_org_jetbrains_compose_ui_ui.$_$.o7;
+  var selectableGroup = kotlin_org_jetbrains_compose_ui_ui.$_$.n7;
+  var get_inspectableElements = kotlin_org_jetbrains_compose_ui_ui.$_$.s5;
+  var get_nameFallback = kotlin_org_jetbrains_compose_ui_ui.$_$.t5;
+  var InspectableValue = kotlin_org_jetbrains_compose_ui_ui.$_$.u5;
   var RoundRect_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.i;
-  var Pair = kotlin_kotlin.$_$.ug;
+  var Pair = kotlin_kotlin.$_$.ih;
   var TextOverflow = kotlin_org_jetbrains_compose_ui_ui_text.$_$.a1;
   var _TextOverflow___get_value__impl__vugm5i = kotlin_org_jetbrains_compose_ui_ui_text.$_$.z1;
-  var Companion_getInstance_17 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.x2;
-  var Companion_getInstance_18 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.u2;
-  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.j4;
-  var rememberSaveable$composable = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.e;
-  var graphicsLayer = kotlin_org_jetbrains_compose_ui_ui.$_$.z;
-  var get_LocalFontFamilyResolver = kotlin_org_jetbrains_compose_ui_ui.$_$.e5;
+  var Companion_getInstance_28 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.x2;
+  var Companion_getInstance_29 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.u2;
+  var graphicsLayer = kotlin_org_jetbrains_compose_ui_ui.$_$.i1;
+  var get_LocalFontFamilyResolver = kotlin_org_jetbrains_compose_ui_ui.$_$.z5;
   var AnnotatedString_init_$Create$ = kotlin_org_jetbrains_compose_ui_ui_text.$_$.p1;
-  var $get_currentCompositeKeyHash$$composable_u3vbzj = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g;
-  var materialize = kotlin_org_jetbrains_compose_ui_ui.$_$.d7;
-  var Companion_getInstance_19 = kotlin_org_jetbrains_compose_ui_ui.$_$.e8;
-  var invalidApplier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l1;
-  var Applier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l;
-  var _Updater___init__impl__rbfxm8 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k2;
-  var Updater__set_impl_v7kwss = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m2;
-  var _Updater___get_composer__impl__9ty7av = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l2;
-  var _Constraints___get_maxWidth__impl__uuyqc = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.e2;
-  var _Constraints___get_maxHeight__impl__dt3e8z = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.d2;
-  var minIntrinsicWidth = kotlin_org_jetbrains_compose_ui_ui.$_$.w2;
-  var minIntrinsicHeight = kotlin_org_jetbrains_compose_ui_ui.$_$.v2;
-  var maxIntrinsicWidth = kotlin_org_jetbrains_compose_ui_ui.$_$.u2;
-  var maxIntrinsicHeight = kotlin_org_jetbrains_compose_ui_ui.$_$.t2;
-  var MeasurePolicy = kotlin_org_jetbrains_compose_ui_ui.$_$.x2;
-  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
-  var Companion_getInstance_20 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.r2;
+  var materialize = kotlin_org_jetbrains_compose_ui_ui.$_$.h8;
+  var Companion_getInstance_30 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.r2;
   var TextFieldValue_init_$Create$ = kotlin_org_jetbrains_compose_ui_ui_text.$_$.o1;
-  var SideEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b1;
-  var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
-  var KMutableProperty0 = kotlin_kotlin.$_$.ne;
-  var getLocalDelegateReference = kotlin_kotlin.$_$.ec;
+  var SideEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
+  var KMutableProperty0 = kotlin_kotlin.$_$.xe;
+  var getLocalDelegateReference = kotlin_kotlin.$_$.lc;
   var TextRange = kotlin_org_jetbrains_compose_ui_ui_text.$_$.j1;
-  var Companion_getInstance_21 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.n2;
+  var Companion_getInstance_31 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.n2;
   var FocusRequester = kotlin_org_jetbrains_compose_ui_ui.$_$.m;
-  var get_LocalTextInputService = kotlin_org_jetbrains_compose_ui_ui.$_$.i5;
-  var get_LocalFocusManager = kotlin_org_jetbrains_compose_ui_ui.$_$.d5;
-  var $get_currentRecomposeScope$$composable_f9ntk0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h;
-  var get_LocalClipboardManager = kotlin_org_jetbrains_compose_ui_ui.$_$.b5;
-  var get_LocalTextToolbar = kotlin_org_jetbrains_compose_ui_ui.$_$.j5;
-  var get_LocalHapticFeedback = kotlin_org_jetbrains_compose_ui_ui.$_$.f5;
+  var get_LocalTextInputService = kotlin_org_jetbrains_compose_ui_ui.$_$.d6;
+  var get_LocalFocusManager = kotlin_org_jetbrains_compose_ui_ui.$_$.y5;
+  var $get_currentRecomposeScope$$composable_f9ntk0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i;
+  var get_LocalClipboardManager = kotlin_org_jetbrains_compose_ui_ui.$_$.w5;
+  var get_LocalTextToolbar = kotlin_org_jetbrains_compose_ui_ui.$_$.e6;
+  var get_LocalHapticFeedback = kotlin_org_jetbrains_compose_ui_ui.$_$.a6;
   var drawBehind = kotlin_org_jetbrains_compose_ui_ui.$_$.f;
-  var onGloballyPositioned = kotlin_org_jetbrains_compose_ui_ui.$_$.i3;
+  var onGloballyPositioned = kotlin_org_jetbrains_compose_ui_ui.$_$.d4;
   var PasswordVisualTransformation = kotlin_org_jetbrains_compose_ui_ui_text.$_$.n;
-  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
-  var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c;
   var EditProcessor = kotlin_org_jetbrains_compose_ui_ui_text.$_$.g;
-  var Paint = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.v;
+  var Paint = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.y;
   var _TextRange___get_max__impl__owm8m = kotlin_org_jetbrains_compose_ui_ui_text.$_$.e2;
-  var Companion_getInstance_22 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n2;
-  var onPreviewKeyEvent = kotlin_org_jetbrains_compose_ui_ui.$_$.k1;
-  var Companion_getInstance_23 = kotlin_org_jetbrains_compose_ui_ui.$_$.h8;
+  var onPreviewKeyEvent = kotlin_org_jetbrains_compose_ui_ui.$_$.t1;
   var rememberBoxMeasurePolicy$composable = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.u;
-  var materializerOf = kotlin_org_jetbrains_compose_ui_ui.$_$.h3;
-  var _SkippableUpdater___init__impl__4ft0t9 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i2;
-  var SkippableUpdater = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
   var BoxScopeInstance_getInstance = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.g1;
   var _TextRange___get_start__impl__ww4t90 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.h2;
   var _TextRange___get_end__impl__gcdxpp = kotlin_org_jetbrains_compose_ui_ui_text.$_$.c2;
   var _TextRange___get_collapsed__impl__cilesp = kotlin_org_jetbrains_compose_ui_ui_text.$_$.a2;
-  var pointerInput = kotlin_org_jetbrains_compose_ui_ui.$_$.f2;
-  var KProperty0 = kotlin_kotlin.$_$.pe;
-  var snapshotFlow = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y1;
+  var pointerInput = kotlin_org_jetbrains_compose_ui_ui.$_$.o2;
+  var snapshotFlow = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a2;
   var DeleteAllCommand = kotlin_org_jetbrains_compose_ui_ui_text.$_$.e;
   var CommitTextCommand = kotlin_org_jetbrains_compose_ui_ui_text.$_$.d;
-  var listOf = kotlin_kotlin.$_$.u8;
   var TextRange_0 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.h1;
   var FinishComposingTextCommand = kotlin_org_jetbrains_compose_ui_ui_text.$_$.h;
-  var isCharSequence = kotlin_kotlin.$_$.qc;
-  var replaceRange = kotlin_kotlin.$_$.qf;
+  var isCharSequence = kotlin_kotlin.$_$.xc;
+  var replaceRange = kotlin_kotlin.$_$.cg;
   var TextRange_1 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.i1;
   var TextFieldValue = kotlin_org_jetbrains_compose_ui_ui_text.$_$.s;
-  var coerceAtLeast = kotlin_kotlin.$_$.ae;
   var ImeAction = kotlin_org_jetbrains_compose_ui_ui_text.$_$.i;
-  var set_imeAction = kotlin_org_jetbrains_compose_ui_ui.$_$.a6;
-  var set_editableText = kotlin_org_jetbrains_compose_ui_ui.$_$.w5;
-  var set_textSelectionRange = kotlin_org_jetbrains_compose_ui_ui.$_$.q6;
-  var password = kotlin_org_jetbrains_compose_ui_ui.$_$.f6;
-  var getTextLayoutResult = kotlin_org_jetbrains_compose_ui_ui.$_$.z5;
-  var setText = kotlin_org_jetbrains_compose_ui_ui.$_$.o6;
-  var insertTextAtCursor = kotlin_org_jetbrains_compose_ui_ui.$_$.b6;
-  var setSelection = kotlin_org_jetbrains_compose_ui_ui.$_$.n6;
-  var performImeAction = kotlin_org_jetbrains_compose_ui_ui.$_$.h6;
-  var copyText = kotlin_org_jetbrains_compose_ui_ui.$_$.t5;
-  var cutText = kotlin_org_jetbrains_compose_ui_ui.$_$.u5;
-  var pasteText = kotlin_org_jetbrains_compose_ui_ui.$_$.g6;
-  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
-  var get_FirstBaseline = kotlin_org_jetbrains_compose_ui_ui.$_$.j2;
-  var get_LastBaseline = kotlin_org_jetbrains_compose_ui_ui.$_$.k2;
-  var mapOf = kotlin_kotlin.$_$.x8;
+  var set_imeAction = kotlin_org_jetbrains_compose_ui_ui.$_$.z6;
+  var set_editableText = kotlin_org_jetbrains_compose_ui_ui.$_$.u6;
+  var set_textSelectionRange = kotlin_org_jetbrains_compose_ui_ui.$_$.t7;
+  var password = kotlin_org_jetbrains_compose_ui_ui.$_$.g7;
+  var getTextLayoutResult = kotlin_org_jetbrains_compose_ui_ui.$_$.x6;
+  var setText = kotlin_org_jetbrains_compose_ui_ui.$_$.r7;
+  var insertTextAtCursor = kotlin_org_jetbrains_compose_ui_ui.$_$.b7;
+  var setSelection = kotlin_org_jetbrains_compose_ui_ui.$_$.q7;
+  var performImeAction = kotlin_org_jetbrains_compose_ui_ui.$_$.i7;
+  var copyText = kotlin_org_jetbrains_compose_ui_ui.$_$.r6;
+  var cutText = kotlin_org_jetbrains_compose_ui_ui.$_$.s6;
+  var pasteText = kotlin_org_jetbrains_compose_ui_ui.$_$.h7;
+  var get_FirstBaseline = kotlin_org_jetbrains_compose_ui_ui.$_$.u2;
+  var get_LastBaseline = kotlin_org_jetbrains_compose_ui_ui.$_$.v2;
+  var mapOf = kotlin_kotlin.$_$.d9;
   var heightIn = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.n;
-  var KMutableProperty1 = kotlin_kotlin.$_$.oe;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.hc;
-  var get_LocalLayoutDirection = kotlin_org_jetbrains_compose_ui_ui.$_$.h5;
   var resolveDefaults = kotlin_org_jetbrains_compose_ui_ui_text.$_$.l1;
-  var Companion_getInstance_24 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.l2;
-  var Companion_getInstance_25 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.j2;
+  var Companion_getInstance_32 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.l2;
+  var Companion_getInstance_33 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.j2;
   var FontStyle = kotlin_org_jetbrains_compose_ui_ui_text.$_$.a;
-  var Companion_getInstance_26 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.k2;
+  var Companion_getInstance_34 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.k2;
   var FontSynthesis = kotlin_org_jetbrains_compose_ui_ui_text.$_$.b;
-  var get_isAltPressed = kotlin_org_jetbrains_compose_ui_ui.$_$.e1;
-  var get_isShiftPressed = kotlin_org_jetbrains_compose_ui_ui.$_$.h1;
-  var get_isCtrlPressed = kotlin_org_jetbrains_compose_ui_ui.$_$.f1;
-  var KeyEvent = kotlin_org_jetbrains_compose_ui_ui.$_$.b1;
-  var KProperty1 = kotlin_kotlin.$_$.qe;
-  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.di;
-  var Companion_getInstance_27 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.m2;
-  var Companion_getInstance_28 = kotlin_org_jetbrains_compose_ui_ui.$_$.t7;
-  var Companion_getInstance_29 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.o2;
-  var Companion_getInstance_30 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.p2;
+  var get_isAltPressed = kotlin_org_jetbrains_compose_ui_ui.$_$.n1;
+  var get_isShiftPressed = kotlin_org_jetbrains_compose_ui_ui.$_$.q1;
+  var get_isCtrlPressed = kotlin_org_jetbrains_compose_ui_ui.$_$.o1;
+  var KeyEvent = kotlin_org_jetbrains_compose_ui_ui.$_$.k1;
+  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.si;
+  var Companion_getInstance_35 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.m2;
+  var Companion_getInstance_36 = kotlin_org_jetbrains_compose_ui_ui.$_$.y8;
+  var Companion_getInstance_37 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.o2;
+  var Companion_getInstance_38 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.p2;
   var ImeOptions = kotlin_org_jetbrains_compose_ui_ui_text.$_$.j;
   var KeyboardCapitalization = kotlin_org_jetbrains_compose_ui_ui_text.$_$.k;
   var KeyboardType = kotlin_org_jetbrains_compose_ui_ui_text.$_$.l;
   var KeyboardCapitalization__hashCode_impl_6ibuz5 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.v1;
   var KeyboardType__hashCode_impl_mw6m33 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.w1;
   var ImeAction__hashCode_impl_m1mrob = kotlin_org_jetbrains_compose_ui_ui_text.$_$.u1;
-  var charSequenceGet = kotlin_kotlin.$_$.ub;
-  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.m2;
-  var charSequenceLength = kotlin_kotlin.$_$.vb;
-  var _Constraints___get_minWidth__impl__hi9lfi = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.g2;
-  var Companion_getInstance_31 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.k3;
-  var _Constraints___get_hasBoundedWidth__impl__7hd0wr = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.z1;
-  var coerceIn = kotlin_kotlin.$_$.he;
-  var Constraints = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.a;
+  var charSequenceGet = kotlin_kotlin.$_$.bc;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.o2;
+  var charSequenceLength = kotlin_kotlin.$_$.cc;
+  var _Constraints___get_hasBoundedWidth__impl__7hd0wr = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.a2;
+  var coerceIn = kotlin_kotlin.$_$.qe;
   var MultiParagraph = kotlin_org_jetbrains_compose_ui_ui_text.$_$.c1;
   var TextPainter_getInstance = kotlin_org_jetbrains_compose_ui_ui_text.$_$.v2;
   var MultiParagraphIntrinsics = kotlin_org_jetbrains_compose_ui_ui_text.$_$.b1;
   var TextLayoutInput_init_$Create$ = kotlin_org_jetbrains_compose_ui_ui_text.$_$.s1;
   var constrain = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.j1;
   var TextLayoutResult = kotlin_org_jetbrains_compose_ui_ui_text.$_$.g1;
-  var Constraints_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.b;
-  var coerceIn_0 = kotlin_kotlin.$_$.ge;
-  var coerceAtLeast_0 = kotlin_kotlin.$_$.be;
-  var coerceAtMost_0 = kotlin_kotlin.$_$.de;
-  var Animatable = kotlin_org_jetbrains_compose_animation_animation_core.$_$.a;
-  var _Color___get_value__impl__1pls5m = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.y2;
-  var get_LocalWindowInfo = kotlin_org_jetbrains_compose_ui_ui.$_$.k5;
-  var LaunchedEffect$composable_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
+  var coerceIn_0 = kotlin_kotlin.$_$.pe;
+  var Animatable_0 = kotlin_org_jetbrains_compose_animation_animation_core.$_$.a;
+  var _Color___get_value__impl__1pls5m = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d3;
+  var get_LocalWindowInfo = kotlin_org_jetbrains_compose_ui_ui.$_$.f6;
+  var LaunchedEffect$composable_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
   var drawWithContent = kotlin_org_jetbrains_compose_ui_ui.$_$.g;
-  var keyframes = kotlin_org_jetbrains_compose_animation_animation_core.$_$.z;
-  var infiniteRepeatable = kotlin_org_jetbrains_compose_animation_animation_core.$_$.y;
-  var Triple = kotlin_kotlin.$_$.zg;
+  var keyframes = kotlin_org_jetbrains_compose_animation_animation_core.$_$.b1;
+  var infiniteRepeatable = kotlin_org_jetbrains_compose_animation_animation_core.$_$.a1;
+  var Triple = kotlin_kotlin.$_$.nh;
   var _TextRange___get_min__impl__uu95c4 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.f2;
   var Rect_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.g;
   var Builder_init_$Create$ = kotlin_org_jetbrains_compose_ui_ui_text.$_$.q1;
-  var Companion_getInstance_32 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.t2;
+  var Companion_getInstance_39 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.t2;
   var SpanStyle_init_$Create$ = kotlin_org_jetbrains_compose_ui_ui_text.$_$.r1;
   var TransformedText = kotlin_org_jetbrains_compose_ui_ui_text.$_$.u;
   var Paragraph = kotlin_org_jetbrains_compose_ui_ui_text.$_$.f1;
-  var repeat = kotlin_kotlin.$_$.pf;
+  var repeat = kotlin_kotlin.$_$.bg;
   var focusRequester = kotlin_org_jetbrains_compose_ui_ui.$_$.o;
   var onFocusChanged = kotlin_org_jetbrains_compose_ui_ui.$_$.q;
-  var toMutableList = kotlin_kotlin.$_$.da;
-  var listOf_0 = kotlin_kotlin.$_$.t8;
-  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.h1;
+  var toMutableList = kotlin_kotlin.$_$.ka;
+  var listOf_0 = kotlin_kotlin.$_$.z8;
+  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.i1;
   var CommitTextCommand_init_$Create$ = kotlin_org_jetbrains_compose_ui_ui_text.$_$.n1;
   var DeleteSurroundingTextCommand = kotlin_org_jetbrains_compose_ui_ui_text.$_$.f;
-  var Companion_getInstance_33 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.q2;
-  var get_type = kotlin_org_jetbrains_compose_ui_ui.$_$.l1;
-  var Companion_getInstance_34 = kotlin_org_jetbrains_compose_ui_ui.$_$.w7;
-  var onKeyEvent = kotlin_org_jetbrains_compose_ui_ui.$_$.j1;
-  var pointerHoverIcon = kotlin_org_jetbrains_compose_ui_ui.$_$.e2;
-  var objectCreate = kotlin_kotlin.$_$.hd;
-  var listSaver = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.c;
-  var mutableFloatStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n1;
-  var Companion_getInstance_35 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.t1;
-  var Companion_getInstance_36 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.w2;
-  var structuralEqualityPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
-  var clipToBounds = kotlin_org_jetbrains_compose_ui_ui.$_$.d;
-  var Constraints__copy$default_impl_f452rp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i3;
-  var minIntrinsicWidth_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.q2;
-  var minIntrinsicHeight_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.p2;
-  var maxIntrinsicWidth_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.o2;
-  var maxIntrinsicHeight_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.n2;
-  var LayoutModifier = kotlin_org_jetbrains_compose_ui_ui.$_$.r2;
-  var derivedStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j1;
+  var Companion_getInstance_40 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.q2;
+  var get_type = kotlin_org_jetbrains_compose_ui_ui.$_$.u1;
+  var Companion_getInstance_41 = kotlin_org_jetbrains_compose_ui_ui.$_$.b9;
+  var onKeyEvent = kotlin_org_jetbrains_compose_ui_ui.$_$.s1;
+  var pointerHoverIcon = kotlin_org_jetbrains_compose_ui_ui.$_$.n2;
+  var mutableFloatStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.p1;
+  var Companion_getInstance_42 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.t1;
+  var Companion_getInstance_43 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.w2;
+  var Constraints__copy$default_impl_f452rp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.l3;
+  var minIntrinsicWidth_1 = kotlin_org_jetbrains_compose_ui_ui.$_$.b3;
+  var minIntrinsicHeight_1 = kotlin_org_jetbrains_compose_ui_ui.$_$.a3;
+  var maxIntrinsicWidth_1 = kotlin_org_jetbrains_compose_ui_ui.$_$.z2;
+  var maxIntrinsicHeight_1 = kotlin_org_jetbrains_compose_ui_ui.$_$.y2;
+  var LayoutModifier = kotlin_org_jetbrains_compose_ui_ui.$_$.c3;
+  var derivedStateOf_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l1;
   var defaultMinSize = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.j;
-  var _Constraints___get_minHeight__impl__ev4bgx = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.f2;
-  var layout = kotlin_org_jetbrains_compose_ui_ui.$_$.g3;
-  var Long = kotlin_kotlin.$_$.qg;
-  var toLong = kotlin_kotlin.$_$.md;
+  var layout = kotlin_org_jetbrains_compose_ui_ui.$_$.b4;
+  var Long = kotlin_kotlin.$_$.eh;
+  var toLong = kotlin_kotlin.$_$.ud;
   var OffsetMapping = kotlin_org_jetbrains_compose_ui_ui_text.$_$.m;
-  var toBits = kotlin_kotlin.$_$.ei;
-  var floatFromBits = kotlin_kotlin.$_$.dc;
+  var toBits = kotlin_kotlin.$_$.ti;
+  var floatFromBits = kotlin_kotlin.$_$.kc;
   var ParagraphIntrinsics = kotlin_org_jetbrains_compose_ui_ui_text.$_$.d1;
   var Paragraph_0 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.e1;
   var TextOverflow__hashCode_impl_kqdwgt = kotlin_org_jetbrains_compose_ui_ui_text.$_$.y1;
-  var invalidateMeasurement = kotlin_org_jetbrains_compose_ui_ui.$_$.t4;
-  var LayoutModifierNode = kotlin_org_jetbrains_compose_ui_ui.$_$.e4;
-  var RememberObserver = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
-  var invalidateDraw = kotlin_org_jetbrains_compose_ui_ui.$_$.r4;
-  var set_text = kotlin_org_jetbrains_compose_ui_ui.$_$.p6;
-  var invalidateLayer = kotlin_org_jetbrains_compose_ui_ui.$_$.s4;
-  var Companion_getInstance_37 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a4;
+  var invalidateMeasurement = kotlin_org_jetbrains_compose_ui_ui.$_$.o5;
+  var RememberObserver = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b1;
+  var invalidateDraw = kotlin_org_jetbrains_compose_ui_ui.$_$.m5;
+  var set_text = kotlin_org_jetbrains_compose_ui_ui.$_$.s7;
+  var invalidateLayer = kotlin_org_jetbrains_compose_ui_ui.$_$.n5;
+  var Companion_getInstance_44 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g4;
   var LinkedHashMap_init_$Create$_0 = kotlin_kotlin.$_$.u;
   var _TextRange___get_reversed__impl__emhnbm = kotlin_org_jetbrains_compose_ui_ui_text.$_$.g2;
-  var get_lastIndex = kotlin_kotlin.$_$.of;
+  var get_lastIndex_1 = kotlin_kotlin.$_$.zf;
   var Offset__hashCode_impl_hbql41 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.c1;
-  var SemanticsPropertyKey = kotlin_org_jetbrains_compose_ui_ui.$_$.q5;
+  var SemanticsPropertyKey = kotlin_org_jetbrains_compose_ui_ui.$_$.n6;
   var AnimationVector2D = kotlin_org_jetbrains_compose_animation_animation_core.$_$.e;
   var get_isSpecified = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.q;
   var TwoWayConverter = kotlin_org_jetbrains_compose_animation_animation_core.$_$.o;
-  var SpringSpec = kotlin_org_jetbrains_compose_animation_animation_core.$_$.m;
-  var boundsInWindow = kotlin_org_jetbrains_compose_ui_ui.$_$.d3;
+  var boundsInWindow = kotlin_org_jetbrains_compose_ui_ui.$_$.y3;
   var Rect_1 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.f;
-  var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h1;
-  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.j;
-  var Companion_getInstance_38 = kotlin_org_jetbrains_compose_ui_ui.$_$.u7;
-  var TextToolbarStatus_Hidden_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.i7;
+  var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i1;
+  var Companion_getInstance_45 = kotlin_org_jetbrains_compose_ui_ui.$_$.z8;
+  var TextToolbarStatus_Hidden_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.m8;
   var getSelectedText = kotlin_org_jetbrains_compose_ui_ui_text.$_$.v;
   var getTextBeforeSelection = kotlin_org_jetbrains_compose_ui_ui_text.$_$.x;
   var getTextAfterSelection = kotlin_org_jetbrains_compose_ui_ui_text.$_$.w;
   var _TextRange___get_length__impl__7qes3a = kotlin_org_jetbrains_compose_ui_ui_text.$_$.d2;
-  var TextToolbarStatus_Shown_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.j7;
+  var TextToolbarStatus_Shown_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.n8;
   var TextRange__contains_impl_ws45z2 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.b2;
   var SetSelectionCommand = kotlin_org_jetbrains_compose_ui_ui_text.$_$.r;
   var ResolvedTextDirection_Rtl_getInstance = kotlin_org_jetbrains_compose_ui_ui_text.$_$.m1;
-  var get_isShiftPressed_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.d2;
-  var _KeyEvent___get_nativeKeyEvent__impl__py13j5 = kotlin_org_jetbrains_compose_ui_ui.$_$.r7;
+  var get_isShiftPressed_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.m2;
+  var _KeyEvent___get_nativeKeyEvent__impl__py13j5 = kotlin_org_jetbrains_compose_ui_ui.$_$.w8;
   var SkikoKey_KEY_SPACE_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.s6;
-  var Companion_getInstance_39 = kotlin_org_jetbrains_compose_ui_ui.$_$.v7;
-  var _Key___get_keyCode__impl__ymzu5v = kotlin_org_jetbrains_compose_ui_ui.$_$.q7;
-  var _Key___init__impl__p6mluu = kotlin_org_jetbrains_compose_ui_ui.$_$.p7;
-  var Companion_getInstance_40 = kotlin_kotlin.$_$.o4;
-  var Char__plus_impl_qi7pgj = kotlin_kotlin.$_$.p2;
-  var numberToChar = kotlin_kotlin.$_$.dd;
+  var Companion_getInstance_46 = kotlin_org_jetbrains_compose_ui_ui.$_$.a9;
+  var _Key___get_keyCode__impl__ymzu5v = kotlin_org_jetbrains_compose_ui_ui.$_$.v8;
+  var _Key___init__impl__p6mluu = kotlin_org_jetbrains_compose_ui_ui.$_$.u8;
+  var Companion_getInstance_47 = kotlin_kotlin.$_$.s4;
+  var Char__plus_impl_qi7pgj = kotlin_kotlin.$_$.s2;
+  var numberToChar = kotlin_kotlin.$_$.ld;
   var rememberSplineBasedDecay$composable = kotlin_org_jetbrains_compose_animation_animation.$_$.g;
-  var get_hostOs = kotlin_org_jetbrains_skiko_skiko.$_$.m9;
+  var get_hostOs = kotlin_org_jetbrains_skiko_skiko.$_$.n9;
   var SkikoKeyboardEventKind_DOWN_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.e7;
-  var DummyPointerIcon_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.y7;
-  var numberToLong = kotlin_kotlin.$_$.gd;
-  var Color_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.m;
-  var NotImplementedError = kotlin_kotlin.$_$.sg;
+  var DummyPointerIcon_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.d9;
+  var numberToLong = kotlin_kotlin.$_$.od;
+  var Color_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.p;
+  var NotImplementedError = kotlin_kotlin.$_$.gh;
   var MainScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.g2;
-  var get_LocalSystemTheme = kotlin_org_jetbrains_compose_ui_ui.$_$.t6;
-  var SystemTheme_Dark_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.k7;
-  var LayoutCoordinates = kotlin_org_jetbrains_compose_ui_ui.$_$.l2;
-  var get_utf16CodePoint = kotlin_org_jetbrains_compose_ui_ui.$_$.m1;
-  var get_isMetaPressed = kotlin_org_jetbrains_compose_ui_ui.$_$.g1;
-  var Companion_getInstance_41 = kotlin_org_jetbrains_skiko_skiko.$_$.s7;
+  var get_LocalSystemTheme = kotlin_org_jetbrains_compose_ui_ui.$_$.x7;
+  var SystemTheme_Dark_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.o8;
+  var LayoutCoordinates = kotlin_org_jetbrains_compose_ui_ui.$_$.w2;
+  var get_utf16CodePoint = kotlin_org_jetbrains_compose_ui_ui.$_$.v1;
+  var get_isMetaPressed = kotlin_org_jetbrains_compose_ui_ui.$_$.p1;
+  var Companion_getInstance_48 = kotlin_org_jetbrains_skiko_skiko.$_$.s7;
   //endregion
   //region block: pre-declaration
   setMetadataFor(BackgroundElement, 'BackgroundElement', classMeta, ModifierNodeElement);
@@ -639,6 +733,7 @@
   setMetadataFor($emitEnterCOROUTINE$1, '$emitEnterCOROUTINE$1', classMeta, CoroutineImpl);
   setMetadataFor($emitExitCOROUTINE$2, '$emitExitCOROUTINE$2', classMeta, CoroutineImpl);
   setMetadataFor(HoverableNode, 'HoverableNode', classMeta, Node, [PointerInputModifierNode, Node], VOID, VOID, [0]);
+  setMetadataFor(sam$androidx_compose_ui_layout_MeasurePolicy$0, 'sam$androidx_compose_ui_layout_MeasurePolicy$0', classMeta, VOID, [MeasurePolicy]);
   setMetadataFor(Indication, 'Indication', interfaceMeta);
   setMetadataFor(IndicationInstance, 'IndicationInstance', interfaceMeta);
   setMetadataFor(DefaultDebugIndicationInstance, 'DefaultDebugIndicationInstance', classMeta, VOID, [IndicationInstance]);
@@ -719,17 +814,18 @@
   setMetadataFor(AnimatedMouseWheelScrollNode, 'AnimatedMouseWheelScrollNode', classMeta, MouseWheelScrollNode, VOID, VOID, VOID, [4]);
   setMetadataFor(RawMouseWheelScrollNode, 'RawMouseWheelScrollNode', classMeta, MouseWheelScrollNode);
   setMetadataFor(Orientation, 'Orientation', classMeta, Enum);
-  setMetadataFor(ModifierLocalScrollableContainerProvider, 'ModifierLocalScrollableContainerProvider', objectMeta, VOID, [ModifierLocalProvider]);
-  setMetadataFor(ScrollableDefaults, 'ScrollableDefaults', objectMeta);
+  setMetadataFor(animateScrollBy$slambda, 'animateScrollBy$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor($animateScrollByCOROUTINE$0, '$animateScrollByCOROUTINE$0', classMeta, CoroutineImpl);
   setMetadataFor(ScrollingLogic$onDragStopped$slambda$slambda, 'ScrollingLogic$onDragStopped$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor(ScrollingLogic$onDragStopped$slambda, 'ScrollingLogic$onDragStopped$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor(ScrollScope, 'ScrollScope', interfaceMeta);
   setMetadataFor(ScrollingLogic$doFlingAnimation$scope$1, VOID, classMeta, VOID, [ScrollScope]);
-  setMetadataFor($onDragStoppedCOROUTINE$20, '$onDragStoppedCOROUTINE$20', classMeta, CoroutineImpl);
-  setMetadataFor($doFlingAnimationCOROUTINE$21, '$doFlingAnimationCOROUTINE$21', classMeta, CoroutineImpl);
+  setMetadataFor($onDragStoppedCOROUTINE$1, '$onDragStoppedCOROUTINE$1', classMeta, CoroutineImpl);
+  setMetadataFor($doFlingAnimationCOROUTINE$2, '$doFlingAnimationCOROUTINE$2', classMeta, CoroutineImpl);
   setMetadataFor(ScrollingLogic, 'ScrollingLogic', classMeta, VOID, VOID, VOID, VOID, [1]);
-  setMetadataFor(ScrollDraggableState$drag$slambda, 'ScrollDraggableState$drag$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(ScrollDraggableState, 'ScrollDraggableState', classMeta, VOID, [DraggableState, DragScope], VOID, VOID, [2]);
+  setMetadataFor(ScrollableDefaults, 'ScrollableDefaults', objectMeta);
+  setMetadataFor(DefaultFlingBehavior$performFling$slambda, 'DefaultFlingBehavior$performFling$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(DefaultFlingBehavior, 'DefaultFlingBehavior', classMeta, VOID, [FlingBehavior], VOID, VOID, [1]);
   function get_isSmoothScrollingEnabled() {
     return false;
   }
@@ -737,15 +833,16 @@
     return false;
   }
   setMetadataFor(ScrollConfig, 'ScrollConfig', interfaceMeta);
-  setMetadataFor(DefaultFlingBehavior$performFling$slambda, 'DefaultFlingBehavior$performFling$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(DefaultFlingBehavior, 'DefaultFlingBehavior', classMeta, VOID, [FlingBehavior], VOID, VOID, [1]);
+  setMetadataFor(ModifierLocalScrollableContainerProvider, 'ModifierLocalScrollableContainerProvider', objectMeta, VOID, [ModifierLocalProvider]);
+  setMetadataFor(ScrollDraggableState$drag$slambda, 'ScrollDraggableState$drag$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(ScrollDraggableState, 'ScrollDraggableState', classMeta, VOID, [DraggableState, DragScope], VOID, VOID, [2]);
   setMetadataFor(NoOpOnDragStarted$slambda, 'NoOpOnDragStarted$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [2]);
   setMetadataFor(NoOpScrollScope$1, VOID, classMeta, VOID, [ScrollScope]);
   setMetadataFor(DefaultScrollMotionDurationScale$1, VOID, classMeta, VOID, [MotionDurationScale]);
   setMetadataFor(pointerScrollable$composable$slambda$slambda, 'pointerScrollable$composable$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor(pointerScrollable$composable$slambda, 'pointerScrollable$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [2]);
   setMetadataFor(scrollableNestedScrollConnection$o$onPostFling$slambda, 'scrollableNestedScrollConnection$o$onPostFling$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor($onPostFlingCOROUTINE$22, '$onPostFlingCOROUTINE$22', classMeta, CoroutineImpl);
+  setMetadataFor($onPostFlingCOROUTINE$3, '$onPostFlingCOROUTINE$3', classMeta, CoroutineImpl);
   setMetadataFor(scrollableNestedScrollConnection$1, VOID, classMeta, VOID, [NestedScrollConnection], VOID, VOID, [2, 1]);
   function scroll$default(scrollPriority, block, $completion, $super) {
     scrollPriority = scrollPriority === VOID ? MutatePriority_Default_getInstance() : scrollPriority;
@@ -757,11 +854,11 @@
   function get_canScrollBackward() {
     return true;
   }
-  setMetadataFor(ScrollableState, 'ScrollableState', interfaceMeta, VOID, VOID, VOID, VOID, [2]);
+  setMetadataFor(ScrollableState_0, 'ScrollableState', interfaceMeta, VOID, VOID, VOID, VOID, [2]);
   setMetadataFor(DefaultScrollableState$scroll$slambda$slambda, 'DefaultScrollableState$scroll$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor(DefaultScrollableState$scrollScope$1, VOID, classMeta, VOID, [ScrollScope]);
   setMetadataFor(DefaultScrollableState$scroll$slambda, 'DefaultScrollableState$scroll$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(DefaultScrollableState, 'DefaultScrollableState', classMeta, VOID, [ScrollableState], VOID, VOID, [2]);
+  setMetadataFor(DefaultScrollableState, 'DefaultScrollableState', classMeta, VOID, [ScrollableState_0], VOID, VOID, [2]);
   setMetadataFor(PressGestureScope, 'PressGestureScope', interfaceMeta, VOID, [Density], VOID, VOID, [0]);
   setMetadataFor($resetCOROUTINE$23, '$resetCOROUTINE$23', classMeta, CoroutineImpl);
   setMetadataFor($awaitReleaseCOROUTINE$24, '$awaitReleaseCOROUTINE$24', classMeta, CoroutineImpl);
@@ -808,6 +905,303 @@
   setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0_2, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, [1]);
   setMetadataFor(collectIsPressedAsState$composable$slambda$slambda, 'collectIsPressedAsState$composable$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor(collectIsPressedAsState$composable$slambda, 'collectIsPressedAsState$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  function item(key, contentType, content) {
+    illegalDecoyCallException('item');
+  }
+  function item_0(key, content) {
+    illegalDecoyCallException('item');
+  }
+  function items(count, key, contentType, itemContent) {
+    illegalDecoyCallException('items');
+  }
+  function items_0(count, key, itemContent) {
+    illegalDecoyCallException('items');
+  }
+  function item$composable(key, contentType, content) {
+    // Inline function 'kotlin.error' call
+    throw IllegalStateException_init_$Create$('The method is not implemented');
+  }
+  function item$composable$default(key, contentType, content, $super) {
+    key = key === VOID ? null : key;
+    contentType = contentType === VOID ? null : contentType;
+    var tmp;
+    if ($super === VOID) {
+      this.item$composable_kcz00x_k$(key, contentType, content);
+      tmp = Unit_getInstance();
+    } else {
+      item$composable(key, contentType, content);
+      tmp = Unit_getInstance();
+    }
+    return tmp;
+  }
+  function item$composable_0(key, content) {
+    this.item$composable_kcz00x_k$(key, null, content);
+  }
+  function item$composable$default_0(key, content, $super) {
+    key = key === VOID ? null : key;
+    var tmp;
+    if ($super === VOID) {
+      this.item$composable_24plcw_k$(key, content);
+      tmp = Unit_getInstance();
+    } else {
+      item$composable_0(key, content);
+      tmp = Unit_getInstance();
+    }
+    return tmp;
+  }
+  function items$composable(count, key, contentType, itemContent) {
+    // Inline function 'kotlin.error' call
+    throw IllegalStateException_init_$Create$('The method is not implemented');
+  }
+  function items$composable$default(count, key, contentType, itemContent, $super) {
+    key = key === VOID ? null : key;
+    var tmp;
+    if (contentType === VOID) {
+      tmp = LazyListScope$items$composable$lambda;
+    } else {
+      tmp = contentType;
+    }
+    contentType = tmp;
+    var tmp_0;
+    if ($super === VOID) {
+      this.items$composable_x0xxle_k$(count, key, contentType, itemContent);
+      tmp_0 = Unit_getInstance();
+    } else {
+      items$composable(count, key, contentType, itemContent);
+      tmp_0 = Unit_getInstance();
+    }
+    return tmp_0;
+  }
+  function items$composable_0(count, key, itemContent) {
+    this.items$composable_x0xxle_k$(count, key, LazyListScope$items$composable$lambda_0, itemContent);
+  }
+  function items$composable$default_0(count, key, itemContent, $super) {
+    key = key === VOID ? null : key;
+    var tmp;
+    if ($super === VOID) {
+      this.items$composable_w046d1_k$(count, key, itemContent);
+      tmp = Unit_getInstance();
+    } else {
+      items$composable_0(count, key, itemContent);
+      tmp = Unit_getInstance();
+    }
+    return tmp;
+  }
+  function stickyHeader$composable$default(key, contentType, content, $super) {
+    key = key === VOID ? null : key;
+    contentType = contentType === VOID ? null : contentType;
+    var tmp;
+    if ($super === VOID) {
+      this.stickyHeader$composable_a1gyde_k$(key, contentType, content);
+      tmp = Unit_getInstance();
+    } else {
+      tmp = $super.stickyHeader$composable_a1gyde_k$.call(this, key, contentType, content);
+    }
+    return tmp;
+  }
+  setMetadataFor(LazyListScope, 'LazyListScope', interfaceMeta);
+  function fillParentMaxSize$default(_this__u8e3s4, fraction, $super) {
+    fraction = fraction === VOID ? 1.0 : fraction;
+    return $super === VOID ? this.fillParentMaxSize_9aygor_k$(_this__u8e3s4, fraction) : $super.fillParentMaxSize_9aygor_k$.call(this, _this__u8e3s4, fraction);
+  }
+  function fillParentMaxWidth$default(_this__u8e3s4, fraction, $super) {
+    fraction = fraction === VOID ? 1.0 : fraction;
+    return $super === VOID ? this.fillParentMaxWidth_mix4ck_k$(_this__u8e3s4, fraction) : $super.fillParentMaxWidth_mix4ck_k$.call(this, _this__u8e3s4, fraction);
+  }
+  function fillParentMaxHeight$default(_this__u8e3s4, fraction, $super) {
+    fraction = fraction === VOID ? 1.0 : fraction;
+    return $super === VOID ? this.fillParentMaxHeight_swwm0b_k$(_this__u8e3s4, fraction) : $super.fillParentMaxHeight_swwm0b_k$.call(this, _this__u8e3s4, fraction);
+  }
+  function animateItemPlacement$default(_this__u8e3s4, animationSpec, $super) {
+    animationSpec = animationSpec === VOID ? spring(VOID, Spring_getInstance().get_StiffnessMediumLow_62ltjd_k$(), new IntOffset(get_VisibilityThreshold(Companion_getInstance_21()))) : animationSpec;
+    return $super === VOID ? this.animateItemPlacement_de652m_k$(_this__u8e3s4, animationSpec) : $super.animateItemPlacement_de652m_k$.call(this, _this__u8e3s4, animationSpec);
+  }
+  setMetadataFor(LazyItemScope, 'LazyItemScope', interfaceMeta);
+  setMetadataFor(LazyItemScopeImpl, 'LazyItemScopeImpl', classMeta, VOID, [LazyItemScope]);
+  setMetadataFor(ParentSizeElement, 'ParentSizeElement', classMeta, ModifierNodeElement);
+  setMetadataFor(AnimateItemPlacementElement, 'AnimateItemPlacementElement', classMeta, ModifierNodeElement);
+  setMetadataFor(ParentSizeNode, 'ParentSizeNode', classMeta, Node, [LayoutModifierNode, Node]);
+  setMetadataFor(AnimateItemPlacementNode, 'AnimateItemPlacementNode', classMeta, DelegatingNode, [DelegatingNode, ParentDataModifierNode]);
+  setMetadataFor($animateScrollByCOROUTINE$4, '$animateScrollByCOROUTINE$4', classMeta, CoroutineImpl);
+  setMetadataFor(LazyLayoutSemanticState_0, 'LazyLayoutSemanticState', interfaceMeta, VOID, VOID, VOID, VOID, [1]);
+  setMetadataFor(LazyLayoutSemanticState$1, VOID, classMeta, VOID, [LazyLayoutSemanticState_0], VOID, VOID, [1]);
+  setMetadataFor(LazyListMeasuredItemProvider, 'LazyListMeasuredItemProvider', classMeta);
+  setMetadataFor(rememberLazyListMeasurePolicy$composable$1$1$measuredItemProvider$1, VOID, classMeta, LazyListMeasuredItemProvider);
+  setMetadataFor(LazyAnimateScrollScope, 'LazyAnimateScrollScope', interfaceMeta, VOID, VOID, VOID, VOID, [1]);
+  setMetadataFor(LazyListAnimateScrollScope, 'LazyListAnimateScrollScope', classMeta, VOID, [LazyAnimateScrollScope], VOID, VOID, [1]);
+  setMetadataFor(LazyLayoutBeyondBoundsState, 'LazyLayoutBeyondBoundsState', interfaceMeta);
+  setMetadataFor(LazyListBeyondBoundsState, 'LazyListBeyondBoundsState', classMeta, VOID, [LazyLayoutBeyondBoundsState]);
+  function get_key_1() {
+    return null;
+  }
+  function get_type_0() {
+    return LazyLayoutIntervalContent$Interval$_get_type_$lambda_1wu10p;
+  }
+  setMetadataFor(Interval_1, 'Interval', interfaceMeta);
+  setMetadataFor(LazyListInterval, 'LazyListInterval', classMeta, VOID, [Interval_1]);
+  setMetadataFor(LazyLayoutIntervalContent, 'LazyLayoutIntervalContent', classMeta);
+  setMetadataFor(LazyListIntervalContent, 'LazyListIntervalContent', classMeta, LazyLayoutIntervalContent, [LazyLayoutIntervalContent, LazyListScope]);
+  function get_contentType() {
+    return null;
+  }
+  setMetadataFor(LazyListItemInfo, 'LazyListItemInfo', interfaceMeta);
+  setMetadataFor(sam$kotlin_Comparator$0, 'sam$kotlin_Comparator$0', classMeta, VOID, [Comparator]);
+  setMetadataFor(LazyListItemPlacementAnimator, 'LazyListItemPlacementAnimator', classMeta);
+  function getContentType(index) {
+    return null;
+  }
+  function getKey(index) {
+    return getDefaultLazyLayoutKey(index);
+  }
+  function getIndex(key) {
+    return -1;
+  }
+  setMetadataFor(LazyLayoutItemProvider, 'LazyLayoutItemProvider', interfaceMeta);
+  setMetadataFor(LazyListItemProvider, 'LazyListItemProvider', interfaceMeta, VOID, [LazyLayoutItemProvider]);
+  setMetadataFor(LazyListItemProviderImpl, 'LazyListItemProviderImpl', classMeta, VOID, [LazyListItemProvider]);
+  function get_viewportSize() {
+    return Companion_getInstance_17().get_Zero_4ip44w_k$();
+  }
+  function get_orientation() {
+    return Orientation_Vertical_getInstance();
+  }
+  function get_reverseLayout() {
+    return false;
+  }
+  function get_beforeContentPadding() {
+    return 0;
+  }
+  function get_afterContentPadding() {
+    return 0;
+  }
+  function get_mainAxisItemSpacing() {
+    return 0;
+  }
+  setMetadataFor(LazyListLayoutInfo, 'LazyListLayoutInfo', interfaceMeta);
+  setMetadataFor(LazyListMeasureResult, 'LazyListMeasureResult', classMeta, VOID, [LazyListLayoutInfo, MeasureResult]);
+  setMetadataFor(LazyListMeasuredItem, 'LazyListMeasuredItem', classMeta, VOID, [LazyListItemInfo]);
+  setMetadataFor(LazyListScrollPosition, 'LazyListScrollPosition', classMeta);
+  setMetadataFor(Companion_2, 'Companion', objectMeta);
+  setMetadataFor(LazyListState$remeasurementModifier$1, VOID, classMeta, VOID, [RemeasurementModifier]);
+  setMetadataFor(LazyListState$scrollToItem$slambda, 'LazyListState$scrollToItem$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor($scrollCOROUTINE$5, '$scrollCOROUTINE$5', classMeta, CoroutineImpl);
+  setMetadataFor(LazyListState, 'LazyListState', classMeta, VOID, [ScrollableState_0], VOID, VOID, [2]);
+  setMetadataFor(EmptyLazyListLayoutInfo, 'EmptyLazyListLayoutInfo', objectMeta, VOID, [LazyListLayoutInfo]);
+  setMetadataFor(LazyScopeMarker, 'LazyScopeMarker', classMeta, VOID, [Annotation]);
+  setMetadataFor($waitForFirstLayoutCOROUTINE$6, '$waitForFirstLayoutCOROUTINE$6', classMeta, CoroutineImpl);
+  setMetadataFor(AwaitFirstLayoutModifier, 'AwaitFirstLayoutModifier', classMeta, VOID, [OnGloballyPositionedModifier], VOID, VOID, [0]);
+  setMetadataFor(Interval, 'Interval', classMeta);
+  function forEach$default(fromIndex, toIndex, block, $super) {
+    fromIndex = fromIndex === VOID ? 0 : fromIndex;
+    toIndex = toIndex === VOID ? this.get_size_woubt6_k$() - 1 | 0 : toIndex;
+    var tmp;
+    if ($super === VOID) {
+      this.forEach_3zjzeu_k$(fromIndex, toIndex, block);
+      tmp = Unit_getInstance();
+    } else {
+      tmp = $super.forEach_3zjzeu_k$.call(this, fromIndex, toIndex, block);
+    }
+    return tmp;
+  }
+  setMetadataFor(IntervalList, 'IntervalList', interfaceMeta);
+  setMetadataFor(MutableIntervalList, 'MutableIntervalList', classMeta, VOID, [IntervalList]);
+  setMetadataFor(ItemFoundInScroll, 'ItemFoundInScroll', classMeta, CancellationException);
+  setMetadataFor(animateScrollToItem$slambda, 'animateScrollToItem$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(LazyLayoutItemReusePolicy, 'LazyLayoutItemReusePolicy', classMeta, VOID, [SubcomposeSlotReusePolicy]);
+  setMetadataFor(Companion_3, 'Companion', objectMeta);
+  setMetadataFor(LazyLayoutAnimateItemModifierNode$cancelAnimation$slambda, 'LazyLayoutAnimateItemModifierNode$cancelAnimation$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda, 'LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(LazyLayoutAnimateItemModifierNode, 'LazyLayoutAnimateItemModifierNode', classMeta, Node);
+  setMetadataFor(Interval_0, 'Interval', classMeta);
+  setMetadataFor(LazyLayoutBeyondBoundsInfo, 'LazyLayoutBeyondBoundsInfo', classMeta);
+  setMetadataFor(LazyLayoutBeyondBoundsModifierLocal$Companion$emptyBeyondBoundsScope$1, VOID, classMeta, VOID, [BeyondBoundsScope]);
+  setMetadataFor(Companion_4, 'Companion', objectMeta);
+  setMetadataFor(LazyLayoutBeyondBoundsModifierLocal$layout$2, VOID, classMeta, VOID, [BeyondBoundsScope]);
+  setMetadataFor(LazyLayoutBeyondBoundsModifierLocal, 'LazyLayoutBeyondBoundsModifierLocal', classMeta, VOID, [ModifierLocalProvider, BeyondBoundsLayout]);
+  setMetadataFor(_no_name_provided__qut3iv_0, VOID, classMeta, VOID, [DisposableEffectResult]);
+  setMetadataFor(CachedItemContent, 'CachedItemContent', classMeta);
+  setMetadataFor(LazyLayoutItemContentFactory, 'LazyLayoutItemContentFactory', classMeta);
+  setMetadataFor(StableValue, 'StableValue', classMeta);
+  setMetadataFor(LazyLayoutKeyIndexMap, 'LazyLayoutKeyIndexMap', interfaceMeta);
+  setMetadataFor(NearestRangeKeyIndexMap, 'NearestRangeKeyIndexMap', classMeta, VOID, [LazyLayoutKeyIndexMap]);
+  setMetadataFor(Empty, 'Empty', objectMeta, VOID, [LazyLayoutKeyIndexMap]);
+  function toDp_2(_this__u8e3s4) {
+    // Inline function 'kotlin.check' call
+    var tmp0_check = equals(_TextUnit___get_type__impl__uc2olt(_this__u8e3s4), Companion_getInstance_25().get_Sp_1up9b4_k$());
+    // Inline function 'kotlin.contracts.contract' call
+    if (!tmp0_check) {
+      var tmp$ret$0;
+      // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutMeasureScope.toDp.<anonymous>' call
+      tmp$ret$0 = 'Only Sp can convert to Px';
+      var message = tmp$ret$0;
+      throw IllegalStateException_init_$Create$(toString(message));
+    }
+    return _Dp___init__impl__ms3zkb(_TextUnit___get_value__impl__hpbx0k(_this__u8e3s4) * this.get_fontScale_h56n3i_k$());
+  }
+  function toDp_3(_this__u8e3s4) {
+    var tmp$ret$0;
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var tmp0_get_dp_bnsrxl = _this__u8e3s4 / this.get_density_qy0267_k$();
+    tmp$ret$0 = _Dp___init__impl__ms3zkb(tmp0_get_dp_bnsrxl);
+    return tmp$ret$0;
+  }
+  function toDp_4(_this__u8e3s4) {
+    var tmp$ret$0;
+    // Inline function 'androidx.compose.ui.unit.dp' call
+    var tmp0_get_dp_bnsrxl = _this__u8e3s4 / this.get_density_qy0267_k$();
+    tmp$ret$0 = _Dp___init__impl__ms3zkb(tmp0_get_dp_bnsrxl);
+    return tmp$ret$0;
+  }
+  function toSp_2(_this__u8e3s4) {
+    return get_sp(_this__u8e3s4 / (this.get_fontScale_h56n3i_k$() * this.get_density_qy0267_k$()));
+  }
+  function toSp_3(_this__u8e3s4) {
+    return get_sp(_this__u8e3s4 / (this.get_fontScale_h56n3i_k$() * this.get_density_qy0267_k$()));
+  }
+  function toSp_4(_this__u8e3s4) {
+    return get_sp(_Dp___get_value__impl__geb1vb(_this__u8e3s4) / this.get_fontScale_h56n3i_k$());
+  }
+  function toSize_1(_this__u8e3s4) {
+    var tmp;
+    var tmp$ret$0;
+    // Inline function 'androidx.compose.ui.unit.isSpecified' call
+    tmp$ret$0 = !_DpSize___get_packedValue__impl__jx4au8(_this__u8e3s4).equals(_DpSize___get_packedValue__impl__jx4au8(Companion_getInstance_26().get_Unspecified_3pf4om_k$()));
+    if (tmp$ret$0) {
+      tmp = Size_0(this.toPx_u0ojv5_k$(_DpSize___get_width__impl__o3d5gt(_this__u8e3s4)), this.toPx_u0ojv5_k$(_DpSize___get_height__impl__5xueo2(_this__u8e3s4)));
+    } else {
+      tmp = Companion_getInstance_27().get_Unspecified_o59ai8_k$();
+    }
+    return tmp;
+  }
+  function toDpSize_0(_this__u8e3s4) {
+    var tmp;
+    var tmp$ret$0;
+    // Inline function 'androidx.compose.ui.geometry.isSpecified' call
+    tmp$ret$0 = !_Size___get_packedValue__impl__7rlt1o(_this__u8e3s4).equals(_Size___get_packedValue__impl__7rlt1o(Companion_getInstance_27().get_Unspecified_o59ai8_k$()));
+    if (tmp$ret$0) {
+      tmp = DpSize(this.toDp_2y47ho_k$(_Size___get_width__impl__58y75t(_this__u8e3s4)), this.toDp_2y47ho_k$(_Size___get_height__impl__a04p02(_this__u8e3s4)));
+    } else {
+      tmp = Companion_getInstance_26().get_Unspecified_3pf4om_k$();
+    }
+    return tmp;
+  }
+  setMetadataFor(LazyLayoutMeasureScope, 'LazyLayoutMeasureScope', interfaceMeta, VOID, [MeasureScope]);
+  setMetadataFor(LazyLayoutMeasureScopeImpl, 'LazyLayoutMeasureScopeImpl', classMeta, VOID, [LazyLayoutMeasureScope, MeasureScope]);
+  setMetadataFor(Companion_5, 'Companion', objectMeta);
+  setMetadataFor(LazyLayoutNearestRangeState, 'LazyLayoutNearestRangeState', classMeta, VOID, [State]);
+  setMetadataFor(PinnedItem, 'PinnedItem', interfaceMeta);
+  setMetadataFor(LazyLayoutPinnedItemList, 'LazyLayoutPinnedItemList', classMeta, VOID, [List]);
+  setMetadataFor(LazyLayoutPinnableItem, 'LazyLayoutPinnableItem', classMeta, VOID, [PinnableContainer, PinnedHandle, PinnedItem]);
+  setMetadataFor(_no_name_provided__qut3iv_1, VOID, classMeta, VOID, [DisposableEffectResult]);
+  setMetadataFor(PrefetchHandle, 'PrefetchHandle', interfaceMeta);
+  setMetadataFor(Prefetcher, 'Prefetcher', interfaceMeta);
+  setMetadataFor(LazyLayoutPrefetchState, 'LazyLayoutPrefetchState', classMeta);
+  setMetadataFor(DummyHandle, 'DummyHandle', objectMeta, VOID, [PrefetchHandle]);
+  setMetadataFor(lazyLayoutSemantics$composable$lambda$slambda, 'lazyLayoutSemantics$composable$lambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(lazyLayoutSemantics$composable$lambda$slambda_1, 'lazyLayoutSemantics$composable$lambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(Companion_6, 'Companion', objectMeta);
+  setMetadataFor(_no_name_provided__qut3iv_2, VOID, classMeta, VOID, [DisposableEffectResult]);
+  setMetadataFor(LazySaveableStateHolder, 'LazySaveableStateHolder', classMeta, VOID, [SaveableStateRegistry_0, SaveableStateHolder]);
   setMetadataFor(PageInfo, 'PageInfo', interfaceMeta);
   setMetadataFor(ConsumeAllFlingOnDirection, 'ConsumeAllFlingOnDirection', classMeta, VOID, [NestedScrollConnection], VOID, VOID, [2, 1]);
   setMetadataFor(PagerLayoutInfo, 'PagerLayoutInfo', interfaceMeta);
@@ -847,8 +1241,8 @@
   setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0_3, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, [1]);
   setMetadataFor(CoreTextField$composable$slambda$slambda, 'CoreTextField$composable$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor(CoreTextField$composable$slambda, 'CoreTextField$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(_no_name_provided__qut3iv_0, VOID, classMeta, VOID, [DisposableEffectResult]);
-  setMetadataFor(_no_name_provided__qut3iv_1, VOID, classMeta, VOID, [DisposableEffectResult]);
+  setMetadataFor(_no_name_provided__qut3iv_3, VOID, classMeta, VOID, [DisposableEffectResult]);
+  setMetadataFor(_no_name_provided__qut3iv_4, VOID, classMeta, VOID, [DisposableEffectResult]);
   setMetadataFor(CoreTextField$composable$5$1$1$1$1$1$2, VOID, classMeta, VOID, [MeasurePolicy]);
   setMetadataFor(TextFieldCursorHandle$composable$slambda, 'TextFieldCursorHandle$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor(InternalFoundationTextApi, 'InternalFoundationTextApi', classMeta, VOID, [Annotation]);
@@ -858,9 +1252,9 @@
   setMetadataFor(commonKeyMapping$1, VOID, classMeta, VOID, [KeyMapping]);
   setMetadataFor(KeyboardActionScope, 'KeyboardActionScope', interfaceMeta);
   setMetadataFor(KeyboardActionRunner, 'KeyboardActionRunner', classMeta, VOID, [KeyboardActionScope]);
-  setMetadataFor(Companion_2, 'Companion', objectMeta);
+  setMetadataFor(Companion_7, 'Companion', objectMeta);
   setMetadataFor(KeyboardActions, 'KeyboardActions', classMeta);
-  setMetadataFor(Companion_3, 'Companion', objectMeta);
+  setMetadataFor(Companion_8, 'Companion', objectMeta);
   setMetadataFor(KeyboardOptions, 'KeyboardOptions', classMeta);
   setMetadataFor(TextDragObserver, 'TextDragObserver', interfaceMeta);
   setMetadataFor(detectDownAndDragGesturesWithObserver$slambda$slambda, 'detectDownAndDragGesturesWithObserver$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
@@ -868,41 +1262,41 @@
   setMetadataFor(detectDownAndDragGesturesWithObserver$slambda, 'detectDownAndDragGesturesWithObserver$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor(detectPreDragGesturesWithObserver$slambda, 'detectPreDragGesturesWithObserver$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor($detectDownAndDragGesturesWithObserverCOROUTINE$31, '$detectDownAndDragGesturesWithObserverCOROUTINE$31', classMeta, CoroutineImpl);
-  setMetadataFor(Companion_4, 'Companion', objectMeta);
+  setMetadataFor(Companion_9, 'Companion', objectMeta);
   setMetadataFor(TextDelegate, 'TextDelegate', classMeta);
   setMetadataFor(FixedMotionDurationScale, 'FixedMotionDurationScale', objectMeta, VOID, [MotionDurationScale]);
   setMetadataFor(cursor$lambda$slambda$slambda, 'cursor$lambda$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor(cursor$lambda$slambda, 'cursor$lambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(Companion_5, 'Companion', objectMeta);
+  setMetadataFor(Companion_10, 'Companion', objectMeta);
   setMetadataFor(TextFieldDelegate, 'TextFieldDelegate', classMeta);
   setMetadataFor(longPressDragGestureFilter$slambda, 'longPressDragGestureFilter$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor(mouseDragGestureDetector$lambda$slambda, 'mouseDragGestureDetector$lambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor(TextFieldKeyInput, 'TextFieldKeyInput', classMeta);
-  setMetadataFor(_no_name_provided__qut3iv_2, VOID, classMeta, VOID, [DisposableEffectResult]);
+  setMetadataFor(_no_name_provided__qut3iv_5, VOID, classMeta, VOID, [DisposableEffectResult]);
   setMetadataFor(tapPressTextFieldModifier$lambda$slambda$slambda$slambda, 'tapPressTextFieldModifier$lambda$slambda$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor(tapPressTextFieldModifier$lambda$slambda$slambda$slambda_1, 'tapPressTextFieldModifier$lambda$slambda$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
   setMetadataFor(tapPressTextFieldModifier$lambda$slambda$slambda, 'tapPressTextFieldModifier$lambda$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [2]);
   setMetadataFor(tapPressTextFieldModifier$lambda$slambda, 'tapPressTextFieldModifier$lambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(Companion_6, 'Companion', objectMeta);
+  setMetadataFor(Companion_11, 'Companion', objectMeta);
   setMetadataFor(TextFieldScrollerPosition, 'TextFieldScrollerPosition', classMeta);
   setMetadataFor(VerticalScrollLayoutModifier, 'VerticalScrollLayoutModifier', classMeta, VOID, [LayoutModifier]);
   setMetadataFor(HorizontalScrollLayoutModifier, 'HorizontalScrollLayoutModifier', classMeta, VOID, [LayoutModifier]);
-  setMetadataFor(createScrollableState$1, VOID, classMeta, VOID, [ScrollableState], VOID, VOID, [2]);
+  setMetadataFor(createScrollableState$1, VOID, classMeta, VOID, [ScrollableState_0], VOID, VOID, [2]);
   setMetadataFor(TextFieldSize, 'TextFieldSize', classMeta);
   setMetadataFor(TextLayoutResultProxy, 'TextLayoutResultProxy', classMeta);
   setMetadataFor(Entry, 'Entry', classMeta);
   setMetadataFor(UndoManager, 'UndoManager', classMeta);
   setMetadataFor(ValidatingOffsetMapping, 'ValidatingOffsetMapping', classMeta, VOID, [OffsetMapping]);
-  setMetadataFor(Companion_7, 'Companion', objectMeta);
+  setMetadataFor(Companion_12, 'Companion', objectMeta);
   setMetadataFor(InlineDensity, 'InlineDensity', classMeta);
-  setMetadataFor(Companion_8, 'Companion', objectMeta);
+  setMetadataFor(Companion_13, 'Companion', objectMeta);
   setMetadataFor(MinLinesConstrainer, 'MinLinesConstrainer', classMeta);
   setMetadataFor(MultiParagraphLayoutCache, 'MultiParagraphLayoutCache', classMeta);
   setMetadataFor(ParagraphLayoutCache, 'ParagraphLayoutCache', classMeta);
   setMetadataFor(SelectableTextAnnotatedStringElement, 'SelectableTextAnnotatedStringElement', classMeta, ModifierNodeElement);
   setMetadataFor(SelectableTextAnnotatedStringNode, 'SelectableTextAnnotatedStringNode', classMeta, DelegatingNode, [DelegatingNode, LayoutModifierNode, DrawModifierNode, GlobalPositionAwareModifierNode]);
   setMetadataFor(SelectionController, 'SelectionController', classMeta, VOID, [RememberObserver]);
-  setMetadataFor(Companion_9, 'Companion', objectMeta);
+  setMetadataFor(Companion_14, 'Companion', objectMeta);
   setMetadataFor(StaticTextSelectionParams, 'StaticTextSelectionParams', classMeta);
   setMetadataFor(makeSelectionModifier$longPressDragObserver$1, VOID, classMeta, VOID, [TextDragObserver]);
   setMetadataFor(makeSelectionModifier$slambda, 'makeSelectionModifier$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
@@ -941,14 +1335,14 @@
   setMetadataFor(SelectionAdjustment$Companion$Word$1, VOID, classMeta, VOID, [SelectionAdjustment]);
   setMetadataFor(SelectionAdjustment$Companion$Paragraph$1, VOID, classMeta, VOID, [SelectionAdjustment]);
   setMetadataFor(SelectionAdjustment$Companion$CharacterWithWordAccelerate$1, VOID, classMeta, VOID, [SelectionAdjustment]);
-  setMetadataFor(Companion_10, 'Companion', objectMeta);
+  setMetadataFor(Companion_15, 'Companion', objectMeta);
   setMetadataFor(SelectionHandleInfo, 'SelectionHandleInfo', classMeta);
   setMetadataFor(SelectionMode, 'SelectionMode', classMeta, Enum);
   setMetadataFor(SelectionMode$Vertical, 'Vertical', classMeta, SelectionMode);
   setMetadataFor(SelectionMode$Horizontal, 'Horizontal', classMeta, SelectionMode);
-  setMetadataFor(Companion_11, 'Companion', objectMeta);
+  setMetadataFor(Companion_16, 'Companion', objectMeta);
   setMetadataFor(SelectionRegistrar, 'SelectionRegistrar', interfaceMeta);
-  setMetadataFor(sam$androidx_compose_ui_layout_MeasurePolicy$0, 'sam$androidx_compose_ui_layout_MeasurePolicy$0', classMeta, VOID, [MeasurePolicy]);
+  setMetadataFor(sam$androidx_compose_ui_layout_MeasurePolicy$0_0, 'sam$androidx_compose_ui_layout_MeasurePolicy$0', classMeta, VOID, [MeasurePolicy]);
   setMetadataFor(TextFieldSelectionManager$touchSelectionObserver$1, VOID, classMeta, VOID, [TextDragObserver]);
   setMetadataFor(TextFieldSelectionManager$mouseSelectionObserver$1, VOID, classMeta, VOID, [MouseSelectionObserver]);
   setMetadataFor(TextFieldSelectionManager$handleDragObserver$1, VOID, classMeta, VOID, [TextDragObserver]);
@@ -958,7 +1352,7 @@
   setMetadataFor(TextPreparedSelectionState, 'TextPreparedSelectionState', classMeta);
   setMetadataFor(BaseTextPreparedSelection, 'BaseTextPreparedSelection', classMeta);
   setMetadataFor(TextFieldPreparedSelection, 'TextFieldPreparedSelection', classMeta, BaseTextPreparedSelection);
-  setMetadataFor(Companion_12, 'Companion', objectMeta);
+  setMetadataFor(Companion_17, 'Companion', objectMeta);
   setMetadataFor(TextSelectionColors, 'TextSelectionColors', classMeta);
   setMetadataFor(ClicksCounter, 'ClicksCounter', classMeta);
   setMetadataFor(mouseSelectionDetector$slambda, 'mouseSelectionDetector$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
@@ -968,6 +1362,7 @@
   setMetadataFor($applyToFlingCOROUTINE$33, '$applyToFlingCOROUTINE$33', classMeta, CoroutineImpl);
   setMetadataFor(JSOverscrollEffect, 'JSOverscrollEffect', classMeta, VOID, [OverscrollEffect], VOID, VOID, [2]);
   setMetadataFor(JsConfig, 'JsConfig', objectMeta, VOID, [ScrollConfig]);
+  setMetadataFor(DefaultLazyKey, 'DefaultLazyKey', classMeta);
   setMetadataFor(ScrollbarStyle, 'ScrollbarStyle', classMeta);
   setMetadataFor(sam$androidx_compose_foundation_relocation_BringIntoViewParent$0, 'sam$androidx_compose_foundation_relocation_BringIntoViewParent$0', classMeta, VOID, [BringIntoViewParent], VOID, VOID, [2]);
   setMetadataFor(defaultBringIntoViewParent$slambda, 'defaultBringIntoViewParent$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [2]);
@@ -1218,7 +1613,7 @@
     return new sam$androidx_compose_foundation_MarqueeSpacing$0(tmp);
   };
   var Companion_instance;
-  function Companion_getInstance_42() {
+  function Companion_getInstance_49() {
     if (Companion_instance == null)
       new Companion();
     return Companion_instance;
@@ -1231,7 +1626,7 @@
       properties_initialized_BasicMarquee_kt_zfhsq2 = true;
       DefaultMarqueeIterations = 3;
       DefaultMarqueeDelayMillis = 1200;
-      DefaultMarqueeSpacing = Companion_getInstance_42().fractionOfContainer_x5152e_k$(1.0 / 3.0);
+      DefaultMarqueeSpacing = Companion_getInstance_49().fractionOfContainer_x5152e_k$(1.0 / 3.0);
       // Inline function 'androidx.compose.ui.unit.dp' call
       DefaultMarqueeVelocity = _Dp___init__impl__ms3zkb(30);
     }
@@ -1913,6 +2308,25 @@
   function BorderStroke_0(width, color) {
     return new BorderStroke(width, new SolidColor(color));
   }
+  function checkScrollableContainerConstraints(constraints, orientation) {
+    if (orientation.equals(Orientation_Vertical_getInstance())) {
+      // Inline function 'kotlin.check' call
+      // Inline function 'kotlin.contracts.contract' call
+      if (!!(_Constraints___get_maxHeight__impl__dt3e8z(constraints) === Companion_getInstance_7().get_Infinity_rvchkf_k$())) {
+        // Inline function 'androidx.compose.foundation.checkScrollableContainerConstraints.<anonymous>' call
+        var message = 'Vertically scrollable component was measured with an infinity maximum height constraints, which is disallowed. One of the common reasons is nesting layouts like LazyColumn and Column(Modifier.verticalScroll()). If you want to add a header before the list of items please add a header as a separate item() before the main items() inside the LazyColumn scope. There are could be other reasons for this to happen: your ComposeView was added into a LinearLayout with some weight, you applied Modifier.wrapContentSize(unbounded = true) or wrote a custom layout. Please try to remove the source of infinite constraints in the hierarchy above the scrolling container.';
+        throw IllegalStateException_init_$Create$(toString(message));
+      }
+    } else {
+      // Inline function 'kotlin.check' call
+      // Inline function 'kotlin.contracts.contract' call
+      if (!!(_Constraints___get_maxWidth__impl__uuyqc(constraints) === Companion_getInstance_7().get_Infinity_rvchkf_k$())) {
+        // Inline function 'androidx.compose.foundation.checkScrollableContainerConstraints.<anonymous>' call
+        var message_0 = 'Horizontally scrollable component was measured with an infinity maximum width constraints, which is disallowed. One of the common reasons is nesting layouts like LazyRow and Row(Modifier.horizontalScroll()). If you want to add a header before the list of items please add a header as a separate item() before the main items() inside the LazyRow scope. There are could be other reasons for this to happen: your ComposeView was added into a LinearLayout with some weight, you applied Modifier.wrapContentSize(unbounded = true) or wrote a custom layout. Please try to remove the source of infinite constraints in the hierarchy above the scrolling container.';
+        throw IllegalStateException_init_$Create$(toString(message_0));
+      }
+    }
+  }
   function clickable(_this__u8e3s4, interactionSource, indication_0, enabled, onClickLabel, role, onClick) {
     enabled = enabled === VOID ? true : enabled;
     onClickLabel = onClickLabel === VOID ? null : onClickLabel;
@@ -1928,8 +2342,8 @@
     var tmp0_inspectable = tmp;
     var tmp$ret$1;
     // Inline function 'androidx.compose.foundation.clickable.<anonymous>' call
-    Companion_getInstance_7();
-    tmp$ret$1 = focusable(hoverable(indication(Companion_getInstance_7(), interactionSource, indication_0), interactionSource, enabled).then_5qw5wu_k$(new ClickableElement(interactionSource, enabled, onClickLabel, role, onClick)), enabled, interactionSource);
+    Companion_getInstance_8();
+    tmp$ret$1 = focusable(hoverable(indication(Companion_getInstance_8(), interactionSource, indication_0), interactionSource, enabled).then_5qw5wu_k$(new ClickableElement(interactionSource, enabled, onClickLabel, role, onClick)), enabled, interactionSource);
     return inspectableWrapper(_this__u8e3s4, tmp0_inspectable, tmp$ret$1);
   }
   function _get_interactionSource__1shxi4($this) {
@@ -2948,9 +3362,9 @@
       properties_initialized_ClipScrollableContainer_kt_l2hne = true;
       // Inline function 'androidx.compose.ui.unit.dp' call
       MaxSupportedElevation = _Dp___init__impl__ms3zkb(30);
-      var tmp = Companion_getInstance_7();
+      var tmp = Companion_getInstance_8();
       HorizontalScrollableClipModifier = clip(tmp, new HorizontalScrollableClipModifier$1());
-      var tmp_0 = Companion_getInstance_7();
+      var tmp_0 = Companion_getInstance_8();
       VerticalScrollableClipModifier = clip(tmp_0, new VerticalScrollableClipModifier$1());
     }
   }
@@ -3001,7 +3415,7 @@
     // Inline function 'kotlin.apply' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.foundation.FocusableInNonTouchMode.applyFocusProperties.<anonymous>' call
-    focusProperties.set_canFocus_n88v8k_k$(!(_get_inputModeManager__dmvjvv(this).get_inputMode_ga9bte_k$() === Companion_getInstance_8().get_Touch_waibs4_k$()));
+    focusProperties.set_canFocus_n88v8k_k$(!(_get_inputModeManager__dmvjvv(this).get_inputMode_ga9bte_k$() === Companion_getInstance_9().get_Touch_waibs4_k$()));
   };
   function focusable(_this__u8e3s4, enabled, interactionSource) {
     enabled = enabled === VOID ? true : enabled;
@@ -3011,7 +3425,7 @@
     if (enabled) {
       tmp = focusTarget(new FocusableElement(interactionSource));
     } else {
-      tmp = Companion_getInstance_7();
+      tmp = Companion_getInstance_8();
     }
     return _this__u8e3s4.then_5qw5wu_k$(tmp);
   }
@@ -3641,7 +4055,7 @@
   }
   function hoverable(_this__u8e3s4, interactionSource, enabled) {
     enabled = enabled === VOID ? true : enabled;
-    return _this__u8e3s4.then_5qw5wu_k$(enabled ? new HoverableElement(interactionSource) : Companion_getInstance_7());
+    return _this__u8e3s4.then_5qw5wu_k$(enabled ? new HoverableElement(interactionSource) : Companion_getInstance_8());
   }
   function _get_interactionSource__1shxi4_3($this) {
     return $this.interactionSource_1;
@@ -3915,11 +4329,11 @@
   protoOf(HoverableNode).onPointerEvent_5xxilc_k$ = function (pointerEvent, pass, bounds) {
     if (pass.equals(PointerEventPass_Main_getInstance())) {
       var tmp0_subject = pointerEvent.get_type_tjo6xw_k$();
-      if (tmp0_subject === Companion_getInstance_9().get_Enter_vi0jh4_k$()) {
+      if (tmp0_subject === Companion_getInstance_10().get_Enter_vi0jh4_k$()) {
         var tmp = this.get_coroutineScope_5k7h45_k$();
         var tmp_0 = CoroutineStart_UNDISPATCHED_getInstance();
         launch(tmp, VOID, tmp_0, HoverableNode$onPointerEvent$slambda_0(this, null));
-      } else if (tmp0_subject === Companion_getInstance_9().get_Exit_bacme8_k$()) {
+      } else if (tmp0_subject === Companion_getInstance_10().get_Exit_bacme8_k$()) {
         var tmp_1 = this.get_coroutineScope_5k7h45_k$();
         var tmp_2 = CoroutineStart_UNDISPATCHED_getInstance();
         launch(tmp_1, VOID, tmp_2, HoverableNode$onPointerEvent$slambda_2(this, null));
@@ -3956,6 +4370,207 @@
       this.hoverInteraction_1 = null;
     }
   };
+  function Image$composable(painter, contentDescription, modifier, alignment, contentScale, alpha, colorFilter, $composer, $changed, $default) {
+    var modifier_0 = {_v: modifier};
+    var alignment_0 = {_v: alignment};
+    var contentScale_0 = {_v: contentScale};
+    var alpha_0 = {_v: alpha};
+    var colorFilter_0 = {_v: colorFilter};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-47040969);
+    sourceInformation($composer_0, 'C(Image$composable)P(6,3,5!1,4)264@12184L88,255@11931L341:Image.kt#71ulvw');
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(painter) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(contentDescription) ? 32 : 16);
+    if (!(($default & 4) === 0))
+      $dirty = $dirty | 384;
+    else if (($changed & 896) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(modifier_0._v) ? 256 : 128);
+    if (!(($default & 8) === 0))
+      $dirty = $dirty | 3072;
+    else if (($changed & 7168) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(alignment_0._v) ? 2048 : 1024);
+    if (!(($default & 16) === 0))
+      $dirty = $dirty | 24576;
+    else if (($changed & 57344) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(contentScale_0._v) ? 16384 : 8192);
+    if (!(($default & 32) === 0))
+      $dirty = $dirty | 196608;
+    else if (($changed & 458752) === 0)
+      $dirty = $dirty | ($composer_0.changed_7hxtmu_k$(alpha_0._v) ? 131072 : 65536);
+    if (!(($default & 64) === 0))
+      $dirty = $dirty | 1572864;
+    else if (($changed & 3670016) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(colorFilter_0._v) ? 1048576 : 524288);
+    if (!(($dirty & 2995931) === 599186) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 4) === 0)) {
+        modifier_0._v = Companion_getInstance_8();
+      }
+      if (!(($default & 8) === 0)) {
+        alignment_0._v = Companion_getInstance_11().get_Center_3arb0i_k$();
+      }
+      if (!(($default & 16) === 0)) {
+        contentScale_0._v = Companion_getInstance_12().get_Fit_18jtko_k$();
+      }
+      if (!(($default & 32) === 0)) {
+        alpha_0._v = get_DefaultAlpha();
+      }
+      if (!(($default & 64) === 0)) {
+        colorFilter_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(-47040969, $dirty, -1, 'androidx.compose.foundation.Image$composable (Image.kt:235)');
+      }
+      $composer_0.startReplaceableGroup_rp6air_k$(-2006858426);
+      sourceInformation($composer_0, '245@11667L103');
+      var tmp;
+      if (!(contentDescription == null)) {
+        var tmp_0 = Companion_getInstance_8();
+        // Inline function 'androidx.compose.runtime.remember$composable' call
+        var $composer_1 = $composer_0;
+        $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+        sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+        // Inline function 'androidx.compose.runtime.cache' call
+        var tmp1_cache = $composer_1.changed_ga7h3f_k$(contentDescription);
+        // Inline function 'kotlin.let' call
+        var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
+        // Inline function 'kotlin.contracts.contract' call
+        // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var tmp_1;
+        if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+          // Inline function 'androidx.compose.foundation.Image$composable.<anonymous>' call
+          var value = Image$composable$lambda(contentDescription);
+          $composer_1.updateRememberedValue_l1colo_k$(value);
+          tmp_1 = value;
+        } else {
+          tmp_1 = tmp0_let;
+        }
+        var tmp_2 = tmp_1;
+        var tmp0 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
+        $composer_1.endReplaceableGroup_er37p7_k$();
+        tmp = semantics(tmp_0, VOID, tmp0);
+      } else {
+        tmp = Companion_getInstance_8();
+      }
+      var tmp0_group = tmp;
+      $composer_0.endReplaceableGroup_er37p7_k$();
+      var semantics_0 = tmp0_group;
+      // Inline function 'androidx.compose.ui.layout.Layout$composable' call
+      var tmp3_Layout$composable = paint(clipToBounds(modifier_0._v.then_5qw5wu_k$(semantics_0)), painter, VOID, alignment_0._v, contentScale_0._v, alpha_0._v, colorFilter_0._v);
+      // Inline function 'androidx.compose.runtime.remember$composable' call
+      var $composer_2 = $composer_0;
+      $composer_2.startReplaceableGroup_rp6air_k$(547886695);
+      sourceInformation($composer_2, 'CC(remember$composable):Composables.kt#9igjgp');
+      // Inline function 'androidx.compose.runtime.cache' call
+      // Inline function 'kotlin.let' call
+      var tmp0_let_0 = $composer_2.rememberedValue_4dg93v_k$();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var tmp_3;
+      if (false ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+        // Inline function 'androidx.compose.foundation.Image$composable.<anonymous>' call
+        var value_0 = Image$composable$lambda_0;
+        $composer_2.updateRememberedValue_l1colo_k$(value_0);
+        tmp_3 = value_0;
+      } else {
+        tmp_3 = tmp0_let_0;
+      }
+      var tmp_4 = tmp_3;
+      var tmp0_0 = (tmp_4 == null ? true : isObject(tmp_4)) ? tmp_4 : THROW_CCE();
+      $composer_2.endReplaceableGroup_er37p7_k$();
+      var tmp4_Layout$composable = new sam$androidx_compose_ui_layout_MeasurePolicy$0(tmp0_0);
+      var modifier_1 = tmp3_Layout$composable;
+      var $composer_3 = $composer_0;
+      $composer_3.startReplaceableGroup_rp6air_k$(1725976829);
+      sourceInformation($composer_3, 'CC(Layout$composable)P(!1,2)78@3158L23,80@3248L420:Layout.kt#80mrfh');
+      if (!(0 === 0))
+        modifier_1 = Companion_getInstance_8();
+      var compositeKeyHash = $get_currentCompositeKeyHash$$composable_u3vbzj($composer_3, 0);
+      var localMap = $composer_3.get_currentCompositionLocalMap_fmcf79_k$();
+      // Inline function 'androidx.compose.runtime.ReusableComposeNode$composable' call
+      var tmp0_ReusableComposeNode$composable = Companion_getInstance_14().get_Constructor_f7ieep_k$();
+      var tmp1_ReusableComposeNode$composable = materializerOf(modifier_1);
+      var $composer_4 = $composer_3;
+      var tmp_5 = $composer_4.get_applier_bupu8u_k$();
+      if (!isInterface(tmp_5, Applier)) {
+        invalidApplier();
+      }
+      $composer_4.startReusableNode_jk07k2_k$();
+      if ($composer_4.get_inserting_25mlsw_k$()) {
+        $composer_4.createNode_p4ouwd_k$(tmp0_ReusableComposeNode$composable);
+      } else {
+        $composer_4.useNode_inlzo8_k$();
+      }
+      // Inline function 'androidx.compose.ui.layout.Layout$composable.<anonymous>' call
+      var tmp4_anonymous = _Updater___init__impl__rbfxm8($composer_4);
+      Updater__set_impl_v7kwss(tmp4_anonymous, tmp4_Layout$composable, Companion_getInstance_14().get_SetMeasurePolicy_on6ujt_k$());
+      Updater__set_impl_v7kwss(tmp4_anonymous, localMap, Companion_getInstance_14().get_SetResolvedCompositionLocals_rc2u9t_k$());
+      // Inline function 'androidx.compose.runtime.Updater.set' call
+      var tmp0_set = Companion_getInstance_14().get_SetCompositeKeyHash_n8lgg1_k$();
+      // Inline function 'kotlin.with' call
+      var tmp0_with = _Updater___get_composer__impl__9ty7av(tmp4_anonymous);
+      // Inline function 'kotlin.contracts.contract' call
+      var tmp_6;
+      if (tmp0_with.get_inserting_25mlsw_k$() ? true : !equals(tmp0_with.rememberedValue_4dg93v_k$(), compositeKeyHash)) {
+        tmp0_with.updateRememberedValue_l1colo_k$(compositeKeyHash);
+        _Updater___get_composer__impl__9ty7av(tmp4_anonymous).apply_ar56ei_k$(compositeKeyHash, tmp0_set);
+        tmp_6 = Unit_getInstance();
+      }
+      tmp1_ReusableComposeNode$composable(new SkippableUpdater(_SkippableUpdater___init__impl__4ft0t9($composer_4)), $composer_4, 112 & 6 >> 3);
+      $composer_4.startReplaceableGroup_rp6air_k$(2058660585);
+      // Inline function 'androidx.compose.foundation.Image$composable.<anonymous>' call
+      var $composer_5 = $composer_4;
+      sourceInformationMarkerStart($composer_5, -1685823299, 'C:Image.kt#71ulvw');
+      sourceInformationMarkerEnd($composer_5);
+      $composer_4.endReplaceableGroup_er37p7_k$();
+      $composer_4.endNode_3mkr10_k$();
+      $composer_3.endReplaceableGroup_er37p7_k$();
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lhns3f_k$();
+    }
+    var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp1_safe_receiver === null)
+      null;
+    else {
+      tmp1_safe_receiver.updateScope_xhrf9y_k$(Image$composable$lambda_1(painter, contentDescription, modifier_0, alignment_0, contentScale_0, alpha_0, colorFilter_0, $changed, $default));
+    }
+  }
+  function sam$androidx_compose_ui_layout_MeasurePolicy$0(function_0) {
+    this.function_1 = function_0;
+  }
+  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0).measure_i7pm3b_k$ = function (_this__u8e3s4, measurables, constraints) {
+    return this.function_1(_this__u8e3s4, measurables, new Constraints(constraints));
+  };
+  function Image$composable$lambda($contentDescription) {
+    return function ($this$semantics) {
+      set_contentDescription($this$semantics, $contentDescription);
+      set_role($this$semantics, Companion_getInstance_15().get_Image_q9qgyo_k$());
+      return Unit_getInstance();
+    };
+  }
+  function Image$composable$lambda_0($this$Layout, _anonymous_parameter_0__qggqh8, constraints) {
+    var tmp = _Constraints___get_minWidth__impl__hi9lfi(constraints.value_1);
+    var tmp_0 = _Constraints___get_minHeight__impl__ev4bgx(constraints.value_1);
+    return $this$Layout.layout$default_8ylrvs_k$(tmp, tmp_0, VOID, Image$composable$lambda$lambda);
+  }
+  function Image$composable$lambda$lambda($this$layout) {
+    return Unit_getInstance();
+  }
+  function Image$composable$lambda_1($painter, $contentDescription, $modifier, $alignment, $contentScale, $alpha, $colorFilter, $$changed, $$default) {
+    return function ($composer, $force) {
+      Image$composable($painter, $contentDescription, $modifier._v, $alignment._v, $contentScale._v, $alpha._v, $colorFilter._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
+  }
   function get_LocalIndication() {
     _init_properties_Indication_kt__w3ndj0();
     return LocalIndication;
@@ -4012,7 +4627,7 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
     var tmp;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.foundation.DefaultDebugIndication.rememberUpdatedInstance$composable.<anonymous>' call
       var value = new DefaultDebugIndicationInstance(isPressed, isHovered, isFocused);
       $composer_1.updateRememberedValue_l1colo_k$(value);
@@ -4148,7 +4763,7 @@
             continue $sm;
           case 1:
             var tmp_0;
-            if (this.$inputModeManager_1.get_inputMode_ga9bte_k$() === Companion_getInstance_8().get_Touch_waibs4_k$()) {
+            if (this.$inputModeManager_1.get_inputMode_ga9bte_k$() === Companion_getInstance_9().get_Touch_waibs4_k$()) {
               var tmp_1 = this.value_1;
               tmp_0 = tmp_1 instanceof Focus;
             } else {
@@ -4298,7 +4913,7 @@
       var tmp$ret$5;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_0;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$4;
         // Inline function 'androidx.compose.foundation.indication.<anonymous>.<anonymous>' call
         var tmp$ret$3;
@@ -4346,7 +4961,7 @@
       var tmp$ret$10;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_2;
-      if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$9;
         // Inline function 'androidx.compose.foundation.indication.<anonymous>.<anonymous>' call
         tmp$ret$9 = new IndicationModifier(instance);
@@ -4741,6 +5356,30 @@
   }
   function OverscrollEffect() {
   }
+  function overscroll(_this__u8e3s4, overscrollEffect) {
+    return _this__u8e3s4.then_5qw5wu_k$(overscrollEffect.get_effectModifier_3qlchb_k$());
+  }
+  function fastFilter(_this__u8e3s4, predicate) {
+    // Inline function 'kotlin.contracts.contract' call
+    var target = ArrayList_init_$Create$(_this__u8e3s4.get_size_woubt6_k$());
+    // Inline function 'androidx.compose.ui.util.fastForEach' call
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    var last = _this__u8e3s4.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable <= last)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        var item = _this__u8e3s4.get_fkrdnv_k$(index);
+        // Inline function 'androidx.compose.foundation.fastFilter.<anonymous>' call
+        if (predicate(item)) {
+          // Inline function 'kotlin.collections.plusAssign' call
+          target.add_1j60pz_k$(item);
+        }
+      }
+       while (inductionVariable <= last);
+    return target;
+  }
   function fastFold(_this__u8e3s4, initial, operation) {
     // Inline function 'kotlin.contracts.contract' call
     var accumulator = initial;
@@ -4793,7 +5432,7 @@
       var tmp0_resume = request.get_continuation_7yron4_k$();
       var tmp$ret$0;
       // Inline function 'kotlin.Companion.success' call
-      Companion_getInstance_11();
+      Companion_getInstance_16();
       tmp$ret$0 = _Result___init__impl__xyqfz8(Unit_getInstance());
       tmp0_resume.resumeWith_s3a3yh_k$(tmp$ret$0);
       return false;
@@ -4879,7 +5518,7 @@
         var tmp2_resume = ((tmp == null ? true : isObject(tmp)) ? tmp : THROW_CCE()).get_continuation_7yron4_k$();
         var tmp$ret$2;
         // Inline function 'kotlin.Companion.success' call
-        Companion_getInstance_11();
+        Companion_getInstance_16();
         tmp$ret$2 = _Result___init__impl__xyqfz8(Unit_getInstance());
         tmp2_resume.resumeWith_s3a3yh_k$(tmp$ret$2);
       }
@@ -4897,7 +5536,7 @@
         var tmp1_resume = this.requests_1.removeAt_qvpkxi_k$(tmp$ret$0).get_continuation_7yron4_k$();
         var tmp$ret$1;
         // Inline function 'kotlin.Companion.success' call
-        Companion_getInstance_11();
+        Companion_getInstance_16();
         tmp$ret$1 = _Result___init__impl__xyqfz8(Unit_getInstance());
         tmp1_resume.resumeWith_s3a3yh_k$(tmp$ret$1);
       } else {
@@ -5020,7 +5659,7 @@
             var tmp1_resume = tmp_0.removeAt_qvpkxi_k$(tmp$ret$2).continuation_1;
             var tmp$ret$3;
             // Inline function 'kotlin.Companion.success' call
-            var tmp0_success = Companion_getInstance_11();
+            var tmp0_success = Companion_getInstance_16();
             tmp$ret$3 = _Result___init__impl__xyqfz8(Unit_getInstance());
             tmp1_resume.resumeWith_s3a3yh_k$(tmp$ret$3);
             tmp$ret$4 = Unit_getInstance();
@@ -5243,7 +5882,7 @@
     launch($this.scope_1, VOID, tmp, ContentInViewModifier$launchAnimation$slambda_0($this, null));
   }
   function calculateScrollDelta($this) {
-    if (equals($this.viewportSize_1, Companion_getInstance_12().get_Zero_4ip44w_k$()))
+    if (equals($this.viewportSize_1, Companion_getInstance_17().get_Zero_4ip44w_k$()))
       return 0.0;
     var tmp0_elvis_lhs = findBringIntoViewRequest($this);
     var tmp1_elvis_lhs = tmp0_elvis_lhs == null ? $this.trackingFocusedChild_1 ? getFocusedChildBounds($this) : null : tmp0_elvis_lhs;
@@ -5598,7 +6237,7 @@
     this.focusedChild_1 = null;
     this.focusedChildBoundsFromPreviousRemeasure_1 = null;
     this.trackingFocusedChild_1 = false;
-    this.viewportSize_1 = Companion_getInstance_12().get_Zero_4ip44w_k$();
+    this.viewportSize_1 = Companion_getInstance_17().get_Zero_4ip44w_k$();
     this.isAnimationRunning_1 = false;
     this.animationState_1 = new UpdatableAnimationState();
     var tmp = this;
@@ -5610,7 +6249,7 @@
   protoOf(ContentInViewModifier).calculateRectForParent_f1hhkh_k$ = function (localRect) {
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!!equals(this.viewportSize_1, Companion_getInstance_12().get_Zero_4ip44w_k$())) {
+    if (!!equals(this.viewportSize_1, Companion_getInstance_17().get_Zero_4ip44w_k$())) {
       // Inline function 'androidx.compose.foundation.gestures.ContentInViewModifier.calculateRectForParent.<anonymous>' call
       var message = 'Expected BringIntoViewRequester to not be used before parents are placed.';
       throw IllegalStateException_init_$Create$(toString(message));
@@ -5783,7 +6422,7 @@
   }
   function pointerSlop(_this__u8e3s4, pointerType) {
     _init_properties_DragGestureDetector_kt__sw7hnt();
-    return pointerType === Companion_getInstance_13().get_Mouse_a0dpcz_k$() ? _this__u8e3s4.get_touchSlop_ej3fhs_k$() * get_mouseToTouchSlopRatio() : _this__u8e3s4.get_touchSlop_ej3fhs_k$();
+    return pointerType === Companion_getInstance_18().get_Mouse_a0dpcz_k$() ? _this__u8e3s4.get_touchSlop_ej3fhs_k$() * get_mouseToTouchSlopRatio() : _this__u8e3s4.get_touchSlop_ej3fhs_k$();
   }
   function detectDragGestures(_this__u8e3s4, onDragStart, onDragEnd, onDragCancel, onDrag, $completion) {
     var tmp;
@@ -6955,7 +7594,7 @@
         switch (tmp) {
           case 0:
             this.set_exceptionState_s9sevl_k$(14);
-            this.tmp0_pointerType0__1 = Companion_getInstance_13().get_Touch_e07c8t_k$();
+            this.tmp0_pointerType0__1 = Companion_getInstance_18().get_Touch_e07c8t_k$();
             this.tmp1_pointerDirectionConfig1__1 = get_HorizontalPointerDirectionConfig();
             this.set_state_a96kl8_k$(1);
             continue $sm;
@@ -8509,7 +9148,7 @@
             continue $sm;
           case 3:
             this.set_state_a96kl8_k$(4);
-            suspendResult = this._this__u8e3s4__1.onDragStopped_1(this._this__u8e3s4__2, new Velocity(Companion_getInstance_14().get_Zero_s3q2zh_k$()), this);
+            suspendResult = this._this__u8e3s4__1.onDragStopped_1(this._this__u8e3s4__2, new Velocity(Companion_getInstance_19().get_Zero_s3q2zh_k$()), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -9727,7 +10366,7 @@
             continue $sm;
           case 2:
             this.event0__1 = suspendResult;
-            if (!(this.event0__1.get_type_tjo6xw_k$() === Companion_getInstance_9().get_Scroll_mr6lht_k$())) {
+            if (!(this.event0__1.get_type_tjo6xw_k$() === Companion_getInstance_10().get_Scroll_mr6lht_k$())) {
               this.set_state_a96kl8_k$(1);
               continue $sm;
             }
@@ -10312,6 +10951,119 @@
     Orientation_initEntries();
     return Orientation_Horizontal_instance;
   }
+  function animateScrollBy(_this__u8e3s4, value, animationSpec, $completion) {
+    animationSpec = animationSpec === VOID ? spring() : animationSpec;
+    var tmp = new $animateScrollByCOROUTINE$0(_this__u8e3s4, value, animationSpec, $completion);
+    tmp.set_result_ximc09_k$(Unit_getInstance());
+    tmp.set_exception_pwgeox_k$(null);
+    return tmp.doResume_5yljmg_k$();
+  }
+  function animateScrollBy$slambda$lambda($previousValue, $this_scroll) {
+    return function (currentValue, _anonymous_parameter_1__qggqgd) {
+      $previousValue._v = $previousValue._v + $this_scroll.scrollBy_p9cup6_k$(currentValue - $previousValue._v);
+      return Unit_getInstance();
+    };
+  }
+  function animateScrollBy$slambda($value, $animationSpec, $previousValue, resultContinuation) {
+    this.$value_1 = $value;
+    this.$animationSpec_1 = $animationSpec;
+    this.$previousValue_1 = $previousValue;
+    CoroutineImpl.call(this, resultContinuation);
+  }
+  protoOf(animateScrollBy$slambda).invoke_zaade9_k$ = function ($this$scroll, $completion) {
+    var tmp = this.create_ld2pu4_k$($this$scroll, $completion);
+    tmp.set_result_ximc09_k$(Unit_getInstance());
+    tmp.set_exception_pwgeox_k$(null);
+    return tmp.doResume_5yljmg_k$();
+  };
+  protoOf(animateScrollBy$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
+    return this.invoke_zaade9_k$((!(p1 == null) ? isInterface(p1, ScrollScope) : false) ? p1 : THROW_CCE(), $completion);
+  };
+  protoOf(animateScrollBy$slambda).doResume_5yljmg_k$ = function () {
+    var suspendResult = this.get_result_iyg5d2_k$();
+    $sm: do
+      try {
+        var tmp = this.get_state_iypx7s_k$();
+        switch (tmp) {
+          case 0:
+            this.set_exceptionState_s9sevl_k$(2);
+            this.set_state_a96kl8_k$(1);
+            suspendResult = animate(0.0, this.$value_1, VOID, this.$animationSpec_1, animateScrollBy$slambda$lambda(this.$previousValue_1, this.$this$scroll_1), this);
+            if (suspendResult === get_COROUTINE_SUSPENDED()) {
+              return suspendResult;
+            }
+
+            continue $sm;
+          case 1:
+            return Unit_getInstance();
+          case 2:
+            throw this.get_exception_x0n6w6_k$();
+        }
+      } catch ($p) {
+        var e = $p;
+        if (this.get_exceptionState_wflpxn_k$() === 2) {
+          throw e;
+        } else {
+          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_pwgeox_k$(e);
+        }
+      }
+     while (true);
+  };
+  protoOf(animateScrollBy$slambda).create_ld2pu4_k$ = function ($this$scroll, completion) {
+    var i = new animateScrollBy$slambda(this.$value_1, this.$animationSpec_1, this.$previousValue_1, completion);
+    i.$this$scroll_1 = $this$scroll;
+    return i;
+  };
+  protoOf(animateScrollBy$slambda).create_xubfvz_k$ = function (value, completion) {
+    return this.create_ld2pu4_k$((!(value == null) ? isInterface(value, ScrollScope) : false) ? value : THROW_CCE(), completion);
+  };
+  function animateScrollBy$slambda_0($value, $animationSpec, $previousValue, resultContinuation) {
+    var i = new animateScrollBy$slambda($value, $animationSpec, $previousValue, resultContinuation);
+    var l = function ($this$scroll, $completion) {
+      return i.invoke_zaade9_k$($this$scroll, $completion);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function $animateScrollByCOROUTINE$0(_this__u8e3s4, value, animationSpec, resultContinuation) {
+    CoroutineImpl.call(this, resultContinuation);
+    this._this__u8e3s4__1 = _this__u8e3s4;
+    this.value_1 = value;
+    this.animationSpec_1 = animationSpec;
+  }
+  protoOf($animateScrollByCOROUTINE$0).doResume_5yljmg_k$ = function () {
+    var suspendResult = this.get_result_iyg5d2_k$();
+    $sm: do
+      try {
+        var tmp = this.get_state_iypx7s_k$();
+        switch (tmp) {
+          case 0:
+            this.set_exceptionState_s9sevl_k$(2);
+            this.previousValue0__1 = {_v: 0.0};
+            this.set_state_a96kl8_k$(1);
+            suspendResult = this._this__u8e3s4__1.scroll$default_9l862x_k$(VOID, animateScrollBy$slambda_0(this.value_1, this.animationSpec_1, this.previousValue0__1, null), this);
+            if (suspendResult === get_COROUTINE_SUSPENDED()) {
+              return suspendResult;
+            }
+
+            continue $sm;
+          case 1:
+            return this.previousValue0__1._v;
+          case 2:
+            throw this.get_exception_x0n6w6_k$();
+        }
+      } catch ($p) {
+        var e = $p;
+        if (this.get_exceptionState_wflpxn_k$() === 2) {
+          throw e;
+        } else {
+          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_pwgeox_k$(e);
+        }
+      }
+     while (true);
+  };
   function get_NoOpOnDragStarted() {
     _init_properties_Scrollable_kt__k2543d();
     return NoOpOnDragStarted;
@@ -10332,10 +11084,6 @@
     return DefaultScrollMotionDurationScale;
   }
   var DefaultScrollMotionDurationScale;
-  function get_DefaultScrollMotionDurationScaleFactor() {
-    return DefaultScrollMotionDurationScaleFactor;
-  }
-  var DefaultScrollMotionDurationScaleFactor;
   function scrollable(_this__u8e3s4, state, orientation, overscrollEffect, enabled, reverseDirection, flingBehavior, interactionSource) {
     enabled = enabled === VOID ? true : enabled;
     reverseDirection = reverseDirection === VOID ? false : reverseDirection;
@@ -10351,243 +11099,6 @@
     }
     var tmp_0 = tmp;
     return composed$composable(_this__u8e3s4, tmp_0, scrollable$lambda_0(orientation, state, reverseDirection, interactionSource, flingBehavior, overscrollEffect, enabled));
-  }
-  function ModifierLocalScrollableContainerProvider() {
-    ModifierLocalScrollableContainerProvider_instance = this;
-    this.key_1 = get_ModifierLocalScrollableContainer();
-    this.value_1 = true;
-  }
-  protoOf(ModifierLocalScrollableContainerProvider).get_key_18j28a_k$ = function () {
-    return this.key_1;
-  };
-  protoOf(ModifierLocalScrollableContainerProvider).get_value_j01efc_k$ = function () {
-    return this.value_1;
-  };
-  var ModifierLocalScrollableContainerProvider_instance;
-  function ModifierLocalScrollableContainerProvider_getInstance() {
-    if (ModifierLocalScrollableContainerProvider_instance == null)
-      new ModifierLocalScrollableContainerProvider();
-    return ModifierLocalScrollableContainerProvider_instance;
-  }
-  function pointerScrollable$composable(_this__u8e3s4, interactionSource, orientation, reverseDirection, controller, flingBehavior, overscrollEffect, enabled, $composer, $changed) {
-    _init_properties_Scrollable_kt__k2543d();
-    var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1423283007);
-    sourceInformation($composer_0, 'C(pointerScrollable$composable)P(3,4,6!1,2,5)251@10488L53,253@10577L196,261@10796L38,262@10868L88,265@10982L46,266@11052L22,267@11106L7,283@11725L42,276@11401L47,278@11525L176:Scrollable.kt#8bwon0');
-    if (isTraceInProgress()) {
-      traceEventStart(-1423283007, $changed, -1, 'androidx.compose.foundation.gestures.pointerScrollable$composable (Scrollable.kt:241)');
-    }
-    $composer_0.startReplaceableGroup_rp6air_k$(-1354677204);
-    sourceInformation($composer_0, '250@10439L15');
-    var tmp1_group = flingBehavior == null ? ScrollableDefaults_getInstance().flingBehavior$composable_q5mns3_k$($composer_0, 6) : flingBehavior;
-    $composer_0.endReplaceableGroup_er37p7_k$();
-    var fling = tmp1_group;
-    // Inline function 'androidx.compose.runtime.remember$composable' call
-    var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(547886695);
-    sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
-    // Inline function 'androidx.compose.runtime.cache' call
-    // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var tmp;
-    if (false ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
-      // Inline function 'androidx.compose.foundation.gestures.pointerScrollable$composable.<anonymous>' call
-      var value = mutableStateOf(new NestedScrollDispatcher());
-      $composer_1.updateRememberedValue_l1colo_k$(value);
-      tmp = value;
-    } else {
-      tmp = tmp0_let;
-    }
-    var tmp_0 = tmp;
-    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
-    var nestedScrollDispatcher = tmp0;
-    var scrollLogicValue = rememberScrollingLogic$composable(orientation, reverseDirection, nestedScrollDispatcher, controller, fling, overscrollEffect, $composer_0, 14 & $changed >> 6 | 112 & $changed >> 6 | 7168 & $changed >> 3 | 458752 & $changed >> 3);
-    var scrollLogic = rememberUpdatedState$composable(scrollLogicValue, $composer_0, 0);
-    // Inline function 'androidx.compose.runtime.remember$composable' call
-    var $composer_2 = $composer_0;
-    $composer_2.startReplaceableGroup_rp6air_k$(-838505973);
-    sourceInformation($composer_2, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
-    // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache = $composer_2.changed_ga7h3f_k$(enabled);
-    // Inline function 'kotlin.let' call
-    var tmp0_let_0 = $composer_2.rememberedValue_4dg93v_k$();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var tmp_1;
-    if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
-      // Inline function 'androidx.compose.foundation.gestures.pointerScrollable$composable.<anonymous>' call
-      var value_0 = scrollableNestedScrollConnection(scrollLogic, enabled);
-      $composer_2.updateRememberedValue_l1colo_k$(value_0);
-      tmp_1 = value_0;
-    } else {
-      tmp_1 = tmp0_let_0;
-    }
-    var tmp_2 = tmp_1;
-    var tmp0_0 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
-    $composer_2.endReplaceableGroup_er37p7_k$();
-    var nestedScrollConnection = tmp0_0;
-    // Inline function 'androidx.compose.runtime.remember$composable' call
-    var $composer_3 = $composer_0;
-    $composer_3.startReplaceableGroup_rp6air_k$(547886695);
-    sourceInformation($composer_3, 'CC(remember$composable):Composables.kt#9igjgp');
-    // Inline function 'androidx.compose.runtime.cache' call
-    // Inline function 'kotlin.let' call
-    var tmp0_let_1 = $composer_3.rememberedValue_4dg93v_k$();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var tmp_3;
-    if (false ? true : tmp0_let_1 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
-      // Inline function 'androidx.compose.foundation.gestures.pointerScrollable$composable.<anonymous>' call
-      var value_1 = new ScrollDraggableState(scrollLogic);
-      $composer_3.updateRememberedValue_l1colo_k$(value_1);
-      tmp_3 = value_1;
-    } else {
-      tmp_3 = tmp0_let_1;
-    }
-    var tmp_4 = tmp_3;
-    var tmp0_1 = (tmp_4 == null ? true : isObject(tmp_4)) ? tmp_4 : THROW_CCE();
-    $composer_3.endReplaceableGroup_er37p7_k$();
-    var draggableState = tmp0_1;
-    var scrollConfig = platformScrollConfig$composable($composer_0, 0);
-    // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-    var tmp4_$get_current$$composable_f3pcsz = get_LocalDensity();
-    var $composer_4 = $composer_0;
-    sourceInformationMarkerStart($composer_4, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-    var tmp0_2 = $composer_4.consume_11nid3_k$(tmp4_$get_current$$composable_f3pcsz);
-    sourceInformationMarkerEnd($composer_4);
-    var density = tmp0_2.get_density_qy0267_k$();
-    var tmp1_onDragStarted = get_NoOpOnDragStarted();
-    // Inline function 'androidx.compose.runtime.remember$composable' call
-    var $composer_5 = $composer_0;
-    $composer_5.startReplaceableGroup_rp6air_k$(547886695);
-    sourceInformation($composer_5, 'CC(remember$composable):Composables.kt#9igjgp');
-    // Inline function 'androidx.compose.runtime.cache' call
-    // Inline function 'kotlin.let' call
-    var tmp0_let_2 = $composer_5.rememberedValue_4dg93v_k$();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var tmp_5;
-    if (false ? true : tmp0_let_2 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
-      // Inline function 'androidx.compose.foundation.gestures.pointerScrollable$composable.<anonymous>' call
-      var value_2 = pointerScrollable$composable$lambda;
-      $composer_5.updateRememberedValue_l1colo_k$(value_2);
-      tmp_5 = value_2;
-    } else {
-      tmp_5 = tmp0_let_2;
-    }
-    var tmp_6 = tmp_5;
-    var tmp0_3 = (tmp_6 == null ? true : isObject(tmp_6)) ? tmp_6 : THROW_CCE();
-    $composer_5.endReplaceableGroup_er37p7_k$();
-    var tmp_7 = tmp0_3;
-    // Inline function 'androidx.compose.runtime.remember$composable' call
-    var $composer_6 = $composer_0;
-    $composer_6.startReplaceableGroup_rp6air_k$(-838505973);
-    sourceInformation($composer_6, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
-    // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache_0 = $composer_6.changed_ga7h3f_k$(scrollLogic);
-    // Inline function 'kotlin.let' call
-    var tmp0_let_3 = $composer_6.rememberedValue_4dg93v_k$();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var tmp_8;
-    if (tmp1_cache_0 ? true : tmp0_let_3 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
-      // Inline function 'androidx.compose.foundation.gestures.pointerScrollable$composable.<anonymous>' call
-      var value_3 = pointerScrollable$composable$lambda_0(scrollLogic);
-      $composer_6.updateRememberedValue_l1colo_k$(value_3);
-      tmp_8 = value_3;
-    } else {
-      tmp_8 = tmp0_let_3;
-    }
-    var tmp_9 = tmp_8;
-    var tmp0_4 = (tmp_9 == null ? true : isObject(tmp_9)) ? tmp_9 : THROW_CCE();
-    $composer_6.endReplaceableGroup_er37p7_k$();
-    var tmp_10 = tmp0_4;
-    // Inline function 'androidx.compose.runtime.remember$composable' call
-    var $composer_7 = $composer_0;
-    $composer_7.startReplaceableGroup_rp6air_k$(-1124426577);
-    sourceInformation($composer_7, 'CC(remember$composable)P(1,2):Composables.kt#9igjgp');
-    // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache_1 = !!($composer_7.changed_ga7h3f_k$(nestedScrollDispatcher) | $composer_7.changed_ga7h3f_k$(scrollLogic));
-    // Inline function 'kotlin.let' call
-    var tmp0_let_4 = $composer_7.rememberedValue_4dg93v_k$();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var tmp_11;
-    if (tmp1_cache_1 ? true : tmp0_let_4 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
-      // Inline function 'androidx.compose.foundation.gestures.pointerScrollable$composable.<anonymous>' call
-      var value_4 = pointerScrollable$composable$slambda_0(nestedScrollDispatcher, scrollLogic, null);
-      $composer_7.updateRememberedValue_l1colo_k$(value_4);
-      tmp_11 = value_4;
-    } else {
-      tmp_11 = tmp0_let_4;
-    }
-    var tmp_12 = tmp_11;
-    var tmp0_5 = (tmp_12 == null ? true : isObject(tmp_12)) ? tmp_12 : THROW_CCE();
-    $composer_7.endReplaceableGroup_er37p7_k$();
-    var tmp0_6 = nestedScroll(_this__u8e3s4.then_5qw5wu_k$(new DraggableElement(draggableState, tmp_7, orientation, enabled, interactionSource, tmp_10, tmp1_onDragStarted, tmp0_5, false)).then_5qw5wu_k$(new MouseWheelScrollableElement(scrollLogicValue, scrollConfig, density)), nestedScrollConnection, nestedScrollDispatcher.get_value_j01efc_k$());
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    $composer_0.endReplaceableGroup_er37p7_k$();
-    return tmp0_6;
-  }
-  function get_$stableprop_7() {
-    return 0;
-  }
-  function ScrollableDefaults() {
-    ScrollableDefaults_instance = this;
-    this.$stable_1 = 0;
-  }
-  protoOf(ScrollableDefaults).flingBehavior_nuk9n2_k$ = function () {
-    illegalDecoyCallException('flingBehavior');
-  };
-  protoOf(ScrollableDefaults).overscrollEffect_jufk42_k$ = function () {
-    illegalDecoyCallException('overscrollEffect');
-  };
-  protoOf(ScrollableDefaults).reverseDirection_cttzbv_k$ = function (layoutDirection, orientation, reverseScrolling) {
-    var reverseDirection = !reverseScrolling;
-    var isRtl = layoutDirection.equals(LayoutDirection_Rtl_getInstance());
-    if (isRtl ? !orientation.equals(Orientation_Vertical_getInstance()) : false) {
-      reverseDirection = !reverseDirection;
-    }
-    return reverseDirection;
-  };
-  protoOf(ScrollableDefaults).flingBehavior$composable_q5mns3_k$ = function ($composer, $changed) {
-    var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(2018042528);
-    sourceInformation($composer_0, 'C(flingBehavior$composable)183@8186L23:Scrollable.kt#8bwon0');
-    if (isTraceInProgress()) {
-      traceEventStart(2018042528, $changed, -1, 'androidx.compose.foundation.gestures.ScrollableDefaults.flingBehavior$composable (Scrollable.kt:183)');
-    }
-    var tmp0 = rememberFlingBehavior$composable($composer_0, 0);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    $composer_0.endReplaceableGroup_er37p7_k$();
-    return tmp0;
-  };
-  protoOf(ScrollableDefaults).overscrollEffect$composable_onahuh_k$ = function ($composer, $changed) {
-    var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1082370243);
-    sourceInformation($composer_0, 'C(overscrollEffect$composable)192@8448L26:Scrollable.kt#8bwon0');
-    if (isTraceInProgress()) {
-      traceEventStart(-1082370243, $changed, -1, 'androidx.compose.foundation.gestures.ScrollableDefaults.overscrollEffect$composable (Scrollable.kt:191)');
-    }
-    var tmp0 = rememberOverscrollEffect$composable($composer_0, 0);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    $composer_0.endReplaceableGroup_er37p7_k$();
-    return tmp0;
-  };
-  var ScrollableDefaults_instance;
-  function ScrollableDefaults_getInstance() {
-    if (ScrollableDefaults_instance == null)
-      new ScrollableDefaults();
-    return ScrollableDefaults_instance;
   }
   function ScrollingLogic$onDragStopped$slambda$slambda(this$0, $this_scroll, resultContinuation) {
     this.this$0__1 = this$0;
@@ -10789,7 +11300,7 @@
   }
   function ScrollingLogic$doFlingAnimation$lambda(this$0, $this_doFlingAnimation) {
     return function (delta) {
-      return new Offset_0(this$0.reverseIfNeeded_exx2b1_k$(this$0.dispatchScroll_9741up_k$($this_doFlingAnimation, this$0.reverseIfNeeded_exx2b1_k$(delta.packedValue_1), Companion_getInstance_15().get_Fling_te9v25_k$())));
+      return new Offset_0(this$0.reverseIfNeeded_exx2b1_k$(this$0.dispatchScroll_9741up_k$($this_doFlingAnimation, this$0.reverseIfNeeded_exx2b1_k$(delta.packedValue_1), Companion_getInstance_20().get_Fling_te9v25_k$())));
     };
   }
   function ScrollingLogic$doFlingAnimation$scope$1(this$0, $outerScopeScroll) {
@@ -10799,12 +11310,12 @@
   protoOf(ScrollingLogic$doFlingAnimation$scope$1).scrollBy_p9cup6_k$ = function (pixels) {
     return this.this$0__1.toFloat_ycpo8q_k$(this.$outerScopeScroll_1(new Offset_0(this.this$0__1.toOffset_fg67sq_k$(pixels))).packedValue_1);
   };
-  function $onDragStoppedCOROUTINE$20(_this__u8e3s4, initialVelocity, resultContinuation) {
+  function $onDragStoppedCOROUTINE$1(_this__u8e3s4, initialVelocity, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.initialVelocity_1 = initialVelocity;
   }
-  protoOf($onDragStoppedCOROUTINE$20).doResume_5yljmg_k$ = function () {
+  protoOf($onDragStoppedCOROUTINE$1).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -10838,13 +11349,13 @@
       }
      while (true);
   };
-  function $doFlingAnimationCOROUTINE$21(_this__u8e3s4, _this__u8e3s4_0, available, resultContinuation) {
+  function $doFlingAnimationCOROUTINE$2(_this__u8e3s4, _this__u8e3s4_0, available, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this._this__u8e3s4__2 = _this__u8e3s4_0;
     this.available_1 = available;
   }
-  protoOf($doFlingAnimationCOROUTINE$21).doResume_5yljmg_k$ = function () {
+  protoOf($doFlingAnimationCOROUTINE$2).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -10961,13 +11472,13 @@
     return this.toOffset_fg67sq_k$(this.reverseIfNeeded_by99jo_k$(this.scrollableState_1.dispatchRawDelta_ck05yc_k$(this.reverseIfNeeded_by99jo_k$(this.toFloat_ycpo8q_k$(scroll)))));
   };
   protoOf(ScrollingLogic).onDragStopped_o8o9ey_k$ = function (initialVelocity, $completion) {
-    var tmp = new $onDragStoppedCOROUTINE$20(this, initialVelocity, $completion);
+    var tmp = new $onDragStoppedCOROUTINE$1(this, initialVelocity, $completion);
     tmp.set_result_ximc09_k$(Unit_getInstance());
     tmp.set_exception_pwgeox_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
   protoOf(ScrollingLogic).doFlingAnimation_b3sk1y_k$ = function (_this__u8e3s4, available, $completion) {
-    var tmp = new $doFlingAnimationCOROUTINE$21(this, _this__u8e3s4, available, $completion);
+    var tmp = new $doFlingAnimationCOROUTINE$2(this, _this__u8e3s4, available, $completion);
     tmp.set_result_ximc09_k$(Unit_getInstance());
     tmp.set_exception_pwgeox_k$(null);
     var tmp_0 = tmp.doResume_5yljmg_k$();
@@ -10989,153 +11500,60 @@
   protoOf(ScrollingLogic).registerNestedFling_pg0ux_k$ = function (isFlinging) {
     this.isNestedFlinging_1.set_value_rnwamw_k$(isFlinging);
   };
-  function rememberScrollingLogic$composable(orientation, reverseDirection, nestedScrollDispatcher, scrollableState, flingBehavior, overscrollEffect, $composer, $changed) {
-    _init_properties_Scrollable_kt__k2543d();
+  function get_$stableprop_7() {
+    return 0;
+  }
+  function ScrollableDefaults() {
+    ScrollableDefaults_instance = this;
+    this.$stable_1 = 0;
+  }
+  protoOf(ScrollableDefaults).flingBehavior_nuk9n2_k$ = function () {
+    illegalDecoyCallException('flingBehavior');
+  };
+  protoOf(ScrollableDefaults).overscrollEffect_jufk42_k$ = function () {
+    illegalDecoyCallException('overscrollEffect');
+  };
+  protoOf(ScrollableDefaults).reverseDirection_cttzbv_k$ = function (layoutDirection, orientation, reverseScrolling) {
+    var reverseDirection = !reverseScrolling;
+    var isRtl = layoutDirection.equals(LayoutDirection_Rtl_getInstance());
+    if (isRtl ? !orientation.equals(Orientation_Vertical_getInstance()) : false) {
+      reverseDirection = !reverseDirection;
+    }
+    return reverseDirection;
+  };
+  protoOf(ScrollableDefaults).flingBehavior$composable_q5mns3_k$ = function ($composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-243835753);
-    sourceInformation($composer_0, 'C(rememberScrollingLogic$composable)P(2,4,1,5)300@12421L321:Scrollable.kt#8bwon0');
+    $composer_0.startReplaceableGroup_rp6air_k$(2018042528);
+    sourceInformation($composer_0, 'C(flingBehavior$composable)183@8186L23:Scrollable.kt#8bwon0');
     if (isTraceInProgress()) {
-      traceEventStart(-243835753, $changed, -1, 'androidx.compose.foundation.gestures.rememberScrollingLogic$composable (Scrollable.kt:293)');
+      traceEventStart(2018042528, $changed, -1, 'androidx.compose.foundation.gestures.ScrollableDefaults.flingBehavior$composable (Scrollable.kt:183)');
     }
-    // Inline function 'androidx.compose.runtime.remember$composable' call
-    var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(-1603429786);
-    sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
-    var invalid = false;
-    var indexedObject = [orientation, reverseDirection, nestedScrollDispatcher, scrollableState, flingBehavior, overscrollEffect];
-    var inductionVariable = 0;
-    var last = indexedObject.length;
-    while (inductionVariable < last) {
-      var key = indexedObject[inductionVariable];
-      inductionVariable = inductionVariable + 1 | 0;
-      invalid = !!(invalid | $composer_1.changed_ga7h3f_k$(key));
-    }
-    // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache = invalid;
-    // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var tmp;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
-      // Inline function 'androidx.compose.foundation.gestures.rememberScrollingLogic$composable.<anonymous>' call
-      var value = new ScrollingLogic(orientation, reverseDirection, nestedScrollDispatcher, scrollableState, flingBehavior, overscrollEffect);
-      $composer_1.updateRememberedValue_l1colo_k$(value);
-      tmp = value;
-    } else {
-      tmp = tmp0_let;
-    }
-    var tmp_0 = tmp;
-    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
+    var tmp0 = rememberFlingBehavior$composable($composer_0, 0);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
     $composer_0.endReplaceableGroup_er37p7_k$();
     return tmp0;
-  }
-  function scrollableNestedScrollConnection(scrollLogic, enabled) {
-    _init_properties_Scrollable_kt__k2543d();
-    return new scrollableNestedScrollConnection$1(scrollLogic, enabled);
-  }
-  function ScrollDraggableState$drag$slambda(this$0, $block, resultContinuation) {
-    this.this$0__1 = this$0;
-    this.$block_1 = $block;
-    CoroutineImpl.call(this, resultContinuation);
-  }
-  protoOf(ScrollDraggableState$drag$slambda).invoke_zaade9_k$ = function ($this$scroll, $completion) {
-    var tmp = this.create_ld2pu4_k$($this$scroll, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
-    return tmp.doResume_5yljmg_k$();
   };
-  protoOf(ScrollDraggableState$drag$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_zaade9_k$((!(p1 == null) ? isInterface(p1, ScrollScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(ScrollableDefaults).overscrollEffect$composable_onahuh_k$ = function ($composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_rp6air_k$(-1082370243);
+    sourceInformation($composer_0, 'C(overscrollEffect$composable)192@8448L26:Scrollable.kt#8bwon0');
+    if (isTraceInProgress()) {
+      traceEventStart(-1082370243, $changed, -1, 'androidx.compose.foundation.gestures.ScrollableDefaults.overscrollEffect$composable (Scrollable.kt:191)');
+    }
+    var tmp0 = rememberOverscrollEffect$composable($composer_0, 0);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    return tmp0;
   };
-  protoOf(ScrollDraggableState$drag$slambda).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.this$0__1.latestScrollScope_1 = this.$this$scroll_1;
-            this.set_state_a96kl8_k$(1);
-            suspendResult = this.$block_1(this.this$0__1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
-        }
-      }
-     while (true);
-  };
-  protoOf(ScrollDraggableState$drag$slambda).create_ld2pu4_k$ = function ($this$scroll, completion) {
-    var i = new ScrollDraggableState$drag$slambda(this.this$0__1, this.$block_1, completion);
-    i.$this$scroll_1 = $this$scroll;
-    return i;
-  };
-  protoOf(ScrollDraggableState$drag$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_ld2pu4_k$((!(value == null) ? isInterface(value, ScrollScope) : false) ? value : THROW_CCE(), completion);
-  };
-  function ScrollDraggableState$drag$slambda_0(this$0, $block, resultContinuation) {
-    var i = new ScrollDraggableState$drag$slambda(this$0, $block, resultContinuation);
-    var l = function ($this$scroll, $completion) {
-      return i.invoke_zaade9_k$($this$scroll, $completion);
-    };
-    l.$arity = 1;
-    return l;
-  }
-  function ScrollDraggableState(scrollLogic) {
-    this.scrollLogic_1 = scrollLogic;
-    this.latestScrollScope_1 = get_NoOpScrollScope();
-  }
-  protoOf(ScrollDraggableState).get_scrollLogic_n9q8k8_k$ = function () {
-    return this.scrollLogic_1;
-  };
-  protoOf(ScrollDraggableState).set_latestScrollScope_mbcnug_k$ = function (_set____db54di) {
-    this.latestScrollScope_1 = _set____db54di;
-  };
-  protoOf(ScrollDraggableState).get_latestScrollScope_tmkn9z_k$ = function () {
-    return this.latestScrollScope_1;
-  };
-  protoOf(ScrollDraggableState).dragBy_silpzm_k$ = function (pixels) {
-    // Inline function 'kotlin.with' call
-    var tmp0_with = this.scrollLogic_1.get_value_j01efc_k$();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.foundation.gestures.ScrollDraggableState.dragBy.<anonymous>' call
-    // Inline function 'kotlin.with' call
-    var tmp0_with_0 = this.latestScrollScope_1;
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.foundation.gestures.ScrollDraggableState.dragBy.<anonymous>.<anonymous>' call
-    tmp0_with.dispatchScroll_9741up_k$(tmp0_with_0, tmp0_with.toOffset_fg67sq_k$(pixels), Companion_getInstance_15().get_Drag_nrda4n_k$());
-  };
-  protoOf(ScrollDraggableState).drag_p40z53_k$ = function (dragPriority, block, $completion) {
-    var tmp = this.scrollLogic_1.get_value_j01efc_k$().scrollableState_1;
-    return tmp.scroll_cftnmv_k$(dragPriority, ScrollDraggableState$drag$slambda_0(this, block, null), $completion);
-  };
-  protoOf(ScrollDraggableState).dispatchRawDelta_pi5a99_k$ = function (delta) {
-    // Inline function 'kotlin.with' call
-    var tmp0_with = this.scrollLogic_1.get_value_j01efc_k$();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.foundation.gestures.ScrollDraggableState.dispatchRawDelta.<anonymous>' call
-    tmp0_with.performRawScroll_ckbgf3_k$(tmp0_with.toOffset_fg67sq_k$(delta));
-  };
-  function ScrollConfig() {
+  var ScrollableDefaults_instance;
+  function ScrollableDefaults_getInstance() {
+    if (ScrollableDefaults_instance == null)
+      new ScrollableDefaults();
+    return ScrollableDefaults_instance;
   }
   function DefaultFlingBehavior$performFling$slambda$lambda($lastValue, $this_performFling, $velocityLeft, this$0) {
     return function ($this$animateDecay) {
@@ -11256,6 +11674,340 @@
     this.lastAnimationCycleCount_1 = 0;
     return withContext(this.motionDurationScale_1, DefaultFlingBehavior$performFling$slambda_0(initialVelocity, this, _this__u8e3s4, null), $completion);
   };
+  function ScrollConfig() {
+  }
+  function get_DefaultScrollMotionDurationScaleFactor() {
+    return DefaultScrollMotionDurationScaleFactor;
+  }
+  var DefaultScrollMotionDurationScaleFactor;
+  function ModifierLocalScrollableContainerProvider() {
+    ModifierLocalScrollableContainerProvider_instance = this;
+    this.key_1 = get_ModifierLocalScrollableContainer();
+    this.value_1 = true;
+  }
+  protoOf(ModifierLocalScrollableContainerProvider).get_key_18j28a_k$ = function () {
+    return this.key_1;
+  };
+  protoOf(ModifierLocalScrollableContainerProvider).get_value_j01efc_k$ = function () {
+    return this.value_1;
+  };
+  var ModifierLocalScrollableContainerProvider_instance;
+  function ModifierLocalScrollableContainerProvider_getInstance() {
+    if (ModifierLocalScrollableContainerProvider_instance == null)
+      new ModifierLocalScrollableContainerProvider();
+    return ModifierLocalScrollableContainerProvider_instance;
+  }
+  function pointerScrollable$composable(_this__u8e3s4, interactionSource, orientation, reverseDirection, controller, flingBehavior, overscrollEffect, enabled, $composer, $changed) {
+    _init_properties_Scrollable_kt__k2543d();
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_rp6air_k$(-1423283007);
+    sourceInformation($composer_0, 'C(pointerScrollable$composable)P(3,4,6!1,2,5)251@10488L53,253@10577L196,261@10796L38,262@10868L88,265@10982L46,266@11052L22,267@11106L7,283@11725L42,276@11401L47,278@11525L176:Scrollable.kt#8bwon0');
+    if (isTraceInProgress()) {
+      traceEventStart(-1423283007, $changed, -1, 'androidx.compose.foundation.gestures.pointerScrollable$composable (Scrollable.kt:241)');
+    }
+    $composer_0.startReplaceableGroup_rp6air_k$(-1354677204);
+    sourceInformation($composer_0, '250@10439L15');
+    var tmp1_group = flingBehavior == null ? ScrollableDefaults_getInstance().flingBehavior$composable_q5mns3_k$($composer_0, 6) : flingBehavior;
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    var fling = tmp1_group;
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_1 = $composer_0;
+    $composer_1.startReplaceableGroup_rp6air_k$(547886695);
+    sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
+    // Inline function 'androidx.compose.runtime.cache' call
+    // Inline function 'kotlin.let' call
+    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp;
+    if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.gestures.pointerScrollable$composable.<anonymous>' call
+      var value = mutableStateOf(new NestedScrollDispatcher());
+      $composer_1.updateRememberedValue_l1colo_k$(value);
+      tmp = value;
+    } else {
+      tmp = tmp0_let;
+    }
+    var tmp_0 = tmp;
+    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
+    $composer_1.endReplaceableGroup_er37p7_k$();
+    var nestedScrollDispatcher = tmp0;
+    var scrollLogicValue = rememberScrollingLogic$composable(orientation, reverseDirection, nestedScrollDispatcher, controller, fling, overscrollEffect, $composer_0, 14 & $changed >> 6 | 112 & $changed >> 6 | 7168 & $changed >> 3 | 458752 & $changed >> 3);
+    var scrollLogic = rememberUpdatedState$composable(scrollLogicValue, $composer_0, 0);
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_2 = $composer_0;
+    $composer_2.startReplaceableGroup_rp6air_k$(-838505973);
+    sourceInformation($composer_2, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+    // Inline function 'androidx.compose.runtime.cache' call
+    var tmp1_cache = $composer_2.changed_ga7h3f_k$(enabled);
+    // Inline function 'kotlin.let' call
+    var tmp0_let_0 = $composer_2.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp_1;
+    if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.gestures.pointerScrollable$composable.<anonymous>' call
+      var value_0 = scrollableNestedScrollConnection(scrollLogic, enabled);
+      $composer_2.updateRememberedValue_l1colo_k$(value_0);
+      tmp_1 = value_0;
+    } else {
+      tmp_1 = tmp0_let_0;
+    }
+    var tmp_2 = tmp_1;
+    var tmp0_0 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
+    $composer_2.endReplaceableGroup_er37p7_k$();
+    var nestedScrollConnection = tmp0_0;
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_3 = $composer_0;
+    $composer_3.startReplaceableGroup_rp6air_k$(547886695);
+    sourceInformation($composer_3, 'CC(remember$composable):Composables.kt#9igjgp');
+    // Inline function 'androidx.compose.runtime.cache' call
+    // Inline function 'kotlin.let' call
+    var tmp0_let_1 = $composer_3.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp_3;
+    if (false ? true : tmp0_let_1 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.gestures.pointerScrollable$composable.<anonymous>' call
+      var value_1 = new ScrollDraggableState(scrollLogic);
+      $composer_3.updateRememberedValue_l1colo_k$(value_1);
+      tmp_3 = value_1;
+    } else {
+      tmp_3 = tmp0_let_1;
+    }
+    var tmp_4 = tmp_3;
+    var tmp0_1 = (tmp_4 == null ? true : isObject(tmp_4)) ? tmp_4 : THROW_CCE();
+    $composer_3.endReplaceableGroup_er37p7_k$();
+    var draggableState = tmp0_1;
+    var scrollConfig = platformScrollConfig$composable($composer_0, 0);
+    // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
+    var tmp4_$get_current$$composable_f3pcsz = get_LocalDensity();
+    var $composer_4 = $composer_0;
+    sourceInformationMarkerStart($composer_4, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
+    var tmp0_2 = $composer_4.consume_11nid3_k$(tmp4_$get_current$$composable_f3pcsz);
+    sourceInformationMarkerEnd($composer_4);
+    var density = tmp0_2.get_density_qy0267_k$();
+    var tmp1_onDragStarted = get_NoOpOnDragStarted();
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_5 = $composer_0;
+    $composer_5.startReplaceableGroup_rp6air_k$(547886695);
+    sourceInformation($composer_5, 'CC(remember$composable):Composables.kt#9igjgp');
+    // Inline function 'androidx.compose.runtime.cache' call
+    // Inline function 'kotlin.let' call
+    var tmp0_let_2 = $composer_5.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp_5;
+    if (false ? true : tmp0_let_2 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.gestures.pointerScrollable$composable.<anonymous>' call
+      var value_2 = pointerScrollable$composable$lambda;
+      $composer_5.updateRememberedValue_l1colo_k$(value_2);
+      tmp_5 = value_2;
+    } else {
+      tmp_5 = tmp0_let_2;
+    }
+    var tmp_6 = tmp_5;
+    var tmp0_3 = (tmp_6 == null ? true : isObject(tmp_6)) ? tmp_6 : THROW_CCE();
+    $composer_5.endReplaceableGroup_er37p7_k$();
+    var tmp_7 = tmp0_3;
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_6 = $composer_0;
+    $composer_6.startReplaceableGroup_rp6air_k$(-838505973);
+    sourceInformation($composer_6, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+    // Inline function 'androidx.compose.runtime.cache' call
+    var tmp1_cache_0 = $composer_6.changed_ga7h3f_k$(scrollLogic);
+    // Inline function 'kotlin.let' call
+    var tmp0_let_3 = $composer_6.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp_8;
+    if (tmp1_cache_0 ? true : tmp0_let_3 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.gestures.pointerScrollable$composable.<anonymous>' call
+      var value_3 = pointerScrollable$composable$lambda_0(scrollLogic);
+      $composer_6.updateRememberedValue_l1colo_k$(value_3);
+      tmp_8 = value_3;
+    } else {
+      tmp_8 = tmp0_let_3;
+    }
+    var tmp_9 = tmp_8;
+    var tmp0_4 = (tmp_9 == null ? true : isObject(tmp_9)) ? tmp_9 : THROW_CCE();
+    $composer_6.endReplaceableGroup_er37p7_k$();
+    var tmp_10 = tmp0_4;
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_7 = $composer_0;
+    $composer_7.startReplaceableGroup_rp6air_k$(-1124426577);
+    sourceInformation($composer_7, 'CC(remember$composable)P(1,2):Composables.kt#9igjgp');
+    // Inline function 'androidx.compose.runtime.cache' call
+    var tmp1_cache_1 = !!($composer_7.changed_ga7h3f_k$(nestedScrollDispatcher) | $composer_7.changed_ga7h3f_k$(scrollLogic));
+    // Inline function 'kotlin.let' call
+    var tmp0_let_4 = $composer_7.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp_11;
+    if (tmp1_cache_1 ? true : tmp0_let_4 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.gestures.pointerScrollable$composable.<anonymous>' call
+      var value_4 = pointerScrollable$composable$slambda_0(nestedScrollDispatcher, scrollLogic, null);
+      $composer_7.updateRememberedValue_l1colo_k$(value_4);
+      tmp_11 = value_4;
+    } else {
+      tmp_11 = tmp0_let_4;
+    }
+    var tmp_12 = tmp_11;
+    var tmp0_5 = (tmp_12 == null ? true : isObject(tmp_12)) ? tmp_12 : THROW_CCE();
+    $composer_7.endReplaceableGroup_er37p7_k$();
+    var tmp0_6 = nestedScroll(_this__u8e3s4.then_5qw5wu_k$(new DraggableElement(draggableState, tmp_7, orientation, enabled, interactionSource, tmp_10, tmp1_onDragStarted, tmp0_5, false)).then_5qw5wu_k$(new MouseWheelScrollableElement(scrollLogicValue, scrollConfig, density)), nestedScrollConnection, nestedScrollDispatcher.get_value_j01efc_k$());
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    return tmp0_6;
+  }
+  function rememberScrollingLogic$composable(orientation, reverseDirection, nestedScrollDispatcher, scrollableState, flingBehavior, overscrollEffect, $composer, $changed) {
+    _init_properties_Scrollable_kt__k2543d();
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_rp6air_k$(-243835753);
+    sourceInformation($composer_0, 'C(rememberScrollingLogic$composable)P(2,4,1,5)300@12421L321:Scrollable.kt#8bwon0');
+    if (isTraceInProgress()) {
+      traceEventStart(-243835753, $changed, -1, 'androidx.compose.foundation.gestures.rememberScrollingLogic$composable (Scrollable.kt:293)');
+    }
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_1 = $composer_0;
+    $composer_1.startReplaceableGroup_rp6air_k$(-1603429786);
+    sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+    var invalid = false;
+    var indexedObject = [orientation, reverseDirection, nestedScrollDispatcher, scrollableState, flingBehavior, overscrollEffect];
+    var inductionVariable = 0;
+    var last = indexedObject.length;
+    while (inductionVariable < last) {
+      var key = indexedObject[inductionVariable];
+      inductionVariable = inductionVariable + 1 | 0;
+      invalid = !!(invalid | $composer_1.changed_ga7h3f_k$(key));
+    }
+    // Inline function 'androidx.compose.runtime.cache' call
+    var tmp1_cache = invalid;
+    // Inline function 'kotlin.let' call
+    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp;
+    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.gestures.rememberScrollingLogic$composable.<anonymous>' call
+      var value = new ScrollingLogic(orientation, reverseDirection, nestedScrollDispatcher, scrollableState, flingBehavior, overscrollEffect);
+      $composer_1.updateRememberedValue_l1colo_k$(value);
+      tmp = value;
+    } else {
+      tmp = tmp0_let;
+    }
+    var tmp_0 = tmp;
+    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
+    $composer_1.endReplaceableGroup_er37p7_k$();
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    return tmp0;
+  }
+  function scrollableNestedScrollConnection(scrollLogic, enabled) {
+    _init_properties_Scrollable_kt__k2543d();
+    return new scrollableNestedScrollConnection$1(scrollLogic, enabled);
+  }
+  function ScrollDraggableState$drag$slambda(this$0, $block, resultContinuation) {
+    this.this$0__1 = this$0;
+    this.$block_1 = $block;
+    CoroutineImpl.call(this, resultContinuation);
+  }
+  protoOf(ScrollDraggableState$drag$slambda).invoke_zaade9_k$ = function ($this$scroll, $completion) {
+    var tmp = this.create_ld2pu4_k$($this$scroll, $completion);
+    tmp.set_result_ximc09_k$(Unit_getInstance());
+    tmp.set_exception_pwgeox_k$(null);
+    return tmp.doResume_5yljmg_k$();
+  };
+  protoOf(ScrollDraggableState$drag$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
+    return this.invoke_zaade9_k$((!(p1 == null) ? isInterface(p1, ScrollScope) : false) ? p1 : THROW_CCE(), $completion);
+  };
+  protoOf(ScrollDraggableState$drag$slambda).doResume_5yljmg_k$ = function () {
+    var suspendResult = this.get_result_iyg5d2_k$();
+    $sm: do
+      try {
+        var tmp = this.get_state_iypx7s_k$();
+        switch (tmp) {
+          case 0:
+            this.set_exceptionState_s9sevl_k$(2);
+            this.this$0__1.latestScrollScope_1 = this.$this$scroll_1;
+            this.set_state_a96kl8_k$(1);
+            suspendResult = this.$block_1(this.this$0__1, this);
+            if (suspendResult === get_COROUTINE_SUSPENDED()) {
+              return suspendResult;
+            }
+
+            continue $sm;
+          case 1:
+            return Unit_getInstance();
+          case 2:
+            throw this.get_exception_x0n6w6_k$();
+        }
+      } catch ($p) {
+        var e = $p;
+        if (this.get_exceptionState_wflpxn_k$() === 2) {
+          throw e;
+        } else {
+          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_pwgeox_k$(e);
+        }
+      }
+     while (true);
+  };
+  protoOf(ScrollDraggableState$drag$slambda).create_ld2pu4_k$ = function ($this$scroll, completion) {
+    var i = new ScrollDraggableState$drag$slambda(this.this$0__1, this.$block_1, completion);
+    i.$this$scroll_1 = $this$scroll;
+    return i;
+  };
+  protoOf(ScrollDraggableState$drag$slambda).create_xubfvz_k$ = function (value, completion) {
+    return this.create_ld2pu4_k$((!(value == null) ? isInterface(value, ScrollScope) : false) ? value : THROW_CCE(), completion);
+  };
+  function ScrollDraggableState$drag$slambda_0(this$0, $block, resultContinuation) {
+    var i = new ScrollDraggableState$drag$slambda(this$0, $block, resultContinuation);
+    var l = function ($this$scroll, $completion) {
+      return i.invoke_zaade9_k$($this$scroll, $completion);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function ScrollDraggableState(scrollLogic) {
+    this.scrollLogic_1 = scrollLogic;
+    this.latestScrollScope_1 = get_NoOpScrollScope();
+  }
+  protoOf(ScrollDraggableState).get_scrollLogic_n9q8k8_k$ = function () {
+    return this.scrollLogic_1;
+  };
+  protoOf(ScrollDraggableState).set_latestScrollScope_mbcnug_k$ = function (_set____db54di) {
+    this.latestScrollScope_1 = _set____db54di;
+  };
+  protoOf(ScrollDraggableState).get_latestScrollScope_tmkn9z_k$ = function () {
+    return this.latestScrollScope_1;
+  };
+  protoOf(ScrollDraggableState).dragBy_silpzm_k$ = function (pixels) {
+    // Inline function 'kotlin.with' call
+    var tmp0_with = this.scrollLogic_1.get_value_j01efc_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.foundation.gestures.ScrollDraggableState.dragBy.<anonymous>' call
+    // Inline function 'kotlin.with' call
+    var tmp0_with_0 = this.latestScrollScope_1;
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.foundation.gestures.ScrollDraggableState.dragBy.<anonymous>.<anonymous>' call
+    tmp0_with.dispatchScroll_9741up_k$(tmp0_with_0, tmp0_with.toOffset_fg67sq_k$(pixels), Companion_getInstance_20().get_Drag_nrda4n_k$());
+  };
+  protoOf(ScrollDraggableState).drag_p40z53_k$ = function (dragPriority, block, $completion) {
+    var tmp = this.scrollLogic_1.get_value_j01efc_k$().scrollableState_1;
+    return tmp.scroll_cftnmv_k$(dragPriority, ScrollDraggableState$drag$slambda_0(this, block, null), $completion);
+  };
+  protoOf(ScrollDraggableState).dispatchRawDelta_pi5a99_k$ = function (delta) {
+    // Inline function 'kotlin.with' call
+    var tmp0_with = this.scrollLogic_1.get_value_j01efc_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.foundation.gestures.ScrollDraggableState.dispatchRawDelta.<anonymous>' call
+    tmp0_with.performRawScroll_ckbgf3_k$(tmp0_with.toOffset_fg67sq_k$(delta));
+  };
   function NoOpOnDragStarted$slambda(resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
   }
@@ -11369,7 +12121,7 @@
       var tmp$ret$1;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_0;
-      if (false ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$0;
         // Inline function 'androidx.compose.runtime.rememberCoroutineScope$composable.<anonymous>' call
         tmp$ret$0 = new CompositionScopedCoroutineScopeCanceller(createCompositionCoroutineScope(getContext._v(), composer));
@@ -11417,7 +12169,7 @@
       var tmp$ret$7;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_2;
-      if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$6;
         // Inline function 'androidx.compose.foundation.gestures.scrollable.<anonymous>.<anonymous>' call
         tmp$ret$6 = new ContentInViewModifier(coroutineScope, $orientation, $state, $reverseDirection);
@@ -11435,7 +12187,7 @@
       $composer_3.endReplaceableGroup_er37p7_k$();
       tmp$ret$10 = tmp0_1;
       var keepFocusedChildInViewModifier = tmp$ret$10;
-      var tmp0_2 = pointerScrollable$composable(focusGroup(Companion_getInstance_7()).then_5qw5wu_k$(keepFocusedChildInViewModifier.get_modifier_t1pq5c_k$()), $interactionSource, $orientation, $reverseDirection, $state, $flingBehavior, $overscrollEffect, $enabled, $composer_0, 0).then_5qw5wu_k$($enabled ? ModifierLocalScrollableContainerProvider_getInstance() : Companion_getInstance_7());
+      var tmp0_2 = pointerScrollable$composable(focusGroup(Companion_getInstance_8()).then_5qw5wu_k$(keepFocusedChildInViewModifier.get_modifier_t1pq5c_k$()), $interactionSource, $orientation, $reverseDirection, $state, $flingBehavior, $overscrollEffect, $enabled, $composer_0, 0).then_5qw5wu_k$($enabled ? ModifierLocalScrollableContainerProvider_getInstance() : Companion_getInstance_8());
       var tmp_4;
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -11447,7 +12199,7 @@
   }
   function pointerScrollable$composable$lambda(down) {
     _init_properties_Scrollable_kt__k2543d();
-    return !(down.get_type_zeflrq_k$() === Companion_getInstance_13().get_Mouse_a0dpcz_k$());
+    return !(down.get_type_zeflrq_k$() === Companion_getInstance_18().get_Mouse_a0dpcz_k$());
   }
   function pointerScrollable$composable$lambda_0($scrollLogic) {
     return function () {
@@ -11633,13 +12385,13 @@
     l.$arity = 1;
     return l;
   }
-  function $onPostFlingCOROUTINE$22(_this__u8e3s4, consumed, available, resultContinuation) {
+  function $onPostFlingCOROUTINE$3(_this__u8e3s4, consumed, available, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.consumed_1 = consumed;
     this.available_1 = available;
   }
-  protoOf($onPostFlingCOROUTINE$22).doResume_5yljmg_k$ = function () {
+  protoOf($onPostFlingCOROUTINE$3).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -11659,7 +12411,7 @@
               continue $sm;
             } else {
               var tmp_1 = this;
-              tmp_1.WHEN_RESULT0__1 = Companion_getInstance_14().get_Zero_s3q2zh_k$();
+              tmp_1.WHEN_RESULT0__1 = Companion_getInstance_19().get_Zero_s3q2zh_k$();
               this.set_state_a96kl8_k$(2);
               continue $sm;
             }
@@ -11691,7 +12443,7 @@
     this.$enabled_1 = $enabled;
   }
   protoOf(scrollableNestedScrollConnection$1).onPreScroll_lxl9op_k$ = function (available, source) {
-    if (source === Companion_getInstance_15().get_Fling_te9v25_k$()) {
+    if (source === Companion_getInstance_20().get_Fling_te9v25_k$()) {
       this.$scrollLogic_1.get_value_j01efc_k$().registerNestedFling_pg0ux_k$(true);
     }
     return Companion_getInstance_6().get_Zero_sctq3f_k$();
@@ -11706,7 +12458,7 @@
     return tmp;
   };
   protoOf(scrollableNestedScrollConnection$1).onPostFling_9ubv_k$ = function (consumed, available, $completion) {
-    var tmp = new $onPostFlingCOROUTINE$22(this, consumed, available, $completion);
+    var tmp = new $onPostFlingCOROUTINE$3(this, consumed, available, $completion);
     tmp.set_result_ximc09_k$(Unit_getInstance());
     tmp.set_exception_pwgeox_k$(null);
     var tmp_0 = tmp.doResume_5yljmg_k$();
@@ -11726,7 +12478,10 @@
   }
   function ScrollScope() {
   }
-  function ScrollableState() {
+  function ScrollableState(consumeScrollDelta) {
+    return new DefaultScrollableState(consumeScrollDelta);
+  }
+  function ScrollableState_0() {
   }
   function rememberScrollableState$composable(consumeScrollDelta, $composer, $changed) {
     var $composer_0 = $composer;
@@ -11746,9 +12501,9 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
     var tmp;
-    if (false ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+    if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.foundation.gestures.rememberScrollableState$composable.<anonymous>' call
-      var value = ScrollableState_0(rememberScrollableState$composable$lambda(lambdaState));
+      var value = ScrollableState(rememberScrollableState$composable$lambda(lambdaState));
       $composer_1.updateRememberedValue_l1colo_k$(value);
       tmp = value;
     } else {
@@ -11762,9 +12517,6 @@
     }
     $composer_0.endReplaceableGroup_er37p7_k$();
     return tmp0;
-  }
-  function ScrollableState_0(consumeScrollDelta) {
-    return new DefaultScrollableState(consumeScrollDelta);
   }
   function DefaultScrollableState$scroll$slambda$slambda(this$0, $block, resultContinuation) {
     this.this$0__1 = this$0;
@@ -12209,7 +12961,7 @@
           var item = tmp0_fastAll.get_fkrdnv_k$(index);
           // Inline function 'androidx.compose.ui.util.fastAll.<anonymous>' call
           // Inline function 'androidx.compose.foundation.gestures.isPrimaryChangedDown.<anonymous>' call
-          if (!(item.get_type_zeflrq_k$() === Companion_getInstance_13().get_Mouse_a0dpcz_k$())) {
+          if (!(item.get_type_zeflrq_k$() === Companion_getInstance_18().get_Mouse_a0dpcz_k$())) {
             tmp$ret$1 = false;
             break $l$block;
           }
@@ -12880,7 +13632,7 @@
     return Math.abs(_this__u8e3s4) < 0.01;
   };
   var Companion_instance_0;
-  function Companion_getInstance_43() {
+  function Companion_getInstance_50() {
     if (Companion_instance_0 == null)
       new Companion_0();
     return Companion_instance_0;
@@ -12895,7 +13647,7 @@
       var vectorizedCurrentValue = new AnimationVector1D(this$0.value_1);
       var tmp_0;
       if ($durationScale === 0.0) {
-        tmp_0 = Companion_getInstance_43().RebasableAnimationSpec_1.getDurationNanos_62az16_k$(new AnimationVector1D(this$0.value_1), Companion_getInstance_43().ZeroVector_1, this$0.lastVelocity_1);
+        tmp_0 = Companion_getInstance_50().RebasableAnimationSpec_1.getDurationNanos_62az16_k$(new AnimationVector1D(this$0.value_1), Companion_getInstance_50().ZeroVector_1, this$0.lastVelocity_1);
       } else {
         var tmp$ret$1;
         // Inline function 'kotlin.math.roundToLong' call
@@ -12908,8 +13660,8 @@
         tmp_0 = tmp$ret$1;
       }
       var playTime = tmp_0;
-      var newValue = Companion_getInstance_43().RebasableAnimationSpec_1.getValueFromNanos_274kdl_k$(playTime, vectorizedCurrentValue, Companion_getInstance_43().ZeroVector_1, this$0.lastVelocity_1).get_value_j01efc_k$();
-      this$0.lastVelocity_1 = Companion_getInstance_43().RebasableAnimationSpec_1.getVelocityFromNanos_2nsq5r_k$(playTime, vectorizedCurrentValue, Companion_getInstance_43().ZeroVector_1, this$0.lastVelocity_1);
+      var newValue = Companion_getInstance_50().RebasableAnimationSpec_1.getValueFromNanos_274kdl_k$(playTime, vectorizedCurrentValue, Companion_getInstance_50().ZeroVector_1, this$0.lastVelocity_1).get_value_j01efc_k$();
+      this$0.lastVelocity_1 = Companion_getInstance_50().RebasableAnimationSpec_1.getVelocityFromNanos_2nsq5r_k$(playTime, vectorizedCurrentValue, Companion_getInstance_50().ZeroVector_1, this$0.lastVelocity_1);
       this$0.lastFrameTime_1 = frameTime;
       var delta = this$0.value_1 - newValue;
       this$0.value_1 = newValue;
@@ -12956,7 +13708,7 @@
             this.set_state_a96kl8_k$(2);
             continue $sm;
           case 2:
-            if (!!Companion_getInstance_43().isZeroish_5nfn3g_k$(this._this__u8e3s4__1.value_1)) {
+            if (!!Companion_getInstance_50().isZeroish_5nfn3g_k$(this._this__u8e3s4__1.value_1)) {
               this.set_state_a96kl8_k$(5);
               continue $sm;
             }
@@ -13006,14 +13758,14 @@
             continue $sm;
           case 8:
             this._this__u8e3s4__1.lastFrameTime_1 = AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$();
-            this._this__u8e3s4__1.lastVelocity_1 = Companion_getInstance_43().ZeroVector_1;
+            this._this__u8e3s4__1.lastVelocity_1 = Companion_getInstance_50().ZeroVector_1;
             this._this__u8e3s4__1.isRunning_1 = false;
             return Unit_getInstance();
           case 9:
             this.set_exceptionState_s9sevl_k$(10);
             var t = this.get_exception_x0n6w6_k$();
             this._this__u8e3s4__1.lastFrameTime_1 = AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$();
-            this._this__u8e3s4__1.lastVelocity_1 = Companion_getInstance_43().ZeroVector_1;
+            this._this__u8e3s4__1.lastVelocity_1 = Companion_getInstance_50().ZeroVector_1;
             this._this__u8e3s4__1.isRunning_1 = false;
             throw t;
           case 10:
@@ -13031,9 +13783,9 @@
      while (true);
   };
   function UpdatableAnimationState() {
-    Companion_getInstance_43();
+    Companion_getInstance_50();
     this.lastFrameTime_1 = AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$();
-    this.lastVelocity_1 = Companion_getInstance_43().ZeroVector_1;
+    this.lastVelocity_1 = Companion_getInstance_50().ZeroVector_1;
     this.isRunning_1 = false;
     this.value_1 = 0.0;
   }
@@ -13081,7 +13833,7 @@
     return this.CenterToCenter_1;
   };
   var Companion_instance_1;
-  function Companion_getInstance_44() {
+  function Companion_getInstance_51() {
     if (Companion_instance_1 == null)
       new Companion_1();
     return Companion_instance_1;
@@ -13133,7 +13885,7 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
     var tmp;
-    if (false ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+    if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.foundation.interaction.collectIsFocusedAsState$composable.<anonymous>' call
       var value = mutableStateOf(false);
       $composer_1.updateRememberedValue_l1colo_k$(value);
@@ -13156,7 +13908,7 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
     var tmp_1;
-    if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+    if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.foundation.interaction.collectIsFocusedAsState$composable.<anonymous>' call
       var value_0 = collectIsFocusedAsState$composable$slambda_0(_this__u8e3s4, isFocused, null);
       $composer_2.updateRememberedValue_l1colo_k$(value_0);
@@ -13277,7 +14029,7 @@
           case 0:
             this.set_exceptionState_s9sevl_k$(2);
             var tmp_0 = this;
-            tmp_0.focusInteractions0__1 = ArrayList_init_$Create$();
+            tmp_0.focusInteractions0__1 = ArrayList_init_$Create$_0();
             this.set_state_a96kl8_k$(1);
             var tmp_1 = this.$this_collectIsFocusedAsState$composable_1.get_interactions_ql02qy_k$();
             var tmp_2 = collectIsFocusedAsState$composable$slambda$slambda_0(this.focusInteractions0__1, this.$isFocused_1, null);
@@ -13336,7 +14088,7 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
     var tmp;
-    if (false ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+    if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.foundation.interaction.collectIsHoveredAsState$composable.<anonymous>' call
       var value = mutableStateOf(false);
       $composer_1.updateRememberedValue_l1colo_k$(value);
@@ -13359,7 +14111,7 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
     var tmp_1;
-    if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+    if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.foundation.interaction.collectIsHoveredAsState$composable.<anonymous>' call
       var value_0 = collectIsHoveredAsState$composable$slambda_0(_this__u8e3s4, isHovered, null);
       $composer_2.updateRememberedValue_l1colo_k$(value_0);
@@ -13480,7 +14232,7 @@
           case 0:
             this.set_exceptionState_s9sevl_k$(2);
             var tmp_0 = this;
-            tmp_0.hoverInteractions0__1 = ArrayList_init_$Create$();
+            tmp_0.hoverInteractions0__1 = ArrayList_init_$Create$_0();
             this.set_state_a96kl8_k$(1);
             var tmp_1 = this.$this_collectIsHoveredAsState$composable_1.get_interactions_ql02qy_k$();
             var tmp_2 = collectIsHoveredAsState$composable$slambda$slambda_0(this.hoverInteractions0__1, this.$isHovered_1, null);
@@ -13560,7 +14312,7 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
     var tmp;
-    if (false ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+    if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.foundation.interaction.collectIsPressedAsState$composable.<anonymous>' call
       var value = mutableStateOf(false);
       $composer_1.updateRememberedValue_l1colo_k$(value);
@@ -13583,7 +14335,7 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
     var tmp_1;
-    if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+    if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.foundation.interaction.collectIsPressedAsState$composable.<anonymous>' call
       var value_0 = collectIsPressedAsState$composable$slambda_0(_this__u8e3s4, isPressed, null);
       $composer_2.updateRememberedValue_l1colo_k$(value_0);
@@ -13722,7 +14474,7 @@
           case 0:
             this.set_exceptionState_s9sevl_k$(2);
             var tmp_0 = this;
-            tmp_0.pressInteractions0__1 = ArrayList_init_$Create$();
+            tmp_0.pressInteractions0__1 = ArrayList_init_$Create$_0();
             this.set_state_a96kl8_k$(1);
             var tmp_1 = this.$this_collectIsPressedAsState$composable_1.get_interactions_ql02qy_k$();
             var tmp_2 = collectIsPressedAsState$composable$slambda$slambda_0(this.pressInteractions0__1, this.$isPressed_1, null);
@@ -13764,6 +14516,3831 @@
     l.$arity = 1;
     return l;
   }
+  function LazyListScope$items$composable$lambda(it) {
+    return null;
+  }
+  function LazyListScope$items$composable$lambda_0(it) {
+    return null;
+  }
+  function LazyListScope() {
+  }
+  function LazyColumn$composable(modifier, state, contentPadding, reverseLayout, verticalArrangement, horizontalAlignment, flingBehavior, userScrollEnabled, content, $composer, $changed, $default) {
+    var modifier_0 = {_v: modifier};
+    var state_0 = {_v: state};
+    var contentPadding_0 = {_v: contentPadding};
+    var reverseLayout_0 = {_v: reverseLayout};
+    var verticalArrangement_0 = {_v: verticalArrangement};
+    var horizontalAlignment_0 = {_v: horizontalAlignment};
+    var flingBehavior_0 = {_v: flingBehavior};
+    var userScrollEnabled_0 = {_v: userScrollEnabled};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(1658583333);
+    sourceInformation($composer_0, 'C(LazyColumn$composable)P(4,6,1,5,8,3,2,7)347@16950L23,353@17304L15,357@17406L388:LazyDsl.kt#428nma');
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(modifier_0._v) ? 4 : 2);
+    if (($changed & 112) === 0)
+      $dirty = $dirty | ((($default & 2) === 0 ? $composer_0.changed_ga7h3f_k$(state_0._v) : false) ? 32 : 16);
+    if (!(($default & 4) === 0))
+      $dirty = $dirty | 384;
+    else if (($changed & 896) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(contentPadding_0._v) ? 256 : 128);
+    if (!(($default & 8) === 0))
+      $dirty = $dirty | 3072;
+    else if (($changed & 7168) === 0)
+      $dirty = $dirty | ($composer_0.changed_i0nym2_k$(reverseLayout_0._v) ? 2048 : 1024);
+    if (($changed & 57344) === 0)
+      $dirty = $dirty | ((($default & 16) === 0 ? $composer_0.changed_ga7h3f_k$(verticalArrangement_0._v) : false) ? 16384 : 8192);
+    if (!(($default & 32) === 0))
+      $dirty = $dirty | 196608;
+    else if (($changed & 458752) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(horizontalAlignment_0._v) ? 131072 : 65536);
+    if (($changed & 3670016) === 0)
+      $dirty = $dirty | ((($default & 64) === 0 ? $composer_0.changed_ga7h3f_k$(flingBehavior_0._v) : false) ? 1048576 : 524288);
+    if (!(($default & 128) === 0))
+      $dirty = $dirty | 12582912;
+    else if (($changed & 29360128) === 0)
+      $dirty = $dirty | ($composer_0.changed_i0nym2_k$(userScrollEnabled_0._v) ? 8388608 : 4194304);
+    if (!(($default & 256) === 0))
+      $dirty = $dirty | 100663296;
+    else if (($changed & 234881024) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content) ? 67108864 : 33554432);
+    if (!(($dirty & 191739611) === 38347922) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      $composer_0.startDefaults_g7jseb_k$();
+      if (($changed & 1) === 0 ? true : $composer_0.get_defaultsInvalid_y88fc4_k$()) {
+        if (!(($default & 1) === 0)) {
+          modifier_0._v = Companion_getInstance_8();
+        }
+        if (!(($default & 2) === 0)) {
+          state_0._v = rememberLazyListState$composable(0, 0, $composer_0, 0, 3);
+          $dirty = $dirty & -113;
+        }
+        if (!(($default & 4) === 0)) {
+          var tmp$ret$0;
+          // Inline function 'androidx.compose.ui.unit.dp' call
+          tmp$ret$0 = _Dp___init__impl__ms3zkb(0);
+          contentPadding_0._v = PaddingValues(tmp$ret$0);
+        }
+        if (!(($default & 8) === 0)) {
+          reverseLayout_0._v = false;
+        }
+        if (!(($default & 16) === 0)) {
+          verticalArrangement_0._v = !reverseLayout_0._v ? Arrangement_getInstance().get_Top_18jj1w_k$() : Arrangement_getInstance().get_Bottom_3m75bg_k$();
+          $dirty = $dirty & -57345;
+        }
+        if (!(($default & 32) === 0)) {
+          horizontalAlignment_0._v = Companion_getInstance_11().get_Start_ih4i6x_k$();
+        }
+        if (!(($default & 64) === 0)) {
+          flingBehavior_0._v = ScrollableDefaults_getInstance().flingBehavior$composable_q5mns3_k$($composer_0, 6);
+          $dirty = $dirty & -3670017;
+        }
+        if (!(($default & 128) === 0)) {
+          userScrollEnabled_0._v = true;
+        }
+      } else {
+        $composer_0.skipToGroupEnd_lhns3f_k$();
+        if (!(($default & 2) === 0))
+          $dirty = $dirty & -113;
+        if (!(($default & 16) === 0))
+          $dirty = $dirty & -57345;
+        if (!(($default & 64) === 0))
+          $dirty = $dirty & -3670017;
+      }
+      $composer_0.endDefaults_b0883g_k$();
+      if (isTraceInProgress()) {
+        traceEventStart(1658583333, $dirty, -1, 'androidx.compose.foundation.lazy.LazyColumn$composable (LazyDsl.kt:345)');
+      }
+      var tmp = modifier_0._v;
+      var tmp_0 = state_0._v;
+      var tmp_1 = contentPadding_0._v;
+      var tmp_2 = reverseLayout_0._v;
+      var tmp_3 = flingBehavior_0._v;
+      var tmp_4 = userScrollEnabled_0._v;
+      var tmp_5 = horizontalAlignment_0._v;
+      var tmp_6 = verticalArrangement_0._v;
+      LazyList$composable(tmp, tmp_0, tmp_1, tmp_2, true, tmp_3, tmp_4, 0, tmp_5, tmp_6, null, null, content, $composer_0, 24576 | 14 & $dirty | 112 & $dirty | 896 & $dirty | 7168 & $dirty | 458752 & $dirty >> 3 | 3670016 & $dirty >> 3 | 234881024 & $dirty << 9 | 1879048192 & $dirty << 15, 896 & $dirty >> 18, 3200);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lhns3f_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver === null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_xhrf9y_k$(LazyColumn$composable$lambda(modifier_0, state_0, contentPadding_0, reverseLayout_0, verticalArrangement_0, horizontalAlignment_0, flingBehavior_0, userScrollEnabled_0, content, $changed, $default));
+    }
+  }
+  function LazyColumn$composable$lambda($modifier, $state, $contentPadding, $reverseLayout, $verticalArrangement, $horizontalAlignment, $flingBehavior, $userScrollEnabled, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      LazyColumn$composable($modifier._v, $state._v, $contentPadding._v, $reverseLayout._v, $verticalArrangement._v, $horizontalAlignment._v, $flingBehavior._v, $userScrollEnabled._v, $content, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
+  }
+  function LazyItemScope() {
+  }
+  function _set_maxWidthState__o3eqly($this, _set____db54di) {
+    $this.maxWidthState_1 = _set____db54di;
+  }
+  function _get_maxWidthState__8vn83m($this) {
+    return $this.maxWidthState_1;
+  }
+  function _set_maxHeightState__tl6k0f($this, _set____db54di) {
+    $this.maxHeightState_1 = _set____db54di;
+  }
+  function _get_maxHeightState__4233yz($this) {
+    return $this.maxHeightState_1;
+  }
+  function LazyItemScopeImpl() {
+    this.maxWidthState_1 = mutableIntStateOf(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$());
+    this.maxHeightState_1 = mutableIntStateOf(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$());
+  }
+  protoOf(LazyItemScopeImpl).setMaxSize_x76qvm_k$ = function (width, height) {
+    this.maxWidthState_1.set_intValue_q75ky9_k$(width);
+    this.maxHeightState_1.set_intValue_q75ky9_k$(height);
+  };
+  protoOf(LazyItemScopeImpl).fillParentMaxSize_9aygor_k$ = function (_this__u8e3s4, fraction) {
+    var tmp0_widthState = this.maxWidthState_1;
+    var tmp1_heightState = this.maxHeightState_1;
+    return _this__u8e3s4.then_5qw5wu_k$(new ParentSizeElement(fraction, tmp0_widthState, tmp1_heightState, 'fillParentMaxSize'));
+  };
+  protoOf(LazyItemScopeImpl).fillParentMaxWidth_mix4ck_k$ = function (_this__u8e3s4, fraction) {
+    var tmp0_widthState = this.maxWidthState_1;
+    return _this__u8e3s4.then_5qw5wu_k$(new ParentSizeElement(fraction, tmp0_widthState, VOID, 'fillParentMaxWidth'));
+  };
+  protoOf(LazyItemScopeImpl).fillParentMaxHeight_swwm0b_k$ = function (_this__u8e3s4, fraction) {
+    var tmp0_heightState = this.maxHeightState_1;
+    return _this__u8e3s4.then_5qw5wu_k$(new ParentSizeElement(fraction, VOID, tmp0_heightState, 'fillParentMaxHeight'));
+  };
+  protoOf(LazyItemScopeImpl).animateItemPlacement_de652m_k$ = function (_this__u8e3s4, animationSpec) {
+    return _this__u8e3s4.then_5qw5wu_k$(new AnimateItemPlacementElement(animationSpec));
+  };
+  function ParentSizeElement(fraction, widthState, heightState, inspectorName) {
+    widthState = widthState === VOID ? null : widthState;
+    heightState = heightState === VOID ? null : heightState;
+    ModifierNodeElement.call(this);
+    this.fraction_1 = fraction;
+    this.widthState_1 = widthState;
+    this.heightState_1 = heightState;
+    this.inspectorName_1 = inspectorName;
+  }
+  protoOf(ParentSizeElement).get_fraction_bvkonf_k$ = function () {
+    return this.fraction_1;
+  };
+  protoOf(ParentSizeElement).get_widthState_ofbw8k_k$ = function () {
+    return this.widthState_1;
+  };
+  protoOf(ParentSizeElement).get_heightState_3d0kan_k$ = function () {
+    return this.heightState_1;
+  };
+  protoOf(ParentSizeElement).get_inspectorName_jx58u1_k$ = function () {
+    return this.inspectorName_1;
+  };
+  protoOf(ParentSizeElement).create_md4cuc_k$ = function () {
+    return new ParentSizeNode(this.fraction_1, this.widthState_1, this.heightState_1);
+  };
+  protoOf(ParentSizeElement).update_8uvgw6_k$ = function (node) {
+    node.fraction_1 = this.fraction_1;
+    node.widthState_1 = this.widthState_1;
+    node.heightState_1 = this.heightState_1;
+  };
+  protoOf(ParentSizeElement).update_c7m3nr_k$ = function (node) {
+    return this.update_8uvgw6_k$(node instanceof ParentSizeNode ? node : THROW_CCE());
+  };
+  protoOf(ParentSizeElement).equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof ParentSizeNode))
+      return false;
+    return (this.fraction_1 === other.fraction_1 ? equals(this.widthState_1, other.widthState_1) : false) ? equals(this.heightState_1, other.heightState_1) : false;
+  };
+  protoOf(ParentSizeElement).hashCode = function () {
+    var tmp0_safe_receiver = this.widthState_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : hashCode(tmp0_safe_receiver);
+    var result = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
+    var tmp = imul(31, result);
+    var tmp2_safe_receiver = this.heightState_1;
+    var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : hashCode(tmp2_safe_receiver);
+    result = tmp + (tmp3_elvis_lhs == null ? 0 : tmp3_elvis_lhs) | 0;
+    result = imul(31, result) + getNumberHashCode(this.fraction_1) | 0;
+    return result;
+  };
+  protoOf(ParentSizeElement).inspectableProperties_ryaptq_k$ = function (_this__u8e3s4) {
+    _this__u8e3s4.set_name_1v3553_k$(this.inspectorName_1);
+    _this__u8e3s4.set_value_rj6yh0_k$(this.fraction_1);
+  };
+  function AnimateItemPlacementElement(animationSpec) {
+    ModifierNodeElement.call(this);
+    this.animationSpec_1 = animationSpec;
+  }
+  protoOf(AnimateItemPlacementElement).get_animationSpec_wdk2t2_k$ = function () {
+    return this.animationSpec_1;
+  };
+  protoOf(AnimateItemPlacementElement).create_md4cuc_k$ = function () {
+    return new AnimateItemPlacementNode(this.animationSpec_1);
+  };
+  protoOf(AnimateItemPlacementElement).update_7pvnmc_k$ = function (node) {
+    node.delegatingNode_1.set_placementAnimationSpec_22ldus_k$(this.animationSpec_1);
+  };
+  protoOf(AnimateItemPlacementElement).update_c7m3nr_k$ = function (node) {
+    return this.update_7pvnmc_k$(node instanceof AnimateItemPlacementNode ? node : THROW_CCE());
+  };
+  protoOf(AnimateItemPlacementElement).equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof AnimateItemPlacementElement))
+      return false;
+    return !equals(this.animationSpec_1, other.animationSpec_1);
+  };
+  protoOf(AnimateItemPlacementElement).hashCode = function () {
+    return hashCode(this.animationSpec_1);
+  };
+  protoOf(AnimateItemPlacementElement).inspectableProperties_ryaptq_k$ = function (_this__u8e3s4) {
+    _this__u8e3s4.set_name_1v3553_k$('animateItemPlacement');
+    _this__u8e3s4.set_value_rj6yh0_k$(this.animationSpec_1);
+  };
+  function ParentSizeNode$measure$lambda($placeable) {
+    return function ($this$layout) {
+      $this$layout.place$default_eachz5_k$($placeable, 0, 0);
+      return Unit_getInstance();
+    };
+  }
+  function ParentSizeNode(fraction, widthState, heightState) {
+    widthState = widthState === VOID ? null : widthState;
+    heightState = heightState === VOID ? null : heightState;
+    Node.call(this);
+    this.fraction_1 = fraction;
+    this.widthState_1 = widthState;
+    this.heightState_1 = heightState;
+  }
+  protoOf(ParentSizeNode).set_fraction_1erpa_k$ = function (_set____db54di) {
+    this.fraction_1 = _set____db54di;
+  };
+  protoOf(ParentSizeNode).get_fraction_bvkonf_k$ = function () {
+    return this.fraction_1;
+  };
+  protoOf(ParentSizeNode).set_widthState_4nohvh_k$ = function (_set____db54di) {
+    this.widthState_1 = _set____db54di;
+  };
+  protoOf(ParentSizeNode).get_widthState_ofbw8k_k$ = function () {
+    return this.widthState_1;
+  };
+  protoOf(ParentSizeNode).set_heightState_ltcs82_k$ = function (_set____db54di) {
+    this.heightState_1 = _set____db54di;
+  };
+  protoOf(ParentSizeNode).get_heightState_3d0kan_k$ = function () {
+    return this.heightState_1;
+  };
+  protoOf(ParentSizeNode).measure_i9wrw7_k$ = function (_this__u8e3s4, measurable, constraints) {
+    var tmp0_safe_receiver = this.widthState_1;
+    var tmp;
+    if (tmp0_safe_receiver == null) {
+      tmp = null;
+    } else {
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.foundation.lazy.ParentSizeNode.measure.<anonymous>' call
+      var tmp_0;
+      if (!(tmp0_safe_receiver.get_value_j01efc_k$() === Companion_getInstance_7().get_Infinity_rvchkf_k$())) {
+        // Inline function 'kotlin.math.roundToInt' call
+        var tmp0_roundToInt = tmp0_safe_receiver.get_value_j01efc_k$() * this.fraction_1;
+        tmp_0 = roundToInt(tmp0_roundToInt);
+      } else {
+        tmp_0 = Companion_getInstance_7().get_Infinity_rvchkf_k$();
+      }
+      tmp = tmp_0;
+    }
+    var tmp1_elvis_lhs = tmp;
+    var width = tmp1_elvis_lhs == null ? Companion_getInstance_7().get_Infinity_rvchkf_k$() : tmp1_elvis_lhs;
+    var tmp2_safe_receiver = this.heightState_1;
+    var tmp_1;
+    if (tmp2_safe_receiver == null) {
+      tmp_1 = null;
+    } else {
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.foundation.lazy.ParentSizeNode.measure.<anonymous>' call
+      var tmp_2;
+      if (!(tmp2_safe_receiver.get_value_j01efc_k$() === Companion_getInstance_7().get_Infinity_rvchkf_k$())) {
+        // Inline function 'kotlin.math.roundToInt' call
+        var tmp0_roundToInt_0 = tmp2_safe_receiver.get_value_j01efc_k$() * this.fraction_1;
+        tmp_2 = roundToInt(tmp0_roundToInt_0);
+      } else {
+        tmp_2 = Companion_getInstance_7().get_Infinity_rvchkf_k$();
+      }
+      tmp_1 = tmp_2;
+    }
+    var tmp3_elvis_lhs = tmp_1;
+    var height = tmp3_elvis_lhs == null ? Companion_getInstance_7().get_Infinity_rvchkf_k$() : tmp3_elvis_lhs;
+    var tmp4_minWidth = !(width === Companion_getInstance_7().get_Infinity_rvchkf_k$()) ? width : _Constraints___get_minWidth__impl__hi9lfi(constraints);
+    var tmp5_minHeight = !(height === Companion_getInstance_7().get_Infinity_rvchkf_k$()) ? height : _Constraints___get_minHeight__impl__ev4bgx(constraints);
+    var tmp6_maxWidth = !(width === Companion_getInstance_7().get_Infinity_rvchkf_k$()) ? width : _Constraints___get_maxWidth__impl__uuyqc(constraints);
+    var tmp7_maxHeight = !(height === Companion_getInstance_7().get_Infinity_rvchkf_k$()) ? height : _Constraints___get_maxHeight__impl__dt3e8z(constraints);
+    var childConstraints = Constraints_0(tmp4_minWidth, tmp6_maxWidth, tmp5_minHeight, tmp7_maxHeight);
+    var placeable = measurable.measure_ikak0q_k$(childConstraints);
+    var tmp_3 = placeable.get_width_j0q4yl_k$();
+    var tmp_4 = placeable.get_height_e7t92o_k$();
+    return _this__u8e3s4.layout$default_8ylrvs_k$(tmp_3, tmp_4, VOID, ParentSizeNode$measure$lambda(placeable));
+  };
+  function AnimateItemPlacementNode(animationSpec) {
+    DelegatingNode.call(this);
+    this.delegatingNode_1 = this.delegate_l89519_k$(new LazyLayoutAnimateItemModifierNode(animationSpec));
+  }
+  protoOf(AnimateItemPlacementNode).get_delegatingNode_frd6mr_k$ = function () {
+    return this.delegatingNode_1;
+  };
+  protoOf(AnimateItemPlacementNode).modifyParentData_x7ztp7_k$ = function (_this__u8e3s4, parentData) {
+    return this.delegatingNode_1;
+  };
+  function LazyLayoutSemanticState(state, isVertical) {
+    return new LazyLayoutSemanticState$1(state, isVertical);
+  }
+  function $animateScrollByCOROUTINE$4(_this__u8e3s4, delta, resultContinuation) {
+    CoroutineImpl.call(this, resultContinuation);
+    this._this__u8e3s4__1 = _this__u8e3s4;
+    this.delta_1 = delta;
+  }
+  protoOf($animateScrollByCOROUTINE$4).doResume_5yljmg_k$ = function () {
+    var suspendResult = this.get_result_iyg5d2_k$();
+    $sm: do
+      try {
+        var tmp = this.get_state_iypx7s_k$();
+        switch (tmp) {
+          case 0:
+            this.set_exceptionState_s9sevl_k$(2);
+            this.set_state_a96kl8_k$(1);
+            suspendResult = animateScrollBy(this._this__u8e3s4__1.$state_1, this.delta_1, VOID, this);
+            if (suspendResult === get_COROUTINE_SUSPENDED()) {
+              return suspendResult;
+            }
+
+            continue $sm;
+          case 1:
+            return Unit_getInstance();
+          case 2:
+            throw this.get_exception_x0n6w6_k$();
+        }
+      } catch ($p) {
+        var e = $p;
+        if (this.get_exceptionState_wflpxn_k$() === 2) {
+          throw e;
+        } else {
+          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_pwgeox_k$(e);
+        }
+      }
+     while (true);
+  };
+  function LazyLayoutSemanticState$1($state, $isVertical) {
+    this.$state_1 = $state;
+    this.$isVertical_1 = $isVertical;
+  }
+  protoOf(LazyLayoutSemanticState$1).get_currentPosition_ic997d_k$ = function () {
+    return this.$state_1.get_firstVisibleItemIndex_pq52y4_k$() + this.$state_1.get_firstVisibleItemScrollOffset_my3xxa_k$() / 100000.0;
+  };
+  protoOf(LazyLayoutSemanticState$1).get_canScrollForward_dmb0fj_k$ = function () {
+    return this.$state_1.get_canScrollForward_dmb0fj_k$();
+  };
+  protoOf(LazyLayoutSemanticState$1).animateScrollBy_pr2z7u_k$ = function (delta, $completion) {
+    var tmp = new $animateScrollByCOROUTINE$4(this, delta, $completion);
+    tmp.set_result_ximc09_k$(Unit_getInstance());
+    tmp.set_exception_pwgeox_k$(null);
+    return tmp.doResume_5yljmg_k$();
+  };
+  protoOf(LazyLayoutSemanticState$1).scrollToItem_7215sd_k$ = function (index, $completion) {
+    return this.$state_1.scrollToItem$default_qr0dm3_k$(index, VOID, $completion);
+  };
+  protoOf(LazyLayoutSemanticState$1).collectionInfo_54y5ik_k$ = function () {
+    var tmp;
+    if (this.$isVertical_1) {
+      tmp = new CollectionInfo(-1, 1);
+    } else {
+      tmp = new CollectionInfo(1, -1);
+    }
+    return tmp;
+  };
+  function LazyList$composable(modifier, state, contentPadding, reverseLayout, isVertical, flingBehavior, userScrollEnabled, beyondBoundsItemCount, horizontalAlignment, verticalArrangement, verticalAlignment, horizontalArrangement, content, $composer, $changed, $changed1, $default) {
+    var beyondBoundsItemCount_0 = {_v: beyondBoundsItemCount};
+    var horizontalAlignment_0 = {_v: horizontalAlignment};
+    var verticalArrangement_0 = {_v: verticalArrangement};
+    var verticalAlignment_0 = {_v: verticalAlignment};
+    var horizontalArrangement_0 = {_v: horizontalArrangement};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-1674367534);
+    sourceInformation($composer_0, 'C(LazyList$composable)P(7,9,2,8,6,3,10!1,4,12,11,5)78@3680L50,80@3756L48,82@3830L292,95@4128L48,97@4224L18,103@4479L277,111@4820L164,121@5208L7,99@4334L1359:LazyList.kt#428nma');
+    var $dirty = $changed;
+    var $dirty1 = $changed1;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(modifier) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(state) ? 32 : 16);
+    if (!(($default & 4) === 0))
+      $dirty = $dirty | 384;
+    else if (($changed & 896) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(contentPadding) ? 256 : 128);
+    if (!(($default & 8) === 0))
+      $dirty = $dirty | 3072;
+    else if (($changed & 7168) === 0)
+      $dirty = $dirty | ($composer_0.changed_i0nym2_k$(reverseLayout) ? 2048 : 1024);
+    if (!(($default & 16) === 0))
+      $dirty = $dirty | 24576;
+    else if (($changed & 57344) === 0)
+      $dirty = $dirty | ($composer_0.changed_i0nym2_k$(isVertical) ? 16384 : 8192);
+    if (!(($default & 32) === 0))
+      $dirty = $dirty | 196608;
+    else if (($changed & 458752) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(flingBehavior) ? 131072 : 65536);
+    if (!(($default & 64) === 0))
+      $dirty = $dirty | 1572864;
+    else if (($changed & 3670016) === 0)
+      $dirty = $dirty | ($composer_0.changed_i0nym2_k$(userScrollEnabled) ? 1048576 : 524288);
+    if (!(($default & 128) === 0))
+      $dirty = $dirty | 12582912;
+    else if (($changed & 29360128) === 0)
+      $dirty = $dirty | ($composer_0.changed_s0r703_k$(beyondBoundsItemCount_0._v) ? 8388608 : 4194304);
+    if (!(($default & 256) === 0))
+      $dirty = $dirty | 100663296;
+    else if (($changed & 234881024) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(horizontalAlignment_0._v) ? 67108864 : 33554432);
+    if (!(($default & 512) === 0))
+      $dirty = $dirty | 805306368;
+    else if (($changed & 1879048192) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(verticalArrangement_0._v) ? 536870912 : 268435456);
+    if (!(($default & 1024) === 0))
+      $dirty1 = $dirty1 | 6;
+    else if (($changed1 & 14) === 0)
+      $dirty1 = $dirty1 | ($composer_0.changed_ga7h3f_k$(verticalAlignment_0._v) ? 4 : 2);
+    if (!(($default & 2048) === 0))
+      $dirty1 = $dirty1 | 48;
+    else if (($changed1 & 112) === 0)
+      $dirty1 = $dirty1 | ($composer_0.changed_ga7h3f_k$(horizontalArrangement_0._v) ? 32 : 16);
+    if (!(($default & 4096) === 0))
+      $dirty1 = $dirty1 | 384;
+    else if (($changed1 & 896) === 0)
+      $dirty1 = $dirty1 | ($composer_0.changedInstance_s1wkiy_k$(content) ? 256 : 128);
+    if ((!(($dirty & 1533916891) === 306783378) ? true : !(($dirty1 & 731) === 146)) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 128) === 0)) {
+        beyondBoundsItemCount_0._v = 0;
+      }
+      if (!(($default & 256) === 0)) {
+        horizontalAlignment_0._v = null;
+      }
+      if (!(($default & 512) === 0)) {
+        verticalArrangement_0._v = null;
+      }
+      if (!(($default & 1024) === 0)) {
+        verticalAlignment_0._v = null;
+      }
+      if (!(($default & 2048) === 0)) {
+        horizontalArrangement_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(-1674367534, $dirty, $dirty1, 'androidx.compose.foundation.lazy.LazyList$composable (LazyList.kt:50)');
+      }
+      var itemProviderLambda = rememberLazyListItemProviderLambda$composable(state, content, $composer_0, 14 & $dirty >> 3 | 112 & $dirty1 >> 3);
+      var semanticState = rememberLazyListSemanticState$composable(state, isVertical, $composer_0, 14 & $dirty >> 3 | 112 & $dirty >> 9);
+      var measurePolicy = rememberLazyListMeasurePolicy$composable(itemProviderLambda, state, contentPadding, reverseLayout, isVertical, beyondBoundsItemCount_0._v, horizontalAlignment_0._v, verticalAlignment_0._v, horizontalArrangement_0._v, verticalArrangement_0._v, $composer_0, 112 & $dirty | 896 & $dirty | 7168 & $dirty | 57344 & $dirty | 458752 & $dirty >> 6 | 3670016 & $dirty >> 6 | 29360128 & $dirty1 << 21 | 234881024 & $dirty1 << 21 | 1879048192 & $dirty, 0);
+      ScrollPositionUpdater$composable(itemProviderLambda, state, $composer_0, 112 & $dirty);
+      var overscrollEffect = ScrollableDefaults_getInstance().overscrollEffect$composable_onahuh_k$($composer_0, 6);
+      var orientation = isVertical ? Orientation_Vertical_getInstance() : Orientation_Horizontal_getInstance();
+      var tmp0_$receiver = overscroll(lazyListBeyondBoundsModifier$composable(clipScrollableContainer(lazyLayoutSemantics$composable(modifier.then_5qw5wu_k$(state.get_remeasurementModifier_3hgdqh_k$()).then_5qw5wu_k$(state.get_awaitLayoutModifier_187c1a_k$()), itemProviderLambda, semanticState, orientation, userScrollEnabled, reverseLayout, $composer_0, 57344 & $dirty >> 6 | 458752 & $dirty << 6), orientation), state, beyondBoundsItemCount_0._v, reverseLayout, orientation, $composer_0, 112 & $dirty | 896 & $dirty >> 15 | 7168 & $dirty), overscrollEffect);
+      var tmp = ScrollableDefaults_getInstance();
+      // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
+      var tmp0_$get_current$$composable_h5ksy7 = get_LocalLayoutDirection();
+      var $composer_1 = $composer_0;
+      sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
+      var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+      sourceInformationMarkerEnd($composer_1);
+      var tmp1_reverseDirection = tmp.reverseDirection_cttzbv_k$(tmp0, orientation, reverseLayout);
+      var tmp2_interactionSource = state.get_internalInteractionSource_eko5y1_k$();
+      var tmp3_modifier = scrollable(tmp0_$receiver, state, orientation, overscrollEffect, userScrollEnabled, tmp1_reverseDirection, flingBehavior, tmp2_interactionSource);
+      var tmp4_prefetchState = state.get_prefetchState_uk67nz_k$();
+      LazyLayout$composable(itemProviderLambda, tmp3_modifier, tmp4_prefetchState, measurePolicy, $composer_0, 0, 0);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lhns3f_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver === null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_xhrf9y_k$(LazyList$composable$lambda(modifier, state, contentPadding, reverseLayout, isVertical, flingBehavior, userScrollEnabled, beyondBoundsItemCount_0, horizontalAlignment_0, verticalArrangement_0, verticalAlignment_0, horizontalArrangement_0, content, $changed, $changed1, $default));
+    }
+  }
+  function rememberLazyListMeasurePolicy$composable(itemProviderLambda, state, contentPadding, reverseLayout, isVertical, beyondBoundsItemCount, horizontalAlignment, verticalAlignment, horizontalArrangement, verticalArrangement, $composer, $changed, $default) {
+    var horizontalAlignment_0 = {_v: horizontalAlignment};
+    var verticalAlignment_0 = {_v: verticalAlignment};
+    var horizontalArrangement_0 = {_v: horizontalArrangement};
+    var verticalArrangement_0 = {_v: verticalArrangement};
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_rp6air_k$(-19004095);
+    sourceInformation($composer_0, 'C(rememberLazyListMeasurePolicy$composable)P(5,7,1,6,4!2,8)173@7248L7052:LazyList.kt#428nma');
+    if (!(($default & 64) === 0)) {
+      horizontalAlignment_0._v = null;
+    }
+    if (!(($default & 128) === 0)) {
+      verticalAlignment_0._v = null;
+    }
+    if (!(($default & 256) === 0)) {
+      horizontalArrangement_0._v = null;
+    }
+    if (!(($default & 512) === 0)) {
+      verticalArrangement_0._v = null;
+    }
+    if (isTraceInProgress()) {
+      traceEventStart(-19004095, $changed, -1, 'androidx.compose.foundation.lazy.rememberLazyListMeasurePolicy$composable (LazyList.kt:152)');
+    }
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var tmp0_remember$composable = [state, contentPadding, reverseLayout, isVertical, horizontalAlignment_0._v, verticalAlignment_0._v, horizontalArrangement_0._v, verticalArrangement_0._v];
+    var $composer_1 = $composer_0;
+    $composer_1.startReplaceableGroup_rp6air_k$(-1603429786);
+    sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+    var invalid = false;
+    var inductionVariable = 0;
+    var last = tmp0_remember$composable.length;
+    while (inductionVariable < last) {
+      var key = tmp0_remember$composable[inductionVariable];
+      inductionVariable = inductionVariable + 1 | 0;
+      invalid = !!(invalid | $composer_1.changed_ga7h3f_k$(key));
+    }
+    // Inline function 'androidx.compose.runtime.cache' call
+    var tmp1_cache = invalid;
+    // Inline function 'kotlin.let' call
+    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp;
+    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.lazy.rememberLazyListMeasurePolicy$composable.<anonymous>' call
+      var value = rememberLazyListMeasurePolicy$composable$lambda(isVertical, contentPadding, reverseLayout, state, itemProviderLambda, verticalArrangement_0, horizontalArrangement_0, horizontalAlignment_0, verticalAlignment_0, beyondBoundsItemCount);
+      $composer_1.updateRememberedValue_l1colo_k$(value);
+      tmp = value;
+    } else {
+      tmp = tmp0_let;
+    }
+    var tmp_0 = tmp;
+    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
+    $composer_1.endReplaceableGroup_er37p7_k$();
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    return tmp0;
+  }
+  function ScrollPositionUpdater$composable(itemProviderLambda, state, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(32465292);
+    sourceInformation($composer_0, 'C(ScrollPositionUpdater$composable):LazyList.kt#428nma');
+    var $dirty = $changed;
+    if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(itemProviderLambda) ? 4 : 2);
+    if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(state) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(32465292, $changed, -1, 'androidx.compose.foundation.lazy.ScrollPositionUpdater$composable (LazyList.kt:140)');
+      }
+      var itemProvider = itemProviderLambda();
+      if (itemProvider.get_itemCount_rbqtpp_k$() > 0) {
+        state.updateScrollPositionIfTheFirstItemWasMoved$default_civt2t_k$(itemProvider);
+      }
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lhns3f_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver === null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_xhrf9y_k$(ScrollPositionUpdater$composable$lambda(itemProviderLambda, state, $changed));
+    }
+  }
+  function LazyList$composable$lambda($modifier, $state, $contentPadding, $reverseLayout, $isVertical, $flingBehavior, $userScrollEnabled, $beyondBoundsItemCount, $horizontalAlignment, $verticalArrangement, $verticalAlignment, $horizontalArrangement, $content, $$changed, $$changed1, $$default) {
+    return function ($composer, $force) {
+      LazyList$composable($modifier, $state, $contentPadding, $reverseLayout, $isVertical, $flingBehavior, $userScrollEnabled, $beyondBoundsItemCount._v, $horizontalAlignment._v, $verticalArrangement._v, $verticalAlignment._v, $horizontalArrangement._v, $content, $composer, updateChangedFlags($$changed | 1), updateChangedFlags($$changed1), $$default);
+      return Unit_getInstance();
+    };
+  }
+  function rememberLazyListMeasurePolicy$composable$1$1$measuredItemProvider$1($contentConstraints, $isVertical, $itemProvider, $this_null, $itemsCount, $spaceBetweenItems, $horizontalAlignment, $verticalAlignment, $reverseLayout, $beforeContentPadding, $afterContentPadding, $visualItemOffset) {
+    this.$isVertical_1 = $isVertical;
+    this.$this_null_1 = $this_null;
+    this.$itemsCount_1 = $itemsCount;
+    this.$spaceBetweenItems_1 = $spaceBetweenItems;
+    this.$horizontalAlignment_1 = $horizontalAlignment;
+    this.$verticalAlignment_1 = $verticalAlignment;
+    this.$reverseLayout_1 = $reverseLayout;
+    this.$beforeContentPadding_1 = $beforeContentPadding;
+    this.$afterContentPadding_1 = $afterContentPadding;
+    this.$visualItemOffset_1 = $visualItemOffset;
+    LazyListMeasuredItemProvider.call(this, $contentConstraints, $isVertical, $itemProvider, $this_null);
+  }
+  protoOf(rememberLazyListMeasurePolicy$composable$1$1$measuredItemProvider$1).createItem_914mua_k$ = function (index, key, contentType, placeables) {
+    var spacing = index === (this.$itemsCount_1 - 1 | 0) ? 0 : this.$spaceBetweenItems_1;
+    return new LazyListMeasuredItem(index, placeables, this.$isVertical_1, this.$horizontalAlignment_1._v, this.$verticalAlignment_1._v, this.$this_null_1.get_layoutDirection_7e37v0_k$(), this.$reverseLayout_1, this.$beforeContentPadding_1, this.$afterContentPadding_1, spacing, this.$visualItemOffset_1, key, contentType);
+  };
+  function rememberLazyListMeasurePolicy$composable$lambda$lambda($this_null, $containerConstraints, $totalHorizontalPadding, $totalVerticalPadding) {
+    return function (width, height, placement) {
+      return $this_null.layout_na8ejh_k$(constrainWidth($containerConstraints, width + $totalHorizontalPadding | 0), constrainHeight($containerConstraints, height + $totalVerticalPadding | 0), emptyMap(), placement);
+    };
+  }
+  function rememberLazyListMeasurePolicy$composable$lambda($isVertical, $contentPadding, $reverseLayout, $state, $itemProviderLambda, $verticalArrangement, $horizontalArrangement, $horizontalAlignment, $verticalAlignment, $beyondBoundsItemCount) {
+    return function ($this$null, containerConstraints) {
+      checkScrollableContainerConstraints(containerConstraints.value_1, $isVertical ? Orientation_Vertical_getInstance() : Orientation_Horizontal_getInstance());
+      var tmp;
+      if ($isVertical) {
+        tmp = $this$null.roundToPx_hl1u8z_k$($contentPadding.calculateLeftPadding_71tp16_k$($this$null.get_layoutDirection_7e37v0_k$()));
+      } else {
+        tmp = $this$null.roundToPx_hl1u8z_k$(calculateStartPadding($contentPadding, $this$null.get_layoutDirection_7e37v0_k$()));
+      }
+      var startPadding = tmp;
+      var tmp_0;
+      if ($isVertical) {
+        tmp_0 = $this$null.roundToPx_hl1u8z_k$($contentPadding.calculateRightPadding_wmvkqr_k$($this$null.get_layoutDirection_7e37v0_k$()));
+      } else {
+        tmp_0 = $this$null.roundToPx_hl1u8z_k$(calculateEndPadding($contentPadding, $this$null.get_layoutDirection_7e37v0_k$()));
+      }
+      var endPadding = tmp_0;
+      var topPadding = $this$null.roundToPx_hl1u8z_k$($contentPadding.calculateTopPadding_ok52o3_k$());
+      var bottomPadding = $this$null.roundToPx_hl1u8z_k$($contentPadding.calculateBottomPadding_lu87vf_k$());
+      var totalVerticalPadding = topPadding + bottomPadding | 0;
+      var totalHorizontalPadding = startPadding + endPadding | 0;
+      var totalMainAxisPadding = $isVertical ? totalVerticalPadding : totalHorizontalPadding;
+      var beforeContentPadding = ($isVertical ? !$reverseLayout : false) ? topPadding : ($isVertical ? $reverseLayout : false) ? bottomPadding : (!$isVertical ? !$reverseLayout : false) ? startPadding : endPadding;
+      var afterContentPadding = totalMainAxisPadding - beforeContentPadding | 0;
+      var contentConstraints = offset(containerConstraints.value_1, -totalHorizontalPadding | 0, -totalVerticalPadding | 0);
+      $state.set_density_kzqph6_k$($this$null);
+      var itemProvider = $itemProviderLambda();
+      itemProvider.get_itemScope_r35wh4_k$().setMaxSize_x76qvm_k$(_Constraints___get_maxWidth__impl__uuyqc(contentConstraints), _Constraints___get_maxHeight__impl__dt3e8z(contentConstraints));
+      var tmp_1;
+      if ($isVertical) {
+        var tmp$ret$2;
+        // Inline function 'kotlin.requireNotNull' call
+        var tmp0_requireNotNull = $verticalArrangement._v;
+        // Inline function 'kotlin.contracts.contract' call
+        var tmp$ret$1;
+        $l$block: {
+          // Inline function 'kotlin.requireNotNull' call
+          // Inline function 'kotlin.contracts.contract' call
+          if (tmp0_requireNotNull == null) {
+            var tmp$ret$0;
+            // Inline function 'kotlin.requireNotNull.<anonymous>' call
+            tmp$ret$0 = 'Required value was null.';
+            var message = tmp$ret$0;
+            throw IllegalArgumentException_init_$Create$(toString(message));
+          } else {
+            tmp$ret$1 = tmp0_requireNotNull;
+            break $l$block;
+          }
+        }
+        tmp$ret$2 = tmp$ret$1;
+        tmp_1 = tmp$ret$2.get_spacing_kuwe3v_k$();
+      } else {
+        var tmp$ret$5;
+        // Inline function 'kotlin.requireNotNull' call
+        var tmp1_requireNotNull = $horizontalArrangement._v;
+        // Inline function 'kotlin.contracts.contract' call
+        var tmp$ret$4;
+        $l$block_0: {
+          // Inline function 'kotlin.requireNotNull' call
+          // Inline function 'kotlin.contracts.contract' call
+          if (tmp1_requireNotNull == null) {
+            var tmp$ret$3;
+            // Inline function 'kotlin.requireNotNull.<anonymous>' call
+            tmp$ret$3 = 'Required value was null.';
+            var message_0 = tmp$ret$3;
+            throw IllegalArgumentException_init_$Create$(toString(message_0));
+          } else {
+            tmp$ret$4 = tmp1_requireNotNull;
+            break $l$block_0;
+          }
+        }
+        tmp$ret$5 = tmp$ret$4;
+        tmp_1 = tmp$ret$5.get_spacing_kuwe3v_k$();
+      }
+      var spaceBetweenItemsDp = tmp_1;
+      var spaceBetweenItems = $this$null.roundToPx_hl1u8z_k$(spaceBetweenItemsDp);
+      var itemsCount = itemProvider.get_itemCount_rbqtpp_k$();
+      var tmp_2;
+      if ($isVertical) {
+        tmp_2 = _Constraints___get_maxHeight__impl__dt3e8z(containerConstraints.value_1) - totalVerticalPadding | 0;
+      } else {
+        tmp_2 = _Constraints___get_maxWidth__impl__uuyqc(containerConstraints.value_1) - totalHorizontalPadding | 0;
+      }
+      var mainAxisAvailableSize = tmp_2;
+      var tmp_3;
+      if (!$reverseLayout ? true : mainAxisAvailableSize > 0) {
+        tmp_3 = IntOffset_0(startPadding, topPadding);
+      } else {
+        tmp_3 = IntOffset_0($isVertical ? startPadding : startPadding + mainAxisAvailableSize | 0, $isVertical ? topPadding + mainAxisAvailableSize | 0 : topPadding);
+      }
+      var visualItemOffset = tmp_3;
+      var measuredItemProvider = new rememberLazyListMeasurePolicy$composable$1$1$measuredItemProvider$1(contentConstraints, $isVertical, itemProvider, $this$null, itemsCount, spaceBetweenItems, $horizontalAlignment, $verticalAlignment, $reverseLayout, beforeContentPadding, afterContentPadding, visualItemOffset);
+      $state.set_premeasureConstraints_fta6bv_k$(measuredItemProvider.get_childConstraints_3vtpbw_k$());
+      var firstVisibleItemIndex;
+      var firstVisibleScrollOffset;
+      var tmp$ret$7;
+      $l$block_2: {
+        // Inline function 'androidx.compose.runtime.snapshots.Companion.withoutReadObservation' call
+        var tmp2_withoutReadObservation = Companion_getInstance_22();
+        // Inline function 'kotlin.contracts.contract' call
+        var snapshot = tmp2_withoutReadObservation.createNonObservableSnapshot_p8njg8_k$();
+        try {
+          var tmp$ret$6;
+          $l$block_1: {
+            // Inline function 'androidx.compose.runtime.snapshots.Snapshot.enter' call
+            var previous = snapshot.makeCurrent_v2db9x_k$();
+            try {
+              firstVisibleItemIndex = $state.updateScrollPositionIfTheFirstItemWasMoved_xbglu_k$(itemProvider, $state.get_firstVisibleItemIndex_pq52y4_k$());
+              firstVisibleScrollOffset = $state.get_firstVisibleItemScrollOffset_my3xxa_k$();
+              tmp$ret$6 = Unit_getInstance();
+              break $l$block_1;
+            }finally {
+              snapshot.restoreCurrent_lqo3p4_k$(previous);
+            }
+          }
+          tmp$ret$7 = tmp$ret$6;
+          break $l$block_2;
+        }finally {
+          snapshot.dispose_3n44we_k$();
+        }
+      }
+      var pinnedItems = calculateLazyLayoutPinnedIndices(itemProvider, $state.get_pinnedItems_ujz3hb_k$(), $state.get_beyondBoundsInfo_3eepc5_k$());
+      var tmp$ret$8;
+      // Inline function 'kotlin.also' call
+      var tmp_4 = $state.get_scrollToBeConsumed_q08rtw_k$();
+      var tmp_5 = itemProvider.get_headerIndexes_ov0kui_k$();
+      var tmp_6 = $verticalArrangement._v;
+      var tmp_7 = $horizontalArrangement._v;
+      var tmp_8 = $state.get_placementAnimator_wpwptp_k$();
+      var tmp3_also = measureLazyList(itemsCount, measuredItemProvider, mainAxisAvailableSize, beforeContentPadding, afterContentPadding, spaceBetweenItems, firstVisibleItemIndex, firstVisibleScrollOffset, tmp_4, contentConstraints, $isVertical, tmp_5, tmp_6, tmp_7, $reverseLayout, $this$null, tmp_8, $beyondBoundsItemCount, pinnedItems, rememberLazyListMeasurePolicy$composable$lambda$lambda($this$null, containerConstraints.value_1, totalHorizontalPadding, totalVerticalPadding));
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.foundation.lazy.rememberLazyListMeasurePolicy$composable.<anonymous>.<anonymous>.<anonymous>' call
+      $state.applyMeasureResult_rfy3ii_k$(tmp3_also);
+      tmp$ret$8 = tmp3_also;
+      return tmp$ret$8;
+    };
+  }
+  function ScrollPositionUpdater$composable$lambda($itemProviderLambda, $state, $$changed) {
+    return function ($composer, $force) {
+      ScrollPositionUpdater$composable($itemProviderLambda, $state, $composer, updateChangedFlags($$changed | 1));
+      return Unit_getInstance();
+    };
+  }
+  function _get_state__b8zcm8_1($this) {
+    return $this.state_1;
+  }
+  function LazyListAnimateScrollScope(state) {
+    this.state_1 = state;
+    this.numOfItemsForTeleport_1 = 100;
+  }
+  protoOf(LazyListAnimateScrollScope).get_density_qy0267_k$ = function () {
+    return this.state_1.get_density_qy0267_k$();
+  };
+  protoOf(LazyListAnimateScrollScope).get_firstVisibleItemIndex_pq52y4_k$ = function () {
+    return this.state_1.get_firstVisibleItemIndex_pq52y4_k$();
+  };
+  protoOf(LazyListAnimateScrollScope).get_firstVisibleItemScrollOffset_my3xxa_k$ = function () {
+    return this.state_1.get_firstVisibleItemScrollOffset_my3xxa_k$();
+  };
+  protoOf(LazyListAnimateScrollScope).get_lastVisibleItemIndex_co91as_k$ = function () {
+    var tmp0_safe_receiver = lastOrNull(this.state_1.get_layoutInfo_ej1bpb_k$().get_visibleItemsInfo_uew4qj_k$());
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_index_it478p_k$();
+    return tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
+  };
+  protoOf(LazyListAnimateScrollScope).get_itemCount_rbqtpp_k$ = function () {
+    return this.state_1.get_layoutInfo_ej1bpb_k$().get_totalItemsCount_aiolgq_k$();
+  };
+  protoOf(LazyListAnimateScrollScope).get_numOfItemsForTeleport_m5cg14_k$ = function () {
+    return this.numOfItemsForTeleport_1;
+  };
+  protoOf(LazyListAnimateScrollScope).getTargetItemOffset_vu2ruc_k$ = function (index) {
+    var tmp$ret$1;
+    $l$block: {
+      // Inline function 'androidx.compose.ui.util.fastFirstOrNull' call
+      var tmp0_fastFirstOrNull = this.state_1.get_layoutInfo_ej1bpb_k$().get_visibleItemsInfo_uew4qj_k$();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.ui.util.fastForEach' call
+      // Inline function 'kotlin.contracts.contract' call
+      var inductionVariable = 0;
+      var last = tmp0_fastFirstOrNull.get_size_woubt6_k$() - 1 | 0;
+      if (inductionVariable <= last)
+        do {
+          var index_0 = inductionVariable;
+          inductionVariable = inductionVariable + 1 | 0;
+          var item = tmp0_fastFirstOrNull.get_fkrdnv_k$(index_0);
+          // Inline function 'androidx.compose.ui.util.fastFirstOrNull.<anonymous>' call
+          // Inline function 'androidx.compose.foundation.lazy.LazyListAnimateScrollScope.getTargetItemOffset.<anonymous>' call
+          if (item.get_index_it478p_k$() === index) {
+            tmp$ret$1 = item;
+            break $l$block;
+          }
+        }
+         while (inductionVariable <= last);
+      tmp$ret$1 = null;
+    }
+    var tmp0_safe_receiver = tmp$ret$1;
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_offset_hjmqak_k$();
+  };
+  protoOf(LazyListAnimateScrollScope).snapToItem_a195ff_k$ = function (_this__u8e3s4, index, scrollOffset) {
+    this.state_1.snapToItemIndexInternal_akujp6_k$(index, scrollOffset);
+  };
+  protoOf(LazyListAnimateScrollScope).expectedDistanceTo_bgmoi0_k$ = function (index, targetScrollOffset) {
+    var layoutInfo = this.state_1.get_layoutInfo_ej1bpb_k$();
+    var visibleItems = layoutInfo.get_visibleItemsInfo_uew4qj_k$();
+    // Inline function 'androidx.compose.ui.util.fastSumBy' call
+    // Inline function 'kotlin.contracts.contract' call
+    var sum = 0;
+    // Inline function 'androidx.compose.ui.util.fastForEach' call
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    var last = visibleItems.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable <= last)
+      do {
+        var index_0 = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        var item = visibleItems.get_fkrdnv_k$(index_0);
+        // Inline function 'androidx.compose.ui.util.fastSumBy.<anonymous>' call
+        var tmp = sum;
+        // Inline function 'androidx.compose.foundation.lazy.LazyListAnimateScrollScope.expectedDistanceTo.<anonymous>' call
+        sum = tmp + item.get_size_woubt6_k$() | 0;
+      }
+       while (inductionVariable <= last);
+    var averageSize = (sum / visibleItems.get_size_woubt6_k$() | 0) + layoutInfo.get_mainAxisItemSpacing_tq19t9_k$() | 0;
+    var indexesDiff = index - this.get_firstVisibleItemIndex_pq52y4_k$() | 0;
+    // Inline function 'kotlin.comparisons.minOf' call
+    var tmp0_minOf = abs(targetScrollOffset);
+    var coercedOffset = Math.min(tmp0_minOf, averageSize);
+    if (targetScrollOffset < 0)
+      coercedOffset = imul(coercedOffset, -1);
+    return imul(averageSize, indexesDiff) + coercedOffset - this.get_firstVisibleItemScrollOffset_my3xxa_k$();
+  };
+  protoOf(LazyListAnimateScrollScope).scroll_e2op36_k$ = function (block, $completion) {
+    return this.state_1.scroll$default_9l862x_k$(VOID, block, $completion);
+  };
+  function lazyListBeyondBoundsModifier$composable(_this__u8e3s4, state, beyondBoundsItemCount, reverseLayout, orientation, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_rp6air_k$(-777639973);
+    sourceInformation($composer_0, 'C(lazyListBeyondBoundsModifier$composable)P(3!1,2)38@1484L7,39@1520L110,43@1702L340:LazyListBeyondBoundsModifier.kt#428nma');
+    if (isTraceInProgress()) {
+      traceEventStart(-777639973, $changed, -1, 'androidx.compose.foundation.lazy.lazyListBeyondBoundsModifier$composable (LazyListBeyondBoundsModifier.kt:32)');
+    }
+    // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
+    var tmp0_$get_current$$composable_h5ksy7 = get_LocalLayoutDirection();
+    var $composer_1 = $composer_0;
+    sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
+    var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+    sourceInformationMarkerEnd($composer_1);
+    var layoutDirection = tmp0;
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_2 = $composer_0;
+    $composer_2.startReplaceableGroup_rp6air_k$(-1124426577);
+    sourceInformation($composer_2, 'CC(remember$composable)P(1,2):Composables.kt#9igjgp');
+    // Inline function 'androidx.compose.runtime.cache' call
+    var tmp1_cache = !!($composer_2.changed_ga7h3f_k$(state) | $composer_2.changed_ga7h3f_k$(beyondBoundsItemCount));
+    // Inline function 'kotlin.let' call
+    var tmp0_let = $composer_2.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp;
+    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.lazy.lazyListBeyondBoundsModifier$composable.<anonymous>' call
+      var value = new LazyListBeyondBoundsState(state, beyondBoundsItemCount);
+      $composer_2.updateRememberedValue_l1colo_k$(value);
+      tmp = value;
+    } else {
+      tmp = tmp0_let;
+    }
+    var tmp_0 = tmp;
+    var tmp0_0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
+    $composer_2.endReplaceableGroup_er37p7_k$();
+    var beyondBoundsState = tmp0_0;
+    var beyondBoundsInfo = state.get_beyondBoundsInfo_3eepc5_k$();
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_3 = $composer_0;
+    $composer_3.startReplaceableGroup_rp6air_k$(-1603429786);
+    sourceInformation($composer_3, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+    var invalid = false;
+    var indexedObject = [beyondBoundsState, beyondBoundsInfo, reverseLayout, layoutDirection, orientation];
+    var inductionVariable = 0;
+    var last = indexedObject.length;
+    while (inductionVariable < last) {
+      var key = indexedObject[inductionVariable];
+      inductionVariable = inductionVariable + 1 | 0;
+      invalid = !!(invalid | $composer_3.changed_ga7h3f_k$(key));
+    }
+    // Inline function 'androidx.compose.runtime.cache' call
+    var tmp1_cache_0 = invalid;
+    // Inline function 'kotlin.let' call
+    var tmp0_let_0 = $composer_3.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp_1;
+    if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.lazy.lazyListBeyondBoundsModifier$composable.<anonymous>' call
+      var value_0 = new LazyLayoutBeyondBoundsModifierLocal(beyondBoundsState, beyondBoundsInfo, reverseLayout, layoutDirection, orientation);
+      $composer_3.updateRememberedValue_l1colo_k$(value_0);
+      tmp_1 = value_0;
+    } else {
+      tmp_1 = tmp0_let_0;
+    }
+    var tmp_2 = tmp_1;
+    var tmp0_1 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
+    $composer_3.endReplaceableGroup_er37p7_k$();
+    var tmp0_2 = _this__u8e3s4.then_5qw5wu_k$(tmp0_1);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    return tmp0_2;
+  }
+  function LazyListBeyondBoundsState(state, beyondBoundsItemCount) {
+    this.state_1 = state;
+    this.beyondBoundsItemCount_1 = beyondBoundsItemCount;
+  }
+  protoOf(LazyListBeyondBoundsState).get_state_iypx7s_k$ = function () {
+    return this.state_1;
+  };
+  protoOf(LazyListBeyondBoundsState).get_beyondBoundsItemCount_auzlwx_k$ = function () {
+    return this.beyondBoundsItemCount_1;
+  };
+  protoOf(LazyListBeyondBoundsState).remeasure_jaiume_k$ = function () {
+    var tmp0_safe_receiver = this.state_1.get_remeasurement_dley68_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.forceRemeasure_y45w6p_k$();
+    }
+  };
+  protoOf(LazyListBeyondBoundsState).get_itemCount_rbqtpp_k$ = function () {
+    return this.state_1.get_layoutInfo_ej1bpb_k$().get_totalItemsCount_aiolgq_k$();
+  };
+  protoOf(LazyListBeyondBoundsState).get_hasVisibleItems_ggfbnl_k$ = function () {
+    // Inline function 'kotlin.collections.isNotEmpty' call
+    return !this.state_1.get_layoutInfo_ej1bpb_k$().get_visibleItemsInfo_uew4qj_k$().isEmpty_y1axqb_k$();
+  };
+  protoOf(LazyListBeyondBoundsState).get_firstPlacedIndex_fupbhu_k$ = function () {
+    // Inline function 'kotlin.comparisons.maxOf' call
+    var tmp0_maxOf = this.state_1.get_firstVisibleItemIndex_pq52y4_k$() - this.beyondBoundsItemCount_1 | 0;
+    return Math.max(0, tmp0_maxOf);
+  };
+  protoOf(LazyListBeyondBoundsState).get_lastPlacedIndex_caqdyu_k$ = function () {
+    // Inline function 'kotlin.comparisons.minOf' call
+    var tmp0_minOf = this.get_itemCount_rbqtpp_k$() - 1 | 0;
+    var tmp1_minOf = last(this.state_1.get_layoutInfo_ej1bpb_k$().get_visibleItemsInfo_uew4qj_k$()).get_index_it478p_k$() + this.beyondBoundsItemCount_1 | 0;
+    return Math.min(tmp0_minOf, tmp1_minOf);
+  };
+  function findOrComposeLazyListHeader(composedVisibleItems, itemProvider, headerIndexes, beforeContentPadding, layoutWidth, layoutHeight) {
+    var currentHeaderOffset = IntCompanionObject_getInstance().get_MIN_VALUE_7nmmor_k$();
+    var nextHeaderOffset = IntCompanionObject_getInstance().get_MIN_VALUE_7nmmor_k$();
+    var currentHeaderListPosition = -1;
+    var nextHeaderListPosition = -1;
+    var firstVisible = first(composedVisibleItems).get_index_it478p_k$();
+    var inductionVariable = 0;
+    var last = headerIndexes.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable <= last)
+      $l$loop: do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        if (headerIndexes.get_fkrdnv_k$(index) <= firstVisible) {
+          currentHeaderListPosition = headerIndexes.get_fkrdnv_k$(index);
+          // Inline function 'kotlin.collections.getOrElse' call
+          var tmp0_getOrElse = index + 1 | 0;
+          var tmp;
+          if (tmp0_getOrElse >= 0 ? tmp0_getOrElse <= get_lastIndex(headerIndexes) : false) {
+            tmp = headerIndexes.get_fkrdnv_k$(tmp0_getOrElse);
+          } else {
+            // Inline function 'androidx.compose.foundation.lazy.findOrComposeLazyListHeader.<anonymous>' call
+            tmp = -1;
+          }
+          nextHeaderListPosition = tmp;
+        } else {
+          break $l$loop;
+        }
+      }
+       while (inductionVariable <= last);
+    var indexInComposedVisibleItems = -1;
+    // Inline function 'androidx.compose.ui.util.fastForEachIndexed' call
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable_0 = 0;
+    var last_0 = composedVisibleItems.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable_0 <= last_0)
+      do {
+        var index_0 = inductionVariable_0;
+        inductionVariable_0 = inductionVariable_0 + 1 | 0;
+        var item = composedVisibleItems.get_fkrdnv_k$(index_0);
+        // Inline function 'androidx.compose.foundation.lazy.findOrComposeLazyListHeader.<anonymous>' call
+        if (item.get_index_it478p_k$() === currentHeaderListPosition) {
+          indexInComposedVisibleItems = index_0;
+          currentHeaderOffset = item.get_offset_hjmqak_k$();
+        } else {
+          if (item.get_index_it478p_k$() === nextHeaderListPosition) {
+            nextHeaderOffset = item.get_offset_hjmqak_k$();
+          }
+        }
+      }
+       while (inductionVariable_0 <= last_0);
+    if (currentHeaderListPosition === -1) {
+      return null;
+    }
+    var measuredHeaderItem = itemProvider.getAndMeasure_l3gja4_k$(currentHeaderListPosition);
+    var tmp_0;
+    if (!(currentHeaderOffset === IntCompanionObject_getInstance().get_MIN_VALUE_7nmmor_k$())) {
+      // Inline function 'kotlin.comparisons.maxOf' call
+      var tmp1_maxOf = -beforeContentPadding | 0;
+      var tmp2_maxOf = currentHeaderOffset;
+      tmp_0 = Math.max(tmp1_maxOf, tmp2_maxOf);
+    } else {
+      tmp_0 = -beforeContentPadding | 0;
+    }
+    var headerOffset = tmp_0;
+    if (!(nextHeaderOffset === IntCompanionObject_getInstance().get_MIN_VALUE_7nmmor_k$())) {
+      // Inline function 'kotlin.comparisons.minOf' call
+      var tmp3_minOf = headerOffset;
+      var tmp4_minOf = nextHeaderOffset - measuredHeaderItem.get_size_woubt6_k$() | 0;
+      headerOffset = Math.min(tmp3_minOf, tmp4_minOf);
+    }
+    measuredHeaderItem.position_aphp3b_k$(headerOffset, layoutWidth, layoutHeight);
+    if (!(indexInComposedVisibleItems === -1)) {
+      composedVisibleItems.set_meu351_k$(indexInComposedVisibleItems, measuredHeaderItem);
+    } else {
+      composedVisibleItems.add_ydlf05_k$(0, measuredHeaderItem);
+    }
+    return measuredHeaderItem;
+  }
+  function LazyListInterval(key, type, item) {
+    illegalDecoyCallException('<init>');
+  }
+  protoOf(LazyListInterval).get_key_18j28a_k$ = function () {
+    return this.key_1;
+  };
+  protoOf(LazyListInterval).get_type_wovaf7_k$ = function () {
+    return this.type_1;
+  };
+  protoOf(LazyListInterval).get_item_woo5lo_k$ = function () {
+    return this.item_1;
+  };
+  function LazyListInterval(key, type, item) {
+    this.key_1 = key;
+    this.type_1 = type;
+    this.item_1 = item;
+  }
+  function _set__headerIndexes__b8n9wj($this, _set____db54di) {
+    $this._headerIndexes_1 = _set____db54di;
+  }
+  function _get__headerIndexes__y9dc15($this) {
+    return $this._headerIndexes_1;
+  }
+  function LazyListIntervalContent$item$composable$lambda($key) {
+    return function (_anonymous_parameter_0__qggqh8) {
+      return $key;
+    };
+  }
+  function LazyListIntervalContent$item$composable$lambda_0($contentType) {
+    return function (it) {
+      return $contentType;
+    };
+  }
+  function ComposableLambda$invoke$ref($boundThis) {
+    return function (p0, p1, p2, p3) {
+      return $boundThis.invoke_locru7_k$(p0, p1, p2, p3);
+    };
+  }
+  function LazyListIntervalContent$item$composable$lambda_1($content) {
+    return function ($this$$receiver, it, $composer, $changed) {
+      var $composer_0 = $composer;
+      sourceInformation($composer_0, 'C58@2071L9:LazyListIntervalContent.kt#428nma');
+      var $dirty = $changed;
+      var tmp;
+      if (($changed & 14) === 0) {
+        $dirty = $dirty | ($composer_0.changed_ga7h3f_k$($this$$receiver) ? 4 : 2);
+        tmp = Unit_getInstance();
+      }
+      var tmp_0;
+      if (!(($dirty & 651) === 130) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+        if (isTraceInProgress()) {
+          traceEventStart(-1010194746, $dirty, -1, 'androidx.compose.foundation.lazy.LazyListIntervalContent.item$composable.<anonymous> (LazyListIntervalContent.kt:58)');
+        }
+        $content($this$$receiver, $composer_0, 14 & $dirty);
+        var tmp_1;
+        if (isTraceInProgress()) {
+          traceEventEnd();
+          tmp_1 = Unit_getInstance();
+        }
+        tmp_0 = tmp_1;
+      } else {
+        $composer_0.skipToGroupEnd_lhns3f_k$();
+        tmp_0 = Unit_getInstance();
+      }
+      return Unit_getInstance();
+    };
+  }
+  function LazyListIntervalContent(content) {
+    LazyLayoutIntervalContent.call(this);
+    this.intervals_1 = new MutableIntervalList();
+    this._headerIndexes_1 = null;
+    // Inline function 'kotlin.apply' call
+    // Inline function 'kotlin.contracts.contract' call
+    content(this);
+  }
+  protoOf(LazyListIntervalContent).get_intervals_gu2011_k$ = function () {
+    return this.intervals_1;
+  };
+  protoOf(LazyListIntervalContent).get_headerIndexes_ov0kui_k$ = function () {
+    var tmp0_elvis_lhs = this._headerIndexes_1;
+    return tmp0_elvis_lhs == null ? emptyList() : tmp0_elvis_lhs;
+  };
+  protoOf(LazyListIntervalContent).items_whl5gy_k$ = function (count, key, contentType, itemContent) {
+    illegalDecoyCallException('items');
+  };
+  protoOf(LazyListIntervalContent).item_8f8zbp_k$ = function (key, contentType, content) {
+    illegalDecoyCallException('item');
+  };
+  protoOf(LazyListIntervalContent).stickyHeader_uf6voy_k$ = function (key, contentType, content) {
+    illegalDecoyCallException('stickyHeader');
+  };
+  protoOf(LazyListIntervalContent).items$composable_x0xxle_k$ = function (count, key, contentType, itemContent) {
+    this.intervals_1.addInterval_x1rwf_k$(count, new LazyListInterval(key, contentType, itemContent));
+  };
+  protoOf(LazyListIntervalContent).item$composable_kcz00x_k$ = function (key, contentType, content) {
+    var tmp;
+    if (!(key == null)) {
+      tmp = LazyListIntervalContent$item$composable$lambda(key);
+    } else {
+      tmp = null;
+    }
+    var tmp_0 = tmp;
+    var tmp_1 = LazyListIntervalContent$item$composable$lambda_0(contentType);
+    this.intervals_1.addInterval_x1rwf_k$(1, new LazyListInterval(tmp_0, tmp_1, ComposableLambda$invoke$ref(composableLambdaInstance(-1010194746, true, LazyListIntervalContent$item$composable$lambda_1(content)))));
+  };
+  protoOf(LazyListIntervalContent).stickyHeader$composable_a1gyde_k$ = function (key, contentType, content) {
+    var tmp0_elvis_lhs = this._headerIndexes_1;
+    var tmp;
+    if (tmp0_elvis_lhs == null) {
+      // Inline function 'kotlin.also' call
+      // Inline function 'kotlin.collections.mutableListOf' call
+      var tmp0_also = ArrayList_init_$Create$_0();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.foundation.lazy.LazyListIntervalContent.stickyHeader$composable.<anonymous>' call
+      this._headerIndexes_1 = tmp0_also;
+      tmp = tmp0_also;
+    } else {
+      tmp = tmp0_elvis_lhs;
+    }
+    var headersIndexes = tmp;
+    headersIndexes.add_1j60pz_k$(this.intervals_1.get_size_woubt6_k$());
+    this.item$composable_kcz00x_k$(key, contentType, content);
+  };
+  function LazyListItemInfo() {
+  }
+  function _get_activeKeys__m4vb1t($this) {
+    return $this.activeKeys_1;
+  }
+  function _set_keyIndexMap__o5qz5w($this, _set____db54di) {
+    $this.keyIndexMap_1 = _set____db54di;
+  }
+  function _get_keyIndexMap__64n760($this) {
+    return $this.keyIndexMap_1;
+  }
+  function _set_firstVisibleIndex__es8ivf($this, _set____db54di) {
+    $this.firstVisibleIndex_1 = _set____db54di;
+  }
+  function _get_firstVisibleIndex__yj2mtd($this) {
+    return $this.firstVisibleIndex_1;
+  }
+  function _get_movingAwayKeys__adh0uz($this) {
+    return $this.movingAwayKeys_1;
+  }
+  function _get_movingInFromStartBound__g9mw8i($this) {
+    return $this.movingInFromStartBound_1;
+  }
+  function _get_movingInFromEndBound__uwfzbp($this) {
+    return $this.movingInFromEndBound_1;
+  }
+  function _get_movingAwayToStartBound__dxobmg($this) {
+    return $this.movingAwayToStartBound_1;
+  }
+  function _get_movingAwayToEndBound__j28841($this) {
+    return $this.movingAwayToEndBound_1;
+  }
+  function initializeNode($this, item, mainAxisOffset) {
+    var firstPlaceableOffset = item.getOffset_euq86z_k$(0);
+    var tmp;
+    if (item.get_isVertical_4x9emh_k$()) {
+      tmp = IntOffset__copy$default_impl_1y5pbb(firstPlaceableOffset, VOID, mainAxisOffset);
+    } else {
+      tmp = IntOffset__copy$default_impl_1y5pbb(firstPlaceableOffset, mainAxisOffset);
+    }
+    var targetFirstPlaceableOffset = tmp;
+    // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.forEachNode' call
+    // Inline function 'kotlin.repeat' call
+    var tmp0_repeat = item.get_placeablesCount_3f5k0k_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    if (inductionVariable < tmp0_repeat)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.forEachNode.<anonymous>' call
+        var tmp0_safe_receiver = _get_node__db0vwp(item.getParentData_x984o9_k$(index), $this);
+        if (tmp0_safe_receiver == null)
+          null;
+        else {
+          // Inline function 'kotlin.let' call
+          // Inline function 'kotlin.contracts.contract' call
+          // Inline function 'androidx.compose.ui.unit.IntOffset.minus' call
+          var tmp0_minus = item.getOffset_euq86z_k$(index);
+          var diffToFirstPlaceableOffset = IntOffset_0(_IntOffset___get_x__impl__qiqr5o(tmp0_minus) - _IntOffset___get_x__impl__qiqr5o(firstPlaceableOffset) | 0, _IntOffset___get_y__impl__2avpwj(tmp0_minus) - _IntOffset___get_y__impl__2avpwj(firstPlaceableOffset) | 0);
+          var tmp$ret$1;
+          // Inline function 'androidx.compose.ui.unit.IntOffset.plus' call
+          tmp$ret$1 = IntOffset_0(_IntOffset___get_x__impl__qiqr5o(targetFirstPlaceableOffset) + _IntOffset___get_x__impl__qiqr5o(diffToFirstPlaceableOffset) | 0, _IntOffset___get_y__impl__2avpwj(targetFirstPlaceableOffset) + _IntOffset___get_y__impl__2avpwj(diffToFirstPlaceableOffset) | 0);
+          tmp0_safe_receiver.set_rawOffset_fid5t_k$(tmp$ret$1);
+        }
+      }
+       while (inductionVariable < tmp0_repeat);
+  }
+  function startAnimationsIfNeeded($this, item) {
+    // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.forEachNode' call
+    // Inline function 'kotlin.repeat' call
+    var tmp0_repeat = item.get_placeablesCount_3f5k0k_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    if (inductionVariable < tmp0_repeat)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.forEachNode.<anonymous>' call
+        var tmp0_safe_receiver = _get_node__db0vwp(item.getParentData_x984o9_k$(index), $this);
+        if (tmp0_safe_receiver == null)
+          null;
+        else {
+          // Inline function 'kotlin.let' call
+          // Inline function 'kotlin.contracts.contract' call
+          var newTarget = item.getOffset_euq86z_k$(index);
+          var currentTarget = tmp0_safe_receiver.get_rawOffset_26tztr_k$();
+          if (!equals(currentTarget, Companion_getInstance_53().get_NotInitialized_f7de21_k$()) ? !equals(currentTarget, newTarget) : false) {
+            var tmp$ret$0;
+            // Inline function 'androidx.compose.ui.unit.IntOffset.minus' call
+            tmp$ret$0 = IntOffset_0(_IntOffset___get_x__impl__qiqr5o(newTarget) - _IntOffset___get_x__impl__qiqr5o(currentTarget) | 0, _IntOffset___get_y__impl__2avpwj(newTarget) - _IntOffset___get_y__impl__2avpwj(currentTarget) | 0);
+            tmp0_safe_receiver.animatePlacementDelta_ci4kmt_k$(tmp$ret$0);
+          }
+          tmp0_safe_receiver.set_rawOffset_fid5t_k$(newTarget);
+        }
+      }
+       while (inductionVariable < tmp0_repeat);
+  }
+  function _get_node__db0vwp(_this__u8e3s4, $this) {
+    return _this__u8e3s4 instanceof LazyLayoutAnimateItemModifierNode ? _this__u8e3s4 : null;
+  }
+  function _get_hasAnimations__pyw8qw(_this__u8e3s4, $this) {
+    // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.forEachNode' call
+    // Inline function 'kotlin.repeat' call
+    var tmp0_repeat = _this__u8e3s4.get_placeablesCount_3f5k0k_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    if (inductionVariable < tmp0_repeat)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.forEachNode.<anonymous>' call
+        if (_get_node__db0vwp(_this__u8e3s4.getParentData_x984o9_k$(index), $this) == null)
+          null;
+        else {
+          // Inline function 'kotlin.let' call
+          // Inline function 'kotlin.contracts.contract' call
+          return true;
+        }
+      }
+       while (inductionVariable < tmp0_repeat);
+    return false;
+  }
+  function forEachNode(_this__u8e3s4, $this, block) {
+    // Inline function 'kotlin.repeat' call
+    var tmp0_repeat = _this__u8e3s4.get_placeablesCount_3f5k0k_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    if (inductionVariable < tmp0_repeat)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.forEachNode.<anonymous>' call
+        var tmp0_safe_receiver = _get_node__db0vwp(_this__u8e3s4.getParentData_x984o9_k$(index), $this);
+        if (tmp0_safe_receiver == null)
+          null;
+        else {
+          // Inline function 'kotlin.let' call
+          // Inline function 'kotlin.contracts.contract' call
+          block(index, tmp0_safe_receiver);
+        }
+      }
+       while (inductionVariable < tmp0_repeat);
+  }
+  function sam$kotlin_Comparator$0(function_0) {
+    this.function_1 = function_0;
+  }
+  protoOf(sam$kotlin_Comparator$0).compare_6tbigh_k$ = function (a, b) {
+    return this.function_1(a, b);
+  };
+  protoOf(sam$kotlin_Comparator$0).compare = function (a, b) {
+    return this.compare_6tbigh_k$(a, b);
+  };
+  function LazyListItemPlacementAnimator$onMeasured$lambda($previousKeyToIndexMap) {
+    return function (a, b) {
+      var tmp$ret$2;
+      // Inline function 'kotlin.comparisons.compareValuesBy' call
+      var tmp$ret$0;
+      // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+      tmp$ret$0 = $previousKeyToIndexMap.getIndex_xxb61u_k$(b.get_key_18j28a_k$());
+      var tmp = tmp$ret$0;
+      var tmp$ret$1;
+      // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+      tmp$ret$1 = $previousKeyToIndexMap.getIndex_xxb61u_k$(a.get_key_18j28a_k$());
+      tmp$ret$2 = compareValues(tmp, tmp$ret$1);
+      return tmp$ret$2;
+    };
+  }
+  function LazyListItemPlacementAnimator$onMeasured$lambda_0($previousKeyToIndexMap) {
+    return function (a, b) {
+      var tmp$ret$2;
+      // Inline function 'kotlin.comparisons.compareValuesBy' call
+      var tmp$ret$0;
+      // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+      tmp$ret$0 = $previousKeyToIndexMap.getIndex_xxb61u_k$(a.get_key_18j28a_k$());
+      var tmp = tmp$ret$0;
+      var tmp$ret$1;
+      // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+      tmp$ret$1 = $previousKeyToIndexMap.getIndex_xxb61u_k$(b.get_key_18j28a_k$());
+      tmp$ret$2 = compareValues(tmp, tmp$ret$1);
+      return tmp$ret$2;
+    };
+  }
+  function LazyListItemPlacementAnimator$onMeasured$lambda_1(this$0) {
+    return function (a, b) {
+      var tmp$ret$2;
+      // Inline function 'kotlin.comparisons.compareValuesBy' call
+      var tmp$ret$0;
+      // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+      tmp$ret$0 = this$0.keyIndexMap_1.getIndex_xxb61u_k$(b.get_key_18j28a_k$());
+      var tmp = tmp$ret$0;
+      var tmp$ret$1;
+      // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+      tmp$ret$1 = this$0.keyIndexMap_1.getIndex_xxb61u_k$(a.get_key_18j28a_k$());
+      tmp$ret$2 = compareValues(tmp, tmp$ret$1);
+      return tmp$ret$2;
+    };
+  }
+  function LazyListItemPlacementAnimator$onMeasured$lambda_2(this$0) {
+    return function (a, b) {
+      var tmp$ret$2;
+      // Inline function 'kotlin.comparisons.compareValuesBy' call
+      var tmp$ret$0;
+      // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+      tmp$ret$0 = this$0.keyIndexMap_1.getIndex_xxb61u_k$(a.get_key_18j28a_k$());
+      var tmp = tmp$ret$0;
+      var tmp$ret$1;
+      // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+      tmp$ret$1 = this$0.keyIndexMap_1.getIndex_xxb61u_k$(b.get_key_18j28a_k$());
+      tmp$ret$2 = compareValues(tmp, tmp$ret$1);
+      return tmp$ret$2;
+    };
+  }
+  function LazyListItemPlacementAnimator() {
+    var tmp = this;
+    // Inline function 'kotlin.collections.mutableSetOf' call
+    tmp.activeKeys_1 = LinkedHashSet_init_$Create$();
+    this.keyIndexMap_1 = Empty_getInstance();
+    this.firstVisibleIndex_1 = 0;
+    this.movingAwayKeys_1 = LinkedHashSet_init_$Create$();
+    var tmp_0 = this;
+    // Inline function 'kotlin.collections.mutableListOf' call
+    tmp_0.movingInFromStartBound_1 = ArrayList_init_$Create$_0();
+    var tmp_1 = this;
+    // Inline function 'kotlin.collections.mutableListOf' call
+    tmp_1.movingInFromEndBound_1 = ArrayList_init_$Create$_0();
+    var tmp_2 = this;
+    // Inline function 'kotlin.collections.mutableListOf' call
+    tmp_2.movingAwayToStartBound_1 = ArrayList_init_$Create$_0();
+    var tmp_3 = this;
+    // Inline function 'kotlin.collections.mutableListOf' call
+    tmp_3.movingAwayToEndBound_1 = ArrayList_init_$Create$_0();
+  }
+  protoOf(LazyListItemPlacementAnimator).onMeasured_c8l3z2_k$ = function (consumedScroll, layoutWidth, layoutHeight, positionedItems, itemProvider, isVertical) {
+    var tmp;
+    var tmp$ret$1;
+    $l$block: {
+      // Inline function 'androidx.compose.ui.util.fastAny' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.ui.util.fastForEach' call
+      // Inline function 'kotlin.contracts.contract' call
+      var inductionVariable = 0;
+      var last = positionedItems.get_size_woubt6_k$() - 1 | 0;
+      if (inductionVariable <= last)
+        do {
+          var index = inductionVariable;
+          inductionVariable = inductionVariable + 1 | 0;
+          var item = positionedItems.get_fkrdnv_k$(index);
+          // Inline function 'androidx.compose.ui.util.fastAny.<anonymous>' call
+          // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+          if (_get_hasAnimations__pyw8qw(item, this)) {
+            tmp$ret$1 = true;
+            break $l$block;
+          }
+        }
+         while (inductionVariable <= last);
+      tmp$ret$1 = false;
+    }
+    if (!tmp$ret$1) {
+      tmp = this.activeKeys_1.isEmpty_y1axqb_k$();
+    } else {
+      tmp = false;
+    }
+    if (tmp) {
+      this.reset_5tn5dq_k$();
+      return Unit_getInstance();
+    }
+    var previousFirstVisibleIndex = this.firstVisibleIndex_1;
+    var tmp_0 = this;
+    var tmp0_safe_receiver = firstOrNull(positionedItems);
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_index_it478p_k$();
+    tmp_0.firstVisibleIndex_1 = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
+    var previousKeyToIndexMap = this.keyIndexMap_1;
+    this.keyIndexMap_1 = itemProvider.get_keyIndexMap_54cmgw_k$();
+    var mainAxisLayoutSize = isVertical ? layoutHeight : layoutWidth;
+    var tmp_1;
+    if (isVertical) {
+      tmp_1 = IntOffset_0(0, consumedScroll);
+    } else {
+      tmp_1 = IntOffset_0(consumedScroll, 0);
+    }
+    var scrollOffset = tmp_1;
+    this.movingAwayKeys_1.addAll_oxxjjk_k$(this.activeKeys_1);
+    // Inline function 'androidx.compose.ui.util.fastForEach' call
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable_0 = 0;
+    var last_0 = positionedItems.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable_0 <= last_0)
+      do {
+        var index_0 = inductionVariable_0;
+        inductionVariable_0 = inductionVariable_0 + 1 | 0;
+        var item_0 = positionedItems.get_fkrdnv_k$(index_0);
+        // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+        this.movingAwayKeys_1.remove_8hbkc6_k$(item_0.get_key_18j28a_k$());
+        if (_get_hasAnimations__pyw8qw(item_0, this)) {
+          if (!this.activeKeys_1.contains_2ehdt1_k$(item_0.get_key_18j28a_k$())) {
+            // Inline function 'kotlin.collections.plusAssign' call
+            var tmp0_plusAssign = this.activeKeys_1;
+            var tmp1_plusAssign = item_0.get_key_18j28a_k$();
+            tmp0_plusAssign.add_1j60pz_k$(tmp1_plusAssign);
+            var previousIndex = previousKeyToIndexMap.getIndex_xxb61u_k$(item_0.get_key_18j28a_k$());
+            if (!(previousIndex === -1) ? !(item_0.get_index_it478p_k$() === previousIndex) : false) {
+              if (previousIndex < previousFirstVisibleIndex) {
+                this.movingInFromStartBound_1.add_1j60pz_k$(item_0);
+              } else {
+                this.movingInFromEndBound_1.add_1j60pz_k$(item_0);
+              }
+            } else {
+              var tmp$ret$3;
+              // Inline function 'kotlin.let' call
+              var tmp2_let = item_0.getOffset_euq86z_k$(0);
+              // Inline function 'kotlin.contracts.contract' call
+              // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>.<anonymous>' call
+              tmp$ret$3 = item_0.get_isVertical_4x9emh_k$() ? _IntOffset___get_y__impl__2avpwj(tmp2_let) : _IntOffset___get_x__impl__qiqr5o(tmp2_let);
+              initializeNode(this, item_0, tmp$ret$3);
+            }
+          } else {
+            // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.forEachNode' call
+            // Inline function 'kotlin.repeat' call
+            var tmp0_repeat = item_0.get_placeablesCount_3f5k0k_k$();
+            // Inline function 'kotlin.contracts.contract' call
+            var inductionVariable_1 = 0;
+            if (inductionVariable_1 < tmp0_repeat)
+              do {
+                var index_1 = inductionVariable_1;
+                inductionVariable_1 = inductionVariable_1 + 1 | 0;
+                // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.forEachNode.<anonymous>' call
+                var tmp0_safe_receiver_0 = _get_node__db0vwp(item_0.getParentData_x984o9_k$(index_1), this);
+                if (tmp0_safe_receiver_0 == null)
+                  null;
+                else {
+                  // Inline function 'kotlin.let' call
+                  // Inline function 'kotlin.contracts.contract' call
+                  var tmp_2;
+                  if (!equals(tmp0_safe_receiver_0.get_rawOffset_26tztr_k$(), Companion_getInstance_53().get_NotInitialized_f7de21_k$())) {
+                    var tmp$ret$4;
+                    // Inline function 'androidx.compose.ui.unit.IntOffset.plus' call
+                    var tmp0_plus = tmp0_safe_receiver_0.get_rawOffset_26tztr_k$();
+                    tmp$ret$4 = IntOffset_0(_IntOffset___get_x__impl__qiqr5o(tmp0_plus) + _IntOffset___get_x__impl__qiqr5o(scrollOffset) | 0, _IntOffset___get_y__impl__2avpwj(tmp0_plus) + _IntOffset___get_y__impl__2avpwj(scrollOffset) | 0);
+                    tmp0_safe_receiver_0.set_rawOffset_fid5t_k$(tmp$ret$4);
+                    tmp_2 = Unit_getInstance();
+                  }
+                }
+              }
+               while (inductionVariable_1 < tmp0_repeat);
+            startAnimationsIfNeeded(this, item_0);
+          }
+        } else {
+          this.activeKeys_1.remove_8hbkc6_k$(item_0.get_key_18j28a_k$());
+        }
+      }
+       while (inductionVariable_0 <= last_0);
+    var accumulatedOffset = 0;
+    // Inline function 'kotlin.collections.sortByDescending' call
+    var tmp0_sortByDescending = this.movingInFromStartBound_1;
+    if (tmp0_sortByDescending.get_size_woubt6_k$() > 1) {
+      var tmp$ret$6;
+      // Inline function 'kotlin.comparisons.compareByDescending' call
+      var tmp_3 = LazyListItemPlacementAnimator$onMeasured$lambda(previousKeyToIndexMap);
+      tmp$ret$6 = new sam$kotlin_Comparator$0(tmp_3);
+      sortWith(tmp0_sortByDescending, tmp$ret$6);
+    }
+    // Inline function 'androidx.compose.ui.util.fastForEach' call
+    var tmp1_fastForEach = this.movingInFromStartBound_1;
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable_2 = 0;
+    var last_1 = tmp1_fastForEach.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable_2 <= last_1)
+      do {
+        var index_2 = inductionVariable_2;
+        inductionVariable_2 = inductionVariable_2 + 1 | 0;
+        var item_1 = tmp1_fastForEach.get_fkrdnv_k$(index_2);
+        // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+        accumulatedOffset = accumulatedOffset + item_1.get_size_woubt6_k$() | 0;
+        var mainAxisOffset = 0 - accumulatedOffset | 0;
+        initializeNode(this, item_1, mainAxisOffset);
+        startAnimationsIfNeeded(this, item_1);
+      }
+       while (inductionVariable_2 <= last_1);
+    accumulatedOffset = 0;
+    // Inline function 'kotlin.collections.sortBy' call
+    var tmp2_sortBy = this.movingInFromEndBound_1;
+    if (tmp2_sortBy.get_size_woubt6_k$() > 1) {
+      var tmp$ret$7;
+      // Inline function 'kotlin.comparisons.compareBy' call
+      var tmp_4 = LazyListItemPlacementAnimator$onMeasured$lambda_0(previousKeyToIndexMap);
+      tmp$ret$7 = new sam$kotlin_Comparator$0(tmp_4);
+      sortWith(tmp2_sortBy, tmp$ret$7);
+    }
+    // Inline function 'androidx.compose.ui.util.fastForEach' call
+    var tmp3_fastForEach = this.movingInFromEndBound_1;
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable_3 = 0;
+    var last_2 = tmp3_fastForEach.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable_3 <= last_2)
+      do {
+        var index_3 = inductionVariable_3;
+        inductionVariable_3 = inductionVariable_3 + 1 | 0;
+        var item_2 = tmp3_fastForEach.get_fkrdnv_k$(index_3);
+        // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+        var mainAxisOffset_0 = mainAxisLayoutSize + accumulatedOffset | 0;
+        accumulatedOffset = accumulatedOffset + item_2.get_size_woubt6_k$() | 0;
+        initializeNode(this, item_2, mainAxisOffset_0);
+        startAnimationsIfNeeded(this, item_2);
+      }
+       while (inductionVariable_3 <= last_2);
+    // Inline function 'kotlin.collections.forEach' call
+    var tmp0_iterator = this.movingAwayKeys_1.iterator_jk1svi_k$();
+    while (tmp0_iterator.hasNext_bitz1p_k$()) {
+      var element = tmp0_iterator.next_20eer_k$();
+      // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+      var newIndex = this.keyIndexMap_1.getIndex_xxb61u_k$(element);
+      if (newIndex === -1) {
+        this.activeKeys_1.remove_8hbkc6_k$(element);
+      } else {
+        var item_3 = itemProvider.getAndMeasure_l3gja4_k$(newIndex);
+        var inProgress = false;
+        // Inline function 'kotlin.repeat' call
+        var tmp0_repeat_0 = item_3.get_placeablesCount_3f5k0k_k$();
+        // Inline function 'kotlin.contracts.contract' call
+        var inductionVariable_4 = 0;
+        if (inductionVariable_4 < tmp0_repeat_0)
+          do {
+            var index_4 = inductionVariable_4;
+            inductionVariable_4 = inductionVariable_4 + 1 | 0;
+            $l$block_0: {
+              // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>.<anonymous>' call
+              var tmp0_safe_receiver_1 = _get_node__db0vwp(item_3.getParentData_x984o9_k$(index_4), this);
+              if ((tmp0_safe_receiver_1 == null ? null : tmp0_safe_receiver_1.get_isAnimationInProgress_9kh57h_k$()) === true) {
+                inProgress = true;
+                break $l$block_0;
+              }
+            }
+          }
+           while (inductionVariable_4 < tmp0_repeat_0);
+        if (!inProgress ? newIndex === previousKeyToIndexMap.getIndex_xxb61u_k$(element) : false) {
+          this.activeKeys_1.remove_8hbkc6_k$(element);
+        } else {
+          if (newIndex < this.firstVisibleIndex_1) {
+            this.movingAwayToStartBound_1.add_1j60pz_k$(item_3);
+          } else {
+            this.movingAwayToEndBound_1.add_1j60pz_k$(item_3);
+          }
+        }
+      }
+    }
+    accumulatedOffset = 0;
+    // Inline function 'kotlin.collections.sortByDescending' call
+    var tmp5_sortByDescending = this.movingAwayToStartBound_1;
+    if (tmp5_sortByDescending.get_size_woubt6_k$() > 1) {
+      var tmp$ret$9;
+      // Inline function 'kotlin.comparisons.compareByDescending' call
+      var tmp_5 = LazyListItemPlacementAnimator$onMeasured$lambda_1(this);
+      tmp$ret$9 = new sam$kotlin_Comparator$0(tmp_5);
+      sortWith(tmp5_sortByDescending, tmp$ret$9);
+    }
+    // Inline function 'androidx.compose.ui.util.fastForEach' call
+    var tmp6_fastForEach = this.movingAwayToStartBound_1;
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable_5 = 0;
+    var last_3 = tmp6_fastForEach.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable_5 <= last_3)
+      do {
+        var index_5 = inductionVariable_5;
+        inductionVariable_5 = inductionVariable_5 + 1 | 0;
+        var item_4 = tmp6_fastForEach.get_fkrdnv_k$(index_5);
+        // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+        accumulatedOffset = accumulatedOffset + item_4.get_size_woubt6_k$() | 0;
+        var mainAxisOffset_1 = 0 - accumulatedOffset | 0;
+        item_4.position_aphp3b_k$(mainAxisOffset_1, layoutWidth, layoutHeight);
+        positionedItems.add_1j60pz_k$(item_4);
+        startAnimationsIfNeeded(this, item_4);
+      }
+       while (inductionVariable_5 <= last_3);
+    accumulatedOffset = 0;
+    // Inline function 'kotlin.collections.sortBy' call
+    var tmp7_sortBy = this.movingAwayToEndBound_1;
+    if (tmp7_sortBy.get_size_woubt6_k$() > 1) {
+      var tmp$ret$10;
+      // Inline function 'kotlin.comparisons.compareBy' call
+      var tmp_6 = LazyListItemPlacementAnimator$onMeasured$lambda_2(this);
+      tmp$ret$10 = new sam$kotlin_Comparator$0(tmp_6);
+      sortWith(tmp7_sortBy, tmp$ret$10);
+    }
+    // Inline function 'androidx.compose.ui.util.fastForEach' call
+    var tmp8_fastForEach = this.movingAwayToEndBound_1;
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable_6 = 0;
+    var last_4 = tmp8_fastForEach.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable_6 <= last_4)
+      do {
+        var index_6 = inductionVariable_6;
+        inductionVariable_6 = inductionVariable_6 + 1 | 0;
+        var item_5 = tmp8_fastForEach.get_fkrdnv_k$(index_6);
+        // Inline function 'androidx.compose.foundation.lazy.LazyListItemPlacementAnimator.onMeasured.<anonymous>' call
+        var mainAxisOffset_2 = mainAxisLayoutSize + accumulatedOffset | 0;
+        accumulatedOffset = accumulatedOffset + item_5.get_size_woubt6_k$() | 0;
+        item_5.position_aphp3b_k$(mainAxisOffset_2, layoutWidth, layoutHeight);
+        positionedItems.add_1j60pz_k$(item_5);
+        startAnimationsIfNeeded(this, item_5);
+      }
+       while (inductionVariable_6 <= last_4);
+    this.movingInFromStartBound_1.clear_j9y8zo_k$();
+    this.movingInFromEndBound_1.clear_j9y8zo_k$();
+    this.movingAwayToStartBound_1.clear_j9y8zo_k$();
+    this.movingAwayToEndBound_1.clear_j9y8zo_k$();
+    this.movingAwayKeys_1.clear_j9y8zo_k$();
+  };
+  protoOf(LazyListItemPlacementAnimator).reset_5tn5dq_k$ = function () {
+    this.activeKeys_1.clear_j9y8zo_k$();
+    this.keyIndexMap_1 = Empty_getInstance();
+    this.firstVisibleIndex_1 = -1;
+  };
+  function rememberLazyListItemProviderLambda$composable(state, content, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_rp6air_k$(-714518597);
+    sourceInformation($composer_0, 'C(rememberLazyListItemProviderLambda$composable)P(1)44@1787L29,45@1828L679:LazyListItemProvider.kt#428nma');
+    if (isTraceInProgress()) {
+      traceEventStart(-714518597, $changed, -1, 'androidx.compose.foundation.lazy.rememberLazyListItemProviderLambda$composable (LazyListItemProvider.kt:40)');
+    }
+    var latestContent = rememberUpdatedState$composable(content, $composer_0, 14 & $changed >> 3);
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_1 = $composer_0;
+    $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+    sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+    // Inline function 'androidx.compose.runtime.cache' call
+    var tmp1_cache = $composer_1.changed_ga7h3f_k$(state);
+    // Inline function 'kotlin.let' call
+    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp;
+    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.lazy.rememberLazyListItemProviderLambda$composable.<anonymous>' call
+      var scope = new LazyItemScopeImpl();
+      var tmp_0 = referentialEqualityPolicy();
+      var intervalContentState = derivedStateOf(tmp_0, rememberLazyListItemProviderLambda$composable$lambda(latestContent));
+      var tmp_1 = referentialEqualityPolicy();
+      var itemProviderState = derivedStateOf(tmp_1, rememberLazyListItemProviderLambda$composable$lambda_0(intervalContentState, state, scope));
+      var value = value$factory(itemProviderState);
+      $composer_1.updateRememberedValue_l1colo_k$(value);
+      tmp = value;
+    } else {
+      tmp = tmp0_let;
+    }
+    var tmp_2 = tmp;
+    var tmp0 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
+    $composer_1.endReplaceableGroup_er37p7_k$();
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    return tmp0;
+  }
+  function LazyListItemProvider() {
+  }
+  function _get_state__b8zcm8_2($this) {
+    return $this.state_1;
+  }
+  function _get_intervalContent__bul1ul($this) {
+    return $this.intervalContent_1;
+  }
+  function LazyListItemProviderImpl$Item$composable$lambda(this$0, $index) {
+    return function ($composer, $changed) {
+      var $composer_0 = $composer;
+      sourceInformation($composer_0, 'C*78@3104L27:LazyListItemProvider.kt#428nma');
+      var tmp;
+      if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+        if (isTraceInProgress()) {
+          traceEventStart(-824725566, $changed, -1, 'androidx.compose.foundation.lazy.LazyListItemProviderImpl.Item$composable.<anonymous> (LazyListItemProvider.kt:76)');
+        }
+        var tmp$ret$0;
+        // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutIntervalContent.withInterval' call
+        var tmp0_withInterval = this$0.intervalContent_1;
+        var interval = tmp0_withInterval.get_intervals_gu2011_k$().get_fkrdnv_k$($index);
+        var localIntervalIndex = $index - interval.get_startIndex_oi1lp5_k$() | 0;
+        var tmp1_anonymous = interval.get_value_j01efc_k$();
+        tmp$ret$0 = tmp1_anonymous.get_item_woo5lo_k$()(this$0.itemScope_1, localIntervalIndex, $composer_0, 0);
+        var tmp_0;
+        if (isTraceInProgress()) {
+          traceEventEnd();
+          tmp_0 = Unit_getInstance();
+        }
+        tmp = tmp_0;
+      } else {
+        $composer_0.skipToGroupEnd_lhns3f_k$();
+        tmp = Unit_getInstance();
+      }
+      return Unit_getInstance();
+    };
+  }
+  function ComposableLambda$invoke$ref_0($boundThis) {
+    return function (p0, p1) {
+      return $boundThis.invoke_6harzl_k$(p0, p1);
+    };
+  }
+  function LazyListItemProviderImpl$Item$composable$lambda_0($tmp0_rcvr, $index, $key, $$changed) {
+    return function ($composer, $force) {
+      $tmp0_rcvr.Item$composable_lnrxno_k$($index, $key, $composer, updateChangedFlags($$changed | 1));
+      return Unit_getInstance();
+    };
+  }
+  function LazyListItemProviderImpl(state, intervalContent, itemScope, keyIndexMap) {
+    this.state_1 = state;
+    this.intervalContent_1 = intervalContent;
+    this.itemScope_1 = itemScope;
+    this.keyIndexMap_1 = keyIndexMap;
+  }
+  protoOf(LazyListItemProviderImpl).get_itemScope_r35wh4_k$ = function () {
+    return this.itemScope_1;
+  };
+  protoOf(LazyListItemProviderImpl).get_keyIndexMap_54cmgw_k$ = function () {
+    return this.keyIndexMap_1;
+  };
+  protoOf(LazyListItemProviderImpl).get_itemCount_rbqtpp_k$ = function () {
+    return this.intervalContent_1.get_itemCount_rbqtpp_k$();
+  };
+  protoOf(LazyListItemProviderImpl).Item_n2mjnj_k$ = function (index, key) {
+    illegalDecoyCallException('Item');
+  };
+  protoOf(LazyListItemProviderImpl).getKey_c0u4so_k$ = function (index) {
+    var tmp0_elvis_lhs = this.keyIndexMap_1.getKey_c0u4so_k$(index);
+    return tmp0_elvis_lhs == null ? this.intervalContent_1.getKey_c0u4so_k$(index) : tmp0_elvis_lhs;
+  };
+  protoOf(LazyListItemProviderImpl).getContentType_uak9tw_k$ = function (index) {
+    return this.intervalContent_1.getContentType_uak9tw_k$(index);
+  };
+  protoOf(LazyListItemProviderImpl).get_headerIndexes_ov0kui_k$ = function () {
+    return this.intervalContent_1.get_headerIndexes_ov0kui_k$();
+  };
+  protoOf(LazyListItemProviderImpl).getIndex_xxb61u_k$ = function (key) {
+    return this.keyIndexMap_1.getIndex_xxb61u_k$(key);
+  };
+  protoOf(LazyListItemProviderImpl).equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof LazyListItemProviderImpl))
+      return false;
+    return equals(this.intervalContent_1, other.intervalContent_1);
+  };
+  protoOf(LazyListItemProviderImpl).hashCode = function () {
+    return hashCode(this.intervalContent_1);
+  };
+  protoOf(LazyListItemProviderImpl).Item$composable_lnrxno_k$ = function (index, key, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(1801201164);
+    sourceInformation($composer_0, 'C(Item$composable)76@2951L204:LazyListItemProvider.kt#428nma');
+    var $dirty = $changed;
+    if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changed_s0r703_k$(index) ? 4 : 2);
+    if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(key) ? 32 : 16);
+    if (($changed & 896) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(this) ? 256 : 128);
+    if (!(($dirty & 731) === 146) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(1801201164, $dirty, -1, 'androidx.compose.foundation.lazy.LazyListItemProviderImpl.Item$composable (LazyListItemProvider.kt:75)');
+      }
+      var tmp = this.state_1.get_pinnedItems_ujz3hb_k$();
+      // Inline function 'kotlin.run' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.foundation.lazy.LazyListItemProviderImpl.Item$composable.<anonymous>' call
+      var tmp_0 = $composer_0;
+      var dispatchReceiver = composableLambda(tmp_0, -824725566, true, LazyListItemProviderImpl$Item$composable$lambda(this, index));
+      // Inline function 'androidx.compose.runtime.remember$composable' call
+      var $composer_1 = $composer_0;
+      $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+      sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+      // Inline function 'androidx.compose.runtime.cache' call
+      var tmp1_cache = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
+      // Inline function 'kotlin.let' call
+      var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var tmp_1;
+      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+        // Inline function 'androidx.compose.foundation.lazy.LazyListItemProviderImpl.Item$composable.<anonymous>.<anonymous>' call
+        var value = ComposableLambda$invoke$ref_0(dispatchReceiver);
+        $composer_1.updateRememberedValue_l1colo_k$(value);
+        tmp_1 = value;
+      } else {
+        tmp_1 = tmp0_let;
+      }
+      var tmp_2 = tmp_1;
+      var tmp0 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
+      $composer_1.endReplaceableGroup_er37p7_k$();
+      LazyLayoutPinnableItem$composable(key, index, tmp, tmp0, $composer_0, 3072 | 14 & $dirty >> 3 | 112 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lhns3f_k$();
+    }
+    var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp1_safe_receiver === null)
+      null;
+    else {
+      tmp1_safe_receiver.updateScope_xhrf9y_k$(LazyListItemProviderImpl$Item$composable$lambda_0(this, index, key, $changed));
+    }
+  };
+  function rememberLazyListItemProviderLambda$composable$lambda($latestContent) {
+    return function () {
+      return new LazyListIntervalContent($latestContent.get_value_j01efc_k$());
+    };
+  }
+  function rememberLazyListItemProviderLambda$composable$lambda_0($intervalContentState, $state, $scope) {
+    return function () {
+      var intervalContent = $intervalContentState.get_value_j01efc_k$();
+      var map = new NearestRangeKeyIndexMap($state.get_nearestRange_gyp8lk_k$(), intervalContent);
+      return new LazyListItemProviderImpl($state, intervalContent, $scope, map);
+    };
+  }
+  function value$factory($b0) {
+    return getPropertyCallableRef('value', 0, KProperty0, function () {
+      return $b0.get_value_j01efc_k$();
+    }, null);
+  }
+  function LazyListLayoutInfo() {
+  }
+  function measureLazyList(itemsCount, measuredItemProvider, mainAxisAvailableSize, beforeContentPadding, afterContentPadding, spaceBetweenItems, firstVisibleItemIndex, firstVisibleItemScrollOffset, scrollToBeConsumed, constraints, isVertical, headerIndexes, verticalArrangement, horizontalArrangement, reverseLayout, density, placementAnimator, beyondBoundsItemCount, pinnedItems, layout) {
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(beforeContentPadding >= 0)) {
+      // Inline function 'kotlin.require.<anonymous>' call
+      var message = 'Failed requirement.';
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(afterContentPadding >= 0)) {
+      // Inline function 'kotlin.require.<anonymous>' call
+      var message_0 = 'Failed requirement.';
+      throw IllegalArgumentException_init_$Create$(toString(message_0));
+    }
+    if (itemsCount <= 0) {
+      var tmp = _Constraints___get_minWidth__impl__hi9lfi(constraints);
+      var tmp_0 = _Constraints___get_minHeight__impl__ev4bgx(constraints);
+      return new LazyListMeasureResult(null, 0, false, 0.0, layout(tmp, tmp_0, measureLazyList$lambda), emptyList(), -beforeContentPadding | 0, mainAxisAvailableSize + afterContentPadding | 0, 0, reverseLayout, isVertical ? Orientation_Vertical_getInstance() : Orientation_Horizontal_getInstance(), afterContentPadding, spaceBetweenItems);
+    } else {
+      var currentFirstItemIndex = firstVisibleItemIndex;
+      var currentFirstItemScrollOffset = firstVisibleItemScrollOffset;
+      if (currentFirstItemIndex >= itemsCount) {
+        currentFirstItemIndex = itemsCount - 1 | 0;
+        currentFirstItemScrollOffset = 0;
+      }
+      // Inline function 'kotlin.math.roundToInt' call
+      var scrollDelta = roundToInt(scrollToBeConsumed);
+      currentFirstItemScrollOffset = currentFirstItemScrollOffset - scrollDelta | 0;
+      if (currentFirstItemIndex === 0 ? currentFirstItemScrollOffset < 0 : false) {
+        scrollDelta = scrollDelta + currentFirstItemScrollOffset | 0;
+        currentFirstItemScrollOffset = 0;
+      }
+      var visibleItems = ArrayDeque_init_$Create$();
+      var minOffset = (-beforeContentPadding | 0) + (spaceBetweenItems < 0 ? spaceBetweenItems : 0) | 0;
+      var maxOffset = mainAxisAvailableSize;
+      currentFirstItemScrollOffset = currentFirstItemScrollOffset + minOffset | 0;
+      var maxCrossAxis = 0;
+      while (currentFirstItemScrollOffset < 0 ? currentFirstItemIndex > 0 : false) {
+        var previous = currentFirstItemIndex - 1 | 0;
+        var measuredItem = measuredItemProvider.getAndMeasure_l3gja4_k$(previous);
+        visibleItems.add_ydlf05_k$(0, measuredItem);
+        // Inline function 'kotlin.comparisons.maxOf' call
+        var tmp2_maxOf = maxCrossAxis;
+        var tmp3_maxOf = measuredItem.get_crossAxisSize_vn6o3d_k$();
+        maxCrossAxis = Math.max(tmp2_maxOf, tmp3_maxOf);
+        currentFirstItemScrollOffset = currentFirstItemScrollOffset + measuredItem.get_sizeWithSpacings_q8axgg_k$() | 0;
+        currentFirstItemIndex = previous;
+      }
+      if (currentFirstItemScrollOffset < minOffset) {
+        scrollDelta = scrollDelta + currentFirstItemScrollOffset | 0;
+        currentFirstItemScrollOffset = minOffset;
+      }
+      currentFirstItemScrollOffset = currentFirstItemScrollOffset - minOffset | 0;
+      var index = currentFirstItemIndex;
+      var maxMainAxis = coerceAtLeast(maxOffset + afterContentPadding | 0, 0);
+      var currentMainAxisOffset = -currentFirstItemScrollOffset | 0;
+      // Inline function 'androidx.compose.ui.util.fastForEach' call
+      // Inline function 'kotlin.contracts.contract' call
+      var inductionVariable = 0;
+      var last = visibleItems.get_size_woubt6_k$() - 1 | 0;
+      if (inductionVariable <= last)
+        do {
+          var index_0 = inductionVariable;
+          inductionVariable = inductionVariable + 1 | 0;
+          var item = visibleItems.get_fkrdnv_k$(index_0);
+          // Inline function 'androidx.compose.foundation.lazy.measureLazyList.<anonymous>' call
+          index = index + 1 | 0;
+          currentMainAxisOffset = currentMainAxisOffset + item.get_sizeWithSpacings_q8axgg_k$() | 0;
+        }
+         while (inductionVariable <= last);
+      while (index < itemsCount ? (currentMainAxisOffset < maxMainAxis ? true : currentMainAxisOffset <= 0) ? true : visibleItems.isEmpty_y1axqb_k$() : false) {
+        var measuredItem_0 = measuredItemProvider.getAndMeasure_l3gja4_k$(index);
+        currentMainAxisOffset = currentMainAxisOffset + measuredItem_0.get_sizeWithSpacings_q8axgg_k$() | 0;
+        if (currentMainAxisOffset <= minOffset ? !(index === (itemsCount - 1 | 0)) : false) {
+          currentFirstItemIndex = index + 1 | 0;
+          currentFirstItemScrollOffset = currentFirstItemScrollOffset - measuredItem_0.get_sizeWithSpacings_q8axgg_k$() | 0;
+        } else {
+          // Inline function 'kotlin.comparisons.maxOf' call
+          var tmp4_maxOf = maxCrossAxis;
+          var tmp5_maxOf = measuredItem_0.get_crossAxisSize_vn6o3d_k$();
+          maxCrossAxis = Math.max(tmp4_maxOf, tmp5_maxOf);
+          visibleItems.add_1j60pz_k$(measuredItem_0);
+        }
+        index = index + 1 | 0;
+      }
+      if (currentMainAxisOffset < maxOffset) {
+        var toScrollBack = maxOffset - currentMainAxisOffset | 0;
+        currentFirstItemScrollOffset = currentFirstItemScrollOffset - toScrollBack | 0;
+        currentMainAxisOffset = currentMainAxisOffset + toScrollBack | 0;
+        while (currentFirstItemScrollOffset < beforeContentPadding ? currentFirstItemIndex > 0 : false) {
+          var previousIndex = currentFirstItemIndex - 1 | 0;
+          var measuredItem_1 = measuredItemProvider.getAndMeasure_l3gja4_k$(previousIndex);
+          visibleItems.add_ydlf05_k$(0, measuredItem_1);
+          // Inline function 'kotlin.comparisons.maxOf' call
+          var tmp6_maxOf = maxCrossAxis;
+          var tmp7_maxOf = measuredItem_1.get_crossAxisSize_vn6o3d_k$();
+          maxCrossAxis = Math.max(tmp6_maxOf, tmp7_maxOf);
+          currentFirstItemScrollOffset = currentFirstItemScrollOffset + measuredItem_1.get_sizeWithSpacings_q8axgg_k$() | 0;
+          currentFirstItemIndex = previousIndex;
+        }
+        scrollDelta = scrollDelta + toScrollBack | 0;
+        if (currentFirstItemScrollOffset < 0) {
+          scrollDelta = scrollDelta + currentFirstItemScrollOffset | 0;
+          currentMainAxisOffset = currentMainAxisOffset + currentFirstItemScrollOffset | 0;
+          currentFirstItemScrollOffset = 0;
+        }
+      }
+      var tmp_1;
+      var tmp_2;
+      var tmp$ret$6;
+      // Inline function 'kotlin.math.roundToInt' call
+      tmp$ret$6 = roundToInt(scrollToBeConsumed);
+      if (get_sign(tmp$ret$6) === get_sign(scrollDelta)) {
+        var tmp$ret$7;
+        // Inline function 'kotlin.math.roundToInt' call
+        tmp$ret$7 = roundToInt(scrollToBeConsumed);
+        tmp_2 = abs(tmp$ret$7) >= abs(scrollDelta);
+      } else {
+        tmp_2 = false;
+      }
+      if (tmp_2) {
+        tmp_1 = scrollDelta;
+      } else {
+        tmp_1 = scrollToBeConsumed;
+      }
+      var consumedScroll = tmp_1;
+      // Inline function 'kotlin.require' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'kotlin.require' call
+      // Inline function 'kotlin.contracts.contract' call
+      if (!(currentFirstItemScrollOffset >= 0)) {
+        // Inline function 'kotlin.require.<anonymous>' call
+        var message_1 = 'Failed requirement.';
+        throw IllegalArgumentException_init_$Create$(toString(message_1));
+      }
+      var visibleItemsScrollOffset = -currentFirstItemScrollOffset | 0;
+      var firstItem = visibleItems.first_1m0hio_k$();
+      if (beforeContentPadding > 0 ? true : spaceBetweenItems < 0) {
+        var inductionVariable_0 = 0;
+        var last_0 = visibleItems.get_size_woubt6_k$() - 1 | 0;
+        if (inductionVariable_0 <= last_0)
+          $l$loop: do {
+            var i = inductionVariable_0;
+            inductionVariable_0 = inductionVariable_0 + 1 | 0;
+            var size = visibleItems.get_fkrdnv_k$(i).get_sizeWithSpacings_q8axgg_k$();
+            if ((!(currentFirstItemScrollOffset === 0) ? size <= currentFirstItemScrollOffset : false) ? !(i === get_lastIndex(visibleItems)) : false) {
+              currentFirstItemScrollOffset = currentFirstItemScrollOffset - size | 0;
+              firstItem = visibleItems.get_fkrdnv_k$(i + 1 | 0);
+            } else {
+              break $l$loop;
+            }
+          }
+           while (inductionVariable_0 <= last_0);
+      }
+      var extraItemsBefore = createItemsBeforeList(currentFirstItemIndex, measuredItemProvider, beyondBoundsItemCount, pinnedItems);
+      // Inline function 'androidx.compose.ui.util.fastForEach' call
+      // Inline function 'kotlin.contracts.contract' call
+      var inductionVariable_1 = 0;
+      var last_1 = extraItemsBefore.get_size_woubt6_k$() - 1 | 0;
+      if (inductionVariable_1 <= last_1)
+        do {
+          var index_1 = inductionVariable_1;
+          inductionVariable_1 = inductionVariable_1 + 1 | 0;
+          var item_0 = extraItemsBefore.get_fkrdnv_k$(index_1);
+          // Inline function 'androidx.compose.foundation.lazy.measureLazyList.<anonymous>' call
+          // Inline function 'kotlin.comparisons.maxOf' call
+          var tmp0_maxOf = maxCrossAxis;
+          var tmp1_maxOf = item_0.get_crossAxisSize_vn6o3d_k$();
+          maxCrossAxis = Math.max(tmp0_maxOf, tmp1_maxOf);
+        }
+         while (inductionVariable_1 <= last_1);
+      var extraItemsAfter = createItemsAfterList(visibleItems, measuredItemProvider, itemsCount, beyondBoundsItemCount, pinnedItems);
+      // Inline function 'androidx.compose.ui.util.fastForEach' call
+      // Inline function 'kotlin.contracts.contract' call
+      var inductionVariable_2 = 0;
+      var last_2 = extraItemsAfter.get_size_woubt6_k$() - 1 | 0;
+      if (inductionVariable_2 <= last_2)
+        do {
+          var index_2 = inductionVariable_2;
+          inductionVariable_2 = inductionVariable_2 + 1 | 0;
+          var item_1 = extraItemsAfter.get_fkrdnv_k$(index_2);
+          // Inline function 'androidx.compose.foundation.lazy.measureLazyList.<anonymous>' call
+          // Inline function 'kotlin.comparisons.maxOf' call
+          var tmp0_maxOf_0 = maxCrossAxis;
+          var tmp1_maxOf_0 = item_1.get_crossAxisSize_vn6o3d_k$();
+          maxCrossAxis = Math.max(tmp0_maxOf_0, tmp1_maxOf_0);
+        }
+         while (inductionVariable_2 <= last_2);
+      var noExtraItems = (equals(firstItem, visibleItems.first_1m0hio_k$()) ? extraItemsBefore.isEmpty_y1axqb_k$() : false) ? extraItemsAfter.isEmpty_y1axqb_k$() : false;
+      var layoutWidth = constrainWidth(constraints, isVertical ? maxCrossAxis : currentMainAxisOffset);
+      var layoutHeight = constrainHeight(constraints, isVertical ? currentMainAxisOffset : maxCrossAxis);
+      var positionedItems = calculateItemsOffsets(visibleItems, extraItemsBefore, extraItemsAfter, layoutWidth, layoutHeight, currentMainAxisOffset, maxOffset, visibleItemsScrollOffset, isVertical, verticalArrangement, horizontalArrangement, reverseLayout, density);
+      placementAnimator.onMeasured_c8l3z2_k$(numberToInt(consumedScroll), layoutWidth, layoutHeight, positionedItems, measuredItemProvider, isVertical);
+      var tmp_3;
+      // Inline function 'kotlin.collections.isNotEmpty' call
+      if (!headerIndexes.isEmpty_y1axqb_k$()) {
+        tmp_3 = findOrComposeLazyListHeader(positionedItems, measuredItemProvider, headerIndexes, beforeContentPadding, layoutWidth, layoutHeight);
+      } else {
+        tmp_3 = null;
+      }
+      var headerItem = tmp_3;
+      var tmp2_firstVisibleItem = firstItem;
+      var tmp3_firstVisibleItemScrollOffset = currentFirstItemScrollOffset;
+      var tmp4_canScrollForward = index < itemsCount ? true : currentMainAxisOffset > maxOffset;
+      var tmp5_measureResult = layout(layoutWidth, layoutHeight, measureLazyList$lambda_0(positionedItems, headerItem));
+      var tmp6_viewportStartOffset = -beforeContentPadding | 0;
+      var tmp7_viewportEndOffset = maxOffset + afterContentPadding | 0;
+      var tmp_4;
+      if (noExtraItems) {
+        tmp_4 = positionedItems;
+      } else {
+        // Inline function 'androidx.compose.foundation.fastFilter' call
+        // Inline function 'kotlin.contracts.contract' call
+        var target = ArrayList_init_$Create$(positionedItems.get_size_woubt6_k$());
+        // Inline function 'androidx.compose.ui.util.fastForEach' call
+        // Inline function 'kotlin.contracts.contract' call
+        var inductionVariable_3 = 0;
+        var last_3 = positionedItems.get_size_woubt6_k$() - 1 | 0;
+        if (inductionVariable_3 <= last_3)
+          do {
+            var index_3 = inductionVariable_3;
+            inductionVariable_3 = inductionVariable_3 + 1 | 0;
+            var item_2 = positionedItems.get_fkrdnv_k$(index_3);
+            // Inline function 'androidx.compose.foundation.fastFilter.<anonymous>' call
+            // Inline function 'androidx.compose.foundation.lazy.measureLazyList.<anonymous>' call
+            if ((item_2.get_index_it478p_k$() >= visibleItems.first_1m0hio_k$().get_index_it478p_k$() ? item_2.get_index_it478p_k$() <= visibleItems.last_1z1cm_k$().get_index_it478p_k$() : false) ? true : item_2 === headerItem) {
+              // Inline function 'kotlin.collections.plusAssign' call
+              target.add_1j60pz_k$(item_2);
+            }
+          }
+           while (inductionVariable_3 <= last_3);
+        tmp_4 = target;
+      }
+      var tmp8_visibleItemsInfo = tmp_4;
+      var tmp9_orientation = isVertical ? Orientation_Vertical_getInstance() : Orientation_Horizontal_getInstance();
+      return new LazyListMeasureResult(tmp2_firstVisibleItem, tmp3_firstVisibleItemScrollOffset, tmp4_canScrollForward, consumedScroll, tmp5_measureResult, tmp8_visibleItemsInfo, tmp6_viewportStartOffset, tmp7_viewportEndOffset, itemsCount, reverseLayout, tmp9_orientation, afterContentPadding, spaceBetweenItems);
+    }
+  }
+  function createItemsBeforeList(currentFirstItemIndex, measuredItemProvider, beyondBoundsItemCount, pinnedItems) {
+    var list = null;
+    var start = currentFirstItemIndex;
+    // Inline function 'kotlin.comparisons.maxOf' call
+    var tmp0_maxOf = start - beyondBoundsItemCount | 0;
+    start = Math.max(0, tmp0_maxOf);
+    var inductionVariable = currentFirstItemIndex - 1 | 0;
+    var last = start;
+    if (last <= inductionVariable)
+      do {
+        var i = inductionVariable;
+        inductionVariable = inductionVariable + -1 | 0;
+        if (list == null) {
+          // Inline function 'kotlin.collections.mutableListOf' call
+          list = ArrayList_init_$Create$_0();
+        }
+        list.add_1j60pz_k$(measuredItemProvider.getAndMeasure_l3gja4_k$(i));
+      }
+       while (!(i === last));
+    // Inline function 'androidx.compose.ui.util.fastForEach' call
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable_0 = 0;
+    var last_0 = pinnedItems.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable_0 <= last_0)
+      do {
+        var index = inductionVariable_0;
+        inductionVariable_0 = inductionVariable_0 + 1 | 0;
+        var item = pinnedItems.get_fkrdnv_k$(index);
+        // Inline function 'androidx.compose.foundation.lazy.createItemsBeforeList.<anonymous>' call
+        if (item < start) {
+          if (list == null) {
+            // Inline function 'kotlin.collections.mutableListOf' call
+            list = ArrayList_init_$Create$_0();
+          }
+          var tmp0_safe_receiver = list;
+          if (tmp0_safe_receiver == null)
+            null;
+          else
+            tmp0_safe_receiver.add_1j60pz_k$(measuredItemProvider.getAndMeasure_l3gja4_k$(item));
+        }
+      }
+       while (inductionVariable_0 <= last_0);
+    var tmp1_elvis_lhs = list;
+    return tmp1_elvis_lhs == null ? emptyList() : tmp1_elvis_lhs;
+  }
+  function createItemsAfterList(visibleItems, measuredItemProvider, itemsCount, beyondBoundsItemCount, pinnedItems) {
+    var list = null;
+    var end = last(visibleItems).get_index_it478p_k$();
+    // Inline function 'kotlin.comparisons.minOf' call
+    var tmp0_minOf = end + beyondBoundsItemCount | 0;
+    var tmp1_minOf = itemsCount - 1 | 0;
+    end = Math.min(tmp0_minOf, tmp1_minOf);
+    var inductionVariable = last(visibleItems).get_index_it478p_k$() + 1 | 0;
+    var last_0 = end;
+    if (inductionVariable <= last_0)
+      do {
+        var i = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        if (list == null) {
+          // Inline function 'kotlin.collections.mutableListOf' call
+          list = ArrayList_init_$Create$_0();
+        }
+        list.add_1j60pz_k$(measuredItemProvider.getAndMeasure_l3gja4_k$(i));
+      }
+       while (!(i === last_0));
+    // Inline function 'androidx.compose.ui.util.fastForEach' call
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable_0 = 0;
+    var last_1 = pinnedItems.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable_0 <= last_1)
+      do {
+        var index = inductionVariable_0;
+        inductionVariable_0 = inductionVariable_0 + 1 | 0;
+        var item = pinnedItems.get_fkrdnv_k$(index);
+        // Inline function 'androidx.compose.foundation.lazy.createItemsAfterList.<anonymous>' call
+        if (item > end) {
+          if (list == null) {
+            // Inline function 'kotlin.collections.mutableListOf' call
+            list = ArrayList_init_$Create$_0();
+          }
+          var tmp0_safe_receiver = list;
+          if (tmp0_safe_receiver == null)
+            null;
+          else
+            tmp0_safe_receiver.add_1j60pz_k$(measuredItemProvider.getAndMeasure_l3gja4_k$(item));
+        }
+      }
+       while (inductionVariable_0 <= last_1);
+    var tmp1_elvis_lhs = list;
+    return tmp1_elvis_lhs == null ? emptyList() : tmp1_elvis_lhs;
+  }
+  function calculateItemsOffsets(items, extraItemsBefore, extraItemsAfter, layoutWidth, layoutHeight, finalMainAxisOffset, maxOffset, itemsScrollOffset, isVertical, verticalArrangement, horizontalArrangement, reverseLayout, density) {
+    var mainAxisLayoutSize = isVertical ? layoutHeight : layoutWidth;
+    // Inline function 'kotlin.comparisons.minOf' call
+    var hasSpareSpace = finalMainAxisOffset < Math.min(mainAxisLayoutSize, maxOffset);
+    if (hasSpareSpace) {
+      // Inline function 'kotlin.check' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'kotlin.check' call
+      // Inline function 'kotlin.contracts.contract' call
+      if (!(itemsScrollOffset === 0)) {
+        // Inline function 'kotlin.check.<anonymous>' call
+        var message = 'Check failed.';
+        throw IllegalStateException_init_$Create$(toString(message));
+      }
+    }
+    var positionedItems = ArrayList_init_$Create$((items.get_size_woubt6_k$() + extraItemsBefore.get_size_woubt6_k$() | 0) + extraItemsAfter.get_size_woubt6_k$() | 0);
+    if (hasSpareSpace) {
+      // Inline function 'kotlin.require' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'kotlin.require' call
+      // Inline function 'kotlin.contracts.contract' call
+      if (!(extraItemsBefore.isEmpty_y1axqb_k$() ? extraItemsAfter.isEmpty_y1axqb_k$() : false)) {
+        // Inline function 'kotlin.require.<anonymous>' call
+        var message_0 = 'Failed requirement.';
+        throw IllegalArgumentException_init_$Create$(toString(message_0));
+      }
+      var itemsCount = items.get_size_woubt6_k$();
+      var tmp = 0;
+      var tmp_0 = new Int32Array(itemsCount);
+      while (tmp < itemsCount) {
+        var tmp_1 = tmp;
+        tmp_0[tmp_1] = items.get_fkrdnv_k$(calculateItemsOffsets$reverseAware(tmp_1, reverseLayout, itemsCount)).get_size_woubt6_k$();
+        tmp = tmp + 1 | 0;
+      }
+      var sizes = tmp_0;
+      var tmp_2 = 0;
+      var tmp_3 = new Int32Array(itemsCount);
+      while (tmp_2 < itemsCount) {
+        tmp_3[tmp_2] = 0;
+        tmp_2 = tmp_2 + 1 | 0;
+      }
+      var offsets = tmp_3;
+      if (isVertical) {
+        // Inline function 'kotlin.with' call
+        // Inline function 'kotlin.requireNotNull' call
+        // Inline function 'kotlin.contracts.contract' call
+        var tmp$ret$6;
+        $l$block: {
+          // Inline function 'kotlin.requireNotNull' call
+          // Inline function 'kotlin.contracts.contract' call
+          if (verticalArrangement == null) {
+            // Inline function 'kotlin.requireNotNull.<anonymous>' call
+            var message_1 = 'Required value was null.';
+            throw IllegalArgumentException_init_$Create$(toString(message_1));
+          } else {
+            tmp$ret$6 = verticalArrangement;
+            break $l$block;
+          }
+        }
+        // Inline function 'kotlin.contracts.contract' call
+        tmp$ret$6.arrange_bbki90_k$(density, mainAxisLayoutSize, sizes, offsets);
+      } else {
+        // Inline function 'kotlin.with' call
+        // Inline function 'kotlin.requireNotNull' call
+        // Inline function 'kotlin.contracts.contract' call
+        var tmp$ret$10;
+        $l$block_0: {
+          // Inline function 'kotlin.requireNotNull' call
+          // Inline function 'kotlin.contracts.contract' call
+          if (horizontalArrangement == null) {
+            // Inline function 'kotlin.requireNotNull.<anonymous>' call
+            var message_2 = 'Required value was null.';
+            throw IllegalArgumentException_init_$Create$(toString(message_2));
+          } else {
+            tmp$ret$10 = horizontalArrangement;
+            break $l$block_0;
+          }
+        }
+        // Inline function 'kotlin.contracts.contract' call
+        tmp$ret$10.arrange_6sc983_k$(density, mainAxisLayoutSize, sizes, LayoutDirection_Ltr_getInstance(), offsets);
+      }
+      var reverseAwareOffsetIndices = !reverseLayout ? get_indices(offsets) : reversed(get_indices(offsets));
+      var inductionVariable = reverseAwareOffsetIndices.get_first_irdx8n_k$();
+      var last = reverseAwareOffsetIndices.get_last_wopotb_k$();
+      var step = reverseAwareOffsetIndices.get_step_woujh1_k$();
+      if ((step > 0 ? inductionVariable <= last : false) ? true : step < 0 ? last <= inductionVariable : false)
+        do {
+          var index = inductionVariable;
+          inductionVariable = inductionVariable + step | 0;
+          var absoluteOffset = offsets[index];
+          var item = items.get_fkrdnv_k$(calculateItemsOffsets$reverseAware(index, reverseLayout, itemsCount));
+          var tmp_4;
+          if (reverseLayout) {
+            tmp_4 = (mainAxisLayoutSize - absoluteOffset | 0) - item.get_size_woubt6_k$() | 0;
+          } else {
+            tmp_4 = absoluteOffset;
+          }
+          var relativeOffset = tmp_4;
+          item.position_aphp3b_k$(relativeOffset, layoutWidth, layoutHeight);
+          positionedItems.add_1j60pz_k$(item);
+        }
+         while (!(index === last));
+    } else {
+      var currentMainAxis = itemsScrollOffset;
+      // Inline function 'androidx.compose.ui.util.fastForEach' call
+      // Inline function 'kotlin.contracts.contract' call
+      var inductionVariable_0 = 0;
+      var last_0 = extraItemsBefore.get_size_woubt6_k$() - 1 | 0;
+      if (inductionVariable_0 <= last_0)
+        do {
+          var index_0 = inductionVariable_0;
+          inductionVariable_0 = inductionVariable_0 + 1 | 0;
+          var item_0 = extraItemsBefore.get_fkrdnv_k$(index_0);
+          // Inline function 'androidx.compose.foundation.lazy.calculateItemsOffsets.<anonymous>' call
+          currentMainAxis = currentMainAxis - item_0.get_sizeWithSpacings_q8axgg_k$() | 0;
+          item_0.position_aphp3b_k$(currentMainAxis, layoutWidth, layoutHeight);
+          positionedItems.add_1j60pz_k$(item_0);
+        }
+         while (inductionVariable_0 <= last_0);
+      currentMainAxis = itemsScrollOffset;
+      // Inline function 'androidx.compose.ui.util.fastForEach' call
+      // Inline function 'kotlin.contracts.contract' call
+      var inductionVariable_1 = 0;
+      var last_1 = items.get_size_woubt6_k$() - 1 | 0;
+      if (inductionVariable_1 <= last_1)
+        do {
+          var index_1 = inductionVariable_1;
+          inductionVariable_1 = inductionVariable_1 + 1 | 0;
+          var item_1 = items.get_fkrdnv_k$(index_1);
+          // Inline function 'androidx.compose.foundation.lazy.calculateItemsOffsets.<anonymous>' call
+          item_1.position_aphp3b_k$(currentMainAxis, layoutWidth, layoutHeight);
+          positionedItems.add_1j60pz_k$(item_1);
+          currentMainAxis = currentMainAxis + item_1.get_sizeWithSpacings_q8axgg_k$() | 0;
+        }
+         while (inductionVariable_1 <= last_1);
+      // Inline function 'androidx.compose.ui.util.fastForEach' call
+      // Inline function 'kotlin.contracts.contract' call
+      var inductionVariable_2 = 0;
+      var last_2 = extraItemsAfter.get_size_woubt6_k$() - 1 | 0;
+      if (inductionVariable_2 <= last_2)
+        do {
+          var index_2 = inductionVariable_2;
+          inductionVariable_2 = inductionVariable_2 + 1 | 0;
+          var item_2 = extraItemsAfter.get_fkrdnv_k$(index_2);
+          // Inline function 'androidx.compose.foundation.lazy.calculateItemsOffsets.<anonymous>' call
+          item_2.position_aphp3b_k$(currentMainAxis, layoutWidth, layoutHeight);
+          positionedItems.add_1j60pz_k$(item_2);
+          currentMainAxis = currentMainAxis + item_2.get_sizeWithSpacings_q8axgg_k$() | 0;
+        }
+         while (inductionVariable_2 <= last_2);
+    }
+    return positionedItems;
+  }
+  function calculateItemsOffsets$reverseAware(_this__u8e3s4, $reverseLayout, itemsCount) {
+    return !$reverseLayout ? _this__u8e3s4 : (itemsCount - _this__u8e3s4 | 0) - 1 | 0;
+  }
+  function measureLazyList$lambda($this$invoke) {
+    return Unit_getInstance();
+  }
+  function measureLazyList$lambda_0($positionedItems, $headerItem) {
+    return function ($this$invoke) {
+      // Inline function 'kotlin.contracts.contract' call
+      var inductionVariable = 0;
+      var last = $positionedItems.get_size_woubt6_k$() - 1 | 0;
+      var tmp;
+      if (inductionVariable <= last) {
+        do {
+          var index = inductionVariable;
+          inductionVariable = inductionVariable + 1 | 0;
+          var item = $positionedItems.get_fkrdnv_k$(index);
+          // Inline function 'androidx.compose.foundation.lazy.measureLazyList.<anonymous>.<anonymous>' call
+          if (!(item === $headerItem)) {
+            item.place_x70aep_k$($this$invoke);
+          }
+        }
+         while (inductionVariable <= last);
+        tmp = Unit_getInstance();
+      }
+      var tmp0_safe_receiver = $headerItem;
+      if (tmp0_safe_receiver == null)
+        null;
+      else {
+        tmp0_safe_receiver.place_x70aep_k$($this$invoke);
+      }
+      return Unit_getInstance();
+    };
+  }
+  function LazyListMeasureResult(firstVisibleItem, firstVisibleItemScrollOffset, canScrollForward, consumedScroll, measureResult, visibleItemsInfo, viewportStartOffset, viewportEndOffset, totalItemsCount, reverseLayout, orientation, afterContentPadding, mainAxisItemSpacing) {
+    this.firstVisibleItem_1 = firstVisibleItem;
+    this.firstVisibleItemScrollOffset_1 = firstVisibleItemScrollOffset;
+    this.canScrollForward_1 = canScrollForward;
+    this.consumedScroll_1 = consumedScroll;
+    this.visibleItemsInfo_1 = visibleItemsInfo;
+    this.viewportStartOffset_1 = viewportStartOffset;
+    this.viewportEndOffset_1 = viewportEndOffset;
+    this.totalItemsCount_1 = totalItemsCount;
+    this.reverseLayout_1 = reverseLayout;
+    this.orientation_1 = orientation;
+    this.afterContentPadding_1 = afterContentPadding;
+    this.mainAxisItemSpacing_1 = mainAxisItemSpacing;
+    this.$$delegate_0__1 = measureResult;
+  }
+  protoOf(LazyListMeasureResult).get_firstVisibleItem_l4avz6_k$ = function () {
+    return this.firstVisibleItem_1;
+  };
+  protoOf(LazyListMeasureResult).get_firstVisibleItemScrollOffset_my3xxa_k$ = function () {
+    return this.firstVisibleItemScrollOffset_1;
+  };
+  protoOf(LazyListMeasureResult).get_canScrollForward_dmb0fj_k$ = function () {
+    return this.canScrollForward_1;
+  };
+  protoOf(LazyListMeasureResult).get_consumedScroll_u59rku_k$ = function () {
+    return this.consumedScroll_1;
+  };
+  protoOf(LazyListMeasureResult).get_visibleItemsInfo_uew4qj_k$ = function () {
+    return this.visibleItemsInfo_1;
+  };
+  protoOf(LazyListMeasureResult).get_viewportStartOffset_v4b1ay_k$ = function () {
+    return this.viewportStartOffset_1;
+  };
+  protoOf(LazyListMeasureResult).get_viewportEndOffset_gapdi7_k$ = function () {
+    return this.viewportEndOffset_1;
+  };
+  protoOf(LazyListMeasureResult).get_totalItemsCount_aiolgq_k$ = function () {
+    return this.totalItemsCount_1;
+  };
+  protoOf(LazyListMeasureResult).get_reverseLayout_nclvnn_k$ = function () {
+    return this.reverseLayout_1;
+  };
+  protoOf(LazyListMeasureResult).get_orientation_9wu93t_k$ = function () {
+    return this.orientation_1;
+  };
+  protoOf(LazyListMeasureResult).get_afterContentPadding_49ooob_k$ = function () {
+    return this.afterContentPadding_1;
+  };
+  protoOf(LazyListMeasureResult).get_mainAxisItemSpacing_tq19t9_k$ = function () {
+    return this.mainAxisItemSpacing_1;
+  };
+  protoOf(LazyListMeasureResult).get_alignmentLines_nx3i05_k$ = function () {
+    return this.$$delegate_0__1.get_alignmentLines_nx3i05_k$();
+  };
+  protoOf(LazyListMeasureResult).get_height_e7t92o_k$ = function () {
+    return this.$$delegate_0__1.get_height_e7t92o_k$();
+  };
+  protoOf(LazyListMeasureResult).get_width_j0q4yl_k$ = function () {
+    return this.$$delegate_0__1.get_width_j0q4yl_k$();
+  };
+  protoOf(LazyListMeasureResult).placeChildren_kebx9n_k$ = function () {
+    this.$$delegate_0__1.placeChildren_kebx9n_k$();
+  };
+  protoOf(LazyListMeasureResult).get_viewportSize_38c6y9_k$ = function () {
+    return IntSize(this.get_width_j0q4yl_k$(), this.get_height_e7t92o_k$());
+  };
+  protoOf(LazyListMeasureResult).get_beforeContentPadding_2dperk_k$ = function () {
+    return -this.viewportStartOffset_1 | 0;
+  };
+  function _get_placeables__otc5bb($this) {
+    return $this.placeables_1;
+  }
+  function _get_horizontalAlignment__hyzxw2($this) {
+    return $this.horizontalAlignment_1;
+  }
+  function _get_verticalAlignment__1j8kpw($this) {
+    return $this.verticalAlignment_1;
+  }
+  function _get_layoutDirection__u3l5q4($this) {
+    return $this.layoutDirection_1;
+  }
+  function _get_reverseLayout__b4hu1n($this) {
+    return $this.reverseLayout_1;
+  }
+  function _get_beforeContentPadding__8jxpx0($this) {
+    return $this.beforeContentPadding_1;
+  }
+  function _get_afterContentPadding__razem5($this) {
+    return $this.afterContentPadding_1;
+  }
+  function _get_spacing__209fwy($this) {
+    return $this.spacing_1;
+  }
+  function _get_visualOffset__slruiw($this) {
+    return $this.visualOffset_1;
+  }
+  function _set_offset__aq0ezo($this, _set____db54di) {
+    $this.offset_1 = _set____db54di;
+  }
+  function _set_mainAxisLayoutSize__frif1q($this, _set____db54di) {
+    $this.mainAxisLayoutSize_1 = _set____db54di;
+  }
+  function _get_mainAxisLayoutSize__lbqbt2($this) {
+    return $this.mainAxisLayoutSize_1;
+  }
+  function _set_minMainAxisOffset__bsxkee($this, _set____db54di) {
+    $this.minMainAxisOffset_1 = _set____db54di;
+  }
+  function _get_minMainAxisOffset__9wvbvy($this) {
+    return $this.minMainAxisOffset_1;
+  }
+  function _set_maxMainAxisOffset__wfzltg($this, _set____db54di) {
+    $this.maxMainAxisOffset_1 = _set____db54di;
+  }
+  function _get_maxMainAxisOffset__aq6pj4($this) {
+    return $this.maxMainAxisOffset_1;
+  }
+  function _get_placeableOffsets__178038($this) {
+    return $this.placeableOffsets_1;
+  }
+  function _get_mainAxis__jwdafl(_this__u8e3s4, $this) {
+    return $this.isVertical_1 ? _IntOffset___get_y__impl__2avpwj(_this__u8e3s4) : _IntOffset___get_x__impl__qiqr5o(_this__u8e3s4);
+  }
+  function _get_mainAxisSize__iyci34(_this__u8e3s4, $this) {
+    return $this.isVertical_1 ? _this__u8e3s4.get_height_e7t92o_k$() : _this__u8e3s4.get_width_j0q4yl_k$();
+  }
+  function copy_0(_this__u8e3s4, $this, mainAxisMap) {
+    return IntOffset_0($this.isVertical_1 ? _IntOffset___get_x__impl__qiqr5o(_this__u8e3s4) : mainAxisMap(_IntOffset___get_x__impl__qiqr5o(_this__u8e3s4)), $this.isVertical_1 ? mainAxisMap(_IntOffset___get_y__impl__2avpwj(_this__u8e3s4)) : _IntOffset___get_y__impl__2avpwj(_this__u8e3s4));
+  }
+  function LazyListMeasuredItem(index, placeables, isVertical, horizontalAlignment, verticalAlignment, layoutDirection, reverseLayout, beforeContentPadding, afterContentPadding, spacing, visualOffset, key, contentType) {
+    this.index_1 = index;
+    this.placeables_1 = placeables;
+    this.isVertical_1 = isVertical;
+    this.horizontalAlignment_1 = horizontalAlignment;
+    this.verticalAlignment_1 = verticalAlignment;
+    this.layoutDirection_1 = layoutDirection;
+    this.reverseLayout_1 = reverseLayout;
+    this.beforeContentPadding_1 = beforeContentPadding;
+    this.afterContentPadding_1 = afterContentPadding;
+    this.spacing_1 = spacing;
+    this.visualOffset_1 = visualOffset;
+    this.key_1 = key;
+    this.contentType_1 = contentType;
+    this.offset_1 = 0;
+    this.mainAxisLayoutSize_1 = -2147483648;
+    this.minMainAxisOffset_1 = 0;
+    this.maxMainAxisOffset_1 = 0;
+    var mainAxisSize = 0;
+    var maxCrossAxis = 0;
+    // Inline function 'androidx.compose.ui.util.fastForEach' call
+    var tmp0_fastForEach = this.placeables_1;
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    var last = tmp0_fastForEach.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable <= last)
+      do {
+        var index_0 = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        var item = tmp0_fastForEach.get_fkrdnv_k$(index_0);
+        // Inline function 'androidx.compose.foundation.lazy.LazyListMeasuredItem.<anonymous>' call
+        mainAxisSize = mainAxisSize + (this.isVertical_1 ? item.get_height_e7t92o_k$() : item.get_width_j0q4yl_k$()) | 0;
+        // Inline function 'kotlin.comparisons.maxOf' call
+        var tmp0_maxOf = maxCrossAxis;
+        var tmp1_maxOf = !this.isVertical_1 ? item.get_height_e7t92o_k$() : item.get_width_j0q4yl_k$();
+        maxCrossAxis = Math.max(tmp0_maxOf, tmp1_maxOf);
+      }
+       while (inductionVariable <= last);
+    this.size_1 = mainAxisSize;
+    this.sizeWithSpacings_1 = coerceAtLeast(this.size_1 + this.spacing_1 | 0, 0);
+    this.crossAxisSize_1 = maxCrossAxis;
+    this.placeableOffsets_1 = new Int32Array(imul(this.placeables_1.get_size_woubt6_k$(), 2));
+  }
+  protoOf(LazyListMeasuredItem).get_index_it478p_k$ = function () {
+    return this.index_1;
+  };
+  protoOf(LazyListMeasuredItem).get_isVertical_4x9emh_k$ = function () {
+    return this.isVertical_1;
+  };
+  protoOf(LazyListMeasuredItem).get_key_18j28a_k$ = function () {
+    return this.key_1;
+  };
+  protoOf(LazyListMeasuredItem).get_contentType_7git4a_k$ = function () {
+    return this.contentType_1;
+  };
+  protoOf(LazyListMeasuredItem).get_offset_hjmqak_k$ = function () {
+    return this.offset_1;
+  };
+  protoOf(LazyListMeasuredItem).get_size_woubt6_k$ = function () {
+    return this.size_1;
+  };
+  protoOf(LazyListMeasuredItem).get_sizeWithSpacings_q8axgg_k$ = function () {
+    return this.sizeWithSpacings_1;
+  };
+  protoOf(LazyListMeasuredItem).get_crossAxisSize_vn6o3d_k$ = function () {
+    return this.crossAxisSize_1;
+  };
+  protoOf(LazyListMeasuredItem).get_placeablesCount_3f5k0k_k$ = function () {
+    return this.placeables_1.get_size_woubt6_k$();
+  };
+  protoOf(LazyListMeasuredItem).getParentData_x984o9_k$ = function (index) {
+    return this.placeables_1.get_fkrdnv_k$(index).get_parentData_o87vnn_k$();
+  };
+  protoOf(LazyListMeasuredItem).position_aphp3b_k$ = function (offset, layoutWidth, layoutHeight) {
+    this.offset_1 = offset;
+    this.mainAxisLayoutSize_1 = this.isVertical_1 ? layoutHeight : layoutWidth;
+    var mainAxisOffset = offset;
+    // Inline function 'androidx.compose.ui.util.fastForEachIndexed' call
+    var tmp0_fastForEachIndexed = this.placeables_1;
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    var last = tmp0_fastForEachIndexed.get_size_woubt6_k$() - 1 | 0;
+    if (inductionVariable <= last)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        var item = tmp0_fastForEachIndexed.get_fkrdnv_k$(index);
+        // Inline function 'androidx.compose.foundation.lazy.LazyListMeasuredItem.position.<anonymous>' call
+        var indexInArray = imul(index, 2);
+        if (this.isVertical_1) {
+          var tmp$ret$2;
+          // Inline function 'kotlin.requireNotNull' call
+          var tmp0_requireNotNull = this.horizontalAlignment_1;
+          // Inline function 'kotlin.contracts.contract' call
+          var tmp$ret$1;
+          $l$block: {
+            // Inline function 'kotlin.requireNotNull' call
+            // Inline function 'kotlin.contracts.contract' call
+            if (tmp0_requireNotNull == null) {
+              // Inline function 'kotlin.requireNotNull.<anonymous>' call
+              var message = 'Required value was null.';
+              throw IllegalArgumentException_init_$Create$(toString(message));
+            } else {
+              tmp$ret$1 = tmp0_requireNotNull;
+              break $l$block;
+            }
+          }
+          tmp$ret$2 = tmp$ret$1;
+          this.placeableOffsets_1[indexInArray] = tmp$ret$2.align_a5f08y_k$(item.get_width_j0q4yl_k$(), layoutWidth, this.layoutDirection_1);
+          this.placeableOffsets_1[indexInArray + 1 | 0] = mainAxisOffset;
+          mainAxisOffset = mainAxisOffset + item.get_height_e7t92o_k$() | 0;
+        } else {
+          this.placeableOffsets_1[indexInArray] = mainAxisOffset;
+          var tmp = indexInArray + 1 | 0;
+          var tmp$ret$5;
+          // Inline function 'kotlin.requireNotNull' call
+          var tmp1_requireNotNull = this.verticalAlignment_1;
+          // Inline function 'kotlin.contracts.contract' call
+          var tmp$ret$4;
+          $l$block_0: {
+            // Inline function 'kotlin.requireNotNull' call
+            // Inline function 'kotlin.contracts.contract' call
+            if (tmp1_requireNotNull == null) {
+              // Inline function 'kotlin.requireNotNull.<anonymous>' call
+              var message_0 = 'Required value was null.';
+              throw IllegalArgumentException_init_$Create$(toString(message_0));
+            } else {
+              tmp$ret$4 = tmp1_requireNotNull;
+              break $l$block_0;
+            }
+          }
+          tmp$ret$5 = tmp$ret$4;
+          this.placeableOffsets_1[tmp] = tmp$ret$5.align_1fj06d_k$(item.get_height_e7t92o_k$(), layoutHeight);
+          mainAxisOffset = mainAxisOffset + item.get_width_j0q4yl_k$() | 0;
+        }
+      }
+       while (inductionVariable <= last);
+    this.minMainAxisOffset_1 = -this.beforeContentPadding_1 | 0;
+    this.maxMainAxisOffset_1 = this.mainAxisLayoutSize_1 + this.afterContentPadding_1 | 0;
+  };
+  protoOf(LazyListMeasuredItem).getOffset_euq86z_k$ = function (index) {
+    return IntOffset_0(this.placeableOffsets_1[imul(index, 2)], this.placeableOffsets_1[imul(index, 2) + 1 | 0]);
+  };
+  protoOf(LazyListMeasuredItem).place_x70aep_k$ = function (scope) {
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!!(this.mainAxisLayoutSize_1 === -2147483648)) {
+      // Inline function 'androidx.compose.foundation.lazy.LazyListMeasuredItem.place.<anonymous>.<anonymous>' call
+      var message = 'position() should be called first';
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    var tmp1_repeat = this.get_placeablesCount_3f5k0k_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    var tmp;
+    if (inductionVariable < tmp1_repeat) {
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        // Inline function 'androidx.compose.foundation.lazy.LazyListMeasuredItem.place.<anonymous>.<anonymous>' call
+        var placeable = this.placeables_1.get_fkrdnv_k$(index);
+        var minOffset = this.minMainAxisOffset_1 - _get_mainAxisSize__iyci34(placeable, this) | 0;
+        var maxOffset = this.maxMainAxisOffset_1;
+        var offset = this.getOffset_euq86z_k$(index);
+        var tmp_0 = this.getParentData_x984o9_k$(index);
+        var animateNode = tmp_0 instanceof LazyLayoutAnimateItemModifierNode ? tmp_0 : null;
+        if (!(animateNode == null)) {
+          // Inline function 'androidx.compose.ui.unit.IntOffset.plus' call
+          var tmp0_plus = offset;
+          var tmp1_plus = animateNode.get_placementDelta_8w9z7t_k$();
+          var animatedOffset = IntOffset_0(_IntOffset___get_x__impl__qiqr5o(tmp0_plus) + _IntOffset___get_x__impl__qiqr5o(tmp1_plus) | 0, _IntOffset___get_y__impl__2avpwj(tmp0_plus) + _IntOffset___get_y__impl__2avpwj(tmp1_plus) | 0);
+          if ((_get_mainAxis__jwdafl(offset, this) <= minOffset ? _get_mainAxis__jwdafl(animatedOffset, this) <= minOffset : false) ? true : _get_mainAxis__jwdafl(offset, this) >= maxOffset ? _get_mainAxis__jwdafl(animatedOffset, this) >= maxOffset : false) {
+            animateNode.cancelAnimation_ickco7_k$();
+          }
+          offset = animatedOffset;
+        }
+        if (this.reverseLayout_1) {
+          // Inline function 'androidx.compose.foundation.lazy.LazyListMeasuredItem.copy' call
+          var tmp2_copy = offset;
+          var tmp_1;
+          if (this.isVertical_1) {
+            tmp_1 = _IntOffset___get_x__impl__qiqr5o(tmp2_copy);
+          } else {
+            // Inline function 'androidx.compose.foundation.lazy.LazyListMeasuredItem.place.<anonymous>.<anonymous>.<anonymous>' call
+            var tmp3_anonymous = _IntOffset___get_x__impl__qiqr5o(tmp2_copy);
+            tmp_1 = (this.mainAxisLayoutSize_1 - tmp3_anonymous | 0) - _get_mainAxisSize__iyci34(placeable, this) | 0;
+          }
+          var tmp_2 = tmp_1;
+          var tmp_3;
+          if (this.isVertical_1) {
+            // Inline function 'androidx.compose.foundation.lazy.LazyListMeasuredItem.place.<anonymous>.<anonymous>.<anonymous>' call
+            var tmp4_anonymous = _IntOffset___get_y__impl__2avpwj(tmp2_copy);
+            tmp_3 = (this.mainAxisLayoutSize_1 - tmp4_anonymous | 0) - _get_mainAxisSize__iyci34(placeable, this) | 0;
+          } else {
+            tmp_3 = _IntOffset___get_y__impl__2avpwj(tmp2_copy);
+          }
+          offset = IntOffset_0(tmp_2, tmp_3);
+        }
+        // Inline function 'androidx.compose.ui.unit.IntOffset.plus' call
+        var tmp5_plus = offset;
+        var tmp6_plus = this.visualOffset_1;
+        offset = IntOffset_0(_IntOffset___get_x__impl__qiqr5o(tmp5_plus) + _IntOffset___get_x__impl__qiqr5o(tmp6_plus) | 0, _IntOffset___get_y__impl__2avpwj(tmp5_plus) + _IntOffset___get_y__impl__2avpwj(tmp6_plus) | 0);
+        if (this.isVertical_1) {
+          scope.placeWithLayer$default_lk33fl_k$(placeable, offset);
+        } else {
+          scope.placeRelativeWithLayer$default_4lbet1_k$(placeable, offset);
+        }
+      }
+       while (inductionVariable < tmp1_repeat);
+      tmp = Unit_getInstance();
+    }
+    return tmp;
+  };
+  function get_Unset() {
+    return Unset;
+  }
+  var Unset;
+  function _get_itemProvider__opdbc7($this) {
+    return $this.itemProvider_1;
+  }
+  function _get_measureScope__aqf6gl($this) {
+    return $this.measureScope_1;
+  }
+  function LazyListMeasuredItemProvider(constraints, isVertical, itemProvider, measureScope) {
+    this.itemProvider_1 = itemProvider;
+    this.measureScope_1 = measureScope;
+    this.childConstraints_1 = Constraints_0(VOID, isVertical ? _Constraints___get_maxWidth__impl__uuyqc(constraints) : Companion_getInstance_7().get_Infinity_rvchkf_k$(), VOID, !isVertical ? _Constraints___get_maxHeight__impl__dt3e8z(constraints) : Companion_getInstance_7().get_Infinity_rvchkf_k$());
+  }
+  protoOf(LazyListMeasuredItemProvider).get_childConstraints_3vtpbw_k$ = function () {
+    return this.childConstraints_1;
+  };
+  protoOf(LazyListMeasuredItemProvider).getAndMeasure_l3gja4_k$ = function (index) {
+    var key = this.itemProvider_1.getKey_c0u4so_k$(index);
+    var contentType = this.itemProvider_1.getContentType_uak9tw_k$(index);
+    var placeables = this.measureScope_1.measure_2x0n5r_k$(index, this.childConstraints_1);
+    return this.createItem_914mua_k$(index, key, contentType, placeables);
+  };
+  protoOf(LazyListMeasuredItemProvider).get_keyIndexMap_54cmgw_k$ = function () {
+    return this.itemProvider_1.get_keyIndexMap_54cmgw_k$();
+  };
+  function _set_scrollOffset__x5lxuf($this, _set____db54di) {
+    scrollOffset$factory();
+    return $this.scrollOffset$delegate_1.set_intValue_q75ky9_k$(_set____db54di);
+  }
+  function _set_hadFirstNotEmptyLayout__fcqi9a($this, _set____db54di) {
+    $this.hadFirstNotEmptyLayout_1 = _set____db54di;
+  }
+  function _get_hadFirstNotEmptyLayout__xfa3a6($this) {
+    return $this.hadFirstNotEmptyLayout_1;
+  }
+  function _set_lastKnownFirstItemKey__d3k7wc($this, _set____db54di) {
+    $this.lastKnownFirstItemKey_1 = _set____db54di;
+  }
+  function _get_lastKnownFirstItemKey__6xxvgo($this) {
+    return $this.lastKnownFirstItemKey_1;
+  }
+  function update($this, index, scrollOffset) {
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(index >= 0.0)) {
+      // Inline function 'androidx.compose.foundation.lazy.LazyListScrollPosition.update.<anonymous>' call
+      var message = 'Index should be non-negative (' + index + ')';
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    $this.set_index_eknhut_k$(index);
+    $this.nearestRangeState_1.update_v1ypx5_k$(index);
+    _set_scrollOffset__x5lxuf($this, scrollOffset);
+  }
+  function LazyListScrollPosition(initialIndex, initialScrollOffset) {
+    initialIndex = initialIndex === VOID ? 0 : initialIndex;
+    initialScrollOffset = initialScrollOffset === VOID ? 0 : initialScrollOffset;
+    this.index$delegate_1 = mutableIntStateOf(initialIndex);
+    this.scrollOffset$delegate_1 = mutableIntStateOf(initialScrollOffset);
+    this.hadFirstNotEmptyLayout_1 = false;
+    this.lastKnownFirstItemKey_1 = null;
+    this.nearestRangeState_1 = new LazyLayoutNearestRangeState(initialIndex, 30, 100);
+  }
+  protoOf(LazyListScrollPosition).set_index_eknhut_k$ = function (_set____db54di) {
+    index$factory();
+    return this.index$delegate_1.set_intValue_q75ky9_k$(_set____db54di);
+  };
+  protoOf(LazyListScrollPosition).get_index_it478p_k$ = function () {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    index$factory_0();
+    return this.index$delegate_1.get_intValue_mlvnn9_k$();
+  };
+  protoOf(LazyListScrollPosition).get_scrollOffset_9saj93_k$ = function () {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    scrollOffset$factory_0();
+    return this.scrollOffset$delegate_1.get_intValue_mlvnn9_k$();
+  };
+  protoOf(LazyListScrollPosition).get_nearestRangeState_4d4g9j_k$ = function () {
+    return this.nearestRangeState_1;
+  };
+  protoOf(LazyListScrollPosition).updateFromMeasureResult_y5d5db_k$ = function (measureResult) {
+    var tmp = this;
+    var tmp0_safe_receiver = measureResult.get_firstVisibleItem_l4avz6_k$();
+    tmp.lastKnownFirstItemKey_1 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_key_18j28a_k$();
+    if (this.hadFirstNotEmptyLayout_1 ? true : measureResult.get_totalItemsCount_aiolgq_k$() > 0) {
+      this.hadFirstNotEmptyLayout_1 = true;
+      var scrollOffset = measureResult.get_firstVisibleItemScrollOffset_my3xxa_k$();
+      // Inline function 'kotlin.check' call
+      // Inline function 'kotlin.contracts.contract' call
+      if (!(scrollOffset >= 0.0)) {
+        // Inline function 'androidx.compose.foundation.lazy.LazyListScrollPosition.updateFromMeasureResult.<anonymous>' call
+        var message = 'scrollOffset should be non-negative (' + scrollOffset + ')';
+        throw IllegalStateException_init_$Create$(toString(message));
+      }
+      var tmp1_safe_receiver = measureResult.get_firstVisibleItem_l4avz6_k$();
+      var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.get_index_it478p_k$();
+      var firstIndex = tmp2_elvis_lhs == null ? 0 : tmp2_elvis_lhs;
+      update(this, firstIndex, scrollOffset);
+    }
+  };
+  protoOf(LazyListScrollPosition).requestPosition_tcczxj_k$ = function (index, scrollOffset) {
+    update(this, index, scrollOffset);
+    this.lastKnownFirstItemKey_1 = null;
+  };
+  protoOf(LazyListScrollPosition).updateScrollPositionIfTheFirstItemWasMoved_xbglu_k$ = function (itemProvider, index) {
+    var newIndex = findIndexByKey(itemProvider, this.lastKnownFirstItemKey_1, index);
+    if (!(index === newIndex)) {
+      this.set_index_eknhut_k$(newIndex);
+      this.nearestRangeState_1.update_v1ypx5_k$(index);
+    }
+    return newIndex;
+  };
+  function get_NearestItemsSlidingWindowSize() {
+    return NearestItemsSlidingWindowSize;
+  }
+  var NearestItemsSlidingWindowSize;
+  function get_NearestItemsExtraItemCount() {
+    return NearestItemsExtraItemCount;
+  }
+  var NearestItemsExtraItemCount;
+  function index$factory() {
+    return getPropertyCallableRef('index', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_index_it478p_k$();
+    }, function (receiver, value) {
+      return receiver.set_index_eknhut_k$(value);
+    });
+  }
+  function index$factory_0() {
+    return getPropertyCallableRef('index', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_index_it478p_k$();
+    }, function (receiver, value) {
+      return receiver.set_index_eknhut_k$(value);
+    });
+  }
+  function scrollOffset$factory() {
+    return getPropertyCallableRef('scrollOffset', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_scrollOffset_9saj93_k$();
+    }, function (receiver, value) {
+      return _set_scrollOffset__x5lxuf(receiver, value);
+    });
+  }
+  function scrollOffset$factory_0() {
+    return getPropertyCallableRef('scrollOffset', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_scrollOffset_9saj93_k$();
+    }, function (receiver, value) {
+      return _set_scrollOffset__x5lxuf(receiver, value);
+    });
+  }
+  function rememberLazyListSemanticState$composable(state, isVertical, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_rp6air_k$(-1475181803);
+    sourceInformation($composer_0, 'C(rememberLazyListSemanticState$composable)P(1)27@961L107:LazyListSemantics.kt#428nma');
+    if (isTraceInProgress()) {
+      traceEventStart(-1475181803, $changed, -1, 'androidx.compose.foundation.lazy.rememberLazyListSemanticState$composable (LazyListSemantics.kt:23)');
+    }
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_1 = $composer_0;
+    $composer_1.startReplaceableGroup_rp6air_k$(-1124426577);
+    sourceInformation($composer_1, 'CC(remember$composable)P(1,2):Composables.kt#9igjgp');
+    // Inline function 'androidx.compose.runtime.cache' call
+    var tmp1_cache = !!($composer_1.changed_ga7h3f_k$(state) | $composer_1.changed_ga7h3f_k$(isVertical));
+    // Inline function 'kotlin.let' call
+    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp;
+    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.lazy.rememberLazyListSemanticState$composable.<anonymous>' call
+      var value = LazyLayoutSemanticState(state, isVertical);
+      $composer_1.updateRememberedValue_l1colo_k$(value);
+      tmp = value;
+    } else {
+      tmp = tmp0_let;
+    }
+    var tmp_0 = tmp;
+    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
+    $composer_1.endReplaceableGroup_er37p7_k$();
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    return tmp0;
+  }
+  function rememberLazyListState$composable(initialFirstVisibleItemIndex, initialFirstVisibleItemScrollOffset, $composer, $changed, $default) {
+    var initialFirstVisibleItemIndex_0 = {_v: initialFirstVisibleItemIndex};
+    var initialFirstVisibleItemScrollOffset_0 = {_v: initialFirstVisibleItemScrollOffset};
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_rp6air_k$(1687562551);
+    sourceInformation($composer_0, 'C(rememberLazyListState$composable)61@2758L130,61@2712L176:LazyListState.kt#428nma');
+    if (!(($default & 1) === 0)) {
+      initialFirstVisibleItemIndex_0._v = 0;
+    }
+    if (!(($default & 2) === 0)) {
+      initialFirstVisibleItemScrollOffset_0._v = 0;
+    }
+    if (isTraceInProgress()) {
+      traceEventStart(1687562551, $changed, -1, 'androidx.compose.foundation.lazy.rememberLazyListState$composable (LazyListState.kt:57)');
+    }
+    var tmp = Companion_getInstance_52().Saver_1;
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var tmp0_remember$composable = initialFirstVisibleItemIndex_0._v;
+    var tmp1_remember$composable = initialFirstVisibleItemScrollOffset_0._v;
+    var $composer_1 = $composer_0;
+    $composer_1.startReplaceableGroup_rp6air_k$(-1124426577);
+    sourceInformation($composer_1, 'CC(remember$composable)P(1,2):Composables.kt#9igjgp');
+    // Inline function 'androidx.compose.runtime.cache' call
+    var tmp1_cache = !!($composer_1.changed_ga7h3f_k$(tmp0_remember$composable) | $composer_1.changed_ga7h3f_k$(tmp1_remember$composable));
+    // Inline function 'kotlin.let' call
+    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp_0;
+    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.lazy.rememberLazyListState$composable.<anonymous>' call
+      var value = rememberLazyListState$composable$lambda(initialFirstVisibleItemIndex_0, initialFirstVisibleItemScrollOffset_0);
+      $composer_1.updateRememberedValue_l1colo_k$(value);
+      tmp_0 = value;
+    } else {
+      tmp_0 = tmp0_let;
+    }
+    var tmp_1 = tmp_0;
+    var tmp0 = (tmp_1 == null ? true : isObject(tmp_1)) ? tmp_1 : THROW_CCE();
+    $composer_1.endReplaceableGroup_er37p7_k$();
+    var tmp0_0 = rememberSaveable$composable([], tmp, null, tmp0, $composer_0, 8, 4);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    return tmp0_0;
+  }
+  function LazyListState$Companion$Saver$lambda($this$listSaver, it) {
+    return listOf([it.get_firstVisibleItemIndex_pq52y4_k$(), it.get_firstVisibleItemScrollOffset_my3xxa_k$()]);
+  }
+  function LazyListState$Companion$Saver$lambda_0(it) {
+    return new LazyListState(it.get_fkrdnv_k$(0), it.get_fkrdnv_k$(1));
+  }
+  function _get_scrollPosition__ez6czv($this) {
+    return $this.scrollPosition_1;
+  }
+  function _get_animateScrollScope__kjbxph($this) {
+    return $this.animateScrollScope_1;
+  }
+  function _get_layoutInfoState__cv7ohk($this) {
+    return $this.layoutInfoState_1;
+  }
+  function _set_scrollToBeConsumed__3hdeos($this, _set____db54di) {
+    $this.scrollToBeConsumed_1 = _set____db54di;
+  }
+  function _get_scrollableState__jb0ylj($this) {
+    return $this.scrollableState_1;
+  }
+  function _set_numMeasurePasses__1zmgww($this, _set____db54di) {
+    $this.numMeasurePasses_1 = _set____db54di;
+  }
+  function _set_indexToPrefetch__srbaip($this, _set____db54di) {
+    $this.indexToPrefetch_1 = _set____db54di;
+  }
+  function _get_indexToPrefetch__w62jxv($this) {
+    return $this.indexToPrefetch_1;
+  }
+  function _set_currentPrefetchHandle__4ezssz($this, _set____db54di) {
+    $this.currentPrefetchHandle_1 = _set____db54di;
+  }
+  function _get_currentPrefetchHandle__akm58n($this) {
+    return $this.currentPrefetchHandle_1;
+  }
+  function _set_wasScrollingForward__vrgfzo($this, _set____db54di) {
+    $this.wasScrollingForward_1 = _set____db54di;
+  }
+  function _get_wasScrollingForward__igq73c($this) {
+    return $this.wasScrollingForward_1;
+  }
+  function _set_remeasurement__4pn4n8($this, _set____db54di) {
+    $this.remeasurement_1 = _set____db54di;
+  }
+  function _set_canScrollForward__ffth81($this, _set____db54di) {
+    canScrollForward$factory();
+    return $this.canScrollForward$delegate_1.set_value_rnwamw_k$(_set____db54di);
+  }
+  function _set_canScrollBackward__6c7ll1($this, _set____db54di) {
+    canScrollBackward$factory();
+    return $this.canScrollBackward$delegate_1.set_value_rnwamw_k$(_set____db54di);
+  }
+  function notifyPrefetch($this, delta) {
+    if (!$this.prefetchingEnabled_1) {
+      return Unit_getInstance();
+    }
+    var info = $this.get_layoutInfo_ej1bpb_k$();
+    // Inline function 'kotlin.collections.isNotEmpty' call
+    if (!info.get_visibleItemsInfo_uew4qj_k$().isEmpty_y1axqb_k$()) {
+      var scrollingForward = delta < 0;
+      var tmp;
+      if (scrollingForward) {
+        tmp = last(info.get_visibleItemsInfo_uew4qj_k$()).get_index_it478p_k$() + 1 | 0;
+      } else {
+        tmp = first(info.get_visibleItemsInfo_uew4qj_k$()).get_index_it478p_k$() - 1 | 0;
+      }
+      var indexToPrefetch = tmp;
+      if (!(indexToPrefetch === $this.indexToPrefetch_1) ? 0 <= indexToPrefetch ? indexToPrefetch < info.get_totalItemsCount_aiolgq_k$() : false : false) {
+        if (!($this.wasScrollingForward_1 === scrollingForward)) {
+          var tmp0_safe_receiver = $this.currentPrefetchHandle_1;
+          if (tmp0_safe_receiver == null)
+            null;
+          else {
+            tmp0_safe_receiver.cancel_2kogtl_k$();
+          }
+        }
+        $this.wasScrollingForward_1 = scrollingForward;
+        $this.indexToPrefetch_1 = indexToPrefetch;
+        $this.currentPrefetchHandle_1 = $this.prefetchState_1.schedulePrefetch_1a1lnz_k$(indexToPrefetch, $this.premeasureConstraints_1);
+      }
+    }
+  }
+  function cancelPrefetchIfVisibleItemsChanged($this, info) {
+    var tmp;
+    if (!($this.indexToPrefetch_1 === -1)) {
+      // Inline function 'kotlin.collections.isNotEmpty' call
+      tmp = !info.get_visibleItemsInfo_uew4qj_k$().isEmpty_y1axqb_k$();
+    } else {
+      tmp = false;
+    }
+    if (tmp) {
+      var tmp_0;
+      if ($this.wasScrollingForward_1) {
+        tmp_0 = last(info.get_visibleItemsInfo_uew4qj_k$()).get_index_it478p_k$() + 1 | 0;
+      } else {
+        tmp_0 = first(info.get_visibleItemsInfo_uew4qj_k$()).get_index_it478p_k$() - 1 | 0;
+      }
+      var expectedPrefetchIndex = tmp_0;
+      if (!($this.indexToPrefetch_1 === expectedPrefetchIndex)) {
+        $this.indexToPrefetch_1 = -1;
+        var tmp0_safe_receiver = $this.currentPrefetchHandle_1;
+        if (tmp0_safe_receiver == null)
+          null;
+        else {
+          tmp0_safe_receiver.cancel_2kogtl_k$();
+        }
+        $this.currentPrefetchHandle_1 = null;
+      }
+    }
+  }
+  function Companion_2() {
+    Companion_instance_2 = this;
+    var tmp = this;
+    var tmp_0 = LazyListState$Companion$Saver$lambda;
+    tmp.Saver_1 = listSaver(tmp_0, LazyListState$Companion$Saver$lambda_0);
+  }
+  protoOf(Companion_2).get_Saver_igssp8_k$ = function () {
+    return this.Saver_1;
+  };
+  var Companion_instance_2;
+  function Companion_getInstance_52() {
+    if (Companion_instance_2 == null)
+      new Companion_2();
+    return Companion_instance_2;
+  }
+  function get_$stableprop_18() {
+    return 0;
+  }
+  function LazyListState$scrollableState$lambda(this$0) {
+    return function (it) {
+      return -this$0.onScroll_e9ucri_k$(-it);
+    };
+  }
+  function LazyListState$remeasurementModifier$1(this$0) {
+    this.this$0__1 = this$0;
+  }
+  protoOf(LazyListState$remeasurementModifier$1).onRemeasurementAvailable_28m2yb_k$ = function (remeasurement) {
+    this.this$0__1.remeasurement_1 = remeasurement;
+  };
+  function LazyListState$scrollToItem$slambda(this$0, $index, $scrollOffset, resultContinuation) {
+    this.this$0__1 = this$0;
+    this.$index_1 = $index;
+    this.$scrollOffset_1 = $scrollOffset;
+    CoroutineImpl.call(this, resultContinuation);
+  }
+  protoOf(LazyListState$scrollToItem$slambda).invoke_zaade9_k$ = function ($this$scroll, $completion) {
+    var tmp = this.create_ld2pu4_k$($this$scroll, $completion);
+    tmp.set_result_ximc09_k$(Unit_getInstance());
+    tmp.set_exception_pwgeox_k$(null);
+    return tmp.doResume_5yljmg_k$();
+  };
+  protoOf(LazyListState$scrollToItem$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
+    return this.invoke_zaade9_k$((!(p1 == null) ? isInterface(p1, ScrollScope) : false) ? p1 : THROW_CCE(), $completion);
+  };
+  protoOf(LazyListState$scrollToItem$slambda).doResume_5yljmg_k$ = function () {
+    var suspendResult = this.get_result_iyg5d2_k$();
+    $sm: do
+      try {
+        var tmp = this.get_state_iypx7s_k$();
+        if (tmp === 0) {
+          this.set_exceptionState_s9sevl_k$(1);
+          this.this$0__1.snapToItemIndexInternal_akujp6_k$(this.$index_1, this.$scrollOffset_1);
+          return Unit_getInstance();
+        } else if (tmp === 1) {
+          throw this.get_exception_x0n6w6_k$();
+        }
+      } catch ($p) {
+        var e = $p;
+        throw e;
+      }
+     while (true);
+  };
+  protoOf(LazyListState$scrollToItem$slambda).create_ld2pu4_k$ = function ($this$scroll, completion) {
+    var i = new LazyListState$scrollToItem$slambda(this.this$0__1, this.$index_1, this.$scrollOffset_1, completion);
+    i.$this$scroll_1 = $this$scroll;
+    return i;
+  };
+  protoOf(LazyListState$scrollToItem$slambda).create_xubfvz_k$ = function (value, completion) {
+    return this.create_ld2pu4_k$((!(value == null) ? isInterface(value, ScrollScope) : false) ? value : THROW_CCE(), completion);
+  };
+  function LazyListState$scrollToItem$slambda_0(this$0, $index, $scrollOffset, resultContinuation) {
+    var i = new LazyListState$scrollToItem$slambda(this$0, $index, $scrollOffset, resultContinuation);
+    var l = function ($this$scroll, $completion) {
+      return i.invoke_zaade9_k$($this$scroll, $completion);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function $scrollCOROUTINE$5(_this__u8e3s4, scrollPriority, block, resultContinuation) {
+    CoroutineImpl.call(this, resultContinuation);
+    this._this__u8e3s4__1 = _this__u8e3s4;
+    this.scrollPriority_1 = scrollPriority;
+    this.block_1 = block;
+  }
+  protoOf($scrollCOROUTINE$5).doResume_5yljmg_k$ = function () {
+    var suspendResult = this.get_result_iyg5d2_k$();
+    $sm: do
+      try {
+        var tmp = this.get_state_iypx7s_k$();
+        switch (tmp) {
+          case 0:
+            this.set_exceptionState_s9sevl_k$(3);
+            this.set_state_a96kl8_k$(1);
+            suspendResult = this._this__u8e3s4__1.awaitLayoutModifier_1.waitForFirstLayout_3w8i5v_k$(this);
+            if (suspendResult === get_COROUTINE_SUSPENDED()) {
+              return suspendResult;
+            }
+
+            continue $sm;
+          case 1:
+            this.set_state_a96kl8_k$(2);
+            suspendResult = this._this__u8e3s4__1.scrollableState_1.scroll_cftnmv_k$(this.scrollPriority_1, this.block_1, this);
+            if (suspendResult === get_COROUTINE_SUSPENDED()) {
+              return suspendResult;
+            }
+
+            continue $sm;
+          case 2:
+            return Unit_getInstance();
+          case 3:
+            throw this.get_exception_x0n6w6_k$();
+        }
+      } catch ($p) {
+        var e = $p;
+        if (this.get_exceptionState_wflpxn_k$() === 3) {
+          throw e;
+        } else {
+          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_pwgeox_k$(e);
+        }
+      }
+     while (true);
+  };
+  function LazyListState(firstVisibleItemIndex, firstVisibleItemScrollOffset) {
+    Companion_getInstance_52();
+    firstVisibleItemIndex = firstVisibleItemIndex === VOID ? 0 : firstVisibleItemIndex;
+    firstVisibleItemScrollOffset = firstVisibleItemScrollOffset === VOID ? 0 : firstVisibleItemScrollOffset;
+    this.scrollPosition_1 = new LazyListScrollPosition(firstVisibleItemIndex, firstVisibleItemScrollOffset);
+    this.animateScrollScope_1 = new LazyListAnimateScrollScope(this);
+    this.layoutInfoState_1 = mutableStateOf(EmptyLazyListLayoutInfo_getInstance());
+    this.internalInteractionSource_1 = funMutableInteractionSource();
+    this.scrollToBeConsumed_1 = 0.0;
+    this.density_1 = Density_0(1.0, 1.0);
+    var tmp = this;
+    tmp.scrollableState_1 = ScrollableState(LazyListState$scrollableState$lambda(this));
+    this.numMeasurePasses_1 = 0;
+    this.prefetchingEnabled_1 = true;
+    this.indexToPrefetch_1 = -1;
+    this.currentPrefetchHandle_1 = null;
+    this.wasScrollingForward_1 = false;
+    this.remeasurement_1 = null;
+    var tmp_0 = this;
+    tmp_0.remeasurementModifier_1 = new LazyListState$remeasurementModifier$1(this);
+    this.awaitLayoutModifier_1 = new AwaitFirstLayoutModifier();
+    this.placementAnimator_1 = new LazyListItemPlacementAnimator();
+    this.beyondBoundsInfo_1 = new LazyLayoutBeyondBoundsInfo();
+    this.premeasureConstraints_1 = Constraints_0();
+    this.pinnedItems_1 = LazyLayoutPinnedItemList_init_$Create$();
+    this.nearestRange$delegate_1 = this.scrollPosition_1.get_nearestRangeState_4d4g9j_k$();
+    this.canScrollForward$delegate_1 = mutableStateOf(false);
+    this.canScrollBackward$delegate_1 = mutableStateOf(false);
+    this.prefetchState_1 = new LazyLayoutPrefetchState();
+    this.$stable_1 = 0;
+  }
+  protoOf(LazyListState).get_firstVisibleItemIndex_pq52y4_k$ = function () {
+    return this.scrollPosition_1.get_index_it478p_k$();
+  };
+  protoOf(LazyListState).get_firstVisibleItemScrollOffset_my3xxa_k$ = function () {
+    return this.scrollPosition_1.get_scrollOffset_9saj93_k$();
+  };
+  protoOf(LazyListState).get_layoutInfo_ej1bpb_k$ = function () {
+    return this.layoutInfoState_1.get_value_j01efc_k$();
+  };
+  protoOf(LazyListState).get_interactionSource_k8ijg_k$ = function () {
+    return this.internalInteractionSource_1;
+  };
+  protoOf(LazyListState).get_internalInteractionSource_eko5y1_k$ = function () {
+    return this.internalInteractionSource_1;
+  };
+  protoOf(LazyListState).get_scrollToBeConsumed_q08rtw_k$ = function () {
+    return this.scrollToBeConsumed_1;
+  };
+  protoOf(LazyListState).set_density_kzqph6_k$ = function (_set____db54di) {
+    this.density_1 = _set____db54di;
+  };
+  protoOf(LazyListState).get_density_qy0267_k$ = function () {
+    return this.density_1;
+  };
+  protoOf(LazyListState).get_numMeasurePasses_8h39nk_k$ = function () {
+    return this.numMeasurePasses_1;
+  };
+  protoOf(LazyListState).set_prefetchingEnabled_6g4vje_k$ = function (_set____db54di) {
+    this.prefetchingEnabled_1 = _set____db54di;
+  };
+  protoOf(LazyListState).get_prefetchingEnabled_w73glb_k$ = function () {
+    return this.prefetchingEnabled_1;
+  };
+  protoOf(LazyListState).get_remeasurement_dley68_k$ = function () {
+    return this.remeasurement_1;
+  };
+  protoOf(LazyListState).get_remeasurementModifier_3hgdqh_k$ = function () {
+    return this.remeasurementModifier_1;
+  };
+  protoOf(LazyListState).get_awaitLayoutModifier_187c1a_k$ = function () {
+    return this.awaitLayoutModifier_1;
+  };
+  protoOf(LazyListState).get_placementAnimator_wpwptp_k$ = function () {
+    return this.placementAnimator_1;
+  };
+  protoOf(LazyListState).get_beyondBoundsInfo_3eepc5_k$ = function () {
+    return this.beyondBoundsInfo_1;
+  };
+  protoOf(LazyListState).set_premeasureConstraints_fta6bv_k$ = function (_set____db54di) {
+    this.premeasureConstraints_1 = _set____db54di;
+  };
+  protoOf(LazyListState).get_premeasureConstraints_uuatxn_k$ = function () {
+    return this.premeasureConstraints_1;
+  };
+  protoOf(LazyListState).get_pinnedItems_ujz3hb_k$ = function () {
+    return this.pinnedItems_1;
+  };
+  protoOf(LazyListState).get_nearestRange_gyp8lk_k$ = function () {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    nearestRange$factory();
+    return this.nearestRange$delegate_1.get_value_j01efc_k$();
+  };
+  protoOf(LazyListState).scrollToItem_d56li0_k$ = function (index, scrollOffset, $completion) {
+    return this.scroll$default_9l862x_k$(VOID, LazyListState$scrollToItem$slambda_0(this, index, scrollOffset, null), $completion);
+  };
+  protoOf(LazyListState).scrollToItem$default_qr0dm3_k$ = function (index, scrollOffset, $completion, $super) {
+    scrollOffset = scrollOffset === VOID ? 0 : scrollOffset;
+    return $super === VOID ? this.scrollToItem_d56li0_k$(index, scrollOffset, $completion) : $super.scrollToItem_d56li0_k$.call(this, index, scrollOffset, $completion);
+  };
+  protoOf(LazyListState).snapToItemIndexInternal_akujp6_k$ = function (index, scrollOffset) {
+    this.scrollPosition_1.requestPosition_tcczxj_k$(index, scrollOffset);
+    this.placementAnimator_1.reset_5tn5dq_k$();
+    var tmp0_safe_receiver = this.remeasurement_1;
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.forceRemeasure_y45w6p_k$();
+    }
+  };
+  protoOf(LazyListState).scroll_cftnmv_k$ = function (scrollPriority, block, $completion) {
+    var tmp = new $scrollCOROUTINE$5(this, scrollPriority, block, $completion);
+    tmp.set_result_ximc09_k$(Unit_getInstance());
+    tmp.set_exception_pwgeox_k$(null);
+    return tmp.doResume_5yljmg_k$();
+  };
+  protoOf(LazyListState).dispatchRawDelta_ck05yc_k$ = function (delta) {
+    return this.scrollableState_1.dispatchRawDelta_ck05yc_k$(delta);
+  };
+  protoOf(LazyListState).get_isScrollInProgress_n6ediq_k$ = function () {
+    return this.scrollableState_1.get_isScrollInProgress_n6ediq_k$();
+  };
+  protoOf(LazyListState).get_canScrollForward_dmb0fj_k$ = function () {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    canScrollForward$factory_0();
+    return this.canScrollForward$delegate_1.get_value_j01efc_k$();
+  };
+  protoOf(LazyListState).get_canScrollBackward_v2t7h3_k$ = function () {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    canScrollBackward$factory_0();
+    return this.canScrollBackward$delegate_1.get_value_j01efc_k$();
+  };
+  protoOf(LazyListState).onScroll_e9ucri_k$ = function (distance) {
+    if ((distance < 0 ? !this.get_canScrollForward_dmb0fj_k$() : false) ? true : distance > 0 ? !this.get_canScrollBackward_v2t7h3_k$() : false) {
+      return 0.0;
+    }
+    // Inline function 'kotlin.check' call
+    // Inline function 'kotlin.math.abs' call
+    var tmp0_abs = this.scrollToBeConsumed_1;
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(Math.abs(tmp0_abs) <= 0.5)) {
+      // Inline function 'androidx.compose.foundation.lazy.LazyListState.onScroll.<anonymous>' call
+      var message = 'entered drag with non-zero pending scroll: ' + this.scrollToBeConsumed_1;
+      throw IllegalStateException_init_$Create$(toString(message));
+    }
+    this.scrollToBeConsumed_1 = this.scrollToBeConsumed_1 + distance;
+    // Inline function 'kotlin.math.abs' call
+    var tmp2_abs = this.scrollToBeConsumed_1;
+    if (Math.abs(tmp2_abs) > 0.5) {
+      var preScrollToBeConsumed = this.scrollToBeConsumed_1;
+      var tmp1_safe_receiver = this.remeasurement_1;
+      if (tmp1_safe_receiver == null)
+        null;
+      else {
+        tmp1_safe_receiver.forceRemeasure_y45w6p_k$();
+      }
+      if (this.prefetchingEnabled_1) {
+        notifyPrefetch(this, preScrollToBeConsumed - this.scrollToBeConsumed_1);
+      }
+    }
+    // Inline function 'kotlin.math.abs' call
+    var tmp3_abs = this.scrollToBeConsumed_1;
+    if (Math.abs(tmp3_abs) <= 0.5) {
+      return distance;
+    } else {
+      var scrollConsumed = distance - this.scrollToBeConsumed_1;
+      this.scrollToBeConsumed_1 = 0.0;
+      return scrollConsumed;
+    }
+  };
+  protoOf(LazyListState).get_prefetchState_uk67nz_k$ = function () {
+    return this.prefetchState_1;
+  };
+  protoOf(LazyListState).animateScrollToItem_oa3j6x_k$ = function (index, scrollOffset, $completion) {
+    return animateScrollToItem(this.animateScrollScope_1, index, scrollOffset, $completion);
+  };
+  protoOf(LazyListState).animateScrollToItem$default_qxmxv8_k$ = function (index, scrollOffset, $completion, $super) {
+    scrollOffset = scrollOffset === VOID ? 0 : scrollOffset;
+    return $super === VOID ? this.animateScrollToItem_oa3j6x_k$(index, scrollOffset, $completion) : $super.animateScrollToItem_oa3j6x_k$.call(this, index, scrollOffset, $completion);
+  };
+  protoOf(LazyListState).applyMeasureResult_rfy3ii_k$ = function (result) {
+    this.scrollPosition_1.updateFromMeasureResult_y5d5db_k$(result);
+    this.scrollToBeConsumed_1 = this.scrollToBeConsumed_1 - result.get_consumedScroll_u59rku_k$();
+    this.layoutInfoState_1.set_value_rnwamw_k$(result);
+    _set_canScrollForward__ffth81(this, result.get_canScrollForward_dmb0fj_k$());
+    var tmp;
+    var tmp1_safe_receiver = result.get_firstVisibleItem_l4avz6_k$();
+    var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.get_index_it478p_k$();
+    if (!((tmp2_elvis_lhs == null ? 0 : tmp2_elvis_lhs) === 0)) {
+      tmp = true;
+    } else {
+      tmp = !(result.get_firstVisibleItemScrollOffset_my3xxa_k$() === 0);
+    }
+    _set_canScrollBackward__6c7ll1(this, tmp);
+    this.numMeasurePasses_1 = this.numMeasurePasses_1 + 1 | 0;
+    cancelPrefetchIfVisibleItemsChanged(this, result);
+  };
+  protoOf(LazyListState).updateScrollPositionIfTheFirstItemWasMoved_xbglu_k$ = function (itemProvider, firstItemIndex) {
+    return this.scrollPosition_1.updateScrollPositionIfTheFirstItemWasMoved_xbglu_k$(itemProvider, firstItemIndex);
+  };
+  protoOf(LazyListState).updateScrollPositionIfTheFirstItemWasMoved$default_civt2t_k$ = function (itemProvider, firstItemIndex, $super) {
+    var tmp;
+    if (firstItemIndex === VOID) {
+      $l$block_0: {
+        // Inline function 'androidx.compose.runtime.snapshots.Companion.withoutReadObservation' call
+        // Inline function 'kotlin.contracts.contract' call
+        var snapshot = Companion_getInstance_22().createNonObservableSnapshot_p8njg8_k$();
+        try {
+          var tmp$ret$1;
+          $l$block: {
+            // Inline function 'androidx.compose.runtime.snapshots.Snapshot.enter' call
+            var previous = snapshot.makeCurrent_v2db9x_k$();
+            try {
+              // Inline function 'androidx.compose.foundation.lazy.LazyListState.updateScrollPositionIfTheFirstItemWasMoved.<anonymous>' call
+              tmp$ret$1 = this.scrollPosition_1.get_index_it478p_k$();
+              break $l$block;
+            }finally {
+              snapshot.restoreCurrent_lqo3p4_k$(previous);
+            }
+          }
+          break $l$block_0;
+        }finally {
+          snapshot.dispose_3n44we_k$();
+        }
+      }
+      tmp = tmp$ret$1;
+    } else {
+      tmp = firstItemIndex;
+    }
+    firstItemIndex = tmp;
+    return $super === VOID ? this.updateScrollPositionIfTheFirstItemWasMoved_xbglu_k$(itemProvider, firstItemIndex) : $super.updateScrollPositionIfTheFirstItemWasMoved_xbglu_k$.call(this, itemProvider, firstItemIndex);
+  };
+  function EmptyLazyListLayoutInfo() {
+    EmptyLazyListLayoutInfo_instance = this;
+    this.visibleItemsInfo_1 = emptyList();
+    this.viewportStartOffset_1 = 0;
+    this.viewportEndOffset_1 = 0;
+    this.totalItemsCount_1 = 0;
+    this.viewportSize_1 = Companion_getInstance_17().get_Zero_4ip44w_k$();
+    this.orientation_1 = Orientation_Vertical_getInstance();
+    this.reverseLayout_1 = false;
+    this.beforeContentPadding_1 = 0;
+    this.afterContentPadding_1 = 0;
+    this.mainAxisItemSpacing_1 = 0;
+  }
+  protoOf(EmptyLazyListLayoutInfo).get_visibleItemsInfo_uew4qj_k$ = function () {
+    return this.visibleItemsInfo_1;
+  };
+  protoOf(EmptyLazyListLayoutInfo).get_viewportStartOffset_v4b1ay_k$ = function () {
+    return this.viewportStartOffset_1;
+  };
+  protoOf(EmptyLazyListLayoutInfo).get_viewportEndOffset_gapdi7_k$ = function () {
+    return this.viewportEndOffset_1;
+  };
+  protoOf(EmptyLazyListLayoutInfo).get_totalItemsCount_aiolgq_k$ = function () {
+    return this.totalItemsCount_1;
+  };
+  protoOf(EmptyLazyListLayoutInfo).get_viewportSize_38c6y9_k$ = function () {
+    return this.viewportSize_1;
+  };
+  protoOf(EmptyLazyListLayoutInfo).get_orientation_9wu93t_k$ = function () {
+    return this.orientation_1;
+  };
+  protoOf(EmptyLazyListLayoutInfo).get_reverseLayout_nclvnn_k$ = function () {
+    return this.reverseLayout_1;
+  };
+  protoOf(EmptyLazyListLayoutInfo).get_beforeContentPadding_2dperk_k$ = function () {
+    return this.beforeContentPadding_1;
+  };
+  protoOf(EmptyLazyListLayoutInfo).get_afterContentPadding_49ooob_k$ = function () {
+    return this.afterContentPadding_1;
+  };
+  protoOf(EmptyLazyListLayoutInfo).get_mainAxisItemSpacing_tq19t9_k$ = function () {
+    return this.mainAxisItemSpacing_1;
+  };
+  var EmptyLazyListLayoutInfo_instance;
+  function EmptyLazyListLayoutInfo_getInstance() {
+    if (EmptyLazyListLayoutInfo_instance == null)
+      new EmptyLazyListLayoutInfo();
+    return EmptyLazyListLayoutInfo_instance;
+  }
+  function rememberLazyListState$composable$lambda($initialFirstVisibleItemIndex, $initialFirstVisibleItemScrollOffset) {
+    return function () {
+      return new LazyListState($initialFirstVisibleItemIndex._v, $initialFirstVisibleItemScrollOffset._v);
+    };
+  }
+  function nearestRange$factory() {
+    return getPropertyCallableRef('nearestRange', 1, KProperty1, function (receiver) {
+      return receiver.get_nearestRange_gyp8lk_k$();
+    }, null);
+  }
+  function canScrollForward$factory() {
+    return getPropertyCallableRef('canScrollForward', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_canScrollForward_dmb0fj_k$();
+    }, function (receiver, value) {
+      return _set_canScrollForward__ffth81(receiver, value);
+    });
+  }
+  function canScrollForward$factory_0() {
+    return getPropertyCallableRef('canScrollForward', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_canScrollForward_dmb0fj_k$();
+    }, function (receiver, value) {
+      return _set_canScrollForward__ffth81(receiver, value);
+    });
+  }
+  function canScrollBackward$factory() {
+    return getPropertyCallableRef('canScrollBackward', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_canScrollBackward_v2t7h3_k$();
+    }, function (receiver, value) {
+      return _set_canScrollBackward__6c7ll1(receiver, value);
+    });
+  }
+  function canScrollBackward$factory_0() {
+    return getPropertyCallableRef('canScrollBackward', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_canScrollBackward_v2t7h3_k$();
+    }, function (receiver, value) {
+      return _set_canScrollBackward__6c7ll1(receiver, value);
+    });
+  }
+  function LazyScopeMarker() {
+  }
+  protoOf(LazyScopeMarker).equals = function (other) {
+    if (!(other instanceof LazyScopeMarker))
+      return false;
+    other instanceof LazyScopeMarker || THROW_CCE();
+    return true;
+  };
+  protoOf(LazyScopeMarker).hashCode = function () {
+    return 0;
+  };
+  protoOf(LazyScopeMarker).toString = function () {
+    return '@androidx.compose.foundation.lazy.LazyScopeMarker()';
+  };
+  function _set_wasPositioned__yfg1kc($this, _set____db54di) {
+    $this.wasPositioned_1 = _set____db54di;
+  }
+  function _get_wasPositioned__ldwhwg($this) {
+    return $this.wasPositioned_1;
+  }
+  function _set_continuation__ijq8sg($this, _set____db54di) {
+    $this.continuation_1 = _set____db54di;
+  }
+  function _get_continuation__y3gzck($this) {
+    return $this.continuation_1;
+  }
+  function $waitForFirstLayoutCOROUTINE$6(_this__u8e3s4, resultContinuation) {
+    CoroutineImpl.call(this, resultContinuation);
+    this._this__u8e3s4__1 = _this__u8e3s4;
+  }
+  protoOf($waitForFirstLayoutCOROUTINE$6).doResume_5yljmg_k$ = function () {
+    var suspendResult = this.get_result_iyg5d2_k$();
+    $sm: do
+      try {
+        var tmp = this.get_state_iypx7s_k$();
+        switch (tmp) {
+          case 0:
+            this.set_exceptionState_s9sevl_k$(3);
+            if (!this._this__u8e3s4__1.wasPositioned_1) {
+              this.oldContinuation0__1 = this._this__u8e3s4__1.continuation_1;
+              this.set_state_a96kl8_k$(1);
+              var safe = SafeContinuation_init_$Create$(intercepted(this));
+              this._this__u8e3s4__1.continuation_1 = safe;
+              suspendResult = returnIfSuspended(safe.getOrThrow_323tdf_k$(), this);
+              if (suspendResult === get_COROUTINE_SUSPENDED()) {
+                return suspendResult;
+              }
+              continue $sm;
+            } else {
+              this.set_state_a96kl8_k$(2);
+              continue $sm;
+            }
+
+          case 1:
+            var tmp0_safe_receiver = this.oldContinuation0__1;
+            if (tmp0_safe_receiver == null)
+              null;
+            else {
+              Companion_getInstance_16();
+              tmp0_safe_receiver.resumeWith_s3a3yh_k$(_Result___init__impl__xyqfz8(Unit_getInstance()));
+            }
+
+            this.set_state_a96kl8_k$(2);
+            continue $sm;
+          case 2:
+            return Unit_getInstance();
+          case 3:
+            throw this.get_exception_x0n6w6_k$();
+        }
+      } catch ($p) {
+        var e = $p;
+        if (this.get_exceptionState_wflpxn_k$() === 3) {
+          throw e;
+        } else {
+          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_pwgeox_k$(e);
+        }
+      }
+     while (true);
+  };
+  function AwaitFirstLayoutModifier() {
+    this.wasPositioned_1 = false;
+    this.continuation_1 = null;
+  }
+  protoOf(AwaitFirstLayoutModifier).waitForFirstLayout_3w8i5v_k$ = function ($completion) {
+    var tmp = new $waitForFirstLayoutCOROUTINE$6(this, $completion);
+    tmp.set_result_ximc09_k$(Unit_getInstance());
+    tmp.set_exception_pwgeox_k$(null);
+    return tmp.doResume_5yljmg_k$();
+  };
+  protoOf(AwaitFirstLayoutModifier).onGloballyPositioned_14gzvn_k$ = function (coordinates) {
+    if (!this.wasPositioned_1) {
+      this.wasPositioned_1 = true;
+      var tmp0_safe_receiver = this.continuation_1;
+      if (tmp0_safe_receiver == null)
+        null;
+      else {
+        // Inline function 'kotlin.coroutines.resume' call
+        var tmp$ret$0;
+        // Inline function 'kotlin.Companion.success' call
+        Companion_getInstance_16();
+        tmp$ret$0 = _Result___init__impl__xyqfz8(Unit_getInstance());
+        tmp0_safe_receiver.resumeWith_s3a3yh_k$(tmp$ret$0);
+      }
+      this.continuation_1 = null;
+    }
+  };
+  function get_$stableprop_19() {
+    return 0;
+  }
+  function Interval(startIndex, size, value) {
+    this.startIndex_1 = startIndex;
+    this.size_1 = size;
+    this.value_1 = value;
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(this.startIndex_1 >= 0)) {
+      // Inline function 'androidx.compose.foundation.lazy.layout.Interval.<anonymous>' call
+      var message = 'startIndex should be >= 0, but was ' + this.startIndex_1;
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(this.size_1 > 0)) {
+      // Inline function 'androidx.compose.foundation.lazy.layout.Interval.<anonymous>' call
+      var message_0 = 'size should be >0, but was ' + this.size_1;
+      throw IllegalArgumentException_init_$Create$(toString(message_0));
+    }
+    this.$stable_1 = 0;
+  }
+  protoOf(Interval).get_startIndex_oi1lp5_k$ = function () {
+    return this.startIndex_1;
+  };
+  protoOf(Interval).get_size_woubt6_k$ = function () {
+    return this.size_1;
+  };
+  protoOf(Interval).get_value_j01efc_k$ = function () {
+    return this.value_1;
+  };
+  function IntervalList() {
+  }
+  function _get_intervals__n7kkhv($this) {
+    return $this.intervals_1;
+  }
+  function _set_size__9twho6($this, _set____db54di) {
+    $this.size_1 = _set____db54di;
+  }
+  function _set_lastInterval__ttp16k($this, _set____db54di) {
+    $this.lastInterval_1 = _set____db54di;
+  }
+  function _get_lastInterval__pnoa8g($this) {
+    return $this.lastInterval_1;
+  }
+  function getIntervalForIndex($this, itemIndex) {
+    var lastInterval = $this.lastInterval_1;
+    var tmp;
+    if (!(lastInterval == null) ? contains(lastInterval, $this, itemIndex) : false) {
+      tmp = lastInterval;
+    } else {
+      // Inline function 'kotlin.also' call
+      // Inline function 'androidx.compose.runtime.collection.MutableVector.get' call
+      var tmp0_get = $this.intervals_1;
+      var tmp1_get = binarySearch($this.intervals_1, itemIndex);
+      var tmp_0 = tmp0_get.get_content_h02jrk_k$()[tmp1_get];
+      var tmp2_also = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.foundation.lazy.layout.MutableIntervalList.getIntervalForIndex.<anonymous>' call
+      $this.lastInterval_1 = tmp2_also;
+      tmp = tmp2_also;
+    }
+    return tmp;
+  }
+  function checkIndexBounds($this, index) {
+    if (!(0 <= index ? index < $this.size_1 : false)) {
+      throw IndexOutOfBoundsException_init_$Create$('Index ' + index + ', size ' + $this.size_1);
+    }
+  }
+  function contains(_this__u8e3s4, $this, index) {
+    var containsLower = _this__u8e3s4.startIndex_1;
+    return index < (_this__u8e3s4.startIndex_1 + _this__u8e3s4.size_1 | 0) ? containsLower <= index : false;
+  }
+  function get_$stableprop_20() {
+    return 8;
+  }
+  function MutableIntervalList() {
+    var tmp = this;
+    // Inline function 'androidx.compose.runtime.collection.mutableVectorOf' call
+    // Inline function 'androidx.compose.runtime.collection.MutableVector' call
+    var tmp$ret$0;
+    // Inline function 'kotlin.arrayOfNulls' call
+    tmp$ret$0 = fillArrayVal(Array(16), null);
+    tmp.intervals_1 = new MutableVector(tmp$ret$0, 0);
+    this.size_1 = 0;
+    this.lastInterval_1 = null;
+    this.$stable_1 = 8;
+  }
+  protoOf(MutableIntervalList).get_size_woubt6_k$ = function () {
+    return this.size_1;
+  };
+  protoOf(MutableIntervalList).addInterval_x1rwf_k$ = function (size, value) {
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(size >= 0)) {
+      // Inline function 'androidx.compose.foundation.lazy.layout.MutableIntervalList.addInterval.<anonymous>' call
+      var message = 'size should be >=0, but was ' + size;
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    if (size === 0) {
+      return Unit_getInstance();
+    }
+    var interval = new Interval(this.size_1, size, value);
+    this.size_1 = this.size_1 + size | 0;
+    this.intervals_1.add_1j60qe_k$(interval);
+  };
+  protoOf(MutableIntervalList).forEach_3zjzeu_k$ = function (fromIndex, toIndex, block) {
+    checkIndexBounds(this, fromIndex);
+    checkIndexBounds(this, toIndex);
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(toIndex >= fromIndex)) {
+      // Inline function 'androidx.compose.foundation.lazy.layout.MutableIntervalList.forEach.<anonymous>' call
+      var message = 'toIndex (' + toIndex + ') should be not smaller than fromIndex (' + fromIndex + ')';
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    var intervalIndex = binarySearch(this.intervals_1, fromIndex);
+    // Inline function 'androidx.compose.runtime.collection.MutableVector.get' call
+    var tmp1_get = this.intervals_1;
+    var tmp2_get = intervalIndex;
+    var tmp = tmp1_get.get_content_h02jrk_k$()[tmp2_get];
+    var itemIndex = ((tmp == null ? true : isObject(tmp)) ? tmp : THROW_CCE()).startIndex_1;
+    while (itemIndex <= toIndex) {
+      // Inline function 'androidx.compose.runtime.collection.MutableVector.get' call
+      var tmp3_get = this.intervals_1;
+      var tmp4_get = intervalIndex;
+      var tmp_0 = tmp3_get.get_content_h02jrk_k$()[tmp4_get];
+      var interval = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
+      block(interval);
+      itemIndex = itemIndex + interval.size_1 | 0;
+      intervalIndex = intervalIndex + 1 | 0;
+    }
+  };
+  protoOf(MutableIntervalList).get_fkrdnv_k$ = function (index) {
+    checkIndexBounds(this, index);
+    return getIntervalForIndex(this, index);
+  };
+  function binarySearch(_this__u8e3s4, itemIndex) {
+    var left = 0;
+    // Inline function 'androidx.compose.runtime.collection.MutableVector.lastIndex' call
+    var right = _this__u8e3s4.get_size_woubt6_k$() - 1 | 0;
+    while (left < right) {
+      var middle = left + ((right - left | 0) / 2 | 0) | 0;
+      // Inline function 'androidx.compose.runtime.collection.MutableVector.get' call
+      var tmp = _this__u8e3s4.get_content_h02jrk_k$()[middle];
+      var middleValue = ((tmp == null ? true : isObject(tmp)) ? tmp : THROW_CCE()).startIndex_1;
+      if (middleValue === itemIndex) {
+        return middle;
+      }
+      if (middleValue < itemIndex) {
+        left = middle + 1 | 0;
+        // Inline function 'androidx.compose.runtime.collection.MutableVector.get' call
+        var tmp0_get = left;
+        var tmp_0 = _this__u8e3s4.get_content_h02jrk_k$()[tmp0_get];
+        if (itemIndex < ((tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE()).startIndex_1) {
+          return middle;
+        }
+      } else {
+        right = middle - 1 | 0;
+      }
+    }
+    return left;
+  }
   function get_TargetDistance() {
     _init_properties_LazyAnimateScroll_kt__eqop2w();
     return TargetDistance;
@@ -13779,6 +18356,376 @@
     return MinimumDistance;
   }
   var MinimumDistance;
+  function animateScrollToItem(_this__u8e3s4, index, scrollOffset, $completion) {
+    return _this__u8e3s4.scroll_e2op36_k$(animateScrollToItem$slambda_0(index, _this__u8e3s4, scrollOffset, null), $completion);
+  }
+  function LazyAnimateScrollScope() {
+  }
+  function ItemFoundInScroll(itemOffset, previousAnimation) {
+    CancellationException_init_$Init$_0(this);
+    captureStack(this, ItemFoundInScroll);
+    this.itemOffset_1 = itemOffset;
+    this.previousAnimation_1 = previousAnimation;
+  }
+  protoOf(ItemFoundInScroll).get_itemOffset_askwlr_k$ = function () {
+    return this.itemOffset_1;
+  };
+  protoOf(ItemFoundInScroll).get_previousAnimation_ugsggs_k$ = function () {
+    return this.previousAnimation_1;
+  };
+  function debugLog(generateMsg) {
+    _init_properties_LazyAnimateScroll_kt__eqop2w();
+    if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+      println('LazyScrolling: ' + generateMsg());
+    }
+  }
+  function get_DEBUG_0() {
+    return DEBUG_0;
+  }
+  var DEBUG_0;
+  function _get_DEBUG_$accessor$1bm0lc7_6p2imj() {
+    _init_properties_LazyAnimateScroll_kt__eqop2w();
+    return false;
+  }
+  function invoke$isOvershot(forward, $this_animateScrollToItem, $index, $scrollOffset) {
+    var tmp;
+    if (forward) {
+      var tmp_0;
+      if ($this_animateScrollToItem.get_firstVisibleItemIndex_pq52y4_k$() > $index) {
+        tmp_0 = true;
+      } else if ($this_animateScrollToItem.get_firstVisibleItemIndex_pq52y4_k$() === $index ? $this_animateScrollToItem.get_firstVisibleItemScrollOffset_my3xxa_k$() > $scrollOffset : false) {
+        tmp_0 = true;
+      } else {
+        tmp_0 = false;
+      }
+      tmp = tmp_0;
+    } else {
+      var tmp_1;
+      if ($this_animateScrollToItem.get_firstVisibleItemIndex_pq52y4_k$() < $index) {
+        tmp_1 = true;
+      } else if ($this_animateScrollToItem.get_firstVisibleItemIndex_pq52y4_k$() === $index ? $this_animateScrollToItem.get_firstVisibleItemScrollOffset_my3xxa_k$() < $scrollOffset : false) {
+        tmp_1 = true;
+      } else {
+        tmp_1 = false;
+      }
+      tmp = tmp_1;
+    }
+    return tmp;
+  }
+  function animateScrollToItem$slambda$lambda($this_animateScrollToItem, $index, $target, $prevValue, $this_scroll, $loop, $forward, $boundDistancePx, $loops, $scrollOffset, $anim) {
+    return function ($this$animateTo) {
+      var targetItemOffset = $this_animateScrollToItem.getTargetItemOffset_vu2ruc_k$($index);
+      var tmp;
+      if (targetItemOffset == null) {
+        var tmp_0;
+        if ($target > 0) {
+          tmp_0 = coerceAtMost_0($this$animateTo.get_value_j01efc_k$(), $target);
+        } else {
+          tmp_0 = coerceAtLeast_0($this$animateTo.get_value_j01efc_k$(), $target);
+        }
+        var coercedValue = tmp_0;
+        var delta = coercedValue - $prevValue._v;
+        // Inline function 'androidx.compose.foundation.lazy.layout.debugLog' call
+        if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+          var tmp$ret$0;
+          // Inline function 'androidx.compose.foundation.lazy.layout.animateScrollToItem.<anonymous>.<anonymous>.<anonymous>' call
+          tmp$ret$0 = 'Scrolling by ' + delta + ' (target: ' + $target + ', coercedValue: ' + coercedValue + ')';
+          println('LazyScrolling: ' + tmp$ret$0);
+        }
+        var consumed = $this_scroll.scrollBy_p9cup6_k$(delta);
+        targetItemOffset = $this_animateScrollToItem.getTargetItemOffset_vu2ruc_k$($index);
+        var tmp_1;
+        if (!(targetItemOffset == null)) {
+          var tmp_2;
+          if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+            var tmp$ret$1;
+            // Inline function 'androidx.compose.foundation.lazy.layout.animateScrollToItem.<anonymous>.<anonymous>.<anonymous>' call
+            tmp$ret$1 = 'Found the item after performing scrollBy()';
+            println('LazyScrolling: ' + tmp$ret$1);
+            tmp_2 = Unit_getInstance();
+          }
+          tmp_1 = tmp_2;
+        } else if (!invoke$isOvershot($forward, $this_animateScrollToItem, $index, $scrollOffset)) {
+          if (!(delta === consumed)) {
+            // Inline function 'androidx.compose.foundation.lazy.layout.debugLog' call
+            if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+              var tmp$ret$2;
+              // Inline function 'androidx.compose.foundation.lazy.layout.animateScrollToItem.<anonymous>.<anonymous>.<anonymous>' call
+              tmp$ret$2 = 'Hit end without finding the item';
+              println('LazyScrolling: ' + tmp$ret$2);
+            }
+            $this$animateTo.cancelAnimation_ickco7_k$();
+            $loop._v = false;
+            return Unit_getInstance();
+          }
+          $prevValue._v = $prevValue._v + delta;
+          if ($forward) {
+            if ($this$animateTo.get_value_j01efc_k$() > $boundDistancePx) {
+              // Inline function 'androidx.compose.foundation.lazy.layout.debugLog' call
+              if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+                var tmp$ret$3;
+                // Inline function 'androidx.compose.foundation.lazy.layout.animateScrollToItem.<anonymous>.<anonymous>.<anonymous>' call
+                tmp$ret$3 = 'Struck bound going forward';
+                println('LazyScrolling: ' + tmp$ret$3);
+              }
+              $this$animateTo.cancelAnimation_ickco7_k$();
+            }
+          } else {
+            if ($this$animateTo.get_value_j01efc_k$() < -$boundDistancePx) {
+              // Inline function 'androidx.compose.foundation.lazy.layout.debugLog' call
+              if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+                var tmp$ret$4;
+                // Inline function 'androidx.compose.foundation.lazy.layout.animateScrollToItem.<anonymous>.<anonymous>.<anonymous>' call
+                tmp$ret$4 = 'Struck bound going backward';
+                println('LazyScrolling: ' + tmp$ret$4);
+              }
+              $this$animateTo.cancelAnimation_ickco7_k$();
+            }
+          }
+          var tmp_3;
+          if ($forward) {
+            var tmp_4;
+            if ($loops._v >= 2 ? ($index - $this_animateScrollToItem.get_lastVisibleItemIndex_co91as_k$() | 0) > $this_animateScrollToItem.get_numOfItemsForTeleport_m5cg14_k$() : false) {
+              // Inline function 'androidx.compose.foundation.lazy.layout.debugLog' call
+              if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+                var tmp$ret$5;
+                // Inline function 'androidx.compose.foundation.lazy.layout.animateScrollToItem.<anonymous>.<anonymous>.<anonymous>' call
+                tmp$ret$5 = 'Teleport forward';
+                println('LazyScrolling: ' + tmp$ret$5);
+              }
+              $this_animateScrollToItem.snapToItem_a195ff_k$($this_scroll, $index - $this_animateScrollToItem.get_numOfItemsForTeleport_m5cg14_k$() | 0, 0);
+              tmp_4 = Unit_getInstance();
+            }
+            tmp_3 = tmp_4;
+          } else {
+            var tmp_5;
+            if ($loops._v >= 2 ? ($this_animateScrollToItem.get_firstVisibleItemIndex_pq52y4_k$() - $index | 0) > $this_animateScrollToItem.get_numOfItemsForTeleport_m5cg14_k$() : false) {
+              // Inline function 'androidx.compose.foundation.lazy.layout.debugLog' call
+              if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+                var tmp$ret$6;
+                // Inline function 'androidx.compose.foundation.lazy.layout.animateScrollToItem.<anonymous>.<anonymous>.<anonymous>' call
+                tmp$ret$6 = 'Teleport backward';
+                println('LazyScrolling: ' + tmp$ret$6);
+              }
+              $this_animateScrollToItem.snapToItem_a195ff_k$($this_scroll, $index + $this_animateScrollToItem.get_numOfItemsForTeleport_m5cg14_k$() | 0, 0);
+              tmp_5 = Unit_getInstance();
+            }
+            tmp_3 = tmp_5;
+          }
+          tmp_1 = tmp_3;
+        }
+        tmp = tmp_1;
+      }
+      var tmp_6;
+      if (invoke$isOvershot($forward, $this_animateScrollToItem, $index, $scrollOffset)) {
+        // Inline function 'androidx.compose.foundation.lazy.layout.debugLog' call
+        if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+          var tmp$ret$7;
+          // Inline function 'androidx.compose.foundation.lazy.layout.animateScrollToItem.<anonymous>.<anonymous>.<anonymous>' call
+          tmp$ret$7 = 'Overshot, ' + ('item ' + $this_animateScrollToItem.get_firstVisibleItemIndex_pq52y4_k$() + ' at ' + $this_animateScrollToItem.get_firstVisibleItemScrollOffset_my3xxa_k$() + ', ') + ('target is ' + $scrollOffset);
+          println('LazyScrolling: ' + tmp$ret$7);
+        }
+        $this_animateScrollToItem.snapToItem_a195ff_k$($this_scroll, $index, $scrollOffset);
+        $loop._v = false;
+        $this$animateTo.cancelAnimation_ickco7_k$();
+        return Unit_getInstance();
+      } else if (!(targetItemOffset == null)) {
+        // Inline function 'androidx.compose.foundation.lazy.layout.debugLog' call
+        if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+          var tmp$ret$8;
+          // Inline function 'androidx.compose.foundation.lazy.layout.animateScrollToItem.<anonymous>.<anonymous>.<anonymous>' call
+          tmp$ret$8 = 'Found item';
+          println('LazyScrolling: ' + tmp$ret$8);
+        }
+        throw new ItemFoundInScroll(targetItemOffset, $anim._v);
+      }
+      return Unit_getInstance();
+    };
+  }
+  function animateScrollToItem$slambda$lambda_0($target, $prevValue, $this_scroll) {
+    return function ($this$animateTo) {
+      var tmp;
+      if ($target > 0) {
+        tmp = coerceAtMost_0($this$animateTo.get_value_j01efc_k$(), $target);
+      } else if ($target < 0) {
+        tmp = coerceAtLeast_0($this$animateTo.get_value_j01efc_k$(), $target);
+      } else {
+        // Inline function 'androidx.compose.foundation.lazy.layout.debugLog' call
+        if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+          var tmp$ret$0;
+          // Inline function 'androidx.compose.foundation.lazy.layout.animateScrollToItem.<anonymous>.<anonymous>.<anonymous>' call
+          tmp$ret$0 = "WARNING: somehow ended up seeking 0px, this shouldn't happen";
+          println('LazyScrolling: ' + tmp$ret$0);
+        }
+        tmp = 0.0;
+      }
+      var coercedValue = tmp;
+      var delta = coercedValue - $prevValue._v;
+      var tmp_0;
+      if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+        var tmp$ret$1;
+        // Inline function 'androidx.compose.foundation.lazy.layout.animateScrollToItem.<anonymous>.<anonymous>.<anonymous>' call
+        tmp$ret$1 = 'Seeking by ' + delta + ' (coercedValue = ' + coercedValue + ')';
+        println('LazyScrolling: ' + tmp$ret$1);
+        tmp_0 = Unit_getInstance();
+      }
+      var consumed = $this_scroll.scrollBy_p9cup6_k$(delta);
+      var tmp_1;
+      if (!(delta === consumed) ? true : !(coercedValue === $this$animateTo.get_value_j01efc_k$())) {
+        $this$animateTo.cancelAnimation_ickco7_k$();
+        tmp_1 = Unit_getInstance();
+      }
+      $prevValue._v = $prevValue._v + delta;
+      return Unit_getInstance();
+    };
+  }
+  function animateScrollToItem$slambda($index, $this_animateScrollToItem, $scrollOffset, resultContinuation) {
+    this.$index_1 = $index;
+    this.$this_animateScrollToItem_1 = $this_animateScrollToItem;
+    this.$scrollOffset_1 = $scrollOffset;
+    CoroutineImpl.call(this, resultContinuation);
+  }
+  protoOf(animateScrollToItem$slambda).invoke_zaade9_k$ = function ($this$scroll, $completion) {
+    var tmp = this.create_ld2pu4_k$($this$scroll, $completion);
+    tmp.set_result_ximc09_k$(Unit_getInstance());
+    tmp.set_exception_pwgeox_k$(null);
+    return tmp.doResume_5yljmg_k$();
+  };
+  protoOf(animateScrollToItem$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
+    return this.invoke_zaade9_k$((!(p1 == null) ? isInterface(p1, ScrollScope) : false) ? p1 : THROW_CCE(), $completion);
+  };
+  protoOf(animateScrollToItem$slambda).doResume_5yljmg_k$ = function () {
+    var suspendResult = this.get_result_iyg5d2_k$();
+    $sm: do
+      try {
+        var tmp = this.get_state_iypx7s_k$();
+        switch (tmp) {
+          case 0:
+            this.set_exceptionState_s9sevl_k$(6);
+            if (!(this.$index_1 >= 0.0)) {
+              var message = 'Index should be non-negative (' + this.$index_1 + ')';
+              throw IllegalArgumentException_init_$Create$(toString(message));
+            }
+
+            this.set_exceptionState_s9sevl_k$(4);
+            var tmp_0 = this;
+            tmp_0.targetDistancePx0__1 = this.$this_animateScrollToItem_1.get_density_qy0267_k$().toPx_u0ojv5_k$(get_TargetDistance());
+            var tmp_1 = this;
+            tmp_1.boundDistancePx1__1 = this.$this_animateScrollToItem_1.get_density_qy0267_k$().toPx_u0ojv5_k$(get_BoundDistance());
+            var tmp_2 = this;
+            tmp_2.minDistancePx2__1 = this.$this_animateScrollToItem_1.get_density_qy0267_k$().toPx_u0ojv5_k$(get_MinimumDistance());
+            this.loop3__1 = {_v: true};
+            this.anim4__1 = {_v: AnimationState(0.0)};
+            this.targetItemInitialOffset5__1 = this.$this_animateScrollToItem_1.getTargetItemOffset_vu2ruc_k$(this.$index_1);
+            if (!(this.targetItemInitialOffset5__1 == null)) {
+              throw new ItemFoundInScroll(this.targetItemInitialOffset5__1, this.anim4__1._v);
+            }
+
+            this.forward6__1 = this.$index_1 > this.$this_animateScrollToItem_1.get_firstVisibleItemIndex_pq52y4_k$();
+            this.loops7__1 = {_v: 1};
+            this.set_state_a96kl8_k$(1);
+            continue $sm;
+          case 1:
+            if (!(this.loop3__1._v ? this.$this_animateScrollToItem_1.get_itemCount_rbqtpp_k$() > 0 : false)) {
+              this.set_state_a96kl8_k$(3);
+              continue $sm;
+            }
+
+            this.expectedDistance8__1 = this.$this_animateScrollToItem_1.expectedDistanceTo_bgmoi0_k$(this.$index_1, this.$scrollOffset_1);
+            var tmp_3 = this;
+            var tmp_4;
+            if (Math.abs(this.expectedDistance8__1) < this.targetDistancePx0__1) {
+              var tmp4_maxOf = Math.abs(this.expectedDistance8__1);
+              var absTargetPx = Math.max(tmp4_maxOf, this.minDistancePx2__1);
+              tmp_4 = this.forward6__1 ? absTargetPx : -absTargetPx;
+            } else {
+              tmp_4 = this.forward6__1 ? this.targetDistancePx0__1 : -this.targetDistancePx0__1;
+            }
+
+            tmp_3.target9__1 = tmp_4;
+            if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+              println('LazyScrolling: ' + ('Scrolling to index=' + this.$index_1 + ' offset=' + this.$scrollOffset_1 + ' from ' + ('index=' + this.$this_animateScrollToItem_1.get_firstVisibleItemIndex_pq52y4_k$() + ' offset=' + this.$this_animateScrollToItem_1.get_firstVisibleItemScrollOffset_my3xxa_k$() + ' with ') + (' calculated target=' + this.target9__1)));
+            }
+
+            this.anim4__1._v = copy(this.anim4__1._v, 0.0);
+            this.prevValue10__1 = {_v: 0.0};
+            this.set_state_a96kl8_k$(2);
+            var tmp_5 = this.anim4__1._v;
+            var tmp_6 = !(this.anim4__1._v.get_velocity_3hqvmu_k$() === 0.0);
+            suspendResult = animateTo(tmp_5, this.target9__1, VOID, tmp_6, animateScrollToItem$slambda$lambda(this.$this_animateScrollToItem_1, this.$index_1, this.target9__1, this.prevValue10__1, this.$this$scroll_1, this.loop3__1, this.forward6__1, this.boundDistancePx1__1, this.loops7__1, this.$scrollOffset_1, this.anim4__1), this);
+            if (suspendResult === get_COROUTINE_SUSPENDED()) {
+              return suspendResult;
+            }
+
+            continue $sm;
+          case 2:
+            var tmp0 = this.loops7__1._v;
+            this.loops7__1._v = tmp0 + 1 | 0;
+            this.set_state_a96kl8_k$(1);
+            continue $sm;
+          case 3:
+            this.set_exceptionState_s9sevl_k$(6);
+            this.set_state_a96kl8_k$(7);
+            continue $sm;
+          case 4:
+            this.set_exceptionState_s9sevl_k$(6);
+            var tmp_7 = this.get_exception_x0n6w6_k$();
+            if (tmp_7 instanceof ItemFoundInScroll) {
+              this.itemFound11__1 = this.get_exception_x0n6w6_k$();
+              this.anim12__1 = copy(this.itemFound11__1.previousAnimation_1, 0.0);
+              this.target13__1 = this.itemFound11__1.itemOffset_1 + this.$scrollOffset_1 | 0;
+              this.prevValue14__1 = {_v: 0.0};
+              if (_get_DEBUG_$accessor$1bm0lc7_6p2imj()) {
+                println('LazyScrolling: ' + ('Seeking by ' + this.target13__1 + ' at velocity ' + this.itemFound11__1.previousAnimation_1.get_velocity_3hqvmu_k$()));
+              }
+              this.set_state_a96kl8_k$(5);
+              var tmp_8 = !(this.anim12__1.get_velocity_3hqvmu_k$() === 0.0);
+              suspendResult = animateTo(this.anim12__1, this.target13__1, VOID, tmp_8, animateScrollToItem$slambda$lambda_0(this.target13__1, this.prevValue14__1, this.$this$scroll_1), this);
+              if (suspendResult === get_COROUTINE_SUSPENDED()) {
+                return suspendResult;
+              }
+              continue $sm;
+            } else {
+              throw this.get_exception_x0n6w6_k$();
+            }
+
+          case 5:
+            this.$this_animateScrollToItem_1.snapToItem_a195ff_k$(this.$this$scroll_1, this.$index_1, this.$scrollOffset_1);
+            this.set_state_a96kl8_k$(7);
+            continue $sm;
+          case 6:
+            throw this.get_exception_x0n6w6_k$();
+          case 7:
+            this.set_exceptionState_s9sevl_k$(6);
+            return Unit_getInstance();
+        }
+      } catch ($p) {
+        var e = $p;
+        if (this.get_exceptionState_wflpxn_k$() === 6) {
+          throw e;
+        } else {
+          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_pwgeox_k$(e);
+        }
+      }
+     while (true);
+  };
+  protoOf(animateScrollToItem$slambda).create_ld2pu4_k$ = function ($this$scroll, completion) {
+    var i = new animateScrollToItem$slambda(this.$index_1, this.$this_animateScrollToItem_1, this.$scrollOffset_1, completion);
+    i.$this$scroll_1 = $this$scroll;
+    return i;
+  };
+  protoOf(animateScrollToItem$slambda).create_xubfvz_k$ = function (value, completion) {
+    return this.create_ld2pu4_k$((!(value == null) ? isInterface(value, ScrollScope) : false) ? value : THROW_CCE(), completion);
+  };
+  function animateScrollToItem$slambda_0($index, $this_animateScrollToItem, $scrollOffset, resultContinuation) {
+    var i = new animateScrollToItem$slambda($index, $this_animateScrollToItem, $scrollOffset, resultContinuation);
+    var l = function ($this$scroll, $completion) {
+      return i.invoke_zaade9_k$($this$scroll, $completion);
+    };
+    l.$arity = 1;
+    return l;
+  }
   var properties_initialized_LazyAnimateScroll_kt_ru8vti;
   function _init_properties_LazyAnimateScroll_kt__eqop2w() {
     if (!properties_initialized_LazyAnimateScroll_kt_ru8vti) {
@@ -13791,17 +18738,2643 @@
       MinimumDistance = _Dp___init__impl__ms3zkb(50);
     }
   }
+  function LazyLayout$composable(itemProvider, modifier, prefetchState, measurePolicy, $composer, $changed, $default) {
+    var modifier_0 = {_v: modifier};
+    var prefetchState_0 = {_v: prefetchState};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-1464561401);
+    sourceInformation($composer_0, 'C(LazyLayout$composable)P(!1,2,3)58@2285L34,60@2325L1039:LazyLayout.kt#wow0x6');
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(itemProvider) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(modifier_0._v) ? 32 : 16);
+    if (!(($default & 4) === 0))
+      $dirty = $dirty | 384;
+    else if (($changed & 896) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(prefetchState_0._v) ? 256 : 128);
+    if (!(($default & 8) === 0))
+      $dirty = $dirty | 3072;
+    else if (($changed & 7168) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(measurePolicy) ? 2048 : 1024);
+    if (!(($dirty & 5851) === 1170) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 2) === 0)) {
+        modifier_0._v = Companion_getInstance_8();
+      }
+      if (!(($default & 4) === 0)) {
+        prefetchState_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(-1464561401, $dirty, -1, 'androidx.compose.foundation.lazy.layout.LazyLayout$composable (LazyLayout.kt:52)');
+      }
+      var currentItemProvider = rememberUpdatedState$composable(itemProvider, $composer_0, 14 & $dirty);
+      // Inline function 'kotlin.run' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayout$composable.<anonymous>' call
+      var tmp = $composer_0;
+      var dispatchReceiver = composableLambda(tmp, -1488997347, true, LazyLayout$composable$lambda(prefetchState_0, $dirty, modifier_0, measurePolicy, currentItemProvider));
+      // Inline function 'androidx.compose.runtime.remember$composable' call
+      var $composer_1 = $composer_0;
+      $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+      sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+      // Inline function 'androidx.compose.runtime.cache' call
+      var tmp1_cache = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
+      // Inline function 'kotlin.let' call
+      var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var tmp_0;
+      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+        // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayout$composable.<anonymous>.<anonymous>' call
+        var value = ComposableLambda$invoke$ref_1(dispatchReceiver);
+        $composer_1.updateRememberedValue_l1colo_k$(value);
+        tmp_0 = value;
+      } else {
+        tmp_0 = tmp0_let;
+      }
+      var tmp_1 = tmp_0;
+      var tmp0 = (tmp_1 == null ? true : isObject(tmp_1)) ? tmp_1 : THROW_CCE();
+      $composer_1.endReplaceableGroup_er37p7_k$();
+      LazySaveableStateHolderProvider$composable(tmp0, $composer_0, 6);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lhns3f_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver === null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_xhrf9y_k$(LazyLayout$composable$lambda_0(itemProvider, modifier_0, prefetchState_0, measurePolicy, $changed, $default));
+    }
+  }
+  function _get_factory__revr21($this) {
+    return $this.factory_1;
+  }
+  function _get_countPerType__ciwyal($this) {
+    return $this.countPerType_1;
+  }
+  function LazyLayoutItemReusePolicy(factory) {
+    this.factory_1 = factory;
+    var tmp = this;
+    // Inline function 'kotlin.collections.mutableMapOf' call
+    tmp.countPerType_1 = LinkedHashMap_init_$Create$();
+  }
+  protoOf(LazyLayoutItemReusePolicy).getSlotsToRetain_nnr6zi_k$ = function (slotIds) {
+    this.countPerType_1.clear_j9y8zo_k$();
+    // Inline function 'kotlin.with' call
+    var tmp0_with = slotIds.iterator_jk1svi_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    while (tmp0_with.hasNext_bitz1p_k$()) {
+      var slotId = tmp0_with.next_20eer_k$();
+      var type = this.factory_1.getContentType_founby_k$(slotId);
+      var tmp0_elvis_lhs = this.countPerType_1.get_1mhr4y_k$(type);
+      var currentCount = tmp0_elvis_lhs == null ? 0 : tmp0_elvis_lhs;
+      if (currentCount === 7) {
+        tmp0_with.remove_le47v1_k$();
+      } else {
+        // Inline function 'kotlin.collections.set' call
+        var tmp0_set = this.countPerType_1;
+        var tmp1_set = currentCount + 1 | 0;
+        tmp0_set.put_3mhbri_k$(type, tmp1_set);
+      }
+    }
+  };
+  protoOf(LazyLayoutItemReusePolicy).areCompatible_zh47cm_k$ = function (slotId, reusableSlotId) {
+    return equals(this.factory_1.getContentType_founby_k$(slotId), this.factory_1.getContentType_founby_k$(reusableSlotId));
+  };
+  function get_MaxItemsToRetainForReuse() {
+    return MaxItemsToRetainForReuse;
+  }
+  var MaxItemsToRetainForReuse;
+  function LazyLayout$composable$lambda$lambda($currentItemProvider) {
+    return function () {
+      return $currentItemProvider.get_value_j01efc_k$()();
+    };
+  }
+  function LazyLayout$composable$lambda$lambda_0($itemContentFactory, $measurePolicy) {
+    return function ($this$null, constraints) {
+      var tmp$ret$1;
+      // Inline function 'kotlin.with' call
+      var tmp0_with = new LazyLayoutMeasureScopeImpl($itemContentFactory, $this$null);
+      // Inline function 'kotlin.contracts.contract' call
+      var tmp$ret$0;
+      // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayout$composable.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
+      tmp$ret$0 = $measurePolicy(tmp0_with, constraints);
+      tmp$ret$1 = tmp$ret$0;
+      return tmp$ret$1;
+    };
+  }
+  function LazyLayout$composable$lambda($prefetchState, $$dirty, $modifier, $measurePolicy, $currentItemProvider) {
+    return function (saveableStateHolder, $composer, $changed) {
+      var $composer_0 = $composer;
+      sourceInformation($composer_0, 'C61@2415L114,64@2566L101,78@2956L392,75@2869L489:LazyLayout.kt#wow0x6');
+      var $dirty = $changed;
+      var tmp;
+      if (($changed & 14) === 0) {
+        $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(saveableStateHolder) ? 4 : 2);
+        tmp = Unit_getInstance();
+      }
+      var tmp_0;
+      if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+        if (isTraceInProgress()) {
+          traceEventStart(-1488997347, $changed, -1, 'androidx.compose.foundation.lazy.layout.LazyLayout$composable.<anonymous> (LazyLayout.kt:60)');
+        }
+        var tmp$ret$4;
+        // Inline function 'androidx.compose.runtime.remember$composable' call
+        var tmp0_remember$composable = $composer_0;
+        var $composer_1 = tmp0_remember$composable;
+        $composer_1.startReplaceableGroup_rp6air_k$(547886695);
+        sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
+        var tmp$ret$3;
+        // Inline function 'androidx.compose.runtime.cache' call
+        var tmp0_cache = $composer_1;
+        var tmp$ret$2;
+        // Inline function 'kotlin.let' call
+        var tmp0_let = tmp0_cache.rememberedValue_4dg93v_k$();
+        // Inline function 'kotlin.contracts.contract' call
+        var tmp$ret$1;
+        // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var tmp_1;
+        if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+          var tmp$ret$0;
+          // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayout$composable.<anonymous>.<anonymous>.<anonymous>' call
+          tmp$ret$0 = new LazyLayoutItemContentFactory(saveableStateHolder, LazyLayout$composable$lambda$lambda($currentItemProvider));
+          var value = tmp$ret$0;
+          tmp0_cache.updateRememberedValue_l1colo_k$(value);
+          tmp_1 = value;
+        } else {
+          tmp_1 = tmp0_let;
+        }
+        tmp$ret$1 = tmp_1;
+        tmp$ret$2 = tmp$ret$1;
+        var tmp_2 = tmp$ret$2;
+        tmp$ret$3 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
+        var tmp0 = tmp$ret$3;
+        $composer_1.endReplaceableGroup_er37p7_k$();
+        tmp$ret$4 = tmp0;
+        var itemContentFactory = tmp$ret$4;
+        var tmp$ret$9;
+        // Inline function 'androidx.compose.runtime.remember$composable' call
+        var tmp1_remember$composable = $composer_0;
+        var $composer_2 = tmp1_remember$composable;
+        $composer_2.startReplaceableGroup_rp6air_k$(547886695);
+        sourceInformation($composer_2, 'CC(remember$composable):Composables.kt#9igjgp');
+        var tmp$ret$8;
+        // Inline function 'androidx.compose.runtime.cache' call
+        var tmp0_cache_0 = $composer_2;
+        var tmp$ret$7;
+        // Inline function 'kotlin.let' call
+        var tmp0_let_0 = tmp0_cache_0.rememberedValue_4dg93v_k$();
+        // Inline function 'kotlin.contracts.contract' call
+        var tmp$ret$6;
+        // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var tmp_3;
+        if (false ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+          var tmp$ret$5;
+          // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayout$composable.<anonymous>.<anonymous>.<anonymous>' call
+          tmp$ret$5 = new SubcomposeLayoutState(new LazyLayoutItemReusePolicy(itemContentFactory));
+          var value_0 = tmp$ret$5;
+          tmp0_cache_0.updateRememberedValue_l1colo_k$(value_0);
+          tmp_3 = value_0;
+        } else {
+          tmp_3 = tmp0_let_0;
+        }
+        tmp$ret$6 = tmp_3;
+        tmp$ret$7 = tmp$ret$6;
+        var tmp_4 = tmp$ret$7;
+        tmp$ret$8 = (tmp_4 == null ? true : isObject(tmp_4)) ? tmp_4 : THROW_CCE();
+        var tmp0_0 = tmp$ret$8;
+        $composer_2.endReplaceableGroup_er37p7_k$();
+        tmp$ret$9 = tmp0_0;
+        var subcomposeLayoutState = tmp$ret$9;
+        var tmp0_safe_receiver = $prefetchState._v;
+        $composer_0.startReplaceableGroup_rp6air_k$(918142389);
+        sourceInformation($composer_0, '*68@2709L140');
+        var tmp_5;
+        if (tmp0_safe_receiver == null) {
+          tmp_5 = null;
+        } else {
+          var tmp$ret$10;
+          // Inline function 'kotlin.let' call
+          // Inline function 'kotlin.contracts.contract' call
+          LazyLayoutPrefetcher$composable($prefetchState._v, itemContentFactory, subcomposeLayoutState, $composer_0, 14 & $$dirty >> 6);
+          tmp$ret$10 = Unit_getInstance();
+          tmp_5 = Unit_getInstance();
+        }
+        var tmp0_group = tmp_5;
+        $composer_0.endReplaceableGroup_er37p7_k$();
+        var tmp_6 = $modifier._v;
+        var tmp$ret$15;
+        // Inline function 'androidx.compose.runtime.remember$composable' call
+        var tmp2_remember$composable = $composer_0;
+        var tmp3_remember$composable = 112 & $$dirty >> 6;
+        var $composer_3 = tmp2_remember$composable;
+        $composer_3.startReplaceableGroup_rp6air_k$(-1124426577);
+        sourceInformation($composer_3, 'CC(remember$composable)P(1,2):Composables.kt#9igjgp');
+        var tmp$ret$14;
+        // Inline function 'androidx.compose.runtime.cache' call
+        var tmp0_cache_1 = $composer_3;
+        var tmp1_cache = !!($composer_3.changed_ga7h3f_k$(itemContentFactory) | $composer_3.changed_ga7h3f_k$($measurePolicy));
+        var tmp$ret$13;
+        // Inline function 'kotlin.let' call
+        var tmp0_let_1 = tmp0_cache_1.rememberedValue_4dg93v_k$();
+        // Inline function 'kotlin.contracts.contract' call
+        var tmp$ret$12;
+        // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var tmp_7;
+        if (tmp1_cache ? true : tmp0_let_1 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+          var tmp$ret$11;
+          // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayout$composable.<anonymous>.<anonymous>.<anonymous>' call
+          tmp$ret$11 = LazyLayout$composable$lambda$lambda_0(itemContentFactory, $measurePolicy);
+          var value_1 = tmp$ret$11;
+          tmp0_cache_1.updateRememberedValue_l1colo_k$(value_1);
+          tmp_7 = value_1;
+        } else {
+          tmp_7 = tmp0_let_1;
+        }
+        tmp$ret$12 = tmp_7;
+        tmp$ret$13 = tmp$ret$12;
+        var tmp_8 = tmp$ret$13;
+        tmp$ret$14 = (tmp_8 == null ? true : isObject(tmp_8)) ? tmp_8 : THROW_CCE();
+        var tmp0_1 = tmp$ret$14;
+        $composer_3.endReplaceableGroup_er37p7_k$();
+        tmp$ret$15 = tmp0_1;
+        SubcomposeLayout$composable(subcomposeLayoutState, tmp_6, tmp$ret$15, $composer_0, 112 & $$dirty, 0);
+        var tmp_9;
+        if (isTraceInProgress()) {
+          traceEventEnd();
+          tmp_9 = Unit_getInstance();
+        }
+        tmp_0 = tmp_9;
+      } else {
+        $composer_0.skipToGroupEnd_lhns3f_k$();
+        tmp_0 = Unit_getInstance();
+      }
+      return Unit_getInstance();
+    };
+  }
+  function ComposableLambda$invoke$ref_1($boundThis) {
+    return function (p0, p1, p2) {
+      return $boundThis.invoke_5qf8pc_k$(p0, p1, p2);
+    };
+  }
+  function LazyLayout$composable$lambda_0($itemProvider, $modifier, $prefetchState, $measurePolicy, $$changed, $$default) {
+    return function ($composer, $force) {
+      LazyLayout$composable($itemProvider, $modifier._v, $prefetchState._v, $measurePolicy, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
+  }
   function get_InterruptionSpec() {
     _init_properties_LazyLayoutAnimateItemModifierNode_kt__4bieql();
     return InterruptionSpec;
   }
   var InterruptionSpec;
+  function LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda$lambda(this$0, $animationTarget) {
+    return function ($this$animateTo) {
+      var tmp$ret$0;
+      // Inline function 'androidx.compose.ui.unit.IntOffset.minus' call
+      var tmp0_minus = $this$animateTo.get_value_j01efc_k$().packedValue_1;
+      tmp$ret$0 = IntOffset_0(_IntOffset___get_x__impl__qiqr5o(tmp0_minus) - _IntOffset___get_x__impl__qiqr5o($animationTarget) | 0, _IntOffset___get_y__impl__2avpwj(tmp0_minus) - _IntOffset___get_y__impl__2avpwj($animationTarget) | 0);
+      _set_placementDelta__ka0zmk(this$0, tmp$ret$0);
+      return Unit_getInstance();
+    };
+  }
+  function _set_isAnimationInProgress__afegnb($this, _set____db54di) {
+    isAnimationInProgress$factory();
+    return $this.isAnimationInProgress$delegate_1.set_value_rnwamw_k$(_set____db54di);
+  }
+  function _get_placementDeltaAnimation__5jov28($this) {
+    return $this.placementDeltaAnimation_1;
+  }
+  function _set_placementDelta__ka0zmk($this, _set____db54di) {
+    placementDelta$factory();
+    return $this.placementDelta$delegate_1.set_value_rnwamw_k$(new IntOffset(_set____db54di));
+  }
+  function Companion_3() {
+    Companion_instance_3 = this;
+    this.NotInitialized_1 = IntOffset_0(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$(), IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$());
+  }
+  protoOf(Companion_3).get_NotInitialized_f7de21_k$ = function () {
+    return this.NotInitialized_1;
+  };
+  var Companion_instance_3;
+  function Companion_getInstance_53() {
+    if (Companion_instance_3 == null)
+      new Companion_3();
+    return Companion_instance_3;
+  }
+  function LazyLayoutAnimateItemModifierNode$cancelAnimation$slambda(this$0, resultContinuation) {
+    this.this$0__1 = this$0;
+    CoroutineImpl.call(this, resultContinuation);
+  }
+  protoOf(LazyLayoutAnimateItemModifierNode$cancelAnimation$slambda).invoke_d6gbsu_k$ = function ($this$launch, $completion) {
+    var tmp = this.create_b6qu53_k$($this$launch, $completion);
+    tmp.set_result_ximc09_k$(Unit_getInstance());
+    tmp.set_exception_pwgeox_k$(null);
+    return tmp.doResume_5yljmg_k$();
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode$cancelAnimation$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
+    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode$cancelAnimation$slambda).doResume_5yljmg_k$ = function () {
+    var suspendResult = this.get_result_iyg5d2_k$();
+    $sm: do
+      try {
+        var tmp = this.get_state_iypx7s_k$();
+        switch (tmp) {
+          case 0:
+            this.set_exceptionState_s9sevl_k$(2);
+            this.set_state_a96kl8_k$(1);
+            suspendResult = this.this$0__1.placementDeltaAnimation_1.snapTo_fkfduh_k$(new IntOffset(Companion_getInstance_21().get_Zero_c6qc7y_k$()), this);
+            if (suspendResult === get_COROUTINE_SUSPENDED()) {
+              return suspendResult;
+            }
+
+            continue $sm;
+          case 1:
+            _set_placementDelta__ka0zmk(this.this$0__1, Companion_getInstance_21().get_Zero_c6qc7y_k$());
+            _set_isAnimationInProgress__afegnb(this.this$0__1, false);
+            return Unit_getInstance();
+          case 2:
+            throw this.get_exception_x0n6w6_k$();
+        }
+      } catch ($p) {
+        var e = $p;
+        if (this.get_exceptionState_wflpxn_k$() === 2) {
+          throw e;
+        } else {
+          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_pwgeox_k$(e);
+        }
+      }
+     while (true);
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode$cancelAnimation$slambda).create_b6qu53_k$ = function ($this$launch, completion) {
+    var i = new LazyLayoutAnimateItemModifierNode$cancelAnimation$slambda(this.this$0__1, completion);
+    i.$this$launch_1 = $this$launch;
+    return i;
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode$cancelAnimation$slambda).create_xubfvz_k$ = function (value, completion) {
+    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  };
+  function LazyLayoutAnimateItemModifierNode$cancelAnimation$slambda_0(this$0, resultContinuation) {
+    var i = new LazyLayoutAnimateItemModifierNode$cancelAnimation$slambda(this$0, resultContinuation);
+    var l = function ($this$launch, $completion) {
+      return i.invoke_d6gbsu_k$($this$launch, $completion);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda(this$0, $totalDelta, resultContinuation) {
+    this.this$0__1 = this$0;
+    this.$totalDelta_1 = $totalDelta;
+    CoroutineImpl.call(this, resultContinuation);
+  }
+  protoOf(LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda).invoke_d6gbsu_k$ = function ($this$launch, $completion) {
+    var tmp = this.create_b6qu53_k$($this$launch, $completion);
+    tmp.set_result_ximc09_k$(Unit_getInstance());
+    tmp.set_exception_pwgeox_k$(null);
+    return tmp.doResume_5yljmg_k$();
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
+    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda).doResume_5yljmg_k$ = function () {
+    var suspendResult = this.get_result_iyg5d2_k$();
+    $sm: do
+      try {
+        var tmp = this.get_state_iypx7s_k$();
+        switch (tmp) {
+          case 0:
+            this.set_exceptionState_s9sevl_k$(5);
+            this.set_exceptionState_s9sevl_k$(4);
+            var tmp_0 = this;
+            var tmp_1;
+            if (this.this$0__1.placementDeltaAnimation_1.get_isRunning_okmtn0_k$()) {
+              var tmp_2;
+              var tmp_3 = this.this$0__1.placementAnimationSpec_1;
+              if (tmp_3 instanceof SpringSpec) {
+                tmp_2 = this.this$0__1.placementAnimationSpec_1;
+              } else {
+                tmp_2 = get_InterruptionSpec();
+              }
+              tmp_1 = tmp_2;
+            } else {
+              tmp_1 = this.this$0__1.placementAnimationSpec_1;
+            }
+
+            tmp_0.spec0__1 = tmp_1;
+            if (!this.this$0__1.placementDeltaAnimation_1.get_isRunning_okmtn0_k$()) {
+              this.set_state_a96kl8_k$(1);
+              suspendResult = this.this$0__1.placementDeltaAnimation_1.snapTo_fkfduh_k$(new IntOffset(this.$totalDelta_1), this);
+              if (suspendResult === get_COROUTINE_SUSPENDED()) {
+                return suspendResult;
+              }
+              continue $sm;
+            } else {
+              this.set_state_a96kl8_k$(2);
+              continue $sm;
+            }
+
+          case 1:
+            this.set_state_a96kl8_k$(2);
+            continue $sm;
+          case 2:
+            var tmp_4 = this;
+            var tmp0_minus = this.this$0__1.placementDeltaAnimation_1.get_value_j01efc_k$().packedValue_1;
+            tmp_4.animationTarget1__1 = IntOffset_0(_IntOffset___get_x__impl__qiqr5o(tmp0_minus) - _IntOffset___get_x__impl__qiqr5o(this.$totalDelta_1) | 0, _IntOffset___get_y__impl__2avpwj(tmp0_minus) - _IntOffset___get_y__impl__2avpwj(this.$totalDelta_1) | 0);
+            this.set_state_a96kl8_k$(3);
+            var tmp_5 = new IntOffset(this.animationTarget1__1);
+            suspendResult = this.this$0__1.placementDeltaAnimation_1.animateTo$default_vnltb6_k$(tmp_5, this.spec0__1, VOID, LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda$lambda(this.this$0__1, this.animationTarget1__1), this);
+            if (suspendResult === get_COROUTINE_SUSPENDED()) {
+              return suspendResult;
+            }
+
+            continue $sm;
+          case 3:
+            _set_isAnimationInProgress__afegnb(this.this$0__1, false);
+            this.set_exceptionState_s9sevl_k$(5);
+            this.set_state_a96kl8_k$(6);
+            continue $sm;
+          case 4:
+            this.set_exceptionState_s9sevl_k$(5);
+            var tmp_6 = this.get_exception_x0n6w6_k$();
+            if (tmp_6 instanceof CancellationException) {
+              var _ = this.get_exception_x0n6w6_k$();
+              this.set_state_a96kl8_k$(6);
+              continue $sm;
+            } else {
+              throw this.get_exception_x0n6w6_k$();
+            }
+
+          case 5:
+            throw this.get_exception_x0n6w6_k$();
+          case 6:
+            this.set_exceptionState_s9sevl_k$(5);
+            return Unit_getInstance();
+        }
+      } catch ($p) {
+        var e = $p;
+        if (this.get_exceptionState_wflpxn_k$() === 5) {
+          throw e;
+        } else {
+          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_pwgeox_k$(e);
+        }
+      }
+     while (true);
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda).create_b6qu53_k$ = function ($this$launch, completion) {
+    var i = new LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda(this.this$0__1, this.$totalDelta_1, completion);
+    i.$this$launch_1 = $this$launch;
+    return i;
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda).create_xubfvz_k$ = function (value, completion) {
+    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  };
+  function LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda_0(this$0, $totalDelta, resultContinuation) {
+    var i = new LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda(this$0, $totalDelta, resultContinuation);
+    var l = function ($this$launch, $completion) {
+      return i.invoke_d6gbsu_k$($this$launch, $completion);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function LazyLayoutAnimateItemModifierNode(placementAnimationSpec) {
+    Companion_getInstance_53();
+    Node.call(this);
+    this.placementAnimationSpec_1 = placementAnimationSpec;
+    this.isAnimationInProgress$delegate_1 = mutableStateOf(false);
+    this.rawOffset_1 = Companion_getInstance_53().NotInitialized_1;
+    this.placementDeltaAnimation_1 = new Animatable(new IntOffset(Companion_getInstance_21().get_Zero_c6qc7y_k$()), get_VectorConverter_0(Companion_getInstance_21()));
+    this.placementDelta$delegate_1 = mutableStateOf(new IntOffset(Companion_getInstance_21().get_Zero_c6qc7y_k$()));
+  }
+  protoOf(LazyLayoutAnimateItemModifierNode).set_placementAnimationSpec_22ldus_k$ = function (_set____db54di) {
+    this.placementAnimationSpec_1 = _set____db54di;
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode).get_placementAnimationSpec_snbngd_k$ = function () {
+    return this.placementAnimationSpec_1;
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode).get_isAnimationInProgress_9kh57h_k$ = function () {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    isAnimationInProgress$factory_0();
+    return this.isAnimationInProgress$delegate_1.get_value_j01efc_k$();
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode).set_rawOffset_fid5t_k$ = function (_set____db54di) {
+    this.rawOffset_1 = _set____db54di;
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode).get_rawOffset_26tztr_k$ = function () {
+    return this.rawOffset_1;
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode).get_placementDelta_8w9z7t_k$ = function () {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    placementDelta$factory_0();
+    return this.placementDelta$delegate_1.get_value_j01efc_k$().packedValue_1;
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode).cancelAnimation_ickco7_k$ = function () {
+    if (this.get_isAnimationInProgress_9kh57h_k$()) {
+      var tmp = this.get_coroutineScope_5k7h45_k$();
+      launch(tmp, VOID, VOID, LazyLayoutAnimateItemModifierNode$cancelAnimation$slambda_0(this, null));
+    }
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode).animatePlacementDelta_ci4kmt_k$ = function (delta) {
+    // Inline function 'androidx.compose.ui.unit.IntOffset.minus' call
+    var tmp0_minus = this.get_placementDelta_8w9z7t_k$();
+    var totalDelta = IntOffset_0(_IntOffset___get_x__impl__qiqr5o(tmp0_minus) - _IntOffset___get_x__impl__qiqr5o(delta) | 0, _IntOffset___get_y__impl__2avpwj(tmp0_minus) - _IntOffset___get_y__impl__2avpwj(delta) | 0);
+    _set_placementDelta__ka0zmk(this, totalDelta);
+    _set_isAnimationInProgress__afegnb(this, true);
+    var tmp = this.get_coroutineScope_5k7h45_k$();
+    launch(tmp, VOID, VOID, LazyLayoutAnimateItemModifierNode$animatePlacementDelta$slambda_0(this, totalDelta, null));
+  };
+  protoOf(LazyLayoutAnimateItemModifierNode).onDetach_8cynep_k$ = function () {
+    _set_placementDelta__ka0zmk(this, Companion_getInstance_21().get_Zero_c6qc7y_k$());
+    _set_isAnimationInProgress__afegnb(this, false);
+    this.rawOffset_1 = Companion_getInstance_53().NotInitialized_1;
+  };
+  function isAnimationInProgress$factory() {
+    return getPropertyCallableRef('isAnimationInProgress', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_isAnimationInProgress_9kh57h_k$();
+    }, function (receiver, value) {
+      return _set_isAnimationInProgress__afegnb(receiver, value);
+    });
+  }
+  function isAnimationInProgress$factory_0() {
+    return getPropertyCallableRef('isAnimationInProgress', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_isAnimationInProgress_9kh57h_k$();
+    }, function (receiver, value) {
+      return _set_isAnimationInProgress__afegnb(receiver, value);
+    });
+  }
+  function placementDelta$factory() {
+    return getPropertyCallableRef('placementDelta', 1, KMutableProperty1, function (receiver) {
+      return new IntOffset(receiver.get_placementDelta_8w9z7t_k$());
+    }, function (receiver, value) {
+      return _set_placementDelta__ka0zmk(receiver, value.packedValue_1);
+    });
+  }
+  function placementDelta$factory_0() {
+    return getPropertyCallableRef('placementDelta', 1, KMutableProperty1, function (receiver) {
+      return new IntOffset(receiver.get_placementDelta_8w9z7t_k$());
+    }, function (receiver, value) {
+      return _set_placementDelta__ka0zmk(receiver, value.packedValue_1);
+    });
+  }
   var properties_initialized_LazyLayoutAnimateItemModifierNode_kt_15yezl;
   function _init_properties_LazyLayoutAnimateItemModifierNode_kt__4bieql() {
     if (!properties_initialized_LazyLayoutAnimateItemModifierNode_kt_15yezl) {
       properties_initialized_LazyLayoutAnimateItemModifierNode_kt_15yezl = true;
-      InterruptionSpec = spring(VOID, Spring_getInstance().get_StiffnessMediumLow_62ltjd_k$(), new IntOffset(get_VisibilityThreshold(Companion_getInstance_16())));
+      InterruptionSpec = spring(VOID, Spring_getInstance().get_StiffnessMediumLow_62ltjd_k$(), new IntOffset(get_VisibilityThreshold(Companion_getInstance_21())));
     }
+  }
+  function _get_beyondBoundsItems__fiscwl($this) {
+    return $this.beyondBoundsItems_1;
+  }
+  function Interval_0(start, end) {
+    this.start_1 = start;
+    this.end_1 = end;
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(this.start_1 >= 0)) {
+      // Inline function 'kotlin.require.<anonymous>' call
+      var message = 'Failed requirement.';
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(this.end_1 >= this.start_1)) {
+      // Inline function 'kotlin.require.<anonymous>' call
+      var message_0 = 'Failed requirement.';
+      throw IllegalArgumentException_init_$Create$(toString(message_0));
+    }
+  }
+  protoOf(Interval_0).get_start_iypx6h_k$ = function () {
+    return this.start_1;
+  };
+  protoOf(Interval_0).get_end_18j6ha_k$ = function () {
+    return this.end_1;
+  };
+  protoOf(Interval_0).component1_7eebsc_k$ = function () {
+    return this.start_1;
+  };
+  protoOf(Interval_0).component2_7eebsb_k$ = function () {
+    return this.end_1;
+  };
+  protoOf(Interval_0).copy_r83ead_k$ = function (start, end) {
+    return new Interval_0(start, end);
+  };
+  protoOf(Interval_0).copy$default_c41pbv_k$ = function (start, end, $super) {
+    start = start === VOID ? this.start_1 : start;
+    end = end === VOID ? this.end_1 : end;
+    return $super === VOID ? this.copy_r83ead_k$(start, end) : $super.copy_r83ead_k$.call(this, start, end);
+  };
+  protoOf(Interval_0).toString = function () {
+    return 'Interval(start=' + this.start_1 + ', end=' + this.end_1 + ')';
+  };
+  protoOf(Interval_0).hashCode = function () {
+    var result = this.start_1;
+    result = imul(result, 31) + this.end_1 | 0;
+    return result;
+  };
+  protoOf(Interval_0).equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof Interval_0))
+      return false;
+    var tmp0_other_with_cast = other instanceof Interval_0 ? other : THROW_CCE();
+    if (!(this.start_1 === tmp0_other_with_cast.start_1))
+      return false;
+    if (!(this.end_1 === tmp0_other_with_cast.end_1))
+      return false;
+    return true;
+  };
+  function LazyLayoutBeyondBoundsInfo() {
+    var tmp = this;
+    // Inline function 'androidx.compose.runtime.collection.mutableVectorOf' call
+    // Inline function 'androidx.compose.runtime.collection.MutableVector' call
+    var tmp$ret$0;
+    // Inline function 'kotlin.arrayOfNulls' call
+    tmp$ret$0 = fillArrayVal(Array(16), null);
+    tmp.beyondBoundsItems_1 = new MutableVector(tmp$ret$0, 0);
+  }
+  protoOf(LazyLayoutBeyondBoundsInfo).addInterval_l6nmue_k$ = function (start, end) {
+    // Inline function 'kotlin.apply' call
+    var tmp0_apply = new Interval_0(start, end);
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsInfo.addInterval.<anonymous>' call
+    this.beyondBoundsItems_1.add_1j60qe_k$(tmp0_apply);
+    return tmp0_apply;
+  };
+  protoOf(LazyLayoutBeyondBoundsInfo).removeInterval_aalrbm_k$ = function (interval) {
+    this.beyondBoundsItems_1.remove_8hbkbr_k$(interval);
+  };
+  protoOf(LazyLayoutBeyondBoundsInfo).hasIntervals_9n4iek_k$ = function () {
+    return this.beyondBoundsItems_1.isNotEmpty_cjxbwk_k$();
+  };
+  protoOf(LazyLayoutBeyondBoundsInfo).get_start_iypx6h_k$ = function () {
+    var minIndex = this.beyondBoundsItems_1.first_1m0hio_k$().start_1;
+    // Inline function 'androidx.compose.runtime.collection.MutableVector.forEach' call
+    var tmp0_forEach = this.beyondBoundsItems_1;
+    // Inline function 'kotlin.contracts.contract' call
+    var size = tmp0_forEach.get_size_woubt6_k$();
+    if (size > 0) {
+      var i = 0;
+      var tmp = tmp0_forEach.get_content_h02jrk_k$();
+      var content = isArray(tmp) ? tmp : THROW_CCE();
+      do {
+        // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsInfo.<get-start>.<anonymous>' call
+        var tmp1_anonymous = content[i];
+        if (tmp1_anonymous.start_1 < minIndex) {
+          minIndex = tmp1_anonymous.start_1;
+        }
+        i = i + 1 | 0;
+      }
+       while (i < size);
+    }
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(minIndex >= 0)) {
+      // Inline function 'kotlin.require.<anonymous>' call
+      var message = 'Failed requirement.';
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    return minIndex;
+  };
+  protoOf(LazyLayoutBeyondBoundsInfo).get_end_18j6ha_k$ = function () {
+    var maxIndex = this.beyondBoundsItems_1.first_1m0hio_k$().end_1;
+    // Inline function 'androidx.compose.runtime.collection.MutableVector.forEach' call
+    var tmp0_forEach = this.beyondBoundsItems_1;
+    // Inline function 'kotlin.contracts.contract' call
+    var size = tmp0_forEach.get_size_woubt6_k$();
+    if (size > 0) {
+      var i = 0;
+      var tmp = tmp0_forEach.get_content_h02jrk_k$();
+      var content = isArray(tmp) ? tmp : THROW_CCE();
+      do {
+        // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsInfo.<get-end>.<anonymous>' call
+        var tmp1_anonymous = content[i];
+        if (tmp1_anonymous.end_1 > maxIndex) {
+          maxIndex = tmp1_anonymous.end_1;
+        }
+        i = i + 1 | 0;
+      }
+       while (i < size);
+    }
+    return maxIndex;
+  };
+  function _get_emptyBeyondBoundsScope__g7eehk($this) {
+    return $this.emptyBeyondBoundsScope_1;
+  }
+  function LazyLayoutBeyondBoundsModifierLocal$Companion$emptyBeyondBoundsScope$1() {
+    this.hasMoreContent_1 = false;
+  }
+  protoOf(LazyLayoutBeyondBoundsModifierLocal$Companion$emptyBeyondBoundsScope$1).get_hasMoreContent_r3jblf_k$ = function () {
+    return this.hasMoreContent_1;
+  };
+  function _get_state__b8zcm8_3($this) {
+    return $this.state_1;
+  }
+  function _get_beyondBoundsInfo__opfy3r($this) {
+    return $this.beyondBoundsInfo_1;
+  }
+  function _get_reverseLayout__b4hu1n_0($this) {
+    return $this.reverseLayout_1;
+  }
+  function _get_layoutDirection__u3l5q4_0($this) {
+    return $this.layoutDirection_1;
+  }
+  function _get_orientation__cb6m7_2($this) {
+    return $this.orientation_1;
+  }
+  function Companion_4() {
+    Companion_instance_4 = this;
+    var tmp = this;
+    tmp.emptyBeyondBoundsScope_1 = new LazyLayoutBeyondBoundsModifierLocal$Companion$emptyBeyondBoundsScope$1();
+  }
+  var Companion_instance_4;
+  function Companion_getInstance_54() {
+    if (Companion_instance_4 == null)
+      new Companion_4();
+    return Companion_instance_4;
+  }
+  function isForward(_this__u8e3s4, $this) {
+    var tmp;
+    if (_this__u8e3s4 === Companion_getInstance_23().get_Before_o24rz0_k$()) {
+      tmp = false;
+    } else if (_this__u8e3s4 === Companion_getInstance_23().get_After_zfui93_k$()) {
+      tmp = true;
+    } else if (_this__u8e3s4 === Companion_getInstance_23().get_Above_h0znpk_k$()) {
+      tmp = $this.reverseLayout_1;
+    } else if (_this__u8e3s4 === Companion_getInstance_23().get_Below_1rvkrg_k$()) {
+      tmp = !$this.reverseLayout_1;
+    } else if (_this__u8e3s4 === Companion_getInstance_23().get_Left_dsjvrw_k$()) {
+      var tmp_0;
+      switch ($this.layoutDirection_1.get_ordinal_ip24qg_k$()) {
+        case 0:
+          tmp_0 = $this.reverseLayout_1;
+          break;
+        case 1:
+          tmp_0 = !$this.reverseLayout_1;
+          break;
+        default:
+          noWhenBranchMatchedException();
+          break;
+      }
+      tmp = tmp_0;
+    } else if (_this__u8e3s4 === Companion_getInstance_23().get_Right_ypxhd3_k$()) {
+      var tmp_1;
+      switch ($this.layoutDirection_1.get_ordinal_ip24qg_k$()) {
+        case 0:
+          tmp_1 = !$this.reverseLayout_1;
+          break;
+        case 1:
+          tmp_1 = $this.reverseLayout_1;
+          break;
+        default:
+          noWhenBranchMatchedException();
+          break;
+      }
+      tmp = tmp_1;
+    } else {
+      unsupportedDirection();
+    }
+    return tmp;
+  }
+  function addNextInterval($this, currentInterval, direction) {
+    var start = currentInterval.get_start_iypx6h_k$();
+    var end = currentInterval.get_end_18j6ha_k$();
+    if (isForward(direction, $this)) {
+      end = end + 1 | 0;
+    } else {
+      start = start - 1 | 0;
+    }
+    return $this.beyondBoundsInfo_1.addInterval_l6nmue_k$(start, end);
+  }
+  function hasMoreContent(_this__u8e3s4, $this, direction) {
+    if (isOppositeToOrientation(direction, $this))
+      return false;
+    return isForward(direction, $this) ? _this__u8e3s4.get_end_18j6ha_k$() < ($this.state_1.get_itemCount_rbqtpp_k$() - 1 | 0) : _this__u8e3s4.get_start_iypx6h_k$() > 0;
+  }
+  function isOppositeToOrientation(_this__u8e3s4, $this) {
+    var tmp;
+    if (_this__u8e3s4 === Companion_getInstance_23().get_Above_h0znpk_k$() ? true : _this__u8e3s4 === Companion_getInstance_23().get_Below_1rvkrg_k$()) {
+      tmp = $this.orientation_1.equals(Orientation_Horizontal_getInstance());
+    } else if (_this__u8e3s4 === Companion_getInstance_23().get_Left_dsjvrw_k$() ? true : _this__u8e3s4 === Companion_getInstance_23().get_Right_ypxhd3_k$()) {
+      tmp = $this.orientation_1.equals(Orientation_Vertical_getInstance());
+    } else if (_this__u8e3s4 === Companion_getInstance_23().get_Before_o24rz0_k$() ? true : _this__u8e3s4 === Companion_getInstance_23().get_After_zfui93_k$()) {
+      tmp = false;
+    } else {
+      unsupportedDirection();
+    }
+    return tmp;
+  }
+  function LazyLayoutBeyondBoundsModifierLocal$layout$2(this$0, $interval, $direction) {
+    this.this$0__1 = this$0;
+    this.$interval_1 = $interval;
+    this.$direction_1 = $direction;
+  }
+  protoOf(LazyLayoutBeyondBoundsModifierLocal$layout$2).get_hasMoreContent_r3jblf_k$ = function () {
+    return hasMoreContent(this.$interval_1._v, this.this$0__1, this.$direction_1);
+  };
+  function LazyLayoutBeyondBoundsModifierLocal(state, beyondBoundsInfo, reverseLayout, layoutDirection, orientation) {
+    Companion_getInstance_54();
+    this.state_1 = state;
+    this.beyondBoundsInfo_1 = beyondBoundsInfo;
+    this.reverseLayout_1 = reverseLayout;
+    this.layoutDirection_1 = layoutDirection;
+    this.orientation_1 = orientation;
+  }
+  protoOf(LazyLayoutBeyondBoundsModifierLocal).get_key_18j28a_k$ = function () {
+    return get_ModifierLocalBeyondBoundsLayout();
+  };
+  protoOf(LazyLayoutBeyondBoundsModifierLocal).get_value_j01efc_k$ = function () {
+    return this;
+  };
+  protoOf(LazyLayoutBeyondBoundsModifierLocal).layout_itiyk0_k$ = function (direction, block) {
+    if (this.state_1.get_itemCount_rbqtpp_k$() <= 0 ? true : !this.state_1.get_hasVisibleItems_ggfbnl_k$()) {
+      return block(Companion_getInstance_54().emptyBeyondBoundsScope_1);
+    }
+    var tmp;
+    if (isForward(direction, this)) {
+      tmp = this.state_1.get_lastPlacedIndex_caqdyu_k$();
+    } else {
+      tmp = this.state_1.get_firstPlacedIndex_fupbhu_k$();
+    }
+    var startIndex = tmp;
+    var interval = {_v: this.beyondBoundsInfo_1.addInterval_l6nmue_k$(startIndex, startIndex)};
+    var found = null;
+    while (found == null ? hasMoreContent(interval._v, this, direction) : false) {
+      // Inline function 'kotlin.also' call
+      var tmp0_also = addNextInterval(this, interval._v, direction);
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsModifierLocal.layout.<anonymous>' call
+      this.beyondBoundsInfo_1.removeInterval_aalrbm_k$(interval._v);
+      interval._v = tmp0_also;
+      this.state_1.remeasure_jaiume_k$();
+      found = block(new LazyLayoutBeyondBoundsModifierLocal$layout$2(this, interval, direction));
+    }
+    this.beyondBoundsInfo_1.removeInterval_aalrbm_k$(interval._v);
+    this.state_1.remeasure_jaiume_k$();
+    return found;
+  };
+  function unsupportedDirection() {
+    throw IllegalStateException_init_$Create$('Lazy list does not support beyond bounds layout for the specified direction');
+  }
+  function calculateLazyLayoutPinnedIndices(_this__u8e3s4, pinnedItemList, beyondBoundsInfo) {
+    if (!beyondBoundsInfo.hasIntervals_9n4iek_k$() ? pinnedItemList.isEmpty_y1axqb_k$() : false) {
+      return emptyList();
+    } else {
+      // Inline function 'kotlin.collections.mutableListOf' call
+      var pinnedItems = ArrayList_init_$Create$_0();
+      var tmp;
+      if (beyondBoundsInfo.hasIntervals_9n4iek_k$()) {
+        var tmp_0 = beyondBoundsInfo.get_start_iypx6h_k$();
+        var tmp$ret$1;
+        // Inline function 'kotlin.math.min' call
+        var tmp0_min = beyondBoundsInfo.get_end_18j6ha_k$();
+        var tmp1_min = _this__u8e3s4.get_itemCount_rbqtpp_k$() - 1 | 0;
+        tmp$ret$1 = Math.min(tmp0_min, tmp1_min);
+        tmp = numberRangeToNumber(tmp_0, tmp$ret$1);
+      } else {
+        tmp = Companion_getInstance_24().get_EMPTY_i8q41w_k$();
+      }
+      var beyondBoundsRange = tmp;
+      // Inline function 'androidx.compose.ui.util.fastForEach' call
+      // Inline function 'kotlin.contracts.contract' call
+      var inductionVariable = 0;
+      var last = pinnedItemList.get_size_woubt6_k$() - 1 | 0;
+      if (inductionVariable <= last)
+        do {
+          var index = inductionVariable;
+          inductionVariable = inductionVariable + 1 | 0;
+          var item = pinnedItemList.get_fkrdnv_k$(index);
+          $l$block_0: {
+            // Inline function 'androidx.compose.foundation.lazy.layout.calculateLazyLayoutPinnedIndices.<anonymous>' call
+            var index_0 = findIndexByKey(_this__u8e3s4, item.get_key_18j28a_k$(), item.get_index_it478p_k$());
+            var containsLower = beyondBoundsRange.get_first_irdx8n_k$();
+            if (index_0 <= beyondBoundsRange.get_last_wopotb_k$() ? containsLower <= index_0 : false) {
+              break $l$block_0;
+            }
+            if (!(0 <= index_0 ? index_0 < _this__u8e3s4.get_itemCount_rbqtpp_k$() : false)) {
+              break $l$block_0;
+            }
+            pinnedItems.add_1j60pz_k$(index_0);
+          }
+        }
+         while (inductionVariable <= last);
+      var inductionVariable_0 = beyondBoundsRange.get_first_irdx8n_k$();
+      var last_0 = beyondBoundsRange.get_last_wopotb_k$();
+      if (inductionVariable_0 <= last_0)
+        do {
+          var i = inductionVariable_0;
+          inductionVariable_0 = inductionVariable_0 + 1 | 0;
+          pinnedItems.add_1j60pz_k$(i);
+        }
+         while (!(i === last_0));
+      return pinnedItems;
+    }
+  }
+  function LazyLayoutBeyondBoundsState() {
+  }
+  function LazyLayoutIntervalContent$Interval$_get_type_$lambda_1wu10p(it) {
+    return null;
+  }
+  function Interval_1() {
+  }
+  function get_$stableprop_21() {
+    return 0;
+  }
+  function LazyLayoutIntervalContent() {
+    this.$stable_1 = 0;
+  }
+  protoOf(LazyLayoutIntervalContent).get_itemCount_rbqtpp_k$ = function () {
+    return this.get_intervals_gu2011_k$().get_size_woubt6_k$();
+  };
+  protoOf(LazyLayoutIntervalContent).getKey_c0u4so_k$ = function (index) {
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutIntervalContent.withInterval' call
+    var interval = this.get_intervals_gu2011_k$().get_fkrdnv_k$(index);
+    var localIntervalIndex = index - interval.get_startIndex_oi1lp5_k$() | 0;
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutIntervalContent.getKey.<anonymous>' call
+    var tmp0_safe_receiver = interval.get_value_j01efc_k$().get_key_18j28a_k$();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver(localIntervalIndex);
+    return tmp1_elvis_lhs == null ? getDefaultLazyLayoutKey(index) : tmp1_elvis_lhs;
+  };
+  protoOf(LazyLayoutIntervalContent).getContentType_uak9tw_k$ = function (index) {
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutIntervalContent.withInterval' call
+    var interval = this.get_intervals_gu2011_k$().get_fkrdnv_k$(index);
+    var localIntervalIndex = index - interval.get_startIndex_oi1lp5_k$() | 0;
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutIntervalContent.getContentType.<anonymous>' call
+    return interval.get_value_j01efc_k$().get_type_wovaf7_k$()(localIntervalIndex);
+  };
+  protoOf(LazyLayoutIntervalContent).withInterval_lqm89p_k$ = function (globalIndex, block) {
+    var interval = this.get_intervals_gu2011_k$().get_fkrdnv_k$(globalIndex);
+    var localIntervalIndex = globalIndex - interval.get_startIndex_oi1lp5_k$() | 0;
+    return block(localIntervalIndex, interval.get_value_j01efc_k$());
+  };
+  function _set_index__fyfqnn($this, _set____db54di) {
+    $this.index_1 = _set____db54di;
+  }
+  function _set__content__tf9lul($this, _set____db54di) {
+    illegalDecoyCallException('<set-_content>');
+  }
+  function _get__content__gmdadt($this) {
+    return $this._content_1;
+  }
+  function createContentLambda($this) {
+    return ComposableLambda$invoke$ref_2(composableLambdaInstance(1403994769, true, LazyLayoutItemContentFactory$CachedItemContent$createContentLambda$lambda($this.$this_1, $this)));
+  }
+  function $set__content$$composable_n9477a($this, set__$_ezb9bk) {
+    $this._content_1 = set__$_ezb9bk;
+  }
+  function ComposableLambda$invoke$ref_2($boundThis) {
+    return function (p0, p1) {
+      return $boundThis.invoke_6harzl_k$(p0, p1);
+    };
+  }
+  function _no_name_provided__qut3iv_0(this$0) {
+    this.this$0__1 = this$0;
+  }
+  protoOf(_no_name_provided__qut3iv_0).dispose_3n44we_k$ = function () {
+    // Inline function 'androidx.compose.foundation.lazy.layout.CachedItemContent.createContentLambda.<anonymous>.<anonymous>.<anonymous>' call
+    $set__content$$composable_n9477a(this.this$0__1, null);
+  };
+  function LazyLayoutItemContentFactory$CachedItemContent$createContentLambda$lambda$lambda(this$0) {
+    return function ($this$DisposableEffect) {
+      var tmp$ret$0;
+      // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
+      tmp$ret$0 = new _no_name_provided__qut3iv_0(this$0);
+      return tmp$ret$0;
+    };
+  }
+  function LazyLayoutItemContentFactory$CachedItemContent$createContentLambda$lambda(this$0, this$1) {
+    return function ($composer, $changed) {
+      var $composer_0 = $composer;
+      sourceInformation($composer_0, 'C100@3719L258,108@3990L219:LazyLayoutItemContentFactory.kt#wow0x6');
+      var tmp;
+      if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+        if (isTraceInProgress()) {
+          traceEventStart(1403994769, $changed, -1, 'androidx.compose.foundation.lazy.layout.LazyLayoutItemContentFactory.CachedItemContent.createContentLambda.<anonymous> (LazyLayoutItemContentFactory.kt:91)');
+        }
+        var itemProvider = this$0.itemProvider_1();
+        var index = {_v: this$1.index_1};
+        if (index._v >= itemProvider.get_itemCount_rbqtpp_k$() ? true : !equals(itemProvider.getKey_c0u4so_k$(index._v), this$1.key_1)) {
+          index._v = itemProvider.getIndex_xxb61u_k$(this$1.key_1);
+          if (!(index._v === -1))
+            this$1.index_1 = index._v;
+        }
+        // Inline function 'androidx.compose.runtime.ReusableContentHost$composable' call
+        var tmp0_ReusableContentHost$composable = !(index._v === -1);
+        var tmp1_ReusableContentHost$composable = $composer_0;
+        var $composer_1 = tmp1_ReusableContentHost$composable;
+        $composer_1.startReusableGroup_2z9l41_k$(get_reuseKey(), tmp0_ReusableContentHost$composable);
+        var activeChanged = $composer_1.changed_i0nym2_k$(tmp0_ReusableContentHost$composable);
+        if (tmp0_ReusableContentHost$composable) {
+          // Inline function 'androidx.compose.foundation.lazy.layout.CachedItemContent.createContentLambda.<anonymous>.<anonymous>' call
+          var tmp2_anonymous = $composer_1;
+          var tmp3_anonymous = 0;
+          var $composer_2 = tmp2_anonymous;
+          sourceInformationMarkerStart($composer_2, -1642427949, 'C101@3779L184:LazyLayoutItemContentFactory.kt#wow0x6');
+          SkippableItem$composable(itemProvider, _StableValue___init__impl__8rwrjx(this$0.saveableStateHolder_1), index._v, _StableValue___init__impl__8rwrjx(this$1.key_1), $composer_2, 0);
+          sourceInformationMarkerEnd($composer_2);
+        } else {
+          $composer_1.deactivateToEndGroup_1yxrt6_k$(activeChanged);
+        }
+        $composer_1.endReusableGroup_jxruvs_k$();
+        DisposableEffect$composable(this$1.key_1, LazyLayoutItemContentFactory$CachedItemContent$createContentLambda$lambda$lambda(this$1), $composer_0, 0);
+        var tmp_0;
+        if (isTraceInProgress()) {
+          traceEventEnd();
+          tmp_0 = Unit_getInstance();
+        }
+        tmp = tmp_0;
+      } else {
+        $composer_0.skipToGroupEnd_lhns3f_k$();
+        tmp = Unit_getInstance();
+      }
+      return Unit_getInstance();
+    };
+  }
+  function _get_saveableStateHolder__cz2xkl($this) {
+    return $this.saveableStateHolder_1;
+  }
+  function _get_lambdasCache__78pdmz($this) {
+    return $this.lambdasCache_1;
+  }
+  function CachedItemContent($outer, index, key, contentType) {
+    this.$this_1 = $outer;
+    this.key_1 = key;
+    this.contentType_1 = contentType;
+    this.index_1 = index;
+    this._content_1 = null;
+  }
+  protoOf(CachedItemContent).get_key_18j28a_k$ = function () {
+    return this.key_1;
+  };
+  protoOf(CachedItemContent).get_contentType_7git4a_k$ = function () {
+    return this.contentType_1;
+  };
+  protoOf(CachedItemContent).get_index_it478p_k$ = function () {
+    return this.index_1;
+  };
+  protoOf(CachedItemContent).get_content_h02jrk_k$ = function () {
+    var tmp0_elvis_lhs = this._content_1;
+    var tmp;
+    if (tmp0_elvis_lhs == null) {
+      // Inline function 'kotlin.also' call
+      var tmp0_also = createContentLambda(this);
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.foundation.lazy.layout.CachedItemContent.<get-content>.<anonymous>' call
+      $set__content$$composable_n9477a(this, tmp0_also);
+      tmp = tmp0_also;
+    } else {
+      tmp = tmp0_elvis_lhs;
+    }
+    return tmp;
+  };
+  function LazyLayoutItemContentFactory(saveableStateHolder, itemProvider) {
+    this.saveableStateHolder_1 = saveableStateHolder;
+    this.itemProvider_1 = itemProvider;
+    var tmp = this;
+    // Inline function 'kotlin.collections.mutableMapOf' call
+    tmp.lambdasCache_1 = LinkedHashMap_init_$Create$();
+  }
+  protoOf(LazyLayoutItemContentFactory).get_itemProvider_1e7o2b_k$ = function () {
+    return this.itemProvider_1;
+  };
+  protoOf(LazyLayoutItemContentFactory).getContentType_founby_k$ = function (key) {
+    if (key == null)
+      return null;
+    var cachedContent = this.lambdasCache_1.get_1mhr4y_k$(key);
+    var tmp;
+    if (!(cachedContent == null)) {
+      tmp = cachedContent.contentType_1;
+    } else {
+      var itemProvider = this.itemProvider_1();
+      var index = itemProvider.getIndex_xxb61u_k$(key);
+      var tmp_0;
+      if (!(index === -1)) {
+        tmp_0 = itemProvider.getContentType_uak9tw_k$(index);
+      } else {
+        tmp_0 = null;
+      }
+      tmp = tmp_0;
+    }
+    return tmp;
+  };
+  protoOf(LazyLayoutItemContentFactory).getContent_jgck9r_k$ = function (index, key, contentType) {
+    var cached = this.lambdasCache_1.get_1mhr4y_k$(key);
+    var tmp;
+    if ((!(cached == null) ? cached.index_1 === index : false) ? equals(cached.contentType_1, contentType) : false) {
+      tmp = cached.get_content_h02jrk_k$();
+    } else {
+      var newContent = new CachedItemContent(this, index, key, contentType);
+      // Inline function 'kotlin.collections.set' call
+      this.lambdasCache_1.put_3mhbri_k$(key, newContent);
+      tmp = newContent.get_content_h02jrk_k$();
+    }
+    return tmp;
+  };
+  function SkippableItem$composable(itemProvider, saveableStateHolder, index, key, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-489923881);
+    sourceInformation($composer_0, 'C(SkippableItem$composable)P(1,3:c#foundation.lazy.layout.StableValue!,2:c#foundation.lazy.layout.StableValue)134@4737L84:LazyLayoutItemContentFactory.kt#wow0x6');
+    var $dirty = $changed;
+    if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(itemProvider) ? 4 : 2);
+    if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(_StableValue___get_value__impl__cutoif(saveableStateHolder)) ? 32 : 16);
+    if (($changed & 896) === 0)
+      $dirty = $dirty | ($composer_0.changed_s0r703_k$(index) ? 256 : 128);
+    if (($changed & 7168) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(_StableValue___get_value__impl__cutoif(key)) ? 2048 : 1024);
+    if (!(($dirty & 5851) === 1170) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(-489923881, $dirty, -1, 'androidx.compose.foundation.lazy.layout.SkippableItem$composable (LazyLayoutItemContentFactory.kt:128)');
+      }
+      var tmp = _StableValue___get_value__impl__cutoif(saveableStateHolder);
+      var tmp_0 = _StableValue___get_value__impl__cutoif(key);
+      // Inline function 'kotlin.run' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.foundation.lazy.layout.SkippableItem$composable.<anonymous>' call
+      var tmp_1 = $composer_0;
+      var dispatchReceiver = composableLambda(tmp_1, 980966366, true, SkippableItem$composable$lambda(itemProvider, index, key, $dirty));
+      // Inline function 'androidx.compose.runtime.remember$composable' call
+      var $composer_1 = $composer_0;
+      $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+      sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+      // Inline function 'androidx.compose.runtime.cache' call
+      var tmp1_cache = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
+      // Inline function 'kotlin.let' call
+      var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var tmp_2;
+      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+        // Inline function 'androidx.compose.foundation.lazy.layout.SkippableItem$composable.<anonymous>.<anonymous>' call
+        var value = ComposableLambda$invoke$ref_3(dispatchReceiver);
+        $composer_1.updateRememberedValue_l1colo_k$(value);
+        tmp_2 = value;
+      } else {
+        tmp_2 = tmp0_let;
+      }
+      var tmp_3 = tmp_2;
+      var tmp0 = (tmp_3 == null ? true : isObject(tmp_3)) ? tmp_3 : THROW_CCE();
+      $composer_1.endReplaceableGroup_er37p7_k$();
+      tmp.SaveableStateProvider$composable_n5yi3h_k$(tmp_0, tmp0, $composer_0, 48);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lhns3f_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver === null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_xhrf9y_k$(SkippableItem$composable$lambda_0(itemProvider, saveableStateHolder, index, key, $changed));
+    }
+  }
+  function _StableValue___init__impl__8rwrjx(value) {
+    return value;
+  }
+  function _StableValue___get_value__impl__cutoif($this) {
+    return $this;
+  }
+  function StableValue__toString_impl_gy5svf($this) {
+    return 'StableValue(value=' + $this + ')';
+  }
+  function StableValue__hashCode_impl_4t03xg($this) {
+    return $this == null ? 0 : hashCode($this);
+  }
+  function StableValue__equals_impl_5bz0jc($this, other) {
+    if (!(other instanceof StableValue))
+      return false;
+    var tmp0_other_with_cast = other instanceof StableValue ? other.value_1 : THROW_CCE();
+    if (!equals($this, tmp0_other_with_cast))
+      return false;
+    return true;
+  }
+  function StableValue(value) {
+    this.value_1 = value;
+  }
+  protoOf(StableValue).toString = function () {
+    return StableValue__toString_impl_gy5svf(this.value_1);
+  };
+  protoOf(StableValue).hashCode = function () {
+    return StableValue__hashCode_impl_4t03xg(this.value_1);
+  };
+  protoOf(StableValue).equals = function (other) {
+    return StableValue__equals_impl_5bz0jc(this.value_1, other);
+  };
+  function SkippableItem$composable$lambda($itemProvider, $index, $key, $$dirty) {
+    return function ($composer, $changed) {
+      var $composer_0 = $composer;
+      sourceInformation($composer_0, 'C135@4793L22:LazyLayoutItemContentFactory.kt#wow0x6');
+      var tmp;
+      if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+        if (isTraceInProgress()) {
+          traceEventStart(980966366, $changed, -1, 'androidx.compose.foundation.lazy.layout.SkippableItem$composable.<anonymous> (LazyLayoutItemContentFactory.kt:134)');
+        }
+        $itemProvider.Item$composable_lnrxno_k$($index, _StableValue___get_value__impl__cutoif($key), $composer_0, 14 & $$dirty >> 6 | 896 & $$dirty << 6);
+        var tmp_0;
+        if (isTraceInProgress()) {
+          traceEventEnd();
+          tmp_0 = Unit_getInstance();
+        }
+        tmp = tmp_0;
+      } else {
+        $composer_0.skipToGroupEnd_lhns3f_k$();
+        tmp = Unit_getInstance();
+      }
+      return Unit_getInstance();
+    };
+  }
+  function ComposableLambda$invoke$ref_3($boundThis) {
+    return function (p0, p1) {
+      return $boundThis.invoke_6harzl_k$(p0, p1);
+    };
+  }
+  function SkippableItem$composable$lambda_0($itemProvider, $saveableStateHolder, $index, $key, $$changed) {
+    return function ($composer, $force) {
+      SkippableItem$composable($itemProvider, $saveableStateHolder, $index, $key, $composer, updateChangedFlags($$changed | 1));
+      return Unit_getInstance();
+    };
+  }
+  function LazyLayoutItemProvider() {
+  }
+  function findIndexByKey(_this__u8e3s4, key, lastKnownIndex) {
+    if (key == null ? true : _this__u8e3s4.get_itemCount_rbqtpp_k$() === 0) {
+      return lastKnownIndex;
+    }
+    if (lastKnownIndex < _this__u8e3s4.get_itemCount_rbqtpp_k$() ? equals(key, _this__u8e3s4.getKey_c0u4so_k$(lastKnownIndex)) : false) {
+      return lastKnownIndex;
+    }
+    var newIndex = _this__u8e3s4.getIndex_xxb61u_k$(key);
+    if (!(newIndex === -1)) {
+      return newIndex;
+    }
+    return lastKnownIndex;
+  }
+  function _get_map__e6co1h($this) {
+    return $this.map_1;
+  }
+  function _get_keys__d97k5z($this) {
+    return $this.keys_1;
+  }
+  function _get_keysStartIndex__wx4bh5($this) {
+    return $this.keysStartIndex_1;
+  }
+  function NearestRangeKeyIndexMap$lambda($first, $last, $tmp4_also, this$0) {
+    return function (it) {
+      var keyFactory = it.get_value_j01efc_k$().get_key_18j28a_k$();
+      var tmp$ret$0;
+      // Inline function 'kotlin.comparisons.maxOf' call
+      var tmp0_maxOf = it.get_startIndex_oi1lp5_k$();
+      tmp$ret$0 = Math.max($first, tmp0_maxOf);
+      var start = tmp$ret$0;
+      var tmp$ret$1;
+      // Inline function 'kotlin.comparisons.minOf' call
+      var tmp1_minOf = (it.get_startIndex_oi1lp5_k$() + it.get_size_woubt6_k$() | 0) - 1 | 0;
+      tmp$ret$1 = Math.min($last, tmp1_minOf);
+      var end = tmp$ret$1;
+      var inductionVariable = start;
+      var tmp;
+      if (inductionVariable <= end) {
+        do {
+          var i = inductionVariable;
+          inductionVariable = inductionVariable + 1 | 0;
+          var tmp1_safe_receiver = keyFactory;
+          var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver(i - it.get_startIndex_oi1lp5_k$() | 0);
+          var key = tmp2_elvis_lhs == null ? getDefaultLazyLayoutKey(i) : tmp2_elvis_lhs;
+          // Inline function 'kotlin.collections.set' call
+          $tmp4_also.put_3mhbri_k$(key, i);
+          this$0.keys_1[i - this$0.keysStartIndex_1 | 0] = key;
+        }
+         while (!(i === end));
+        tmp = Unit_getInstance();
+      }
+      return Unit_getInstance();
+    };
+  }
+  function NearestRangeKeyIndexMap(nearestRange, intervalContent) {
+    var list = intervalContent.get_intervals_gu2011_k$();
+    var first = nearestRange.get_first_irdx8n_k$();
+    // Inline function 'kotlin.check' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'kotlin.check' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(first >= 0)) {
+      // Inline function 'kotlin.check.<anonymous>' call
+      var message = 'Check failed.';
+      throw IllegalStateException_init_$Create$(toString(message));
+    }
+    // Inline function 'kotlin.comparisons.minOf' call
+    var tmp1_minOf = nearestRange.get_last_wopotb_k$();
+    var tmp2_minOf = list.get_size_woubt6_k$() - 1 | 0;
+    var last = Math.min(tmp1_minOf, tmp2_minOf);
+    if (last < first) {
+      this.map_1 = emptyMap();
+      var tmp = this;
+      // Inline function 'kotlin.emptyArray' call
+      tmp.keys_1 = [];
+      this.keysStartIndex_1 = 0;
+    } else {
+      var tmp_0 = this;
+      // Inline function 'kotlin.arrayOfNulls' call
+      var tmp3_arrayOfNulls = (last - first | 0) + 1 | 0;
+      tmp_0.keys_1 = fillArrayVal(Array(tmp3_arrayOfNulls), null);
+      this.keysStartIndex_1 = first;
+      var tmp_1 = this;
+      // Inline function 'kotlin.also' call
+      // Inline function 'kotlin.collections.hashMapOf' call
+      var tmp4_also = HashMap_init_$Create$();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.foundation.lazy.layout.NearestRangeKeyIndexMap.<anonymous>' call
+      list.forEach_3zjzeu_k$(first, last, NearestRangeKeyIndexMap$lambda(first, last, tmp4_also, this));
+      tmp_1.map_1 = tmp4_also;
+    }
+  }
+  protoOf(NearestRangeKeyIndexMap).getIndex_xxb61u_k$ = function (key) {
+    // Inline function 'kotlin.collections.getOrElse' call
+    var tmp0_elvis_lhs = this.map_1.get_1mhr4y_k$(key);
+    var tmp;
+    if (tmp0_elvis_lhs == null) {
+      // Inline function 'androidx.compose.foundation.lazy.layout.NearestRangeKeyIndexMap.getIndex.<anonymous>' call
+      tmp = -1;
+    } else {
+      tmp = tmp0_elvis_lhs;
+    }
+    return tmp;
+  };
+  protoOf(NearestRangeKeyIndexMap).getKey_c0u4so_k$ = function (index) {
+    // Inline function 'kotlin.collections.getOrElse' call
+    var tmp0_getOrElse = this.keys_1;
+    var tmp1_getOrElse = index - this.keysStartIndex_1 | 0;
+    var tmp;
+    if (tmp1_getOrElse >= 0 ? tmp1_getOrElse <= get_lastIndex_0(tmp0_getOrElse) : false) {
+      tmp = tmp0_getOrElse[tmp1_getOrElse];
+    } else {
+      // Inline function 'androidx.compose.foundation.lazy.layout.NearestRangeKeyIndexMap.getKey.<anonymous>' call
+      tmp = null;
+    }
+    return tmp;
+  };
+  function Empty() {
+    Empty_instance = this;
+  }
+  protoOf(Empty).getIndex_xxb61u_k$ = function (key) {
+    return -1;
+  };
+  protoOf(Empty).getKey_c0u4so_k$ = function (index) {
+    return null;
+  };
+  var Empty_instance;
+  function Empty_getInstance() {
+    if (Empty_instance == null)
+      new Empty();
+    return Empty_instance;
+  }
+  function LazyLayoutKeyIndexMap() {
+  }
+  function LazyLayoutMeasureScope() {
+  }
+  function _get_itemContentFactory__b86yfb($this) {
+    return $this.itemContentFactory_1;
+  }
+  function _get_subcomposeMeasureScope__xzggeb($this) {
+    return $this.subcomposeMeasureScope_1;
+  }
+  function _get_itemProvider__opdbc7_0($this) {
+    return $this.itemProvider_1;
+  }
+  function _get_placeablesCache__m6b2e7($this) {
+    return $this.placeablesCache_1;
+  }
+  function LazyLayoutMeasureScopeImpl(itemContentFactory, subcomposeMeasureScope) {
+    this.itemContentFactory_1 = itemContentFactory;
+    this.subcomposeMeasureScope_1 = subcomposeMeasureScope;
+    this.itemProvider_1 = this.itemContentFactory_1.get_itemProvider_1e7o2b_k$()();
+    var tmp = this;
+    // Inline function 'kotlin.collections.hashMapOf' call
+    tmp.placeablesCache_1 = HashMap_init_$Create$();
+  }
+  protoOf(LazyLayoutMeasureScopeImpl).get_density_qy0267_k$ = function () {
+    return this.subcomposeMeasureScope_1.get_density_qy0267_k$();
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).get_fontScale_h56n3i_k$ = function () {
+    return this.subcomposeMeasureScope_1.get_fontScale_h56n3i_k$();
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).get_isLookingAhead_2057g1_k$ = function () {
+    return this.subcomposeMeasureScope_1.get_isLookingAhead_2057g1_k$();
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).get_layoutDirection_7e37v0_k$ = function () {
+    return this.subcomposeMeasureScope_1.get_layoutDirection_7e37v0_k$();
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).layout_na8ejh_k$ = function (width, height, alignmentLines, placementBlock) {
+    return this.subcomposeMeasureScope_1.layout_na8ejh_k$(width, height, alignmentLines, placementBlock);
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).roundToPx_hl1u8z_k$ = function (_this__u8e3s4) {
+    return this.subcomposeMeasureScope_1.roundToPx_hl1u8z_k$(_this__u8e3s4);
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).roundToPx_bdej4u_k$ = function (_this__u8e3s4) {
+    return this.subcomposeMeasureScope_1.roundToPx_bdej4u_k$(_this__u8e3s4);
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).toPx_u0ojv5_k$ = function (_this__u8e3s4) {
+    return this.subcomposeMeasureScope_1.toPx_u0ojv5_k$(_this__u8e3s4);
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).toPx_x7oik4_k$ = function (_this__u8e3s4) {
+    return this.subcomposeMeasureScope_1.toPx_x7oik4_k$(_this__u8e3s4);
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).toRect_l767f3_k$ = function (_this__u8e3s4) {
+    return this.subcomposeMeasureScope_1.toRect_l767f3_k$(_this__u8e3s4);
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).measure_2x0n5r_k$ = function (index, constraints) {
+    var cachedPlaceable = this.placeablesCache_1.get_1mhr4y_k$(index);
+    var tmp;
+    if (!(cachedPlaceable == null)) {
+      tmp = cachedPlaceable;
+    } else {
+      var key = this.itemProvider_1.getKey_c0u4so_k$(index);
+      var contentType = this.itemProvider_1.getContentType_uak9tw_k$(index);
+      var itemContent = this.itemContentFactory_1.getContent_jgck9r_k$(index, key, contentType);
+      var measurables = this.subcomposeMeasureScope_1.subcompose$composable_w3wgfm_k$(key, itemContent);
+      // Inline function 'kotlin.also' call
+      // Inline function 'kotlin.collections.List' call
+      var tmp0_List = measurables.get_size_woubt6_k$();
+      // Inline function 'kotlin.collections.MutableList' call
+      var list = ArrayList_init_$Create$(tmp0_List);
+      // Inline function 'kotlin.repeat' call
+      // Inline function 'kotlin.contracts.contract' call
+      var inductionVariable = 0;
+      if (inductionVariable < tmp0_List)
+        do {
+          var index_0 = inductionVariable;
+          inductionVariable = inductionVariable + 1 | 0;
+          // Inline function 'kotlin.collections.MutableList.<anonymous>' call
+          var tmp$ret$0;
+          // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutMeasureScopeImpl.measure.<anonymous>' call
+          tmp$ret$0 = measurables.get_fkrdnv_k$(index_0).measure_ikak0q_k$(constraints);
+          list.add_1j60pz_k$(tmp$ret$0);
+        }
+         while (inductionVariable < tmp0_List);
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutMeasureScopeImpl.measure.<anonymous>' call
+      // Inline function 'kotlin.collections.set' call
+      this.placeablesCache_1.put_3mhbri_k$(index, list);
+      tmp = list;
+    }
+    return tmp;
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).toDp_amhzyl_k$ = function (_this__u8e3s4) {
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutMeasureScopeImpl.toDp.<anonymous>' call
+    return this.subcomposeMeasureScope_1.toDp_amhzyl_k$(_this__u8e3s4);
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).toDp_2eugbd_k$ = function (_this__u8e3s4) {
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutMeasureScopeImpl.toDp.<anonymous>' call
+    return this.subcomposeMeasureScope_1.toDp_2eugbd_k$(_this__u8e3s4);
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).toDp_2y47ho_k$ = function (_this__u8e3s4) {
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutMeasureScopeImpl.toDp.<anonymous>' call
+    return this.subcomposeMeasureScope_1.toDp_2y47ho_k$(_this__u8e3s4);
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).toSp_j4kre0_k$ = function (_this__u8e3s4) {
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutMeasureScopeImpl.toSp.<anonymous>' call
+    return this.subcomposeMeasureScope_1.toSp_j4kre0_k$(_this__u8e3s4);
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).toSp_8a8emd_k$ = function (_this__u8e3s4) {
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutMeasureScopeImpl.toSp.<anonymous>' call
+    return this.subcomposeMeasureScope_1.toSp_8a8emd_k$(_this__u8e3s4);
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).toSp_ul0xj8_k$ = function (_this__u8e3s4) {
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutMeasureScopeImpl.toSp.<anonymous>' call
+    return this.subcomposeMeasureScope_1.toSp_ul0xj8_k$(_this__u8e3s4);
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).toSize_z60fpn_k$ = function (_this__u8e3s4) {
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutMeasureScopeImpl.toSize.<anonymous>' call
+    return this.subcomposeMeasureScope_1.toSize_z60fpn_k$(_this__u8e3s4);
+  };
+  protoOf(LazyLayoutMeasureScopeImpl).toDpSize_ncjzav_k$ = function (_this__u8e3s4) {
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutMeasureScopeImpl.toDpSize.<anonymous>' call
+    return this.subcomposeMeasureScope_1.toDpSize_ncjzav_k$(_this__u8e3s4);
+  };
+  function calculateNearestItemsRange($this, firstVisibleItem, slidingWindowSize, extraItemCount) {
+    var slidingWindowStart = imul(slidingWindowSize, firstVisibleItem / slidingWindowSize | 0);
+    // Inline function 'kotlin.comparisons.maxOf' call
+    var tmp0_maxOf = slidingWindowStart - extraItemCount | 0;
+    var start = Math.max(tmp0_maxOf, 0);
+    var end = (slidingWindowStart + slidingWindowSize | 0) + extraItemCount | 0;
+    return until(start, end);
+  }
+  function _get_slidingWindowSize__sgv1ke($this) {
+    return $this.slidingWindowSize_1;
+  }
+  function _get_extraItemCount__a1q4u9($this) {
+    return $this.extraItemCount_1;
+  }
+  function _set_value__lx0xdg($this, _set____db54di) {
+    value$factory_0();
+    return $this.value$delegate_1.set_value_rnwamw_k$(_set____db54di);
+  }
+  function _set_lastFirstVisibleItem__av4nxo($this, _set____db54di) {
+    $this.lastFirstVisibleItem_1 = _set____db54di;
+  }
+  function _get_lastFirstVisibleItem__32y02o($this) {
+    return $this.lastFirstVisibleItem_1;
+  }
+  function Companion_5() {
+    Companion_instance_5 = this;
+  }
+  var Companion_instance_5;
+  function Companion_getInstance_55() {
+    if (Companion_instance_5 == null)
+      new Companion_5();
+    return Companion_instance_5;
+  }
+  function LazyLayoutNearestRangeState(firstVisibleItem, slidingWindowSize, extraItemCount) {
+    Companion_getInstance_55();
+    this.slidingWindowSize_1 = slidingWindowSize;
+    this.extraItemCount_1 = extraItemCount;
+    this.value$delegate_1 = mutableStateOf(calculateNearestItemsRange(Companion_getInstance_55(), firstVisibleItem, this.slidingWindowSize_1, this.extraItemCount_1), structuralEqualityPolicy());
+    this.lastFirstVisibleItem_1 = firstVisibleItem;
+  }
+  protoOf(LazyLayoutNearestRangeState).get_value_j01efc_k$ = function () {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    value$factory_1();
+    return this.value$delegate_1.get_value_j01efc_k$();
+  };
+  protoOf(LazyLayoutNearestRangeState).update_v1ypx5_k$ = function (firstVisibleItem) {
+    if (!(firstVisibleItem === this.lastFirstVisibleItem_1)) {
+      this.lastFirstVisibleItem_1 = firstVisibleItem;
+      _set_value__lx0xdg(this, calculateNearestItemsRange(Companion_getInstance_55(), firstVisibleItem, this.slidingWindowSize_1, this.extraItemCount_1));
+    }
+  };
+  function value$factory_0() {
+    return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_value_j01efc_k$();
+    }, function (receiver, value) {
+      return _set_value__lx0xdg(receiver, value);
+    });
+  }
+  function value$factory_1() {
+    return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_value_j01efc_k$();
+    }, function (receiver, value) {
+      return _set_value__lx0xdg(receiver, value);
+    });
+  }
+  function _get_items__fzd5gv($this) {
+    return $this.items_1;
+  }
+  function LazyLayoutPinnedItemList_init_$Init$($this) {
+    LazyLayoutPinnedItemList.call($this, new SnapshotStateList());
+    return $this;
+  }
+  function LazyLayoutPinnedItemList_init_$Create$() {
+    return LazyLayoutPinnedItemList_init_$Init$(objectCreate(protoOf(LazyLayoutPinnedItemList)));
+  }
+  function PinnedItem() {
+  }
+  function get_$stableprop_22() {
+    return 8;
+  }
+  function LazyLayoutPinnedItemList(items) {
+    this.items_1 = items;
+    this.$stable_1 = 8;
+  }
+  protoOf(LazyLayoutPinnedItemList).get_size_woubt6_k$ = function () {
+    return this.items_1.get_size_woubt6_k$();
+  };
+  protoOf(LazyLayoutPinnedItemList).contains_y4p6up_k$ = function (element) {
+    return this.items_1.contains_2ehdt1_k$(element);
+  };
+  protoOf(LazyLayoutPinnedItemList).contains_2ehdt1_k$ = function (element) {
+    if (!(!(element == null) ? isInterface(element, PinnedItem) : false))
+      return false;
+    return this.contains_y4p6up_k$((!(element == null) ? isInterface(element, PinnedItem) : false) ? element : THROW_CCE());
+  };
+  protoOf(LazyLayoutPinnedItemList).containsAll_9qebly_k$ = function (elements) {
+    return this.items_1.containsAll_jr3fla_k$(elements);
+  };
+  protoOf(LazyLayoutPinnedItemList).containsAll_jr3fla_k$ = function (elements) {
+    return this.containsAll_9qebly_k$(elements);
+  };
+  protoOf(LazyLayoutPinnedItemList).get_fkrdnv_k$ = function (index) {
+    return this.items_1.get_fkrdnv_k$(index);
+  };
+  protoOf(LazyLayoutPinnedItemList).indexOf_u4c0bp_k$ = function (element) {
+    return this.items_1.indexOf_dcv8dt_k$(element);
+  };
+  protoOf(LazyLayoutPinnedItemList).indexOf_dcv8dt_k$ = function (element) {
+    if (!(!(element == null) ? isInterface(element, PinnedItem) : false))
+      return -1;
+    return this.indexOf_u4c0bp_k$((!(element == null) ? isInterface(element, PinnedItem) : false) ? element : THROW_CCE());
+  };
+  protoOf(LazyLayoutPinnedItemList).isEmpty_y1axqb_k$ = function () {
+    return this.items_1.isEmpty_y1axqb_k$();
+  };
+  protoOf(LazyLayoutPinnedItemList).iterator_jk1svi_k$ = function () {
+    return this.items_1.iterator_jk1svi_k$();
+  };
+  protoOf(LazyLayoutPinnedItemList).lastIndexOf_jebvtn_k$ = function (element) {
+    return this.items_1.lastIndexOf_rzx8t5_k$(element);
+  };
+  protoOf(LazyLayoutPinnedItemList).lastIndexOf_rzx8t5_k$ = function (element) {
+    if (!(!(element == null) ? isInterface(element, PinnedItem) : false))
+      return -1;
+    return this.lastIndexOf_jebvtn_k$((!(element == null) ? isInterface(element, PinnedItem) : false) ? element : THROW_CCE());
+  };
+  protoOf(LazyLayoutPinnedItemList).listIterator_xjshxw_k$ = function () {
+    return this.items_1.listIterator_xjshxw_k$();
+  };
+  protoOf(LazyLayoutPinnedItemList).listIterator_5hanv9_k$ = function (index) {
+    return this.items_1.listIterator_5hanv9_k$(index);
+  };
+  protoOf(LazyLayoutPinnedItemList).subList_d153ha_k$ = function (fromIndex, toIndex) {
+    return this.items_1.subList_d153ha_k$(fromIndex, toIndex);
+  };
+  protoOf(LazyLayoutPinnedItemList).pin_owa454_k$ = function (item) {
+    this.items_1.add_1j60pz_k$(item);
+  };
+  protoOf(LazyLayoutPinnedItemList).release_a1n36e_k$ = function (item) {
+    this.items_1.remove_8hbkc6_k$(item);
+  };
+  function LazyLayoutPinnableItem$composable(key, index, pinnedItemList, content, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-2141118175);
+    sourceInformation($composer_0, 'C(LazyLayoutPinnableItem$composable)P(2,1,3)49@1914L77,51@2089L7,52@2132L43,52@2101L74,53@2180L103:LazyLayoutPinnableItem.kt#wow0x6');
+    var $dirty = $changed;
+    if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(key) ? 4 : 2);
+    if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changed_s0r703_k$(index) ? 32 : 16);
+    if (($changed & 896) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(pinnedItemList) ? 256 : 128);
+    if (($changed & 7168) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content) ? 2048 : 1024);
+    if (!(($dirty & 5851) === 1170) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(-2141118175, $dirty, -1, 'androidx.compose.foundation.lazy.layout.LazyLayoutPinnableItem$composable (LazyLayoutPinnableItem.kt:43)');
+      }
+      // Inline function 'androidx.compose.runtime.remember$composable' call
+      var $composer_1 = $composer_0;
+      $composer_1.startReplaceableGroup_rp6air_k$(-1124426577);
+      sourceInformation($composer_1, 'CC(remember$composable)P(1,2):Composables.kt#9igjgp');
+      // Inline function 'androidx.compose.runtime.cache' call
+      var tmp1_cache = !!($composer_1.changed_ga7h3f_k$(key) | $composer_1.changed_ga7h3f_k$(pinnedItemList));
+      // Inline function 'kotlin.let' call
+      var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var tmp;
+      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+        // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutPinnableItem$composable.<anonymous>' call
+        var value = new LazyLayoutPinnableItem(key, pinnedItemList);
+        $composer_1.updateRememberedValue_l1colo_k$(value);
+        tmp = value;
+      } else {
+        tmp = tmp0_let;
+      }
+      var tmp_0 = tmp;
+      var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
+      $composer_1.endReplaceableGroup_er37p7_k$();
+      var pinnableItem = tmp0;
+      pinnableItem.set_index_eknhut_k$(index);
+      // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
+      var tmp2_$get_current$$composable_g4n2vl = get_LocalPinnableContainer();
+      var $composer_2 = $composer_0;
+      sourceInformationMarkerStart($composer_2, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
+      var tmp0_0 = $composer_2.consume_11nid3_k$(tmp2_$get_current$$composable_g4n2vl);
+      sourceInformationMarkerEnd($composer_2);
+      pinnableItem.set_parentPinnableContainer_uq2xjn_k$(tmp0_0);
+      // Inline function 'androidx.compose.runtime.remember$composable' call
+      var $composer_3 = $composer_0;
+      $composer_3.startReplaceableGroup_rp6air_k$(-838505973);
+      sourceInformation($composer_3, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+      // Inline function 'androidx.compose.runtime.cache' call
+      var tmp1_cache_0 = $composer_3.changed_ga7h3f_k$(pinnableItem);
+      // Inline function 'kotlin.let' call
+      var tmp0_let_0 = $composer_3.rememberedValue_4dg93v_k$();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var tmp_1;
+      if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+        // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutPinnableItem$composable.<anonymous>' call
+        var value_0 = LazyLayoutPinnableItem$composable$lambda(pinnableItem);
+        $composer_3.updateRememberedValue_l1colo_k$(value_0);
+        tmp_1 = value_0;
+      } else {
+        tmp_1 = tmp0_let_0;
+      }
+      var tmp_2 = tmp_1;
+      var tmp0_1 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
+      $composer_3.endReplaceableGroup_er37p7_k$();
+      DisposableEffect$composable(pinnableItem, tmp0_1, $composer_0, 0);
+      CompositionLocalProvider$composable([get_LocalPinnableContainer().provides_3e53yf_k$(pinnableItem)], content, $composer_0, 112 & $dirty >> 6);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lhns3f_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver === null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_xhrf9y_k$(LazyLayoutPinnableItem$composable$lambda_0(key, index, pinnedItemList, content, $changed));
+    }
+  }
+  function _get_pinnedItemList__nluqla($this) {
+    return $this.pinnedItemList_1;
+  }
+  function _set_pinsCount__b8qi4s($this, _set____db54di) {
+    pinsCount$factory();
+    return $this.pinsCount$delegate_1.set_intValue_q75ky9_k$(_set____db54di);
+  }
+  function _get_pinsCount__i23y9s($this) {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    pinsCount$factory_0();
+    return $this.pinsCount$delegate_1.get_intValue_mlvnn9_k$();
+  }
+  function _set_parentHandle__bde57($this, _set____db54di) {
+    parentHandle$factory();
+    return $this.parentHandle$delegate_1.set_value_rnwamw_k$(_set____db54di);
+  }
+  function _get_parentHandle__f8dcex($this) {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    parentHandle$factory_0();
+    return $this.parentHandle$delegate_1.get_value_j01efc_k$();
+  }
+  function _set__parentPinnableContainer__wpbnbm($this, _set____db54di) {
+    _parentPinnableContainer$factory();
+    return $this._parentPinnableContainer$delegate_1.set_value_rnwamw_k$(_set____db54di);
+  }
+  function _get__parentPinnableContainer__xtf70a($this) {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    _parentPinnableContainer$factory_0();
+    return $this._parentPinnableContainer$delegate_1.get_value_j01efc_k$();
+  }
+  function LazyLayoutPinnableItem(key, pinnedItemList) {
+    this.key_1 = key;
+    this.pinnedItemList_1 = pinnedItemList;
+    this.index$delegate_1 = mutableIntStateOf(-1);
+    this.pinsCount$delegate_1 = mutableIntStateOf(0);
+    this.parentHandle$delegate_1 = mutableStateOf(null);
+    this._parentPinnableContainer$delegate_1 = mutableStateOf(null);
+  }
+  protoOf(LazyLayoutPinnableItem).get_key_18j28a_k$ = function () {
+    return this.key_1;
+  };
+  protoOf(LazyLayoutPinnableItem).set_index_eknhut_k$ = function (_set____db54di) {
+    index$factory_1();
+    return this.index$delegate_1.set_intValue_q75ky9_k$(_set____db54di);
+  };
+  protoOf(LazyLayoutPinnableItem).get_index_it478p_k$ = function () {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    index$factory_2();
+    return this.index$delegate_1.get_intValue_mlvnn9_k$();
+  };
+  protoOf(LazyLayoutPinnableItem).set_parentPinnableContainer_uq2xjn_k$ = function (value) {
+    $l$block_0: {
+      // Inline function 'androidx.compose.runtime.snapshots.Companion.withoutReadObservation' call
+      // Inline function 'kotlin.contracts.contract' call
+      var snapshot = Companion_getInstance_22().createNonObservableSnapshot_p8njg8_k$();
+      try {
+        $l$block: {
+          // Inline function 'androidx.compose.runtime.snapshots.Snapshot.enter' call
+          var previous = snapshot.makeCurrent_v2db9x_k$();
+          try {
+            var previous_0 = _get__parentPinnableContainer__xtf70a(this);
+            var tmp;
+            if (!(value === previous_0)) {
+              _set__parentPinnableContainer__wpbnbm(this, value);
+              var tmp_0;
+              if (_get_pinsCount__i23y9s(this) > 0) {
+                var tmp0_safe_receiver = _get_parentHandle__f8dcex(this);
+                if (tmp0_safe_receiver == null)
+                  null;
+                else {
+                  tmp0_safe_receiver.release_wtm6d2_k$();
+                }
+                _set_parentHandle__bde57(this, value == null ? null : value.pin_2dn9_k$());
+                tmp_0 = Unit_getInstance();
+              }
+              tmp = tmp_0;
+            }
+            break $l$block;
+          }finally {
+            snapshot.restoreCurrent_lqo3p4_k$(previous);
+          }
+        }
+        break $l$block_0;
+      }finally {
+        snapshot.dispose_3n44we_k$();
+      }
+    }
+  };
+  protoOf(LazyLayoutPinnableItem).get_parentPinnableContainer_op7jzv_k$ = function () {
+    return _get__parentPinnableContainer__xtf70a(this);
+  };
+  protoOf(LazyLayoutPinnableItem).pin_2dn9_k$ = function () {
+    if (_get_pinsCount__i23y9s(this) === 0) {
+      this.pinnedItemList_1.pin_owa454_k$(this);
+      var tmp0_safe_receiver = this.get_parentPinnableContainer_op7jzv_k$();
+      _set_parentHandle__bde57(this, tmp0_safe_receiver == null ? null : tmp0_safe_receiver.pin_2dn9_k$());
+    }
+    var tmp2 = _get_pinsCount__i23y9s(this);
+    _set_pinsCount__b8qi4s(this, tmp2 + 1 | 0);
+    return this;
+  };
+  protoOf(LazyLayoutPinnableItem).release_wtm6d2_k$ = function () {
+    // Inline function 'kotlin.check' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(_get_pinsCount__i23y9s(this) > 0)) {
+      // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutPinnableItem.release.<anonymous>' call
+      var message = 'Release should only be called once';
+      throw IllegalStateException_init_$Create$(toString(message));
+    }
+    var tmp1 = _get_pinsCount__i23y9s(this);
+    _set_pinsCount__b8qi4s(this, tmp1 - 1 | 0);
+    if (_get_pinsCount__i23y9s(this) === 0) {
+      this.pinnedItemList_1.release_a1n36e_k$(this);
+      var tmp2_safe_receiver = _get_parentHandle__f8dcex(this);
+      if (tmp2_safe_receiver == null)
+        null;
+      else {
+        tmp2_safe_receiver.release_wtm6d2_k$();
+      }
+      _set_parentHandle__bde57(this, null);
+    }
+  };
+  protoOf(LazyLayoutPinnableItem).onDisposed_ru05hv_k$ = function () {
+    // Inline function 'kotlin.repeat' call
+    var tmp0_repeat = _get_pinsCount__i23y9s(this);
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    if (inductionVariable < tmp0_repeat)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutPinnableItem.onDisposed.<anonymous>' call
+        this.release_wtm6d2_k$();
+      }
+       while (inductionVariable < tmp0_repeat);
+  };
+  function _no_name_provided__qut3iv_1($pinnableItem) {
+    this.$pinnableItem_1 = $pinnableItem;
+  }
+  protoOf(_no_name_provided__qut3iv_1).dispose_3n44we_k$ = function () {
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazyLayoutPinnableItem$composable.<anonymous>.<anonymous>.<anonymous>' call
+    this.$pinnableItem_1.onDisposed_ru05hv_k$();
+  };
+  function LazyLayoutPinnableItem$composable$lambda($pinnableItem) {
+    return function ($this$DisposableEffect) {
+      var tmp$ret$0;
+      // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
+      tmp$ret$0 = new _no_name_provided__qut3iv_1($pinnableItem);
+      return tmp$ret$0;
+    };
+  }
+  function LazyLayoutPinnableItem$composable$lambda_0($key, $index, $pinnedItemList, $content, $$changed) {
+    return function ($composer, $force) {
+      LazyLayoutPinnableItem$composable($key, $index, $pinnedItemList, $content, $composer, updateChangedFlags($$changed | 1));
+      return Unit_getInstance();
+    };
+  }
+  function index$factory_1() {
+    return getPropertyCallableRef('index', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_index_it478p_k$();
+    }, function (receiver, value) {
+      return receiver.set_index_eknhut_k$(value);
+    });
+  }
+  function index$factory_2() {
+    return getPropertyCallableRef('index', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_index_it478p_k$();
+    }, function (receiver, value) {
+      return receiver.set_index_eknhut_k$(value);
+    });
+  }
+  function pinsCount$factory() {
+    return getPropertyCallableRef('pinsCount', 1, KMutableProperty1, function (receiver) {
+      return _get_pinsCount__i23y9s(receiver);
+    }, function (receiver, value) {
+      return _set_pinsCount__b8qi4s(receiver, value);
+    });
+  }
+  function pinsCount$factory_0() {
+    return getPropertyCallableRef('pinsCount', 1, KMutableProperty1, function (receiver) {
+      return _get_pinsCount__i23y9s(receiver);
+    }, function (receiver, value) {
+      return _set_pinsCount__b8qi4s(receiver, value);
+    });
+  }
+  function parentHandle$factory() {
+    return getPropertyCallableRef('parentHandle', 1, KMutableProperty1, function (receiver) {
+      return _get_parentHandle__f8dcex(receiver);
+    }, function (receiver, value) {
+      return _set_parentHandle__bde57(receiver, value);
+    });
+  }
+  function parentHandle$factory_0() {
+    return getPropertyCallableRef('parentHandle', 1, KMutableProperty1, function (receiver) {
+      return _get_parentHandle__f8dcex(receiver);
+    }, function (receiver, value) {
+      return _set_parentHandle__bde57(receiver, value);
+    });
+  }
+  function _parentPinnableContainer$factory() {
+    return getPropertyCallableRef('_parentPinnableContainer', 1, KMutableProperty1, function (receiver) {
+      return _get__parentPinnableContainer__xtf70a(receiver);
+    }, function (receiver, value) {
+      return _set__parentPinnableContainer__wpbnbm(receiver, value);
+    });
+  }
+  function _parentPinnableContainer$factory_0() {
+    return getPropertyCallableRef('_parentPinnableContainer', 1, KMutableProperty1, function (receiver) {
+      return _get__parentPinnableContainer__xtf70a(receiver);
+    }, function (receiver, value) {
+      return _set__parentPinnableContainer__wpbnbm(receiver, value);
+    });
+  }
+  function PrefetchHandle() {
+  }
+  function Prefetcher() {
+  }
+  function get_$stableprop_23() {
+    return 0;
+  }
+  function LazyLayoutPrefetchState() {
+    this.prefetcher_1 = null;
+    this.$stable_1 = 0;
+  }
+  protoOf(LazyLayoutPrefetchState).set_prefetcher_656ipk_k$ = function (_set____db54di) {
+    this.prefetcher_1 = _set____db54di;
+  };
+  protoOf(LazyLayoutPrefetchState).get_prefetcher_qqrwx9_k$ = function () {
+    return this.prefetcher_1;
+  };
+  protoOf(LazyLayoutPrefetchState).schedulePrefetch_1a1lnz_k$ = function (index, constraints) {
+    var tmp0_safe_receiver = this.prefetcher_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.schedulePrefetch_1a1lnz_k$(index, constraints);
+    return tmp1_elvis_lhs == null ? DummyHandle_getInstance() : tmp1_elvis_lhs;
+  };
+  function DummyHandle() {
+    DummyHandle_instance = this;
+  }
+  protoOf(DummyHandle).cancel_2kogtl_k$ = function () {
+  };
+  var DummyHandle_instance;
+  function DummyHandle_getInstance() {
+    if (DummyHandle_instance == null)
+      new DummyHandle();
+    return DummyHandle_instance;
+  }
+  function lazyLayoutSemantics$composable(_this__u8e3s4, itemProviderLambda, state, orientation, userScrollEnabled, reverseScrolling, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_rp6air_k$(-1288765490);
+    sourceInformation($composer_0, 'C(lazyLayoutSemantics$composable)P(!1,3!1,4)47@1936L24,49@1991L3667:LazyLayoutSemantics.kt#wow0x6');
+    if (isTraceInProgress()) {
+      traceEventStart(-1288765490, $changed, -1, 'androidx.compose.foundation.lazy.layout.lazyLayoutSemantics$composable (LazyLayoutSemantics.kt:40)');
+    }
+    // Inline function 'androidx.compose.runtime.rememberCoroutineScope$composable' call
+    var getContext = {_v: null};
+    var $composer_1 = $composer_0;
+    $composer_1.startReplaceableGroup_rp6air_k$(102870005);
+    sourceInformation($composer_1, 'CC(rememberCoroutineScope$composable)481@20228L144:Effects.kt#9igjgp');
+    if (!(1 === 0)) {
+      getContext._v = lazyLayoutSemantics$composable$lambda;
+    }
+    var composer = $composer_1;
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_2 = $composer_1;
+    $composer_2.startReplaceableGroup_rp6air_k$(547886695);
+    sourceInformation($composer_2, 'CC(remember$composable):Composables.kt#9igjgp');
+    // Inline function 'androidx.compose.runtime.cache' call
+    // Inline function 'kotlin.let' call
+    var tmp0_let = $composer_2.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp;
+    if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.runtime.rememberCoroutineScope$composable.<anonymous>' call
+      var value = new CompositionScopedCoroutineScopeCanceller(createCompositionCoroutineScope(getContext._v(), composer));
+      $composer_2.updateRememberedValue_l1colo_k$(value);
+      tmp = value;
+    } else {
+      tmp = tmp0_let;
+    }
+    var tmp_0 = tmp;
+    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
+    $composer_2.endReplaceableGroup_er37p7_k$();
+    var wrapper = tmp0;
+    var tmp0_0 = wrapper.get_coroutineScope_5k7h45_k$();
+    $composer_1.endReplaceableGroup_er37p7_k$();
+    var coroutineScope = tmp0_0;
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_3 = $composer_0;
+    $composer_3.startReplaceableGroup_rp6air_k$(-1603429786);
+    sourceInformation($composer_3, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+    var invalid = false;
+    var indexedObject = [itemProviderLambda, state, orientation, userScrollEnabled];
+    var inductionVariable = 0;
+    var last = indexedObject.length;
+    while (inductionVariable < last) {
+      var key = indexedObject[inductionVariable];
+      inductionVariable = inductionVariable + 1 | 0;
+      invalid = !!(invalid | $composer_3.changed_ga7h3f_k$(key));
+    }
+    // Inline function 'androidx.compose.runtime.cache' call
+    var tmp1_cache = invalid;
+    // Inline function 'kotlin.let' call
+    var tmp0_let_0 = $composer_3.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp_1;
+    if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.foundation.lazy.layout.lazyLayoutSemantics$composable.<anonymous>' call
+      var isVertical = orientation.equals(Orientation_Vertical_getInstance());
+      var indexForKeyMapping = lazyLayoutSemantics$composable$lambda_0(itemProviderLambda);
+      var tmp_2 = lazyLayoutSemantics$composable$lambda_1(state);
+      var accessibilityScrollState = new ScrollAxisRange(tmp_2, lazyLayoutSemantics$composable$lambda_2(itemProviderLambda, state), reverseScrolling);
+      var tmp_3;
+      if (userScrollEnabled) {
+        tmp_3 = lazyLayoutSemantics$composable$lambda_3(isVertical, coroutineScope, state);
+      } else {
+        tmp_3 = null;
+      }
+      var scrollByAction = tmp_3;
+      var tmp_4;
+      if (userScrollEnabled) {
+        tmp_4 = lazyLayoutSemantics$composable$lambda_4(itemProviderLambda, coroutineScope, state);
+      } else {
+        tmp_4 = null;
+      }
+      var scrollToIndexAction = tmp_4;
+      var collectionInfo = state.collectionInfo_54y5ik_k$();
+      var tmp_5 = Companion_getInstance_8();
+      var value_0 = semantics(tmp_5, VOID, lazyLayoutSemantics$composable$lambda_5(indexForKeyMapping, isVertical, accessibilityScrollState, scrollByAction, scrollToIndexAction, collectionInfo));
+      $composer_3.updateRememberedValue_l1colo_k$(value_0);
+      tmp_1 = value_0;
+    } else {
+      tmp_1 = tmp0_let_0;
+    }
+    var tmp_6 = tmp_1;
+    var tmp0_1 = (tmp_6 == null ? true : isObject(tmp_6)) ? tmp_6 : THROW_CCE();
+    $composer_3.endReplaceableGroup_er37p7_k$();
+    var tmp0_2 = _this__u8e3s4.then_5qw5wu_k$(tmp0_1);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    return tmp0_2;
+  }
+  function LazyLayoutSemanticState_0() {
+  }
+  function lazyLayoutSemantics$composable$lambda() {
+    return EmptyCoroutineContext_getInstance();
+  }
+  function lazyLayoutSemantics$composable$lambda_0($itemProviderLambda) {
+    return function (needle) {
+      var itemProvider = $itemProviderLambda();
+      var result = -1;
+      var inductionVariable = 0;
+      var last = itemProvider.get_itemCount_rbqtpp_k$();
+      var tmp;
+      if (inductionVariable < last) {
+        $l$loop: do {
+          var index = inductionVariable;
+          inductionVariable = inductionVariable + 1 | 0;
+          if (equals(itemProvider.getKey_c0u4so_k$(index), needle)) {
+            result = index;
+            break $l$loop;
+          }
+        }
+         while (inductionVariable < last);
+        tmp = Unit_getInstance();
+      }
+      return result;
+    };
+  }
+  function lazyLayoutSemantics$composable$lambda_1($state) {
+    return function () {
+      return $state.get_currentPosition_ic997d_k$();
+    };
+  }
+  function lazyLayoutSemantics$composable$lambda_2($itemProviderLambda, $state) {
+    return function () {
+      var itemProvider = $itemProviderLambda();
+      var tmp;
+      if ($state.get_canScrollForward_dmb0fj_k$()) {
+        tmp = itemProvider.get_itemCount_rbqtpp_k$() + 1.0;
+      } else {
+        tmp = $state.get_currentPosition_ic997d_k$();
+      }
+      return tmp;
+    };
+  }
+  function lazyLayoutSemantics$composable$lambda$slambda($state, $delta, resultContinuation) {
+    this.$state_1 = $state;
+    this.$delta_1 = $delta;
+    CoroutineImpl.call(this, resultContinuation);
+  }
+  protoOf(lazyLayoutSemantics$composable$lambda$slambda).invoke_d6gbsu_k$ = function ($this$launch, $completion) {
+    var tmp = this.create_b6qu53_k$($this$launch, $completion);
+    tmp.set_result_ximc09_k$(Unit_getInstance());
+    tmp.set_exception_pwgeox_k$(null);
+    return tmp.doResume_5yljmg_k$();
+  };
+  protoOf(lazyLayoutSemantics$composable$lambda$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
+    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  };
+  protoOf(lazyLayoutSemantics$composable$lambda$slambda).doResume_5yljmg_k$ = function () {
+    var suspendResult = this.get_result_iyg5d2_k$();
+    $sm: do
+      try {
+        var tmp = this.get_state_iypx7s_k$();
+        switch (tmp) {
+          case 0:
+            this.set_exceptionState_s9sevl_k$(2);
+            this.set_state_a96kl8_k$(1);
+            suspendResult = this.$state_1.animateScrollBy_pr2z7u_k$(this.$delta_1, this);
+            if (suspendResult === get_COROUTINE_SUSPENDED()) {
+              return suspendResult;
+            }
+
+            continue $sm;
+          case 1:
+            return Unit_getInstance();
+          case 2:
+            throw this.get_exception_x0n6w6_k$();
+        }
+      } catch ($p) {
+        var e = $p;
+        if (this.get_exceptionState_wflpxn_k$() === 2) {
+          throw e;
+        } else {
+          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_pwgeox_k$(e);
+        }
+      }
+     while (true);
+  };
+  protoOf(lazyLayoutSemantics$composable$lambda$slambda).create_b6qu53_k$ = function ($this$launch, completion) {
+    var i = new lazyLayoutSemantics$composable$lambda$slambda(this.$state_1, this.$delta_1, completion);
+    i.$this$launch_1 = $this$launch;
+    return i;
+  };
+  protoOf(lazyLayoutSemantics$composable$lambda$slambda).create_xubfvz_k$ = function (value, completion) {
+    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  };
+  function lazyLayoutSemantics$composable$lambda$slambda_0($state, $delta, resultContinuation) {
+    var i = new lazyLayoutSemantics$composable$lambda$slambda($state, $delta, resultContinuation);
+    var l = function ($this$launch, $completion) {
+      return i.invoke_d6gbsu_k$($this$launch, $completion);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function lazyLayoutSemantics$composable$lambda_3($isVertical, $coroutineScope, $state) {
+    return function (x, y) {
+      var tmp;
+      if ($isVertical) {
+        tmp = y;
+      } else {
+        tmp = x;
+      }
+      var delta = tmp;
+      launch($coroutineScope, VOID, VOID, lazyLayoutSemantics$composable$lambda$slambda_0($state, delta, null));
+      return true;
+    };
+  }
+  function lazyLayoutSemantics$composable$lambda$slambda_1($state, $index, resultContinuation) {
+    this.$state_1 = $state;
+    this.$index_1 = $index;
+    CoroutineImpl.call(this, resultContinuation);
+  }
+  protoOf(lazyLayoutSemantics$composable$lambda$slambda_1).invoke_d6gbsu_k$ = function ($this$launch, $completion) {
+    var tmp = this.create_b6qu53_k$($this$launch, $completion);
+    tmp.set_result_ximc09_k$(Unit_getInstance());
+    tmp.set_exception_pwgeox_k$(null);
+    return tmp.doResume_5yljmg_k$();
+  };
+  protoOf(lazyLayoutSemantics$composable$lambda$slambda_1).invoke_5zdxxo_k$ = function (p1, $completion) {
+    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  };
+  protoOf(lazyLayoutSemantics$composable$lambda$slambda_1).doResume_5yljmg_k$ = function () {
+    var suspendResult = this.get_result_iyg5d2_k$();
+    $sm: do
+      try {
+        var tmp = this.get_state_iypx7s_k$();
+        switch (tmp) {
+          case 0:
+            this.set_exceptionState_s9sevl_k$(2);
+            this.set_state_a96kl8_k$(1);
+            suspendResult = this.$state_1.scrollToItem_7215sd_k$(this.$index_1, this);
+            if (suspendResult === get_COROUTINE_SUSPENDED()) {
+              return suspendResult;
+            }
+
+            continue $sm;
+          case 1:
+            return Unit_getInstance();
+          case 2:
+            throw this.get_exception_x0n6w6_k$();
+        }
+      } catch ($p) {
+        var e = $p;
+        if (this.get_exceptionState_wflpxn_k$() === 2) {
+          throw e;
+        } else {
+          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_pwgeox_k$(e);
+        }
+      }
+     while (true);
+  };
+  protoOf(lazyLayoutSemantics$composable$lambda$slambda_1).create_b6qu53_k$ = function ($this$launch, completion) {
+    var i = new lazyLayoutSemantics$composable$lambda$slambda_1(this.$state_1, this.$index_1, completion);
+    i.$this$launch_1 = $this$launch;
+    return i;
+  };
+  protoOf(lazyLayoutSemantics$composable$lambda$slambda_1).create_xubfvz_k$ = function (value, completion) {
+    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  };
+  function lazyLayoutSemantics$composable$lambda$slambda_2($state, $index, resultContinuation) {
+    var i = new lazyLayoutSemantics$composable$lambda$slambda_1($state, $index, resultContinuation);
+    var l = function ($this$launch, $completion) {
+      return i.invoke_d6gbsu_k$($this$launch, $completion);
+    };
+    l.$arity = 1;
+    return l;
+  }
+  function lazyLayoutSemantics$composable$lambda_4($itemProviderLambda, $coroutineScope, $state) {
+    return function (index) {
+      var itemProvider = $itemProviderLambda();
+      var tmp0_require = index >= 0 ? index < itemProvider.get_itemCount_rbqtpp_k$() : false;
+      // Inline function 'kotlin.contracts.contract' call
+      var tmp;
+      if (!tmp0_require) {
+        var tmp$ret$0;
+        // Inline function 'androidx.compose.foundation.lazy.layout.lazyLayoutSemantics$composable.<anonymous>.<anonymous>.<anonymous>' call
+        tmp$ret$0 = "Can't scroll to index " + index + ', it is out of ' + ('bounds [0, ' + itemProvider.get_itemCount_rbqtpp_k$() + ')');
+        var message = tmp$ret$0;
+        throw IllegalArgumentException_init_$Create$(toString(message));
+      }
+      launch($coroutineScope, VOID, VOID, lazyLayoutSemantics$composable$lambda$slambda_2($state, index, null));
+      return true;
+    };
+  }
+  function lazyLayoutSemantics$composable$lambda_5($indexForKeyMapping, $isVertical, $accessibilityScrollState, $scrollByAction, $scrollToIndexAction, $collectionInfo) {
+    return function ($this$semantics) {
+      set_isTraversalGroup($this$semantics, true);
+      indexForKey($this$semantics, $indexForKeyMapping);
+      var tmp;
+      if ($isVertical) {
+        set_verticalScrollAxisRange($this$semantics, $accessibilityScrollState);
+        tmp = Unit_getInstance();
+      } else {
+        set_horizontalScrollAxisRange($this$semantics, $accessibilityScrollState);
+        tmp = Unit_getInstance();
+      }
+      var tmp_0;
+      if (!($scrollByAction == null)) {
+        scrollBy($this$semantics, VOID, $scrollByAction);
+        tmp_0 = Unit_getInstance();
+      }
+      var tmp_1;
+      if (!($scrollToIndexAction == null)) {
+        scrollToIndex($this$semantics, VOID, $scrollToIndexAction);
+        tmp_1 = Unit_getInstance();
+      }
+      set_collectionInfo($this$semantics, $collectionInfo);
+      return Unit_getInstance();
+    };
+  }
+  function LazySaveableStateHolderProvider$composable(content, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-314824125);
+    sourceInformation($composer_0, 'C(LazySaveableStateHolderProvider$composable)42@2089L7,43@2114L172,48@2291L161:LazySaveableStateHolder.kt#wow0x6');
+    var $dirty = $changed;
+    if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content) ? 4 : 2);
+    if (!(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(-314824125, $dirty, -1, 'androidx.compose.foundation.lazy.layout.LazySaveableStateHolderProvider$composable (LazySaveableStateHolder.kt:41)');
+      }
+      // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
+      var tmp0_$get_current$$composable_h5ksy7 = get_LocalSaveableStateRegistry();
+      var $composer_1 = $composer_0;
+      sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
+      var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+      sourceInformationMarkerEnd($composer_1);
+      var currentRegistry = tmp0;
+      var tmp = Companion_getInstance_56().saver_z9bq5q_k$(currentRegistry);
+      var holder = rememberSaveable$composable([currentRegistry], tmp, null, LazySaveableStateHolderProvider$composable$lambda(currentRegistry), $composer_0, 0, 4);
+      var tmp_0 = [get_LocalSaveableStateRegistry().provides_3e53yf_k$(holder)];
+      // Inline function 'kotlin.run' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.foundation.lazy.layout.LazySaveableStateHolderProvider$composable.<anonymous>' call
+      var tmp_1 = $composer_0;
+      var dispatchReceiver = composableLambda(tmp_1, 1863926504, true, LazySaveableStateHolderProvider$composable$lambda_0(holder, content, $dirty));
+      // Inline function 'androidx.compose.runtime.remember$composable' call
+      var $composer_2 = $composer_0;
+      $composer_2.startReplaceableGroup_rp6air_k$(-838505973);
+      sourceInformation($composer_2, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+      // Inline function 'androidx.compose.runtime.cache' call
+      var tmp1_cache = $composer_2.changed_ga7h3f_k$(dispatchReceiver);
+      // Inline function 'kotlin.let' call
+      var tmp0_let = $composer_2.rememberedValue_4dg93v_k$();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var tmp_2;
+      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
+        // Inline function 'androidx.compose.foundation.lazy.layout.LazySaveableStateHolderProvider$composable.<anonymous>.<anonymous>' call
+        var value = ComposableLambda$invoke$ref_4(dispatchReceiver);
+        $composer_2.updateRememberedValue_l1colo_k$(value);
+        tmp_2 = value;
+      } else {
+        tmp_2 = tmp0_let;
+      }
+      var tmp_3 = tmp_2;
+      var tmp0_0 = (tmp_3 == null ? true : isObject(tmp_3)) ? tmp_3 : THROW_CCE();
+      $composer_2.endReplaceableGroup_er37p7_k$();
+      CompositionLocalProvider$composable(tmp_0, tmp0_0, $composer_0, 48);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lhns3f_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver === null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_xhrf9y_k$(LazySaveableStateHolderProvider$composable$lambda_1(content, $changed));
+    }
+  }
+  function LazySaveableStateHolder$Companion$saver$lambda($this$Saver, it) {
+    // Inline function 'kotlin.collections.ifEmpty' call
+    var tmp0_ifEmpty = it.performSave_ohn24i_k$();
+    var tmp;
+    if (tmp0_ifEmpty.isEmpty_y1axqb_k$()) {
+      // Inline function 'androidx.compose.foundation.lazy.layout.Companion.saver.<anonymous>.<anonymous>' call
+      tmp = null;
+    } else {
+      tmp = tmp0_ifEmpty;
+    }
+    return tmp;
+  }
+  function LazySaveableStateHolder$Companion$saver$lambda_0($parentRegistry) {
+    return function (restored) {
+      return LazySaveableStateHolder_init_$Create$($parentRegistry, restored);
+    };
+  }
+  function _get_wrappedRegistry__pgn5nz($this) {
+    return $this.wrappedRegistry_1;
+  }
+  function LazySaveableStateHolder_init_$Init$(parentRegistry, restoredValues, $this) {
+    LazySaveableStateHolder.call($this, SaveableStateRegistry(restoredValues, LazySaveableStateHolder$_init_$lambda_f4mmxz(parentRegistry)));
+    return $this;
+  }
+  function LazySaveableStateHolder_init_$Create$(parentRegistry, restoredValues) {
+    return LazySaveableStateHolder_init_$Init$(parentRegistry, restoredValues, objectCreate(protoOf(LazySaveableStateHolder)));
+  }
+  function _get_previouslyComposedKeys__yg82wv($this) {
+    return $this.previouslyComposedKeys_1;
+  }
+  function Companion_6() {
+    Companion_instance_6 = this;
+  }
+  protoOf(Companion_6).saver_z9bq5q_k$ = function (parentRegistry) {
+    var tmp = LazySaveableStateHolder$Companion$saver$lambda;
+    return Saver(tmp, LazySaveableStateHolder$Companion$saver$lambda_0(parentRegistry));
+  };
+  var Companion_instance_6;
+  function Companion_getInstance_56() {
+    if (Companion_instance_6 == null)
+      new Companion_6();
+    return Companion_instance_6;
+  }
+  function LazySaveableStateHolder$_init_$lambda_f4mmxz($parentRegistry) {
+    return function (it) {
+      var tmp0_safe_receiver = $parentRegistry;
+      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.canBeSaved_nnajrq_k$(it);
+      return tmp1_elvis_lhs == null ? true : tmp1_elvis_lhs;
+    };
+  }
+  function _no_name_provided__qut3iv_2(this$0, $key) {
+    this.this$0__1 = this$0;
+    this.$key_1 = $key;
+  }
+  protoOf(_no_name_provided__qut3iv_2).dispose_3n44we_k$ = function () {
+    // Inline function 'androidx.compose.foundation.lazy.layout.LazySaveableStateHolder.SaveableStateProvider$composable.<anonymous>.<anonymous>' call
+    // Inline function 'kotlin.collections.plusAssign' call
+    this.this$0__1.previouslyComposedKeys_1.add_1j60pz_k$(this.$key_1);
+  };
+  function LazySaveableStateHolder$SaveableStateProvider$composable$lambda(this$0, $key) {
+    return function ($this$DisposableEffect) {
+      var tmp0_this = this$0;
+      var tmp0_minusAssign = tmp0_this.previouslyComposedKeys_1;
+      tmp0_minusAssign.remove_8hbkc6_k$($key);
+      var tmp$ret$0;
+      // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
+      tmp$ret$0 = new _no_name_provided__qut3iv_2(this$0, $key);
+      return tmp$ret$0;
+    };
+  }
+  function LazySaveableStateHolder$SaveableStateProvider$composable$lambda_0($tmp0_rcvr, $key, $content, $$changed) {
+    return function ($composer, $force) {
+      $tmp0_rcvr.SaveableStateProvider$composable_n5yi3h_k$($key, $content, $composer, updateChangedFlags($$changed | 1));
+      return Unit_getInstance();
+    };
+  }
+  function LazySaveableStateHolder(wrappedRegistry) {
+    Companion_getInstance_56();
+    this.wrappedRegistry_1 = wrappedRegistry;
+    this.wrappedHolder$delegate_1 = mutableStateOf(null);
+    var tmp = this;
+    // Inline function 'kotlin.collections.mutableSetOf' call
+    tmp.previouslyComposedKeys_1 = LinkedHashSet_init_$Create$();
+  }
+  protoOf(LazySaveableStateHolder).canBeSaved_nnajrq_k$ = function (value) {
+    return this.wrappedRegistry_1.canBeSaved_nnajrq_k$(value);
+  };
+  protoOf(LazySaveableStateHolder).consumeRestored_kptfch_k$ = function (key) {
+    return this.wrappedRegistry_1.consumeRestored_kptfch_k$(key);
+  };
+  protoOf(LazySaveableStateHolder).registerProvider_h94pml_k$ = function (key, valueProvider) {
+    return this.wrappedRegistry_1.registerProvider_h94pml_k$(key, valueProvider);
+  };
+  protoOf(LazySaveableStateHolder).set_wrappedHolder_n5zqcz_k$ = function (_set____db54di) {
+    wrappedHolder$factory();
+    return this.wrappedHolder$delegate_1.set_value_rnwamw_k$(_set____db54di);
+  };
+  protoOf(LazySaveableStateHolder).get_wrappedHolder_t1s0ig_k$ = function () {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    wrappedHolder$factory_0();
+    return this.wrappedHolder$delegate_1.get_value_j01efc_k$();
+  };
+  protoOf(LazySaveableStateHolder).performSave_ohn24i_k$ = function () {
+    var holder = this.get_wrappedHolder_t1s0ig_k$();
+    if (!(holder == null)) {
+      // Inline function 'kotlin.collections.forEach' call
+      var tmp0_iterator = this.previouslyComposedKeys_1.iterator_jk1svi_k$();
+      while (tmp0_iterator.hasNext_bitz1p_k$()) {
+        var element = tmp0_iterator.next_20eer_k$();
+        // Inline function 'androidx.compose.foundation.lazy.layout.LazySaveableStateHolder.performSave.<anonymous>' call
+        holder.removeState_5vvsww_k$(element);
+      }
+    }
+    return this.wrappedRegistry_1.performSave_ohn24i_k$();
+  };
+  protoOf(LazySaveableStateHolder).SaveableStateProvider_2masgx_k$ = function (key, content) {
+    illegalDecoyCallException('SaveableStateProvider');
+  };
+  protoOf(LazySaveableStateHolder).removeState_5vvsww_k$ = function (key) {
+    // Inline function 'kotlin.requireNotNull' call
+    var tmp0_requireNotNull = this.get_wrappedHolder_t1s0ig_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    var tmp$ret$1;
+    $l$block: {
+      // Inline function 'kotlin.requireNotNull' call
+      // Inline function 'kotlin.contracts.contract' call
+      if (tmp0_requireNotNull == null) {
+        // Inline function 'kotlin.requireNotNull.<anonymous>' call
+        var message = 'Required value was null.';
+        throw IllegalArgumentException_init_$Create$(toString(message));
+      } else {
+        tmp$ret$1 = tmp0_requireNotNull;
+        break $l$block;
+      }
+    }
+    tmp$ret$1.removeState_5vvsww_k$(key);
+  };
+  protoOf(LazySaveableStateHolder).SaveableStateProvider$composable_n5yi3h_k$ = function (key, content, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(1082632940);
+    sourceInformation($composer_0, 'C(SaveableStateProvider$composable)P(1)83@3415L35,84@3459L159:LazySaveableStateHolder.kt#wow0x6');
+    var $dirty = $changed;
+    if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(key) ? 4 : 2);
+    if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content) ? 32 : 16);
+    if (($changed & 896) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(this) ? 256 : 128);
+    if (!(($dirty & 731) === 146) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(1082632940, $dirty, -1, 'androidx.compose.foundation.lazy.layout.LazySaveableStateHolder.SaveableStateProvider$composable (LazySaveableStateHolder.kt:82)');
+      }
+      // Inline function 'kotlin.requireNotNull' call
+      var tmp0_requireNotNull = this.get_wrappedHolder_t1s0ig_k$();
+      // Inline function 'kotlin.contracts.contract' call
+      var tmp$ret$1;
+      $l$block: {
+        // Inline function 'kotlin.requireNotNull' call
+        // Inline function 'kotlin.contracts.contract' call
+        if (tmp0_requireNotNull == null) {
+          // Inline function 'kotlin.requireNotNull.<anonymous>' call
+          var message = 'Required value was null.';
+          throw IllegalArgumentException_init_$Create$(toString(message));
+        } else {
+          tmp$ret$1 = tmp0_requireNotNull;
+          break $l$block;
+        }
+      }
+      tmp$ret$1.SaveableStateProvider$composable_n5yi3h_k$(key, content, $composer_0, 14 & $dirty | 112 & $dirty);
+      DisposableEffect$composable(key, LazySaveableStateHolder$SaveableStateProvider$composable$lambda(this, key), $composer_0, 14 & $dirty);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lhns3f_k$();
+    }
+    var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp1_safe_receiver === null)
+      null;
+    else {
+      tmp1_safe_receiver.updateScope_xhrf9y_k$(LazySaveableStateHolder$SaveableStateProvider$composable$lambda_0(this, key, content, $changed));
+    }
+  };
+  function LazySaveableStateHolderProvider$composable$lambda($currentRegistry) {
+    return function () {
+      return LazySaveableStateHolder_init_$Create$($currentRegistry, emptyMap());
+    };
+  }
+  function LazySaveableStateHolderProvider$composable$lambda_0($holder, $content, $$dirty) {
+    return function ($composer, $changed) {
+      var $composer_0 = $composer;
+      sourceInformation($composer_0, 'C49@2393L29,50@2431L15:LazySaveableStateHolder.kt#wow0x6');
+      var tmp;
+      if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+        if (isTraceInProgress()) {
+          traceEventStart(1863926504, $changed, -1, 'androidx.compose.foundation.lazy.layout.LazySaveableStateHolderProvider$composable.<anonymous> (LazySaveableStateHolder.kt:48)');
+        }
+        $holder.set_wrappedHolder_n5zqcz_k$(rememberSaveableStateHolder$composable($composer_0, 0));
+        $content($holder, $composer_0, 112 & $$dirty << 3);
+        var tmp_0;
+        if (isTraceInProgress()) {
+          traceEventEnd();
+          tmp_0 = Unit_getInstance();
+        }
+        tmp = tmp_0;
+      } else {
+        $composer_0.skipToGroupEnd_lhns3f_k$();
+        tmp = Unit_getInstance();
+      }
+      return Unit_getInstance();
+    };
+  }
+  function ComposableLambda$invoke$ref_4($boundThis) {
+    return function (p0, p1) {
+      return $boundThis.invoke_6harzl_k$(p0, p1);
+    };
+  }
+  function LazySaveableStateHolderProvider$composable$lambda_1($content, $$changed) {
+    return function ($composer, $force) {
+      LazySaveableStateHolderProvider$composable($content, $composer, updateChangedFlags($$changed | 1));
+      return Unit_getInstance();
+    };
+  }
+  function wrappedHolder$factory() {
+    return getPropertyCallableRef('wrappedHolder', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_wrappedHolder_t1s0ig_k$();
+    }, function (receiver, value) {
+      return receiver.set_wrappedHolder_n5zqcz_k$(value);
+    });
+  }
+  function wrappedHolder$factory_0() {
+    return getPropertyCallableRef('wrappedHolder', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_wrappedHolder_t1s0ig_k$();
+    }, function (receiver, value) {
+      return receiver.set_wrappedHolder_n5zqcz_k$(value);
+    });
   }
   function PageInfo() {
   }
@@ -13840,7 +21413,7 @@
     return tmp;
   };
   protoOf(ConsumeAllFlingOnDirection).onPostScroll_h2864l_k$ = function (consumed, available, source) {
-    return source === Companion_getInstance_15().get_Fling_te9v25_k$() ? this.consumeOnOrientation_x0gk5b_k$(available, this.orientation_1) : Companion_getInstance_6().get_Zero_sctq3f_k$();
+    return source === Companion_getInstance_20().get_Fling_te9v25_k$() ? this.consumeOnOrientation_x0gk5b_k$(available, this.orientation_1) : Companion_getInstance_6().get_Zero_sctq3f_k$();
   };
   protoOf(ConsumeAllFlingOnDirection).onPostFling_9ubv_k$ = function (consumed, available, $completion) {
     return new Velocity(this.consumeOnOrientation_jz3z5t_k$(available, this.orientation_1));
@@ -13889,7 +21462,7 @@
     this.pageSpacing_1 = 0;
     this.beforeContentPadding_1 = 0;
     this.afterContentPadding_1 = 0;
-    this.viewportSize_1 = Companion_getInstance_12().get_Zero_4ip44w_k$();
+    this.viewportSize_1 = Companion_getInstance_17().get_Zero_4ip44w_k$();
     this.orientation_1 = Orientation_Horizontal_getInstance();
     this.viewportStartOffset_1 = 0;
     this.viewportEndOffset_1 = 0;
@@ -14583,8 +22156,8 @@
     var tmp0_inspectable = tmp;
     var tmp$ret$1;
     // Inline function 'androidx.compose.foundation.selection.selectable.<anonymous>' call
-    Companion_getInstance_7();
-    var tmp_0 = clickable(Companion_getInstance_7(), interactionSource, indication, enabled, VOID, role, onClick);
+    Companion_getInstance_8();
+    var tmp_0 = clickable(Companion_getInstance_8(), interactionSource, indication, enabled, VOID, role, onClick);
     tmp$ret$1 = semantics(tmp_0, VOID, selectable$lambda_0(selected));
     return inspectableWrapper(_this__u8e3s4, tmp0_inspectable, tmp$ret$1);
   }
@@ -14615,7 +22188,7 @@
     selectableGroup($this$semantics);
     return Unit_getInstance();
   }
-  function get_$stableprop_18() {
+  function get_$stableprop_24() {
     return 0;
   }
   function CornerBasedShape(topStart, topEnd, bottomEnd, bottomStart) {
@@ -14795,7 +22368,7 @@
     return CircleShape;
   }
   var CircleShape;
-  function get_$stableprop_19() {
+  function get_$stableprop_25() {
     return 0;
   }
   function RoundedCornerShape(topStart, topEnd, bottomEnd, bottomStart) {
@@ -14957,16 +22530,16 @@
       $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(color_0._v) ? 67108864 : 33554432);
     if (!(($dirty & 191739611) === 38347922) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (!(($default & 2) === 0)) {
-        modifier_0._v = Companion_getInstance_7();
+        modifier_0._v = Companion_getInstance_8();
       }
       if (!(($default & 4) === 0)) {
-        style_0._v = Companion_getInstance_17().get_Default_goqax4_k$();
+        style_0._v = Companion_getInstance_28().get_Default_goqax4_k$();
       }
       if (!(($default & 8) === 0)) {
         onTextLayout_0._v = null;
       }
       if (!(($default & 16) === 0)) {
-        overflow_0._v = new TextOverflow(Companion_getInstance_18().get_Clip_a6y3d7_k$());
+        overflow_0._v = new TextOverflow(Companion_getInstance_29().get_Clip_a6y3d7_k$());
       }
       if (!(($default & 32) === 0)) {
         softWrap_0._v = true;
@@ -15014,7 +22587,7 @@
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
         var tmp_0;
-        if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+        if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
           // Inline function 'androidx.compose.foundation.text.BasicText$composable.<anonymous>' call
           var value = new SelectionController(selectableId, selectionRegistrar, backgroundSelectionColor);
           $composer_3.updateRememberedValue_l1colo_k$(value);
@@ -15076,12 +22649,12 @@
       $composer_6.startReplaceableGroup_rp6air_k$(310513410);
       sourceInformation($composer_6, 'CC(Layout$composable)P(1)123@4760L23,126@4911L385:Layout.kt#80mrfh');
       if (!(0 === 0))
-        modifier_1 = Companion_getInstance_7();
+        modifier_1 = Companion_getInstance_8();
       var compositeKeyHash = $get_currentCompositeKeyHash$$composable_u3vbzj($composer_6, 0);
       var materialized = materialize($composer_6, modifier_1);
       var localMap = $composer_6.get_currentCompositionLocalMap_fmcf79_k$();
       // Inline function 'androidx.compose.runtime.ReusableComposeNode$composable' call
-      var tmp0_ReusableComposeNode$composable = Companion_getInstance_19().get_Constructor_f7ieep_k$();
+      var tmp0_ReusableComposeNode$composable = Companion_getInstance_14().get_Constructor_f7ieep_k$();
       var $composer_7 = $composer_6;
       $composer_7.startReplaceableGroup_rp6air_k$(-1096955905);
       sourceInformation($composer_7, 'CC(ReusableComposeNode$composable):Composables.kt#9igjgp');
@@ -15098,11 +22671,11 @@
       }
       // Inline function 'androidx.compose.ui.layout.Layout$composable.<anonymous>' call
       var tmp2_anonymous = _Updater___init__impl__rbfxm8($composer_7);
-      Updater__set_impl_v7kwss(tmp2_anonymous, tmp9_Layout$composable, Companion_getInstance_19().get_SetMeasurePolicy_on6ujt_k$());
-      Updater__set_impl_v7kwss(tmp2_anonymous, localMap, Companion_getInstance_19().get_SetResolvedCompositionLocals_rc2u9t_k$());
-      Updater__set_impl_v7kwss(tmp2_anonymous, materialized, Companion_getInstance_19().get_SetModifier_6tz580_k$());
+      Updater__set_impl_v7kwss(tmp2_anonymous, tmp9_Layout$composable, Companion_getInstance_14().get_SetMeasurePolicy_on6ujt_k$());
+      Updater__set_impl_v7kwss(tmp2_anonymous, localMap, Companion_getInstance_14().get_SetResolvedCompositionLocals_rc2u9t_k$());
+      Updater__set_impl_v7kwss(tmp2_anonymous, materialized, Companion_getInstance_14().get_SetModifier_6tz580_k$());
       // Inline function 'androidx.compose.runtime.Updater.set' call
-      var tmp0_set = Companion_getInstance_19().get_SetCompositeKeyHash_n8lgg1_k$();
+      var tmp0_set = Companion_getInstance_14().get_SetCompositeKeyHash_n8lgg1_k$();
       // Inline function 'kotlin.with' call
       var tmp0_with = _Updater___get_composer__impl__9ty7av(tmp2_anonymous);
       // Inline function 'kotlin.contracts.contract' call
@@ -15131,7 +22704,7 @@
   function textModifier(_this__u8e3s4, text, style, onTextLayout, overflow, softWrap, maxLines, minLines, fontFamilyResolver, placeholders, onPlaceholderLayout, selectionController, color) {
     if (selectionController == null) {
       var staticTextModifier = new TextAnnotatedStringElement(text, style, fontFamilyResolver, onTextLayout, overflow, softWrap, maxLines, minLines, placeholders, onPlaceholderLayout, null, color);
-      return _this__u8e3s4.then_5qw5wu_k$(Companion_getInstance_7()).then_5qw5wu_k$(staticTextModifier);
+      return _this__u8e3s4.then_5qw5wu_k$(Companion_getInstance_8()).then_5qw5wu_k$(staticTextModifier);
     } else {
       var selectableTextModifier = new SelectableTextAnnotatedStringElement(text, style, fontFamilyResolver, onTextLayout, overflow, softWrap, maxLines, minLines, placeholders, onPlaceholderLayout, selectionController, color);
       return _this__u8e3s4.then_5qw5wu_k$(selectionController.get_modifier_t1pq5c_k$()).then_5qw5wu_k$(selectableTextModifier);
@@ -15255,7 +22828,7 @@
       $composer_0.startDefaults_g7jseb_k$();
       if (($changed & 1) === 0 ? true : $composer_0.get_defaultsInvalid_y88fc4_k$()) {
         if (!(($default & 4) === 0)) {
-          modifier_0._v = Companion_getInstance_7();
+          modifier_0._v = Companion_getInstance_8();
         }
         if (!(($default & 8) === 0)) {
           enabled_0._v = true;
@@ -15264,13 +22837,13 @@
           readOnly_0._v = false;
         }
         if (!(($default & 32) === 0)) {
-          textStyle_0._v = Companion_getInstance_17().get_Default_goqax4_k$();
+          textStyle_0._v = Companion_getInstance_28().get_Default_goqax4_k$();
         }
         if (!(($default & 64) === 0)) {
-          keyboardOptions_0._v = Companion_getInstance_46().get_Default_goqax4_k$();
+          keyboardOptions_0._v = Companion_getInstance_58().get_Default_goqax4_k$();
         }
         if (!(($default & 128) === 0)) {
-          keyboardActions_0._v = Companion_getInstance_45().get_Default_goqax4_k$();
+          keyboardActions_0._v = Companion_getInstance_57().get_Default_goqax4_k$();
         }
         if (!(($default & 256) === 0)) {
           singleLine_0._v = false;
@@ -15283,7 +22856,7 @@
           minLines_0._v = 1;
         }
         if (!(($default & 2048) === 0)) {
-          visualTransformation_0._v = Companion_getInstance_20().get_None_wo6tgh_k$();
+          visualTransformation_0._v = Companion_getInstance_30().get_None_wo6tgh_k$();
         }
         if (!(($default & 4096) === 0)) {
           // Inline function 'androidx.compose.runtime.remember$composable' call
@@ -15296,7 +22869,7 @@
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
           var tmp;
-          if (false ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+          if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
             // Inline function 'androidx.compose.foundation.text.BasicTextField$composable.<anonymous>' call
             var value_0 = BasicTextField$composable$lambda_3;
             $composer_1.updateRememberedValue_l1colo_k$(value_0);
@@ -15321,7 +22894,7 @@
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
           var tmp_1;
-          if (false ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+          if (false ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
             // Inline function 'androidx.compose.foundation.text.BasicTextField$composable.<anonymous>' call
             var value_1 = funMutableInteractionSource();
             $composer_2.updateRememberedValue_l1colo_k$(value_1);
@@ -15364,7 +22937,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_3;
-      if (false ? true : tmp0_let_1 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let_1 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.BasicTextField$composable.<anonymous>' call
         var value_2 = mutableStateOf(TextFieldValue_init_$Create$(value));
         $composer_3.updateRememberedValue_l1colo_k$(value_2);
@@ -15388,7 +22961,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_5;
-      if (tmp1_cache ? true : tmp0_let_2 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache ? true : tmp0_let_2 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.BasicTextField$composable.<anonymous>' call
         var value_3 = BasicTextField$composable$lambda_4(textFieldValue, textFieldValueState$delegate);
         $composer_4.updateRememberedValue_l1colo_k$(value_3);
@@ -15411,7 +22984,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_7;
-      if (tmp1_cache_0 ? true : tmp0_let_3 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache_0 ? true : tmp0_let_3 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.BasicTextField$composable.<anonymous>' call
         var value_4 = mutableStateOf(value);
         $composer_5.updateRememberedValue_l1colo_k$(value_4);
@@ -15438,7 +23011,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_9;
-      if (tmp1_cache_1 ? true : tmp0_let_4 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache_1 ? true : tmp0_let_4 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.BasicTextField$composable.<anonymous>' call
         var value_5 = BasicTextField$composable$lambda_5(onValueChange, textFieldValueState$delegate, lastTextValue$delegate);
         $composer_6.updateRememberedValue_l1colo_k$(value_5);
@@ -15474,7 +23047,7 @@
       tmp0_safe_receiver.updateScope_xhrf9y_k$(BasicTextField$composable$lambda_6(value, onValueChange, modifier_0, enabled_0, readOnly_0, textStyle_0, keyboardOptions_0, keyboardActions_0, singleLine_0, maxLines_0, minLines_0, visualTransformation_0, onTextLayout_0, interactionSource_0, cursorBrush_0, decorationBox_0, $changed, $changed1, $default));
     }
   }
-  function ComposableLambda$invoke$ref($boundThis) {
+  function ComposableLambda$invoke$ref_5($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_5qf8pc_k$(p0, p1, p2);
     };
@@ -15498,7 +23071,7 @@
     }
     return Unit_getInstance();
   }
-  function ComposableLambda$invoke$ref_0($boundThis) {
+  function ComposableLambda$invoke$ref_6($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_5qf8pc_k$(p0, p1, p2);
     };
@@ -15522,7 +23095,7 @@
     }
     return Unit_getInstance();
   }
-  function ComposableLambda$invoke$ref_1($boundThis) {
+  function ComposableLambda$invoke$ref_7($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_5qf8pc_k$(p0, p1, p2);
     };
@@ -15546,7 +23119,7 @@
     }
     return Unit_getInstance();
   }
-  function ComposableLambda$invoke$ref_2($boundThis) {
+  function ComposableLambda$invoke$ref_8($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_5qf8pc_k$(p0, p1, p2);
     };
@@ -15573,13 +23146,13 @@
   function ComposableSingletons$BasicTextFieldKt() {
     ComposableSingletons$BasicTextFieldKt_instance = this;
     var tmp = this;
-    tmp.lambda_1_r8sbbp_1 = ComposableLambda$invoke$ref(composableLambdaInstance(997835932, false, ComposableSingletons$BasicTextFieldKt$lambda_1$lambda_k3hiul));
+    tmp.lambda_1_r8sbbp_1 = ComposableLambda$invoke$ref_5(composableLambdaInstance(997835932, false, ComposableSingletons$BasicTextFieldKt$lambda_1$lambda_k3hiul));
     var tmp_0 = this;
-    tmp_0.lambda_2_r8sbbo_1 = ComposableLambda$invoke$ref_0(composableLambdaInstance(2105616367, false, ComposableSingletons$BasicTextFieldKt$lambda_2$lambda_8q4y7m));
+    tmp_0.lambda_2_r8sbbo_1 = ComposableLambda$invoke$ref_6(composableLambdaInstance(2105616367, false, ComposableSingletons$BasicTextFieldKt$lambda_2$lambda_8q4y7m));
     var tmp_1 = this;
-    tmp_1.lambda_3_r8sbbn_1 = ComposableLambda$invoke$ref_1(composableLambdaInstance(434140383, false, ComposableSingletons$BasicTextFieldKt$lambda_3$lambda_xhcmpb));
+    tmp_1.lambda_3_r8sbbn_1 = ComposableLambda$invoke$ref_7(composableLambdaInstance(434140383, false, ComposableSingletons$BasicTextFieldKt$lambda_3$lambda_xhcmpb));
     var tmp_2 = this;
-    tmp_2.lambda_4_r8sbbm_1 = ComposableLambda$invoke$ref_2(composableLambdaInstance(-34833998, false, ComposableSingletons$BasicTextFieldKt$lambda_4$lambda_4nq5n4));
+    tmp_2.lambda_4_r8sbbm_1 = ComposableLambda$invoke$ref_8(composableLambdaInstance(-34833998, false, ComposableSingletons$BasicTextFieldKt$lambda_4$lambda_4nq5n4));
   }
   protoOf(ComposableSingletons$BasicTextFieldKt).get_lambda_1_bzdzzo_k$ = function () {
     return this.lambda_1_r8sbbp_1;
@@ -15786,13 +23359,13 @@
       $composer_0.startDefaults_g7jseb_k$();
       if (($changed & 1) === 0 ? true : $composer_0.get_defaultsInvalid_y88fc4_k$()) {
         if (!(($default & 4) === 0)) {
-          modifier_0._v = Companion_getInstance_7();
+          modifier_0._v = Companion_getInstance_8();
         }
         if (!(($default & 8) === 0)) {
-          textStyle_0._v = Companion_getInstance_17().get_Default_goqax4_k$();
+          textStyle_0._v = Companion_getInstance_28().get_Default_goqax4_k$();
         }
         if (!(($default & 16) === 0)) {
-          visualTransformation_0._v = Companion_getInstance_20().get_None_wo6tgh_k$();
+          visualTransformation_0._v = Companion_getInstance_30().get_None_wo6tgh_k$();
         }
         if (!(($default & 32) === 0)) {
           // Inline function 'androidx.compose.runtime.remember$composable' call
@@ -15805,7 +23378,7 @@
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
           var tmp;
-          if (false ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+          if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
             // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>' call
             var value_0 = CoreTextField$composable$lambda_0;
             $composer_1.updateRememberedValue_l1colo_k$(value_0);
@@ -15835,11 +23408,11 @@
           minLines_0._v = get_DefaultMinLines();
         }
         if (!(($default & 2048) === 0)) {
-          imeOptions_0._v = Companion_getInstance_21().get_Default_goqax4_k$();
+          imeOptions_0._v = Companion_getInstance_31().get_Default_goqax4_k$();
           $dirty1 = $dirty1 & -113;
         }
         if (!(($default & 4096) === 0)) {
-          keyboardActions_0._v = Companion_getInstance_45().get_Default_goqax4_k$();
+          keyboardActions_0._v = Companion_getInstance_57().get_Default_goqax4_k$();
         }
         if (!(($default & 8192) === 0)) {
           enabled_0._v = true;
@@ -15874,7 +23447,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_1;
-      if (false ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>' call
         var value_1 = new FocusRequester();
         $composer_2.updateRememberedValue_l1colo_k$(value_1);
@@ -15928,7 +23501,7 @@
       sourceInformation($composer_0, '221@12196L42,218@12103L135');
       var tmp_3;
       if (tmp0_elvis_lhs == null) {
-        var tmp_4 = Companion_getInstance_49().get_Saver_igssp8_k$();
+        var tmp_4 = Companion_getInstance_61().get_Saver_igssp8_k$();
         // Inline function 'androidx.compose.runtime.remember$composable' call
         var $composer_8 = $composer_0;
         $composer_8.startReplaceableGroup_rp6air_k$(-838505973);
@@ -15940,7 +23513,7 @@
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
         var tmp_5;
-        if (tmp1_cache ? true : tmp0_let_1 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+        if (tmp1_cache ? true : tmp0_let_1 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
           // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>' call
           var value_2 = CoreTextField$composable$lambda_1(orientation);
           $composer_8.updateRememberedValue_l1colo_k$(value_2);
@@ -15973,7 +23546,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_7;
-      if (tmp1_cache_0 ? true : tmp0_let_2 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache_0 ? true : tmp0_let_2 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>' call
         var transformed = filterWithValidation(visualTransformation_0._v, value.get_annotatedString_5pdwrk_k$());
         var tmp0_safe_receiver = value.get_composition_7jhfbq_k$();
@@ -15985,7 +23558,7 @@
           // Inline function 'kotlin.let' call
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>.<anonymous>' call
-          tmp_8 = Companion_getInstance_48().applyCompositionDecoration_rguykw_k$(tmp0_safe_receiver, transformed);
+          tmp_8 = Companion_getInstance_60().applyCompositionDecoration_rguykw_k$(tmp0_safe_receiver, transformed);
         }
         var tmp1_elvis_lhs = tmp_8;
         var value_3 = tmp1_elvis_lhs == null ? transformed : tmp1_elvis_lhs;
@@ -16011,7 +23584,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_11;
-      if (false ? true : tmp0_let_3 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let_3 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>' call
         var value_4 = new TextFieldState(new TextDelegate(visualText, textStyle_0._v, VOID, VOID, softWrap_0._v, VOID, density, fontFamilyResolver), scope);
         $composer_10.updateRememberedValue_l1colo_k$(value_4);
@@ -16035,7 +23608,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_13;
-      if (false ? true : tmp0_let_4 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let_4 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>' call
         var value_5 = new UndoManager();
         $composer_11.updateRememberedValue_l1colo_k$(value_5);
@@ -16058,7 +23631,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_15;
-      if (false ? true : tmp0_let_5 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let_5 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>' call
         var value_6 = new TextFieldSelectionManager(undoManager);
         $composer_12.updateRememberedValue_l1colo_k$(value_6);
@@ -16118,7 +23691,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_17;
-      if (false ? true : tmp0_let_6 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let_6 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.runtime.rememberCoroutineScope$composable.<anonymous>' call
         var value_7 = new CompositionScopedCoroutineScopeCanceller(createCompositionCoroutineScope(getContext._v(), composer));
         $composer_17.updateRememberedValue_l1colo_k$(value_7);
@@ -16143,7 +23716,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_19;
-      if (false ? true : tmp0_let_7 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let_7 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>' call
         var value_8 = funBringIntoViewRequester();
         $composer_18.updateRememberedValue_l1colo_k$(value_8);
@@ -16155,7 +23728,7 @@
       var tmp0_16 = (tmp_20 == null ? true : isObject(tmp_20)) ? tmp_20 : THROW_CCE();
       $composer_18.endReplaceableGroup_er37p7_k$();
       var bringIntoViewRequester = tmp0_16;
-      var tmp_21 = Companion_getInstance_7();
+      var tmp_21 = Companion_getInstance_8();
       var tmp_22 = enabled_0._v;
       var tmp_23 = interactionSource_0._v;
       var focusModifier = textFieldFocusModifier(tmp_21, tmp_22, focusRequester, tmp_23, CoreTextField$composable$lambda_3(state, textInputService, enabled_0, readOnly_0, value, imeOptions_0, offsetMapping, coroutineScope, manager, bringIntoViewRequester));
@@ -16166,28 +23739,28 @@
         LaunchedEffect$composable(Unit_getInstance(), CoreTextField$composable$slambda_0(state, writeable$delegate, textInputService, value, imeOptions_0, offsetMapping, null), $composer_0, 6);
       }
       $composer_0.endReplaceableGroup_er37p7_k$();
-      var pointerModifier = textFieldPointer$composable(Companion_getInstance_7(), manager, enabled_0._v, interactionSource_0._v, state, focusRequester, readOnly_0._v, offsetMapping, $composer_0, 32838 | 896 & $dirty1 >> 3 | 7168 & $dirty >> 9 | 3670016 & $dirty1 << 6);
-      var tmp_24 = Companion_getInstance_7();
+      var pointerModifier = textFieldPointer$composable(Companion_getInstance_8(), manager, enabled_0._v, interactionSource_0._v, state, focusRequester, readOnly_0._v, offsetMapping, $composer_0, 32838 | 896 & $dirty1 >> 3 | 7168 & $dirty >> 9 | 3670016 & $dirty1 << 6);
+      var tmp_24 = Companion_getInstance_8();
       var drawModifier = drawBehind(tmp_24, CoreTextField$composable$lambda_4(state, value, offsetMapping));
-      var tmp_25 = Companion_getInstance_7();
+      var tmp_25 = Companion_getInstance_8();
       var onPositionedModifier = onGloballyPositioned(tmp_25, CoreTextField$composable$lambda_5(state, enabled_0, manager, value, offsetMapping));
       var tmp_26 = visualTransformation_0._v;
       var isPassword = tmp_26 instanceof PasswordVisualTransformation;
-      var tmp_27 = Companion_getInstance_7();
+      var tmp_27 = Companion_getInstance_8();
       var semanticsModifier = semantics(tmp_27, true, CoreTextField$composable$lambda_6(imeOptions_0, transformedText, value, enabled_0, isPassword, readOnly_0, state, offsetMapping, manager, focusRequester));
-      var cursorModifier = cursor(Companion_getInstance_7(), state, value, offsetMapping, cursorBrush_0._v, enabled_0._v ? !readOnly_0._v : false);
+      var cursorModifier = cursor(Companion_getInstance_8(), state, value, offsetMapping, cursorBrush_0._v, enabled_0._v ? !readOnly_0._v : false);
       DisposableEffect$composable(manager, CoreTextField$composable$lambda_7(manager), $composer_0, 8);
       var tmp_28 = imeOptions_0._v;
       DisposableEffect$composable(tmp_28, CoreTextField$composable$lambda_8(textInputService, state, value, imeOptions_0), $composer_0, 14 & $dirty1 >> 3);
-      var textKeyInputModifier = textFieldKeyInput(Companion_getInstance_7(), state, manager, value, state.onValueChange_1, !readOnly_0._v, maxLines_0._v === 1, offsetMapping, undoManager, imeOptions_0._v.get_imeAction_y0cbl_k$());
+      var textKeyInputModifier = textFieldKeyInput(Companion_getInstance_8(), state, manager, value, state.onValueChange_1, !readOnly_0._v, maxLines_0._v === 1, offsetMapping, undoManager, imeOptions_0._v.get_imeAction_y0cbl_k$());
       var tmp_29 = textFieldScrollable(previewKeyEventToDeselectOnBack(interceptDPadAndMoveFocus(modifier_0._v.then_5qw5wu_k$(focusModifier), state, focusManager), state, manager).then_5qw5wu_k$(textKeyInputModifier), scrollerPosition, interactionSource_0._v, enabled_0._v).then_5qw5wu_k$(pointerModifier).then_5qw5wu_k$(semanticsModifier);
       var decorationBoxModifier = onGloballyPositioned(tmp_29, CoreTextField$composable$lambda_9(state));
       var showHandleAndMagnifier = (enabled_0._v ? state.get_hasFocus_tux8ex_k$() : false) ? get_isInTouchMode() : false;
       var tmp_30;
       if (showHandleAndMagnifier) {
-        tmp_30 = textFieldMagnifier(Companion_getInstance_7(), manager);
+        tmp_30 = textFieldMagnifier(Companion_getInstance_8(), manager);
       } else {
-        tmp_30 = Companion_getInstance_7();
+        tmp_30 = Companion_getInstance_8();
       }
       var magnifierModifier = tmp_30;
       // Inline function 'kotlin.run' call
@@ -16206,9 +23779,9 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_32;
-      if (tmp1_cache_1 ? true : tmp0_let_8 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache_1 ? true : tmp0_let_8 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>.<anonymous>' call
-        var value_9 = ComposableLambda$invoke$ref_6(dispatchReceiver);
+        var value_9 = ComposableLambda$invoke$ref_12(dispatchReceiver);
         $composer_19.updateRememberedValue_l1colo_k$(value_9);
         tmp_32 = value_9;
       } else {
@@ -16231,7 +23804,7 @@
       tmp1_safe_receiver.updateScope_xhrf9y_k$(CoreTextField$composable$lambda_11(value, onValueChange, modifier_0, textStyle_0, visualTransformation_0, onTextLayout_0, interactionSource_0, cursorBrush_0, softWrap_0, maxLines_0, minLines_0, imeOptions_0, keyboardActions_0, enabled_0, readOnly_0, decorationBox_0, textScrollerPosition_0, $changed, $changed1, $default));
     }
   }
-  function ComposableLambda$invoke$ref_3($boundThis) {
+  function ComposableLambda$invoke$ref_9($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_5qf8pc_k$(p0, p1, p2);
     };
@@ -16258,7 +23831,7 @@
   function ComposableSingletons$CoreTextFieldKt() {
     ComposableSingletons$CoreTextFieldKt_instance = this;
     var tmp = this;
-    tmp.lambda_1_r8sbbp_1 = ComposableLambda$invoke$ref_3(composableLambdaInstance(-813639903, false, ComposableSingletons$CoreTextFieldKt$lambda_1$lambda_tut2dg));
+    tmp.lambda_1_r8sbbp_1 = ComposableLambda$invoke$ref_9(composableLambdaInstance(-813639903, false, ComposableSingletons$CoreTextFieldKt$lambda_1$lambda_tut2dg));
   }
   protoOf(ComposableSingletons$CoreTextFieldKt).get_lambda_1_bzdzzo_k$ = function () {
     return this.lambda_1_r8sbbp_1;
@@ -16464,7 +24037,7 @@
     this.textDelegate_1 = newTextDelegate;
   };
   function startInputSession(textInputService, state, value, imeOptions, offsetMapping) {
-    state.inputSession_1 = Companion_getInstance_48().onFocus_nyq65v_k$(textInputService, value, state.processor_1, imeOptions, state.onValueChange_1, state.onImeActionPerformed_1);
+    state.inputSession_1 = Companion_getInstance_60().onFocus_nyq65v_k$(textInputService, value, state.processor_1, imeOptions, state.onValueChange_1, state.onImeActionPerformed_1);
     notifyFocusedRect(state, value, offsetMapping);
   }
   function endInputSession(state) {
@@ -16474,7 +24047,7 @@
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
-      Companion_getInstance_48().onBlur_e9j2js_k$(tmp0_safe_receiver, state.processor_1, state.onValueChange_1);
+      Companion_getInstance_60().onBlur_e9j2js_k$(tmp0_safe_receiver, state.processor_1, state.onValueChange_1);
     }
     state.inputSession_1 = null;
   }
@@ -16558,7 +24131,7 @@
               tmp_1 = tmp2_elvis_lhs;
             }
             var layoutCoordinates = tmp_1;
-            Companion_getInstance_48().notifyFocusedRect_yr4ff8_k$(value, state.textDelegate_1, layoutResult.get_value_j01efc_k$(), layoutCoordinates, inputSession, state.get_hasFocus_tux8ex_k$(), offsetMapping);
+            Companion_getInstance_60().notifyFocusedRect_yr4ff8_k$(value, state.textDelegate_1, layoutResult.get_value_j01efc_k$(), layoutCoordinates, inputSession, state.get_hasFocus_tux8ex_k$(), offsetMapping);
             break $l$block;
           }finally {
             snapshot.restoreCurrent_lqo3p4_k$(previous);
@@ -16601,9 +24174,9 @@
     $composer_1.startReplaceableGroup_rp6air_k$(1330882304);
     sourceInformation($composer_1, 'CC(Box$composable)P(2,1,3)69@3214L67,70@3286L130:Box.kt#2w3rfo');
     if (!(0 === 0))
-      modifier_0 = Companion_getInstance_7();
+      modifier_0 = Companion_getInstance_8();
     if (!(2 === 0))
-      contentAlignment = Companion_getInstance_23().get_TopStart_o4x792_k$();
+      contentAlignment = Companion_getInstance_11().get_TopStart_o4x792_k$();
     if (!(0 === 0))
       propagateMinConstraints = false;
     var measurePolicy = rememberBoxMeasurePolicy$composable(contentAlignment, propagateMinConstraints, $composer_1, 14 & tmp2_Box$composable >> 3 | 112 & tmp2_Box$composable >> 3);
@@ -16615,11 +24188,11 @@
     $composer_2.startReplaceableGroup_rp6air_k$(1725976829);
     sourceInformation($composer_2, 'CC(Layout$composable)P(!1,2)78@3158L23,80@3248L420:Layout.kt#80mrfh');
     if (!(0 === 0))
-      modifier_1 = Companion_getInstance_7();
+      modifier_1 = Companion_getInstance_8();
     var compositeKeyHash = $get_currentCompositeKeyHash$$composable_u3vbzj($composer_2, 0);
     var localMap = $composer_2.get_currentCompositionLocalMap_fmcf79_k$();
     // Inline function 'androidx.compose.runtime.ReusableComposeNode$composable' call
-    var tmp0_ReusableComposeNode$composable = Companion_getInstance_19().get_Constructor_f7ieep_k$();
+    var tmp0_ReusableComposeNode$composable = Companion_getInstance_14().get_Constructor_f7ieep_k$();
     var tmp1_ReusableComposeNode$composable = materializerOf(modifier_1);
     var tmp3_ReusableComposeNode$composable = 6 | 7168 & tmp2_Layout$composable << 9;
     var $composer_3 = $composer_2;
@@ -16635,10 +24208,10 @@
     }
     // Inline function 'androidx.compose.ui.layout.Layout$composable.<anonymous>' call
     var tmp4_anonymous = _Updater___init__impl__rbfxm8($composer_3);
-    Updater__set_impl_v7kwss(tmp4_anonymous, measurePolicy, Companion_getInstance_19().get_SetMeasurePolicy_on6ujt_k$());
-    Updater__set_impl_v7kwss(tmp4_anonymous, localMap, Companion_getInstance_19().get_SetResolvedCompositionLocals_rc2u9t_k$());
+    Updater__set_impl_v7kwss(tmp4_anonymous, measurePolicy, Companion_getInstance_14().get_SetMeasurePolicy_on6ujt_k$());
+    Updater__set_impl_v7kwss(tmp4_anonymous, localMap, Companion_getInstance_14().get_SetResolvedCompositionLocals_rc2u9t_k$());
     // Inline function 'androidx.compose.runtime.Updater.set' call
-    var tmp0_set = Companion_getInstance_19().get_SetCompositeKeyHash_n8lgg1_k$();
+    var tmp0_set = Companion_getInstance_14().get_SetCompositeKeyHash_n8lgg1_k$();
     // Inline function 'kotlin.with' call
     var tmp0_with = _Updater___get_composer__impl__9ty7av(tmp4_anonymous);
     // Inline function 'kotlin.contracts.contract' call
@@ -16795,7 +24368,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.TextFieldCursorHandle$composable.<anonymous>' call
         var value = manager.cursorDragObserver_z7hrog_k$();
         $composer_1.updateRememberedValue_l1colo_k$(value);
@@ -16814,7 +24387,7 @@
       var tmp0_0 = $composer_2.consume_11nid3_k$(tmp1_$get_current$$composable_gn3xww);
       sourceInformationMarkerEnd($composer_2);
       var position = manager.getCursorPosition_wz202z_k$(tmp0_0);
-      var tmp_1 = Companion_getInstance_7();
+      var tmp_1 = Companion_getInstance_8();
       var tmp_2 = pointerInput(tmp_1, observer, TextFieldCursorHandle$composable$slambda_0(observer, null));
       // Inline function 'androidx.compose.runtime.remember$composable' call
       var $composer_3 = $composer_0;
@@ -16827,7 +24400,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_3;
-      if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.TextFieldCursorHandle$composable.<anonymous>' call
         var value_0 = TextFieldCursorHandle$composable$lambda(position);
         $composer_3.updateRememberedValue_l1colo_k$(value_0);
@@ -17132,7 +24705,7 @@
         var tmp$ret$0;
         // Inline function 'androidx.compose.ui.graphics.drawscope.drawIntoCanvas' call
         var tmp0_anonymous = $this$drawBehind.get_drawContext_ffwztu_k$().get_canvas_bshgm9_k$();
-        Companion_getInstance_48().draw_rsxlrj_k$(tmp0_anonymous, $value, $offsetMapping, tmp0_safe_receiver.get_value_j01efc_k$(), $state.selectionPaint_1);
+        Companion_getInstance_60().draw_rsxlrj_k$(tmp0_anonymous, $value, $offsetMapping, tmp0_safe_receiver.get_value_j01efc_k$(), $state.selectionPaint_1);
         tmp$ret$0 = Unit_getInstance();
         tmp$ret$1 = tmp$ret$0;
       }
@@ -17195,7 +24768,7 @@
         var tmp$ret$0;
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
-        Companion_getInstance_48().onEditCommand_j9opbt_k$(listOf([new DeleteAllCommand(), new CommitTextCommand(text, 1)]), $state.processor_1, $state.onValueChange_1, tmp0_safe_receiver);
+        Companion_getInstance_60().onEditCommand_j9opbt_k$(listOf([new DeleteAllCommand(), new CommitTextCommand(text, 1)]), $state.processor_1, $state.onValueChange_1, tmp0_safe_receiver);
         tmp$ret$0 = Unit_getInstance();
         tmp_0 = Unit_getInstance();
       }
@@ -17227,7 +24800,7 @@
         var tmp$ret$0;
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
-        Companion_getInstance_48().onEditCommand_j9opbt_k$(listOf([new FinishComposingTextCommand(), new CommitTextCommand(text, 1)]), $state.processor_1, $state.onValueChange_1, tmp0_safe_receiver);
+        Companion_getInstance_60().onEditCommand_j9opbt_k$(listOf([new FinishComposingTextCommand(), new CommitTextCommand(text, 1)]), $state.processor_1, $state.onValueChange_1, tmp0_safe_receiver);
         tmp$ret$0 = Unit_getInstance();
         tmp_0 = Unit_getInstance();
       }
@@ -17365,10 +24938,10 @@
       return Unit_getInstance();
     };
   }
-  function _no_name_provided__qut3iv_0($manager) {
+  function _no_name_provided__qut3iv_3($manager) {
     this.$manager_1 = $manager;
   }
-  protoOf(_no_name_provided__qut3iv_0).dispose_3n44we_k$ = function () {
+  protoOf(_no_name_provided__qut3iv_3).dispose_3n44we_k$ = function () {
     // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>.<anonymous>' call
     this.$manager_1.hideSelectionToolbar_2pkotc_k$();
   };
@@ -17376,25 +24949,25 @@
     return function ($this$DisposableEffect) {
       var tmp$ret$0;
       // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      tmp$ret$0 = new _no_name_provided__qut3iv_0($manager);
+      tmp$ret$0 = new _no_name_provided__qut3iv_3($manager);
       return tmp$ret$0;
     };
   }
-  function _no_name_provided__qut3iv_1() {
+  function _no_name_provided__qut3iv_4() {
   }
-  protoOf(_no_name_provided__qut3iv_1).dispose_3n44we_k$ = function () {
+  protoOf(_no_name_provided__qut3iv_4).dispose_3n44we_k$ = function () {
     // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>.<anonymous>' call
   };
   function CoreTextField$composable$lambda_8($textInputService, $state, $value, $imeOptions) {
     return function ($this$DisposableEffect) {
       var tmp;
       if (!($textInputService == null) ? $state.get_hasFocus_tux8ex_k$() : false) {
-        $state.inputSession_1 = Companion_getInstance_48().restartInput_xph7v3_k$($textInputService, $value, $state.processor_1, $imeOptions._v, $state.onValueChange_1, $state.onImeActionPerformed_1);
+        $state.inputSession_1 = Companion_getInstance_60().restartInput_xph7v3_k$($textInputService, $value, $state.processor_1, $imeOptions._v, $state.onValueChange_1, $state.onImeActionPerformed_1);
         tmp = Unit_getInstance();
       }
       var tmp$ret$0;
       // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      tmp$ret$0 = new _no_name_provided__qut3iv_1();
+      tmp$ret$0 = new _no_name_provided__qut3iv_4();
       return tmp$ret$0;
     };
   }
@@ -17447,7 +25020,7 @@
       }
     }
     var prevResult = tmp$ret$1;
-    var tmp0_container = Companion_getInstance_48().layout_ll7k81_k$(this.$state_1.textDelegate_1, constraints, _this__u8e3s4.get_layoutDirection_7e37v0_k$(), prevResult);
+    var tmp0_container = Companion_getInstance_60().layout_ll7k81_k$(this.$state_1.textDelegate_1, constraints, _this__u8e3s4.get_layoutDirection_7e37v0_k$(), prevResult);
     var width = tmp0_container.component1_7eebsc_k$();
     var height = tmp0_container.component2_7eebsb_k$();
     var result = tmp0_container.component3_7eebsa_k$();
@@ -17504,11 +25077,11 @@
         $composer_1.startReplaceableGroup_rp6air_k$(1725976829);
         sourceInformation($composer_1, 'CC(Layout$composable)P(!1,2)78@3158L23,80@3248L420:Layout.kt#80mrfh');
         if (!(2 === 0))
-          modifier = Companion_getInstance_7();
+          modifier = Companion_getInstance_8();
         var compositeKeyHash = $get_currentCompositeKeyHash$$composable_u3vbzj($composer_1, 0);
         var localMap = $composer_1.get_currentCompositionLocalMap_fmcf79_k$();
         // Inline function 'androidx.compose.runtime.ReusableComposeNode$composable' call
-        var tmp0_ReusableComposeNode$composable = Companion_getInstance_19().get_Constructor_f7ieep_k$();
+        var tmp0_ReusableComposeNode$composable = Companion_getInstance_14().get_Constructor_f7ieep_k$();
         var tmp1_ReusableComposeNode$composable = materializerOf(modifier);
         var tmp2_ReusableComposeNode$composable = $composer_1;
         var tmp3_ReusableComposeNode$composable = 6;
@@ -17525,11 +25098,11 @@
         }
         // Inline function 'androidx.compose.ui.layout.Layout$composable.<anonymous>' call
         var tmp4_anonymous = _Updater___init__impl__rbfxm8($composer_2);
-        Updater__set_impl_v7kwss(tmp4_anonymous, tmp1_Layout$composable, Companion_getInstance_19().get_SetMeasurePolicy_on6ujt_k$());
-        Updater__set_impl_v7kwss(tmp4_anonymous, localMap, Companion_getInstance_19().get_SetResolvedCompositionLocals_rc2u9t_k$());
+        Updater__set_impl_v7kwss(tmp4_anonymous, tmp1_Layout$composable, Companion_getInstance_14().get_SetMeasurePolicy_on6ujt_k$());
+        Updater__set_impl_v7kwss(tmp4_anonymous, localMap, Companion_getInstance_14().get_SetResolvedCompositionLocals_rc2u9t_k$());
         var tmp$ret$1;
         // Inline function 'androidx.compose.runtime.Updater.set' call
-        var tmp0_set = Companion_getInstance_19().get_SetCompositeKeyHash_n8lgg1_k$();
+        var tmp0_set = Companion_getInstance_14().get_SetCompositeKeyHash_n8lgg1_k$();
         var tmp$ret$0;
         // Inline function 'kotlin.with' call
         var tmp0_with = _Updater___get_composer__impl__9ty7av(tmp4_anonymous);
@@ -17570,7 +25143,7 @@
       return Unit_getInstance();
     };
   }
-  function ComposableLambda$invoke$ref_4($boundThis) {
+  function ComposableLambda$invoke$ref_10($boundThis) {
     return function (p0, p1) {
       return $boundThis.invoke_6harzl_k$(p0, p1);
     };
@@ -17584,7 +25157,7 @@
         if (isTraceInProgress()) {
           traceEventStart(-1835647873, $changed, -1, 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>.<anonymous> (CoreTextField.kt:607)');
         }
-        var tmp_0 = heightInLines(heightIn(Companion_getInstance_7(), $state.get_minHeightForSingleLineField_61epts_k$()), $textStyle._v, $minLines._v, $maxLines._v);
+        var tmp_0 = heightInLines(heightIn(Companion_getInstance_8(), $state.get_minHeightForSingleLineField_61epts_k$()), $textStyle._v, $minLines._v, $maxLines._v);
         var tmp_1 = $visualTransformation._v;
         var coreTextFieldModifier = bringIntoViewRequester(textFieldMinSize(textFieldScroll(tmp_0, $scrollerPosition, $value, tmp_1, CoreTextField$composable$lambda$lambda$lambda($state)).then_5qw5wu_k$($cursorModifier).then_5qw5wu_k$($drawModifier), $textStyle._v).then_5qw5wu_k$($onPositionedModifier).then_5qw5wu_k$($magnifierModifier), $bringIntoViewRequester);
         var tmp$ret$6;
@@ -17611,10 +25184,10 @@
         var tmp$ret$1;
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
         var tmp_3;
-        if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+        if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
           var tmp$ret$0;
           // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-          tmp$ret$0 = ComposableLambda$invoke$ref_4(dispatchReceiver);
+          tmp$ret$0 = ComposableLambda$invoke$ref_10(dispatchReceiver);
           var value = tmp$ret$0;
           tmp0_cache.updateRememberedValue_l1colo_k$(value);
           tmp_3 = value;
@@ -17644,7 +25217,7 @@
       return Unit_getInstance();
     };
   }
-  function ComposableLambda$invoke$ref_5($boundThis) {
+  function ComposableLambda$invoke$ref_11($boundThis) {
     return function (p0, p1) {
       return $boundThis.invoke_6harzl_k$(p0, p1);
     };
@@ -17683,10 +25256,10 @@
         var tmp$ret$1;
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
         var tmp_2;
-        if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+        if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
           var tmp$ret$0;
           // Inline function 'androidx.compose.foundation.text.CoreTextField$composable.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-          tmp$ret$0 = ComposableLambda$invoke$ref_5(dispatchReceiver);
+          tmp$ret$0 = ComposableLambda$invoke$ref_11(dispatchReceiver);
           var value = tmp$ret$0;
           tmp0_cache.updateRememberedValue_l1colo_k$(value);
           tmp_2 = value;
@@ -17716,7 +25289,7 @@
       return Unit_getInstance();
     };
   }
-  function ComposableLambda$invoke$ref_6($boundThis) {
+  function ComposableLambda$invoke$ref_12($boundThis) {
     return function (p0, p1) {
       return $boundThis.invoke_6harzl_k$(p0, p1);
     };
@@ -17993,7 +25566,7 @@
       validateMinMaxLines($minLines, $maxLines);
       var tmp_0;
       if ($minLines === 1 ? $maxLines === IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : false) {
-        var tmp1_return = Companion_getInstance_7();
+        var tmp1_return = Companion_getInstance_8();
         if (isTraceInProgress()) {
           traceEventEnd();
         }
@@ -18047,7 +25620,7 @@
       var tmp$ret$4;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_1;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$3;
         // Inline function 'androidx.compose.foundation.text.heightInLines.<anonymous>.<anonymous>' call
         tmp$ret$3 = resolveDefaults($textStyle, layoutDirection);
@@ -18082,17 +25655,17 @@
       var tmp$ret$9;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_3;
-      if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$8;
         // Inline function 'androidx.compose.foundation.text.heightInLines.<anonymous>.<anonymous>' call
         var tmp_4 = resolvedStyle.get_fontFamily_ulphcs_k$();
         var tmp0_elvis_lhs = resolvedStyle.get_fontWeight_wbif2o_k$();
-        var tmp_5 = tmp0_elvis_lhs == null ? Companion_getInstance_24().get_Normal_22avww_k$() : tmp0_elvis_lhs;
+        var tmp_5 = tmp0_elvis_lhs == null ? Companion_getInstance_32().get_Normal_22avww_k$() : tmp0_elvis_lhs;
         var tmp1_elvis_lhs = resolvedStyle.get_fontStyle_fze7ml_k$();
         var tmp_6;
         var tmp_7 = tmp1_elvis_lhs;
         if ((tmp_7 == null ? null : new FontStyle(tmp_7)) == null) {
-          tmp_6 = Companion_getInstance_25().get_Normal_b4ik9_k$();
+          tmp_6 = Companion_getInstance_33().get_Normal_b4ik9_k$();
         } else {
           tmp_6 = tmp1_elvis_lhs;
         }
@@ -18101,7 +25674,7 @@
         var tmp_9;
         var tmp_10 = tmp2_elvis_lhs;
         if ((tmp_10 == null ? null : new FontSynthesis(tmp_10)) == null) {
-          tmp_9 = Companion_getInstance_26().get_All_wqntwc_k$();
+          tmp_9 = Companion_getInstance_34().get_All_wqntwc_k$();
         } else {
           tmp_9 = tmp2_elvis_lhs;
         }
@@ -18147,7 +25720,7 @@
       var tmp$ret$14;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_12;
-      if (tmp1_cache_1 ? true : tmp0_let_1 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache_1 ? true : tmp0_let_1 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$13;
         // Inline function 'androidx.compose.foundation.text.heightInLines.<anonymous>.<anonymous>' call
         tmp$ret$13 = _IntSize___get_height__impl__prv63b(computeSizeForDefaultText(resolvedStyle, density, fontFamilyResolver, get_EmptyTextReplacement(), 1));
@@ -18192,7 +25765,7 @@
       var tmp$ret$19;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_14;
-      if (tmp1_cache_2 ? true : tmp0_let_2 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache_2 ? true : tmp0_let_2 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$18;
         // Inline function 'androidx.compose.foundation.text.heightInLines.<anonymous>.<anonymous>' call
         var twoLines = get_EmptyTextReplacement() + '\n' + get_EmptyTextReplacement();
@@ -18219,7 +25792,7 @@
       // Inline function 'kotlin.contracts.contract' call
       var tmp$ret$23;
       // Inline function 'androidx.compose.foundation.text.heightInLines.<anonymous>.<anonymous>' call
-      var tmp_16 = Companion_getInstance_7();
+      var tmp_16 = Companion_getInstance_8();
       var tmp0_safe_receiver = precomputedMinLinesHeight;
       var tmp1_elvis_lhs_0 = tmp0_safe_receiver == null ? null : density.toDp_2eugbd_k$(tmp0_safe_receiver);
       var tmp_17;
@@ -18779,19 +26352,19 @@
   };
   protoOf(KeyboardActionRunner).runAction_r7ozvc_k$ = function (imeAction) {
     var tmp;
-    if (imeAction === Companion_getInstance_27().get_Done_lhg5fi_k$()) {
+    if (imeAction === Companion_getInstance_35().get_Done_lhg5fi_k$()) {
       tmp = this.get_keyboardActions_htrw0j_k$().get_onDone_hnfaq2_k$();
-    } else if (imeAction === Companion_getInstance_27().get_Go_nezxic_k$()) {
+    } else if (imeAction === Companion_getInstance_35().get_Go_nezxic_k$()) {
       tmp = this.get_keyboardActions_htrw0j_k$().get_onGo_worucw_k$();
-    } else if (imeAction === Companion_getInstance_27().get_Next_8nlv7z_k$()) {
+    } else if (imeAction === Companion_getInstance_35().get_Next_8nlv7z_k$()) {
       tmp = this.get_keyboardActions_htrw0j_k$().get_onNext_hnlhff_k$();
-    } else if (imeAction === Companion_getInstance_27().get_Previous_rwgujx_k$()) {
+    } else if (imeAction === Companion_getInstance_35().get_Previous_rwgujx_k$()) {
       tmp = this.get_keyboardActions_htrw0j_k$().get_onPrevious_4kj7un_k$();
-    } else if (imeAction === Companion_getInstance_27().get_Search_umu0rg_k$()) {
+    } else if (imeAction === Companion_getInstance_35().get_Search_umu0rg_k$()) {
       tmp = this.get_keyboardActions_htrw0j_k$().get_onSearch_74lfbk_k$();
-    } else if (imeAction === Companion_getInstance_27().get_Send_m4mbb8_k$()) {
+    } else if (imeAction === Companion_getInstance_35().get_Send_m4mbb8_k$()) {
       tmp = this.get_keyboardActions_htrw0j_k$().get_onSend_hnoo40_k$();
-    } else if (imeAction === Companion_getInstance_27().get_Default_74yox7_k$() ? true : imeAction === Companion_getInstance_27().get_None_mrn910_k$()) {
+    } else if (imeAction === Companion_getInstance_35().get_Default_74yox7_k$() ? true : imeAction === Companion_getInstance_35().get_None_mrn910_k$()) {
       tmp = null;
     } else {
       throw IllegalStateException_init_$Create$('invalid ImeAction');
@@ -18802,37 +26375,37 @@
     }
   };
   protoOf(KeyboardActionRunner).defaultKeyboardAction_e0mk79_k$ = function (imeAction) {
-    if (imeAction === Companion_getInstance_27().get_Next_8nlv7z_k$()) {
-      this.get_focusManager_bz28e6_k$().moveFocus_1o88b6_k$(Companion_getInstance_28().get_Next_t1antw_k$());
-    } else if (imeAction === Companion_getInstance_27().get_Previous_rwgujx_k$()) {
-      this.get_focusManager_bz28e6_k$().moveFocus_1o88b6_k$(Companion_getInstance_28().get_Previous_7is1y0_k$());
-    } else if (imeAction === Companion_getInstance_27().get_Done_lhg5fi_k$()) {
+    if (imeAction === Companion_getInstance_35().get_Next_8nlv7z_k$()) {
+      this.get_focusManager_bz28e6_k$().moveFocus_1o88b6_k$(Companion_getInstance_36().get_Next_t1antw_k$());
+    } else if (imeAction === Companion_getInstance_35().get_Previous_rwgujx_k$()) {
+      this.get_focusManager_bz28e6_k$().moveFocus_1o88b6_k$(Companion_getInstance_36().get_Previous_7is1y0_k$());
+    } else if (imeAction === Companion_getInstance_35().get_Done_lhg5fi_k$()) {
       var tmp1_safe_receiver = this.inputSession_1;
       if (tmp1_safe_receiver == null)
         null;
       else
         tmp1_safe_receiver.hideSoftwareKeyboard_pwrw8g_k$();
     } else
-      (((imeAction === Companion_getInstance_27().get_Go_nezxic_k$() ? true : imeAction === Companion_getInstance_27().get_Search_umu0rg_k$()) ? true : imeAction === Companion_getInstance_27().get_Send_m4mbb8_k$()) ? true : imeAction === Companion_getInstance_27().get_Default_74yox7_k$()) || imeAction === Companion_getInstance_27().get_None_mrn910_k$();
+      (((imeAction === Companion_getInstance_35().get_Go_nezxic_k$() ? true : imeAction === Companion_getInstance_35().get_Search_umu0rg_k$()) ? true : imeAction === Companion_getInstance_35().get_Send_m4mbb8_k$()) ? true : imeAction === Companion_getInstance_35().get_Default_74yox7_k$()) || imeAction === Companion_getInstance_35().get_None_mrn910_k$();
   };
-  function Companion_2() {
-    Companion_instance_2 = this;
+  function Companion_7() {
+    Companion_instance_7 = this;
     this.Default_1 = new KeyboardActions();
   }
-  protoOf(Companion_2).get_Default_goqax4_k$ = function () {
+  protoOf(Companion_7).get_Default_goqax4_k$ = function () {
     return this.Default_1;
   };
-  var Companion_instance_2;
-  function Companion_getInstance_45() {
-    if (Companion_instance_2 == null)
-      new Companion_2();
-    return Companion_instance_2;
+  var Companion_instance_7;
+  function Companion_getInstance_57() {
+    if (Companion_instance_7 == null)
+      new Companion_7();
+    return Companion_instance_7;
   }
-  function get_$stableprop_20() {
+  function get_$stableprop_26() {
     return 0;
   }
   function KeyboardActions(onDone, onGo, onNext, onPrevious, onSearch, onSend) {
-    Companion_getInstance_45();
+    Companion_getInstance_57();
     onDone = onDone === VOID ? null : onDone;
     onGo = onGo === VOID ? null : onGo;
     onNext = onNext === VOID ? null : onNext;
@@ -18900,28 +26473,28 @@
   };
   function KeyboardActionScope() {
   }
-  function Companion_3() {
-    Companion_instance_3 = this;
+  function Companion_8() {
+    Companion_instance_8 = this;
     this.Default_1 = new KeyboardOptions();
   }
-  protoOf(Companion_3).get_Default_goqax4_k$ = function () {
+  protoOf(Companion_8).get_Default_goqax4_k$ = function () {
     return this.Default_1;
   };
-  var Companion_instance_3;
-  function Companion_getInstance_46() {
-    if (Companion_instance_3 == null)
-      new Companion_3();
-    return Companion_instance_3;
+  var Companion_instance_8;
+  function Companion_getInstance_58() {
+    if (Companion_instance_8 == null)
+      new Companion_8();
+    return Companion_instance_8;
   }
-  function get_$stableprop_21() {
+  function get_$stableprop_27() {
     return 0;
   }
   function KeyboardOptions(capitalization, autoCorrect, keyboardType, imeAction) {
-    Companion_getInstance_46();
-    capitalization = capitalization === VOID ? Companion_getInstance_29().get_None_icfadu_k$() : capitalization;
+    Companion_getInstance_58();
+    capitalization = capitalization === VOID ? Companion_getInstance_37().get_None_icfadu_k$() : capitalization;
     autoCorrect = autoCorrect === VOID ? true : autoCorrect;
-    keyboardType = keyboardType === VOID ? Companion_getInstance_30().get_Text_qopopt_k$() : keyboardType;
-    imeAction = imeAction === VOID ? Companion_getInstance_27().get_Default_74yox7_k$() : imeAction;
+    keyboardType = keyboardType === VOID ? Companion_getInstance_38().get_Text_qopopt_k$() : keyboardType;
+    imeAction = imeAction === VOID ? Companion_getInstance_35().get_Default_74yox7_k$() : imeAction;
     this.capitalization_1 = capitalization;
     this.autoCorrect_1 = autoCorrect;
     this.keyboardType_1 = keyboardType;
@@ -18944,7 +26517,7 @@
     return new ImeOptions(singleLine, this.capitalization_1, this.autoCorrect_1, this.keyboardType_1, this.imeAction_1);
   };
   protoOf(KeyboardOptions).toImeOptions$default_um9g6u_k$ = function (singleLine, $super) {
-    singleLine = singleLine === VOID ? Companion_getInstance_21().get_Default_goqax4_k$().get_singleLine_52fw9n_k$() : singleLine;
+    singleLine = singleLine === VOID ? Companion_getInstance_31().get_Default_goqax4_k$().get_singleLine_52fw9n_k$() : singleLine;
     return $super === VOID ? this.toImeOptions_2t3uma_k$(singleLine) : $super.toImeOptions_2t3uma_k$.call(this, singleLine);
   };
   protoOf(KeyboardOptions).copy_knggfb_k$ = function (capitalization, autoCorrect, keyboardType, imeAction) {
@@ -19412,15 +26985,15 @@
   function layoutText($this, constraints, layoutDirection) {
     $this.layoutIntrinsics_4irjyy_k$(layoutDirection);
     var minWidth = _Constraints___get_minWidth__impl__hi9lfi(constraints);
-    var widthMatters = $this.softWrap_1 ? true : $this.overflow_1 === Companion_getInstance_18().get_Ellipsis_xgxit0_k$();
+    var widthMatters = $this.softWrap_1 ? true : $this.overflow_1 === Companion_getInstance_29().get_Ellipsis_xgxit0_k$();
     var tmp;
     if (widthMatters ? _Constraints___get_hasBoundedWidth__impl__7hd0wr(constraints) : false) {
       tmp = _Constraints___get_maxWidth__impl__uuyqc(constraints);
     } else {
-      tmp = Companion_getInstance_31().get_Infinity_rvchkf_k$();
+      tmp = Companion_getInstance_7().get_Infinity_rvchkf_k$();
     }
     var maxWidth = tmp;
-    var overwriteMaxLines = !$this.softWrap_1 ? $this.overflow_1 === Companion_getInstance_18().get_Ellipsis_xgxit0_k$() : false;
+    var overwriteMaxLines = !$this.softWrap_1 ? $this.overflow_1 === Companion_getInstance_29().get_Ellipsis_xgxit0_k$() : false;
     var finalMaxLines = overwriteMaxLines ? 1 : $this.maxLines_1;
     var tmp_0;
     if (minWidth === maxWidth) {
@@ -19429,29 +27002,29 @@
       tmp_0 = coerceIn($this.get_maxIntrinsicWidth_b4gk2k_k$(), minWidth, maxWidth);
     }
     var width = tmp_0;
-    return new MultiParagraph(_get_nonNullIntrinsics__hf0xox($this), Constraints(VOID, width, VOID, _Constraints___get_maxHeight__impl__dt3e8z(constraints)), finalMaxLines, $this.overflow_1 === Companion_getInstance_18().get_Ellipsis_xgxit0_k$());
+    return new MultiParagraph(_get_nonNullIntrinsics__hf0xox($this), Constraints_0(VOID, width, VOID, _Constraints___get_maxHeight__impl__dt3e8z(constraints)), finalMaxLines, $this.overflow_1 === Companion_getInstance_29().get_Ellipsis_xgxit0_k$());
   }
-  function Companion_4() {
-    Companion_instance_4 = this;
+  function Companion_9() {
+    Companion_instance_9 = this;
   }
-  protoOf(Companion_4).paint_ct2xtf_k$ = function (canvas, textLayoutResult) {
+  protoOf(Companion_9).paint_ct2xtf_k$ = function (canvas, textLayoutResult) {
     TextPainter_getInstance().paint_ct2xtf_k$(canvas, textLayoutResult);
   };
-  var Companion_instance_4;
-  function Companion_getInstance_47() {
-    if (Companion_instance_4 == null)
-      new Companion_4();
-    return Companion_instance_4;
+  var Companion_instance_9;
+  function Companion_getInstance_59() {
+    if (Companion_instance_9 == null)
+      new Companion_9();
+    return Companion_instance_9;
   }
-  function get_$stableprop_22() {
+  function get_$stableprop_28() {
     return 0;
   }
   function TextDelegate(text, style, maxLines, minLines, softWrap, overflow, density, fontFamilyResolver, placeholders) {
-    Companion_getInstance_47();
+    Companion_getInstance_59();
     maxLines = maxLines === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : maxLines;
     minLines = minLines === VOID ? get_DefaultMinLines() : minLines;
     softWrap = softWrap === VOID ? true : softWrap;
-    overflow = overflow === VOID ? Companion_getInstance_18().get_Clip_a6y3d7_k$() : overflow;
+    overflow = overflow === VOID ? Companion_getInstance_29().get_Clip_a6y3d7_k$() : overflow;
     placeholders = placeholders === VOID ? emptyList() : placeholders;
     this.text_1 = text;
     this.style_1 = style;
@@ -19568,11 +27141,11 @@
   };
   protoOf(TextDelegate).layout$default_xpwrr2_k$ = function (constraints, layoutDirection, prevResult, $super) {
     prevResult = prevResult === VOID ? null : prevResult;
-    return $super === VOID ? this.layout_k0cayh_k$(constraints, layoutDirection, prevResult) : $super.layout_k0cayh_k$.call(this, new Constraints_0(constraints), layoutDirection, prevResult);
+    return $super === VOID ? this.layout_k0cayh_k$(constraints, layoutDirection, prevResult) : $super.layout_k0cayh_k$.call(this, new Constraints(constraints), layoutDirection, prevResult);
   };
   function updateTextDelegate(current, text, style, density, fontFamilyResolver, softWrap, overflow, maxLines, minLines, placeholders) {
     softWrap = softWrap === VOID ? true : softWrap;
-    overflow = overflow === VOID ? Companion_getInstance_18().get_Clip_a6y3d7_k$() : overflow;
+    overflow = overflow === VOID ? Companion_getInstance_29().get_Clip_a6y3d7_k$() : overflow;
     maxLines = maxLines === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : maxLines;
     minLines = minLines === VOID ? get_DefaultMinLines() : minLines;
     var tmp;
@@ -19812,10 +27385,10 @@
       var tmp$ret$1;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_0;
-      if (false ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$0;
         // Inline function 'androidx.compose.foundation.text.cursor.<anonymous>.<anonymous>' call
-        tmp$ret$0 = Animatable(1.0);
+        tmp$ret$0 = Animatable_0(1.0);
         var value = tmp$ret$0;
         tmp0_cache.updateRememberedValue_l1colo_k$(value);
         tmp_0 = value;
@@ -19872,7 +27445,7 @@
         var tmp$ret$8;
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
         var tmp_6;
-        if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+        if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
           var tmp$ret$7;
           // Inline function 'androidx.compose.foundation.text.cursor.<anonymous>.<anonymous>' call
           tmp$ret$7 = cursor$lambda$slambda_0(cursorAlpha, null);
@@ -19892,7 +27465,7 @@
         LaunchedEffect$composable_0(tmp_4, tmp_5, tmp$ret$11, $composer_0, 0);
         tmp_3 = drawWithContent($this$composed, cursor$lambda$lambda(cursorAlpha, $offsetMapping, $value, $state, $cursorBrush));
       } else {
-        tmp_3 = Companion_getInstance_7();
+        tmp_3 = Companion_getInstance_8();
       }
       var tmp1_group = tmp_3;
       var tmp0_2 = tmp1_group;
@@ -19923,22 +27496,22 @@
   var DefaultWidthCharCount;
   function TextFieldDelegate$Companion$restartInput$lambda($editProcessor, $onValueChange, $session) {
     return function (it) {
-      Companion_getInstance_48().onEditCommand_j9opbt_k$(it, $editProcessor, $onValueChange, $session._v);
+      Companion_getInstance_60().onEditCommand_j9opbt_k$(it, $editProcessor, $onValueChange, $session._v);
       return Unit_getInstance();
     };
   }
-  function Companion_5() {
-    Companion_instance_5 = this;
+  function Companion_10() {
+    Companion_instance_10 = this;
   }
-  protoOf(Companion_5).layout_ll7k81_k$ = function (textDelegate, constraints, layoutDirection, prevResultText) {
+  protoOf(Companion_10).layout_ll7k81_k$ = function (textDelegate, constraints, layoutDirection, prevResultText) {
     var layoutResult = textDelegate.layout_k0cayh_k$(constraints, layoutDirection, prevResultText);
     return new Triple(_IntSize___get_width__impl__d9yl4o(layoutResult.get_size_yscczt_k$()), _IntSize___get_height__impl__prv63b(layoutResult.get_size_yscczt_k$()), layoutResult);
   };
-  protoOf(Companion_5).layout$default_krqkq0_k$ = function (textDelegate, constraints, layoutDirection, prevResultText, $super) {
+  protoOf(Companion_10).layout$default_krqkq0_k$ = function (textDelegate, constraints, layoutDirection, prevResultText, $super) {
     prevResultText = prevResultText === VOID ? null : prevResultText;
-    return $super === VOID ? this.layout_ll7k81_k$(textDelegate, constraints, layoutDirection, prevResultText) : $super.layout_ll7k81_k$.call(this, textDelegate, new Constraints_0(constraints), layoutDirection, prevResultText);
+    return $super === VOID ? this.layout_ll7k81_k$(textDelegate, constraints, layoutDirection, prevResultText) : $super.layout_ll7k81_k$.call(this, textDelegate, new Constraints(constraints), layoutDirection, prevResultText);
   };
-  protoOf(Companion_5).draw_rsxlrj_k$ = function (canvas, value, offsetMapping, textLayoutResult, selectionPaint) {
+  protoOf(Companion_10).draw_rsxlrj_k$ = function (canvas, value, offsetMapping, textLayoutResult, selectionPaint) {
     if (!_TextRange___get_collapsed__impl__cilesp(value.get_selection_iqfejd_k$())) {
       var start = offsetMapping.originalToTransformed_c5d2si_k$(_TextRange___get_min__impl__uu95c4(value.get_selection_iqfejd_k$()));
       var end = offsetMapping.originalToTransformed_c5d2si_k$(_TextRange___get_max__impl__owm8m(value.get_selection_iqfejd_k$()));
@@ -19949,7 +27522,7 @@
     }
     TextPainter_getInstance().paint_ct2xtf_k$(canvas, textLayoutResult);
   };
-  protoOf(Companion_5).notifyFocusedRect_yr4ff8_k$ = function (value, textDelegate, textLayoutResult, layoutCoordinates, textInputSession, hasFocus, offsetMapping) {
+  protoOf(Companion_10).notifyFocusedRect_yr4ff8_k$ = function (value, textDelegate, textLayoutResult, layoutCoordinates, textInputSession, hasFocus, offsetMapping) {
     if (!hasFocus) {
       return Unit_getInstance();
     }
@@ -19967,7 +27540,7 @@
     var globalLT = layoutCoordinates.localToRoot_ew7gqb_k$(Offset(bbox.get_left_woprgw_k$(), bbox.get_top_18ivbo_k$()));
     textInputSession.notifyFocusedRect_xqvesm_k$(Rect_0(Offset(_Offset___get_x__impl__xvi35n(globalLT), _Offset___get_y__impl__8bzhra(globalLT)), Size_0(bbox.get_width_j0q4yl_k$(), bbox.get_height_e7t92o_k$())));
   };
-  protoOf(Companion_5).onEditCommand_j9opbt_k$ = function (ops, editProcessor, onValueChange, session) {
+  protoOf(Companion_10).onEditCommand_j9opbt_k$ = function (ops, editProcessor, onValueChange, session) {
     var newValue = editProcessor.apply_6gs6io_k$(ops);
     if (session == null)
       null;
@@ -19975,38 +27548,38 @@
       session.updateState_h3q7x3_k$(null, newValue);
     onValueChange(newValue);
   };
-  protoOf(Companion_5).setCursorOffset_oyozv8_k$ = function (position, textLayoutResult, editProcessor, offsetMapping, onValueChange) {
+  protoOf(Companion_10).setCursorOffset_oyozv8_k$ = function (position, textLayoutResult, editProcessor, offsetMapping, onValueChange) {
     var offset = offsetMapping.transformedToOriginal_xp4com_k$(textLayoutResult.getOffsetForPosition$default_kshj9t_k$(position));
     onValueChange(editProcessor.toTextFieldValue_3ykzy7_k$().copy$default_c4y0gg_k$(VOID, TextRange_0(offset)));
   };
-  protoOf(Companion_5).restartInput_xph7v3_k$ = function (textInputService, value, editProcessor, imeOptions, onValueChange, onImeActionPerformed) {
+  protoOf(Companion_10).restartInput_xph7v3_k$ = function (textInputService, value, editProcessor, imeOptions, onValueChange, onImeActionPerformed) {
     var session = {_v: null};
     session._v = textInputService.startInput_5hgpy9_k$(value, imeOptions, TextFieldDelegate$Companion$restartInput$lambda(editProcessor, onValueChange, session), onImeActionPerformed);
     return session._v;
   };
-  protoOf(Companion_5).onFocus_nyq65v_k$ = function (textInputService, value, editProcessor, imeOptions, onValueChange, onImeActionPerformed) {
+  protoOf(Companion_10).onFocus_nyq65v_k$ = function (textInputService, value, editProcessor, imeOptions, onValueChange, onImeActionPerformed) {
     return this.restartInput_xph7v3_k$(textInputService, value, editProcessor, imeOptions, onValueChange, onImeActionPerformed);
   };
-  protoOf(Companion_5).onBlur_e9j2js_k$ = function (textInputSession, editProcessor, onValueChange) {
+  protoOf(Companion_10).onBlur_e9j2js_k$ = function (textInputSession, editProcessor, onValueChange) {
     onValueChange(editProcessor.toTextFieldValue_3ykzy7_k$().copy$default_c4y0gg_k$(VOID, VOID, null));
     textInputSession.dispose_3n44we_k$();
   };
-  protoOf(Companion_5).applyCompositionDecoration_rguykw_k$ = function (compositionRange, transformed) {
+  protoOf(Companion_10).applyCompositionDecoration_rguykw_k$ = function (compositionRange, transformed) {
     // Inline function 'kotlin.apply' call
     var tmp0_apply = Builder_init_$Create$(transformed.get_text_wouvsm_k$());
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.foundation.text.Companion.applyCompositionDecoration.<anonymous>' call
-    tmp0_apply.addStyle_jucs1v_k$(SpanStyle_init_$Create$(VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, Companion_getInstance_32().get_Underline_oo7egz_k$()), transformed.get_offsetMapping_mw1yem_k$().originalToTransformed_c5d2si_k$(_TextRange___get_start__impl__ww4t90(compositionRange)), transformed.get_offsetMapping_mw1yem_k$().originalToTransformed_c5d2si_k$(_TextRange___get_end__impl__gcdxpp(compositionRange)));
+    tmp0_apply.addStyle_jucs1v_k$(SpanStyle_init_$Create$(VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, Companion_getInstance_39().get_Underline_oo7egz_k$()), transformed.get_offsetMapping_mw1yem_k$().originalToTransformed_c5d2si_k$(_TextRange___get_start__impl__ww4t90(compositionRange)), transformed.get_offsetMapping_mw1yem_k$().originalToTransformed_c5d2si_k$(_TextRange___get_end__impl__gcdxpp(compositionRange)));
     return new TransformedText(tmp0_apply.toAnnotatedString_yesz4e_k$(), transformed.get_offsetMapping_mw1yem_k$());
   };
-  var Companion_instance_5;
-  function Companion_getInstance_48() {
-    if (Companion_instance_5 == null)
-      new Companion_5();
-    return Companion_instance_5;
+  var Companion_instance_10;
+  function Companion_getInstance_60() {
+    if (Companion_instance_10 == null)
+      new Companion_10();
+    return Companion_instance_10;
   }
   function TextFieldDelegate() {
-    Companion_getInstance_48();
+    Companion_getInstance_60();
   }
   function computeSizeForDefaultText(style, density, fontFamilyResolver, text, maxLines) {
     text = text === VOID ? get_EmptyTextReplacement() : text;
@@ -20014,7 +27587,7 @@
     _init_properties_TextFieldDelegate_kt__lo6v7k();
     // Inline function 'kotlin.collections.listOf' call
     var tmp0_spanStyles = emptyList();
-    var tmp1_constraints = Constraints();
+    var tmp1_constraints = Constraints_0();
     var paragraph = Paragraph(text, style, tmp1_constraints, density, fontFamilyResolver, tmp0_spanStyles, VOID, maxLines, false);
     return IntSize(ceilToIntPx(paragraph.get_minIntrinsicWidth_lmc1rq_k$()), ceilToIntPx(paragraph.get_height_e7t92o_k$()));
   }
@@ -20040,7 +27613,7 @@
   function mouseDragGestureDetector(_this__u8e3s4, observer, enabled) {
     var tmp;
     if (enabled) {
-      var tmp_0 = Companion_getInstance_7();
+      var tmp_0 = Companion_getInstance_8();
       tmp = composed$composable(tmp_0, VOID, mouseDragGestureDetector$lambda(observer));
     } else {
       tmp = _this__u8e3s4;
@@ -20202,7 +27775,7 @@
       var tmp$ret$1;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_0;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$0;
         // Inline function 'androidx.compose.foundation.text.mouseDragGestureDetector.<anonymous>.<anonymous>' call
         tmp$ret$0 = mouseDragGestureDetector$lambda$slambda_0(currentMouseSelectionObserver$delegate, null);
@@ -20303,7 +27876,7 @@
   function TextFieldKeyInput$process$lambda$lambda_2($this$deleteIfSelectedOr) {
     var nextCharacterIndex = $this$deleteIfSelectedOr.getNextCharacterIndex_o30ufi_k$();
     var tmp;
-    if (!(nextCharacterIndex === Companion_getInstance_55().get_NoCharacterFound_8tb95p_k$())) {
+    if (!(nextCharacterIndex === Companion_getInstance_67().get_NoCharacterFound_8tb95p_k$())) {
       tmp = new DeleteSurroundingTextCommand(0, nextCharacterIndex - _TextRange___get_end__impl__gcdxpp($this$deleteIfSelectedOr.get_selection_iqfejd_k$()) | 0);
     } else {
       tmp = null;
@@ -20647,7 +28220,7 @@
     value = value === VOID ? TextFieldValue_init_$Create$() : value;
     editable = editable === VOID ? true : editable;
     singleLine = singleLine === VOID ? false : singleLine;
-    offsetMapping = offsetMapping === VOID ? Companion_getInstance_33().get_Identity_wza1cp_k$() : offsetMapping;
+    offsetMapping = offsetMapping === VOID ? Companion_getInstance_40().get_Identity_wza1cp_k$() : offsetMapping;
     undoManager = undoManager === VOID ? null : undoManager;
     keyMapping = keyMapping === VOID ? get_platformDefaultKeyMapping() : keyMapping;
     var tmp;
@@ -20711,7 +28284,7 @@
       }
       return tmp;
     }
-    if (!(get_type(event) === Companion_getInstance_34().get_KeyDown_e22p7_k$())) {
+    if (!(get_type(event) === Companion_getInstance_41().get_KeyDown_e22p7_k$())) {
       return false;
     }
     var command = this.keyMapping_1.map_qbm95i_k$(event);
@@ -20764,7 +28337,7 @@
       var tmp$ret$1;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_0;
-      if (false ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$0;
         // Inline function 'androidx.compose.foundation.text.textFieldKeyInput.<anonymous>.<anonymous>' call
         tmp$ret$0 = new TextPreparedSelectionState();
@@ -20798,7 +28371,7 @@
       var tmp$ret$6;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_2;
-      if (false ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$5;
         // Inline function 'androidx.compose.foundation.text.textFieldKeyInput.<anonymous>.<anonymous>' call
         tmp$ret$5 = new DeadKeyCombiner();
@@ -20817,7 +28390,7 @@
       tmp$ret$9 = tmp0_0;
       var keyCombiner = tmp$ret$9;
       var processor = new TextFieldKeyInput($state, $manager, $value, $editable, $singleLine, preparedSelectionState, $offsetMapping, $undoManager, keyCombiner, VOID, $onValueChange, $imeAction);
-      var tmp_4 = Companion_getInstance_7();
+      var tmp_4 = Companion_getInstance_8();
       var tmp0_1 = onKeyEvent(tmp_4, TextFieldKeyInput$process$ref(processor));
       var tmp_5;
       if (isTraceInProgress()) {
@@ -20837,7 +28410,7 @@
     }
     var tmp;
     if (get_isInTouchMode()) {
-      var selectionModifier = longPressDragGestureFilter(Companion_getInstance_7(), manager.get_touchSelectionObserver_1m39pw_k$(), enabled);
+      var selectionModifier = longPressDragGestureFilter(Companion_getInstance_8(), manager.get_touchSelectionObserver_1m39pw_k$(), enabled);
       tmp = pointerHoverIcon(tapPressTextFieldModifier(_this__u8e3s4, interactionSource, enabled, defaultTextFieldPointer$composable$lambda(state, focusRequester, readOnly, offsetMapping, manager)).then_5qw5wu_k$(selectionModifier), get_textPointerIcon());
     } else {
       tmp = pointerHoverIcon(mouseDragGestureDetector(_this__u8e3s4, manager.get_mouseSelectionObserver_aow8ey_k$(), enabled), get_textPointerIcon());
@@ -20863,7 +28436,7 @@
             var tmp$ret$1;
             // Inline function 'kotlin.let' call
             // Inline function 'kotlin.contracts.contract' call
-            Companion_getInstance_48().setCursorOffset_oyozv8_k$(offset.packedValue_1, tmp0_safe_receiver, $state.get_processor_9l9ogn_k$(), $offsetMapping, $state.get_onValueChange_omahaf_k$());
+            Companion_getInstance_60().setCursorOffset_oyozv8_k$(offset.packedValue_1, tmp0_safe_receiver, $state.get_processor_9l9ogn_k$(), $offsetMapping, $state.get_onValueChange_omahaf_k$());
             var tmp_1;
             var tmp$ret$0;
             // Inline function 'kotlin.text.isNotEmpty' call
@@ -20899,11 +28472,11 @@
   function tapPressTextFieldModifier$lambda$lambda() {
     return EmptyCoroutineContext_getInstance();
   }
-  function _no_name_provided__qut3iv_2($pressedInteraction, $interactionSource) {
+  function _no_name_provided__qut3iv_5($pressedInteraction, $interactionSource) {
     this.$pressedInteraction_1 = $pressedInteraction;
     this.$interactionSource_1 = $interactionSource;
   }
-  protoOf(_no_name_provided__qut3iv_2).dispose_3n44we_k$ = function () {
+  protoOf(_no_name_provided__qut3iv_5).dispose_3n44we_k$ = function () {
     // Inline function 'androidx.compose.foundation.text.tapPressTextFieldModifier.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
     var tmp0_safe_receiver = this.$pressedInteraction_1.get_value_j01efc_k$();
     if (tmp0_safe_receiver == null)
@@ -20924,7 +28497,7 @@
     return function ($this$DisposableEffect) {
       var tmp$ret$0;
       // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      tmp$ret$0 = new _no_name_provided__qut3iv_2($pressedInteraction, $interactionSource);
+      tmp$ret$0 = new _no_name_provided__qut3iv_5($pressedInteraction, $interactionSource);
       return tmp$ret$0;
     };
   }
@@ -21305,7 +28878,7 @@
       var tmp$ret$1;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_0;
-      if (false ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$0;
         // Inline function 'androidx.compose.runtime.rememberCoroutineScope$composable.<anonymous>' call
         tmp$ret$0 = new CompositionScopedCoroutineScopeCanceller(createCompositionCoroutineScope(getContext._v(), composer));
@@ -21343,7 +28916,7 @@
       var tmp$ret$7;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_2;
-      if (false ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$6;
         // Inline function 'androidx.compose.foundation.text.tapPressTextFieldModifier.<anonymous>.<anonymous>' call
         tmp$ret$6 = mutableStateOf(null);
@@ -21379,7 +28952,7 @@
       var tmp$ret$12;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_4;
-      if (tmp1_cache ? true : tmp0_let_1 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache ? true : tmp0_let_1 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$11;
         // Inline function 'androidx.compose.foundation.text.tapPressTextFieldModifier.<anonymous>.<anonymous>' call
         tmp$ret$11 = tapPressTextFieldModifier$lambda$lambda_0(pressedInteraction, $interactionSource);
@@ -21397,7 +28970,7 @@
       $composer_4.endReplaceableGroup_er37p7_k$();
       tmp$ret$15 = tmp0_2;
       DisposableEffect$composable($interactionSource, tmp$ret$15, $composer_0, 0);
-      var tmp_6 = Companion_getInstance_7();
+      var tmp_6 = Companion_getInstance_8();
       var tmp0_3 = pointerInput(tmp_6, $interactionSource, tapPressTextFieldModifier$lambda$slambda_0(scope, pressedInteraction, $interactionSource, onTapState, null));
       var tmp_7;
       if (isTraceInProgress()) {
@@ -21444,29 +29017,29 @@
   function _get_previousCursorRect__4iarq($this) {
     return $this.previousCursorRect_1;
   }
-  function Companion_6() {
-    Companion_instance_6 = this;
+  function Companion_11() {
+    Companion_instance_11 = this;
     var tmp = this;
     var tmp_0 = TextFieldScrollerPosition$Companion$Saver$lambda;
     tmp.Saver_1 = listSaver(tmp_0, TextFieldScrollerPosition$Companion$Saver$lambda_0);
   }
-  protoOf(Companion_6).get_Saver_igssp8_k$ = function () {
+  protoOf(Companion_11).get_Saver_igssp8_k$ = function () {
     return this.Saver_1;
   };
-  var Companion_instance_6;
-  function Companion_getInstance_49() {
-    if (Companion_instance_6 == null)
-      new Companion_6();
-    return Companion_instance_6;
+  var Companion_instance_11;
+  function Companion_getInstance_61() {
+    if (Companion_instance_11 == null)
+      new Companion_11();
+    return Companion_instance_11;
   }
   function TextFieldScrollerPosition(initialOrientation, initial) {
-    Companion_getInstance_49();
+    Companion_getInstance_61();
     initial = initial === VOID ? 0.0 : initial;
     this.offset$delegate_1 = mutableFloatStateOf(initial);
     this.maximum$delegate_1 = mutableFloatStateOf(0.0);
     this.viewportSize$delegate_1 = mutableStateOf(0);
-    this.previousCursorRect_1 = Companion_getInstance_35().get_Zero_woe9zl_k$();
-    this.previousSelection_1 = Companion_getInstance_36().get_Zero_e8si87_k$();
+    this.previousCursorRect_1 = Companion_getInstance_42().get_Zero_woe9zl_k$();
+    this.previousSelection_1 = Companion_getInstance_43().get_Zero_e8si87_k$();
     this.orientation$delegate_1 = mutableStateOf(initialOrientation, structuralEqualityPolicy());
   }
   protoOf(TextFieldScrollerPosition).set_offset_qxj79p_k$ = function (_set____db54di) {
@@ -21593,7 +29166,7 @@
     return this.textLayoutResultProvider_1;
   };
   protoOf(VerticalScrollLayoutModifier).measure_i9wrw7_k$ = function (_this__u8e3s4, measurable, constraints) {
-    var childConstraints = Constraints__copy$default_impl_f452rp(constraints, VOID, VOID, VOID, Companion_getInstance_31().get_Infinity_rvchkf_k$());
+    var childConstraints = Constraints__copy$default_impl_f452rp(constraints, VOID, VOID, VOID, Companion_getInstance_7().get_Infinity_rvchkf_k$());
     var placeable = measurable.measure_ikak0q_k$(childConstraints);
     // Inline function 'kotlin.math.min' call
     var tmp0_min = placeable.get_height_e7t92o_k$();
@@ -21687,7 +29260,7 @@
     if (maxIntrinsicWidth < _Constraints___get_maxWidth__impl__uuyqc(constraints)) {
       tmp = constraints;
     } else {
-      tmp = Constraints__copy$default_impl_f452rp(constraints, VOID, Companion_getInstance_31().get_Infinity_rvchkf_k$());
+      tmp = Constraints__copy$default_impl_f452rp(constraints, VOID, Companion_getInstance_7().get_Infinity_rvchkf_k$());
     }
     var childConstraints = tmp;
     var placeable = measurable.measure_ikak0q_k$(childConstraints);
@@ -21748,7 +29321,7 @@
   };
   function getCursorRectInScroller(_this__u8e3s4, cursorOffset, transformedText, textLayoutResult, rtl, textFieldWidth) {
     var tmp1_elvis_lhs = textLayoutResult == null ? null : textLayoutResult.getCursorRect_x5c8fl_k$(transformedText.get_offsetMapping_mw1yem_k$().originalToTransformed_c5d2si_k$(cursorOffset));
-    var cursorRect = tmp1_elvis_lhs == null ? Companion_getInstance_35().get_Zero_woe9zl_k$() : tmp1_elvis_lhs;
+    var cursorRect = tmp1_elvis_lhs == null ? Companion_getInstance_42().get_Zero_woe9zl_k$() : tmp1_elvis_lhs;
     var thickness = _this__u8e3s4.roundToPx_hl1u8z_k$(get_DefaultCursorThickness());
     var tmp;
     if (rtl) {
@@ -21779,9 +29352,9 @@
   function createScrollableState$1($scrollableState, $scrollerPosition) {
     this.$$delegate_0__1 = $scrollableState;
     var tmp = this;
-    tmp.canScrollForward$delegate_1 = derivedStateOf(_no_name_provided_$canScrollForward$delegate$lambda_oh15fp($scrollerPosition));
+    tmp.canScrollForward$delegate_1 = derivedStateOf_0(_no_name_provided_$canScrollForward$delegate$lambda_oh15fp($scrollerPosition));
     var tmp_0 = this;
-    tmp_0.canScrollBackward$delegate_1 = derivedStateOf(_no_name_provided_$canScrollBackward$delegate$lambda_x23spl($scrollerPosition));
+    tmp_0.canScrollBackward$delegate_1 = derivedStateOf_0(_no_name_provided_$canScrollBackward$delegate$lambda_x23spl($scrollerPosition));
   }
   protoOf(createScrollableState$1).get_isScrollInProgress_n6ediq_k$ = function () {
     return this.$$delegate_0__1.get_isScrollInProgress_n6ediq_k$();
@@ -21794,12 +29367,12 @@
   };
   protoOf(createScrollableState$1).get_canScrollForward_dmb0fj_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
-    canScrollForward$factory();
+    canScrollForward$factory_1();
     return this.canScrollForward$delegate_1.get_value_j01efc_k$();
   };
   protoOf(createScrollableState$1).get_canScrollBackward_v2t7h3_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
-    canScrollBackward$factory();
+    canScrollBackward$factory_1();
     return this.canScrollBackward$delegate_1.get_value_j01efc_k$();
   };
   function textFieldScrollable$lambda($scrollerPosition, $interactionSource, $enabled) {
@@ -21858,7 +29431,7 @@
       var tmp$ret$2;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_0;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$1;
         // Inline function 'androidx.compose.foundation.text.textFieldScrollable.<anonymous>.<anonymous>' call
         tmp$ret$1 = textFieldScrollable$lambda$lambda($scrollerPosition);
@@ -21893,7 +29466,7 @@
       var tmp$ret$8;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_2;
-      if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$7;
         // Inline function 'androidx.compose.foundation.text.textFieldScrollable.<anonymous>.<anonymous>' call
         var tmp$ret$6;
@@ -21915,7 +29488,7 @@
       tmp$ret$11 = tmp0_1;
       var wrappedScrollableState = tmp$ret$11;
       var overscrollEffect = rememberTextFieldOverscrollEffect$composable($composer_0, 0);
-      var tmp0_$receiver = Companion_getInstance_7();
+      var tmp0_$receiver = Companion_getInstance_8();
       var tmp1_orientation = $scrollerPosition.get_orientation_9wu93t_k$();
       var tmp2_enabled = $enabled ? !($scrollerPosition.get_maximum_f8hnp3_k$() === 0.0) : false;
       var scroll = scrollable(tmp0_$receiver, wrappedScrollableState, tmp1_orientation, overscrollEffect, tmp2_enabled, reverseDirection, VOID, $interactionSource);
@@ -21930,7 +29503,7 @@
         // Inline function 'kotlin.contracts.contract' call
         var tmp$ret$12;
         // Inline function 'androidx.compose.foundation.text.textFieldScrollable.<anonymous>.<anonymous>' call
-        var tmp0_return = clipScrollableContainer(Companion_getInstance_7(), $scrollerPosition.get_orientation_9wu93t_k$()).then_5qw5wu_k$(tmp4_safe_receiver).then_5qw5wu_k$(scroll);
+        var tmp0_return = clipScrollableContainer(Companion_getInstance_8(), $scrollerPosition.get_orientation_9wu93t_k$()).then_5qw5wu_k$(tmp4_safe_receiver).then_5qw5wu_k$(scroll);
         tmp$ret$12 = tmp0_return;
         tmp$ret$13 = tmp$ret$12;
         tmp_4 = tmp$ret$13;
@@ -22002,12 +29575,12 @@
       return receiver.set_orientation_mck6bl_k$(value);
     });
   }
-  function canScrollForward$factory() {
+  function canScrollForward$factory_1() {
     return getPropertyCallableRef('canScrollForward', 1, KProperty1, function (receiver) {
       return receiver.get_canScrollForward_dmb0fj_k$();
     }, null);
   }
-  function canScrollBackward$factory() {
+  function canScrollBackward$factory_1() {
     return getPropertyCallableRef('canScrollBackward', 1, KProperty1, function (receiver) {
       return receiver.get_canScrollBackward_v2t7h3_k$();
     }, null);
@@ -22087,7 +29660,7 @@
   }
   function textFieldMinSize$lambda$lambda($minSizeState) {
     return function ($this$layout, measurable, constraints) {
-      defaultMinSize(Companion_getInstance_7());
+      defaultMinSize(Companion_getInstance_8());
       var minSize = $minSizeState.minSize_1;
       var childConstraints = Constraints__copy$default_impl_f452rp(constraints.value_1, coerceIn(_IntSize___get_width__impl__d9yl4o(minSize), _Constraints___get_minWidth__impl__hi9lfi(constraints.value_1), _Constraints___get_maxWidth__impl__uuyqc(constraints.value_1)), VOID, coerceIn(_IntSize___get_height__impl__prv63b(minSize), _Constraints___get_minHeight__impl__ev4bgx(constraints.value_1), _Constraints___get_maxHeight__impl__dt3e8z(constraints.value_1)));
       var measured = measurable.measure_ikak0q_k$(childConstraints);
@@ -22153,7 +29726,7 @@
       var tmp$ret$4;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_0;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$3;
         // Inline function 'androidx.compose.foundation.text.textFieldMinSize.<anonymous>.<anonymous>' call
         tmp$ret$3 = resolveDefaults($style, layoutDirection);
@@ -22188,17 +29761,17 @@
       var tmp$ret$9;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_2;
-      if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$8;
         // Inline function 'androidx.compose.foundation.text.textFieldMinSize.<anonymous>.<anonymous>' call
         var tmp_3 = resolvedStyle.get_fontFamily_ulphcs_k$();
         var tmp0_elvis_lhs = resolvedStyle.get_fontWeight_wbif2o_k$();
-        var tmp_4 = tmp0_elvis_lhs == null ? Companion_getInstance_24().get_Normal_22avww_k$() : tmp0_elvis_lhs;
+        var tmp_4 = tmp0_elvis_lhs == null ? Companion_getInstance_32().get_Normal_22avww_k$() : tmp0_elvis_lhs;
         var tmp1_elvis_lhs = resolvedStyle.get_fontStyle_fze7ml_k$();
         var tmp_5;
         var tmp_6 = tmp1_elvis_lhs;
         if ((tmp_6 == null ? null : new FontStyle(tmp_6)) == null) {
-          tmp_5 = Companion_getInstance_25().get_Normal_b4ik9_k$();
+          tmp_5 = Companion_getInstance_33().get_Normal_b4ik9_k$();
         } else {
           tmp_5 = tmp1_elvis_lhs;
         }
@@ -22207,7 +29780,7 @@
         var tmp_8;
         var tmp_9 = tmp2_elvis_lhs;
         if ((tmp_9 == null ? null : new FontSynthesis(tmp_9)) == null) {
-          tmp_8 = Companion_getInstance_26().get_All_wqntwc_k$();
+          tmp_8 = Companion_getInstance_34().get_All_wqntwc_k$();
         } else {
           tmp_8 = tmp2_elvis_lhs;
         }
@@ -22242,7 +29815,7 @@
       var tmp$ret$14;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_11;
-      if (false ? true : tmp0_let_1 === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let_1 === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$13;
         // Inline function 'androidx.compose.foundation.text.textFieldMinSize.<anonymous>.<anonymous>' call
         tmp$ret$13 = new TextFieldSize(layoutDirection, density, fontFamilyResolver, $style, invoke$lambda_1(typeface$delegate));
@@ -22261,7 +29834,7 @@
       tmp$ret$17 = tmp0_4;
       var minSizeState = tmp$ret$17;
       minSizeState.update_s09s6q_k$(layoutDirection, density, fontFamilyResolver, resolvedStyle, invoke$lambda_1(typeface$delegate));
-      var tmp_13 = Companion_getInstance_7();
+      var tmp_13 = Companion_getInstance_8();
       var tmp0_5 = layout(tmp_13, textFieldMinSize$lambda$lambda(minSizeState));
       var tmp_14;
       if (isTraceInProgress()) {
@@ -22282,7 +29855,7 @@
     }
     if (!(_Constraints___get_minWidth__impl__hi9lfi(constraints) === _Constraints___get_minWidth__impl__hi9lfi(layoutInput.get_constraints_khg0u2_k$())))
       return false;
-    if (!(softWrap ? true : overflow === Companion_getInstance_18().get_Ellipsis_xgxit0_k$())) {
+    if (!(softWrap ? true : overflow === Companion_getInstance_29().get_Ellipsis_xgxit0_k$())) {
       return true;
     }
     return _Constraints___get_maxWidth__impl__uuyqc(constraints) === _Constraints___get_maxWidth__impl__uuyqc(layoutInput.get_constraints_khg0u2_k$()) ? _Constraints___get_maxHeight__impl__dt3e8z(constraints) === _Constraints___get_maxHeight__impl__dt3e8z(layoutInput.get_constraints_khg0u2_k$()) : false;
@@ -22338,12 +29911,12 @@
         var tmp0_safe_receiver_0 = $this.decorationBoxCoordinates_1;
         tmp_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.localBoundingBoxOf$default_ein37w_k$(tmp0_safe_receiver);
       } else {
-        tmp_0 = Companion_getInstance_35().get_Zero_woe9zl_k$();
+        tmp_0 = Companion_getInstance_42().get_Zero_woe9zl_k$();
       }
       tmp = tmp_0;
     }
     var tmp1_elvis_lhs = tmp;
-    var visibleInnerTextFieldRect = tmp1_elvis_lhs == null ? Companion_getInstance_35().get_Zero_woe9zl_k$() : tmp1_elvis_lhs;
+    var visibleInnerTextFieldRect = tmp1_elvis_lhs == null ? Companion_getInstance_42().get_Zero_woe9zl_k$() : tmp1_elvis_lhs;
     return coerceIn_1(_this__u8e3s4, visibleInnerTextFieldRect);
   }
   function TextLayoutResultProxy(value) {
@@ -22644,7 +30217,7 @@
   function _init_properties_ValidatingOffsetMapping_kt__fcd8ty() {
     if (!properties_initialized_ValidatingOffsetMapping_kt_rllilk) {
       properties_initialized_ValidatingOffsetMapping_kt_rllilk = true;
-      ValidatingEmptyOffsetMappingIdentity = new ValidatingOffsetMapping(Companion_getInstance_33().get_Identity_wza1cp_k$(), 0, 0);
+      ValidatingEmptyOffsetMappingIdentity = new ValidatingOffsetMapping(Companion_getInstance_40().get_Identity_wza1cp_k$(), 0, 0);
     }
   }
   function _InlineDensity___init__impl__1m7u8m(packedValue) {
@@ -22683,18 +30256,18 @@
   function InlineDensity__toString_impl_9jhvwu($this) {
     return 'InlineDensity(density=' + _InlineDensity___get_density__impl__uz12rr($this) + ', fontScale=' + _InlineDensity___get_fontScale__impl__ao594c($this) + ')';
   }
-  function Companion_7() {
-    Companion_instance_7 = this;
+  function Companion_12() {
+    Companion_instance_12 = this;
     this.Unspecified_1 = _InlineDensity___init__impl__1m7u8m_0(FloatCompanionObject_getInstance().get_NaN_18jnv2_k$(), FloatCompanionObject_getInstance().get_NaN_18jnv2_k$());
   }
-  protoOf(Companion_7).get_Unspecified_d3ty2y_k$ = function () {
+  protoOf(Companion_12).get_Unspecified_d3ty2y_k$ = function () {
     return this.Unspecified_1;
   };
-  var Companion_instance_7;
-  function Companion_getInstance_50() {
-    if (Companion_instance_7 == null)
-      new Companion_7();
-    return Companion_instance_7;
+  var Companion_instance_12;
+  function Companion_getInstance_62() {
+    if (Companion_instance_12 == null)
+      new Companion_12();
+    return Companion_instance_12;
   }
   function InlineDensity__hashCode_impl_vanspp($this) {
     return $this.hashCode();
@@ -22708,7 +30281,7 @@
     return true;
   }
   function InlineDensity(packedValue) {
-    Companion_getInstance_50();
+    Companion_getInstance_62();
     this.packedValue_1 = packedValue;
   }
   protoOf(InlineDensity).toString = function () {
@@ -22721,19 +30294,19 @@
     return InlineDensity__equals_impl_ppdv5r(this.packedValue_1, other);
   };
   function finalConstraints(constraints, softWrap, overflow, maxIntrinsicWidth) {
-    return Constraints(VOID, finalMaxWidth(constraints, softWrap, overflow, maxIntrinsicWidth), VOID, _Constraints___get_maxHeight__impl__dt3e8z(constraints));
+    return Constraints_0(VOID, finalMaxWidth(constraints, softWrap, overflow, maxIntrinsicWidth), VOID, _Constraints___get_maxHeight__impl__dt3e8z(constraints));
   }
   function finalMaxLines(softWrap, overflow, maxLinesIn) {
-    var overwriteMaxLines = !softWrap ? overflow === Companion_getInstance_18().get_Ellipsis_xgxit0_k$() : false;
+    var overwriteMaxLines = !softWrap ? overflow === Companion_getInstance_29().get_Ellipsis_xgxit0_k$() : false;
     return overwriteMaxLines ? 1 : coerceAtLeast(maxLinesIn, 1);
   }
   function finalMaxWidth(constraints, softWrap, overflow, maxIntrinsicWidth) {
-    var widthMatters = softWrap ? true : overflow === Companion_getInstance_18().get_Ellipsis_xgxit0_k$();
+    var widthMatters = softWrap ? true : overflow === Companion_getInstance_29().get_Ellipsis_xgxit0_k$();
     var tmp;
     if (widthMatters ? _Constraints___get_hasBoundedWidth__impl__7hd0wr(constraints) : false) {
       tmp = _Constraints___get_maxWidth__impl__uuyqc(constraints);
     } else {
-      tmp = Companion_getInstance_31().get_Infinity_rvchkf_k$();
+      tmp = Companion_getInstance_7().get_Infinity_rvchkf_k$();
     }
     var maxWidth = tmp;
     var tmp_0;
@@ -22779,11 +30352,11 @@
   function _get_oneLineHeightCache__hje19m($this) {
     return $this.oneLineHeightCache_1;
   }
-  function Companion_8() {
-    Companion_instance_8 = this;
+  function Companion_13() {
+    Companion_instance_13 = this;
     this.last_1 = null;
   }
-  protoOf(Companion_8).from_5sdud2_k$ = function (minMaxUtil, layoutDirection, paramStyle, density, fontFamilyResolver) {
+  protoOf(Companion_13).from_5sdud2_k$ = function (minMaxUtil, layoutDirection, paramStyle, density, fontFamilyResolver) {
     if (minMaxUtil == null)
       null;
     else {
@@ -22809,17 +30382,17 @@
     var tmp0_also = new MinLinesConstrainer(layoutDirection, resolveDefaults(paramStyle, layoutDirection), density, fontFamilyResolver);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.foundation.text.modifiers.Companion.from.<anonymous>' call
-    Companion_getInstance_51().last_1 = tmp0_also;
+    Companion_getInstance_63().last_1 = tmp0_also;
     return tmp0_also;
   };
-  var Companion_instance_8;
-  function Companion_getInstance_51() {
-    if (Companion_instance_8 == null)
-      new Companion_8();
-    return Companion_instance_8;
+  var Companion_instance_13;
+  function Companion_getInstance_63() {
+    if (Companion_instance_13 == null)
+      new Companion_13();
+    return Companion_instance_13;
   }
   function MinLinesConstrainer(layoutDirection, inputTextStyle, density, fontFamilyResolver) {
-    Companion_getInstance_51();
+    Companion_getInstance_63();
     this.layoutDirection_1 = layoutDirection;
     this.inputTextStyle_1 = inputTextStyle;
     this.density_1 = density;
@@ -22844,8 +30417,8 @@
     var oneLineHeight = this.oneLineHeightCache_1;
     var lineHeight = this.lineHeightCache_1;
     if (isNaN_0(oneLineHeight) ? true : isNaN_0(lineHeight)) {
-      oneLineHeight = Paragraph(get_EmptyTextReplacement_0(), this.resolvedStyle_1, Constraints(), this.density_1, this.fontFamilyResolver_1, VOID, VOID, 1, false).get_height_e7t92o_k$();
-      var twoLineHeight = Paragraph(get_TwoLineTextReplacement(), this.resolvedStyle_1, Constraints(), this.density_1, this.fontFamilyResolver_1, VOID, VOID, 2, false).get_height_e7t92o_k$();
+      oneLineHeight = Paragraph(get_EmptyTextReplacement_0(), this.resolvedStyle_1, Constraints_0(), this.density_1, this.fontFamilyResolver_1, VOID, VOID, 1, false).get_height_e7t92o_k$();
+      var twoLineHeight = Paragraph(get_TwoLineTextReplacement(), this.resolvedStyle_1, Constraints_0(), this.density_1, this.fontFamilyResolver_1, VOID, VOID, 2, false).get_height_e7t92o_k$();
       lineHeight = twoLineHeight - oneLineHeight;
       this.oneLineHeightCache_1 = oneLineHeight;
       this.lineHeightCache_1 = lineHeight;
@@ -22864,7 +30437,7 @@
     var tmp0_maxHeight = _Constraints___get_maxHeight__impl__dt3e8z(inConstraints);
     var tmp1_minWidth = _Constraints___get_minWidth__impl__hi9lfi(inConstraints);
     var tmp2_maxWidth = _Constraints___get_maxWidth__impl__uuyqc(inConstraints);
-    return Constraints(tmp1_minWidth, tmp2_maxWidth, minHeight, tmp0_maxHeight);
+    return Constraints_0(tmp1_minWidth, tmp2_maxWidth, minHeight, tmp0_maxHeight);
   };
   var properties_initialized_MinLinesConstrainer_kt_uvu6cn;
   function _init_properties_MinLinesConstrainer_kt__odtdjv() {
@@ -22995,7 +30568,7 @@
   }
   function layoutText_0($this, constraints, layoutDirection) {
     var localParagraphIntrinsics = setLayoutDirection($this, layoutDirection);
-    return new MultiParagraph(localParagraphIntrinsics, finalConstraints(constraints, $this.softWrap_1, $this.overflow_1, localParagraphIntrinsics.get_maxIntrinsicWidth_b4gk2k_k$()), finalMaxLines($this.softWrap_1, $this.overflow_1, $this.maxLines_1), $this.overflow_1 === Companion_getInstance_18().get_Ellipsis_xgxit0_k$());
+    return new MultiParagraph(localParagraphIntrinsics, finalConstraints(constraints, $this.softWrap_1, $this.overflow_1, localParagraphIntrinsics.get_maxIntrinsicWidth_b4gk2k_k$()), finalMaxLines($this.softWrap_1, $this.overflow_1, $this.maxLines_1), $this.overflow_1 === Companion_getInstance_29().get_Ellipsis_xgxit0_k$());
   }
   function newLayoutWillBeDifferent(_this__u8e3s4, $this, constraints, layoutDirection) {
     if (_this__u8e3s4 == null)
@@ -23021,7 +30594,7 @@
     $this.layoutCache_1 = null;
   }
   function MultiParagraphLayoutCache(text, style, fontFamilyResolver, overflow, softWrap, maxLines, minLines, placeholders) {
-    overflow = overflow === VOID ? Companion_getInstance_18().get_Clip_a6y3d7_k$() : overflow;
+    overflow = overflow === VOID ? Companion_getInstance_29().get_Clip_a6y3d7_k$() : overflow;
     softWrap = softWrap === VOID ? true : softWrap;
     maxLines = maxLines === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : maxLines;
     minLines = minLines === VOID ? get_DefaultMinLines() : minLines;
@@ -23035,7 +30608,7 @@
     this.minLines_1 = minLines;
     this.placeholders_1 = placeholders;
     this.mMinLinesConstrainer_1 = null;
-    this.lastDensity_1 = Companion_getInstance_50().get_Unspecified_d3ty2y_k$();
+    this.lastDensity_1 = Companion_getInstance_62().get_Unspecified_d3ty2y_k$();
     this.density_1 = null;
     this.paragraphIntrinsics_1 = null;
     this.intrinsicsLayoutDirection_1 = null;
@@ -23058,7 +30631,7 @@
     var tmp_0;
     var tmp_1 = tmp1_elvis_lhs;
     if ((tmp_1 == null ? null : new InlineDensity(tmp_1)) == null) {
-      tmp_0 = Companion_getInstance_50().get_Unspecified_d3ty2y_k$();
+      tmp_0 = Companion_getInstance_62().get_Unspecified_d3ty2y_k$();
     } else {
       tmp_0 = tmp1_elvis_lhs;
     }
@@ -23094,7 +30667,7 @@
     var tmp;
     if (this.minLines_1 > 1) {
       // Inline function 'kotlin.also' call
-      var tmp0_also = Companion_getInstance_51().from_5sdud2_k$(this.mMinLinesConstrainer_1, layoutDirection, this.style_1, ensureNotNull(this.density_1), this.fontFamilyResolver_1);
+      var tmp0_also = Companion_getInstance_63().from_5sdud2_k$(this.mMinLinesConstrainer_1, layoutDirection, this.style_1, ensureNotNull(this.density_1), this.fontFamilyResolver_1);
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.foundation.text.modifiers.MultiParagraphLayoutCache.layoutWithConstraints.<anonymous>' call
       this.mMinLinesConstrainer_1 = tmp0_also;
@@ -23119,7 +30692,7 @@
     var localHeght = this.cachedIntrinsicHeight_1;
     if (width === localWidth ? !(localWidth === -1) : false)
       return localHeght;
-    var result = ceilToIntPx(layoutText_0(this, Constraints(0, width, 0, Companion_getInstance_31().get_Infinity_rvchkf_k$()), layoutDirection).get_height_e7t92o_k$());
+    var result = ceilToIntPx(layoutText_0(this, Constraints_0(0, width, 0, Companion_getInstance_7().get_Infinity_rvchkf_k$()), layoutDirection).get_height_e7t92o_k$());
     this.cachedIntrinsicHeightInputWidth_1 = width;
     this.cachedIntrinsicHeight_1 = result;
     return result;
@@ -23240,7 +30813,7 @@
   }
   function layoutText_1($this, constraints, layoutDirection) {
     var localParagraphIntrinsics = setLayoutDirection_0($this, layoutDirection);
-    return Paragraph_0(localParagraphIntrinsics, finalConstraints(constraints, $this.softWrap_1, $this.overflow_1, localParagraphIntrinsics.get_maxIntrinsicWidth_b4gk2k_k$()), finalMaxLines($this.softWrap_1, $this.overflow_1, $this.maxLines_1), $this.overflow_1 === Companion_getInstance_18().get_Ellipsis_xgxit0_k$());
+    return Paragraph_0(localParagraphIntrinsics, finalConstraints(constraints, $this.softWrap_1, $this.overflow_1, localParagraphIntrinsics.get_maxIntrinsicWidth_b4gk2k_k$()), finalMaxLines($this.softWrap_1, $this.overflow_1, $this.maxLines_1), $this.overflow_1 === Companion_getInstance_29().get_Ellipsis_xgxit0_k$());
   }
   function newLayoutWillBeDifferent_0($this, constraints, layoutDirection) {
     var tmp0_elvis_lhs = $this.paragraph_1;
@@ -23278,12 +30851,12 @@
     $this.intrinsicsLayoutDirection_1 = null;
     $this.cachedIntrinsicHeightInputWidth_1 = -1;
     $this.cachedIntrinsicHeight_1 = -1;
-    $this.prevConstraints_1 = Companion_getInstance_31().fixed_bmujv7_k$(0, 0);
+    $this.prevConstraints_1 = Companion_getInstance_7().fixed_bmujv7_k$(0, 0);
     $this.layoutSize_1 = IntSize(0, 0);
     $this.didOverflow_1 = false;
   }
   function ParagraphLayoutCache(text, style, fontFamilyResolver, overflow, softWrap, maxLines, minLines) {
-    overflow = overflow === VOID ? Companion_getInstance_18().get_Clip_a6y3d7_k$() : overflow;
+    overflow = overflow === VOID ? Companion_getInstance_29().get_Clip_a6y3d7_k$() : overflow;
     softWrap = softWrap === VOID ? true : softWrap;
     maxLines = maxLines === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : maxLines;
     minLines = minLines === VOID ? get_DefaultMinLines() : minLines;
@@ -23294,7 +30867,7 @@
     this.softWrap_1 = softWrap;
     this.maxLines_1 = maxLines;
     this.minLines_1 = minLines;
-    this.lastDensity_1 = Companion_getInstance_50().get_Unspecified_d3ty2y_k$();
+    this.lastDensity_1 = Companion_getInstance_62().get_Unspecified_d3ty2y_k$();
     this.density_1 = null;
     this.paragraph_1 = null;
     this.didOverflow_1 = false;
@@ -23302,7 +30875,7 @@
     this.mMinLinesConstrainer_1 = null;
     this.paragraphIntrinsics_1 = null;
     this.intrinsicsLayoutDirection_1 = null;
-    this.prevConstraints_1 = Companion_getInstance_31().fixed_bmujv7_k$(0, 0);
+    this.prevConstraints_1 = Companion_getInstance_7().fixed_bmujv7_k$(0, 0);
     this.cachedIntrinsicHeightInputWidth_1 = -1;
     this.cachedIntrinsicHeight_1 = -1;
   }
@@ -23321,7 +30894,7 @@
     var tmp_0;
     var tmp_1 = tmp1_elvis_lhs;
     if ((tmp_1 == null ? null : new InlineDensity(tmp_1)) == null) {
-      tmp_0 = Companion_getInstance_50().get_Unspecified_d3ty2y_k$();
+      tmp_0 = Companion_getInstance_62().get_Unspecified_d3ty2y_k$();
     } else {
       tmp_0 = tmp1_elvis_lhs;
     }
@@ -23369,7 +30942,7 @@
     var tmp;
     if (this.minLines_1 > 1) {
       // Inline function 'kotlin.also' call
-      var tmp0_also = Companion_getInstance_51().from_5sdud2_k$(this.mMinLinesConstrainer_1, layoutDirection, this.style_1, ensureNotNull(this.density_1), this.fontFamilyResolver_1);
+      var tmp0_also = Companion_getInstance_63().from_5sdud2_k$(this.mMinLinesConstrainer_1, layoutDirection, this.style_1, ensureNotNull(this.density_1), this.fontFamilyResolver_1);
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.foundation.text.modifiers.ParagraphLayoutCache.layoutWithConstraints.<anonymous>' call
       this.mMinLinesConstrainer_1 = tmp0_also;
@@ -23384,7 +30957,7 @@
         var localParagraph = ensureNotNull(this.paragraph_1);
         var localSize = constrain(finalConstraints, IntSize(ceilToIntPx(localParagraph.get_width_j0q4yl_k$()), ceilToIntPx(localParagraph.get_height_e7t92o_k$())));
         this.layoutSize_1 = localSize;
-        this.didOverflow_1 = !(this.overflow_1 === Companion_getInstance_18().get_Visible_2hbc1x_k$()) ? _IntSize___get_width__impl__d9yl4o(localSize) < localParagraph.get_width_j0q4yl_k$() ? true : _IntSize___get_height__impl__prv63b(localSize) < localParagraph.get_height_e7t92o_k$() : false;
+        this.didOverflow_1 = !(this.overflow_1 === Companion_getInstance_29().get_Visible_2hbc1x_k$()) ? _IntSize___get_width__impl__d9yl4o(localSize) < localParagraph.get_width_j0q4yl_k$() ? true : _IntSize___get_height__impl__prv63b(localSize) < localParagraph.get_height_e7t92o_k$() : false;
       }
       return false;
     }
@@ -23396,7 +30969,7 @@
     this.prevConstraints_1 = finalConstraints;
     var localSize_0 = constrain(finalConstraints, IntSize(ceilToIntPx(tmp1_also.get_width_j0q4yl_k$()), ceilToIntPx(tmp1_also.get_height_e7t92o_k$())));
     this.layoutSize_1 = localSize_0;
-    this.didOverflow_1 = !(this.overflow_1 === Companion_getInstance_18().get_Visible_2hbc1x_k$()) ? _IntSize___get_width__impl__d9yl4o(localSize_0) < tmp1_also.get_width_j0q4yl_k$() ? true : _IntSize___get_height__impl__prv63b(localSize_0) < tmp1_also.get_height_e7t92o_k$() : false;
+    this.didOverflow_1 = !(this.overflow_1 === Companion_getInstance_29().get_Visible_2hbc1x_k$()) ? _IntSize___get_width__impl__d9yl4o(localSize_0) < tmp1_also.get_width_j0q4yl_k$() ? true : _IntSize___get_height__impl__prv63b(localSize_0) < tmp1_also.get_height_e7t92o_k$() : false;
     tmp_0.paragraph_1 = tmp1_also;
     return true;
   };
@@ -23405,7 +30978,7 @@
     var localHeght = this.cachedIntrinsicHeight_1;
     if (width === localWidth ? !(localWidth === -1) : false)
       return localHeght;
-    var result = ceilToIntPx(layoutText_1(this, Constraints(0, width, 0, Companion_getInstance_31().get_Infinity_rvchkf_k$()), layoutDirection).get_height_e7t92o_k$());
+    var result = ceilToIntPx(layoutText_1(this, Constraints_0(0, width, 0, Companion_getInstance_7().get_Infinity_rvchkf_k$()), layoutDirection).get_height_e7t92o_k$());
     this.cachedIntrinsicHeightInputWidth_1 = width;
     this.cachedIntrinsicHeight_1 = result;
     return result;
@@ -23443,7 +31016,7 @@
     if (this.paragraphIntrinsics_1 == null)
       return null;
     var finalConstraints = Constraints__copy$default_impl_f452rp(this.prevConstraints_1, 0, VOID, 0);
-    return new TextLayoutResult(TextLayoutInput_init_$Create$(annotatedString, this.style_1, emptyList(), this.maxLines_1, this.softWrap_1, this.overflow_1, localDensity, localLayoutDirection, this.fontFamilyResolver_1, finalConstraints), new MultiParagraph(new MultiParagraphIntrinsics(annotatedString, this.style_1, emptyList(), localDensity, this.fontFamilyResolver_1), finalConstraints, this.maxLines_1, this.overflow_1 === Companion_getInstance_18().get_Ellipsis_xgxit0_k$()), this.layoutSize_1);
+    return new TextLayoutResult(TextLayoutInput_init_$Create$(annotatedString, this.style_1, emptyList(), this.maxLines_1, this.softWrap_1, this.overflow_1, localDensity, localLayoutDirection, this.fontFamilyResolver_1, finalConstraints), new MultiParagraph(new MultiParagraphIntrinsics(annotatedString, this.style_1, emptyList(), localDensity, this.fontFamilyResolver_1), finalConstraints, this.maxLines_1, this.overflow_1 === Companion_getInstance_29().get_Ellipsis_xgxit0_k$()), this.layoutSize_1);
   };
   protoOf(ParagraphLayoutCache).minIntrinsicWidth_s9t2s0_k$ = function (layoutDirection) {
     return ceilToIntPx(setLayoutDirection_0(this, layoutDirection).get_minIntrinsicWidth_lmc1rq_k$());
@@ -23525,7 +31098,7 @@
   }
   function SelectableTextAnnotatedStringElement(text, style, fontFamilyResolver, onTextLayout, overflow, softWrap, maxLines, minLines, placeholders, onPlaceholderLayout, selectionController, color) {
     onTextLayout = onTextLayout === VOID ? null : onTextLayout;
-    overflow = overflow === VOID ? Companion_getInstance_18().get_Clip_a6y3d7_k$() : overflow;
+    overflow = overflow === VOID ? Companion_getInstance_29().get_Clip_a6y3d7_k$() : overflow;
     softWrap = softWrap === VOID ? true : softWrap;
     maxLines = maxLines === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : maxLines;
     minLines = minLines === VOID ? get_DefaultMinLines() : minLines;
@@ -23651,7 +31224,7 @@
   }
   function SelectableTextAnnotatedStringNode(text, style, fontFamilyResolver, onTextLayout, overflow, softWrap, maxLines, minLines, placeholders, onPlaceholderLayout, selectionController, overrideColor) {
     onTextLayout = onTextLayout === VOID ? null : onTextLayout;
-    overflow = overflow === VOID ? Companion_getInstance_18().get_Clip_a6y3d7_k$() : overflow;
+    overflow = overflow === VOID ? Companion_getInstance_29().get_Clip_a6y3d7_k$() : overflow;
     softWrap = softWrap === VOID ? true : softWrap;
     maxLines = maxLines === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : maxLines;
     minLines = minLines === VOID ? get_DefaultMinLines() : minLines;
@@ -23747,7 +31320,7 @@
     };
   }
   function SelectionController(selectableId, selectionRegistrar, backgroundSelectionColor, params) {
-    params = params === VOID ? Companion_getInstance_52().Empty_1 : params;
+    params = params === VOID ? Companion_getInstance_64().Empty_1 : params;
     this.selectableId_1 = selectableId;
     this.selectionRegistrar_1 = selectionRegistrar;
     this.backgroundSelectionColor_1 = backgroundSelectionColor;
@@ -23849,21 +31422,21 @@
       tmp_3 = Unit_getInstance();
     }
   };
-  function Companion_9() {
-    Companion_instance_9 = this;
+  function Companion_14() {
+    Companion_instance_14 = this;
     this.Empty_1 = new StaticTextSelectionParams(null, null);
   }
-  protoOf(Companion_9).get_Empty_i9b85g_k$ = function () {
+  protoOf(Companion_14).get_Empty_i9b85g_k$ = function () {
     return this.Empty_1;
   };
-  var Companion_instance_9;
-  function Companion_getInstance_52() {
-    if (Companion_instance_9 == null)
-      new Companion_9();
-    return Companion_instance_9;
+  var Companion_instance_14;
+  function Companion_getInstance_64() {
+    if (Companion_instance_14 == null)
+      new Companion_14();
+    return Companion_instance_14;
   }
   function StaticTextSelectionParams(layoutCoordinates, textLayoutResult) {
-    Companion_getInstance_52();
+    Companion_getInstance_64();
     this.layoutCoordinates_1 = layoutCoordinates;
     this.textLayoutResult_1 = textLayoutResult;
   }
@@ -23881,7 +31454,7 @@
     var tmp0_safe_receiver = this.textLayoutResult_1;
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_layoutInput_o7gjah_k$();
     var tmp = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.get_overflow_rjdkkj_k$();
-    return equals(tmp == null ? null : new TextOverflow(tmp), new TextOverflow(Companion_getInstance_18().get_Visible_2hbc1x_k$()));
+    return equals(tmp == null ? null : new TextOverflow(tmp), new TextOverflow(Companion_getInstance_29().get_Visible_2hbc1x_k$()));
   };
   protoOf(StaticTextSelectionParams).copy_7kbbqr_k$ = function (layoutCoordinates, textLayoutResult) {
     return new StaticTextSelectionParams(layoutCoordinates, textLayoutResult);
@@ -23895,11 +31468,11 @@
     var tmp;
     if (isInTouchMode) {
       var longPressDragObserver = new makeSelectionModifier$longPressDragObserver$1(layoutCoordinates, textLayoutResult, _this__u8e3s4, selectableId);
-      var tmp_0 = Companion_getInstance_7();
+      var tmp_0 = Companion_getInstance_8();
       tmp = pointerInput(tmp_0, longPressDragObserver, makeSelectionModifier$slambda_0(longPressDragObserver, null));
     } else {
       var mouseSelectionObserver = new makeSelectionModifier$mouseSelectionObserver$1(layoutCoordinates, _this__u8e3s4, selectableId);
-      var tmp_1 = Companion_getInstance_7();
+      var tmp_1 = Companion_getInstance_8();
       tmp = pointerHoverIcon(composed$composable(tmp_1, VOID, makeSelectionModifier$lambda(mouseSelectionObserver)), get_textPointerIcon());
     }
     return tmp;
@@ -23948,7 +31521,7 @@
       if (outOfBoundary(this.$textLayoutResult_1(), startPoint, startPoint)) {
         this.$this_makeSelectionModifier_1.notifySelectionUpdateSelectAll_uyvpea_k$(this.$selectableId_1);
       } else {
-        this.$this_makeSelectionModifier_1.notifySelectionUpdateStart_2s99iw_k$(tmp0_safe_receiver, startPoint, Companion_getInstance_53().get_Word_wockfn_k$());
+        this.$this_makeSelectionModifier_1.notifySelectionUpdateStart_2s99iw_k$(tmp0_safe_receiver, startPoint, Companion_getInstance_65().get_Word_wockfn_k$());
       }
       this.lastPosition_1 = startPoint;
     }
@@ -23972,7 +31545,7 @@
       var tmp;
       if (!outOfBoundary(this.$textLayoutResult_1(), this.lastPosition_1, newPosition)) {
         var tmp1_previousPosition = this.lastPosition_1;
-        var tmp2_adjustment = Companion_getInstance_53().get_CharacterWithWordAccelerate_b1h3l9_k$();
+        var tmp2_adjustment = Companion_getInstance_65().get_CharacterWithWordAccelerate_b1h3l9_k$();
         var consumed = this.$this_makeSelectionModifier_1.notifySelectionUpdate_xy1nj0_k$(tmp0_safe_receiver, newPosition, tmp1_previousPosition, false, tmp2_adjustment);
         var tmp_0;
         if (consumed) {
@@ -24075,7 +31648,7 @@
       // Inline function 'kotlin.contracts.contract' call
       if (!tmp0_safe_receiver.get_isAttached_odsl1l_k$())
         return false;
-      var consumed = this.$this_makeSelectionModifier_1.notifySelectionUpdate_xy1nj0_k$(tmp0_safe_receiver, downPosition, this.lastPosition_1, false, Companion_getInstance_53().get_None_wo6tgh_k$());
+      var consumed = this.$this_makeSelectionModifier_1.notifySelectionUpdate_xy1nj0_k$(tmp0_safe_receiver, downPosition, this.lastPosition_1, false, Companion_getInstance_65().get_None_wo6tgh_k$());
       if (consumed) {
         this.lastPosition_1 = downPosition;
       }
@@ -24094,7 +31667,7 @@
         return false;
       if (!hasSelection(this.$this_makeSelectionModifier_1, this.$selectableId_1))
         return false;
-      var consumed = this.$this_makeSelectionModifier_1.notifySelectionUpdate_xy1nj0_k$(tmp0_safe_receiver, dragPosition, this.lastPosition_1, false, Companion_getInstance_53().get_None_wo6tgh_k$());
+      var consumed = this.$this_makeSelectionModifier_1.notifySelectionUpdate_xy1nj0_k$(tmp0_safe_receiver, dragPosition, this.lastPosition_1, false, Companion_getInstance_65().get_None_wo6tgh_k$());
       var tmp;
       if (consumed) {
         this.lastPosition_1 = dragPosition;
@@ -24234,7 +31807,7 @@
       var tmp$ret$1;
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp_0;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         var tmp$ret$0;
         // Inline function 'androidx.compose.foundation.text.modifiers.makeSelectionModifier.<anonymous>.<anonymous>' call
         tmp$ret$0 = makeSelectionModifier$lambda$slambda_0(currentMouseSelectionObserver$delegate, null);
@@ -24299,7 +31872,7 @@
   }
   function TextAnnotatedStringElement(text, style, fontFamilyResolver, onTextLayout, overflow, softWrap, maxLines, minLines, placeholders, onPlaceholderLayout, selectionController, color) {
     onTextLayout = onTextLayout === VOID ? null : onTextLayout;
-    overflow = overflow === VOID ? Companion_getInstance_18().get_Clip_a6y3d7_k$() : overflow;
+    overflow = overflow === VOID ? Companion_getInstance_29().get_Clip_a6y3d7_k$() : overflow;
     softWrap = softWrap === VOID ? true : softWrap;
     maxLines = maxLines === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : maxLines;
     minLines = minLines === VOID ? get_DefaultMinLines() : minLines;
@@ -24524,7 +32097,7 @@
   }
   function TextAnnotatedStringNode(text, style, fontFamilyResolver, onTextLayout, overflow, softWrap, maxLines, minLines, placeholders, onPlaceholderLayout, selectionController, overrideColor) {
     onTextLayout = onTextLayout === VOID ? null : onTextLayout;
-    overflow = overflow === VOID ? Companion_getInstance_18().get_Clip_a6y3d7_k$() : overflow;
+    overflow = overflow === VOID ? Companion_getInstance_29().get_Clip_a6y3d7_k$() : overflow;
     softWrap = softWrap === VOID ? true : softWrap;
     maxLines = maxLines === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : maxLines;
     minLines = minLines === VOID ? get_DefaultMinLines() : minLines;
@@ -24672,7 +32245,7 @@
       null;
     else
       tmp2_safe_receiver(textLayoutResult.get_placeholderRects_1ky2fv_k$());
-    var placeable = measurable.measure_ikak0q_k$(Companion_getInstance_31().fixed_bmujv7_k$(_IntSize___get_width__impl__d9yl4o(textLayoutResult.get_size_yscczt_k$()), _IntSize___get_height__impl__prv63b(textLayoutResult.get_size_yscczt_k$())));
+    var placeable = measurable.measure_ikak0q_k$(Companion_getInstance_7().fixed_bmujv7_k$(_IntSize___get_width__impl__d9yl4o(textLayoutResult.get_size_yscczt_k$()), _IntSize___get_height__impl__prv63b(textLayoutResult.get_size_yscczt_k$())));
     var tmp_3 = _IntSize___get_width__impl__d9yl4o(textLayoutResult.get_size_yscczt_k$());
     var tmp_4 = _IntSize___get_height__impl__prv63b(textLayoutResult.get_size_yscczt_k$());
     var tmp_5 = ensureNotNull(this.baselineCache_1);
@@ -24716,7 +32289,7 @@
     var tmp0_anonymous = _this__u8e3s4.get_drawContext_ffwztu_k$().get_canvas_bshgm9_k$();
     var textLayoutResult = _get_layoutCache__kch9ev_0(this).get_textLayoutResult_u0m931_k$();
     var localParagraph = textLayoutResult.get_multiParagraph_xte3we_k$();
-    var willClip = textLayoutResult.get_hasVisualOverflow_ocbqq5_k$() ? !(this.overflow_1 === Companion_getInstance_18().get_Visible_2hbc1x_k$()) : false;
+    var willClip = textLayoutResult.get_hasVisualOverflow_ocbqq5_k$() ? !(this.overflow_1 === Companion_getInstance_29().get_Visible_2hbc1x_k$()) : false;
     if (willClip) {
       var width = _IntSize___get_width__impl__d9yl4o(textLayoutResult.get_size_yscczt_k$());
       var height = _IntSize___get_height__impl__prv63b(textLayoutResult.get_size_yscczt_k$());
@@ -24727,9 +32300,9 @@
     var tmp;
     try {
       var tmp0_elvis_lhs = this.style_1.get_textDecoration_itgjwm_k$();
-      var textDecoration = tmp0_elvis_lhs == null ? Companion_getInstance_32().get_None_wo6tgh_k$() : tmp0_elvis_lhs;
+      var textDecoration = tmp0_elvis_lhs == null ? Companion_getInstance_39().get_None_wo6tgh_k$() : tmp0_elvis_lhs;
       var tmp1_elvis_lhs = this.style_1.get_shadow_jgtb8p_k$();
-      var shadow = tmp1_elvis_lhs == null ? Companion_getInstance_37().get_None_wo6tgh_k$() : tmp1_elvis_lhs;
+      var shadow = tmp1_elvis_lhs == null ? Companion_getInstance_44().get_None_wo6tgh_k$() : tmp1_elvis_lhs;
       var tmp2_elvis_lhs = this.style_1.get_drawStyle_arbehw_k$();
       var drawStyle = tmp2_elvis_lhs == null ? Fill_getInstance() : tmp2_elvis_lhs;
       var brush = this.style_1.get_brush_ipcjyp_k$();
@@ -24804,7 +32377,7 @@
     return $this.color_1;
   }
   function TextStringSimpleElement(text, style, fontFamilyResolver, overflow, softWrap, maxLines, minLines, color) {
-    overflow = overflow === VOID ? Companion_getInstance_18().get_Clip_a6y3d7_k$() : overflow;
+    overflow = overflow === VOID ? Companion_getInstance_29().get_Clip_a6y3d7_k$() : overflow;
     softWrap = softWrap === VOID ? true : softWrap;
     maxLines = maxLines === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : maxLines;
     minLines = minLines === VOID ? get_DefaultMinLines() : minLines;
@@ -24974,7 +32547,7 @@
     };
   }
   function TextStringSimpleNode(text, style, fontFamilyResolver, overflow, softWrap, maxLines, minLines, overrideColor) {
-    overflow = overflow === VOID ? Companion_getInstance_18().get_Clip_a6y3d7_k$() : overflow;
+    overflow = overflow === VOID ? Companion_getInstance_29().get_Clip_a6y3d7_k$() : overflow;
     softWrap = softWrap === VOID ? true : softWrap;
     maxLines = maxLines === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : maxLines;
     minLines = minLines === VOID ? get_DefaultMinLines() : minLines;
@@ -25083,7 +32656,7 @@
       tmp5_set.put_3mhbri_k$(tmp6_set, tmp7_set);
       this.baselineCache_1 = cache;
     }
-    var placeable = measurable.measure_ikak0q_k$(Companion_getInstance_31().fixed_bmujv7_k$(_IntSize___get_width__impl__d9yl4o(layoutSize), _IntSize___get_height__impl__prv63b(layoutSize)));
+    var placeable = measurable.measure_ikak0q_k$(Companion_getInstance_7().fixed_bmujv7_k$(_IntSize___get_width__impl__d9yl4o(layoutSize), _IntSize___get_height__impl__prv63b(layoutSize)));
     var tmp = _IntSize___get_width__impl__d9yl4o(layoutSize);
     var tmp_0 = _IntSize___get_height__impl__prv63b(layoutSize);
     var tmp_1 = ensureNotNull(this.baselineCache_1);
@@ -25132,9 +32705,9 @@
     var tmp;
     try {
       var tmp0_elvis_lhs = this.style_1.get_textDecoration_itgjwm_k$();
-      var textDecoration = tmp0_elvis_lhs == null ? Companion_getInstance_32().get_None_wo6tgh_k$() : tmp0_elvis_lhs;
+      var textDecoration = tmp0_elvis_lhs == null ? Companion_getInstance_39().get_None_wo6tgh_k$() : tmp0_elvis_lhs;
       var tmp1_elvis_lhs = this.style_1.get_shadow_jgtb8p_k$();
-      var shadow = tmp1_elvis_lhs == null ? Companion_getInstance_37().get_None_wo6tgh_k$() : tmp1_elvis_lhs;
+      var shadow = tmp1_elvis_lhs == null ? Companion_getInstance_44().get_None_wo6tgh_k$() : tmp1_elvis_lhs;
       var tmp2_elvis_lhs = this.style_1.get_drawStyle_arbehw_k$();
       var drawStyle = tmp2_elvis_lhs == null ? Fill_getInstance() : tmp2_elvis_lhs;
       var brush = this.style_1.get_brush_ipcjyp_k$();
@@ -25315,28 +32888,28 @@
     var tmp0_elvis_lhs = this.layoutResultCallback_1();
     var tmp;
     if (tmp0_elvis_lhs == null) {
-      return Companion_getInstance_35().get_Zero_woe9zl_k$();
+      return Companion_getInstance_42().get_Zero_woe9zl_k$();
     } else {
       tmp = tmp0_elvis_lhs;
     }
     var textLayoutResult = tmp;
     var textLength = textLayoutResult.get_layoutInput_o7gjah_k$().get_text_wouvsm_k$().get_length_g42xv3_k$();
     if (textLength < 1)
-      return Companion_getInstance_35().get_Zero_woe9zl_k$();
+      return Companion_getInstance_42().get_Zero_woe9zl_k$();
     return textLayoutResult.getBoundingBox_urudbk_k$(coerceIn(offset, 0, textLength - 1 | 0));
   };
   protoOf(MultiWidgetSelectionDelegate).getRangeOfLineContaining_v74j7b_k$ = function (offset) {
     var tmp0_elvis_lhs = this.layoutResultCallback_1();
     var tmp;
     if (tmp0_elvis_lhs == null) {
-      return Companion_getInstance_36().get_Zero_e8si87_k$();
+      return Companion_getInstance_43().get_Zero_e8si87_k$();
     } else {
       tmp = tmp0_elvis_lhs;
     }
     var textLayoutResult = tmp;
     var visibleTextLength = _get_lastVisibleOffset__v7xite(textLayoutResult, this);
     if (visibleTextLength < 1)
-      return Companion_getInstance_36().get_Zero_e8si87_k$();
+      return Companion_getInstance_43().get_Zero_e8si87_k$();
     var line = textLayoutResult.getLineForOffset_9a3vwv_k$(coerceIn(offset, 0, visibleTextLength - 1 | 0));
     return TextRange_1(textLayoutResult.getLineStart_504snr_k$(line), textLayoutResult.getLineEnd_7kqxuy_k$(line, true));
   };
@@ -25653,9 +33226,9 @@
     // Inline function 'kotlin.text.isEmpty' call
     var tmp0_isEmpty = textLayoutResult.get_layoutInput_o7gjah_k$().get_text_wouvsm_k$();
     if (charSequenceLength(tmp0_isEmpty) === 0) {
-      return Companion_getInstance_36().get_Zero_e8si87_k$();
+      return Companion_getInstance_43().get_Zero_e8si87_k$();
     }
-    var maxOffset = get_lastIndex(textLayoutResult.get_layoutInput_o7gjah_k$().get_text_wouvsm_k$());
+    var maxOffset = get_lastIndex_1(textLayoutResult.get_layoutInput_o7gjah_k$().get_text_wouvsm_k$());
     var startBoundary = boundaryFun(coerceIn(_TextRange___get_start__impl__ww4t90(newRawSelection), 0, maxOffset)).packedValue_1;
     var endBoundary = boundaryFun(coerceIn(_TextRange___get_end__impl__gcdxpp(newRawSelection), 0, maxOffset)).packedValue_1;
     var start = _TextRange___get_reversed__impl__emhnbm(newRawSelection) ? _TextRange___get_end__impl__gcdxpp(startBoundary) : _TextRange___get_start__impl__ww4t90(startBoundary);
@@ -25681,7 +33254,7 @@
       }
       var tmp1_elvis_lhs = tmp_0;
       var previousHandlesCrossed = tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
-      tmp = ensureAtLeastOneChar(textLayoutResult.get_layoutInput_o7gjah_k$().get_text_wouvsm_k$().get_text_wouvsm_k$(), _TextRange___get_start__impl__ww4t90(newRawSelectionRange), get_lastIndex(textLayoutResult.get_layoutInput_o7gjah_k$().get_text_wouvsm_k$()), isStartHandle, previousHandlesCrossed);
+      tmp = ensureAtLeastOneChar(textLayoutResult.get_layoutInput_o7gjah_k$().get_text_wouvsm_k$().get_text_wouvsm_k$(), _TextRange___get_start__impl__ww4t90(newRawSelectionRange), get_lastIndex_1(textLayoutResult.get_layoutInput_o7gjah_k$().get_text_wouvsm_k$()), isStartHandle, previousHandlesCrossed);
     } else {
       tmp = newRawSelectionRange;
     }
@@ -25690,24 +33263,24 @@
   function SelectionAdjustment$Companion$Word$1() {
   }
   protoOf(SelectionAdjustment$Companion$Word$1).adjust_xh53z6_k$ = function (textLayoutResult, newRawSelectionRange, previousHandleOffset, isStartHandle, previousSelectionRange) {
-    var tmp = Companion_getInstance_53();
+    var tmp = Companion_getInstance_65();
     return adjustByBoundary(tmp, textLayoutResult, newRawSelectionRange, TextLayoutResult$getWordBoundary$ref(textLayoutResult));
   };
   function SelectionAdjustment$Companion$Paragraph$1() {
   }
   protoOf(SelectionAdjustment$Companion$Paragraph$1).adjust_xh53z6_k$ = function (textLayoutResult, newRawSelectionRange, previousHandleOffset, isStartHandle, previousSelectionRange) {
     var boundaryFun = getParagraphBoundary$ref(textLayoutResult.get_layoutInput_o7gjah_k$().get_text_wouvsm_k$());
-    return adjustByBoundary(Companion_getInstance_53(), textLayoutResult, newRawSelectionRange, boundaryFun);
+    return adjustByBoundary(Companion_getInstance_65(), textLayoutResult, newRawSelectionRange, boundaryFun);
   };
   function SelectionAdjustment$Companion$CharacterWithWordAccelerate$1() {
   }
   protoOf(SelectionAdjustment$Companion$CharacterWithWordAccelerate$1).adjust_xh53z6_k$ = function (textLayoutResult, newRawSelectionRange, previousHandleOffset, isStartHandle, previousSelectionRange) {
     var tmp = previousSelectionRange;
     if ((tmp == null ? null : new TextRange(tmp)) == null) {
-      return Companion_getInstance_53().Word_1.adjust_xh53z6_k$(textLayoutResult, newRawSelectionRange, previousHandleOffset, isStartHandle, previousSelectionRange);
+      return Companion_getInstance_65().Word_1.adjust_xh53z6_k$(textLayoutResult, newRawSelectionRange, previousHandleOffset, isStartHandle, previousSelectionRange);
     }
     if (_TextRange___get_collapsed__impl__cilesp(newRawSelectionRange)) {
-      return ensureAtLeastOneChar(textLayoutResult.get_layoutInput_o7gjah_k$().get_text_wouvsm_k$().get_text_wouvsm_k$(), _TextRange___get_start__impl__ww4t90(newRawSelectionRange), get_lastIndex(textLayoutResult.get_layoutInput_o7gjah_k$().get_text_wouvsm_k$()), isStartHandle, _TextRange___get_reversed__impl__emhnbm(previousSelectionRange));
+      return ensureAtLeastOneChar(textLayoutResult.get_layoutInput_o7gjah_k$().get_text_wouvsm_k$().get_text_wouvsm_k$(), _TextRange___get_start__impl__ww4t90(newRawSelectionRange), get_lastIndex_1(textLayoutResult.get_layoutInput_o7gjah_k$().get_text_wouvsm_k$()), isStartHandle, _TextRange___get_reversed__impl__emhnbm(previousSelectionRange));
     }
     var start;
     var end;
@@ -25720,8 +33293,8 @@
     }
     return TextRange_1(start, end);
   };
-  function Companion_10() {
-    Companion_instance_10 = this;
+  function Companion_15() {
+    Companion_instance_15 = this;
     var tmp = this;
     tmp.None_1 = new SelectionAdjustment$Companion$None$1();
     var tmp_0 = this;
@@ -25733,26 +33306,26 @@
     var tmp_3 = this;
     tmp_3.CharacterWithWordAccelerate_1 = new SelectionAdjustment$Companion$CharacterWithWordAccelerate$1();
   }
-  protoOf(Companion_10).get_None_wo6tgh_k$ = function () {
+  protoOf(Companion_15).get_None_wo6tgh_k$ = function () {
     return this.None_1;
   };
-  protoOf(Companion_10).get_Character_3i744g_k$ = function () {
+  protoOf(Companion_15).get_Character_3i744g_k$ = function () {
     return this.Character_1;
   };
-  protoOf(Companion_10).get_Word_wockfn_k$ = function () {
+  protoOf(Companion_15).get_Word_wockfn_k$ = function () {
     return this.Word_1;
   };
-  protoOf(Companion_10).get_Paragraph_2v2rol_k$ = function () {
+  protoOf(Companion_15).get_Paragraph_2v2rol_k$ = function () {
     return this.Paragraph_1;
   };
-  protoOf(Companion_10).get_CharacterWithWordAccelerate_b1h3l9_k$ = function () {
+  protoOf(Companion_15).get_CharacterWithWordAccelerate_b1h3l9_k$ = function () {
     return this.CharacterWithWordAccelerate_1;
   };
-  var Companion_instance_10;
-  function Companion_getInstance_53() {
-    if (Companion_instance_10 == null)
-      new Companion_10();
-    return Companion_instance_10;
+  var Companion_instance_15;
+  function Companion_getInstance_65() {
+    if (Companion_instance_15 == null)
+      new Companion_15();
+    return Companion_instance_15;
   }
   function SelectionAdjustment() {
   }
@@ -26010,18 +33583,18 @@
     return LocalSelectionRegistrar;
   }
   var LocalSelectionRegistrar;
-  function Companion_11() {
-    Companion_instance_11 = this;
+  function Companion_16() {
+    Companion_instance_16 = this;
     this.InvalidSelectableId_1 = new Long(0, 0);
   }
-  protoOf(Companion_11).get_InvalidSelectableId_nbfra9_k$ = function () {
+  protoOf(Companion_16).get_InvalidSelectableId_nbfra9_k$ = function () {
     return this.InvalidSelectableId_1;
   };
-  var Companion_instance_11;
-  function Companion_getInstance_54() {
-    if (Companion_instance_11 == null)
-      new Companion_11();
-    return Companion_instance_11;
+  var Companion_instance_16;
+  function Companion_getInstance_66() {
+    if (Companion_instance_16 == null)
+      new Companion_16();
+    return Companion_instance_16;
   }
   function SelectionRegistrar() {
   }
@@ -26058,7 +33631,7 @@
       $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content) ? 32 : 16);
     if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (!(($default & 1) === 0)) {
-        modifier_0._v = Companion_getInstance_7();
+        modifier_0._v = Companion_getInstance_8();
       }
       if (isTraceInProgress()) {
         traceEventStart(1003129593, $dirty, -1, 'androidx.compose.foundation.text.selection.SimpleLayout$composable (SimpleLayout.kt:31)');
@@ -26073,7 +33646,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
       var tmp;
-      if (false ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+      if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.foundation.text.selection.SimpleLayout$composable.<anonymous>' call
         var value = SimpleLayout$composable$lambda;
         $composer_1.updateRememberedValue_l1colo_k$(value);
@@ -26084,7 +33657,7 @@
       var tmp_0 = tmp;
       var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
       $composer_1.endReplaceableGroup_er37p7_k$();
-      var tmp0_measurePolicy = new sam$androidx_compose_ui_layout_MeasurePolicy$0(tmp0);
+      var tmp0_measurePolicy = new sam$androidx_compose_ui_layout_MeasurePolicy$0_0(tmp0);
       // Inline function 'androidx.compose.ui.layout.Layout$composable' call
       var tmp1_Layout$composable = modifier_0._v;
       var tmp2_Layout$composable = $composer_0;
@@ -26094,11 +33667,11 @@
       $composer_2.startReplaceableGroup_rp6air_k$(1725976829);
       sourceInformation($composer_2, 'CC(Layout$composable)P(!1,2)78@3158L23,80@3248L420:Layout.kt#80mrfh');
       if (!(0 === 0))
-        modifier_1 = Companion_getInstance_7();
+        modifier_1 = Companion_getInstance_8();
       var compositeKeyHash = $get_currentCompositeKeyHash$$composable_u3vbzj($composer_2, 0);
       var localMap = $composer_2.get_currentCompositionLocalMap_fmcf79_k$();
       // Inline function 'androidx.compose.runtime.ReusableComposeNode$composable' call
-      var tmp0_ReusableComposeNode$composable = Companion_getInstance_19().get_Constructor_f7ieep_k$();
+      var tmp0_ReusableComposeNode$composable = Companion_getInstance_14().get_Constructor_f7ieep_k$();
       var tmp1_ReusableComposeNode$composable = materializerOf(modifier_1);
       var tmp3_ReusableComposeNode$composable = 6 | 7168 & tmp3_Layout$composable << 9;
       var $composer_3 = $composer_2;
@@ -26114,10 +33687,10 @@
       }
       // Inline function 'androidx.compose.ui.layout.Layout$composable.<anonymous>' call
       var tmp4_anonymous = _Updater___init__impl__rbfxm8($composer_3);
-      Updater__set_impl_v7kwss(tmp4_anonymous, tmp0_measurePolicy, Companion_getInstance_19().get_SetMeasurePolicy_on6ujt_k$());
-      Updater__set_impl_v7kwss(tmp4_anonymous, localMap, Companion_getInstance_19().get_SetResolvedCompositionLocals_rc2u9t_k$());
+      Updater__set_impl_v7kwss(tmp4_anonymous, tmp0_measurePolicy, Companion_getInstance_14().get_SetMeasurePolicy_on6ujt_k$());
+      Updater__set_impl_v7kwss(tmp4_anonymous, localMap, Companion_getInstance_14().get_SetResolvedCompositionLocals_rc2u9t_k$());
       // Inline function 'androidx.compose.runtime.Updater.set' call
-      var tmp0_set = Companion_getInstance_19().get_SetCompositeKeyHash_n8lgg1_k$();
+      var tmp0_set = Companion_getInstance_14().get_SetCompositeKeyHash_n8lgg1_k$();
       // Inline function 'kotlin.with' call
       var tmp0_with = _Updater___get_composer__impl__9ty7av(tmp4_anonymous);
       // Inline function 'kotlin.contracts.contract' call
@@ -26146,16 +33719,16 @@
       tmp0_safe_receiver.updateScope_xhrf9y_k$(SimpleLayout$composable$lambda_0(modifier_0, content, $changed, $default));
     }
   }
-  function sam$androidx_compose_ui_layout_MeasurePolicy$0(function_0) {
+  function sam$androidx_compose_ui_layout_MeasurePolicy$0_0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0).measure_i7pm3b_k$ = function (_this__u8e3s4, measurables, constraints) {
-    return this.function_1(_this__u8e3s4, measurables, new Constraints_0(constraints));
+  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0_0).measure_i7pm3b_k$ = function (_this__u8e3s4, measurables, constraints) {
+    return this.function_1(_this__u8e3s4, measurables, new Constraints(constraints));
   };
   function SimpleLayout$composable$lambda($this$Layout, measurables, constraints) {
     // Inline function 'androidx.compose.ui.util.fastMap' call
     // Inline function 'kotlin.contracts.contract' call
-    var target = ArrayList_init_$Create$_0(measurables.get_size_woubt6_k$());
+    var target = ArrayList_init_$Create$(measurables.get_size_woubt6_k$());
     // Inline function 'androidx.compose.ui.util.fastForEach' call
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
@@ -26253,7 +33826,7 @@
       var tmp;
       var tmp_0 = previousSelection;
       if ((tmp_0 == null ? null : new TextRange(tmp_0)) == null) {
-        tmp = equals(adjustment, Companion_getInstance_53().get_Character_3i744g_k$());
+        tmp = equals(adjustment, Companion_getInstance_65().get_Character_3i744g_k$());
       } else {
         tmp = false;
       }
@@ -26408,7 +33981,7 @@
       var bottom = tmp_11 + _Dp___get_value__impl__geb1vb(tmp$ret$6) * tmp1_safe_receiver.get_textDelegate_dno657_k$().get_density_qy0267_k$().get_density_qy0267_k$();
       return new Rect(left, top, right, bottom);
     }
-    return Companion_getInstance_35().get_Zero_woe9zl_k$();
+    return Companion_getInstance_42().get_Zero_woe9zl_k$();
   }
   function updateSelection($this, value, transformedStartOffset, transformedEndOffset, isStartHandle, adjustment) {
     var transformedSelection = TextRange_1($this.offsetMapping_1.originalToTransformed_c5d2si_k$(_TextRange___get_start__impl__ww4t90(value.get_selection_iqfejd_k$())), $this.offsetMapping_1.originalToTransformed_c5d2si_k$(_TextRange___get_end__impl__gcdxpp(value.get_selection_iqfejd_k$())));
@@ -26422,7 +33995,7 @@
     if (tmp2_safe_receiver == null)
       null;
     else {
-      tmp2_safe_receiver.performHapticFeedback_5schwc_k$(Companion_getInstance_38().get_TextHandleMove_9z2whw_k$());
+      tmp2_safe_receiver.performHapticFeedback_5schwc_k$(Companion_getInstance_45().get_TextHandleMove_9z2whw_k$());
     }
     var newValue = createTextFieldValue($this, value.get_annotatedString_5pdwrk_k$(), originalSelection);
     $this.onValueChange_1(newValue);
@@ -26478,7 +34051,7 @@
         if (tmp0_safe_receiver_0 == null)
           null;
         else {
-          tmp0_safe_receiver_0.performHapticFeedback_5schwc_k$(Companion_getInstance_38().get_TextHandleMove_9z2whw_k$());
+          tmp0_safe_receiver_0.performHapticFeedback_5schwc_k$(Companion_getInstance_45().get_TextHandleMove_9z2whw_k$());
         }
         var newValue = createTextFieldValue(this.this$0__1, this.this$0__1.get_value_j01efc_k$().get_annotatedString_5pdwrk_k$(), TextRange_1(offset, offset));
         this.this$0__1.enterSelectionMode_ku27eu_k$();
@@ -26499,7 +34072,7 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       var offset_0 = tmp5_safe_receiver.getOffsetForPosition$default_kshj9t_k$(startPoint);
-      updateSelection(this.this$0__1, this.this$0__1.get_value_j01efc_k$(), offset_0, offset_0, false, Companion_getInstance_53().get_Word_wockfn_k$());
+      updateSelection(this.this$0__1, this.this$0__1.get_value_j01efc_k$(), offset_0, offset_0, false, Companion_getInstance_65().get_Word_wockfn_k$());
       this.this$0__1.dragBeginOffsetInText_1 = offset_0;
     }
     this.this$0__1.dragBeginPosition_1 = startPoint;
@@ -26525,7 +34098,7 @@
       var startOffset = tmp0_elvis_lhs == null ? tmp2_safe_receiver.getOffsetForPosition_b0kdye_k$(this.this$0__1.dragBeginPosition_1, false) : tmp0_elvis_lhs;
       var tmp = this.this$0__1.get_currentDragPosition_n3r0ri_k$();
       var endOffset = tmp2_safe_receiver.getOffsetForPosition_b0kdye_k$(ensureNotNull(tmp == null ? null : new Offset_0(tmp)).packedValue_1, false);
-      updateSelection(this.this$0__1, this.this$0__1.get_value_j01efc_k$(), startOffset, endOffset, false, Companion_getInstance_53().get_Word_wockfn_k$());
+      updateSelection(this.this$0__1, this.this$0__1.get_value_j01efc_k$(), startOffset, endOffset, false, Companion_getInstance_65().get_Word_wockfn_k$());
     }
     var tmp3_safe_receiver = this.this$0__1.state_1;
     if (tmp3_safe_receiver != null) {
@@ -26560,7 +34133,7 @@
       // Inline function 'kotlin.contracts.contract' call
       var startOffset = this.this$0__1.offsetMapping_1.originalToTransformed_c5d2si_k$(_TextRange___get_start__impl__ww4t90(this.this$0__1.get_value_j01efc_k$().get_selection_iqfejd_k$()));
       var clickOffset = tmp1_safe_receiver.getOffsetForPosition$default_kshj9t_k$(downPosition);
-      updateSelection(this.this$0__1, this.this$0__1.get_value_j01efc_k$(), startOffset, clickOffset, false, Companion_getInstance_53().get_None_wo6tgh_k$());
+      updateSelection(this.this$0__1, this.this$0__1.get_value_j01efc_k$(), startOffset, clickOffset, false, Companion_getInstance_65().get_None_wo6tgh_k$());
       return true;
     }
     return false;
@@ -26579,7 +34152,7 @@
       // Inline function 'kotlin.contracts.contract' call
       var startOffset = this.this$0__1.offsetMapping_1.originalToTransformed_c5d2si_k$(_TextRange___get_start__impl__ww4t90(this.this$0__1.get_value_j01efc_k$().get_selection_iqfejd_k$()));
       var dragOffset = tmp1_safe_receiver.getOffsetForPosition_b0kdye_k$(dragPosition, false);
-      updateSelection(this.this$0__1, this.this$0__1.get_value_j01efc_k$(), startOffset, dragOffset, false, Companion_getInstance_53().get_None_wo6tgh_k$());
+      updateSelection(this.this$0__1, this.this$0__1.get_value_j01efc_k$(), startOffset, dragOffset, false, Companion_getInstance_65().get_None_wo6tgh_k$());
       return true;
     }
     return false;
@@ -26674,7 +34247,7 @@
         tmp_1 = tmp3_safe_receiver.getOffsetForPosition_f04xcw_k$(ensureNotNull(tmp_2 == null ? null : new Offset_0(tmp_2)).packedValue_1);
       }
       var endOffset = tmp_1;
-      updateSelection(this.this$0__1, this.this$0__1.get_value_j01efc_k$(), startOffset, endOffset, this.$isStartHandle_1, Companion_getInstance_53().get_Character_3i744g_k$());
+      updateSelection(this.this$0__1, this.this$0__1.get_value_j01efc_k$(), startOffset, endOffset, this.$isStartHandle_1, Companion_getInstance_65().get_Character_3i744g_k$());
     }
     var tmp4_safe_receiver = this.this$0__1.state_1;
     if (tmp4_safe_receiver != null) {
@@ -26734,7 +34307,7 @@
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.performHapticFeedback_5schwc_k$(Companion_getInstance_38().get_TextHandleMove_9z2whw_k$());
+        tmp0_safe_receiver.performHapticFeedback_5schwc_k$(Companion_getInstance_45().get_TextHandleMove_9z2whw_k$());
       }
       this.this$0__1.onValueChange_1(createTextFieldValue(this.this$0__1, this.this$0__1.get_value_j01efc_k$().get_annotatedString_5pdwrk_k$(), newSelection));
     }
@@ -26780,7 +34353,7 @@
     tmp.onValueChange_1 = TextFieldSelectionManager$onValueChange$lambda;
     this.state_1 = null;
     this.value$delegate_1 = mutableStateOf(TextFieldValue_init_$Create$());
-    this.visualTransformation_1 = Companion_getInstance_20().get_None_wo6tgh_k$();
+    this.visualTransformation_1 = Companion_getInstance_30().get_None_wo6tgh_k$();
     this.clipboardManager_1 = null;
     this.textToolbar_1 = null;
     this.hapticFeedBack_1 = null;
@@ -26819,12 +34392,12 @@
     return this.state_1;
   };
   protoOf(TextFieldSelectionManager).set_value_1clbp0_k$ = function (_set____db54di) {
-    value$factory();
+    value$factory_2();
     return this.value$delegate_1.set_value_rnwamw_k$(_set____db54di);
   };
   protoOf(TextFieldSelectionManager).get_value_j01efc_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
-    value$factory_0();
+    value$factory_3();
     return this.value$delegate_1.get_value_j01efc_k$();
   };
   protoOf(TextFieldSelectionManager).set_visualTransformation_uikevf_k$ = function (_set____db54di) {
@@ -27142,7 +34715,7 @@
       var offset = tmp1_safe_receiver.getOffsetForPosition$default_kshj9t_k$(position);
       var tmp;
       if (!TextRange__contains_impl_ws45z2(this.get_value_j01efc_k$().get_selection_iqfejd_k$(), offset)) {
-        updateSelection(this, this.get_value_j01efc_k$(), offset, offset, false, Companion_getInstance_53().get_Word_wockfn_k$());
+        updateSelection(this, this.get_value_j01efc_k$(), offset, offset, false, Companion_getInstance_65().get_Word_wockfn_k$());
         tmp = Unit_getInstance();
       }
     }
@@ -27176,7 +34749,7 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
     var tmp;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.foundation.text.selection.TextFieldSelectionHandle$composable.<anonymous>' call
       var value = manager.handleDragObserver_k8l4eg_k$(isStartHandle);
       $composer_1.updateRememberedValue_l1colo_k$(value);
@@ -27191,7 +34764,7 @@
     var position = manager.getHandlePosition_rmihzb_k$(isStartHandle);
     var tmp_1 = _TextRange___get_reversed__impl__emhnbm(manager.get_value_j01efc_k$().get_selection_iqfejd_k$());
     var tmp_2 = manager.getHandleLineHeight_c93axt_k$(isStartHandle);
-    var tmp_3 = Companion_getInstance_7();
+    var tmp_3 = Companion_getInstance_8();
     SelectionHandle$composable(position, isStartHandle, direction, tmp_1, tmp_2, pointerInput(tmp_3, observer, TextFieldSelectionHandle$composable$slambda_0(observer, null)), null, $composer_0, 1572864 | 112 & $dirty << 3 | 896 & $dirty << 3);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -27269,14 +34842,14 @@
       return Unit_getInstance();
     };
   }
-  function value$factory() {
+  function value$factory_2() {
     return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
       return receiver.get_value_j01efc_k$();
     }, function (receiver, value) {
       return receiver.set_value_1clbp0_k$(value);
     });
   }
-  function value$factory_0() {
+  function value$factory_3() {
     return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
       return receiver.get_value_j01efc_k$();
     }, function (receiver, value) {
@@ -27354,7 +34927,7 @@
       tmp = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.localBoundingBoxOf$default_ein37w_k$(tmp0_safe_receiver);
     }
     var tmp1_elvis_lhs = tmp;
-    var visibleInnerTextFieldRect = tmp1_elvis_lhs == null ? Companion_getInstance_35().get_Zero_woe9zl_k$() : tmp1_elvis_lhs;
+    var visibleInnerTextFieldRect = tmp1_elvis_lhs == null ? Companion_getInstance_42().get_Zero_woe9zl_k$() : tmp1_elvis_lhs;
     var currentOffset = $this.offsetMapping_1.originalToTransformed_c5d2si_k$(_TextRange___get_end__impl__gcdxpp($this.currentValue_1.get_selection_iqfejd_k$()));
     var currentPos = _this__u8e3s4.get_value_j01efc_k$().getCursorRect_x5c8fl_k$(currentOffset);
     var x = currentPos.get_left_woprgw_k$();
@@ -27362,7 +34935,7 @@
     return $this.offsetMapping_1.transformedToOriginal_xp4com_k$(_this__u8e3s4.get_value_j01efc_k$().getOffsetForPosition_f04xcw_k$(Offset(x, y)));
   }
   function TextFieldPreparedSelection(currentValue, offsetMapping, layoutResultProxy, state) {
-    offsetMapping = offsetMapping === VOID ? Companion_getInstance_33().get_Identity_wza1cp_k$() : offsetMapping;
+    offsetMapping = offsetMapping === VOID ? Companion_getInstance_40().get_Identity_wza1cp_k$() : offsetMapping;
     state = state === VOID ? new TextPreparedSelectionState() : state;
     var tmp1_originalText = currentValue.get_annotatedString_5pdwrk_k$();
     var tmp2_originalSelection = currentValue.get_selection_iqfejd_k$();
@@ -27629,21 +35202,21 @@
   function getParagraphEnd($this) {
     return findParagraphEnd($this.get_text_wouvsm_k$(), _TextRange___get_max__impl__owm8m($this.selection_1));
   }
-  function Companion_12() {
-    Companion_instance_12 = this;
+  function Companion_17() {
+    Companion_instance_17 = this;
     this.NoCharacterFound_1 = -1;
   }
-  protoOf(Companion_12).get_NoCharacterFound_8tb95p_k$ = function () {
+  protoOf(Companion_17).get_NoCharacterFound_8tb95p_k$ = function () {
     return this.NoCharacterFound_1;
   };
-  var Companion_instance_12;
-  function Companion_getInstance_55() {
-    if (Companion_instance_12 == null)
-      new Companion_12();
-    return Companion_instance_12;
+  var Companion_instance_17;
+  function Companion_getInstance_67() {
+    if (Companion_instance_17 == null)
+      new Companion_17();
+    return Companion_instance_17;
   }
   function BaseTextPreparedSelection(originalText, originalSelection, layoutResult, offsetMapping, state) {
-    Companion_getInstance_55();
+    Companion_getInstance_67();
     this.originalText_1 = originalText;
     this.originalSelection_1 = originalSelection;
     this.layoutResult_1 = layoutResult;
@@ -28011,7 +35584,7 @@
     return LocalTextSelectionColors;
   }
   var LocalTextSelectionColors;
-  function get_$stableprop_23() {
+  function get_$stableprop_29() {
     return 0;
   }
   function TextSelectionColors(handleColor, backgroundColor) {
@@ -28209,13 +35782,13 @@
               var tmp_3 = this;
               switch (this.clicksCounter0__1.clicks_1) {
                 case 1:
-                  tmp_3.selectionMode4__1 = Companion_getInstance_53().get_None_wo6tgh_k$();
+                  tmp_3.selectionMode4__1 = Companion_getInstance_65().get_None_wo6tgh_k$();
                   break;
                 case 2:
-                  tmp_3.selectionMode4__1 = Companion_getInstance_53().get_Word_wockfn_k$();
+                  tmp_3.selectionMode4__1 = Companion_getInstance_65().get_Word_wockfn_k$();
                   break;
                 default:
-                  tmp_3.selectionMode4__1 = Companion_getInstance_53().get_Paragraph_2v2rol_k$();
+                  tmp_3.selectionMode4__1 = Companion_getInstance_65().get_Paragraph_2v2rol_k$();
                   break;
               }
               this.started5__1 = this.$observer_1.onStart_i02yuj_k$(this.downChange2__1.get_position_kw508q_k$(), this.selectionMode4__1);
@@ -28317,7 +35890,7 @@
                     var index = inductionVariable;
                     inductionVariable = inductionVariable + 1 | 0;
                     var item = tmp0_fastAll.get_fkrdnv_k$(index);
-                    if (!(item.get_type_zeflrq_k$() === Companion_getInstance_13().get_Mouse_a0dpcz_k$() ? changedToDown(item) : false)) {
+                    if (!(item.get_type_zeflrq_k$() === Companion_getInstance_18().get_Mouse_a0dpcz_k$() ? changedToDown(item) : false)) {
                       tmp$ret$0 = false;
                       break l$ret$1;
                     }
@@ -28365,7 +35938,7 @@
   var TapIndicationDelay;
   function get_isPress(_this__u8e3s4) {
     var tmp;
-    if (get_type(_this__u8e3s4) === Companion_getInstance_34().get_KeyDown_e22p7_k$()) {
+    if (get_type(_this__u8e3s4) === Companion_getInstance_41().get_KeyDown_e22p7_k$()) {
       tmp = _KeyEvent___get_nativeKeyEvent__impl__py13j5(_this__u8e3s4).get_key_18j28a_k$().get_ordinal_ip24qg_k$() === 48 ? true : false;
     } else {
       tmp = false;
@@ -28374,7 +35947,7 @@
   }
   function get_isClick(_this__u8e3s4) {
     var tmp;
-    if (get_type(_this__u8e3s4) === Companion_getInstance_34().get_KeyUp_mt1bam_k$()) {
+    if (get_type(_this__u8e3s4) === Companion_getInstance_41().get_KeyUp_mt1bam_k$()) {
       tmp = _KeyEvent___get_nativeKeyEvent__impl__py13j5(_this__u8e3s4).get_key_18j28a_k$().get_ordinal_ip24qg_k$() === 48 ? true : false;
     } else {
       tmp = false;
@@ -28415,30 +35988,30 @@
   }
   function MappedKeys() {
     MappedKeys_instance = this;
-    this.A_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_A_4rac6v_k$()));
-    this.C_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_C_z9yylx_k$()));
-    this.H_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_H_uhjlao_k$()));
-    this.V_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_V_ty3eam_k$()));
-    this.X_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_X_kl84g_k$()));
-    this.Y_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_Y_ftxjbz_k$()));
-    this.Z_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_Z_v39uji_k$()));
-    this.Backslash_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_Backslash_wlrcta_k$()));
-    this.DirectionLeft_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_DirectionLeft_nnkkvm_k$()));
-    this.DirectionRight_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_DirectionRight_k294n_k$()));
-    this.DirectionUp_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_DirectionUp_s9cb6m_k$()));
-    this.DirectionDown_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_DirectionDown_81vop_k$()));
-    this.PageUp_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_PageUp_d9v330_k$()));
-    this.PageDown_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_PageDown_hz00wl_k$()));
-    this.MoveHome_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_MoveHome_6w70dm_k$()));
-    this.MoveEnd_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_MoveEnd_bx0ymm_k$()));
-    this.Insert_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_Insert_y6atub_k$()));
-    this.Enter_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_Enter_72nuyo_k$()));
-    this.Backspace_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_Backspace_g19x21_k$()));
-    this.Delete_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_Delete_mdp9fp_k$()));
-    this.Paste_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_Paste_5hb4sl_k$()));
-    this.Cut_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_Cut_9e92qy_k$()));
-    this.Tab_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_Tab_x9q08z_k$()));
-    this.Copy_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_Copy_i0eaup_k$()));
+    this.A_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_A_4rac6v_k$()));
+    this.C_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_C_z9yylx_k$()));
+    this.H_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_H_uhjlao_k$()));
+    this.V_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_V_ty3eam_k$()));
+    this.X_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_X_kl84g_k$()));
+    this.Y_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_Y_ftxjbz_k$()));
+    this.Z_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_Z_v39uji_k$()));
+    this.Backslash_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_Backslash_wlrcta_k$()));
+    this.DirectionLeft_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_DirectionLeft_nnkkvm_k$()));
+    this.DirectionRight_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_DirectionRight_k294n_k$()));
+    this.DirectionUp_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_DirectionUp_s9cb6m_k$()));
+    this.DirectionDown_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_DirectionDown_81vop_k$()));
+    this.PageUp_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_PageUp_d9v330_k$()));
+    this.PageDown_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_PageDown_hz00wl_k$()));
+    this.MoveHome_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_MoveHome_6w70dm_k$()));
+    this.MoveEnd_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_MoveEnd_bx0ymm_k$()));
+    this.Insert_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_Insert_y6atub_k$()));
+    this.Enter_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_Enter_72nuyo_k$()));
+    this.Backspace_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_Backspace_g19x21_k$()));
+    this.Delete_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_Delete_mdp9fp_k$()));
+    this.Paste_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_Paste_5hb4sl_k$()));
+    this.Cut_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_Cut_9e92qy_k$()));
+    this.Tab_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_Tab_x9q08z_k$()));
+    this.Copy_1 = _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_Copy_i0eaup_k$()));
   }
   protoOf(MappedKeys).get_A_4rac6v_k$ = function () {
     return this.A_1;
@@ -28519,31 +36092,31 @@
     return MappedKeys_instance;
   }
   function get_Space(_this__u8e3s4) {
-    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_Spacebar_678yqv_k$()));
+    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_Spacebar_678yqv_k$()));
   }
   function get_F(_this__u8e3s4) {
-    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_F_a0vu9e_k$()));
+    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_F_a0vu9e_k$()));
   }
   function get_B(_this__u8e3s4) {
-    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_B_k0mnee_k$()));
+    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_B_k0mnee_k$()));
   }
   function get_P(_this__u8e3s4) {
-    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_P_kk2ueg_k$()));
+    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_P_kk2ueg_k$()));
   }
   function get_N(_this__u8e3s4) {
-    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_N_9yls0m_k$()));
+    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_N_9yls0m_k$()));
   }
   function get_E(_this__u8e3s4) {
-    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_E_58ggy5_k$()));
+    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_E_58ggy5_k$()));
   }
   function get_D(_this__u8e3s4) {
-    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_D_khss5o_k$()));
+    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_D_khss5o_k$()));
   }
   function get_K(_this__u8e3s4) {
-    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_K_fahcbx_k$()));
+    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_K_fahcbx_k$()));
   }
   function get_O(_this__u8e3s4) {
-    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_39().get_O_5aqj6x_k$()));
+    return _Key___init__impl__p6mluu(_Key___get_keyCode__impl__ymzu5v(Companion_getInstance_46().get_O_5aqj6x_k$()));
   }
   function appendCodePointX(_this__u8e3s4, codePoint) {
     // Inline function 'kotlin.apply' call
@@ -28556,8 +36129,8 @@
     if (codePoint < 65536) {
       _this__u8e3s4.append_t8oh9e_k$(numberToChar(codePoint));
     } else {
-      _this__u8e3s4.append_t8oh9e_k$(Char__plus_impl_qi7pgj(Companion_getInstance_40().get_MIN_HIGH_SURROGATE_t7mej6_k$(), (codePoint - 65536 | 0) >> 10));
-      _this__u8e3s4.append_t8oh9e_k$(Char__plus_impl_qi7pgj(Companion_getInstance_40().get_MIN_LOW_SURROGATE_mxezgo_k$(), codePoint & 1023));
+      _this__u8e3s4.append_t8oh9e_k$(Char__plus_impl_qi7pgj(Companion_getInstance_47().get_MIN_HIGH_SURROGATE_t7mej6_k$(), (codePoint - 65536 | 0) >> 10));
+      _this__u8e3s4.append_t8oh9e_k$(Char__plus_impl_qi7pgj(Companion_getInstance_47().get_MIN_LOW_SURROGATE_mxezgo_k$(), codePoint & 1023));
     }
   }
   function get_MIN_SUPPLEMENTARY_CODE_POINT() {
@@ -28581,7 +36154,7 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
     var tmp;
-    if (false ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+    if (false ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.foundation.rememberOverscrollEffect$composable.<anonymous>' call
       var value = new JSOverscrollEffect();
       $composer_1.updateRememberedValue_l1colo_k$(value);
@@ -28637,7 +36210,7 @@
   };
   function JSOverscrollEffect() {
     this.isInProgress_1 = false;
-    this.effectModifier_1 = Companion_getInstance_7();
+    this.effectModifier_1 = Companion_getInstance_8();
   }
   protoOf(JSOverscrollEffect).applyToScroll_1ybr7h_k$ = function (delta, source, performScroll) {
     var overscrollDelta = Companion_getInstance_6().get_Zero_sctq3f_k$();
@@ -28677,7 +36250,7 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
     var tmp;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_10().get_Empty_i9b85g_k$()) {
+    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_13().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.foundation.gestures.rememberFlingBehavior$composable.<anonymous>' call
       var value = new DefaultFlingBehavior(flingSpec);
       $composer_1.updateRememberedValue_l1colo_k$(value);
@@ -28745,6 +36318,41 @@
        while (inductionVariable <= last);
     return accumulator;
   }
+  function getDefaultLazyLayoutKey(index) {
+    return new DefaultLazyKey(index);
+  }
+  function _get_index__g2optt($this) {
+    return $this.index_1;
+  }
+  function component1_3($this) {
+    return $this.index_1;
+  }
+  function DefaultLazyKey(index) {
+    this.index_1 = index;
+  }
+  protoOf(DefaultLazyKey).copy_u8zkvg_k$ = function (index) {
+    return new DefaultLazyKey(index);
+  };
+  protoOf(DefaultLazyKey).copy$default_13zcsi_k$ = function (index, $super) {
+    index = index === VOID ? this.index_1 : index;
+    return $super === VOID ? this.copy_u8zkvg_k$(index) : $super.copy_u8zkvg_k$.call(this, index);
+  };
+  protoOf(DefaultLazyKey).toString = function () {
+    return 'DefaultLazyKey(index=' + this.index_1 + ')';
+  };
+  protoOf(DefaultLazyKey).hashCode = function () {
+    return this.index_1;
+  };
+  protoOf(DefaultLazyKey).equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof DefaultLazyKey))
+      return false;
+    var tmp0_other_with_cast = other instanceof DefaultLazyKey ? other : THROW_CCE();
+    if (!(this.index_1 === tmp0_other_with_cast.index_1))
+      return false;
+    return true;
+  };
   function ContextMenuArea$composable(manager, content, $composer, $changed) {
     var $composer_0 = $composer;
     $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-1484295290);
@@ -28857,7 +36465,7 @@
     if (isTraceInProgress()) {
       traceEventStart(-839490155, $changed, -1, 'androidx.compose.foundation.text.textFieldPointer$composable (TextFieldPointerModifier.jsWasm.kt:26)');
     }
-    var tmp0 = defaultTextFieldPointer$composable(Companion_getInstance_7(), manager, enabled, interactionSource, state, focusRequester, readOnly, offsetMapping, $composer_0, 32838 | 896 & $changed | 7168 & $changed | 458752 & $changed | 3670016 & $changed | 29360128 & $changed);
+    var tmp0 = defaultTextFieldPointer$composable(Companion_getInstance_8(), manager, enabled, interactionSource, state, focusRequester, readOnly, offsetMapping, $composer_0, 32838 | 896 & $changed | 7168 & $changed | 458752 & $changed | 3670016 & $changed | 29360128 & $changed);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -28982,7 +36590,7 @@
     return LocalScrollbarStyle;
   }
   var LocalScrollbarStyle;
-  function get_$stableprop_24() {
+  function get_$stableprop_30() {
     return 0;
   }
   function ScrollbarStyle(minimalHeight, thickness, shape, hoverDurationMillis, unhoverColor, hoverColor) {
@@ -29096,6 +36704,33 @@
       LocalScrollbarStyle = staticCompositionLocalOf(LocalScrollbarStyle$lambda);
     }
   }
+  function LazyLayoutPrefetcher$composable(prefetchState, itemContentFactory, subcomposeLayoutState, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-1893241397);
+    sourceInformation($composer_0, 'C(LazyLayoutPrefetcher$composable)P(1):LazyLayoutPrefetcher.skiko.kt#wow0x6');
+    if (!(($changed & 1) === 0) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(-1893241397, $changed, -1, 'androidx.compose.foundation.lazy.layout.LazyLayoutPrefetcher$composable (LazyLayoutPrefetcher.skiko.kt:24)');
+      }
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lhns3f_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver === null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_xhrf9y_k$(LazyLayoutPrefetcher$composable$lambda(prefetchState, itemContentFactory, subcomposeLayoutState, $changed));
+    }
+  }
+  function LazyLayoutPrefetcher$composable$lambda($prefetchState, $itemContentFactory, $subcomposeLayoutState, $$changed) {
+    return function ($composer, $force) {
+      LazyLayoutPrefetcher$composable($prefetchState, $itemContentFactory, $subcomposeLayoutState, $composer, updateChangedFlags($$changed | 1));
+      return Unit_getInstance();
+    };
+  }
   function defaultBringIntoViewParent(_this__u8e3s4) {
     var tmp = defaultBringIntoViewParent$slambda_0(null);
     return new sam$androidx_compose_foundation_relocation_BringIntoViewParent$0(tmp);
@@ -29206,12 +36841,12 @@
     }, null);
   }
   function findFollowingBreak(_this__u8e3s4, index) {
-    var it = Companion_getInstance_41().makeCharacterInstance$default_lxnpdw_k$();
+    var it = Companion_getInstance_48().makeCharacterInstance$default_lxnpdw_k$();
     it.setText_nscvi8_k$(_this__u8e3s4);
     return it.following_1lapf4_k$(index);
   }
   function findPrecedingBreak(_this__u8e3s4, index) {
-    var it = Companion_getInstance_41().makeCharacterInstance$default_lxnpdw_k$();
+    var it = Companion_getInstance_48().makeCharacterInstance$default_lxnpdw_k$();
     it.setText_nscvi8_k$(_this__u8e3s4);
     return it.preceding_i4vixu_k$(index);
   }
@@ -29292,6 +36927,10 @@
   protoOf(HoverableNode).sharePointerInputWithSiblings_uw6o77_k$ = sharePointerInputWithSiblings;
   protoOf(HoverableNode).onDensityChange_hd2x8o_k$ = onDensityChange;
   protoOf(HoverableNode).onViewConfigurationChange_i5i1ip_k$ = onViewConfigurationChange;
+  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0).minIntrinsicWidth_h4fdo9_k$ = minIntrinsicWidth;
+  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0).minIntrinsicHeight_n7gxym_k$ = minIntrinsicHeight;
+  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0).maxIntrinsicWidth_4tn57d_k$ = maxIntrinsicWidth;
+  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0).maxIntrinsicHeight_6rhckk_k$ = maxIntrinsicHeight;
   protoOf(IndicationModifier).foldIn_u08fre_k$ = foldIn;
   protoOf(IndicationModifier).foldOut_4ty55p_k$ = foldOut;
   protoOf(IndicationModifier).any_hrontp_k$ = any;
@@ -29343,6 +36982,51 @@
   protoOf(DefaultScrollableState).scroll$default_9l862x_k$ = scroll$default;
   protoOf(DefaultScrollableState).get_canScrollForward_dmb0fj_k$ = get_canScrollForward;
   protoOf(DefaultScrollableState).get_canScrollBackward_v2t7h3_k$ = get_canScrollBackward;
+  protoOf(LazyItemScopeImpl).fillParentMaxSize$default_pbf5n4_k$ = fillParentMaxSize$default;
+  protoOf(LazyItemScopeImpl).fillParentMaxWidth$default_r4bsnt_k$ = fillParentMaxWidth$default;
+  protoOf(LazyItemScopeImpl).fillParentMaxHeight$default_3xf0ui_k$ = fillParentMaxHeight$default;
+  protoOf(LazyItemScopeImpl).animateItemPlacement$default_idcim7_k$ = animateItemPlacement$default;
+  protoOf(ParentSizeElement).foldIn_u08fre_k$ = foldIn;
+  protoOf(ParentSizeElement).foldOut_4ty55p_k$ = foldOut;
+  protoOf(ParentSizeElement).any_hrontp_k$ = any;
+  protoOf(ParentSizeElement).all_ctzlrs_k$ = all;
+  protoOf(ParentSizeElement).then_5qw5wu_k$ = then;
+  protoOf(AnimateItemPlacementElement).foldIn_u08fre_k$ = foldIn;
+  protoOf(AnimateItemPlacementElement).foldOut_4ty55p_k$ = foldOut;
+  protoOf(AnimateItemPlacementElement).any_hrontp_k$ = any;
+  protoOf(AnimateItemPlacementElement).all_ctzlrs_k$ = all;
+  protoOf(AnimateItemPlacementElement).then_5qw5wu_k$ = then;
+  protoOf(ParentSizeNode).minIntrinsicWidth_72od57_k$ = minIntrinsicWidth_0;
+  protoOf(ParentSizeNode).minIntrinsicHeight_zr6pa_k$ = minIntrinsicHeight_0;
+  protoOf(ParentSizeNode).maxIntrinsicWidth_o2xntp_k$ = maxIntrinsicWidth_0;
+  protoOf(ParentSizeNode).maxIntrinsicHeight_t0gmkg_k$ = maxIntrinsicHeight_0;
+  protoOf(LazyListIntervalContent).items$composable$default_hzgqo7_k$ = items$composable$default;
+  protoOf(LazyListIntervalContent).item$composable$default_ydqo62_k$ = item$composable$default;
+  protoOf(LazyListIntervalContent).stickyHeader$composable$default_q4uatl_k$ = stickyHeader$composable$default;
+  protoOf(LazyListIntervalContent).item_vccoga_k$ = item_0;
+  protoOf(LazyListIntervalContent).items_zboux9_k$ = items_0;
+  protoOf(LazyListIntervalContent).item$composable_24plcw_k$ = item$composable_0;
+  protoOf(LazyListIntervalContent).item$composable$default_rp6xsu_k$ = item$composable$default_0;
+  protoOf(LazyListIntervalContent).items$composable_w046d1_k$ = items$composable_0;
+  protoOf(LazyListIntervalContent).items$composable$default_3c2iht_k$ = items$composable$default_0;
+  protoOf(LazyListState$remeasurementModifier$1).foldIn_u08fre_k$ = foldIn;
+  protoOf(LazyListState$remeasurementModifier$1).foldOut_4ty55p_k$ = foldOut;
+  protoOf(LazyListState$remeasurementModifier$1).any_hrontp_k$ = any;
+  protoOf(LazyListState$remeasurementModifier$1).all_ctzlrs_k$ = all;
+  protoOf(LazyListState$remeasurementModifier$1).then_5qw5wu_k$ = then;
+  protoOf(LazyListState).scroll$default_9l862x_k$ = scroll$default;
+  protoOf(AwaitFirstLayoutModifier).foldIn_u08fre_k$ = foldIn;
+  protoOf(AwaitFirstLayoutModifier).foldOut_4ty55p_k$ = foldOut;
+  protoOf(AwaitFirstLayoutModifier).any_hrontp_k$ = any;
+  protoOf(AwaitFirstLayoutModifier).all_ctzlrs_k$ = all;
+  protoOf(AwaitFirstLayoutModifier).then_5qw5wu_k$ = then;
+  protoOf(MutableIntervalList).forEach$default_fdmw30_k$ = forEach$default;
+  protoOf(LazyLayoutBeyondBoundsModifierLocal).foldIn_u08fre_k$ = foldIn;
+  protoOf(LazyLayoutBeyondBoundsModifierLocal).foldOut_4ty55p_k$ = foldOut;
+  protoOf(LazyLayoutBeyondBoundsModifierLocal).any_hrontp_k$ = any;
+  protoOf(LazyLayoutBeyondBoundsModifierLocal).all_ctzlrs_k$ = all;
+  protoOf(LazyLayoutBeyondBoundsModifierLocal).then_5qw5wu_k$ = then;
+  protoOf(LazyLayoutMeasureScopeImpl).layout$default_8ylrvs_k$ = layout$default;
   protoOf(ConsumeAllFlingOnDirection).onPreScroll_lxl9op_k$ = onPreScroll;
   protoOf(ConsumeAllFlingOnDirection).onPreFling_xhlpmx_k$ = onPreFling;
   protoOf(UnitDensity$1).toPx_u0ojv5_k$ = toPx;
@@ -29398,19 +37082,19 @@
   protoOf(FixedMotionDurationScale).fold_iindx8_k$ = fold;
   protoOf(FixedMotionDurationScale).minusKey_y21q55_k$ = minusKey;
   protoOf(FixedMotionDurationScale).plus_rgw9wi_k$ = plus;
-  protoOf(VerticalScrollLayoutModifier).minIntrinsicWidth_72od57_k$ = minIntrinsicWidth_0;
-  protoOf(VerticalScrollLayoutModifier).minIntrinsicHeight_zr6pa_k$ = minIntrinsicHeight_0;
-  protoOf(VerticalScrollLayoutModifier).maxIntrinsicWidth_o2xntp_k$ = maxIntrinsicWidth_0;
-  protoOf(VerticalScrollLayoutModifier).maxIntrinsicHeight_t0gmkg_k$ = maxIntrinsicHeight_0;
+  protoOf(VerticalScrollLayoutModifier).minIntrinsicWidth_72od57_k$ = minIntrinsicWidth_1;
+  protoOf(VerticalScrollLayoutModifier).minIntrinsicHeight_zr6pa_k$ = minIntrinsicHeight_1;
+  protoOf(VerticalScrollLayoutModifier).maxIntrinsicWidth_o2xntp_k$ = maxIntrinsicWidth_1;
+  protoOf(VerticalScrollLayoutModifier).maxIntrinsicHeight_t0gmkg_k$ = maxIntrinsicHeight_1;
   protoOf(VerticalScrollLayoutModifier).foldIn_u08fre_k$ = foldIn;
   protoOf(VerticalScrollLayoutModifier).foldOut_4ty55p_k$ = foldOut;
   protoOf(VerticalScrollLayoutModifier).any_hrontp_k$ = any;
   protoOf(VerticalScrollLayoutModifier).all_ctzlrs_k$ = all;
   protoOf(VerticalScrollLayoutModifier).then_5qw5wu_k$ = then;
-  protoOf(HorizontalScrollLayoutModifier).minIntrinsicWidth_72od57_k$ = minIntrinsicWidth_0;
-  protoOf(HorizontalScrollLayoutModifier).minIntrinsicHeight_zr6pa_k$ = minIntrinsicHeight_0;
-  protoOf(HorizontalScrollLayoutModifier).maxIntrinsicWidth_o2xntp_k$ = maxIntrinsicWidth_0;
-  protoOf(HorizontalScrollLayoutModifier).maxIntrinsicHeight_t0gmkg_k$ = maxIntrinsicHeight_0;
+  protoOf(HorizontalScrollLayoutModifier).minIntrinsicWidth_72od57_k$ = minIntrinsicWidth_1;
+  protoOf(HorizontalScrollLayoutModifier).minIntrinsicHeight_zr6pa_k$ = minIntrinsicHeight_1;
+  protoOf(HorizontalScrollLayoutModifier).maxIntrinsicWidth_o2xntp_k$ = maxIntrinsicWidth_1;
+  protoOf(HorizontalScrollLayoutModifier).maxIntrinsicHeight_t0gmkg_k$ = maxIntrinsicHeight_1;
   protoOf(HorizontalScrollLayoutModifier).foldIn_u08fre_k$ = foldIn;
   protoOf(HorizontalScrollLayoutModifier).foldOut_4ty55p_k$ = foldOut;
   protoOf(HorizontalScrollLayoutModifier).any_hrontp_k$ = any;
@@ -29440,16 +37124,21 @@
   protoOf(TextStringSimpleNode).get_shouldClearDescendantSemantics_glb41r_k$ = get_shouldClearDescendantSemantics;
   protoOf(TextStringSimpleNode).get_shouldMergeDescendantSemantics_tbewdw_k$ = get_shouldMergeDescendantSemantics;
   protoOf(MultiWidgetSelectionDelegate).updateSelection$default_rv37dy_k$ = updateSelection$default;
-  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0).minIntrinsicWidth_h4fdo9_k$ = minIntrinsicWidth;
-  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0).minIntrinsicHeight_n7gxym_k$ = minIntrinsicHeight;
-  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0).maxIntrinsicWidth_4tn57d_k$ = maxIntrinsicWidth;
-  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0).maxIntrinsicHeight_6rhckk_k$ = maxIntrinsicHeight;
+  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0_0).minIntrinsicWidth_h4fdo9_k$ = minIntrinsicWidth;
+  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0_0).minIntrinsicHeight_n7gxym_k$ = minIntrinsicHeight;
+  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0_0).maxIntrinsicWidth_4tn57d_k$ = maxIntrinsicWidth;
+  protoOf(sam$androidx_compose_ui_layout_MeasurePolicy$0_0).maxIntrinsicHeight_6rhckk_k$ = maxIntrinsicHeight;
   protoOf(JsConfig).isPreciseWheelScroll_mn8ctv_k$ = isPreciseWheelScroll;
   //endregion
   //region block: init
   DEBUG = false;
   TAG = 'ContentInViewModifier';
   DefaultScrollMotionDurationScaleFactor = 1.0;
+  Unset = -2147483648;
+  NearestItemsSlidingWindowSize = 30;
+  NearestItemsExtraItemCount = 100;
+  DEBUG_0 = false;
+  MaxItemsToRetainForReuse = 7;
   DefaultMinLines = 1;
   DefaultWidthCharCount = 10;
   SNAPSHOTS_INTERVAL_MILLIS = 5000;
@@ -29474,33 +37163,35 @@
   _.$_$.l = Press;
   _.$_$.m = Release;
   _.$_$.n = collectIsFocusedAsState$composable;
-  _.$_$.o = selectableGroup_0;
-  _.$_$.p = selectable;
-  _.$_$.q = get_CircleShape;
-  _.$_$.r = CornerSize_1;
-  _.$_$.s = RoundedCornerShape_2;
-  _.$_$.t = RoundedCornerShape_3;
-  _.$_$.u = get_LocalTextSelectionColors;
-  _.$_$.v = TextSelectionColors;
-  _.$_$.w = BasicText$composable;
-  _.$_$.x = BasicTextField$composable;
-  _.$_$.y = BorderStroke_0;
-  _.$_$.z = BorderStroke;
-  _.$_$.a1 = IndicationInstance;
-  _.$_$.b1 = Indication;
-  _.$_$.c1 = get_LocalIndication;
-  _.$_$.d1 = background;
-  _.$_$.e1 = border;
-  _.$_$.f1 = clickable;
-  _.$_$.g1 = focusable;
-  _.$_$.h1 = indication;
-  _.$_$.i1 = isSystemInDarkTheme$composable;
-  _.$_$.j1 = awaitDragOrCancellation;
-  _.$_$.k1 = awaitEachGesture;
-  _.$_$.l1 = awaitFirstDown;
-  _.$_$.m1 = awaitTouchSlopOrCancellation;
-  _.$_$.n1 = Companion_getInstance_45;
-  _.$_$.o1 = Companion_getInstance_46;
+  _.$_$.o = LazyColumn$composable;
+  _.$_$.p = selectableGroup_0;
+  _.$_$.q = selectable;
+  _.$_$.r = get_CircleShape;
+  _.$_$.s = CornerSize_1;
+  _.$_$.t = RoundedCornerShape_2;
+  _.$_$.u = RoundedCornerShape_3;
+  _.$_$.v = get_LocalTextSelectionColors;
+  _.$_$.w = TextSelectionColors;
+  _.$_$.x = BasicText$composable;
+  _.$_$.y = BasicTextField$composable;
+  _.$_$.z = BorderStroke_0;
+  _.$_$.a1 = BorderStroke;
+  _.$_$.b1 = Image$composable;
+  _.$_$.c1 = IndicationInstance;
+  _.$_$.d1 = Indication;
+  _.$_$.e1 = get_LocalIndication;
+  _.$_$.f1 = background;
+  _.$_$.g1 = border;
+  _.$_$.h1 = clickable;
+  _.$_$.i1 = focusable;
+  _.$_$.j1 = indication;
+  _.$_$.k1 = isSystemInDarkTheme$composable;
+  _.$_$.l1 = awaitDragOrCancellation;
+  _.$_$.m1 = awaitEachGesture;
+  _.$_$.n1 = awaitFirstDown;
+  _.$_$.o1 = awaitTouchSlopOrCancellation;
+  _.$_$.p1 = Companion_getInstance_57;
+  _.$_$.q1 = Companion_getInstance_58;
   //endregion
   return _;
 }));

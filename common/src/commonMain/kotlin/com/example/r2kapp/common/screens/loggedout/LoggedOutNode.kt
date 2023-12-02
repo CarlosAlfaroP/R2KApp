@@ -97,7 +97,7 @@ class LoggedOutNode(
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                var name by remember { mutableStateOf("Usuario") }
+                var name by remember { mutableStateOf("Invitado") }
 
                 Text(
                     text = "Login",

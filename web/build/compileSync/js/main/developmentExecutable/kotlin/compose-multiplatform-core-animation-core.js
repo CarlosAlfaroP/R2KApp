@@ -28,43 +28,43 @@
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var Unit_getInstance = kotlin_kotlin.$_$.v4;
-  var equals = kotlin_kotlin.$_$.bc;
-  var VOID = kotlin_kotlin.$_$.li;
-  var protoOf = kotlin_kotlin.$_$.jd;
-  var objectCreate = kotlin_kotlin.$_$.hd;
-  var coerceIn = kotlin_kotlin.$_$.ge;
-  var CoroutineImpl = kotlin_kotlin.$_$.eb;
-  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.oa;
-  var CancellationException = kotlin_kotlin.$_$.na;
-  var classMeta = kotlin_kotlin.$_$.xb;
-  var setMetadataFor = kotlin_kotlin.$_$.kd;
-  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s1;
-  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.i4;
-  var toString = kotlin_kotlin.$_$.od;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.y1;
-  var KMutableProperty1 = kotlin_kotlin.$_$.oe;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.hc;
-  var SuspendFunction0 = kotlin_kotlin.$_$.fb;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m1;
+  var Unit_getInstance = kotlin_kotlin.$_$.z4;
+  var equals = kotlin_kotlin.$_$.ic;
+  var VOID = kotlin_kotlin.$_$.bj;
+  var protoOf = kotlin_kotlin.$_$.rd;
+  var objectCreate = kotlin_kotlin.$_$.pd;
+  var coerceIn = kotlin_kotlin.$_$.pe;
+  var CoroutineImpl = kotlin_kotlin.$_$.lb;
+  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.va;
+  var CancellationException = kotlin_kotlin.$_$.ua;
+  var classMeta = kotlin_kotlin.$_$.ec;
+  var setMetadataFor = kotlin_kotlin.$_$.sd;
+  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u1;
+  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.l4;
+  var toString = kotlin_kotlin.$_$.wd;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.a2;
+  var KMutableProperty1 = kotlin_kotlin.$_$.ye;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.oc;
+  var SuspendFunction0 = kotlin_kotlin.$_$.mb;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o1;
   var Dp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u;
-  var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.l3;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
-  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
-  var THROW_CCE = kotlin_kotlin.$_$.xg;
-  var isObject = kotlin_kotlin.$_$.wc;
-  var rememberUpdatedState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w1;
+  var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.p3;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
+  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q2;
+  var THROW_CCE = kotlin_kotlin.$_$.lh;
+  var isObject = kotlin_kotlin.$_$.dd;
+  var rememberUpdatedState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y1;
   var Factory_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.t;
   var Channel = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.a1;
-  var SideEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b1;
-  var LaunchedEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
-  var KProperty0 = kotlin_kotlin.$_$.pe;
-  var THROW_ISE = kotlin_kotlin.$_$.yg;
-  var getLocalDelegateReference = kotlin_kotlin.$_$.ec;
+  var SideEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
+  var LaunchedEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
+  var KProperty0 = kotlin_kotlin.$_$.ze;
+  var THROW_ISE = kotlin_kotlin.$_$.mh;
+  var getLocalDelegateReference = kotlin_kotlin.$_$.lc;
   var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.b2;
-  var isInterface = kotlin_kotlin.$_$.uc;
+  var isInterface = kotlin_kotlin.$_$.bd;
   var ChannelResult__getOrNull_impl_f5e07h = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.r;
   var launch = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.q2;
   var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u1;
@@ -72,62 +72,62 @@
   var Companion_getInstance_2 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.s1;
   var Offset = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.e;
   var Companion_getInstance_3 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.t1;
-  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.j4;
-  var Companion_getInstance_4 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.o3;
+  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.m4;
+  var Companion_getInstance_4 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s3;
   var IntOffset = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w;
-  var Companion_getInstance_5 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q3;
+  var Companion_getInstance_5 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u3;
   var IntSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.y;
-  var SuspendFunction1 = kotlin_kotlin.$_$.gb;
-  var Long = kotlin_kotlin.$_$.qg;
-  var isNaN_0 = kotlin_kotlin.$_$.sh;
-  var interfaceMeta = kotlin_kotlin.$_$.lc;
-  var Enum = kotlin_kotlin.$_$.lg;
-  var hashCode = kotlin_kotlin.$_$.jc;
-  var getNumberHashCode = kotlin_kotlin.$_$.fc;
+  var SuspendFunction1 = kotlin_kotlin.$_$.nb;
+  var Long = kotlin_kotlin.$_$.eh;
+  var isNaN_0 = kotlin_kotlin.$_$.hi;
+  var interfaceMeta = kotlin_kotlin.$_$.sc;
+  var Enum = kotlin_kotlin.$_$.zg;
+  var hashCode = kotlin_kotlin.$_$.qc;
+  var getNumberHashCode = kotlin_kotlin.$_$.mc;
   var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.v;
-  var roundToInt = kotlin_kotlin.$_$.ud;
-  var to = kotlin_kotlin.$_$.ii;
-  var mapCapacity = kotlin_kotlin.$_$.v8;
+  var roundToInt = kotlin_kotlin.$_$.ce;
+  var to = kotlin_kotlin.$_$.xi;
+  var mapCapacity = kotlin_kotlin.$_$.b9;
   var LinkedHashMap_init_$Create$_0 = kotlin_kotlin.$_$.u;
-  var toLong = kotlin_kotlin.$_$.md;
-  var abs = kotlin_kotlin.$_$.qd;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.wh;
-  var objectMeta = kotlin_kotlin.$_$.id;
-  var State = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e1;
-  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.di;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.t1;
-  var get_PI = kotlin_kotlin.$_$.pd;
-  var coerceIn_0 = kotlin_kotlin.$_$.ie;
-  var numberToLong = kotlin_kotlin.$_$.gd;
-  var withFrameNanos = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
-  var Key_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.f8;
-  var Annotation = kotlin_kotlin.$_$.fg;
-  var CancellationException_init_$Create$ = kotlin_kotlin.$_$.b1;
+  var toLong = kotlin_kotlin.$_$.ud;
+  var abs = kotlin_kotlin.$_$.yd;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.li;
+  var objectMeta = kotlin_kotlin.$_$.qd;
+  var State = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f1;
+  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.si;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.v1;
+  var get_PI = kotlin_kotlin.$_$.xd;
+  var coerceIn_0 = kotlin_kotlin.$_$.re;
+  var numberToLong = kotlin_kotlin.$_$.od;
+  var withFrameNanos = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j2;
+  var Key_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.l9;
+  var Annotation = kotlin_kotlin.$_$.tg;
+  var CancellationException_init_$Create$ = kotlin_kotlin.$_$.c1;
   var Key_getInstance_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.y;
-  var ensureNotNull = kotlin_kotlin.$_$.oh;
-  var AtomicReference = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m;
+  var ensureNotNull = kotlin_kotlin.$_$.di;
+  var AtomicReference = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n;
   var Mutex = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.v1;
   var coroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.k;
-  var captureStack = kotlin_kotlin.$_$.rb;
-  var isFinite = kotlin_kotlin.$_$.ph;
-  var isNaN_1 = kotlin_kotlin.$_$.th;
-  var DoubleCompanionObject_getInstance = kotlin_kotlin.$_$.h4;
-  var floatFromBits = kotlin_kotlin.$_$.dc;
-  var toBits = kotlin_kotlin.$_$.ei;
-  var Key_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui.$_$.j8;
-  var mutableLongStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.p1;
-  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
-  var mutableStateListOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q1;
-  var derivedStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j1;
+  var captureStack = kotlin_kotlin.$_$.yb;
+  var isFinite = kotlin_kotlin.$_$.ei;
+  var isNaN_1 = kotlin_kotlin.$_$.ii;
+  var DoubleCompanionObject_getInstance = kotlin_kotlin.$_$.k4;
+  var floatFromBits = kotlin_kotlin.$_$.kc;
+  var toBits = kotlin_kotlin.$_$.ti;
+  var Key_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui.$_$.p9;
+  var mutableLongStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r1;
+  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i2;
+  var mutableStateListOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s1;
+  var derivedStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l1;
   var illegalDecoyCallException = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
-  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
-  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
-  var KProperty1 = kotlin_kotlin.$_$.qe;
-  var numberToInt = kotlin_kotlin.$_$.fd;
-  var _Dp___get_value__impl__geb1vb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.k2;
-  var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.h2;
-  var _DpOffset___get_x__impl__uauqb5 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.l2;
-  var _DpOffset___get_y__impl__1h898y = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.m2;
+  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
+  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
+  var KProperty1 = kotlin_kotlin.$_$.af;
+  var numberToInt = kotlin_kotlin.$_$.nd;
+  var _Dp___get_value__impl__geb1vb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.l2;
+  var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i2;
+  var _DpOffset___get_x__impl__uauqb5 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.m2;
+  var _DpOffset___get_y__impl__1h898y = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.n2;
   var DpOffset = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.r;
   var DpOffset_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s;
   var _Size___get_width__impl__58y75t = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.p1;
@@ -136,21 +136,21 @@
   var _Offset___get_x__impl__xvi35n = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.i1;
   var _Offset___get_y__impl__8bzhra = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.j1;
   var Offset_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.d;
-  var _IntOffset___get_x__impl__qiqr5o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q2;
-  var _IntOffset___get_y__impl__2avpwj = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.r2;
+  var _IntOffset___get_x__impl__qiqr5o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t2;
+  var _IntOffset___get_y__impl__2avpwj = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u2;
   var IntOffset_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v;
-  var _IntSize___get_width__impl__d9yl4o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u2;
-  var _IntSize___get_height__impl__prv63b = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t2;
+  var _IntSize___get_width__impl__d9yl4o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x2;
+  var _IntSize___get_height__impl__prv63b = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w2;
   var IntSize_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x;
   var Rect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.h;
-  var until = kotlin_kotlin.$_$.le;
-  var Companion_getInstance_6 = kotlin_kotlin.$_$.p4;
-  var getValue = kotlin_kotlin.$_$.a8;
-  var collectionSizeOrDefault = kotlin_kotlin.$_$.l6;
+  var until = kotlin_kotlin.$_$.ve;
+  var Companion_getInstance_6 = kotlin_kotlin.$_$.t4;
+  var getValue = kotlin_kotlin.$_$.e8;
+  var collectionSizeOrDefault = kotlin_kotlin.$_$.p6;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
-  var Companion_getInstance_7 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.m3;
-  var mapOf = kotlin_kotlin.$_$.x8;
-  var CancellationException_init_$Init$ = kotlin_kotlin.$_$.a1;
+  var Companion_getInstance_7 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q3;
+  var mapOf = kotlin_kotlin.$_$.d9;
+  var CancellationException_init_$Init$ = kotlin_kotlin.$_$.b1;
   //endregion
   //region block: pre-declaration
   setMetadataFor(Animatable$runAnimation$slambda, 'Animatable$runAnimation$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [0]);
@@ -181,8 +181,8 @@
   setMetadataFor(AnimationConstants, 'AnimationConstants', objectMeta);
   setMetadataFor(Companion, 'Companion', objectMeta);
   setMetadataFor(StartOffsetType, 'StartOffsetType', classMeta);
-  setMetadataFor(AnimationState, 'AnimationState', classMeta, VOID, [State]);
   setMetadataFor(AnimationScope, 'AnimationScope', classMeta);
+  setMetadataFor(AnimationState_0, 'AnimationState', classMeta, VOID, [State]);
   setMetadataFor(AnimationVector, 'AnimationVector', classMeta);
   setMetadataFor(AnimationVector1D, 'AnimationVector1D', classMeta, AnimationVector);
   setMetadataFor(AnimationVector2D, 'AnimationVector2D', classMeta, AnimationVector);
@@ -227,8 +227,8 @@
   setMetadataFor(MutationInterruptedException, 'MutationInterruptedException', classMeta, PlatformOptimizedCancellationException);
   setMetadataFor(SpringSimulation, 'SpringSimulation', classMeta);
   setMetadataFor(Motion, 'Motion', classMeta);
-  setMetadataFor($animateCOROUTINE$1, '$animateCOROUTINE$1', classMeta, CoroutineImpl);
-  setMetadataFor($callWithFrameNanosCOROUTINE$2, '$callWithFrameNanosCOROUTINE$2', classMeta, CoroutineImpl);
+  setMetadataFor($animateCOROUTINE$0, '$animateCOROUTINE$0', classMeta, CoroutineImpl);
+  setMetadataFor($callWithFrameNanosCOROUTINE$1, '$callWithFrameNanosCOROUTINE$1', classMeta, CoroutineImpl);
   setMetadataFor(DeferredAnimationData, 'DeferredAnimationData', classMeta, VOID, [State]);
   setMetadataFor(TransitionAnimationState, 'TransitionAnimationState', classMeta, VOID, [State]);
   function isTransitioningTo(_this__u8e3s4, targetState) {
@@ -423,10 +423,10 @@
             this.this$0__1.internalState_1.set_velocityVector_mao3b1_k$(this.this$0__1.typeConverter_1.get_convertToVector_s594l4_k$()(this.$initialVelocity_1));
             _set_targetValue__aqsk0r(this.this$0__1, this.$animation_1.get_targetValue_kq6mfd_k$());
             _set_isRunning__kpbg34(this.this$0__1, true);
-            this.endState1__1 = copy(this.this$0__1.internalState_1, VOID, VOID, VOID, AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$());
+            this.endState1__1 = copy_0(this.this$0__1.internalState_1, VOID, VOID, VOID, AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$());
             this.clampingNeeded2__1 = {_v: false};
             this.set_state_a96kl8_k$(1);
-            suspendResult = animate(this.endState1__1, this.$animation_1, this.$startTime_1, Animatable$runAnimation$slambda$lambda(this.this$0__1, this.endState1__1, this.$block_1, this.clampingNeeded2__1), this);
+            suspendResult = animate_0(this.endState1__1, this.$animation_1, this.$startTime_1, Animatable$runAnimation$slambda$lambda(this.this$0__1, this.endState1__1, this.$block_1, this.clampingNeeded2__1), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -573,7 +573,7 @@
     this.typeConverter_1 = typeConverter;
     this.visibilityThreshold_1 = visibilityThreshold;
     this.label_1 = label;
-    this.internalState_1 = new AnimationState(this.typeConverter_1, initialValue);
+    this.internalState_1 = new AnimationState_0(this.typeConverter_1, initialValue);
     this.isRunning$delegate_1 = mutableStateOf(false);
     this.targetValue$delegate_1 = mutableStateOf(initialValue);
     this.lowerBound_1 = null;
@@ -1267,7 +1267,7 @@
     this.initialValueVector_1 = this.typeConverter_1.get_convertToVector_s594l4_k$()(this.initialValue_1);
     this.targetValueVector_1 = this.typeConverter_1.get_convertToVector_s594l4_k$()(this.targetValue_1);
     var tmp = this;
-    var tmp1_elvis_lhs = initialVelocityVector == null ? null : copy_0(initialVelocityVector);
+    var tmp1_elvis_lhs = initialVelocityVector == null ? null : copy_1(initialVelocityVector);
     tmp.initialVelocityVector_1 = tmp1_elvis_lhs == null ? newInstance(this.typeConverter_1.get_convertToVector_s594l4_k$()(this.initialValue_1)) : tmp1_elvis_lhs;
     this.durationNanos_1 = this.animationSpec_1.getDurationNanos_62az16_k$(this.initialValueVector_1, this.targetValueVector_1, this.initialVelocityVector_1);
     this.endVelocity_1 = this.animationSpec_1.getEndVelocity_2fbr89_k$(this.initialValueVector_1, this.targetValueVector_1, this.initialVelocityVector_1);
@@ -1365,11 +1365,11 @@
     this.typeConverter_1 = typeConverter;
     this.initialValue_1 = initialValue;
     this.initialValueVector_1 = this.typeConverter_1.get_convertToVector_s594l4_k$()(this.initialValue_1);
-    this.initialVelocityVector_1 = copy_0(initialVelocityVector);
+    this.initialVelocityVector_1 = copy_1(initialVelocityVector);
     this.targetValue_1 = this.typeConverter_1.get_convertFromVector_kmewon_k$()(this.animationSpec_1.getTargetValue_ftaxp4_k$(this.initialValueVector_1, initialVelocityVector));
     this.isInfinite_1 = false;
     this.durationNanos_1 = this.animationSpec_1.getDurationNanos_m6hrcz_k$(this.initialValueVector_1, initialVelocityVector);
-    this.endVelocity_1 = copy_0(this.animationSpec_1.getVelocityFromNanos_hyp13a_k$(this.durationNanos_1, this.initialValueVector_1, initialVelocityVector));
+    this.endVelocity_1 = copy_1(this.animationSpec_1.getVelocityFromNanos_hyp13a_k$(this.durationNanos_1, this.initialValueVector_1, initialVelocityVector));
     var inductionVariable = 0;
     var last = this.endVelocity_1.get_size_woubt6_k$();
     if (inductionVariable < last)
@@ -1940,78 +1940,10 @@
     RepeatMode_initEntries();
     return RepeatMode_Reverse_instance;
   }
-  function get_$stableprop_10() {
-    return 0;
-  }
-  function AnimationState(typeConverter, initialValue, initialVelocityVector, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
-    initialVelocityVector = initialVelocityVector === VOID ? null : initialVelocityVector;
-    lastFrameTimeNanos = lastFrameTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : lastFrameTimeNanos;
-    finishedTimeNanos = finishedTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : finishedTimeNanos;
-    isRunning = isRunning === VOID ? false : isRunning;
-    this.typeConverter_1 = typeConverter;
-    this.value$delegate_1 = mutableStateOf(initialValue);
-    var tmp = this;
-    var tmp1_elvis_lhs = initialVelocityVector == null ? null : copy_0(initialVelocityVector);
-    tmp.velocityVector_1 = tmp1_elvis_lhs == null ? createZeroVectorFrom(this.typeConverter_1, initialValue) : tmp1_elvis_lhs;
-    this.lastFrameTimeNanos_1 = lastFrameTimeNanos;
-    this.finishedTimeNanos_1 = finishedTimeNanos;
-    this.isRunning_1 = isRunning;
-    this.$stable_1 = 0;
-  }
-  protoOf(AnimationState).get_typeConverter_seyvfn_k$ = function () {
-    return this.typeConverter_1;
-  };
-  protoOf(AnimationState).set_value_rnwamw_k$ = function (_set____db54di) {
-    value$factory();
-    return this.value$delegate_1.set_value_rnwamw_k$(_set____db54di);
-  };
-  protoOf(AnimationState).get_value_j01efc_k$ = function () {
-    // Inline function 'androidx.compose.runtime.getValue' call
-    value$factory_0();
-    return this.value$delegate_1.get_value_j01efc_k$();
-  };
-  protoOf(AnimationState).set_velocityVector_mao3b1_k$ = function (_set____db54di) {
-    this.velocityVector_1 = _set____db54di;
-  };
-  protoOf(AnimationState).get_velocityVector_v3jmo9_k$ = function () {
-    return this.velocityVector_1;
-  };
-  protoOf(AnimationState).set_lastFrameTimeNanos_c9sxzl_k$ = function (_set____db54di) {
-    this.lastFrameTimeNanos_1 = _set____db54di;
-  };
-  protoOf(AnimationState).get_lastFrameTimeNanos_3aprno_k$ = function () {
-    return this.lastFrameTimeNanos_1;
-  };
-  protoOf(AnimationState).set_finishedTimeNanos_iw0ihw_k$ = function (_set____db54di) {
-    this.finishedTimeNanos_1 = _set____db54di;
-  };
-  protoOf(AnimationState).get_finishedTimeNanos_t5ryif_k$ = function () {
-    return this.finishedTimeNanos_1;
-  };
-  protoOf(AnimationState).set_isRunning_tw1q35_k$ = function (_set____db54di) {
-    this.isRunning_1 = _set____db54di;
-  };
-  protoOf(AnimationState).get_isRunning_okmtn0_k$ = function () {
-    return this.isRunning_1;
-  };
-  protoOf(AnimationState).get_velocity_3hqvmu_k$ = function () {
-    return this.typeConverter_1.get_convertFromVector_kmewon_k$()(this.velocityVector_1);
-  };
-  protoOf(AnimationState).toString = function () {
-    return 'AnimationState(' + ('value=' + this.get_value_j01efc_k$() + ', ') + ('velocity=' + this.get_velocity_3hqvmu_k$() + ', ') + ('isRunning=' + this.isRunning_1 + ', ') + ('lastFrameTimeNanos=' + toString(this.lastFrameTimeNanos_1) + ', ') + ('finishedTimeNanos=' + toString(this.finishedTimeNanos_1)) + ')';
-  };
-  function copy(_this__u8e3s4, value, velocityVector, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
-    value = value === VOID ? _this__u8e3s4.get_value_j01efc_k$() : value;
-    velocityVector = velocityVector === VOID ? copy_0(_this__u8e3s4.velocityVector_1) : velocityVector;
-    lastFrameTimeNanos = lastFrameTimeNanos === VOID ? _this__u8e3s4.lastFrameTimeNanos_1 : lastFrameTimeNanos;
-    finishedTimeNanos = finishedTimeNanos === VOID ? _this__u8e3s4.finishedTimeNanos_1 : finishedTimeNanos;
-    isRunning = isRunning === VOID ? _this__u8e3s4.isRunning_1 : isRunning;
-    return new AnimationState(_this__u8e3s4.typeConverter_1, value, velocityVector, lastFrameTimeNanos, finishedTimeNanos, isRunning);
-  }
   function _get_onCancel__fbp26m($this) {
     return $this.onCancel_1;
   }
-  function get_$stableprop_11() {
+  function get_$stableprop_10() {
     return 8;
   }
   function AnimationScope(initialValue, typeConverter, initialVelocityVector, lastFrameTimeNanos, targetValue, startTimeNanos, isRunning, onCancel) {
@@ -2020,7 +1952,7 @@
     this.startTimeNanos_1 = startTimeNanos;
     this.onCancel_1 = onCancel;
     this.value$delegate_1 = mutableStateOf(initialValue);
-    this.velocityVector_1 = copy_0(initialVelocityVector);
+    this.velocityVector_1 = copy_1(initialVelocityVector);
     this.lastFrameTimeNanos_1 = lastFrameTimeNanos;
     this.finishedTimeNanos_1 = AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$();
     this.isRunning$delegate_1 = mutableStateOf(isRunning);
@@ -2036,12 +1968,12 @@
     return this.startTimeNanos_1;
   };
   protoOf(AnimationScope).set_value_rnwamw_k$ = function (_set____db54di) {
-    value$factory_1();
+    value$factory();
     return this.value$delegate_1.set_value_rnwamw_k$(_set____db54di);
   };
   protoOf(AnimationScope).get_value_j01efc_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
-    value$factory_2();
+    value$factory_0();
     return this.value$delegate_1.get_value_j01efc_k$();
   };
   protoOf(AnimationScope).set_velocityVector_mao3b1_k$ = function (_set____db54di) {
@@ -2079,18 +2011,94 @@
     this.onCancel_1();
   };
   protoOf(AnimationScope).toAnimationState_sex3co_k$ = function () {
-    return new AnimationState(this.typeConverter_1, this.get_value_j01efc_k$(), this.velocityVector_1, this.lastFrameTimeNanos_1, this.finishedTimeNanos_1, this.get_isRunning_okmtn0_k$());
+    return new AnimationState_0(this.typeConverter_1, this.get_value_j01efc_k$(), this.velocityVector_1, this.lastFrameTimeNanos_1, this.finishedTimeNanos_1, this.get_isRunning_okmtn0_k$());
   };
   function createZeroVectorFrom(_this__u8e3s4, value) {
     return newInstance(_this__u8e3s4.get_convertToVector_s594l4_k$()(value));
   }
-  function AnimationState_0(initialValue, initialVelocity, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
+  function copy(_this__u8e3s4, value, velocity, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
+    value = value === VOID ? _this__u8e3s4.get_value_j01efc_k$() : value;
+    velocity = velocity === VOID ? _this__u8e3s4.velocityVector_1.get_value_j01efc_k$() : velocity;
+    lastFrameTimeNanos = lastFrameTimeNanos === VOID ? _this__u8e3s4.lastFrameTimeNanos_1 : lastFrameTimeNanos;
+    finishedTimeNanos = finishedTimeNanos === VOID ? _this__u8e3s4.finishedTimeNanos_1 : finishedTimeNanos;
+    isRunning = isRunning === VOID ? _this__u8e3s4.isRunning_1 : isRunning;
+    return new AnimationState_0(_this__u8e3s4.typeConverter_1, value, AnimationVector_0(velocity), lastFrameTimeNanos, finishedTimeNanos, isRunning);
+  }
+  function copy_0(_this__u8e3s4, value, velocityVector, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
+    value = value === VOID ? _this__u8e3s4.get_value_j01efc_k$() : value;
+    velocityVector = velocityVector === VOID ? copy_1(_this__u8e3s4.velocityVector_1) : velocityVector;
+    lastFrameTimeNanos = lastFrameTimeNanos === VOID ? _this__u8e3s4.lastFrameTimeNanos_1 : lastFrameTimeNanos;
+    finishedTimeNanos = finishedTimeNanos === VOID ? _this__u8e3s4.finishedTimeNanos_1 : finishedTimeNanos;
+    isRunning = isRunning === VOID ? _this__u8e3s4.isRunning_1 : isRunning;
+    return new AnimationState_0(_this__u8e3s4.typeConverter_1, value, velocityVector, lastFrameTimeNanos, finishedTimeNanos, isRunning);
+  }
+  function AnimationState(initialValue, initialVelocity, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
     initialVelocity = initialVelocity === VOID ? 0.0 : initialVelocity;
     lastFrameTimeNanos = lastFrameTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : lastFrameTimeNanos;
     finishedTimeNanos = finishedTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : finishedTimeNanos;
     isRunning = isRunning === VOID ? false : isRunning;
-    return new AnimationState(get_VectorConverter_2(FloatCompanionObject_getInstance()), initialValue, AnimationVector_0(initialVelocity), lastFrameTimeNanos, finishedTimeNanos, isRunning);
+    return new AnimationState_0(get_VectorConverter_2(FloatCompanionObject_getInstance()), initialValue, AnimationVector_0(initialVelocity), lastFrameTimeNanos, finishedTimeNanos, isRunning);
   }
+  function get_$stableprop_11() {
+    return 0;
+  }
+  function AnimationState_0(typeConverter, initialValue, initialVelocityVector, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
+    initialVelocityVector = initialVelocityVector === VOID ? null : initialVelocityVector;
+    lastFrameTimeNanos = lastFrameTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : lastFrameTimeNanos;
+    finishedTimeNanos = finishedTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : finishedTimeNanos;
+    isRunning = isRunning === VOID ? false : isRunning;
+    this.typeConverter_1 = typeConverter;
+    this.value$delegate_1 = mutableStateOf(initialValue);
+    var tmp = this;
+    var tmp1_elvis_lhs = initialVelocityVector == null ? null : copy_1(initialVelocityVector);
+    tmp.velocityVector_1 = tmp1_elvis_lhs == null ? createZeroVectorFrom(this.typeConverter_1, initialValue) : tmp1_elvis_lhs;
+    this.lastFrameTimeNanos_1 = lastFrameTimeNanos;
+    this.finishedTimeNanos_1 = finishedTimeNanos;
+    this.isRunning_1 = isRunning;
+    this.$stable_1 = 0;
+  }
+  protoOf(AnimationState_0).get_typeConverter_seyvfn_k$ = function () {
+    return this.typeConverter_1;
+  };
+  protoOf(AnimationState_0).set_value_rnwamw_k$ = function (_set____db54di) {
+    value$factory_1();
+    return this.value$delegate_1.set_value_rnwamw_k$(_set____db54di);
+  };
+  protoOf(AnimationState_0).get_value_j01efc_k$ = function () {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    value$factory_2();
+    return this.value$delegate_1.get_value_j01efc_k$();
+  };
+  protoOf(AnimationState_0).set_velocityVector_mao3b1_k$ = function (_set____db54di) {
+    this.velocityVector_1 = _set____db54di;
+  };
+  protoOf(AnimationState_0).get_velocityVector_v3jmo9_k$ = function () {
+    return this.velocityVector_1;
+  };
+  protoOf(AnimationState_0).set_lastFrameTimeNanos_c9sxzl_k$ = function (_set____db54di) {
+    this.lastFrameTimeNanos_1 = _set____db54di;
+  };
+  protoOf(AnimationState_0).get_lastFrameTimeNanos_3aprno_k$ = function () {
+    return this.lastFrameTimeNanos_1;
+  };
+  protoOf(AnimationState_0).set_finishedTimeNanos_iw0ihw_k$ = function (_set____db54di) {
+    this.finishedTimeNanos_1 = _set____db54di;
+  };
+  protoOf(AnimationState_0).get_finishedTimeNanos_t5ryif_k$ = function () {
+    return this.finishedTimeNanos_1;
+  };
+  protoOf(AnimationState_0).set_isRunning_tw1q35_k$ = function (_set____db54di) {
+    this.isRunning_1 = _set____db54di;
+  };
+  protoOf(AnimationState_0).get_isRunning_okmtn0_k$ = function () {
+    return this.isRunning_1;
+  };
+  protoOf(AnimationState_0).get_velocity_3hqvmu_k$ = function () {
+    return this.typeConverter_1.get_convertFromVector_kmewon_k$()(this.velocityVector_1);
+  };
+  protoOf(AnimationState_0).toString = function () {
+    return 'AnimationState(' + ('value=' + this.get_value_j01efc_k$() + ', ') + ('velocity=' + this.get_velocity_3hqvmu_k$() + ', ') + ('isRunning=' + this.isRunning_1 + ', ') + ('lastFrameTimeNanos=' + toString(this.lastFrameTimeNanos_1) + ', ') + ('finishedTimeNanos=' + toString(this.finishedTimeNanos_1)) + ')';
+  };
   function value$factory() {
     return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
       return receiver.get_value_j01efc_k$();
@@ -2099,20 +2107,6 @@
     });
   }
   function value$factory_0() {
-    return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
-      return receiver.get_value_j01efc_k$();
-    }, function (receiver, value) {
-      return receiver.set_value_rnwamw_k$(value);
-    });
-  }
-  function value$factory_1() {
-    return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
-      return receiver.get_value_j01efc_k$();
-    }, function (receiver, value) {
-      return receiver.set_value_rnwamw_k$(value);
-    });
-  }
-  function value$factory_2() {
     return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
       return receiver.get_value_j01efc_k$();
     }, function (receiver, value) {
@@ -2131,6 +2125,20 @@
       return receiver.get_isRunning_okmtn0_k$();
     }, function (receiver, value) {
       return receiver.set_isRunning_tw1q35_k$(value);
+    });
+  }
+  function value$factory_1() {
+    return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_value_j01efc_k$();
+    }, function (receiver, value) {
+      return receiver.set_value_rnwamw_k$(value);
+    });
+  }
+  function value$factory_2() {
+    return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_value_j01efc_k$();
+    }, function (receiver, value) {
+      return receiver.set_value_rnwamw_k$(value);
     });
   }
   function get_$stableprop_12() {
@@ -2466,7 +2474,7 @@
   protoOf(AnimationVector3D).hashCode = function () {
     return imul(imul(getNumberHashCode(this.v1__1), 31) + getNumberHashCode(this.v2__1) | 0, 31) + getNumberHashCode(this.v3__1) | 0;
   };
-  function copy_0(_this__u8e3s4) {
+  function copy_1(_this__u8e3s4) {
     var newVector = newInstance(_this__u8e3s4);
     var inductionVariable = 0;
     var last = newVector.get_size_woubt6_k$();
@@ -4332,7 +4340,27 @@
     tmp$ret$0 = v1.shl_po5ip6_k$(32).or_s401rn_k$(v2.and_jhajnj_k$(new Long(-1, 0)));
     return _Motion___init__impl__vk56rv(tmp$ret$0);
   }
-  function animate(_this__u8e3s4, animation, startTimeNanos, block, $completion) {
+  function animateDecay(_this__u8e3s4, animationSpec, sequentialAnimation, block, $completion) {
+    sequentialAnimation = sequentialAnimation === VOID ? false : sequentialAnimation;
+    var tmp;
+    if (block === VOID) {
+      tmp = animateDecay$lambda;
+    } else {
+      tmp = block;
+    }
+    block = tmp;
+    var tmp0_initialValue = _this__u8e3s4.get_value_j01efc_k$();
+    var tmp1_initialVelocityVector = _this__u8e3s4.get_velocityVector_v3jmo9_k$();
+    var tmp2_typeConverter = _this__u8e3s4.get_typeConverter_seyvfn_k$();
+    var anim = DecayAnimation_init_$Create$(animationSpec, tmp2_typeConverter, tmp0_initialValue, tmp1_initialVelocityVector);
+    return animate_0(_this__u8e3s4, anim, sequentialAnimation ? _this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$() : AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$(), block, $completion);
+  }
+  function animate(initialValue, targetValue, initialVelocity, animationSpec, block, $completion) {
+    initialVelocity = initialVelocity === VOID ? 0.0 : initialVelocity;
+    animationSpec = animationSpec === VOID ? spring() : animationSpec;
+    return animate_1(get_VectorConverter_2(FloatCompanionObject_getInstance()), initialValue, targetValue, initialVelocity, animationSpec, block, $completion);
+  }
+  function animate_0(_this__u8e3s4, animation, startTimeNanos, block, $completion) {
     startTimeNanos = startTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : startTimeNanos;
     var tmp;
     if (block === VOID) {
@@ -4341,17 +4369,10 @@
       tmp = block;
     }
     block = tmp;
-    var tmp_0 = new $animateCOROUTINE$1(_this__u8e3s4, animation, startTimeNanos, block, $completion);
+    var tmp_0 = new $animateCOROUTINE$0(_this__u8e3s4, animation, startTimeNanos, block, $completion);
     tmp_0.set_result_ximc09_k$(Unit_getInstance());
     tmp_0.set_exception_pwgeox_k$(null);
     return tmp_0.doResume_5yljmg_k$();
-  }
-  function updateState(_this__u8e3s4, state) {
-    state.set_value_rnwamw_k$(_this__u8e3s4.get_value_j01efc_k$());
-    copyFrom(state.get_velocityVector_v3jmo9_k$(), _this__u8e3s4.get_velocityVector_v3jmo9_k$());
-    state.set_finishedTimeNanos_iw0ihw_k$(_this__u8e3s4.get_finishedTimeNanos_t5ryif_k$());
-    state.set_lastFrameTimeNanos_c9sxzl_k$(_this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$());
-    state.set_isRunning_tw1q35_k$(_this__u8e3s4.get_isRunning_okmtn0_k$());
   }
   function get_durationScale(_this__u8e3s4) {
     var tmp0_safe_receiver = _this__u8e3s4.get_j1ktw6_k$(Key_getInstance_1());
@@ -4368,8 +4389,49 @@
     }
     return scale;
   }
+  function animateTo(_this__u8e3s4, targetValue, animationSpec, sequentialAnimation, block, $completion) {
+    animationSpec = animationSpec === VOID ? spring() : animationSpec;
+    sequentialAnimation = sequentialAnimation === VOID ? false : sequentialAnimation;
+    var tmp;
+    if (block === VOID) {
+      tmp = animateTo$lambda;
+    } else {
+      tmp = block;
+    }
+    block = tmp;
+    var tmp0_initialValue = _this__u8e3s4.get_value_j01efc_k$();
+    var tmp1_typeConverter = _this__u8e3s4.get_typeConverter_seyvfn_k$();
+    var tmp2_initialVelocityVector = _this__u8e3s4.get_velocityVector_v3jmo9_k$();
+    var anim = TargetBasedAnimation_init_$Create$(animationSpec, tmp1_typeConverter, tmp0_initialValue, targetValue, tmp2_initialVelocityVector);
+    return animate_0(_this__u8e3s4, anim, sequentialAnimation ? _this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$() : AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$(), block, $completion);
+  }
+  function updateState(_this__u8e3s4, state) {
+    state.set_value_rnwamw_k$(_this__u8e3s4.get_value_j01efc_k$());
+    copyFrom(state.get_velocityVector_v3jmo9_k$(), _this__u8e3s4.get_velocityVector_v3jmo9_k$());
+    state.set_finishedTimeNanos_iw0ihw_k$(_this__u8e3s4.get_finishedTimeNanos_t5ryif_k$());
+    state.set_lastFrameTimeNanos_c9sxzl_k$(_this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$());
+    state.set_isRunning_tw1q35_k$(_this__u8e3s4.get_isRunning_okmtn0_k$());
+  }
+  function animate_1(typeConverter, initialValue, targetValue, initialVelocity, animationSpec, block, $completion) {
+    initialVelocity = initialVelocity === VOID ? null : initialVelocity;
+    animationSpec = animationSpec === VOID ? spring() : animationSpec;
+    var tmp;
+    if (initialVelocity == null) {
+      tmp = null;
+    } else {
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.animation.core.animate.<anonymous>' call
+      tmp = typeConverter.get_convertToVector_s594l4_k$()(initialVelocity);
+    }
+    var tmp1_elvis_lhs = tmp;
+    var initialVelocityVector = tmp1_elvis_lhs == null ? newInstance(typeConverter.get_convertToVector_s594l4_k$()(initialValue)) : tmp1_elvis_lhs;
+    var anim = TargetBasedAnimation_init_$Create$(animationSpec, typeConverter, initialValue, targetValue, initialVelocityVector);
+    var tmp_0 = new AnimationState_0(typeConverter, initialValue, initialVelocityVector);
+    return animate_0(tmp_0, anim, VOID, animate$lambda_3(block, typeConverter), $completion);
+  }
   function callWithFrameNanos(_this__u8e3s4, onFrame, $completion) {
-    var tmp = new $callWithFrameNanosCOROUTINE$2(_this__u8e3s4, onFrame, $completion);
+    var tmp = new $callWithFrameNanosCOROUTINE$1(_this__u8e3s4, onFrame, $completion);
     tmp.set_result_ximc09_k$(Unit_getInstance());
     tmp.set_exception_pwgeox_k$(null);
     return tmp.doResume_5yljmg_k$();
@@ -4399,36 +4461,8 @@
     updateState(_this__u8e3s4, state);
     block(_this__u8e3s4);
   }
-  function animateTo(_this__u8e3s4, targetValue, animationSpec, sequentialAnimation, block, $completion) {
-    animationSpec = animationSpec === VOID ? spring() : animationSpec;
-    sequentialAnimation = sequentialAnimation === VOID ? false : sequentialAnimation;
-    var tmp;
-    if (block === VOID) {
-      tmp = animateTo$lambda;
-    } else {
-      tmp = block;
-    }
-    block = tmp;
-    var tmp0_initialValue = _this__u8e3s4.get_value_j01efc_k$();
-    var tmp1_typeConverter = _this__u8e3s4.get_typeConverter_seyvfn_k$();
-    var tmp2_initialVelocityVector = _this__u8e3s4.get_velocityVector_v3jmo9_k$();
-    var anim = TargetBasedAnimation_init_$Create$(animationSpec, tmp1_typeConverter, tmp0_initialValue, targetValue, tmp2_initialVelocityVector);
-    return animate(_this__u8e3s4, anim, sequentialAnimation ? _this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$() : AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$(), block, $completion);
-  }
-  function animateDecay(_this__u8e3s4, animationSpec, sequentialAnimation, block, $completion) {
-    sequentialAnimation = sequentialAnimation === VOID ? false : sequentialAnimation;
-    var tmp;
-    if (block === VOID) {
-      tmp = animateDecay$lambda;
-    } else {
-      tmp = block;
-    }
-    block = tmp;
-    var tmp0_initialValue = _this__u8e3s4.get_value_j01efc_k$();
-    var tmp1_initialVelocityVector = _this__u8e3s4.get_velocityVector_v3jmo9_k$();
-    var tmp2_typeConverter = _this__u8e3s4.get_typeConverter_seyvfn_k$();
-    var anim = DecayAnimation_init_$Create$(animationSpec, tmp2_typeConverter, tmp0_initialValue, tmp1_initialVelocityVector);
-    return animate(_this__u8e3s4, anim, sequentialAnimation ? _this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$() : AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$(), block, $completion);
+  function animateDecay$lambda($this$null) {
+    return Unit_getInstance();
   }
   function animate$lambda($this$null) {
     return Unit_getInstance();
@@ -4466,6 +4500,15 @@
       return Unit_getInstance();
     };
   }
+  function animateTo$lambda($this$null) {
+    return Unit_getInstance();
+  }
+  function animate$lambda_3($block, $typeConverter) {
+    return function ($this$animate) {
+      $block($this$animate.get_value_j01efc_k$(), $typeConverter.get_convertFromVector_kmewon_k$()($this$animate.get_velocityVector_v3jmo9_k$()));
+      return Unit_getInstance();
+    };
+  }
   function callWithFrameNanos$lambda($onFrame) {
     return function (it) {
       var tmp$ret$0;
@@ -4475,20 +4518,14 @@
       return $onFrame(tmp$ret$0);
     };
   }
-  function animateTo$lambda($this$null) {
-    return Unit_getInstance();
-  }
-  function animateDecay$lambda($this$null) {
-    return Unit_getInstance();
-  }
-  function $animateCOROUTINE$1(_this__u8e3s4, animation, startTimeNanos, block, resultContinuation) {
+  function $animateCOROUTINE$0(_this__u8e3s4, animation, startTimeNanos, block, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.animation_1 = animation;
     this.startTimeNanos_1 = startTimeNanos;
     this.block_1 = block;
   }
-  protoOf($animateCOROUTINE$1).doResume_5yljmg_k$ = function () {
+  protoOf($animateCOROUTINE$0).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -4582,12 +4619,12 @@
       }
      while (true);
   };
-  function $callWithFrameNanosCOROUTINE$2(_this__u8e3s4, onFrame, resultContinuation) {
+  function $callWithFrameNanosCOROUTINE$1(_this__u8e3s4, onFrame, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.onFrame_1 = onFrame;
   }
-  protoOf($callWithFrameNanosCOROUTINE$2).doResume_5yljmg_k$ = function () {
+  protoOf($callWithFrameNanosCOROUTINE$1).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -6782,7 +6819,7 @@
   _.$_$ = _.$_$ || {};
   _.$_$.a = Animatable_0;
   _.$_$.b = Animatable;
-  _.$_$.c = AnimationState_0;
+  _.$_$.c = AnimationState;
   _.$_$.d = AnimationVector1D;
   _.$_$.e = AnimationVector2D;
   _.$_$.f = AnimationVector3D;
@@ -6795,24 +6832,27 @@
   _.$_$.m = SpringSpec;
   _.$_$.n = TweenSpec;
   _.$_$.o = TwoWayConverter_0;
-  _.$_$.p = get_VectorConverter_6;
-  _.$_$.q = get_VectorConverter_2;
-  _.$_$.r = get_VisibilityThreshold_4;
-  _.$_$.s = get_VisibilityThreshold_5;
-  _.$_$.t = animateDpAsState$composable;
-  _.$_$.u = animateFloatAsState$composable;
-  _.$_$.v = animateValueAsState$composable;
-  _.$_$.w = createTransitionAnimation$composable;
-  _.$_$.x = generateDecayAnimationSpec;
-  _.$_$.y = infiniteRepeatable;
-  _.$_$.z = keyframes;
-  _.$_$.a1 = spring;
-  _.$_$.b1 = tween;
-  _.$_$.c1 = updateTransition$composable;
-  _.$_$.d1 = animateDecay;
-  _.$_$.e1 = animateTo;
-  _.$_$.f1 = AnimationConstants_getInstance;
-  _.$_$.g1 = Spring_getInstance;
+  _.$_$.p = get_VectorConverter_1;
+  _.$_$.q = get_VectorConverter_6;
+  _.$_$.r = get_VectorConverter_2;
+  _.$_$.s = get_VisibilityThreshold_4;
+  _.$_$.t = get_VisibilityThreshold_5;
+  _.$_$.u = animateDpAsState$composable;
+  _.$_$.v = animateFloatAsState$composable;
+  _.$_$.w = animateValueAsState$composable;
+  _.$_$.x = copy;
+  _.$_$.y = createTransitionAnimation$composable;
+  _.$_$.z = generateDecayAnimationSpec;
+  _.$_$.a1 = infiniteRepeatable;
+  _.$_$.b1 = keyframes;
+  _.$_$.c1 = spring;
+  _.$_$.d1 = tween;
+  _.$_$.e1 = updateTransition$composable;
+  _.$_$.f1 = animateDecay;
+  _.$_$.g1 = animateTo;
+  _.$_$.h1 = animate;
+  _.$_$.i1 = AnimationConstants_getInstance;
+  _.$_$.j1 = Spring_getInstance;
   //endregion
   return _;
 }));

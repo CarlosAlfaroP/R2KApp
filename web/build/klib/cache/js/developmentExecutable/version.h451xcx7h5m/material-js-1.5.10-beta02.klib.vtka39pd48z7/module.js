@@ -43,97 +43,98 @@
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.i8;
-  var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.h2;
-  var VOID = kotlin_kotlin.$_$.li;
+  var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.o9;
+  var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i2;
+  var VOID = kotlin_kotlin.$_$.bj;
   var padding = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.s;
-  var get_sp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s1;
-  var _Dp___get_value__impl__geb1vb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.k2;
+  var get_sp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t1;
+  var _Dp___get_value__impl__geb1vb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.l2;
   var width = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.b1;
   var fillMaxHeight = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.k;
   var get_FastOutSlowInEasing = kotlin_org_jetbrains_compose_animation_animation_core.$_$.j;
   var TweenSpec = kotlin_org_jetbrains_compose_animation_animation_core.$_$.n;
-  var Color = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.n;
-  var structuralEqualityPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
-  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s1;
-  var protoOf = kotlin_kotlin.$_$.jd;
-  var classMeta = kotlin_kotlin.$_$.xb;
-  var setMetadataFor = kotlin_kotlin.$_$.kd;
-  var Long = kotlin_kotlin.$_$.qg;
-  var Color_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.m;
-  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.u3;
-  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a2;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m1;
-  var _Color___get_value__impl__1pls5m = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.y2;
-  var equals = kotlin_kotlin.$_$.bc;
-  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z1;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
-  var KMutableProperty1 = kotlin_kotlin.$_$.oe;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.hc;
-  var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c2;
-  var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h1;
-  var CubicBezierEasing = kotlin_org_jetbrains_compose_animation_animation_core.$_$.i;
-  var interfaceMeta = kotlin_kotlin.$_$.lc;
+  var Color = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.q;
+  var structuralEqualityPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
+  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u1;
+  var protoOf = kotlin_kotlin.$_$.rd;
+  var classMeta = kotlin_kotlin.$_$.ec;
+  var setMetadataFor = kotlin_kotlin.$_$.sd;
+  var Long = kotlin_kotlin.$_$.eh;
+  var Color_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.p;
+  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a4;
+  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c2;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o1;
+  var _Color___get_value__impl__1pls5m = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d3;
+  var equals = kotlin_kotlin.$_$.ic;
+  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
+  var KMutableProperty1 = kotlin_kotlin.$_$.ye;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.oc;
+  var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
   var illegalDecoyCallException = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
-  var Dp__compareTo_impl_tlg3dl = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i2;
-  var compositeOver = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.k1;
-  var objectMeta = kotlin_kotlin.$_$.id;
-  var Color__copy$default_impl_ectz3s = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.m3;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
+  var luminance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.t1;
+  var objectMeta = kotlin_kotlin.$_$.qd;
+  var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i1;
+  var CubicBezierEasing = kotlin_org_jetbrains_compose_animation_animation_core.$_$.i;
+  var interfaceMeta = kotlin_kotlin.$_$.sc;
+  var Dp__compareTo_impl_tlg3dl = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.j2;
+  var compositeOver = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.o1;
+  var Color__copy$default_impl_ectz3s = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.r3;
   var Dp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u;
-  var THROW_CCE = kotlin_kotlin.$_$.xg;
-  var Annotation = kotlin_kotlin.$_$.fg;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
-  var rememberVectorPainter$composable = kotlin_org_jetbrains_compose_ui_ui.$_$.v;
-  var _ULong___get_data__impl__fggpzb = kotlin_kotlin.$_$.n3;
-  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.v3;
-  var Companion_getInstance_2 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
-  var isObject = kotlin_kotlin.$_$.wc;
-  var semantics = kotlin_org_jetbrains_compose_ui_ui.$_$.m6;
-  var toolingGraphicsLayer = kotlin_org_jetbrains_compose_ui_ui.$_$.a1;
-  var Companion_getInstance_3 = kotlin_org_jetbrains_compose_ui_ui.$_$.d8;
+  var THROW_CCE = kotlin_kotlin.$_$.lh;
+  var Annotation = kotlin_kotlin.$_$.tg;
+  var rememberVectorPainter$composable = kotlin_org_jetbrains_compose_ui_ui.$_$.e1;
+  var _ULong___get_data__impl__fggpzb = kotlin_kotlin.$_$.q3;
+  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.b4;
+  var Companion_getInstance_2 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q2;
+  var isObject = kotlin_kotlin.$_$.dd;
+  var semantics = kotlin_org_jetbrains_compose_ui_ui.$_$.p7;
+  var toolingGraphicsLayer = kotlin_org_jetbrains_compose_ui_ui.$_$.j1;
+  var Companion_getInstance_3 = kotlin_org_jetbrains_compose_ui_ui.$_$.j9;
   var paint = kotlin_org_jetbrains_compose_ui_ui.$_$.h;
   var Box$composable = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.a;
   var Companion_getInstance_4 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u1;
   var _Size___get_height__impl__a04p02 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l1;
-  var isInfinite = kotlin_kotlin.$_$.rh;
+  var isInfinite = kotlin_kotlin.$_$.gi;
   var _Size___get_width__impl__58y75t = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.p1;
-  var set_contentDescription = kotlin_org_jetbrains_compose_ui_ui.$_$.s5;
-  var Companion_getInstance_5 = kotlin_org_jetbrains_compose_ui_ui.$_$.g8;
-  var set_role = kotlin_org_jetbrains_compose_ui_ui.$_$.j6;
-  var Unit_getInstance = kotlin_kotlin.$_$.v4;
-  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
+  var set_contentDescription = kotlin_org_jetbrains_compose_ui_ui.$_$.q6;
+  var Companion_getInstance_5 = kotlin_org_jetbrains_compose_ui_ui.$_$.m9;
+  var set_role = kotlin_org_jetbrains_compose_ui_ui.$_$.k7;
+  var Unit_getInstance = kotlin_kotlin.$_$.z4;
+  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i2;
   var size = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.x;
   var DpSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t;
-  var Spring_getInstance = kotlin_org_jetbrains_compose_animation_animation_core.$_$.g1;
+  var Spring_getInstance = kotlin_org_jetbrains_compose_animation_animation_core.$_$.j1;
   var SpringSpec = kotlin_org_jetbrains_compose_animation_animation_core.$_$.m;
-  var RoundedCornerShape = kotlin_org_jetbrains_compose_foundation_foundation.$_$.s;
-  var hashCode = kotlin_kotlin.$_$.jc;
+  var RoundedCornerShape = kotlin_org_jetbrains_compose_foundation_foundation.$_$.t;
+  var hashCode = kotlin_kotlin.$_$.qc;
   var widthIn = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.a1;
   var heightIn = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.n;
-  var tween = kotlin_org_jetbrains_compose_animation_animation_core.$_$.b1;
+  var tween = kotlin_org_jetbrains_compose_animation_animation_core.$_$.d1;
   var TextUnit = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.b1;
   var FontStyle = kotlin_org_jetbrains_compose_ui_ui_text.$_$.a;
   var TextAlign = kotlin_org_jetbrains_compose_ui_ui_text.$_$.z;
   var TextOverflow = kotlin_org_jetbrains_compose_ui_ui_text.$_$.a1;
-  var _TextUnit___get_packedValue__impl__it60w4 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.z2;
+  var _TextUnit___get_packedValue__impl__it60w4 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.c3;
   var _TextOverflow___get_value__impl__vugm5i = kotlin_org_jetbrains_compose_ui_ui_text.$_$.z1;
-  var Companion_getInstance_6 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.r3;
+  var Companion_getInstance_6 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v3;
   var Companion_getInstance_7 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.u2;
-  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.j4;
-  var BasicText$composable = kotlin_org_jetbrains_compose_foundation_foundation.$_$.w;
-  var ColorProducer = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.j;
+  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.m4;
+  var BasicText$composable = kotlin_org_jetbrains_compose_foundation_foundation.$_$.x;
+  var ColorProducer = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.l;
   var Constraints = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.a;
   var defaultMinSize = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.j;
   var Companion_getInstance_8 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.i2;
   var Companion_getInstance_9 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.l2;
-  var get_sp_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.r1;
-  var objectCreate = kotlin_kotlin.$_$.hd;
+  var get_sp_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s1;
+  var objectCreate = kotlin_kotlin.$_$.pd;
   var Companion_getInstance_10 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.x2;
-  var get_CircleShape = kotlin_org_jetbrains_compose_foundation_foundation.$_$.q;
+  var get_CircleShape = kotlin_org_jetbrains_compose_foundation_foundation.$_$.r;
   var get_LinearEasing = kotlin_org_jetbrains_compose_animation_animation_core.$_$.l;
   var SkikoKey_KEY_UP_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.x6;
-  var toLong = kotlin_kotlin.$_$.md;
+  var toLong = kotlin_kotlin.$_$.ud;
   var SkikoKey_KEY_DOWN_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.b4;
   var SkikoKey_KEY_LEFT_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.g5;
   var SkikoKey_KEY_RIGHT_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.n6;
@@ -144,6 +145,9 @@
   //endregion
   //region block: pre-declaration
   setMetadataFor(Colors, 'Colors', classMeta);
+  setMetadataFor(ContentAlpha, 'ContentAlpha', objectMeta);
+  setMetadataFor(HighContrastContentAlpha, 'HighContrastContentAlpha', objectMeta);
+  setMetadataFor(LowContrastContentAlpha, 'LowContrastContentAlpha', objectMeta);
   setMetadataFor(ElevationOverlay, 'ElevationOverlay', interfaceMeta);
   setMetadataFor(DefaultElevationOverlay, 'DefaultElevationOverlay', objectMeta, VOID, [ElevationOverlay]);
   setMetadataFor(ExperimentalMaterialApi, 'ExperimentalMaterialApi', classMeta, VOID, [Annotation]);
@@ -881,6 +885,149 @@
     return LocalContentAlpha;
   }
   var LocalContentAlpha;
+  function contentAlpha($this, highContrastAlpha, lowContrastAlpha) {
+    illegalDecoyCallException('contentAlpha');
+  }
+  function get_$stableprop_0() {
+    return 0;
+  }
+  function contentAlpha$composable($this, highContrastAlpha, lowContrastAlpha, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_rp6air_k$(-198048456);
+    sourceInformation($composer_0, 'C(contentAlpha$composable)76@2623L7,77@2670L6:ContentAlpha.kt#jmzs0o');
+    if (isTraceInProgress()) {
+      traceEventStart(-198048456, $changed, -1, 'androidx.compose.material.ContentAlpha.contentAlpha$composable (ContentAlpha.kt:70)');
+    }
+    // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
+    var tmp0_$get_current$$composable_h5ksy7 = get_LocalContentColor();
+    var $composer_1 = $composer_0;
+    sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
+    var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+    sourceInformationMarkerEnd($composer_1);
+    var contentColor = tmp0.value_1;
+    var lightTheme = MaterialTheme_getInstance().$get_colors$$composable_pawxfy_k$($composer_0, 6).get_isLight_zemp0j_k$();
+    var tmp;
+    if (lightTheme) {
+      tmp = luminance(contentColor) > 0.5 ? highContrastAlpha : lowContrastAlpha;
+    } else {
+      tmp = luminance(contentColor) < 0.5 ? highContrastAlpha : lowContrastAlpha;
+    }
+    var tmp0_0 = tmp;
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    return tmp0_0;
+  }
+  function ContentAlpha() {
+    ContentAlpha_instance = this;
+    this.$stable_1 = 0;
+  }
+  protoOf(ContentAlpha).get_high_wonai3_k$ = function () {
+    illegalDecoyCallException('<get-high>');
+  };
+  protoOf(ContentAlpha).get_medium_gky7we_k$ = function () {
+    illegalDecoyCallException('<get-medium>');
+  };
+  protoOf(ContentAlpha).get_disabled_rbmjej_k$ = function () {
+    illegalDecoyCallException('<get-disabled>');
+  };
+  protoOf(ContentAlpha).$get_high$$composable_xt02qk_k$ = function ($composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_rp6air_k$(-1959843334);
+    sourceInformation($composer_0, 'C($get-high$$composable)34@1107L146:ContentAlpha.kt#jmzs0o');
+    if (isTraceInProgress()) {
+      traceEventStart(-1959843334, $changed, -1, 'androidx.compose.material.ContentAlpha.$get-high$$composable (ContentAlpha.kt:34)');
+    }
+    HighContrastContentAlpha_getInstance();
+    LowContrastContentAlpha_getInstance();
+    var tmp0 = contentAlpha$composable(this, 1.0, 0.87, $composer_0, 54 | 896 & $changed << 6);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    return tmp0;
+  };
+  protoOf(ContentAlpha).$get_medium$$composable_ialx8p_k$ = function ($composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_rp6air_k$(-277492921);
+    sourceInformation($composer_0, 'C($get-medium$$composable)45@1458L150:ContentAlpha.kt#jmzs0o');
+    if (isTraceInProgress()) {
+      traceEventStart(-277492921, $changed, -1, 'androidx.compose.material.ContentAlpha.$get-medium$$composable (ContentAlpha.kt:45)');
+    }
+    HighContrastContentAlpha_getInstance();
+    LowContrastContentAlpha_getInstance();
+    var tmp0 = contentAlpha$composable(this, 0.74, 0.6, $composer_0, 54 | 896 & $changed << 6);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    return tmp0;
+  };
+  protoOf(ContentAlpha).$get_disabled$$composable_xy2o02_k$ = function ($composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_rp6air_k$(856927968);
+    sourceInformation($composer_0, 'C($get-disabled$$composable)56@1805L154:ContentAlpha.kt#jmzs0o');
+    if (isTraceInProgress()) {
+      traceEventStart(856927968, $changed, -1, 'androidx.compose.material.ContentAlpha.$get-disabled$$composable (ContentAlpha.kt:56)');
+    }
+    HighContrastContentAlpha_getInstance();
+    LowContrastContentAlpha_getInstance();
+    var tmp0 = contentAlpha$composable(this, 0.38, 0.38, $composer_0, 54 | 896 & $changed << 6);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_er37p7_k$();
+    return tmp0;
+  };
+  var ContentAlpha_instance;
+  function ContentAlpha_getInstance() {
+    if (ContentAlpha_instance == null)
+      new ContentAlpha();
+    return ContentAlpha_instance;
+  }
+  function HighContrastContentAlpha() {
+    HighContrastContentAlpha_instance = this;
+    this.high_1 = 1.0;
+    this.medium_1 = 0.74;
+    this.disabled_1 = 0.38;
+  }
+  protoOf(HighContrastContentAlpha).get_high_wonai3_k$ = function () {
+    return this.high_1;
+  };
+  protoOf(HighContrastContentAlpha).get_medium_gky7we_k$ = function () {
+    return this.medium_1;
+  };
+  protoOf(HighContrastContentAlpha).get_disabled_rbmjej_k$ = function () {
+    return this.disabled_1;
+  };
+  var HighContrastContentAlpha_instance;
+  function HighContrastContentAlpha_getInstance() {
+    if (HighContrastContentAlpha_instance == null)
+      new HighContrastContentAlpha();
+    return HighContrastContentAlpha_instance;
+  }
+  function LowContrastContentAlpha() {
+    LowContrastContentAlpha_instance = this;
+    this.high_1 = 0.87;
+    this.medium_1 = 0.6;
+    this.disabled_1 = 0.38;
+  }
+  protoOf(LowContrastContentAlpha).get_high_wonai3_k$ = function () {
+    return this.high_1;
+  };
+  protoOf(LowContrastContentAlpha).get_medium_gky7we_k$ = function () {
+    return this.medium_1;
+  };
+  protoOf(LowContrastContentAlpha).get_disabled_rbmjej_k$ = function () {
+    return this.disabled_1;
+  };
+  var LowContrastContentAlpha_instance;
+  function LowContrastContentAlpha_getInstance() {
+    if (LowContrastContentAlpha_instance == null)
+      new LowContrastContentAlpha();
+    return LowContrastContentAlpha_instance;
+  }
   function LocalContentAlpha$lambda() {
     _init_properties_ContentAlpha_kt__y2n6o5();
     return 1.0;
@@ -1361,7 +1508,7 @@
       minimumInteractiveComponentSize = DpSize(tmp, tmp$ret$1);
     }
   }
-  function get_$stableprop_0() {
+  function get_$stableprop_1() {
     return 0;
   }
   function MaterialTheme() {
@@ -1633,7 +1780,7 @@
     return CircularEasing;
   }
   var CircularEasing;
-  function get_$stableprop_1() {
+  function get_$stableprop_2() {
     return 0;
   }
   function ProgressIndicatorDefaults() {
@@ -1771,7 +1918,7 @@
     return LocalShapes;
   }
   var LocalShapes;
-  function get_$stableprop_2() {
+  function get_$stableprop_3() {
     return 0;
   }
   function Shapes(small, medium, large) {
@@ -2681,7 +2828,7 @@
   function Typography_init_$Create$(defaultFontFamily, h1, h2, h3, h4, h5, h6, subtitle1, subtitle2, body1, body2, button, caption, overline) {
     return Typography_init_$Init$(defaultFontFamily, h1, h2, h3, h4, h5, h6, subtitle1, subtitle2, body1, body2, button, caption, overline, objectCreate(protoOf(Typography)));
   }
-  function get_$stableprop_3() {
+  function get_$stableprop_4() {
     return 0;
   }
   function Typography(h1, h2, h3, h4, h5, h6, subtitle1, subtitle2, body1, body2, button, caption, overline) {
@@ -2946,7 +3093,9 @@
   //region block: exports
   _.$_$ = _.$_$ || {};
   _.$_$.a = Icon$composable;
-  _.$_$.b = Text$composable;
+  _.$_$.b = get_LocalContentAlpha;
+  _.$_$.c = Text$composable;
+  _.$_$.d = ContentAlpha_getInstance;
   //endregion
   return _;
 }));

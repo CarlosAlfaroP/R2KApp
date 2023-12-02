@@ -38,39 +38,39 @@
   //region block: imports
   var imul = Math.imul;
   var sign = Math.sign;
-  var protoOf = kotlin_kotlin.$_$.jd;
-  var interfaceMeta = kotlin_kotlin.$_$.lc;
-  var VOID = kotlin_kotlin.$_$.li;
-  var setMetadataFor = kotlin_kotlin.$_$.kd;
-  var objectMeta = kotlin_kotlin.$_$.id;
-  var LayoutDirection_Ltr_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v1;
-  var roundToInt = kotlin_kotlin.$_$.ud;
-  var getNumberHashCode = kotlin_kotlin.$_$.fc;
-  var THROW_CCE = kotlin_kotlin.$_$.xg;
-  var equals = kotlin_kotlin.$_$.bc;
-  var classMeta = kotlin_kotlin.$_$.xb;
-  var _IntSize___get_width__impl__d9yl4o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u2;
-  var _IntSize___get_height__impl__prv63b = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t2;
+  var protoOf = kotlin_kotlin.$_$.rd;
+  var interfaceMeta = kotlin_kotlin.$_$.sc;
+  var VOID = kotlin_kotlin.$_$.bj;
+  var setMetadataFor = kotlin_kotlin.$_$.sd;
+  var objectMeta = kotlin_kotlin.$_$.qd;
+  var LayoutDirection_Ltr_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w1;
+  var roundToInt = kotlin_kotlin.$_$.ce;
+  var getNumberHashCode = kotlin_kotlin.$_$.mc;
+  var THROW_CCE = kotlin_kotlin.$_$.lh;
+  var equals = kotlin_kotlin.$_$.ic;
+  var classMeta = kotlin_kotlin.$_$.ec;
+  var _IntSize___get_width__impl__d9yl4o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x2;
+  var _IntSize___get_height__impl__prv63b = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w2;
   var IntOffset = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v;
   var illegalDecoyCallException = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
-  var Annotation = kotlin_kotlin.$_$.fg;
+  var Annotation = kotlin_kotlin.$_$.tg;
   var Key_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.y;
   var Job = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.e2;
   var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.a2;
-  var toString = kotlin_kotlin.$_$.od;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.y1;
+  var toString = kotlin_kotlin.$_$.wd;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.a2;
   var cancel = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.k2;
-  var Unit_getInstance = kotlin_kotlin.$_$.v4;
-  var charSequenceLength = kotlin_kotlin.$_$.vb;
-  var hashCode = kotlin_kotlin.$_$.jc;
-  var captureStack = kotlin_kotlin.$_$.rb;
-  var Key = kotlin_kotlin.$_$.cb;
-  var Element = kotlin_kotlin.$_$.bb;
+  var Unit_getInstance = kotlin_kotlin.$_$.z4;
+  var charSequenceLength = kotlin_kotlin.$_$.cc;
+  var hashCode = kotlin_kotlin.$_$.qc;
+  var captureStack = kotlin_kotlin.$_$.yb;
+  var Key = kotlin_kotlin.$_$.jb;
+  var Element = kotlin_kotlin.$_$.ib;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
-  var emptyList = kotlin_kotlin.$_$.j7;
+  var emptyList = kotlin_kotlin.$_$.n7;
   var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.v;
-  var THROW_ISE = kotlin_kotlin.$_$.yg;
-  var Enum = kotlin_kotlin.$_$.lg;
+  var THROW_ISE = kotlin_kotlin.$_$.mh;
+  var Enum = kotlin_kotlin.$_$.zg;
   var toPx = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i;
   var toPx_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.j;
   var roundToPx = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.c;
@@ -85,236 +85,237 @@
   var toSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.l;
   var toDpSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.e;
   var Density = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q;
-  var ensureNotNull = kotlin_kotlin.$_$.oh;
-  var toSize_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u1;
+  var ensureNotNull = kotlin_kotlin.$_$.di;
+  var toSize_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v1;
   var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u1;
   var Density_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.p;
-  var get_DefaultAlpha = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.o;
+  var get_DefaultAlpha = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.r;
   var _Size___get_packedValue__impl__7rlt1o = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.o1;
   var _Size___get_width__impl__58y75t = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.p1;
   var _Size___get_height__impl__a04p02 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l1;
   var Size = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.k;
-  var _Constraints___get_hasBoundedHeight__impl__bsh4rw = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.y1;
-  var _Constraints___get_hasBoundedWidth__impl__7hd0wr = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.z1;
-  var _Constraints___get_hasFixedHeight__impl__y56fxx = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.a2;
-  var _Constraints___get_hasFixedWidth__impl__4p17wc = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.b2;
-  var _Constraints___get_maxWidth__impl__uuyqc = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.e2;
-  var _Constraints___get_maxHeight__impl__dt3e8z = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.d2;
-  var Constraints__copy$default_impl_f452rp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i3;
-  var _Constraints___get_minWidth__impl__hi9lfi = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.g2;
-  var _Constraints___get_minHeight__impl__ev4bgx = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.f2;
+  var _Constraints___get_hasBoundedHeight__impl__bsh4rw = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.z1;
+  var _Constraints___get_hasBoundedWidth__impl__7hd0wr = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.a2;
+  var _Constraints___get_hasFixedHeight__impl__y56fxx = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.b2;
+  var _Constraints___get_hasFixedWidth__impl__4p17wc = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.c2;
+  var _Constraints___get_maxWidth__impl__uuyqc = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.f2;
+  var _Constraints___get_maxHeight__impl__dt3e8z = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.e2;
+  var Constraints__copy$default_impl_f452rp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.l3;
+  var _Constraints___get_minWidth__impl__hi9lfi = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.h2;
+  var _Constraints___get_minHeight__impl__ev4bgx = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.g2;
   var constrainWidth = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.h1;
   var constrainHeight = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.g1;
-  var isFinite = kotlin_kotlin.$_$.qh;
+  var isFinite = kotlin_kotlin.$_$.fi;
   var Constraints = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.a;
   var IntSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x;
-  var _IntOffset___get_x__impl__qiqr5o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q2;
-  var _IntOffset___get_y__impl__2avpwj = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.r2;
-  var get_RectangleShape = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.z;
-  var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.h2;
-  var Dp__compareTo_impl_tlg3dl = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i2;
+  var _IntOffset___get_x__impl__qiqr5o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t2;
+  var _IntOffset___get_y__impl__2avpwj = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u2;
+  var get_RectangleShape = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.c1;
+  var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i2;
+  var Dp__compareTo_impl_tlg3dl = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.j2;
   var Dp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u;
-  var Color = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.n;
-  var fillArrayVal = kotlin_kotlin.$_$.cc;
+  var Color = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.q;
+  var fillArrayVal = kotlin_kotlin.$_$.jc;
   var MutableVector = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a;
-  var isInterface = kotlin_kotlin.$_$.uc;
+  var isInterface = kotlin_kotlin.$_$.bd;
   var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.y;
-  var objectCreate = kotlin_kotlin.$_$.hd;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.wh;
-  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.di;
+  var objectCreate = kotlin_kotlin.$_$.pd;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.li;
+  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.si;
   var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
-  var isArray = kotlin_kotlin.$_$.mc;
-  var getStringHashCode = kotlin_kotlin.$_$.ic;
+  var isArray = kotlin_kotlin.$_$.tc;
+  var getStringHashCode = kotlin_kotlin.$_$.pc;
   var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.t1;
-  var numberRangeToNumber = kotlin_kotlin.$_$.bd;
-  var isObject = kotlin_kotlin.$_$.wc;
-  var compareTo = kotlin_kotlin.$_$.yb;
-  var Comparator = kotlin_kotlin.$_$.kg;
+  var numberRangeToNumber = kotlin_kotlin.$_$.jd;
+  var isObject = kotlin_kotlin.$_$.dd;
+  var compareTo = kotlin_kotlin.$_$.fc;
+  var Comparator = kotlin_kotlin.$_$.yg;
   var Rect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.h;
-  var numberToLong = kotlin_kotlin.$_$.gd;
-  var Color__hashCode_impl_vjyivj = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.x2;
-  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.u3;
-  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.i4;
-  var floatFromBits = kotlin_kotlin.$_$.dc;
-  var Long = kotlin_kotlin.$_$.qg;
-  var toBits = kotlin_kotlin.$_$.ei;
-  var toLong = kotlin_kotlin.$_$.md;
-  var Companion_getInstance_2 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.s3;
-  var Companion_getInstance_3 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q3;
+  var numberToLong = kotlin_kotlin.$_$.od;
+  var Color__hashCode_impl_vjyivj = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.c3;
+  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a4;
+  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.l4;
+  var floatFromBits = kotlin_kotlin.$_$.kc;
+  var Long = kotlin_kotlin.$_$.eh;
+  var toBits = kotlin_kotlin.$_$.ti;
+  var toLong = kotlin_kotlin.$_$.ud;
+  var Companion_getInstance_2 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.x3;
+  var Companion_getInstance_3 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u3;
   var CanvasDrawScope = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a;
-  var ImageBitmap = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.q;
-  var Canvas = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i;
-  var PathFillType = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.w;
-  var StrokeCap = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.e1;
-  var StrokeJoin = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.f1;
-  var Dp__hashCode_impl_sxkrra = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.j2;
-  var BlendMode__hashCode_impl_93ceri = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.o2;
-  var Iterator = kotlin_kotlin.$_$.l5;
-  var Iterable = kotlin_kotlin.$_$.k5;
+  var ImageBitmap = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.t;
+  var Canvas = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.k;
+  var PathFillType = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.z;
+  var StrokeCap = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.h1;
+  var StrokeJoin = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i1;
+  var Dp__hashCode_impl_sxkrra = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.k2;
+  var BlendMode__hashCode_impl_93ceri = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.t2;
   var getKClassFromExpression = kotlin_kotlin.$_$.b;
-  var StrokeCap__hashCode_impl_posxk8 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.k3;
-  var StrokeJoin__hashCode_impl_3pyh8w = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.l3;
-  var PathFillType__hashCode_impl_pdqo4w = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.j3;
-  var PathBuilder = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.f;
-  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s1;
-  var numberToInt = kotlin_kotlin.$_$.fd;
-  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.h1;
-  var Path = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.y;
-  var toPath = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g;
-  var Matrix__reset_impl_4l49i7 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.c3;
-  var _Matrix___init__impl__q3kp4w = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.z2;
-  var Matrix = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.r;
-  var Matrix__translate$default_impl_10t8ql = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.o3;
-  var Matrix__rotateZ_impl_2g2pf5 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.f3;
-  var Matrix__scale_impl_6w89a4 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g3;
-  var PathMeasure = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.x;
+  var StrokeCap__hashCode_impl_posxk8 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.p3;
+  var StrokeJoin__hashCode_impl_3pyh8w = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.q3;
+  var PathFillType__hashCode_impl_pdqo4w = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.o3;
+  var Iterator = kotlin_kotlin.$_$.p5;
+  var Iterable = kotlin_kotlin.$_$.o5;
+  var PathBuilder = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g;
+  var PathParser = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.h;
+  var Path = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.b1;
+  var toPath = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i;
+  var Matrix__reset_impl_4l49i7 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.h3;
+  var _Matrix___init__impl__q3kp4w = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.e3;
+  var Matrix = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.u;
+  var Matrix__translate$default_impl_10t8ql = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.t3;
+  var Matrix__rotateZ_impl_2g2pf5 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.k3;
+  var Matrix__scale_impl_6w89a4 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.l3;
+  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.i1;
+  var PathMeasure = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a1;
   var LazyThreadSafetyMode_NONE_getInstance = kotlin_kotlin.$_$.f;
-  var lazy = kotlin_kotlin.$_$.uh;
+  var lazy = kotlin_kotlin.$_$.ji;
   var Stroke = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d;
-  var KMutableProperty1 = kotlin_kotlin.$_$.oe;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.hc;
-  var KProperty1 = kotlin_kotlin.$_$.qe;
-  var Companion_getInstance_4 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.b4;
-  var Companion_getInstance_5 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.c4;
-  var Companion_getInstance_6 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.y3;
-  var AbstractApplier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i;
-  var onBeginChanges = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j;
-  var onEndChanges = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m1;
-  var Companion_getInstance_7 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
-  var invalidApplier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l1;
-  var _Updater___init__impl__rbfxm8 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k2;
-  var Updater__set_impl_v7kwss = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m2;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
-  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a2;
-  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z1;
-  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
-  var Composition = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
+  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u1;
+  var numberToInt = kotlin_kotlin.$_$.nd;
+  var KProperty1 = kotlin_kotlin.$_$.af;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.oc;
+  var KMutableProperty1 = kotlin_kotlin.$_$.ye;
+  var Companion_getInstance_4 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.h4;
+  var Companion_getInstance_5 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i4;
+  var Companion_getInstance_6 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.e4;
+  var AbstractApplier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j;
+  var onBeginChanges = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k;
+  var onEndChanges = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o1;
+  var Companion_getInstance_7 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q2;
+  var invalidApplier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n1;
+  var _Updater___init__impl__rbfxm8 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m2;
+  var Updater__set_impl_v7kwss = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
+  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c2;
+  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
+  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i2;
+  var Composition = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
   var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
-  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
-  var Painter = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.e;
+  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
+  var Painter = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.f;
   var Size_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l;
-  var LayoutDirection_Rtl_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w1;
-  var rememberCompositionContext$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v1;
-  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
+  var LayoutDirection_Rtl_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x1;
+  var rememberCompositionContext$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x1;
+  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c;
-  var BlendMode = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.h;
-  var isNaN_0 = kotlin_kotlin.$_$.sh;
-  var Companion_getInstance_8 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.v3;
-  var emptyMap = kotlin_kotlin.$_$.k7;
-  var listOf = kotlin_kotlin.$_$.u8;
+  var BlendMode = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.j;
+  var isNaN_0 = kotlin_kotlin.$_$.hi;
+  var Companion_getInstance_8 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.b4;
+  var emptyMap = kotlin_kotlin.$_$.o7;
+  var listOf = kotlin_kotlin.$_$.a9;
   var Companion_getInstance_9 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.s1;
-  var Companion_getInstance_10 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s3;
+  var Companion_getInstance_10 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x3;
   var Velocity = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.d1;
-  var CoroutineImpl = kotlin_kotlin.$_$.eb;
-  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.oa;
+  var CoroutineImpl = kotlin_kotlin.$_$.lb;
+  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.va;
   var Offset = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.e;
-  var Velocity__minus_impl_w0cg92 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.d3;
-  var Velocity__plus_impl_9g3s6u = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.e3;
-  var to = kotlin_kotlin.$_$.ii;
+  var Velocity__minus_impl_w0cg92 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.g3;
+  var Velocity__plus_impl_9g3s6u = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.h3;
+  var to = kotlin_kotlin.$_$.xi;
   var Offset__minus_impl_hoj2c0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.e1;
   var Offset__plus_impl_c78cg0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.f1;
-  var toList = kotlin_kotlin.$_$.aa;
+  var toList = kotlin_kotlin.$_$.ha;
   var Offset__hashCode_impl_hbql41 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.c1;
   var IntSize_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.y;
   var _Offset___get_x__impl__xvi35n = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.i1;
   var _Offset___get_y__impl__8bzhra = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.j1;
-  var SideEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b1;
-  var SuspendFunction1 = kotlin_kotlin.$_$.gb;
-  var Collection = kotlin_kotlin.$_$.f5;
+  var SideEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
+  var SuspendFunction1 = kotlin_kotlin.$_$.nb;
+  var Collection = kotlin_kotlin.$_$.j5;
   var LinkedHashMap_init_$Create$_0 = kotlin_kotlin.$_$.u;
-  var contentEquals = kotlin_kotlin.$_$.q6;
-  var contentHashCode = kotlin_kotlin.$_$.t6;
+  var contentEquals = kotlin_kotlin.$_$.u6;
+  var contentHashCode = kotlin_kotlin.$_$.x6;
   var CoroutineScope_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.b2;
   var delay = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.l;
-  var Companion_getInstance_11 = kotlin_kotlin.$_$.q4;
-  var createFailure = kotlin_kotlin.$_$.nh;
-  var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.s2;
+  var Companion_getInstance_11 = kotlin_kotlin.$_$.u4;
+  var createFailure = kotlin_kotlin.$_$.ci;
+  var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.v2;
   var launch = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.q2;
-  var EmptyCoroutineContext_getInstance = kotlin_kotlin.$_$.e4;
-  var intercepted = kotlin_kotlin.$_$.ra;
+  var EmptyCoroutineContext_getInstance = kotlin_kotlin.$_$.h4;
+  var intercepted = kotlin_kotlin.$_$.ya;
   var get_MODE_CANCELLABLE = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.f2;
   var CancellableContinuationImpl = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.w1;
-  var Continuation = kotlin_kotlin.$_$.xa;
+  var Continuation = kotlin_kotlin.$_$.eb;
   var CoroutineStart_UNDISPATCHED_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.b;
-  var createCoroutine = kotlin_kotlin.$_$.jb;
+  var createCoroutine = kotlin_kotlin.$_$.qb;
   var Velocity_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.c1;
-  var IllegalArgumentException = kotlin_kotlin.$_$.og;
-  var abs = kotlin_kotlin.$_$.rd;
-  var fill = kotlin_kotlin.$_$.o7;
-  var coerceAtLeast = kotlin_kotlin.$_$.ae;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.t1;
-  var min = kotlin_kotlin.$_$.td;
-  var max = kotlin_kotlin.$_$.sd;
+  var IllegalArgumentException = kotlin_kotlin.$_$.ch;
+  var abs = kotlin_kotlin.$_$.zd;
+  var fill = kotlin_kotlin.$_$.s7;
+  var coerceAtLeast = kotlin_kotlin.$_$.je;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.v1;
+  var min = kotlin_kotlin.$_$.be;
+  var max = kotlin_kotlin.$_$.ae;
   var Constraints_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.b;
-  var Companion_getInstance_12 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.o3;
-  var $get_currentCompositeKeyHash$$composable_u3vbzj = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g;
-  var Applier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l;
-  var _Updater___get_composer__impl__9ty7av = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l2;
-  var _SkippableUpdater___init__impl__4ft0t9 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i2;
-  var SkippableUpdater = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
-  var _SkippableUpdater___get_composer__impl__6t7yne = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j2;
-  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.j2;
-  var coerceIn = kotlin_kotlin.$_$.ge;
+  var Companion_getInstance_12 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s3;
+  var $get_currentCompositeKeyHash$$composable_u3vbzj = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h;
+  var Applier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m;
+  var _Updater___get_composer__impl__9ty7av = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n2;
+  var _SkippableUpdater___init__impl__4ft0t9 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k2;
+  var SkippableUpdater = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d1;
+  var _SkippableUpdater___get_composer__impl__6t7yne = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l2;
+  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.l2;
+  var coerceIn = kotlin_kotlin.$_$.pe;
   var Offset_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.d;
-  var minOf = kotlin_kotlin.$_$.ma;
-  var maxOf = kotlin_kotlin.$_$.ja;
-  var toString_0 = kotlin_kotlin.$_$.hi;
-  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.j4;
-  var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h1;
-  var coerceIn_0 = kotlin_kotlin.$_$.he;
+  var minOf = kotlin_kotlin.$_$.ta;
+  var maxOf = kotlin_kotlin.$_$.qa;
+  var toString_0 = kotlin_kotlin.$_$.wi;
+  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.m4;
+  var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i1;
+  var coerceIn_0 = kotlin_kotlin.$_$.qe;
   var IntOffset_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w;
-  var Companion_getInstance_13 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n2;
-  var get_reuseKey = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x1;
-  var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.a2;
-  var removeAll = kotlin_kotlin.$_$.g9;
-  var retainAll = kotlin_kotlin.$_$.j9;
-  var rememberUpdatedState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w1;
+  var removeAll = kotlin_kotlin.$_$.m9;
+  var retainAll = kotlin_kotlin.$_$.q9;
+  var Companion_getInstance_13 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.p2;
+  var get_reuseKey = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z1;
+  var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.c2;
+  var rememberUpdatedState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y1;
   var HashSet_init_$Create$ = kotlin_kotlin.$_$.r;
-  var get_lastIndex = kotlin_kotlin.$_$.l8;
-  var copyOf = kotlin_kotlin.$_$.f7;
-  var copyOf_0 = kotlin_kotlin.$_$.z6;
-  var ListIterator = kotlin_kotlin.$_$.o5;
-  var List = kotlin_kotlin.$_$.p5;
-  var longArray = kotlin_kotlin.$_$.ad;
-  var arrayCopy = kotlin_kotlin.$_$.c6;
-  var Paint = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.v;
-  var Companion_getInstance_14 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.x3;
-  var Companion_getInstance_15 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.n3;
-  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.m2;
-  var Companion_getInstance_16 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.p2;
-  var println = kotlin_kotlin.$_$.nb;
-  var ComposeNodeLifecycleCallback = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o;
-  var Map = kotlin_kotlin.$_$.r5;
-  var getValue = kotlin_kotlin.$_$.a8;
+  var get_lastIndex = kotlin_kotlin.$_$.q8;
+  var copyOf = kotlin_kotlin.$_$.j7;
+  var copyOf_0 = kotlin_kotlin.$_$.d7;
+  var ListIterator = kotlin_kotlin.$_$.s5;
+  var List = kotlin_kotlin.$_$.t5;
+  var longArray = kotlin_kotlin.$_$.id;
+  var arrayCopy = kotlin_kotlin.$_$.g6;
+  var Paint = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.y;
+  var Companion_getInstance_14 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d4;
+  var Companion_getInstance_15 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.r3;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.o2;
+  var Companion_getInstance_16 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r2;
+  var println = kotlin_kotlin.$_$.ub;
+  var ComposeNodeLifecycleCallback = kotlin_org_jetbrains_compose_runtime_runtime.$_$.p;
+  var Map = kotlin_kotlin.$_$.v5;
+  var getValue = kotlin_kotlin.$_$.e8;
   var HashMap_init_$Create$ = kotlin_kotlin.$_$.n;
-  var drawArc$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.v1;
-  var drawArc$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.w1;
-  var drawCircle$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.x1;
-  var drawCircle$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.y1;
-  var drawImage$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a2;
-  var drawImage$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.z1;
-  var drawImage$default_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.b2;
-  var drawLine$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.c2;
-  var drawLine$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d2;
-  var drawOval$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.e2;
-  var drawOval$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.f2;
-  var drawPath$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g2;
-  var drawPath$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.h2;
-  var drawPoints$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i2;
-  var drawPoints$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.j2;
-  var drawRect$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.k2;
-  var drawRect$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.l2;
-  var drawRoundRect$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.m2;
-  var drawRoundRect$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.n2;
+  var drawArc$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a2;
+  var drawArc$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.b2;
+  var drawCircle$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.c2;
+  var drawCircle$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d2;
+  var drawImage$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.f2;
+  var drawImage$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.e2;
+  var drawImage$default_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g2;
+  var drawLine$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.h2;
+  var drawLine$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i2;
+  var drawOval$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.j2;
+  var drawOval$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.k2;
+  var drawPath$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.l2;
+  var drawPath$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.m2;
+  var drawPoints$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.n2;
+  var drawPoints$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.o2;
+  var drawRect$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.p2;
+  var drawRect$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.q2;
+  var drawRoundRect$default = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.r2;
+  var drawRoundRect$default_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.s2;
   var DrawScope = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.c;
   var ContentDrawScope = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.b;
-  var copyOf_1 = kotlin_kotlin.$_$.g7;
-  var abs_0 = kotlin_kotlin.$_$.qd;
-  var Matrix__timesAssign_impl_oas521 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.h3;
-  var emptySet = kotlin_kotlin.$_$.l7;
+  var copyOf_1 = kotlin_kotlin.$_$.k7;
+  var abs_0 = kotlin_kotlin.$_$.yd;
+  var Matrix__timesAssign_impl_oas521 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.m3;
+  var emptySet = kotlin_kotlin.$_$.p7;
   var MutableRect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.c;
   var toRect_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.t;
   var Offset__unaryMinus_impl_ssu2iv = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.h1;
@@ -322,33 +323,33 @@
   var minus = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.n1;
   var get_isFinite = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.o;
   var Offset__getDistanceSquared_impl_97mhi6 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.a1;
-  var SnapshotStateObserver = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f;
-  var CompositionLocalProvider$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.p;
-  var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c2;
-  var Sequence = kotlin_kotlin.$_$.ve;
-  var emptySequence = kotlin_kotlin.$_$.we;
-  var _Matrix___get_values__impl__fblr7b = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i3;
-  var Generic = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.s;
-  var Rounded = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.u;
-  var Rectangle = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.t;
+  var SnapshotStateObserver = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g;
+  var CompositionLocalProvider$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q;
+  var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
+  var Sequence = kotlin_kotlin.$_$.ff;
+  var emptySequence = kotlin_kotlin.$_$.gf;
+  var _Matrix___get_values__impl__fblr7b = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.n3;
+  var Generic = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.v;
+  var Rounded = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.x;
+  var Rectangle = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.w;
   var _CornerRadius___get_x__impl__1594cn = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.v;
   var _CornerRadius___get_y__impl__tyvleu = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.w;
-  var Companion_getInstance_17 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.z3;
+  var Companion_getInstance_17 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.f4;
   var DpSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t;
-  var identityHashCode = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k1;
-  var collectionSizeOrDefault = kotlin_kotlin.$_$.l6;
-  var mapCapacity = kotlin_kotlin.$_$.v8;
-  var firstOrNull = kotlin_kotlin.$_$.q7;
+  var identityHashCode = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m1;
+  var collectionSizeOrDefault = kotlin_kotlin.$_$.p6;
+  var mapCapacity = kotlin_kotlin.$_$.b9;
+  var firstOrNull = kotlin_kotlin.$_$.u7;
   var TextRange = kotlin_org_jetbrains_compose_ui_ui_text.$_$.j1;
   var ImeAction = kotlin_org_jetbrains_compose_ui_ui_text.$_$.i;
-  var toMutableList = kotlin_kotlin.$_$.da;
-  var rangeTo = kotlin_kotlin.$_$.je;
-  var listOf_0 = kotlin_kotlin.$_$.t8;
-  var SkiaLayer = kotlin_org_jetbrains_skiko_skiko.$_$.e9;
-  var Companion_getInstance_18 = kotlin_org_jetbrains_skiko_skiko.$_$.j8;
+  var toMutableList = kotlin_kotlin.$_$.ka;
+  var listOf_0 = kotlin_kotlin.$_$.z8;
+  var rangeTo = kotlin_kotlin.$_$.se;
+  var SkiaLayer = kotlin_org_jetbrains_skiko_skiko.$_$.f9;
+  var Companion_getInstance_18 = kotlin_org_jetbrains_skiko_skiko.$_$.k8;
   var SkikoInputModifiers__has_impl_qg30o6 = kotlin_org_jetbrains_skiko_skiko.$_$.q7;
-  var CancellationException = kotlin_kotlin.$_$.na;
-  var CancellationException_init_$Init$ = kotlin_kotlin.$_$.a1;
+  var CancellationException = kotlin_kotlin.$_$.ua;
+  var CancellationException_init_$Init$ = kotlin_kotlin.$_$.b1;
   var SkikoKey_KEY_UNKNOWN_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.w6;
   var SkikoKey_KEY_HOME_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.w4;
   var SkikoKey_KEY_UP_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.x6;
@@ -450,83 +451,83 @@
   var SkikoKey_KEY_NUMPAD_ADD_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.u5;
   var SkikoKey_KEY_NUMPAD_ENTER_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.w5;
   var SkikoKey_KEY_END_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.d4;
-  var onInputEvent = kotlin_org_jetbrains_skiko_skiko.$_$.h9;
-  var onGestureEvent = kotlin_org_jetbrains_skiko_skiko.$_$.g9;
-  var SkikoView = kotlin_org_jetbrains_skiko_skiko.$_$.i9;
+  var onInputEvent = kotlin_org_jetbrains_skiko_skiko.$_$.i9;
+  var onGestureEvent = kotlin_org_jetbrains_skiko_skiko.$_$.h9;
+  var SkikoView = kotlin_org_jetbrains_skiko_skiko.$_$.j9;
   var Dispatchers_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.x;
   var SkikoPointerEventKind_SCROLL_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.f7;
-  var currentNanoTime = kotlin_org_jetbrains_skiko_skiko.$_$.k9;
-  var first = kotlin_kotlin.$_$.u7;
-  var binarySearch = kotlin_kotlin.$_$.h6;
-  var DpRect_init_$Create$ = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x1;
-  var Companion_getInstance_19 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.m3;
+  var currentNanoTime = kotlin_org_jetbrains_skiko_skiko.$_$.l9;
+  var first = kotlin_kotlin.$_$.y7;
+  var binarySearch = kotlin_kotlin.$_$.l6;
+  var DpRect_init_$Create$ = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.y1;
+  var Companion_getInstance_19 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q3;
   var DpOffset = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.r;
   var get_isSpecified = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.q;
-  var SkikoInput = kotlin_org_jetbrains_skiko_skiko.$_$.f9;
+  var SkikoInput = kotlin_org_jetbrains_skiko_skiko.$_$.g9;
   var CommitTextCommand_init_$Create$ = kotlin_org_jetbrains_compose_ui_ui_text.$_$.n1;
   var notifyFocusedRect = kotlin_org_jetbrains_compose_ui_ui_text.$_$.p;
   var PlatformTextInputService = kotlin_org_jetbrains_compose_ui_ui_text.$_$.q;
   var Factory_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.t;
   var Channel = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.a1;
   var get_isActive = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.o2;
-  var LaunchedEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
-  var SuspendFunction0 = kotlin_kotlin.$_$.fb;
-  var lazy_0 = kotlin_kotlin.$_$.vh;
+  var LaunchedEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
+  var SuspendFunction0 = kotlin_kotlin.$_$.mb;
+  var lazy_0 = kotlin_kotlin.$_$.ki;
   var EventListener = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.a;
-  var indexOf = kotlin_kotlin.$_$.c8;
-  var BroadcastFrameClock = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n;
-  var Recomposer = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
+  var indexOf = kotlin_kotlin.$_$.g8;
+  var BroadcastFrameClock = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o;
+  var Recomposer = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
   var LinkedHashSet_init_$Create$_0 = kotlin_kotlin.$_$.x;
-  var toIntRect = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t1;
-  var lastOrNull = kotlin_kotlin.$_$.n8;
-  var toSet = kotlin_kotlin.$_$.df;
-  var minus_0 = kotlin_kotlin.$_$.af;
-  var toList_0 = kotlin_kotlin.$_$.cf;
+  var toIntRect = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u1;
+  var lastOrNull = kotlin_kotlin.$_$.t8;
+  var toSet = kotlin_kotlin.$_$.nf;
+  var minus_0 = kotlin_kotlin.$_$.kf;
+  var toList_0 = kotlin_kotlin.$_$.mf;
   var HashSet_init_$Create$_0 = kotlin_kotlin.$_$.q;
-  var asSequence = kotlin_kotlin.$_$.g6;
-  var filter = kotlin_kotlin.$_$.xe;
-  var map = kotlin_kotlin.$_$.ze;
-  var get_currentSystemTheme = kotlin_org_jetbrains_skiko_skiko.$_$.l9;
+  var asSequence = kotlin_kotlin.$_$.k6;
+  var filter = kotlin_kotlin.$_$.hf;
+  var map = kotlin_kotlin.$_$.jf;
+  var get_currentSystemTheme = kotlin_org_jetbrains_skiko_skiko.$_$.m9;
   var Runnable = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.h2;
   var CoroutineDispatcher = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.y1;
-  var plus_0 = kotlin_kotlin.$_$.db;
-  var get = kotlin_kotlin.$_$.ua;
-  var fold = kotlin_kotlin.$_$.ya;
-  var minusKey = kotlin_kotlin.$_$.va;
+  var plus_0 = kotlin_kotlin.$_$.kb;
+  var get = kotlin_kotlin.$_$.bb;
+  var fold = kotlin_kotlin.$_$.fb;
+  var minusKey = kotlin_kotlin.$_$.cb;
   var delay_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.h;
   var invokeOnTimeout = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.c2;
   var Delay = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.d2;
   var cancelConsumed = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.c1;
-  var ClipboardManager = kotlin_org_jetbrains_skiko_skiko.$_$.d9;
+  var ClipboardManager = kotlin_org_jetbrains_skiko_skiko.$_$.e9;
   var AnnotatedString_init_$Create$ = kotlin_org_jetbrains_compose_ui_ui_text.$_$.p1;
-  var URIManager = kotlin_org_jetbrains_skiko_skiko.$_$.j9;
-  var Matrix__rotateY_impl_2x4btc = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.e3;
-  var Matrix__rotateX_impl_3e5y7j = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d3;
-  var Matrix__scale$default_impl_snaws9 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.n3;
-  var set_alphaMultiplier = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g1;
-  var get_nativeCanvas = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.q1;
-  var toSkiaRRect = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.t1;
-  var Companion_getInstance_20 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.t3;
+  var URIManager = kotlin_org_jetbrains_skiko_skiko.$_$.k9;
+  var Matrix__rotateY_impl_2x4btc = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.j3;
+  var Matrix__rotateX_impl_3e5y7j = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i3;
+  var Matrix__scale$default_impl_snaws9 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.s3;
+  var set_alphaMultiplier = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.k1;
+  var get_nativeCanvas = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.u1;
+  var toSkiaRRect = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.y1;
+  var Companion_getInstance_20 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.z3;
   var ClipMode_INTERSECT_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.v1;
   var ClipMode_DIFFERENCE_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.u1;
   var PictureRecorder_init_$Create$ = kotlin_org_jetbrains_skiko_skiko.$_$.p7;
-  var Matrix__map_impl_7meu7m = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a3;
-  var Matrix__map_impl_7meu7m_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.b3;
+  var Matrix__map_impl_7meu7m = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.f3;
+  var Matrix__map_impl_7meu7m_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g3;
   var toRect_1 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u;
-  var toSkiaRect = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.u1;
-  var asComposeCanvas = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.h1;
-  var Point3 = kotlin_org_jetbrains_skiko_skiko.$_$.b9;
-  var Color__copy$default_impl_ectz3s = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.m3;
-  var ShadowUtils_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.h8;
-  var asSkiaPath = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.j1;
-  var toArgb = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.r1;
-  var NotImplementedError = kotlin_kotlin.$_$.sg;
-  var Companion_getInstance_21 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.p3;
+  var toSkiaRect = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.z1;
+  var asComposeCanvas = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.l1;
+  var Point3 = kotlin_org_jetbrains_skiko_skiko.$_$.c9;
+  var Color__copy$default_impl_ectz3s = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.r3;
+  var ShadowUtils_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.i8;
+  var asSkiaPath = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.n1;
+  var toArgb = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.v1;
+  var NotImplementedError = kotlin_kotlin.$_$.gh;
+  var Companion_getInstance_21 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t3;
   var TextInputService = kotlin_org_jetbrains_compose_ui_ui_text.$_$.t;
   var FontLoader = kotlin_org_jetbrains_compose_ui_ui_text.$_$.y;
   var createFontFamilyResolver = kotlin_org_jetbrains_compose_ui_ui_text.$_$.c;
   var PlatformTextInputPluginRegistryImpl = kotlin_org_jetbrains_compose_ui_ui_text.$_$.o;
-  var CompositionLocalProvider$composable_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q;
+  var CompositionLocalProvider$composable_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
   //endregion
   //region block: pre-declaration
   setMetadataFor(Horizontal, 'Horizontal', interfaceMeta);
@@ -922,14 +923,14 @@
   setMetadataFor(Builder, 'Builder', classMeta);
   setMetadataFor(Companion_6, 'Companion', objectMeta);
   setMetadataFor(ImageVector, 'ImageVector', classMeta);
-  setMetadataFor(VectorGroup$iterator$1, VOID, classMeta, VOID, [Iterator]);
   setMetadataFor(VectorNode, 'VectorNode', classMeta);
-  setMetadataFor(VectorGroup, 'VectorGroup', classMeta, VectorNode, [VectorNode, Iterable]);
   setMetadataFor(VectorPath, 'VectorPath', classMeta, VectorNode);
+  setMetadataFor(VectorGroup$iterator$1, VOID, classMeta, VOID, [Iterator]);
+  setMetadataFor(VectorGroup, 'VectorGroup', classMeta, VectorNode, [VectorNode, Iterable]);
   setMetadataFor(VNode, 'VNode', classMeta);
-  setMetadataFor(VectorComponent, 'VectorComponent', classMeta, VNode);
   setMetadataFor(GroupComponent, 'GroupComponent', classMeta, VNode);
   setMetadataFor(PathComponent, 'PathComponent', classMeta, VNode);
+  setMetadataFor(VectorComponent, 'VectorComponent', classMeta, VNode);
   setMetadataFor(VectorComposable, 'VectorComposable', classMeta, VOID, [Annotation]);
   setMetadataFor(VectorApplier, 'VectorApplier', classMeta, AbstractApplier);
   setMetadataFor(_no_name_provided__qut3iv, VOID, classMeta, VOID, [DisposableEffectResult]);
@@ -1322,9 +1323,18 @@
   setMetadataFor(RootMeasurePolicy, 'RootMeasurePolicy', objectMeta, NoIntrinsicsMeasurePolicy);
   setMetadataFor(Companion_18, 'Companion', objectMeta);
   setMetadataFor(ScaleFactor, 'ScaleFactor', classMeta);
+  function get_placeablesCount() {
+    return 0;
+  }
+  function premeasure(index, constraints) {
+  }
+  setMetadataFor(PrecomposedSlotHandle, 'PrecomposedSlotHandle', interfaceMeta);
+  setMetadataFor(SubcomposeLayoutState, 'SubcomposeLayoutState', classMeta);
+  setMetadataFor(SubcomposeMeasureScope, 'SubcomposeMeasureScope', interfaceMeta, VOID, [MeasureScope]);
+  setMetadataFor(SlotIdsSet, 'SlotIdsSet', classMeta, VOID, [Collection]);
+  setMetadataFor(SubcomposeSlotReusePolicy, 'SubcomposeSlotReusePolicy', interfaceMeta);
   setMetadataFor(LayoutNodeSubcompositionsState$createMeasurePolicy$1$measure$1, VOID, classMeta, VOID, [MeasureResult]);
   setMetadataFor(NodeState, 'NodeState', classMeta);
-  setMetadataFor(SubcomposeMeasureScope, 'SubcomposeMeasureScope', interfaceMeta, VOID, [MeasureScope]);
   setMetadataFor(Scope, 'Scope', classMeta, VOID, [SubcomposeMeasureScope]);
   function subcompose(slotId, content) {
     illegalDecoyCallException('subcompose');
@@ -1335,19 +1345,10 @@
   setMetadataFor(SubcomposeIntermediateMeasureScope, 'SubcomposeIntermediateMeasureScope', interfaceMeta, VOID, [SubcomposeMeasureScope]);
   setMetadataFor(IntermediateMeasureScopeImpl_0, 'IntermediateMeasureScopeImpl', classMeta, VOID, [SubcomposeIntermediateMeasureScope, MeasureScope]);
   setMetadataFor(LayoutNodeSubcompositionsState$createMeasurePolicy$1, VOID, classMeta, NoIntrinsicsMeasurePolicy);
-  function get_placeablesCount() {
-    return 0;
-  }
-  function premeasure(index, constraints) {
-  }
-  setMetadataFor(PrecomposedSlotHandle, 'PrecomposedSlotHandle', interfaceMeta);
   setMetadataFor(LayoutNodeSubcompositionsState$precompose$composable$1, VOID, classMeta, VOID, [PrecomposedSlotHandle]);
   setMetadataFor(LayoutNodeSubcompositionsState, 'LayoutNodeSubcompositionsState', classMeta);
-  setMetadataFor(SlotIdsSet, 'SlotIdsSet', classMeta, VOID, [Collection]);
-  setMetadataFor(SubcomposeSlotReusePolicy, 'SubcomposeSlotReusePolicy', interfaceMeta);
-  setMetadataFor(SubcomposeLayoutState, 'SubcomposeLayoutState', classMeta);
-  setMetadataFor(ComposableSingletons$SubcomposeLayoutKt, 'ComposableSingletons$SubcomposeLayoutKt', objectMeta);
   setMetadataFor(NoOpSubcomposeSlotReusePolicy, 'NoOpSubcomposeSlotReusePolicy', objectMeta, VOID, [SubcomposeSlotReusePolicy]);
+  setMetadataFor(ComposableSingletons$SubcomposeLayoutKt, 'ComposableSingletons$SubcomposeLayoutKt', objectMeta);
   setMetadataFor(FixedCountSubcomposeSlotReusePolicy, 'FixedCountSubcomposeSlotReusePolicy', classMeta, VOID, [SubcomposeSlotReusePolicy]);
   setMetadataFor(_no_name_provided__qut3iv_1, VOID, classMeta, VOID, [DisposableEffectResult]);
   setMetadataFor(ModifierLocal, 'ModifierLocal', classMeta);
@@ -1573,20 +1574,20 @@
   setMetadataFor(SemanticsNode$fakeSemanticsNode$fakeNode$1, VOID, classMeta, Node, [SemanticsModifierNode, Node]);
   setMetadataFor(SemanticsNode, 'SemanticsNode', classMeta);
   setMetadataFor(SemanticsOwner, 'SemanticsOwner', classMeta);
+  setMetadataFor(SemanticsProperties, 'SemanticsProperties', objectMeta);
+  setMetadataFor(CollectionInfo, 'CollectionInfo', classMeta);
+  setMetadataFor(Companion_28, 'Companion', objectMeta);
+  setMetadataFor(Role, 'Role', classMeta);
   setMetadataFor(SemanticsPropertyKey, 'SemanticsPropertyKey', classMeta);
   setMetadataFor(AccessibilityAction, 'AccessibilityAction', classMeta);
-  setMetadataFor(SemanticsProperties, 'SemanticsProperties', objectMeta);
-  setMetadataFor(Companion_28, 'Companion', objectMeta);
-  setMetadataFor(ProgressBarRangeInfo, 'ProgressBarRangeInfo', classMeta);
-  setMetadataFor(Companion_29, 'Companion', objectMeta);
-  setMetadataFor(LiveRegionMode, 'LiveRegionMode', classMeta);
+  setMetadataFor(SemanticsActions, 'SemanticsActions', objectMeta);
   setMetadataFor(ScrollAxisRange, 'ScrollAxisRange', classMeta);
+  setMetadataFor(Companion_29, 'Companion', objectMeta);
+  setMetadataFor(ProgressBarRangeInfo, 'ProgressBarRangeInfo', classMeta);
   setMetadataFor(Companion_30, 'Companion', objectMeta);
-  setMetadataFor(Role, 'Role', classMeta);
-  setMetadataFor(CollectionInfo, 'CollectionInfo', classMeta);
+  setMetadataFor(LiveRegionMode, 'LiveRegionMode', classMeta);
   setMetadataFor(CollectionItemInfo, 'CollectionItemInfo', classMeta);
   setMetadataFor(CustomAccessibilityAction, 'CustomAccessibilityAction', classMeta);
-  setMetadataFor(SemanticsActions, 'SemanticsActions', objectMeta);
   setMetadataFor(ToggleableState, 'ToggleableState', classMeta, Enum);
   setMetadataFor(Companion_31, 'Companion', objectMeta);
   setMetadataFor(Key_2, 'Key', classMeta);
@@ -12467,146 +12468,7 @@
     result = imul(31, result) + (this.autoMirror_1 | 0) | 0;
     return result;
   };
-  function _get_children__my42wc($this) {
-    return $this.children_1;
-  }
   function get_$stableprop_13() {
-    return 0;
-  }
-  function VectorGroup$iterator$1(this$0) {
-    this.it_1 = this$0.children_1.iterator_jk1svi_k$();
-  }
-  protoOf(VectorGroup$iterator$1).get_it_kntnws_k$ = function () {
-    return this.it_1;
-  };
-  protoOf(VectorGroup$iterator$1).hasNext_bitz1p_k$ = function () {
-    return this.it_1.hasNext_bitz1p_k$();
-  };
-  protoOf(VectorGroup$iterator$1).next_20eer_k$ = function () {
-    return this.it_1.next_20eer_k$();
-  };
-  function VectorGroup(name, rotation, pivotX, pivotY, scaleX, scaleY, translationX, translationY, clipPathData, children) {
-    name = name === VOID ? get_DefaultGroupName() : name;
-    rotation = rotation === VOID ? get_DefaultRotation() : rotation;
-    pivotX = pivotX === VOID ? get_DefaultPivotX() : pivotX;
-    pivotY = pivotY === VOID ? get_DefaultPivotY() : pivotY;
-    scaleX = scaleX === VOID ? get_DefaultScaleX() : scaleX;
-    scaleY = scaleY === VOID ? get_DefaultScaleY() : scaleY;
-    translationX = translationX === VOID ? get_DefaultTranslationX() : translationX;
-    translationY = translationY === VOID ? get_DefaultTranslationY() : translationY;
-    clipPathData = clipPathData === VOID ? get_EmptyPath() : clipPathData;
-    children = children === VOID ? emptyList() : children;
-    VectorNode.call(this);
-    this.name_1 = name;
-    this.rotation_1 = rotation;
-    this.pivotX_1 = pivotX;
-    this.pivotY_1 = pivotY;
-    this.scaleX_1 = scaleX;
-    this.scaleY_1 = scaleY;
-    this.translationX_1 = translationX;
-    this.translationY_1 = translationY;
-    this.clipPathData_1 = clipPathData;
-    this.children_1 = children;
-    this.$stable_2 = 0;
-  }
-  protoOf(VectorGroup).get_name_woqyms_k$ = function () {
-    return this.name_1;
-  };
-  protoOf(VectorGroup).get_rotation_wgxiux_k$ = function () {
-    return this.rotation_1;
-  };
-  protoOf(VectorGroup).get_pivotX_i2lvmn_k$ = function () {
-    return this.pivotX_1;
-  };
-  protoOf(VectorGroup).get_pivotY_i2lvmo_k$ = function () {
-    return this.pivotY_1;
-  };
-  protoOf(VectorGroup).get_scaleX_je2hxz_k$ = function () {
-    return this.scaleX_1;
-  };
-  protoOf(VectorGroup).get_scaleY_je2hy0_k$ = function () {
-    return this.scaleY_1;
-  };
-  protoOf(VectorGroup).get_translationX_fq2dbk_k$ = function () {
-    return this.translationX_1;
-  };
-  protoOf(VectorGroup).get_translationY_fq2dbj_k$ = function () {
-    return this.translationY_1;
-  };
-  protoOf(VectorGroup).get_clipPathData_fjk2zs_k$ = function () {
-    return this.clipPathData_1;
-  };
-  protoOf(VectorGroup).get_size_woubt6_k$ = function () {
-    return this.children_1.get_size_woubt6_k$();
-  };
-  protoOf(VectorGroup).get_fkrdnv_k$ = function (index) {
-    return this.children_1.get_fkrdnv_k$(index);
-  };
-  protoOf(VectorGroup).iterator_jk1svi_k$ = function () {
-    return new VectorGroup$iterator$1(this);
-  };
-  protoOf(VectorGroup).equals = function (other) {
-    if (this === other)
-      return true;
-    var tmp;
-    if (other == null) {
-      tmp = true;
-    } else {
-      tmp = !(other instanceof VectorGroup);
-    }
-    if (tmp)
-      return false;
-    if (!(this.name_1 === other.name_1))
-      return false;
-    if (!(this.rotation_1 === other.rotation_1))
-      return false;
-    if (!(this.pivotX_1 === other.pivotX_1))
-      return false;
-    if (!(this.pivotY_1 === other.pivotY_1))
-      return false;
-    if (!(this.scaleX_1 === other.scaleX_1))
-      return false;
-    if (!(this.scaleY_1 === other.scaleY_1))
-      return false;
-    if (!(this.translationX_1 === other.translationX_1))
-      return false;
-    if (!(this.translationY_1 === other.translationY_1))
-      return false;
-    if (!equals(this.clipPathData_1, other.clipPathData_1))
-      return false;
-    if (!equals(this.children_1, other.children_1))
-      return false;
-    return true;
-  };
-  protoOf(VectorGroup).hashCode = function () {
-    var result = getStringHashCode(this.name_1);
-    result = imul(31, result) + getNumberHashCode(this.rotation_1) | 0;
-    result = imul(31, result) + getNumberHashCode(this.pivotX_1) | 0;
-    result = imul(31, result) + getNumberHashCode(this.pivotY_1) | 0;
-    result = imul(31, result) + getNumberHashCode(this.scaleX_1) | 0;
-    result = imul(31, result) + getNumberHashCode(this.scaleY_1) | 0;
-    result = imul(31, result) + getNumberHashCode(this.translationX_1) | 0;
-    result = imul(31, result) + getNumberHashCode(this.translationY_1) | 0;
-    result = imul(31, result) + hashCode(this.clipPathData_1) | 0;
-    result = imul(31, result) + hashCode(this.children_1) | 0;
-    return result;
-  };
-  function peek(_this__u8e3s4) {
-    return _this__u8e3s4.get_fkrdnv_k$(_this__u8e3s4.get_size_woubt6_k$() - 1 | 0);
-  }
-  function push(_this__u8e3s4, value) {
-    return _this__u8e3s4.add_1j60pz_k$(value);
-  }
-  function pop(_this__u8e3s4) {
-    return _this__u8e3s4.removeAt_qvpkxi_k$(_this__u8e3s4.get_size_woubt6_k$() - 1 | 0);
-  }
-  function get_$stableprop_14() {
-    return 0;
-  }
-  function VectorNode() {
-    this.$stable_1 = 0;
-  }
-  function get_$stableprop_15() {
     return 0;
   }
   function VectorPath(name, pathData, pathFillType, fill, fillAlpha, stroke, strokeAlpha, strokeLineWidth, strokeLineCap, strokeLineJoin, strokeLineMiter, trimPathStart, trimPathEnd, trimPathOffset) {
@@ -12741,6 +12603,136 @@
     result = imul(31, result) + PathFillType__hashCode_impl_pdqo4w(this.pathFillType_1) | 0;
     return result;
   };
+  function get_$stableprop_14() {
+    return 0;
+  }
+  function VectorNode() {
+    this.$stable_1 = 0;
+  }
+  function _get_children__my42wc($this) {
+    return $this.children_1;
+  }
+  function get_$stableprop_15() {
+    return 0;
+  }
+  function VectorGroup$iterator$1(this$0) {
+    this.it_1 = this$0.children_1.iterator_jk1svi_k$();
+  }
+  protoOf(VectorGroup$iterator$1).get_it_kntnws_k$ = function () {
+    return this.it_1;
+  };
+  protoOf(VectorGroup$iterator$1).hasNext_bitz1p_k$ = function () {
+    return this.it_1.hasNext_bitz1p_k$();
+  };
+  protoOf(VectorGroup$iterator$1).next_20eer_k$ = function () {
+    return this.it_1.next_20eer_k$();
+  };
+  function VectorGroup(name, rotation, pivotX, pivotY, scaleX, scaleY, translationX, translationY, clipPathData, children) {
+    name = name === VOID ? get_DefaultGroupName() : name;
+    rotation = rotation === VOID ? get_DefaultRotation() : rotation;
+    pivotX = pivotX === VOID ? get_DefaultPivotX() : pivotX;
+    pivotY = pivotY === VOID ? get_DefaultPivotY() : pivotY;
+    scaleX = scaleX === VOID ? get_DefaultScaleX() : scaleX;
+    scaleY = scaleY === VOID ? get_DefaultScaleY() : scaleY;
+    translationX = translationX === VOID ? get_DefaultTranslationX() : translationX;
+    translationY = translationY === VOID ? get_DefaultTranslationY() : translationY;
+    clipPathData = clipPathData === VOID ? get_EmptyPath() : clipPathData;
+    children = children === VOID ? emptyList() : children;
+    VectorNode.call(this);
+    this.name_1 = name;
+    this.rotation_1 = rotation;
+    this.pivotX_1 = pivotX;
+    this.pivotY_1 = pivotY;
+    this.scaleX_1 = scaleX;
+    this.scaleY_1 = scaleY;
+    this.translationX_1 = translationX;
+    this.translationY_1 = translationY;
+    this.clipPathData_1 = clipPathData;
+    this.children_1 = children;
+    this.$stable_2 = 0;
+  }
+  protoOf(VectorGroup).get_name_woqyms_k$ = function () {
+    return this.name_1;
+  };
+  protoOf(VectorGroup).get_rotation_wgxiux_k$ = function () {
+    return this.rotation_1;
+  };
+  protoOf(VectorGroup).get_pivotX_i2lvmn_k$ = function () {
+    return this.pivotX_1;
+  };
+  protoOf(VectorGroup).get_pivotY_i2lvmo_k$ = function () {
+    return this.pivotY_1;
+  };
+  protoOf(VectorGroup).get_scaleX_je2hxz_k$ = function () {
+    return this.scaleX_1;
+  };
+  protoOf(VectorGroup).get_scaleY_je2hy0_k$ = function () {
+    return this.scaleY_1;
+  };
+  protoOf(VectorGroup).get_translationX_fq2dbk_k$ = function () {
+    return this.translationX_1;
+  };
+  protoOf(VectorGroup).get_translationY_fq2dbj_k$ = function () {
+    return this.translationY_1;
+  };
+  protoOf(VectorGroup).get_clipPathData_fjk2zs_k$ = function () {
+    return this.clipPathData_1;
+  };
+  protoOf(VectorGroup).get_size_woubt6_k$ = function () {
+    return this.children_1.get_size_woubt6_k$();
+  };
+  protoOf(VectorGroup).get_fkrdnv_k$ = function (index) {
+    return this.children_1.get_fkrdnv_k$(index);
+  };
+  protoOf(VectorGroup).iterator_jk1svi_k$ = function () {
+    return new VectorGroup$iterator$1(this);
+  };
+  protoOf(VectorGroup).equals = function (other) {
+    if (this === other)
+      return true;
+    var tmp;
+    if (other == null) {
+      tmp = true;
+    } else {
+      tmp = !(other instanceof VectorGroup);
+    }
+    if (tmp)
+      return false;
+    if (!(this.name_1 === other.name_1))
+      return false;
+    if (!(this.rotation_1 === other.rotation_1))
+      return false;
+    if (!(this.pivotX_1 === other.pivotX_1))
+      return false;
+    if (!(this.pivotY_1 === other.pivotY_1))
+      return false;
+    if (!(this.scaleX_1 === other.scaleX_1))
+      return false;
+    if (!(this.scaleY_1 === other.scaleY_1))
+      return false;
+    if (!(this.translationX_1 === other.translationX_1))
+      return false;
+    if (!(this.translationY_1 === other.translationY_1))
+      return false;
+    if (!equals(this.clipPathData_1, other.clipPathData_1))
+      return false;
+    if (!equals(this.children_1, other.children_1))
+      return false;
+    return true;
+  };
+  protoOf(VectorGroup).hashCode = function () {
+    var result = getStringHashCode(this.name_1);
+    result = imul(31, result) + getNumberHashCode(this.rotation_1) | 0;
+    result = imul(31, result) + getNumberHashCode(this.pivotX_1) | 0;
+    result = imul(31, result) + getNumberHashCode(this.pivotY_1) | 0;
+    result = imul(31, result) + getNumberHashCode(this.scaleX_1) | 0;
+    result = imul(31, result) + getNumberHashCode(this.scaleY_1) | 0;
+    result = imul(31, result) + getNumberHashCode(this.translationX_1) | 0;
+    result = imul(31, result) + getNumberHashCode(this.translationY_1) | 0;
+    result = imul(31, result) + hashCode(this.clipPathData_1) | 0;
+    result = imul(31, result) + hashCode(this.children_1) | 0;
+    return result;
+  };
   function path(_this__u8e3s4, name, fill, fillAlpha, stroke, strokeAlpha, strokeLineWidth, strokeLineCap, strokeLineJoin, strokeLineMiter, pathFillType, pathBuilder) {
     name = name === VOID ? get_DefaultPathName() : name;
     fill = fill === VOID ? null : fill;
@@ -12761,6 +12753,15 @@
     pathBuilder(tmp0_with);
     tmp$ret$2 = tmp0_with.getNodes_wff5kr_k$();
     return _this__u8e3s4.addPath$default_3xl5r5_k$(tmp$ret$2, pathFillType, name, fill, fillAlpha, stroke, strokeAlpha, strokeLineWidth, strokeLineCap, strokeLineJoin, strokeLineMiter);
+  }
+  function peek(_this__u8e3s4) {
+    return _this__u8e3s4.get_fkrdnv_k$(_this__u8e3s4.get_size_woubt6_k$() - 1 | 0);
+  }
+  function push(_this__u8e3s4, value) {
+    return _this__u8e3s4.add_1j60pz_k$(value);
+  }
+  function pop(_this__u8e3s4) {
+    return _this__u8e3s4.removeAt_qvpkxi_k$(_this__u8e3s4.get_size_woubt6_k$() - 1 | 0);
   }
   function get_EmptyPath() {
     _init_properties_Vector_kt__7ulyhp();
@@ -12792,213 +12793,56 @@
     return DefaultFillType;
   }
   var DefaultFillType;
-  function get_DefaultGroupName() {
-    return DefaultGroupName;
+  function get_$stableprop_16() {
+    return 8;
   }
-  var DefaultGroupName;
-  function get_DefaultRotation() {
-    return DefaultRotation;
+  function VNode() {
+    this.invalidateListener_1 = null;
+    this.$stable_1 = 8;
   }
-  var DefaultRotation;
-  function get_DefaultPivotX() {
-    return DefaultPivotX;
-  }
-  var DefaultPivotX;
-  function get_DefaultPivotY() {
-    return DefaultPivotY;
-  }
-  var DefaultPivotY;
-  function get_DefaultScaleX() {
-    return DefaultScaleX;
-  }
-  var DefaultScaleX;
-  function get_DefaultScaleY() {
-    return DefaultScaleY;
-  }
-  var DefaultScaleY;
-  function get_DefaultTranslationX() {
-    return DefaultTranslationX;
-  }
-  var DefaultTranslationX;
-  function get_DefaultTranslationY() {
-    return DefaultTranslationY;
-  }
-  var DefaultTranslationY;
-  function get_DefaultPathName() {
-    return DefaultPathName;
-  }
-  var DefaultPathName;
-  function get_DefaultStrokeLineWidth() {
-    return DefaultStrokeLineWidth;
-  }
-  var DefaultStrokeLineWidth;
-  function get_DefaultStrokeLineMiter() {
-    return DefaultStrokeLineMiter;
-  }
-  var DefaultStrokeLineMiter;
+  protoOf(VNode).set_invalidateListener_2489j_k$ = function (_set____db54di) {
+    this.invalidateListener_1 = _set____db54di;
+  };
+  protoOf(VNode).get_invalidateListener_iyw0o8_k$ = function () {
+    return this.invalidateListener_1;
+  };
+  protoOf(VNode).invalidate_p4un12_k$ = function () {
+    var tmp0_safe_receiver = this.get_invalidateListener_iyw0o8_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else
+      tmp0_safe_receiver();
+  };
   function get_DefaultTrimPathStart() {
     return DefaultTrimPathStart;
   }
   var DefaultTrimPathStart;
-  function get_DefaultTrimPathEnd() {
-    return DefaultTrimPathEnd;
+  function get_DefaultStrokeLineWidth() {
+    return DefaultStrokeLineWidth;
   }
-  var DefaultTrimPathEnd;
-  function get_DefaultTrimPathOffset() {
-    return DefaultTrimPathOffset;
+  var DefaultStrokeLineWidth;
+  function get_DefaultTranslationY() {
+    return DefaultTranslationY;
   }
-  var DefaultTrimPathOffset;
-  function PathData(block) {
+  var DefaultTranslationY;
+  function get_DefaultPivotX() {
+    return DefaultPivotX;
+  }
+  var DefaultPivotX;
+  function addPathNodes(pathStr) {
     _init_properties_Vector_kt__7ulyhp();
-    // Inline function 'kotlin.with' call
-    var tmp0_with = new PathBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
-    block(tmp0_with);
-    return tmp0_with.getNodes_wff5kr_k$();
-  }
-  function doInvalidate($this) {
-    $this.isDirty_1 = true;
-    $this.invalidateCallback_1();
-  }
-  function _set_isDirty__l4l9oj($this, _set____db54di) {
-    $this.isDirty_1 = _set____db54di;
-  }
-  function _get_isDirty__oaahxl($this) {
-    return $this.isDirty_1;
-  }
-  function _get_cacheDrawScope__nivepv_0($this) {
-    return $this.cacheDrawScope_1;
-  }
-  function _set_previousDrawSize__4vz6xn($this, _set____db54di) {
-    $this.previousDrawSize_1 = _set____db54di;
-  }
-  function _get_previousDrawSize__xz3g0f($this) {
-    return $this.previousDrawSize_1;
-  }
-  function _get_drawVectorBlock__bnsotn($this) {
-    return $this.drawVectorBlock_1;
-  }
-  function VectorComponent$root$lambda(this$0) {
-    return function () {
-      doInvalidate(this$0);
-      return Unit_getInstance();
-    };
-  }
-  function VectorComponent$invalidateCallback$lambda() {
-    return Unit_getInstance();
-  }
-  function VectorComponent$drawVectorBlock$lambda(this$0) {
-    return function ($this$null) {
-      var tmp$ret$0;
-      // Inline function 'kotlin.with' call
-      var tmp0_with = this$0.root_1;
-      // Inline function 'kotlin.contracts.contract' call
-      tmp0_with.draw_tfk150_k$($this$null);
-      tmp$ret$0 = Unit_getInstance();
-      return Unit_getInstance();
-    };
-  }
-  function VectorComponent() {
-    VNode.call(this);
-    var tmp = this;
-    // Inline function 'kotlin.apply' call
-    var tmp0_apply = new GroupComponent();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.ui.graphics.vector.VectorComponent.root.<anonymous>' call
-    tmp0_apply.set_pivotX_rejaui_k$(0.0);
-    tmp0_apply.set_pivotY_rl9ufd_k$(0.0);
-    tmp0_apply.set_invalidateListener_2489j_k$(VectorComponent$root$lambda(this));
-    tmp.root_1 = tmp0_apply;
-    this.isDirty_1 = true;
-    this.cacheDrawScope_1 = new DrawCache();
-    var tmp_0 = this;
-    tmp_0.invalidateCallback_1 = VectorComponent$invalidateCallback$lambda;
-    this.intrinsicColorFilter$delegate_1 = mutableStateOf(null);
-    this.viewportWidth_1 = 0.0;
-    this.viewportHeight_1 = 0.0;
-    this.previousDrawSize_1 = Companion_getInstance().get_Unspecified_o59ai8_k$();
-    var tmp_1 = this;
-    tmp_1.drawVectorBlock_1 = VectorComponent$drawVectorBlock$lambda(this);
-  }
-  protoOf(VectorComponent).get_root_wott0r_k$ = function () {
-    return this.root_1;
-  };
-  protoOf(VectorComponent).set_name_p5yp4m_k$ = function (value) {
-    this.root_1.set_name_p5yp4m_k$(value);
-  };
-  protoOf(VectorComponent).get_name_woqyms_k$ = function () {
-    return this.root_1.name_1;
-  };
-  protoOf(VectorComponent).set_invalidateCallback_r6ytcb_k$ = function (_set____db54di) {
-    this.invalidateCallback_1 = _set____db54di;
-  };
-  protoOf(VectorComponent).get_invalidateCallback_qy7vop_k$ = function () {
-    return this.invalidateCallback_1;
-  };
-  protoOf(VectorComponent).set_intrinsicColorFilter_5l5or5_k$ = function (_set____db54di) {
-    intrinsicColorFilter$factory();
-    return this.intrinsicColorFilter$delegate_1.set_value_rnwamw_k$(_set____db54di);
-  };
-  protoOf(VectorComponent).get_intrinsicColorFilter_tcjku9_k$ = function () {
-    // Inline function 'androidx.compose.runtime.getValue' call
-    intrinsicColorFilter$factory_0();
-    return this.intrinsicColorFilter$delegate_1.get_value_j01efc_k$();
-  };
-  protoOf(VectorComponent).set_viewportWidth_h0uc4a_k$ = function (value) {
-    if (!(this.viewportWidth_1 === value)) {
-      this.viewportWidth_1 = value;
-      doInvalidate(this);
+    var tmp;
+    if (pathStr == null) {
+      tmp = get_EmptyPath();
+    } else {
+      tmp = (new PathParser()).parsePathString_obiteg_k$(pathStr).toNodes_jcvf9m_k$();
     }
-  };
-  protoOf(VectorComponent).get_viewportWidth_q084fd_k$ = function () {
-    return this.viewportWidth_1;
-  };
-  protoOf(VectorComponent).set_viewportHeight_nr1x59_k$ = function (value) {
-    if (!(this.viewportHeight_1 === value)) {
-      this.viewportHeight_1 = value;
-      doInvalidate(this);
-    }
-  };
-  protoOf(VectorComponent).get_viewportHeight_w0jsei_k$ = function () {
-    return this.viewportHeight_1;
-  };
-  protoOf(VectorComponent).draw_5rstlj_k$ = function (_this__u8e3s4, alpha, colorFilter) {
-    var targetColorFilter = colorFilter == null ? this.get_intrinsicColorFilter_tcjku9_k$() : colorFilter;
-    if (this.isDirty_1 ? true : !equals(this.previousDrawSize_1, _this__u8e3s4.get_size_x9ctfw_k$())) {
-      this.root_1.set_scaleX_10jlbm_k$(_Size___get_width__impl__58y75t(_this__u8e3s4.get_size_x9ctfw_k$()) / this.viewportWidth_1);
-      this.root_1.set_scaleY_17a4wh_k$(_Size___get_height__impl__a04p02(_this__u8e3s4.get_size_x9ctfw_k$()) / this.viewportHeight_1);
-      var tmp$ret$0;
-      // Inline function 'kotlin.math.ceil' call
-      var tmp0_ceil = _Size___get_width__impl__58y75t(_this__u8e3s4.get_size_x9ctfw_k$());
-      tmp$ret$0 = Math.ceil(tmp0_ceil);
-      var tmp = numberToInt(tmp$ret$0);
-      var tmp$ret$1;
-      // Inline function 'kotlin.math.ceil' call
-      var tmp1_ceil = _Size___get_height__impl__a04p02(_this__u8e3s4.get_size_x9ctfw_k$());
-      tmp$ret$1 = Math.ceil(tmp1_ceil);
-      this.cacheDrawScope_1.drawCachedImage_sd15qx_k$(IntSize(tmp, numberToInt(tmp$ret$1)), _this__u8e3s4, _this__u8e3s4.get_layoutDirection_7e37v0_k$(), this.drawVectorBlock_1);
-      this.isDirty_1 = false;
-      this.previousDrawSize_1 = _this__u8e3s4.get_size_x9ctfw_k$();
-    }
-    this.cacheDrawScope_1.drawInto_n4yq1_k$(_this__u8e3s4, alpha, targetColorFilter);
-  };
-  protoOf(VectorComponent).draw_tfk150_k$ = function (_this__u8e3s4) {
-    this.draw_5rstlj_k$(_this__u8e3s4, 1.0, null);
-  };
-  protoOf(VectorComponent).toString = function () {
-    // Inline function 'kotlin.text.buildString' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'kotlin.apply' call
-    var tmp0_apply = StringBuilder_init_$Create$();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.ui.graphics.vector.VectorComponent.toString.<anonymous>' call
-    tmp0_apply.append_ssq29y_k$('Params: ');
-    tmp0_apply.append_ssq29y_k$('\tname: ').append_ssq29y_k$(this.get_name_woqyms_k$()).append_ssq29y_k$('\n');
-    tmp0_apply.append_ssq29y_k$('\tviewportWidth: ').append_t8pm91_k$(this.viewportWidth_1).append_ssq29y_k$('\n');
-    tmp0_apply.append_ssq29y_k$('\tviewportHeight: ').append_t8pm91_k$(this.viewportHeight_1).append_ssq29y_k$('\n');
-    return tmp0_apply.toString();
-  };
+    return tmp;
+  }
+  function get_DefaultScaleY() {
+    return DefaultScaleY;
+  }
+  var DefaultScaleY;
   function _set_groupMatrix__57bahx($this, _set____db54di) {
     $this.groupMatrix_1 = _set____db54di;
   }
@@ -13298,26 +13142,47 @@
        while (inductionVariable <= last);
     return sb.toString();
   };
-  function get_$stableprop_16() {
-    return 8;
+  function get_DefaultPathName() {
+    return DefaultPathName;
   }
-  function VNode() {
-    this.invalidateListener_1 = null;
-    this.$stable_1 = 8;
+  var DefaultPathName;
+  function get_DefaultTranslationX() {
+    return DefaultTranslationX;
   }
-  protoOf(VNode).set_invalidateListener_2489j_k$ = function (_set____db54di) {
-    this.invalidateListener_1 = _set____db54di;
-  };
-  protoOf(VNode).get_invalidateListener_iyw0o8_k$ = function () {
-    return this.invalidateListener_1;
-  };
-  protoOf(VNode).invalidate_p4un12_k$ = function () {
-    var tmp0_safe_receiver = this.get_invalidateListener_iyw0o8_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else
-      tmp0_safe_receiver();
-  };
+  var DefaultTranslationX;
+  function get_DefaultRotation() {
+    return DefaultRotation;
+  }
+  var DefaultRotation;
+  function get_DefaultPivotY() {
+    return DefaultPivotY;
+  }
+  var DefaultPivotY;
+  function PathData(block) {
+    _init_properties_Vector_kt__7ulyhp();
+    // Inline function 'kotlin.with' call
+    var tmp0_with = new PathBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
+    block(tmp0_with);
+    return tmp0_with.getNodes_wff5kr_k$();
+  }
+  function get_DefaultTrimPathEnd() {
+    return DefaultTrimPathEnd;
+  }
+  var DefaultTrimPathEnd;
+  function get_DefaultTrimPathOffset() {
+    return DefaultTrimPathOffset;
+  }
+  var DefaultTrimPathOffset;
+  function get_DefaultScaleX() {
+    return DefaultScaleX;
+  }
+  var DefaultScaleX;
+  function get_DefaultStrokeLineMiter() {
+    return DefaultStrokeLineMiter;
+  }
+  var DefaultStrokeLineMiter;
   function _set_isPathDirty__vhor3y($this, _set____db54di) {
     $this.isPathDirty_1 = _set____db54di;
   }
@@ -13558,6 +13423,157 @@
   protoOf(PathComponent).toString = function () {
     return toString(this.path_1);
   };
+  function get_DefaultGroupName() {
+    return DefaultGroupName;
+  }
+  var DefaultGroupName;
+  function doInvalidate($this) {
+    $this.isDirty_1 = true;
+    $this.invalidateCallback_1();
+  }
+  function _set_isDirty__l4l9oj($this, _set____db54di) {
+    $this.isDirty_1 = _set____db54di;
+  }
+  function _get_isDirty__oaahxl($this) {
+    return $this.isDirty_1;
+  }
+  function _get_cacheDrawScope__nivepv_0($this) {
+    return $this.cacheDrawScope_1;
+  }
+  function _set_previousDrawSize__4vz6xn($this, _set____db54di) {
+    $this.previousDrawSize_1 = _set____db54di;
+  }
+  function _get_previousDrawSize__xz3g0f($this) {
+    return $this.previousDrawSize_1;
+  }
+  function _get_drawVectorBlock__bnsotn($this) {
+    return $this.drawVectorBlock_1;
+  }
+  function VectorComponent$root$lambda(this$0) {
+    return function () {
+      doInvalidate(this$0);
+      return Unit_getInstance();
+    };
+  }
+  function VectorComponent$invalidateCallback$lambda() {
+    return Unit_getInstance();
+  }
+  function VectorComponent$drawVectorBlock$lambda(this$0) {
+    return function ($this$null) {
+      var tmp$ret$0;
+      // Inline function 'kotlin.with' call
+      var tmp0_with = this$0.root_1;
+      // Inline function 'kotlin.contracts.contract' call
+      tmp0_with.draw_tfk150_k$($this$null);
+      tmp$ret$0 = Unit_getInstance();
+      return Unit_getInstance();
+    };
+  }
+  function VectorComponent() {
+    VNode.call(this);
+    var tmp = this;
+    // Inline function 'kotlin.apply' call
+    var tmp0_apply = new GroupComponent();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.ui.graphics.vector.VectorComponent.root.<anonymous>' call
+    tmp0_apply.set_pivotX_rejaui_k$(0.0);
+    tmp0_apply.set_pivotY_rl9ufd_k$(0.0);
+    tmp0_apply.set_invalidateListener_2489j_k$(VectorComponent$root$lambda(this));
+    tmp.root_1 = tmp0_apply;
+    this.isDirty_1 = true;
+    this.cacheDrawScope_1 = new DrawCache();
+    var tmp_0 = this;
+    tmp_0.invalidateCallback_1 = VectorComponent$invalidateCallback$lambda;
+    this.intrinsicColorFilter$delegate_1 = mutableStateOf(null);
+    this.viewportWidth_1 = 0.0;
+    this.viewportHeight_1 = 0.0;
+    this.previousDrawSize_1 = Companion_getInstance().get_Unspecified_o59ai8_k$();
+    var tmp_1 = this;
+    tmp_1.drawVectorBlock_1 = VectorComponent$drawVectorBlock$lambda(this);
+  }
+  protoOf(VectorComponent).get_root_wott0r_k$ = function () {
+    return this.root_1;
+  };
+  protoOf(VectorComponent).set_name_p5yp4m_k$ = function (value) {
+    this.root_1.set_name_p5yp4m_k$(value);
+  };
+  protoOf(VectorComponent).get_name_woqyms_k$ = function () {
+    return this.root_1.name_1;
+  };
+  protoOf(VectorComponent).set_invalidateCallback_r6ytcb_k$ = function (_set____db54di) {
+    this.invalidateCallback_1 = _set____db54di;
+  };
+  protoOf(VectorComponent).get_invalidateCallback_qy7vop_k$ = function () {
+    return this.invalidateCallback_1;
+  };
+  protoOf(VectorComponent).set_intrinsicColorFilter_5l5or5_k$ = function (_set____db54di) {
+    intrinsicColorFilter$factory();
+    return this.intrinsicColorFilter$delegate_1.set_value_rnwamw_k$(_set____db54di);
+  };
+  protoOf(VectorComponent).get_intrinsicColorFilter_tcjku9_k$ = function () {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    intrinsicColorFilter$factory_0();
+    return this.intrinsicColorFilter$delegate_1.get_value_j01efc_k$();
+  };
+  protoOf(VectorComponent).set_viewportWidth_h0uc4a_k$ = function (value) {
+    if (!(this.viewportWidth_1 === value)) {
+      this.viewportWidth_1 = value;
+      doInvalidate(this);
+    }
+  };
+  protoOf(VectorComponent).get_viewportWidth_q084fd_k$ = function () {
+    return this.viewportWidth_1;
+  };
+  protoOf(VectorComponent).set_viewportHeight_nr1x59_k$ = function (value) {
+    if (!(this.viewportHeight_1 === value)) {
+      this.viewportHeight_1 = value;
+      doInvalidate(this);
+    }
+  };
+  protoOf(VectorComponent).get_viewportHeight_w0jsei_k$ = function () {
+    return this.viewportHeight_1;
+  };
+  protoOf(VectorComponent).draw_5rstlj_k$ = function (_this__u8e3s4, alpha, colorFilter) {
+    var targetColorFilter = colorFilter == null ? this.get_intrinsicColorFilter_tcjku9_k$() : colorFilter;
+    if (this.isDirty_1 ? true : !equals(this.previousDrawSize_1, _this__u8e3s4.get_size_x9ctfw_k$())) {
+      this.root_1.set_scaleX_10jlbm_k$(_Size___get_width__impl__58y75t(_this__u8e3s4.get_size_x9ctfw_k$()) / this.viewportWidth_1);
+      this.root_1.set_scaleY_17a4wh_k$(_Size___get_height__impl__a04p02(_this__u8e3s4.get_size_x9ctfw_k$()) / this.viewportHeight_1);
+      var tmp$ret$0;
+      // Inline function 'kotlin.math.ceil' call
+      var tmp0_ceil = _Size___get_width__impl__58y75t(_this__u8e3s4.get_size_x9ctfw_k$());
+      tmp$ret$0 = Math.ceil(tmp0_ceil);
+      var tmp = numberToInt(tmp$ret$0);
+      var tmp$ret$1;
+      // Inline function 'kotlin.math.ceil' call
+      var tmp1_ceil = _Size___get_height__impl__a04p02(_this__u8e3s4.get_size_x9ctfw_k$());
+      tmp$ret$1 = Math.ceil(tmp1_ceil);
+      this.cacheDrawScope_1.drawCachedImage_sd15qx_k$(IntSize(tmp, numberToInt(tmp$ret$1)), _this__u8e3s4, _this__u8e3s4.get_layoutDirection_7e37v0_k$(), this.drawVectorBlock_1);
+      this.isDirty_1 = false;
+      this.previousDrawSize_1 = _this__u8e3s4.get_size_x9ctfw_k$();
+    }
+    this.cacheDrawScope_1.drawInto_n4yq1_k$(_this__u8e3s4, alpha, targetColorFilter);
+  };
+  protoOf(VectorComponent).draw_tfk150_k$ = function (_this__u8e3s4) {
+    this.draw_5rstlj_k$(_this__u8e3s4, 1.0, null);
+  };
+  protoOf(VectorComponent).toString = function () {
+    // Inline function 'kotlin.text.buildString' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'kotlin.apply' call
+    var tmp0_apply = StringBuilder_init_$Create$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.ui.graphics.vector.VectorComponent.toString.<anonymous>' call
+    tmp0_apply.append_ssq29y_k$('Params: ');
+    tmp0_apply.append_ssq29y_k$('\tname: ').append_ssq29y_k$(this.get_name_woqyms_k$()).append_ssq29y_k$('\n');
+    tmp0_apply.append_ssq29y_k$('\tviewportWidth: ').append_t8pm91_k$(this.viewportWidth_1).append_ssq29y_k$('\n');
+    tmp0_apply.append_ssq29y_k$('\tviewportHeight: ').append_t8pm91_k$(this.viewportHeight_1).append_ssq29y_k$('\n');
+    return tmp0_apply.toString();
+  };
+  function pathMeasure$factory() {
+    return getPropertyCallableRef('pathMeasure', 1, KProperty1, function (receiver) {
+      return _get_pathMeasure__8eu6yw(receiver);
+    }, null);
+  }
   function intrinsicColorFilter$factory() {
     return getPropertyCallableRef('intrinsicColorFilter', 1, KMutableProperty1, function (receiver) {
       return receiver.get_intrinsicColorFilter_tcjku9_k$();
@@ -13571,11 +13587,6 @@
     }, function (receiver, value) {
       return receiver.set_intrinsicColorFilter_5l5or5_k$(value);
     });
-  }
-  function pathMeasure$factory() {
-    return getPropertyCallableRef('pathMeasure', 1, KProperty1, function (receiver) {
-      return _get_pathMeasure__8eu6yw(receiver);
-    }, null);
   }
   var properties_initialized_Vector_kt_6ddpp7;
   function _init_properties_Vector_kt__7ulyhp() {
@@ -22520,6 +22531,299 @@
     var roundedShifted = tmp;
     return roundedShifted / 10;
   }
+  function _get_slotReusePolicy__xp4b87($this) {
+    return $this.slotReusePolicy_1;
+  }
+  function SubcomposeLayoutState_init_$Init$($this) {
+    SubcomposeLayoutState.call($this, NoOpSubcomposeSlotReusePolicy_getInstance());
+    return $this;
+  }
+  function SubcomposeLayoutState_init_$Create$() {
+    return SubcomposeLayoutState_init_$Init$(objectCreate(protoOf(SubcomposeLayoutState)));
+  }
+  function SubcomposeLayoutState_init_$Init$_0(maxSlotsToRetainForReuse, $this) {
+    SubcomposeLayoutState.call($this, SubcomposeSlotReusePolicy_0(maxSlotsToRetainForReuse));
+    return $this;
+  }
+  function SubcomposeLayoutState_init_$Create$_0(maxSlotsToRetainForReuse) {
+    return SubcomposeLayoutState_init_$Init$_0(maxSlotsToRetainForReuse, objectCreate(protoOf(SubcomposeLayoutState)));
+  }
+  function _set__state__4o0y7v($this, _set____db54di) {
+    $this._state_1 = _set____db54di;
+  }
+  function _get__state__37adl3($this) {
+    return $this._state_1;
+  }
+  function _get_state__b8zcm8($this) {
+    var tmp$ret$1;
+    $l$block: {
+      // Inline function 'kotlin.requireNotNull' call
+      var tmp0_requireNotNull = $this._state_1;
+      // Inline function 'kotlin.contracts.contract' call
+      if (tmp0_requireNotNull == null) {
+        // Inline function 'androidx.compose.ui.layout.SubcomposeLayoutState.<get-state>.<anonymous>' call
+        var message = 'SubcomposeLayoutState is not attached to SubcomposeLayout';
+        throw IllegalArgumentException_init_$Create$(toString(message));
+      } else {
+        tmp$ret$1 = tmp0_requireNotNull;
+        break $l$block;
+      }
+    }
+    return tmp$ret$1;
+  }
+  function PrecomposedSlotHandle() {
+  }
+  function get_$stableprop_51() {
+    return 8;
+  }
+  function SubcomposeLayoutState$setRoot$lambda(this$0) {
+    return function ($this$null, it) {
+      var tmp = this$0;
+      var tmp0_elvis_lhs = $this$null.get_subcompositionsState_n3zr3j_k$();
+      var tmp_0;
+      if (tmp0_elvis_lhs == null) {
+        var tmp$ret$0;
+        // Inline function 'kotlin.also' call
+        var tmp0_also = new LayoutNodeSubcompositionsState($this$null, this$0.slotReusePolicy_1);
+        // Inline function 'kotlin.contracts.contract' call
+        // Inline function 'androidx.compose.ui.layout.SubcomposeLayoutState.setRoot.<anonymous>.<anonymous>' call
+        $this$null.set_subcompositionsState_68i4on_k$(tmp0_also);
+        tmp$ret$0 = tmp0_also;
+        tmp_0 = tmp$ret$0;
+      } else {
+        tmp_0 = tmp0_elvis_lhs;
+      }
+      tmp._state_1 = tmp_0;
+      _get_state__b8zcm8(this$0).makeSureStateIsConsistent_8nkdw9_k$();
+      _get_state__b8zcm8(this$0).set_slotReusePolicy_efsc8e_k$(this$0.slotReusePolicy_1);
+      return Unit_getInstance();
+    };
+  }
+  function SubcomposeLayoutState$setCompositionContext$lambda(this$0) {
+    return function ($this$null, it) {
+      _get_state__b8zcm8(this$0).compositionContext_1 = it;
+      return Unit_getInstance();
+    };
+  }
+  function SubcomposeLayoutState$setMeasurePolicy$lambda(this$0) {
+    return function ($this$null, it) {
+      $this$null.set_measurePolicy_czfezk_k$(_get_state__b8zcm8(this$0).createMeasurePolicy_t8v23g_k$(it));
+      return Unit_getInstance();
+    };
+  }
+  function SubcomposeLayoutState$setIntermediateMeasurePolicy$lambda(this$0) {
+    return function ($this$null, it) {
+      _get_state__b8zcm8(this$0).intermediateMeasurePolicy_1 = it;
+      return Unit_getInstance();
+    };
+  }
+  function SubcomposeLayoutState(slotReusePolicy) {
+    this.slotReusePolicy_1 = slotReusePolicy;
+    this._state_1 = null;
+    var tmp = this;
+    tmp.setRoot_1 = SubcomposeLayoutState$setRoot$lambda(this);
+    var tmp_0 = this;
+    tmp_0.setCompositionContext_1 = SubcomposeLayoutState$setCompositionContext$lambda(this);
+    var tmp_1 = this;
+    tmp_1.setMeasurePolicy_1 = SubcomposeLayoutState$setMeasurePolicy$lambda(this);
+    var tmp_2 = this;
+    tmp_2.setIntermediateMeasurePolicy_1 = SubcomposeLayoutState$setIntermediateMeasurePolicy$lambda(this);
+    this.$stable_1 = 8;
+  }
+  protoOf(SubcomposeLayoutState).get_isInLookaheadScope_k87ely_k$ = function () {
+    return _get_state__b8zcm8(this).get_isInLookaheadScope_k87ely_k$();
+  };
+  protoOf(SubcomposeLayoutState).get_setRoot_y3bywr_k$ = function () {
+    return this.setRoot_1;
+  };
+  protoOf(SubcomposeLayoutState).get_setCompositionContext_swambm_k$ = function () {
+    return this.setCompositionContext_1;
+  };
+  protoOf(SubcomposeLayoutState).get_setMeasurePolicy_apf8sp_k$ = function () {
+    return this.setMeasurePolicy_1;
+  };
+  protoOf(SubcomposeLayoutState).get_setIntermediateMeasurePolicy_6riipu_k$ = function () {
+    return this.setIntermediateMeasurePolicy_1;
+  };
+  protoOf(SubcomposeLayoutState).precompose_gwy6xb_k$ = function (slotId, content) {
+    illegalDecoyCallException('precompose');
+  };
+  protoOf(SubcomposeLayoutState).forceRecomposeChildren_rgeaqm_k$ = function () {
+    return _get_state__b8zcm8(this).forceRecomposeChildren_rgeaqm_k$();
+  };
+  protoOf(SubcomposeLayoutState).disposeCurrentNodes_dg0e1y_k$ = function () {
+    return _get_state__b8zcm8(this).disposeCurrentNodes_dg0e1y_k$();
+  };
+  protoOf(SubcomposeLayoutState).precompose$composable_nbzcup_k$ = function (slotId, content) {
+    return _get_state__b8zcm8(this).precompose$composable_nbzcup_k$(slotId, content);
+  };
+  function SubcomposeLayout$composable(modifier, measurePolicy, $composer, $changed, $default) {
+    var modifier_0 = {_v: modifier};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-1552806025);
+    sourceInformation($composer_0, 'C(SubcomposeLayout$composable)P(1)77@3566L36,76@3532L144:SubcomposeLayout.kt#80mrfh');
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(modifier_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(measurePolicy) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        modifier_0._v = Companion_getInstance_23();
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(-1552806025, $dirty, -1, 'androidx.compose.ui.layout.SubcomposeLayout$composable (SubcomposeLayout.kt:72)');
+      }
+      // Inline function 'androidx.compose.runtime.remember$composable' call
+      var $composer_1 = $composer_0;
+      $composer_1.startReplaceableGroup_rp6air_k$(547886695);
+      sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
+      // Inline function 'androidx.compose.runtime.cache' call
+      // Inline function 'kotlin.let' call
+      var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var tmp;
+      if (false ? true : tmp0_let === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
+        // Inline function 'androidx.compose.ui.layout.SubcomposeLayout$composable.<anonymous>' call
+        var value = SubcomposeLayoutState_init_$Create$();
+        $composer_1.updateRememberedValue_l1colo_k$(value);
+        tmp = value;
+      } else {
+        tmp = tmp0_let;
+      }
+      var tmp_0 = tmp;
+      var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
+      $composer_1.endReplaceableGroup_er37p7_k$();
+      SubcomposeLayout$composable_0(tmp0, modifier_0._v, measurePolicy, $composer_0, 8 | 112 & $dirty << 3 | 896 & $dirty << 3, 0);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lhns3f_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver === null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_xhrf9y_k$(SubcomposeLayout$composable$lambda(modifier_0, measurePolicy, $changed, $default));
+    }
+  }
+  function SubcomposeLayout$composable_0(state, modifier, measurePolicy, $composer, $changed, $default) {
+    var modifier_0 = {_v: modifier};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(50812272);
+    sourceInformation($composer_0, 'C(SubcomposeLayout$composable)P(2,1)260@13465L30,260@13431L80:SubcomposeLayout.kt#80mrfh');
+    var $dirty = $changed;
+    if (!(($default & 2) === 0)) {
+      modifier_0._v = Companion_getInstance_23();
+    }
+    if (isTraceInProgress()) {
+      traceEventStart(50812272, $dirty, -1, 'androidx.compose.ui.layout.SubcomposeLayout$composable (SubcomposeLayout.kt:254)');
+    }
+    var tmp = modifier_0._v;
+    // Inline function 'androidx.compose.runtime.remember$composable' call
+    var $composer_1 = $composer_0;
+    $composer_1.startReplaceableGroup_rp6air_k$(547886695);
+    sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
+    // Inline function 'androidx.compose.runtime.cache' call
+    // Inline function 'kotlin.let' call
+    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var tmp_0;
+    if (false ? true : tmp0_let === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
+      // Inline function 'androidx.compose.ui.layout.SubcomposeLayout$composable.<anonymous>' call
+      var value = SubcomposeLayout$composable$lambda_0;
+      $composer_1.updateRememberedValue_l1colo_k$(value);
+      tmp_0 = value;
+    } else {
+      tmp_0 = tmp0_let;
+    }
+    var tmp_1 = tmp_0;
+    var tmp0 = (tmp_1 == null ? true : isObject(tmp_1)) ? tmp_1 : THROW_CCE();
+    $composer_1.endReplaceableGroup_er37p7_k$();
+    SubcomposeLayout$composable_1(state, tmp, tmp0, measurePolicy, $composer_0, 8 | 112 & $dirty | 7168 & $dirty << 3, 0);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver === null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_xhrf9y_k$(SubcomposeLayout$composable$lambda_1(state, modifier_0, measurePolicy, $changed, $default));
+    }
+  }
+  function SubcomposeMeasureScope() {
+  }
+  function _get_set__e6gl0v($this) {
+    return $this.set_1;
+  }
+  function get_$stableprop_52() {
+    return 8;
+  }
+  function SlotIdsSet(set) {
+    var tmp;
+    if (set === VOID) {
+      // Inline function 'kotlin.collections.mutableSetOf' call
+      tmp = LinkedHashSet_init_$Create$();
+    } else {
+      tmp = set;
+    }
+    set = tmp;
+    this.set_1 = set;
+    this.$stable_1 = 8;
+  }
+  protoOf(SlotIdsSet).get_size_woubt6_k$ = function () {
+    return this.set_1.get_size_woubt6_k$();
+  };
+  protoOf(SlotIdsSet).contains_i4byw0_k$ = function (element) {
+    return this.set_1.contains_2ehdt1_k$(element);
+  };
+  protoOf(SlotIdsSet).contains_2ehdt1_k$ = function (element) {
+    if (!(element == null ? true : isObject(element)))
+      return false;
+    return this.contains_i4byw0_k$((element == null ? true : isObject(element)) ? element : THROW_CCE());
+  };
+  protoOf(SlotIdsSet).containsAll_u2l3fx_k$ = function (elements) {
+    return this.set_1.containsAll_jr3fla_k$(elements);
+  };
+  protoOf(SlotIdsSet).containsAll_jr3fla_k$ = function (elements) {
+    return this.containsAll_u2l3fx_k$(elements);
+  };
+  protoOf(SlotIdsSet).isEmpty_y1axqb_k$ = function () {
+    return this.set_1.isEmpty_y1axqb_k$();
+  };
+  protoOf(SlotIdsSet).add_6wmvoe_k$ = function (slotId) {
+    return this.set_1.add_1j60pz_k$(slotId);
+  };
+  protoOf(SlotIdsSet).iterator_jk1svi_k$ = function () {
+    return this.set_1.iterator_jk1svi_k$();
+  };
+  protoOf(SlotIdsSet).remove_2axmdh_k$ = function (slotId) {
+    return this.set_1.remove_8hbkc6_k$(slotId);
+  };
+  protoOf(SlotIdsSet).removeAll_l74yyw_k$ = function (slotIds) {
+    return this.set_1.remove_8hbkc6_k$(slotIds);
+  };
+  protoOf(SlotIdsSet).removeAll_v4cyy1_k$ = function (predicate) {
+    return removeAll(this.set_1, predicate);
+  };
+  protoOf(SlotIdsSet).retainAll_xdgmdj_k$ = function (slotIds) {
+    return this.set_1.retainAll_j44sd0_k$(slotIds);
+  };
+  protoOf(SlotIdsSet).retainAll_km5uvq_k$ = function (predicate) {
+    return retainAll(this.set_1, predicate);
+  };
+  protoOf(SlotIdsSet).clear_j9y8zo_k$ = function () {
+    return this.set_1.clear_j9y8zo_k$();
+  };
+  function SubcomposeSlotReusePolicy() {
+  }
   function LayoutNodeSubcompositionsState$createMeasurePolicy$1$measure$1($result, this$0, $indexAfterMeasure) {
     this.$result_1 = $result;
     this.this$0__1 = this$0;
@@ -23337,234 +23641,6 @@
     }
     return new LayoutNodeSubcompositionsState$precompose$composable$1(this, slotId);
   };
-  function _get_set__e6gl0v($this) {
-    return $this.set_1;
-  }
-  function get_$stableprop_51() {
-    return 8;
-  }
-  function SlotIdsSet(set) {
-    var tmp;
-    if (set === VOID) {
-      // Inline function 'kotlin.collections.mutableSetOf' call
-      tmp = LinkedHashSet_init_$Create$();
-    } else {
-      tmp = set;
-    }
-    set = tmp;
-    this.set_1 = set;
-    this.$stable_1 = 8;
-  }
-  protoOf(SlotIdsSet).get_size_woubt6_k$ = function () {
-    return this.set_1.get_size_woubt6_k$();
-  };
-  protoOf(SlotIdsSet).contains_i4byw0_k$ = function (element) {
-    return this.set_1.contains_2ehdt1_k$(element);
-  };
-  protoOf(SlotIdsSet).contains_2ehdt1_k$ = function (element) {
-    if (!(element == null ? true : isObject(element)))
-      return false;
-    return this.contains_i4byw0_k$((element == null ? true : isObject(element)) ? element : THROW_CCE());
-  };
-  protoOf(SlotIdsSet).containsAll_u2l3fx_k$ = function (elements) {
-    return this.set_1.containsAll_jr3fla_k$(elements);
-  };
-  protoOf(SlotIdsSet).containsAll_jr3fla_k$ = function (elements) {
-    return this.containsAll_u2l3fx_k$(elements);
-  };
-  protoOf(SlotIdsSet).isEmpty_y1axqb_k$ = function () {
-    return this.set_1.isEmpty_y1axqb_k$();
-  };
-  protoOf(SlotIdsSet).add_6wmvoe_k$ = function (slotId) {
-    return this.set_1.add_1j60pz_k$(slotId);
-  };
-  protoOf(SlotIdsSet).iterator_jk1svi_k$ = function () {
-    return this.set_1.iterator_jk1svi_k$();
-  };
-  protoOf(SlotIdsSet).remove_2axmdh_k$ = function (slotId) {
-    return this.set_1.remove_8hbkc6_k$(slotId);
-  };
-  protoOf(SlotIdsSet).removeAll_l74yyw_k$ = function (slotIds) {
-    return this.set_1.remove_8hbkc6_k$(slotIds);
-  };
-  protoOf(SlotIdsSet).removeAll_v4cyy1_k$ = function (predicate) {
-    return removeAll(this.set_1, predicate);
-  };
-  protoOf(SlotIdsSet).retainAll_xdgmdj_k$ = function (slotIds) {
-    return this.set_1.retainAll_j44sd0_k$(slotIds);
-  };
-  protoOf(SlotIdsSet).retainAll_km5uvq_k$ = function (predicate) {
-    return retainAll(this.set_1, predicate);
-  };
-  protoOf(SlotIdsSet).clear_j9y8zo_k$ = function () {
-    return this.set_1.clear_j9y8zo_k$();
-  };
-  function SubcomposeSlotReusePolicy() {
-  }
-  function SubcomposeIntermediateMeasureScope() {
-  }
-  function SubcomposeMeasureScope() {
-  }
-  function _get_slotReusePolicy__xp4b87($this) {
-    return $this.slotReusePolicy_1;
-  }
-  function SubcomposeLayoutState_init_$Init$($this) {
-    SubcomposeLayoutState.call($this, NoOpSubcomposeSlotReusePolicy_getInstance());
-    return $this;
-  }
-  function SubcomposeLayoutState_init_$Create$() {
-    return SubcomposeLayoutState_init_$Init$(objectCreate(protoOf(SubcomposeLayoutState)));
-  }
-  function SubcomposeLayoutState_init_$Init$_0(maxSlotsToRetainForReuse, $this) {
-    SubcomposeLayoutState.call($this, SubcomposeSlotReusePolicy_0(maxSlotsToRetainForReuse));
-    return $this;
-  }
-  function SubcomposeLayoutState_init_$Create$_0(maxSlotsToRetainForReuse) {
-    return SubcomposeLayoutState_init_$Init$_0(maxSlotsToRetainForReuse, objectCreate(protoOf(SubcomposeLayoutState)));
-  }
-  function _set__state__4o0y7v($this, _set____db54di) {
-    $this._state_1 = _set____db54di;
-  }
-  function _get__state__37adl3($this) {
-    return $this._state_1;
-  }
-  function _get_state__b8zcm8($this) {
-    var tmp$ret$1;
-    $l$block: {
-      // Inline function 'kotlin.requireNotNull' call
-      var tmp0_requireNotNull = $this._state_1;
-      // Inline function 'kotlin.contracts.contract' call
-      if (tmp0_requireNotNull == null) {
-        // Inline function 'androidx.compose.ui.layout.SubcomposeLayoutState.<get-state>.<anonymous>' call
-        var message = 'SubcomposeLayoutState is not attached to SubcomposeLayout';
-        throw IllegalArgumentException_init_$Create$(toString(message));
-      } else {
-        tmp$ret$1 = tmp0_requireNotNull;
-        break $l$block;
-      }
-    }
-    return tmp$ret$1;
-  }
-  function PrecomposedSlotHandle() {
-  }
-  function get_$stableprop_52() {
-    return 8;
-  }
-  function SubcomposeLayoutState$setRoot$lambda(this$0) {
-    return function ($this$null, it) {
-      var tmp = this$0;
-      var tmp0_elvis_lhs = $this$null.get_subcompositionsState_n3zr3j_k$();
-      var tmp_0;
-      if (tmp0_elvis_lhs == null) {
-        var tmp$ret$0;
-        // Inline function 'kotlin.also' call
-        var tmp0_also = new LayoutNodeSubcompositionsState($this$null, this$0.slotReusePolicy_1);
-        // Inline function 'kotlin.contracts.contract' call
-        // Inline function 'androidx.compose.ui.layout.SubcomposeLayoutState.setRoot.<anonymous>.<anonymous>' call
-        $this$null.set_subcompositionsState_68i4on_k$(tmp0_also);
-        tmp$ret$0 = tmp0_also;
-        tmp_0 = tmp$ret$0;
-      } else {
-        tmp_0 = tmp0_elvis_lhs;
-      }
-      tmp._state_1 = tmp_0;
-      _get_state__b8zcm8(this$0).makeSureStateIsConsistent_8nkdw9_k$();
-      _get_state__b8zcm8(this$0).set_slotReusePolicy_efsc8e_k$(this$0.slotReusePolicy_1);
-      return Unit_getInstance();
-    };
-  }
-  function SubcomposeLayoutState$setCompositionContext$lambda(this$0) {
-    return function ($this$null, it) {
-      _get_state__b8zcm8(this$0).compositionContext_1 = it;
-      return Unit_getInstance();
-    };
-  }
-  function SubcomposeLayoutState$setMeasurePolicy$lambda(this$0) {
-    return function ($this$null, it) {
-      $this$null.set_measurePolicy_czfezk_k$(_get_state__b8zcm8(this$0).createMeasurePolicy_t8v23g_k$(it));
-      return Unit_getInstance();
-    };
-  }
-  function SubcomposeLayoutState$setIntermediateMeasurePolicy$lambda(this$0) {
-    return function ($this$null, it) {
-      _get_state__b8zcm8(this$0).intermediateMeasurePolicy_1 = it;
-      return Unit_getInstance();
-    };
-  }
-  function SubcomposeLayoutState(slotReusePolicy) {
-    this.slotReusePolicy_1 = slotReusePolicy;
-    this._state_1 = null;
-    var tmp = this;
-    tmp.setRoot_1 = SubcomposeLayoutState$setRoot$lambda(this);
-    var tmp_0 = this;
-    tmp_0.setCompositionContext_1 = SubcomposeLayoutState$setCompositionContext$lambda(this);
-    var tmp_1 = this;
-    tmp_1.setMeasurePolicy_1 = SubcomposeLayoutState$setMeasurePolicy$lambda(this);
-    var tmp_2 = this;
-    tmp_2.setIntermediateMeasurePolicy_1 = SubcomposeLayoutState$setIntermediateMeasurePolicy$lambda(this);
-    this.$stable_1 = 8;
-  }
-  protoOf(SubcomposeLayoutState).get_isInLookaheadScope_k87ely_k$ = function () {
-    return _get_state__b8zcm8(this).get_isInLookaheadScope_k87ely_k$();
-  };
-  protoOf(SubcomposeLayoutState).get_setRoot_y3bywr_k$ = function () {
-    return this.setRoot_1;
-  };
-  protoOf(SubcomposeLayoutState).get_setCompositionContext_swambm_k$ = function () {
-    return this.setCompositionContext_1;
-  };
-  protoOf(SubcomposeLayoutState).get_setMeasurePolicy_apf8sp_k$ = function () {
-    return this.setMeasurePolicy_1;
-  };
-  protoOf(SubcomposeLayoutState).get_setIntermediateMeasurePolicy_6riipu_k$ = function () {
-    return this.setIntermediateMeasurePolicy_1;
-  };
-  protoOf(SubcomposeLayoutState).precompose_gwy6xb_k$ = function (slotId, content) {
-    illegalDecoyCallException('precompose');
-  };
-  protoOf(SubcomposeLayoutState).forceRecomposeChildren_rgeaqm_k$ = function () {
-    return _get_state__b8zcm8(this).forceRecomposeChildren_rgeaqm_k$();
-  };
-  protoOf(SubcomposeLayoutState).disposeCurrentNodes_dg0e1y_k$ = function () {
-    return _get_state__b8zcm8(this).disposeCurrentNodes_dg0e1y_k$();
-  };
-  protoOf(SubcomposeLayoutState).precompose$composable_nbzcup_k$ = function (slotId, content) {
-    return _get_state__b8zcm8(this).precompose$composable_nbzcup_k$(slotId, content);
-  };
-  function ComposableLambda$invoke$ref_4($boundThis) {
-    return function (p0, p1) {
-      return $boundThis.invoke_6harzl_k$(p0, p1);
-    };
-  }
-  function ComposableSingletons$SubcomposeLayoutKt$lambda_1$lambda_8mxfps($composer, $changed) {
-    var $composer_0 = $composer;
-    sourceInformation($composer_0, 'C:SubcomposeLayout.kt#80mrfh');
-    if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (isTraceInProgress()) {
-        traceEventStart(-1741544742, $changed, -1, 'androidx.compose.ui.layout.ComposableSingletons$SubcomposeLayoutKt.lambda-1.<anonymous> (SubcomposeLayout.kt:679)');
-      }
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
-    }
-    return Unit_getInstance();
-  }
-  function ComposableSingletons$SubcomposeLayoutKt() {
-    ComposableSingletons$SubcomposeLayoutKt_instance = this;
-    var tmp = this;
-    tmp.lambda_1_r8sbbp_1 = ComposableLambda$invoke$ref_4(composableLambdaInstance(-1741544742, false, ComposableSingletons$SubcomposeLayoutKt$lambda_1$lambda_8mxfps));
-  }
-  protoOf(ComposableSingletons$SubcomposeLayoutKt).get_lambda_1_bzdzzo_k$ = function () {
-    return this.lambda_1_r8sbbp_1;
-  };
-  var ComposableSingletons$SubcomposeLayoutKt_instance;
-  function ComposableSingletons$SubcomposeLayoutKt_getInstance() {
-    if (ComposableSingletons$SubcomposeLayoutKt_instance == null)
-      new ComposableSingletons$SubcomposeLayoutKt();
-    return ComposableSingletons$SubcomposeLayoutKt_instance;
-  }
   function NoOpSubcomposeSlotReusePolicy() {
     NoOpSubcomposeSlotReusePolicy_instance = this;
   }
@@ -23583,130 +23659,7 @@
   function SubcomposeSlotReusePolicy_0(maxSlotsToRetainForReuse) {
     return new FixedCountSubcomposeSlotReusePolicy(maxSlotsToRetainForReuse);
   }
-  function _get_maxSlotsToRetainForReuse__s6v49b($this) {
-    return $this.maxSlotsToRetainForReuse_1;
-  }
-  function FixedCountSubcomposeSlotReusePolicy(maxSlotsToRetainForReuse) {
-    this.maxSlotsToRetainForReuse_1 = maxSlotsToRetainForReuse;
-  }
-  protoOf(FixedCountSubcomposeSlotReusePolicy).getSlotsToRetain_nnr6zi_k$ = function (slotIds) {
-    if (slotIds.get_size_woubt6_k$() > this.maxSlotsToRetainForReuse_1) {
-      var count = 0;
-      // Inline function 'kotlin.with' call
-      var tmp0_with = slotIds.iterator_jk1svi_k$();
-      // Inline function 'kotlin.contracts.contract' call
-      while (tmp0_with.hasNext_bitz1p_k$()) {
-        tmp0_with.next_20eer_k$();
-        count = count + 1 | 0;
-        if (count > this.maxSlotsToRetainForReuse_1) {
-          tmp0_with.remove_le47v1_k$();
-        }
-      }
-    }
-  };
-  protoOf(FixedCountSubcomposeSlotReusePolicy).areCompatible_zh47cm_k$ = function (slotId, reusableSlotId) {
-    return true;
-  };
-  function SubcomposeLayout$composable(modifier, measurePolicy, $composer, $changed, $default) {
-    var modifier_0 = {_v: modifier};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-1552806025);
-    sourceInformation($composer_0, 'C(SubcomposeLayout$composable)P(1)77@3566L36,76@3532L144:SubcomposeLayout.kt#80mrfh');
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(modifier_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(measurePolicy) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        modifier_0._v = Companion_getInstance_23();
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(-1552806025, $dirty, -1, 'androidx.compose.ui.layout.SubcomposeLayout$composable (SubcomposeLayout.kt:72)');
-      }
-      // Inline function 'androidx.compose.runtime.remember$composable' call
-      var $composer_1 = $composer_0;
-      $composer_1.startReplaceableGroup_rp6air_k$(547886695);
-      sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
-      // Inline function 'androidx.compose.runtime.cache' call
-      // Inline function 'kotlin.let' call
-      var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var tmp;
-      if (false ? true : tmp0_let === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-        // Inline function 'androidx.compose.ui.layout.SubcomposeLayout$composable.<anonymous>' call
-        var value = SubcomposeLayoutState_init_$Create$();
-        $composer_1.updateRememberedValue_l1colo_k$(value);
-        tmp = value;
-      } else {
-        tmp = tmp0_let;
-      }
-      var tmp_0 = tmp;
-      var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-      $composer_1.endReplaceableGroup_er37p7_k$();
-      SubcomposeLayout$composable_0(tmp0, modifier_0._v, measurePolicy, $composer_0, 8 | 112 & $dirty << 3 | 896 & $dirty << 3, 0);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver === null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_xhrf9y_k$(SubcomposeLayout$composable$lambda(modifier_0, measurePolicy, $changed, $default));
-    }
-  }
-  function SubcomposeLayout$composable_0(state, modifier, measurePolicy, $composer, $changed, $default) {
-    var modifier_0 = {_v: modifier};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(50812272);
-    sourceInformation($composer_0, 'C(SubcomposeLayout$composable)P(2,1)260@13465L30,260@13431L80:SubcomposeLayout.kt#80mrfh');
-    var $dirty = $changed;
-    if (!(($default & 2) === 0)) {
-      modifier_0._v = Companion_getInstance_23();
-    }
-    if (isTraceInProgress()) {
-      traceEventStart(50812272, $dirty, -1, 'androidx.compose.ui.layout.SubcomposeLayout$composable (SubcomposeLayout.kt:254)');
-    }
-    var tmp = modifier_0._v;
-    // Inline function 'androidx.compose.runtime.remember$composable' call
-    var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(547886695);
-    sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
-    // Inline function 'androidx.compose.runtime.cache' call
-    // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var tmp_0;
-    if (false ? true : tmp0_let === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-      // Inline function 'androidx.compose.ui.layout.SubcomposeLayout$composable.<anonymous>' call
-      var value = SubcomposeLayout$composable$lambda_0;
-      $composer_1.updateRememberedValue_l1colo_k$(value);
-      tmp_0 = value;
-    } else {
-      tmp_0 = tmp0_let;
-    }
-    var tmp_1 = tmp_0;
-    var tmp0 = (tmp_1 == null ? true : isObject(tmp_1)) ? tmp_1 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
-    SubcomposeLayout$composable_1(state, tmp, tmp0, measurePolicy, $composer_0, 8 | 112 & $dirty | 7168 & $dirty << 3, 0);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver === null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_xhrf9y_k$(SubcomposeLayout$composable$lambda_1(state, modifier_0, measurePolicy, $changed, $default));
-    }
+  function SubcomposeIntermediateMeasureScope() {
   }
   function SubcomposeLayout$composable_1(state, modifier, intermediateMeasurePolicy, measurePolicy, $composer, $changed, $default) {
     var modifier_0 = {_v: modifier};
@@ -23827,6 +23780,64 @@
       tmp0_safe_receiver.updateScope_xhrf9y_k$(SubcomposeLayout$composable$lambda_6(state, modifier_0, intermediateMeasurePolicy_0, measurePolicy, $changed, $default));
     }
   }
+  function ComposableLambda$invoke$ref_4($boundThis) {
+    return function (p0, p1) {
+      return $boundThis.invoke_6harzl_k$(p0, p1);
+    };
+  }
+  function ComposableSingletons$SubcomposeLayoutKt$lambda_1$lambda_8mxfps($composer, $changed) {
+    var $composer_0 = $composer;
+    sourceInformation($composer_0, 'C:SubcomposeLayout.kt#80mrfh');
+    if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(-1741544742, $changed, -1, 'androidx.compose.ui.layout.ComposableSingletons$SubcomposeLayoutKt.lambda-1.<anonymous> (SubcomposeLayout.kt:679)');
+      }
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lhns3f_k$();
+    }
+    return Unit_getInstance();
+  }
+  function ComposableSingletons$SubcomposeLayoutKt() {
+    ComposableSingletons$SubcomposeLayoutKt_instance = this;
+    var tmp = this;
+    tmp.lambda_1_r8sbbp_1 = ComposableLambda$invoke$ref_4(composableLambdaInstance(-1741544742, false, ComposableSingletons$SubcomposeLayoutKt$lambda_1$lambda_8mxfps));
+  }
+  protoOf(ComposableSingletons$SubcomposeLayoutKt).get_lambda_1_bzdzzo_k$ = function () {
+    return this.lambda_1_r8sbbp_1;
+  };
+  var ComposableSingletons$SubcomposeLayoutKt_instance;
+  function ComposableSingletons$SubcomposeLayoutKt_getInstance() {
+    if (ComposableSingletons$SubcomposeLayoutKt_instance == null)
+      new ComposableSingletons$SubcomposeLayoutKt();
+    return ComposableSingletons$SubcomposeLayoutKt_instance;
+  }
+  function _get_maxSlotsToRetainForReuse__s6v49b($this) {
+    return $this.maxSlotsToRetainForReuse_1;
+  }
+  function FixedCountSubcomposeSlotReusePolicy(maxSlotsToRetainForReuse) {
+    this.maxSlotsToRetainForReuse_1 = maxSlotsToRetainForReuse;
+  }
+  protoOf(FixedCountSubcomposeSlotReusePolicy).getSlotsToRetain_nnr6zi_k$ = function (slotIds) {
+    if (slotIds.get_size_woubt6_k$() > this.maxSlotsToRetainForReuse_1) {
+      var count = 0;
+      // Inline function 'kotlin.with' call
+      var tmp0_with = slotIds.iterator_jk1svi_k$();
+      // Inline function 'kotlin.contracts.contract' call
+      while (tmp0_with.hasNext_bitz1p_k$()) {
+        tmp0_with.next_20eer_k$();
+        count = count + 1 | 0;
+        if (count > this.maxSlotsToRetainForReuse_1) {
+          tmp0_with.remove_le47v1_k$();
+        }
+      }
+    }
+  };
+  protoOf(FixedCountSubcomposeSlotReusePolicy).areCompatible_zh47cm_k$ = function (slotId, reusableSlotId) {
+    return true;
+  };
   function SubcomposeLayout$composable$lambda($modifier, $measurePolicy, $$changed, $$default) {
     return function ($composer, $force) {
       SubcomposeLayout$composable($modifier._v, $measurePolicy, $composer, updateChangedFlags($$changed | 1), $$default);
@@ -40288,84 +40299,12 @@
     return customActions$delegate.getValue_e9nbc2_k$(_this__u8e3s4, customActions$factory_0());
   }
   var customActions$delegate;
-  function SemanticsPropertyReceiver() {
+  function getTextLayoutResult(_this__u8e3s4, label, action) {
+    label = label === VOID ? null : label;
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().GetTextLayoutResult_1, new AccessibilityAction(label, action));
   }
   function get_$stableprop_67() {
-    return 0;
-  }
-  function SemanticsPropertyKey$_init_$lambda_wl0qjy(parentValue, childValue) {
-    return parentValue == null ? childValue : parentValue;
-  }
-  function SemanticsPropertyKey(name, mergePolicy) {
-    var tmp;
-    if (mergePolicy === VOID) {
-      tmp = SemanticsPropertyKey$_init_$lambda_wl0qjy;
-    } else {
-      tmp = mergePolicy;
-    }
-    mergePolicy = tmp;
-    this.name_1 = name;
-    this.mergePolicy_1 = mergePolicy;
-    this.$stable_1 = 0;
-  }
-  protoOf(SemanticsPropertyKey).get_name_woqyms_k$ = function () {
-    return this.name_1;
-  };
-  protoOf(SemanticsPropertyKey).get_mergePolicy_fkx541_k$ = function () {
-    return this.mergePolicy_1;
-  };
-  protoOf(SemanticsPropertyKey).merge_i275cp_k$ = function (parentValue, childValue) {
-    return this.mergePolicy_1(parentValue, childValue);
-  };
-  protoOf(SemanticsPropertyKey).getValue_e9nbc2_k$ = function (thisRef, property) {
-    return throwSemanticsGetNotSupported();
-  };
-  protoOf(SemanticsPropertyKey).setValue_puy6p2_k$ = function (thisRef, property, value) {
-    thisRef.set_hltzqq_k$(this, value);
-  };
-  protoOf(SemanticsPropertyKey).toString = function () {
-    return 'SemanticsPropertyKey: ' + this.name_1;
-  };
-  function get_$stableprop_68() {
-    return 0;
-  }
-  function AccessibilityAction(label, action) {
-    this.label_1 = label;
-    this.action_1 = action;
-    this.$stable_1 = 0;
-  }
-  protoOf(AccessibilityAction).get_label_iuj8p7_k$ = function () {
-    return this.label_1;
-  };
-  protoOf(AccessibilityAction).get_action_avldmn_k$ = function () {
-    return this.action_1;
-  };
-  protoOf(AccessibilityAction).equals = function (other) {
-    if (this === other)
-      return true;
-    if (!(other instanceof AccessibilityAction))
-      return false;
-    if (!(this.label_1 == other.label_1))
-      return false;
-    if (!equals(this.action_1, other.action_1))
-      return false;
-    return true;
-  };
-  protoOf(AccessibilityAction).hashCode = function () {
-    var tmp0_safe_receiver = this.label_1;
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : getStringHashCode(tmp0_safe_receiver);
-    var result = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
-    var tmp = imul(31, result);
-    // Inline function 'kotlin.hashCode' call
-    var tmp0_safe_receiver_0 = this.action_1;
-    var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : hashCode(tmp0_safe_receiver_0);
-    result = tmp + (tmp1_elvis_lhs_0 == null ? 0 : tmp1_elvis_lhs_0) | 0;
-    return result;
-  };
-  protoOf(AccessibilityAction).toString = function () {
-    return 'AccessibilityAction(label=' + this.label_1 + ', action=' + this.action_1 + ')';
-  };
-  function get_$stableprop_69() {
     return 0;
   }
   function SemanticsProperties$ContentDescription$lambda(parentValue, childValue) {
@@ -40557,209 +40496,7 @@
       new SemanticsProperties();
     return SemanticsProperties_instance;
   }
-  function Companion_28() {
-    Companion_instance_28 = this;
-    this.Indeterminate_1 = new ProgressBarRangeInfo(0.0, rangeTo(0.0, 0.0));
-  }
-  protoOf(Companion_28).get_Indeterminate_mgvzw2_k$ = function () {
-    return this.Indeterminate_1;
-  };
-  var Companion_instance_28;
-  function Companion_getInstance_51() {
-    if (Companion_instance_28 == null)
-      new Companion_28();
-    return Companion_instance_28;
-  }
-  function get_$stableprop_70() {
-    return 0;
-  }
-  function ProgressBarRangeInfo(current, range, steps) {
-    Companion_getInstance_51();
-    steps = steps === VOID ? 0 : steps;
-    this.current_1 = current;
-    this.range_1 = range;
-    this.steps_1 = steps;
-    // Inline function 'kotlin.require' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!!isNaN_0(this.current_1)) {
-      // Inline function 'androidx.compose.ui.semantics.ProgressBarRangeInfo.<anonymous>' call
-      var message = 'current must not be NaN';
-      throw IllegalArgumentException_init_$Create$(toString(message));
-    }
-    this.$stable_1 = 0;
-  }
-  protoOf(ProgressBarRangeInfo).get_current_jwi6j4_k$ = function () {
-    return this.current_1;
-  };
-  protoOf(ProgressBarRangeInfo).get_range_ixu978_k$ = function () {
-    return this.range_1;
-  };
-  protoOf(ProgressBarRangeInfo).get_steps_iyq03i_k$ = function () {
-    return this.steps_1;
-  };
-  protoOf(ProgressBarRangeInfo).equals = function (other) {
-    if (this === other)
-      return true;
-    if (!(other instanceof ProgressBarRangeInfo))
-      return false;
-    if (!(this.current_1 === other.current_1))
-      return false;
-    if (!equals(this.range_1, other.range_1))
-      return false;
-    if (!(this.steps_1 === other.steps_1))
-      return false;
-    return true;
-  };
-  protoOf(ProgressBarRangeInfo).hashCode = function () {
-    var result = getNumberHashCode(this.current_1);
-    result = imul(31, result) + hashCode(this.range_1) | 0;
-    result = imul(31, result) + this.steps_1 | 0;
-    return result;
-  };
-  protoOf(ProgressBarRangeInfo).toString = function () {
-    return 'ProgressBarRangeInfo(current=' + this.current_1 + ', range=' + this.range_1 + ', steps=' + this.steps_1 + ')';
-  };
-  function _LiveRegionMode___init__impl__qe4nr2(value) {
-    return value;
-  }
-  function _get_value__a43j40_8($this) {
-    return $this;
-  }
-  function Companion_29() {
-    Companion_instance_29 = this;
-    this.Polite_1 = _LiveRegionMode___init__impl__qe4nr2(0);
-    this.Assertive_1 = _LiveRegionMode___init__impl__qe4nr2(1);
-  }
-  protoOf(Companion_29).get_Polite_5oyu95_k$ = function () {
-    return this.Polite_1;
-  };
-  protoOf(Companion_29).get_Assertive_igz13q_k$ = function () {
-    return this.Assertive_1;
-  };
-  var Companion_instance_29;
-  function Companion_getInstance_52() {
-    if (Companion_instance_29 == null)
-      new Companion_29();
-    return Companion_instance_29;
-  }
-  function LiveRegionMode__toString_impl_bs4n26($this) {
-    return $this === Companion_getInstance_52().Polite_1 ? 'Polite' : $this === Companion_getInstance_52().Assertive_1 ? 'Assertive' : 'Unknown';
-  }
-  function LiveRegionMode__hashCode_impl_9z19qp($this) {
-    return $this;
-  }
-  function LiveRegionMode__equals_impl_87jxjf($this, other) {
-    if (!(other instanceof LiveRegionMode))
-      return false;
-    if (!($this === (other instanceof LiveRegionMode ? other.value_1 : THROW_CCE())))
-      return false;
-    return true;
-  }
-  function LiveRegionMode(value) {
-    Companion_getInstance_52();
-    this.value_1 = value;
-  }
-  protoOf(LiveRegionMode).toString = function () {
-    return LiveRegionMode__toString_impl_bs4n26(this.value_1);
-  };
-  protoOf(LiveRegionMode).hashCode = function () {
-    return LiveRegionMode__hashCode_impl_9z19qp(this.value_1);
-  };
-  protoOf(LiveRegionMode).equals = function (other) {
-    return LiveRegionMode__equals_impl_87jxjf(this.value_1, other);
-  };
-  function get_$stableprop_71() {
-    return 0;
-  }
-  function ScrollAxisRange(value, maxValue, reverseScrolling) {
-    reverseScrolling = reverseScrolling === VOID ? false : reverseScrolling;
-    this.value_1 = value;
-    this.maxValue_1 = maxValue;
-    this.reverseScrolling_1 = reverseScrolling;
-    this.$stable_1 = 0;
-  }
-  protoOf(ScrollAxisRange).get_value_j01efc_k$ = function () {
-    return this.value_1;
-  };
-  protoOf(ScrollAxisRange).get_maxValue_p78wqy_k$ = function () {
-    return this.maxValue_1;
-  };
-  protoOf(ScrollAxisRange).get_reverseScrolling_ks9n2c_k$ = function () {
-    return this.reverseScrolling_1;
-  };
-  protoOf(ScrollAxisRange).toString = function () {
-    return 'ScrollAxisRange(value=' + this.value_1() + ', maxValue=' + this.maxValue_1() + ', ' + ('reverseScrolling=' + this.reverseScrolling_1 + ')');
-  };
-  function _Role___init__impl__464ukr(value) {
-    return value;
-  }
-  function _get_value__a43j40_9($this) {
-    return $this;
-  }
-  function Companion_30() {
-    Companion_instance_30 = this;
-    this.Button_1 = _Role___init__impl__464ukr(0);
-    this.Checkbox_1 = _Role___init__impl__464ukr(1);
-    this.Switch_1 = _Role___init__impl__464ukr(2);
-    this.RadioButton_1 = _Role___init__impl__464ukr(3);
-    this.Tab_1 = _Role___init__impl__464ukr(4);
-    this.Image_1 = _Role___init__impl__464ukr(5);
-    this.DropdownList_1 = _Role___init__impl__464ukr(6);
-  }
-  protoOf(Companion_30).get_Button_5hgz49_k$ = function () {
-    return this.Button_1;
-  };
-  protoOf(Companion_30).get_Checkbox_pc0v5y_k$ = function () {
-    return this.Checkbox_1;
-  };
-  protoOf(Companion_30).get_Switch_ganlkl_k$ = function () {
-    return this.Switch_1;
-  };
-  protoOf(Companion_30).get_RadioButton_jrhtea_k$ = function () {
-    return this.RadioButton_1;
-  };
-  protoOf(Companion_30).get_Tab_hzfg62_k$ = function () {
-    return this.Tab_1;
-  };
-  protoOf(Companion_30).get_Image_q9qgyo_k$ = function () {
-    return this.Image_1;
-  };
-  protoOf(Companion_30).get_DropdownList_5vz8au_k$ = function () {
-    return this.DropdownList_1;
-  };
-  var Companion_instance_30;
-  function Companion_getInstance_53() {
-    if (Companion_instance_30 == null)
-      new Companion_30();
-    return Companion_instance_30;
-  }
-  function Role__toString_impl_ixe5w5($this) {
-    return $this === Companion_getInstance_53().Button_1 ? 'Button' : $this === Companion_getInstance_53().Checkbox_1 ? 'Checkbox' : $this === Companion_getInstance_53().Switch_1 ? 'Switch' : $this === Companion_getInstance_53().RadioButton_1 ? 'RadioButton' : $this === Companion_getInstance_53().Tab_1 ? 'Tab' : $this === Companion_getInstance_53().Image_1 ? 'Image' : $this === Companion_getInstance_53().DropdownList_1 ? 'DropdownList' : 'Unknown';
-  }
-  function Role__hashCode_impl_ucjza4($this) {
-    return $this;
-  }
-  function Role__equals_impl_cvy6o8($this, other) {
-    if (!(other instanceof Role))
-      return false;
-    if (!($this === (other instanceof Role ? other.value_1 : THROW_CCE())))
-      return false;
-    return true;
-  }
-  function Role(value) {
-    Companion_getInstance_53();
-    this.value_1 = value;
-  }
-  protoOf(Role).toString = function () {
-    return Role__toString_impl_ixe5w5(this.value_1);
-  };
-  protoOf(Role).hashCode = function () {
-    return Role__hashCode_impl_ucjza4(this.value_1);
-  };
-  protoOf(Role).equals = function (other) {
-    return Role__equals_impl_cvy6o8(this.value_1, other);
-  };
-  function get_$stableprop_72() {
+  function get_$stableprop_68() {
     return 0;
   }
   function CollectionInfo(rowCount, columnCount) {
@@ -40773,62 +40510,215 @@
   protoOf(CollectionInfo).get_columnCount_c9btc_k$ = function () {
     return this.columnCount_1;
   };
-  function get_$stableprop_73() {
+  function scrollBy(_this__u8e3s4, label, action) {
+    label = label === VOID ? null : label;
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().ScrollBy_1, new AccessibilityAction(label, action));
+  }
+  function selectableGroup(_this__u8e3s4) {
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsProperties_getInstance().SelectableGroup_1, Unit_getInstance());
+  }
+  function indexForKey(_this__u8e3s4, mapping) {
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsProperties_getInstance().IndexForKey_1, mapping);
+  }
+  function _Role___init__impl__464ukr(value) {
+    return value;
+  }
+  function _get_value__a43j40_8($this) {
+    return $this;
+  }
+  function Companion_28() {
+    Companion_instance_28 = this;
+    this.Button_1 = _Role___init__impl__464ukr(0);
+    this.Checkbox_1 = _Role___init__impl__464ukr(1);
+    this.Switch_1 = _Role___init__impl__464ukr(2);
+    this.RadioButton_1 = _Role___init__impl__464ukr(3);
+    this.Tab_1 = _Role___init__impl__464ukr(4);
+    this.Image_1 = _Role___init__impl__464ukr(5);
+    this.DropdownList_1 = _Role___init__impl__464ukr(6);
+  }
+  protoOf(Companion_28).get_Button_5hgz49_k$ = function () {
+    return this.Button_1;
+  };
+  protoOf(Companion_28).get_Checkbox_pc0v5y_k$ = function () {
+    return this.Checkbox_1;
+  };
+  protoOf(Companion_28).get_Switch_ganlkl_k$ = function () {
+    return this.Switch_1;
+  };
+  protoOf(Companion_28).get_RadioButton_jrhtea_k$ = function () {
+    return this.RadioButton_1;
+  };
+  protoOf(Companion_28).get_Tab_hzfg62_k$ = function () {
+    return this.Tab_1;
+  };
+  protoOf(Companion_28).get_Image_q9qgyo_k$ = function () {
+    return this.Image_1;
+  };
+  protoOf(Companion_28).get_DropdownList_5vz8au_k$ = function () {
+    return this.DropdownList_1;
+  };
+  var Companion_instance_28;
+  function Companion_getInstance_51() {
+    if (Companion_instance_28 == null)
+      new Companion_28();
+    return Companion_instance_28;
+  }
+  function Role__toString_impl_ixe5w5($this) {
+    return $this === Companion_getInstance_51().Button_1 ? 'Button' : $this === Companion_getInstance_51().Checkbox_1 ? 'Checkbox' : $this === Companion_getInstance_51().Switch_1 ? 'Switch' : $this === Companion_getInstance_51().RadioButton_1 ? 'RadioButton' : $this === Companion_getInstance_51().Tab_1 ? 'Tab' : $this === Companion_getInstance_51().Image_1 ? 'Image' : $this === Companion_getInstance_51().DropdownList_1 ? 'DropdownList' : 'Unknown';
+  }
+  function Role__hashCode_impl_ucjza4($this) {
+    return $this;
+  }
+  function Role__equals_impl_cvy6o8($this, other) {
+    if (!(other instanceof Role))
+      return false;
+    if (!($this === (other instanceof Role ? other.value_1 : THROW_CCE())))
+      return false;
+    return true;
+  }
+  function Role(value) {
+    Companion_getInstance_51();
+    this.value_1 = value;
+  }
+  protoOf(Role).toString = function () {
+    return Role__toString_impl_ixe5w5(this.value_1);
+  };
+  protoOf(Role).hashCode = function () {
+    return Role__hashCode_impl_ucjza4(this.value_1);
+  };
+  protoOf(Role).equals = function (other) {
+    return Role__equals_impl_cvy6o8(this.value_1, other);
+  };
+  function setSelection(_this__u8e3s4, label, action) {
+    label = label === VOID ? null : label;
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().SetSelection_1, new AccessibilityAction(label, action));
+  }
+  function insertTextAtCursor(_this__u8e3s4, label, action) {
+    label = label === VOID ? null : label;
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().InsertTextAtCursor_1, new AccessibilityAction(label, action));
+  }
+  function error(_this__u8e3s4, description) {
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsProperties_getInstance().Error_1, description);
+  }
+  function get_$stableprop_69() {
     return 0;
   }
-  function CollectionItemInfo(rowIndex, rowSpan, columnIndex, columnSpan) {
-    this.rowIndex_1 = rowIndex;
-    this.rowSpan_1 = rowSpan;
-    this.columnIndex_1 = columnIndex;
-    this.columnSpan_1 = columnSpan;
+  function SemanticsPropertyKey$_init_$lambda_wl0qjy(parentValue, childValue) {
+    return parentValue == null ? childValue : parentValue;
+  }
+  function SemanticsPropertyKey(name, mergePolicy) {
+    var tmp;
+    if (mergePolicy === VOID) {
+      tmp = SemanticsPropertyKey$_init_$lambda_wl0qjy;
+    } else {
+      tmp = mergePolicy;
+    }
+    mergePolicy = tmp;
+    this.name_1 = name;
+    this.mergePolicy_1 = mergePolicy;
     this.$stable_1 = 0;
   }
-  protoOf(CollectionItemInfo).get_rowIndex_vf3nrz_k$ = function () {
-    return this.rowIndex_1;
+  protoOf(SemanticsPropertyKey).get_name_woqyms_k$ = function () {
+    return this.name_1;
   };
-  protoOf(CollectionItemInfo).get_rowSpan_o71xsr_k$ = function () {
-    return this.rowSpan_1;
+  protoOf(SemanticsPropertyKey).get_mergePolicy_fkx541_k$ = function () {
+    return this.mergePolicy_1;
   };
-  protoOf(CollectionItemInfo).get_columnIndex_8zk25_k$ = function () {
-    return this.columnIndex_1;
+  protoOf(SemanticsPropertyKey).merge_i275cp_k$ = function (parentValue, childValue) {
+    return this.mergePolicy_1(parentValue, childValue);
   };
-  protoOf(CollectionItemInfo).get_columnSpan_g1au6h_k$ = function () {
-    return this.columnSpan_1;
+  protoOf(SemanticsPropertyKey).getValue_e9nbc2_k$ = function (thisRef, property) {
+    return throwSemanticsGetNotSupported();
   };
-  function get_$stableprop_74() {
+  protoOf(SemanticsPropertyKey).setValue_puy6p2_k$ = function (thisRef, property, value) {
+    thisRef.set_hltzqq_k$(this, value);
+  };
+  protoOf(SemanticsPropertyKey).toString = function () {
+    return 'SemanticsPropertyKey: ' + this.name_1;
+  };
+  function get_$stableprop_70() {
     return 0;
   }
-  function CustomAccessibilityAction(label, action) {
+  function AccessibilityAction(label, action) {
     this.label_1 = label;
     this.action_1 = action;
     this.$stable_1 = 0;
   }
-  protoOf(CustomAccessibilityAction).get_label_iuj8p7_k$ = function () {
+  protoOf(AccessibilityAction).get_label_iuj8p7_k$ = function () {
     return this.label_1;
   };
-  protoOf(CustomAccessibilityAction).get_action_avldmn_k$ = function () {
+  protoOf(AccessibilityAction).get_action_avldmn_k$ = function () {
     return this.action_1;
   };
-  protoOf(CustomAccessibilityAction).equals = function (other) {
+  protoOf(AccessibilityAction).equals = function (other) {
     if (this === other)
       return true;
-    if (!(other instanceof CustomAccessibilityAction))
+    if (!(other instanceof AccessibilityAction))
       return false;
-    if (!(this.label_1 === other.label_1))
+    if (!(this.label_1 == other.label_1))
       return false;
     if (!equals(this.action_1, other.action_1))
       return false;
     return true;
   };
-  protoOf(CustomAccessibilityAction).hashCode = function () {
-    var result = getStringHashCode(this.label_1);
-    result = imul(31, result) + hashCode(this.action_1) | 0;
+  protoOf(AccessibilityAction).hashCode = function () {
+    var tmp0_safe_receiver = this.label_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : getStringHashCode(tmp0_safe_receiver);
+    var result = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
+    var tmp = imul(31, result);
+    // Inline function 'kotlin.hashCode' call
+    var tmp0_safe_receiver_0 = this.action_1;
+    var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : hashCode(tmp0_safe_receiver_0);
+    result = tmp + (tmp1_elvis_lhs_0 == null ? 0 : tmp1_elvis_lhs_0) | 0;
     return result;
   };
-  protoOf(CustomAccessibilityAction).toString = function () {
-    return 'CustomAccessibilityAction(label=' + this.label_1 + ', action=' + this.action_1 + ')';
+  protoOf(AccessibilityAction).toString = function () {
+    return 'AccessibilityAction(label=' + this.label_1 + ', action=' + this.action_1 + ')';
   };
-  function get_$stableprop_75() {
+  function disabled(_this__u8e3s4) {
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsProperties_getInstance().Disabled_1, Unit_getInstance());
+  }
+  function onLongClick(_this__u8e3s4, label, action) {
+    label = label === VOID ? null : label;
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().OnLongClick_1, new AccessibilityAction(label, action));
+  }
+  function copyText(_this__u8e3s4, label, action) {
+    label = label === VOID ? null : label;
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().CopyText_1, new AccessibilityAction(label, action));
+  }
+  function scrollToIndex(_this__u8e3s4, label, action) {
+    label = label === VOID ? null : label;
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().ScrollToIndex_1, new AccessibilityAction(label, action));
+  }
+  function performImeAction(_this__u8e3s4, label, action) {
+    label = label === VOID ? null : label;
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().PerformImeAction_1, new AccessibilityAction(label, action));
+  }
+  function setText(_this__u8e3s4, label, action) {
+    label = label === VOID ? null : label;
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().SetText_1, new AccessibilityAction(label, action));
+  }
+  function set_contentDescription(_this__u8e3s4, value) {
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsProperties_getInstance().ContentDescription_1, listOf_0(value));
+  }
+  function get_contentDescription(_this__u8e3s4) {
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    return throwSemanticsGetNotSupported();
+  }
+  function get_$stableprop_71() {
     return 0;
   }
   function SemanticsActions$GetTextLayoutResult$lambda(parentValue, childValue) {
@@ -41097,44 +40987,44 @@
       new SemanticsActions();
     return SemanticsActions_instance;
   }
-  function throwSemanticsGetNotSupported() {
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    throw UnsupportedOperationException_init_$Create$('You cannot retrieve a semantics property directly - use one of the SemanticsConfiguration.getOr* methods instead');
-  }
-  function ActionPropertyKey(name) {
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    return new SemanticsPropertyKey(name, ActionPropertyKey$lambda);
-  }
-  function set_contentDescription(_this__u8e3s4, value) {
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    _this__u8e3s4.set_hltzqq_k$(SemanticsProperties_getInstance().ContentDescription_1, listOf_0(value));
-  }
-  function get_contentDescription(_this__u8e3s4) {
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    return throwSemanticsGetNotSupported();
-  }
-  function error(_this__u8e3s4, description) {
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    _this__u8e3s4.set_hltzqq_k$(SemanticsProperties_getInstance().Error_1, description);
-  }
   function requestFocus_1(_this__u8e3s4, label, action) {
     label = label === VOID ? null : label;
     _init_properties_SemanticsProperties_kt__mp85yq();
     _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().RequestFocus_1, new AccessibilityAction(label, action));
   }
+  function SemanticsPropertyReceiver() {
+  }
+  function get_$stableprop_72() {
+    return 0;
+  }
+  function ScrollAxisRange(value, maxValue, reverseScrolling) {
+    reverseScrolling = reverseScrolling === VOID ? false : reverseScrolling;
+    this.value_1 = value;
+    this.maxValue_1 = maxValue;
+    this.reverseScrolling_1 = reverseScrolling;
+    this.$stable_1 = 0;
+  }
+  protoOf(ScrollAxisRange).get_value_j01efc_k$ = function () {
+    return this.value_1;
+  };
+  protoOf(ScrollAxisRange).get_maxValue_p78wqy_k$ = function () {
+    return this.maxValue_1;
+  };
+  protoOf(ScrollAxisRange).get_reverseScrolling_ks9n2c_k$ = function () {
+    return this.reverseScrolling_1;
+  };
+  protoOf(ScrollAxisRange).toString = function () {
+    return 'ScrollAxisRange(value=' + this.value_1() + ', maxValue=' + this.maxValue_1() + ', ' + ('reverseScrolling=' + this.reverseScrolling_1 + ')');
+  };
+  function cutText(_this__u8e3s4, label, action) {
+    label = label === VOID ? null : label;
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().CutText_1, new AccessibilityAction(label, action));
+  }
   function onClick(_this__u8e3s4, label, action) {
     label = label === VOID ? null : label;
     _init_properties_SemanticsProperties_kt__mp85yq();
     _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().OnClick_1, new AccessibilityAction(label, action));
-  }
-  function onLongClick(_this__u8e3s4, label, action) {
-    label = label === VOID ? null : label;
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().OnLongClick_1, new AccessibilityAction(label, action));
-  }
-  function disabled(_this__u8e3s4) {
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    _this__u8e3s4.set_hltzqq_k$(SemanticsProperties_getInstance().Disabled_1, Unit_getInstance());
   }
   function set_text(_this__u8e3s4, value) {
     _init_properties_SemanticsProperties_kt__mp85yq();
@@ -41144,53 +41034,188 @@
     _init_properties_SemanticsProperties_kt__mp85yq();
     return throwSemanticsGetNotSupported();
   }
-  function getTextLayoutResult(_this__u8e3s4, label, action) {
+  function pasteText(_this__u8e3s4, label, action) {
     label = label === VOID ? null : label;
     _init_properties_SemanticsProperties_kt__mp85yq();
-    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().GetTextLayoutResult_1, new AccessibilityAction(label, action));
-  }
-  function selectableGroup(_this__u8e3s4) {
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    _this__u8e3s4.set_hltzqq_k$(SemanticsProperties_getInstance().SelectableGroup_1, Unit_getInstance());
+    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().PasteText_1, new AccessibilityAction(label, action));
   }
   function password(_this__u8e3s4) {
     _init_properties_SemanticsProperties_kt__mp85yq();
     _this__u8e3s4.set_hltzqq_k$(SemanticsProperties_getInstance().Password_1, Unit_getInstance());
   }
-  function setText(_this__u8e3s4, label, action) {
-    label = label === VOID ? null : label;
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().SetText_1, new AccessibilityAction(label, action));
+  function Companion_29() {
+    Companion_instance_29 = this;
+    this.Indeterminate_1 = new ProgressBarRangeInfo(0.0, rangeTo(0.0, 0.0));
   }
-  function insertTextAtCursor(_this__u8e3s4, label, action) {
-    label = label === VOID ? null : label;
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().InsertTextAtCursor_1, new AccessibilityAction(label, action));
+  protoOf(Companion_29).get_Indeterminate_mgvzw2_k$ = function () {
+    return this.Indeterminate_1;
+  };
+  var Companion_instance_29;
+  function Companion_getInstance_52() {
+    if (Companion_instance_29 == null)
+      new Companion_29();
+    return Companion_instance_29;
   }
-  function setSelection(_this__u8e3s4, label, action) {
-    label = label === VOID ? null : label;
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().SetSelection_1, new AccessibilityAction(label, action));
+  function get_$stableprop_73() {
+    return 0;
   }
-  function performImeAction(_this__u8e3s4, label, action) {
-    label = label === VOID ? null : label;
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().PerformImeAction_1, new AccessibilityAction(label, action));
+  function ProgressBarRangeInfo(current, range, steps) {
+    Companion_getInstance_52();
+    steps = steps === VOID ? 0 : steps;
+    this.current_1 = current;
+    this.range_1 = range;
+    this.steps_1 = steps;
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!!isNaN_0(this.current_1)) {
+      // Inline function 'androidx.compose.ui.semantics.ProgressBarRangeInfo.<anonymous>' call
+      var message = 'current must not be NaN';
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    this.$stable_1 = 0;
   }
-  function copyText(_this__u8e3s4, label, action) {
-    label = label === VOID ? null : label;
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().CopyText_1, new AccessibilityAction(label, action));
+  protoOf(ProgressBarRangeInfo).get_current_jwi6j4_k$ = function () {
+    return this.current_1;
+  };
+  protoOf(ProgressBarRangeInfo).get_range_ixu978_k$ = function () {
+    return this.range_1;
+  };
+  protoOf(ProgressBarRangeInfo).get_steps_iyq03i_k$ = function () {
+    return this.steps_1;
+  };
+  protoOf(ProgressBarRangeInfo).equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof ProgressBarRangeInfo))
+      return false;
+    if (!(this.current_1 === other.current_1))
+      return false;
+    if (!equals(this.range_1, other.range_1))
+      return false;
+    if (!(this.steps_1 === other.steps_1))
+      return false;
+    return true;
+  };
+  protoOf(ProgressBarRangeInfo).hashCode = function () {
+    var result = getNumberHashCode(this.current_1);
+    result = imul(31, result) + hashCode(this.range_1) | 0;
+    result = imul(31, result) + this.steps_1 | 0;
+    return result;
+  };
+  protoOf(ProgressBarRangeInfo).toString = function () {
+    return 'ProgressBarRangeInfo(current=' + this.current_1 + ', range=' + this.range_1 + ', steps=' + this.steps_1 + ')';
+  };
+  function _LiveRegionMode___init__impl__qe4nr2(value) {
+    return value;
   }
-  function cutText(_this__u8e3s4, label, action) {
-    label = label === VOID ? null : label;
-    _init_properties_SemanticsProperties_kt__mp85yq();
-    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().CutText_1, new AccessibilityAction(label, action));
+  function _get_value__a43j40_9($this) {
+    return $this;
   }
-  function pasteText(_this__u8e3s4, label, action) {
-    label = label === VOID ? null : label;
+  function Companion_30() {
+    Companion_instance_30 = this;
+    this.Polite_1 = _LiveRegionMode___init__impl__qe4nr2(0);
+    this.Assertive_1 = _LiveRegionMode___init__impl__qe4nr2(1);
+  }
+  protoOf(Companion_30).get_Polite_5oyu95_k$ = function () {
+    return this.Polite_1;
+  };
+  protoOf(Companion_30).get_Assertive_igz13q_k$ = function () {
+    return this.Assertive_1;
+  };
+  var Companion_instance_30;
+  function Companion_getInstance_53() {
+    if (Companion_instance_30 == null)
+      new Companion_30();
+    return Companion_instance_30;
+  }
+  function LiveRegionMode__toString_impl_bs4n26($this) {
+    return $this === Companion_getInstance_53().Polite_1 ? 'Polite' : $this === Companion_getInstance_53().Assertive_1 ? 'Assertive' : 'Unknown';
+  }
+  function LiveRegionMode__hashCode_impl_9z19qp($this) {
+    return $this;
+  }
+  function LiveRegionMode__equals_impl_87jxjf($this, other) {
+    if (!(other instanceof LiveRegionMode))
+      return false;
+    if (!($this === (other instanceof LiveRegionMode ? other.value_1 : THROW_CCE())))
+      return false;
+    return true;
+  }
+  function LiveRegionMode(value) {
+    Companion_getInstance_53();
+    this.value_1 = value;
+  }
+  protoOf(LiveRegionMode).toString = function () {
+    return LiveRegionMode__toString_impl_bs4n26(this.value_1);
+  };
+  protoOf(LiveRegionMode).hashCode = function () {
+    return LiveRegionMode__hashCode_impl_9z19qp(this.value_1);
+  };
+  protoOf(LiveRegionMode).equals = function (other) {
+    return LiveRegionMode__equals_impl_87jxjf(this.value_1, other);
+  };
+  function get_$stableprop_74() {
+    return 0;
+  }
+  function CollectionItemInfo(rowIndex, rowSpan, columnIndex, columnSpan) {
+    this.rowIndex_1 = rowIndex;
+    this.rowSpan_1 = rowSpan;
+    this.columnIndex_1 = columnIndex;
+    this.columnSpan_1 = columnSpan;
+    this.$stable_1 = 0;
+  }
+  protoOf(CollectionItemInfo).get_rowIndex_vf3nrz_k$ = function () {
+    return this.rowIndex_1;
+  };
+  protoOf(CollectionItemInfo).get_rowSpan_o71xsr_k$ = function () {
+    return this.rowSpan_1;
+  };
+  protoOf(CollectionItemInfo).get_columnIndex_8zk25_k$ = function () {
+    return this.columnIndex_1;
+  };
+  protoOf(CollectionItemInfo).get_columnSpan_g1au6h_k$ = function () {
+    return this.columnSpan_1;
+  };
+  function get_$stableprop_75() {
+    return 0;
+  }
+  function CustomAccessibilityAction(label, action) {
+    this.label_1 = label;
+    this.action_1 = action;
+    this.$stable_1 = 0;
+  }
+  protoOf(CustomAccessibilityAction).get_label_iuj8p7_k$ = function () {
+    return this.label_1;
+  };
+  protoOf(CustomAccessibilityAction).get_action_avldmn_k$ = function () {
+    return this.action_1;
+  };
+  protoOf(CustomAccessibilityAction).equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof CustomAccessibilityAction))
+      return false;
+    if (!(this.label_1 === other.label_1))
+      return false;
+    if (!equals(this.action_1, other.action_1))
+      return false;
+    return true;
+  };
+  protoOf(CustomAccessibilityAction).hashCode = function () {
+    var result = getStringHashCode(this.label_1);
+    result = imul(31, result) + hashCode(this.action_1) | 0;
+    return result;
+  };
+  protoOf(CustomAccessibilityAction).toString = function () {
+    return 'CustomAccessibilityAction(label=' + this.label_1 + ', action=' + this.action_1 + ')';
+  };
+  function throwSemanticsGetNotSupported() {
     _init_properties_SemanticsProperties_kt__mp85yq();
-    _this__u8e3s4.set_hltzqq_k$(SemanticsActions_getInstance().PasteText_1, new AccessibilityAction(label, action));
+    throw UnsupportedOperationException_init_$Create$('You cannot retrieve a semantics property directly - use one of the SemanticsConfiguration.getOr* methods instead');
+  }
+  function ActionPropertyKey(name) {
+    _init_properties_SemanticsProperties_kt__mp85yq();
+    return new SemanticsPropertyKey(name, ActionPropertyKey$lambda);
   }
   function ActionPropertyKey$lambda(parentValue, childValue) {
     _init_properties_SemanticsProperties_kt__mp85yq();
@@ -49285,20 +49310,20 @@
   InvalidFocusDirection_0 = 'This function should only be used for 2-D focus search';
   NoActiveChild_0 = 'ActiveParent must have a focusedChild';
   DefaultCameraDistance = 8.0;
-  DefaultGroupName = '';
-  DefaultRotation = 0.0;
-  DefaultPivotX = 0.0;
-  DefaultPivotY = 0.0;
-  DefaultScaleX = 1.0;
-  DefaultScaleY = 1.0;
-  DefaultTranslationX = 0.0;
-  DefaultTranslationY = 0.0;
-  DefaultPathName = '';
-  DefaultStrokeLineWidth = 0.0;
-  DefaultStrokeLineMiter = 4.0;
   DefaultTrimPathStart = 0.0;
+  DefaultStrokeLineWidth = 0.0;
+  DefaultTranslationY = 0.0;
+  DefaultPivotX = 0.0;
+  DefaultScaleY = 1.0;
+  DefaultPathName = '';
+  DefaultTranslationX = 0.0;
+  DefaultRotation = 0.0;
+  DefaultPivotY = 0.0;
   DefaultTrimPathEnd = 1.0;
   DefaultTrimPathOffset = 0.0;
+  DefaultScaleX = 1.0;
+  DefaultStrokeLineMiter = 4.0;
+  DefaultGroupName = '';
   RootGroupName = 'VectorRootGroup';
   HistorySize = 20;
   HorizonMilliseconds = 100;
@@ -49339,204 +49364,236 @@
   _.$_$.r = requestFocus;
   _.$_$.s = get_DefaultFillType;
   _.$_$.t = get_DefaultPathName;
-  _.$_$.u = Builder;
-  _.$_$.v = rememberVectorPainter$composable;
-  _.$_$.w = TransformOrigin_0;
-  _.$_$.x = TransformOrigin;
-  _.$_$.y = graphicsLayer_0;
-  _.$_$.z = graphicsLayer;
-  _.$_$.a1 = toolingGraphicsLayer;
-  _.$_$.b1 = KeyEvent;
-  _.$_$.c1 = KeyInputModifierNode;
-  _.$_$.d1 = Key_2;
-  _.$_$.e1 = get_isAltPressed;
-  _.$_$.f1 = get_isCtrlPressed;
-  _.$_$.g1 = get_isMetaPressed;
-  _.$_$.h1 = get_isShiftPressed;
-  _.$_$.i1 = get_key_1;
-  _.$_$.j1 = onKeyEvent;
-  _.$_$.k1 = onPreviewKeyEvent;
-  _.$_$.l1 = get_type;
-  _.$_$.m1 = get_utf16CodePoint;
-  _.$_$.n1 = onPreScroll;
-  _.$_$.o1 = NestedScrollConnection;
-  _.$_$.p1 = NestedScrollDispatcher;
-  _.$_$.q1 = nestedScroll;
-  _.$_$.r1 = VelocityTracker;
-  _.$_$.s1 = addPointerInputChange;
-  _.$_$.t1 = AwaitPointerEventScope;
-  _.$_$.u1 = PointerEventTimeoutCancellationException;
-  _.$_$.v1 = PointerInputScope;
-  _.$_$.w1 = SuspendingPointerInputModifierNode_0;
-  _.$_$.x1 = changedToDownIgnoreConsumed;
-  _.$_$.y1 = changedToDown;
-  _.$_$.z1 = changedToUpIgnoreConsumed;
-  _.$_$.a2 = changedToUp;
-  _.$_$.b2 = isOutOfBounds_0;
-  _.$_$.c2 = get_isPrimaryPressed;
-  _.$_$.d2 = get_isShiftPressed_0;
-  _.$_$.e2 = pointerHoverIcon;
-  _.$_$.f2 = pointerInput;
-  _.$_$.g2 = positionChangeIgnoreConsumed;
-  _.$_$.h2 = positionChangedIgnoreConsumed;
-  _.$_$.i2 = positionChange;
-  _.$_$.j2 = get_FirstBaseline;
-  _.$_$.k2 = get_LastBaseline;
-  _.$_$.l2 = LayoutCoordinates;
-  _.$_$.m2 = LayoutIdParentData;
-  _.$_$.n2 = maxIntrinsicHeight_0;
-  _.$_$.o2 = maxIntrinsicWidth_0;
-  _.$_$.p2 = minIntrinsicHeight_0;
-  _.$_$.q2 = minIntrinsicWidth_0;
-  _.$_$.r2 = LayoutModifier;
-  _.$_$.s2 = get_LocalPinnableContainer;
-  _.$_$.t2 = maxIntrinsicHeight_1;
-  _.$_$.u2 = maxIntrinsicWidth_1;
-  _.$_$.v2 = minIntrinsicHeight_1;
-  _.$_$.w2 = minIntrinsicWidth_1;
-  _.$_$.x2 = MeasurePolicy;
-  _.$_$.y2 = OnPlacedModifier;
-  _.$_$.z2 = OnRemeasuredModifier;
-  _.$_$.a3 = Placeable;
-  _.$_$.b3 = SubcomposeLayout$composable;
-  _.$_$.c3 = boundsInParent;
-  _.$_$.d3 = boundsInWindow;
-  _.$_$.e3 = get_layoutId;
-  _.$_$.f3 = layoutId;
-  _.$_$.g3 = layout_0;
-  _.$_$.h3 = materializerOf;
-  _.$_$.i3 = onGloballyPositioned;
-  _.$_$.j3 = onPlaced_0;
-  _.$_$.k3 = onSizeChanged;
-  _.$_$.l3 = ModifierLocalConsumer;
-  _.$_$.m3 = get_current;
-  _.$_$.n3 = get_providedValues;
-  _.$_$.o3 = provide;
-  _.$_$.p3 = ModifierLocalModifierNode;
-  _.$_$.q3 = ModifierLocalProvider;
-  _.$_$.r3 = modifierLocalMapOf;
-  _.$_$.s3 = modifierLocalOf;
-  _.$_$.t3 = CompositionLocalConsumerModifierNode;
-  _.$_$.u3 = DelegatingNode;
-  _.$_$.v3 = onMeasureResultChanged;
-  _.$_$.w3 = DrawModifierNode;
-  _.$_$.x3 = GlobalPositionAwareModifierNode;
-  _.$_$.y3 = onRemeasured;
-  _.$_$.z3 = LayoutAwareModifierNode;
-  _.$_$.a4 = maxIntrinsicHeight;
-  _.$_$.b4 = maxIntrinsicWidth;
-  _.$_$.c4 = minIntrinsicHeight;
-  _.$_$.d4 = minIntrinsicWidth;
-  _.$_$.e4 = LayoutModifierNode;
-  _.$_$.f4 = ModifierNodeElement;
-  _.$_$.g4 = ObserverModifierNode;
-  _.$_$.h4 = ParentDataModifierNode;
-  _.$_$.i4 = interceptOutOfBoundsChildEvents;
-  _.$_$.j4 = onDensityChange;
-  _.$_$.k4 = onViewConfigurationChange;
-  _.$_$.l4 = sharePointerInputWithSiblings;
-  _.$_$.m4 = PointerInputModifierNode;
-  _.$_$.n4 = get_shouldClearDescendantSemantics;
-  _.$_$.o4 = get_shouldMergeDescendantSemantics;
-  _.$_$.p4 = SemanticsModifierNode;
-  _.$_$.q4 = currentValueOf;
-  _.$_$.r4 = invalidateDraw;
-  _.$_$.s4 = invalidateLayer;
-  _.$_$.t4 = invalidateMeasurement;
-  _.$_$.u4 = invalidateSemantics;
-  _.$_$.v4 = observeReads;
-  _.$_$.w4 = InspectableModifier;
-  _.$_$.x4 = get_inspectableElements;
-  _.$_$.y4 = get_nameFallback;
-  _.$_$.z4 = InspectableValue;
-  _.$_$.a5 = InspectorValueInfo;
-  _.$_$.b5 = get_LocalClipboardManager;
-  _.$_$.c5 = get_LocalDensity;
-  _.$_$.d5 = get_LocalFocusManager;
-  _.$_$.e5 = get_LocalFontFamilyResolver;
-  _.$_$.f5 = get_LocalHapticFeedback;
-  _.$_$.g5 = get_LocalInputModeManager;
-  _.$_$.h5 = get_LocalLayoutDirection;
-  _.$_$.i5 = get_LocalTextInputService;
-  _.$_$.j5 = get_LocalTextToolbar;
-  _.$_$.k5 = get_LocalWindowInfo;
-  _.$_$.l5 = get_NoInspectorInfo;
-  _.$_$.m5 = inspectableWrapper;
-  _.$_$.n5 = get_isDebugInspectorInfoEnabled;
-  _.$_$.o5 = Role;
-  _.$_$.p5 = SemanticsConfiguration;
-  _.$_$.q5 = SemanticsPropertyKey;
-  _.$_$.r5 = clearAndSetSemantics;
-  _.$_$.s5 = set_contentDescription;
-  _.$_$.t5 = copyText;
-  _.$_$.u5 = cutText;
-  _.$_$.v5 = disabled;
-  _.$_$.w5 = set_editableText;
-  _.$_$.x5 = error;
-  _.$_$.y5 = set_focused;
-  _.$_$.z5 = getTextLayoutResult;
-  _.$_$.a6 = set_imeAction;
-  _.$_$.b6 = insertTextAtCursor;
-  _.$_$.c6 = set_isContainer;
-  _.$_$.d6 = onClick;
-  _.$_$.e6 = onLongClick;
-  _.$_$.f6 = password;
-  _.$_$.g6 = pasteText;
-  _.$_$.h6 = performImeAction;
-  _.$_$.i6 = requestFocus_1;
-  _.$_$.j6 = set_role;
-  _.$_$.k6 = selectableGroup;
-  _.$_$.l6 = set_selected;
-  _.$_$.m6 = semantics;
-  _.$_$.n6 = setSelection;
-  _.$_$.o6 = setText;
-  _.$_$.p6 = set_text;
-  _.$_$.q6 = set_textSelectionRange;
-  _.$_$.r6 = CanvasBasedWindow$composable;
-  _.$_$.s6 = Alignment;
-  _.$_$.t6 = get_LocalSystemTheme;
-  _.$_$.u6 = all;
-  _.$_$.v6 = any;
-  _.$_$.w6 = foldIn;
-  _.$_$.x6 = foldOut;
-  _.$_$.y6 = Node;
-  _.$_$.z6 = then;
-  _.$_$.a7 = get_key;
-  _.$_$.b7 = MotionDurationScale;
-  _.$_$.c7 = composed$composable;
-  _.$_$.d7 = materialize;
-  _.$_$.e7 = zIndex;
-  _.$_$.f7 = PointerEventPass_Final_getInstance;
-  _.$_$.g7 = PointerEventPass_Initial_getInstance;
-  _.$_$.h7 = PointerEventPass_Main_getInstance;
-  _.$_$.i7 = TextToolbarStatus_Hidden_getInstance;
-  _.$_$.j7 = TextToolbarStatus_Shown_getInstance;
-  _.$_$.k7 = SystemTheme_Dark_getInstance;
-  _.$_$.l7 = onPreFling;
-  _.$_$.m7 = TransformOrigin__hashCode_impl_pmqpcw;
-  _.$_$.n7 = _TransformOrigin___get_pivotFractionX__impl__a9pmci;
-  _.$_$.o7 = _TransformOrigin___get_pivotFractionY__impl__ijwupp;
-  _.$_$.p7 = _Key___init__impl__p6mluu;
-  _.$_$.q7 = _Key___get_keyCode__impl__ymzu5v;
-  _.$_$.r7 = _KeyEvent___get_nativeKeyEvent__impl__py13j5;
-  _.$_$.s7 = Role__hashCode_impl_ucjza4;
-  _.$_$.t7 = Companion_getInstance_25;
-  _.$_$.u7 = Companion_getInstance_30;
-  _.$_$.v7 = Companion_getInstance_54;
-  _.$_$.w7 = Companion_getInstance_32;
-  _.$_$.x7 = Companion_getInstance_33;
-  _.$_$.y7 = DummyPointerIcon_getInstance;
-  _.$_$.z7 = Companion_getInstance_34;
-  _.$_$.a8 = Companion_getInstance_35;
-  _.$_$.b8 = Companion_getInstance_31;
-  _.$_$.c8 = Companion_getInstance_37;
-  _.$_$.d8 = Companion_getInstance_39;
-  _.$_$.e8 = Companion_getInstance_42;
-  _.$_$.f8 = Key_getInstance_1;
-  _.$_$.g8 = Companion_getInstance_53;
-  _.$_$.h8 = Companion_getInstance_22;
-  _.$_$.i8 = Companion_getInstance_23;
-  _.$_$.j8 = Key_getInstance_0;
+  _.$_$.u = get_DefaultPivotX;
+  _.$_$.v = get_DefaultPivotY;
+  _.$_$.w = get_DefaultRotation;
+  _.$_$.x = get_DefaultScaleX;
+  _.$_$.y = get_DefaultScaleY;
+  _.$_$.z = get_DefaultTranslationX;
+  _.$_$.a1 = get_DefaultTranslationY;
+  _.$_$.b1 = get_EmptyPath;
+  _.$_$.c1 = Builder;
+  _.$_$.d1 = addPathNodes;
+  _.$_$.e1 = rememberVectorPainter$composable;
+  _.$_$.f1 = TransformOrigin_0;
+  _.$_$.g1 = TransformOrigin;
+  _.$_$.h1 = graphicsLayer_0;
+  _.$_$.i1 = graphicsLayer;
+  _.$_$.j1 = toolingGraphicsLayer;
+  _.$_$.k1 = KeyEvent;
+  _.$_$.l1 = KeyInputModifierNode;
+  _.$_$.m1 = Key_2;
+  _.$_$.n1 = get_isAltPressed;
+  _.$_$.o1 = get_isCtrlPressed;
+  _.$_$.p1 = get_isMetaPressed;
+  _.$_$.q1 = get_isShiftPressed;
+  _.$_$.r1 = get_key_1;
+  _.$_$.s1 = onKeyEvent;
+  _.$_$.t1 = onPreviewKeyEvent;
+  _.$_$.u1 = get_type;
+  _.$_$.v1 = get_utf16CodePoint;
+  _.$_$.w1 = onPreScroll;
+  _.$_$.x1 = NestedScrollConnection;
+  _.$_$.y1 = NestedScrollDispatcher;
+  _.$_$.z1 = nestedScroll;
+  _.$_$.a2 = VelocityTracker;
+  _.$_$.b2 = addPointerInputChange;
+  _.$_$.c2 = AwaitPointerEventScope;
+  _.$_$.d2 = PointerEventTimeoutCancellationException;
+  _.$_$.e2 = PointerInputScope;
+  _.$_$.f2 = SuspendingPointerInputModifierNode_0;
+  _.$_$.g2 = changedToDownIgnoreConsumed;
+  _.$_$.h2 = changedToDown;
+  _.$_$.i2 = changedToUpIgnoreConsumed;
+  _.$_$.j2 = changedToUp;
+  _.$_$.k2 = isOutOfBounds_0;
+  _.$_$.l2 = get_isPrimaryPressed;
+  _.$_$.m2 = get_isShiftPressed_0;
+  _.$_$.n2 = pointerHoverIcon;
+  _.$_$.o2 = pointerInput;
+  _.$_$.p2 = positionChangeIgnoreConsumed;
+  _.$_$.q2 = positionChangedIgnoreConsumed;
+  _.$_$.r2 = positionChange;
+  _.$_$.s2 = BeyondBoundsScope;
+  _.$_$.t2 = BeyondBoundsLayout;
+  _.$_$.u2 = get_FirstBaseline;
+  _.$_$.v2 = get_LastBaseline;
+  _.$_$.w2 = LayoutCoordinates;
+  _.$_$.x2 = LayoutIdParentData;
+  _.$_$.y2 = maxIntrinsicHeight_0;
+  _.$_$.z2 = maxIntrinsicWidth_0;
+  _.$_$.a3 = minIntrinsicHeight_0;
+  _.$_$.b3 = minIntrinsicWidth_0;
+  _.$_$.c3 = LayoutModifier;
+  _.$_$.d3 = get_LocalPinnableContainer;
+  _.$_$.e3 = maxIntrinsicHeight_1;
+  _.$_$.f3 = maxIntrinsicWidth_1;
+  _.$_$.g3 = minIntrinsicHeight_1;
+  _.$_$.h3 = minIntrinsicWidth_1;
+  _.$_$.i3 = MeasurePolicy;
+  _.$_$.j3 = MeasureResult;
+  _.$_$.k3 = MeasureScope;
+  _.$_$.l3 = get_ModifierLocalBeyondBoundsLayout;
+  _.$_$.m3 = OnGloballyPositionedModifier;
+  _.$_$.n3 = OnPlacedModifier;
+  _.$_$.o3 = OnRemeasuredModifier;
+  _.$_$.p3 = PinnedHandle;
+  _.$_$.q3 = PinnableContainer;
+  _.$_$.r3 = Placeable;
+  _.$_$.s3 = RemeasurementModifier;
+  _.$_$.t3 = SubcomposeLayout$composable;
+  _.$_$.u3 = SubcomposeLayout$composable_0;
+  _.$_$.v3 = SubcomposeLayoutState;
+  _.$_$.w3 = SubcomposeSlotReusePolicy;
+  _.$_$.x3 = boundsInParent;
+  _.$_$.y3 = boundsInWindow;
+  _.$_$.z3 = get_layoutId;
+  _.$_$.a4 = layoutId;
+  _.$_$.b4 = layout_0;
+  _.$_$.c4 = materializerOf;
+  _.$_$.d4 = onGloballyPositioned;
+  _.$_$.e4 = onPlaced_0;
+  _.$_$.f4 = onSizeChanged;
+  _.$_$.g4 = ModifierLocalConsumer;
+  _.$_$.h4 = get_current;
+  _.$_$.i4 = get_providedValues;
+  _.$_$.j4 = provide;
+  _.$_$.k4 = ModifierLocalModifierNode;
+  _.$_$.l4 = ModifierLocalProvider;
+  _.$_$.m4 = modifierLocalMapOf;
+  _.$_$.n4 = modifierLocalOf;
+  _.$_$.o4 = CompositionLocalConsumerModifierNode;
+  _.$_$.p4 = DelegatingNode;
+  _.$_$.q4 = onMeasureResultChanged;
+  _.$_$.r4 = DrawModifierNode;
+  _.$_$.s4 = GlobalPositionAwareModifierNode;
+  _.$_$.t4 = onRemeasured;
+  _.$_$.u4 = LayoutAwareModifierNode;
+  _.$_$.v4 = maxIntrinsicHeight;
+  _.$_$.w4 = maxIntrinsicWidth;
+  _.$_$.x4 = minIntrinsicHeight;
+  _.$_$.y4 = minIntrinsicWidth;
+  _.$_$.z4 = LayoutModifierNode;
+  _.$_$.a5 = ModifierNodeElement;
+  _.$_$.b5 = ObserverModifierNode;
+  _.$_$.c5 = ParentDataModifierNode;
+  _.$_$.d5 = interceptOutOfBoundsChildEvents;
+  _.$_$.e5 = onDensityChange;
+  _.$_$.f5 = onViewConfigurationChange;
+  _.$_$.g5 = sharePointerInputWithSiblings;
+  _.$_$.h5 = PointerInputModifierNode;
+  _.$_$.i5 = get_shouldClearDescendantSemantics;
+  _.$_$.j5 = get_shouldMergeDescendantSemantics;
+  _.$_$.k5 = SemanticsModifierNode;
+  _.$_$.l5 = currentValueOf;
+  _.$_$.m5 = invalidateDraw;
+  _.$_$.n5 = invalidateLayer;
+  _.$_$.o5 = invalidateMeasurement;
+  _.$_$.p5 = invalidateSemantics;
+  _.$_$.q5 = observeReads;
+  _.$_$.r5 = InspectableModifier;
+  _.$_$.s5 = get_inspectableElements;
+  _.$_$.t5 = get_nameFallback;
+  _.$_$.u5 = InspectableValue;
+  _.$_$.v5 = InspectorValueInfo;
+  _.$_$.w5 = get_LocalClipboardManager;
+  _.$_$.x5 = get_LocalDensity;
+  _.$_$.y5 = get_LocalFocusManager;
+  _.$_$.z5 = get_LocalFontFamilyResolver;
+  _.$_$.a6 = get_LocalHapticFeedback;
+  _.$_$.b6 = get_LocalInputModeManager;
+  _.$_$.c6 = get_LocalLayoutDirection;
+  _.$_$.d6 = get_LocalTextInputService;
+  _.$_$.e6 = get_LocalTextToolbar;
+  _.$_$.f6 = get_LocalWindowInfo;
+  _.$_$.g6 = get_NoInspectorInfo;
+  _.$_$.h6 = inspectableWrapper;
+  _.$_$.i6 = get_isDebugInspectorInfoEnabled;
+  _.$_$.j6 = CollectionInfo;
+  _.$_$.k6 = Role;
+  _.$_$.l6 = ScrollAxisRange;
+  _.$_$.m6 = SemanticsConfiguration;
+  _.$_$.n6 = SemanticsPropertyKey;
+  _.$_$.o6 = clearAndSetSemantics;
+  _.$_$.p6 = set_collectionInfo;
+  _.$_$.q6 = set_contentDescription;
+  _.$_$.r6 = copyText;
+  _.$_$.s6 = cutText;
+  _.$_$.t6 = disabled;
+  _.$_$.u6 = set_editableText;
+  _.$_$.v6 = error;
+  _.$_$.w6 = set_focused;
+  _.$_$.x6 = getTextLayoutResult;
+  _.$_$.y6 = set_horizontalScrollAxisRange;
+  _.$_$.z6 = set_imeAction;
+  _.$_$.a7 = indexForKey;
+  _.$_$.b7 = insertTextAtCursor;
+  _.$_$.c7 = set_isContainer;
+  _.$_$.d7 = set_isTraversalGroup;
+  _.$_$.e7 = onClick;
+  _.$_$.f7 = onLongClick;
+  _.$_$.g7 = password;
+  _.$_$.h7 = pasteText;
+  _.$_$.i7 = performImeAction;
+  _.$_$.j7 = requestFocus_1;
+  _.$_$.k7 = set_role;
+  _.$_$.l7 = scrollBy;
+  _.$_$.m7 = scrollToIndex;
+  _.$_$.n7 = selectableGroup;
+  _.$_$.o7 = set_selected;
+  _.$_$.p7 = semantics;
+  _.$_$.q7 = setSelection;
+  _.$_$.r7 = setText;
+  _.$_$.s7 = set_text;
+  _.$_$.t7 = set_textSelectionRange;
+  _.$_$.u7 = set_verticalScrollAxisRange;
+  _.$_$.v7 = CanvasBasedWindow$composable;
+  _.$_$.w7 = Alignment;
+  _.$_$.x7 = get_LocalSystemTheme;
+  _.$_$.y7 = all;
+  _.$_$.z7 = any;
+  _.$_$.a8 = foldIn;
+  _.$_$.b8 = foldOut;
+  _.$_$.c8 = Node;
+  _.$_$.d8 = then;
+  _.$_$.e8 = get_key;
+  _.$_$.f8 = MotionDurationScale;
+  _.$_$.g8 = composed$composable;
+  _.$_$.h8 = materialize;
+  _.$_$.i8 = zIndex;
+  _.$_$.j8 = PointerEventPass_Final_getInstance;
+  _.$_$.k8 = PointerEventPass_Initial_getInstance;
+  _.$_$.l8 = PointerEventPass_Main_getInstance;
+  _.$_$.m8 = TextToolbarStatus_Hidden_getInstance;
+  _.$_$.n8 = TextToolbarStatus_Shown_getInstance;
+  _.$_$.o8 = SystemTheme_Dark_getInstance;
+  _.$_$.p8 = onPreFling;
+  _.$_$.q8 = layout$default;
+  _.$_$.r8 = TransformOrigin__hashCode_impl_pmqpcw;
+  _.$_$.s8 = _TransformOrigin___get_pivotFractionX__impl__a9pmci;
+  _.$_$.t8 = _TransformOrigin___get_pivotFractionY__impl__ijwupp;
+  _.$_$.u8 = _Key___init__impl__p6mluu;
+  _.$_$.v8 = _Key___get_keyCode__impl__ymzu5v;
+  _.$_$.w8 = _KeyEvent___get_nativeKeyEvent__impl__py13j5;
+  _.$_$.x8 = Role__hashCode_impl_ucjza4;
+  _.$_$.y8 = Companion_getInstance_25;
+  _.$_$.z8 = Companion_getInstance_30;
+  _.$_$.a9 = Companion_getInstance_54;
+  _.$_$.b9 = Companion_getInstance_32;
+  _.$_$.c9 = Companion_getInstance_33;
+  _.$_$.d9 = DummyPointerIcon_getInstance;
+  _.$_$.e9 = Companion_getInstance_34;
+  _.$_$.f9 = Companion_getInstance_35;
+  _.$_$.g9 = Companion_getInstance_31;
+  _.$_$.h9 = Companion_getInstance_37;
+  _.$_$.i9 = Companion_getInstance_38;
+  _.$_$.j9 = Companion_getInstance_39;
+  _.$_$.k9 = Companion_getInstance_42;
+  _.$_$.l9 = Key_getInstance_1;
+  _.$_$.m9 = Companion_getInstance_51;
+  _.$_$.n9 = Companion_getInstance_22;
+  _.$_$.o9 = Companion_getInstance_23;
+  _.$_$.p9 = Key_getInstance_0;
   //endregion
   return _;
 }));

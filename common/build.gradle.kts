@@ -32,7 +32,6 @@ kotlin {
                 implementation(compose.foundation)
                 implementation(compose.material)
                 implementation(compose.material3)
-                //api("com.bumble.appyx:utils-material3:2.0.0-alpha09")
                 implementation("com.bumble.appyx:appyx-navigation:2.0.0-alpha09")
                 implementation("com.bumble.appyx:appyx-interactions:2.0.0-alpha09")
                 api("com.bumble.appyx:backstack:2.0.0-alpha09")
@@ -50,12 +49,14 @@ kotlin {
         val desktopMain by getting {
             dependencies {
                 // Desktop specifc deps
+                resources.srcDirs("src/commonMain/resource")
             }
         }
 
         val jsMain by getting {
             dependencies {
                 // JS specific dps
+                resources.srcDirs("src/commonMain/resource")
             }
         }
     }
@@ -73,5 +74,13 @@ android() {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
+    sourceSets {
+        named("main"){
+            resources.srcDirs("src/commonMain/resource")
+        }
+    }
+}
 
+compose {
+    kotlinCompilerPlugin.set("1.5.4")
 }

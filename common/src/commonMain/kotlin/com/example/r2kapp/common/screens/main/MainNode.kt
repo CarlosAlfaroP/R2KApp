@@ -29,6 +29,7 @@ class MainNode(
     plugins: List<Plugin> = listOf(),
 ) : AppyxMaterial3NavNode<MainNavItem>(
     buildContext = buildContext,
+    //initialActiveElement=MainNavItem.PROFILE, Si no se especifica va al primer nodo)
     navTargets = mainNavItems,
     navTargetResolver = MainNavItem.resolver(
         user = user,
@@ -38,7 +39,7 @@ class MainNode(
 ) {
     @Parcelize
     enum class MainNavItem : Parcelable {
-        DESTINATION1, DESTINATION2, DESTINATION3;
+        HOME, CATEGORY, PROFILE;
 
         companion object {
             fun resolver(
@@ -46,7 +47,7 @@ class MainNode(
                 onLogout: () -> Unit
             ): (MainNavItem) -> AppyxNavItem = { navBarItem ->
                 when (navBarItem) {
-                    DESTINATION1 -> AppyxNavItem(
+                    HOME -> AppyxNavItem(
                         text = "Home",
                         unselectedIcon = Outlined.Home,
                         selectedIcon = Filled.Home,
@@ -54,7 +55,7 @@ class MainNode(
                         node = { HomeNode(it) }
                     )
 
-                    DESTINATION2 -> AppyxNavItem(
+                    CATEGORY -> AppyxNavItem(
                         text = "Categorias",
                         unselectedIcon = Outlined.Menu,
                         selectedIcon = Filled.Menu,
@@ -62,7 +63,7 @@ class MainNode(
                         node = { CategoryNode(it) }
                     )
 
-                    DESTINATION3 -> AppyxNavItem(
+                    PROFILE -> AppyxNavItem(
                         text = "Perfil",
                         unselectedIcon = Outlined.Person,
                         selectedIcon = Filled.Person,
