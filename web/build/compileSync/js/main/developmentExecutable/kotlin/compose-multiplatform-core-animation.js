@@ -1,8 +1,8 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './compose-multiplatform-core-animation-core.js', './compose-multiplatform-core-ui-graphics.js', './kotlin-kotlin-stdlib-js-ir.js', './compose-multiplatform-core-ui-unit.js', './compose-multiplatform-core-ui.js', './compose-multiplatform-core-runtime.js'], factory);
+    define(['exports', './compose-multiplatform-core-animation-core.js', './compose-multiplatform-core-ui-graphics.js', './kotlin-kotlin-stdlib.js', './compose-multiplatform-core-ui-unit.js', './compose-multiplatform-core-ui.js', './compose-multiplatform-core-runtime.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./compose-multiplatform-core-animation-core.js'), require('./compose-multiplatform-core-ui-graphics.js'), require('./kotlin-kotlin-stdlib-js-ir.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./compose-multiplatform-core-ui.js'), require('./compose-multiplatform-core-runtime.js'));
+    factory(module.exports, require('./compose-multiplatform-core-animation-core.js'), require('./compose-multiplatform-core-ui-graphics.js'), require('./kotlin-kotlin-stdlib.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./compose-multiplatform-core-ui.js'), require('./compose-multiplatform-core-runtime.js'));
   else {
     if (typeof this['compose-multiplatform-core-animation-core'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-animation'. Its dependency 'compose-multiplatform-core-animation-core' was not found. Please, check whether 'compose-multiplatform-core-animation-core' is loaded prior to 'compose-multiplatform-core-animation'.");
@@ -10,8 +10,8 @@
     if (typeof this['compose-multiplatform-core-ui-graphics'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-animation'. Its dependency 'compose-multiplatform-core-ui-graphics' was not found. Please, check whether 'compose-multiplatform-core-ui-graphics' is loaded prior to 'compose-multiplatform-core-animation'.");
     }
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'compose-multiplatform-core-animation'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'compose-multiplatform-core-animation'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-animation'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'compose-multiplatform-core-animation'.");
     }
     if (typeof this['compose-multiplatform-core-ui-unit'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-animation'. Its dependency 'compose-multiplatform-core-ui-unit' was not found. Please, check whether 'compose-multiplatform-core-ui-unit' is loaded prior to 'compose-multiplatform-core-animation'.");
@@ -22,7 +22,7 @@
     if (typeof this['compose-multiplatform-core-runtime'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-animation'. Its dependency 'compose-multiplatform-core-runtime' was not found. Please, check whether 'compose-multiplatform-core-runtime' is loaded prior to 'compose-multiplatform-core-animation'.");
     }
-    root['compose-multiplatform-core-animation'] = factory(typeof this['compose-multiplatform-core-animation'] === 'undefined' ? {} : this['compose-multiplatform-core-animation'], this['compose-multiplatform-core-animation-core'], this['compose-multiplatform-core-ui-graphics'], this['kotlin-kotlin-stdlib-js-ir'], this['compose-multiplatform-core-ui-unit'], this['compose-multiplatform-core-ui'], this['compose-multiplatform-core-runtime']);
+    root['compose-multiplatform-core-animation'] = factory(typeof this['compose-multiplatform-core-animation'] === 'undefined' ? {} : this['compose-multiplatform-core-animation'], this['compose-multiplatform-core-animation-core'], this['compose-multiplatform-core-ui-graphics'], this['kotlin-kotlin-stdlib'], this['compose-multiplatform-core-ui-unit'], this['compose-multiplatform-core-ui'], this['compose-multiplatform-core-runtime']);
   }
 }(this, function (_, kotlin_org_jetbrains_compose_animation_animation_core, kotlin_org_jetbrains_compose_ui_ui_graphics, kotlin_kotlin, kotlin_org_jetbrains_compose_ui_ui_unit, kotlin_org_jetbrains_compose_ui_ui, kotlin_org_jetbrains_compose_runtime_runtime) {
   'use strict';
@@ -37,26 +37,27 @@
   var Color__component3_impl_mxb9is = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.z2;
   var Color__component4_impl_necvwz = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a3;
   var AnimationVector4D = kotlin_org_jetbrains_compose_animation_animation_core.$_$.g;
-  var coerceIn = kotlin_kotlin.$_$.pe;
+  var coerceIn = kotlin_kotlin.$_$.se;
   var Color = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.o;
   var Color_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.q;
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var THROW_CCE = kotlin_kotlin.$_$.lh;
-  var Annotation = kotlin_kotlin.$_$.tg;
-  var classMeta = kotlin_kotlin.$_$.ec;
-  var VOID = kotlin_kotlin.$_$.bj;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
-  var objectMeta = kotlin_kotlin.$_$.qd;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var THROW_CCE = kotlin_kotlin.$_$.qh;
+  var Annotation = kotlin_kotlin.$_$.yg;
+  var classMeta = kotlin_kotlin.$_$.hc;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var VOID = kotlin_kotlin.$_$.e;
+  var objectMeta = kotlin_kotlin.$_$.td;
   var Spring_getInstance = kotlin_org_jetbrains_compose_animation_animation_core.$_$.j1;
   var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u3;
   var get_VisibilityThreshold = kotlin_org_jetbrains_compose_animation_animation_core.$_$.t;
   var IntSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.y;
   var spring = kotlin_org_jetbrains_compose_animation_animation_core.$_$.c1;
   var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.n9;
-  var equals = kotlin_kotlin.$_$.ic;
-  var getNumberHashCode = kotlin_kotlin.$_$.mc;
-  var hashCode = kotlin_kotlin.$_$.qc;
+  var equals = kotlin_kotlin.$_$.lc;
+  var getNumberHashCode = kotlin_kotlin.$_$.qc;
+  var hashCode = kotlin_kotlin.$_$.uc;
   var IntSize_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x;
+  var getBooleanHashCode = kotlin_kotlin.$_$.oc;
   var TransformOrigin = kotlin_org_jetbrains_compose_ui_ui.$_$.g1;
   var TransformOrigin__hashCode_impl_pmqpcw = kotlin_org_jetbrains_compose_ui_ui.$_$.r8;
   var _TransformOrigin___get_pivotFractionX__impl__a9pmci = kotlin_org_jetbrains_compose_ui_ui.$_$.s8;
@@ -65,28 +66,26 @@
   var TransformOrigin_0 = kotlin_org_jetbrains_compose_ui_ui.$_$.f1;
   var _IntSize___get_width__impl__d9yl4o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x2;
   var _IntSize___get_height__impl__prv63b = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w2;
-  var mutableFloatStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.p1;
+  var mutableFloatStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n1;
   var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s3;
   var get_VisibilityThreshold_0 = kotlin_org_jetbrains_compose_animation_animation_core.$_$.s;
   var IntOffset = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w;
-  var Long = kotlin_kotlin.$_$.eh;
-  var toString = kotlin_kotlin.$_$.wd;
-  var numberToLong = kotlin_kotlin.$_$.od;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o1;
+  var Long = kotlin_kotlin.$_$.jh;
+  var numberToLong = kotlin_kotlin.$_$.rd;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m1;
   var _Color___get_colorSpace__impl__jqqozk = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.w2;
   var Companion_getInstance_2 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a4;
-  var Companion_getInstance_3 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q2;
-  var isObject = kotlin_kotlin.$_$.dd;
+  var Companion_getInstance_3 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
   var animateValueAsState$composable = kotlin_org_jetbrains_compose_animation_animation_core.$_$.w;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
-  var numberToInt = kotlin_kotlin.$_$.nd;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
+  var numberToInt = kotlin_kotlin.$_$.qd;
   var FloatDecayAnimationSpec = kotlin_org_jetbrains_compose_animation_animation_core.$_$.k;
   var createTransitionAnimation$composable = kotlin_org_jetbrains_compose_animation_animation_core.$_$.y;
   var get_LocalDensity = kotlin_org_jetbrains_compose_ui_ui.$_$.x5;
-  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c2;
-  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
+  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a2;
+  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z1;
   var generateDecayAnimationSpec = kotlin_org_jetbrains_compose_animation_animation_core.$_$.z;
   //endregion
   //region block: pre-declaration
@@ -95,7 +94,7 @@
   setMetadataFor(ExitTransition, 'ExitTransition', classMeta);
   setMetadataFor(Companion_0, 'Companion', objectMeta);
   setMetadataFor(EnterTransition, 'EnterTransition', classMeta);
-  setMetadataFor(TransitionData, 'TransitionData', classMeta);
+  setMetadataFor(TransitionData, 'TransitionData', classMeta, VOID, VOID, TransitionData);
   setMetadataFor(ExitTransitionImpl, 'ExitTransitionImpl', classMeta, ExitTransition);
   setMetadataFor(Fade, 'Fade', classMeta);
   setMetadataFor(Slide, 'Slide', classMeta);
@@ -202,7 +201,7 @@
     Companion_getInstance_4();
     this.$stable_1 = 0;
   }
-  protoOf(ExitTransition).plus_3d7su1_k$ = function (exit) {
+  protoOf(ExitTransition).plus_buzi7t_k$ = function (exit) {
     var tmp0_elvis_lhs = this.get_data_wokkxf_k$().fade_1;
     var tmp = tmp0_elvis_lhs == null ? exit.get_data_wokkxf_k$().fade_1 : tmp0_elvis_lhs;
     var tmp1_elvis_lhs = this.get_data_wokkxf_k$().slide_1;
@@ -227,16 +226,16 @@
       tmp = 'ExitTransition.None';
     } else {
       // Inline function 'kotlin.run' call
-      var tmp0_run = this.get_data_wokkxf_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.animation.ExitTransition.toString.<anonymous>' call
-      var tmp3_safe_receiver = tmp0_run.fade_1;
+      var $this$run = this.get_data_wokkxf_k$();
+      var tmp3_safe_receiver = $this$run.fade_1;
       var tmp_0 = 'ExitTransition: \nFade - ' + (tmp3_safe_receiver == null ? null : tmp3_safe_receiver.toString()) + ',\nSlide - ';
-      var tmp2_safe_receiver = tmp0_run.slide_1;
+      var tmp2_safe_receiver = $this$run.slide_1;
       var tmp_1 = tmp_0 + (tmp2_safe_receiver == null ? null : tmp2_safe_receiver.toString()) + ',\nShrink - ';
-      var tmp1_safe_receiver = tmp0_run.changeSize_1;
+      var tmp1_safe_receiver = $this$run.changeSize_1;
       var tmp_2 = tmp_1 + (tmp1_safe_receiver == null ? null : tmp1_safe_receiver.toString()) + ',\nScale - ';
-      var tmp0_safe_receiver = tmp0_run.scale_1;
+      var tmp0_safe_receiver = $this$run.scale_1;
       tmp = tmp_2 + (tmp0_safe_receiver == null ? null : tmp0_safe_receiver.toString());
     }
     return tmp;
@@ -285,7 +284,7 @@
     Companion_getInstance_5();
     this.$stable_1 = 0;
   }
-  protoOf(EnterTransition).plus_9f8al5_k$ = function (enter) {
+  protoOf(EnterTransition).plus_w36lq9_k$ = function (enter) {
     var tmp0_elvis_lhs = this.get_data_wokkxf_k$().fade_1;
     var tmp = tmp0_elvis_lhs == null ? enter.get_data_wokkxf_k$().fade_1 : tmp0_elvis_lhs;
     var tmp1_elvis_lhs = this.get_data_wokkxf_k$().slide_1;
@@ -301,16 +300,16 @@
       tmp = 'EnterTransition.None';
     } else {
       // Inline function 'kotlin.run' call
-      var tmp0_run = this.get_data_wokkxf_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.animation.EnterTransition.toString.<anonymous>' call
-      var tmp3_safe_receiver = tmp0_run.fade_1;
+      var $this$run = this.get_data_wokkxf_k$();
+      var tmp3_safe_receiver = $this$run.fade_1;
       var tmp_0 = 'EnterTransition: \nFade - ' + (tmp3_safe_receiver == null ? null : tmp3_safe_receiver.toString()) + ',\nSlide - ';
-      var tmp2_safe_receiver = tmp0_run.slide_1;
+      var tmp2_safe_receiver = $this$run.slide_1;
       var tmp_1 = tmp_0 + (tmp2_safe_receiver == null ? null : tmp2_safe_receiver.toString()) + ',\nShrink - ';
-      var tmp1_safe_receiver = tmp0_run.changeSize_1;
+      var tmp1_safe_receiver = $this$run.changeSize_1;
       var tmp_2 = tmp_1 + (tmp1_safe_receiver == null ? null : tmp1_safe_receiver.toString()) + ',\nScale - ';
-      var tmp0_safe_receiver = tmp0_run.scale_1;
+      var tmp0_safe_receiver = $this$run.scale_1;
       tmp = tmp_2 + (tmp0_safe_receiver == null ? null : tmp0_safe_receiver.toString());
     }
     return tmp;
@@ -412,15 +411,15 @@
   protoOf(TransitionData).component4_7eebs9_k$ = function () {
     return this.scale_1;
   };
-  protoOf(TransitionData).copy_zgcw61_k$ = function (fade, slide, changeSize, scale) {
+  protoOf(TransitionData).copy_n6sent_k$ = function (fade, slide, changeSize, scale) {
     return new TransitionData(fade, slide, changeSize, scale);
   };
-  protoOf(TransitionData).copy$default_rtbj4u_k$ = function (fade, slide, changeSize, scale, $super) {
+  protoOf(TransitionData).copy$default_dt4p0q_k$ = function (fade, slide, changeSize, scale, $super) {
     fade = fade === VOID ? this.fade_1 : fade;
     slide = slide === VOID ? this.slide_1 : slide;
     changeSize = changeSize === VOID ? this.changeSize_1 : changeSize;
     scale = scale === VOID ? this.scale_1 : scale;
-    return $super === VOID ? this.copy_zgcw61_k$(fade, slide, changeSize, scale) : $super.copy_zgcw61_k$.call(this, fade, slide, changeSize, scale);
+    return $super === VOID ? this.copy_n6sent_k$(fade, slide, changeSize, scale) : $super.copy_n6sent_k$.call(this, fade, slide, changeSize, scale);
   };
   protoOf(TransitionData).toString = function () {
     return 'TransitionData(fade=' + this.fade_1 + ', slide=' + this.slide_1 + ', changeSize=' + this.changeSize_1 + ', scale=' + this.scale_1 + ')';
@@ -471,13 +470,13 @@
   protoOf(Fade).component2_7eebsb_k$ = function () {
     return this.animationSpec_1;
   };
-  protoOf(Fade).copy_sae5ax_k$ = function (alpha, animationSpec) {
+  protoOf(Fade).copy_z8z8aw_k$ = function (alpha, animationSpec) {
     return new Fade(alpha, animationSpec);
   };
-  protoOf(Fade).copy$default_y9588r_k$ = function (alpha, animationSpec, $super) {
+  protoOf(Fade).copy$default_ma0w9o_k$ = function (alpha, animationSpec, $super) {
     alpha = alpha === VOID ? this.alpha_1 : alpha;
     animationSpec = animationSpec === VOID ? this.animationSpec_1 : animationSpec;
-    return $super === VOID ? this.copy_sae5ax_k$(alpha, animationSpec) : $super.copy_sae5ax_k$.call(this, alpha, animationSpec);
+    return $super === VOID ? this.copy_z8z8aw_k$(alpha, animationSpec) : $super.copy_z8z8aw_k$.call(this, alpha, animationSpec);
   };
   protoOf(Fade).toString = function () {
     return 'Fade(alpha=' + this.alpha_1 + ', animationSpec=' + this.animationSpec_1 + ')';
@@ -515,13 +514,13 @@
   protoOf(Slide).component2_7eebsb_k$ = function () {
     return this.animationSpec_1;
   };
-  protoOf(Slide).copy_gp3dbw_k$ = function (slideOffset, animationSpec) {
+  protoOf(Slide).copy_rxbt3p_k$ = function (slideOffset, animationSpec) {
     return new Slide(slideOffset, animationSpec);
   };
-  protoOf(Slide).copy$default_40mtxb_k$ = function (slideOffset, animationSpec, $super) {
+  protoOf(Slide).copy$default_redmhi_k$ = function (slideOffset, animationSpec, $super) {
     slideOffset = slideOffset === VOID ? this.slideOffset_1 : slideOffset;
     animationSpec = animationSpec === VOID ? this.animationSpec_1 : animationSpec;
-    return $super === VOID ? this.copy_gp3dbw_k$(slideOffset, animationSpec) : $super.copy_gp3dbw_k$.call(this, slideOffset, animationSpec);
+    return $super === VOID ? this.copy_rxbt3p_k$(slideOffset, animationSpec) : $super.copy_rxbt3p_k$.call(this, slideOffset, animationSpec);
   };
   protoOf(Slide).toString = function () {
     return 'Slide(slideOffset=' + this.slideOffset_1 + ', animationSpec=' + this.animationSpec_1 + ')';
@@ -584,15 +583,15 @@
   protoOf(ChangeSize).component4_7eebs9_k$ = function () {
     return this.clip_1;
   };
-  protoOf(ChangeSize).copy_c1dznr_k$ = function (alignment, size, animationSpec, clip) {
+  protoOf(ChangeSize).copy_v6ndrn_k$ = function (alignment, size, animationSpec, clip) {
     return new ChangeSize(alignment, size, animationSpec, clip);
   };
-  protoOf(ChangeSize).copy$default_gegaug_k$ = function (alignment, size, animationSpec, clip, $super) {
+  protoOf(ChangeSize).copy$default_lm9k9y_k$ = function (alignment, size, animationSpec, clip, $super) {
     alignment = alignment === VOID ? this.alignment_1 : alignment;
     size = size === VOID ? this.size_1 : size;
     animationSpec = animationSpec === VOID ? this.animationSpec_1 : animationSpec;
     clip = clip === VOID ? this.clip_1 : clip;
-    return $super === VOID ? this.copy_c1dznr_k$(alignment, size, animationSpec, clip) : $super.copy_c1dznr_k$.call(this, alignment, size, animationSpec, clip);
+    return $super === VOID ? this.copy_v6ndrn_k$(alignment, size, animationSpec, clip) : $super.copy_v6ndrn_k$.call(this, alignment, size, animationSpec, clip);
   };
   protoOf(ChangeSize).toString = function () {
     return 'ChangeSize(alignment=' + this.alignment_1 + ', size=' + this.size_1 + ', animationSpec=' + this.animationSpec_1 + ', clip=' + this.clip_1 + ')';
@@ -601,7 +600,7 @@
     var result = hashCode(this.alignment_1);
     result = imul(result, 31) + hashCode(this.size_1) | 0;
     result = imul(result, 31) + hashCode(this.animationSpec_1) | 0;
-    result = imul(result, 31) + (this.clip_1 | 0) | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.clip_1) | 0;
     return result;
   };
   protoOf(ChangeSize).equals = function (other) {
@@ -628,7 +627,7 @@
   protoOf(Scale).get_scale_iyf28x_k$ = function () {
     return this.scale_1;
   };
-  protoOf(Scale).get_transformOrigin_q3dmip_k$ = function () {
+  protoOf(Scale).get_transformOrigin_bc7467_k$ = function () {
     return this.transformOrigin_1;
   };
   protoOf(Scale).get_animationSpec_wdk2t2_k$ = function () {
@@ -637,20 +636,20 @@
   protoOf(Scale).component1_7eebsc_k$ = function () {
     return this.scale_1;
   };
-  protoOf(Scale).component2_dvu46t_k$ = function () {
+  protoOf(Scale).component2_vce5p_k$ = function () {
     return this.transformOrigin_1;
   };
   protoOf(Scale).component3_7eebsa_k$ = function () {
     return this.animationSpec_1;
   };
-  protoOf(Scale).copy_x7tq9e_k$ = function (scale, transformOrigin, animationSpec) {
+  protoOf(Scale).copy_yexmra_k$ = function (scale, transformOrigin, animationSpec) {
     return new Scale(scale, transformOrigin, animationSpec);
   };
-  protoOf(Scale).copy$default_unhhwl_k$ = function (scale, transformOrigin, animationSpec, $super) {
+  protoOf(Scale).copy$default_nonyxv_k$ = function (scale, transformOrigin, animationSpec, $super) {
     scale = scale === VOID ? this.scale_1 : scale;
     transformOrigin = transformOrigin === VOID ? this.transformOrigin_1 : transformOrigin;
     animationSpec = animationSpec === VOID ? this.animationSpec_1 : animationSpec;
-    return $super === VOID ? this.copy_x7tq9e_k$(scale, transformOrigin, animationSpec) : $super.copy_x7tq9e_k$.call(this, scale, new TransformOrigin(transformOrigin), animationSpec);
+    return $super === VOID ? this.copy_yexmra_k$(scale, transformOrigin, animationSpec) : $super.copy_yexmra_k$.call(this, scale, new TransformOrigin(transformOrigin), animationSpec);
   };
   protoOf(Scale).toString = function () {
     return 'Scale(scale=' + this.scale_1 + ', transformOrigin=' + new TransformOrigin(this.transformOrigin_1) + ', animationSpec=' + this.animationSpec_1 + ')';
@@ -800,7 +799,7 @@
     return computeDeceleration_0(0.84, density.get_density_qy0267_k$());
   }
   function getSplineDeceleration($this, velocity) {
-    return AndroidFlingSpline_getInstance().deceleration_b9qzl_k$(velocity, $this.friction_1 * $this.magicPhysicalCoefficient_1);
+    return AndroidFlingSpline_getInstance().deceleration_7lhbmp_k$(velocity, $this.friction_1 * $this.magicPhysicalCoefficient_1);
   }
   function FlingInfo(initialVelocity, distance, duration) {
     this.initialVelocity_1 = initialVelocity;
@@ -817,36 +816,35 @@
   protoOf(FlingInfo).get_duration_6a6kpp_k$ = function () {
     return this.duration_1;
   };
-  protoOf(FlingInfo).position_axeral_k$ = function (time) {
+  protoOf(FlingInfo).position_oaxlut_k$ = function (time) {
     var tmp;
-    if (this.duration_1.compareTo_n4fqi2_k$(new Long(0, 0)) > 0) {
+    if (this.duration_1.compareTo_9jj042_k$(new Long(0, 0)) > 0) {
       // Inline function 'kotlin.Long.div' call
-      var tmp0_div = this.duration_1.toFloat_jhbgwv_k$();
-      tmp = time.toFloat_jhbgwv_k$() / tmp0_div;
+      var other = this.duration_1.toFloat_jhbgwv_k$();
+      tmp = time.toFloat_jhbgwv_k$() / other;
     } else {
       tmp = 1.0;
     }
     var splinePos = tmp;
-    var tmp$ret$1;
     // Inline function 'kotlin.math.sign' call
-    var tmp1_sign = this.initialVelocity_1;
-    tmp$ret$1 = sign(tmp1_sign);
-    return this.distance_1 * tmp$ret$1 * AndroidFlingSpline_getInstance().flingPosition_xrffyv_k$(splinePos).get_distanceCoefficient_3vhbop_k$();
+    var x = this.initialVelocity_1;
+    var tmp$ret$1 = sign(x);
+    return this.distance_1 * tmp$ret$1 * AndroidFlingSpline_getInstance().flingPosition_kqyylv_k$(splinePos).get_distanceCoefficient_3vhbop_k$();
   };
-  protoOf(FlingInfo).velocity_v2xlvr_k$ = function (time) {
+  protoOf(FlingInfo).velocity_2zfv01_k$ = function (time) {
     var tmp;
-    if (this.duration_1.compareTo_n4fqi2_k$(new Long(0, 0)) > 0) {
+    if (this.duration_1.compareTo_9jj042_k$(new Long(0, 0)) > 0) {
       // Inline function 'kotlin.Long.div' call
-      var tmp0_div = this.duration_1.toFloat_jhbgwv_k$();
-      tmp = time.toFloat_jhbgwv_k$() / tmp0_div;
+      var other = this.duration_1.toFloat_jhbgwv_k$();
+      tmp = time.toFloat_jhbgwv_k$() / other;
     } else {
       tmp = 1.0;
     }
     var splinePos = tmp;
-    var tmp_0 = AndroidFlingSpline_getInstance().flingPosition_xrffyv_k$(splinePos).get_velocityCoefficient_w8qjlb_k$();
+    var tmp_0 = AndroidFlingSpline_getInstance().flingPosition_kqyylv_k$(splinePos).get_velocityCoefficient_w8qjlb_k$();
     // Inline function 'kotlin.math.sign' call
-    var tmp1_sign = this.initialVelocity_1;
-    return tmp_0 * sign(tmp1_sign) * this.distance_1 / this.duration_1.toFloat_jhbgwv_k$() * 1000.0;
+    var x = this.initialVelocity_1;
+    return tmp_0 * sign(x) * this.distance_1 / this.duration_1.toFloat_jhbgwv_k$() * 1000.0;
   };
   protoOf(FlingInfo).component1_7eebsc_k$ = function () {
     return this.initialVelocity_1;
@@ -857,17 +855,17 @@
   protoOf(FlingInfo).component3_7eebsa_k$ = function () {
     return this.duration_1;
   };
-  protoOf(FlingInfo).copy_qho10f_k$ = function (initialVelocity, distance, duration) {
+  protoOf(FlingInfo).copy_g5ll21_k$ = function (initialVelocity, distance, duration) {
     return new FlingInfo(initialVelocity, distance, duration);
   };
-  protoOf(FlingInfo).copy$default_wl6v6_k$ = function (initialVelocity, distance, duration, $super) {
+  protoOf(FlingInfo).copy$default_w0uq4e_k$ = function (initialVelocity, distance, duration, $super) {
     initialVelocity = initialVelocity === VOID ? this.initialVelocity_1 : initialVelocity;
     distance = distance === VOID ? this.distance_1 : distance;
     duration = duration === VOID ? this.duration_1 : duration;
-    return $super === VOID ? this.copy_qho10f_k$(initialVelocity, distance, duration) : $super.copy_qho10f_k$.call(this, initialVelocity, distance, duration);
+    return $super === VOID ? this.copy_g5ll21_k$(initialVelocity, distance, duration) : $super.copy_g5ll21_k$.call(this, initialVelocity, distance, duration);
   };
   protoOf(FlingInfo).toString = function () {
-    return 'FlingInfo(initialVelocity=' + this.initialVelocity_1 + ', distance=' + this.distance_1 + ', duration=' + toString(this.duration_1) + ')';
+    return 'FlingInfo(initialVelocity=' + this.initialVelocity_1 + ', distance=' + this.distance_1 + ', duration=' + this.duration_1.toString() + ')';
   };
   protoOf(FlingInfo).hashCode = function () {
     var result = getNumberHashCode(this.initialVelocity_1);
@@ -897,39 +895,37 @@
   protoOf(FlingCalculator).get_density_qy0267_k$ = function () {
     return this.density_1;
   };
-  protoOf(FlingCalculator).flingDuration_tlzcny_k$ = function (velocity) {
+  protoOf(FlingCalculator).flingDuration_g3t3l4_k$ = function (velocity) {
     var l = getSplineDeceleration(this, velocity);
     var decelMinusOne = get_DecelerationRate() - 1.0;
-    var tmp$ret$0;
     // Inline function 'kotlin.math.exp' call
-    var tmp0_exp = l / decelMinusOne;
-    tmp$ret$0 = Math.exp(tmp0_exp);
+    var x = l / decelMinusOne;
+    var tmp$ret$0 = Math.exp(x);
     return numberToLong(1000.0 * tmp$ret$0);
   };
-  protoOf(FlingCalculator).flingDistance_fh7swt_k$ = function (velocity) {
+  protoOf(FlingCalculator).flingDistance_e8js0p_k$ = function (velocity) {
     var l = getSplineDeceleration(this, velocity);
     var decelMinusOne = get_DecelerationRate() - 1.0;
     var tmp = this.friction_1 * this.magicPhysicalCoefficient_1;
     // Inline function 'kotlin.math.exp' call
-    var tmp0_exp = get_DecelerationRate() / decelMinusOne * l;
-    return tmp * Math.exp(tmp0_exp);
+    var x = get_DecelerationRate() / decelMinusOne * l;
+    return tmp * Math.exp(x);
   };
-  protoOf(FlingCalculator).flingInfo_gbiih0_k$ = function (velocity) {
+  protoOf(FlingCalculator).flingInfo_sr0d1q_k$ = function (velocity) {
     var l = getSplineDeceleration(this, velocity);
     var decelMinusOne = get_DecelerationRate() - 1.0;
     var tmp = this.friction_1 * this.magicPhysicalCoefficient_1;
     // Inline function 'kotlin.math.exp' call
-    var tmp0_exp = get_DecelerationRate() / decelMinusOne * l;
-    var tmp_0 = tmp * Math.exp(tmp0_exp);
-    var tmp$ret$1;
+    var x = get_DecelerationRate() / decelMinusOne * l;
+    var tmp_0 = tmp * Math.exp(x);
     // Inline function 'kotlin.math.exp' call
-    var tmp1_exp = l / decelMinusOne;
-    tmp$ret$1 = Math.exp(tmp1_exp);
+    var x_0 = l / decelMinusOne;
+    var tmp$ret$1 = Math.exp(x_0);
     return new FlingInfo(velocity, tmp_0, numberToLong(1000.0 * tmp$ret$1));
   };
   function computeDeceleration_0(friction, density) {
     _init_properties_FlingCalculator_kt__ornu7o();
-    return 9.80665 * 39.37 * density * 160.0 * friction;
+    return 386.08781049999993 * density * 160.0 * friction;
   }
   function get_InchesPerMeter() {
     return InchesPerMeter;
@@ -960,7 +956,7 @@
     var label_0 = label;
     var finishedListener_0 = finishedListener;
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-836854195);
+    $composer_0.startReplaceableGroup_ip860b_k$(-836854195);
     sourceInformation($composer_0, 'C(animateColorAsState$composable)P(3:c#ui.graphics.Color!1,2)62@2847L96,65@2955L124:SingleValueAnimation.kt#xbi5r1');
     if (!(($default & 2) === 0))
       animationSpec_0 = get_colorDefaultSpring();
@@ -972,36 +968,35 @@
       traceEventStart(-836854195, $changed, -1, 'androidx.compose.animation.animateColorAsState$composable (SingleValueAnimation.kt:56)');
     }
     // Inline function 'androidx.compose.runtime.remember$composable' call
-    var tmp0_remember$composable = _Color___get_colorSpace__impl__jqqozk(targetValue);
+    var key1 = _Color___get_colorSpace__impl__jqqozk(targetValue);
     var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+    $composer_1.startReplaceableGroup_ip860b_k$(-838505973);
     sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache = $composer_1.changed_ga7h3f_k$(tmp0_remember$composable);
+    var invalid = $composer_1.changed_ga7h3f_k$(key1);
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_1.rememberedValue_4dg93v_k$();
     var tmp;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_3().get_Empty_i9b85g_k$()) {
+    if (invalid ? true : it === Companion_getInstance_3().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.animation.animateColorAsState$composable.<anonymous>' call
       var value = get_VectorConverter(Companion_getInstance_2())(_Color___get_colorSpace__impl__jqqozk(targetValue));
-      $composer_1.updateRememberedValue_l1colo_k$(value);
+      $composer_1.updateRememberedValue_l1wh71_k$(value);
       tmp = value;
     } else {
-      tmp = tmp0_let;
+      tmp = it;
     }
     var tmp_0 = tmp;
-    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
+    var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_1.endReplaceableGroup_ern0ak_k$();
     var converter = tmp0;
-    var tmp_1 = new Color_0(targetValue);
-    var tmp_2 = animationSpec_0;
-    var tmp0_0 = animateValueAsState$composable(tmp_1, converter, tmp_2, null, label_0, finishedListener_0, $composer_0, 14 & $changed | 896 & $changed << 3 | 57344 & $changed << 6 | 458752 & $changed << 6, 8);
+    var tmp_1 = animationSpec_0;
+    var tmp0_0 = animateValueAsState$composable(new Color_0(targetValue), converter, tmp_1, null, label_0, finishedListener_0, $composer_0, 14 & $changed | 896 & $changed << 3 | 57344 & $changed << 6 | 458752 & $changed << 6, 8);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0_0;
   }
   var properties_initialized_SingleValueAnimation_kt_kqgwkj;
@@ -1040,13 +1035,13 @@
   protoOf(FlingResult).component2_7eebsb_k$ = function () {
     return this.velocityCoefficient_1;
   };
-  protoOf(FlingResult).copy_138fzp_k$ = function (distanceCoefficient, velocityCoefficient) {
+  protoOf(FlingResult).copy_4tzoad_k$ = function (distanceCoefficient, velocityCoefficient) {
     return new FlingResult(distanceCoefficient, velocityCoefficient);
   };
-  protoOf(FlingResult).copy$default_6em5l2_k$ = function (distanceCoefficient, velocityCoefficient, $super) {
+  protoOf(FlingResult).copy$default_ujshx8_k$ = function (distanceCoefficient, velocityCoefficient, $super) {
     distanceCoefficient = distanceCoefficient === VOID ? this.distanceCoefficient_1 : distanceCoefficient;
     velocityCoefficient = velocityCoefficient === VOID ? this.velocityCoefficient_1 : velocityCoefficient;
-    return $super === VOID ? this.copy_138fzp_k$(distanceCoefficient, velocityCoefficient) : $super.copy_138fzp_k$.call(this, distanceCoefficient, velocityCoefficient);
+    return $super === VOID ? this.copy_4tzoad_k$(distanceCoefficient, velocityCoefficient) : $super.copy_4tzoad_k$.call(this, distanceCoefficient, velocityCoefficient);
   };
   protoOf(FlingResult).toString = function () {
     return 'FlingResult(distanceCoefficient=' + this.distanceCoefficient_1 + ', velocityCoefficient=' + this.velocityCoefficient_1 + ')';
@@ -1075,7 +1070,7 @@
     this.SplineTimes_1 = new Float32Array(101);
     computeSplineInfo(this.SplinePositions_1, this.SplineTimes_1, 100);
   }
-  protoOf(AndroidFlingSpline).flingPosition_xrffyv_k$ = function (time) {
+  protoOf(AndroidFlingSpline).flingPosition_kqyylv_k$ = function (time) {
     var index = numberToInt(100 * time);
     var distanceCoef = 1.0;
     var velocityCoef = 0.0;
@@ -1089,11 +1084,11 @@
     }
     return new FlingResult(distanceCoef, velocityCoef);
   };
-  protoOf(AndroidFlingSpline).deceleration_b9qzl_k$ = function (velocity, friction) {
+  protoOf(AndroidFlingSpline).deceleration_7lhbmp_k$ = function (velocity, friction) {
     // Inline function 'kotlin.math.ln' call
     // Inline function 'kotlin.math.abs' call
-    var tmp0_ln = 0.35 * Math.abs(velocity) / friction;
-    return Math.log(tmp0_ln);
+    var x = 0.35 * Math.abs(velocity) / friction;
+    return Math.log(x);
   };
   var AndroidFlingSpline_instance;
   function AndroidFlingSpline_getInstance() {
@@ -1119,8 +1114,8 @@
           coef = 3.0 * x * (1.0 - x);
           tx = coef * ((1.0 - x) * 0.175 + x * 0.35000002) + x * x * x;
           // Inline function 'kotlin.math.abs' call
-          var tmp0_abs = tx - alpha;
-          if (Math.abs(tmp0_abs) < 1.0E-5)
+          var x_0 = tx - alpha;
+          if (Math.abs(x_0) < 1.0E-5)
             break $l$loop;
           if (tx > alpha)
             xMax = x;
@@ -1136,8 +1131,8 @@
           coef = 3.0 * y * (1.0 - y);
           dy = coef * ((1.0 - y) * 0.5 + y) + y * y * y;
           // Inline function 'kotlin.math.abs' call
-          var tmp1_abs = dy - alpha;
-          if (Math.abs(tmp1_abs) < 1.0E-5)
+          var x_1 = dy - alpha;
+          if (Math.abs(x_1) < 1.0E-5)
             break $l$loop_0;
           if (dy > alpha)
             yMax = y;
@@ -1170,7 +1165,7 @@
     return $this.flingCalculator_1;
   }
   function flingDistance($this, startVelocity) {
-    var tmp = $this.flingCalculator_1.flingDistance_fh7swt_k$(startVelocity);
+    var tmp = $this.flingCalculator_1.flingDistance_e8js0p_k$(startVelocity);
     // Inline function 'kotlin.math.sign' call
     return tmp * sign(startVelocity);
   }
@@ -1184,25 +1179,25 @@
   protoOf(SplineBasedFloatDecayAnimationSpec).get_absVelocityThreshold_wsgqo5_k$ = function () {
     return 0.0;
   };
-  protoOf(SplineBasedFloatDecayAnimationSpec).getTargetValue_xs6ane_k$ = function (initialValue, initialVelocity) {
+  protoOf(SplineBasedFloatDecayAnimationSpec).getTargetValue_k8zsye_k$ = function (initialValue, initialVelocity) {
     return initialValue + flingDistance(this, initialVelocity);
   };
-  protoOf(SplineBasedFloatDecayAnimationSpec).getValueFromNanos_tm63l0_k$ = function (playTimeNanos, initialValue, initialVelocity) {
-    var playTimeMillis = playTimeNanos.div_9s1fi3_k$(new Long(1000000, 0));
-    return initialValue + this.flingCalculator_1.flingInfo_gbiih0_k$(initialVelocity).position_axeral_k$(playTimeMillis);
+  protoOf(SplineBasedFloatDecayAnimationSpec).getValueFromNanos_vizg24_k$ = function (playTimeNanos, initialValue, initialVelocity) {
+    var playTimeMillis = playTimeNanos.div_jun7gj_k$(new Long(1000000, 0));
+    return initialValue + this.flingCalculator_1.flingInfo_sr0d1q_k$(initialVelocity).position_oaxlut_k$(playTimeMillis);
   };
-  protoOf(SplineBasedFloatDecayAnimationSpec).getDurationNanos_kuw0r9_k$ = function (initialValue, initialVelocity) {
-    return this.flingCalculator_1.flingDuration_tlzcny_k$(initialVelocity).times_2zfqpc_k$(new Long(1000000, 0));
+  protoOf(SplineBasedFloatDecayAnimationSpec).getDurationNanos_dl2v11_k$ = function (initialValue, initialVelocity) {
+    return this.flingCalculator_1.flingDuration_g3t3l4_k$(initialVelocity).times_nfzjiw_k$(new Long(1000000, 0));
   };
-  protoOf(SplineBasedFloatDecayAnimationSpec).getVelocityFromNanos_1qiryk_k$ = function (playTimeNanos, initialValue, initialVelocity) {
-    var playTimeMillis = playTimeNanos.div_9s1fi3_k$(new Long(1000000, 0));
-    return this.flingCalculator_1.flingInfo_gbiih0_k$(initialVelocity).velocity_v2xlvr_k$(playTimeMillis);
+  protoOf(SplineBasedFloatDecayAnimationSpec).getVelocityFromNanos_eyb6gk_k$ = function (playTimeNanos, initialValue, initialVelocity) {
+    var playTimeMillis = playTimeNanos.div_jun7gj_k$(new Long(1000000, 0));
+    return this.flingCalculator_1.flingInfo_sr0d1q_k$(initialVelocity).velocity_2zfv01_k$(playTimeMillis);
   };
   function animateColor$composable(_this__u8e3s4, transitionSpec, label, targetValueByState, $composer, $changed, $default) {
     var transitionSpec_0 = transitionSpec;
     var label_0 = label;
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1488075038);
+    $composer_0.startReplaceableGroup_ip860b_k$(-1488075038);
     sourceInformation($composer_0, 'CC(animateColor$composable)P(2)68@3220L31,69@3287L70,73@3370L70:Transition.kt#xbi5r1');
     if (!(($default & 1) === 0)) {
       transitionSpec_0 = animateColor$composable$lambda;
@@ -1212,50 +1207,50 @@
     var colorSpace = _Color___get_colorSpace__impl__jqqozk(targetValueByState(_this__u8e3s4.get_targetState_kri3mx_k$(), $composer_0, 112 & $changed >> 6).value_1);
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+    $composer_1.startReplaceableGroup_ip860b_k$(-838505973);
     sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache = $composer_1.changed_ga7h3f_k$(colorSpace);
+    var invalid = $composer_1.changed_ga7h3f_k$(colorSpace);
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_1.rememberedValue_4dg93v_k$();
     var tmp;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_3().get_Empty_i9b85g_k$()) {
+    if (invalid ? true : it === Companion_getInstance_3().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.animation.animateColor$composable.<anonymous>' call
       var value = get_VectorConverter(Companion_getInstance_2())(colorSpace);
-      $composer_1.updateRememberedValue_l1colo_k$(value);
+      $composer_1.updateRememberedValue_l1wh71_k$(value);
       tmp = value;
     } else {
-      tmp = tmp0_let;
+      tmp = it;
     }
     var tmp_0 = tmp;
-    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
+    var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_1.endReplaceableGroup_ern0ak_k$();
     var typeConverter = tmp0;
     // Inline function 'androidx.compose.animation.core.animateValue$composable' call
-    var tmp4_animateValue$composable = 14 & $changed | 896 & $changed << 3 | 7168 & $changed << 3 | 57344 & $changed << 3;
+    var $changed_0 = 14 & $changed | 896 & $changed << 3 | 7168 & $changed << 3 | 57344 & $changed << 3;
     var transitionSpec_1 = transitionSpec_0;
     var label_1 = label_0;
     var $composer_2 = $composer_0;
-    $composer_2.startReplaceableGroup_rp6air_k$(-1940744337);
+    $composer_2.startReplaceableGroup_ip860b_k$(-1940744337);
     sourceInformation($composer_2, 'CC(animateValue$composable)P(3,2)857@34142L32,858@34197L31,859@34253L23,861@34289L89:Transition.kt#pdpnli');
-    if (!(0 === 0)) {
+    if (!((0 & 2) === 0)) {
       transitionSpec_1 = animateColor$composable$lambda_0;
     }
-    if (!(0 === 0))
+    if (!((0 & 4) === 0))
       label_1 = 'ValueAnimation';
-    var initialValue = targetValueByState(_this__u8e3s4.get_currentState_snihnl_k$(), $composer_2, 112 & tmp4_animateValue$composable >> 9).value_1;
-    var targetValue = targetValueByState(_this__u8e3s4.get_targetState_kri3mx_k$(), $composer_2, 112 & tmp4_animateValue$composable >> 9).value_1;
-    var animationSpec = transitionSpec_1(_this__u8e3s4.get_segment_xwnoei_k$(), $composer_2, 112 & tmp4_animateValue$composable >> 3);
-    var tmp0_0 = createTransitionAnimation$composable(_this__u8e3s4, new Color_0(initialValue), new Color_0(targetValue), animationSpec, typeConverter, label_1, $composer_2, 14 & tmp4_animateValue$composable | 57344 & tmp4_animateValue$composable << 9 | 458752 & tmp4_animateValue$composable << 6);
-    $composer_2.endReplaceableGroup_er37p7_k$();
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    var initialValue = targetValueByState(_this__u8e3s4.get_currentState_snihnl_k$(), $composer_2, 112 & $changed_0 >> 9).value_1;
+    var targetValue = targetValueByState(_this__u8e3s4.get_targetState_kri3mx_k$(), $composer_2, 112 & $changed_0 >> 9).value_1;
+    var animationSpec = transitionSpec_1(_this__u8e3s4.get_segment_xwnoei_k$(), $composer_2, 112 & $changed_0 >> 3);
+    var tmp0_0 = createTransitionAnimation$composable(_this__u8e3s4, new Color_0(initialValue), new Color_0(targetValue), animationSpec, typeConverter, label_1, $composer_2, 14 & $changed_0 | 57344 & $changed_0 << 9 | 458752 & $changed_0 << 6);
+    $composer_2.endReplaceableGroup_ern0ak_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0_0;
   }
   function animateColor$composable$lambda($this$null, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1457805428);
+    $composer_0.startReplaceableGroup_ip860b_k$(-1457805428);
     if (isTraceInProgress()) {
       traceEventStart(-1457805428, $changed, -1, 'androidx.compose.animation.animateColor$composable.<anonymous> (Transition.kt:64)');
     }
@@ -1263,12 +1258,12 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function animateColor$composable$lambda_0($this$null, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-895531546);
+    $composer_0.startReplaceableGroup_ip860b_k$(-895531546);
     if (isTraceInProgress()) {
       traceEventStart(-895531546, $changed, -1, 'androidx.compose.animation.core.animateValue$composable.<anonymous> (Transition.kt:852)');
     }
@@ -1276,7 +1271,7 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function get_platformFlingScrollFriction() {
@@ -1285,45 +1280,45 @@
   var platformFlingScrollFriction;
   function rememberSplineBasedDecay$composable($composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(802798862);
+    $composer_0.startReplaceableGroup_ip860b_k$(802798862);
     sourceInformation($composer_0, 'C(rememberSplineBasedDecay$composable)30@1256L7,31@1275L114:SplineBasedDecayAnimationSpec.js.kt#xbi5r1');
     if (isTraceInProgress()) {
       traceEventStart(802798862, $changed, -1, 'androidx.compose.animation.rememberSplineBasedDecay$composable (SplineBasedDecayAnimationSpec.js.kt:27)');
     }
     // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-    var tmp0_$get_current$$composable_h5ksy7 = get_LocalDensity();
+    var this_0 = get_LocalDensity();
     var $composer_1 = $composer_0;
     sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-    var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+    var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
     sourceInformationMarkerEnd($composer_1);
     var density = tmp0;
     // Inline function 'androidx.compose.runtime.remember$composable' call
-    var tmp2_remember$composable = density.get_density_qy0267_k$();
+    var key1 = density.get_density_qy0267_k$();
     var $composer_2 = $composer_0;
-    $composer_2.startReplaceableGroup_rp6air_k$(-838505973);
+    $composer_2.startReplaceableGroup_ip860b_k$(-838505973);
     sourceInformation($composer_2, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache = $composer_2.changed_ga7h3f_k$(tmp2_remember$composable);
+    var invalid = $composer_2.changed_ga7h3f_k$(key1);
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_2.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_2.rememberedValue_4dg93v_k$();
     var tmp;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_3().get_Empty_i9b85g_k$()) {
+    if (invalid ? true : it === Companion_getInstance_3().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.animation.rememberSplineBasedDecay$composable.<anonymous>' call
       var value = generateDecayAnimationSpec(new SplineBasedFloatDecayAnimationSpec(density));
-      $composer_2.updateRememberedValue_l1colo_k$(value);
+      $composer_2.updateRememberedValue_l1wh71_k$(value);
       tmp = value;
     } else {
-      tmp = tmp0_let;
+      tmp = it;
     }
     var tmp_0 = tmp;
-    var tmp0_0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-    $composer_2.endReplaceableGroup_er37p7_k$();
+    var tmp0_0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_2.endReplaceableGroup_ern0ak_k$();
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0_0;
   }
   //region block: init

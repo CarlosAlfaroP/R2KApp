@@ -1,25 +1,25 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin-kotlin-stdlib-js-ir.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'));
   else {
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'appyx-utils-multiplatform'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'appyx-utils-multiplatform'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'appyx-utils-multiplatform'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'appyx-utils-multiplatform'.");
     }
-    root['appyx-utils-multiplatform'] = factory(typeof this['appyx-utils-multiplatform'] === 'undefined' ? {} : this['appyx-utils-multiplatform'], this['kotlin-kotlin-stdlib-js-ir']);
+    root['appyx-utils-multiplatform'] = factory(typeof this['appyx-utils-multiplatform'] === 'undefined' ? {} : this['appyx-utils-multiplatform'], this['kotlin-kotlin-stdlib']);
   }
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var objectMeta = kotlin_kotlin.$_$.qd;
-  var VOID = kotlin_kotlin.$_$.bj;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
-  var THROW_CCE = kotlin_kotlin.$_$.lh;
-  var Annotation = kotlin_kotlin.$_$.tg;
-  var classMeta = kotlin_kotlin.$_$.ec;
-  var interfaceMeta = kotlin_kotlin.$_$.sc;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var objectMeta = kotlin_kotlin.$_$.td;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var THROW_CCE = kotlin_kotlin.$_$.qh;
+  var Annotation = kotlin_kotlin.$_$.yg;
+  var classMeta = kotlin_kotlin.$_$.hc;
+  var VOID = kotlin_kotlin.$_$.e;
+  var interfaceMeta = kotlin_kotlin.$_$.wc;
   //endregion
   //region block: pre-declaration
   setMetadataFor(AppyxLoggingLevel, 'AppyxLoggingLevel', objectMeta);
@@ -66,33 +66,33 @@
     AppyxLogger_instance = this;
     this.loggingLevel_1 = AppyxLoggingLevel_getInstance().get_DISABLED_edo4or_k$();
   }
-  protoOf(AppyxLogger).set_loggingLevel_6k890y_k$ = function (_set____db54di) {
+  protoOf(AppyxLogger).set_loggingLevel_6o2tp6_k$ = function (_set____db54di) {
     this.loggingLevel_1 = _set____db54di;
   };
   protoOf(AppyxLogger).get_loggingLevel_ajrgb6_k$ = function () {
     return this.loggingLevel_1;
   };
-  protoOf(AppyxLogger).v_cvrl3x_k$ = function (tag, message) {
+  protoOf(AppyxLogger).v_aecy5i_k$ = function (tag, message) {
     if (this.loggingLevel_1 <= AppyxLoggingLevel_getInstance().get_VERBOSE_iy29a1_k$()) {
       console.log(tag + ': ' + message);
     }
   };
-  protoOf(AppyxLogger).d_3t63e7_k$ = function (tag, message) {
+  protoOf(AppyxLogger).d_86dvmc_k$ = function (tag, message) {
     if (this.loggingLevel_1 <= AppyxLoggingLevel_getInstance().get_DEBUG_i80x6y_k$()) {
       console.log(tag + ': ' + message);
     }
   };
-  protoOf(AppyxLogger).i_2dtu7e_k$ = function (tag, message) {
+  protoOf(AppyxLogger).i_31l207_k$ = function (tag, message) {
     if (this.loggingLevel_1 <= AppyxLoggingLevel_getInstance().get_INFO_wo2x2v_k$()) {
       console.log(tag + ': ' + message);
     }
   };
-  protoOf(AppyxLogger).w_u0rp44_k$ = function (tag, message) {
+  protoOf(AppyxLogger).w_mczkmf_k$ = function (tag, message) {
     if (this.loggingLevel_1 <= AppyxLoggingLevel_getInstance().get_WARN_wobljj_k$()) {
       console.log(tag + ': ' + message);
     }
   };
-  protoOf(AppyxLogger).e_vxqv5a_k$ = function (tag, message) {
+  protoOf(AppyxLogger).e_k50i39_k$ = function (tag, message) {
     if (this.loggingLevel_1 <= AppyxLoggingLevel_getInstance().get_ERROR_i8tccf_k$()) {
       console.log(tag + ': ' + message);
     }

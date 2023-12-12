@@ -1,8 +1,8 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './compose-multiplatform-core-ui.js', './compose-multiplatform-core-ui-unit.js', './kotlin-kotlin-stdlib-js-ir.js', './compose-multiplatform-core-foundation-layout.js', './compose-multiplatform-core-animation-core.js', './compose-multiplatform-core-ui-graphics.js', './compose-multiplatform-core-runtime.js', './compose-multiplatform-core-ui-geometry.js', './compose-multiplatform-core-foundation.js', './compose-multiplatform-core-ui-text.js', './skiko-kjs.js'], factory);
+    define(['exports', './compose-multiplatform-core-ui.js', './compose-multiplatform-core-ui-unit.js', './kotlin-kotlin-stdlib.js', './compose-multiplatform-core-foundation-layout.js', './compose-multiplatform-core-animation-core.js', './compose-multiplatform-core-ui-graphics.js', './compose-multiplatform-core-runtime.js', './compose-multiplatform-core-ui-geometry.js', './compose-multiplatform-core-foundation.js', './compose-multiplatform-core-ui-text.js', './skiko-kjs.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./compose-multiplatform-core-ui.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./kotlin-kotlin-stdlib-js-ir.js'), require('./compose-multiplatform-core-foundation-layout.js'), require('./compose-multiplatform-core-animation-core.js'), require('./compose-multiplatform-core-ui-graphics.js'), require('./compose-multiplatform-core-runtime.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./compose-multiplatform-core-foundation.js'), require('./compose-multiplatform-core-ui-text.js'), require('./skiko-kjs.js'));
+    factory(module.exports, require('./compose-multiplatform-core-ui.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./kotlin-kotlin-stdlib.js'), require('./compose-multiplatform-core-foundation-layout.js'), require('./compose-multiplatform-core-animation-core.js'), require('./compose-multiplatform-core-ui-graphics.js'), require('./compose-multiplatform-core-runtime.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./compose-multiplatform-core-foundation.js'), require('./compose-multiplatform-core-ui-text.js'), require('./skiko-kjs.js'));
   else {
     if (typeof this['compose-multiplatform-core-ui'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-material'. Its dependency 'compose-multiplatform-core-ui' was not found. Please, check whether 'compose-multiplatform-core-ui' is loaded prior to 'compose-multiplatform-core-material'.");
@@ -10,8 +10,8 @@
     if (typeof this['compose-multiplatform-core-ui-unit'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-material'. Its dependency 'compose-multiplatform-core-ui-unit' was not found. Please, check whether 'compose-multiplatform-core-ui-unit' is loaded prior to 'compose-multiplatform-core-material'.");
     }
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'compose-multiplatform-core-material'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'compose-multiplatform-core-material'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-material'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'compose-multiplatform-core-material'.");
     }
     if (typeof this['compose-multiplatform-core-foundation-layout'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-material'. Its dependency 'compose-multiplatform-core-foundation-layout' was not found. Please, check whether 'compose-multiplatform-core-foundation-layout' is loaded prior to 'compose-multiplatform-core-material'.");
@@ -37,7 +37,7 @@
     if (typeof this['skiko-kjs'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-material'. Its dependency 'skiko-kjs' was not found. Please, check whether 'skiko-kjs' is loaded prior to 'compose-multiplatform-core-material'.");
     }
-    root['compose-multiplatform-core-material'] = factory(typeof this['compose-multiplatform-core-material'] === 'undefined' ? {} : this['compose-multiplatform-core-material'], this['compose-multiplatform-core-ui'], this['compose-multiplatform-core-ui-unit'], this['kotlin-kotlin-stdlib-js-ir'], this['compose-multiplatform-core-foundation-layout'], this['compose-multiplatform-core-animation-core'], this['compose-multiplatform-core-ui-graphics'], this['compose-multiplatform-core-runtime'], this['compose-multiplatform-core-ui-geometry'], this['compose-multiplatform-core-foundation'], this['compose-multiplatform-core-ui-text'], this['skiko-kjs']);
+    root['compose-multiplatform-core-material'] = factory(typeof this['compose-multiplatform-core-material'] === 'undefined' ? {} : this['compose-multiplatform-core-material'], this['compose-multiplatform-core-ui'], this['compose-multiplatform-core-ui-unit'], this['kotlin-kotlin-stdlib'], this['compose-multiplatform-core-foundation-layout'], this['compose-multiplatform-core-animation-core'], this['compose-multiplatform-core-ui-graphics'], this['compose-multiplatform-core-runtime'], this['compose-multiplatform-core-ui-geometry'], this['compose-multiplatform-core-foundation'], this['compose-multiplatform-core-ui-text'], this['skiko-kjs']);
   }
 }(this, function (_, kotlin_org_jetbrains_compose_ui_ui, kotlin_org_jetbrains_compose_ui_ui_unit, kotlin_kotlin, kotlin_org_jetbrains_compose_foundation_foundation_layout, kotlin_org_jetbrains_compose_animation_animation_core, kotlin_org_jetbrains_compose_ui_ui_graphics, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_org_jetbrains_compose_ui_ui_geometry, kotlin_org_jetbrains_compose_foundation_foundation, kotlin_org_jetbrains_compose_ui_ui_text, kotlin_org_jetbrains_skiko_skiko) {
   'use strict';
@@ -45,7 +45,7 @@
   var imul = Math.imul;
   var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.o9;
   var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i2;
-  var VOID = kotlin_kotlin.$_$.bj;
+  var VOID = kotlin_kotlin.$_$.e;
   var padding = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.s;
   var get_sp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t1;
   var _Dp___get_value__impl__geb1vb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.l2;
@@ -54,42 +54,42 @@
   var get_FastOutSlowInEasing = kotlin_org_jetbrains_compose_animation_animation_core.$_$.j;
   var TweenSpec = kotlin_org_jetbrains_compose_animation_animation_core.$_$.n;
   var Color = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.q;
-  var structuralEqualityPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
-  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u1;
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var classMeta = kotlin_kotlin.$_$.ec;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
-  var Long = kotlin_kotlin.$_$.eh;
+  var structuralEqualityPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
+  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s1;
+  var Unit_getInstance = kotlin_kotlin.$_$.b5;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var classMeta = kotlin_kotlin.$_$.hc;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var Long = kotlin_kotlin.$_$.jh;
   var Color_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.p;
   var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a4;
-  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c2;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o1;
+  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a2;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m1;
   var _Color___get_value__impl__1pls5m = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d3;
-  var equals = kotlin_kotlin.$_$.ic;
-  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
-  var KMutableProperty1 = kotlin_kotlin.$_$.ye;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.oc;
-  var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
+  var equals = kotlin_kotlin.$_$.lc;
+  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z1;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
+  var KMutableProperty1 = kotlin_kotlin.$_$.bf;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.sc;
+  var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c2;
   var illegalDecoyCallException = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
   var luminance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.t1;
-  var objectMeta = kotlin_kotlin.$_$.qd;
-  var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i1;
+  var objectMeta = kotlin_kotlin.$_$.td;
+  var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
   var CubicBezierEasing = kotlin_org_jetbrains_compose_animation_animation_core.$_$.i;
-  var interfaceMeta = kotlin_kotlin.$_$.sc;
+  var interfaceMeta = kotlin_kotlin.$_$.wc;
   var Dp__compareTo_impl_tlg3dl = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.j2;
   var compositeOver = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.o1;
   var Color__copy$default_impl_ectz3s = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.r3;
   var Dp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u;
-  var THROW_CCE = kotlin_kotlin.$_$.lh;
-  var Annotation = kotlin_kotlin.$_$.tg;
+  var THROW_CCE = kotlin_kotlin.$_$.qh;
+  var Annotation = kotlin_kotlin.$_$.yg;
   var rememberVectorPainter$composable = kotlin_org_jetbrains_compose_ui_ui.$_$.e1;
-  var _ULong___get_data__impl__fggpzb = kotlin_kotlin.$_$.q3;
+  var _ULong___get_data__impl__fggpzb = kotlin_kotlin.$_$.s3;
   var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.b4;
-  var Companion_getInstance_2 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q2;
-  var isObject = kotlin_kotlin.$_$.dd;
+  var Companion_getInstance_2 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
   var semantics = kotlin_org_jetbrains_compose_ui_ui.$_$.p7;
   var toolingGraphicsLayer = kotlin_org_jetbrains_compose_ui_ui.$_$.j1;
   var Companion_getInstance_3 = kotlin_org_jetbrains_compose_ui_ui.$_$.j9;
@@ -97,19 +97,18 @@
   var Box$composable = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.a;
   var Companion_getInstance_4 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u1;
   var _Size___get_height__impl__a04p02 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l1;
-  var isInfinite = kotlin_kotlin.$_$.gi;
+  var isInfinite = kotlin_kotlin.$_$.mi;
   var _Size___get_width__impl__58y75t = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.p1;
   var set_contentDescription = kotlin_org_jetbrains_compose_ui_ui.$_$.q6;
   var Companion_getInstance_5 = kotlin_org_jetbrains_compose_ui_ui.$_$.m9;
   var set_role = kotlin_org_jetbrains_compose_ui_ui.$_$.k7;
-  var Unit_getInstance = kotlin_kotlin.$_$.z4;
-  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i2;
+  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
   var size = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.x;
   var DpSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t;
   var Spring_getInstance = kotlin_org_jetbrains_compose_animation_animation_core.$_$.j1;
   var SpringSpec = kotlin_org_jetbrains_compose_animation_animation_core.$_$.m;
   var RoundedCornerShape = kotlin_org_jetbrains_compose_foundation_foundation.$_$.t;
-  var hashCode = kotlin_kotlin.$_$.qc;
+  var hashCode = kotlin_kotlin.$_$.uc;
   var widthIn = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.a1;
   var heightIn = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.n;
   var tween = kotlin_org_jetbrains_compose_animation_animation_core.$_$.d1;
@@ -121,7 +120,7 @@
   var _TextOverflow___get_value__impl__vugm5i = kotlin_org_jetbrains_compose_ui_ui_text.$_$.z1;
   var Companion_getInstance_6 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v3;
   var Companion_getInstance_7 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.u2;
-  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.m4;
+  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.o4;
   var BasicText$composable = kotlin_org_jetbrains_compose_foundation_foundation.$_$.x;
   var ColorProducer = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.l;
   var Constraints = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.a;
@@ -129,12 +128,12 @@
   var Companion_getInstance_8 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.i2;
   var Companion_getInstance_9 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.l2;
   var get_sp_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s1;
-  var objectCreate = kotlin_kotlin.$_$.pd;
+  var objectCreate = kotlin_kotlin.$_$.sd;
   var Companion_getInstance_10 = kotlin_org_jetbrains_compose_ui_ui_text.$_$.x2;
   var get_CircleShape = kotlin_org_jetbrains_compose_foundation_foundation.$_$.r;
   var get_LinearEasing = kotlin_org_jetbrains_compose_animation_animation_core.$_$.l;
   var SkikoKey_KEY_UP_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.x6;
-  var toLong = kotlin_kotlin.$_$.ud;
+  var toLong = kotlin_kotlin.$_$.xd;
   var SkikoKey_KEY_DOWN_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.b4;
   var SkikoKey_KEY_LEFT_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.g5;
   var SkikoKey_KEY_RIGHT_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.n6;
@@ -154,9 +153,9 @@
   setMetadataFor(MaterialTheme, 'MaterialTheme', objectMeta);
   setMetadataFor(ProgressIndicatorDefaults, 'ProgressIndicatorDefaults', objectMeta);
   setMetadataFor(FabPlacement, 'FabPlacement', classMeta);
-  setMetadataFor(Shapes, 'Shapes', classMeta);
+  setMetadataFor(Shapes, 'Shapes', classMeta, VOID, VOID, Shapes);
   setMetadataFor(sam$androidx_compose_ui_graphics_ColorProducer$0, 'sam$androidx_compose_ui_graphics_ColorProducer$0', classMeta, VOID, [ColorProducer]);
-  setMetadataFor(Typography, 'Typography', classMeta);
+  setMetadataFor(Typography, 'Typography', classMeta, VOID, VOID, Typography_init_$Create$);
   //endregion
   function get_TitlePadding() {
     _init_properties_AlertDialog_kt__pwewa6();
@@ -190,18 +189,16 @@
       var tmp = Companion_getInstance();
       // Inline function 'androidx.compose.ui.unit.dp' call
       var tmp_0 = _Dp___init__impl__ms3zkb(24);
-      var tmp$ret$1;
       // Inline function 'androidx.compose.ui.unit.dp' call
-      tmp$ret$1 = _Dp___init__impl__ms3zkb(24);
+      var tmp$ret$1 = _Dp___init__impl__ms3zkb(24);
       TitlePadding = padding(tmp, tmp_0, VOID, tmp$ret$1);
       var tmp_1 = Companion_getInstance();
       // Inline function 'androidx.compose.ui.unit.dp' call
       var tmp_2 = _Dp___init__impl__ms3zkb(24);
       // Inline function 'androidx.compose.ui.unit.dp' call
       var tmp_3 = _Dp___init__impl__ms3zkb(24);
-      var tmp$ret$2;
       // Inline function 'androidx.compose.ui.unit.dp' call
-      tmp$ret$2 = _Dp___init__impl__ms3zkb(28);
+      var tmp$ret$2 = _Dp___init__impl__ms3zkb(28);
       TextPadding = padding(tmp_1, tmp_2, VOID, tmp_3, tmp$ret$2);
       TitleBaselineDistanceFromTop = get_sp(40);
       TextBaselineDistanceFromTitle = get_sp(36);
@@ -247,20 +244,18 @@
       // Inline function 'androidx.compose.ui.unit.dp' call
       AppBarHorizontalPadding = _Dp___init__impl__ms3zkb(4);
       var tmp = Companion_getInstance();
-      var tmp$ret$1;
       // Inline function 'androidx.compose.ui.unit.Dp.minus' call
       // Inline function 'androidx.compose.ui.unit.dp' call
-      var tmp0_minus = _Dp___init__impl__ms3zkb(16);
-      var tmp1_minus = get_AppBarHorizontalPadding();
-      tmp$ret$1 = _Dp___init__impl__ms3zkb(_Dp___get_value__impl__geb1vb(tmp0_minus) - _Dp___get_value__impl__geb1vb(tmp1_minus));
+      var this_0 = _Dp___init__impl__ms3zkb(16);
+      var other = get_AppBarHorizontalPadding();
+      var tmp$ret$1 = _Dp___init__impl__ms3zkb(_Dp___get_value__impl__geb1vb(this_0) - _Dp___get_value__impl__geb1vb(other));
       TitleInsetWithoutIcon = width(tmp, tmp$ret$1);
       var tmp_0 = fillMaxHeight(Companion_getInstance());
-      var tmp$ret$1_0;
       // Inline function 'androidx.compose.ui.unit.Dp.minus' call
       // Inline function 'androidx.compose.ui.unit.dp' call
-      var tmp0_minus_0 = _Dp___init__impl__ms3zkb(72);
-      var tmp1_minus_0 = get_AppBarHorizontalPadding();
-      tmp$ret$1_0 = _Dp___init__impl__ms3zkb(_Dp___get_value__impl__geb1vb(tmp0_minus_0) - _Dp___get_value__impl__geb1vb(tmp1_minus_0));
+      var this_1 = _Dp___init__impl__ms3zkb(72);
+      var other_0 = get_AppBarHorizontalPadding();
+      var tmp$ret$1_0 = _Dp___init__impl__ms3zkb(_Dp___get_value__impl__geb1vb(this_1) - _Dp___get_value__impl__geb1vb(other_0));
       TitleIconModifier = width(tmp_0, tmp$ret$1_0);
       // Inline function 'androidx.compose.ui.unit.dp' call
       BottomAppBarCutoutOffset = _Dp___init__impl__ms3zkb(8);
@@ -324,12 +319,12 @@
       BadgeWithContentHorizontalPadding = _Dp___init__impl__ms3zkb(4);
       // Inline function 'androidx.compose.ui.unit.Dp.unaryMinus' call
       // Inline function 'androidx.compose.ui.unit.dp' call
-      var tmp0_unaryMinus = _Dp___init__impl__ms3zkb(6);
-      BadgeWithContentHorizontalOffset = _Dp___init__impl__ms3zkb(-_Dp___get_value__impl__geb1vb(tmp0_unaryMinus));
+      var this_0 = _Dp___init__impl__ms3zkb(6);
+      BadgeWithContentHorizontalOffset = _Dp___init__impl__ms3zkb(-_Dp___get_value__impl__geb1vb(this_0));
       // Inline function 'androidx.compose.ui.unit.Dp.unaryMinus' call
       // Inline function 'androidx.compose.ui.unit.dp' call
-      var tmp0_unaryMinus_0 = _Dp___init__impl__ms3zkb(4);
-      BadgeHorizontalOffset = _Dp___init__impl__ms3zkb(-_Dp___get_value__impl__geb1vb(tmp0_unaryMinus_0));
+      var this_1 = _Dp___init__impl__ms3zkb(4);
+      BadgeHorizontalOffset = _Dp___init__impl__ms3zkb(-_Dp___get_value__impl__geb1vb(this_1));
     }
   }
   function get_BottomNavigationAnimationSpec() {
@@ -498,158 +493,209 @@
     this.isLight$delegate_1 = mutableStateOf(isLight, structuralEqualityPolicy());
     this.$stable_1 = 0;
   }
-  protoOf(Colors).set_primary_1v4zhe_k$ = function (_set____db54di) {
+  protoOf(Colors).set_primary_1oxcea_k$ = function (_set____db54di) {
+    var this_0 = this.primary$delegate_1;
     primary$factory();
-    return this.primary$delegate_1.set_value_rnwamw_k$(new Color(_set____db54di));
+    var value = new Color(_set____db54di);
+    this_0.set_value_v1vabv_k$(value);
+    return Unit_getInstance();
   };
-  protoOf(Colors).get_primary_9vvgym_k$ = function () {
+  protoOf(Colors).get_primary_gfn28_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.primary$delegate_1;
     primary$factory_0();
-    return this.primary$delegate_1.get_value_j01efc_k$().value_1;
+    return this_0.get_value_j01efc_k$().value_1;
   };
-  protoOf(Colors).set_primaryVariant_4vgd3b_k$ = function (_set____db54di) {
+  protoOf(Colors).set_primaryVariant_lna2f7_k$ = function (_set____db54di) {
+    var this_0 = this.primaryVariant$delegate_1;
     primaryVariant$factory();
-    return this.primaryVariant$delegate_1.set_value_rnwamw_k$(new Color(_set____db54di));
+    var value = new Color(_set____db54di);
+    this_0.set_value_v1vabv_k$(value);
+    return Unit_getInstance();
   };
-  protoOf(Colors).get_primaryVariant_e5ihv3_k$ = function () {
+  protoOf(Colors).get_primaryVariant_nkybrh_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.primaryVariant$delegate_1;
     primaryVariant$factory_0();
-    return this.primaryVariant$delegate_1.get_value_j01efc_k$().value_1;
+    return this_0.get_value_j01efc_k$().value_1;
   };
-  protoOf(Colors).set_secondary_vcikds_k$ = function (_set____db54di) {
+  protoOf(Colors).set_secondary_m6t3ck_k$ = function (_set____db54di) {
+    var this_0 = this.secondary$delegate_1;
     secondary$factory();
-    return this.secondary$delegate_1.set_value_rnwamw_k$(new Color(_set____db54di));
+    var value = new Color(_set____db54di);
+    this_0.set_value_v1vabv_k$(value);
+    return Unit_getInstance();
   };
-  protoOf(Colors).get_secondary_k1hldc_k$ = function () {
+  protoOf(Colors).get_secondary_tgxf9q_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.secondary$delegate_1;
     secondary$factory_0();
-    return this.secondary$delegate_1.get_value_j01efc_k$().value_1;
+    return this_0.get_value_j01efc_k$().value_1;
   };
-  protoOf(Colors).set_secondaryVariant_tt45mv_k$ = function (_set____db54di) {
+  protoOf(Colors).set_secondaryVariant_t4bdu3_k$ = function (_set____db54di) {
+    var this_0 = this.secondaryVariant$delegate_1;
     secondaryVariant$factory();
-    return this.secondaryVariant$delegate_1.set_value_rnwamw_k$(new Color(_set____db54di));
+    var value = new Color(_set____db54di);
+    this_0.set_value_v1vabv_k$(value);
+    return Unit_getInstance();
   };
-  protoOf(Colors).get_secondaryVariant_2d0yxr_k$ = function () {
+  protoOf(Colors).get_secondaryVariant_72euyn_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.secondaryVariant$delegate_1;
     secondaryVariant$factory_0();
-    return this.secondaryVariant$delegate_1.get_value_j01efc_k$().value_1;
+    return this_0.get_value_j01efc_k$().value_1;
   };
-  protoOf(Colors).set_background_kwyuos_k$ = function (_set____db54di) {
+  protoOf(Colors).set_background_jj6oi0_k$ = function (_set____db54di) {
+    var this_0 = this.background$delegate_1;
     background$factory();
-    return this.background$delegate_1.set_value_rnwamw_k$(new Color(_set____db54di));
+    var value = new Color(_set____db54di);
+    this_0.set_value_v1vabv_k$(value);
+    return Unit_getInstance();
   };
-  protoOf(Colors).get_background_ubksc_k$ = function () {
+  protoOf(Colors).get_background_8l4942_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.background$delegate_1;
     background$factory_0();
-    return this.background$delegate_1.get_value_j01efc_k$().value_1;
+    return this_0.get_value_j01efc_k$().value_1;
   };
-  protoOf(Colors).set_surface_cc9rfb_k$ = function (_set____db54di) {
+  protoOf(Colors).set_surface_59aa25_k$ = function (_set____db54di) {
+    var this_0 = this.surface$delegate_1;
     surface$factory();
-    return this.surface$delegate_1.set_value_rnwamw_k$(new Color(_set____db54di));
+    var value = new Color(_set____db54di);
+    this_0.set_value_v1vabv_k$(value);
+    return Unit_getInstance();
   };
-  protoOf(Colors).get_surface_rbg09j_k$ = function () {
+  protoOf(Colors).get_surface_ya87t7_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.surface$delegate_1;
     surface$factory_0();
-    return this.surface$delegate_1.get_value_j01efc_k$().value_1;
+    return this_0.get_value_j01efc_k$().value_1;
   };
-  protoOf(Colors).set_error_inofto_k$ = function (_set____db54di) {
+  protoOf(Colors).set_error_xl056w_k$ = function (_set____db54di) {
+    var this_0 = this.error$delegate_1;
     error$factory();
-    return this.error$delegate_1.set_value_rnwamw_k$(new Color(_set____db54di));
+    var value = new Color(_set____db54di);
+    this_0.set_value_v1vabv_k$(value);
+    return Unit_getInstance();
   };
-  protoOf(Colors).get_error_3wds10_k$ = function () {
+  protoOf(Colors).get_error_5j21ve_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.error$delegate_1;
     error$factory_0();
-    return this.error$delegate_1.get_value_j01efc_k$().value_1;
+    return this_0.get_value_j01efc_k$().value_1;
   };
-  protoOf(Colors).set_onPrimary_oij9nl_k$ = function (_set____db54di) {
+  protoOf(Colors).set_onPrimary_8yocyr_k$ = function (_set____db54di) {
+    var this_0 = this.onPrimary$delegate_1;
     onPrimary$factory();
-    return this.onPrimary$delegate_1.set_value_rnwamw_k$(new Color(_set____db54di));
+    var value = new Color(_set____db54di);
+    this_0.set_value_v1vabv_k$(value);
+    return Unit_getInstance();
   };
-  protoOf(Colors).get_onPrimary_dkxau7_k$ = function () {
+  protoOf(Colors).get_onPrimary_45hgxt_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.onPrimary$delegate_1;
     onPrimary$factory_0();
-    return this.onPrimary$delegate_1.get_value_j01efc_k$().value_1;
+    return this_0.get_value_j01efc_k$().value_1;
   };
-  protoOf(Colors).set_onSecondary_8ksqoh_k$ = function (_set____db54di) {
+  protoOf(Colors).set_onSecondary_ml65pn_k$ = function (_set____db54di) {
+    var this_0 = this.onSecondary$delegate_1;
     onSecondary$factory();
-    return this.onSecondary$delegate_1.set_value_rnwamw_k$(new Color(_set____db54di));
+    var value = new Color(_set____db54di);
+    this_0.set_value_v1vabv_k$(value);
+    return Unit_getInstance();
   };
-  protoOf(Colors).get_onSecondary_jv9s1b_k$ = function () {
+  protoOf(Colors).get_onSecondary_taplxp_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.onSecondary$delegate_1;
     onSecondary$factory_0();
-    return this.onSecondary$delegate_1.get_value_j01efc_k$().value_1;
+    return this_0.get_value_j01efc_k$().value_1;
   };
-  protoOf(Colors).set_onBackground_98uqo3_k$ = function (_set____db54di) {
+  protoOf(Colors).set_onBackground_iz12ux_k$ = function (_set____db54di) {
+    var this_0 = this.onBackground$delegate_1;
     onBackground$factory();
-    return this.onBackground$delegate_1.set_value_rnwamw_k$(new Color(_set____db54di));
+    var value = new Color(_set____db54di);
+    this_0.set_value_v1vabv_k$(value);
+    return Unit_getInstance();
   };
-  protoOf(Colors).get_onBackground_671u57_k$ = function () {
+  protoOf(Colors).get_onBackground_38dzr7_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.onBackground$delegate_1;
     onBackground$factory_0();
-    return this.onBackground$delegate_1.get_value_j01efc_k$().value_1;
+    return this_0.get_value_j01efc_k$().value_1;
   };
-  protoOf(Colors).set_onSurface_yzo1li_k$ = function (_set____db54di) {
+  protoOf(Colors).set_onSurface_cj1amm_k$ = function (_set____db54di) {
+    var this_0 = this.onSurface$delegate_1;
     onSurface$factory();
-    return this.onSurface$delegate_1.set_value_rnwamw_k$(new Color(_set____db54di));
+    var value = new Color(_set____db54di);
+    this_0.set_value_v1vabv_k$(value);
+    return Unit_getInstance();
   };
-  protoOf(Colors).get_onSurface_nme6dy_k$ = function () {
+  protoOf(Colors).get_onSurface_x1u0ac_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.onSurface$delegate_1;
     onSurface$factory_0();
-    return this.onSurface$delegate_1.get_value_j01efc_k$().value_1;
+    return this_0.get_value_j01efc_k$().value_1;
   };
-  protoOf(Colors).set_onError_ow1iaj_k$ = function (_set____db54di) {
+  protoOf(Colors).set_onError_c35gwn_k$ = function (_set____db54di) {
+    var this_0 = this.onError$delegate_1;
     onError$factory();
-    return this.onError$delegate_1.set_value_rnwamw_k$(new Color(_set____db54di));
+    var value = new Color(_set____db54di);
+    this_0.set_value_v1vabv_k$(value);
+    return Unit_getInstance();
   };
-  protoOf(Colors).get_onError_hlsowr_k$ = function () {
+  protoOf(Colors).get_onError_r18it5_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.onError$delegate_1;
     onError$factory_0();
-    return this.onError$delegate_1.get_value_j01efc_k$().value_1;
+    return this_0.get_value_j01efc_k$().value_1;
   };
-  protoOf(Colors).set_isLight_oo2guy_k$ = function (_set____db54di) {
+  protoOf(Colors).set_isLight_1ahhfe_k$ = function (_set____db54di) {
+    var this_0 = this.isLight$delegate_1;
     isLight$factory();
-    return this.isLight$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   };
   protoOf(Colors).get_isLight_zemp0j_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.isLight$delegate_1;
     isLight$factory_0();
-    return this.isLight$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(Colors).copy_nlygth_k$ = function (primary, primaryVariant, secondary, secondaryVariant, background, surface, error, onPrimary, onSecondary, onBackground, onSurface, onError, isLight) {
+  protoOf(Colors).copy_6r0yto_k$ = function (primary, primaryVariant, secondary, secondaryVariant, background, surface, error, onPrimary, onSecondary, onBackground, onSurface, onError, isLight) {
     return new Colors(primary, primaryVariant, secondary, secondaryVariant, background, surface, error, onPrimary, onSecondary, onBackground, onSurface, onError, isLight);
   };
-  protoOf(Colors).copy$default_lykjh1_k$ = function (primary, primaryVariant, secondary, secondaryVariant, background, surface, error, onPrimary, onSecondary, onBackground, onSurface, onError, isLight, $super) {
-    primary = primary === VOID ? this.get_primary_9vvgym_k$() : primary;
-    primaryVariant = primaryVariant === VOID ? this.get_primaryVariant_e5ihv3_k$() : primaryVariant;
-    secondary = secondary === VOID ? this.get_secondary_k1hldc_k$() : secondary;
-    secondaryVariant = secondaryVariant === VOID ? this.get_secondaryVariant_2d0yxr_k$() : secondaryVariant;
-    background = background === VOID ? this.get_background_ubksc_k$() : background;
-    surface = surface === VOID ? this.get_surface_rbg09j_k$() : surface;
-    error = error === VOID ? this.get_error_3wds10_k$() : error;
-    onPrimary = onPrimary === VOID ? this.get_onPrimary_dkxau7_k$() : onPrimary;
-    onSecondary = onSecondary === VOID ? this.get_onSecondary_jv9s1b_k$() : onSecondary;
-    onBackground = onBackground === VOID ? this.get_onBackground_671u57_k$() : onBackground;
-    onSurface = onSurface === VOID ? this.get_onSurface_nme6dy_k$() : onSurface;
-    onError = onError === VOID ? this.get_onError_hlsowr_k$() : onError;
+  protoOf(Colors).copy$default_4p63ik_k$ = function (primary, primaryVariant, secondary, secondaryVariant, background, surface, error, onPrimary, onSecondary, onBackground, onSurface, onError, isLight, $super) {
+    primary = primary === VOID ? this.get_primary_gfn28_k$() : primary;
+    primaryVariant = primaryVariant === VOID ? this.get_primaryVariant_nkybrh_k$() : primaryVariant;
+    secondary = secondary === VOID ? this.get_secondary_tgxf9q_k$() : secondary;
+    secondaryVariant = secondaryVariant === VOID ? this.get_secondaryVariant_72euyn_k$() : secondaryVariant;
+    background = background === VOID ? this.get_background_8l4942_k$() : background;
+    surface = surface === VOID ? this.get_surface_ya87t7_k$() : surface;
+    error = error === VOID ? this.get_error_5j21ve_k$() : error;
+    onPrimary = onPrimary === VOID ? this.get_onPrimary_45hgxt_k$() : onPrimary;
+    onSecondary = onSecondary === VOID ? this.get_onSecondary_taplxp_k$() : onSecondary;
+    onBackground = onBackground === VOID ? this.get_onBackground_38dzr7_k$() : onBackground;
+    onSurface = onSurface === VOID ? this.get_onSurface_x1u0ac_k$() : onSurface;
+    onError = onError === VOID ? this.get_onError_r18it5_k$() : onError;
     isLight = isLight === VOID ? this.get_isLight_zemp0j_k$() : isLight;
-    return $super === VOID ? this.copy_nlygth_k$(primary, primaryVariant, secondary, secondaryVariant, background, surface, error, onPrimary, onSecondary, onBackground, onSurface, onError, isLight) : $super.copy_nlygth_k$.call(this, new Color(primary), new Color(primaryVariant), new Color(secondary), new Color(secondaryVariant), new Color(background), new Color(surface), new Color(error), new Color(onPrimary), new Color(onSecondary), new Color(onBackground), new Color(onSurface), new Color(onError), isLight);
+    return $super === VOID ? this.copy_6r0yto_k$(primary, primaryVariant, secondary, secondaryVariant, background, surface, error, onPrimary, onSecondary, onBackground, onSurface, onError, isLight) : $super.copy_6r0yto_k$.call(this, new Color(primary), new Color(primaryVariant), new Color(secondary), new Color(secondaryVariant), new Color(background), new Color(surface), new Color(error), new Color(onPrimary), new Color(onSecondary), new Color(onBackground), new Color(onSurface), new Color(onError), isLight);
   };
   protoOf(Colors).toString = function () {
-    return 'Colors(' + ('primary=' + new Color(this.get_primary_9vvgym_k$()) + ', ') + ('primaryVariant=' + new Color(this.get_primaryVariant_e5ihv3_k$()) + ', ') + ('secondary=' + new Color(this.get_secondary_k1hldc_k$()) + ', ') + ('secondaryVariant=' + new Color(this.get_secondaryVariant_2d0yxr_k$()) + ', ') + ('background=' + new Color(this.get_background_ubksc_k$()) + ', ') + ('surface=' + new Color(this.get_surface_rbg09j_k$()) + ', ') + ('error=' + new Color(this.get_error_3wds10_k$()) + ', ') + ('onPrimary=' + new Color(this.get_onPrimary_dkxau7_k$()) + ', ') + ('onSecondary=' + new Color(this.get_onSecondary_jv9s1b_k$()) + ', ') + ('onBackground=' + new Color(this.get_onBackground_671u57_k$()) + ', ') + ('onSurface=' + new Color(this.get_onSurface_nme6dy_k$()) + ', ') + ('onError=' + new Color(this.get_onError_hlsowr_k$()) + ', ') + ('isLight=' + this.get_isLight_zemp0j_k$()) + ')';
+    return 'Colors(' + ('primary=' + new Color(this.get_primary_gfn28_k$()) + ', ') + ('primaryVariant=' + new Color(this.get_primaryVariant_nkybrh_k$()) + ', ') + ('secondary=' + new Color(this.get_secondary_tgxf9q_k$()) + ', ') + ('secondaryVariant=' + new Color(this.get_secondaryVariant_72euyn_k$()) + ', ') + ('background=' + new Color(this.get_background_8l4942_k$()) + ', ') + ('surface=' + new Color(this.get_surface_ya87t7_k$()) + ', ') + ('error=' + new Color(this.get_error_5j21ve_k$()) + ', ') + ('onPrimary=' + new Color(this.get_onPrimary_45hgxt_k$()) + ', ') + ('onSecondary=' + new Color(this.get_onSecondary_taplxp_k$()) + ', ') + ('onBackground=' + new Color(this.get_onBackground_38dzr7_k$()) + ', ') + ('onSurface=' + new Color(this.get_onSurface_x1u0ac_k$()) + ', ') + ('onError=' + new Color(this.get_onError_r18it5_k$()) + ', ') + ('isLight=' + this.get_isLight_zemp0j_k$()) + ')';
   };
   function lightColors(primary, primaryVariant, secondary, secondaryVariant, background, surface, error, onPrimary, onSecondary, onBackground, onSurface, onError) {
     primary = primary === VOID ? Color_0(new Long(-10354450, 0)) : primary;
     primaryVariant = primaryVariant === VOID ? Color_0(new Long(-13172557, 0)) : primaryVariant;
     secondary = secondary === VOID ? Color_0(new Long(-16524602, 0)) : secondary;
     secondaryVariant = secondaryVariant === VOID ? Color_0(new Long(-16676986, 0)) : secondaryVariant;
-    background = background === VOID ? Companion_getInstance_0().get_White_rvz4cb_k$() : background;
-    surface = surface === VOID ? Companion_getInstance_0().get_White_rvz4cb_k$() : surface;
+    background = background === VOID ? Companion_getInstance_0().get_White_xpp3qf_k$() : background;
+    surface = surface === VOID ? Companion_getInstance_0().get_White_xpp3qf_k$() : surface;
     error = error === VOID ? Color_0(new Long(-5242848, 0)) : error;
-    onPrimary = onPrimary === VOID ? Companion_getInstance_0().get_White_rvz4cb_k$() : onPrimary;
-    onSecondary = onSecondary === VOID ? Companion_getInstance_0().get_Black_wh3yn9_k$() : onSecondary;
-    onBackground = onBackground === VOID ? Companion_getInstance_0().get_Black_wh3yn9_k$() : onBackground;
-    onSurface = onSurface === VOID ? Companion_getInstance_0().get_Black_wh3yn9_k$() : onSurface;
-    onError = onError === VOID ? Companion_getInstance_0().get_White_rvz4cb_k$() : onError;
+    onPrimary = onPrimary === VOID ? Companion_getInstance_0().get_White_xpp3qf_k$() : onPrimary;
+    onSecondary = onSecondary === VOID ? Companion_getInstance_0().get_Black_t4k9fh_k$() : onSecondary;
+    onBackground = onBackground === VOID ? Companion_getInstance_0().get_Black_t4k9fh_k$() : onBackground;
+    onSurface = onSurface === VOID ? Companion_getInstance_0().get_Black_t4k9fh_k$() : onSurface;
+    onError = onError === VOID ? Companion_getInstance_0().get_White_xpp3qf_k$() : onError;
     _init_properties_Colors_kt__dgoqts();
     return new Colors(primary, primaryVariant, secondary, secondaryVariant, background, surface, error, onPrimary, onSecondary, onBackground, onSurface, onError, true);
   }
@@ -661,18 +707,18 @@
       traceEventStart(-62582793, $changed, -1, 'androidx.compose.material.contentColorFor$composable (Colors.kt:295)');
     }
     // Inline function 'androidx.compose.ui.graphics.takeOrElse' call
-    var tmp0_takeOrElse = contentColorFor(MaterialTheme_getInstance().$get_colors$$composable_pawxfy_k$($composer_0, 6), backgroundColor);
+    var this_0 = contentColorFor(MaterialTheme_getInstance().$get_colors$$composable_sv7kqp_k$($composer_0, 6), backgroundColor);
     var tmp;
     // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-    if (!equals(_Color___get_value__impl__1pls5m(tmp0_takeOrElse), _Color___get_value__impl__1pls5m(Companion_getInstance_0().get_Unspecified_9ntdt9_k$()))) {
-      tmp = tmp0_takeOrElse;
+    if (!equals(_Color___get_value__impl__1pls5m(this_0), _Color___get_value__impl__1pls5m(Companion_getInstance_0().get_Unspecified_j397pn_k$()))) {
+      tmp = this_0;
     } else {
       // Inline function 'androidx.compose.material.contentColorFor$composable.<anonymous>' call
       // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-      var tmp0_$get_current$$composable_h5ksy7 = get_LocalContentColor();
+      var this_1 = get_LocalContentColor();
       var $composer_1 = $composer_0;
       sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-      var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+      var tmp0 = $composer_1.consume_ebzcrh_k$(this_1);
       sourceInformationMarkerEnd($composer_1);
       tmp = tmp0.value_1;
     }
@@ -685,7 +731,7 @@
   }
   function contentColorFor(_this__u8e3s4, backgroundColor) {
     _init_properties_Colors_kt__dgoqts();
-    return equals(backgroundColor, _this__u8e3s4.get_primary_9vvgym_k$()) ? _this__u8e3s4.get_onPrimary_dkxau7_k$() : equals(backgroundColor, _this__u8e3s4.get_primaryVariant_e5ihv3_k$()) ? _this__u8e3s4.get_onPrimary_dkxau7_k$() : equals(backgroundColor, _this__u8e3s4.get_secondary_k1hldc_k$()) ? _this__u8e3s4.get_onSecondary_jv9s1b_k$() : equals(backgroundColor, _this__u8e3s4.get_secondaryVariant_2d0yxr_k$()) ? _this__u8e3s4.get_onSecondary_jv9s1b_k$() : equals(backgroundColor, _this__u8e3s4.get_background_ubksc_k$()) ? _this__u8e3s4.get_onBackground_671u57_k$() : equals(backgroundColor, _this__u8e3s4.get_surface_rbg09j_k$()) ? _this__u8e3s4.get_onSurface_nme6dy_k$() : equals(backgroundColor, _this__u8e3s4.get_error_3wds10_k$()) ? _this__u8e3s4.get_onError_hlsowr_k$() : Companion_getInstance_0().get_Unspecified_9ntdt9_k$();
+    return equals(backgroundColor, _this__u8e3s4.get_primary_gfn28_k$()) ? _this__u8e3s4.get_onPrimary_45hgxt_k$() : equals(backgroundColor, _this__u8e3s4.get_primaryVariant_nkybrh_k$()) ? _this__u8e3s4.get_onPrimary_45hgxt_k$() : equals(backgroundColor, _this__u8e3s4.get_secondary_tgxf9q_k$()) ? _this__u8e3s4.get_onSecondary_taplxp_k$() : equals(backgroundColor, _this__u8e3s4.get_secondaryVariant_72euyn_k$()) ? _this__u8e3s4.get_onSecondary_taplxp_k$() : equals(backgroundColor, _this__u8e3s4.get_background_8l4942_k$()) ? _this__u8e3s4.get_onBackground_38dzr7_k$() : equals(backgroundColor, _this__u8e3s4.get_surface_ya87t7_k$()) ? _this__u8e3s4.get_onSurface_x1u0ac_k$() : equals(backgroundColor, _this__u8e3s4.get_error_5j21ve_k$()) ? _this__u8e3s4.get_onError_r18it5_k$() : Companion_getInstance_0().get_Unspecified_j397pn_k$();
   }
   function LocalColors$lambda() {
     _init_properties_Colors_kt__dgoqts();
@@ -693,184 +739,184 @@
   }
   function primary$factory() {
     return getPropertyCallableRef('primary', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_primary_9vvgym_k$());
+      return new Color(receiver.get_primary_gfn28_k$());
     }, function (receiver, value) {
-      return receiver.set_primary_1v4zhe_k$(value.value_1);
+      return receiver.set_primary_1oxcea_k$(value.value_1);
     });
   }
   function primary$factory_0() {
     return getPropertyCallableRef('primary', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_primary_9vvgym_k$());
+      return new Color(receiver.get_primary_gfn28_k$());
     }, function (receiver, value) {
-      return receiver.set_primary_1v4zhe_k$(value.value_1);
+      return receiver.set_primary_1oxcea_k$(value.value_1);
     });
   }
   function primaryVariant$factory() {
     return getPropertyCallableRef('primaryVariant', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_primaryVariant_e5ihv3_k$());
+      return new Color(receiver.get_primaryVariant_nkybrh_k$());
     }, function (receiver, value) {
-      return receiver.set_primaryVariant_4vgd3b_k$(value.value_1);
+      return receiver.set_primaryVariant_lna2f7_k$(value.value_1);
     });
   }
   function primaryVariant$factory_0() {
     return getPropertyCallableRef('primaryVariant', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_primaryVariant_e5ihv3_k$());
+      return new Color(receiver.get_primaryVariant_nkybrh_k$());
     }, function (receiver, value) {
-      return receiver.set_primaryVariant_4vgd3b_k$(value.value_1);
+      return receiver.set_primaryVariant_lna2f7_k$(value.value_1);
     });
   }
   function secondary$factory() {
     return getPropertyCallableRef('secondary', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_secondary_k1hldc_k$());
+      return new Color(receiver.get_secondary_tgxf9q_k$());
     }, function (receiver, value) {
-      return receiver.set_secondary_vcikds_k$(value.value_1);
+      return receiver.set_secondary_m6t3ck_k$(value.value_1);
     });
   }
   function secondary$factory_0() {
     return getPropertyCallableRef('secondary', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_secondary_k1hldc_k$());
+      return new Color(receiver.get_secondary_tgxf9q_k$());
     }, function (receiver, value) {
-      return receiver.set_secondary_vcikds_k$(value.value_1);
+      return receiver.set_secondary_m6t3ck_k$(value.value_1);
     });
   }
   function secondaryVariant$factory() {
     return getPropertyCallableRef('secondaryVariant', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_secondaryVariant_2d0yxr_k$());
+      return new Color(receiver.get_secondaryVariant_72euyn_k$());
     }, function (receiver, value) {
-      return receiver.set_secondaryVariant_tt45mv_k$(value.value_1);
+      return receiver.set_secondaryVariant_t4bdu3_k$(value.value_1);
     });
   }
   function secondaryVariant$factory_0() {
     return getPropertyCallableRef('secondaryVariant', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_secondaryVariant_2d0yxr_k$());
+      return new Color(receiver.get_secondaryVariant_72euyn_k$());
     }, function (receiver, value) {
-      return receiver.set_secondaryVariant_tt45mv_k$(value.value_1);
+      return receiver.set_secondaryVariant_t4bdu3_k$(value.value_1);
     });
   }
   function background$factory() {
     return getPropertyCallableRef('background', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_background_ubksc_k$());
+      return new Color(receiver.get_background_8l4942_k$());
     }, function (receiver, value) {
-      return receiver.set_background_kwyuos_k$(value.value_1);
+      return receiver.set_background_jj6oi0_k$(value.value_1);
     });
   }
   function background$factory_0() {
     return getPropertyCallableRef('background', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_background_ubksc_k$());
+      return new Color(receiver.get_background_8l4942_k$());
     }, function (receiver, value) {
-      return receiver.set_background_kwyuos_k$(value.value_1);
+      return receiver.set_background_jj6oi0_k$(value.value_1);
     });
   }
   function surface$factory() {
     return getPropertyCallableRef('surface', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_surface_rbg09j_k$());
+      return new Color(receiver.get_surface_ya87t7_k$());
     }, function (receiver, value) {
-      return receiver.set_surface_cc9rfb_k$(value.value_1);
+      return receiver.set_surface_59aa25_k$(value.value_1);
     });
   }
   function surface$factory_0() {
     return getPropertyCallableRef('surface', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_surface_rbg09j_k$());
+      return new Color(receiver.get_surface_ya87t7_k$());
     }, function (receiver, value) {
-      return receiver.set_surface_cc9rfb_k$(value.value_1);
+      return receiver.set_surface_59aa25_k$(value.value_1);
     });
   }
   function error$factory() {
     return getPropertyCallableRef('error', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_error_3wds10_k$());
+      return new Color(receiver.get_error_5j21ve_k$());
     }, function (receiver, value) {
-      return receiver.set_error_inofto_k$(value.value_1);
+      return receiver.set_error_xl056w_k$(value.value_1);
     });
   }
   function error$factory_0() {
     return getPropertyCallableRef('error', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_error_3wds10_k$());
+      return new Color(receiver.get_error_5j21ve_k$());
     }, function (receiver, value) {
-      return receiver.set_error_inofto_k$(value.value_1);
+      return receiver.set_error_xl056w_k$(value.value_1);
     });
   }
   function onPrimary$factory() {
     return getPropertyCallableRef('onPrimary', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_onPrimary_dkxau7_k$());
+      return new Color(receiver.get_onPrimary_45hgxt_k$());
     }, function (receiver, value) {
-      return receiver.set_onPrimary_oij9nl_k$(value.value_1);
+      return receiver.set_onPrimary_8yocyr_k$(value.value_1);
     });
   }
   function onPrimary$factory_0() {
     return getPropertyCallableRef('onPrimary', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_onPrimary_dkxau7_k$());
+      return new Color(receiver.get_onPrimary_45hgxt_k$());
     }, function (receiver, value) {
-      return receiver.set_onPrimary_oij9nl_k$(value.value_1);
+      return receiver.set_onPrimary_8yocyr_k$(value.value_1);
     });
   }
   function onSecondary$factory() {
     return getPropertyCallableRef('onSecondary', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_onSecondary_jv9s1b_k$());
+      return new Color(receiver.get_onSecondary_taplxp_k$());
     }, function (receiver, value) {
-      return receiver.set_onSecondary_8ksqoh_k$(value.value_1);
+      return receiver.set_onSecondary_ml65pn_k$(value.value_1);
     });
   }
   function onSecondary$factory_0() {
     return getPropertyCallableRef('onSecondary', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_onSecondary_jv9s1b_k$());
+      return new Color(receiver.get_onSecondary_taplxp_k$());
     }, function (receiver, value) {
-      return receiver.set_onSecondary_8ksqoh_k$(value.value_1);
+      return receiver.set_onSecondary_ml65pn_k$(value.value_1);
     });
   }
   function onBackground$factory() {
     return getPropertyCallableRef('onBackground', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_onBackground_671u57_k$());
+      return new Color(receiver.get_onBackground_38dzr7_k$());
     }, function (receiver, value) {
-      return receiver.set_onBackground_98uqo3_k$(value.value_1);
+      return receiver.set_onBackground_iz12ux_k$(value.value_1);
     });
   }
   function onBackground$factory_0() {
     return getPropertyCallableRef('onBackground', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_onBackground_671u57_k$());
+      return new Color(receiver.get_onBackground_38dzr7_k$());
     }, function (receiver, value) {
-      return receiver.set_onBackground_98uqo3_k$(value.value_1);
+      return receiver.set_onBackground_iz12ux_k$(value.value_1);
     });
   }
   function onSurface$factory() {
     return getPropertyCallableRef('onSurface', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_onSurface_nme6dy_k$());
+      return new Color(receiver.get_onSurface_x1u0ac_k$());
     }, function (receiver, value) {
-      return receiver.set_onSurface_yzo1li_k$(value.value_1);
+      return receiver.set_onSurface_cj1amm_k$(value.value_1);
     });
   }
   function onSurface$factory_0() {
     return getPropertyCallableRef('onSurface', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_onSurface_nme6dy_k$());
+      return new Color(receiver.get_onSurface_x1u0ac_k$());
     }, function (receiver, value) {
-      return receiver.set_onSurface_yzo1li_k$(value.value_1);
+      return receiver.set_onSurface_cj1amm_k$(value.value_1);
     });
   }
   function onError$factory() {
     return getPropertyCallableRef('onError', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_onError_hlsowr_k$());
+      return new Color(receiver.get_onError_r18it5_k$());
     }, function (receiver, value) {
-      return receiver.set_onError_ow1iaj_k$(value.value_1);
+      return receiver.set_onError_c35gwn_k$(value.value_1);
     });
   }
   function onError$factory_0() {
     return getPropertyCallableRef('onError', 1, KMutableProperty1, function (receiver) {
-      return new Color(receiver.get_onError_hlsowr_k$());
+      return new Color(receiver.get_onError_r18it5_k$());
     }, function (receiver, value) {
-      return receiver.set_onError_ow1iaj_k$(value.value_1);
+      return receiver.set_onError_c35gwn_k$(value.value_1);
     });
   }
   function isLight$factory() {
     return getPropertyCallableRef('isLight', 1, KMutableProperty1, function (receiver) {
       return receiver.get_isLight_zemp0j_k$();
     }, function (receiver, value) {
-      return receiver.set_isLight_oo2guy_k$(value);
+      return receiver.set_isLight_1ahhfe_k$(value);
     });
   }
   function isLight$factory_0() {
     return getPropertyCallableRef('isLight', 1, KMutableProperty1, function (receiver) {
       return receiver.get_isLight_zemp0j_k$();
     }, function (receiver, value) {
-      return receiver.set_isLight_oo2guy_k$(value);
+      return receiver.set_isLight_1ahhfe_k$(value);
     });
   }
   var properties_initialized_Colors_kt_23tfjm;
@@ -893,19 +939,19 @@
   }
   function contentAlpha$composable($this, highContrastAlpha, lowContrastAlpha, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-198048456);
+    $composer_0.startReplaceableGroup_ip860b_k$(-198048456);
     sourceInformation($composer_0, 'C(contentAlpha$composable)76@2623L7,77@2670L6:ContentAlpha.kt#jmzs0o');
     if (isTraceInProgress()) {
       traceEventStart(-198048456, $changed, -1, 'androidx.compose.material.ContentAlpha.contentAlpha$composable (ContentAlpha.kt:70)');
     }
     // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-    var tmp0_$get_current$$composable_h5ksy7 = get_LocalContentColor();
+    var this_0 = get_LocalContentColor();
     var $composer_1 = $composer_0;
     sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-    var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+    var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
     sourceInformationMarkerEnd($composer_1);
     var contentColor = tmp0.value_1;
-    var lightTheme = MaterialTheme_getInstance().$get_colors$$composable_pawxfy_k$($composer_0, 6).get_isLight_zemp0j_k$();
+    var lightTheme = MaterialTheme_getInstance().$get_colors$$composable_sv7kqp_k$($composer_0, 6).get_isLight_zemp0j_k$();
     var tmp;
     if (lightTheme) {
       tmp = luminance(contentColor) > 0.5 ? highContrastAlpha : lowContrastAlpha;
@@ -916,7 +962,7 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0_0;
   }
   function ContentAlpha() {
@@ -932,52 +978,46 @@
   protoOf(ContentAlpha).get_disabled_rbmjej_k$ = function () {
     illegalDecoyCallException('<get-disabled>');
   };
-  protoOf(ContentAlpha).$get_high$$composable_xt02qk_k$ = function ($composer, $changed) {
+  protoOf(ContentAlpha).$get_high$$composable_qqvh8v_k$ = function ($composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1959843334);
+    $composer_0.startReplaceableGroup_ip860b_k$(-1959843334);
     sourceInformation($composer_0, 'C($get-high$$composable)34@1107L146:ContentAlpha.kt#jmzs0o');
     if (isTraceInProgress()) {
       traceEventStart(-1959843334, $changed, -1, 'androidx.compose.material.ContentAlpha.$get-high$$composable (ContentAlpha.kt:34)');
     }
-    HighContrastContentAlpha_getInstance();
-    LowContrastContentAlpha_getInstance();
     var tmp0 = contentAlpha$composable(this, 1.0, 0.87, $composer_0, 54 | 896 & $changed << 6);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   };
-  protoOf(ContentAlpha).$get_medium$$composable_ialx8p_k$ = function ($composer, $changed) {
+  protoOf(ContentAlpha).$get_medium$$composable_nfhsx0_k$ = function ($composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-277492921);
+    $composer_0.startReplaceableGroup_ip860b_k$(-277492921);
     sourceInformation($composer_0, 'C($get-medium$$composable)45@1458L150:ContentAlpha.kt#jmzs0o');
     if (isTraceInProgress()) {
       traceEventStart(-277492921, $changed, -1, 'androidx.compose.material.ContentAlpha.$get-medium$$composable (ContentAlpha.kt:45)');
     }
-    HighContrastContentAlpha_getInstance();
-    LowContrastContentAlpha_getInstance();
     var tmp0 = contentAlpha$composable(this, 0.74, 0.6, $composer_0, 54 | 896 & $changed << 6);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   };
-  protoOf(ContentAlpha).$get_disabled$$composable_xy2o02_k$ = function ($composer, $changed) {
+  protoOf(ContentAlpha).$get_disabled$$composable_hqnx1n_k$ = function ($composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(856927968);
+    $composer_0.startReplaceableGroup_ip860b_k$(856927968);
     sourceInformation($composer_0, 'C($get-disabled$$composable)56@1805L154:ContentAlpha.kt#jmzs0o');
     if (isTraceInProgress()) {
       traceEventStart(856927968, $changed, -1, 'androidx.compose.material.ContentAlpha.$get-disabled$$composable (ContentAlpha.kt:56)');
     }
-    HighContrastContentAlpha_getInstance();
-    LowContrastContentAlpha_getInstance();
     var tmp0 = contentAlpha$composable(this, 0.38, 0.38, $composer_0, 54 | 896 & $changed << 6);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   };
   var ContentAlpha_instance;
@@ -1046,7 +1086,7 @@
   var LocalContentColor;
   function LocalContentColor$lambda() {
     _init_properties_ContentColor_kt__5mda8a();
-    return new Color(Companion_getInstance_0().get_Black_wh3yn9_k$());
+    return new Color(Companion_getInstance_0().get_Black_t4k9fh_k$());
   }
   var properties_initialized_ContentColor_kt_sc8rw;
   function _init_properties_ContentColor_kt__5mda8a() {
@@ -1079,9 +1119,9 @@
       // Inline function 'androidx.compose.ui.unit.dp' call
       defaultTouchSlop = _Dp___init__impl__ms3zkb(18);
       // Inline function 'androidx.compose.ui.unit.Dp.div' call
-      var tmp0_div = get_mouseSlop();
-      var tmp1_div = get_defaultTouchSlop();
-      mouseToTouchSlopRatio = _Dp___get_value__impl__geb1vb(tmp0_div) / _Dp___get_value__impl__geb1vb(tmp1_div);
+      var this_0 = get_mouseSlop();
+      var other = get_defaultTouchSlop();
+      mouseToTouchSlopRatio = _Dp___get_value__impl__geb1vb(this_0) / _Dp___get_value__impl__geb1vb(other);
     }
   }
   function get_EndDrawerPadding() {
@@ -1156,21 +1196,20 @@
   function DefaultElevationOverlay() {
     DefaultElevationOverlay_instance = this;
   }
-  protoOf(DefaultElevationOverlay).apply_e856lp_k$ = function (color, elevation) {
+  protoOf(DefaultElevationOverlay).apply_xods1p_k$ = function (color, elevation) {
     illegalDecoyCallException('apply');
   };
-  protoOf(DefaultElevationOverlay).apply$composable_pd3zbm_k$ = function (color, elevation, $composer, $changed) {
+  protoOf(DefaultElevationOverlay).apply$composable_3wl4t5_k$ = function (color, elevation, $composer, $changed) {
     var $composer_0 = $composer;
     sourceInformationMarkerStart($composer_0, -1758936578, 'C(apply$composable)P(0:c#ui.graphics.Color,1:c#ui.unit.Dp)69@2742L6,71@2841L42:ElevationOverlay.kt#jmzs0o');
     if (isTraceInProgress()) {
       traceEventStart(-1758936578, $changed, -1, 'androidx.compose.material.DefaultElevationOverlay.apply$composable (ElevationOverlay.kt:68)');
     }
-    var colors = MaterialTheme_getInstance().$get_colors$$composable_pawxfy_k$($composer_0, 6);
+    var colors = MaterialTheme_getInstance().$get_colors$$composable_sv7kqp_k$($composer_0, 6);
     var tmp;
     var tmp_0;
-    var tmp$ret$0;
     // Inline function 'androidx.compose.ui.unit.dp' call
-    tmp$ret$0 = _Dp___init__impl__ms3zkb(0);
+    var tmp$ret$0 = _Dp___init__impl__ms3zkb(0);
     if (Dp__compareTo_impl_tlg3dl(elevation, tmp$ret$0) > 0) {
       tmp_0 = !colors.get_isLight_zemp0j_k$();
     } else {
@@ -1203,8 +1242,8 @@
       traceEventStart(-1391092752, $changed, -1, 'androidx.compose.material.calculateForegroundColor$composable (ElevationOverlay.kt:86)');
     }
     // Inline function 'kotlin.math.ln' call
-    var tmp0_ln = _Dp___get_value__impl__geb1vb(elevation) + 1;
-    var alpha = (4.5 * Math.log(tmp0_ln) + 2.0) / 100.0;
+    var x = _Dp___get_value__impl__geb1vb(elevation) + 1;
+    var alpha = (4.5 * Math.log(x) + 2.0) / 100.0;
     var baseForegroundColor = contentColorFor$composable(backgroundColor, $composer_0, 14 & $changed);
     var tmp0 = Color__copy$default_impl_ectz3s(baseForegroundColor, alpha);
     if (isTraceInProgress()) {
@@ -1219,9 +1258,8 @@
   }
   function LocalAbsoluteElevation$lambda() {
     _init_properties_ElevationOverlay_kt__499xhv();
-    var tmp$ret$0;
     // Inline function 'androidx.compose.ui.unit.dp' call
-    tmp$ret$0 = _Dp___init__impl__ms3zkb(0);
+    var tmp$ret$0 = _Dp___init__impl__ms3zkb(0);
     return new Dp(tmp$ret$0);
   }
   var properties_initialized_ElevationOverlay_kt_xrg85x;
@@ -1290,23 +1328,23 @@
     var modifier_0 = modifier;
     var tint_0 = tint;
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1798234707);
+    $composer_0.startReplaceableGroup_ip860b_k$(-1798234707);
     sourceInformation($composer_0, 'C(Icon$composable)P(1!,3:c#ui.graphics.Color)65@3149L7,65@3188L7,68@3229L34,67@3205L163:Icon.kt#jmzs0o');
     if (!(($default & 4) === 0))
       modifier_0 = Companion_getInstance();
     if (!(($default & 8) === 0)) {
       // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-      var tmp0_$get_current$$composable_h5ksy7 = get_LocalContentColor();
+      var this_0 = get_LocalContentColor();
       var $composer_1 = $composer_0;
       sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-      var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+      var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
       sourceInformationMarkerEnd($composer_1);
       var tmp = tmp0.value_1;
       // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-      var tmp2_$get_current$$composable_g4n2vl = get_LocalContentAlpha();
+      var this_1 = get_LocalContentAlpha();
       var $composer_2 = $composer_0;
       sourceInformationMarkerStart($composer_2, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-      var tmp0_0 = $composer_2.consume_11nid3_k$(tmp2_$get_current$$composable_g4n2vl);
+      var tmp0_0 = $composer_2.consume_ebzcrh_k$(this_1);
       sourceInformationMarkerEnd($composer_2);
       tint_0 = Color__copy$default_impl_ectz3s(tmp, tmp0_0);
     }
@@ -1317,14 +1355,14 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
   }
   function Icon$composable_0(painter, contentDescription, modifier, tint, $composer, $changed, $default) {
     _init_properties_Icon_kt__pgqcnt();
     var modifier_0 = {_v: modifier};
     var tint_0 = {_v: new Color(tint)};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-1405370588);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1405370588);
     sourceInformation($composer_0, 'C(Icon$composable)P(2!,3:c#ui.graphics.Color)133@6456L7,133@6495L7,145@6878L253:Icon.kt#jmzs0o');
     var $dirty = $changed;
     if (!(($default & 1) === 0))
@@ -1340,99 +1378,99 @@
     else if (($changed & 896) === 0)
       $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(modifier_0._v) ? 256 : 128);
     if (($changed & 7168) === 0)
-      $dirty = $dirty | ((($default & 8) === 0 ? $composer_0.changed_ga0fqa_k$(_ULong___get_data__impl__fggpzb(_Color___get_value__impl__1pls5m(tint_0._v.value_1))) : false) ? 2048 : 1024);
+      $dirty = $dirty | ((($default & 8) === 0 ? $composer_0.changed_j54hty_k$(_ULong___get_data__impl__fggpzb(_Color___get_value__impl__1pls5m(tint_0._v.value_1))) : false) ? 2048 : 1024);
     if (!(($dirty & 5851) === 1170) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      $composer_0.startDefaults_g7jseb_k$();
+      $composer_0.startDefaults_g83kzo_k$();
       if (($changed & 1) === 0 ? true : $composer_0.get_defaultsInvalid_y88fc4_k$()) {
         if (!(($default & 4) === 0)) {
           modifier_0._v = Companion_getInstance();
         }
         if (!(($default & 8) === 0)) {
           // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-          var tmp0_$get_current$$composable_h5ksy7 = get_LocalContentColor();
+          var this_0 = get_LocalContentColor();
           var $composer_1 = $composer_0;
           sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-          var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+          var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
           sourceInformationMarkerEnd($composer_1);
           var tmp = tmp0.value_1;
           // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-          var tmp2_$get_current$$composable_g4n2vl = get_LocalContentAlpha();
+          var this_1 = get_LocalContentAlpha();
           var $composer_2 = $composer_0;
           sourceInformationMarkerStart($composer_2, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-          var tmp0_0 = $composer_2.consume_11nid3_k$(tmp2_$get_current$$composable_g4n2vl);
+          var tmp0_0 = $composer_2.consume_ebzcrh_k$(this_1);
           sourceInformationMarkerEnd($composer_2);
           tint_0._v = new Color(Color__copy$default_impl_ectz3s(tmp, tmp0_0));
           $dirty = $dirty & -7169;
         }
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         if (!(($default & 8) === 0))
           $dirty = $dirty & -7169;
       }
-      $composer_0.endDefaults_b0883g_k$();
+      $composer_0.endDefaults_b0s0ot_k$();
       if (isTraceInProgress()) {
         traceEventStart(-1405370588, $dirty, -1, 'androidx.compose.material.Icon$composable (Icon.kt:129)');
       }
-      var colorFilter = tint_0._v.equals(new Color(Companion_getInstance_0().get_Unspecified_9ntdt9_k$())) ? null : Companion_getInstance_1().tint$default_or1h4c_k$(tint_0._v.value_1);
-      $composer_0.startReplaceableGroup_rp6air_k$(1651962591);
+      var colorFilter = tint_0._v.equals(new Color(Companion_getInstance_0().get_Unspecified_j397pn_k$())) ? null : Companion_getInstance_1().tint$default_jnxvki_k$(tint_0._v.value_1);
+      $composer_0.startReplaceableGroup_ip860b_k$(1651962591);
       sourceInformation($composer_0, '138@6734L103');
       var tmp_0;
       if (!(contentDescription == null)) {
         var tmp_1 = Companion_getInstance();
         // Inline function 'androidx.compose.runtime.remember$composable' call
         var $composer_3 = $composer_0;
-        $composer_3.startReplaceableGroup_rp6air_k$(-838505973);
+        $composer_3.startReplaceableGroup_ip860b_k$(-838505973);
         sourceInformation($composer_3, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
         // Inline function 'androidx.compose.runtime.cache' call
-        var tmp1_cache = $composer_3.changed_ga7h3f_k$(contentDescription);
+        var invalid = $composer_3.changed_ga7h3f_k$(contentDescription);
         // Inline function 'kotlin.let' call
-        var tmp0_let = $composer_3.rememberedValue_4dg93v_k$();
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var it = $composer_3.rememberedValue_4dg93v_k$();
         var tmp_2;
-        if (tmp1_cache ? true : tmp0_let === Companion_getInstance_2().get_Empty_i9b85g_k$()) {
+        if (invalid ? true : it === Companion_getInstance_2().get_Empty_i9b85g_k$()) {
           // Inline function 'androidx.compose.material.Icon$composable.<anonymous>' call
           var value = Icon$composable$lambda(contentDescription);
-          $composer_3.updateRememberedValue_l1colo_k$(value);
+          $composer_3.updateRememberedValue_l1wh71_k$(value);
           tmp_2 = value;
         } else {
-          tmp_2 = tmp0_let;
+          tmp_2 = it;
         }
         var tmp_3 = tmp_2;
-        var tmp0_1 = (tmp_3 == null ? true : isObject(tmp_3)) ? tmp_3 : THROW_CCE();
-        $composer_3.endReplaceableGroup_er37p7_k$();
+        var tmp0_1 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
+        $composer_3.endReplaceableGroup_ern0ak_k$();
         tmp_0 = semantics(tmp_1, VOID, tmp0_1);
       } else {
         tmp_0 = Companion_getInstance();
       }
       var tmp0_group = tmp_0;
-      $composer_0.endReplaceableGroup_er37p7_k$();
+      $composer_0.endReplaceableGroup_ern0ak_k$();
       var semantics_0 = tmp0_group;
       var tmp0_$receiver = defaultSizeFor(toolingGraphicsLayer(modifier_0._v), painter);
       var tmp1_contentScale = Companion_getInstance_3().get_Fit_18jtko_k$();
-      Box$composable(paint(tmp0_$receiver, painter, VOID, VOID, tmp1_contentScale, VOID, colorFilter).then_5qw5wu_k$(semantics_0), $composer_0, 0);
+      Box$composable(paint(tmp0_$receiver, painter, VOID, VOID, tmp1_contentScale, VOID, colorFilter).then_g5qrxq_k$(semantics_0), $composer_0, 0);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(Icon$composable$lambda_0(painter, contentDescription, modifier_0, tint_0, $changed, $default));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(Icon$composable$lambda_0(painter, contentDescription, modifier_0, tint_0, $changed, $default));
     }
   }
   function defaultSizeFor(_this__u8e3s4, painter) {
     _init_properties_Icon_kt__pgqcnt();
     var tmp;
-    if (equals(painter.get_intrinsicSize_x61on3_k$(), Companion_getInstance_4().get_Unspecified_o59ai8_k$()) ? true : isInfinite_0(painter.get_intrinsicSize_x61on3_k$())) {
+    if (equals(painter.get_intrinsicSize_culx5t_k$(), Companion_getInstance_4().get_Unspecified_3ttj0y_k$()) ? true : isInfinite_0(painter.get_intrinsicSize_culx5t_k$())) {
       tmp = get_DefaultIconSizeModifier();
     } else {
       tmp = Companion_getInstance();
     }
-    return _this__u8e3s4.then_5qw5wu_k$(tmp);
+    return _this__u8e3s4.then_g5qrxq_k$(tmp);
   }
   function isInfinite_0(_this__u8e3s4) {
     _init_properties_Icon_kt__pgqcnt();
@@ -1441,7 +1479,7 @@
   function Icon$composable$lambda($contentDescription) {
     return function ($this$semantics) {
       set_contentDescription($this$semantics, $contentDescription);
-      set_role($this$semantics, Companion_getInstance_5().get_Image_q9qgyo_k$());
+      set_role($this$semantics, Companion_getInstance_5().get_Image_hasgv4_k$());
       return Unit_getInstance();
     };
   }
@@ -1456,9 +1494,8 @@
     if (!properties_initialized_Icon_kt_u3g1lx) {
       properties_initialized_Icon_kt_u3g1lx = true;
       var tmp = Companion_getInstance();
-      var tmp$ret$0;
       // Inline function 'androidx.compose.ui.unit.dp' call
-      tmp$ret$0 = _Dp___init__impl__ms3zkb(24);
+      var tmp$ret$0 = _Dp___init__impl__ms3zkb(24);
       DefaultIconSizeModifier = size(tmp, tmp$ret$0);
     }
   }
@@ -1502,9 +1539,8 @@
       LocalMinimumTouchTargetEnforcement = get_LocalMinimumInteractiveComponentEnforcement();
       // Inline function 'androidx.compose.ui.unit.dp' call
       var tmp = _Dp___init__impl__ms3zkb(48);
-      var tmp$ret$1;
       // Inline function 'androidx.compose.ui.unit.dp' call
-      tmp$ret$1 = _Dp___init__impl__ms3zkb(48);
+      var tmp$ret$1 = _Dp___init__impl__ms3zkb(48);
       minimumInteractiveComponentSize = DpSize(tmp, tmp$ret$1);
     }
   }
@@ -1524,17 +1560,17 @@
   protoOf(MaterialTheme).get_shapes_jgtjwb_k$ = function () {
     illegalDecoyCallException('<get-shapes>');
   };
-  protoOf(MaterialTheme).$get_colors$$composable_pawxfy_k$ = function ($composer, $changed) {
+  protoOf(MaterialTheme).$get_colors$$composable_sv7kqp_k$ = function ($composer, $changed) {
     var $composer_0 = $composer;
     sourceInformationMarkerStart($composer_0, 273761861, 'C($get-colors$$composable)102@4462L7:MaterialTheme.kt#jmzs0o');
     if (isTraceInProgress()) {
       traceEventStart(273761861, $changed, -1, 'androidx.compose.material.MaterialTheme.$get-colors$$composable (MaterialTheme.kt:102)');
     }
     // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-    var tmp0_$get_current$$composable_h5ksy7 = get_LocalColors();
+    var this_0 = get_LocalColors();
     var $composer_1 = $composer_0;
     sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-    var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+    var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
     sourceInformationMarkerEnd($composer_1);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -1542,17 +1578,17 @@
     sourceInformationMarkerEnd($composer_0);
     return tmp0;
   };
-  protoOf(MaterialTheme).$get_typography$$composable_fm42xb_k$ = function ($composer, $changed) {
+  protoOf(MaterialTheme).$get_typography$$composable_99iyci_k$ = function ($composer, $changed) {
     var $composer_0 = $composer;
     sourceInformationMarkerStart($composer_0, 1858445221, 'C($get-typography$$composable)112@4763L7:MaterialTheme.kt#jmzs0o');
     if (isTraceInProgress()) {
       traceEventStart(1858445221, $changed, -1, 'androidx.compose.material.MaterialTheme.$get-typography$$composable (MaterialTheme.kt:112)');
     }
     // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-    var tmp0_$get_current$$composable_h5ksy7 = get_LocalTypography();
+    var this_0 = get_LocalTypography();
     var $composer_1 = $composer_0;
     sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-    var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+    var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
     sourceInformationMarkerEnd($composer_1);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -1560,17 +1596,17 @@
     sourceInformationMarkerEnd($composer_0);
     return tmp0;
   };
-  protoOf(MaterialTheme).$get_shapes$$composable_4kixjg_k$ = function ($composer, $changed) {
+  protoOf(MaterialTheme).$get_shapes$$composable_gkckn5_k$ = function ($composer, $changed) {
     var $composer_0 = $composer;
     sourceInformationMarkerStart($composer_0, 493638021, 'C($get-shapes$$composable)120@4971L7:MaterialTheme.kt#jmzs0o');
     if (isTraceInProgress()) {
       traceEventStart(493638021, $changed, -1, 'androidx.compose.material.MaterialTheme.$get-shapes$$composable (MaterialTheme.kt:120)');
     }
     // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-    var tmp0_$get_current$$composable_h5ksy7 = get_LocalShapes();
+    var this_0 = get_LocalShapes();
     var $composer_1 = $composer_0;
     sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-    var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+    var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
     sourceInformationMarkerEnd($composer_1);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -1789,10 +1825,10 @@
     // Inline function 'androidx.compose.ui.unit.dp' call
     tmp.StrokeWidth_1 = _Dp___init__impl__ms3zkb(4);
     this.IndicatorBackgroundOpacity_1 = 0.24;
-    this.ProgressAnimationSpec_1 = new SpringSpec(Spring_getInstance().get_DampingRatioNoBouncy_45ga5r_k$(), Spring_getInstance().get_StiffnessVeryLow_1smo6g_k$(), 1 / 1000.0);
+    this.ProgressAnimationSpec_1 = new SpringSpec(Spring_getInstance().get_DampingRatioNoBouncy_45ga5r_k$(), Spring_getInstance().get_StiffnessVeryLow_1smo6g_k$(), 0.001);
     this.$stable_1 = 0;
   }
-  protoOf(ProgressIndicatorDefaults).get_StrokeWidth_ciyx9c_k$ = function () {
+  protoOf(ProgressIndicatorDefaults).get_StrokeWidth_rdzany_k$ = function () {
     return this.StrokeWidth_1;
   };
   protoOf(ProgressIndicatorDefaults).get_IndicatorBackgroundOpacity_19bkuv_k$ = function () {
@@ -1864,8 +1900,8 @@
       // Inline function 'androidx.compose.ui.unit.dp' call
       RadioButtonSize = _Dp___init__impl__ms3zkb(20);
       // Inline function 'androidx.compose.ui.unit.Dp.div' call
-      var tmp0_div = get_RadioButtonSize();
-      RadioRadius = _Dp___init__impl__ms3zkb(_Dp___get_value__impl__geb1vb(tmp0_div) / 2);
+      var this_0 = get_RadioButtonSize();
+      RadioRadius = _Dp___init__impl__ms3zkb(_Dp___get_value__impl__geb1vb(this_0) / 2);
       // Inline function 'androidx.compose.ui.unit.dp' call
       RadioButtonDotSize = _Dp___init__impl__ms3zkb(12);
       // Inline function 'androidx.compose.ui.unit.dp' call
@@ -1924,9 +1960,8 @@
   function Shapes(small, medium, large) {
     var tmp;
     if (small === VOID) {
-      var tmp$ret$0;
       // Inline function 'androidx.compose.ui.unit.dp' call
-      tmp$ret$0 = _Dp___init__impl__ms3zkb(4);
+      var tmp$ret$0 = _Dp___init__impl__ms3zkb(4);
       tmp = RoundedCornerShape(tmp$ret$0);
     } else {
       tmp = small;
@@ -1934,9 +1969,8 @@
     small = tmp;
     var tmp_0;
     if (medium === VOID) {
-      var tmp$ret$0_0;
       // Inline function 'androidx.compose.ui.unit.dp' call
-      tmp$ret$0_0 = _Dp___init__impl__ms3zkb(4);
+      var tmp$ret$0_0 = _Dp___init__impl__ms3zkb(4);
       tmp_0 = RoundedCornerShape(tmp$ret$0_0);
     } else {
       tmp_0 = medium;
@@ -1944,9 +1978,8 @@
     medium = tmp_0;
     var tmp_1;
     if (large === VOID) {
-      var tmp$ret$0_1;
       // Inline function 'androidx.compose.ui.unit.dp' call
-      tmp$ret$0_1 = _Dp___init__impl__ms3zkb(0);
+      var tmp$ret$0_1 = _Dp___init__impl__ms3zkb(0);
       tmp_1 = RoundedCornerShape(tmp$ret$0_1);
     } else {
       tmp_1 = large;
@@ -1966,14 +1999,14 @@
   protoOf(Shapes).get_large_iujklu_k$ = function () {
     return this.large_1;
   };
-  protoOf(Shapes).copy_w6gorw_k$ = function (small, medium, large) {
+  protoOf(Shapes).copy_wmdikb_k$ = function (small, medium, large) {
     return new Shapes(small, medium, large);
   };
-  protoOf(Shapes).copy$default_6kq3t0_k$ = function (small, medium, large, $super) {
+  protoOf(Shapes).copy$default_x2usmb_k$ = function (small, medium, large, $super) {
     small = small === VOID ? this.small_1 : small;
     medium = medium === VOID ? this.medium_1 : medium;
     large = large === VOID ? this.large_1 : large;
-    return $super === VOID ? this.copy_w6gorw_k$(small, medium, large) : $super.copy_w6gorw_k$.call(this, small, medium, large);
+    return $super === VOID ? this.copy_wmdikb_k$(small, medium, large) : $super.copy_wmdikb_k$.call(this, small, medium, large);
   };
   protoOf(Shapes).equals = function (other) {
     if (this === other)
@@ -2234,9 +2267,9 @@
       SwitchWidth = get_TrackWidth();
       SwitchHeight = get_ThumbDiameter();
       // Inline function 'androidx.compose.ui.unit.Dp.minus' call
-      var tmp0_minus = get_TrackWidth();
-      var tmp1_minus = get_ThumbDiameter();
-      ThumbPathLength = _Dp___init__impl__ms3zkb(_Dp___get_value__impl__geb1vb(tmp0_minus) - _Dp___get_value__impl__geb1vb(tmp1_minus));
+      var this_0 = get_TrackWidth();
+      var other = get_ThumbDiameter();
+      ThumbPathLength = _Dp___init__impl__ms3zkb(_Dp___get_value__impl__geb1vb(this_0) - _Dp___get_value__impl__geb1vb(other));
       AnimationSpec_0 = new TweenSpec(100);
       // Inline function 'androidx.compose.ui.unit.dp' call
       ThumbDefaultElevation_0 = _Dp___init__impl__ms3zkb(1);
@@ -2345,7 +2378,7 @@
     var onTextLayout_0 = {_v: onTextLayout};
     var style_0 = {_v: style};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(66730249);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(66730249);
     sourceInformation($composer_0, 'C(Text$composable)P(14,9,0:c#ui.graphics.Color,2:c#ui.unit.TextUnit,3:c#ui.text.font.FontStyle,4!1,5:c#ui.unit.TextUnit,16,15:c#ui.text.style.TextAlign,6:c#ui.unit.TextUnit,11:c#ui.text.style.TextOverflow,12)109@5711L7,128@6923L7,129@6977L7,156@7775L30,138@7204L607:Text.kt#jmzs0o');
     var $dirty = $changed;
     var $dirty1 = $changed1;
@@ -2360,11 +2393,11 @@
     if (!(($default & 4) === 0))
       $dirty = $dirty | 384;
     else if (($changed & 896) === 0)
-      $dirty = $dirty | ($composer_0.changed_ga0fqa_k$(_ULong___get_data__impl__fggpzb(_Color___get_value__impl__1pls5m(color_0._v.value_1))) ? 256 : 128);
+      $dirty = $dirty | ($composer_0.changed_j54hty_k$(_ULong___get_data__impl__fggpzb(_Color___get_value__impl__1pls5m(color_0._v.value_1))) ? 256 : 128);
     if (!(($default & 8) === 0))
       $dirty = $dirty | 3072;
     else if (($changed & 7168) === 0)
-      $dirty = $dirty | ($composer_0.changed_ga0fqa_k$(_TextUnit___get_packedValue__impl__it60w4(fontSize_0._v.packedValue_1)) ? 2048 : 1024);
+      $dirty = $dirty | ($composer_0.changed_j54hty_k$(_TextUnit___get_packedValue__impl__it60w4(fontSize_0._v.packedValue_1)) ? 2048 : 1024);
     if (!(($default & 16) === 0))
       $dirty = $dirty | 24576;
     else if (($changed & 57344) === 0)
@@ -2380,7 +2413,7 @@
     if (!(($default & 128) === 0))
       $dirty = $dirty | 12582912;
     else if (($changed & 29360128) === 0)
-      $dirty = $dirty | ($composer_0.changed_ga0fqa_k$(_TextUnit___get_packedValue__impl__it60w4(letterSpacing_0._v.packedValue_1)) ? 8388608 : 4194304);
+      $dirty = $dirty | ($composer_0.changed_j54hty_k$(_TextUnit___get_packedValue__impl__it60w4(letterSpacing_0._v.packedValue_1)) ? 8388608 : 4194304);
     if (!(($default & 256) === 0))
       $dirty = $dirty | 100663296;
     else if (($changed & 234881024) === 0)
@@ -2392,23 +2425,23 @@
     if (!(($default & 1024) === 0))
       $dirty1 = $dirty1 | 6;
     else if (($changed1 & 14) === 0)
-      $dirty1 = $dirty1 | ($composer_0.changed_ga0fqa_k$(_TextUnit___get_packedValue__impl__it60w4(lineHeight_0._v.packedValue_1)) ? 4 : 2);
+      $dirty1 = $dirty1 | ($composer_0.changed_j54hty_k$(_TextUnit___get_packedValue__impl__it60w4(lineHeight_0._v.packedValue_1)) ? 4 : 2);
     if (!(($default & 2048) === 0))
       $dirty1 = $dirty1 | 48;
     else if (($changed1 & 112) === 0)
-      $dirty1 = $dirty1 | ($composer_0.changed_s0r703_k$(_TextOverflow___get_value__impl__vugm5i(overflow_0._v.value_1)) ? 32 : 16);
+      $dirty1 = $dirty1 | ($composer_0.changed_kpusro_k$(_TextOverflow___get_value__impl__vugm5i(overflow_0._v.value_1)) ? 32 : 16);
     if (!(($default & 4096) === 0))
       $dirty1 = $dirty1 | 384;
     else if (($changed1 & 896) === 0)
-      $dirty1 = $dirty1 | ($composer_0.changed_i0nym2_k$(softWrap_0._v) ? 256 : 128);
+      $dirty1 = $dirty1 | ($composer_0.changed_jpyyrz_k$(softWrap_0._v) ? 256 : 128);
     if (!(($default & 8192) === 0))
       $dirty1 = $dirty1 | 3072;
     else if (($changed1 & 7168) === 0)
-      $dirty1 = $dirty1 | ($composer_0.changed_s0r703_k$(maxLines_0._v) ? 2048 : 1024);
+      $dirty1 = $dirty1 | ($composer_0.changed_kpusro_k$(maxLines_0._v) ? 2048 : 1024);
     if (!(($default & 16384) === 0))
       $dirty1 = $dirty1 | 24576;
     else if (($changed1 & 57344) === 0)
-      $dirty1 = $dirty1 | ($composer_0.changed_s0r703_k$(minLines_0._v) ? 16384 : 8192);
+      $dirty1 = $dirty1 | ($composer_0.changed_kpusro_k$(minLines_0._v) ? 16384 : 8192);
     if (!(($default & 32768) === 0))
       $dirty1 = $dirty1 | 196608;
     else if (($changed1 & 458752) === 0)
@@ -2416,16 +2449,16 @@
     if (($changed1 & 3670016) === 0)
       $dirty1 = $dirty1 | ((($default & 65536) === 0 ? $composer_0.changed_ga7h3f_k$(style_0._v) : false) ? 1048576 : 524288);
     if ((!(($dirty & 1533916891) === 306783378) ? true : !(($dirty1 & 2995931) === 599186)) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      $composer_0.startDefaults_g7jseb_k$();
+      $composer_0.startDefaults_g83kzo_k$();
       if (($changed & 1) === 0 ? true : $composer_0.get_defaultsInvalid_y88fc4_k$()) {
         if (!(($default & 2) === 0)) {
           modifier_0._v = Companion_getInstance();
         }
         if (!(($default & 4) === 0)) {
-          color_0._v = new Color(Companion_getInstance_0().get_Unspecified_9ntdt9_k$());
+          color_0._v = new Color(Companion_getInstance_0().get_Unspecified_j397pn_k$());
         }
         if (!(($default & 8) === 0)) {
-          fontSize_0._v = new TextUnit(Companion_getInstance_6().get_Unspecified_n7zca6_k$());
+          fontSize_0._v = new TextUnit(Companion_getInstance_6().get_Unspecified_r048kw_k$());
         }
         if (!(($default & 16) === 0)) {
           fontStyle_0._v = null;
@@ -2437,7 +2470,7 @@
           fontFamily_0._v = null;
         }
         if (!(($default & 128) === 0)) {
-          letterSpacing_0._v = new TextUnit(Companion_getInstance_6().get_Unspecified_n7zca6_k$());
+          letterSpacing_0._v = new TextUnit(Companion_getInstance_6().get_Unspecified_r048kw_k$());
         }
         if (!(($default & 256) === 0)) {
           textDecoration_0._v = null;
@@ -2446,10 +2479,10 @@
           textAlign_0._v = null;
         }
         if (!(($default & 1024) === 0)) {
-          lineHeight_0._v = new TextUnit(Companion_getInstance_6().get_Unspecified_n7zca6_k$());
+          lineHeight_0._v = new TextUnit(Companion_getInstance_6().get_Unspecified_r048kw_k$());
         }
         if (!(($default & 2048) === 0)) {
-          overflow_0._v = new TextOverflow(Companion_getInstance_7().get_Clip_a6y3d7_k$());
+          overflow_0._v = new TextOverflow(Companion_getInstance_7().get_Clip_ypf2ge_k$());
         }
         if (!(($default & 4096) === 0)) {
           softWrap_0._v = true;
@@ -2465,47 +2498,47 @@
         }
         if (!(($default & 65536) === 0)) {
           // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-          var tmp0_$get_current$$composable_h5ksy7 = get_LocalTextStyle();
+          var this_0 = get_LocalTextStyle();
           var $composer_1 = $composer_0;
           sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-          var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+          var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
           sourceInformationMarkerEnd($composer_1);
           style_0._v = tmp0;
           $dirty1 = $dirty1 & -3670017;
         }
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         if (!(($default & 65536) === 0))
           $dirty1 = $dirty1 & -3670017;
       }
-      $composer_0.endDefaults_b0883g_k$();
+      $composer_0.endDefaults_b0s0ot_k$();
       if (isTraceInProgress()) {
         traceEventStart(66730249, $dirty, $dirty1, 'androidx.compose.material.Text$composable (Text.kt:92)');
       }
       // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-      var tmp2_$get_current$$composable_g4n2vl = get_LocalContentColor();
+      var this_1 = get_LocalContentColor();
       var $composer_2 = $composer_0;
       sourceInformationMarkerStart($composer_2, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-      var tmp0_0 = $composer_2.consume_11nid3_k$(tmp2_$get_current$$composable_g4n2vl);
+      var tmp0_0 = $composer_2.consume_ebzcrh_k$(this_1);
       sourceInformationMarkerEnd($composer_2);
       var localContentColor = tmp0_0.value_1;
       // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-      var tmp4_$get_current$$composable_f3pcsz = get_LocalContentAlpha();
+      var this_2 = get_LocalContentAlpha();
       var $composer_3 = $composer_0;
       sourceInformationMarkerStart($composer_3, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-      var tmp0_1 = $composer_3.consume_11nid3_k$(tmp4_$get_current$$composable_f3pcsz);
+      var tmp0_1 = $composer_3.consume_ebzcrh_k$(this_2);
       sourceInformationMarkerEnd($composer_3);
       var localContentAlpha = tmp0_1;
       var tmp_1;
       // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-      var tmp6_get_isSpecified_coq2dt = color_0._v.value_1;
-      if (!equals(_Color___get_value__impl__1pls5m(tmp6_get_isSpecified_coq2dt), _Color___get_value__impl__1pls5m(Companion_getInstance_0().get_Unspecified_9ntdt9_k$()))) {
+      var this_3 = color_0._v.value_1;
+      if (!equals(_Color___get_value__impl__1pls5m(this_3), _Color___get_value__impl__1pls5m(Companion_getInstance_0().get_Unspecified_j397pn_k$()))) {
         tmp_1 = color_0._v.value_1;
       } else {
         // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-        var tmp7_get_isSpecified_9p0228 = style_0._v.get_color_v34vrz_k$();
-        if (!equals(_Color___get_value__impl__1pls5m(tmp7_get_isSpecified_9p0228), _Color___get_value__impl__1pls5m(Companion_getInstance_0().get_Unspecified_9ntdt9_k$()))) {
-          tmp_1 = style_0._v.get_color_v34vrz_k$();
+        var this_4 = style_0._v.get_color_lnp1vl_k$();
+        if (!equals(_Color___get_value__impl__1pls5m(this_4), _Color___get_value__impl__1pls5m(Companion_getInstance_0().get_Unspecified_j397pn_k$()))) {
+          tmp_1 = style_0._v.get_color_lnp1vl_k$();
         } else {
           tmp_1 = Color__copy$default_impl_ectz3s(localContentColor, localContentAlpha);
         }
@@ -2513,60 +2546,61 @@
       var overrideColorOrUnspecified = tmp_1;
       var tmp_2 = modifier_0._v;
       var tmp_3 = style_0._v;
-      var tmp_4 = fontSize_0._v.packedValue_1;
+      var tmp_4 = fontSize_0._v;
       var tmp_5 = fontWeight_0._v;
       var tmp_6 = fontStyle_0._v;
       var tmp_7 = tmp_6 == null ? null : tmp_6.value_1;
       var tmp_8 = fontFamily_0._v;
-      var tmp_9 = letterSpacing_0._v.packedValue_1;
+      var tmp_9 = letterSpacing_0._v;
       var tmp_10 = textDecoration_0._v;
       var tmp_11 = textAlign_0._v;
-      var tmp_12 = tmp_3.merge$default_jeiwm0_k$(VOID, tmp_4, tmp_5, tmp_7, VOID, tmp_8, VOID, tmp_9, VOID, VOID, VOID, VOID, tmp_10, VOID, VOID, tmp_11 == null ? null : tmp_11.value_1, VOID, lineHeight_0._v.packedValue_1);
+      var tmp_12 = tmp_3.merge$default_iezoge_k$(VOID, tmp_4.packedValue_1, tmp_5, tmp_7, VOID, tmp_8, VOID, tmp_9.packedValue_1, VOID, VOID, VOID, VOID, tmp_10, VOID, VOID, tmp_11 == null ? null : tmp_11.value_1, VOID, lineHeight_0._v.packedValue_1);
       var tmp_13 = onTextLayout_0._v;
-      var tmp_14 = overflow_0._v.value_1;
+      var tmp_14 = overflow_0._v;
       var tmp_15 = softWrap_0._v;
       var tmp_16 = maxLines_0._v;
       var tmp_17 = minLines_0._v;
       // Inline function 'androidx.compose.runtime.remember$composable' call
+      var key1 = new Color(overrideColorOrUnspecified);
       var $composer_4 = $composer_0;
-      $composer_4.startReplaceableGroup_rp6air_k$(-838505973);
+      $composer_4.startReplaceableGroup_ip860b_k$(-838505973);
       sourceInformation($composer_4, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var tmp1_cache = $composer_4.changed_ga7h3f_k$(new Color(overrideColorOrUnspecified));
+      var invalid = $composer_4.changed_ga7h3f_k$(key1);
       // Inline function 'kotlin.let' call
-      var tmp0_let = $composer_4.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = $composer_4.rememberedValue_4dg93v_k$();
       var tmp_18;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_2().get_Empty_i9b85g_k$()) {
+      if (invalid ? true : it === Companion_getInstance_2().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.material.Text$composable.<anonymous>' call
         var value = Text$composable$lambda(overrideColorOrUnspecified);
-        $composer_4.updateRememberedValue_l1colo_k$(value);
+        $composer_4.updateRememberedValue_l1wh71_k$(value);
         tmp_18 = value;
       } else {
-        tmp_18 = tmp0_let;
+        tmp_18 = it;
       }
       var tmp_19 = tmp_18;
-      var tmp0_2 = (tmp_19 == null ? true : isObject(tmp_19)) ? tmp_19 : THROW_CCE();
-      $composer_4.endReplaceableGroup_er37p7_k$();
-      BasicText$composable(text, tmp_2, tmp_12, tmp_13, tmp_14, tmp_15, tmp_16, tmp_17, new sam$androidx_compose_ui_graphics_ColorProducer$0(tmp0_2), $composer_0, 14 & $dirty | 112 & $dirty | 7168 & $dirty1 >> 6 | 57344 & $dirty1 << 9 | 458752 & $dirty1 << 9 | 3670016 & $dirty1 << 9 | 29360128 & $dirty1 << 9, 0);
+      var tmp0_2 = (tmp_19 == null ? true : !(tmp_19 == null)) ? tmp_19 : THROW_CCE();
+      $composer_4.endReplaceableGroup_ern0ak_k$();
+      BasicText$composable(text, tmp_2, tmp_12, tmp_13, tmp_14.value_1, tmp_15, tmp_16, tmp_17, new sam$androidx_compose_ui_graphics_ColorProducer$0(tmp0_2), $composer_0, 14 & $dirty | 112 & $dirty | 7168 & $dirty1 >> 6 | 57344 & $dirty1 << 9 | 458752 & $dirty1 << 9 | 3670016 & $dirty1 << 9 | 29360128 & $dirty1 << 9, 0);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp0_safe_receiver === null)
       null;
     else {
-      tmp0_safe_receiver.updateScope_xhrf9y_k$(Text$composable$lambda_0(text, modifier_0, color_0, fontSize_0, fontStyle_0, fontWeight_0, fontFamily_0, letterSpacing_0, textDecoration_0, textAlign_0, lineHeight_0, overflow_0, softWrap_0, maxLines_0, minLines_0, onTextLayout_0, style_0, $changed, $changed1, $default));
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Text$composable$lambda_0(text, modifier_0, color_0, fontSize_0, fontStyle_0, fontWeight_0, fontFamily_0, letterSpacing_0, textDecoration_0, textAlign_0, lineHeight_0, overflow_0, softWrap_0, maxLines_0, minLines_0, onTextLayout_0, style_0, $changed, $changed1, $default));
     }
   }
   function sam$androidx_compose_ui_graphics_ColorProducer$0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_ui_graphics_ColorProducer$0).invoke_54deeb_k$ = function () {
+  protoOf(sam$androidx_compose_ui_graphics_ColorProducer$0).invoke_ejt8ap_k$ = function () {
     return this.function_1().value_1;
   };
   function LocalTextStyle$lambda() {
@@ -2581,16 +2615,16 @@
   function Text$composable$lambda_0($text, $modifier, $color, $fontSize, $fontStyle, $fontWeight, $fontFamily, $letterSpacing, $textDecoration, $textAlign, $lineHeight, $overflow, $softWrap, $maxLines, $minLines, $onTextLayout, $style, $$changed, $$changed1, $$default) {
     return function ($composer, $force) {
       var tmp = $modifier._v;
-      var tmp_0 = $color._v.value_1;
-      var tmp_1 = $fontSize._v.packedValue_1;
+      var tmp_0 = $color._v;
+      var tmp_1 = $fontSize._v;
       var tmp_2 = $fontStyle._v;
       var tmp_3 = tmp_2 == null ? null : tmp_2.value_1;
       var tmp_4 = $fontWeight._v;
       var tmp_5 = $fontFamily._v;
-      var tmp_6 = $letterSpacing._v.packedValue_1;
+      var tmp_6 = $letterSpacing._v;
       var tmp_7 = $textDecoration._v;
       var tmp_8 = $textAlign._v;
-      Text$composable($text, tmp, tmp_0, tmp_1, tmp_3, tmp_4, tmp_5, tmp_6, tmp_7, tmp_8 == null ? null : tmp_8.value_1, $lineHeight._v.packedValue_1, $overflow._v.value_1, $softWrap._v, $maxLines._v, $minLines._v, $onTextLayout._v, $style._v, $composer, updateChangedFlags($$changed | 1), updateChangedFlags($$changed1), $$default);
+      Text$composable($text, tmp, tmp_0.value_1, tmp_1.packedValue_1, tmp_3, tmp_4, tmp_5, tmp_6.packedValue_1, tmp_7, tmp_8 == null ? null : tmp_8.value_1, $lineHeight._v.packedValue_1, $overflow._v.value_1, $softWrap._v, $maxLines._v, $minLines._v, $onTextLayout._v, $style._v, $composer, updateChangedFlags($$changed | 1), updateChangedFlags($$changed1), $$default);
       return Unit_getInstance();
     };
   }
@@ -2661,9 +2695,8 @@
       var tmp = Companion_getInstance();
       // Inline function 'androidx.compose.ui.unit.dp' call
       var tmp_0 = _Dp___init__impl__ms3zkb(48);
-      var tmp$ret$1;
       // Inline function 'androidx.compose.ui.unit.dp' call
-      tmp$ret$1 = _Dp___init__impl__ms3zkb(48);
+      var tmp$ret$1 = _Dp___init__impl__ms3zkb(48);
       IconDefaultSizeModifier = defaultMinSize(tmp, tmp_0, tmp$ret$1);
     }
   }
@@ -2685,7 +2718,7 @@
       var tmp1_fontWeight = Companion_getInstance_9().get_Light_id31e5_k$();
       var tmp2_fontSize = get_sp(96);
       var tmp3_letterSpacing = get_sp_0(-1.5);
-      tmp = tmp0_$this.copy$default_yckbkh_k$(VOID, tmp2_fontSize, tmp1_fontWeight, VOID, VOID, VOID, VOID, tmp3_letterSpacing);
+      tmp = tmp0_$this.copy$default_82cxxr_k$(VOID, tmp2_fontSize, tmp1_fontWeight, VOID, VOID, VOID, VOID, tmp3_letterSpacing);
     } else {
       tmp = h1;
     }
@@ -2696,7 +2729,7 @@
       var tmp5_fontWeight = Companion_getInstance_9().get_Light_id31e5_k$();
       var tmp6_fontSize = get_sp(60);
       var tmp7_letterSpacing = get_sp_0(-0.5);
-      tmp_0 = tmp4_$this.copy$default_yckbkh_k$(VOID, tmp6_fontSize, tmp5_fontWeight, VOID, VOID, VOID, VOID, tmp7_letterSpacing);
+      tmp_0 = tmp4_$this.copy$default_82cxxr_k$(VOID, tmp6_fontSize, tmp5_fontWeight, VOID, VOID, VOID, VOID, tmp7_letterSpacing);
     } else {
       tmp_0 = h2;
     }
@@ -2707,7 +2740,7 @@
       var tmp9_fontWeight = Companion_getInstance_9().get_Normal_22avww_k$();
       var tmp10_fontSize = get_sp(48);
       var tmp11_letterSpacing = get_sp(0);
-      tmp_1 = tmp8_$this.copy$default_yckbkh_k$(VOID, tmp10_fontSize, tmp9_fontWeight, VOID, VOID, VOID, VOID, tmp11_letterSpacing);
+      tmp_1 = tmp8_$this.copy$default_82cxxr_k$(VOID, tmp10_fontSize, tmp9_fontWeight, VOID, VOID, VOID, VOID, tmp11_letterSpacing);
     } else {
       tmp_1 = h3;
     }
@@ -2718,7 +2751,7 @@
       var tmp13_fontWeight = Companion_getInstance_9().get_Normal_22avww_k$();
       var tmp14_fontSize = get_sp(34);
       var tmp15_letterSpacing = get_sp_0(0.25);
-      tmp_2 = tmp12_$this.copy$default_yckbkh_k$(VOID, tmp14_fontSize, tmp13_fontWeight, VOID, VOID, VOID, VOID, tmp15_letterSpacing);
+      tmp_2 = tmp12_$this.copy$default_82cxxr_k$(VOID, tmp14_fontSize, tmp13_fontWeight, VOID, VOID, VOID, VOID, tmp15_letterSpacing);
     } else {
       tmp_2 = h4;
     }
@@ -2729,7 +2762,7 @@
       var tmp17_fontWeight = Companion_getInstance_9().get_Normal_22avww_k$();
       var tmp18_fontSize = get_sp(24);
       var tmp19_letterSpacing = get_sp(0);
-      tmp_3 = tmp16_$this.copy$default_yckbkh_k$(VOID, tmp18_fontSize, tmp17_fontWeight, VOID, VOID, VOID, VOID, tmp19_letterSpacing);
+      tmp_3 = tmp16_$this.copy$default_82cxxr_k$(VOID, tmp18_fontSize, tmp17_fontWeight, VOID, VOID, VOID, VOID, tmp19_letterSpacing);
     } else {
       tmp_3 = h5;
     }
@@ -2740,7 +2773,7 @@
       var tmp21_fontWeight = Companion_getInstance_9().get_Medium_1fiba6_k$();
       var tmp22_fontSize = get_sp(20);
       var tmp23_letterSpacing = get_sp_0(0.15);
-      tmp_4 = tmp20_$this.copy$default_yckbkh_k$(VOID, tmp22_fontSize, tmp21_fontWeight, VOID, VOID, VOID, VOID, tmp23_letterSpacing);
+      tmp_4 = tmp20_$this.copy$default_82cxxr_k$(VOID, tmp22_fontSize, tmp21_fontWeight, VOID, VOID, VOID, VOID, tmp23_letterSpacing);
     } else {
       tmp_4 = h6;
     }
@@ -2751,7 +2784,7 @@
       var tmp25_fontWeight = Companion_getInstance_9().get_Normal_22avww_k$();
       var tmp26_fontSize = get_sp(16);
       var tmp27_letterSpacing = get_sp_0(0.15);
-      tmp_5 = tmp24_$this.copy$default_yckbkh_k$(VOID, tmp26_fontSize, tmp25_fontWeight, VOID, VOID, VOID, VOID, tmp27_letterSpacing);
+      tmp_5 = tmp24_$this.copy$default_82cxxr_k$(VOID, tmp26_fontSize, tmp25_fontWeight, VOID, VOID, VOID, VOID, tmp27_letterSpacing);
     } else {
       tmp_5 = subtitle1;
     }
@@ -2762,7 +2795,7 @@
       var tmp29_fontWeight = Companion_getInstance_9().get_Medium_1fiba6_k$();
       var tmp30_fontSize = get_sp(14);
       var tmp31_letterSpacing = get_sp_0(0.1);
-      tmp_6 = tmp28_$this.copy$default_yckbkh_k$(VOID, tmp30_fontSize, tmp29_fontWeight, VOID, VOID, VOID, VOID, tmp31_letterSpacing);
+      tmp_6 = tmp28_$this.copy$default_82cxxr_k$(VOID, tmp30_fontSize, tmp29_fontWeight, VOID, VOID, VOID, VOID, tmp31_letterSpacing);
     } else {
       tmp_6 = subtitle2;
     }
@@ -2773,7 +2806,7 @@
       var tmp33_fontWeight = Companion_getInstance_9().get_Normal_22avww_k$();
       var tmp34_fontSize = get_sp(16);
       var tmp35_letterSpacing = get_sp_0(0.5);
-      tmp_7 = tmp32_$this.copy$default_yckbkh_k$(VOID, tmp34_fontSize, tmp33_fontWeight, VOID, VOID, VOID, VOID, tmp35_letterSpacing);
+      tmp_7 = tmp32_$this.copy$default_82cxxr_k$(VOID, tmp34_fontSize, tmp33_fontWeight, VOID, VOID, VOID, VOID, tmp35_letterSpacing);
     } else {
       tmp_7 = body1;
     }
@@ -2784,7 +2817,7 @@
       var tmp37_fontWeight = Companion_getInstance_9().get_Normal_22avww_k$();
       var tmp38_fontSize = get_sp(14);
       var tmp39_letterSpacing = get_sp_0(0.25);
-      tmp_8 = tmp36_$this.copy$default_yckbkh_k$(VOID, tmp38_fontSize, tmp37_fontWeight, VOID, VOID, VOID, VOID, tmp39_letterSpacing);
+      tmp_8 = tmp36_$this.copy$default_82cxxr_k$(VOID, tmp38_fontSize, tmp37_fontWeight, VOID, VOID, VOID, VOID, tmp39_letterSpacing);
     } else {
       tmp_8 = body2;
     }
@@ -2795,7 +2828,7 @@
       var tmp41_fontWeight = Companion_getInstance_9().get_Medium_1fiba6_k$();
       var tmp42_fontSize = get_sp(14);
       var tmp43_letterSpacing = get_sp_0(1.25);
-      tmp_9 = tmp40_$this.copy$default_yckbkh_k$(VOID, tmp42_fontSize, tmp41_fontWeight, VOID, VOID, VOID, VOID, tmp43_letterSpacing);
+      tmp_9 = tmp40_$this.copy$default_82cxxr_k$(VOID, tmp42_fontSize, tmp41_fontWeight, VOID, VOID, VOID, VOID, tmp43_letterSpacing);
     } else {
       tmp_9 = button;
     }
@@ -2806,7 +2839,7 @@
       var tmp45_fontWeight = Companion_getInstance_9().get_Normal_22avww_k$();
       var tmp46_fontSize = get_sp(12);
       var tmp47_letterSpacing = get_sp_0(0.4);
-      tmp_10 = tmp44_$this.copy$default_yckbkh_k$(VOID, tmp46_fontSize, tmp45_fontWeight, VOID, VOID, VOID, VOID, tmp47_letterSpacing);
+      tmp_10 = tmp44_$this.copy$default_82cxxr_k$(VOID, tmp46_fontSize, tmp45_fontWeight, VOID, VOID, VOID, VOID, tmp47_letterSpacing);
     } else {
       tmp_10 = caption;
     }
@@ -2817,7 +2850,7 @@
       var tmp49_fontWeight = Companion_getInstance_9().get_Normal_22avww_k$();
       var tmp50_fontSize = get_sp(10);
       var tmp51_letterSpacing = get_sp_0(1.5);
-      tmp_11 = tmp48_$this.copy$default_yckbkh_k$(VOID, tmp50_fontSize, tmp49_fontWeight, VOID, VOID, VOID, VOID, tmp51_letterSpacing);
+      tmp_11 = tmp48_$this.copy$default_82cxxr_k$(VOID, tmp50_fontSize, tmp49_fontWeight, VOID, VOID, VOID, VOID, tmp51_letterSpacing);
     } else {
       tmp_11 = overline;
     }
@@ -2886,10 +2919,10 @@
   protoOf(Typography).get_overline_n1hw8f_k$ = function () {
     return this.overline_1;
   };
-  protoOf(Typography).copy_9bikh2_k$ = function (h1, h2, h3, h4, h5, h6, subtitle1, subtitle2, body1, body2, button, caption, overline) {
+  protoOf(Typography).copy_uz7ssp_k$ = function (h1, h2, h3, h4, h5, h6, subtitle1, subtitle2, body1, body2, button, caption, overline) {
     return new Typography(h1, h2, h3, h4, h5, h6, subtitle1, subtitle2, body1, body2, button, caption, overline);
   };
-  protoOf(Typography).copy$default_ncf83z_k$ = function (h1, h2, h3, h4, h5, h6, subtitle1, subtitle2, body1, body2, button, caption, overline, $super) {
+  protoOf(Typography).copy$default_c4bfw_k$ = function (h1, h2, h3, h4, h5, h6, subtitle1, subtitle2, body1, body2, button, caption, overline, $super) {
     h1 = h1 === VOID ? this.h1__1 : h1;
     h2 = h2 === VOID ? this.h2__1 : h2;
     h3 = h3 === VOID ? this.h3__1 : h3;
@@ -2903,7 +2936,7 @@
     button = button === VOID ? this.button_1 : button;
     caption = caption === VOID ? this.caption_1 : caption;
     overline = overline === VOID ? this.overline_1 : overline;
-    return $super === VOID ? this.copy_9bikh2_k$(h1, h2, h3, h4, h5, h6, subtitle1, subtitle2, body1, body2, button, caption, overline) : $super.copy_9bikh2_k$.call(this, h1, h2, h3, h4, h5, h6, subtitle1, subtitle2, body1, body2, button, caption, overline);
+    return $super === VOID ? this.copy_uz7ssp_k$(h1, h2, h3, h4, h5, h6, subtitle1, subtitle2, body1, body2, button, caption, overline) : $super.copy_uz7ssp_k$.call(this, h1, h2, h3, h4, h5, h6, subtitle1, subtitle2, body1, body2, button, caption, overline);
   };
   protoOf(Typography).equals = function (other) {
     if (this === other)
@@ -2959,7 +2992,7 @@
   };
   function withDefaultFontFamily(_this__u8e3s4, default_0) {
     _init_properties_Typography_kt__rm3fch();
-    return !(_this__u8e3s4.get_fontFamily_ulphcs_k$() == null) ? _this__u8e3s4 : _this__u8e3s4.copy$default_yckbkh_k$(VOID, VOID, VOID, VOID, VOID, default_0);
+    return !(_this__u8e3s4.get_fontFamily_ulphcs_k$() == null) ? _this__u8e3s4 : _this__u8e3s4.copy$default_82cxxr_k$(VOID, VOID, VOID, VOID, VOID, default_0);
   }
   function LocalTypography$lambda() {
     _init_properties_Typography_kt__rm3fch();
@@ -2969,7 +3002,7 @@
   function _init_properties_Typography_kt__rm3fch() {
     if (!properties_initialized_Typography_kt_bpd27j) {
       properties_initialized_Typography_kt_bpd27j = true;
-      DefaultTextStyle = Companion_getInstance_10().get_Default_goqax4_k$().copy$default_yckbkh_k$(VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, defaultPlatformTextStyle());
+      DefaultTextStyle = Companion_getInstance_10().get_Default_goqax4_k$().copy$default_82cxxr_k$(VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, defaultPlatformTextStyle());
       LocalTypography = staticCompositionLocalOf(LocalTypography$lambda);
     }
   }

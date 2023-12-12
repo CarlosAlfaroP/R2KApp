@@ -1,31 +1,31 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin-kotlin-stdlib-js-ir.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'));
   else {
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'appyx-utils-customisation'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'appyx-utils-customisation'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'appyx-utils-customisation'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'appyx-utils-customisation'.");
     }
-    root['appyx-utils-customisation'] = factory(typeof this['appyx-utils-customisation'] === 'undefined' ? {} : this['appyx-utils-customisation'], this['kotlin-kotlin-stdlib-js-ir']);
+    root['appyx-utils-customisation'] = factory(typeof this['appyx-utils-customisation'] === 'undefined' ? {} : this['appyx-utils-customisation'], this['kotlin-kotlin-stdlib']);
   }
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var interfaceMeta = kotlin_kotlin.$_$.sc;
-  var VOID = kotlin_kotlin.$_$.bj;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var interfaceMeta = kotlin_kotlin.$_$.wc;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var VOID = kotlin_kotlin.$_$.e;
   var getKClassFromExpression = kotlin_kotlin.$_$.b;
-  var classMeta = kotlin_kotlin.$_$.ec;
+  var classMeta = kotlin_kotlin.$_$.hc;
   //endregion
   //region block: pre-declaration
   function getRecursivelyOrDefault(default_0) {
-    var tmp1_elvis_lhs = this.get_5xtif6_k$(getKClassFromExpression(default_0));
+    var tmp1_elvis_lhs = this.get_1ybre7_k$(getKClassFromExpression(default_0));
     var tmp;
     if (tmp1_elvis_lhs == null) {
       var tmp0_safe_receiver = this.get_parent_hy4reb_k$();
-      tmp = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_5xtif6_k$(getKClassFromExpression(default_0));
+      tmp = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_1ybre7_k$(getKClassFromExpression(default_0));
     } else {
       tmp = tmp1_elvis_lhs;
     }
@@ -35,7 +35,7 @@
   setMetadataFor(NodeCustomisationDirectory, 'NodeCustomisationDirectory', interfaceMeta);
   setMetadataFor(MutableNodeCustomisationDirectory, 'MutableNodeCustomisationDirectory', interfaceMeta, VOID, [NodeCustomisationDirectory]);
   setMetadataFor(NodeCustomisation, 'NodeCustomisation', interfaceMeta);
-  setMetadataFor(NodeCustomisationDirectoryImpl, 'NodeCustomisationDirectoryImpl', classMeta, VOID, [MutableNodeCustomisationDirectory]);
+  setMetadataFor(NodeCustomisationDirectoryImpl, 'NodeCustomisationDirectoryImpl', classMeta, VOID, [MutableNodeCustomisationDirectory], NodeCustomisationDirectoryImpl);
   //endregion
   function MutableNodeCustomisationDirectory() {
   }
@@ -50,26 +50,26 @@
   protoOf(NodeCustomisationDirectoryImpl).get_parent_hy4reb_k$ = function () {
     return this.parent_1;
   };
-  protoOf(NodeCustomisationDirectoryImpl).put_68m61y_k$ = function (key, valueProvider) {
+  protoOf(NodeCustomisationDirectoryImpl).put_gm53um_k$ = function (key, valueProvider) {
   };
-  protoOf(NodeCustomisationDirectoryImpl).get_5xtif6_k$ = function (key) {
+  protoOf(NodeCustomisationDirectoryImpl).get_1ybre7_k$ = function (key) {
     return null;
   };
-  protoOf(NodeCustomisationDirectoryImpl).getRecursively_5tpyid_k$ = function (key) {
+  protoOf(NodeCustomisationDirectoryImpl).getRecursively_ngj70e_k$ = function (key) {
     return null;
   };
-  protoOf(NodeCustomisationDirectoryImpl).putSubDirectory_fktsdf_k$ = function (key, valueProvider) {
+  protoOf(NodeCustomisationDirectoryImpl).putSubDirectory_iejjel_k$ = function (key, valueProvider) {
   };
-  protoOf(NodeCustomisationDirectoryImpl).getSubDirectory_7zcjo8_k$ = function (key) {
+  protoOf(NodeCustomisationDirectoryImpl).getSubDirectory_e965mi_k$ = function (key) {
     return null;
   };
-  protoOf(NodeCustomisationDirectoryImpl).getSubDirectoryOrSelf_vtw4p5_k$ = function (key) {
+  protoOf(NodeCustomisationDirectoryImpl).getSubDirectoryOrSelf_ngo65l_k$ = function (key) {
     return this;
   };
-  protoOf(NodeCustomisationDirectoryImpl).invoke_t4gx9i_k$ = function (_this__u8e3s4, block) {
+  protoOf(NodeCustomisationDirectoryImpl).invoke_68ypvh_k$ = function (_this__u8e3s4, block) {
   };
   //region block: post-declaration
-  protoOf(NodeCustomisationDirectoryImpl).getRecursivelyOrDefault_1mcspa_k$ = getRecursivelyOrDefault;
+  protoOf(NodeCustomisationDirectoryImpl).getRecursivelyOrDefault_ussi2u_k$ = getRecursivelyOrDefault;
   //endregion
   //region block: exports
   _.$_$ = _.$_$ || {};

@@ -1,8 +1,8 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './compose-multiplatform-core-runtime.js', './compose-multiplatform-core-ui-graphics.js', './compose-multiplatform-core-ui.js', './kotlin-kotlin-stdlib-js-ir.js', './compose-multiplatform-core-ui-unit.js', './kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js', './compose-multiplatform-core-ui-geometry.js', './skiko-kjs.js'], factory);
+    define(['exports', './compose-multiplatform-core-runtime.js', './compose-multiplatform-core-ui-graphics.js', './compose-multiplatform-core-ui.js', './kotlin-kotlin-stdlib.js', './compose-multiplatform-core-ui-unit.js', './kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js', './compose-multiplatform-core-ui-geometry.js', './skiko-kjs.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./compose-multiplatform-core-runtime.js'), require('./compose-multiplatform-core-ui-graphics.js'), require('./compose-multiplatform-core-ui.js'), require('./kotlin-kotlin-stdlib-js-ir.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./skiko-kjs.js'));
+    factory(module.exports, require('./compose-multiplatform-core-runtime.js'), require('./compose-multiplatform-core-ui-graphics.js'), require('./compose-multiplatform-core-ui.js'), require('./kotlin-kotlin-stdlib.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./skiko-kjs.js'));
   else {
     if (typeof this['compose-multiplatform-core-runtime'] === 'undefined') {
       throw new Error("Error loading module 'components-library'. Its dependency 'compose-multiplatform-core-runtime' was not found. Please, check whether 'compose-multiplatform-core-runtime' is loaded prior to 'components-library'.");
@@ -13,8 +13,8 @@
     if (typeof this['compose-multiplatform-core-ui'] === 'undefined') {
       throw new Error("Error loading module 'components-library'. Its dependency 'compose-multiplatform-core-ui' was not found. Please, check whether 'compose-multiplatform-core-ui' is loaded prior to 'components-library'.");
     }
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'components-library'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'components-library'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'components-library'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'components-library'.");
     }
     if (typeof this['compose-multiplatform-core-ui-unit'] === 'undefined') {
       throw new Error("Error loading module 'components-library'. Its dependency 'compose-multiplatform-core-ui-unit' was not found. Please, check whether 'compose-multiplatform-core-ui-unit' is loaded prior to 'components-library'.");
@@ -28,70 +28,69 @@
     if (typeof this['skiko-kjs'] === 'undefined') {
       throw new Error("Error loading module 'components-library'. Its dependency 'skiko-kjs' was not found. Please, check whether 'skiko-kjs' is loaded prior to 'components-library'.");
     }
-    root['components-library'] = factory(typeof this['components-library'] === 'undefined' ? {} : this['components-library'], this['compose-multiplatform-core-runtime'], this['compose-multiplatform-core-ui-graphics'], this['compose-multiplatform-core-ui'], this['kotlin-kotlin-stdlib-js-ir'], this['compose-multiplatform-core-ui-unit'], this['kotlinx.coroutines-kotlinx-coroutines-core-js-ir'], this['compose-multiplatform-core-ui-geometry'], this['skiko-kjs']);
+    root['components-library'] = factory(typeof this['components-library'] === 'undefined' ? {} : this['components-library'], this['compose-multiplatform-core-runtime'], this['compose-multiplatform-core-ui-graphics'], this['compose-multiplatform-core-ui'], this['kotlin-kotlin-stdlib'], this['compose-multiplatform-core-ui-unit'], this['kotlinx.coroutines-kotlinx-coroutines-core-js-ir'], this['compose-multiplatform-core-ui-geometry'], this['skiko-kjs']);
   }
 }(this, function (_, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_org_jetbrains_compose_ui_ui_graphics, kotlin_org_jetbrains_compose_ui_ui, kotlin_kotlin, kotlin_org_jetbrains_compose_ui_ui_unit, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core, kotlin_org_jetbrains_compose_ui_ui_geometry, kotlin_org_jetbrains_skiko_skiko) {
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o1;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m1;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
   var BitmapPainter = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.e;
   var get_LocalDensity = kotlin_org_jetbrains_compose_ui_ui.$_$.x5;
-  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c2;
-  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
+  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a2;
+  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z1;
   var rememberVectorPainter$composable = kotlin_org_jetbrains_compose_ui_ui.$_$.e1;
-  var endsWith = kotlin_kotlin.$_$.sf;
-  var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q2;
-  var THROW_CCE = kotlin_kotlin.$_$.lh;
-  var isObject = kotlin_kotlin.$_$.dd;
-  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u1;
-  var LaunchedEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
-  var LaunchedEffect$composable_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.li;
+  var endsWith = kotlin_kotlin.$_$.vf;
+  var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
+  var THROW_CCE = kotlin_kotlin.$_$.qh;
+  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s1;
+  var LaunchedEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
+  var LaunchedEffect$composable_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.ri;
   var ImageBitmap = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.t;
   var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i2;
-  var VOID = kotlin_kotlin.$_$.bj;
+  var VOID = kotlin_kotlin.$_$.e;
   var Builder = kotlin_org_jetbrains_compose_ui_ui.$_$.c1;
-  var CoroutineImpl = kotlin_kotlin.$_$.lb;
-  var Unit_getInstance = kotlin_kotlin.$_$.z4;
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.b2;
-  var isInterface = kotlin_kotlin.$_$.bd;
-  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.va;
-  var Exception = kotlin_kotlin.$_$.bh;
-  var classMeta = kotlin_kotlin.$_$.ec;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
-  var KProperty0 = kotlin_kotlin.$_$.ze;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.oc;
-  var lazy = kotlin_kotlin.$_$.ki;
-  var SuspendFunction1 = kotlin_kotlin.$_$.nb;
-  var Annotation = kotlin_kotlin.$_$.tg;
-  var hashCode = kotlin_kotlin.$_$.qc;
-  var equals = kotlin_kotlin.$_$.ic;
-  var interfaceMeta = kotlin_kotlin.$_$.sc;
-  var getStringHashCode = kotlin_kotlin.$_$.pc;
-  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.j4;
-  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.l2;
+  var CoroutineImpl = kotlin_kotlin.$_$.ob;
+  var Unit_getInstance = kotlin_kotlin.$_$.b5;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.c2;
+  var isInterface = kotlin_kotlin.$_$.fd;
+  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.ya;
+  var Exception = kotlin_kotlin.$_$.gh;
+  var classMeta = kotlin_kotlin.$_$.hc;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var KProperty0 = kotlin_kotlin.$_$.cf;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.sc;
+  var lazy = kotlin_kotlin.$_$.qi;
+  var SuspendFunction1 = kotlin_kotlin.$_$.qb;
+  var Annotation = kotlin_kotlin.$_$.yg;
+  var hashCode = kotlin_kotlin.$_$.uc;
+  var equals = kotlin_kotlin.$_$.lc;
+  var interfaceMeta = kotlin_kotlin.$_$.wc;
+  var getStringHashCode = kotlin_kotlin.$_$.tc;
+  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.n2;
+  var removeSuffix = kotlin_kotlin.$_$.eg;
+  var toDouble = kotlin_kotlin.$_$.mg;
+  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.e4;
   var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.h4;
-  var removeSuffix = kotlin_kotlin.$_$.ag;
-  var toDouble = kotlin_kotlin.$_$.ig;
-  var Companion_getInstance_2 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.e4;
-  var startsWith = kotlin_kotlin.$_$.fg;
-  var toString = kotlin_kotlin.$_$.wd;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.v1;
-  var toUInt = kotlin_kotlin.$_$.og;
-  var _UInt___get_data__impl__f0vqqw = kotlin_kotlin.$_$.i3;
-  var Companion_getInstance_3 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i4;
-  var THROW_ISE = kotlin_kotlin.$_$.mh;
-  var Enum = kotlin_kotlin.$_$.zg;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.k;
-  var isBlank = kotlin_kotlin.$_$.uf;
-  var filter = kotlin_kotlin.$_$.hf;
-  var Sequence = kotlin_kotlin.$_$.ff;
-  var sequence = kotlin_kotlin.$_$.lf;
+  var Companion_getInstance_2 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i4;
+  var startsWith = kotlin_kotlin.$_$.jg;
+  var toString = kotlin_kotlin.$_$.zd;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.w1;
+  var toUInt = kotlin_kotlin.$_$.sg;
+  var _UInt___get_data__impl__f0vqqw = kotlin_kotlin.$_$.k3;
+  var Companion_getInstance_3 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.j4;
+  var THROW_IAE = kotlin_kotlin.$_$.rh;
+  var Enum = kotlin_kotlin.$_$.eh;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.l;
+  var isBlank = kotlin_kotlin.$_$.xf;
+  var filter = kotlin_kotlin.$_$.kf;
+  var Sequence = kotlin_kotlin.$_$.if;
+  var sequence = kotlin_kotlin.$_$.of;
   var addPathNodes = kotlin_org_jetbrains_compose_ui_ui.$_$.d1;
   var PathFillType = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.z;
   var StrokeCap = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.h1;
@@ -104,55 +103,52 @@
   var get_DefaultTranslationX = kotlin_org_jetbrains_compose_ui_ui.$_$.z;
   var get_DefaultTranslationY = kotlin_org_jetbrains_compose_ui_ui.$_$.a1;
   var get_EmptyPath = kotlin_org_jetbrains_compose_ui_ui.$_$.b1;
-  var removeLastOrNull = kotlin_kotlin.$_$.o9;
+  var removeLastOrNull = kotlin_kotlin.$_$.r9;
   var Color = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.n;
   var SolidColor = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g1;
   var Companion_getInstance_4 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.y3;
   var Offset = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.d;
   var TileMode = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.j1;
-  var toList = kotlin_kotlin.$_$.mf;
-  var checkIndexOverflow = kotlin_kotlin.$_$.n6;
-  var get_lastIndex = kotlin_kotlin.$_$.q8;
-  var coerceAtLeast = kotlin_kotlin.$_$.je;
+  var toList = kotlin_kotlin.$_$.pf;
+  var checkIndexOverflow = kotlin_kotlin.$_$.p6;
+  var get_lastIndex = kotlin_kotlin.$_$.s8;
+  var coerceAtLeast = kotlin_kotlin.$_$.me;
   var Color_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.q;
-  var to = kotlin_kotlin.$_$.xi;
-  var copyToArray = kotlin_kotlin.$_$.l7;
-  var SequenceScope = kotlin_kotlin.$_$.ef;
-  var until = kotlin_kotlin.$_$.ve;
-  var Exception_init_$Init$ = kotlin_kotlin.$_$.o1;
-  var captureStack = kotlin_kotlin.$_$.yb;
-  var decodeToString = kotlin_kotlin.$_$.rf;
-  var UnsupportedOperationException_init_$Create$_0 = kotlin_kotlin.$_$.k2;
-  var Companion_getInstance_5 = kotlin_kotlin.$_$.u4;
-  var createFailure = kotlin_kotlin.$_$.ci;
-  var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.v2;
-  var intercepted = kotlin_kotlin.$_$.ya;
-  var SafeContinuation_init_$Create$ = kotlin_kotlin.$_$.f1;
-  var returnIfSuspended = kotlin_kotlin.$_$.h;
-  var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.c2;
-  var KProperty1 = kotlin_kotlin.$_$.af;
-  var Companion_getInstance_6 = kotlin_org_jetbrains_skiko_skiko.$_$.a8;
+  var to = kotlin_kotlin.$_$.dj;
+  var copyToArray = kotlin_kotlin.$_$.n7;
+  var SequenceScope = kotlin_kotlin.$_$.hf;
+  var until = kotlin_kotlin.$_$.ye;
+  var Exception_init_$Init$ = kotlin_kotlin.$_$.p1;
+  var captureStack = kotlin_kotlin.$_$.bc;
+  var UnsupportedOperationException_init_$Create$_0 = kotlin_kotlin.$_$.m2;
+  var decodeToString = kotlin_kotlin.$_$.uf;
+  var objectMeta = kotlin_kotlin.$_$.td;
+  var await_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.j;
+  var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.d2;
+  var KProperty1 = kotlin_kotlin.$_$.df;
+  var Companion_getInstance_5 = kotlin_org_jetbrains_skiko_skiko.$_$.a8;
   var toComposeImageBitmap = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.w1;
   //endregion
   //region block: pre-declaration
-  setMetadataFor(rememberImageBitmap$composable$slambda, 'rememberImageBitmap$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(rememberImageVector$composable$slambda, 'rememberImageVector$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(rememberImageBitmap$composable$slambda, 'rememberImageBitmap$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(rememberImageVector$composable$slambda, 'rememberImageVector$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(ExperimentalResourceApi, 'ExperimentalResourceApi', classMeta, VOID, [Annotation]);
   setMetadataFor(LoadState, 'LoadState', classMeta);
-  setMetadataFor(Loading, 'Loading', classMeta, LoadState);
+  setMetadataFor(Loading, 'Loading', classMeta, LoadState, VOID, Loading);
   setMetadataFor(Success, 'Success', classMeta, LoadState);
   setMetadataFor(Error_0, 'Error', classMeta, LoadState);
-  setMetadataFor(Resource, 'Resource', interfaceMeta, VOID, VOID, VOID, VOID, [0]);
-  setMetadataFor(AbstractResourceImpl, 'AbstractResourceImpl', classMeta, VOID, [Resource], VOID, VOID, [0]);
+  setMetadataFor(Resource, 'Resource', interfaceMeta, VOID, VOID, VOID, VOID, VOID, [0]);
+  setMetadataFor(AbstractResourceImpl, 'AbstractResourceImpl', classMeta, VOID, [Resource], VOID, VOID, VOID, [0]);
   setMetadataFor(Group, 'Group', classMeta, Enum);
-  setMetadataFor(BuildContext, 'BuildContext', classMeta);
-  setMetadataFor(_get_childrenSequence_$slambda_9jpw3j, '<get-childrenSequence>$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(BuildContext, 'BuildContext', classMeta, VOID, VOID, BuildContext);
+  setMetadataFor(_get_childrenSequence_$slambda_9jpw3j, '<get-childrenSequence>$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(Node, 'Node', interfaceMeta);
   setMetadataFor(Element_0, 'Element', interfaceMeta, VOID, [Node]);
   setMetadataFor(MalformedXMLException, 'MalformedXMLException', classMeta, Exception);
   setMetadataFor(NodeList, 'NodeList', interfaceMeta);
+  setMetadataFor(WebResourcesConfiguration, 'WebResourcesConfiguration', objectMeta);
   setMetadataFor($readBytesCOROUTINE$0, '$readBytesCOROUTINE$0', classMeta, CoroutineImpl);
-  setMetadataFor(JSResourceImpl, 'JSResourceImpl', classMeta, AbstractResourceImpl, VOID, VOID, VOID, [0]);
+  setMetadataFor(JSUrlResourceImpl, 'JSUrlResourceImpl', classMeta, AbstractResourceImpl, VOID, VOID, VOID, VOID, [0]);
   setMetadataFor(MissingResourceException, 'MissingResourceException', classMeta, Exception);
   setMetadataFor(NodeImpl, 'NodeImpl', classMeta, VOID, [Node]);
   setMetadataFor(ElementImpl, 'ElementImpl', classMeta, NodeImpl, [NodeImpl, Element_0]);
@@ -161,147 +157,149 @@
   function get_emptyImageBitmap() {
     _init_properties_ComposeResource_common_kt__692f5z();
     // Inline function 'kotlin.getValue' call
+    var this_0 = emptyImageBitmap$delegate;
     emptyImageBitmap$factory();
-    return emptyImageBitmap$delegate.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   }
   var emptyImageBitmap$delegate;
   function get_emptyImageVector() {
     _init_properties_ComposeResource_common_kt__692f5z();
     // Inline function 'kotlin.getValue' call
+    var this_0 = emptyImageVector$delegate;
     emptyImageVector$factory();
-    return emptyImageVector$delegate.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   }
   var emptyImageVector$delegate;
   function painterResource$composable(res, $composer, $changed) {
     _init_properties_ComposeResource_common_kt__692f5z();
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-2119472146);
+    $composer_0.startReplaceableGroup_ip860b_k$(-2119472146);
     sourceInformation($composer_0, 'C(painterResource$composable)');
     if (isTraceInProgress()) {
       traceEventStart(-2119472146, $changed, -1, 'org.jetbrains.compose.resources.painterResource$composable (ComposeResource.common.kt:117)');
     }
     var tmp;
     if (isSyncResourceLoadingSupported()) {
-      $composer_0.startReplaceableGroup_rp6air_k$(180607650);
+      $composer_0.startReplaceableGroup_ip860b_k$(180607650);
       var tmp_0 = painterResource$composable$lambda;
       var tmp1_group = painterResource$composable_0(res, tmp_0, painterResource$composable$lambda_0, $composer_0, 14 & $changed);
-      $composer_0.endReplaceableGroup_er37p7_k$();
+      $composer_0.endReplaceableGroup_ern0ak_k$();
       tmp = tmp1_group;
     } else {
-      $composer_0.startReplaceableGroup_rp6air_k$(180607766);
+      $composer_0.startReplaceableGroup_ip860b_k$(180607766);
       var tmp_1 = painterResource$composable$lambda_1;
       var tmp2_group = painterResource$composable_0(res, tmp_1, painterResource$composable$lambda_2, $composer_0, 14 & $changed);
-      $composer_0.endReplaceableGroup_er37p7_k$();
+      $composer_0.endReplaceableGroup_ern0ak_k$();
       tmp = tmp2_group;
     }
     var tmp0 = tmp;
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function painterResource$composable_0(res, rememberImageBitmap, rememberImageVector, $composer, $changed) {
     _init_properties_ComposeResource_common_kt__692f5z();
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(721382759);
+    $composer_0.startReplaceableGroup_ip860b_k$(721382759);
     if (isTraceInProgress()) {
       traceEventStart(721382759, $changed, -1, 'org.jetbrains.compose.resources.painterResource$composable (ComposeResource.common.kt:93)');
     }
     var tmp;
     if (endsWith(res, '.xml')) {
-      $composer_0.startReplaceableGroup_rp6air_k$(180606871);
+      $composer_0.startReplaceableGroup_ip860b_k$(180606871);
       var tmp_0 = resource(res);
       // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-      var tmp0_$get_current$$composable_h5ksy7 = get_LocalDensity();
+      var this_0 = get_LocalDensity();
       var $composer_1 = $composer_0;
       sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-      var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+      var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
       sourceInformationMarkerEnd($composer_1);
       var tmp1_group = rememberVectorPainter$composable(rememberImageVector(tmp_0, tmp0, $composer_0, 896 & $changed), $composer_0, 0);
-      $composer_0.endReplaceableGroup_er37p7_k$();
+      $composer_0.endReplaceableGroup_ern0ak_k$();
       tmp = tmp1_group;
     } else {
-      $composer_0.startReplaceableGroup_rp6air_k$(180606971);
+      $composer_0.startReplaceableGroup_ip860b_k$(180606971);
       var tmp2_group = new BitmapPainter(rememberImageBitmap(resource(res), $composer_0, 112 & $changed));
-      $composer_0.endReplaceableGroup_er37p7_k$();
+      $composer_0.endReplaceableGroup_ern0ak_k$();
       tmp = tmp2_group;
     }
     var tmp0_0 = tmp;
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0_0;
   }
   function rememberImageBitmapSync$composable(_this__u8e3s4, $composer, $changed) {
     _init_properties_ComposeResource_common_kt__692f5z();
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(68255616);
+    $composer_0.startReplaceableGroup_ip860b_k$(68255616);
     if (isTraceInProgress()) {
       traceEventStart(68255616, $changed, -1, 'org.jetbrains.compose.resources.rememberImageBitmapSync$composable (ComposeResource.common.kt:80)');
     }
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+    $composer_1.startReplaceableGroup_ip860b_k$(-838505973);
     sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache = $composer_1.changed_ga7h3f_k$(_this__u8e3s4);
+    var invalid = $composer_1.changed_ga7h3f_k$(_this__u8e3s4);
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_1.rememberedValue_4dg93v_k$();
     var tmp;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance().get_Empty_i9b85g_k$()) {
+    if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
       // Inline function 'org.jetbrains.compose.resources.rememberImageBitmapSync$composable.<anonymous>' call
       var value = toImageBitmap(readBytesSync(_this__u8e3s4));
-      $composer_1.updateRememberedValue_l1colo_k$(value);
+      $composer_1.updateRememberedValue_l1wh71_k$(value);
       tmp = value;
     } else {
-      tmp = tmp0_let;
+      tmp = it;
     }
     var tmp_0 = tmp;
-    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
+    var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_1.endReplaceableGroup_ern0ak_k$();
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function rememberImageVectorSync$composable(_this__u8e3s4, density, $composer, $changed) {
     _init_properties_ComposeResource_common_kt__692f5z();
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1029554264);
+    $composer_0.startReplaceableGroup_ip860b_k$(-1029554264);
     if (isTraceInProgress()) {
       traceEventStart(-1029554264, $changed, -1, 'org.jetbrains.compose.resources.rememberImageVectorSync$composable (ComposeResource.common.kt:86)');
     }
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(-1124426577);
+    $composer_1.startReplaceableGroup_ip860b_k$(-1124426577);
     sourceInformation($composer_1, 'CC(remember$composable)P(1,2):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache = !!($composer_1.changed_ga7h3f_k$(_this__u8e3s4) | $composer_1.changed_ga7h3f_k$(density));
+    var invalid = !!($composer_1.changed_ga7h3f_k$(_this__u8e3s4) | $composer_1.changed_ga7h3f_k$(density));
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_1.rememberedValue_4dg93v_k$();
     var tmp;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance().get_Empty_i9b85g_k$()) {
+    if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
       // Inline function 'org.jetbrains.compose.resources.rememberImageVectorSync$composable.<anonymous>' call
       var value = toImageVector(readBytesSync(_this__u8e3s4), density);
-      $composer_1.updateRememberedValue_l1colo_k$(value);
+      $composer_1.updateRememberedValue_l1wh71_k$(value);
       tmp = value;
     } else {
-      tmp = tmp0_let;
+      tmp = it;
     }
     var tmp_0 = tmp;
-    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
+    var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_1.endReplaceableGroup_ern0ak_k$();
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function orEmpty(_this__u8e3s4) {
@@ -311,40 +309,40 @@
   function rememberImageBitmap$composable(_this__u8e3s4, $composer, $changed) {
     _init_properties_ComposeResource_common_kt__692f5z();
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(1540248957);
+    $composer_0.startReplaceableGroup_ip860b_k$(1540248957);
     sourceInformation($composer_0, 'C(rememberImageBitmap$composable)');
     if (isTraceInProgress()) {
       traceEventStart(1540248957, $changed, -1, 'org.jetbrains.compose.resources.rememberImageBitmap$composable (ComposeResource.common.kt:30)');
     }
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+    $composer_1.startReplaceableGroup_ip860b_k$(-838505973);
     sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache = $composer_1.changed_ga7h3f_k$(_this__u8e3s4);
+    var invalid = $composer_1.changed_ga7h3f_k$(_this__u8e3s4);
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_1.rememberedValue_4dg93v_k$();
     var tmp;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance().get_Empty_i9b85g_k$()) {
+    if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
       // Inline function 'org.jetbrains.compose.resources.rememberImageBitmap$composable.<anonymous>' call
       var value = mutableStateOf(new Loading());
-      $composer_1.updateRememberedValue_l1colo_k$(value);
+      $composer_1.updateRememberedValue_l1wh71_k$(value);
       tmp = value;
     } else {
-      tmp = tmp0_let;
+      tmp = it;
     }
     var tmp_0 = tmp;
-    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
+    var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_1.endReplaceableGroup_ern0ak_k$();
     var state = tmp0;
     LaunchedEffect$composable(_this__u8e3s4, rememberImageBitmap$composable$slambda_0(state, _this__u8e3s4, null), $composer_0, 14 & $changed);
     var tmp0_0 = state.get_value_j01efc_k$();
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0_0;
   }
   function orEmpty_0(_this__u8e3s4) {
@@ -354,40 +352,40 @@
   function rememberImageVector$composable(_this__u8e3s4, density, $composer, $changed) {
     _init_properties_ComposeResource_common_kt__692f5z();
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(741159083);
+    $composer_0.startReplaceableGroup_ip860b_k$(741159083);
     sourceInformation($composer_0, 'C(rememberImageVector$composable)');
     if (isTraceInProgress()) {
       traceEventStart(741159083, $changed, -1, 'org.jetbrains.compose.resources.rememberImageVector$composable (ComposeResource.common.kt:47)');
     }
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(-1124426577);
+    $composer_1.startReplaceableGroup_ip860b_k$(-1124426577);
     sourceInformation($composer_1, 'CC(remember$composable)P(1,2):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache = !!($composer_1.changed_ga7h3f_k$(_this__u8e3s4) | $composer_1.changed_ga7h3f_k$(density));
+    var invalid = !!($composer_1.changed_ga7h3f_k$(_this__u8e3s4) | $composer_1.changed_ga7h3f_k$(density));
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_1.rememberedValue_4dg93v_k$();
     var tmp;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance().get_Empty_i9b85g_k$()) {
+    if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
       // Inline function 'org.jetbrains.compose.resources.rememberImageVector$composable.<anonymous>' call
       var value = mutableStateOf(new Loading());
-      $composer_1.updateRememberedValue_l1colo_k$(value);
+      $composer_1.updateRememberedValue_l1wh71_k$(value);
       tmp = value;
     } else {
-      tmp = tmp0_let;
+      tmp = it;
     }
     var tmp_0 = tmp;
-    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
+    var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_1.endReplaceableGroup_ern0ak_k$();
     var state = tmp0;
     LaunchedEffect$composable_0(_this__u8e3s4, density, rememberImageVector$composable$slambda_0(state, _this__u8e3s4, density, null), $composer_0, 14 & $changed | 112 & $changed);
     var tmp0_0 = state.get_value_j01efc_k$();
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0_0;
   }
   function toImageVector(_this__u8e3s4, density) {
@@ -420,15 +418,14 @@
     _init_properties_ComposeResource_common_kt__692f5z();
     // Inline function 'androidx.compose.ui.unit.dp' call
     var tmp = _Dp___init__impl__ms3zkb(1);
-    var tmp$ret$1;
     // Inline function 'androidx.compose.ui.unit.dp' call
-    tmp$ret$1 = _Dp___init__impl__ms3zkb(1);
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(1);
     return (new Builder(VOID, tmp, tmp$ret$1, 1.0, 1.0)).build_1k0s4u_k$();
   }
   function painterResource$composable$lambda($this$painterResource, $composer, $changed) {
     _init_properties_ComposeResource_common_kt__692f5z();
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(1313644271);
+    $composer_0.startReplaceableGroup_ip860b_k$(1313644271);
     if (isTraceInProgress()) {
       traceEventStart(1313644271, $changed, -1, 'org.jetbrains.compose.resources.painterResource$composable.<anonymous> (ComposeResource.common.kt:119)');
     }
@@ -436,13 +433,13 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function painterResource$composable$lambda_0($this$painterResource, density, $composer, $changed) {
     _init_properties_ComposeResource_common_kt__692f5z();
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(1595580880);
+    $composer_0.startReplaceableGroup_ip860b_k$(1595580880);
     if (isTraceInProgress()) {
       traceEventStart(1595580880, $changed, -1, 'org.jetbrains.compose.resources.painterResource$composable.<anonymous> (ComposeResource.common.kt:119)');
     }
@@ -450,13 +447,13 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function painterResource$composable$lambda_1($this$painterResource, $composer, $changed) {
     _init_properties_ComposeResource_common_kt__692f5z();
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(1252106488);
+    $composer_0.startReplaceableGroup_ip860b_k$(1252106488);
     if (isTraceInProgress()) {
       traceEventStart(1252106488, $changed, -1, 'org.jetbrains.compose.resources.painterResource$composable.<anonymous> (ComposeResource.common.kt:121)');
     }
@@ -464,13 +461,13 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function painterResource$composable$lambda_2($this$painterResource, density, $composer, $changed) {
     _init_properties_ComposeResource_common_kt__692f5z();
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(1864689689);
+    $composer_0.startReplaceableGroup_ip860b_k$(1864689689);
     if (isTraceInProgress()) {
       traceEventStart(1864689689, $changed, -1, 'org.jetbrains.compose.resources.painterResource$composable.<anonymous> (ComposeResource.common.kt:121)');
     }
@@ -478,7 +475,7 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function rememberImageBitmap$composable$slambda($state, $this_rememberImageBitmap$composable, resultContinuation) {
@@ -486,14 +483,14 @@
     this.$this_rememberImageBitmap$composable_1 = $this_rememberImageBitmap$composable;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(rememberImageBitmap$composable$slambda).invoke_d6gbsu_k$ = function ($this$LaunchedEffect, $completion) {
-    var tmp = this.create_b6qu53_k$($this$LaunchedEffect, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(rememberImageBitmap$composable$slambda).invoke_d9fzmj_k$ = function ($this$LaunchedEffect, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$LaunchedEffect, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(rememberImageBitmap$composable$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(rememberImageBitmap$composable$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(rememberImageBitmap$composable$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -502,10 +499,10 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(4);
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
-            suspendResult = this.$this_rememberImageBitmap$composable_1.readBytes_v1lxol_k$(this);
+            this.set_exceptionState_fex74n_k$(4);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
+            suspendResult = this.$this_rememberImageBitmap$composable_1.readBytes_d7rp36_k$(this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -515,26 +512,26 @@
             var ARGUMENT = suspendResult;
             var ARGUMENT_0 = toImageBitmap(ARGUMENT);
             this.TRY_RESULT0__1 = new Success(ARGUMENT_0);
-            this.set_exceptionState_s9sevl_k$(4);
-            this.set_state_a96kl8_k$(3);
+            this.set_exceptionState_fex74n_k$(4);
+            this.set_state_rjd8d0_k$(3);
             continue $sm;
           case 2:
-            this.set_exceptionState_s9sevl_k$(4);
+            this.set_exceptionState_fex74n_k$(4);
             var tmp_0 = this.get_exception_x0n6w6_k$();
             if (tmp_0 instanceof Exception) {
               var e = this.get_exception_x0n6w6_k$();
               var tmp_1 = this;
               tmp_1.TRY_RESULT0__1 = new Error_0(e);
-              this.set_state_a96kl8_k$(3);
+              this.set_state_rjd8d0_k$(3);
               continue $sm;
             } else {
               throw this.get_exception_x0n6w6_k$();
             }
 
           case 3:
-            this.set_exceptionState_s9sevl_k$(4);
+            this.set_exceptionState_fex74n_k$(4);
             var ARGUMENT_1 = this.TRY_RESULT0__1;
-            this.$state_1.set_value_rnwamw_k$(ARGUMENT_1);
+            this.$state_1.set_value_v1vabv_k$(ARGUMENT_1);
             return Unit_getInstance();
           case 4:
             throw this.get_exception_x0n6w6_k$();
@@ -544,24 +541,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 4) {
           throw e_0;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e_0);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e_0);
         }
       }
      while (true);
   };
-  protoOf(rememberImageBitmap$composable$slambda).create_b6qu53_k$ = function ($this$LaunchedEffect, completion) {
+  protoOf(rememberImageBitmap$composable$slambda).create_rcuf4x_k$ = function ($this$LaunchedEffect, completion) {
     var i = new rememberImageBitmap$composable$slambda(this.$state_1, this.$this_rememberImageBitmap$composable_1, completion);
     i.$this$LaunchedEffect_1 = $this$LaunchedEffect;
     return i;
   };
-  protoOf(rememberImageBitmap$composable$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(rememberImageBitmap$composable$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function rememberImageBitmap$composable$slambda_0($state, $this_rememberImageBitmap$composable, resultContinuation) {
     var i = new rememberImageBitmap$composable$slambda($state, $this_rememberImageBitmap$composable, resultContinuation);
     var l = function ($this$LaunchedEffect, $completion) {
-      return i.invoke_d6gbsu_k$($this$LaunchedEffect, $completion);
+      return i.invoke_d9fzmj_k$($this$LaunchedEffect, $completion);
     };
     l.$arity = 1;
     return l;
@@ -572,14 +569,14 @@
     this.$density_1 = $density;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(rememberImageVector$composable$slambda).invoke_d6gbsu_k$ = function ($this$LaunchedEffect, $completion) {
-    var tmp = this.create_b6qu53_k$($this$LaunchedEffect, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(rememberImageVector$composable$slambda).invoke_d9fzmj_k$ = function ($this$LaunchedEffect, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$LaunchedEffect, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(rememberImageVector$composable$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(rememberImageVector$composable$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(rememberImageVector$composable$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -588,10 +585,10 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(4);
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
-            suspendResult = this.$this_rememberImageVector$composable_1.readBytes_v1lxol_k$(this);
+            this.set_exceptionState_fex74n_k$(4);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
+            suspendResult = this.$this_rememberImageVector$composable_1.readBytes_d7rp36_k$(this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -601,26 +598,26 @@
             var ARGUMENT = suspendResult;
             var ARGUMENT_0 = toImageVector(ARGUMENT, this.$density_1);
             this.TRY_RESULT0__1 = new Success(ARGUMENT_0);
-            this.set_exceptionState_s9sevl_k$(4);
-            this.set_state_a96kl8_k$(3);
+            this.set_exceptionState_fex74n_k$(4);
+            this.set_state_rjd8d0_k$(3);
             continue $sm;
           case 2:
-            this.set_exceptionState_s9sevl_k$(4);
+            this.set_exceptionState_fex74n_k$(4);
             var tmp_0 = this.get_exception_x0n6w6_k$();
             if (tmp_0 instanceof Exception) {
               var e = this.get_exception_x0n6w6_k$();
               var tmp_1 = this;
               tmp_1.TRY_RESULT0__1 = new Error_0(e);
-              this.set_state_a96kl8_k$(3);
+              this.set_state_rjd8d0_k$(3);
               continue $sm;
             } else {
               throw this.get_exception_x0n6w6_k$();
             }
 
           case 3:
-            this.set_exceptionState_s9sevl_k$(4);
+            this.set_exceptionState_fex74n_k$(4);
             var ARGUMENT_1 = this.TRY_RESULT0__1;
-            this.$state_1.set_value_rnwamw_k$(ARGUMENT_1);
+            this.$state_1.set_value_v1vabv_k$(ARGUMENT_1);
             return Unit_getInstance();
           case 4:
             throw this.get_exception_x0n6w6_k$();
@@ -630,24 +627,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 4) {
           throw e_0;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e_0);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e_0);
         }
       }
      while (true);
   };
-  protoOf(rememberImageVector$composable$slambda).create_b6qu53_k$ = function ($this$LaunchedEffect, completion) {
+  protoOf(rememberImageVector$composable$slambda).create_rcuf4x_k$ = function ($this$LaunchedEffect, completion) {
     var i = new rememberImageVector$composable$slambda(this.$state_1, this.$this_rememberImageVector$composable_1, this.$density_1, completion);
     i.$this$LaunchedEffect_1 = $this$LaunchedEffect;
     return i;
   };
-  protoOf(rememberImageVector$composable$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(rememberImageVector$composable$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function rememberImageVector$composable$slambda_0($state, $this_rememberImageVector$composable, $density, resultContinuation) {
     var i = new rememberImageVector$composable$slambda($state, $this_rememberImageVector$composable, $density, resultContinuation);
     var l = function ($this$LaunchedEffect, $completion) {
-      return i.invoke_d6gbsu_k$($this$LaunchedEffect, $completion);
+      return i.invoke_d9fzmj_k$($this$LaunchedEffect, $completion);
     };
     l.$arity = 1;
     return l;
@@ -708,12 +705,12 @@
   protoOf(Success).component1_7eebsc_k$ = function () {
     return this.value_1;
   };
-  protoOf(Success).copy_mek8hi_k$ = function (value) {
+  protoOf(Success).copy_62qimy_k$ = function (value) {
     return new Success(value);
   };
-  protoOf(Success).copy$default_pgbg_k$ = function (value, $super) {
+  protoOf(Success).copy$default_z9ttht_k$ = function (value, $super) {
     value = value === VOID ? this.value_1 : value;
-    return $super === VOID ? this.copy_mek8hi_k$(value) : $super.copy_mek8hi_k$.call(this, value);
+    return $super === VOID ? this.copy_62qimy_k$(value) : $super.copy_62qimy_k$.call(this, value);
   };
   protoOf(Success).toString = function () {
     return 'Success(value=' + this.value_1 + ')';
@@ -742,12 +739,12 @@
   protoOf(Error_0).component1_7eebsc_k$ = function () {
     return this.exception_1;
   };
-  protoOf(Error_0).copy_cpobv0_k$ = function (exception) {
+  protoOf(Error_0).copy_d85agk_k$ = function (exception) {
     return new Error_0(exception);
   };
-  protoOf(Error_0).copy$default_rpihmv_k$ = function (exception, $super) {
+  protoOf(Error_0).copy$default_7uf0mm_k$ = function (exception, $super) {
     exception = exception === VOID ? this.exception_1 : exception;
-    return $super === VOID ? this.copy_cpobv0_k$(exception) : $super.copy_cpobv0_k$.call(this, exception);
+    return $super === VOID ? this.copy_d85agk_k$(exception) : $super.copy_d85agk_k$.call(this, exception);
   };
   protoOf(Error_0).toString = function () {
     return 'Error(exception=' + this.exception_1 + ')';
@@ -793,40 +790,6 @@
   protoOf(AbstractResourceImpl).hashCode = function () {
     return getStringHashCode(this.path_1);
   };
-  function parseTileMode(tileMode) {
-    var tmp;
-    switch (tileMode) {
-      case 'clamp':
-        tmp = Companion_getInstance_0().get_Clamp_q8g1jp_k$();
-        break;
-      case 'repeated':
-        tmp = Companion_getInstance_0().get_Repeated_k0uuck_k$();
-        break;
-      case 'mirror':
-        tmp = Companion_getInstance_0().get_Mirror_3kopi9_k$();
-        break;
-      default:
-        throw UnsupportedOperationException_init_$Create$('unknown tileMode: ' + tileMode);
-    }
-    return tmp;
-  }
-  function parseStrokeCap(strokeCap) {
-    var tmp;
-    switch (strokeCap) {
-      case 'butt':
-        tmp = Companion_getInstance_1().get_Butt_vf89me_k$();
-        break;
-      case 'round':
-        tmp = Companion_getInstance_1().get_Round_x6oq4t_k$();
-        break;
-      case 'square':
-        tmp = Companion_getInstance_1().get_Square_xmkdw4_k$();
-        break;
-      default:
-        throw UnsupportedOperationException_init_$Create$('unknown strokeCap: ' + strokeCap);
-    }
-    return tmp;
-  }
   function parseDp(_this__u8e3s4, density) {
     // Inline function 'kotlin.with' call
     // Inline function 'kotlin.contracts.contract' call
@@ -837,19 +800,18 @@
     } else if (endsWith(_this__u8e3s4, 'dp')) {
       // Inline function 'androidx.compose.ui.unit.dp' call
       // Inline function 'kotlin.text.toFloat' call
-      var tmp0_toFloat = removeSuffix(_this__u8e3s4, 'dp');
+      var this_0 = removeSuffix(_this__u8e3s4, 'dp');
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp1_get_dp_ujoszc = toDouble(tmp0_toFloat);
-      tmp = _Dp___init__impl__ms3zkb(tmp1_get_dp_ujoszc);
+      var this_1 = toDouble(this_0);
+      tmp = _Dp___init__impl__ms3zkb(this_1);
     } else if (endsWith(_this__u8e3s4, 'px')) {
-      var tmp$ret$7;
       // Inline function 'kotlin.text.toFloat' call
-      var tmp2_toFloat = removeSuffix(_this__u8e3s4, 'px');
+      var this_2 = removeSuffix(_this__u8e3s4, 'px');
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      tmp$ret$7 = toDouble(tmp2_toFloat);
-      tmp = density.toDp_2y47ho_k$(tmp$ret$7);
+      var tmp$ret$7 = toDouble(this_2);
+      tmp = density.toDp_hs0w0_k$(tmp$ret$7);
     } else {
       throw UnsupportedOperationException_init_$Create$('value should ends with dp or px');
     }
@@ -859,13 +821,47 @@
     var tmp;
     switch (fillType) {
       case 'nonZero':
-        tmp = Companion_getInstance_2().get_NonZero_j4d1fu_k$();
+        tmp = Companion_getInstance_0().get_NonZero_dwy848_k$();
         break;
       case 'evenOdd':
-        tmp = Companion_getInstance_2().get_EvenOdd_pai4nq_k$();
+        tmp = Companion_getInstance_0().get_EvenOdd_cpanrc_k$();
         break;
       default:
         throw UnsupportedOperationException_init_$Create$('unknown fillType: ' + fillType);
+    }
+    return tmp;
+  }
+  function parseStrokeCap(strokeCap) {
+    var tmp;
+    switch (strokeCap) {
+      case 'butt':
+        tmp = Companion_getInstance_1().get_Butt_jb7qjw_k$();
+        break;
+      case 'round':
+        tmp = Companion_getInstance_1().get_Round_hjra1h_k$();
+        break;
+      case 'square':
+        tmp = Companion_getInstance_1().get_Square_dbwc3a_k$();
+        break;
+      default:
+        throw UnsupportedOperationException_init_$Create$('unknown strokeCap: ' + strokeCap);
+    }
+    return tmp;
+  }
+  function parseStrokeJoin(strokeJoin) {
+    var tmp;
+    switch (strokeJoin) {
+      case 'miter':
+        tmp = Companion_getInstance_2().get_Miter_xkwqso_k$();
+        break;
+      case 'round':
+        tmp = Companion_getInstance_2().get_Round_o8jjqp_k$();
+        break;
+      case 'bevel':
+        tmp = Companion_getInstance_2().get_Bevel_8ab6n7_k$();
+        break;
+      default:
+        throw UnsupportedOperationException_init_$Create$('unknown strokeJoin: ' + strokeJoin);
     }
     return tmp;
   }
@@ -882,38 +878,35 @@
       case 7:
         // Inline function 'kotlin.UInt.toInt' call
 
-        var tmp$ret$2;
         // Inline function 'kotlin.text.substring' call
 
         // Inline function 'kotlin.js.asDynamic' call
 
-        tmp$ret$2 = color.substring(1);
-        var tmp1_toInt = toUInt(tmp$ret$2, 16);
-        tmp = _UInt___get_data__impl__f0vqqw(tmp1_toInt) | -16777216;
+        var tmp$ret$2 = color.substring(1);
+        var this_0 = toUInt(tmp$ret$2, 16);
+        tmp = _UInt___get_data__impl__f0vqqw(this_0) | -16777216;
         break;
       case 9:
         // Inline function 'kotlin.UInt.toInt' call
 
-        var tmp$ret$5;
         // Inline function 'kotlin.text.substring' call
 
         // Inline function 'kotlin.js.asDynamic' call
 
-        tmp$ret$5 = color.substring(1);
-        var tmp2_toInt = toUInt(tmp$ret$5, 16);
-        tmp = _UInt___get_data__impl__f0vqqw(tmp2_toInt);
+        var tmp$ret$5 = color.substring(1);
+        var this_1 = toUInt(tmp$ret$5, 16);
+        tmp = _UInt___get_data__impl__f0vqqw(this_1);
         break;
       case 4:
         // Inline function 'kotlin.UInt.toInt' call
 
-        var tmp$ret$8;
         // Inline function 'kotlin.text.substring' call
 
         // Inline function 'kotlin.js.asDynamic' call
 
-        tmp$ret$8 = color.substring(1);
-        var tmp3_toInt = toUInt(tmp$ret$8, 16);
-        var v = _UInt___get_data__impl__f0vqqw(tmp3_toInt);
+        var tmp$ret$8 = color.substring(1);
+        var this_2 = toUInt(tmp$ret$8, 16);
+        var v = _UInt___get_data__impl__f0vqqw(this_2);
         var k = imul(v >> 8 & 15, 1114112);
         k = k | imul(v >> 4 & 15, 4352);
         k = k | imul(v & 15, 17);
@@ -922,14 +915,13 @@
       case 5:
         // Inline function 'kotlin.UInt.toInt' call
 
-        var tmp$ret$11;
         // Inline function 'kotlin.text.substring' call
 
         // Inline function 'kotlin.js.asDynamic' call
 
-        tmp$ret$11 = color.substring(1);
-        var tmp4_toInt = toUInt(tmp$ret$11, 16);
-        var v_0 = _UInt___get_data__impl__f0vqqw(tmp4_toInt);
+        var tmp$ret$11 = color.substring(1);
+        var this_3 = toUInt(tmp$ret$11, 16);
+        var v_0 = _UInt___get_data__impl__f0vqqw(this_3);
         var k_0 = imul(v_0 >> 12 & 15, 285212672);
         k_0 = k_0 | imul(v_0 >> 8 & 15, 1114112);
         k_0 = k_0 | imul(v_0 >> 4 & 15, 4352);
@@ -942,20 +934,20 @@
     }
     return tmp;
   }
-  function parseStrokeJoin(strokeJoin) {
+  function parseTileMode(tileMode) {
     var tmp;
-    switch (strokeJoin) {
-      case 'miter':
-        tmp = Companion_getInstance_3().get_Miter_rcwd8a_k$();
+    switch (tileMode) {
+      case 'clamp':
+        tmp = Companion_getInstance_3().get_Clamp_ddetsd_k$();
         break;
-      case 'round':
-        tmp = Companion_getInstance_3().get_Round_ybuhov_k$();
+      case 'repeated':
+        tmp = Companion_getInstance_3().get_Repeated_jl00zi_k$();
         break;
-      case 'bevel':
-        tmp = Companion_getInstance_3().get_Bevel_1szraz_k$();
+      case 'mirror':
+        tmp = Companion_getInstance_3().get_Mirror_rukh4t_k$();
         break;
       default:
-        throw UnsupportedOperationException_init_$Create$('unknown strokeJoin: ' + strokeJoin);
+        throw UnsupportedOperationException_init_$Create$('unknown tileMode: ' + tileMode);
     }
     return tmp;
   }
@@ -1007,7 +999,7 @@
         return Group_Virtual_getInstance();
       default:
         Group_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -1039,7 +1031,7 @@
     return this.currentGroups_1;
   };
   function attributeOrNull(_this__u8e3s4, namespace, name) {
-    var value = _this__u8e3s4.getAttributeNS_8n2twp_k$(namespace, name);
+    var value = _this__u8e3s4.getAttributeNS_m2qmcr_k$(namespace, name);
     var tmp;
     // Inline function 'kotlin.text.isNotBlank' call
     if (!isBlank(value)) {
@@ -1056,8 +1048,8 @@
   function parseVectorNodes(_this__u8e3s4, builder, context) {
     // Inline function 'kotlin.sequences.forEach' call
     // Inline function 'kotlin.sequences.filterIsInstance' call
-    var tmp0_filterIsInstance = get_childrenSequence(_this__u8e3s4);
-    var tmp = filter(tmp0_filterIsInstance, parseVectorNodes$lambda);
+    var this_0 = get_childrenSequence(_this__u8e3s4);
+    var tmp = filter(this_0, parseVectorNodes$lambda);
     var tmp0_iterator = (isInterface(tmp, Sequence) ? tmp : THROW_CCE()).iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var element = tmp0_iterator.next_20eer_k$();
@@ -1096,7 +1088,7 @@
     var tmp_1;
     var tmp_2 = tmp1_elvis_lhs;
     if ((tmp_2 == null ? null : new PathFillType(tmp_2)) == null) {
-      tmp_1 = Companion_getInstance_2().get_NonZero_j4d1fu_k$();
+      tmp_1 = Companion_getInstance_0().get_NonZero_dwy848_k$();
     } else {
       tmp_1 = tmp1_elvis_lhs;
     }
@@ -1204,7 +1196,7 @@
     var tmp_20;
     var tmp_21 = tmp16_elvis_lhs;
     if ((tmp_21 == null ? null : new StrokeCap(tmp_21)) == null) {
-      tmp_20 = Companion_getInstance_1().get_Butt_vf89me_k$();
+      tmp_20 = Companion_getInstance_1().get_Butt_jb7qjw_k$();
     } else {
       tmp_20 = tmp16_elvis_lhs;
     }
@@ -1222,7 +1214,7 @@
     var tmp_24;
     var tmp_25 = tmp18_elvis_lhs;
     if ((tmp_25 == null ? null : new StrokeJoin(tmp_25)) == null) {
-      tmp_24 = Companion_getInstance_3().get_Miter_rcwd8a_k$();
+      tmp_24 = Companion_getInstance_2().get_Miter_xkwqso_k$();
     } else {
       tmp_24 = tmp18_elvis_lhs;
     }
@@ -1274,12 +1266,12 @@
       tmp_33 = toDouble(tmp25_safe_receiver);
     }
     var tmp26_elvis_lhs = tmp_33;
-    builder.addPath_o8nein_k$(tmp, tmp_3, tmp_4, tmp_8, tmp_10, tmp_14, tmp_16, tmp_18, tmp_22, tmp_26, tmp_28, tmp_30, tmp_32, tmp26_elvis_lhs == null ? 0.0 : tmp26_elvis_lhs);
+    builder.addPath_15iv0l_k$(tmp, tmp_3, tmp_4, tmp_8, tmp_10, tmp_14, tmp_16, tmp_18, tmp_22, tmp_26, tmp_28, tmp_30, tmp_32, tmp26_elvis_lhs == null ? 0.0 : tmp26_elvis_lhs);
   }
   function parseClipPath(_this__u8e3s4, builder, context) {
     var tmp0_elvis_lhs = attributeOrNull(_this__u8e3s4, 'http://schemas.android.com/apk/res/android', 'name');
-    builder.addGroup$default_nyvebk_k$(tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs, VOID, VOID, VOID, VOID, VOID, VOID, VOID, addPathNodes(attributeOrNull(_this__u8e3s4, 'http://schemas.android.com/apk/res/android', 'pathData')));
-    context.currentGroups_1.add_1j60pz_k$(Group_Virtual_getInstance());
+    builder.addGroup$default_x7xqxd_k$(tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs, VOID, VOID, VOID, VOID, VOID, VOID, VOID, addPathNodes(attributeOrNull(_this__u8e3s4, 'http://schemas.android.com/apk/res/android', 'pathData')));
+    context.currentGroups_1.add_utx5q5_k$(Group_Virtual_getInstance());
   }
   function parseGroup(_this__u8e3s4, builder, context) {
     var tmp0_elvis_lhs = attributeOrNull(_this__u8e3s4, 'http://schemas.android.com/apk/res/android', 'name');
@@ -1367,8 +1359,8 @@
       tmp_12 = toDouble(tmp13_safe_receiver);
     }
     var tmp14_elvis_lhs = tmp_12;
-    builder.addGroup_ks32xc_k$(tmp, tmp_1, tmp_3, tmp_5, tmp_7, tmp_9, tmp_11, tmp14_elvis_lhs == null ? get_DefaultTranslationY() : tmp14_elvis_lhs, get_EmptyPath());
-    context.currentGroups_1.add_1j60pz_k$(Group_Real_getInstance());
+    builder.addGroup_xxexed_k$(tmp, tmp_1, tmp_3, tmp_5, tmp_7, tmp_9, tmp_11, tmp14_elvis_lhs == null ? get_DefaultTranslationY() : tmp14_elvis_lhs, get_EmptyPath());
+    context.currentGroups_1.add_utx5q5_k$(Group_Real_getInstance());
     parseVectorNodes(_this__u8e3s4, builder, context);
     do {
       var removedGroup = removeLastOrNull(context.currentGroups_1);
@@ -1380,20 +1372,20 @@
     return new SolidColor(Color(parseColorValue(str)));
   }
   function apptAttr(_this__u8e3s4, namespace, name) {
-    var prefix = _this__u8e3s4.lookupPrefix_ud58r9_k$(namespace);
+    var prefix = _this__u8e3s4.lookupPrefix_39tj8y_k$(namespace);
     // Inline function 'kotlin.sequences.find' call
     // Inline function 'kotlin.sequences.filterIsInstance' call
-    var tmp0_filterIsInstance = get_childrenSequence(_this__u8e3s4);
-    var tmp = filter(tmp0_filterIsInstance, apptAttr$lambda);
-    var tmp1_find = isInterface(tmp, Sequence) ? tmp : THROW_CCE();
+    var this_0 = get_childrenSequence(_this__u8e3s4);
+    var tmp = filter(this_0, apptAttr$lambda);
+    var this_1 = isInterface(tmp, Sequence) ? tmp : THROW_CCE();
     var tmp$ret$2;
     $l$block: {
       // Inline function 'kotlin.sequences.firstOrNull' call
-      var tmp0_iterator = tmp1_find.iterator_jk1svi_k$();
+      var tmp0_iterator = this_1.iterator_jk1svi_k$();
       while (tmp0_iterator.hasNext_bitz1p_k$()) {
         var element = tmp0_iterator.next_20eer_k$();
         // Inline function 'org.jetbrains.compose.resources.vector.apptAttr.<anonymous>' call
-        if ((element.get_namespaceURI_g6nmhy_k$() === 'http://schemas.android.com/aapt' ? element.get_localName_bf4zrn_k$() === 'attr' : false) ? element.getAttribute_g44hqz_k$('name') === prefix + ':' + name : false) {
+        if ((element.get_namespaceURI_g6nmhy_k$() === 'http://schemas.android.com/aapt' ? element.get_localName_bf4zrn_k$() === 'attr' : false) ? element.getAttribute_z2kbho_k$('name') === prefix + ':' + name : false) {
           tmp$ret$2 = element;
           break $l$block;
         }
@@ -1405,13 +1397,13 @@
   function parseElementBrush(_this__u8e3s4) {
     // Inline function 'kotlin.sequences.find' call
     // Inline function 'kotlin.sequences.filterIsInstance' call
-    var tmp0_filterIsInstance = get_childrenSequence(_this__u8e3s4);
-    var tmp = filter(tmp0_filterIsInstance, parseElementBrush$lambda);
-    var tmp1_find = isInterface(tmp, Sequence) ? tmp : THROW_CCE();
+    var this_0 = get_childrenSequence(_this__u8e3s4);
+    var tmp = filter(this_0, parseElementBrush$lambda);
+    var this_1 = isInterface(tmp, Sequence) ? tmp : THROW_CCE();
     var tmp$ret$2;
     $l$block: {
       // Inline function 'kotlin.sequences.firstOrNull' call
-      var tmp0_iterator = tmp1_find.iterator_jk1svi_k$();
+      var tmp0_iterator = this_1.iterator_jk1svi_k$();
       while (tmp0_iterator.hasNext_bitz1p_k$()) {
         var element = tmp0_iterator.next_20eer_k$();
         // Inline function 'org.jetbrains.compose.resources.vector.parseElementBrush.<anonymous>' call
@@ -1505,11 +1497,11 @@
     var tmp_10;
     var tmp_11 = tmp9_elvis_lhs;
     if ((tmp_11 == null ? null : new TileMode(tmp_11)) == null) {
-      tmp_10 = Companion_getInstance_0().get_Clamp_q8g1jp_k$();
+      tmp_10 = Companion_getInstance_3().get_Clamp_ddetsd_k$();
     } else {
       tmp_10 = tmp9_elvis_lhs;
     }
-    return tmp.linearGradient_hzla25_k$(tmp_0, tmp_4, tmp_8, tmp_10);
+    return tmp.linearGradient_gq8lze_k$(tmp_0, tmp_4, tmp_8, tmp_10);
   }
   function parseRadialGradient(_this__u8e3s4) {
     var tmp = Companion_getInstance_4();
@@ -1563,11 +1555,11 @@
     var tmp_8;
     var tmp_9 = tmp7_elvis_lhs;
     if ((tmp_9 == null ? null : new TileMode(tmp_9)) == null) {
-      tmp_8 = Companion_getInstance_0().get_Clamp_q8g1jp_k$();
+      tmp_8 = Companion_getInstance_3().get_Clamp_ddetsd_k$();
     } else {
       tmp_8 = tmp7_elvis_lhs;
     }
-    return tmp.radialGradient_ge8bks_k$(tmp_0, tmp_4, tmp_6, tmp_8);
+    return tmp.radialGradient_q9mw3i_k$(tmp_0, tmp_4, tmp_6, tmp_8);
   }
   function parseSweepGradient(_this__u8e3s4) {
     var tmp = Companion_getInstance_4();
@@ -1595,17 +1587,17 @@
       tmp_3 = toDouble(tmp2_safe_receiver);
     }
     var tmp3_elvis_lhs = tmp_3;
-    return tmp.sweepGradient_nrx7hj_k$(tmp_0, Offset(tmp_2, tmp3_elvis_lhs == null ? 0.0 : tmp3_elvis_lhs));
+    return tmp.sweepGradient_pf4hbc_k$(tmp_0, Offset(tmp_2, tmp3_elvis_lhs == null ? 0.0 : tmp3_elvis_lhs));
   }
   function parseColorStops(_this__u8e3s4) {
     // Inline function 'kotlin.sequences.filterIsInstance' call
-    var tmp0_filterIsInstance = get_childrenSequence(_this__u8e3s4);
-    var tmp = filter(tmp0_filterIsInstance, parseColorStops$lambda);
+    var this_0 = get_childrenSequence(_this__u8e3s4);
+    var tmp = filter(this_0, parseColorStops$lambda);
     var tmp_0 = isInterface(tmp, Sequence) ? tmp : THROW_CCE();
     var items = toList(filter(tmp_0, parseColorStops$lambda_0));
     // Inline function 'kotlin.collections.mapIndexedNotNullTo' call
     // Inline function 'kotlin.collections.mutableListOf' call
-    var tmp1_mapIndexedNotNullTo = ArrayList_init_$Create$();
+    var destination = ArrayList_init_$Create$();
     // Inline function 'kotlin.collections.forEachIndexed' call
     var index = 0;
     var tmp0_iterator = items.iterator_jk1svi_k$();
@@ -1614,18 +1606,18 @@
       // Inline function 'kotlin.collections.mapIndexedNotNullTo.<anonymous>' call
       var tmp1 = index;
       index = tmp1 + 1 | 0;
-      var tmp0_anonymous = checkIndexOverflow(tmp1);
       // Inline function 'org.jetbrains.compose.resources.vector.parseColorStops.<anonymous>' call
-      var tmp0_safe_receiver = parseColorStop(item, tmp0_anonymous / coerceAtLeast(get_lastIndex(items), 1));
+      var index_0 = checkIndexOverflow(tmp1);
+      var tmp0_safe_receiver = parseColorStop(item, index_0 / coerceAtLeast(get_lastIndex(items), 1));
       if (tmp0_safe_receiver == null)
         null;
       else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
-        tmp1_mapIndexedNotNullTo.add_1j60pz_k$(tmp0_safe_receiver);
+        destination.add_utx5q5_k$(tmp0_safe_receiver);
       }
     }
-    var colorStops = tmp1_mapIndexedNotNullTo;
+    var colorStops = destination;
     if (colorStops.isEmpty_y1axqb_k$()) {
       var tmp0_safe_receiver_0 = attributeOrNull(_this__u8e3s4, 'http://schemas.android.com/apk/res/android', 'startColor');
       var tmp_1;
@@ -1658,13 +1650,13 @@
       }
       var endColor = tmp_3;
       if (!(startColor == null)) {
-        colorStops.add_1j60pz_k$(to(0.0, new Color_0(Color(startColor))));
+        colorStops.add_utx5q5_k$(to(0.0, new Color_0(Color(startColor))));
       }
       if (!(centerColor == null)) {
-        colorStops.add_1j60pz_k$(to(0.5, new Color_0(Color(centerColor))));
+        colorStops.add_utx5q5_k$(to(0.5, new Color_0(Color(centerColor))));
       }
       if (!(endColor == null)) {
-        colorStops.add_1j60pz_k$(to(1.0, new Color_0(Color(endColor))));
+        colorStops.add_utx5q5_k$(to(1.0, new Color_0(Color(endColor))));
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
@@ -1709,14 +1701,14 @@
     this.$this_childrenSequence_1 = $this_childrenSequence;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(_get_childrenSequence_$slambda_9jpw3j).invoke_bj7uip_k$ = function ($this$sequence, $completion) {
-    var tmp = this.create_6qtc4i_k$($this$sequence, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(_get_childrenSequence_$slambda_9jpw3j).invoke_e8kyn4_k$ = function ($this$sequence, $completion) {
+    var tmp = this.create_5jok44_k$($this$sequence, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(_get_childrenSequence_$slambda_9jpw3j).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_bj7uip_k$(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
+  protoOf(_get_childrenSequence_$slambda_9jpw3j).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_e8kyn4_k$(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
   };
   protoOf(_get_childrenSequence_$slambda_9jpw3j).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -1725,26 +1717,26 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(4);
+            this.set_exceptionState_fex74n_k$(4);
             this.tmp0_iterator0__1 = until(0, this.$this_childrenSequence_1.get_childNodes_1z4mta_k$().get_length_g42xv3_k$()).iterator_jk1svi_k$();
-            this.set_state_a96kl8_k$(1);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 1:
             if (!this.tmp0_iterator0__1.hasNext_bitz1p_k$()) {
-              this.set_state_a96kl8_k$(3);
+              this.set_state_rjd8d0_k$(3);
               continue $sm;
             }
 
             this.i1__1 = this.tmp0_iterator0__1.next_20eer_k$();
-            this.set_state_a96kl8_k$(2);
-            suspendResult = this.$this$sequence_1.yield_24z9an_k$(this.$this_childrenSequence_1.get_childNodes_1z4mta_k$().item_nqfaq6_k$(this.i1__1), this);
+            this.set_state_rjd8d0_k$(2);
+            suspendResult = this.$this$sequence_1.yield_3xhcex_k$(this.$this_childrenSequence_1.get_childNodes_1z4mta_k$().item_dog3dn_k$(this.i1__1), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 2:
-            this.set_state_a96kl8_k$(1);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 3:
             return Unit_getInstance();
@@ -1756,24 +1748,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 4) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(_get_childrenSequence_$slambda_9jpw3j).create_6qtc4i_k$ = function ($this$sequence, completion) {
+  protoOf(_get_childrenSequence_$slambda_9jpw3j).create_5jok44_k$ = function ($this$sequence, completion) {
     var i = new _get_childrenSequence_$slambda_9jpw3j(this.$this_childrenSequence_1, completion);
     i.$this$sequence_1 = $this$sequence;
     return i;
   };
-  protoOf(_get_childrenSequence_$slambda_9jpw3j).create_xubfvz_k$ = function (value, completion) {
-    return this.create_6qtc4i_k$(value instanceof SequenceScope ? value : THROW_CCE(), completion);
+  protoOf(_get_childrenSequence_$slambda_9jpw3j).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_5jok44_k$(value instanceof SequenceScope ? value : THROW_CCE(), completion);
   };
   function _get_childrenSequence_$slambda_9jpw3j_0($this_childrenSequence, resultContinuation) {
     var i = new _get_childrenSequence_$slambda_9jpw3j($this_childrenSequence, resultContinuation);
     var l = function ($this$sequence, $completion) {
-      return i.invoke_bj7uip_k$($this$sequence, $completion);
+      return i.invoke_e8kyn4_k$($this$sequence, $completion);
     };
     l.$arity = 1;
     return l;
@@ -1804,6 +1796,15 @@
   }
   function NodeList() {
   }
+  function isSyncResourceLoadingSupported() {
+    return false;
+  }
+  function resource(path) {
+    return WebResourcesConfiguration_getInstance().jsResourceImplFactory_1(path);
+  }
+  function readBytesSync(_this__u8e3s4) {
+    throw UnsupportedOperationException_init_$Create$_0();
+  }
   function parseXML(byteArray) {
     var xmlString = decodeToString(byteArray);
     var xmlDom = (new DOMParser()).parseFromString(xmlString, 'application/xml');
@@ -1817,44 +1818,35 @@
     var domElement = tmp;
     return new ElementImpl(domElement);
   }
-  function readBytesSync(_this__u8e3s4) {
-    throw UnsupportedOperationException_init_$Create$_0();
+  function get_$stableprop_4() {
+    return 8;
   }
-  function isSyncResourceLoadingSupported() {
-    return false;
+  function WebResourcesConfiguration$jsResourceImplFactory$lambda(it) {
+    return urlResource('./' + it);
   }
-  function resource(path) {
-    return new JSResourceImpl(path);
+  function WebResourcesConfiguration() {
+    WebResourcesConfiguration_instance = this;
+    var tmp = this;
+    tmp.jsResourceImplFactory_1 = WebResourcesConfiguration$jsResourceImplFactory$lambda;
+    this.$stable_1 = 8;
   }
-  function JSResourceImpl$readBytes$lambda($req, $safe, this$0) {
-    return function (event) {
-      var arrayBuffer = $req.response;
-      var tmp;
-      if (arrayBuffer instanceof ArrayBuffer) {
-        var tmp$ret$1;
-        // Inline function 'kotlin.coroutines.resume' call
-        var tmp0_resume = toByteArray(arrayBuffer);
-        var tmp$ret$0;
-        // Inline function 'kotlin.Companion.success' call
-        var tmp0_success = Companion_getInstance_5();
-        tmp$ret$0 = _Result___init__impl__xyqfz8(tmp0_resume);
-        $safe.resumeWith_s3a3yh_k$(tmp$ret$0);
-        tmp$ret$1 = Unit_getInstance();
-        tmp = tmp$ret$1;
-      } else {
-        var tmp$ret$3;
-        // Inline function 'kotlin.coroutines.resumeWithException' call
-        var tmp1_resumeWithException = new MissingResourceException(this$0.get_path_wos8ry_k$());
-        var tmp$ret$2;
-        // Inline function 'kotlin.Companion.failure' call
-        var tmp0_failure = Companion_getInstance_5();
-        tmp$ret$2 = _Result___init__impl__xyqfz8(createFailure(tmp1_resumeWithException));
-        $safe.resumeWith_s3a3yh_k$(tmp$ret$2);
-        tmp$ret$3 = Unit_getInstance();
-        tmp = tmp$ret$3;
-      }
-      return Unit_getInstance();
-    };
+  protoOf(WebResourcesConfiguration).set_jsResourceImplFactory_igc4y0_k$ = function (_set____db54di) {
+    this.jsResourceImplFactory_1 = _set____db54di;
+  };
+  protoOf(WebResourcesConfiguration).get_jsResourceImplFactory_7jzvl6_k$ = function () {
+    return this.jsResourceImplFactory_1;
+  };
+  protoOf(WebResourcesConfiguration).setResourceFactory_x6kgno_k$ = function (factory) {
+    this.jsResourceImplFactory_1 = factory;
+  };
+  var WebResourcesConfiguration_instance;
+  function WebResourcesConfiguration_getInstance() {
+    if (WebResourcesConfiguration_instance == null)
+      new WebResourcesConfiguration();
+    return WebResourcesConfiguration_instance;
+  }
+  function urlResource(url) {
+    return new JSUrlResourceImpl(url);
   }
   function $readBytesCOROUTINE$0(_this__u8e3s4, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
@@ -1867,54 +1859,61 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
-            var safe = SafeContinuation_init_$Create$(intercepted(this));
-            var req = new XMLHttpRequest();
-            req.open('GET', '/' + this._this__u8e3s4__1.get_path_wos8ry_k$(), true);
-            null;
-            req.responseType = 'arraybuffer';
-            req.onload = JSResourceImpl$readBytes$lambda(req, safe, this._this__u8e3s4__1);
-            req.send(null);
-            suspendResult = returnIfSuspended(safe.getOrThrow_323tdf_k$(), this);
+            this.set_exceptionState_fex74n_k$(3);
+            this.set_state_rjd8d0_k$(1);
+            suspendResult = await_0(window.fetch(this._this__u8e3s4__1.get_path_wos8ry_k$()), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 1:
-            return suspendResult;
+            this.response0__1 = suspendResult;
+            if (!this.response0__1.ok) {
+              throw new MissingResourceException(this._this__u8e3s4__1.get_path_wos8ry_k$());
+            }
+
+            this.set_state_rjd8d0_k$(2);
+            suspendResult = await_0(this.response0__1.arrayBuffer(), this);
+            if (suspendResult === get_COROUTINE_SUSPENDED()) {
+              return suspendResult;
+            }
+
+            continue $sm;
           case 2:
+            var ARGUMENT = suspendResult;
+            return toByteArray(ARGUMENT);
+          case 3:
             throw this.get_exception_x0n6w6_k$();
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
+        if (this.get_exceptionState_wflpxn_k$() === 3) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  function JSResourceImpl(path) {
-    AbstractResourceImpl.call(this, path);
+  function JSUrlResourceImpl(url) {
+    AbstractResourceImpl.call(this, url);
   }
-  protoOf(JSResourceImpl).readBytes_v1lxol_k$ = function ($completion) {
+  protoOf(JSUrlResourceImpl).readBytes_d7rp36_k$ = function ($completion) {
     var tmp = new $readBytesCOROUTINE$0(this, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
+  function MissingResourceException(path) {
+    Exception_init_$Init$('Missing resource with path: ' + path, this);
+    captureStack(this, MissingResourceException);
+  }
   function toByteArray(_this__u8e3s4) {
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return new Int8Array(_this__u8e3s4, 0, _this__u8e3s4.byteLength);
-  }
-  function MissingResourceException(path) {
-    Exception_init_$Init$('Missing resource with path: ' + path, this);
-    captureStack(this, MissingResourceException);
   }
   function ElementImpl(element) {
     NodeImpl.call(this, element);
@@ -1930,11 +1929,11 @@
     var tmp0_elvis_lhs = this.element_1.namespaceURI;
     return tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
   };
-  protoOf(ElementImpl).getAttributeNS_8n2twp_k$ = function (nameSpaceURI, localName) {
+  protoOf(ElementImpl).getAttributeNS_m2qmcr_k$ = function (nameSpaceURI, localName) {
     var tmp0_elvis_lhs = this.element_1.getAttributeNS(nameSpaceURI, localName);
     return tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
   };
-  protoOf(ElementImpl).getAttribute_g44hqz_k$ = function (name) {
+  protoOf(ElementImpl).getAttribute_z2kbho_k$ = function (name) {
     var tmp0_elvis_lhs = this.element_1.getAttribute(name);
     return tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
   };
@@ -1942,7 +1941,7 @@
     this.this$0__1 = this$0;
     this.length_1 = this$0.n_1.childNodes.length;
   }
-  protoOf(NodeImpl$childNodes$2$1).item_nqfaq6_k$ = function (i) {
+  protoOf(NodeImpl$childNodes$2$1).item_dog3dn_k$ = function (i) {
     var tmp0_elvis_lhs = this.this$0__1.n_1.childNodes.item(i);
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -1988,10 +1987,11 @@
   };
   protoOf(NodeImpl).get_childNodes_1z4mta_k$ = function () {
     // Inline function 'kotlin.getValue' call
+    var this_0 = this.childNodes$delegate_1;
     childNodes$factory();
-    return this.childNodes$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(NodeImpl).lookupPrefix_ud58r9_k$ = function (namespaceURI) {
+  protoOf(NodeImpl).lookupPrefix_39tj8y_k$ = function (namespaceURI) {
     var tmp0_elvis_lhs = this.n_1.lookupPrefix(namespaceURI);
     return tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
   };
@@ -2001,7 +2001,7 @@
     }, null);
   }
   function toImageBitmap(_this__u8e3s4) {
-    return toComposeImageBitmap(Companion_getInstance_6().makeFromEncoded_eatg37_k$(_this__u8e3s4));
+    return toComposeImageBitmap(Companion_getInstance_5().makeFromEncoded_99p5hy_k$(_this__u8e3s4));
   }
   //region block: init
   ALPHA_MASK = -16777216;

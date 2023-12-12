@@ -1,11 +1,11 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin-kotlin-stdlib-js-ir.js', './compose-multiplatform-core-ui-unit.js', './compose-multiplatform-core-ui-graphics.js', './compose-multiplatform-core-ui-geometry.js', './compose-multiplatform-core-runtime-saveable.js', './compose-multiplatform-core-runtime.js', './kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js', './compose-multiplatform-core-ui-util.js', './skiko-kjs.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js', './compose-multiplatform-core-ui-unit.js', './compose-multiplatform-core-ui-graphics.js', './compose-multiplatform-core-ui-geometry.js', './compose-multiplatform-core-runtime-saveable.js', './compose-multiplatform-core-runtime.js', './kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js', './compose-multiplatform-core-ui-util.js', './skiko-kjs.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./compose-multiplatform-core-ui-graphics.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./compose-multiplatform-core-runtime-saveable.js'), require('./compose-multiplatform-core-runtime.js'), require('./kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js'), require('./compose-multiplatform-core-ui-util.js'), require('./skiko-kjs.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./compose-multiplatform-core-ui-graphics.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./compose-multiplatform-core-runtime-saveable.js'), require('./compose-multiplatform-core-runtime.js'), require('./kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js'), require('./compose-multiplatform-core-ui-util.js'), require('./skiko-kjs.js'));
   else {
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'compose-multiplatform-core-ui-text'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'compose-multiplatform-core-ui-text'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-ui-text'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'compose-multiplatform-core-ui-text'.");
     }
     if (typeof this['compose-multiplatform-core-ui-unit'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-ui-text'. Its dependency 'compose-multiplatform-core-ui-unit' was not found. Please, check whether 'compose-multiplatform-core-ui-unit' is loaded prior to 'compose-multiplatform-core-ui-text'.");
@@ -31,86 +31,86 @@
     if (typeof this['skiko-kjs'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-ui-text'. Its dependency 'skiko-kjs' was not found. Please, check whether 'skiko-kjs' is loaded prior to 'compose-multiplatform-core-ui-text'.");
     }
-    root['compose-multiplatform-core-ui-text'] = factory(typeof this['compose-multiplatform-core-ui-text'] === 'undefined' ? {} : this['compose-multiplatform-core-ui-text'], this['kotlin-kotlin-stdlib-js-ir'], this['compose-multiplatform-core-ui-unit'], this['compose-multiplatform-core-ui-graphics'], this['compose-multiplatform-core-ui-geometry'], this['compose-multiplatform-core-runtime-saveable'], this['compose-multiplatform-core-runtime'], this['kotlinx.coroutines-kotlinx-coroutines-core-js-ir'], this['compose-multiplatform-core-ui-util'], this['skiko-kjs']);
+    root['compose-multiplatform-core-ui-text'] = factory(typeof this['compose-multiplatform-core-ui-text'] === 'undefined' ? {} : this['compose-multiplatform-core-ui-text'], this['kotlin-kotlin-stdlib'], this['compose-multiplatform-core-ui-unit'], this['compose-multiplatform-core-ui-graphics'], this['compose-multiplatform-core-ui-geometry'], this['compose-multiplatform-core-runtime-saveable'], this['compose-multiplatform-core-runtime'], this['kotlinx.coroutines-kotlinx-coroutines-core-js-ir'], this['compose-multiplatform-core-ui-util'], this['skiko-kjs']);
   }
 }(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_compose_ui_ui_unit, kotlin_org_jetbrains_compose_ui_ui_graphics, kotlin_org_jetbrains_compose_ui_ui_geometry, kotlin_org_jetbrains_compose_runtime_runtime_saveable, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core, kotlin_org_jetbrains_compose_ui_ui_util, kotlin_org_jetbrains_skiko_skiko) {
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var objectCreate = kotlin_kotlin.$_$.pd;
-  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.m4;
-  var VOID = kotlin_kotlin.$_$.bj;
-  var toString = kotlin_kotlin.$_$.wd;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.a2;
-  var hashCode = kotlin_kotlin.$_$.qc;
-  var getStringHashCode = kotlin_kotlin.$_$.pc;
-  var THROW_CCE = kotlin_kotlin.$_$.lh;
-  var equals = kotlin_kotlin.$_$.ic;
-  var classMeta = kotlin_kotlin.$_$.ec;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
-  var emptyList = kotlin_kotlin.$_$.n7;
-  var Unit_getInstance = kotlin_kotlin.$_$.z4;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.v1;
-  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.h1;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.k;
-  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.j;
-  var Appendable = kotlin_kotlin.$_$.of;
-  var Comparator = kotlin_kotlin.$_$.yg;
-  var compareValues = kotlin_kotlin.$_$.pa;
-  var sortedWith = kotlin_kotlin.$_$.w9;
-  var charSequenceGet = kotlin_kotlin.$_$.bc;
-  var List = kotlin_kotlin.$_$.t5;
-  var isInterface = kotlin_kotlin.$_$.bd;
-  var CharSequence = kotlin_kotlin.$_$.ug;
-  var coerceIn = kotlin_kotlin.$_$.qe;
-  var Annotation = kotlin_kotlin.$_$.tg;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var objectCreate = kotlin_kotlin.$_$.sd;
+  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.o4;
+  var VOID = kotlin_kotlin.$_$.e;
+  var toString = kotlin_kotlin.$_$.zd;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.b2;
+  var hashCode = kotlin_kotlin.$_$.uc;
+  var getStringHashCode = kotlin_kotlin.$_$.tc;
+  var THROW_CCE = kotlin_kotlin.$_$.qh;
+  var equals = kotlin_kotlin.$_$.lc;
+  var classMeta = kotlin_kotlin.$_$.hc;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var emptyList = kotlin_kotlin.$_$.p7;
+  var Unit_getInstance = kotlin_kotlin.$_$.b5;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.w1;
+  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.i1;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.l;
+  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
+  var Appendable = kotlin_kotlin.$_$.rf;
+  var Comparator = kotlin_kotlin.$_$.dh;
+  var compareValues = kotlin_kotlin.$_$.sa;
+  var sortedWith = kotlin_kotlin.$_$.z9;
+  var charSequenceGet = kotlin_kotlin.$_$.ec;
+  var List = kotlin_kotlin.$_$.v5;
+  var isInterface = kotlin_kotlin.$_$.fd;
+  var CharSequence = kotlin_kotlin.$_$.zg;
+  var coerceIn = kotlin_kotlin.$_$.te;
+  var Annotation = kotlin_kotlin.$_$.yg;
   var Constraints = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.a;
-  var charSequenceLength = kotlin_kotlin.$_$.cc;
+  var charSequenceLength = kotlin_kotlin.$_$.fc;
   var _Constraints___get_minHeight__impl__ev4bgx = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.g2;
   var _Constraints___get_minWidth__impl__hi9lfi = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.h2;
   var _Constraints___get_maxWidth__impl__uuyqc = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.f2;
   var _Constraints___get_maxHeight__impl__dt3e8z = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.e2;
-  var coerceAtLeast = kotlin_kotlin.$_$.je;
+  var coerceAtLeast = kotlin_kotlin.$_$.me;
   var _Constraints___get_hasBoundedHeight__impl__bsh4rw = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.z1;
-  var get_lastIndex = kotlin_kotlin.$_$.q8;
-  var addAll = kotlin_kotlin.$_$.f6;
-  var plus = kotlin_kotlin.$_$.k9;
-  var last = kotlin_kotlin.$_$.v8;
+  var get_lastIndex = kotlin_kotlin.$_$.s8;
+  var addAll = kotlin_kotlin.$_$.h6;
+  var plus = kotlin_kotlin.$_$.m9;
+  var last = kotlin_kotlin.$_$.x8;
   var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a4;
   var Color = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.q;
   var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.v3;
   var BlendMode = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.j;
-  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.l4;
+  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.n4;
   var Path = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.b1;
   var _Offset___get_y__impl__8bzhra = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.j1;
   var _Offset___get_x__impl__xvi35n = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.i1;
   var Offset = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.d;
-  var getNumberHashCode = kotlin_kotlin.$_$.mc;
-  var compareTo = kotlin_kotlin.$_$.fc;
-  var LazyThreadSafetyMode_NONE_getInstance = kotlin_kotlin.$_$.f;
-  var lazy = kotlin_kotlin.$_$.ji;
-  var KProperty1 = kotlin_kotlin.$_$.af;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.oc;
-  var numberToInt = kotlin_kotlin.$_$.nd;
-  var interfaceMeta = kotlin_kotlin.$_$.sc;
+  var getNumberHashCode = kotlin_kotlin.$_$.qc;
+  var compareTo = kotlin_kotlin.$_$.ic;
+  var LazyThreadSafetyMode_NONE_getInstance = kotlin_kotlin.$_$.g;
+  var lazy = kotlin_kotlin.$_$.pi;
+  var KProperty1 = kotlin_kotlin.$_$.df;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.sc;
+  var numberToInt = kotlin_kotlin.$_$.qd;
+  var interfaceMeta = kotlin_kotlin.$_$.wc;
   var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v3;
   var _TextUnit___get_value__impl__hpbx0k = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.f3;
   var TextUnit = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.b1;
   var TextUnit__hashCode_impl_qsmeov = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.z2;
   var get_isUnspecified = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.k1;
-  var objectMeta = kotlin_kotlin.$_$.qd;
-  var THROW_ISE = kotlin_kotlin.$_$.mh;
-  var Enum = kotlin_kotlin.$_$.zg;
-  var arrayListOf = kotlin_kotlin.$_$.h6;
-  var ensureNotNull = kotlin_kotlin.$_$.di;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.li;
+  var objectMeta = kotlin_kotlin.$_$.td;
+  var THROW_IAE = kotlin_kotlin.$_$.rh;
+  var Enum = kotlin_kotlin.$_$.eh;
+  var arrayListOf = kotlin_kotlin.$_$.j6;
+  var ensureNotNull = kotlin_kotlin.$_$.ji;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.ri;
   var Companion_getInstance_2 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g4;
   var Shadow = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.e1;
   var Offset_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.e;
   var Companion_getInstance_3 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.s1;
   var _Color___get_value__impl__1pls5m = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d3;
-  var ULong = kotlin_kotlin.$_$.th;
+  var ULong = kotlin_kotlin.$_$.zh;
   var _Color___init__impl__r6cqi2 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.u2;
   var _TextUnit___get_type__impl__uc2olt = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.e3;
   var TextUnitType = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.z;
@@ -122,172 +122,168 @@
   var lerp_1 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.m1;
   var Fill_getInstance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.w3;
   var get_sp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t1;
-  var StringBuilder_init_$Create$_0 = kotlin_kotlin.$_$.i1;
-  var toString_0 = kotlin_kotlin.$_$.wi;
-  var Char = kotlin_kotlin.$_$.vg;
-  var isCharSequence = kotlin_kotlin.$_$.xc;
-  var HashSet_init_$Create$ = kotlin_kotlin.$_$.q;
+  var StringBuilder_init_$Create$_0 = kotlin_kotlin.$_$.j1;
+  var toString_0 = kotlin_kotlin.$_$.cj;
+  var Char = kotlin_kotlin.$_$.ah;
+  var isCharSequence = kotlin_kotlin.$_$.bd;
+  var HashSet_init_$Create$ = kotlin_kotlin.$_$.r;
   var _IntSize___get_height__impl__prv63b = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w2;
   var _IntSize___get_width__impl__d9yl4o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x2;
   var IntSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.y;
   var IntSize__hashCode_impl_gm9mta = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v2;
   var Constraints_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.b;
+  var getBooleanHashCode = kotlin_kotlin.$_$.oc;
   var Constraints__hashCode_impl_ij7484 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.d2;
-  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.v;
+  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.w;
   var Size = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.k;
   var Rect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.g;
-  var Long = kotlin_kotlin.$_$.eh;
-  var toLong = kotlin_kotlin.$_$.ud;
-  var fillArrayVal = kotlin_kotlin.$_$.jc;
-  var HashMap_init_$Create$ = kotlin_kotlin.$_$.p;
-  var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.y;
-  var NullPointerException_init_$Create$ = kotlin_kotlin.$_$.g2;
-  var first = kotlin_kotlin.$_$.z7;
-  var Map = kotlin_kotlin.$_$.v5;
-  var MutableMap = kotlin_kotlin.$_$.b6;
-  var MutableCollection = kotlin_kotlin.$_$.w5;
-  var ConcurrentModificationException_init_$Create$ = kotlin_kotlin.$_$.j1;
-  var copyOf = kotlin_kotlin.$_$.k7;
-  var copyOf_0 = kotlin_kotlin.$_$.j7;
-  var isObject = kotlin_kotlin.$_$.dd;
-  var println = kotlin_kotlin.$_$.ub;
-  var arrayCopy = kotlin_kotlin.$_$.g6;
-  var ClassCastException = kotlin_kotlin.$_$.wg;
-  var NullPointerException = kotlin_kotlin.$_$.hh;
-  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.o2;
-  var ArrayList_init_$Create$_1 = kotlin_kotlin.$_$.l;
-  var asList = kotlin_kotlin.$_$.i6;
-  var IllegalStateException_init_$Create$_0 = kotlin_kotlin.$_$.b2;
-  var Exception = kotlin_kotlin.$_$.bh;
-  var State = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f1;
-  var CoroutineImpl = kotlin_kotlin.$_$.lb;
-  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.va;
-  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.b2;
-  var get_indices = kotlin_kotlin.$_$.k8;
-  var yield_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.q;
-  var get_isActive = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.n2;
-  var withTimeoutOrNull = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.o;
-  var Key_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.v;
-  var CancellationException = kotlin_kotlin.$_$.ua;
-  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u1;
-  var AbstractCoroutineContextElement = kotlin_kotlin.$_$.za;
-  var get = kotlin_kotlin.$_$.gb;
-  var fold = kotlin_kotlin.$_$.fb;
-  var minusKey = kotlin_kotlin.$_$.hb;
-  var plus_0 = kotlin_kotlin.$_$.kb;
-  var CoroutineExceptionHandler = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.z1;
-  var withTimeout = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.p;
-  var async = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.j2;
-  var joinAll = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.m;
-  var EmptyCoroutineContext_getInstance = kotlin_kotlin.$_$.h4;
-  var Key_getInstance_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.y;
-  var SupervisorJob = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.i2;
-  var CoroutineScope_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.a2;
-  var to = kotlin_kotlin.$_$.xi;
-  var first_0 = kotlin_kotlin.$_$.y7;
-  var coroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.k;
+  var Long = kotlin_kotlin.$_$.jh;
+  var toLong = kotlin_kotlin.$_$.xd;
+  var fillArrayVal = kotlin_kotlin.$_$.mc;
+  var HashMap_init_$Create$ = kotlin_kotlin.$_$.q;
+  var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.z;
+  var NullPointerException_init_$Create$ = kotlin_kotlin.$_$.h2;
+  var first = kotlin_kotlin.$_$.b8;
+  var Map = kotlin_kotlin.$_$.x5;
+  var MutableMap = kotlin_kotlin.$_$.d6;
+  var MutableCollection = kotlin_kotlin.$_$.y5;
+  var ConcurrentModificationException_init_$Create$ = kotlin_kotlin.$_$.k1;
+  var copyOf = kotlin_kotlin.$_$.m7;
+  var copyOf_0 = kotlin_kotlin.$_$.l7;
+  var println = kotlin_kotlin.$_$.xb;
+  var arrayCopy = kotlin_kotlin.$_$.i6;
+  var ClassCastException = kotlin_kotlin.$_$.bh;
+  var NullPointerException = kotlin_kotlin.$_$.mh;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.q2;
+  var ArrayList_init_$Create$_1 = kotlin_kotlin.$_$.m;
+  var asList = kotlin_kotlin.$_$.k6;
+  var IllegalStateException_init_$Create$_0 = kotlin_kotlin.$_$.c2;
+  var Exception = kotlin_kotlin.$_$.gh;
+  var State = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d1;
+  var CoroutineImpl = kotlin_kotlin.$_$.ob;
+  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.ya;
+  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.c2;
+  var get_indices = kotlin_kotlin.$_$.m8;
+  var yield_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.r;
+  var get_isActive = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.o2;
+  var withTimeoutOrNull = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.p;
+  var Key_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.w;
+  var CancellationException = kotlin_kotlin.$_$.xa;
+  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s1;
+  var AbstractCoroutineContextElement = kotlin_kotlin.$_$.cb;
+  var CoroutineExceptionHandler = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.a2;
+  var withTimeout = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.q;
+  var async = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.k2;
+  var joinAll = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.n;
+  var EmptyCoroutineContext_getInstance = kotlin_kotlin.$_$.j4;
+  var Key_getInstance_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.z;
+  var SupervisorJob = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.j2;
+  var CoroutineScope_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.b2;
+  var to = kotlin_kotlin.$_$.dj;
+  var first_0 = kotlin_kotlin.$_$.a8;
+  var coroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.l;
   var CoroutineStart_UNDISPATCHED_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.b;
-  var launch = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.q2;
-  var mutableListOf = kotlin_kotlin.$_$.g9;
-  var Companion_getInstance_4 = kotlin_kotlin.$_$.u4;
-  var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.v2;
-  var createFailure = kotlin_kotlin.$_$.ci;
-  var _Result___get_value__impl__bjfvqg = kotlin_kotlin.$_$.y2;
-  var _Result___get_isFailure__impl__jpiriv = kotlin_kotlin.$_$.x2;
-  var KMutableProperty1 = kotlin_kotlin.$_$.ye;
-  var SuspendFunction0 = kotlin_kotlin.$_$.mb;
-  var SuspendFunction1 = kotlin_kotlin.$_$.nb;
-  var listOf = kotlin_kotlin.$_$.a9;
-  var Comparable = kotlin_kotlin.$_$.xg;
+  var launch = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.r2;
+  var mutableListOf = kotlin_kotlin.$_$.i9;
+  var Companion_getInstance_4 = kotlin_kotlin.$_$.w4;
+  var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.x2;
+  var createFailure = kotlin_kotlin.$_$.ii;
+  var _Result___get_value__impl__bjfvqg = kotlin_kotlin.$_$.a3;
+  var _Result___get_isFailure__impl__jpiriv = kotlin_kotlin.$_$.z2;
+  var KMutableProperty1 = kotlin_kotlin.$_$.bf;
+  var SuspendFunction0 = kotlin_kotlin.$_$.pb;
+  var SuspendFunction1 = kotlin_kotlin.$_$.qb;
+  var listOf = kotlin_kotlin.$_$.c9;
+  var Comparable = kotlin_kotlin.$_$.ch;
   var lerp_2 = kotlin_org_jetbrains_compose_ui_ui_util.$_$.b;
   var getKClassFromExpression = kotlin_kotlin.$_$.b;
-  var isLowSurrogate = kotlin_kotlin.$_$.wf;
-  var isHighSurrogate = kotlin_kotlin.$_$.vf;
-  var joinTo = kotlin_kotlin.$_$.o8;
-  var RuntimeException_init_$Create$ = kotlin_kotlin.$_$.j2;
-  var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.c2;
-  var charArray = kotlin_kotlin.$_$.ac;
-  var mutableIntStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q1;
-  var NonCancellable_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.z;
-  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
-  var mutableStateMapOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t1;
+  var isLowSurrogate = kotlin_kotlin.$_$.zf;
+  var isHighSurrogate = kotlin_kotlin.$_$.yf;
+  var joinTo = kotlin_kotlin.$_$.q8;
+  var RuntimeException_init_$Create$ = kotlin_kotlin.$_$.l2;
+  var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.d2;
+  var charArray = kotlin_kotlin.$_$.dc;
+  var mutableIntStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o1;
+  var NonCancellable_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.a1;
+  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
+  var mutableStateMapOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r1;
   var illegalDecoyCallException = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o1;
-  var Companion_getInstance_5 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q2;
-  var createCompositionCoroutineScope = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j1;
-  var CompositionScopedCoroutineScopeCanceller = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
-  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
-  var AtomicReference = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n;
-  var toString_1 = kotlin_kotlin.$_$.u2;
-  var repeat = kotlin_kotlin.$_$.bg;
-  var Char__hashCode_impl_otmys = kotlin_kotlin.$_$.q2;
-  var split = kotlin_kotlin.$_$.eg;
-  var trim = kotlin_kotlin.$_$.qg;
-  var toList = kotlin_kotlin.$_$.ia;
-  var Collection = kotlin_kotlin.$_$.j5;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m1;
+  var Companion_getInstance_5 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
+  var createCompositionCoroutineScope = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h1;
+  var CompositionScopedCoroutineScopeCanceller = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q;
+  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
+  var AtomicReference = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l;
+  var toString_1 = kotlin_kotlin.$_$.w2;
+  var repeat = kotlin_kotlin.$_$.fg;
+  var Char__hashCode_impl_otmys = kotlin_kotlin.$_$.s2;
+  var split = kotlin_kotlin.$_$.ig;
+  var trim = kotlin_kotlin.$_$.ug;
+  var toList = kotlin_kotlin.$_$.la;
+  var Collection = kotlin_kotlin.$_$.l5;
   var lerp_3 = kotlin_org_jetbrains_compose_ui_ui_util.$_$.a;
   var ShaderBrush = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d1;
   var SolidColor = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g1;
-  var isNaN_0 = kotlin_kotlin.$_$.hi;
+  var isNaN_0 = kotlin_kotlin.$_$.ni;
   var _Color___get_alpha__impl__wcfyv1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.v2;
   var Color__copy$default_impl_ectz3s = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.r3;
   var CharDirection_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.r7;
-  var until = kotlin_kotlin.$_$.ve;
-  var collectionSizeOrDefault = kotlin_kotlin.$_$.p6;
-  var setOf = kotlin_kotlin.$_$.r9;
+  var until = kotlin_kotlin.$_$.ye;
+  var collectionSizeOrDefault = kotlin_kotlin.$_$.r6;
+  var setOf = kotlin_kotlin.$_$.u9;
   var get_hostOs = kotlin_org_jetbrains_skiko_skiko.$_$.n9;
   var Companion_getInstance_6 = kotlin_org_jetbrains_skiko_skiko.$_$.j8;
   var Companion_getInstance_7 = kotlin_org_jetbrains_skiko_skiko.$_$.w7;
-  var titlecaseChar = kotlin_kotlin.$_$.gg;
-  var isLowerCase = kotlin_kotlin.$_$.xf;
+  var titlecaseChar = kotlin_kotlin.$_$.kg;
+  var isLowerCase = kotlin_kotlin.$_$.ag;
   var currentNanoTime = kotlin_org_jetbrains_skiko_skiko.$_$.l9;
-  var HashMap_init_$Create$_0 = kotlin_kotlin.$_$.n;
-  var Companion_getInstance_8 = kotlin_kotlin.$_$.s4;
-  var Char__toInt_impl_vasixd = kotlin_kotlin.$_$.t2;
-  var sequence = kotlin_kotlin.$_$.lf;
-  var Char__minus_impl_a2frrh = kotlin_kotlin.$_$.r2;
+  var HashMap_init_$Create$_0 = kotlin_kotlin.$_$.o;
+  var Companion_getInstance_8 = kotlin_kotlin.$_$.u4;
+  var Char__toInt_impl_vasixd = kotlin_kotlin.$_$.v2;
+  var sequence = kotlin_kotlin.$_$.of;
+  var Char__minus_impl_a2frrh = kotlin_kotlin.$_$.t2;
   var Companion_getInstance_9 = kotlin_org_jetbrains_skiko_skiko.$_$.s7;
-  var SequenceScope = kotlin_kotlin.$_$.ef;
-  var numberRangeToNumber = kotlin_kotlin.$_$.jd;
-  var getObjectHashCode = kotlin_kotlin.$_$.nc;
-  var last_0 = kotlin_kotlin.$_$.x8;
-  var isArray = kotlin_kotlin.$_$.tc;
+  var SequenceScope = kotlin_kotlin.$_$.hf;
+  var numberRangeToNumber = kotlin_kotlin.$_$.md;
+  var getObjectHashCode = kotlin_kotlin.$_$.rc;
+  var last_0 = kotlin_kotlin.$_$.z8;
+  var isArray = kotlin_kotlin.$_$.xc;
   var LineMetrics = kotlin_org_jetbrains_skiko_skiko.$_$.m8;
   var RectHeightMode_STRUT_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.p;
   var RectWidthMode_TIGHT_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.q;
-  var firstOrNull = kotlin_kotlin.$_$.x7;
-  var first_1 = kotlin_kotlin.$_$.a8;
+  var firstOrNull = kotlin_kotlin.$_$.z7;
+  var first_1 = kotlin_kotlin.$_$.c8;
   var Rect_0 = kotlin_org_jetbrains_skiko_skiko.$_$.d9;
   var TextBox = kotlin_org_jetbrains_skiko_skiko.$_$.r8;
-  var get_lastIndex_0 = kotlin_kotlin.$_$.zf;
-  var lastOrNull = kotlin_kotlin.$_$.u8;
+  var get_lastIndex_0 = kotlin_kotlin.$_$.cg;
+  var lastOrNull = kotlin_kotlin.$_$.w8;
   var toComposeRect = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.x1;
   var RectHeightMode_MAX_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.o;
   var asSkiaPath = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.n1;
-  var coerceAtMost = kotlin_kotlin.$_$.le;
+  var coerceAtMost = kotlin_kotlin.$_$.oe;
   var Rect_1 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.h;
-  var getOrNull = kotlin_kotlin.$_$.c8;
+  var getOrNull = kotlin_kotlin.$_$.e8;
   var Direction_RTL_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.j;
   var Direction_LTR_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.i;
-  var isWhitespace = kotlin_kotlin.$_$.yf;
+  var isWhitespace = kotlin_kotlin.$_$.bg;
   var get_nativeCanvas = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.u1;
-  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.l2;
+  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.n2;
   var _Size___get_packedValue__impl__7rlt1o = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.o1;
   var Companion_getInstance_10 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u1;
   var _Size___get_width__impl__58y75t = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.p1;
   var _Size___get_height__impl__a04p02 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l1;
-  var listOf_0 = kotlin_kotlin.$_$.z8;
+  var listOf_0 = kotlin_kotlin.$_$.b9;
   var FontCollection_init_$Create$ = kotlin_org_jetbrains_skiko_skiko.$_$.g7;
   var TypefaceFontProvider = kotlin_org_jetbrains_skiko_skiko.$_$.t8;
-  var HashSet_init_$Create$_0 = kotlin_kotlin.$_$.r;
+  var HashSet_init_$Create$_0 = kotlin_kotlin.$_$.s;
   var Companion_getInstance_11 = kotlin_org_jetbrains_skiko_skiko.$_$.y7;
-  var copyToArray = kotlin_kotlin.$_$.l7;
-  var mapOf = kotlin_kotlin.$_$.d9;
-  var KProperty0 = kotlin_kotlin.$_$.ze;
-  var lazy_0 = kotlin_kotlin.$_$.ki;
+  var copyToArray = kotlin_kotlin.$_$.n7;
+  var mapOf = kotlin_kotlin.$_$.f9;
+  var KProperty0 = kotlin_kotlin.$_$.cf;
+  var lazy_0 = kotlin_kotlin.$_$.qi;
   var Companion_getInstance_12 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.x3;
   var Paint_init_$Create$ = kotlin_org_jetbrains_skiko_skiko.$_$.m7;
   var asComposePaint = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.m1;
@@ -295,7 +291,7 @@
   var TextStyle_init_$Create$ = kotlin_org_jetbrains_skiko_skiko.$_$.i7;
   var toArgb = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.v1;
   var Companion_getInstance_14 = kotlin_org_jetbrains_skiko_skiko.$_$.x7;
-  var UnsupportedOperationException_init_$Create$_0 = kotlin_kotlin.$_$.k2;
+  var UnsupportedOperationException_init_$Create$_0 = kotlin_kotlin.$_$.m2;
   var _TextUnit___get_isSp__impl__8c3r6q = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.b3;
   var _TextUnit___get_isEm__impl__esrmtl = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.a3;
   var Size_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l;
@@ -305,15 +301,15 @@
   var DecorationLineStyle_SOLID_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.h;
   var DecorationStyle = kotlin_org_jetbrains_skiko_skiko.$_$.l8;
   var Shadow_0 = kotlin_org_jetbrains_skiko_skiko.$_$.q8;
-  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.si;
-  var sortWith = kotlin_kotlin.$_$.u9;
-  var asReversed = kotlin_kotlin.$_$.j6;
+  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.yi;
+  var sortWith = kotlin_kotlin.$_$.x9;
+  var asReversed = kotlin_kotlin.$_$.l6;
   var ParagraphStyle = kotlin_org_jetbrains_skiko_skiko.$_$.o8;
   var StrutStyle_init_$Create$ = kotlin_org_jetbrains_skiko_skiko.$_$.h7;
   var TextIndent = kotlin_org_jetbrains_skiko_skiko.$_$.s8;
   var Font_init_$Create$ = kotlin_org_jetbrains_skiko_skiko.$_$.l7;
   var ParagraphBuilder = kotlin_org_jetbrains_skiko_skiko.$_$.n8;
-  var charSequenceSubSequence = kotlin_kotlin.$_$.dc;
+  var charSequenceSubSequence = kotlin_kotlin.$_$.gc;
   var BaselineMode_ALPHABETIC_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.g;
   var PlaceholderStyle = kotlin_org_jetbrains_skiko_skiko.$_$.p8;
   var checkArithmetic = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.f1;
@@ -329,14 +325,14 @@
   var Alignment_CENTER_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.a;
   var Alignment_RIGHT_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.e;
   var Alignment_LEFT_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.d;
-  var firstOrNull_0 = kotlin_kotlin.$_$.w7;
-  var coerceIn_0 = kotlin_kotlin.$_$.pe;
+  var firstOrNull_0 = kotlin_kotlin.$_$.y7;
+  var coerceIn_0 = kotlin_kotlin.$_$.se;
   var Stroke = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.d;
   //endregion
   //region block: pre-declaration
   setMetadataFor(MutableRange, 'MutableRange', classMeta);
   setMetadataFor(Range, 'Range', classMeta);
-  setMetadataFor(Builder, 'Builder', classMeta, VOID, [Appendable]);
+  setMetadataFor(Builder, 'Builder', classMeta, VOID, [Appendable], Builder);
   setMetadataFor(sam$kotlin_Comparator$0, 'sam$kotlin_Comparator$0', classMeta, VOID, [Comparator]);
   setMetadataFor(AnnotatedString, 'AnnotatedString', classMeta, VOID, [CharSequence]);
   setMetadataFor(ExperimentalTextApi, 'ExperimentalTextApi', classMeta, VOID, [Annotation]);
@@ -356,7 +352,7 @@
   setMetadataFor(AnnotationType, 'AnnotationType', classMeta, Enum);
   setMetadataFor(SpanStyle, 'SpanStyle', classMeta);
   setMetadataFor(PlatformStringDelegate, 'PlatformStringDelegate', interfaceMeta);
-  setMetadataFor(SynchronizedObject, 'SynchronizedObject', classMeta);
+  setMetadataFor(SynchronizedObject, 'SynchronizedObject', classMeta, VOID, VOID, SynchronizedObject);
   setMetadataFor(TextLayoutResult, 'TextLayoutResult', classMeta);
   setMetadataFor(TextLayoutInput, 'TextLayoutInput', classMeta);
   setMetadataFor(Companion_0, 'Companion', objectMeta);
@@ -371,21 +367,21 @@
   setMetadataFor(VerbatimTtsAnnotation, 'VerbatimTtsAnnotation', classMeta, TtsAnnotation);
   setMetadataFor(UrlAnnotation, 'UrlAnnotation', classMeta);
   setMetadataFor(LruCache, 'LruCache', classMeta);
-  setMetadataFor(SimpleArrayMap, 'SimpleArrayMap', classMeta);
+  setMetadataFor(SimpleArrayMap, 'SimpleArrayMap', classMeta, VOID, VOID, SimpleArrayMap_init_$Create$);
   setMetadataFor(Companion_3, 'Companion', objectMeta);
   function get_loadingStrategy() {
-    return Companion_getInstance_24().get_Blocking_pdgcwr_k$();
+    return Companion_getInstance_24().get_Blocking_7mu9wm_k$();
   }
   setMetadataFor(Font, 'Font', interfaceMeta);
-  setMetadataFor(PlatformFontLoader, 'PlatformFontLoader', interfaceMeta, VOID, VOID, VOID, VOID, [1]);
+  setMetadataFor(PlatformFontLoader, 'PlatformFontLoader', interfaceMeta, VOID, VOID, VOID, VOID, VOID, [1]);
   function resolve$default(fontFamily, fontWeight, fontStyle, fontSynthesis, $super) {
     fontFamily = fontFamily === VOID ? null : fontFamily;
     fontWeight = fontWeight === VOID ? Companion_getInstance_27().get_Normal_22avww_k$() : fontWeight;
-    fontStyle = fontStyle === VOID ? Companion_getInstance_25().get_Normal_b4ik9_k$() : fontStyle;
-    fontSynthesis = fontSynthesis === VOID ? Companion_getInstance_26().get_All_wqntwc_k$() : fontSynthesis;
-    return $super === VOID ? this.resolve_3z78ru_k$(fontFamily, fontWeight, fontStyle, fontSynthesis) : $super.resolve_3z78ru_k$.call(this, fontFamily, fontWeight, new FontStyle(fontStyle), new FontSynthesis(fontSynthesis));
+    fontStyle = fontStyle === VOID ? Companion_getInstance_25().get_Normal_tevh6u_k$() : fontStyle;
+    fontSynthesis = fontSynthesis === VOID ? Companion_getInstance_26().get_All_bqi34r_k$() : fontSynthesis;
+    return $super === VOID ? this.resolve_q3h1fi_k$(fontFamily, fontWeight, fontStyle, fontSynthesis) : $super.resolve_q3h1fi_k$.call(this, fontFamily, fontWeight, new FontStyle(fontStyle), new FontSynthesis(fontSynthesis));
   }
-  setMetadataFor(Resolver, 'Resolver', interfaceMeta, VOID, VOID, VOID, VOID, [1]);
+  setMetadataFor(Resolver, 'Resolver', interfaceMeta, VOID, VOID, VOID, VOID, VOID, [1]);
   setMetadataFor(Companion_4, 'Companion', objectMeta);
   setMetadataFor(FontFamily, 'FontFamily', classMeta);
   setMetadataFor(SystemFontFamily, 'SystemFontFamily', classMeta, FontFamily);
@@ -394,13 +390,13 @@
   setMetadataFor(FileBasedFontFamily, 'FileBasedFontFamily', classMeta, FontFamily);
   setMetadataFor(FontListFontFamily, 'FontListFontFamily', classMeta, FileBasedFontFamily, [FileBasedFontFamily, List]);
   setMetadataFor(LoadedFontFamily, 'LoadedFontFamily', classMeta, FontFamily);
-  setMetadataFor(TypefaceRequestCache, 'TypefaceRequestCache', classMeta);
+  setMetadataFor(TypefaceRequestCache, 'TypefaceRequestCache', classMeta, VOID, VOID, TypefaceRequestCache);
   setMetadataFor(TypefaceRequest, 'TypefaceRequest', classMeta);
   setMetadataFor(TypefaceResult, 'TypefaceResult', interfaceMeta, VOID, [State]);
   setMetadataFor(Immutable, 'Immutable', classMeta, VOID, [TypefaceResult]);
   setMetadataFor(Async, 'Async', classMeta, VOID, [TypefaceResult, State]);
   setMetadataFor($preloadCOROUTINE$0, '$preloadCOROUTINE$0', classMeta, CoroutineImpl);
-  setMetadataFor(FontFamilyResolverImpl, 'FontFamilyResolverImpl', classMeta, VOID, [Resolver], VOID, VOID, [1]);
+  setMetadataFor(FontFamilyResolverImpl, 'FontFamilyResolverImpl', classMeta, VOID, [Resolver], VOID, VOID, VOID, [1]);
   function interceptFontFamily(fontFamily) {
     return fontFamily;
   }
@@ -420,23 +416,23 @@
   setMetadataFor(AsyncTypefaceResult, 'AsyncTypefaceResult', classMeta);
   setMetadataFor(Key, 'Key', classMeta);
   setMetadataFor($runCachedCOROUTINE$1, '$runCachedCOROUTINE$1', classMeta, CoroutineImpl);
-  setMetadataFor(AsyncTypefaceCache, 'AsyncTypefaceCache', classMeta, VOID, VOID, VOID, VOID, [4]);
-  setMetadataFor(AsyncFontListLoader$load$slambda, 'AsyncFontListLoader$load$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [0]);
-  setMetadataFor(AsyncFontListLoader$loadWithTimeoutOrNull$slambda, 'AsyncFontListLoader$loadWithTimeoutOrNull$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(AsyncTypefaceCache, 'AsyncTypefaceCache', classMeta, VOID, VOID, AsyncTypefaceCache, VOID, VOID, [4]);
+  setMetadataFor(AsyncFontListLoader$load$slambda, 'AsyncFontListLoader$load$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [0]);
+  setMetadataFor(AsyncFontListLoader$loadWithTimeoutOrNull$slambda, 'AsyncFontListLoader$loadWithTimeoutOrNull$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor($loadCOROUTINE$2, '$loadCOROUTINE$2', classMeta, CoroutineImpl);
   setMetadataFor($loadWithTimeoutOrNullCOROUTINE$3, '$loadWithTimeoutOrNullCOROUTINE$3', classMeta, CoroutineImpl);
-  setMetadataFor(AsyncFontListLoader, 'AsyncFontListLoader', classMeta, VOID, [State], VOID, VOID, [0]);
+  setMetadataFor(AsyncFontListLoader, 'AsyncFontListLoader', classMeta, VOID, [State], VOID, VOID, VOID, [0]);
   setMetadataFor(_no_name_provided__qut3iv, VOID, classMeta, AbstractCoroutineContextElement, [AbstractCoroutineContextElement, CoroutineExceptionHandler]);
-  setMetadataFor(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda, 'FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda, 'FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [0]);
-  setMetadataFor(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda, 'FontListFontFamilyTypefaceAdapter$preload$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda, 'FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda, 'FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [0]);
+  setMetadataFor(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda, 'FontListFontFamilyTypefaceAdapter$preload$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(Companion_6, 'Companion', objectMeta);
-  setMetadataFor(FontListFontFamilyTypefaceAdapter$preload$slambda, 'FontListFontFamilyTypefaceAdapter$preload$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(FontListFontFamilyTypefaceAdapter$resolve$slambda, 'FontListFontFamilyTypefaceAdapter$resolve$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(FontListFontFamilyTypefaceAdapter, 'FontListFontFamilyTypefaceAdapter', classMeta, VOID, [FontFamilyTypefaceAdapter], VOID, VOID, [2]);
+  setMetadataFor(FontListFontFamilyTypefaceAdapter$preload$slambda, 'FontListFontFamilyTypefaceAdapter$preload$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(FontListFontFamilyTypefaceAdapter$resolve$slambda, 'FontListFontFamilyTypefaceAdapter$resolve$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(FontListFontFamilyTypefaceAdapter, 'FontListFontFamilyTypefaceAdapter', classMeta, VOID, [FontFamilyTypefaceAdapter], FontListFontFamilyTypefaceAdapter, VOID, VOID, [2]);
   setMetadataFor(Companion_7, 'Companion', objectMeta);
   setMetadataFor(FontLoadingStrategy, 'FontLoadingStrategy', classMeta);
-  setMetadataFor(FontMatcher, 'FontMatcher', classMeta);
+  setMetadataFor(FontMatcher, 'FontMatcher', classMeta, VOID, VOID, FontMatcher);
   setMetadataFor(Companion_8, 'Companion', objectMeta);
   setMetadataFor(FontStyle, 'FontStyle', classMeta);
   setMetadataFor(Companion_9, 'Companion', objectMeta);
@@ -446,16 +442,16 @@
   setMetadataFor(Typeface, 'Typeface', interfaceMeta);
   setMetadataFor(EditCommand, 'EditCommand', interfaceMeta);
   setMetadataFor(CommitTextCommand, 'CommitTextCommand', classMeta, VOID, [EditCommand]);
-  setMetadataFor(DeleteAllCommand, 'DeleteAllCommand', classMeta, VOID, [EditCommand]);
-  setMetadataFor(FinishComposingTextCommand, 'FinishComposingTextCommand', classMeta, VOID, [EditCommand]);
+  setMetadataFor(DeleteAllCommand, 'DeleteAllCommand', classMeta, VOID, [EditCommand], DeleteAllCommand);
+  setMetadataFor(FinishComposingTextCommand, 'FinishComposingTextCommand', classMeta, VOID, [EditCommand], FinishComposingTextCommand);
   setMetadataFor(DeleteSurroundingTextCommand, 'DeleteSurroundingTextCommand', classMeta, VOID, [EditCommand]);
   setMetadataFor(SetSelectionCommand, 'SetSelectionCommand', classMeta, VOID, [EditCommand]);
   setMetadataFor(SetComposingTextCommand, 'SetComposingTextCommand', classMeta, VOID, [EditCommand]);
   setMetadataFor(SetComposingRegionCommand, 'SetComposingRegionCommand', classMeta, VOID, [EditCommand]);
   setMetadataFor(DeleteSurroundingTextInCodePointsCommand, 'DeleteSurroundingTextInCodePointsCommand', classMeta, VOID, [EditCommand]);
-  setMetadataFor(BackspaceCommand, 'BackspaceCommand', classMeta, VOID, [EditCommand]);
+  setMetadataFor(BackspaceCommand, 'BackspaceCommand', classMeta, VOID, [EditCommand], BackspaceCommand);
   setMetadataFor(MoveCursorCommand, 'MoveCursorCommand', classMeta, VOID, [EditCommand]);
-  setMetadataFor(EditProcessor, 'EditProcessor', classMeta);
+  setMetadataFor(EditProcessor, 'EditProcessor', classMeta, VOID, VOID, EditProcessor);
   setMetadataFor(Companion_11, 'Companion', objectMeta);
   setMetadataFor(EditingBuffer, 'EditingBuffer', classMeta);
   setMetadataFor(Companion_12, 'Companion', objectMeta);
@@ -464,7 +460,7 @@
   setMetadataFor(Companion_13, 'Companion', objectMeta);
   setMetadataFor(ImeAction, 'ImeAction', classMeta);
   setMetadataFor(Companion_14, 'Companion', objectMeta);
-  setMetadataFor(ImeOptions, 'ImeOptions', classMeta);
+  setMetadataFor(ImeOptions, 'ImeOptions', classMeta, VOID, VOID, ImeOptions);
   setMetadataFor(Companion_15, 'Companion', objectMeta);
   setMetadataFor(KeyboardCapitalization, 'KeyboardCapitalization', classMeta);
   setMetadataFor(Companion_16, 'Companion', objectMeta);
@@ -473,7 +469,7 @@
   setMetadataFor(OffsetMapping$Companion$Identity$1, VOID, classMeta, VOID, [OffsetMapping]);
   setMetadataFor(Companion_17, 'Companion', objectMeta);
   setMetadataFor(PlatformTextInputPluginRegistry, 'PlatformTextInputPluginRegistry', interfaceMeta);
-  setMetadataFor(PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda, 'PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda, 'PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(AdapterHandle, 'AdapterHandle', classMeta);
   setMetadataFor(AdapterWithRefCount, 'AdapterWithRefCount', classMeta);
   setMetadataFor(PlatformTextInput, 'PlatformTextInput', interfaceMeta);
@@ -481,7 +477,7 @@
   setMetadataFor(_no_name_provided__qut3iv_0, VOID, classMeta, VOID, [DisposableEffectResult]);
   setMetadataFor(PlatformTextInputPluginRegistryImpl, 'PlatformTextInputPluginRegistryImpl', classMeta, VOID, [PlatformTextInputPluginRegistry]);
   setMetadataFor(Companion_18, 'Companion', objectMeta);
-  setMetadataFor(TextFieldValue, 'TextFieldValue', classMeta);
+  setMetadataFor(TextFieldValue, 'TextFieldValue', classMeta, VOID, VOID, TextFieldValue_init_$Create$);
   setMetadataFor(TextInputService, 'TextInputService', classMeta);
   function notifyFocusedRect(rect) {
   }
@@ -491,7 +487,7 @@
   setMetadataFor(sam$androidx_compose_ui_text_input_VisualTransformation$0, 'sam$androidx_compose_ui_text_input_VisualTransformation$0', classMeta, VOID, [VisualTransformation]);
   setMetadataFor(Companion_19, 'Companion', objectMeta);
   setMetadataFor(TransformedText, 'TransformedText', classMeta);
-  setMetadataFor(PasswordVisualTransformation, 'PasswordVisualTransformation', classMeta, VOID, [VisualTransformation]);
+  setMetadataFor(PasswordVisualTransformation, 'PasswordVisualTransformation', classMeta, VOID, [VisualTransformation], PasswordVisualTransformation);
   setMetadataFor(Companion_20, 'Companion', objectMeta);
   setMetadataFor(Locale, 'Locale', classMeta);
   setMetadataFor(Companion_21, 'Companion', objectMeta);
@@ -545,7 +541,7 @@
         if (tmp_3) {
           tmp = this;
         } else {
-          tmp = other.takeOrElse_9aen5f_k$(TextForegroundStyle$merge$lambda_0(this));
+          tmp = other.takeOrElse_vujaw_k$(TextForegroundStyle$merge$lambda_0(this));
         }
       }
     }
@@ -560,56 +556,56 @@
   setMetadataFor(BrushStyle, 'BrushStyle', classMeta, VOID, [TextForegroundStyle]);
   setMetadataFor(ColorStyle, 'ColorStyle', classMeta, VOID, [TextForegroundStyle]);
   setMetadataFor(Companion_31, 'Companion', objectMeta);
-  setMetadataFor(TextGeometricTransform, 'TextGeometricTransform', classMeta);
+  setMetadataFor(TextGeometricTransform, 'TextGeometricTransform', classMeta, VOID, VOID, TextGeometricTransform);
   setMetadataFor(Companion_32, 'Companion', objectMeta);
-  setMetadataFor(TextIndent_0, 'TextIndent', classMeta);
+  setMetadataFor(TextIndent_0, 'TextIndent', classMeta, VOID, VOID, TextIndent_0);
   setMetadataFor(Companion_33, 'Companion', objectMeta);
   setMetadataFor(TextOverflow, 'TextOverflow', classMeta);
   setMetadataFor(Cache, 'Cache', interfaceMeta);
-  setMetadataFor(NoCache, 'NoCache', classMeta, VOID, [Cache]);
+  setMetadataFor(NoCache, 'NoCache', classMeta, VOID, [Cache], NoCache);
   setMetadataFor(JsLocale, 'JsLocale', classMeta, VOID, [PlatformLocale]);
   setMetadataFor(createPlatformLocaleDelegate$1, VOID, classMeta, VOID, [PlatformLocaleDelegate]);
-  setMetadataFor(JsStringDelegate, 'JsStringDelegate', classMeta, VOID, [PlatformStringDelegate]);
+  setMetadataFor(JsStringDelegate, 'JsStringDelegate', classMeta, VOID, [PlatformStringDelegate], JsStringDelegate);
   setMetadataFor(PlatformFont, 'PlatformFont', classMeta, VOID, [Font]);
   setMetadataFor(ExpireAfterAccessCache, 'ExpireAfterAccessCache', classMeta, VOID, [Cache]);
   setMetadataFor(Companion_34, 'Companion', objectMeta);
   setMetadataFor(StrongDirectionType, 'StrongDirectionType', classMeta);
-  setMetadataFor(_get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj, '<get-codePointsOutsideDirectionalIsolate>$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(_get_codePoints_$slambda_43x8dt, '<get-codePoints>$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(_get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj, '<get-codePointsOutsideDirectionalIsolate>$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(_get_codePoints_$slambda_43x8dt, '<get-codePoints>$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(Companion_35, 'Companion', objectMeta);
-  setMetadataFor(PlatformParagraphStyle, 'PlatformParagraphStyle', classMeta);
+  setMetadataFor(PlatformParagraphStyle, 'PlatformParagraphStyle', classMeta, VOID, VOID, PlatformParagraphStyle);
   setMetadataFor(Companion_36, 'Companion', objectMeta);
-  setMetadataFor(PlatformSpanStyle, 'PlatformSpanStyle', classMeta);
+  setMetadataFor(PlatformSpanStyle, 'PlatformSpanStyle', classMeta, VOID, VOID, PlatformSpanStyle);
   setMetadataFor(PlatformTextStyle, 'PlatformTextStyle', classMeta);
   function getLineEnd$default(lineIndex, visibleEnd, $super) {
     visibleEnd = visibleEnd === VOID ? false : visibleEnd;
-    return $super === VOID ? this.getLineEnd_7kqxuy_k$(lineIndex, visibleEnd) : $super.getLineEnd_7kqxuy_k$.call(this, lineIndex, visibleEnd);
+    return $super === VOID ? this.getLineEnd_o6geci_k$(lineIndex, visibleEnd) : $super.getLineEnd_o6geci_k$.call(this, lineIndex, visibleEnd);
   }
   function paint$default(canvas, color, shadow, textDecoration, $super) {
-    color = color === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : color;
+    color = color === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : color;
     shadow = shadow === VOID ? null : shadow;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     var tmp;
     if ($super === VOID) {
-      this.paint_aoyx3m_k$(canvas, color, shadow, textDecoration);
+      this.paint_xx9kwo_k$(canvas, color, shadow, textDecoration);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.paint_aoyx3m_k$.call(this, canvas, new Color(color), shadow, textDecoration);
+      tmp = $super.paint_xx9kwo_k$.call(this, canvas, new Color(color), shadow, textDecoration);
     }
     return tmp;
   }
   function paint$default_0(canvas, color, shadow, textDecoration, drawStyle, blendMode, $super) {
-    color = color === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : color;
+    color = color === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : color;
     shadow = shadow === VOID ? null : shadow;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     drawStyle = drawStyle === VOID ? null : drawStyle;
-    blendMode = blendMode === VOID ? Companion_getInstance_0().get_DefaultBlendMode_8kor9s_k$() : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_0().get_DefaultBlendMode_svct2m_k$() : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.paint_4tn74y_k$(canvas, color, shadow, textDecoration, drawStyle, blendMode);
+      this.paint_qj08y1_k$(canvas, color, shadow, textDecoration, drawStyle, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.paint_4tn74y_k$.call(this, canvas, new Color(color), shadow, textDecoration, drawStyle, new BlendMode(blendMode));
+      tmp = $super.paint_qj08y1_k$.call(this, canvas, new Color(color), shadow, textDecoration, drawStyle, new BlendMode(blendMode));
     }
     return tmp;
   }
@@ -618,27 +614,27 @@
     shadow = shadow === VOID ? null : shadow;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     drawStyle = drawStyle === VOID ? null : drawStyle;
-    blendMode = blendMode === VOID ? Companion_getInstance_0().get_DefaultBlendMode_8kor9s_k$() : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_0().get_DefaultBlendMode_svct2m_k$() : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.paint_noetbf_k$(canvas, brush, alpha, shadow, textDecoration, drawStyle, blendMode);
+      this.paint_t6aqss_k$(canvas, brush, alpha, shadow, textDecoration, drawStyle, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.paint_noetbf_k$.call(this, canvas, brush, alpha, shadow, textDecoration, drawStyle, new BlendMode(blendMode));
+      tmp = $super.paint_t6aqss_k$.call(this, canvas, brush, alpha, shadow, textDecoration, drawStyle, new BlendMode(blendMode));
     }
     return tmp;
   }
   setMetadataFor(Paragraph_1, 'Paragraph', interfaceMeta);
   setMetadataFor(SkiaParagraph, 'SkiaParagraph', classMeta, VOID, [Paragraph_1]);
-  setMetadataFor(PlatformFontFamilyTypefaceAdapter, 'PlatformFontFamilyTypefaceAdapter', classMeta, VOID, [FontFamilyTypefaceAdapter]);
-  setMetadataFor(SkiaFontLoader, 'SkiaFontLoader', classMeta, VOID, [PlatformFontLoader], VOID, VOID, [1]);
+  setMetadataFor(PlatformFontFamilyTypefaceAdapter, 'PlatformFontFamilyTypefaceAdapter', classMeta, VOID, [FontFamilyTypefaceAdapter], PlatformFontFamilyTypefaceAdapter);
+  setMetadataFor(SkiaFontLoader, 'SkiaFontLoader', classMeta, VOID, [PlatformFontLoader], SkiaFontLoader, VOID, VOID, [1]);
   setMetadataFor(PlatformTextInputPlugin, 'PlatformTextInputPlugin', interfaceMeta);
   setMetadataFor(PlatformTextInputAdapter, 'PlatformTextInputAdapter', interfaceMeta);
   setMetadataFor(ParagraphLayouter, 'ParagraphLayouter', classMeta);
   setMetadataFor(Platform, 'Platform', classMeta, Enum);
   setMetadataFor(FontLoadResult, 'FontLoadResult', classMeta);
-  setMetadataFor(FontLoader, 'FontLoader', classMeta, VOID, [ResourceLoader]);
-  setMetadataFor(FontCache, 'FontCache', classMeta);
+  setMetadataFor(FontLoader, 'FontLoader', classMeta, VOID, [ResourceLoader], FontLoader);
+  setMetadataFor(FontCache, 'FontCache', classMeta, VOID, VOID, FontCache);
   setMetadataFor(SkiaBackedTypeface, 'SkiaBackedTypeface', classMeta, VOID, [Typeface]);
   setMetadataFor(LoadedFont, 'LoadedFont', classMeta, PlatformFont);
   setMetadataFor(ComputedStyle, 'ComputedStyle', classMeta);
@@ -688,7 +684,7 @@
   protoOf(MutableRange).get_start_iypx6h_k$ = function () {
     return this.start_1;
   };
-  protoOf(MutableRange).set_end_1n4q6m_k$ = function (_set____db54di) {
+  protoOf(MutableRange).set_end_2o0hu2_k$ = function (_set____db54di) {
     this.end_1 = _set____db54di;
   };
   protoOf(MutableRange).get_end_18j6ha_k$ = function () {
@@ -697,7 +693,7 @@
   protoOf(MutableRange).get_tag_18ivnz_k$ = function () {
     return this.tag_1;
   };
-  protoOf(MutableRange).toRange_axwxfj_k$ = function (defaultEnd) {
+  protoOf(MutableRange).toRange_d5re6u_k$ = function (defaultEnd) {
     var end = this.end_1 === IntCompanionObject_getInstance().get_MIN_VALUE_7nmmor_k$() ? defaultEnd : this.end_1;
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
@@ -708,9 +704,9 @@
     }
     return new Range(this.item_1, this.start_1, end, this.tag_1);
   };
-  protoOf(MutableRange).toRange$default_i057s4_k$ = function (defaultEnd, $super) {
+  protoOf(MutableRange).toRange$default_huuesc_k$ = function (defaultEnd, $super) {
     defaultEnd = defaultEnd === VOID ? IntCompanionObject_getInstance().get_MIN_VALUE_7nmmor_k$() : defaultEnd;
-    return $super === VOID ? this.toRange_axwxfj_k$(defaultEnd) : $super.toRange_axwxfj_k$.call(this, defaultEnd);
+    return $super === VOID ? this.toRange_d5re6u_k$(defaultEnd) : $super.toRange_d5re6u_k$.call(this, defaultEnd);
   };
   protoOf(MutableRange).component1_7eebsc_k$ = function () {
     return this.item_1;
@@ -724,15 +720,15 @@
   protoOf(MutableRange).component4_7eebs9_k$ = function () {
     return this.tag_1;
   };
-  protoOf(MutableRange).copy_8fvktl_k$ = function (item, start, end, tag) {
+  protoOf(MutableRange).copy_cu5jos_k$ = function (item, start, end, tag) {
     return new MutableRange(item, start, end, tag);
   };
-  protoOf(MutableRange).copy$default_e1ty99_k$ = function (item, start, end, tag, $super) {
+  protoOf(MutableRange).copy$default_maj59_k$ = function (item, start, end, tag, $super) {
     item = item === VOID ? this.item_1 : item;
     start = start === VOID ? this.start_1 : start;
     end = end === VOID ? this.end_1 : end;
     tag = tag === VOID ? this.tag_1 : tag;
-    return $super === VOID ? this.copy_8fvktl_k$(item, start, end, tag) : $super.copy_8fvktl_k$.call(this, item, start, end, tag);
+    return $super === VOID ? this.copy_cu5jos_k$(item, start, end, tag) : $super.copy_cu5jos_k$.call(this, item, start, end, tag);
   };
   protoOf(MutableRange).toString = function () {
     return 'MutableRange(item=' + this.item_1 + ', start=' + this.start_1 + ', end=' + this.end_1 + ', tag=' + this.tag_1 + ')';
@@ -777,7 +773,7 @@
   }
   function Builder_init_$Init$(text, $this) {
     Builder.call($this);
-    $this.append_1o6mm0_k$(text);
+    $this.append_r87ivk_k$(text);
     return $this;
   }
   function Builder_init_$Create$(text) {
@@ -785,7 +781,7 @@
   }
   function Builder_init_$Init$_0(text, $this) {
     Builder.call($this);
-    $this.append_o859sl_k$(text);
+    $this.append_fd4yh7_k$(text);
     return $this;
   }
   function Builder_init_$Create$_0(text) {
@@ -820,7 +816,6 @@
       tmp_1 = spanStyles;
     }
     var tmp_2 = tmp_1;
-    var tmp$ret$5;
     // Inline function 'kotlin.collections.ifEmpty' call
     var tmp_3;
     if (paragraphStyles.isEmpty_y1axqb_k$()) {
@@ -829,7 +824,7 @@
     } else {
       tmp_3 = paragraphStyles;
     }
-    tmp$ret$5 = tmp_3;
+    var tmp$ret$5 = tmp_3;
     AnnotatedString.call($this, text, tmp_2, tmp$ret$5, null);
     return $this;
   }
@@ -874,15 +869,15 @@
   protoOf(Range).component4_7eebs9_k$ = function () {
     return this.tag_1;
   };
-  protoOf(Range).copy_8fvktl_k$ = function (item, start, end, tag) {
+  protoOf(Range).copy_cu5jos_k$ = function (item, start, end, tag) {
     return new Range(item, start, end, tag);
   };
-  protoOf(Range).copy$default_inexjj_k$ = function (item, start, end, tag, $super) {
+  protoOf(Range).copy$default_a57cke_k$ = function (item, start, end, tag, $super) {
     item = item === VOID ? this.item_1 : item;
     start = start === VOID ? this.start_1 : start;
     end = end === VOID ? this.end_1 : end;
     tag = tag === VOID ? this.tag_1 : tag;
-    return $super === VOID ? this.copy_8fvktl_k$(item, start, end, tag) : $super.copy_8fvktl_k$.call(this, item, start, end, tag);
+    return $super === VOID ? this.copy_cu5jos_k$(item, start, end, tag) : $super.copy_cu5jos_k$.call(this, item, start, end, tag);
   };
   protoOf(Range).toString = function () {
     return 'Range(item=' + this.item_1 + ', start=' + this.start_1 + ', end=' + this.end_1 + ', tag=' + this.tag_1 + ')';
@@ -930,35 +925,35 @@
   protoOf(Builder).get_length_g42xv3_k$ = function () {
     return this.text_1.get_length_g42xv3_k$();
   };
-  protoOf(Builder).append_1o6mm0_k$ = function (text) {
-    this.text_1.append_ssq29y_k$(text);
+  protoOf(Builder).append_r87ivk_k$ = function (text) {
+    this.text_1.append_22ad7x_k$(text);
   };
-  protoOf(Builder).deprecated_append_returning_void_yorjhp_k$ = function (char) {
-    this.append_t8oh9e_k$(char);
+  protoOf(Builder).deprecated_append_returning_void_u24qjh_k$ = function (char) {
+    this.append_am5a4z_k$(char);
   };
-  protoOf(Builder).append_oz4qxs_k$ = function (text) {
+  protoOf(Builder).append_jgojdo_k$ = function (text) {
     if (text instanceof AnnotatedString) {
-      this.append_o859sl_k$(text);
+      this.append_fd4yh7_k$(text);
     } else {
-      this.text_1.append_oz4qxs_k$(text);
+      this.text_1.append_jgojdo_k$(text);
     }
     return this;
   };
-  protoOf(Builder).append_tbojcw_k$ = function (text, start, end) {
+  protoOf(Builder).append_xdc1zw_k$ = function (text, start, end) {
     if (text instanceof AnnotatedString) {
-      this.append_sp12ut_k$(text, start, end);
+      this.append_6at0zv_k$(text, start, end);
     } else {
-      this.text_1.append_tbojcw_k$(text, start, end);
+      this.text_1.append_xdc1zw_k$(text, start, end);
     }
     return this;
   };
-  protoOf(Builder).append_t8oh9e_k$ = function (char) {
-    this.text_1.append_t8oh9e_k$(char);
+  protoOf(Builder).append_am5a4z_k$ = function (char) {
+    this.text_1.append_am5a4z_k$(char);
     return this;
   };
-  protoOf(Builder).append_o859sl_k$ = function (text) {
+  protoOf(Builder).append_fd4yh7_k$ = function (text) {
     var start = this.text_1.get_length_g42xv3_k$();
-    this.text_1.append_ssq29y_k$(text.text_1);
+    this.text_1.append_22ad7x_k$(text.text_1);
     var tmp0_safe_receiver = text.spanStylesOrNull_1;
     if (tmp0_safe_receiver == null)
       null;
@@ -971,9 +966,9 @@
         do {
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var item = tmp0_safe_receiver.get_fkrdnv_k$(index);
+          var item = tmp0_safe_receiver.get_c1px32_k$(index);
           // Inline function 'androidx.compose.ui.text.Builder.append.<anonymous>' call
-          this.addStyle_jucs1v_k$(item.item_1, start + item.start_1 | 0, start + item.end_1 | 0);
+          this.addStyle_pwdtsp_k$(item.item_1, start + item.start_1 | 0, start + item.end_1 | 0);
         }
          while (inductionVariable <= last);
     }
@@ -989,9 +984,9 @@
         do {
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
-          var item_0 = tmp1_safe_receiver.get_fkrdnv_k$(index_0);
+          var item_0 = tmp1_safe_receiver.get_c1px32_k$(index_0);
           // Inline function 'androidx.compose.ui.text.Builder.append.<anonymous>' call
-          this.addStyle_n7uutx_k$(item_0.item_1, start + item_0.start_1 | 0, start + item_0.end_1 | 0);
+          this.addStyle_7tgxpx_k$(item_0.item_1, start + item_0.start_1 | 0, start + item_0.end_1 | 0);
         }
          while (inductionVariable_0 <= last_0);
     }
@@ -1007,16 +1002,16 @@
         do {
           var index_1 = inductionVariable_1;
           inductionVariable_1 = inductionVariable_1 + 1 | 0;
-          var item_1 = tmp2_safe_receiver.get_fkrdnv_k$(index_1);
+          var item_1 = tmp2_safe_receiver.get_c1px32_k$(index_1);
           // Inline function 'androidx.compose.ui.text.Builder.append.<anonymous>' call
-          this.annotations_1.add_1j60pz_k$(new MutableRange(item_1.item_1, start + item_1.start_1 | 0, start + item_1.end_1 | 0, item_1.tag_1));
+          this.annotations_1.add_utx5q5_k$(new MutableRange(item_1.item_1, start + item_1.start_1 | 0, start + item_1.end_1 | 0, item_1.tag_1));
         }
          while (inductionVariable_1 <= last_1);
     }
   };
-  protoOf(Builder).append_sp12ut_k$ = function (text, start, end) {
+  protoOf(Builder).append_6at0zv_k$ = function (text, start, end) {
     var insertionStart = this.text_1.get_length_g42xv3_k$();
-    this.text_1.append_tbojcw_k$(text.text_1, start, end);
+    this.text_1.append_xdc1zw_k$(text.text_1, start, end);
     var tmp0_safe_receiver = getLocalSpanStyles(text, start, end);
     if (tmp0_safe_receiver == null)
       null;
@@ -1029,9 +1024,9 @@
         do {
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var item = tmp0_safe_receiver.get_fkrdnv_k$(index);
+          var item = tmp0_safe_receiver.get_c1px32_k$(index);
           // Inline function 'androidx.compose.ui.text.Builder.append.<anonymous>' call
-          this.addStyle_jucs1v_k$(item.item_1, insertionStart + item.start_1 | 0, insertionStart + item.end_1 | 0);
+          this.addStyle_pwdtsp_k$(item.item_1, insertionStart + item.start_1 | 0, insertionStart + item.end_1 | 0);
         }
          while (inductionVariable <= last);
     }
@@ -1047,9 +1042,9 @@
         do {
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
-          var item_0 = tmp1_safe_receiver.get_fkrdnv_k$(index_0);
+          var item_0 = tmp1_safe_receiver.get_c1px32_k$(index_0);
           // Inline function 'androidx.compose.ui.text.Builder.append.<anonymous>' call
-          this.addStyle_n7uutx_k$(item_0.item_1, insertionStart + item_0.start_1 | 0, insertionStart + item_0.end_1 | 0);
+          this.addStyle_7tgxpx_k$(item_0.item_1, insertionStart + item_0.start_1 | 0, insertionStart + item_0.end_1 | 0);
         }
          while (inductionVariable_0 <= last_0);
     }
@@ -1065,74 +1060,74 @@
         do {
           var index_1 = inductionVariable_1;
           inductionVariable_1 = inductionVariable_1 + 1 | 0;
-          var item_1 = tmp2_safe_receiver.get_fkrdnv_k$(index_1);
+          var item_1 = tmp2_safe_receiver.get_c1px32_k$(index_1);
           // Inline function 'androidx.compose.ui.text.Builder.append.<anonymous>' call
-          this.annotations_1.add_1j60pz_k$(new MutableRange(item_1.item_1, insertionStart + item_1.start_1 | 0, insertionStart + item_1.end_1 | 0, item_1.tag_1));
+          this.annotations_1.add_utx5q5_k$(new MutableRange(item_1.item_1, insertionStart + item_1.start_1 | 0, insertionStart + item_1.end_1 | 0, item_1.tag_1));
         }
          while (inductionVariable_1 <= last_1);
     }
   };
-  protoOf(Builder).addStyle_jucs1v_k$ = function (style, start, end) {
-    this.spanStyles_1.add_1j60pz_k$(new MutableRange(style, start, end));
+  protoOf(Builder).addStyle_pwdtsp_k$ = function (style, start, end) {
+    this.spanStyles_1.add_utx5q5_k$(new MutableRange(style, start, end));
   };
-  protoOf(Builder).addStyle_n7uutx_k$ = function (style, start, end) {
-    this.paragraphStyles_1.add_1j60pz_k$(new MutableRange(style, start, end));
+  protoOf(Builder).addStyle_7tgxpx_k$ = function (style, start, end) {
+    this.paragraphStyles_1.add_utx5q5_k$(new MutableRange(style, start, end));
   };
-  protoOf(Builder).addStringAnnotation_gkf2b2_k$ = function (tag, annotation, start, end) {
-    this.annotations_1.add_1j60pz_k$(new MutableRange(annotation, start, end, tag));
+  protoOf(Builder).addStringAnnotation_kxj1ht_k$ = function (tag, annotation, start, end) {
+    this.annotations_1.add_utx5q5_k$(new MutableRange(annotation, start, end, tag));
   };
-  protoOf(Builder).addTtsAnnotation_b18ufb_k$ = function (ttsAnnotation, start, end) {
-    this.annotations_1.add_1j60pz_k$(new MutableRange(ttsAnnotation, start, end));
+  protoOf(Builder).addTtsAnnotation_d5tlel_k$ = function (ttsAnnotation, start, end) {
+    this.annotations_1.add_utx5q5_k$(new MutableRange(ttsAnnotation, start, end));
   };
-  protoOf(Builder).addUrlAnnotation_hxexdz_k$ = function (urlAnnotation, start, end) {
-    this.annotations_1.add_1j60pz_k$(new MutableRange(urlAnnotation, start, end));
+  protoOf(Builder).addUrlAnnotation_x1fod9_k$ = function (urlAnnotation, start, end) {
+    this.annotations_1.add_utx5q5_k$(new MutableRange(urlAnnotation, start, end));
   };
-  protoOf(Builder).pushStyle_xj8fdz_k$ = function (style) {
+  protoOf(Builder).pushStyle_sz43ky_k$ = function (style) {
     // Inline function 'kotlin.also' call
-    var tmp0_also = new MutableRange(style, this.text_1.get_length_g42xv3_k$());
+    var this_0 = new MutableRange(style, this.text_1.get_length_g42xv3_k$());
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.Builder.pushStyle.<anonymous>' call
-    this.styleStack_1.add_1j60pz_k$(tmp0_also);
-    this.spanStyles_1.add_1j60pz_k$(tmp0_also);
+    this.styleStack_1.add_utx5q5_k$(this_0);
+    this.spanStyles_1.add_utx5q5_k$(this_0);
     return this.styleStack_1.get_size_woubt6_k$() - 1 | 0;
   };
-  protoOf(Builder).pushStyle_asyo3n_k$ = function (style) {
+  protoOf(Builder).pushStyle_rt8dry_k$ = function (style) {
     // Inline function 'kotlin.also' call
-    var tmp0_also = new MutableRange(style, this.text_1.get_length_g42xv3_k$());
+    var this_0 = new MutableRange(style, this.text_1.get_length_g42xv3_k$());
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.Builder.pushStyle.<anonymous>' call
-    this.styleStack_1.add_1j60pz_k$(tmp0_also);
-    this.paragraphStyles_1.add_1j60pz_k$(tmp0_also);
+    this.styleStack_1.add_utx5q5_k$(this_0);
+    this.paragraphStyles_1.add_utx5q5_k$(this_0);
     return this.styleStack_1.get_size_woubt6_k$() - 1 | 0;
   };
-  protoOf(Builder).pushStringAnnotation_sekajs_k$ = function (tag, annotation) {
+  protoOf(Builder).pushStringAnnotation_pqhe92_k$ = function (tag, annotation) {
     // Inline function 'kotlin.also' call
-    var tmp0_also = new MutableRange(annotation, this.text_1.get_length_g42xv3_k$(), VOID, tag);
+    var this_0 = new MutableRange(annotation, this.text_1.get_length_g42xv3_k$(), VOID, tag);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.Builder.pushStringAnnotation.<anonymous>' call
-    this.styleStack_1.add_1j60pz_k$(tmp0_also);
-    this.annotations_1.add_1j60pz_k$(tmp0_also);
+    this.styleStack_1.add_utx5q5_k$(this_0);
+    this.annotations_1.add_utx5q5_k$(this_0);
     return this.styleStack_1.get_size_woubt6_k$() - 1 | 0;
   };
-  protoOf(Builder).pushTtsAnnotation_6qwefj_k$ = function (ttsAnnotation) {
+  protoOf(Builder).pushTtsAnnotation_cblj70_k$ = function (ttsAnnotation) {
     // Inline function 'kotlin.also' call
-    var tmp0_also = new MutableRange(ttsAnnotation, this.text_1.get_length_g42xv3_k$());
+    var this_0 = new MutableRange(ttsAnnotation, this.text_1.get_length_g42xv3_k$());
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.Builder.pushTtsAnnotation.<anonymous>' call
-    this.styleStack_1.add_1j60pz_k$(tmp0_also);
-    this.annotations_1.add_1j60pz_k$(tmp0_also);
+    this.styleStack_1.add_utx5q5_k$(this_0);
+    this.annotations_1.add_utx5q5_k$(this_0);
     return this.styleStack_1.get_size_woubt6_k$() - 1 | 0;
   };
-  protoOf(Builder).pushUrlAnnotation_hujfdb_k$ = function (urlAnnotation) {
+  protoOf(Builder).pushUrlAnnotation_hldbf8_k$ = function (urlAnnotation) {
     // Inline function 'kotlin.also' call
-    var tmp0_also = new MutableRange(urlAnnotation, this.text_1.get_length_g42xv3_k$());
+    var this_0 = new MutableRange(urlAnnotation, this.text_1.get_length_g42xv3_k$());
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.Builder.pushUrlAnnotation.<anonymous>' call
-    this.styleStack_1.add_1j60pz_k$(tmp0_also);
-    this.annotations_1.add_1j60pz_k$(tmp0_also);
+    this.styleStack_1.add_utx5q5_k$(this_0);
+    this.annotations_1.add_utx5q5_k$(this_0);
     return this.styleStack_1.get_size_woubt6_k$() - 1 | 0;
   };
-  protoOf(Builder).pop_6ofvgg_k$ = function () {
+  protoOf(Builder).pop_6ozo1t_k$ = function () {
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.collections.isNotEmpty' call
     // Inline function 'kotlin.contracts.contract' call
@@ -1141,10 +1136,10 @@
       var message = 'Nothing to pop.';
       throw IllegalStateException_init_$Create$(toString(message));
     }
-    var item = this.styleStack_1.removeAt_qvpkxi_k$(this.styleStack_1.get_size_woubt6_k$() - 1 | 0);
+    var item = this.styleStack_1.removeAt_6niowx_k$(this.styleStack_1.get_size_woubt6_k$() - 1 | 0);
     item.end_1 = this.text_1.get_length_g42xv3_k$();
   };
-  protoOf(Builder).pop_8luzb5_k$ = function (index) {
+  protoOf(Builder).pop_r53bx3_k$ = function (index) {
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(index < this.styleStack_1.get_size_woubt6_k$())) {
@@ -1153,30 +1148,30 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
     while ((this.styleStack_1.get_size_woubt6_k$() - 1 | 0) >= index) {
-      this.pop_6ofvgg_k$();
+      this.pop_6ozo1t_k$();
     }
   };
   protoOf(Builder).toAnnotatedString_yesz4e_k$ = function () {
     var tmp = this.text_1.toString();
     // Inline function 'kotlin.collections.ifEmpty' call
     // Inline function 'androidx.compose.ui.util.fastMap' call
-    var tmp0_fastMap = this.spanStyles_1;
+    var this_0 = this.spanStyles_1;
     // Inline function 'kotlin.contracts.contract' call
-    var target = ArrayList_init_$Create$_0(tmp0_fastMap.get_size_woubt6_k$());
+    var target = ArrayList_init_$Create$_0(this_0.get_size_woubt6_k$());
     // Inline function 'androidx.compose.ui.util.fastForEach' call
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
-    var last = tmp0_fastMap.get_size_woubt6_k$() - 1 | 0;
+    var last = this_0.get_size_woubt6_k$() - 1 | 0;
     if (inductionVariable <= last)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = tmp0_fastMap.get_fkrdnv_k$(index);
+        var item = this_0.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.Builder.toAnnotatedString.<anonymous>' call
-        var tmp0_plusAssign = item.toRange_axwxfj_k$(this.text_1.get_length_g42xv3_k$());
-        target.add_1j60pz_k$(tmp0_plusAssign);
+        var element = item.toRange_d5re6u_k$(this.text_1.get_length_g42xv3_k$());
+        target.add_utx5q5_k$(element);
       }
        while (inductionVariable <= last);
     var tmp_0;
@@ -1189,23 +1184,23 @@
     var tmp_1 = tmp_0;
     // Inline function 'kotlin.collections.ifEmpty' call
     // Inline function 'androidx.compose.ui.util.fastMap' call
-    var tmp2_fastMap = this.paragraphStyles_1;
+    var this_1 = this.paragraphStyles_1;
     // Inline function 'kotlin.contracts.contract' call
-    var target_0 = ArrayList_init_$Create$_0(tmp2_fastMap.get_size_woubt6_k$());
+    var target_0 = ArrayList_init_$Create$_0(this_1.get_size_woubt6_k$());
     // Inline function 'androidx.compose.ui.util.fastForEach' call
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable_0 = 0;
-    var last_0 = tmp2_fastMap.get_size_woubt6_k$() - 1 | 0;
+    var last_0 = this_1.get_size_woubt6_k$() - 1 | 0;
     if (inductionVariable_0 <= last_0)
       do {
         var index_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var item_0 = tmp2_fastMap.get_fkrdnv_k$(index_0);
+        var item_0 = this_1.get_c1px32_k$(index_0);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.Builder.toAnnotatedString.<anonymous>' call
-        var tmp0_plusAssign_0 = item_0.toRange_axwxfj_k$(this.text_1.get_length_g42xv3_k$());
-        target_0.add_1j60pz_k$(tmp0_plusAssign_0);
+        var element_0 = item_0.toRange_d5re6u_k$(this.text_1.get_length_g42xv3_k$());
+        target_0.add_utx5q5_k$(element_0);
       }
        while (inductionVariable_0 <= last_0);
     var tmp_2;
@@ -1216,26 +1211,25 @@
       tmp_2 = target_0;
     }
     var tmp_3 = tmp_2;
-    var tmp$ret$11;
     // Inline function 'kotlin.collections.ifEmpty' call
     // Inline function 'androidx.compose.ui.util.fastMap' call
-    var tmp4_fastMap = this.annotations_1;
+    var this_2 = this.annotations_1;
     // Inline function 'kotlin.contracts.contract' call
-    var target_1 = ArrayList_init_$Create$_0(tmp4_fastMap.get_size_woubt6_k$());
+    var target_1 = ArrayList_init_$Create$_0(this_2.get_size_woubt6_k$());
     // Inline function 'androidx.compose.ui.util.fastForEach' call
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable_1 = 0;
-    var last_1 = tmp4_fastMap.get_size_woubt6_k$() - 1 | 0;
+    var last_1 = this_2.get_size_woubt6_k$() - 1 | 0;
     if (inductionVariable_1 <= last_1)
       do {
         var index_1 = inductionVariable_1;
         inductionVariable_1 = inductionVariable_1 + 1 | 0;
-        var item_1 = tmp4_fastMap.get_fkrdnv_k$(index_1);
+        var item_1 = this_2.get_c1px32_k$(index_1);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.Builder.toAnnotatedString.<anonymous>' call
-        var tmp0_plusAssign_1 = item_1.toRange_axwxfj_k$(this.text_1.get_length_g42xv3_k$());
-        target_1.add_1j60pz_k$(tmp0_plusAssign_1);
+        var element_1 = item_1.toRange_d5re6u_k$(this.text_1.get_length_g42xv3_k$());
+        target_1.add_utx5q5_k$(element_1);
       }
        while (inductionVariable_1 <= last_1);
     var tmp_4;
@@ -1245,7 +1239,7 @@
     } else {
       tmp_4 = target_1;
     }
-    tmp$ret$11 = tmp_4;
+    var tmp$ret$11 = tmp_4;
     return new AnnotatedString(tmp, tmp_1, tmp_3, tmp$ret$11);
   };
   function get_$stableprop_1() {
@@ -1254,19 +1248,18 @@
   function sam$kotlin_Comparator$0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$kotlin_Comparator$0).compare_6tbigh_k$ = function (a, b) {
+  protoOf(sam$kotlin_Comparator$0).compare_bczr_k$ = function (a, b) {
     return this.function_1(a, b);
   };
   protoOf(sam$kotlin_Comparator$0).compare = function (a, b) {
-    return this.compare_6tbigh_k$(a, b);
+    return this.compare_bczr_k$(a, b);
   };
   function AnnotatedString$lambda(a, b) {
     // Inline function 'kotlin.comparisons.compareValuesBy' call
     // Inline function 'androidx.compose.ui.text.AnnotatedString.<anonymous>' call
     var tmp = a.start_1;
-    var tmp$ret$1;
     // Inline function 'androidx.compose.ui.text.AnnotatedString.<anonymous>' call
-    tmp$ret$1 = b.start_1;
+    var tmp$ret$1 = b.start_1;
     return compareValues(tmp, tmp$ret$1);
   }
   function AnnotatedString(text, spanStylesOrNull, paragraphStylesOrNull, annotations) {
@@ -1284,10 +1277,9 @@
       tmp = null;
     } else {
       // Inline function 'kotlin.collections.sortedBy' call
-      var tmp$ret$0;
       // Inline function 'kotlin.comparisons.compareBy' call
       var tmp_0 = AnnotatedString$lambda;
-      tmp$ret$0 = new sam$kotlin_Comparator$0(tmp_0);
+      var tmp$ret$0 = new sam$kotlin_Comparator$0(tmp_0);
       tmp = sortedWith(tmp0_safe_receiver, tmp$ret$0);
     }
     var tmp1_safe_receiver = tmp;
@@ -1302,7 +1294,7 @@
         do {
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var item = tmp1_safe_receiver.get_fkrdnv_k$(index);
+          var item = tmp1_safe_receiver.get_c1px32_k$(index);
           // Inline function 'androidx.compose.ui.text.AnnotatedString.<anonymous>' call
           // Inline function 'kotlin.require' call
           // Inline function 'kotlin.contracts.contract' call
@@ -1347,10 +1339,10 @@
   protoOf(AnnotatedString).get_length_g42xv3_k$ = function () {
     return this.text_1.length;
   };
-  protoOf(AnnotatedString).get_a7b70_k$ = function (index) {
+  protoOf(AnnotatedString).get_kdzpvg_k$ = function (index) {
     return charSequenceGet(this.text_1, index);
   };
-  protoOf(AnnotatedString).subSequence_5fh70h_k$ = function (startIndex, endIndex) {
+  protoOf(AnnotatedString).subSequence_hm5hnj_k$ = function (startIndex, endIndex) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(startIndex <= endIndex)) {
@@ -1365,18 +1357,18 @@
     var text = this.text_1.substring(startIndex, endIndex);
     return new AnnotatedString(text, filterRanges(this.spanStylesOrNull_1, startIndex, endIndex), filterRanges(this.paragraphStylesOrNull_1, startIndex, endIndex), filterRanges(this.annotations_1, startIndex, endIndex));
   };
-  protoOf(AnnotatedString).subSequence_k52qt6_k$ = function (range) {
-    return this.subSequence_5fh70h_k$(_TextRange___get_min__impl__uu95c4(range), _TextRange___get_max__impl__owm8m(range));
+  protoOf(AnnotatedString).subSequence_lx5l5t_k$ = function (range) {
+    return this.subSequence_hm5hnj_k$(_TextRange___get_min__impl__uu95c4(range), _TextRange___get_max__impl__owm8m(range));
   };
-  protoOf(AnnotatedString).plus_ya3dly_k$ = function (other) {
+  protoOf(AnnotatedString).plus_hc879h_k$ = function (other) {
     // Inline function 'kotlin.with' call
-    var tmp0_with = Builder_init_$Create$_0(this);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.AnnotatedString.plus.<anonymous>' call
-    tmp0_with.append_o859sl_k$(other);
-    return tmp0_with.toAnnotatedString_yesz4e_k$();
+    var $this$with = Builder_init_$Create$_0(this);
+    $this$with.append_fd4yh7_k$(other);
+    return $this$with.toAnnotatedString_yesz4e_k$();
   };
-  protoOf(AnnotatedString).getStringAnnotations_z0uxhg_k$ = function (tag, start, end) {
+  protoOf(AnnotatedString).getStringAnnotations_8p6ry5_k$ = function (tag, start, end) {
     var tmp0_safe_receiver = this.annotations_1;
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -1393,7 +1385,7 @@
         do {
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var item = tmp0_safe_receiver.get_fkrdnv_k$(index);
+          var item = tmp0_safe_receiver.get_c1px32_k$(index);
           // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
           // Inline function 'androidx.compose.ui.text.AnnotatedString.getStringAnnotations.<anonymous>' call
           var tmp_0;
@@ -1411,7 +1403,7 @@
           }
           if (tmp_0) {
             // Inline function 'kotlin.collections.plusAssign' call
-            target.add_1j60pz_k$(item);
+            target.add_utx5q5_k$(item);
           }
         }
          while (inductionVariable <= last);
@@ -1421,7 +1413,7 @@
     var tmp_3 = tmp1_elvis_lhs == null ? emptyList() : tmp1_elvis_lhs;
     return isInterface(tmp_3, List) ? tmp_3 : THROW_CCE();
   };
-  protoOf(AnnotatedString).hasStringAnnotations_grqabs_k$ = function (tag, start, end) {
+  protoOf(AnnotatedString).hasStringAnnotations_89kqwx_k$ = function (tag, start, end) {
     var tmp0_safe_receiver = this.annotations_1;
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -1439,7 +1431,7 @@
           do {
             var index = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
-            var item = tmp0_safe_receiver.get_fkrdnv_k$(index);
+            var item = tmp0_safe_receiver.get_c1px32_k$(index);
             // Inline function 'androidx.compose.ui.util.fastAny.<anonymous>' call
             // Inline function 'androidx.compose.ui.text.AnnotatedString.hasStringAnnotations.<anonymous>' call
             var tmp_0;
@@ -1468,7 +1460,7 @@
     var tmp1_elvis_lhs = tmp;
     return tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
   };
-  protoOf(AnnotatedString).getStringAnnotations_cnnz5v_k$ = function (start, end) {
+  protoOf(AnnotatedString).getStringAnnotations_p85zqb_k$ = function (start, end) {
     var tmp0_safe_receiver = this.annotations_1;
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -1485,7 +1477,7 @@
         do {
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var item = tmp0_safe_receiver.get_fkrdnv_k$(index);
+          var item = tmp0_safe_receiver.get_c1px32_k$(index);
           // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
           // Inline function 'androidx.compose.ui.text.AnnotatedString.getStringAnnotations.<anonymous>' call
           var tmp_0;
@@ -1497,7 +1489,7 @@
           }
           if (tmp_0) {
             // Inline function 'kotlin.collections.plusAssign' call
-            target.add_1j60pz_k$(item);
+            target.add_utx5q5_k$(item);
           }
         }
          while (inductionVariable <= last);
@@ -1507,7 +1499,7 @@
     var tmp_2 = tmp1_elvis_lhs == null ? emptyList() : tmp1_elvis_lhs;
     return isInterface(tmp_2, List) ? tmp_2 : THROW_CCE();
   };
-  protoOf(AnnotatedString).getTtsAnnotations_fb1uwp_k$ = function (start, end) {
+  protoOf(AnnotatedString).getTtsAnnotations_6d58tj_k$ = function (start, end) {
     var tmp0_safe_receiver = this.annotations_1;
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -1524,7 +1516,7 @@
         do {
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var item = tmp0_safe_receiver.get_fkrdnv_k$(index);
+          var item = tmp0_safe_receiver.get_c1px32_k$(index);
           // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
           // Inline function 'androidx.compose.ui.text.AnnotatedString.getTtsAnnotations.<anonymous>' call
           var tmp_0;
@@ -1536,7 +1528,7 @@
           }
           if (tmp_0) {
             // Inline function 'kotlin.collections.plusAssign' call
-            target.add_1j60pz_k$(item);
+            target.add_utx5q5_k$(item);
           }
         }
          while (inductionVariable <= last);
@@ -1546,7 +1538,7 @@
     var tmp_2 = tmp1_elvis_lhs == null ? emptyList() : tmp1_elvis_lhs;
     return isInterface(tmp_2, List) ? tmp_2 : THROW_CCE();
   };
-  protoOf(AnnotatedString).getUrlAnnotations_gs53n9_k$ = function (start, end) {
+  protoOf(AnnotatedString).getUrlAnnotations_c2y223_k$ = function (start, end) {
     var tmp0_safe_receiver = this.annotations_1;
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -1563,7 +1555,7 @@
         do {
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var item = tmp0_safe_receiver.get_fkrdnv_k$(index);
+          var item = tmp0_safe_receiver.get_c1px32_k$(index);
           // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
           // Inline function 'androidx.compose.ui.text.AnnotatedString.getUrlAnnotations.<anonymous>' call
           var tmp_0;
@@ -1575,7 +1567,7 @@
           }
           if (tmp_0) {
             // Inline function 'kotlin.collections.plusAssign' call
-            target.add_1j60pz_k$(item);
+            target.add_utx5q5_k$(item);
           }
         }
          while (inductionVariable <= last);
@@ -1648,12 +1640,12 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = nonNullRange.get_fkrdnv_k$(index);
+        var item = nonNullRange.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
         // Inline function 'androidx.compose.ui.text.filterRanges.<anonymous>' call
         if (intersect(start, end, item.start_1, item.end_1)) {
           // Inline function 'kotlin.collections.plusAssign' call
-          target.add_1j60pz_k$(item);
+          target.add_utx5q5_k$(item);
         }
       }
        while (inductionVariable <= last);
@@ -1667,19 +1659,18 @@
       do {
         var index_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var item_0 = target.get_fkrdnv_k$(index_0);
+        var item_0 = target.get_c1px32_k$(index_0);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.filterRanges.<anonymous>' call
         // Inline function 'kotlin.comparisons.maxOf' call
-        var tmp0_maxOf = item_0.start_1;
-        var tmp_0 = Math.max(start, tmp0_maxOf) - start | 0;
-        var tmp$ret$4;
+        var b = item_0.start_1;
+        var tmp_0 = Math.max(start, b) - start | 0;
         // Inline function 'kotlin.comparisons.minOf' call
-        var tmp1_minOf = item_0.end_1;
-        tmp$ret$4 = Math.min(end, tmp1_minOf);
-        var tmp0_plusAssign = new Range(item_0.item_1, tmp_0, tmp$ret$4 - start | 0, item_0.tag_1);
-        target_0.add_1j60pz_k$(tmp0_plusAssign);
+        var b_0 = item_0.end_1;
+        var tmp$ret$4 = Math.min(end, b_0);
+        var element = new Range(item_0.item_1, tmp_0, tmp$ret$4 - start | 0, item_0.tag_1);
+        target_0.add_utx5q5_k$(element);
       }
        while (inductionVariable_0 <= last_0);
     var tmp_1;
@@ -1737,12 +1728,12 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = spanStyles.get_fkrdnv_k$(index);
+        var item = spanStyles.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
         // Inline function 'androidx.compose.ui.text.getLocalSpanStyles.<anonymous>' call
         if (intersect(start, end, item.start_1, item.end_1)) {
           // Inline function 'kotlin.collections.plusAssign' call
-          target.add_1j60pz_k$(item);
+          target.add_utx5q5_k$(item);
         }
       }
        while (inductionVariable <= last);
@@ -1756,12 +1747,12 @@
       do {
         var index_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var item_0 = target.get_fkrdnv_k$(index_0);
+        var item_0 = target.get_c1px32_k$(index_0);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.getLocalSpanStyles.<anonymous>' call
-        var tmp0_plusAssign = Range_init_$Create$(item_0.item_1, coerceIn(item_0.start_1, start, end) - start | 0, coerceIn(item_0.end_1, start, end) - start | 0);
-        target_0.add_1j60pz_k$(tmp0_plusAssign);
+        var element = Range_init_$Create$(item_0.item_1, coerceIn(item_0.start_1, start, end) - start | 0, coerceIn(item_0.end_1, start, end) - start | 0);
+        target_0.add_utx5q5_k$(element);
       }
        while (inductionVariable_0 <= last_0);
     return target_0;
@@ -1793,12 +1784,12 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = paragraphStyles.get_fkrdnv_k$(index);
+        var item = paragraphStyles.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
         // Inline function 'androidx.compose.ui.text.getLocalParagraphStyles.<anonymous>' call
         if (intersect(start, end, item.start_1, item.end_1)) {
           // Inline function 'kotlin.collections.plusAssign' call
-          target.add_1j60pz_k$(item);
+          target.add_utx5q5_k$(item);
         }
       }
        while (inductionVariable <= last);
@@ -1812,12 +1803,12 @@
       do {
         var index_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var item_0 = target.get_fkrdnv_k$(index_0);
+        var item_0 = target.get_c1px32_k$(index_0);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.getLocalParagraphStyles.<anonymous>' call
-        var tmp0_plusAssign = Range_init_$Create$(item_0.item_1, coerceIn(item_0.start_1, start, end) - start | 0, coerceIn(item_0.end_1, start, end) - start | 0);
-        target_0.add_1j60pz_k$(tmp0_plusAssign);
+        var element = Range_init_$Create$(item_0.item_1, coerceIn(item_0.start_1, start, end) - start | 0, coerceIn(item_0.end_1, start, end) - start | 0);
+        target_0.add_utx5q5_k$(element);
       }
        while (inductionVariable_0 <= last_0);
     return target_0;
@@ -1849,12 +1840,12 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = annotations.get_fkrdnv_k$(index);
+        var item = annotations.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
         // Inline function 'androidx.compose.ui.text.getLocalAnnotations.<anonymous>' call
         if (intersect(start, end, item.start_1, item.end_1)) {
           // Inline function 'kotlin.collections.plusAssign' call
-          target.add_1j60pz_k$(item);
+          target.add_utx5q5_k$(item);
         }
       }
        while (inductionVariable <= last);
@@ -1868,7 +1859,7 @@
       do {
         var index_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var item_0 = target.get_fkrdnv_k$(index_0);
+        var item_0 = target.get_c1px32_k$(index_0);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.getLocalAnnotations.<anonymous>' call
@@ -1876,8 +1867,8 @@
         var tmp1_item = item_0.item_1;
         var tmp2_start = coerceIn(item_0.start_1, start, end) - start | 0;
         var tmp3_end = coerceIn(item_0.end_1, start, end) - start | 0;
-        var tmp0_plusAssign = new Range(tmp1_item, tmp2_start, tmp3_end, tmp0_tag);
-        target_0.add_1j60pz_k$(tmp0_plusAssign);
+        var element = new Range(tmp1_item, tmp2_start, tmp3_end, tmp0_tag);
+        target_0.add_utx5q5_k$(element);
       }
        while (inductionVariable_0 <= last_0);
     return target_0;
@@ -1889,24 +1880,24 @@
   function mapEachParagraphStyle(_this__u8e3s4, defaultParagraphStyle, block) {
     _init_properties_AnnotatedString_kt__ww2pyh();
     // Inline function 'androidx.compose.ui.util.fastMap' call
-    var tmp0_fastMap = normalizedParagraphStyles(_this__u8e3s4, defaultParagraphStyle);
+    var this_0 = normalizedParagraphStyles(_this__u8e3s4, defaultParagraphStyle);
     // Inline function 'kotlin.contracts.contract' call
-    var target = ArrayList_init_$Create$_0(tmp0_fastMap.get_size_woubt6_k$());
+    var target = ArrayList_init_$Create$_0(this_0.get_size_woubt6_k$());
     // Inline function 'androidx.compose.ui.util.fastForEach' call
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
-    var last = tmp0_fastMap.get_size_woubt6_k$() - 1 | 0;
+    var last = this_0.get_size_woubt6_k$() - 1 | 0;
     if (inductionVariable <= last)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = tmp0_fastMap.get_fkrdnv_k$(index);
+        var item = this_0.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.mapEachParagraphStyle.<anonymous>' call
         var annotatedString = substringWithoutParagraphStyles(_this__u8e3s4, item.start_1, item.end_1);
-        var tmp0_plusAssign = block(annotatedString, item);
-        target.add_1j60pz_k$(tmp0_plusAssign);
+        var element = block(annotatedString, item);
+        target.add_utx5q5_k$(element);
       }
        while (inductionVariable <= last);
     return target;
@@ -1939,23 +1930,23 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = paragraphStyles.get_fkrdnv_k$(index);
+        var item = paragraphStyles.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.normalizedParagraphStyles.<anonymous>' call
         var style = item.component1_7eebsc_k$();
         var start = item.component2_7eebsb_k$();
         var end = item.component3_7eebsa_k$();
         if (!(start === lastOffset)) {
-          result.add_1j60pz_k$(Range_init_$Create$(defaultParagraphStyle, lastOffset, start));
+          result.add_utx5q5_k$(Range_init_$Create$(defaultParagraphStyle, lastOffset, start));
         }
-        result.add_1j60pz_k$(Range_init_$Create$(defaultParagraphStyle.merge_y8afnf_k$(style), start, end));
+        result.add_utx5q5_k$(Range_init_$Create$(defaultParagraphStyle.merge_desd12_k$(style), start, end));
         lastOffset = end;
       }
        while (inductionVariable <= last);
     if (!(lastOffset === length)) {
-      result.add_1j60pz_k$(Range_init_$Create$(defaultParagraphStyle, lastOffset, length));
+      result.add_utx5q5_k$(Range_init_$Create$(defaultParagraphStyle, lastOffset, length));
     }
     if (result.isEmpty_y1axqb_k$()) {
-      result.add_1j60pz_k$(Range_init_$Create$(defaultParagraphStyle, 0, 0));
+      result.add_utx5q5_k$(Range_init_$Create$(defaultParagraphStyle, 0, 0));
     }
     return result;
   }
@@ -2120,7 +2111,7 @@
       $l$loop: do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var paragraphInfo = infoList.get_fkrdnv_k$(index);
+        var paragraphInfo = infoList.get_c1px32_k$(index);
         var tmp = paragraphInfo.get_intrinsics_1zqd0p_k$();
         var tmp_0 = _Constraints___get_maxWidth__impl__uuyqc(constraints);
         var tmp_1;
@@ -2136,7 +2127,7 @@
         var startLineIndex = currentLineCount;
         var endLineIndex = startLineIndex + paragraph.get_lineCount_lmaazy_k$() | 0;
         currentLineCount = endLineIndex;
-        paragraphInfoList.add_1j60pz_k$(new ParagraphInfo(paragraph, paragraphInfo.get_startIndex_oi1lp5_k$(), paragraphInfo.get_endIndex_3lslfk_k$(), startLineIndex, endLineIndex, paragraphTop, paragraphBottom));
+        paragraphInfoList.add_utx5q5_k$(new ParagraphInfo(paragraph, paragraphInfo.get_startIndex_oi1lp5_k$(), paragraphInfo.get_endIndex_3lslfk_k$(), startLineIndex, endLineIndex, paragraphTop, paragraphBottom));
         if (paragraph.get_didExceedMaxLines_xyxo57_k$() ? true : endLineIndex === this.maxLines_1 ? !(index === get_lastIndex(this.intrinsics_1.get_infoList_sv4zbf_k$())) : false) {
           didExceedMaxLines = true;
           break $l$loop;
@@ -2161,30 +2152,30 @@
       do {
         var index_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var item = paragraphInfoList.get_fkrdnv_k$(index_0);
+        var item = paragraphInfoList.get_c1px32_k$(index_0);
         // Inline function 'androidx.compose.ui.text.fastFlatMap.<anonymous>' call
         // Inline function 'androidx.compose.ui.text.MultiParagraph.<anonymous>' call
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.MultiParagraph.<anonymous>.<anonymous>' call
         // Inline function 'androidx.compose.ui.util.fastMap' call
-        var tmp0_fastMap = item.paragraph_1.get_placeholderRects_1ky2fv_k$();
+        var this_0 = item.paragraph_1.get_placeholderRects_1ky2fv_k$();
         // Inline function 'kotlin.contracts.contract' call
-        var target_0 = ArrayList_init_$Create$_0(tmp0_fastMap.get_size_woubt6_k$());
+        var target_0 = ArrayList_init_$Create$_0(this_0.get_size_woubt6_k$());
         // Inline function 'androidx.compose.ui.util.fastForEach' call
         // Inline function 'kotlin.contracts.contract' call
         var inductionVariable_1 = 0;
-        var last_1 = tmp0_fastMap.get_size_woubt6_k$() - 1 | 0;
+        var last_1 = this_0.get_size_woubt6_k$() - 1 | 0;
         if (inductionVariable_1 <= last_1)
           do {
             var index_1 = inductionVariable_1;
             inductionVariable_1 = inductionVariable_1 + 1 | 0;
-            var item_0 = tmp0_fastMap.get_fkrdnv_k$(index_1);
+            var item_0 = this_0.get_c1px32_k$(index_1);
             // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
             // Inline function 'kotlin.collections.plusAssign' call
             // Inline function 'androidx.compose.ui.text.MultiParagraph.<anonymous>.<anonymous>.<anonymous>' call
-            var tmp0_plusAssign = item_0 == null ? null : item.toGlobal_fkwano_k$(item_0);
-            target_0.add_1j60pz_k$(tmp0_plusAssign);
+            var element = item_0 == null ? null : item.toGlobal_ggfqs3_k$(item_0);
+            target_0.add_utx5q5_k$(element);
           }
            while (inductionVariable_1 <= last_1);
         var list = target_0;
@@ -2196,21 +2187,21 @@
     var tmp_3;
     if (target.get_size_woubt6_k$() < this.intrinsics_1.get_placeholders_r4ppyh_k$().get_size_woubt6_k$()) {
       // Inline function 'kotlin.collections.List' call
-      var tmp0_List = this.intrinsics_1.get_placeholders_r4ppyh_k$().get_size_woubt6_k$() - target.get_size_woubt6_k$() | 0;
       // Inline function 'kotlin.collections.MutableList' call
-      var list_0 = ArrayList_init_$Create$_0(tmp0_List);
+      var size = this.intrinsics_1.get_placeholders_r4ppyh_k$().get_size_woubt6_k$() - target.get_size_woubt6_k$() | 0;
+      var list_0 = ArrayList_init_$Create$_0(size);
       // Inline function 'kotlin.repeat' call
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_2 = 0;
-      if (inductionVariable_2 < tmp0_List)
+      if (inductionVariable_2 < size)
         do {
           var index_2 = inductionVariable_2;
           inductionVariable_2 = inductionVariable_2 + 1 | 0;
           // Inline function 'kotlin.collections.MutableList.<anonymous>' call
           // Inline function 'androidx.compose.ui.text.MultiParagraph.<anonymous>.<anonymous>' call
-          list_0.add_1j60pz_k$(null);
+          list_0.add_utx5q5_k$(null);
         }
-         while (inductionVariable_2 < tmp0_List);
+         while (inductionVariable_2 < size);
       tmp_3 = plus(target, list_0);
     } else {
       tmp_3 = target;
@@ -2244,7 +2235,7 @@
     if (this.paragraphInfoList_1.isEmpty_y1axqb_k$()) {
       tmp = 0.0;
     } else {
-      tmp = this.paragraphInfoList_1.get_fkrdnv_k$(0).paragraph_1.get_firstBaseline_s5430_k$();
+      tmp = this.paragraphInfoList_1.get_c1px32_k$(0).paragraph_1.get_firstBaseline_s5430_k$();
     }
     return tmp;
   };
@@ -2254,10 +2245,10 @@
       tmp = 0.0;
     } else {
       // Inline function 'kotlin.with' call
-      var tmp0_with = last(this.paragraphInfoList_1);
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.MultiParagraph.<get-lastBaseline>.<anonymous>' call
-      tmp = tmp0_with.toGlobalYPosition_9cwjwk_k$(tmp0_with.paragraph_1.get_lastBaseline_inuptw_k$());
+      var $this$with = last(this.paragraphInfoList_1);
+      tmp = $this$with.toGlobalYPosition_9oxm7u_k$($this$with.paragraph_1.get_lastBaseline_inuptw_k$());
     }
     return tmp;
   };
@@ -2270,91 +2261,91 @@
   protoOf(MultiParagraph).get_paragraphInfoList_5kk1wv_k$ = function () {
     return this.paragraphInfoList_1;
   };
-  protoOf(MultiParagraph).paint_aoyx3m_k$ = function (canvas, color, shadow, decoration) {
-    canvas.save_erlm4_k$();
+  protoOf(MultiParagraph).paint_xx9kwo_k$ = function (canvas, color, shadow, decoration) {
+    canvas.save_fbe7h_k$();
     // Inline function 'androidx.compose.ui.util.fastForEach' call
-    var tmp0_fastForEach = this.paragraphInfoList_1;
+    var this_0 = this.paragraphInfoList_1;
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
-    var last = tmp0_fastForEach.get_size_woubt6_k$() - 1 | 0;
+    var last = this_0.get_size_woubt6_k$() - 1 | 0;
     if (inductionVariable <= last)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = tmp0_fastForEach.get_fkrdnv_k$(index);
+        var item = this_0.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.MultiParagraph.paint.<anonymous>' call
-        item.paragraph_1.paint_aoyx3m_k$(canvas, color, shadow, decoration);
-        canvas.translate_62wf99_k$(0.0, item.paragraph_1.get_height_e7t92o_k$());
+        item.paragraph_1.paint_xx9kwo_k$(canvas, color, shadow, decoration);
+        canvas.translate_7gghdu_k$(0.0, item.paragraph_1.get_height_e7t92o_k$());
       }
        while (inductionVariable <= last);
-    canvas.restore_a2id37_k$();
+    canvas.restore_a1ykhu_k$();
   };
-  protoOf(MultiParagraph).paint$default_vyh7h9_k$ = function (canvas, color, shadow, decoration, $super) {
-    color = color === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : color;
+  protoOf(MultiParagraph).paint$default_nn0zo6_k$ = function (canvas, color, shadow, decoration, $super) {
+    color = color === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : color;
     shadow = shadow === VOID ? null : shadow;
     decoration = decoration === VOID ? null : decoration;
     var tmp;
     if ($super === VOID) {
-      this.paint_aoyx3m_k$(canvas, color, shadow, decoration);
+      this.paint_xx9kwo_k$(canvas, color, shadow, decoration);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.paint_aoyx3m_k$.call(this, canvas, new Color(color), shadow, decoration);
+      tmp = $super.paint_xx9kwo_k$.call(this, canvas, new Color(color), shadow, decoration);
     }
     return tmp;
   };
-  protoOf(MultiParagraph).paint_4tn74y_k$ = function (canvas, color, shadow, decoration, drawStyle, blendMode) {
-    canvas.save_erlm4_k$();
+  protoOf(MultiParagraph).paint_qj08y1_k$ = function (canvas, color, shadow, decoration, drawStyle, blendMode) {
+    canvas.save_fbe7h_k$();
     // Inline function 'androidx.compose.ui.util.fastForEach' call
-    var tmp0_fastForEach = this.paragraphInfoList_1;
+    var this_0 = this.paragraphInfoList_1;
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
-    var last = tmp0_fastForEach.get_size_woubt6_k$() - 1 | 0;
+    var last = this_0.get_size_woubt6_k$() - 1 | 0;
     if (inductionVariable <= last)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = tmp0_fastForEach.get_fkrdnv_k$(index);
+        var item = this_0.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.MultiParagraph.paint.<anonymous>' call
-        item.paragraph_1.paint_4tn74y_k$(canvas, color, shadow, decoration, drawStyle, blendMode);
-        canvas.translate_62wf99_k$(0.0, item.paragraph_1.get_height_e7t92o_k$());
+        item.paragraph_1.paint_qj08y1_k$(canvas, color, shadow, decoration, drawStyle, blendMode);
+        canvas.translate_7gghdu_k$(0.0, item.paragraph_1.get_height_e7t92o_k$());
       }
        while (inductionVariable <= last);
-    canvas.restore_a2id37_k$();
+    canvas.restore_a1ykhu_k$();
   };
-  protoOf(MultiParagraph).paint$default_pichjd_k$ = function (canvas, color, shadow, decoration, drawStyle, blendMode, $super) {
-    color = color === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : color;
+  protoOf(MultiParagraph).paint$default_rvqyft_k$ = function (canvas, color, shadow, decoration, drawStyle, blendMode, $super) {
+    color = color === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : color;
     shadow = shadow === VOID ? null : shadow;
     decoration = decoration === VOID ? null : decoration;
     drawStyle = drawStyle === VOID ? null : drawStyle;
-    blendMode = blendMode === VOID ? Companion_getInstance_0().get_DefaultBlendMode_8kor9s_k$() : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_0().get_DefaultBlendMode_svct2m_k$() : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.paint_4tn74y_k$(canvas, color, shadow, decoration, drawStyle, blendMode);
+      this.paint_qj08y1_k$(canvas, color, shadow, decoration, drawStyle, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.paint_4tn74y_k$.call(this, canvas, new Color(color), shadow, decoration, drawStyle, new BlendMode(blendMode));
+      tmp = $super.paint_qj08y1_k$.call(this, canvas, new Color(color), shadow, decoration, drawStyle, new BlendMode(blendMode));
     }
     return tmp;
   };
-  protoOf(MultiParagraph).paint_noetbf_k$ = function (canvas, brush, alpha, shadow, decoration, drawStyle, blendMode) {
+  protoOf(MultiParagraph).paint_t6aqss_k$ = function (canvas, brush, alpha, shadow, decoration, drawStyle, blendMode) {
     drawMultiParagraph(this, canvas, brush, alpha, shadow, decoration, drawStyle, blendMode);
   };
-  protoOf(MultiParagraph).paint$default_z9vili_k$ = function (canvas, brush, alpha, shadow, decoration, drawStyle, blendMode, $super) {
+  protoOf(MultiParagraph).paint$default_3gfbfa_k$ = function (canvas, brush, alpha, shadow, decoration, drawStyle, blendMode, $super) {
     alpha = alpha === VOID ? FloatCompanionObject_getInstance().get_NaN_18jnv2_k$() : alpha;
     shadow = shadow === VOID ? null : shadow;
     decoration = decoration === VOID ? null : decoration;
     drawStyle = drawStyle === VOID ? null : drawStyle;
-    blendMode = blendMode === VOID ? Companion_getInstance_0().get_DefaultBlendMode_8kor9s_k$() : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_0().get_DefaultBlendMode_svct2m_k$() : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.paint_noetbf_k$(canvas, brush, alpha, shadow, decoration, drawStyle, blendMode);
+      this.paint_t6aqss_k$(canvas, brush, alpha, shadow, decoration, drawStyle, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.paint_noetbf_k$.call(this, canvas, brush, alpha, shadow, decoration, drawStyle, new BlendMode(blendMode));
+      tmp = $super.paint_t6aqss_k$.call(this, canvas, brush, alpha, shadow, decoration, drawStyle, new BlendMode(blendMode));
     }
     return tmp;
   };
-  protoOf(MultiParagraph).getPathForRange_i163f3_k$ = function (start, end) {
+  protoOf(MultiParagraph).getPathForRange_bge8b5_k$ = function (start, end) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!((0 <= start ? start <= end : false) ? end <= _get_annotatedString__kqljtk(this).get_text_wouvsm_k$().length : false)) {
@@ -2372,60 +2363,60 @@
       $l$loop_0: do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var p = this.paragraphInfoList_1.get_fkrdnv_k$(i);
+        var p = this.paragraphInfoList_1.get_c1px32_k$(i);
         if (p.startIndex_1 >= end)
           break $l$loop_0;
         if (p.startIndex_1 === p.endIndex_1)
           continue $l$loop_0;
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
-        path.addPath$default_tzs6nd_k$(p.toGlobal_wzvkqk_k$(p.paragraph_1.getPathForRange_i163f3_k$(p.toLocalIndex_wba0oh_k$(start), p.toLocalIndex_wba0oh_k$(end))));
+        path.addPath$default_lo4vd5_k$(p.toGlobal_315jad_k$(p.paragraph_1.getPathForRange_bge8b5_k$(p.toLocalIndex_j164i0_k$(start), p.toLocalIndex_j164i0_k$(end))));
       }
        while (inductionVariable < last);
     return path;
   };
-  protoOf(MultiParagraph).getLineForVerticalPosition_c1p2r4_k$ = function (vertical) {
+  protoOf(MultiParagraph).getLineForVerticalPosition_lon9k6_k$ = function (vertical) {
     var paragraphIndex = vertical <= 0.0 ? 0 : vertical >= this.height_1 ? get_lastIndex(this.paragraphInfoList_1) : findParagraphByY(this.paragraphInfoList_1, vertical);
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getLineForVerticalPosition.<anonymous>' call
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
     var tmp;
-    if (tmp0_with.get_length_g42xv3_k$() === 0) {
+    if ($this$with.get_length_g42xv3_k$() === 0) {
       // Inline function 'kotlin.math.max' call
-      var tmp0_max = tmp0_with.startIndex_1 - 1 | 0;
-      tmp = Math.max(0, tmp0_max);
+      var b = $this$with.startIndex_1 - 1 | 0;
+      tmp = Math.max(0, b);
     } else {
-      tmp = tmp0_with.toGlobalLineIndex_mdumgd_k$(tmp0_with.paragraph_1.getLineForVerticalPosition_c1p2r4_k$(tmp0_with.toLocalYPosition_j2kqvm_k$(vertical)));
+      tmp = $this$with.toGlobalLineIndex_e3lmay_k$($this$with.paragraph_1.getLineForVerticalPosition_lon9k6_k$($this$with.toLocalYPosition_dpfuyg_k$(vertical)));
     }
     return tmp;
   };
-  protoOf(MultiParagraph).getOffsetForPosition_f04xcw_k$ = function (position) {
+  protoOf(MultiParagraph).getOffsetForPosition_12t0zj_k$ = function (position) {
     var paragraphIndex = _Offset___get_y__impl__8bzhra(position) <= 0.0 ? 0 : _Offset___get_y__impl__8bzhra(position) >= this.height_1 ? get_lastIndex(this.paragraphInfoList_1) : findParagraphByY(this.paragraphInfoList_1, _Offset___get_y__impl__8bzhra(position));
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getOffsetForPosition.<anonymous>' call
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
     var tmp;
-    if (tmp0_with.get_length_g42xv3_k$() === 0) {
+    if ($this$with.get_length_g42xv3_k$() === 0) {
       // Inline function 'kotlin.math.max' call
-      var tmp0_max = tmp0_with.startIndex_1 - 1 | 0;
-      tmp = Math.max(0, tmp0_max);
+      var b = $this$with.startIndex_1 - 1 | 0;
+      tmp = Math.max(0, b);
     } else {
-      tmp = tmp0_with.toGlobalIndex_v98a4h_k$(tmp0_with.paragraph_1.getOffsetForPosition_f04xcw_k$(tmp0_with.toLocal_92y82x_k$(position)));
+      tmp = $this$with.toGlobalIndex_3l3mdy_k$($this$with.paragraph_1.getOffsetForPosition_12t0zj_k$($this$with.toLocal_4j1wri_k$(position)));
     }
     return tmp;
   };
-  protoOf(MultiParagraph).getBoundingBox_urudbk_k$ = function (offset) {
+  protoOf(MultiParagraph).getBoundingBox_xfho9l_k$ = function (offset) {
     requireIndexInRange(this, offset);
     var paragraphIndex = findParagraphByIndex(this.paragraphInfoList_1, offset);
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getBoundingBox.<anonymous>' call
-    return tmp0_with.toGlobal_fkwano_k$(tmp0_with.paragraph_1.getBoundingBox_urudbk_k$(tmp0_with.toLocalIndex_wba0oh_k$(offset)));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.toGlobal_ggfqs3_k$($this$with.paragraph_1.getBoundingBox_xfho9l_k$($this$with.toLocalIndex_j164i0_k$(offset)));
   };
-  protoOf(MultiParagraph).getHorizontalPosition_b8vvic_k$ = function (offset, usePrimaryDirection) {
+  protoOf(MultiParagraph).getHorizontalPosition_9mx7bk_k$ = function (offset, usePrimaryDirection) {
     requireIndexInRangeInclusiveEnd(this, offset);
     var tmp;
     if (offset === _get_annotatedString__kqljtk(this).get_length_g42xv3_k$()) {
@@ -2435,12 +2426,12 @@
     }
     var paragraphIndex = tmp;
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getHorizontalPosition.<anonymous>' call
-    return tmp0_with.paragraph_1.getHorizontalPosition_b8vvic_k$(tmp0_with.toLocalIndex_wba0oh_k$(offset), usePrimaryDirection);
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.paragraph_1.getHorizontalPosition_9mx7bk_k$($this$with.toLocalIndex_j164i0_k$(offset), usePrimaryDirection);
   };
-  protoOf(MultiParagraph).getParagraphDirection_x8sft2_k$ = function (offset) {
+  protoOf(MultiParagraph).getParagraphDirection_qweb73_k$ = function (offset) {
     requireIndexInRangeInclusiveEnd(this, offset);
     var tmp;
     if (offset === _get_annotatedString__kqljtk(this).get_length_g42xv3_k$()) {
@@ -2450,12 +2441,12 @@
     }
     var paragraphIndex = tmp;
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getParagraphDirection.<anonymous>' call
-    return tmp0_with.paragraph_1.getParagraphDirection_x8sft2_k$(tmp0_with.toLocalIndex_wba0oh_k$(offset));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.paragraph_1.getParagraphDirection_qweb73_k$($this$with.toLocalIndex_j164i0_k$(offset));
   };
-  protoOf(MultiParagraph).getBidiRunDirection_dqdnqj_k$ = function (offset) {
+  protoOf(MultiParagraph).getBidiRunDirection_c67d8i_k$ = function (offset) {
     requireIndexInRangeInclusiveEnd(this, offset);
     var tmp;
     if (offset === _get_annotatedString__kqljtk(this).get_length_g42xv3_k$()) {
@@ -2465,12 +2456,12 @@
     }
     var paragraphIndex = tmp;
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getBidiRunDirection.<anonymous>' call
-    return tmp0_with.paragraph_1.getBidiRunDirection_dqdnqj_k$(tmp0_with.toLocalIndex_wba0oh_k$(offset));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.paragraph_1.getBidiRunDirection_c67d8i_k$($this$with.toLocalIndex_j164i0_k$(offset));
   };
-  protoOf(MultiParagraph).getWordBoundary_qx0177_k$ = function (offset) {
+  protoOf(MultiParagraph).getWordBoundary_s8pru_k$ = function (offset) {
     requireIndexInRangeInclusiveEnd(this, offset);
     var tmp;
     if (offset === _get_annotatedString__kqljtk(this).get_length_g42xv3_k$()) {
@@ -2480,12 +2471,12 @@
     }
     var paragraphIndex = tmp;
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getWordBoundary.<anonymous>' call
-    return tmp0_with.toGlobal_swnfqp_k$(tmp0_with.paragraph_1.getWordBoundary_qx0177_k$(tmp0_with.toLocalIndex_wba0oh_k$(offset)));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.toGlobal_55nchu_k$($this$with.paragraph_1.getWordBoundary_s8pru_k$($this$with.toLocalIndex_j164i0_k$(offset)));
   };
-  protoOf(MultiParagraph).getCursorRect_x5c8fl_k$ = function (offset) {
+  protoOf(MultiParagraph).getCursorRect_gdluko_k$ = function (offset) {
     requireIndexInRangeInclusiveEnd(this, offset);
     var tmp;
     if (offset === _get_annotatedString__kqljtk(this).get_length_g42xv3_k$()) {
@@ -2495,12 +2486,12 @@
     }
     var paragraphIndex = tmp;
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getCursorRect.<anonymous>' call
-    return tmp0_with.toGlobal_fkwano_k$(tmp0_with.paragraph_1.getCursorRect_x5c8fl_k$(tmp0_with.toLocalIndex_wba0oh_k$(offset)));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.toGlobal_ggfqs3_k$($this$with.paragraph_1.getCursorRect_gdluko_k$($this$with.toLocalIndex_j164i0_k$(offset)));
   };
-  protoOf(MultiParagraph).getLineForOffset_9a3vwv_k$ = function (offset) {
+  protoOf(MultiParagraph).getLineForOffset_jakwx2_k$ = function (offset) {
     var tmp;
     if (offset >= _get_annotatedString__kqljtk(this).get_length_g42xv3_k$()) {
       tmp = get_lastIndex(this.paragraphInfoList_1);
@@ -2511,94 +2502,94 @@
     }
     var paragraphIndex = tmp;
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getLineForOffset.<anonymous>' call
-    return tmp0_with.toGlobalLineIndex_mdumgd_k$(tmp0_with.paragraph_1.getLineForOffset_9a3vwv_k$(tmp0_with.toLocalIndex_wba0oh_k$(offset)));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.toGlobalLineIndex_e3lmay_k$($this$with.paragraph_1.getLineForOffset_jakwx2_k$($this$with.toLocalIndex_j164i0_k$(offset)));
   };
-  protoOf(MultiParagraph).getLineLeft_w1obtc_k$ = function (lineIndex) {
+  protoOf(MultiParagraph).getLineLeft_799m07_k$ = function (lineIndex) {
     requireLineIndexInRange(this, lineIndex);
     var paragraphIndex = findParagraphByLineIndex(this.paragraphInfoList_1, lineIndex);
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getLineLeft.<anonymous>' call
-    return tmp0_with.paragraph_1.getLineLeft_w1obtc_k$(tmp0_with.toLocalLineIndex_br45j9_k$(lineIndex));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.paragraph_1.getLineLeft_799m07_k$($this$with.toLocalLineIndex_nunoc_k$(lineIndex));
   };
-  protoOf(MultiParagraph).getLineRight_bo0e7j_k$ = function (lineIndex) {
+  protoOf(MultiParagraph).getLineRight_j8rtqe_k$ = function (lineIndex) {
     requireLineIndexInRange(this, lineIndex);
     var paragraphIndex = findParagraphByLineIndex(this.paragraphInfoList_1, lineIndex);
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getLineRight.<anonymous>' call
-    return tmp0_with.paragraph_1.getLineRight_bo0e7j_k$(tmp0_with.toLocalLineIndex_br45j9_k$(lineIndex));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.paragraph_1.getLineRight_j8rtqe_k$($this$with.toLocalLineIndex_nunoc_k$(lineIndex));
   };
-  protoOf(MultiParagraph).getLineTop_8a2w7q_k$ = function (lineIndex) {
+  protoOf(MultiParagraph).getLineTop_q0a6r_k$ = function (lineIndex) {
     requireLineIndexInRange(this, lineIndex);
     var paragraphIndex = findParagraphByLineIndex(this.paragraphInfoList_1, lineIndex);
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getLineTop.<anonymous>' call
-    return tmp0_with.toGlobalYPosition_9cwjwk_k$(tmp0_with.paragraph_1.getLineTop_8a2w7q_k$(tmp0_with.toLocalLineIndex_br45j9_k$(lineIndex)));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.toGlobalYPosition_9oxm7u_k$($this$with.paragraph_1.getLineTop_q0a6r_k$($this$with.toLocalLineIndex_nunoc_k$(lineIndex)));
   };
-  protoOf(MultiParagraph).getLineBottom_spjtf0_k$ = function (lineIndex) {
+  protoOf(MultiParagraph).getLineBottom_yhu6bn_k$ = function (lineIndex) {
     requireLineIndexInRange(this, lineIndex);
     var paragraphIndex = findParagraphByLineIndex(this.paragraphInfoList_1, lineIndex);
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getLineBottom.<anonymous>' call
-    return tmp0_with.toGlobalYPosition_9cwjwk_k$(tmp0_with.paragraph_1.getLineBottom_spjtf0_k$(tmp0_with.toLocalLineIndex_br45j9_k$(lineIndex)));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.toGlobalYPosition_9oxm7u_k$($this$with.paragraph_1.getLineBottom_yhu6bn_k$($this$with.toLocalLineIndex_nunoc_k$(lineIndex)));
   };
-  protoOf(MultiParagraph).getLineHeight_ba5d5c_k$ = function (lineIndex) {
+  protoOf(MultiParagraph).getLineHeight_hm3g1l_k$ = function (lineIndex) {
     requireLineIndexInRange(this, lineIndex);
     var paragraphIndex = findParagraphByLineIndex(this.paragraphInfoList_1, lineIndex);
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getLineHeight.<anonymous>' call
-    return tmp0_with.paragraph_1.getLineHeight_ba5d5c_k$(tmp0_with.toLocalLineIndex_br45j9_k$(lineIndex));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.paragraph_1.getLineHeight_hm3g1l_k$($this$with.toLocalLineIndex_nunoc_k$(lineIndex));
   };
-  protoOf(MultiParagraph).getLineWidth_ia4jjv_k$ = function (lineIndex) {
+  protoOf(MultiParagraph).getLineWidth_vd5x7g_k$ = function (lineIndex) {
     requireLineIndexInRange(this, lineIndex);
     var paragraphIndex = findParagraphByLineIndex(this.paragraphInfoList_1, lineIndex);
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getLineWidth.<anonymous>' call
-    return tmp0_with.paragraph_1.getLineWidth_ia4jjv_k$(tmp0_with.toLocalLineIndex_br45j9_k$(lineIndex));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.paragraph_1.getLineWidth_vd5x7g_k$($this$with.toLocalLineIndex_nunoc_k$(lineIndex));
   };
-  protoOf(MultiParagraph).getLineStart_504snr_k$ = function (lineIndex) {
+  protoOf(MultiParagraph).getLineStart_clke9s_k$ = function (lineIndex) {
     requireLineIndexInRange(this, lineIndex);
     var paragraphIndex = findParagraphByLineIndex(this.paragraphInfoList_1, lineIndex);
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getLineStart.<anonymous>' call
-    return tmp0_with.toGlobalIndex_v98a4h_k$(tmp0_with.paragraph_1.getLineStart_504snr_k$(tmp0_with.toLocalLineIndex_br45j9_k$(lineIndex)));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.toGlobalIndex_3l3mdy_k$($this$with.paragraph_1.getLineStart_clke9s_k$($this$with.toLocalLineIndex_nunoc_k$(lineIndex)));
   };
-  protoOf(MultiParagraph).getLineEnd_7kqxuy_k$ = function (lineIndex, visibleEnd) {
+  protoOf(MultiParagraph).getLineEnd_o6geci_k$ = function (lineIndex, visibleEnd) {
     requireLineIndexInRange(this, lineIndex);
     var paragraphIndex = findParagraphByLineIndex(this.paragraphInfoList_1, lineIndex);
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.getLineEnd.<anonymous>' call
-    return tmp0_with.toGlobalIndex_v98a4h_k$(tmp0_with.paragraph_1.getLineEnd_7kqxuy_k$(tmp0_with.toLocalLineIndex_br45j9_k$(lineIndex), visibleEnd));
+    var $this$with = this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex);
+    return $this$with.toGlobalIndex_3l3mdy_k$($this$with.paragraph_1.getLineEnd_o6geci_k$($this$with.toLocalLineIndex_nunoc_k$(lineIndex), visibleEnd));
   };
-  protoOf(MultiParagraph).getLineEnd$default_9gl0xj_k$ = function (lineIndex, visibleEnd, $super) {
+  protoOf(MultiParagraph).getLineEnd$default_uw5hk_k$ = function (lineIndex, visibleEnd, $super) {
     visibleEnd = visibleEnd === VOID ? false : visibleEnd;
-    return $super === VOID ? this.getLineEnd_7kqxuy_k$(lineIndex, visibleEnd) : $super.getLineEnd_7kqxuy_k$.call(this, lineIndex, visibleEnd);
+    return $super === VOID ? this.getLineEnd_o6geci_k$(lineIndex, visibleEnd) : $super.getLineEnd_o6geci_k$.call(this, lineIndex, visibleEnd);
   };
-  protoOf(MultiParagraph).isLineEllipsized_r1ol1o_k$ = function (lineIndex) {
+  protoOf(MultiParagraph).isLineEllipsized_1fausj_k$ = function (lineIndex) {
     requireLineIndexInRange(this, lineIndex);
     var paragraphIndex = findParagraphByLineIndex(this.paragraphInfoList_1, lineIndex);
     // Inline function 'kotlin.with' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.MultiParagraph.isLineEllipsized.<anonymous>' call
-    return this.paragraphInfoList_1.get_fkrdnv_k$(paragraphIndex).paragraph_1.isLineEllipsized_r1ol1o_k$(lineIndex);
+    return this.paragraphInfoList_1.get_c1px32_k$(paragraphIndex).paragraph_1.isLineEllipsized_1fausj_k$(lineIndex);
   };
   function ParagraphInfo(paragraph, startIndex, endIndex, startLineIndex, endLineIndex, top, bottom) {
     startLineIndex = startLineIndex === VOID ? -1 : startLineIndex;
@@ -2622,25 +2613,25 @@
   protoOf(ParagraphInfo).get_endIndex_3lslfk_k$ = function () {
     return this.endIndex_1;
   };
-  protoOf(ParagraphInfo).set_startLineIndex_gckpef_k$ = function (_set____db54di) {
+  protoOf(ParagraphInfo).set_startLineIndex_c38bz_k$ = function (_set____db54di) {
     this.startLineIndex_1 = _set____db54di;
   };
   protoOf(ParagraphInfo).get_startLineIndex_2jj8jf_k$ = function () {
     return this.startLineIndex_1;
   };
-  protoOf(ParagraphInfo).set_endLineIndex_4g8xww_k$ = function (_set____db54di) {
+  protoOf(ParagraphInfo).set_endLineIndex_rmrqco_k$ = function (_set____db54di) {
     this.endLineIndex_1 = _set____db54di;
   };
   protoOf(ParagraphInfo).get_endLineIndex_wassus_k$ = function () {
     return this.endLineIndex_1;
   };
-  protoOf(ParagraphInfo).set_top_62laxx_k$ = function (_set____db54di) {
+  protoOf(ParagraphInfo).set_top_q4a9n4_k$ = function (_set____db54di) {
     this.top_1 = _set____db54di;
   };
   protoOf(ParagraphInfo).get_top_18ivbo_k$ = function () {
     return this.top_1;
   };
-  protoOf(ParagraphInfo).set_bottom_y9ard7_k$ = function (_set____db54di) {
+  protoOf(ParagraphInfo).set_bottom_hrdqf4_k$ = function (_set____db54di) {
     this.bottom_1 = _set____db54di;
   };
   protoOf(ParagraphInfo).get_bottom_bj8ras_k$ = function () {
@@ -2649,36 +2640,36 @@
   protoOf(ParagraphInfo).get_length_g42xv3_k$ = function () {
     return this.endIndex_1 - this.startIndex_1 | 0;
   };
-  protoOf(ParagraphInfo).toLocalIndex_wba0oh_k$ = function (_this__u8e3s4) {
+  protoOf(ParagraphInfo).toLocalIndex_j164i0_k$ = function (_this__u8e3s4) {
     return coerceIn(_this__u8e3s4, this.startIndex_1, this.endIndex_1) - this.startIndex_1 | 0;
   };
-  protoOf(ParagraphInfo).toGlobalIndex_v98a4h_k$ = function (_this__u8e3s4) {
+  protoOf(ParagraphInfo).toGlobalIndex_3l3mdy_k$ = function (_this__u8e3s4) {
     return _this__u8e3s4 + this.startIndex_1 | 0;
   };
-  protoOf(ParagraphInfo).toLocalLineIndex_br45j9_k$ = function (_this__u8e3s4) {
+  protoOf(ParagraphInfo).toLocalLineIndex_nunoc_k$ = function (_this__u8e3s4) {
     return _this__u8e3s4 - this.startLineIndex_1 | 0;
   };
-  protoOf(ParagraphInfo).toGlobalLineIndex_mdumgd_k$ = function (_this__u8e3s4) {
+  protoOf(ParagraphInfo).toGlobalLineIndex_e3lmay_k$ = function (_this__u8e3s4) {
     return _this__u8e3s4 + this.startLineIndex_1 | 0;
   };
-  protoOf(ParagraphInfo).toGlobalYPosition_9cwjwk_k$ = function (_this__u8e3s4) {
+  protoOf(ParagraphInfo).toGlobalYPosition_9oxm7u_k$ = function (_this__u8e3s4) {
     return _this__u8e3s4 + this.top_1;
   };
-  protoOf(ParagraphInfo).toLocalYPosition_j2kqvm_k$ = function (_this__u8e3s4) {
+  protoOf(ParagraphInfo).toLocalYPosition_dpfuyg_k$ = function (_this__u8e3s4) {
     return _this__u8e3s4 - this.top_1;
   };
-  protoOf(ParagraphInfo).toLocal_92y82x_k$ = function (_this__u8e3s4) {
+  protoOf(ParagraphInfo).toLocal_4j1wri_k$ = function (_this__u8e3s4) {
     return Offset(_Offset___get_x__impl__xvi35n(_this__u8e3s4), _Offset___get_y__impl__8bzhra(_this__u8e3s4) - this.top_1);
   };
-  protoOf(ParagraphInfo).toGlobal_fkwano_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4.translate_bllf6j_k$(Offset(0.0, this.top_1));
+  protoOf(ParagraphInfo).toGlobal_ggfqs3_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4.translate_e972jg_k$(Offset(0.0, this.top_1));
   };
-  protoOf(ParagraphInfo).toGlobal_wzvkqk_k$ = function (_this__u8e3s4) {
-    _this__u8e3s4.translate_mdejcc_k$(Offset(0.0, this.top_1));
+  protoOf(ParagraphInfo).toGlobal_315jad_k$ = function (_this__u8e3s4) {
+    _this__u8e3s4.translate_nzlwb0_k$(Offset(0.0, this.top_1));
     return _this__u8e3s4;
   };
-  protoOf(ParagraphInfo).toGlobal_swnfqp_k$ = function (_this__u8e3s4) {
-    return TextRange_0(this.toGlobalIndex_v98a4h_k$(_TextRange___get_start__impl__ww4t90(_this__u8e3s4)), this.toGlobalIndex_v98a4h_k$(_TextRange___get_end__impl__gcdxpp(_this__u8e3s4)));
+  protoOf(ParagraphInfo).toGlobal_55nchu_k$ = function (_this__u8e3s4) {
+    return TextRange_0(this.toGlobalIndex_3l3mdy_k$(_TextRange___get_start__impl__ww4t90(_this__u8e3s4)), this.toGlobalIndex_3l3mdy_k$(_TextRange___get_end__impl__gcdxpp(_this__u8e3s4)));
   };
   protoOf(ParagraphInfo).component1_7eebsc_k$ = function () {
     return this.paragraph_1;
@@ -2701,10 +2692,10 @@
   protoOf(ParagraphInfo).component7_7eebs6_k$ = function () {
     return this.bottom_1;
   };
-  protoOf(ParagraphInfo).copy_c94g8g_k$ = function (paragraph, startIndex, endIndex, startLineIndex, endLineIndex, top, bottom) {
+  protoOf(ParagraphInfo).copy_dj5vo5_k$ = function (paragraph, startIndex, endIndex, startLineIndex, endLineIndex, top, bottom) {
     return new ParagraphInfo(paragraph, startIndex, endIndex, startLineIndex, endLineIndex, top, bottom);
   };
-  protoOf(ParagraphInfo).copy$default_9qppoy_k$ = function (paragraph, startIndex, endIndex, startLineIndex, endLineIndex, top, bottom, $super) {
+  protoOf(ParagraphInfo).copy$default_s77fby_k$ = function (paragraph, startIndex, endIndex, startLineIndex, endLineIndex, top, bottom, $super) {
     paragraph = paragraph === VOID ? this.paragraph_1 : paragraph;
     startIndex = startIndex === VOID ? this.startIndex_1 : startIndex;
     endIndex = endIndex === VOID ? this.endIndex_1 : endIndex;
@@ -2712,7 +2703,7 @@
     endLineIndex = endLineIndex === VOID ? this.endLineIndex_1 : endLineIndex;
     top = top === VOID ? this.top_1 : top;
     bottom = bottom === VOID ? this.bottom_1 : bottom;
-    return $super === VOID ? this.copy_c94g8g_k$(paragraph, startIndex, endIndex, startLineIndex, endLineIndex, top, bottom) : $super.copy_c94g8g_k$.call(this, paragraph, startIndex, endIndex, startLineIndex, endLineIndex, top, bottom);
+    return $super === VOID ? this.copy_dj5vo5_k$(paragraph, startIndex, endIndex, startLineIndex, endLineIndex, top, bottom) : $super.copy_dj5vo5_k$.call(this, paragraph, startIndex, endIndex, startLineIndex, endLineIndex, top, bottom);
   };
   protoOf(ParagraphInfo).toString = function () {
     return 'ParagraphInfo(paragraph=' + this.paragraph_1 + ', startIndex=' + this.startIndex_1 + ', endIndex=' + this.endIndex_1 + ', startLineIndex=' + this.startLineIndex_1 + ', endLineIndex=' + this.endLineIndex_1 + ', top=' + this.top_1 + ', bottom=' + this.bottom_1 + ')';
@@ -2757,7 +2748,7 @@
       var high = paragraphInfoList.get_size_woubt6_k$() - 1 | 0;
       while (low <= high) {
         var mid = (low + high | 0) >>> 1 | 0;
-        var midVal = paragraphInfoList.get_fkrdnv_k$(mid);
+        var midVal = paragraphInfoList.get_c1px32_k$(mid);
         // Inline function 'androidx.compose.ui.text.findParagraphByIndex.<anonymous>' call
         var cmp = midVal.startIndex_1 > index ? 1 : midVal.endIndex_1 <= index ? -1 : 0;
         if (cmp < 0)
@@ -2781,7 +2772,7 @@
       var high = paragraphInfoList.get_size_woubt6_k$() - 1 | 0;
       while (low <= high) {
         var mid = (low + high | 0) >>> 1 | 0;
-        var midVal = paragraphInfoList.get_fkrdnv_k$(mid);
+        var midVal = paragraphInfoList.get_c1px32_k$(mid);
         // Inline function 'androidx.compose.ui.text.findParagraphByY.<anonymous>' call
         var cmp = midVal.top_1 > y ? 1 : midVal.bottom_1 <= y ? -1 : 0;
         if (cmp < 0)
@@ -2805,7 +2796,7 @@
       var high = paragraphInfoList.get_size_woubt6_k$() - 1 | 0;
       while (low <= high) {
         var mid = (low + high | 0) >>> 1 | 0;
-        var midVal = paragraphInfoList.get_fkrdnv_k$(mid);
+        var midVal = paragraphInfoList.get_c1px32_k$(mid);
         // Inline function 'androidx.compose.ui.text.findParagraphByLineIndex.<anonymous>' call
         var cmp = midVal.startLineIndex_1 > lineIndex ? 1 : midVal.endLineIndex_1 <= lineIndex ? -1 : 0;
         if (cmp < 0)
@@ -2826,7 +2817,7 @@
     var high = _this__u8e3s4.get_size_woubt6_k$() - 1 | 0;
     while (low <= high) {
       var mid = (low + high | 0) >>> 1 | 0;
-      var midVal = _this__u8e3s4.get_fkrdnv_k$(mid);
+      var midVal = _this__u8e3s4.get_c1px32_k$(mid);
       var cmp = comparison(midVal);
       if (cmp < 0)
         low = mid + 1 | 0;
@@ -2845,18 +2836,21 @@
     return MultiParagraphIntrinsics_init_$Init$(annotatedString, style, placeholders, density, resourceLoader, objectCreate(protoOf(MultiParagraphIntrinsics)));
   }
   function resolveTextDirection($this, style, defaultStyle) {
+    var tmp0_safe_receiver = style.get_textDirection_u2eu2k_k$();
     var tmp;
-    var tmp_0 = style.get_textDirection_fsfodj_k$();
+    var tmp_0 = tmp0_safe_receiver;
     if ((tmp_0 == null ? null : new TextDirection(tmp_0)) == null) {
       tmp = null;
     } else {
       // Inline function 'kotlin.let' call
+      var tmp_1 = tmp0_safe_receiver;
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.MultiParagraphIntrinsics.resolveTextDirection.<anonymous>' call
+      (tmp_1 == null ? null : new TextDirection(tmp_1)).value_1;
       tmp = style;
     }
     var tmp1_elvis_lhs = tmp;
-    return tmp1_elvis_lhs == null ? style.copy$default_2gu832_k$(VOID, defaultStyle.get_textDirection_fsfodj_k$()) : tmp1_elvis_lhs;
+    return tmp1_elvis_lhs == null ? style.copy$default_t7kri3_k$(VOID, defaultStyle.get_textDirection_u2eu2k_k$()) : tmp1_elvis_lhs;
   }
   function get_$stableprop_3() {
     return 0;
@@ -2866,29 +2860,24 @@
       var tmp$ret$0;
       $l$block: {
         // Inline function 'androidx.compose.ui.util.fastMaxBy' call
-        var tmp0_fastMaxBy = this$0.infoList_1;
+        var this_0 = this$0.infoList_1;
         // Inline function 'kotlin.contracts.contract' call
-        if (tmp0_fastMaxBy.isEmpty_y1axqb_k$()) {
+        if (this_0.isEmpty_y1axqb_k$()) {
           tmp$ret$0 = null;
           break $l$block;
         }
-        var maxElem = tmp0_fastMaxBy.get_fkrdnv_k$(0);
-        var tmp$ret$1;
+        var maxElem = this_0.get_c1px32_k$(0);
         // Inline function 'androidx.compose.ui.text.MultiParagraphIntrinsics.minIntrinsicWidth$delegate.<anonymous>.<anonymous>' call
-        var tmp1_anonymous = maxElem;
-        tmp$ret$1 = tmp1_anonymous.intrinsics_1.get_minIntrinsicWidth_lmc1rq_k$();
-        var maxValue = tmp$ret$1;
+        var maxValue = maxElem.intrinsics_1.get_minIntrinsicWidth_lmc1rq_k$();
         var inductionVariable = 1;
-        var last = get_lastIndex(tmp0_fastMaxBy);
+        var last = get_lastIndex(this_0);
         if (inductionVariable <= last)
           do {
             var i = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
-            var e = tmp0_fastMaxBy.get_fkrdnv_k$(i);
-            var tmp$ret$2;
+            var e = this_0.get_c1px32_k$(i);
             // Inline function 'androidx.compose.ui.text.MultiParagraphIntrinsics.minIntrinsicWidth$delegate.<anonymous>.<anonymous>' call
-            tmp$ret$2 = e.intrinsics_1.get_minIntrinsicWidth_lmc1rq_k$();
-            var v = tmp$ret$2;
+            var v = e.intrinsics_1.get_minIntrinsicWidth_lmc1rq_k$();
             if (compareTo(maxValue, v) < 0) {
               maxElem = e;
               maxValue = v;
@@ -2908,29 +2897,24 @@
       var tmp$ret$0;
       $l$block: {
         // Inline function 'androidx.compose.ui.util.fastMaxBy' call
-        var tmp0_fastMaxBy = this$0.infoList_1;
+        var this_0 = this$0.infoList_1;
         // Inline function 'kotlin.contracts.contract' call
-        if (tmp0_fastMaxBy.isEmpty_y1axqb_k$()) {
+        if (this_0.isEmpty_y1axqb_k$()) {
           tmp$ret$0 = null;
           break $l$block;
         }
-        var maxElem = tmp0_fastMaxBy.get_fkrdnv_k$(0);
-        var tmp$ret$1;
+        var maxElem = this_0.get_c1px32_k$(0);
         // Inline function 'androidx.compose.ui.text.MultiParagraphIntrinsics.maxIntrinsicWidth$delegate.<anonymous>.<anonymous>' call
-        var tmp1_anonymous = maxElem;
-        tmp$ret$1 = tmp1_anonymous.intrinsics_1.get_maxIntrinsicWidth_b4gk2k_k$();
-        var maxValue = tmp$ret$1;
+        var maxValue = maxElem.intrinsics_1.get_maxIntrinsicWidth_b4gk2k_k$();
         var inductionVariable = 1;
-        var last = get_lastIndex(tmp0_fastMaxBy);
+        var last = get_lastIndex(this_0);
         if (inductionVariable <= last)
           do {
             var i = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
-            var e = tmp0_fastMaxBy.get_fkrdnv_k$(i);
-            var tmp$ret$2;
+            var e = this_0.get_c1px32_k$(i);
             // Inline function 'androidx.compose.ui.text.MultiParagraphIntrinsics.maxIntrinsicWidth$delegate.<anonymous>.<anonymous>' call
-            tmp$ret$2 = e.intrinsics_1.get_maxIntrinsicWidth_b4gk2k_k$();
-            var v = tmp$ret$2;
+            var v = e.intrinsics_1.get_maxIntrinsicWidth_b4gk2k_k$();
             if (compareTo(maxValue, v) < 0) {
               maxElem = e;
               maxValue = v;
@@ -2957,28 +2941,28 @@
     var paragraphStyle = style.toParagraphStyle_zfuegy_k$();
     var tmp_3 = this;
     // Inline function 'androidx.compose.ui.text.mapEachParagraphStyle' call
-    var tmp0_mapEachParagraphStyle = this.annotatedString_1;
+    var this_0 = this.annotatedString_1;
     // Inline function 'androidx.compose.ui.util.fastMap' call
-    var tmp0_fastMap = normalizedParagraphStyles(tmp0_mapEachParagraphStyle, paragraphStyle);
+    var this_1 = normalizedParagraphStyles(this_0, paragraphStyle);
     // Inline function 'kotlin.contracts.contract' call
-    var target = ArrayList_init_$Create$_0(tmp0_fastMap.get_size_woubt6_k$());
+    var target = ArrayList_init_$Create$_0(this_1.get_size_woubt6_k$());
     // Inline function 'androidx.compose.ui.util.fastForEach' call
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
-    var last = tmp0_fastMap.get_size_woubt6_k$() - 1 | 0;
+    var last = this_1.get_size_woubt6_k$() - 1 | 0;
     if (inductionVariable <= last)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = tmp0_fastMap.get_fkrdnv_k$(index);
+        var item = this_1.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.mapEachParagraphStyle.<anonymous>' call
-        var annotatedString_0 = substringWithoutParagraphStyles(tmp0_mapEachParagraphStyle, item.get_start_iypx6h_k$(), item.get_end_18j6ha_k$());
+        var annotatedString_0 = substringWithoutParagraphStyles(this_0, item.get_start_iypx6h_k$(), item.get_end_18j6ha_k$());
         // Inline function 'androidx.compose.ui.text.MultiParagraphIntrinsics.<anonymous>' call
         var currentParagraphStyle = resolveTextDirection(this, item.get_item_woo5lo_k$(), paragraphStyle);
-        var tmp0_plusAssign = new ParagraphIntrinsicInfo(ParagraphIntrinsics_0(annotatedString_0.get_text_wouvsm_k$(), style.merge_lt4ge4_k$(currentParagraphStyle), annotatedString_0.get_spanStyles_muoq3_k$(), getLocalPlaceholders(this.placeholders_1, item.get_start_iypx6h_k$(), item.get_end_18j6ha_k$()), density, fontFamilyResolver), item.get_start_iypx6h_k$(), item.get_end_18j6ha_k$());
-        target.add_1j60pz_k$(tmp0_plusAssign);
+        var element = new ParagraphIntrinsicInfo(ParagraphIntrinsics_0(annotatedString_0.get_text_wouvsm_k$(), style.merge_fo5h7n_k$(currentParagraphStyle), annotatedString_0.get_spanStyles_muoq3_k$(), getLocalPlaceholders(this.placeholders_1, item.get_start_iypx6h_k$(), item.get_end_18j6ha_k$()), density, fontFamilyResolver), item.get_start_iypx6h_k$(), item.get_end_18j6ha_k$());
+        target.add_utx5q5_k$(element);
       }
        while (inductionVariable <= last);
     tmp_3.infoList_1 = target;
@@ -2992,13 +2976,15 @@
   };
   protoOf(MultiParagraphIntrinsics).get_minIntrinsicWidth_lmc1rq_k$ = function () {
     // Inline function 'kotlin.getValue' call
+    var this_0 = this.minIntrinsicWidth$delegate_1;
     minIntrinsicWidth$factory();
-    return this.minIntrinsicWidth$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   protoOf(MultiParagraphIntrinsics).get_maxIntrinsicWidth_b4gk2k_k$ = function () {
     // Inline function 'kotlin.getValue' call
+    var this_0 = this.maxIntrinsicWidth$delegate_1;
     maxIntrinsicWidth$factory();
-    return this.maxIntrinsicWidth$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   protoOf(MultiParagraphIntrinsics).get_infoList_sv4zbf_k$ = function () {
     return this.infoList_1;
@@ -3007,17 +2993,17 @@
     var tmp$ret$1;
     $l$block: {
       // Inline function 'androidx.compose.ui.util.fastAny' call
-      var tmp0_fastAny = this.infoList_1;
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.util.fastForEach' call
+      var this_0 = this.infoList_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
-      var last = tmp0_fastAny.get_size_woubt6_k$() - 1 | 0;
+      var last = this_0.get_size_woubt6_k$() - 1 | 0;
       if (inductionVariable <= last)
         do {
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var item = tmp0_fastAny.get_fkrdnv_k$(index);
+          var item = this_0.get_c1px32_k$(index);
           // Inline function 'androidx.compose.ui.util.fastAny.<anonymous>' call
           // Inline function 'androidx.compose.ui.text.MultiParagraphIntrinsics.<get-hasStaleResolvedFonts>.<anonymous>' call
           if (item.intrinsics_1.get_hasStaleResolvedFonts_tun9ic_k$()) {
@@ -3053,14 +3039,14 @@
   protoOf(ParagraphIntrinsicInfo).component3_7eebsa_k$ = function () {
     return this.endIndex_1;
   };
-  protoOf(ParagraphIntrinsicInfo).copy_ani2qm_k$ = function (intrinsics, startIndex, endIndex) {
+  protoOf(ParagraphIntrinsicInfo).copy_1myg2h_k$ = function (intrinsics, startIndex, endIndex) {
     return new ParagraphIntrinsicInfo(intrinsics, startIndex, endIndex);
   };
-  protoOf(ParagraphIntrinsicInfo).copy$default_oxitvb_k$ = function (intrinsics, startIndex, endIndex, $super) {
+  protoOf(ParagraphIntrinsicInfo).copy$default_6sahs3_k$ = function (intrinsics, startIndex, endIndex, $super) {
     intrinsics = intrinsics === VOID ? this.intrinsics_1 : intrinsics;
     startIndex = startIndex === VOID ? this.startIndex_1 : startIndex;
     endIndex = endIndex === VOID ? this.endIndex_1 : endIndex;
-    return $super === VOID ? this.copy_ani2qm_k$(intrinsics, startIndex, endIndex) : $super.copy_ani2qm_k$.call(this, intrinsics, startIndex, endIndex);
+    return $super === VOID ? this.copy_1myg2h_k$(intrinsics, startIndex, endIndex) : $super.copy_1myg2h_k$.call(this, intrinsics, startIndex, endIndex);
   };
   protoOf(ParagraphIntrinsicInfo).toString = function () {
     return 'ParagraphIntrinsicInfo(intrinsics=' + this.intrinsics_1 + ', startIndex=' + this.startIndex_1 + ', endIndex=' + this.endIndex_1 + ')';
@@ -3098,12 +3084,12 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = _this__u8e3s4.get_fkrdnv_k$(index);
+        var item = _this__u8e3s4.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
         // Inline function 'androidx.compose.ui.text.getLocalPlaceholders.<anonymous>' call
         if (intersect(start, end, item.get_start_iypx6h_k$(), item.get_end_18j6ha_k$())) {
           // Inline function 'kotlin.collections.plusAssign' call
-          target.add_1j60pz_k$(item);
+          target.add_utx5q5_k$(item);
         }
       }
        while (inductionVariable <= last);
@@ -3117,7 +3103,7 @@
       do {
         var index_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var item_0 = target.get_fkrdnv_k$(index_0);
+        var item_0 = target.get_c1px32_k$(index_0);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.getLocalPlaceholders.<anonymous>' call
@@ -3128,8 +3114,8 @@
           var message = 'placeholder can not overlap with paragraph.';
           throw IllegalArgumentException_init_$Create$(toString(message));
         }
-        var tmp0_plusAssign = Range_init_$Create$(item_0.get_item_woo5lo_k$(), item_0.get_start_iypx6h_k$() - start | 0, item_0.get_end_18j6ha_k$() - start | 0);
-        target_0.add_1j60pz_k$(tmp0_plusAssign);
+        var element = Range_init_$Create$(item_0.get_item_woo5lo_k$(), item_0.get_start_iypx6h_k$() - start | 0, item_0.get_end_18j6ha_k$() - start | 0);
+        target_0.add_utx5q5_k$(element);
       }
        while (inductionVariable_0 <= last_0);
     return target_0;
@@ -3149,9 +3135,8 @@
   }
   var DefaultMaxLines;
   function ceilToInt(_this__u8e3s4) {
-    var tmp$ret$0;
     // Inline function 'kotlin.math.ceil' call
-    tmp$ret$0 = Math.ceil(_this__u8e3s4);
+    var tmp$ret$0 = Math.ceil(_this__u8e3s4);
     return numberToInt(tmp$ret$0);
   }
   function Paragraph(paragraphIntrinsics, constraints, maxLines, ellipsis) {
@@ -3209,7 +3194,7 @@
   function ParagraphStyle_init_$Init$(textAlign, textDirection, lineHeight, textIndent, $this) {
     textAlign = textAlign === VOID ? null : textAlign;
     textDirection = textDirection === VOID ? null : textDirection;
-    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : lineHeight;
+    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : lineHeight;
     textIndent = textIndent === VOID ? null : textIndent;
     ParagraphStyle_0.call($this, textAlign, textDirection, lineHeight, textIndent, null, null, null, null, null);
     return $this;
@@ -3220,7 +3205,7 @@
   function ParagraphStyle_init_$Init$_0(textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, $this) {
     textAlign = textAlign === VOID ? null : textAlign;
     textDirection = textDirection === VOID ? null : textDirection;
-    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : lineHeight;
+    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : lineHeight;
     textIndent = textIndent === VOID ? null : textIndent;
     platformStyle = platformStyle === VOID ? null : platformStyle;
     lineHeightStyle = lineHeightStyle === VOID ? null : lineHeightStyle;
@@ -3233,7 +3218,7 @@
   function ParagraphStyle_init_$Init$_1(textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, $this) {
     textAlign = textAlign === VOID ? null : textAlign;
     textDirection = textDirection === VOID ? null : textDirection;
-    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : lineHeight;
+    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : lineHeight;
     textIndent = textIndent === VOID ? null : textIndent;
     platformStyle = platformStyle === VOID ? null : platformStyle;
     lineHeightStyle = lineHeightStyle === VOID ? null : lineHeightStyle;
@@ -3251,7 +3236,7 @@
   function ParagraphStyle_0(textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion) {
     textAlign = textAlign === VOID ? null : textAlign;
     textDirection = textDirection === VOID ? null : textDirection;
-    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : lineHeight;
+    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : lineHeight;
     textIndent = textIndent === VOID ? null : textIndent;
     platformStyle = platformStyle === VOID ? null : platformStyle;
     lineHeightStyle = lineHeightStyle === VOID ? null : lineHeightStyle;
@@ -3272,7 +3257,7 @@
     var tmp_0;
     var tmp_1 = tmp0_elvis_lhs;
     if ((tmp_1 == null ? null : new TextAlign(tmp_1)) == null) {
-      tmp_0 = Companion_getInstance_44().get_Start_3lwnd0_k$();
+      tmp_0 = Companion_getInstance_44().get_Start_ovf7qx_k$();
     } else {
       tmp_0 = tmp0_elvis_lhs;
     }
@@ -3282,7 +3267,7 @@
     var tmp_3;
     var tmp_4 = tmp0_elvis_lhs_0;
     if ((tmp_4 == null ? null : new LineBreak(tmp_4)) == null) {
-      tmp_3 = Companion_getInstance_54().get_Simple_6j3yz1_k$();
+      tmp_3 = Companion_getInstance_54().get_Simple_z0fu2y_k$();
     } else {
       tmp_3 = tmp0_elvis_lhs_0;
     }
@@ -3292,12 +3277,12 @@
     var tmp_6;
     var tmp_7 = tmp0_elvis_lhs_1;
     if ((tmp_7 == null ? null : new Hyphens(tmp_7)) == null) {
-      tmp_6 = Companion_getInstance_40().get_None_c2j31f_k$();
+      tmp_6 = Companion_getInstance_40().get_None_vxrj2y_k$();
     } else {
       tmp_6 = tmp0_elvis_lhs_1;
     }
     tmp_5.hyphensOrDefault_1 = tmp_6;
-    if (!equals(this.lineHeight_1, Companion_getInstance_1().get_Unspecified_n7zca6_k$())) {
+    if (!equals(this.lineHeight_1, Companion_getInstance_1().get_Unspecified_r048kw_k$())) {
       // Inline function 'kotlin.check' call
       // Inline function 'kotlin.contracts.contract' call
       if (!(_TextUnit___get_value__impl__hpbx0k(this.lineHeight_1) >= 0.0)) {
@@ -3308,13 +3293,13 @@
     }
     this.$stable_1 = 0;
   }
-  protoOf(ParagraphStyle_0).get_textAlign_ihj0br_k$ = function () {
+  protoOf(ParagraphStyle_0).get_textAlign_c2c4cc_k$ = function () {
     return this.textAlign_1;
   };
-  protoOf(ParagraphStyle_0).get_textDirection_fsfodj_k$ = function () {
+  protoOf(ParagraphStyle_0).get_textDirection_u2eu2k_k$ = function () {
     return this.textDirection_1;
   };
-  protoOf(ParagraphStyle_0).get_lineHeight_oovvjw_k$ = function () {
+  protoOf(ParagraphStyle_0).get_lineHeight_3vvefu_k$ = function () {
     return this.lineHeight_1;
   };
   protoOf(ParagraphStyle_0).get_textIndent_5mau2q_k$ = function () {
@@ -3326,49 +3311,49 @@
   protoOf(ParagraphStyle_0).get_lineHeightStyle_fzu4s3_k$ = function () {
     return this.lineHeightStyle_1;
   };
-  protoOf(ParagraphStyle_0).get_lineBreak_rpr8ah_k$ = function () {
+  protoOf(ParagraphStyle_0).get_lineBreak_crhp0k_k$ = function () {
     return this.lineBreak_1;
   };
-  protoOf(ParagraphStyle_0).get_hyphens_v9y2yh_k$ = function () {
+  protoOf(ParagraphStyle_0).get_hyphens_p35ysk_k$ = function () {
     return this.hyphens_1;
   };
   protoOf(ParagraphStyle_0).get_textMotion_7jbf0s_k$ = function () {
     return this.textMotion_1;
   };
-  protoOf(ParagraphStyle_0).get_textAlignOrDefault_bq6t5y_k$ = function () {
+  protoOf(ParagraphStyle_0).get_textAlignOrDefault_utldp9_k$ = function () {
     return this.textAlignOrDefault_1;
   };
-  protoOf(ParagraphStyle_0).get_lineBreakOrDefault_n5xrf0_k$ = function () {
+  protoOf(ParagraphStyle_0).get_lineBreakOrDefault_jdufg7_k$ = function () {
     return this.lineBreakOrDefault_1;
   };
-  protoOf(ParagraphStyle_0).get_hyphensOrDefault_88gth4_k$ = function () {
+  protoOf(ParagraphStyle_0).get_hyphensOrDefault_iscmdn_k$ = function () {
     return this.hyphensOrDefault_1;
   };
-  protoOf(ParagraphStyle_0).merge_y8afnf_k$ = function (other) {
+  protoOf(ParagraphStyle_0).merge_desd12_k$ = function (other) {
     if (other == null)
       return this;
     return fastMerge(this, other.textAlign_1, other.textDirection_1, other.lineHeight_1, other.textIndent_1, other.platformStyle_1, other.lineHeightStyle_1, other.lineBreak_1, other.hyphens_1, other.textMotion_1);
   };
-  protoOf(ParagraphStyle_0).merge$default_hfdir2_k$ = function (other, $super) {
+  protoOf(ParagraphStyle_0).merge$default_robcga_k$ = function (other, $super) {
     other = other === VOID ? null : other;
-    return $super === VOID ? this.merge_y8afnf_k$(other) : $super.merge_y8afnf_k$.call(this, other);
+    return $super === VOID ? this.merge_desd12_k$(other) : $super.merge_desd12_k$.call(this, other);
   };
-  protoOf(ParagraphStyle_0).plus_3d6656_k$ = function (other) {
-    return this.merge_y8afnf_k$(other);
+  protoOf(ParagraphStyle_0).plus_oar7yd_k$ = function (other) {
+    return this.merge_desd12_k$(other);
   };
-  protoOf(ParagraphStyle_0).copy_eifuig_k$ = function (textAlign, textDirection, lineHeight, textIndent) {
+  protoOf(ParagraphStyle_0).copy_tgj1d7_k$ = function (textAlign, textDirection, lineHeight, textIndent) {
     return new ParagraphStyle_0(textAlign, textDirection, lineHeight, textIndent, this.platformStyle_1, this.lineHeightStyle_1, this.lineBreak_1, this.hyphens_1, this.textMotion_1);
   };
-  protoOf(ParagraphStyle_0).copy$default_fgwq58_k$ = function (textAlign, textDirection, lineHeight, textIndent, $super) {
+  protoOf(ParagraphStyle_0).copy$default_q3ecvu_k$ = function (textAlign, textDirection, lineHeight, textIndent, $super) {
     textAlign = textAlign === VOID ? this.textAlign_1 : textAlign;
     textDirection = textDirection === VOID ? this.textDirection_1 : textDirection;
     lineHeight = lineHeight === VOID ? this.lineHeight_1 : lineHeight;
     textIndent = textIndent === VOID ? this.textIndent_1 : textIndent;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_eifuig_k$(textAlign, textDirection, lineHeight, textIndent);
+      tmp = this.copy_tgj1d7_k$(textAlign, textDirection, lineHeight, textIndent);
     } else {
-      var tmp_0 = $super.copy_eifuig_k$;
+      var tmp_0 = $super.copy_tgj1d7_k$;
       var tmp_1 = textAlign;
       var tmp_2 = tmp_1 == null ? null : new TextAlign(tmp_1);
       var tmp_3 = textDirection;
@@ -3376,10 +3361,10 @@
     }
     return tmp;
   };
-  protoOf(ParagraphStyle_0).copy_20901z_k$ = function (textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle) {
+  protoOf(ParagraphStyle_0).copy_kw5uqx_k$ = function (textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle) {
     return new ParagraphStyle_0(textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, this.lineBreak_1, this.hyphens_1, this.textMotion_1);
   };
-  protoOf(ParagraphStyle_0).copy$default_x1l7pt_k$ = function (textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, $super) {
+  protoOf(ParagraphStyle_0).copy$default_2owype_k$ = function (textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, $super) {
     textAlign = textAlign === VOID ? this.textAlign_1 : textAlign;
     textDirection = textDirection === VOID ? this.textDirection_1 : textDirection;
     lineHeight = lineHeight === VOID ? this.lineHeight_1 : lineHeight;
@@ -3388,9 +3373,9 @@
     lineHeightStyle = lineHeightStyle === VOID ? this.lineHeightStyle_1 : lineHeightStyle;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_20901z_k$(textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle);
+      tmp = this.copy_kw5uqx_k$(textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle);
     } else {
-      var tmp_0 = $super.copy_20901z_k$;
+      var tmp_0 = $super.copy_kw5uqx_k$;
       var tmp_1 = textAlign;
       var tmp_2 = tmp_1 == null ? null : new TextAlign(tmp_1);
       var tmp_3 = textDirection;
@@ -3398,10 +3383,10 @@
     }
     return tmp;
   };
-  protoOf(ParagraphStyle_0).copy_xzidet_k$ = function (textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens) {
+  protoOf(ParagraphStyle_0).copy_9sebpv_k$ = function (textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens) {
     return new ParagraphStyle_0(textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, this.textMotion_1);
   };
-  protoOf(ParagraphStyle_0).copy$default_lhv4it_k$ = function (textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, $super) {
+  protoOf(ParagraphStyle_0).copy$default_gljecy_k$ = function (textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, $super) {
     textAlign = textAlign === VOID ? this.textAlign_1 : textAlign;
     textDirection = textDirection === VOID ? this.textDirection_1 : textDirection;
     lineHeight = lineHeight === VOID ? this.lineHeight_1 : lineHeight;
@@ -3412,25 +3397,24 @@
     hyphens = hyphens === VOID ? this.hyphens_1 : hyphens;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_xzidet_k$(textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens);
+      tmp = this.copy_9sebpv_k$(textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens);
     } else {
-      var tmp_0 = $super.copy_xzidet_k$;
+      var tmp_0 = $super.copy_9sebpv_k$;
       var tmp_1 = textAlign;
       var tmp_2 = tmp_1 == null ? null : new TextAlign(tmp_1);
       var tmp_3 = textDirection;
       var tmp_4 = tmp_3 == null ? null : new TextDirection(tmp_3);
-      var tmp_5 = new TextUnit(lineHeight);
-      var tmp_6 = lineBreak;
-      var tmp_7 = tmp_6 == null ? null : new LineBreak(tmp_6);
-      var tmp_8 = hyphens;
-      tmp = tmp_0.call(this, tmp_2, tmp_4, tmp_5, textIndent, platformStyle, lineHeightStyle, tmp_7, tmp_8 == null ? null : new Hyphens(tmp_8));
+      var tmp_5 = lineBreak;
+      var tmp_6 = tmp_5 == null ? null : new LineBreak(tmp_5);
+      var tmp_7 = hyphens;
+      tmp = tmp_0.call(this, tmp_2, tmp_4, new TextUnit(lineHeight), textIndent, platformStyle, lineHeightStyle, tmp_6, tmp_7 == null ? null : new Hyphens(tmp_7));
     }
     return tmp;
   };
-  protoOf(ParagraphStyle_0).copy_4iiump_k$ = function (textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion) {
+  protoOf(ParagraphStyle_0).copy_5ahe65_k$ = function (textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion) {
     return new ParagraphStyle_0(textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion);
   };
-  protoOf(ParagraphStyle_0).copy$default_2gu832_k$ = function (textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion, $super) {
+  protoOf(ParagraphStyle_0).copy$default_t7kri3_k$ = function (textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion, $super) {
     textAlign = textAlign === VOID ? this.textAlign_1 : textAlign;
     textDirection = textDirection === VOID ? this.textDirection_1 : textDirection;
     lineHeight = lineHeight === VOID ? this.lineHeight_1 : lineHeight;
@@ -3442,18 +3426,17 @@
     textMotion = textMotion === VOID ? this.textMotion_1 : textMotion;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_4iiump_k$(textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion);
+      tmp = this.copy_5ahe65_k$(textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion);
     } else {
-      var tmp_0 = $super.copy_4iiump_k$;
+      var tmp_0 = $super.copy_5ahe65_k$;
       var tmp_1 = textAlign;
       var tmp_2 = tmp_1 == null ? null : new TextAlign(tmp_1);
       var tmp_3 = textDirection;
       var tmp_4 = tmp_3 == null ? null : new TextDirection(tmp_3);
-      var tmp_5 = new TextUnit(lineHeight);
-      var tmp_6 = lineBreak;
-      var tmp_7 = tmp_6 == null ? null : new LineBreak(tmp_6);
-      var tmp_8 = hyphens;
-      tmp = tmp_0.call(this, tmp_2, tmp_4, tmp_5, textIndent, platformStyle, lineHeightStyle, tmp_7, tmp_8 == null ? null : new Hyphens(tmp_8), textMotion);
+      var tmp_5 = lineBreak;
+      var tmp_6 = tmp_5 == null ? null : new LineBreak(tmp_5);
+      var tmp_7 = hyphens;
+      tmp = tmp_0.call(this, tmp_2, tmp_4, new TextUnit(lineHeight), textIndent, platformStyle, lineHeightStyle, tmp_6, tmp_7 == null ? null : new Hyphens(tmp_7), textMotion);
     }
     return tmp;
   };
@@ -3719,7 +3702,7 @@
       return other;
     if (other == null)
       return _this__u8e3s4.platformStyle_1;
-    return _this__u8e3s4.platformStyle_1.merge_phrebc_k$(other);
+    return _this__u8e3s4.platformStyle_1.merge_553efx_k$(other);
   }
   function lerp_4(start, stop, fraction) {
     _init_properties_ParagraphStyle_kt__lbx7er();
@@ -3772,7 +3755,7 @@
   function _init_properties_ParagraphStyle_kt__lbx7er() {
     if (!properties_initialized_ParagraphStyle_kt_y6w405) {
       properties_initialized_ParagraphStyle_kt_y6w405 = true;
-      DefaultLineHeight = Companion_getInstance_1().get_Unspecified_n7zca6_k$();
+      DefaultLineHeight = Companion_getInstance_1().get_Unspecified_r048kw_k$();
     }
   }
   function get_$stableprop_5() {
@@ -3798,23 +3781,23 @@
     }
     this.$stable_1 = 0;
   }
-  protoOf(Placeholder).get_width_832krh_k$ = function () {
+  protoOf(Placeholder).get_width_sw31vj_k$ = function () {
     return this.width_1;
   };
-  protoOf(Placeholder).get_height_owlek0_k$ = function () {
+  protoOf(Placeholder).get_height_pbi6b2_k$ = function () {
     return this.height_1;
   };
-  protoOf(Placeholder).get_placeholderVerticalAlign_amg7on_k$ = function () {
+  protoOf(Placeholder).get_placeholderVerticalAlign_kmyoon_k$ = function () {
     return this.placeholderVerticalAlign_1;
   };
-  protoOf(Placeholder).copy_1mnfs0_k$ = function (width, height, placeholderVerticalAlign) {
+  protoOf(Placeholder).copy_c7klfd_k$ = function (width, height, placeholderVerticalAlign) {
     return new Placeholder(width, height, placeholderVerticalAlign);
   };
-  protoOf(Placeholder).copy$default_m5i91f_k$ = function (width, height, placeholderVerticalAlign, $super) {
+  protoOf(Placeholder).copy$default_trap5h_k$ = function (width, height, placeholderVerticalAlign, $super) {
     width = width === VOID ? this.width_1 : width;
     height = height === VOID ? this.height_1 : height;
     placeholderVerticalAlign = placeholderVerticalAlign === VOID ? this.placeholderVerticalAlign_1 : placeholderVerticalAlign;
-    return $super === VOID ? this.copy_1mnfs0_k$(width, height, placeholderVerticalAlign) : $super.copy_1mnfs0_k$.call(this, new TextUnit(width), new TextUnit(height), new PlaceholderVerticalAlign(placeholderVerticalAlign));
+    return $super === VOID ? this.copy_c7klfd_k$(width, height, placeholderVerticalAlign) : $super.copy_c7klfd_k$.call(this, new TextUnit(width), new TextUnit(height), new PlaceholderVerticalAlign(placeholderVerticalAlign));
   };
   protoOf(Placeholder).equals = function (other) {
     if (this === other)
@@ -3857,25 +3840,25 @@
     this.TextBottom_1 = _PlaceholderVerticalAlign___init__impl__mll0or(6);
     this.TextCenter_1 = _PlaceholderVerticalAlign___init__impl__mll0or(7);
   }
-  protoOf(Companion).get_AboveBaseline_fxmzdx_k$ = function () {
+  protoOf(Companion).get_AboveBaseline_nu267x_k$ = function () {
     return this.AboveBaseline_1;
   };
-  protoOf(Companion).get_Top_qulelq_k$ = function () {
+  protoOf(Companion).get_Top_4ethrk_k$ = function () {
     return this.Top_1;
   };
-  protoOf(Companion).get_Bottom_kiigty_k$ = function () {
+  protoOf(Companion).get_Bottom_aqwfjc_k$ = function () {
     return this.Bottom_1;
   };
-  protoOf(Companion).get_Center_89tqw0_k$ = function () {
+  protoOf(Companion).get_Center_mzl5ha_k$ = function () {
     return this.Center_1;
   };
-  protoOf(Companion).get_TextTop_8n8utb_k$ = function () {
+  protoOf(Companion).get_TextTop_v4gasj_k$ = function () {
     return this.TextTop_1;
   };
-  protoOf(Companion).get_TextBottom_9104cj_k$ = function () {
+  protoOf(Companion).get_TextBottom_m8es0r_k$ = function () {
     return this.TextBottom_1;
   };
-  protoOf(Companion).get_TextCenter_37ollf_k$ = function () {
+  protoOf(Companion).get_TextCenter_yh3hyp_k$ = function () {
     return this.TextCenter_1;
   };
   var Companion_instance;
@@ -4018,7 +4001,7 @@
       // Inline function 'kotlin.with' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.save.<anonymous>.<anonymous>' call
-      tmp = saver.save_ef702r_k$(scope, value);
+      tmp = saver.save_khi2yu_k$(scope, value);
     }
     var tmp1_elvis_lhs = tmp;
     return tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
@@ -4045,7 +4028,7 @@
         return AnnotationType_String_getInstance();
       default:
         AnnotationType_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -4121,14 +4104,14 @@
     var tmp$ret$0;
     $l$block: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp0_restore = list.get_fkrdnv_k$(1);
-      var tmp1_restore = get_AnnotationRangeListSaver();
-      if (equals(tmp0_restore, false)) {
+      var value = list.get_c1px32_k$(1);
+      var saver = get_AnnotationRangeListSaver();
+      if (equals(value, false)) {
         tmp$ret$0 = null;
         break $l$block;
       }
       var tmp;
-      if (tmp0_restore == null) {
+      if (value == null) {
         tmp = null;
       } else {
         // Inline function 'kotlin.let' call
@@ -4137,7 +4120,7 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_0 = tmp1_restore.restore_uzeo8_k$(tmp0_restore);
+        var tmp_0 = saver.restore_fyjq85_k$(value);
         tmp = (tmp_0 == null ? true : isInterface(tmp_0, List)) ? tmp_0 : THROW_CCE();
       }
       tmp$ret$0 = tmp;
@@ -4146,14 +4129,14 @@
     var tmp$ret$5;
     $l$block_0: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp2_restore = list.get_fkrdnv_k$(2);
-      var tmp3_restore = get_AnnotationRangeListSaver();
-      if (equals(tmp2_restore, false)) {
+      var value_0 = list.get_c1px32_k$(2);
+      var saver_0 = get_AnnotationRangeListSaver();
+      if (equals(value_0, false)) {
         tmp$ret$5 = null;
         break $l$block_0;
       }
       var tmp_1;
-      if (tmp2_restore == null) {
+      if (value_0 == null) {
         tmp_1 = null;
       } else {
         // Inline function 'kotlin.let' call
@@ -4162,15 +4145,14 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_2 = tmp3_restore.restore_uzeo8_k$(tmp2_restore);
+        var tmp_2 = saver_0.restore_fyjq85_k$(value_0);
         tmp_1 = (tmp_2 == null ? true : isInterface(tmp_2, List)) ? tmp_2 : THROW_CCE();
       }
       tmp$ret$5 = tmp_1;
     }
     var paragraphStylesOrNull = tmp$ret$5;
-    var tmp$ret$12;
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver = list.get_fkrdnv_k$(0);
+    var tmp0_safe_receiver = list.get_c1px32_k$(0);
     var tmp_3;
     if (tmp0_safe_receiver == null) {
       tmp_3 = null;
@@ -4178,9 +4160,9 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      tmp_3 = (tmp0_safe_receiver == null ? true : typeof tmp0_safe_receiver === 'string') ? tmp0_safe_receiver : THROW_CCE();
+      tmp_3 = typeof tmp0_safe_receiver === 'string' ? tmp0_safe_receiver : THROW_CCE();
     }
-    tmp$ret$12 = tmp_3;
+    var tmp$ret$12 = tmp_3;
     var tmp_4 = ensureNotNull(tmp$ret$12);
     var tmp_5;
     if (spanStylesOrNull == null) {
@@ -4215,14 +4197,14 @@
     var tmp$ret$17;
     $l$block_1: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp5_restore = list.get_fkrdnv_k$(3);
-      var tmp6_restore = get_AnnotationRangeListSaver();
-      if (equals(tmp5_restore, false)) {
+      var value_1 = list.get_c1px32_k$(3);
+      var saver_1 = get_AnnotationRangeListSaver();
+      if (equals(value_1, false)) {
         tmp$ret$17 = null;
         break $l$block_1;
       }
       var tmp_11;
-      if (tmp5_restore == null) {
+      if (value_1 == null) {
         tmp_11 = null;
       } else {
         // Inline function 'kotlin.let' call
@@ -4231,7 +4213,7 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_12 = tmp6_restore.restore_uzeo8_k$(tmp5_restore);
+        var tmp_12 = saver_1.restore_fyjq85_k$(value_1);
         tmp_11 = (tmp_12 == null ? true : isInterface(tmp_12, List)) ? tmp_12 : THROW_CCE();
       }
       tmp$ret$17 = tmp_11;
@@ -4251,12 +4233,12 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = it.get_fkrdnv_k$(index);
+        var item = it.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.AnnotationRangeListSaver.<anonymous>.<anonymous>' call
-        var tmp0_plusAssign = save_0(item, get_AnnotationRangeSaver(), $this$Saver);
-        target.add_1j60pz_k$(tmp0_plusAssign);
+        var element = save_0(item, get_AnnotationRangeSaver(), $this$Saver);
+        target.add_utx5q5_k$(element);
       }
        while (inductionVariable <= last);
     return target;
@@ -4275,14 +4257,14 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = list.get_fkrdnv_k$(index);
+        var item = list.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.AnnotationRangeListSaver.<anonymous>.<anonymous>' call
         var tmp$ret$0;
         $l$block: {
           // Inline function 'androidx.compose.ui.text.restore' call
-          var tmp0_restore = get_AnnotationRangeSaver();
+          var saver = get_AnnotationRangeSaver();
           if (equals(item, false)) {
             tmp$ret$0 = null;
             break $l$block;
@@ -4297,13 +4279,13 @@
             // Inline function 'kotlin.with' call
             // Inline function 'kotlin.contracts.contract' call
             // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-            var tmp_0 = tmp0_restore.restore_uzeo8_k$(item);
+            var tmp_0 = saver.restore_fyjq85_k$(item);
             tmp = (tmp_0 == null ? true : tmp_0 instanceof Range) ? tmp_0 : THROW_CCE();
           }
           tmp$ret$0 = tmp;
         }
         var range = ensureNotNull(tmp$ret$0);
-        target.add_1j60pz_k$(range);
+        target.add_utx5q5_k$(range);
       }
        while (inductionVariable <= last);
     return target;
@@ -4361,9 +4343,8 @@
   function AnnotationRangeSaver$lambda_0(it) {
     _init_properties_Savers_kt__o6r3ry();
     var list = isInterface(it, List) ? it : THROW_CCE();
-    var tmp$ret$2;
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver = list.get_fkrdnv_k$(0);
+    var tmp0_safe_receiver = list.get_c1px32_k$(0);
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -4371,13 +4352,12 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      tmp = (tmp0_safe_receiver == null ? true : tmp0_safe_receiver instanceof AnnotationType) ? tmp0_safe_receiver : THROW_CCE();
+      tmp = tmp0_safe_receiver instanceof AnnotationType ? tmp0_safe_receiver : THROW_CCE();
     }
-    tmp$ret$2 = tmp;
+    var tmp$ret$2 = tmp;
     var marker = ensureNotNull(tmp$ret$2);
-    var tmp$ret$5;
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver_0 = list.get_fkrdnv_k$(2);
+    var tmp0_safe_receiver_0 = list.get_c1px32_k$(2);
     var tmp_0;
     if (tmp0_safe_receiver_0 == null) {
       tmp_0 = null;
@@ -4385,13 +4365,12 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      tmp_0 = (tmp0_safe_receiver_0 == null ? true : typeof tmp0_safe_receiver_0 === 'number') ? tmp0_safe_receiver_0 : THROW_CCE();
+      tmp_0 = typeof tmp0_safe_receiver_0 === 'number' ? tmp0_safe_receiver_0 : THROW_CCE();
     }
-    tmp$ret$5 = tmp_0;
+    var tmp$ret$5 = tmp_0;
     var start = ensureNotNull(tmp$ret$5);
-    var tmp$ret$8;
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver_1 = list.get_fkrdnv_k$(3);
+    var tmp0_safe_receiver_1 = list.get_c1px32_k$(3);
     var tmp_1;
     if (tmp0_safe_receiver_1 == null) {
       tmp_1 = null;
@@ -4399,13 +4378,12 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      tmp_1 = (tmp0_safe_receiver_1 == null ? true : typeof tmp0_safe_receiver_1 === 'number') ? tmp0_safe_receiver_1 : THROW_CCE();
+      tmp_1 = typeof tmp0_safe_receiver_1 === 'number' ? tmp0_safe_receiver_1 : THROW_CCE();
     }
-    tmp$ret$8 = tmp_1;
+    var tmp$ret$8 = tmp_1;
     var end = ensureNotNull(tmp$ret$8);
-    var tmp$ret$11;
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver_2 = list.get_fkrdnv_k$(4);
+    var tmp0_safe_receiver_2 = list.get_c1px32_k$(4);
     var tmp_2;
     if (tmp0_safe_receiver_2 == null) {
       tmp_2 = null;
@@ -4413,9 +4391,9 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      tmp_2 = (tmp0_safe_receiver_2 == null ? true : typeof tmp0_safe_receiver_2 === 'string') ? tmp0_safe_receiver_2 : THROW_CCE();
+      tmp_2 = typeof tmp0_safe_receiver_2 === 'string' ? tmp0_safe_receiver_2 : THROW_CCE();
     }
-    tmp$ret$11 = tmp_2;
+    var tmp$ret$11 = tmp_2;
     var tag = ensureNotNull(tmp$ret$11);
     var tmp_3;
     switch (marker.get_ordinal_ip24qg_k$()) {
@@ -4423,14 +4401,14 @@
         var tmp$ret$12;
         $l$block: {
           // Inline function 'androidx.compose.ui.text.restore' call
-          var tmp4_restore = list.get_fkrdnv_k$(1);
-          var tmp5_restore = get_ParagraphStyleSaver();
-          if (equals(tmp4_restore, false)) {
+          var value = list.get_c1px32_k$(1);
+          var saver = get_ParagraphStyleSaver();
+          if (equals(value, false)) {
             tmp$ret$12 = null;
             break $l$block;
           }
           var tmp_4;
-          if (tmp4_restore == null) {
+          if (value == null) {
             tmp_4 = null;
           } else {
             // Inline function 'kotlin.let' call
@@ -4439,7 +4417,7 @@
             // Inline function 'kotlin.with' call
             // Inline function 'kotlin.contracts.contract' call
             // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-            var tmp_5 = tmp5_restore.restore_uzeo8_k$(tmp4_restore);
+            var tmp_5 = saver.restore_fyjq85_k$(value);
             tmp_4 = (tmp_5 == null ? true : tmp_5 instanceof ParagraphStyle_0) ? tmp_5 : THROW_CCE();
           }
           tmp$ret$12 = tmp_4;
@@ -4452,14 +4430,14 @@
         var tmp$ret$17;
         $l$block_0: {
           // Inline function 'androidx.compose.ui.text.restore' call
-          var tmp6_restore = list.get_fkrdnv_k$(1);
-          var tmp7_restore = get_SpanStyleSaver();
-          if (equals(tmp6_restore, false)) {
+          var value_0 = list.get_c1px32_k$(1);
+          var saver_0 = get_SpanStyleSaver();
+          if (equals(value_0, false)) {
             tmp$ret$17 = null;
             break $l$block_0;
           }
           var tmp_6;
-          if (tmp6_restore == null) {
+          if (value_0 == null) {
             tmp_6 = null;
           } else {
             // Inline function 'kotlin.let' call
@@ -4468,7 +4446,7 @@
             // Inline function 'kotlin.with' call
             // Inline function 'kotlin.contracts.contract' call
             // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-            var tmp_7 = tmp7_restore.restore_uzeo8_k$(tmp6_restore);
+            var tmp_7 = saver_0.restore_fyjq85_k$(value_0);
             tmp_6 = (tmp_7 == null ? true : tmp_7 instanceof SpanStyle) ? tmp_7 : THROW_CCE();
           }
           tmp$ret$17 = tmp_6;
@@ -4481,14 +4459,14 @@
         var tmp$ret$22;
         $l$block_1: {
           // Inline function 'androidx.compose.ui.text.restore' call
-          var tmp8_restore = list.get_fkrdnv_k$(1);
-          var tmp9_restore = get_VerbatimTtsAnnotationSaver();
-          if (equals(tmp8_restore, false)) {
+          var value_1 = list.get_c1px32_k$(1);
+          var saver_1 = get_VerbatimTtsAnnotationSaver();
+          if (equals(value_1, false)) {
             tmp$ret$22 = null;
             break $l$block_1;
           }
           var tmp_8;
-          if (tmp8_restore == null) {
+          if (value_1 == null) {
             tmp_8 = null;
           } else {
             // Inline function 'kotlin.let' call
@@ -4497,7 +4475,7 @@
             // Inline function 'kotlin.with' call
             // Inline function 'kotlin.contracts.contract' call
             // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-            var tmp_9 = tmp9_restore.restore_uzeo8_k$(tmp8_restore);
+            var tmp_9 = saver_1.restore_fyjq85_k$(value_1);
             tmp_8 = (tmp_9 == null ? true : tmp_9 instanceof VerbatimTtsAnnotation) ? tmp_9 : THROW_CCE();
           }
           tmp$ret$22 = tmp_8;
@@ -4510,14 +4488,14 @@
         var tmp$ret$27;
         $l$block_2: {
           // Inline function 'androidx.compose.ui.text.restore' call
-          var tmp10_restore = list.get_fkrdnv_k$(1);
-          var tmp11_restore = get_UrlAnnotationSaver();
-          if (equals(tmp10_restore, false)) {
+          var value_2 = list.get_c1px32_k$(1);
+          var saver_2 = get_UrlAnnotationSaver();
+          if (equals(value_2, false)) {
             tmp$ret$27 = null;
             break $l$block_2;
           }
           var tmp_10;
-          if (tmp10_restore == null) {
+          if (value_2 == null) {
             tmp_10 = null;
           } else {
             // Inline function 'kotlin.let' call
@@ -4526,7 +4504,7 @@
             // Inline function 'kotlin.with' call
             // Inline function 'kotlin.contracts.contract' call
             // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-            var tmp_11 = tmp11_restore.restore_uzeo8_k$(tmp10_restore);
+            var tmp_11 = saver_2.restore_fyjq85_k$(value_2);
             tmp_10 = (tmp_11 == null ? true : tmp_11 instanceof UrlAnnotation) ? tmp_11 : THROW_CCE();
           }
           tmp$ret$27 = tmp_10;
@@ -4536,10 +4514,9 @@
         tmp_3 = new Range(item_2, start, end, tag);
         break;
       case 4:
-        var tmp$ret$34;
         // Inline function 'androidx.compose.ui.text.restore' call
 
-        var tmp0_safe_receiver_3 = list.get_fkrdnv_k$(1);
+        var tmp0_safe_receiver_3 = list.get_c1px32_k$(1);
         var tmp_12;
         if (tmp0_safe_receiver_3 == null) {
           tmp_12 = null;
@@ -4547,10 +4524,10 @@
           // Inline function 'kotlin.let' call
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-          tmp_12 = (tmp0_safe_receiver_3 == null ? true : typeof tmp0_safe_receiver_3 === 'string') ? tmp0_safe_receiver_3 : THROW_CCE();
+          tmp_12 = typeof tmp0_safe_receiver_3 === 'string' ? tmp0_safe_receiver_3 : THROW_CCE();
         }
 
-        tmp$ret$34 = tmp_12;
+        var tmp$ret$34 = tmp_12;
         var item_3 = ensureNotNull(tmp$ret$34);
         tmp_3 = new Range(item_3, start, end, tag);
         break;
@@ -4566,7 +4543,6 @@
   }
   function VerbatimTtsAnnotationSaver$lambda_0(it) {
     _init_properties_Savers_kt__o6r3ry();
-    var tmp$ret$2;
     // Inline function 'androidx.compose.ui.text.restore' call
     var tmp;
     if (it == null) {
@@ -4575,9 +4551,9 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      tmp = (it == null ? true : typeof it === 'string') ? it : THROW_CCE();
+      tmp = typeof it === 'string' ? it : THROW_CCE();
     }
-    tmp$ret$2 = tmp;
+    var tmp$ret$2 = tmp;
     return new VerbatimTtsAnnotation(ensureNotNull(tmp$ret$2));
   }
   function UrlAnnotationSaver$lambda($this$Saver, it) {
@@ -4586,7 +4562,6 @@
   }
   function UrlAnnotationSaver$lambda_0(it) {
     _init_properties_Savers_kt__o6r3ry();
-    var tmp$ret$2;
     // Inline function 'androidx.compose.ui.text.restore' call
     var tmp;
     if (it == null) {
@@ -4595,23 +4570,23 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      tmp = (it == null ? true : typeof it === 'string') ? it : THROW_CCE();
+      tmp = typeof it === 'string' ? it : THROW_CCE();
     }
-    tmp$ret$2 = tmp;
+    var tmp$ret$2 = tmp;
     return new UrlAnnotation(ensureNotNull(tmp$ret$2));
   }
   function ParagraphStyleSaver$lambda($this$Saver, it) {
     _init_properties_Savers_kt__o6r3ry();
-    var tmp = it.get_textAlign_ihj0br_k$();
+    var tmp = it.get_textAlign_c2c4cc_k$();
     var tmp_0 = save(tmp == null ? null : new TextAlign(tmp));
-    var tmp_1 = it.get_textDirection_fsfodj_k$();
-    return arrayListOf([tmp_0, save(tmp_1 == null ? null : new TextDirection(tmp_1)), save_0(new TextUnit(it.get_lineHeight_oovvjw_k$()), get_Saver(Companion_getInstance_1()), $this$Saver), save_0(it.get_textIndent_5mau2q_k$(), get_Saver_0(Companion_getInstance_49()), $this$Saver)]);
+    var tmp_1 = it.get_textDirection_u2eu2k_k$();
+    return arrayListOf([tmp_0, save(tmp_1 == null ? null : new TextDirection(tmp_1)), save_0(new TextUnit(it.get_lineHeight_3vvefu_k$()), get_Saver(Companion_getInstance_1()), $this$Saver), save_0(it.get_textIndent_5mau2q_k$(), get_Saver_0(Companion_getInstance_49()), $this$Saver)]);
   }
   function ParagraphStyleSaver$lambda_0(it) {
     _init_properties_Savers_kt__o6r3ry();
     var list = isInterface(it, List) ? it : THROW_CCE();
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver = list.get_fkrdnv_k$(0);
+    var tmp0_safe_receiver = list.get_c1px32_k$(0);
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -4619,47 +4594,33 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      var tmp_0;
-      if (tmp0_safe_receiver == null ? true : tmp0_safe_receiver instanceof TextAlign) {
-        var tmp_1 = tmp0_safe_receiver;
-        tmp_0 = tmp_1 == null ? null : tmp_1.value_1;
-      } else {
-        tmp_0 = THROW_CCE();
-      }
-      tmp = tmp_0;
+      tmp = tmp0_safe_receiver instanceof TextAlign ? tmp0_safe_receiver.value_1 : THROW_CCE();
     }
-    var tmp_2 = tmp;
+    var tmp_0 = tmp;
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver_0 = list.get_fkrdnv_k$(1);
-    var tmp_3;
+    var tmp0_safe_receiver_0 = list.get_c1px32_k$(1);
+    var tmp_1;
     if (tmp0_safe_receiver_0 == null) {
-      tmp_3 = null;
+      tmp_1 = null;
     } else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      var tmp_4;
-      if (tmp0_safe_receiver_0 == null ? true : tmp0_safe_receiver_0 instanceof TextDirection) {
-        var tmp_5 = tmp0_safe_receiver_0;
-        tmp_4 = tmp_5 == null ? null : tmp_5.value_1;
-      } else {
-        tmp_4 = THROW_CCE();
-      }
-      tmp_3 = tmp_4;
+      tmp_1 = tmp0_safe_receiver_0 instanceof TextDirection ? tmp0_safe_receiver_0.value_1 : THROW_CCE();
     }
-    var tmp_6 = tmp_3;
+    var tmp_2 = tmp_1;
     var tmp$ret$6;
     $l$block: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp2_restore = list.get_fkrdnv_k$(2);
-      var tmp3_restore = get_Saver(Companion_getInstance_1());
-      if (equals(tmp2_restore, false)) {
+      var value = list.get_c1px32_k$(2);
+      var saver = get_Saver(Companion_getInstance_1());
+      if (equals(value, false)) {
         tmp$ret$6 = null;
         break $l$block;
       }
-      var tmp_7;
-      if (tmp2_restore == null) {
-        tmp_7 = null;
+      var tmp_3;
+      if (value == null) {
+        tmp_3 = null;
       } else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
@@ -4667,40 +4628,40 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_8 = tmp3_restore.restore_uzeo8_k$(tmp2_restore);
-        var tmp_9 = tmp_8 == null ? null : tmp_8.packedValue_1;
-        var tmp_10;
-        var tmp_11;
-        var tmp_12 = tmp_9;
-        if ((tmp_12 == null ? null : new TextUnit(tmp_12)) == null) {
-          tmp_11 = true;
+        var tmp_4 = saver.restore_fyjq85_k$(value);
+        var tmp_5 = tmp_4 == null ? null : tmp_4.packedValue_1;
+        var tmp_6;
+        var tmp_7;
+        var tmp_8 = tmp_5;
+        if ((tmp_8 == null ? null : new TextUnit(tmp_8)) == null) {
+          tmp_7 = true;
         } else {
-          var tmp_13 = tmp_9;
-          tmp_11 = (tmp_13 == null ? null : new TextUnit(tmp_13))instanceof TextUnit;
+          var tmp_9 = tmp_5;
+          tmp_7 = (tmp_9 == null ? null : new TextUnit(tmp_9))instanceof TextUnit;
         }
-        if (tmp_11) {
-          tmp_10 = tmp_9;
+        if (tmp_7) {
+          tmp_6 = tmp_5;
         } else {
-          tmp_10 = THROW_CCE();
+          tmp_6 = THROW_CCE();
         }
-        tmp_7 = tmp_10;
+        tmp_3 = tmp_6;
       }
-      tmp$ret$6 = tmp_7;
+      tmp$ret$6 = tmp_3;
     }
-    var tmp_14 = tmp$ret$6;
-    var tmp_15 = ensureNotNull(tmp_14 == null ? null : new TextUnit(tmp_14)).packedValue_1;
+    var tmp_10 = tmp$ret$6;
+    var tmp_11 = ensureNotNull(tmp_10 == null ? null : new TextUnit(tmp_10));
     var tmp$ret$11;
     $l$block_0: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp4_restore = list.get_fkrdnv_k$(3);
-      var tmp5_restore = get_Saver_0(Companion_getInstance_49());
-      if (equals(tmp4_restore, false)) {
+      var value_0 = list.get_c1px32_k$(3);
+      var saver_0 = get_Saver_0(Companion_getInstance_49());
+      if (equals(value_0, false)) {
         tmp$ret$11 = null;
         break $l$block_0;
       }
-      var tmp_16;
-      if (tmp4_restore == null) {
-        tmp_16 = null;
+      var tmp_12;
+      if (value_0 == null) {
+        tmp_12 = null;
       } else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
@@ -4708,27 +4669,27 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_17 = tmp5_restore.restore_uzeo8_k$(tmp4_restore);
-        tmp_16 = (tmp_17 == null ? true : tmp_17 instanceof TextIndent_0) ? tmp_17 : THROW_CCE();
+        var tmp_13 = saver_0.restore_fyjq85_k$(value_0);
+        tmp_12 = (tmp_13 == null ? true : tmp_13 instanceof TextIndent_0) ? tmp_13 : THROW_CCE();
       }
-      tmp$ret$11 = tmp_16;
+      tmp$ret$11 = tmp_12;
     }
-    return new ParagraphStyle_0(tmp_2, tmp_6, tmp_15, tmp$ret$11);
+    return new ParagraphStyle_0(tmp_0, tmp_2, tmp_11.packedValue_1, tmp$ret$11);
   }
   function SpanStyleSaver$lambda($this$Saver, it) {
     _init_properties_Savers_kt__o6r3ry();
-    var tmp = save_0(new Color(it.get_color_v34vrz_k$()), get_Saver_1(Companion_getInstance()), $this$Saver);
-    var tmp_0 = save_0(new TextUnit(it.get_fontSize_61k213_k$()), get_Saver(Companion_getInstance_1()), $this$Saver);
+    var tmp = save_0(new Color(it.get_color_lnp1vl_k$()), get_Saver_1(Companion_getInstance()), $this$Saver);
+    var tmp_0 = save_0(new TextUnit(it.get_fontSize_ergf2z_k$()), get_Saver(Companion_getInstance_1()), $this$Saver);
     var tmp_1 = save_0(it.get_fontWeight_wbif2o_k$(), get_Saver_2(Companion_getInstance_27()), $this$Saver);
-    var tmp_2 = it.get_fontStyle_fze7ml_k$();
+    var tmp_2 = it.get_fontStyle_hzv4zg_k$();
     var tmp_3 = save(tmp_2 == null ? null : new FontStyle(tmp_2));
-    var tmp_4 = it.get_fontSynthesis_t08ei1_k$();
+    var tmp_4 = it.get_fontSynthesis_h5auiy_k$();
     var tmp_5 = save(tmp_4 == null ? null : new FontSynthesis(tmp_4));
     var tmp_6 = save(-1);
     var tmp_7 = save(it.get_fontFeatureSettings_a47533_k$());
-    var tmp_8 = save_0(new TextUnit(it.get_letterSpacing_u0tnf8_k$()), get_Saver(Companion_getInstance_1()), $this$Saver);
-    var tmp_9 = it.get_baselineShift_yg9i0p_k$();
-    return arrayListOf([tmp, tmp_0, tmp_1, tmp_3, tmp_5, tmp_6, tmp_7, tmp_8, save_0(tmp_9 == null ? null : new BaselineShift(tmp_9), get_Saver_3(Companion_getInstance_39()), $this$Saver), save_0(it.get_textGeometricTransform_tdfmin_k$(), get_Saver_4(Companion_getInstance_48()), $this$Saver), save_0(it.get_localeList_1gj9gh_k$(), get_Saver_5(Companion_getInstance_38()), $this$Saver), save_0(new Color(it.get_background_ubksc_k$()), get_Saver_1(Companion_getInstance()), $this$Saver), save_0(it.get_textDecoration_itgjwm_k$(), get_Saver_6(Companion_getInstance_45()), $this$Saver), save_0(it.get_shadow_jgtb8p_k$(), get_Saver_7(Companion_getInstance_2()), $this$Saver)]);
+    var tmp_8 = save_0(new TextUnit(it.get_letterSpacing_k79xfu_k$()), get_Saver(Companion_getInstance_1()), $this$Saver);
+    var tmp_9 = it.get_baselineShift_99zyho_k$();
+    return arrayListOf([tmp, tmp_0, tmp_1, tmp_3, tmp_5, tmp_6, tmp_7, tmp_8, save_0(tmp_9 == null ? null : new BaselineShift(tmp_9), get_Saver_3(Companion_getInstance_39()), $this$Saver), save_0(it.get_textGeometricTransform_tdfmin_k$(), get_Saver_4(Companion_getInstance_48()), $this$Saver), save_0(it.get_localeList_1gj9gh_k$(), get_Saver_5(Companion_getInstance_38()), $this$Saver), save_0(new Color(it.get_background_8l4942_k$()), get_Saver_1(Companion_getInstance()), $this$Saver), save_0(it.get_textDecoration_itgjwm_k$(), get_Saver_6(Companion_getInstance_45()), $this$Saver), save_0(it.get_shadow_jgtb8p_k$(), get_Saver_7(Companion_getInstance_2()), $this$Saver)]);
   }
   function SpanStyleSaver$lambda_0(it) {
     _init_properties_Savers_kt__o6r3ry();
@@ -4736,14 +4697,14 @@
     var tmp$ret$0;
     $l$block: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp0_restore = list.get_fkrdnv_k$(0);
-      var tmp1_restore = get_Saver_1(Companion_getInstance());
-      if (equals(tmp0_restore, false)) {
+      var value = list.get_c1px32_k$(0);
+      var saver = get_Saver_1(Companion_getInstance());
+      if (equals(value, false)) {
         tmp$ret$0 = null;
         break $l$block;
       }
       var tmp;
-      if (tmp0_restore == null) {
+      if (value == null) {
         tmp = null;
       } else {
         // Inline function 'kotlin.let' call
@@ -4752,7 +4713,7 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_0 = tmp1_restore.restore_uzeo8_k$(tmp0_restore);
+        var tmp_0 = saver.restore_fyjq85_k$(value);
         var tmp_1 = tmp_0 == null ? null : tmp_0.value_1;
         var tmp_2;
         var tmp_3;
@@ -4773,18 +4734,18 @@
       tmp$ret$0 = tmp;
     }
     var tmp_6 = tmp$ret$0;
-    var tmp_7 = ensureNotNull(tmp_6 == null ? null : new Color(tmp_6)).value_1;
+    var tmp_7 = ensureNotNull(tmp_6 == null ? null : new Color(tmp_6));
     var tmp$ret$5;
     $l$block_0: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp2_restore = list.get_fkrdnv_k$(1);
-      var tmp3_restore = get_Saver(Companion_getInstance_1());
-      if (equals(tmp2_restore, false)) {
+      var value_0 = list.get_c1px32_k$(1);
+      var saver_0 = get_Saver(Companion_getInstance_1());
+      if (equals(value_0, false)) {
         tmp$ret$5 = null;
         break $l$block_0;
       }
       var tmp_8;
-      if (tmp2_restore == null) {
+      if (value_0 == null) {
         tmp_8 = null;
       } else {
         // Inline function 'kotlin.let' call
@@ -4793,7 +4754,7 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_9 = tmp3_restore.restore_uzeo8_k$(tmp2_restore);
+        var tmp_9 = saver_0.restore_fyjq85_k$(value_0);
         var tmp_10 = tmp_9 == null ? null : tmp_9.packedValue_1;
         var tmp_11;
         var tmp_12;
@@ -4814,18 +4775,18 @@
       tmp$ret$5 = tmp_8;
     }
     var tmp_15 = tmp$ret$5;
-    var tmp_16 = ensureNotNull(tmp_15 == null ? null : new TextUnit(tmp_15)).packedValue_1;
+    var tmp_16 = ensureNotNull(tmp_15 == null ? null : new TextUnit(tmp_15));
     var tmp$ret$10;
     $l$block_1: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp4_restore = list.get_fkrdnv_k$(2);
-      var tmp5_restore = get_Saver_2(Companion_getInstance_27());
-      if (equals(tmp4_restore, false)) {
+      var value_1 = list.get_c1px32_k$(2);
+      var saver_1 = get_Saver_2(Companion_getInstance_27());
+      if (equals(value_1, false)) {
         tmp$ret$10 = null;
         break $l$block_1;
       }
       var tmp_17;
-      if (tmp4_restore == null) {
+      if (value_1 == null) {
         tmp_17 = null;
       } else {
         // Inline function 'kotlin.let' call
@@ -4834,14 +4795,14 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_18 = tmp5_restore.restore_uzeo8_k$(tmp4_restore);
+        var tmp_18 = saver_1.restore_fyjq85_k$(value_1);
         tmp_17 = (tmp_18 == null ? true : tmp_18 instanceof FontWeight) ? tmp_18 : THROW_CCE();
       }
       tmp$ret$10 = tmp_17;
     }
     var tmp_19 = tmp$ret$10;
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver = list.get_fkrdnv_k$(3);
+    var tmp0_safe_receiver = list.get_c1px32_k$(3);
     var tmp_20;
     if (tmp0_safe_receiver == null) {
       tmp_20 = null;
@@ -4849,59 +4810,45 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      var tmp_21;
-      if (tmp0_safe_receiver == null ? true : tmp0_safe_receiver instanceof FontStyle) {
-        var tmp_22 = tmp0_safe_receiver;
-        tmp_21 = tmp_22 == null ? null : tmp_22.value_1;
-      } else {
-        tmp_21 = THROW_CCE();
-      }
-      tmp_20 = tmp_21;
+      tmp_20 = tmp0_safe_receiver instanceof FontStyle ? tmp0_safe_receiver.value_1 : THROW_CCE();
     }
-    var tmp_23 = tmp_20;
+    var tmp_21 = tmp_20;
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver_0 = list.get_fkrdnv_k$(4);
-    var tmp_24;
+    var tmp0_safe_receiver_0 = list.get_c1px32_k$(4);
+    var tmp_22;
     if (tmp0_safe_receiver_0 == null) {
+      tmp_22 = null;
+    } else {
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
+      tmp_22 = tmp0_safe_receiver_0 instanceof FontSynthesis ? tmp0_safe_receiver_0.value_1 : THROW_CCE();
+    }
+    var tmp_23 = tmp_22;
+    // Inline function 'androidx.compose.ui.text.restore' call
+    var tmp0_safe_receiver_1 = list.get_c1px32_k$(6);
+    var tmp_24;
+    if (tmp0_safe_receiver_1 == null) {
       tmp_24 = null;
     } else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      var tmp_25;
-      if (tmp0_safe_receiver_0 == null ? true : tmp0_safe_receiver_0 instanceof FontSynthesis) {
-        var tmp_26 = tmp0_safe_receiver_0;
-        tmp_25 = tmp_26 == null ? null : tmp_26.value_1;
-      } else {
-        tmp_25 = THROW_CCE();
-      }
-      tmp_24 = tmp_25;
+      tmp_24 = typeof tmp0_safe_receiver_1 === 'string' ? tmp0_safe_receiver_1 : THROW_CCE();
     }
-    var tmp_27 = tmp_24;
-    // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver_1 = list.get_fkrdnv_k$(6);
-    var tmp_28;
-    if (tmp0_safe_receiver_1 == null) {
-      tmp_28 = null;
-    } else {
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      tmp_28 = (tmp0_safe_receiver_1 == null ? true : typeof tmp0_safe_receiver_1 === 'string') ? tmp0_safe_receiver_1 : THROW_CCE();
-    }
-    var tmp_29 = tmp_28;
+    var tmp_25 = tmp_24;
     var tmp$ret$24;
     $l$block_2: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp9_restore = list.get_fkrdnv_k$(7);
-      var tmp10_restore = get_Saver(Companion_getInstance_1());
-      if (equals(tmp9_restore, false)) {
+      var value_2 = list.get_c1px32_k$(7);
+      var saver_2 = get_Saver(Companion_getInstance_1());
+      if (equals(value_2, false)) {
         tmp$ret$24 = null;
         break $l$block_2;
       }
-      var tmp_30;
-      if (tmp9_restore == null) {
-        tmp_30 = null;
+      var tmp_26;
+      if (value_2 == null) {
+        tmp_26 = null;
       } else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
@@ -4909,40 +4856,40 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_31 = tmp10_restore.restore_uzeo8_k$(tmp9_restore);
-        var tmp_32 = tmp_31 == null ? null : tmp_31.packedValue_1;
-        var tmp_33;
-        var tmp_34;
-        var tmp_35 = tmp_32;
-        if ((tmp_35 == null ? null : new TextUnit(tmp_35)) == null) {
-          tmp_34 = true;
+        var tmp_27 = saver_2.restore_fyjq85_k$(value_2);
+        var tmp_28 = tmp_27 == null ? null : tmp_27.packedValue_1;
+        var tmp_29;
+        var tmp_30;
+        var tmp_31 = tmp_28;
+        if ((tmp_31 == null ? null : new TextUnit(tmp_31)) == null) {
+          tmp_30 = true;
         } else {
-          var tmp_36 = tmp_32;
-          tmp_34 = (tmp_36 == null ? null : new TextUnit(tmp_36))instanceof TextUnit;
+          var tmp_32 = tmp_28;
+          tmp_30 = (tmp_32 == null ? null : new TextUnit(tmp_32))instanceof TextUnit;
         }
-        if (tmp_34) {
-          tmp_33 = tmp_32;
+        if (tmp_30) {
+          tmp_29 = tmp_28;
         } else {
-          tmp_33 = THROW_CCE();
+          tmp_29 = THROW_CCE();
         }
-        tmp_30 = tmp_33;
+        tmp_26 = tmp_29;
       }
-      tmp$ret$24 = tmp_30;
+      tmp$ret$24 = tmp_26;
     }
-    var tmp_37 = tmp$ret$24;
-    var tmp_38 = ensureNotNull(tmp_37 == null ? null : new TextUnit(tmp_37)).packedValue_1;
+    var tmp_33 = tmp$ret$24;
+    var tmp_34 = ensureNotNull(tmp_33 == null ? null : new TextUnit(tmp_33));
     var tmp$ret$29;
     $l$block_3: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp11_restore = list.get_fkrdnv_k$(8);
-      var tmp12_restore = get_Saver_3(Companion_getInstance_39());
-      if (equals(tmp11_restore, false)) {
+      var value_3 = list.get_c1px32_k$(8);
+      var saver_3 = get_Saver_3(Companion_getInstance_39());
+      if (equals(value_3, false)) {
         tmp$ret$29 = null;
         break $l$block_3;
       }
-      var tmp_39;
-      if (tmp11_restore == null) {
-        tmp_39 = null;
+      var tmp_35;
+      if (value_3 == null) {
+        tmp_35 = null;
       } else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
@@ -4950,39 +4897,39 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_40 = tmp12_restore.restore_uzeo8_k$(tmp11_restore);
-        var tmp_41 = tmp_40 == null ? null : tmp_40.multiplier_1;
-        var tmp_42;
-        var tmp_43;
-        var tmp_44 = tmp_41;
-        if ((tmp_44 == null ? null : new BaselineShift(tmp_44)) == null) {
-          tmp_43 = true;
+        var tmp_36 = saver_3.restore_fyjq85_k$(value_3);
+        var tmp_37 = tmp_36 == null ? null : tmp_36.multiplier_1;
+        var tmp_38;
+        var tmp_39;
+        var tmp_40 = tmp_37;
+        if ((tmp_40 == null ? null : new BaselineShift(tmp_40)) == null) {
+          tmp_39 = true;
         } else {
-          var tmp_45 = tmp_41;
-          tmp_43 = (tmp_45 == null ? null : new BaselineShift(tmp_45))instanceof BaselineShift;
+          var tmp_41 = tmp_37;
+          tmp_39 = (tmp_41 == null ? null : new BaselineShift(tmp_41))instanceof BaselineShift;
         }
-        if (tmp_43) {
-          tmp_42 = tmp_41;
+        if (tmp_39) {
+          tmp_38 = tmp_37;
         } else {
-          tmp_42 = THROW_CCE();
+          tmp_38 = THROW_CCE();
         }
-        tmp_39 = tmp_42;
+        tmp_35 = tmp_38;
       }
-      tmp$ret$29 = tmp_39;
+      tmp$ret$29 = tmp_35;
     }
-    var tmp_46 = tmp$ret$29;
+    var tmp_42 = tmp$ret$29;
     var tmp$ret$34;
     $l$block_4: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp13_restore = list.get_fkrdnv_k$(9);
-      var tmp14_restore = get_Saver_4(Companion_getInstance_48());
-      if (equals(tmp13_restore, false)) {
+      var value_4 = list.get_c1px32_k$(9);
+      var saver_4 = get_Saver_4(Companion_getInstance_48());
+      if (equals(value_4, false)) {
         tmp$ret$34 = null;
         break $l$block_4;
       }
-      var tmp_47;
-      if (tmp13_restore == null) {
-        tmp_47 = null;
+      var tmp_43;
+      if (value_4 == null) {
+        tmp_43 = null;
       } else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
@@ -4990,24 +4937,24 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_48 = tmp14_restore.restore_uzeo8_k$(tmp13_restore);
-        tmp_47 = (tmp_48 == null ? true : tmp_48 instanceof TextGeometricTransform) ? tmp_48 : THROW_CCE();
+        var tmp_44 = saver_4.restore_fyjq85_k$(value_4);
+        tmp_43 = (tmp_44 == null ? true : tmp_44 instanceof TextGeometricTransform) ? tmp_44 : THROW_CCE();
       }
-      tmp$ret$34 = tmp_47;
+      tmp$ret$34 = tmp_43;
     }
-    var tmp_49 = tmp$ret$34;
+    var tmp_45 = tmp$ret$34;
     var tmp$ret$39;
     $l$block_5: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp15_restore = list.get_fkrdnv_k$(10);
-      var tmp16_restore = get_Saver_5(Companion_getInstance_38());
-      if (equals(tmp15_restore, false)) {
+      var value_5 = list.get_c1px32_k$(10);
+      var saver_5 = get_Saver_5(Companion_getInstance_38());
+      if (equals(value_5, false)) {
         tmp$ret$39 = null;
         break $l$block_5;
       }
-      var tmp_50;
-      if (tmp15_restore == null) {
-        tmp_50 = null;
+      var tmp_46;
+      if (value_5 == null) {
+        tmp_46 = null;
       } else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
@@ -5015,24 +4962,24 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_51 = tmp16_restore.restore_uzeo8_k$(tmp15_restore);
-        tmp_50 = (tmp_51 == null ? true : tmp_51 instanceof LocaleList) ? tmp_51 : THROW_CCE();
+        var tmp_47 = saver_5.restore_fyjq85_k$(value_5);
+        tmp_46 = (tmp_47 == null ? true : tmp_47 instanceof LocaleList) ? tmp_47 : THROW_CCE();
       }
-      tmp$ret$39 = tmp_50;
+      tmp$ret$39 = tmp_46;
     }
-    var tmp_52 = tmp$ret$39;
+    var tmp_48 = tmp$ret$39;
     var tmp$ret$44;
     $l$block_6: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp17_restore = list.get_fkrdnv_k$(11);
-      var tmp18_restore = get_Saver_1(Companion_getInstance());
-      if (equals(tmp17_restore, false)) {
+      var value_6 = list.get_c1px32_k$(11);
+      var saver_6 = get_Saver_1(Companion_getInstance());
+      if (equals(value_6, false)) {
         tmp$ret$44 = null;
         break $l$block_6;
       }
-      var tmp_53;
-      if (tmp17_restore == null) {
-        tmp_53 = null;
+      var tmp_49;
+      if (value_6 == null) {
+        tmp_49 = null;
       } else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
@@ -5040,40 +4987,40 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_54 = tmp18_restore.restore_uzeo8_k$(tmp17_restore);
-        var tmp_55 = tmp_54 == null ? null : tmp_54.value_1;
-        var tmp_56;
-        var tmp_57;
-        var tmp_58 = tmp_55;
-        if ((tmp_58 == null ? null : new Color(tmp_58)) == null) {
-          tmp_57 = true;
+        var tmp_50 = saver_6.restore_fyjq85_k$(value_6);
+        var tmp_51 = tmp_50 == null ? null : tmp_50.value_1;
+        var tmp_52;
+        var tmp_53;
+        var tmp_54 = tmp_51;
+        if ((tmp_54 == null ? null : new Color(tmp_54)) == null) {
+          tmp_53 = true;
         } else {
-          var tmp_59 = tmp_55;
-          tmp_57 = (tmp_59 == null ? null : new Color(tmp_59))instanceof Color;
+          var tmp_55 = tmp_51;
+          tmp_53 = (tmp_55 == null ? null : new Color(tmp_55))instanceof Color;
         }
-        if (tmp_57) {
-          tmp_56 = tmp_55;
+        if (tmp_53) {
+          tmp_52 = tmp_51;
         } else {
-          tmp_56 = THROW_CCE();
+          tmp_52 = THROW_CCE();
         }
-        tmp_53 = tmp_56;
+        tmp_49 = tmp_52;
       }
-      tmp$ret$44 = tmp_53;
+      tmp$ret$44 = tmp_49;
     }
-    var tmp_60 = tmp$ret$44;
-    var tmp_61 = ensureNotNull(tmp_60 == null ? null : new Color(tmp_60)).value_1;
+    var tmp_56 = tmp$ret$44;
+    var tmp_57 = ensureNotNull(tmp_56 == null ? null : new Color(tmp_56));
     var tmp$ret$49;
     $l$block_7: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp19_restore = list.get_fkrdnv_k$(12);
-      var tmp20_restore = get_Saver_6(Companion_getInstance_45());
-      if (equals(tmp19_restore, false)) {
+      var value_7 = list.get_c1px32_k$(12);
+      var saver_7 = get_Saver_6(Companion_getInstance_45());
+      if (equals(value_7, false)) {
         tmp$ret$49 = null;
         break $l$block_7;
       }
-      var tmp_62;
-      if (tmp19_restore == null) {
-        tmp_62 = null;
+      var tmp_58;
+      if (value_7 == null) {
+        tmp_58 = null;
       } else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
@@ -5081,24 +5028,24 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_63 = tmp20_restore.restore_uzeo8_k$(tmp19_restore);
-        tmp_62 = (tmp_63 == null ? true : tmp_63 instanceof TextDecoration) ? tmp_63 : THROW_CCE();
+        var tmp_59 = saver_7.restore_fyjq85_k$(value_7);
+        tmp_58 = (tmp_59 == null ? true : tmp_59 instanceof TextDecoration) ? tmp_59 : THROW_CCE();
       }
-      tmp$ret$49 = tmp_62;
+      tmp$ret$49 = tmp_58;
     }
-    var tmp_64 = tmp$ret$49;
+    var tmp_60 = tmp$ret$49;
     var tmp$ret$54;
     $l$block_8: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp21_restore = list.get_fkrdnv_k$(13);
-      var tmp22_restore = get_Saver_7(Companion_getInstance_2());
-      if (equals(tmp21_restore, false)) {
+      var value_8 = list.get_c1px32_k$(13);
+      var saver_8 = get_Saver_7(Companion_getInstance_2());
+      if (equals(value_8, false)) {
         tmp$ret$54 = null;
         break $l$block_8;
       }
-      var tmp_65;
-      if (tmp21_restore == null) {
-        tmp_65 = null;
+      var tmp_61;
+      if (value_8 == null) {
+        tmp_61 = null;
       } else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
@@ -5106,12 +5053,12 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_66 = tmp22_restore.restore_uzeo8_k$(tmp21_restore);
-        tmp_65 = (tmp_66 == null ? true : tmp_66 instanceof Shadow) ? tmp_66 : THROW_CCE();
+        var tmp_62 = saver_8.restore_fyjq85_k$(value_8);
+        tmp_61 = (tmp_62 == null ? true : tmp_62 instanceof Shadow) ? tmp_62 : THROW_CCE();
       }
-      tmp$ret$54 = tmp_65;
+      tmp$ret$54 = tmp_61;
     }
-    return SpanStyle_init_$Create$_1(tmp_7, tmp_16, tmp_19, tmp_23, tmp_27, VOID, tmp_29, tmp_38, tmp_46, tmp_49, tmp_52, tmp_61, tmp_64, tmp$ret$54);
+    return SpanStyle_init_$Create$_1(tmp_7.value_1, tmp_16.packedValue_1, tmp_19, tmp_21, tmp_23, VOID, tmp_25, tmp_34.packedValue_1, tmp_42, tmp_45, tmp_48, tmp_57.value_1, tmp_60, tmp$ret$54);
   }
   function TextDecorationSaver$lambda($this$Saver, it) {
     _init_properties_Savers_kt__o6r3ry();
@@ -5128,11 +5075,11 @@
   function TextGeometricTransformSaver$lambda_0(it) {
     _init_properties_Savers_kt__o6r3ry();
     var list = isInterface(it, List) ? it : THROW_CCE();
-    return new TextGeometricTransform(list.get_fkrdnv_k$(0), list.get_fkrdnv_k$(1));
+    return new TextGeometricTransform(list.get_c1px32_k$(0), list.get_c1px32_k$(1));
   }
   function TextIndentSaver$lambda($this$Saver, it) {
     _init_properties_Savers_kt__o6r3ry();
-    return arrayListOf([save_0(new TextUnit(it.get_firstLine_axcdcr_k$()), get_Saver(Companion_getInstance_1()), $this$Saver), save_0(new TextUnit(it.get_restLine_6dnanl_k$()), get_Saver(Companion_getInstance_1()), $this$Saver)]);
+    return arrayListOf([save_0(new TextUnit(it.get_firstLine_vqcugt_k$()), get_Saver(Companion_getInstance_1()), $this$Saver), save_0(new TextUnit(it.get_restLine_r6nrrn_k$()), get_Saver(Companion_getInstance_1()), $this$Saver)]);
   }
   function TextIndentSaver$lambda_0(it) {
     _init_properties_Savers_kt__o6r3ry();
@@ -5140,14 +5087,14 @@
     var tmp$ret$0;
     $l$block: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp0_restore = list.get_fkrdnv_k$(0);
-      var tmp1_restore = get_Saver(Companion_getInstance_1());
-      if (equals(tmp0_restore, false)) {
+      var value = list.get_c1px32_k$(0);
+      var saver = get_Saver(Companion_getInstance_1());
+      if (equals(value, false)) {
         tmp$ret$0 = null;
         break $l$block;
       }
       var tmp;
-      if (tmp0_restore == null) {
+      if (value == null) {
         tmp = null;
       } else {
         // Inline function 'kotlin.let' call
@@ -5156,7 +5103,7 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_0 = tmp1_restore.restore_uzeo8_k$(tmp0_restore);
+        var tmp_0 = saver.restore_fyjq85_k$(value);
         var tmp_1 = tmp_0 == null ? null : tmp_0.packedValue_1;
         var tmp_2;
         var tmp_3;
@@ -5177,18 +5124,18 @@
       tmp$ret$0 = tmp;
     }
     var tmp_6 = tmp$ret$0;
-    var tmp_7 = ensureNotNull(tmp_6 == null ? null : new TextUnit(tmp_6)).packedValue_1;
+    var tmp_7 = ensureNotNull(tmp_6 == null ? null : new TextUnit(tmp_6));
     var tmp$ret$5;
     $l$block_0: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp2_restore = list.get_fkrdnv_k$(1);
-      var tmp3_restore = get_Saver(Companion_getInstance_1());
-      if (equals(tmp2_restore, false)) {
+      var value_0 = list.get_c1px32_k$(1);
+      var saver_0 = get_Saver(Companion_getInstance_1());
+      if (equals(value_0, false)) {
         tmp$ret$5 = null;
         break $l$block_0;
       }
       var tmp_8;
-      if (tmp2_restore == null) {
+      if (value_0 == null) {
         tmp_8 = null;
       } else {
         // Inline function 'kotlin.let' call
@@ -5197,7 +5144,7 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_9 = tmp3_restore.restore_uzeo8_k$(tmp2_restore);
+        var tmp_9 = saver_0.restore_fyjq85_k$(value_0);
         var tmp_10 = tmp_9 == null ? null : tmp_9.packedValue_1;
         var tmp_11;
         var tmp_12;
@@ -5218,7 +5165,7 @@
       tmp$ret$5 = tmp_8;
     }
     var tmp_15 = tmp$ret$5;
-    return new TextIndent_0(tmp_7, ensureNotNull(tmp_15 == null ? null : new TextUnit(tmp_15)).packedValue_1);
+    return new TextIndent_0(tmp_7.packedValue_1, ensureNotNull(tmp_15 == null ? null : new TextUnit(tmp_15)).packedValue_1);
   }
   function FontWeightSaver$lambda($this$Saver, it) {
     _init_properties_Savers_kt__o6r3ry();
@@ -5243,9 +5190,8 @@
   function TextRangeSaver$lambda_0(it) {
     _init_properties_Savers_kt__o6r3ry();
     var list = isInterface(it, List) ? it : THROW_CCE();
-    var tmp$ret$2;
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver = list.get_fkrdnv_k$(0);
+    var tmp0_safe_receiver = list.get_c1px32_k$(0);
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -5253,13 +5199,12 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      tmp = (tmp0_safe_receiver == null ? true : typeof tmp0_safe_receiver === 'number') ? tmp0_safe_receiver : THROW_CCE();
+      tmp = typeof tmp0_safe_receiver === 'number' ? tmp0_safe_receiver : THROW_CCE();
     }
-    tmp$ret$2 = tmp;
+    var tmp$ret$2 = tmp;
     var tmp_0 = ensureNotNull(tmp$ret$2);
-    var tmp$ret$5;
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver_0 = list.get_fkrdnv_k$(1);
+    var tmp0_safe_receiver_0 = list.get_c1px32_k$(1);
     var tmp_1;
     if (tmp0_safe_receiver_0 == null) {
       tmp_1 = null;
@@ -5267,14 +5212,14 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      tmp_1 = (tmp0_safe_receiver_0 == null ? true : typeof tmp0_safe_receiver_0 === 'number') ? tmp0_safe_receiver_0 : THROW_CCE();
+      tmp_1 = typeof tmp0_safe_receiver_0 === 'number' ? tmp0_safe_receiver_0 : THROW_CCE();
     }
-    tmp$ret$5 = tmp_1;
+    var tmp$ret$5 = tmp_1;
     return new TextRange(TextRange_0(tmp_0, ensureNotNull(tmp$ret$5)));
   }
   function ShadowSaver$lambda($this$Saver, it) {
     _init_properties_Savers_kt__o6r3ry();
-    return arrayListOf([save_0(new Color(it.get_color_v34vrz_k$()), get_Saver_1(Companion_getInstance()), $this$Saver), save_0(new Offset_0(it.get_offset_y9g6r4_k$()), get_Saver_8(Companion_getInstance_3()), $this$Saver), save(it.get_blurRadius_r8jo0y_k$())]);
+    return arrayListOf([save_0(new Color(it.get_color_lnp1vl_k$()), get_Saver_1(Companion_getInstance()), $this$Saver), save_0(new Offset_0(it.get_offset_slhc8e_k$()), get_Saver_8(Companion_getInstance_3()), $this$Saver), save(it.get_blurRadius_r8jo0y_k$())]);
   }
   function ShadowSaver$lambda_0(it) {
     _init_properties_Savers_kt__o6r3ry();
@@ -5282,14 +5227,14 @@
     var tmp$ret$0;
     $l$block: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp0_restore = list.get_fkrdnv_k$(0);
-      var tmp1_restore = get_Saver_1(Companion_getInstance());
-      if (equals(tmp0_restore, false)) {
+      var value = list.get_c1px32_k$(0);
+      var saver = get_Saver_1(Companion_getInstance());
+      if (equals(value, false)) {
         tmp$ret$0 = null;
         break $l$block;
       }
       var tmp;
-      if (tmp0_restore == null) {
+      if (value == null) {
         tmp = null;
       } else {
         // Inline function 'kotlin.let' call
@@ -5298,7 +5243,7 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_0 = tmp1_restore.restore_uzeo8_k$(tmp0_restore);
+        var tmp_0 = saver.restore_fyjq85_k$(value);
         var tmp_1 = tmp_0 == null ? null : tmp_0.value_1;
         var tmp_2;
         var tmp_3;
@@ -5319,18 +5264,18 @@
       tmp$ret$0 = tmp;
     }
     var tmp_6 = tmp$ret$0;
-    var tmp_7 = ensureNotNull(tmp_6 == null ? null : new Color(tmp_6)).value_1;
+    var tmp_7 = ensureNotNull(tmp_6 == null ? null : new Color(tmp_6));
     var tmp$ret$5;
     $l$block_0: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp2_restore = list.get_fkrdnv_k$(1);
-      var tmp3_restore = get_Saver_8(Companion_getInstance_3());
-      if (equals(tmp2_restore, false)) {
+      var value_0 = list.get_c1px32_k$(1);
+      var saver_0 = get_Saver_8(Companion_getInstance_3());
+      if (equals(value_0, false)) {
         tmp$ret$5 = null;
         break $l$block_0;
       }
       var tmp_8;
-      if (tmp2_restore == null) {
+      if (value_0 == null) {
         tmp_8 = null;
       } else {
         // Inline function 'kotlin.let' call
@@ -5339,7 +5284,7 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_9 = tmp3_restore.restore_uzeo8_k$(tmp2_restore);
+        var tmp_9 = saver_0.restore_fyjq85_k$(value_0);
         var tmp_10 = tmp_9 == null ? null : tmp_9.packedValue_1;
         var tmp_11;
         var tmp_12;
@@ -5360,10 +5305,9 @@
       tmp$ret$5 = tmp_8;
     }
     var tmp_15 = tmp$ret$5;
-    var tmp_16 = ensureNotNull(tmp_15 == null ? null : new Offset_0(tmp_15)).packedValue_1;
-    var tmp$ret$12;
+    var tmp_16 = ensureNotNull(tmp_15 == null ? null : new Offset_0(tmp_15));
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver = list.get_fkrdnv_k$(2);
+    var tmp0_safe_receiver = list.get_c1px32_k$(2);
     var tmp_17;
     if (tmp0_safe_receiver == null) {
       tmp_17 = null;
@@ -5371,10 +5315,10 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      tmp_17 = (tmp0_safe_receiver == null ? true : typeof tmp0_safe_receiver === 'number') ? tmp0_safe_receiver : THROW_CCE();
+      tmp_17 = typeof tmp0_safe_receiver === 'number' ? tmp0_safe_receiver : THROW_CCE();
     }
-    tmp$ret$12 = tmp_17;
-    return new Shadow(tmp_7, tmp_16, ensureNotNull(tmp$ret$12));
+    var tmp$ret$12 = tmp_17;
+    return new Shadow(tmp_7.value_1, tmp_16.packedValue_1, ensureNotNull(tmp$ret$12));
   }
   function ColorSaver$lambda($this$Saver, it) {
     _init_properties_Savers_kt__o6r3ry();
@@ -5391,9 +5335,8 @@
   function TextUnitSaver$lambda_0(it) {
     _init_properties_Savers_kt__o6r3ry();
     var list = isInterface(it, List) ? it : THROW_CCE();
-    var tmp$ret$2;
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver = list.get_fkrdnv_k$(0);
+    var tmp0_safe_receiver = list.get_c1px32_k$(0);
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -5401,12 +5344,12 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      tmp = (tmp0_safe_receiver == null ? true : typeof tmp0_safe_receiver === 'number') ? tmp0_safe_receiver : THROW_CCE();
+      tmp = typeof tmp0_safe_receiver === 'number' ? tmp0_safe_receiver : THROW_CCE();
     }
-    tmp$ret$2 = tmp;
+    var tmp$ret$2 = tmp;
     var tmp_0 = ensureNotNull(tmp$ret$2);
     // Inline function 'androidx.compose.ui.text.restore' call
-    var tmp0_safe_receiver_0 = list.get_fkrdnv_k$(1);
+    var tmp0_safe_receiver_0 = list.get_c1px32_k$(1);
     var tmp_1;
     if (tmp0_safe_receiver_0 == null) {
       tmp_1 = null;
@@ -5414,22 +5357,15 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-      var tmp_2;
-      if (tmp0_safe_receiver_0 == null ? true : tmp0_safe_receiver_0 instanceof TextUnitType) {
-        var tmp_3 = tmp0_safe_receiver_0;
-        tmp_2 = tmp_3 == null ? null : tmp_3.type_1;
-      } else {
-        tmp_2 = THROW_CCE();
-      }
-      tmp_1 = tmp_2;
+      tmp_1 = tmp0_safe_receiver_0 instanceof TextUnitType ? tmp0_safe_receiver_0.type_1 : THROW_CCE();
     }
-    var tmp_4 = tmp_1;
-    return new TextUnit(TextUnit_0(tmp_0, ensureNotNull(tmp_4 == null ? null : new TextUnitType(tmp_4)).type_1));
+    var tmp_2 = tmp_1;
+    return new TextUnit(TextUnit_0(tmp_0, ensureNotNull(tmp_2 == null ? null : new TextUnitType(tmp_2)).type_1));
   }
   function OffsetSaver$lambda($this$Saver, it) {
     _init_properties_Savers_kt__o6r3ry();
     var tmp;
-    if (equals(it, new Offset_0(Companion_getInstance_3().get_Unspecified_ooyrpa_k$()))) {
+    if (equals(it, new Offset_0(Companion_getInstance_3().get_Unspecified_gis8po_k$()))) {
       tmp = false;
     } else {
       tmp = arrayListOf([save(_Offset___get_x__impl__xvi35n(it.packedValue_1)), save(_Offset___get_y__impl__8bzhra(it.packedValue_1))]);
@@ -5440,12 +5376,11 @@
     _init_properties_Savers_kt__o6r3ry();
     var tmp;
     if (equals(it, false)) {
-      tmp = Companion_getInstance_3().get_Unspecified_ooyrpa_k$();
+      tmp = Companion_getInstance_3().get_Unspecified_gis8po_k$();
     } else {
       var list = isInterface(it, List) ? it : THROW_CCE();
-      var tmp$ret$2;
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp0_safe_receiver = list.get_fkrdnv_k$(0);
+      var tmp0_safe_receiver = list.get_c1px32_k$(0);
       var tmp_0;
       if (tmp0_safe_receiver == null) {
         tmp_0 = null;
@@ -5453,13 +5388,12 @@
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-        tmp_0 = (tmp0_safe_receiver == null ? true : typeof tmp0_safe_receiver === 'number') ? tmp0_safe_receiver : THROW_CCE();
+        tmp_0 = typeof tmp0_safe_receiver === 'number' ? tmp0_safe_receiver : THROW_CCE();
       }
-      tmp$ret$2 = tmp_0;
+      var tmp$ret$2 = tmp_0;
       var tmp_1 = ensureNotNull(tmp$ret$2);
-      var tmp$ret$5;
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp0_safe_receiver_0 = list.get_fkrdnv_k$(1);
+      var tmp0_safe_receiver_0 = list.get_c1px32_k$(1);
       var tmp_2;
       if (tmp0_safe_receiver_0 == null) {
         tmp_2 = null;
@@ -5467,9 +5401,9 @@
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>' call
-        tmp_2 = (tmp0_safe_receiver_0 == null ? true : typeof tmp0_safe_receiver_0 === 'number') ? tmp0_safe_receiver_0 : THROW_CCE();
+        tmp_2 = typeof tmp0_safe_receiver_0 === 'number' ? tmp0_safe_receiver_0 : THROW_CCE();
       }
-      tmp$ret$5 = tmp_2;
+      var tmp$ret$5 = tmp_2;
       tmp = Offset(tmp_1, ensureNotNull(tmp$ret$5));
     }
     var tmp_3 = tmp;
@@ -5478,23 +5412,23 @@
   function LocaleListSaver$lambda($this$Saver, it) {
     _init_properties_Savers_kt__o6r3ry();
     // Inline function 'androidx.compose.ui.util.fastMap' call
-    var tmp0_fastMap = it.get_localeList_1gj9gh_k$();
+    var this_0 = it.get_localeList_1gj9gh_k$();
     // Inline function 'kotlin.contracts.contract' call
-    var target = ArrayList_init_$Create$_0(tmp0_fastMap.get_size_woubt6_k$());
+    var target = ArrayList_init_$Create$_0(this_0.get_size_woubt6_k$());
     // Inline function 'androidx.compose.ui.util.fastForEach' call
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
-    var last = tmp0_fastMap.get_size_woubt6_k$() - 1 | 0;
+    var last = this_0.get_size_woubt6_k$() - 1 | 0;
     if (inductionVariable <= last)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = tmp0_fastMap.get_fkrdnv_k$(index);
+        var item = this_0.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.LocaleListSaver.<anonymous>.<anonymous>' call
-        var tmp0_plusAssign = save_0(item, get_Saver_9(Companion_getInstance_37()), $this$Saver);
-        target.add_1j60pz_k$(tmp0_plusAssign);
+        var element = save_0(item, get_Saver_9(Companion_getInstance_37()), $this$Saver);
+        target.add_utx5q5_k$(element);
       }
        while (inductionVariable <= last);
     return target;
@@ -5513,14 +5447,14 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = list.get_fkrdnv_k$(index);
+        var item = list.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.LocaleListSaver.<anonymous>.<anonymous>' call
         var tmp$ret$0;
         $l$block: {
           // Inline function 'androidx.compose.ui.text.restore' call
-          var tmp0_restore = get_Saver_9(Companion_getInstance_37());
+          var saver = get_Saver_9(Companion_getInstance_37());
           if (equals(item, false)) {
             tmp$ret$0 = null;
             break $l$block;
@@ -5535,13 +5469,13 @@
             // Inline function 'kotlin.with' call
             // Inline function 'kotlin.contracts.contract' call
             // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-            var tmp_0 = tmp0_restore.restore_uzeo8_k$(item);
+            var tmp_0 = saver.restore_fyjq85_k$(item);
             tmp = (tmp_0 == null ? true : tmp_0 instanceof Locale) ? tmp_0 : THROW_CCE();
           }
           tmp$ret$0 = tmp;
         }
-        var tmp0_plusAssign = ensureNotNull(tmp$ret$0);
-        target.add_1j60pz_k$(tmp0_plusAssign);
+        var element = ensureNotNull(tmp$ret$0);
+        target.add_utx5q5_k$(element);
       }
        while (inductionVariable <= last);
     return new LocaleList(target);
@@ -5639,66 +5573,66 @@
   }
   var DefaultColor;
   function SpanStyle_init_$Init$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, $this) {
-    color = color === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : color;
-    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : fontSize;
+    color = color === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : color;
+    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : fontSize;
     fontWeight = fontWeight === VOID ? null : fontWeight;
     fontStyle = fontStyle === VOID ? null : fontStyle;
     fontSynthesis = fontSynthesis === VOID ? null : fontSynthesis;
     fontFamily = fontFamily === VOID ? null : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? null : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : letterSpacing;
+    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : letterSpacing;
     baselineShift = baselineShift === VOID ? null : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? null : textGeometricTransform;
     localeList = localeList === VOID ? null : localeList;
-    background = background === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : background;
+    background = background === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : background;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     shadow = shadow === VOID ? null : shadow;
-    SpanStyle.call($this, Companion_getInstance_47().from_ofk88i_k$(color), fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, null);
+    SpanStyle.call($this, Companion_getInstance_47().from_ccukrb_k$(color), fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, null);
     return $this;
   }
   function SpanStyle_init_$Create$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow) {
     return SpanStyle_init_$Init$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, objectCreate(protoOf(SpanStyle)));
   }
   function SpanStyle_init_$Init$_0(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, $this) {
-    color = color === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : color;
-    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : fontSize;
+    color = color === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : color;
+    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : fontSize;
     fontWeight = fontWeight === VOID ? null : fontWeight;
     fontStyle = fontStyle === VOID ? null : fontStyle;
     fontSynthesis = fontSynthesis === VOID ? null : fontSynthesis;
     fontFamily = fontFamily === VOID ? null : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? null : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : letterSpacing;
+    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : letterSpacing;
     baselineShift = baselineShift === VOID ? null : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? null : textGeometricTransform;
     localeList = localeList === VOID ? null : localeList;
-    background = background === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : background;
+    background = background === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : background;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     shadow = shadow === VOID ? null : shadow;
     platformStyle = platformStyle === VOID ? null : platformStyle;
-    SpanStyle.call($this, Companion_getInstance_47().from_ofk88i_k$(color), fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle);
+    SpanStyle.call($this, Companion_getInstance_47().from_ccukrb_k$(color), fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle);
     return $this;
   }
   function SpanStyle_init_$Create$_0(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle) {
     return SpanStyle_init_$Init$_0(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, objectCreate(protoOf(SpanStyle)));
   }
   function SpanStyle_init_$Init$_1(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle, $this) {
-    color = color === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : color;
-    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : fontSize;
+    color = color === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : color;
+    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : fontSize;
     fontWeight = fontWeight === VOID ? null : fontWeight;
     fontStyle = fontStyle === VOID ? null : fontStyle;
     fontSynthesis = fontSynthesis === VOID ? null : fontSynthesis;
     fontFamily = fontFamily === VOID ? null : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? null : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : letterSpacing;
+    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : letterSpacing;
     baselineShift = baselineShift === VOID ? null : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? null : textGeometricTransform;
     localeList = localeList === VOID ? null : localeList;
-    background = background === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : background;
+    background = background === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : background;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     shadow = shadow === VOID ? null : shadow;
     platformStyle = platformStyle === VOID ? null : platformStyle;
     drawStyle = drawStyle === VOID ? null : drawStyle;
-    SpanStyle.call($this, Companion_getInstance_47().from_ofk88i_k$(color), fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle);
+    SpanStyle.call($this, Companion_getInstance_47().from_ccukrb_k$(color), fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle);
     return $this;
   }
   function SpanStyle_init_$Create$_1(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle) {
@@ -5706,22 +5640,22 @@
   }
   function SpanStyle_init_$Init$_2(brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle, $this) {
     alpha = alpha === VOID ? FloatCompanionObject_getInstance().get_NaN_18jnv2_k$() : alpha;
-    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : fontSize;
+    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : fontSize;
     fontWeight = fontWeight === VOID ? null : fontWeight;
     fontStyle = fontStyle === VOID ? null : fontStyle;
     fontSynthesis = fontSynthesis === VOID ? null : fontSynthesis;
     fontFamily = fontFamily === VOID ? null : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? null : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : letterSpacing;
+    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : letterSpacing;
     baselineShift = baselineShift === VOID ? null : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? null : textGeometricTransform;
     localeList = localeList === VOID ? null : localeList;
-    background = background === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : background;
+    background = background === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : background;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     shadow = shadow === VOID ? null : shadow;
     platformStyle = platformStyle === VOID ? null : platformStyle;
     drawStyle = drawStyle === VOID ? null : drawStyle;
-    SpanStyle.call($this, Companion_getInstance_47().from_4hvn90_k$(brush, alpha), fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle);
+    SpanStyle.call($this, Companion_getInstance_47().from_6wp01d_k$(brush, alpha), fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle);
     return $this;
   }
   function SpanStyle_init_$Create$_2(brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle) {
@@ -5731,17 +5665,17 @@
     return 0;
   }
   function SpanStyle(textForegroundStyle, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle) {
-    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : fontSize;
+    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : fontSize;
     fontWeight = fontWeight === VOID ? null : fontWeight;
     fontStyle = fontStyle === VOID ? null : fontStyle;
     fontSynthesis = fontSynthesis === VOID ? null : fontSynthesis;
     fontFamily = fontFamily === VOID ? null : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? null : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : letterSpacing;
+    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : letterSpacing;
     baselineShift = baselineShift === VOID ? null : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? null : textGeometricTransform;
     localeList = localeList === VOID ? null : localeList;
-    background = background === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : background;
+    background = background === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : background;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     shadow = shadow === VOID ? null : shadow;
     platformStyle = platformStyle === VOID ? null : platformStyle;
@@ -5767,16 +5701,16 @@
   protoOf(SpanStyle).get_textForegroundStyle_1frzu0_k$ = function () {
     return this.textForegroundStyle_1;
   };
-  protoOf(SpanStyle).get_fontSize_61k213_k$ = function () {
+  protoOf(SpanStyle).get_fontSize_ergf2z_k$ = function () {
     return this.fontSize_1;
   };
   protoOf(SpanStyle).get_fontWeight_wbif2o_k$ = function () {
     return this.fontWeight_1;
   };
-  protoOf(SpanStyle).get_fontStyle_fze7ml_k$ = function () {
+  protoOf(SpanStyle).get_fontStyle_hzv4zg_k$ = function () {
     return this.fontStyle_1;
   };
-  protoOf(SpanStyle).get_fontSynthesis_t08ei1_k$ = function () {
+  protoOf(SpanStyle).get_fontSynthesis_h5auiy_k$ = function () {
     return this.fontSynthesis_1;
   };
   protoOf(SpanStyle).get_fontFamily_ulphcs_k$ = function () {
@@ -5785,10 +5719,10 @@
   protoOf(SpanStyle).get_fontFeatureSettings_a47533_k$ = function () {
     return this.fontFeatureSettings_1;
   };
-  protoOf(SpanStyle).get_letterSpacing_u0tnf8_k$ = function () {
+  protoOf(SpanStyle).get_letterSpacing_k79xfu_k$ = function () {
     return this.letterSpacing_1;
   };
-  protoOf(SpanStyle).get_baselineShift_yg9i0p_k$ = function () {
+  protoOf(SpanStyle).get_baselineShift_99zyho_k$ = function () {
     return this.baselineShift_1;
   };
   protoOf(SpanStyle).get_textGeometricTransform_tdfmin_k$ = function () {
@@ -5797,7 +5731,7 @@
   protoOf(SpanStyle).get_localeList_1gj9gh_k$ = function () {
     return this.localeList_1;
   };
-  protoOf(SpanStyle).get_background_ubksc_k$ = function () {
+  protoOf(SpanStyle).get_background_8l4942_k$ = function () {
     return this.background_1;
   };
   protoOf(SpanStyle).get_textDecoration_itgjwm_k$ = function () {
@@ -5812,8 +5746,8 @@
   protoOf(SpanStyle).get_drawStyle_arbehw_k$ = function () {
     return this.drawStyle_1;
   };
-  protoOf(SpanStyle).get_color_v34vrz_k$ = function () {
-    return this.textForegroundStyle_1.get_color_v34vrz_k$();
+  protoOf(SpanStyle).get_color_lnp1vl_k$ = function () {
+    return this.textForegroundStyle_1.get_color_lnp1vl_k$();
   };
   protoOf(SpanStyle).get_brush_ipcjyp_k$ = function () {
     return this.textForegroundStyle_1.get_brush_ipcjyp_k$();
@@ -5821,29 +5755,29 @@
   protoOf(SpanStyle).get_alpha_iooth1_k$ = function () {
     return this.textForegroundStyle_1.get_alpha_iooth1_k$();
   };
-  protoOf(SpanStyle).merge_m0r35z_k$ = function (other) {
+  protoOf(SpanStyle).merge_tmjkxk_k$ = function (other) {
     if (other == null)
       return this;
-    return fastMerge_0(this, other.textForegroundStyle_1.get_color_v34vrz_k$(), other.textForegroundStyle_1.get_brush_ipcjyp_k$(), other.textForegroundStyle_1.get_alpha_iooth1_k$(), other.fontSize_1, other.fontWeight_1, other.fontStyle_1, other.fontSynthesis_1, other.fontFamily_1, other.fontFeatureSettings_1, other.letterSpacing_1, other.baselineShift_1, other.textGeometricTransform_1, other.localeList_1, other.background_1, other.textDecoration_1, other.shadow_1, other.platformStyle_1, other.drawStyle_1);
+    return fastMerge_0(this, other.textForegroundStyle_1.get_color_lnp1vl_k$(), other.textForegroundStyle_1.get_brush_ipcjyp_k$(), other.textForegroundStyle_1.get_alpha_iooth1_k$(), other.fontSize_1, other.fontWeight_1, other.fontStyle_1, other.fontSynthesis_1, other.fontFamily_1, other.fontFeatureSettings_1, other.letterSpacing_1, other.baselineShift_1, other.textGeometricTransform_1, other.localeList_1, other.background_1, other.textDecoration_1, other.shadow_1, other.platformStyle_1, other.drawStyle_1);
   };
-  protoOf(SpanStyle).merge$default_50zcq2_k$ = function (other, $super) {
+  protoOf(SpanStyle).merge$default_qc94do_k$ = function (other, $super) {
     other = other === VOID ? null : other;
-    return $super === VOID ? this.merge_m0r35z_k$(other) : $super.merge_m0r35z_k$.call(this, other);
+    return $super === VOID ? this.merge_tmjkxk_k$(other) : $super.merge_tmjkxk_k$.call(this, other);
   };
-  protoOf(SpanStyle).plus_mcrows_k$ = function (other) {
-    return this.merge_m0r35z_k$(other);
+  protoOf(SpanStyle).plus_mf6lxd_k$ = function (other) {
+    return this.merge_tmjkxk_k$(other);
   };
-  protoOf(SpanStyle).copy_mos7vk_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow) {
+  protoOf(SpanStyle).copy_dpnny7_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow) {
     var tmp;
-    if (equals(color, this.get_color_v34vrz_k$())) {
+    if (equals(color, this.get_color_lnp1vl_k$())) {
       tmp = this.textForegroundStyle_1;
     } else {
-      tmp = Companion_getInstance_47().from_ofk88i_k$(color);
+      tmp = Companion_getInstance_47().from_ccukrb_k$(color);
     }
     return new SpanStyle(tmp, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, this.platformStyle_1, this.drawStyle_1);
   };
-  protoOf(SpanStyle).copy$default_dvt6d2_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, $super) {
-    color = color === VOID ? this.get_color_v34vrz_k$() : color;
+  protoOf(SpanStyle).copy$default_irpwk_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, $super) {
+    color = color === VOID ? this.get_color_lnp1vl_k$() : color;
     fontSize = fontSize === VOID ? this.fontSize_1 : fontSize;
     fontWeight = fontWeight === VOID ? this.fontWeight_1 : fontWeight;
     fontStyle = fontStyle === VOID ? this.fontStyle_1 : fontStyle;
@@ -5859,32 +5793,29 @@
     shadow = shadow === VOID ? this.shadow_1 : shadow;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_mos7vk_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow);
+      tmp = this.copy_dpnny7_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow);
     } else {
-      var tmp_0 = $super.copy_mos7vk_k$;
-      var tmp_1 = new Color(color);
-      var tmp_2 = new TextUnit(fontSize);
-      var tmp_3 = fontStyle;
-      var tmp_4 = tmp_3 == null ? null : new FontStyle(tmp_3);
-      var tmp_5 = fontSynthesis;
-      var tmp_6 = tmp_5 == null ? null : new FontSynthesis(tmp_5);
-      var tmp_7 = new TextUnit(letterSpacing);
-      var tmp_8 = baselineShift;
-      tmp = tmp_0.call(this, tmp_1, tmp_2, fontWeight, tmp_4, tmp_6, fontFamily, fontFeatureSettings, tmp_7, tmp_8 == null ? null : new BaselineShift(tmp_8), textGeometricTransform, localeList, new Color(background), textDecoration, shadow);
+      var tmp_0 = $super.copy_dpnny7_k$;
+      var tmp_1 = fontStyle;
+      var tmp_2 = tmp_1 == null ? null : new FontStyle(tmp_1);
+      var tmp_3 = fontSynthesis;
+      var tmp_4 = tmp_3 == null ? null : new FontSynthesis(tmp_3);
+      var tmp_5 = baselineShift;
+      tmp = tmp_0.call(this, new Color(color), new TextUnit(fontSize), fontWeight, tmp_2, tmp_4, fontFamily, fontFeatureSettings, new TextUnit(letterSpacing), tmp_5 == null ? null : new BaselineShift(tmp_5), textGeometricTransform, localeList, new Color(background), textDecoration, shadow);
     }
     return tmp;
   };
-  protoOf(SpanStyle).copy_wai6a4_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle) {
+  protoOf(SpanStyle).copy_y2sgus_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle) {
     var tmp;
-    if (equals(color, this.get_color_v34vrz_k$())) {
+    if (equals(color, this.get_color_lnp1vl_k$())) {
       tmp = this.textForegroundStyle_1;
     } else {
-      tmp = Companion_getInstance_47().from_ofk88i_k$(color);
+      tmp = Companion_getInstance_47().from_ccukrb_k$(color);
     }
     return new SpanStyle(tmp, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle);
   };
-  protoOf(SpanStyle).copy$default_dwpbwd_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, $super) {
-    color = color === VOID ? this.get_color_v34vrz_k$() : color;
+  protoOf(SpanStyle).copy$default_xj0ne6_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, $super) {
+    color = color === VOID ? this.get_color_lnp1vl_k$() : color;
     fontSize = fontSize === VOID ? this.fontSize_1 : fontSize;
     fontWeight = fontWeight === VOID ? this.fontWeight_1 : fontWeight;
     fontStyle = fontStyle === VOID ? this.fontStyle_1 : fontStyle;
@@ -5901,32 +5832,29 @@
     platformStyle = platformStyle === VOID ? this.platformStyle_1 : platformStyle;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_wai6a4_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle);
+      tmp = this.copy_y2sgus_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle);
     } else {
-      var tmp_0 = $super.copy_wai6a4_k$;
-      var tmp_1 = new Color(color);
-      var tmp_2 = new TextUnit(fontSize);
-      var tmp_3 = fontStyle;
-      var tmp_4 = tmp_3 == null ? null : new FontStyle(tmp_3);
-      var tmp_5 = fontSynthesis;
-      var tmp_6 = tmp_5 == null ? null : new FontSynthesis(tmp_5);
-      var tmp_7 = new TextUnit(letterSpacing);
-      var tmp_8 = baselineShift;
-      tmp = tmp_0.call(this, tmp_1, tmp_2, fontWeight, tmp_4, tmp_6, fontFamily, fontFeatureSettings, tmp_7, tmp_8 == null ? null : new BaselineShift(tmp_8), textGeometricTransform, localeList, new Color(background), textDecoration, shadow, platformStyle);
+      var tmp_0 = $super.copy_y2sgus_k$;
+      var tmp_1 = fontStyle;
+      var tmp_2 = tmp_1 == null ? null : new FontStyle(tmp_1);
+      var tmp_3 = fontSynthesis;
+      var tmp_4 = tmp_3 == null ? null : new FontSynthesis(tmp_3);
+      var tmp_5 = baselineShift;
+      tmp = tmp_0.call(this, new Color(color), new TextUnit(fontSize), fontWeight, tmp_2, tmp_4, fontFamily, fontFeatureSettings, new TextUnit(letterSpacing), tmp_5 == null ? null : new BaselineShift(tmp_5), textGeometricTransform, localeList, new Color(background), textDecoration, shadow, platformStyle);
     }
     return tmp;
   };
-  protoOf(SpanStyle).copy_8yi74h_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle) {
+  protoOf(SpanStyle).copy_9s287b_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle) {
     var tmp;
-    if (equals(color, this.get_color_v34vrz_k$())) {
+    if (equals(color, this.get_color_lnp1vl_k$())) {
       tmp = this.textForegroundStyle_1;
     } else {
-      tmp = Companion_getInstance_47().from_ofk88i_k$(color);
+      tmp = Companion_getInstance_47().from_ccukrb_k$(color);
     }
     return new SpanStyle(tmp, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle);
   };
-  protoOf(SpanStyle).copy$default_r9acpp_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle, $super) {
-    color = color === VOID ? this.get_color_v34vrz_k$() : color;
+  protoOf(SpanStyle).copy$default_yo6fbs_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle, $super) {
+    color = color === VOID ? this.get_color_lnp1vl_k$() : color;
     fontSize = fontSize === VOID ? this.fontSize_1 : fontSize;
     fontWeight = fontWeight === VOID ? this.fontWeight_1 : fontWeight;
     fontStyle = fontStyle === VOID ? this.fontStyle_1 : fontStyle;
@@ -5944,25 +5872,22 @@
     drawStyle = drawStyle === VOID ? this.drawStyle_1 : drawStyle;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_8yi74h_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle);
+      tmp = this.copy_9s287b_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle);
     } else {
-      var tmp_0 = $super.copy_8yi74h_k$;
-      var tmp_1 = new Color(color);
-      var tmp_2 = new TextUnit(fontSize);
-      var tmp_3 = fontStyle;
-      var tmp_4 = tmp_3 == null ? null : new FontStyle(tmp_3);
-      var tmp_5 = fontSynthesis;
-      var tmp_6 = tmp_5 == null ? null : new FontSynthesis(tmp_5);
-      var tmp_7 = new TextUnit(letterSpacing);
-      var tmp_8 = baselineShift;
-      tmp = tmp_0.call(this, tmp_1, tmp_2, fontWeight, tmp_4, tmp_6, fontFamily, fontFeatureSettings, tmp_7, tmp_8 == null ? null : new BaselineShift(tmp_8), textGeometricTransform, localeList, new Color(background), textDecoration, shadow, platformStyle, drawStyle);
+      var tmp_0 = $super.copy_9s287b_k$;
+      var tmp_1 = fontStyle;
+      var tmp_2 = tmp_1 == null ? null : new FontStyle(tmp_1);
+      var tmp_3 = fontSynthesis;
+      var tmp_4 = tmp_3 == null ? null : new FontSynthesis(tmp_3);
+      var tmp_5 = baselineShift;
+      tmp = tmp_0.call(this, new Color(color), new TextUnit(fontSize), fontWeight, tmp_2, tmp_4, fontFamily, fontFeatureSettings, new TextUnit(letterSpacing), tmp_5 == null ? null : new BaselineShift(tmp_5), textGeometricTransform, localeList, new Color(background), textDecoration, shadow, platformStyle, drawStyle);
     }
     return tmp;
   };
-  protoOf(SpanStyle).copy_jat8on_k$ = function (brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle) {
-    return new SpanStyle(Companion_getInstance_47().from_4hvn90_k$(brush, alpha), fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle);
+  protoOf(SpanStyle).copy_u3yo19_k$ = function (brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle) {
+    return new SpanStyle(Companion_getInstance_47().from_6wp01d_k$(brush, alpha), fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle);
   };
-  protoOf(SpanStyle).copy$default_w4pi2l_k$ = function (brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle, $super) {
+  protoOf(SpanStyle).copy$default_ypa2de_k$ = function (brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle, $super) {
     alpha = alpha === VOID ? this.get_alpha_iooth1_k$() : alpha;
     fontSize = fontSize === VOID ? this.fontSize_1 : fontSize;
     fontWeight = fontWeight === VOID ? this.fontWeight_1 : fontWeight;
@@ -5981,17 +5906,15 @@
     drawStyle = drawStyle === VOID ? this.drawStyle_1 : drawStyle;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_jat8on_k$(brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle);
+      tmp = this.copy_u3yo19_k$(brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle, drawStyle);
     } else {
-      var tmp_0 = $super.copy_jat8on_k$;
-      var tmp_1 = new TextUnit(fontSize);
-      var tmp_2 = fontStyle;
-      var tmp_3 = tmp_2 == null ? null : new FontStyle(tmp_2);
-      var tmp_4 = fontSynthesis;
-      var tmp_5 = tmp_4 == null ? null : new FontSynthesis(tmp_4);
-      var tmp_6 = new TextUnit(letterSpacing);
-      var tmp_7 = baselineShift;
-      tmp = tmp_0.call(this, brush, alpha, tmp_1, fontWeight, tmp_3, tmp_5, fontFamily, fontFeatureSettings, tmp_6, tmp_7 == null ? null : new BaselineShift(tmp_7), textGeometricTransform, localeList, new Color(background), textDecoration, shadow, platformStyle, drawStyle);
+      var tmp_0 = $super.copy_u3yo19_k$;
+      var tmp_1 = fontStyle;
+      var tmp_2 = tmp_1 == null ? null : new FontStyle(tmp_1);
+      var tmp_3 = fontSynthesis;
+      var tmp_4 = tmp_3 == null ? null : new FontSynthesis(tmp_3);
+      var tmp_5 = baselineShift;
+      tmp = tmp_0.call(this, brush, alpha, new TextUnit(fontSize), fontWeight, tmp_2, tmp_4, fontFamily, fontFeatureSettings, new TextUnit(letterSpacing), tmp_5 == null ? null : new BaselineShift(tmp_5), textGeometricTransform, localeList, new Color(background), textDecoration, shadow, platformStyle, drawStyle);
     }
     return tmp;
   };
@@ -6000,9 +5923,9 @@
       return true;
     if (!(other instanceof SpanStyle))
       return false;
-    return this.hasSameLayoutAffectingAttributes_h43d5o_k$(other) ? this.hasSameNonLayoutAttributes_tyvwk0_k$(other) : false;
+    return this.hasSameLayoutAffectingAttributes_n0ls75_k$(other) ? this.hasSameNonLayoutAttributes_mkn2vf_k$(other) : false;
   };
-  protoOf(SpanStyle).hasSameLayoutAffectingAttributes_h43d5o_k$ = function (other) {
+  protoOf(SpanStyle).hasSameLayoutAffectingAttributes_n0ls75_k$ = function (other) {
     if (this === other)
       return true;
     if (!equals(this.fontSize_1, other.fontSize_1))
@@ -6040,7 +5963,7 @@
       return false;
     return true;
   };
-  protoOf(SpanStyle).hasSameNonLayoutAttributes_tyvwk0_k$ = function (other) {
+  protoOf(SpanStyle).hasSameNonLayoutAttributes_mkn2vf_k$ = function (other) {
     if (!equals(this.textForegroundStyle_1, other.textForegroundStyle_1))
       return false;
     if (!equals(this.textDecoration_1, other.textDecoration_1))
@@ -6052,7 +5975,7 @@
     return true;
   };
   protoOf(SpanStyle).hashCode = function () {
-    var result = Color__hashCode_impl_vjyivj(this.get_color_v34vrz_k$());
+    var result = Color__hashCode_impl_vjyivj(this.get_color_lnp1vl_k$());
     var tmp = imul(31, result);
     // Inline function 'kotlin.hashCode' call
     var tmp0_safe_receiver = this.get_brush_ipcjyp_k$();
@@ -6197,7 +6120,7 @@
     return result;
   };
   protoOf(SpanStyle).toString = function () {
-    var tmp = 'SpanStyle(' + ('color=' + new Color(this.get_color_v34vrz_k$()) + ', ') + ('brush=' + this.get_brush_ipcjyp_k$() + ', ') + ('alpha=' + this.get_alpha_iooth1_k$() + ', ') + ('fontSize=' + new TextUnit(this.fontSize_1) + ', ') + ('fontWeight=' + this.fontWeight_1 + ', ');
+    var tmp = 'SpanStyle(' + ('color=' + new Color(this.get_color_lnp1vl_k$()) + ', ') + ('brush=' + this.get_brush_ipcjyp_k$() + ', ') + ('alpha=' + this.get_alpha_iooth1_k$() + ', ') + ('fontSize=' + new TextUnit(this.fontSize_1) + ', ') + ('fontWeight=' + this.fontWeight_1 + ', ');
     var tmp_0 = this.fontStyle_1;
     var tmp_1 = tmp + ('fontStyle=' + (tmp_0 == null ? null : new FontStyle(tmp_0)) + ', ');
     var tmp_2 = this.fontSynthesis_1;
@@ -6238,12 +6161,12 @@
       var tmp_18;
       if (brush == null) {
         // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-        tmp_18 = !equals(_Color___get_value__impl__1pls5m(color), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_9ntdt9_k$()));
+        tmp_18 = !equals(_Color___get_value__impl__1pls5m(color), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_j397pn_k$()));
       } else {
         tmp_18 = false;
       }
       if (tmp_18) {
-        tmp_17 = !equals(color, _this__u8e3s4.textForegroundStyle_1.get_color_v34vrz_k$());
+        tmp_17 = !equals(color, _this__u8e3s4.textForegroundStyle_1.get_color_lnp1vl_k$());
       } else {
         tmp_17 = false;
       }
@@ -6351,7 +6274,7 @@
     } else {
       var tmp_35;
       // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-      if (!equals(_Color___get_value__impl__1pls5m(background), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_9ntdt9_k$()))) {
+      if (!equals(_Color___get_value__impl__1pls5m(background), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_j397pn_k$()))) {
         tmp_35 = !equals(background, _this__u8e3s4.background_1);
       } else {
         tmp_35 = false;
@@ -6379,12 +6302,12 @@
     }
     var tmp_36;
     if (!(brush == null)) {
-      tmp_36 = Companion_getInstance_47().from_4hvn90_k$(brush, alpha);
+      tmp_36 = Companion_getInstance_47().from_6wp01d_k$(brush, alpha);
     } else {
-      tmp_36 = Companion_getInstance_47().from_ofk88i_k$(color);
+      tmp_36 = Companion_getInstance_47().from_ccukrb_k$(color);
     }
     var otherTextForegroundStyle = tmp_36;
-    var tmp11_textForegroundStyle = _this__u8e3s4.textForegroundStyle_1.merge_o4w5dp_k$(otherTextForegroundStyle);
+    var tmp11_textForegroundStyle = _this__u8e3s4.textForegroundStyle_1.merge_b7txoj_k$(otherTextForegroundStyle);
     var tmp12_fontFamily = fontFamily == null ? _this__u8e3s4.fontFamily_1 : fontFamily;
     var tmp13_fontSize = !get_isUnspecified(fontSize) ? fontSize : _this__u8e3s4.fontSize_1;
     var tmp14_fontWeight = fontWeight == null ? _this__u8e3s4.fontWeight_1 : fontWeight;
@@ -6425,7 +6348,7 @@
     // Inline function 'androidx.compose.ui.graphics.takeOrElse' call
     var tmp_44;
     // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-    if (!equals(_Color___get_value__impl__1pls5m(background), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_9ntdt9_k$()))) {
+    if (!equals(_Color___get_value__impl__1pls5m(background), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_j397pn_k$()))) {
       tmp_44 = background;
     } else {
       // Inline function 'androidx.compose.ui.text.fastMerge.<anonymous>' call
@@ -6444,7 +6367,7 @@
       return other;
     if (other == null)
       return _this__u8e3s4.platformStyle_1;
-    return _this__u8e3s4.platformStyle_1.merge_o4jtak_k$(other);
+    return _this__u8e3s4.platformStyle_1.merge_ap0tcl_k$(other);
   }
   function lerp_5(start, stop, fraction) {
     _init_properties_SpanStyle_kt__ixg4k5();
@@ -6520,7 +6443,7 @@
   }
   function resolveSpanStyleDefaults(style) {
     _init_properties_SpanStyle_kt__ixg4k5();
-    var tmp = style.textForegroundStyle_1.takeOrElse_9aen5f_k$(resolveSpanStyleDefaults$lambda);
+    var tmp = style.textForegroundStyle_1.takeOrElse_vujaw_k$(resolveSpanStyleDefaults$lambda);
     var tmp_0 = get_isUnspecified(style.fontSize_1) ? get_DefaultFontSize() : style.fontSize_1;
     var tmp0_elvis_lhs = style.fontWeight_1;
     var tmp_1 = tmp0_elvis_lhs == null ? Companion_getInstance_27().get_Normal_22avww_k$() : tmp0_elvis_lhs;
@@ -6528,7 +6451,7 @@
     var tmp_2;
     var tmp_3 = tmp1_elvis_lhs;
     if ((tmp_3 == null ? null : new FontStyle(tmp_3)) == null) {
-      tmp_2 = Companion_getInstance_25().get_Normal_b4ik9_k$();
+      tmp_2 = Companion_getInstance_25().get_Normal_tevh6u_k$();
     } else {
       tmp_2 = tmp1_elvis_lhs;
     }
@@ -6537,7 +6460,7 @@
     var tmp_5;
     var tmp_6 = tmp2_elvis_lhs;
     if ((tmp_6 == null ? null : new FontSynthesis(tmp_6)) == null) {
-      tmp_5 = Companion_getInstance_26().get_All_wqntwc_k$();
+      tmp_5 = Companion_getInstance_26().get_All_bqi34r_k$();
     } else {
       tmp_5 = tmp2_elvis_lhs;
     }
@@ -6557,7 +6480,7 @@
     var tmp_12;
     var tmp_13 = tmp5_elvis_lhs;
     if ((tmp_13 == null ? null : new BaselineShift(tmp_13)) == null) {
-      tmp_12 = Companion_getInstance_39().get_None_burezd_k$();
+      tmp_12 = Companion_getInstance_39().get_None_9kuyzu_k$();
     } else {
       tmp_12 = tmp5_elvis_lhs;
     }
@@ -6567,11 +6490,11 @@
     var tmp7_elvis_lhs = style.localeList_1;
     var tmp_16 = tmp7_elvis_lhs == null ? Companion_getInstance_38().get_current_jwi6j4_k$() : tmp7_elvis_lhs;
     // Inline function 'androidx.compose.ui.graphics.takeOrElse' call
-    var tmp0_takeOrElse = style.background_1;
+    var this_0 = style.background_1;
     var tmp_17;
     // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-    if (!equals(_Color___get_value__impl__1pls5m(tmp0_takeOrElse), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_9ntdt9_k$()))) {
-      tmp_17 = tmp0_takeOrElse;
+    if (!equals(_Color___get_value__impl__1pls5m(this_0), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_j397pn_k$()))) {
+      tmp_17 = this_0;
     } else {
       // Inline function 'androidx.compose.ui.text.resolveSpanStyleDefaults.<anonymous>' call
       tmp_17 = get_DefaultBackgroundColor();
@@ -6586,7 +6509,7 @@
   }
   function resolveSpanStyleDefaults$lambda() {
     _init_properties_SpanStyle_kt__ixg4k5();
-    return Companion_getInstance_47().from_ofk88i_k$(get_DefaultColor());
+    return Companion_getInstance_47().from_ccukrb_k$(get_DefaultColor());
   }
   var properties_initialized_SpanStyle_kt_cqbdlj;
   function _init_properties_SpanStyle_kt__ixg4k5() {
@@ -6594,8 +6517,8 @@
       properties_initialized_SpanStyle_kt_cqbdlj = true;
       DefaultFontSize = get_sp(14);
       DefaultLetterSpacing = get_sp(0);
-      DefaultBackgroundColor = Companion_getInstance().get_Transparent_8zprqq_k$();
-      DefaultColor = Companion_getInstance().get_Black_wh3yn9_k$();
+      DefaultBackgroundColor = Companion_getInstance().get_Transparent_if5ln4_k$();
+      DefaultColor = Companion_getInstance().get_Black_t4k9fh_k$();
     }
   }
   function get_stringDelegate() {
@@ -6632,11 +6555,11 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = _this__u8e3s4.get_fkrdnv_k$(index);
+        var item = _this__u8e3s4.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
         if (predicate(item)) {
           // Inline function 'kotlin.collections.plusAssign' call
-          target.add_1j60pz_k$(item);
+          target.add_utx5q5_k$(item);
         }
       }
        while (inductionVariable <= last);
@@ -6653,7 +6576,7 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = _this__u8e3s4.get_fkrdnv_k$(index);
+        var item = _this__u8e3s4.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.fastFold.<anonymous>' call
         accumulator = operation(accumulator, item);
       }
@@ -6676,7 +6599,7 @@
     limit = limit === VOID ? -1 : limit;
     truncated = truncated === VOID ? '...' : truncated;
     transform = transform === VOID ? null : transform;
-    buffer.append_oz4qxs_k$(prefix);
+    buffer.append_jgojdo_k$(prefix);
     var count = 0;
     var inductionVariable = 0;
     var last = _this__u8e3s4.get_size_woubt6_k$() - 1 | 0;
@@ -6684,10 +6607,10 @@
       $l$loop: do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var element = _this__u8e3s4.get_fkrdnv_k$(index);
+        var element = _this__u8e3s4.get_c1px32_k$(index);
         count = count + 1 | 0;
         if (count > 1) {
-          buffer.append_oz4qxs_k$(separator);
+          buffer.append_jgojdo_k$(separator);
         }
         if (limit < 0 ? true : count <= limit) {
           appendElement(buffer, element, transform);
@@ -6696,22 +6619,22 @@
       }
        while (inductionVariable <= last);
     if (limit >= 0 ? count > limit : false) {
-      buffer.append_oz4qxs_k$(truncated);
+      buffer.append_jgojdo_k$(truncated);
     }
-    buffer.append_oz4qxs_k$(postfix);
+    buffer.append_jgojdo_k$(postfix);
     return buffer;
   }
   function appendElement(_this__u8e3s4, element, transform) {
     if (!(transform == null)) {
-      _this__u8e3s4.append_oz4qxs_k$(transform(element));
+      _this__u8e3s4.append_jgojdo_k$(transform(element));
     } else {
       if (element == null ? true : isCharSequence(element)) {
-        _this__u8e3s4.append_oz4qxs_k$(element);
+        _this__u8e3s4.append_jgojdo_k$(element);
       } else {
         if (element instanceof Char) {
-          _this__u8e3s4.append_t8oh9e_k$(element.value_1);
+          _this__u8e3s4.append_am5a4z_k$(element.value_1);
         } else {
-          _this__u8e3s4.append_oz4qxs_k$(toString_0(element));
+          _this__u8e3s4.append_jgojdo_k$(toString_0(element));
         }
       }
     }
@@ -6727,7 +6650,7 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = _this__u8e3s4.get_fkrdnv_k$(index);
+        var item = _this__u8e3s4.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.fastFlatMap.<anonymous>' call
         var list = transform(item);
         addAll(target, list);
@@ -6747,12 +6670,12 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = _this__u8e3s4.get_fkrdnv_k$(index);
+        var item = _this__u8e3s4.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.fastDistinctBy.<anonymous>' call
         var key = selector(item);
-        if (set.add_1j60pz_k$(key)) {
+        if (set.add_utx5q5_k$(key)) {
           // Inline function 'kotlin.collections.plusAssign' call
-          target.add_1j60pz_k$(item);
+          target.add_utx5q5_k$(item);
         }
       }
        while (inductionVariable <= last);
@@ -6776,7 +6699,7 @@
   protoOf(TextLayoutResult).get_multiParagraph_xte3we_k$ = function () {
     return this.multiParagraph_1;
   };
-  protoOf(TextLayoutResult).get_size_yscczt_k$ = function () {
+  protoOf(TextLayoutResult).get_size_kd98kr_k$ = function () {
     return this.size_1;
   };
   protoOf(TextLayoutResult).get_firstBaseline_s5430_k$ = function () {
@@ -6800,68 +6723,68 @@
   protoOf(TextLayoutResult).get_lineCount_lmaazy_k$ = function () {
     return this.multiParagraph_1.get_lineCount_lmaazy_k$();
   };
-  protoOf(TextLayoutResult).getLineStart_504snr_k$ = function (lineIndex) {
-    return this.multiParagraph_1.getLineStart_504snr_k$(lineIndex);
+  protoOf(TextLayoutResult).getLineStart_clke9s_k$ = function (lineIndex) {
+    return this.multiParagraph_1.getLineStart_clke9s_k$(lineIndex);
   };
-  protoOf(TextLayoutResult).getLineEnd_7kqxuy_k$ = function (lineIndex, visibleEnd) {
-    return this.multiParagraph_1.getLineEnd_7kqxuy_k$(lineIndex, visibleEnd);
+  protoOf(TextLayoutResult).getLineEnd_o6geci_k$ = function (lineIndex, visibleEnd) {
+    return this.multiParagraph_1.getLineEnd_o6geci_k$(lineIndex, visibleEnd);
   };
-  protoOf(TextLayoutResult).getLineEnd$default_d4a36y_k$ = function (lineIndex, visibleEnd, $super) {
+  protoOf(TextLayoutResult).getLineEnd$default_8vuhh5_k$ = function (lineIndex, visibleEnd, $super) {
     visibleEnd = visibleEnd === VOID ? false : visibleEnd;
-    return $super === VOID ? this.getLineEnd_7kqxuy_k$(lineIndex, visibleEnd) : $super.getLineEnd_7kqxuy_k$.call(this, lineIndex, visibleEnd);
+    return $super === VOID ? this.getLineEnd_o6geci_k$(lineIndex, visibleEnd) : $super.getLineEnd_o6geci_k$.call(this, lineIndex, visibleEnd);
   };
-  protoOf(TextLayoutResult).isLineEllipsized_r1ol1o_k$ = function (lineIndex) {
-    return this.multiParagraph_1.isLineEllipsized_r1ol1o_k$(lineIndex);
+  protoOf(TextLayoutResult).isLineEllipsized_1fausj_k$ = function (lineIndex) {
+    return this.multiParagraph_1.isLineEllipsized_1fausj_k$(lineIndex);
   };
-  protoOf(TextLayoutResult).getLineTop_8a2w7q_k$ = function (lineIndex) {
-    return this.multiParagraph_1.getLineTop_8a2w7q_k$(lineIndex);
+  protoOf(TextLayoutResult).getLineTop_q0a6r_k$ = function (lineIndex) {
+    return this.multiParagraph_1.getLineTop_q0a6r_k$(lineIndex);
   };
-  protoOf(TextLayoutResult).getLineBottom_spjtf0_k$ = function (lineIndex) {
-    return this.multiParagraph_1.getLineBottom_spjtf0_k$(lineIndex);
+  protoOf(TextLayoutResult).getLineBottom_yhu6bn_k$ = function (lineIndex) {
+    return this.multiParagraph_1.getLineBottom_yhu6bn_k$(lineIndex);
   };
-  protoOf(TextLayoutResult).getLineLeft_w1obtc_k$ = function (lineIndex) {
-    return this.multiParagraph_1.getLineLeft_w1obtc_k$(lineIndex);
+  protoOf(TextLayoutResult).getLineLeft_799m07_k$ = function (lineIndex) {
+    return this.multiParagraph_1.getLineLeft_799m07_k$(lineIndex);
   };
-  protoOf(TextLayoutResult).getLineRight_bo0e7j_k$ = function (lineIndex) {
-    return this.multiParagraph_1.getLineRight_bo0e7j_k$(lineIndex);
+  protoOf(TextLayoutResult).getLineRight_j8rtqe_k$ = function (lineIndex) {
+    return this.multiParagraph_1.getLineRight_j8rtqe_k$(lineIndex);
   };
-  protoOf(TextLayoutResult).getLineForOffset_9a3vwv_k$ = function (offset) {
-    return this.multiParagraph_1.getLineForOffset_9a3vwv_k$(offset);
+  protoOf(TextLayoutResult).getLineForOffset_jakwx2_k$ = function (offset) {
+    return this.multiParagraph_1.getLineForOffset_jakwx2_k$(offset);
   };
-  protoOf(TextLayoutResult).getLineForVerticalPosition_c1p2r4_k$ = function (vertical) {
-    return this.multiParagraph_1.getLineForVerticalPosition_c1p2r4_k$(vertical);
+  protoOf(TextLayoutResult).getLineForVerticalPosition_lon9k6_k$ = function (vertical) {
+    return this.multiParagraph_1.getLineForVerticalPosition_lon9k6_k$(vertical);
   };
-  protoOf(TextLayoutResult).getHorizontalPosition_b8vvic_k$ = function (offset, usePrimaryDirection) {
-    return this.multiParagraph_1.getHorizontalPosition_b8vvic_k$(offset, usePrimaryDirection);
+  protoOf(TextLayoutResult).getHorizontalPosition_9mx7bk_k$ = function (offset, usePrimaryDirection) {
+    return this.multiParagraph_1.getHorizontalPosition_9mx7bk_k$(offset, usePrimaryDirection);
   };
-  protoOf(TextLayoutResult).getParagraphDirection_x8sft2_k$ = function (offset) {
-    return this.multiParagraph_1.getParagraphDirection_x8sft2_k$(offset);
+  protoOf(TextLayoutResult).getParagraphDirection_qweb73_k$ = function (offset) {
+    return this.multiParagraph_1.getParagraphDirection_qweb73_k$(offset);
   };
-  protoOf(TextLayoutResult).getBidiRunDirection_dqdnqj_k$ = function (offset) {
-    return this.multiParagraph_1.getBidiRunDirection_dqdnqj_k$(offset);
+  protoOf(TextLayoutResult).getBidiRunDirection_c67d8i_k$ = function (offset) {
+    return this.multiParagraph_1.getBidiRunDirection_c67d8i_k$(offset);
   };
-  protoOf(TextLayoutResult).getOffsetForPosition_f04xcw_k$ = function (position) {
-    return this.multiParagraph_1.getOffsetForPosition_f04xcw_k$(position);
+  protoOf(TextLayoutResult).getOffsetForPosition_12t0zj_k$ = function (position) {
+    return this.multiParagraph_1.getOffsetForPosition_12t0zj_k$(position);
   };
-  protoOf(TextLayoutResult).getBoundingBox_urudbk_k$ = function (offset) {
-    return this.multiParagraph_1.getBoundingBox_urudbk_k$(offset);
+  protoOf(TextLayoutResult).getBoundingBox_xfho9l_k$ = function (offset) {
+    return this.multiParagraph_1.getBoundingBox_xfho9l_k$(offset);
   };
-  protoOf(TextLayoutResult).getWordBoundary_qx0177_k$ = function (offset) {
-    return this.multiParagraph_1.getWordBoundary_qx0177_k$(offset);
+  protoOf(TextLayoutResult).getWordBoundary_s8pru_k$ = function (offset) {
+    return this.multiParagraph_1.getWordBoundary_s8pru_k$(offset);
   };
-  protoOf(TextLayoutResult).getCursorRect_x5c8fl_k$ = function (offset) {
-    return this.multiParagraph_1.getCursorRect_x5c8fl_k$(offset);
+  protoOf(TextLayoutResult).getCursorRect_gdluko_k$ = function (offset) {
+    return this.multiParagraph_1.getCursorRect_gdluko_k$(offset);
   };
-  protoOf(TextLayoutResult).getPathForRange_i163f3_k$ = function (start, end) {
-    return this.multiParagraph_1.getPathForRange_i163f3_k$(start, end);
+  protoOf(TextLayoutResult).getPathForRange_bge8b5_k$ = function (start, end) {
+    return this.multiParagraph_1.getPathForRange_bge8b5_k$(start, end);
   };
-  protoOf(TextLayoutResult).copy_wbg4xj_k$ = function (layoutInput, size) {
+  protoOf(TextLayoutResult).copy_masfhl_k$ = function (layoutInput, size) {
     return new TextLayoutResult(layoutInput, this.multiParagraph_1, size);
   };
-  protoOf(TextLayoutResult).copy$default_w6iasm_k$ = function (layoutInput, size, $super) {
+  protoOf(TextLayoutResult).copy$default_7jjbm1_k$ = function (layoutInput, size, $super) {
     layoutInput = layoutInput === VOID ? this.layoutInput_1 : layoutInput;
     size = size === VOID ? this.size_1 : size;
-    return $super === VOID ? this.copy_wbg4xj_k$(layoutInput, size) : $super.copy_wbg4xj_k$.call(this, layoutInput, new IntSize(size));
+    return $super === VOID ? this.copy_masfhl_k$(layoutInput, size) : $super.copy_masfhl_k$.call(this, layoutInput, new IntSize(size));
   };
   protoOf(TextLayoutResult).equals = function (other) {
     if (this === other)
@@ -6946,7 +6869,7 @@
   protoOf(TextLayoutInput).get_softWrap_a000bn_k$ = function () {
     return this.softWrap_1;
   };
-  protoOf(TextLayoutInput).get_overflow_rjdkkj_k$ = function () {
+  protoOf(TextLayoutInput).get_overflow_30wlhc_k$ = function () {
     return this.overflow_1;
   };
   protoOf(TextLayoutInput).get_density_qy0267_k$ = function () {
@@ -6958,17 +6881,17 @@
   protoOf(TextLayoutInput).get_fontFamilyResolver_9o0fjy_k$ = function () {
     return this.fontFamilyResolver_1;
   };
-  protoOf(TextLayoutInput).get_constraints_khg0u2_k$ = function () {
+  protoOf(TextLayoutInput).get_constraints_y0yfdk_k$ = function () {
     return this.constraints_1;
   };
   protoOf(TextLayoutInput).get_resourceLoader_tankju_k$ = function () {
     var tmp0_elvis_lhs = this._developerSuppliedResourceLoader_1;
-    return tmp0_elvis_lhs == null ? Companion_getInstance_17().from_6vr3se_k$(this.fontFamilyResolver_1) : tmp0_elvis_lhs;
+    return tmp0_elvis_lhs == null ? Companion_getInstance_17().from_fsblxv_k$(this.fontFamilyResolver_1) : tmp0_elvis_lhs;
   };
-  protoOf(TextLayoutInput).copy_w1u5jh_k$ = function (text, style, placeholders, maxLines, softWrap, overflow, density, layoutDirection, resourceLoader, constraints) {
+  protoOf(TextLayoutInput).copy_7iv9j7_k$ = function (text, style, placeholders, maxLines, softWrap, overflow, density, layoutDirection, resourceLoader, constraints) {
     return new TextLayoutInput(text, style, placeholders, maxLines, softWrap, overflow, density, layoutDirection, resourceLoader, this.fontFamilyResolver_1, constraints);
   };
-  protoOf(TextLayoutInput).copy$default_xx0pmz_k$ = function (text, style, placeholders, maxLines, softWrap, overflow, density, layoutDirection, resourceLoader, constraints, $super) {
+  protoOf(TextLayoutInput).copy$default_s0hxbi_k$ = function (text, style, placeholders, maxLines, softWrap, overflow, density, layoutDirection, resourceLoader, constraints, $super) {
     text = text === VOID ? this.text_1 : text;
     style = style === VOID ? this.style_1 : style;
     placeholders = placeholders === VOID ? this.placeholders_1 : placeholders;
@@ -6979,7 +6902,7 @@
     layoutDirection = layoutDirection === VOID ? this.layoutDirection_1 : layoutDirection;
     resourceLoader = resourceLoader === VOID ? this.get_resourceLoader_tankju_k$() : resourceLoader;
     constraints = constraints === VOID ? this.constraints_1 : constraints;
-    return $super === VOID ? this.copy_w1u5jh_k$(text, style, placeholders, maxLines, softWrap, overflow, density, layoutDirection, resourceLoader, constraints) : $super.copy_w1u5jh_k$.call(this, text, style, placeholders, maxLines, softWrap, new TextOverflow(overflow), density, layoutDirection, resourceLoader, new Constraints_0(constraints));
+    return $super === VOID ? this.copy_7iv9j7_k$(text, style, placeholders, maxLines, softWrap, overflow, density, layoutDirection, resourceLoader, constraints) : $super.copy_7iv9j7_k$.call(this, text, style, placeholders, maxLines, softWrap, new TextOverflow(overflow), density, layoutDirection, resourceLoader, new Constraints_0(constraints));
   };
   protoOf(TextLayoutInput).equals = function (other) {
     if (this === other)
@@ -7013,7 +6936,7 @@
     result = imul(31, result) + this.style_1.hashCode() | 0;
     result = imul(31, result) + hashCode(this.placeholders_1) | 0;
     result = imul(31, result) + this.maxLines_1 | 0;
-    result = imul(31, result) + (this.softWrap_1 | 0) | 0;
+    result = imul(31, result) + getBooleanHashCode(this.softWrap_1) | 0;
     result = imul(31, result) + TextOverflow__hashCode_impl_kqdwgt(this.overflow_1) | 0;
     result = imul(31, result) + hashCode(this.density_1) | 0;
     result = imul(31, result) + this.layoutDirection_1.hashCode() | 0;
@@ -7034,7 +6957,7 @@
     tmp.cache_1 = LinkedHashMap_init_$Create$();
     this.lock_1 = createSynchronizedObject();
   }
-  protoOf(Companion_0).set_cache_yzktuo_k$ = function (_set____db54di) {
+  protoOf(Companion_0).set_cache_1rkaye_k$ = function (_set____db54di) {
     this.cache_1 = _set____db54di;
   };
   protoOf(Companion_0).get_cache_ipl461_k$ = function () {
@@ -7043,11 +6966,11 @@
   protoOf(Companion_0).get_lock_wopyt0_k$ = function () {
     return this.lock_1;
   };
-  protoOf(Companion_0).from_6vr3se_k$ = function (fontFamilyResolver) {
+  protoOf(Companion_0).from_fsblxv_k$ = function (fontFamilyResolver) {
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.lock_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    var tmp0_safe_receiver = Companion_getInstance_17().cache_1.get_1mhr4y_k$(fontFamilyResolver);
+    this.lock_1;
+    var tmp0_safe_receiver = Companion_getInstance_17().cache_1.get_wei43m_k$(fontFamilyResolver);
     if (tmp0_safe_receiver == null)
       null;
     else {
@@ -7057,7 +6980,7 @@
     }
     var deprecatedBridgeFontResourceLoader = new DeprecatedBridgeFontResourceLoader(fontFamilyResolver);
     // Inline function 'kotlin.collections.set' call
-    Companion_getInstance_17().cache_1.put_3mhbri_k$(fontFamilyResolver, deprecatedBridgeFontResourceLoader);
+    Companion_getInstance_17().cache_1.put_4fpzoq_k$(fontFamilyResolver, deprecatedBridgeFontResourceLoader);
     return deprecatedBridgeFontResourceLoader;
   };
   var Companion_instance_0;
@@ -7070,8 +6993,8 @@
     Companion_getInstance_17();
     this.fontFamilyResolver_1 = fontFamilyResolver;
   }
-  protoOf(DeprecatedBridgeFontResourceLoader).load_oj7ae9_k$ = function (font) {
-    return this.fontFamilyResolver_1.resolve$default_ealfa6_k$(toFontFamily(font), font.get_weight_lbhkzl_k$(), font.get_style_e2e1yp_k$()).get_value_j01efc_k$();
+  protoOf(DeprecatedBridgeFontResourceLoader).load_1hfgn9_k$ = function (font) {
+    return this.fontFamilyResolver_1.resolve$default_51n6kl_k$(toFontFamily(font), font.get_weight_lbhkzl_k$(), font.get_style_fnlxse_k$()).get_value_j01efc_k$();
   };
   function get_DefaultCacheSize() {
     return DefaultCacheSize;
@@ -7084,14 +7007,14 @@
     TextPainter_instance = this;
     this.$stable_1 = 0;
   }
-  protoOf(TextPainter).paint_ct2xtf_k$ = function (canvas, textLayoutResult) {
-    var needClipping = textLayoutResult.get_hasVisualOverflow_ocbqq5_k$() ? !(textLayoutResult.get_layoutInput_o7gjah_k$().get_overflow_rjdkkj_k$() === Companion_getInstance_50().get_Visible_2hbc1x_k$()) : false;
+  protoOf(TextPainter).paint_kguo5w_k$ = function (canvas, textLayoutResult) {
+    var needClipping = textLayoutResult.get_hasVisualOverflow_ocbqq5_k$() ? !(textLayoutResult.get_layoutInput_o7gjah_k$().get_overflow_30wlhc_k$() === Companion_getInstance_50().get_Visible_m15n1a_k$()) : false;
     if (needClipping) {
-      var width = _IntSize___get_width__impl__d9yl4o(textLayoutResult.get_size_yscczt_k$());
-      var height = _IntSize___get_height__impl__prv63b(textLayoutResult.get_size_yscczt_k$());
-      var bounds = Rect(Companion_getInstance_3().get_Zero_sctq3f_k$(), Size(width, height));
-      canvas.save_erlm4_k$();
-      canvas.clipRect$default_7dppdt_k$(bounds);
+      var width = _IntSize___get_width__impl__d9yl4o(textLayoutResult.get_size_kd98kr_k$());
+      var height = _IntSize___get_height__impl__prv63b(textLayoutResult.get_size_kd98kr_k$());
+      var bounds = Rect(Companion_getInstance_3().get_Zero_k6n73t_k$(), Size(width, height));
+      canvas.save_fbe7h_k$();
+      canvas.clipRect$default_a4bw85_k$(bounds);
     }
     var style = textLayoutResult.get_layoutInput_o7gjah_k$().get_style_iyqetk_k$().get_spanStyle_2b836q_k$();
     var tmp0_elvis_lhs = style.get_textDecoration_itgjwm_k$();
@@ -7110,20 +7033,20 @@
           tmp = 1.0;
         }
         var alpha = tmp;
-        textLayoutResult.get_multiParagraph_xte3we_k$().paint$default_z9vili_k$(canvas, brush, alpha, shadow, textDecoration, drawStyle);
+        textLayoutResult.get_multiParagraph_xte3we_k$().paint$default_3gfbfa_k$(canvas, brush, alpha, shadow, textDecoration, drawStyle);
       } else {
         var tmp_0;
         if (!(style.get_textForegroundStyle_1frzu0_k$() === Unspecified_getInstance())) {
-          tmp_0 = style.get_textForegroundStyle_1frzu0_k$().get_color_v34vrz_k$();
+          tmp_0 = style.get_textForegroundStyle_1frzu0_k$().get_color_lnp1vl_k$();
         } else {
-          tmp_0 = Companion_getInstance().get_Black_wh3yn9_k$();
+          tmp_0 = Companion_getInstance().get_Black_t4k9fh_k$();
         }
         var color = tmp_0;
-        textLayoutResult.get_multiParagraph_xte3we_k$().paint$default_pichjd_k$(canvas, color, shadow, textDecoration, drawStyle);
+        textLayoutResult.get_multiParagraph_xte3we_k$().paint$default_rvqyft_k$(canvas, color, shadow, textDecoration, drawStyle);
       }
     }finally {
       if (needClipping) {
-        canvas.restore_a2id37_k$();
+        canvas.restore_a1ykhu_k$();
       }
     }
   };
@@ -7141,11 +7064,11 @@
   }
   function _TextRange___get_start__impl__ww4t90($this) {
     // Inline function 'androidx.compose.ui.util.unpackInt1' call
-    return _get_packedValue__aj623s($this).shr_wjue3g_k$(32).toInt_1tsl84_k$();
+    return _get_packedValue__aj623s($this).shr_9fl3wl_k$(32).toInt_1tsl84_k$();
   }
   function _TextRange___get_end__impl__gcdxpp($this) {
     // Inline function 'androidx.compose.ui.util.unpackInt2' call
-    return _get_packedValue__aj623s($this).and_jhajnj_k$(new Long(-1, 0)).toInt_1tsl84_k$();
+    return _get_packedValue__aj623s($this).and_4spn93_k$(new Long(-1, 0)).toInt_1tsl84_k$();
   }
   function _TextRange___get_min__impl__uu95c4($this) {
     return _TextRange___get_start__impl__ww4t90($this) > _TextRange___get_end__impl__gcdxpp($this) ? _TextRange___get_end__impl__gcdxpp($this) : _TextRange___get_start__impl__ww4t90($this);
@@ -7179,7 +7102,7 @@
     Companion_instance_1 = this;
     this.Zero_1 = TextRange_1(0);
   }
-  protoOf(Companion_1).get_Zero_e8si87_k$ = function () {
+  protoOf(Companion_1).get_Zero_8je9ih_k$ = function () {
     return this.Zero_1;
   };
   var Companion_instance_1;
@@ -7234,7 +7157,7 @@
       throw IllegalArgumentException_init_$Create$(toString(message_0));
     }
     // Inline function 'androidx.compose.ui.util.packInts' call
-    return toLong(start).shl_po5ip6_k$(32).or_s401rn_k$(toLong(end).and_jhajnj_k$(new Long(-1, 0)));
+    return toLong(start).shl_bg8if3_k$(32).or_v7fvkl_k$(toLong(end).and_4spn93_k$(new Long(-1, 0)));
   }
   function coerceIn_1(_this__u8e3s4, minimumValue, maximumValue) {
     var newStart = coerceIn(_TextRange___get_start__impl__ww4t90(_this__u8e3s4), minimumValue, maximumValue);
@@ -7252,23 +7175,23 @@
     return TextStyle_init_$Init$(spanStyle, paragraphStyle, objectCreate(protoOf(TextStyle)));
   }
   function TextStyle_init_$Init$_0(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, $this) {
-    color = color === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : color;
-    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : fontSize;
+    color = color === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : color;
+    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : fontSize;
     fontWeight = fontWeight === VOID ? null : fontWeight;
     fontStyle = fontStyle === VOID ? null : fontStyle;
     fontSynthesis = fontSynthesis === VOID ? null : fontSynthesis;
     fontFamily = fontFamily === VOID ? null : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? null : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : letterSpacing;
+    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : letterSpacing;
     baselineShift = baselineShift === VOID ? null : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? null : textGeometricTransform;
     localeList = localeList === VOID ? null : localeList;
-    background = background === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : background;
+    background = background === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : background;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     shadow = shadow === VOID ? null : shadow;
     textAlign = textAlign === VOID ? null : textAlign;
     textDirection = textDirection === VOID ? null : textDirection;
-    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : lineHeight;
+    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : lineHeight;
     textIndent = textIndent === VOID ? null : textIndent;
     TextStyle.call($this, SpanStyle_init_$Create$_1(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, null, null), new ParagraphStyle_0(textAlign, textDirection, lineHeight, textIndent, null, null, null, null, null), null);
     return $this;
@@ -7277,23 +7200,23 @@
     return TextStyle_init_$Init$_0(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, objectCreate(protoOf(TextStyle)));
   }
   function TextStyle_init_$Init$_1(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, $this) {
-    color = color === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : color;
-    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : fontSize;
+    color = color === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : color;
+    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : fontSize;
     fontWeight = fontWeight === VOID ? null : fontWeight;
     fontStyle = fontStyle === VOID ? null : fontStyle;
     fontSynthesis = fontSynthesis === VOID ? null : fontSynthesis;
     fontFamily = fontFamily === VOID ? null : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? null : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : letterSpacing;
+    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : letterSpacing;
     baselineShift = baselineShift === VOID ? null : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? null : textGeometricTransform;
     localeList = localeList === VOID ? null : localeList;
-    background = background === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : background;
+    background = background === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : background;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     shadow = shadow === VOID ? null : shadow;
     textAlign = textAlign === VOID ? null : textAlign;
     textDirection = textDirection === VOID ? null : textDirection;
-    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : lineHeight;
+    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : lineHeight;
     textIndent = textIndent === VOID ? null : textIndent;
     platformStyle = platformStyle === VOID ? null : platformStyle;
     lineHeightStyle = lineHeightStyle === VOID ? null : lineHeightStyle;
@@ -7305,23 +7228,23 @@
     return TextStyle_init_$Init$_1(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, objectCreate(protoOf(TextStyle)));
   }
   function TextStyle_init_$Init$_2(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, $this) {
-    color = color === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : color;
-    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : fontSize;
+    color = color === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : color;
+    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : fontSize;
     fontWeight = fontWeight === VOID ? null : fontWeight;
     fontStyle = fontStyle === VOID ? null : fontStyle;
     fontSynthesis = fontSynthesis === VOID ? null : fontSynthesis;
     fontFamily = fontFamily === VOID ? null : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? null : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : letterSpacing;
+    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : letterSpacing;
     baselineShift = baselineShift === VOID ? null : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? null : textGeometricTransform;
     localeList = localeList === VOID ? null : localeList;
-    background = background === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : background;
+    background = background === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : background;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     shadow = shadow === VOID ? null : shadow;
     textAlign = textAlign === VOID ? null : textAlign;
     textDirection = textDirection === VOID ? null : textDirection;
-    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : lineHeight;
+    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : lineHeight;
     textIndent = textIndent === VOID ? null : textIndent;
     platformStyle = platformStyle === VOID ? null : platformStyle;
     lineHeightStyle = lineHeightStyle === VOID ? null : lineHeightStyle;
@@ -7335,24 +7258,24 @@
     return TextStyle_init_$Init$_2(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, objectCreate(protoOf(TextStyle)));
   }
   function TextStyle_init_$Init$_3(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion, $this) {
-    color = color === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : color;
-    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : fontSize;
+    color = color === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : color;
+    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : fontSize;
     fontWeight = fontWeight === VOID ? null : fontWeight;
     fontStyle = fontStyle === VOID ? null : fontStyle;
     fontSynthesis = fontSynthesis === VOID ? null : fontSynthesis;
     fontFamily = fontFamily === VOID ? null : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? null : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : letterSpacing;
+    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : letterSpacing;
     baselineShift = baselineShift === VOID ? null : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? null : textGeometricTransform;
     localeList = localeList === VOID ? null : localeList;
-    background = background === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : background;
+    background = background === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : background;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     shadow = shadow === VOID ? null : shadow;
     drawStyle = drawStyle === VOID ? null : drawStyle;
     textAlign = textAlign === VOID ? null : textAlign;
     textDirection = textDirection === VOID ? null : textDirection;
-    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : lineHeight;
+    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : lineHeight;
     textIndent = textIndent === VOID ? null : textIndent;
     platformStyle = platformStyle === VOID ? null : platformStyle;
     lineHeightStyle = lineHeightStyle === VOID ? null : lineHeightStyle;
@@ -7368,23 +7291,23 @@
   }
   function TextStyle_init_$Init$_4(brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion, $this) {
     alpha = alpha === VOID ? FloatCompanionObject_getInstance().get_NaN_18jnv2_k$() : alpha;
-    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : fontSize;
+    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : fontSize;
     fontWeight = fontWeight === VOID ? null : fontWeight;
     fontStyle = fontStyle === VOID ? null : fontStyle;
     fontSynthesis = fontSynthesis === VOID ? null : fontSynthesis;
     fontFamily = fontFamily === VOID ? null : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? null : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : letterSpacing;
+    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : letterSpacing;
     baselineShift = baselineShift === VOID ? null : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? null : textGeometricTransform;
     localeList = localeList === VOID ? null : localeList;
-    background = background === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : background;
+    background = background === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : background;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     shadow = shadow === VOID ? null : shadow;
     drawStyle = drawStyle === VOID ? null : drawStyle;
     textAlign = textAlign === VOID ? null : textAlign;
     textDirection = textDirection === VOID ? null : textDirection;
-    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : lineHeight;
+    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : lineHeight;
     textIndent = textIndent === VOID ? null : textIndent;
     platformStyle = platformStyle === VOID ? null : platformStyle;
     lineHeightStyle = lineHeightStyle === VOID ? null : lineHeightStyle;
@@ -7437,16 +7360,16 @@
   protoOf(TextStyle).toParagraphStyle_zfuegy_k$ = function () {
     return this.paragraphStyle_1;
   };
-  protoOf(TextStyle).merge_axh15w_k$ = function (other) {
+  protoOf(TextStyle).merge_grd1yz_k$ = function (other) {
     if (other == null ? true : equals(other, Companion_getInstance_19().Default_1))
       return this;
-    return TextStyle_init_$Create$_0(this.toSpanStyle_l454tw_k$().merge_m0r35z_k$(other.toSpanStyle_l454tw_k$()), this.toParagraphStyle_zfuegy_k$().merge_y8afnf_k$(other.toParagraphStyle_zfuegy_k$()));
+    return TextStyle_init_$Create$_0(this.toSpanStyle_l454tw_k$().merge_tmjkxk_k$(other.toSpanStyle_l454tw_k$()), this.toParagraphStyle_zfuegy_k$().merge_desd12_k$(other.toParagraphStyle_zfuegy_k$()));
   };
-  protoOf(TextStyle).merge$default_clnabu_k$ = function (other, $super) {
+  protoOf(TextStyle).merge$default_dwu3q_k$ = function (other, $super) {
     other = other === VOID ? null : other;
-    return $super === VOID ? this.merge_axh15w_k$(other) : $super.merge_axh15w_k$.call(this, other);
+    return $super === VOID ? this.merge_grd1yz_k$(other) : $super.merge_grd1yz_k$.call(this, other);
   };
-  protoOf(TextStyle).merge_72glhv_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, lineHeightStyle, lineBreak, hyphens, platformStyle, textMotion) {
+  protoOf(TextStyle).merge_wd0kho_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, lineHeightStyle, lineBreak, hyphens, platformStyle, textMotion) {
     var tmp = FloatCompanionObject_getInstance().get_NaN_18jnv2_k$();
     var mergedSpanStyle = fastMerge_0(this.spanStyle_1, color, null, tmp, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle == null ? null : platformStyle.get_spanStyle_2b836q_k$(), drawStyle);
     var mergedParagraphStyle = fastMerge(this.paragraphStyle_1, textAlign, textDirection, lineHeight, textIndent, platformStyle == null ? null : platformStyle.get_paragraphStyle_27utpo_k$(), lineHeightStyle, lineBreak, hyphens, textMotion);
@@ -7454,25 +7377,25 @@
       return this;
     return TextStyle_init_$Create$_0(mergedSpanStyle, mergedParagraphStyle);
   };
-  protoOf(TextStyle).merge$default_jeiwm0_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, lineHeightStyle, lineBreak, hyphens, platformStyle, textMotion, $super) {
-    color = color === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : color;
-    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : fontSize;
+  protoOf(TextStyle).merge$default_iezoge_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, lineHeightStyle, lineBreak, hyphens, platformStyle, textMotion, $super) {
+    color = color === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : color;
+    fontSize = fontSize === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : fontSize;
     fontWeight = fontWeight === VOID ? null : fontWeight;
     fontStyle = fontStyle === VOID ? null : fontStyle;
     fontSynthesis = fontSynthesis === VOID ? null : fontSynthesis;
     fontFamily = fontFamily === VOID ? null : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? null : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : letterSpacing;
+    letterSpacing = letterSpacing === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : letterSpacing;
     baselineShift = baselineShift === VOID ? null : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? null : textGeometricTransform;
     localeList = localeList === VOID ? null : localeList;
-    background = background === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : background;
+    background = background === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : background;
     textDecoration = textDecoration === VOID ? null : textDecoration;
     shadow = shadow === VOID ? null : shadow;
     drawStyle = drawStyle === VOID ? null : drawStyle;
     textAlign = textAlign === VOID ? null : textAlign;
     textDirection = textDirection === VOID ? null : textDirection;
-    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_n7zca6_k$() : lineHeight;
+    lineHeight = lineHeight === VOID ? Companion_getInstance_1().get_Unspecified_r048kw_k$() : lineHeight;
     textIndent = textIndent === VOID ? null : textIndent;
     lineHeightStyle = lineHeightStyle === VOID ? null : lineHeightStyle;
     lineBreak = lineBreak === VOID ? null : lineBreak;
@@ -7481,349 +7404,322 @@
     textMotion = textMotion === VOID ? null : textMotion;
     var tmp;
     if ($super === VOID) {
-      tmp = this.merge_72glhv_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, lineHeightStyle, lineBreak, hyphens, platformStyle, textMotion);
+      tmp = this.merge_wd0kho_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, lineHeightStyle, lineBreak, hyphens, platformStyle, textMotion);
     } else {
-      var tmp_0 = $super.merge_72glhv_k$;
-      var tmp_1 = new Color(color);
-      var tmp_2 = new TextUnit(fontSize);
-      var tmp_3 = fontStyle;
-      var tmp_4 = tmp_3 == null ? null : new FontStyle(tmp_3);
-      var tmp_5 = fontSynthesis;
-      var tmp_6 = tmp_5 == null ? null : new FontSynthesis(tmp_5);
-      var tmp_7 = new TextUnit(letterSpacing);
-      var tmp_8 = baselineShift;
-      var tmp_9 = tmp_8 == null ? null : new BaselineShift(tmp_8);
-      var tmp_10 = new Color(background);
-      var tmp_11 = textAlign;
-      var tmp_12 = tmp_11 == null ? null : new TextAlign(tmp_11);
-      var tmp_13 = textDirection;
-      var tmp_14 = tmp_13 == null ? null : new TextDirection(tmp_13);
-      var tmp_15 = new TextUnit(lineHeight);
-      var tmp_16 = lineBreak;
-      var tmp_17 = tmp_16 == null ? null : new LineBreak(tmp_16);
-      var tmp_18 = hyphens;
-      tmp = tmp_0.call(this, tmp_1, tmp_2, fontWeight, tmp_4, tmp_6, fontFamily, fontFeatureSettings, tmp_7, tmp_9, textGeometricTransform, localeList, tmp_10, textDecoration, shadow, drawStyle, tmp_12, tmp_14, tmp_15, textIndent, lineHeightStyle, tmp_17, tmp_18 == null ? null : new Hyphens(tmp_18), platformStyle, textMotion);
+      var tmp_0 = $super.merge_wd0kho_k$;
+      var tmp_1 = fontStyle;
+      var tmp_2 = tmp_1 == null ? null : new FontStyle(tmp_1);
+      var tmp_3 = fontSynthesis;
+      var tmp_4 = tmp_3 == null ? null : new FontSynthesis(tmp_3);
+      var tmp_5 = baselineShift;
+      var tmp_6 = tmp_5 == null ? null : new BaselineShift(tmp_5);
+      var tmp_7 = textAlign;
+      var tmp_8 = tmp_7 == null ? null : new TextAlign(tmp_7);
+      var tmp_9 = textDirection;
+      var tmp_10 = tmp_9 == null ? null : new TextDirection(tmp_9);
+      var tmp_11 = lineBreak;
+      var tmp_12 = tmp_11 == null ? null : new LineBreak(tmp_11);
+      var tmp_13 = hyphens;
+      tmp = tmp_0.call(this, new Color(color), new TextUnit(fontSize), fontWeight, tmp_2, tmp_4, fontFamily, fontFeatureSettings, new TextUnit(letterSpacing), tmp_6, textGeometricTransform, localeList, new Color(background), textDecoration, shadow, drawStyle, tmp_8, tmp_10, new TextUnit(lineHeight), textIndent, lineHeightStyle, tmp_12, tmp_13 == null ? null : new Hyphens(tmp_13), platformStyle, textMotion);
     }
     return tmp;
   };
-  protoOf(TextStyle).merge_pkm62_k$ = function (other) {
-    return TextStyle_init_$Create$_0(this.toSpanStyle_l454tw_k$().merge_m0r35z_k$(other), this.toParagraphStyle_zfuegy_k$());
+  protoOf(TextStyle).merge_6pw42n_k$ = function (other) {
+    return TextStyle_init_$Create$_0(this.toSpanStyle_l454tw_k$().merge_tmjkxk_k$(other), this.toParagraphStyle_zfuegy_k$());
   };
-  protoOf(TextStyle).merge_lt4ge4_k$ = function (other) {
-    return TextStyle_init_$Create$_0(this.toSpanStyle_l454tw_k$(), this.toParagraphStyle_zfuegy_k$().merge_y8afnf_k$(other));
+  protoOf(TextStyle).merge_fo5h7n_k$ = function (other) {
+    return TextStyle_init_$Create$_0(this.toSpanStyle_l454tw_k$(), this.toParagraphStyle_zfuegy_k$().merge_desd12_k$(other));
   };
-  protoOf(TextStyle).plus_svcnvj_k$ = function (other) {
-    return this.merge_axh15w_k$(other);
+  protoOf(TextStyle).plus_4nq3rw_k$ = function (other) {
+    return this.merge_grd1yz_k$(other);
   };
-  protoOf(TextStyle).plus_3d6656_k$ = function (other) {
-    return this.merge_lt4ge4_k$(other);
+  protoOf(TextStyle).plus_oar7yd_k$ = function (other) {
+    return this.merge_fo5h7n_k$(other);
   };
-  protoOf(TextStyle).plus_mcrows_k$ = function (other) {
-    return this.merge_pkm62_k$(other);
+  protoOf(TextStyle).plus_mf6lxd_k$ = function (other) {
+    return this.merge_6pw42n_k$(other);
   };
-  protoOf(TextStyle).copy_byi62l_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent) {
+  protoOf(TextStyle).copy_1clm0n_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent) {
     var tmp;
-    if (equals(color, this.spanStyle_1.get_color_v34vrz_k$())) {
+    if (equals(color, this.spanStyle_1.get_color_lnp1vl_k$())) {
       tmp = this.spanStyle_1.get_textForegroundStyle_1frzu0_k$();
     } else {
-      tmp = Companion_getInstance_47().from_ofk88i_k$(color);
+      tmp = Companion_getInstance_47().from_ccukrb_k$(color);
     }
-    return new TextStyle(new SpanStyle(tmp, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, this.spanStyle_1.get_platformStyle_7i053p_k$(), this.spanStyle_1.get_drawStyle_arbehw_k$()), new ParagraphStyle_0(textAlign, textDirection, lineHeight, textIndent, this.paragraphStyle_1.get_platformStyle_7i053p_k$(), this.get_lineHeightStyle_fzu4s3_k$(), this.get_lineBreak_rpr8ah_k$(), this.get_hyphens_v9y2yh_k$(), this.get_textMotion_7jbf0s_k$()), this.platformStyle_1);
+    return new TextStyle(new SpanStyle(tmp, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, this.spanStyle_1.get_platformStyle_7i053p_k$(), this.spanStyle_1.get_drawStyle_arbehw_k$()), new ParagraphStyle_0(textAlign, textDirection, lineHeight, textIndent, this.paragraphStyle_1.get_platformStyle_7i053p_k$(), this.get_lineHeightStyle_fzu4s3_k$(), this.get_lineBreak_crhp0k_k$(), this.get_hyphens_p35ysk_k$(), this.get_textMotion_7jbf0s_k$()), this.platformStyle_1);
   };
-  protoOf(TextStyle).copy$default_rxfwp0_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, $super) {
-    color = color === VOID ? this.spanStyle_1.get_color_v34vrz_k$() : color;
-    fontSize = fontSize === VOID ? this.spanStyle_1.get_fontSize_61k213_k$() : fontSize;
+  protoOf(TextStyle).copy$default_rmzbvl_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, $super) {
+    color = color === VOID ? this.spanStyle_1.get_color_lnp1vl_k$() : color;
+    fontSize = fontSize === VOID ? this.spanStyle_1.get_fontSize_ergf2z_k$() : fontSize;
     fontWeight = fontWeight === VOID ? this.spanStyle_1.get_fontWeight_wbif2o_k$() : fontWeight;
-    fontStyle = fontStyle === VOID ? this.spanStyle_1.get_fontStyle_fze7ml_k$() : fontStyle;
-    fontSynthesis = fontSynthesis === VOID ? this.spanStyle_1.get_fontSynthesis_t08ei1_k$() : fontSynthesis;
+    fontStyle = fontStyle === VOID ? this.spanStyle_1.get_fontStyle_hzv4zg_k$() : fontStyle;
+    fontSynthesis = fontSynthesis === VOID ? this.spanStyle_1.get_fontSynthesis_h5auiy_k$() : fontSynthesis;
     fontFamily = fontFamily === VOID ? this.spanStyle_1.get_fontFamily_ulphcs_k$() : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? this.spanStyle_1.get_fontFeatureSettings_a47533_k$() : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? this.spanStyle_1.get_letterSpacing_u0tnf8_k$() : letterSpacing;
-    baselineShift = baselineShift === VOID ? this.spanStyle_1.get_baselineShift_yg9i0p_k$() : baselineShift;
+    letterSpacing = letterSpacing === VOID ? this.spanStyle_1.get_letterSpacing_k79xfu_k$() : letterSpacing;
+    baselineShift = baselineShift === VOID ? this.spanStyle_1.get_baselineShift_99zyho_k$() : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? this.spanStyle_1.get_textGeometricTransform_tdfmin_k$() : textGeometricTransform;
     localeList = localeList === VOID ? this.spanStyle_1.get_localeList_1gj9gh_k$() : localeList;
-    background = background === VOID ? this.spanStyle_1.get_background_ubksc_k$() : background;
+    background = background === VOID ? this.spanStyle_1.get_background_8l4942_k$() : background;
     textDecoration = textDecoration === VOID ? this.spanStyle_1.get_textDecoration_itgjwm_k$() : textDecoration;
     shadow = shadow === VOID ? this.spanStyle_1.get_shadow_jgtb8p_k$() : shadow;
-    textAlign = textAlign === VOID ? this.paragraphStyle_1.get_textAlign_ihj0br_k$() : textAlign;
-    textDirection = textDirection === VOID ? this.paragraphStyle_1.get_textDirection_fsfodj_k$() : textDirection;
-    lineHeight = lineHeight === VOID ? this.paragraphStyle_1.get_lineHeight_oovvjw_k$() : lineHeight;
+    textAlign = textAlign === VOID ? this.paragraphStyle_1.get_textAlign_c2c4cc_k$() : textAlign;
+    textDirection = textDirection === VOID ? this.paragraphStyle_1.get_textDirection_u2eu2k_k$() : textDirection;
+    lineHeight = lineHeight === VOID ? this.paragraphStyle_1.get_lineHeight_3vvefu_k$() : lineHeight;
     textIndent = textIndent === VOID ? this.paragraphStyle_1.get_textIndent_5mau2q_k$() : textIndent;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_byi62l_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent);
+      tmp = this.copy_1clm0n_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent);
     } else {
-      var tmp_0 = $super.copy_byi62l_k$;
-      var tmp_1 = new Color(color);
-      var tmp_2 = new TextUnit(fontSize);
-      var tmp_3 = fontStyle;
-      var tmp_4 = tmp_3 == null ? null : new FontStyle(tmp_3);
-      var tmp_5 = fontSynthesis;
-      var tmp_6 = tmp_5 == null ? null : new FontSynthesis(tmp_5);
-      var tmp_7 = new TextUnit(letterSpacing);
-      var tmp_8 = baselineShift;
-      var tmp_9 = tmp_8 == null ? null : new BaselineShift(tmp_8);
-      var tmp_10 = new Color(background);
-      var tmp_11 = textAlign;
-      var tmp_12 = tmp_11 == null ? null : new TextAlign(tmp_11);
-      var tmp_13 = textDirection;
-      tmp = tmp_0.call(this, tmp_1, tmp_2, fontWeight, tmp_4, tmp_6, fontFamily, fontFeatureSettings, tmp_7, tmp_9, textGeometricTransform, localeList, tmp_10, textDecoration, shadow, tmp_12, tmp_13 == null ? null : new TextDirection(tmp_13), new TextUnit(lineHeight), textIndent);
+      var tmp_0 = $super.copy_1clm0n_k$;
+      var tmp_1 = fontStyle;
+      var tmp_2 = tmp_1 == null ? null : new FontStyle(tmp_1);
+      var tmp_3 = fontSynthesis;
+      var tmp_4 = tmp_3 == null ? null : new FontSynthesis(tmp_3);
+      var tmp_5 = baselineShift;
+      var tmp_6 = tmp_5 == null ? null : new BaselineShift(tmp_5);
+      var tmp_7 = textAlign;
+      var tmp_8 = tmp_7 == null ? null : new TextAlign(tmp_7);
+      var tmp_9 = textDirection;
+      tmp = tmp_0.call(this, new Color(color), new TextUnit(fontSize), fontWeight, tmp_2, tmp_4, fontFamily, fontFeatureSettings, new TextUnit(letterSpacing), tmp_6, textGeometricTransform, localeList, new Color(background), textDecoration, shadow, tmp_8, tmp_9 == null ? null : new TextDirection(tmp_9), new TextUnit(lineHeight), textIndent);
     }
     return tmp;
   };
-  protoOf(TextStyle).copy_ejjj43_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle) {
+  protoOf(TextStyle).copy_57o59s_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle) {
     var tmp;
-    if (equals(color, this.spanStyle_1.get_color_v34vrz_k$())) {
+    if (equals(color, this.spanStyle_1.get_color_lnp1vl_k$())) {
       tmp = this.spanStyle_1.get_textForegroundStyle_1frzu0_k$();
     } else {
-      tmp = Companion_getInstance_47().from_ofk88i_k$(color);
+      tmp = Companion_getInstance_47().from_ccukrb_k$(color);
     }
     var tmp_0 = tmp;
     var tmp_1 = new SpanStyle(tmp_0, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle == null ? null : platformStyle.get_spanStyle_2b836q_k$(), this.spanStyle_1.get_drawStyle_arbehw_k$());
-    return new TextStyle(tmp_1, new ParagraphStyle_0(textAlign, textDirection, lineHeight, textIndent, platformStyle == null ? null : platformStyle.get_paragraphStyle_27utpo_k$(), lineHeightStyle, this.get_lineBreak_rpr8ah_k$(), this.get_hyphens_v9y2yh_k$(), this.get_textMotion_7jbf0s_k$()), platformStyle);
+    return new TextStyle(tmp_1, new ParagraphStyle_0(textAlign, textDirection, lineHeight, textIndent, platformStyle == null ? null : platformStyle.get_paragraphStyle_27utpo_k$(), lineHeightStyle, this.get_lineBreak_crhp0k_k$(), this.get_hyphens_p35ysk_k$(), this.get_textMotion_7jbf0s_k$()), platformStyle);
   };
-  protoOf(TextStyle).copy$default_jx3qjg_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, $super) {
-    color = color === VOID ? this.spanStyle_1.get_color_v34vrz_k$() : color;
-    fontSize = fontSize === VOID ? this.spanStyle_1.get_fontSize_61k213_k$() : fontSize;
+  protoOf(TextStyle).copy$default_rvqgsk_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, $super) {
+    color = color === VOID ? this.spanStyle_1.get_color_lnp1vl_k$() : color;
+    fontSize = fontSize === VOID ? this.spanStyle_1.get_fontSize_ergf2z_k$() : fontSize;
     fontWeight = fontWeight === VOID ? this.spanStyle_1.get_fontWeight_wbif2o_k$() : fontWeight;
-    fontStyle = fontStyle === VOID ? this.spanStyle_1.get_fontStyle_fze7ml_k$() : fontStyle;
-    fontSynthesis = fontSynthesis === VOID ? this.spanStyle_1.get_fontSynthesis_t08ei1_k$() : fontSynthesis;
+    fontStyle = fontStyle === VOID ? this.spanStyle_1.get_fontStyle_hzv4zg_k$() : fontStyle;
+    fontSynthesis = fontSynthesis === VOID ? this.spanStyle_1.get_fontSynthesis_h5auiy_k$() : fontSynthesis;
     fontFamily = fontFamily === VOID ? this.spanStyle_1.get_fontFamily_ulphcs_k$() : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? this.spanStyle_1.get_fontFeatureSettings_a47533_k$() : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? this.spanStyle_1.get_letterSpacing_u0tnf8_k$() : letterSpacing;
-    baselineShift = baselineShift === VOID ? this.spanStyle_1.get_baselineShift_yg9i0p_k$() : baselineShift;
+    letterSpacing = letterSpacing === VOID ? this.spanStyle_1.get_letterSpacing_k79xfu_k$() : letterSpacing;
+    baselineShift = baselineShift === VOID ? this.spanStyle_1.get_baselineShift_99zyho_k$() : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? this.spanStyle_1.get_textGeometricTransform_tdfmin_k$() : textGeometricTransform;
     localeList = localeList === VOID ? this.spanStyle_1.get_localeList_1gj9gh_k$() : localeList;
-    background = background === VOID ? this.spanStyle_1.get_background_ubksc_k$() : background;
+    background = background === VOID ? this.spanStyle_1.get_background_8l4942_k$() : background;
     textDecoration = textDecoration === VOID ? this.spanStyle_1.get_textDecoration_itgjwm_k$() : textDecoration;
     shadow = shadow === VOID ? this.spanStyle_1.get_shadow_jgtb8p_k$() : shadow;
-    textAlign = textAlign === VOID ? this.paragraphStyle_1.get_textAlign_ihj0br_k$() : textAlign;
-    textDirection = textDirection === VOID ? this.paragraphStyle_1.get_textDirection_fsfodj_k$() : textDirection;
-    lineHeight = lineHeight === VOID ? this.paragraphStyle_1.get_lineHeight_oovvjw_k$() : lineHeight;
+    textAlign = textAlign === VOID ? this.paragraphStyle_1.get_textAlign_c2c4cc_k$() : textAlign;
+    textDirection = textDirection === VOID ? this.paragraphStyle_1.get_textDirection_u2eu2k_k$() : textDirection;
+    lineHeight = lineHeight === VOID ? this.paragraphStyle_1.get_lineHeight_3vvefu_k$() : lineHeight;
     textIndent = textIndent === VOID ? this.paragraphStyle_1.get_textIndent_5mau2q_k$() : textIndent;
     platformStyle = platformStyle === VOID ? this.platformStyle_1 : platformStyle;
     lineHeightStyle = lineHeightStyle === VOID ? this.paragraphStyle_1.get_lineHeightStyle_fzu4s3_k$() : lineHeightStyle;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_ejjj43_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle);
+      tmp = this.copy_57o59s_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle);
     } else {
-      var tmp_0 = $super.copy_ejjj43_k$;
-      var tmp_1 = new Color(color);
-      var tmp_2 = new TextUnit(fontSize);
-      var tmp_3 = fontStyle;
-      var tmp_4 = tmp_3 == null ? null : new FontStyle(tmp_3);
-      var tmp_5 = fontSynthesis;
-      var tmp_6 = tmp_5 == null ? null : new FontSynthesis(tmp_5);
-      var tmp_7 = new TextUnit(letterSpacing);
-      var tmp_8 = baselineShift;
-      var tmp_9 = tmp_8 == null ? null : new BaselineShift(tmp_8);
-      var tmp_10 = new Color(background);
-      var tmp_11 = textAlign;
-      var tmp_12 = tmp_11 == null ? null : new TextAlign(tmp_11);
-      var tmp_13 = textDirection;
-      tmp = tmp_0.call(this, tmp_1, tmp_2, fontWeight, tmp_4, tmp_6, fontFamily, fontFeatureSettings, tmp_7, tmp_9, textGeometricTransform, localeList, tmp_10, textDecoration, shadow, tmp_12, tmp_13 == null ? null : new TextDirection(tmp_13), new TextUnit(lineHeight), textIndent, platformStyle, lineHeightStyle);
+      var tmp_0 = $super.copy_57o59s_k$;
+      var tmp_1 = fontStyle;
+      var tmp_2 = tmp_1 == null ? null : new FontStyle(tmp_1);
+      var tmp_3 = fontSynthesis;
+      var tmp_4 = tmp_3 == null ? null : new FontSynthesis(tmp_3);
+      var tmp_5 = baselineShift;
+      var tmp_6 = tmp_5 == null ? null : new BaselineShift(tmp_5);
+      var tmp_7 = textAlign;
+      var tmp_8 = tmp_7 == null ? null : new TextAlign(tmp_7);
+      var tmp_9 = textDirection;
+      tmp = tmp_0.call(this, new Color(color), new TextUnit(fontSize), fontWeight, tmp_2, tmp_4, fontFamily, fontFeatureSettings, new TextUnit(letterSpacing), tmp_6, textGeometricTransform, localeList, new Color(background), textDecoration, shadow, tmp_8, tmp_9 == null ? null : new TextDirection(tmp_9), new TextUnit(lineHeight), textIndent, platformStyle, lineHeightStyle);
     }
     return tmp;
   };
-  protoOf(TextStyle).copy_puho4h_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens) {
+  protoOf(TextStyle).copy_9myb8m_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens) {
     var tmp;
-    if (equals(color, this.spanStyle_1.get_color_v34vrz_k$())) {
+    if (equals(color, this.spanStyle_1.get_color_lnp1vl_k$())) {
       tmp = this.spanStyle_1.get_textForegroundStyle_1frzu0_k$();
     } else {
-      tmp = Companion_getInstance_47().from_ofk88i_k$(color);
+      tmp = Companion_getInstance_47().from_ccukrb_k$(color);
     }
     var tmp_0 = tmp;
     var tmp_1 = new SpanStyle(tmp_0, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle == null ? null : platformStyle.get_spanStyle_2b836q_k$(), this.get_drawStyle_arbehw_k$());
     return new TextStyle(tmp_1, new ParagraphStyle_0(textAlign, textDirection, lineHeight, textIndent, platformStyle == null ? null : platformStyle.get_paragraphStyle_27utpo_k$(), lineHeightStyle, lineBreak, hyphens, this.get_textMotion_7jbf0s_k$()), platformStyle);
   };
-  protoOf(TextStyle).copy$default_wrs716_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, $super) {
-    color = color === VOID ? this.spanStyle_1.get_color_v34vrz_k$() : color;
-    fontSize = fontSize === VOID ? this.spanStyle_1.get_fontSize_61k213_k$() : fontSize;
+  protoOf(TextStyle).copy$default_zll5s_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, $super) {
+    color = color === VOID ? this.spanStyle_1.get_color_lnp1vl_k$() : color;
+    fontSize = fontSize === VOID ? this.spanStyle_1.get_fontSize_ergf2z_k$() : fontSize;
     fontWeight = fontWeight === VOID ? this.spanStyle_1.get_fontWeight_wbif2o_k$() : fontWeight;
-    fontStyle = fontStyle === VOID ? this.spanStyle_1.get_fontStyle_fze7ml_k$() : fontStyle;
-    fontSynthesis = fontSynthesis === VOID ? this.spanStyle_1.get_fontSynthesis_t08ei1_k$() : fontSynthesis;
+    fontStyle = fontStyle === VOID ? this.spanStyle_1.get_fontStyle_hzv4zg_k$() : fontStyle;
+    fontSynthesis = fontSynthesis === VOID ? this.spanStyle_1.get_fontSynthesis_h5auiy_k$() : fontSynthesis;
     fontFamily = fontFamily === VOID ? this.spanStyle_1.get_fontFamily_ulphcs_k$() : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? this.spanStyle_1.get_fontFeatureSettings_a47533_k$() : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? this.spanStyle_1.get_letterSpacing_u0tnf8_k$() : letterSpacing;
-    baselineShift = baselineShift === VOID ? this.spanStyle_1.get_baselineShift_yg9i0p_k$() : baselineShift;
+    letterSpacing = letterSpacing === VOID ? this.spanStyle_1.get_letterSpacing_k79xfu_k$() : letterSpacing;
+    baselineShift = baselineShift === VOID ? this.spanStyle_1.get_baselineShift_99zyho_k$() : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? this.spanStyle_1.get_textGeometricTransform_tdfmin_k$() : textGeometricTransform;
     localeList = localeList === VOID ? this.spanStyle_1.get_localeList_1gj9gh_k$() : localeList;
-    background = background === VOID ? this.spanStyle_1.get_background_ubksc_k$() : background;
+    background = background === VOID ? this.spanStyle_1.get_background_8l4942_k$() : background;
     textDecoration = textDecoration === VOID ? this.spanStyle_1.get_textDecoration_itgjwm_k$() : textDecoration;
     shadow = shadow === VOID ? this.spanStyle_1.get_shadow_jgtb8p_k$() : shadow;
-    textAlign = textAlign === VOID ? this.paragraphStyle_1.get_textAlign_ihj0br_k$() : textAlign;
-    textDirection = textDirection === VOID ? this.paragraphStyle_1.get_textDirection_fsfodj_k$() : textDirection;
-    lineHeight = lineHeight === VOID ? this.paragraphStyle_1.get_lineHeight_oovvjw_k$() : lineHeight;
+    textAlign = textAlign === VOID ? this.paragraphStyle_1.get_textAlign_c2c4cc_k$() : textAlign;
+    textDirection = textDirection === VOID ? this.paragraphStyle_1.get_textDirection_u2eu2k_k$() : textDirection;
+    lineHeight = lineHeight === VOID ? this.paragraphStyle_1.get_lineHeight_3vvefu_k$() : lineHeight;
     textIndent = textIndent === VOID ? this.paragraphStyle_1.get_textIndent_5mau2q_k$() : textIndent;
     platformStyle = platformStyle === VOID ? this.platformStyle_1 : platformStyle;
     lineHeightStyle = lineHeightStyle === VOID ? this.paragraphStyle_1.get_lineHeightStyle_fzu4s3_k$() : lineHeightStyle;
-    lineBreak = lineBreak === VOID ? this.paragraphStyle_1.get_lineBreak_rpr8ah_k$() : lineBreak;
-    hyphens = hyphens === VOID ? this.paragraphStyle_1.get_hyphens_v9y2yh_k$() : hyphens;
+    lineBreak = lineBreak === VOID ? this.paragraphStyle_1.get_lineBreak_crhp0k_k$() : lineBreak;
+    hyphens = hyphens === VOID ? this.paragraphStyle_1.get_hyphens_p35ysk_k$() : hyphens;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_puho4h_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens);
+      tmp = this.copy_9myb8m_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens);
     } else {
-      var tmp_0 = $super.copy_puho4h_k$;
-      var tmp_1 = new Color(color);
-      var tmp_2 = new TextUnit(fontSize);
-      var tmp_3 = fontStyle;
-      var tmp_4 = tmp_3 == null ? null : new FontStyle(tmp_3);
-      var tmp_5 = fontSynthesis;
-      var tmp_6 = tmp_5 == null ? null : new FontSynthesis(tmp_5);
-      var tmp_7 = new TextUnit(letterSpacing);
-      var tmp_8 = baselineShift;
-      var tmp_9 = tmp_8 == null ? null : new BaselineShift(tmp_8);
-      var tmp_10 = new Color(background);
-      var tmp_11 = textAlign;
-      var tmp_12 = tmp_11 == null ? null : new TextAlign(tmp_11);
-      var tmp_13 = textDirection;
-      var tmp_14 = tmp_13 == null ? null : new TextDirection(tmp_13);
-      var tmp_15 = new TextUnit(lineHeight);
-      var tmp_16 = lineBreak;
-      var tmp_17 = tmp_16 == null ? null : new LineBreak(tmp_16);
-      var tmp_18 = hyphens;
-      tmp = tmp_0.call(this, tmp_1, tmp_2, fontWeight, tmp_4, tmp_6, fontFamily, fontFeatureSettings, tmp_7, tmp_9, textGeometricTransform, localeList, tmp_10, textDecoration, shadow, tmp_12, tmp_14, tmp_15, textIndent, platformStyle, lineHeightStyle, tmp_17, tmp_18 == null ? null : new Hyphens(tmp_18));
+      var tmp_0 = $super.copy_9myb8m_k$;
+      var tmp_1 = fontStyle;
+      var tmp_2 = tmp_1 == null ? null : new FontStyle(tmp_1);
+      var tmp_3 = fontSynthesis;
+      var tmp_4 = tmp_3 == null ? null : new FontSynthesis(tmp_3);
+      var tmp_5 = baselineShift;
+      var tmp_6 = tmp_5 == null ? null : new BaselineShift(tmp_5);
+      var tmp_7 = textAlign;
+      var tmp_8 = tmp_7 == null ? null : new TextAlign(tmp_7);
+      var tmp_9 = textDirection;
+      var tmp_10 = tmp_9 == null ? null : new TextDirection(tmp_9);
+      var tmp_11 = lineBreak;
+      var tmp_12 = tmp_11 == null ? null : new LineBreak(tmp_11);
+      var tmp_13 = hyphens;
+      tmp = tmp_0.call(this, new Color(color), new TextUnit(fontSize), fontWeight, tmp_2, tmp_4, fontFamily, fontFeatureSettings, new TextUnit(letterSpacing), tmp_6, textGeometricTransform, localeList, new Color(background), textDecoration, shadow, tmp_8, tmp_10, new TextUnit(lineHeight), textIndent, platformStyle, lineHeightStyle, tmp_12, tmp_13 == null ? null : new Hyphens(tmp_13));
     }
     return tmp;
   };
-  protoOf(TextStyle).copy_7zs0a8_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion) {
+  protoOf(TextStyle).copy_25irrn_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion) {
     var tmp;
-    if (equals(color, this.spanStyle_1.get_color_v34vrz_k$())) {
+    if (equals(color, this.spanStyle_1.get_color_lnp1vl_k$())) {
       tmp = this.spanStyle_1.get_textForegroundStyle_1frzu0_k$();
     } else {
-      tmp = Companion_getInstance_47().from_ofk88i_k$(color);
+      tmp = Companion_getInstance_47().from_ccukrb_k$(color);
     }
     var tmp_0 = tmp;
     var tmp_1 = new SpanStyle(tmp_0, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle == null ? null : platformStyle.get_spanStyle_2b836q_k$(), drawStyle);
     return new TextStyle(tmp_1, new ParagraphStyle_0(textAlign, textDirection, lineHeight, textIndent, platformStyle == null ? null : platformStyle.get_paragraphStyle_27utpo_k$(), lineHeightStyle, lineBreak, hyphens, textMotion), platformStyle);
   };
-  protoOf(TextStyle).copy$default_yckbkh_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion, $super) {
-    color = color === VOID ? this.spanStyle_1.get_color_v34vrz_k$() : color;
-    fontSize = fontSize === VOID ? this.spanStyle_1.get_fontSize_61k213_k$() : fontSize;
+  protoOf(TextStyle).copy$default_82cxxr_k$ = function (color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion, $super) {
+    color = color === VOID ? this.spanStyle_1.get_color_lnp1vl_k$() : color;
+    fontSize = fontSize === VOID ? this.spanStyle_1.get_fontSize_ergf2z_k$() : fontSize;
     fontWeight = fontWeight === VOID ? this.spanStyle_1.get_fontWeight_wbif2o_k$() : fontWeight;
-    fontStyle = fontStyle === VOID ? this.spanStyle_1.get_fontStyle_fze7ml_k$() : fontStyle;
-    fontSynthesis = fontSynthesis === VOID ? this.spanStyle_1.get_fontSynthesis_t08ei1_k$() : fontSynthesis;
+    fontStyle = fontStyle === VOID ? this.spanStyle_1.get_fontStyle_hzv4zg_k$() : fontStyle;
+    fontSynthesis = fontSynthesis === VOID ? this.spanStyle_1.get_fontSynthesis_h5auiy_k$() : fontSynthesis;
     fontFamily = fontFamily === VOID ? this.spanStyle_1.get_fontFamily_ulphcs_k$() : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? this.spanStyle_1.get_fontFeatureSettings_a47533_k$() : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? this.spanStyle_1.get_letterSpacing_u0tnf8_k$() : letterSpacing;
-    baselineShift = baselineShift === VOID ? this.spanStyle_1.get_baselineShift_yg9i0p_k$() : baselineShift;
+    letterSpacing = letterSpacing === VOID ? this.spanStyle_1.get_letterSpacing_k79xfu_k$() : letterSpacing;
+    baselineShift = baselineShift === VOID ? this.spanStyle_1.get_baselineShift_99zyho_k$() : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? this.spanStyle_1.get_textGeometricTransform_tdfmin_k$() : textGeometricTransform;
     localeList = localeList === VOID ? this.spanStyle_1.get_localeList_1gj9gh_k$() : localeList;
-    background = background === VOID ? this.spanStyle_1.get_background_ubksc_k$() : background;
+    background = background === VOID ? this.spanStyle_1.get_background_8l4942_k$() : background;
     textDecoration = textDecoration === VOID ? this.spanStyle_1.get_textDecoration_itgjwm_k$() : textDecoration;
     shadow = shadow === VOID ? this.spanStyle_1.get_shadow_jgtb8p_k$() : shadow;
     drawStyle = drawStyle === VOID ? this.spanStyle_1.get_drawStyle_arbehw_k$() : drawStyle;
-    textAlign = textAlign === VOID ? this.paragraphStyle_1.get_textAlign_ihj0br_k$() : textAlign;
-    textDirection = textDirection === VOID ? this.paragraphStyle_1.get_textDirection_fsfodj_k$() : textDirection;
-    lineHeight = lineHeight === VOID ? this.paragraphStyle_1.get_lineHeight_oovvjw_k$() : lineHeight;
+    textAlign = textAlign === VOID ? this.paragraphStyle_1.get_textAlign_c2c4cc_k$() : textAlign;
+    textDirection = textDirection === VOID ? this.paragraphStyle_1.get_textDirection_u2eu2k_k$() : textDirection;
+    lineHeight = lineHeight === VOID ? this.paragraphStyle_1.get_lineHeight_3vvefu_k$() : lineHeight;
     textIndent = textIndent === VOID ? this.paragraphStyle_1.get_textIndent_5mau2q_k$() : textIndent;
     platformStyle = platformStyle === VOID ? this.platformStyle_1 : platformStyle;
     lineHeightStyle = lineHeightStyle === VOID ? this.paragraphStyle_1.get_lineHeightStyle_fzu4s3_k$() : lineHeightStyle;
-    lineBreak = lineBreak === VOID ? this.paragraphStyle_1.get_lineBreak_rpr8ah_k$() : lineBreak;
-    hyphens = hyphens === VOID ? this.paragraphStyle_1.get_hyphens_v9y2yh_k$() : hyphens;
+    lineBreak = lineBreak === VOID ? this.paragraphStyle_1.get_lineBreak_crhp0k_k$() : lineBreak;
+    hyphens = hyphens === VOID ? this.paragraphStyle_1.get_hyphens_p35ysk_k$() : hyphens;
     textMotion = textMotion === VOID ? this.paragraphStyle_1.get_textMotion_7jbf0s_k$() : textMotion;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_7zs0a8_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion);
+      tmp = this.copy_25irrn_k$(color, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion);
     } else {
-      var tmp_0 = $super.copy_7zs0a8_k$;
-      var tmp_1 = new Color(color);
-      var tmp_2 = new TextUnit(fontSize);
-      var tmp_3 = fontStyle;
-      var tmp_4 = tmp_3 == null ? null : new FontStyle(tmp_3);
-      var tmp_5 = fontSynthesis;
-      var tmp_6 = tmp_5 == null ? null : new FontSynthesis(tmp_5);
-      var tmp_7 = new TextUnit(letterSpacing);
-      var tmp_8 = baselineShift;
-      var tmp_9 = tmp_8 == null ? null : new BaselineShift(tmp_8);
-      var tmp_10 = new Color(background);
-      var tmp_11 = textAlign;
-      var tmp_12 = tmp_11 == null ? null : new TextAlign(tmp_11);
-      var tmp_13 = textDirection;
-      var tmp_14 = tmp_13 == null ? null : new TextDirection(tmp_13);
-      var tmp_15 = new TextUnit(lineHeight);
-      var tmp_16 = lineBreak;
-      var tmp_17 = tmp_16 == null ? null : new LineBreak(tmp_16);
-      var tmp_18 = hyphens;
-      tmp = tmp_0.call(this, tmp_1, tmp_2, fontWeight, tmp_4, tmp_6, fontFamily, fontFeatureSettings, tmp_7, tmp_9, textGeometricTransform, localeList, tmp_10, textDecoration, shadow, drawStyle, tmp_12, tmp_14, tmp_15, textIndent, platformStyle, lineHeightStyle, tmp_17, tmp_18 == null ? null : new Hyphens(tmp_18), textMotion);
+      var tmp_0 = $super.copy_25irrn_k$;
+      var tmp_1 = fontStyle;
+      var tmp_2 = tmp_1 == null ? null : new FontStyle(tmp_1);
+      var tmp_3 = fontSynthesis;
+      var tmp_4 = tmp_3 == null ? null : new FontSynthesis(tmp_3);
+      var tmp_5 = baselineShift;
+      var tmp_6 = tmp_5 == null ? null : new BaselineShift(tmp_5);
+      var tmp_7 = textAlign;
+      var tmp_8 = tmp_7 == null ? null : new TextAlign(tmp_7);
+      var tmp_9 = textDirection;
+      var tmp_10 = tmp_9 == null ? null : new TextDirection(tmp_9);
+      var tmp_11 = lineBreak;
+      var tmp_12 = tmp_11 == null ? null : new LineBreak(tmp_11);
+      var tmp_13 = hyphens;
+      tmp = tmp_0.call(this, new Color(color), new TextUnit(fontSize), fontWeight, tmp_2, tmp_4, fontFamily, fontFeatureSettings, new TextUnit(letterSpacing), tmp_6, textGeometricTransform, localeList, new Color(background), textDecoration, shadow, drawStyle, tmp_8, tmp_10, new TextUnit(lineHeight), textIndent, platformStyle, lineHeightStyle, tmp_12, tmp_13 == null ? null : new Hyphens(tmp_13), textMotion);
     }
     return tmp;
   };
-  protoOf(TextStyle).copy_evnnfu_k$ = function (brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion) {
+  protoOf(TextStyle).copy_tq2cgj_k$ = function (brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion) {
     var tmp = SpanStyle_init_$Create$_2(brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, platformStyle == null ? null : platformStyle.get_spanStyle_2b836q_k$(), drawStyle);
     return new TextStyle(tmp, new ParagraphStyle_0(textAlign, textDirection, lineHeight, textIndent, platformStyle == null ? null : platformStyle.get_paragraphStyle_27utpo_k$(), lineHeightStyle, lineBreak, hyphens, textMotion), platformStyle);
   };
-  protoOf(TextStyle).copy$default_vazj2t_k$ = function (brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion, $super) {
+  protoOf(TextStyle).copy$default_tzbh93_k$ = function (brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion, $super) {
     alpha = alpha === VOID ? this.spanStyle_1.get_alpha_iooth1_k$() : alpha;
-    fontSize = fontSize === VOID ? this.spanStyle_1.get_fontSize_61k213_k$() : fontSize;
+    fontSize = fontSize === VOID ? this.spanStyle_1.get_fontSize_ergf2z_k$() : fontSize;
     fontWeight = fontWeight === VOID ? this.spanStyle_1.get_fontWeight_wbif2o_k$() : fontWeight;
-    fontStyle = fontStyle === VOID ? this.spanStyle_1.get_fontStyle_fze7ml_k$() : fontStyle;
-    fontSynthesis = fontSynthesis === VOID ? this.spanStyle_1.get_fontSynthesis_t08ei1_k$() : fontSynthesis;
+    fontStyle = fontStyle === VOID ? this.spanStyle_1.get_fontStyle_hzv4zg_k$() : fontStyle;
+    fontSynthesis = fontSynthesis === VOID ? this.spanStyle_1.get_fontSynthesis_h5auiy_k$() : fontSynthesis;
     fontFamily = fontFamily === VOID ? this.spanStyle_1.get_fontFamily_ulphcs_k$() : fontFamily;
     fontFeatureSettings = fontFeatureSettings === VOID ? this.spanStyle_1.get_fontFeatureSettings_a47533_k$() : fontFeatureSettings;
-    letterSpacing = letterSpacing === VOID ? this.spanStyle_1.get_letterSpacing_u0tnf8_k$() : letterSpacing;
-    baselineShift = baselineShift === VOID ? this.spanStyle_1.get_baselineShift_yg9i0p_k$() : baselineShift;
+    letterSpacing = letterSpacing === VOID ? this.spanStyle_1.get_letterSpacing_k79xfu_k$() : letterSpacing;
+    baselineShift = baselineShift === VOID ? this.spanStyle_1.get_baselineShift_99zyho_k$() : baselineShift;
     textGeometricTransform = textGeometricTransform === VOID ? this.spanStyle_1.get_textGeometricTransform_tdfmin_k$() : textGeometricTransform;
     localeList = localeList === VOID ? this.spanStyle_1.get_localeList_1gj9gh_k$() : localeList;
-    background = background === VOID ? this.spanStyle_1.get_background_ubksc_k$() : background;
+    background = background === VOID ? this.spanStyle_1.get_background_8l4942_k$() : background;
     textDecoration = textDecoration === VOID ? this.spanStyle_1.get_textDecoration_itgjwm_k$() : textDecoration;
     shadow = shadow === VOID ? this.spanStyle_1.get_shadow_jgtb8p_k$() : shadow;
     drawStyle = drawStyle === VOID ? this.spanStyle_1.get_drawStyle_arbehw_k$() : drawStyle;
-    textAlign = textAlign === VOID ? this.paragraphStyle_1.get_textAlign_ihj0br_k$() : textAlign;
-    textDirection = textDirection === VOID ? this.paragraphStyle_1.get_textDirection_fsfodj_k$() : textDirection;
-    lineHeight = lineHeight === VOID ? this.paragraphStyle_1.get_lineHeight_oovvjw_k$() : lineHeight;
+    textAlign = textAlign === VOID ? this.paragraphStyle_1.get_textAlign_c2c4cc_k$() : textAlign;
+    textDirection = textDirection === VOID ? this.paragraphStyle_1.get_textDirection_u2eu2k_k$() : textDirection;
+    lineHeight = lineHeight === VOID ? this.paragraphStyle_1.get_lineHeight_3vvefu_k$() : lineHeight;
     textIndent = textIndent === VOID ? this.paragraphStyle_1.get_textIndent_5mau2q_k$() : textIndent;
     platformStyle = platformStyle === VOID ? this.platformStyle_1 : platformStyle;
     lineHeightStyle = lineHeightStyle === VOID ? this.paragraphStyle_1.get_lineHeightStyle_fzu4s3_k$() : lineHeightStyle;
-    lineBreak = lineBreak === VOID ? this.paragraphStyle_1.get_lineBreak_rpr8ah_k$() : lineBreak;
-    hyphens = hyphens === VOID ? this.paragraphStyle_1.get_hyphens_v9y2yh_k$() : hyphens;
+    lineBreak = lineBreak === VOID ? this.paragraphStyle_1.get_lineBreak_crhp0k_k$() : lineBreak;
+    hyphens = hyphens === VOID ? this.paragraphStyle_1.get_hyphens_p35ysk_k$() : hyphens;
     textMotion = textMotion === VOID ? this.paragraphStyle_1.get_textMotion_7jbf0s_k$() : textMotion;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_evnnfu_k$(brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion);
+      tmp = this.copy_tq2cgj_k$(brush, alpha, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, textAlign, textDirection, lineHeight, textIndent, platformStyle, lineHeightStyle, lineBreak, hyphens, textMotion);
     } else {
-      var tmp_0 = $super.copy_evnnfu_k$;
-      var tmp_1 = new TextUnit(fontSize);
-      var tmp_2 = fontStyle;
-      var tmp_3 = tmp_2 == null ? null : new FontStyle(tmp_2);
-      var tmp_4 = fontSynthesis;
-      var tmp_5 = tmp_4 == null ? null : new FontSynthesis(tmp_4);
-      var tmp_6 = new TextUnit(letterSpacing);
-      var tmp_7 = baselineShift;
-      var tmp_8 = tmp_7 == null ? null : new BaselineShift(tmp_7);
-      var tmp_9 = new Color(background);
-      var tmp_10 = textAlign;
-      var tmp_11 = tmp_10 == null ? null : new TextAlign(tmp_10);
-      var tmp_12 = textDirection;
-      var tmp_13 = tmp_12 == null ? null : new TextDirection(tmp_12);
-      var tmp_14 = new TextUnit(lineHeight);
-      var tmp_15 = lineBreak;
-      var tmp_16 = tmp_15 == null ? null : new LineBreak(tmp_15);
-      var tmp_17 = hyphens;
-      tmp = tmp_0.call(this, brush, alpha, tmp_1, fontWeight, tmp_3, tmp_5, fontFamily, fontFeatureSettings, tmp_6, tmp_8, textGeometricTransform, localeList, tmp_9, textDecoration, shadow, drawStyle, tmp_11, tmp_13, tmp_14, textIndent, platformStyle, lineHeightStyle, tmp_16, tmp_17 == null ? null : new Hyphens(tmp_17), textMotion);
+      var tmp_0 = $super.copy_tq2cgj_k$;
+      var tmp_1 = fontStyle;
+      var tmp_2 = tmp_1 == null ? null : new FontStyle(tmp_1);
+      var tmp_3 = fontSynthesis;
+      var tmp_4 = tmp_3 == null ? null : new FontSynthesis(tmp_3);
+      var tmp_5 = baselineShift;
+      var tmp_6 = tmp_5 == null ? null : new BaselineShift(tmp_5);
+      var tmp_7 = textAlign;
+      var tmp_8 = tmp_7 == null ? null : new TextAlign(tmp_7);
+      var tmp_9 = textDirection;
+      var tmp_10 = tmp_9 == null ? null : new TextDirection(tmp_9);
+      var tmp_11 = lineBreak;
+      var tmp_12 = tmp_11 == null ? null : new LineBreak(tmp_11);
+      var tmp_13 = hyphens;
+      tmp = tmp_0.call(this, brush, alpha, new TextUnit(fontSize), fontWeight, tmp_2, tmp_4, fontFamily, fontFeatureSettings, new TextUnit(letterSpacing), tmp_6, textGeometricTransform, localeList, new Color(background), textDecoration, shadow, drawStyle, tmp_8, tmp_10, new TextUnit(lineHeight), textIndent, platformStyle, lineHeightStyle, tmp_12, tmp_13 == null ? null : new Hyphens(tmp_13), textMotion);
     }
     return tmp;
   };
   protoOf(TextStyle).get_brush_ipcjyp_k$ = function () {
     return this.spanStyle_1.get_brush_ipcjyp_k$();
   };
-  protoOf(TextStyle).get_color_v34vrz_k$ = function () {
-    return this.spanStyle_1.get_color_v34vrz_k$();
+  protoOf(TextStyle).get_color_lnp1vl_k$ = function () {
+    return this.spanStyle_1.get_color_lnp1vl_k$();
   };
   protoOf(TextStyle).get_alpha_iooth1_k$ = function () {
     return this.spanStyle_1.get_alpha_iooth1_k$();
   };
-  protoOf(TextStyle).get_fontSize_61k213_k$ = function () {
-    return this.spanStyle_1.get_fontSize_61k213_k$();
+  protoOf(TextStyle).get_fontSize_ergf2z_k$ = function () {
+    return this.spanStyle_1.get_fontSize_ergf2z_k$();
   };
   protoOf(TextStyle).get_fontWeight_wbif2o_k$ = function () {
     return this.spanStyle_1.get_fontWeight_wbif2o_k$();
   };
-  protoOf(TextStyle).get_fontStyle_fze7ml_k$ = function () {
-    return this.spanStyle_1.get_fontStyle_fze7ml_k$();
+  protoOf(TextStyle).get_fontStyle_hzv4zg_k$ = function () {
+    return this.spanStyle_1.get_fontStyle_hzv4zg_k$();
   };
-  protoOf(TextStyle).get_fontSynthesis_t08ei1_k$ = function () {
-    return this.spanStyle_1.get_fontSynthesis_t08ei1_k$();
+  protoOf(TextStyle).get_fontSynthesis_h5auiy_k$ = function () {
+    return this.spanStyle_1.get_fontSynthesis_h5auiy_k$();
   };
   protoOf(TextStyle).get_fontFamily_ulphcs_k$ = function () {
     return this.spanStyle_1.get_fontFamily_ulphcs_k$();
@@ -7831,11 +7727,11 @@
   protoOf(TextStyle).get_fontFeatureSettings_a47533_k$ = function () {
     return this.spanStyle_1.get_fontFeatureSettings_a47533_k$();
   };
-  protoOf(TextStyle).get_letterSpacing_u0tnf8_k$ = function () {
-    return this.spanStyle_1.get_letterSpacing_u0tnf8_k$();
+  protoOf(TextStyle).get_letterSpacing_k79xfu_k$ = function () {
+    return this.spanStyle_1.get_letterSpacing_k79xfu_k$();
   };
-  protoOf(TextStyle).get_baselineShift_yg9i0p_k$ = function () {
-    return this.spanStyle_1.get_baselineShift_yg9i0p_k$();
+  protoOf(TextStyle).get_baselineShift_99zyho_k$ = function () {
+    return this.spanStyle_1.get_baselineShift_99zyho_k$();
   };
   protoOf(TextStyle).get_textGeometricTransform_tdfmin_k$ = function () {
     return this.spanStyle_1.get_textGeometricTransform_tdfmin_k$();
@@ -7843,8 +7739,8 @@
   protoOf(TextStyle).get_localeList_1gj9gh_k$ = function () {
     return this.spanStyle_1.get_localeList_1gj9gh_k$();
   };
-  protoOf(TextStyle).get_background_ubksc_k$ = function () {
-    return this.spanStyle_1.get_background_ubksc_k$();
+  protoOf(TextStyle).get_background_8l4942_k$ = function () {
+    return this.spanStyle_1.get_background_8l4942_k$();
   };
   protoOf(TextStyle).get_textDecoration_itgjwm_k$ = function () {
     return this.spanStyle_1.get_textDecoration_itgjwm_k$();
@@ -7855,14 +7751,14 @@
   protoOf(TextStyle).get_drawStyle_arbehw_k$ = function () {
     return this.spanStyle_1.get_drawStyle_arbehw_k$();
   };
-  protoOf(TextStyle).get_textAlign_ihj0br_k$ = function () {
-    return this.paragraphStyle_1.get_textAlign_ihj0br_k$();
+  protoOf(TextStyle).get_textAlign_c2c4cc_k$ = function () {
+    return this.paragraphStyle_1.get_textAlign_c2c4cc_k$();
   };
-  protoOf(TextStyle).get_textDirection_fsfodj_k$ = function () {
-    return this.paragraphStyle_1.get_textDirection_fsfodj_k$();
+  protoOf(TextStyle).get_textDirection_u2eu2k_k$ = function () {
+    return this.paragraphStyle_1.get_textDirection_u2eu2k_k$();
   };
-  protoOf(TextStyle).get_lineHeight_oovvjw_k$ = function () {
-    return this.paragraphStyle_1.get_lineHeight_oovvjw_k$();
+  protoOf(TextStyle).get_lineHeight_3vvefu_k$ = function () {
+    return this.paragraphStyle_1.get_lineHeight_3vvefu_k$();
   };
   protoOf(TextStyle).get_textIndent_5mau2q_k$ = function () {
     return this.paragraphStyle_1.get_textIndent_5mau2q_k$();
@@ -7870,11 +7766,11 @@
   protoOf(TextStyle).get_lineHeightStyle_fzu4s3_k$ = function () {
     return this.paragraphStyle_1.get_lineHeightStyle_fzu4s3_k$();
   };
-  protoOf(TextStyle).get_hyphens_v9y2yh_k$ = function () {
-    return this.paragraphStyle_1.get_hyphens_v9y2yh_k$();
+  protoOf(TextStyle).get_hyphens_p35ysk_k$ = function () {
+    return this.paragraphStyle_1.get_hyphens_p35ysk_k$();
   };
-  protoOf(TextStyle).get_lineBreak_rpr8ah_k$ = function () {
-    return this.paragraphStyle_1.get_lineBreak_rpr8ah_k$();
+  protoOf(TextStyle).get_lineBreak_crhp0k_k$ = function () {
+    return this.paragraphStyle_1.get_lineBreak_crhp0k_k$();
   };
   protoOf(TextStyle).get_textMotion_7jbf0s_k$ = function () {
     return this.paragraphStyle_1.get_textMotion_7jbf0s_k$();
@@ -7892,11 +7788,11 @@
       return false;
     return true;
   };
-  protoOf(TextStyle).hasSameLayoutAffectingAttributes_nmoc4f_k$ = function (other) {
-    return this === other ? true : this.paragraphStyle_1.equals(other.paragraphStyle_1) ? this.spanStyle_1.hasSameLayoutAffectingAttributes_h43d5o_k$(other.spanStyle_1) : false;
+  protoOf(TextStyle).hasSameLayoutAffectingAttributes_42axi4_k$ = function (other) {
+    return this === other ? true : this.paragraphStyle_1.equals(other.paragraphStyle_1) ? this.spanStyle_1.hasSameLayoutAffectingAttributes_n0ls75_k$(other.spanStyle_1) : false;
   };
-  protoOf(TextStyle).hasSameDrawAffectingAttributes_u9e6rp_k$ = function (other) {
-    return this === other ? true : this.spanStyle_1.hasSameNonLayoutAttributes_tyvwk0_k$(other.spanStyle_1);
+  protoOf(TextStyle).hasSameDrawAffectingAttributes_drzoqy_k$ = function (other) {
+    return this === other ? true : this.spanStyle_1.hasSameNonLayoutAttributes_mkn2vf_k$(other.spanStyle_1);
   };
   protoOf(TextStyle).hashCode = function () {
     var result = this.spanStyle_1.hashCode();
@@ -7917,20 +7813,20 @@
     return result;
   };
   protoOf(TextStyle).toString = function () {
-    var tmp = 'TextStyle(' + ('color=' + new Color(this.get_color_v34vrz_k$()) + ', ') + ('brush=' + this.get_brush_ipcjyp_k$() + ', ') + ('alpha=' + this.get_alpha_iooth1_k$() + ', ') + ('fontSize=' + new TextUnit(this.get_fontSize_61k213_k$()) + ', ') + ('fontWeight=' + this.get_fontWeight_wbif2o_k$() + ', ');
-    var tmp_0 = this.get_fontStyle_fze7ml_k$();
+    var tmp = 'TextStyle(' + ('color=' + new Color(this.get_color_lnp1vl_k$()) + ', ') + ('brush=' + this.get_brush_ipcjyp_k$() + ', ') + ('alpha=' + this.get_alpha_iooth1_k$() + ', ') + ('fontSize=' + new TextUnit(this.get_fontSize_ergf2z_k$()) + ', ') + ('fontWeight=' + this.get_fontWeight_wbif2o_k$() + ', ');
+    var tmp_0 = this.get_fontStyle_hzv4zg_k$();
     var tmp_1 = tmp + ('fontStyle=' + (tmp_0 == null ? null : new FontStyle(tmp_0)) + ', ');
-    var tmp_2 = this.get_fontSynthesis_t08ei1_k$();
-    var tmp_3 = tmp_1 + ('fontSynthesis=' + (tmp_2 == null ? null : new FontSynthesis(tmp_2)) + ', ') + ('fontFamily=' + this.get_fontFamily_ulphcs_k$() + ', ') + ('fontFeatureSettings=' + this.get_fontFeatureSettings_a47533_k$() + ', ') + ('letterSpacing=' + new TextUnit(this.get_letterSpacing_u0tnf8_k$()) + ', ');
-    var tmp_4 = this.get_baselineShift_yg9i0p_k$();
-    var tmp_5 = tmp_3 + ('baselineShift=' + (tmp_4 == null ? null : new BaselineShift(tmp_4)) + ', ') + ('textGeometricTransform=' + this.get_textGeometricTransform_tdfmin_k$() + ', ') + ('localeList=' + this.get_localeList_1gj9gh_k$() + ', ') + ('background=' + new Color(this.get_background_ubksc_k$()) + ', ') + ('textDecoration=' + this.get_textDecoration_itgjwm_k$() + ', ') + ('shadow=' + this.get_shadow_jgtb8p_k$() + ', ') + ('drawStyle=' + this.get_drawStyle_arbehw_k$() + ', ');
-    var tmp_6 = this.get_textAlign_ihj0br_k$();
+    var tmp_2 = this.get_fontSynthesis_h5auiy_k$();
+    var tmp_3 = tmp_1 + ('fontSynthesis=' + (tmp_2 == null ? null : new FontSynthesis(tmp_2)) + ', ') + ('fontFamily=' + this.get_fontFamily_ulphcs_k$() + ', ') + ('fontFeatureSettings=' + this.get_fontFeatureSettings_a47533_k$() + ', ') + ('letterSpacing=' + new TextUnit(this.get_letterSpacing_k79xfu_k$()) + ', ');
+    var tmp_4 = this.get_baselineShift_99zyho_k$();
+    var tmp_5 = tmp_3 + ('baselineShift=' + (tmp_4 == null ? null : new BaselineShift(tmp_4)) + ', ') + ('textGeometricTransform=' + this.get_textGeometricTransform_tdfmin_k$() + ', ') + ('localeList=' + this.get_localeList_1gj9gh_k$() + ', ') + ('background=' + new Color(this.get_background_8l4942_k$()) + ', ') + ('textDecoration=' + this.get_textDecoration_itgjwm_k$() + ', ') + ('shadow=' + this.get_shadow_jgtb8p_k$() + ', ') + ('drawStyle=' + this.get_drawStyle_arbehw_k$() + ', ');
+    var tmp_6 = this.get_textAlign_c2c4cc_k$();
     var tmp_7 = tmp_5 + ('textAlign=' + (tmp_6 == null ? null : new TextAlign(tmp_6)) + ', ');
-    var tmp_8 = this.get_textDirection_fsfodj_k$();
-    var tmp_9 = tmp_7 + ('textDirection=' + (tmp_8 == null ? null : new TextDirection(tmp_8)) + ', ') + ('lineHeight=' + new TextUnit(this.get_lineHeight_oovvjw_k$()) + ', ') + ('textIndent=' + this.get_textIndent_5mau2q_k$() + ', ') + ('platformStyle=' + this.platformStyle_1 + ', ') + ('lineHeightStyle=' + this.get_lineHeightStyle_fzu4s3_k$() + ', ');
-    var tmp_10 = this.get_lineBreak_rpr8ah_k$();
+    var tmp_8 = this.get_textDirection_u2eu2k_k$();
+    var tmp_9 = tmp_7 + ('textDirection=' + (tmp_8 == null ? null : new TextDirection(tmp_8)) + ', ') + ('lineHeight=' + new TextUnit(this.get_lineHeight_3vvefu_k$()) + ', ') + ('textIndent=' + this.get_textIndent_5mau2q_k$() + ', ') + ('platformStyle=' + this.platformStyle_1 + ', ') + ('lineHeightStyle=' + this.get_lineHeightStyle_fzu4s3_k$() + ', ');
+    var tmp_10 = this.get_lineBreak_crhp0k_k$();
     var tmp_11 = tmp_9 + ('lineBreak=' + (tmp_10 == null ? null : new LineBreak(tmp_10)) + ', ');
-    var tmp_12 = this.get_hyphens_v9y2yh_k$();
+    var tmp_12 = this.get_hyphens_p35ysk_k$();
     return tmp_11 + ('hyphens=' + (tmp_12 == null ? null : new Hyphens(tmp_12)) + ', ') + ('textMotion=' + this.get_textMotion_7jbf0s_k$()) + ')';
   };
   function lerp_6(start, stop, fraction) {
@@ -7951,14 +7847,14 @@
   function resolveTextDirection_0(layoutDirection, textDirection) {
     var tmp;
     var tmp_0 = textDirection;
-    if (equals(tmp_0 == null ? null : new TextDirection(tmp_0), new TextDirection(Companion_getInstance_46().get_Content_x7rqv5_k$()))) {
+    if (equals(tmp_0 == null ? null : new TextDirection(tmp_0), new TextDirection(Companion_getInstance_46().get_Content_gdpx4s_k$()))) {
       var tmp_1;
       switch (layoutDirection.get_ordinal_ip24qg_k$()) {
         case 0:
-          tmp_1 = Companion_getInstance_46().get_ContentOrLtr_xdyfbs_k$();
+          tmp_1 = Companion_getInstance_46().get_ContentOrLtr_byc1cl_k$();
           break;
         case 1:
-          tmp_1 = Companion_getInstance_46().get_ContentOrRtl_8hc4mg_k$();
+          tmp_1 = Companion_getInstance_46().get_ContentOrRtl_twyiln_k$();
           break;
         default:
           noWhenBranchMatchedException();
@@ -7971,10 +7867,10 @@
         var tmp_3;
         switch (layoutDirection.get_ordinal_ip24qg_k$()) {
           case 0:
-            tmp_3 = Companion_getInstance_46().get_Ltr_y8cfpu_k$();
+            tmp_3 = Companion_getInstance_46().get_Ltr_fd58a3_k$();
             break;
           case 1:
-            tmp_3 = Companion_getInstance_46().get_Rtl_52ixoy_k$();
+            tmp_3 = Companion_getInstance_46().get_Rtl_qi5bo5_k$();
             break;
           default:
             noWhenBranchMatchedException();
@@ -8146,7 +8042,7 @@
     return LruCache_init_$Init$(maxSize, objectCreate(protoOf(LruCache)));
   }
   function safeSizeOf($this, key, value) {
-    var result = $this.sizeOf_xsmc0r_k$(key, value);
+    var result = $this.sizeOf_flzyzx_k$(key, value);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(result >= 0)) {
@@ -8159,11 +8055,11 @@
   protoOf(LruCache).get_size_woubt6_k$ = function () {
     // Inline function 'androidx.compose.ui.text.caches.LruCache.synchronizedValue' call
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     return this.size_1;
   };
-  protoOf(LruCache).resize_w0jdrw_k$ = function (maxSize) {
+  protoOf(LruCache).resize_ioxo44_k$ = function (maxSize) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(maxSize > 0)) {
@@ -8172,22 +8068,22 @@
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     this.maxSize_1 = maxSize;
-    this.trimToSize_kob4eq_k$(maxSize);
+    this.trimToSize_u8t9m2_k$(maxSize);
   };
-  protoOf(LruCache).get_1mhr4y_k$ = function (key) {
+  protoOf(LruCache).get_wei43m_k$ = function (key) {
     var mapValue = null;
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     // Inline function 'androidx.compose.ui.text.caches.LruCache.get.<anonymous>' call
-    mapValue = this.map_1.get_1mhr4y_k$(key);
+    mapValue = this.map_1.get_wei43m_k$(key);
     var tmp;
     if (!(mapValue == null)) {
-      this.keySet_1.remove_8hbkc6_k$(key);
-      this.keySet_1.add_1j60pz_k$(key);
+      this.keySet_1.remove_cedx0m_k$(key);
+      this.keySet_1.add_utx5q5_k$(key);
       this.hitCount_1 = this.hitCount_1 + 1 | 0;
       return mapValue;
     } else {
@@ -8195,20 +8091,20 @@
       this.missCount_1 = tmp3 + 1 | 0;
       tmp = tmp3;
     }
-    var createdValue = this.create_u3tv48_k$(key);
+    var createdValue = this.create_mqhnms_k$(key);
     if (createdValue == null) {
       return null;
     }
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     this.createCount_1 = this.createCount_1 + 1 | 0;
-    var previousValue = this.map_1.put_3mhbri_k$(key, createdValue);
-    this.keySet_1.remove_8hbkc6_k$(key);
-    this.keySet_1.add_1j60pz_k$(key);
+    var previousValue = this.map_1.put_4fpzoq_k$(key, createdValue);
+    this.keySet_1.remove_cedx0m_k$(key);
+    this.keySet_1.add_utx5q5_k$(key);
     var tmp_0;
     if (!(previousValue == null)) {
-      this.map_1.put_3mhbri_k$(key, previousValue);
+      this.map_1.put_4fpzoq_k$(key, previousValue);
       mapValue = previousValue;
       tmp_0 = Unit_getInstance();
     } else {
@@ -8216,45 +8112,45 @@
       tmp_0 = Unit_getInstance();
     }
     if (!(mapValue == null)) {
-      this.entryRemoved_l91vrc_k$(false, key, createdValue, mapValue);
+      this.entryRemoved_vg0srm_k$(false, key, createdValue, mapValue);
       return mapValue;
     } else {
-      this.trimToSize_kob4eq_k$(this.maxSize_1);
+      this.trimToSize_u8t9m2_k$(this.maxSize_1);
       return createdValue;
     }
   };
-  protoOf(LruCache).put_3mhbri_k$ = function (key, value) {
+  protoOf(LruCache).put_4fpzoq_k$ = function (key, value) {
     if (key == null ? true : value == null) {
       throw NullPointerException_init_$Create$();
     }
     var previous = null;
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     // Inline function 'androidx.compose.ui.text.caches.LruCache.put.<anonymous>' call
     this.putCount_1 = this.putCount_1 + 1 | 0;
     this.size_1 = this.get_size_woubt6_k$() + safeSizeOf(this, key, value) | 0;
-    previous = this.map_1.put_3mhbri_k$(key, value);
+    previous = this.map_1.put_4fpzoq_k$(key, value);
     if (!(previous == null)) {
       this.size_1 = this.get_size_woubt6_k$() - safeSizeOf(this, key, ensureNotNull(previous)) | 0;
     }
-    if (this.keySet_1.contains_2ehdt1_k$(key)) {
-      this.keySet_1.remove_8hbkc6_k$(key);
+    if (this.keySet_1.contains_aljjnj_k$(key)) {
+      this.keySet_1.remove_cedx0m_k$(key);
     }
-    this.keySet_1.add_1j60pz_k$(key);
+    this.keySet_1.add_utx5q5_k$(key);
     if (!(previous == null)) {
-      this.entryRemoved_l91vrc_k$(false, key, ensureNotNull(previous), value);
+      this.entryRemoved_vg0srm_k$(false, key, ensureNotNull(previous), value);
     }
-    this.trimToSize_kob4eq_k$(this.maxSize_1);
+    this.trimToSize_u8t9m2_k$(this.maxSize_1);
     return previous;
   };
-  protoOf(LruCache).trimToSize_kob4eq_k$ = function (maxSize) {
+  protoOf(LruCache).trimToSize_u8t9m2_k$ = function (maxSize) {
     $l$loop: while (true) {
       var key = null;
       var value = null;
       // Inline function 'androidx.compose.ui.text.synchronized' call
-      this.monitor_1;
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+      this.monitor_1;
       if ((this.get_size_woubt6_k$() < 0 ? true : this.map_1.isEmpty_y1axqb_k$() ? !(this.get_size_woubt6_k$() === 0) : false) ? true : !(this.map_1.isEmpty_y1axqb_k$() === this.keySet_1.isEmpty_y1axqb_k$())) {
         throw IllegalStateException_init_$Create$('map/keySet size inconsistency');
       }
@@ -8262,9 +8158,9 @@
       if (this.get_size_woubt6_k$() > maxSize ? !this.map_1.isEmpty_y1axqb_k$() : false) {
         key = first(this.keySet_1);
         // Inline function 'kotlin.collections.get' call
-        var tmp0_get = this.map_1;
-        var tmp1_get = key;
-        var tmp0_elvis_lhs = (isInterface(tmp0_get, Map) ? tmp0_get : THROW_CCE()).get_1mhr4y_k$(tmp1_get);
+        var this_0 = this.map_1;
+        var key_0 = key;
+        var tmp0_elvis_lhs = (isInterface(this_0, Map) ? this_0 : THROW_CCE()).get_wei43m_k$(key_0);
         var tmp_0;
         if (tmp0_elvis_lhs == null) {
           throw IllegalStateException_init_$Create$('inconsistent state');
@@ -8273,13 +8169,13 @@
         }
         value = tmp_0;
         // Inline function 'kotlin.collections.remove' call
-        var tmp2_remove = this.map_1;
-        var tmp3_remove = key;
-        (isInterface(tmp2_remove, MutableMap) ? tmp2_remove : THROW_CCE()).remove_8hbkc0_k$(tmp3_remove);
+        var this_1 = this.map_1;
+        var key_1 = key;
+        (isInterface(this_1, MutableMap) ? this_1 : THROW_CCE()).remove_gppy8k_k$(key_1);
         // Inline function 'kotlin.collections.remove' call
-        var tmp4_remove = this.keySet_1;
-        var tmp5_remove = key;
-        (isInterface(tmp4_remove, MutableCollection) ? tmp4_remove : THROW_CCE()).remove_8hbkc6_k$(tmp5_remove);
+        var this_2 = this.keySet_1;
+        var element = key;
+        (isInterface(this_2, MutableCollection) ? this_2 : THROW_CCE()).remove_cedx0m_k$(element);
         this.size_1 = this.get_size_woubt6_k$() - safeSizeOf(this, ensureNotNull(key), ensureNotNull(value)) | 0;
         this.evictionCount_1 = this.evictionCount_1 + 1 | 0;
         tmp = Unit_getInstance();
@@ -8287,113 +8183,113 @@
       if (key == null ? value == null : false) {
         break $l$loop;
       } else {
-        this.entryRemoved_l91vrc_k$(true, ensureNotNull(key), ensureNotNull(value), null);
+        this.entryRemoved_vg0srm_k$(true, ensureNotNull(key), ensureNotNull(value), null);
       }
     }
   };
-  protoOf(LruCache).remove_8hbkc0_k$ = function (key) {
+  protoOf(LruCache).remove_gppy8k_k$ = function (key) {
     if (key == null) {
       throw NullPointerException_init_$Create$();
     }
     var previous = null;
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    previous = this.map_1.remove_8hbkc0_k$(key);
-    this.keySet_1.remove_8hbkc6_k$(key);
+    this.monitor_1;
+    previous = this.map_1.remove_gppy8k_k$(key);
+    this.keySet_1.remove_cedx0m_k$(key);
     var tmp;
     if (!(previous == null)) {
       this.size_1 = this.get_size_woubt6_k$() - safeSizeOf(this, key, ensureNotNull(previous)) | 0;
       tmp = Unit_getInstance();
     }
     if (!(previous == null)) {
-      this.entryRemoved_l91vrc_k$(false, key, ensureNotNull(previous), null);
+      this.entryRemoved_vg0srm_k$(false, key, ensureNotNull(previous), null);
     }
     return previous;
   };
-  protoOf(LruCache).entryRemoved_l91vrc_k$ = function (evicted, key, oldValue, newValue) {
+  protoOf(LruCache).entryRemoved_vg0srm_k$ = function (evicted, key, oldValue, newValue) {
   };
-  protoOf(LruCache).create_u3tv48_k$ = function (key) {
+  protoOf(LruCache).create_mqhnms_k$ = function (key) {
     return null;
   };
-  protoOf(LruCache).sizeOf_xsmc0r_k$ = function (key, value) {
+  protoOf(LruCache).sizeOf_flzyzx_k$ = function (key, value) {
     return 1;
   };
-  protoOf(LruCache).evictAll_sd7znr_k$ = function () {
-    this.trimToSize_kob4eq_k$(-1);
+  protoOf(LruCache).evictAll_sdrs94_k$ = function () {
+    this.trimToSize_u8t9m2_k$(-1);
   };
   protoOf(LruCache).maxSize_dyjl39_k$ = function () {
     // Inline function 'androidx.compose.ui.text.caches.LruCache.synchronizedValue' call
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     // Inline function 'androidx.compose.ui.text.caches.LruCache.maxSize.<anonymous>' call
     return this.maxSize_1;
   };
   protoOf(LruCache).hitCount_m9mq4k_k$ = function () {
     // Inline function 'androidx.compose.ui.text.caches.LruCache.synchronizedValue' call
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     // Inline function 'androidx.compose.ui.text.caches.LruCache.hitCount.<anonymous>' call
     return this.hitCount_1;
   };
   protoOf(LruCache).missCount_jzozn7_k$ = function () {
     // Inline function 'androidx.compose.ui.text.caches.LruCache.synchronizedValue' call
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     // Inline function 'androidx.compose.ui.text.caches.LruCache.missCount.<anonymous>' call
     return this.missCount_1;
   };
   protoOf(LruCache).createCount_8lc6tp_k$ = function () {
     // Inline function 'androidx.compose.ui.text.caches.LruCache.synchronizedValue' call
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     // Inline function 'androidx.compose.ui.text.caches.LruCache.createCount.<anonymous>' call
     return this.createCount_1;
   };
   protoOf(LruCache).putCount_tak75s_k$ = function () {
     // Inline function 'androidx.compose.ui.text.caches.LruCache.synchronizedValue' call
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     // Inline function 'androidx.compose.ui.text.caches.LruCache.putCount.<anonymous>' call
     return this.putCount_1;
   };
   protoOf(LruCache).evictionCount_nzallc_k$ = function () {
     // Inline function 'androidx.compose.ui.text.caches.LruCache.synchronizedValue' call
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     // Inline function 'androidx.compose.ui.text.caches.LruCache.evictionCount.<anonymous>' call
     return this.evictionCount_1;
   };
   protoOf(LruCache).snapshot_4plubo_k$ = function () {
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     var linkedHashMap = LinkedHashMap_init_$Create$();
     var tmp0_iterator = this.keySet_1.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var key = tmp0_iterator.next_20eer_k$();
-      linkedHashMap.put_3mhbri_k$(key, ensureNotNull(this.map_1.get_1mhr4y_k$(key)));
+      linkedHashMap.put_4fpzoq_k$(key, ensureNotNull(this.map_1.get_wei43m_k$(key)));
     }
     return linkedHashMap;
   };
   protoOf(LruCache).toString = function () {
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     var accesses = this.hitCount_1 + this.missCount_1 | 0;
     var hitPercent = !(accesses === 0) ? imul(100, this.hitCount_1) / accesses | 0 : 0;
     return 'LruCache[maxSize=' + this.maxSize_1 + ',hits=' + this.hitCount_1 + ',misses=' + this.missCount_1 + ',' + ('hitRate=' + hitPercent + '%]');
   };
-  protoOf(LruCache).synchronizedValue_gz1mf5_k$ = function (block) {
+  protoOf(LruCache).synchronizedValue_27304n_k$ = function (block) {
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.monitor_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.monitor_1;
     return block();
   };
   function LruCache() {
@@ -8428,8 +8324,8 @@
       $this.hashes_1 = new Int32Array(capacity);
       var tmp = $this;
       // Inline function 'kotlin.arrayOfNulls' call
-      var tmp0_arrayOfNulls = capacity << 1;
-      tmp.keyValues_1 = fillArrayVal(Array(tmp0_arrayOfNulls), null);
+      var size = capacity << 1;
+      tmp.keyValues_1 = fillArrayVal(Array(size), null);
     }
     $this._size_1 = 0;
     return $this;
@@ -8440,14 +8336,14 @@
   function SimpleArrayMap_init_$Init$_0(map, $this) {
     SimpleArrayMap_init_$Init$(VOID, $this);
     if (!(map == null)) {
-      $this.putAll_jjpgox_k$(map);
+      $this.putAll_ohagg0_k$(map);
     }
     return $this;
   }
   function SimpleArrayMap_init_$Create$_0(map) {
     return SimpleArrayMap_init_$Init$_0(map, objectCreate(protoOf(SimpleArrayMap)));
   }
-  protoOf(SimpleArrayMap).set__size_taaznx_k$ = function (_set____db54di) {
+  protoOf(SimpleArrayMap).set__size_yixcpn_k$ = function (_set____db54di) {
     this._size_1 = _set____db54di;
   };
   protoOf(SimpleArrayMap).get__size_inpkfr_k$ = function () {
@@ -8456,7 +8352,7 @@
   protoOf(SimpleArrayMap).get_size_woubt6_k$ = function () {
     return this._size_1;
   };
-  protoOf(SimpleArrayMap).indexOf_37mh4k_k$ = function (key, hash) {
+  protoOf(SimpleArrayMap).indexOf_mzow2l_k$ = function (key, hash) {
     var N = this._size_1;
     if (N === 0) {
       return -1;
@@ -8510,7 +8406,7 @@
     }
     return ~end;
   };
-  protoOf(SimpleArrayMap).clear_j9y8zo_k$ = function () {
+  protoOf(SimpleArrayMap).clear_j9egeb_k$ = function () {
     if (this._size_1 > 0) {
       this.hashes_1 = get_EMPTY_INTS();
       this.keyValues_1 = get_EMPTY_OBJECTS();
@@ -8520,7 +8416,7 @@
       throw ConcurrentModificationException_init_$Create$();
     }
   };
-  protoOf(SimpleArrayMap).ensureCapacity_ignus8_k$ = function (minimumCapacity) {
+  protoOf(SimpleArrayMap).ensureCapacity_wr7980_k$ = function (minimumCapacity) {
     var osize = this._size_1;
     if (this.hashes_1.length < minimumCapacity) {
       this.hashes_1 = copyOf(this.hashes_1, minimumCapacity);
@@ -8530,13 +8426,13 @@
       throw ConcurrentModificationException_init_$Create$();
     }
   };
-  protoOf(SimpleArrayMap).containsKey_wgk31w_k$ = function (key) {
+  protoOf(SimpleArrayMap).containsKey_aw81wo_k$ = function (key) {
     return this.indexOfKey_ht9ei1_k$(key) >= 0;
   };
   protoOf(SimpleArrayMap).indexOfKey_ht9ei1_k$ = function (key) {
-    return key == null ? this.indexOfNull_k3dchc_k$() : this.indexOf_37mh4k_k$(key, hashCode(key));
+    return key == null ? this.indexOfNull_k3dchc_k$() : this.indexOf_mzow2l_k$(key, hashCode(key));
   };
-  protoOf(SimpleArrayMap).indexOfValue_26501t_k$ = function (value) {
+  protoOf(SimpleArrayMap).indexOfValue_jsyz2z_k$ = function (value) {
     var N = this._size_1 << 1;
     var array = this.keyValues_1;
     if (value == null) {
@@ -8558,50 +8454,50 @@
     }
     return -1;
   };
-  protoOf(SimpleArrayMap).containsValue_5viga1_k$ = function (value) {
-    return this.indexOfValue_26501t_k$(value) >= 0;
+  protoOf(SimpleArrayMap).containsValue_yf2ykl_k$ = function (value) {
+    return this.indexOfValue_jsyz2z_k$(value) >= 0;
   };
-  protoOf(SimpleArrayMap).get_1mhr4y_k$ = function (key) {
+  protoOf(SimpleArrayMap).get_wei43m_k$ = function (key) {
     var index = this.indexOfKey_ht9ei1_k$(key);
     var tmp;
     if (index >= 0) {
       var tmp_0 = this.keyValues_1[(index << 1) + 1 | 0];
-      tmp = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
+      tmp = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
     } else {
       tmp = null;
     }
     return tmp;
   };
-  protoOf(SimpleArrayMap).getOrDefault_98tstx_k$ = function (key, defaultValue) {
+  protoOf(SimpleArrayMap).getOrDefault_6hkvp9_k$ = function (key, defaultValue) {
     var index = this.indexOfKey_ht9ei1_k$(key);
     var tmp;
     if (index >= 0) {
       var tmp_0 = this.keyValues_1[(index << 1) + 1 | 0];
-      tmp = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
+      tmp = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
     } else {
       tmp = defaultValue;
     }
     return tmp;
   };
-  protoOf(SimpleArrayMap).keyAt_krkslr_k$ = function (index) {
+  protoOf(SimpleArrayMap).keyAt_v5apcq_k$ = function (index) {
     var tmp = this.keyValues_1[index << 1];
-    return (tmp == null ? true : isObject(tmp)) ? tmp : THROW_CCE();
+    return (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
   };
-  protoOf(SimpleArrayMap).valueAt_mb56gt_k$ = function (index) {
+  protoOf(SimpleArrayMap).valueAt_sbdne4_k$ = function (index) {
     var tmp = this.keyValues_1[(index << 1) + 1 | 0];
-    return (tmp == null ? true : isObject(tmp)) ? tmp : THROW_CCE();
+    return (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
   };
-  protoOf(SimpleArrayMap).setValueAt_pzoq2_k$ = function (index, value) {
+  protoOf(SimpleArrayMap).setValueAt_ro215_k$ = function (index, value) {
     var actualIndex = (index << 1) + 1 | 0;
     var tmp = this.keyValues_1[actualIndex];
-    var old = (tmp == null ? true : isObject(tmp)) ? tmp : THROW_CCE();
+    var old = (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
     this.keyValues_1[actualIndex] = value;
     return old;
   };
   protoOf(SimpleArrayMap).isEmpty_y1axqb_k$ = function () {
     return this._size_1 <= 0;
   };
-  protoOf(SimpleArrayMap).put_3mhbri_k$ = function (key, value) {
+  protoOf(SimpleArrayMap).put_4fpzoq_k$ = function (key, value) {
     var osize = this._size_1;
     var hash;
     var index;
@@ -8610,12 +8506,12 @@
       index = this.indexOfNull_k3dchc_k$();
     } else {
       hash = hashCode(key);
-      index = this.indexOf_37mh4k_k$(key, hash);
+      index = this.indexOf_mzow2l_k$(key, hash);
     }
     if (index >= 0) {
       index = (index << 1) + 1 | 0;
       var tmp = this.keyValues_1[index];
-      var old = (tmp == null ? true : isObject(tmp)) ? tmp : THROW_CCE();
+      var old = (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
       this.keyValues_1[index] = value;
       return old;
     }
@@ -8636,23 +8532,23 @@
         println('SimpleArrayMap put: move ' + index + '-' + (osize - index | 0) + ' to ' + (index + 1 | 0));
       }
       // Inline function 'kotlin.collections.copyInto' call
-      var tmp0_copyInto = this.hashes_1;
-      var tmp1_copyInto = this.hashes_1;
-      var tmp2_copyInto = index + 1 | 0;
-      var tmp3_copyInto = index;
+      var this_0 = this.hashes_1;
+      var destination = this.hashes_1;
+      var destinationOffset = index + 1 | 0;
+      var startIndex = index;
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp_0 = tmp0_copyInto;
+      var tmp_0 = this_0;
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      arrayCopy(tmp_0, tmp1_copyInto, tmp2_copyInto, tmp3_copyInto, osize);
+      arrayCopy(tmp_0, destination, destinationOffset, startIndex, osize);
       // Inline function 'kotlin.collections.copyInto' call
-      var tmp4_copyInto = this.keyValues_1;
-      var tmp5_copyInto = this.keyValues_1;
-      var tmp6_copyInto = (index + 1 | 0) << 1;
-      var tmp7_copyInto = index << 1;
-      var tmp8_copyInto = this._size_1 << 1;
-      arrayCopy(tmp4_copyInto, tmp5_copyInto, tmp6_copyInto, tmp7_copyInto, tmp8_copyInto);
+      var this_1 = this.keyValues_1;
+      var destination_0 = this.keyValues_1;
+      var destinationOffset_0 = (index + 1 | 0) << 1;
+      var startIndex_0 = index << 1;
+      var endIndex = this._size_1 << 1;
+      arrayCopy(this_1, destination_0, destinationOffset_0, startIndex_0, endIndex);
     }
     if (!(osize === this._size_1) ? true : index >= this.hashes_1.length) {
       throw ConcurrentModificationException_init_$Create$();
@@ -8663,25 +8559,25 @@
     this._size_1 = this._size_1 + 1 | 0;
     return null;
   };
-  protoOf(SimpleArrayMap).putAll_jjpgox_k$ = function (array) {
+  protoOf(SimpleArrayMap).putAll_ohagg0_k$ = function (array) {
     var N = array._size_1;
-    this.ensureCapacity_ignus8_k$(this._size_1 + N | 0);
+    this.ensureCapacity_wr7980_k$(this._size_1 + N | 0);
     if (this._size_1 === 0) {
       if (N > 0) {
         // Inline function 'kotlin.collections.copyInto' call
-        var tmp0_copyInto = array.hashes_1;
-        var tmp1_copyInto = this.hashes_1;
+        var this_0 = array.hashes_1;
+        var destination = this.hashes_1;
         // Inline function 'kotlin.js.unsafeCast' call
         // Inline function 'kotlin.js.asDynamic' call
-        var tmp = tmp0_copyInto;
+        var tmp = this_0;
         // Inline function 'kotlin.js.unsafeCast' call
         // Inline function 'kotlin.js.asDynamic' call
-        arrayCopy(tmp, tmp1_copyInto, 0, 0, N);
+        arrayCopy(tmp, destination, 0, 0, N);
         // Inline function 'kotlin.collections.copyInto' call
-        var tmp2_copyInto = array.keyValues_1;
-        var tmp3_copyInto = this.keyValues_1;
-        var tmp4_copyInto = N << 1;
-        arrayCopy(tmp2_copyInto, tmp3_copyInto, 0, 0, tmp4_copyInto);
+        var this_1 = array.keyValues_1;
+        var destination_0 = this.keyValues_1;
+        var endIndex = N << 1;
+        arrayCopy(this_1, destination_0, 0, 0, endIndex);
         this._size_1 = N;
       }
     } else {
@@ -8690,41 +8586,41 @@
         do {
           var i = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          this.put_3mhbri_k$(array.keyAt_krkslr_k$(i), array.valueAt_mb56gt_k$(i));
+          this.put_4fpzoq_k$(array.keyAt_v5apcq_k$(i), array.valueAt_sbdne4_k$(i));
         }
          while (inductionVariable < N);
     }
   };
-  protoOf(SimpleArrayMap).putIfAbsent_f5fh1k_k$ = function (key, value) {
-    var mapValue = this.get_1mhr4y_k$(key);
+  protoOf(SimpleArrayMap).putIfAbsent_xcpccg_k$ = function (key, value) {
+    var mapValue = this.get_wei43m_k$(key);
     if (mapValue == null) {
-      mapValue = this.put_3mhbri_k$(key, value);
+      mapValue = this.put_4fpzoq_k$(key, value);
     }
     return mapValue;
   };
-  protoOf(SimpleArrayMap).remove_8hbkc0_k$ = function (key) {
+  protoOf(SimpleArrayMap).remove_gppy8k_k$ = function (key) {
     var index = this.indexOfKey_ht9ei1_k$(key);
-    return index >= 0 ? this.removeAt_qvpkxi_k$(index) : null;
+    return index >= 0 ? this.removeAt_6niowx_k$(index) : null;
   };
-  protoOf(SimpleArrayMap).remove_i68l5z_k$ = function (key, value) {
+  protoOf(SimpleArrayMap).remove_tnklb3_k$ = function (key, value) {
     var index = this.indexOfKey_ht9ei1_k$(key);
     if (index >= 0) {
-      var mapValue = this.valueAt_mb56gt_k$(index);
+      var mapValue = this.valueAt_sbdne4_k$(index);
       if (equals(value, mapValue)) {
-        this.removeAt_qvpkxi_k$(index);
+        this.removeAt_6niowx_k$(index);
         return true;
       }
     }
     return false;
   };
-  protoOf(SimpleArrayMap).removeAt_qvpkxi_k$ = function (index) {
+  protoOf(SimpleArrayMap).removeAt_6niowx_k$ = function (index) {
     var old = this.keyValues_1[(index << 1) + 1 | 0];
     var osize = this._size_1;
     if (osize <= 1) {
       if (false) {
         println('SimpleArrayMap remove: shrink from ' + this.hashes_1 + '.size to 0');
       }
-      this.clear_j9y8zo_k$();
+      this.clear_j9egeb_k$();
     } else {
       var nsize = osize - 1 | 0;
       if (this.hashes_1.length > 8 ? osize < (this.hashes_1.length / 3 | 0) : false) {
@@ -8737,8 +8633,8 @@
         this.hashes_1 = new Int32Array(n);
         var tmp = this;
         // Inline function 'kotlin.arrayOfNulls' call
-        var tmp0_arrayOfNulls = n << 1;
-        tmp.keyValues_1 = fillArrayVal(Array(tmp0_arrayOfNulls), null);
+        var size = n << 1;
+        tmp.keyValues_1 = fillArrayVal(Array(size), null);
         if (!(osize === this._size_1)) {
           throw ConcurrentModificationException_init_$Create$();
         }
@@ -8747,38 +8643,38 @@
             println('SimpleArrayMap remove: copy from 0-' + index + ' to 0');
           }
           // Inline function 'kotlin.collections.copyInto' call
-          var tmp1_copyInto = this.hashes_1;
+          var destination = this.hashes_1;
           // Inline function 'kotlin.js.unsafeCast' call
           // Inline function 'kotlin.js.asDynamic' call
           var tmp_0 = ohashes;
           // Inline function 'kotlin.js.unsafeCast' call
           // Inline function 'kotlin.js.asDynamic' call
-          arrayCopy(tmp_0, tmp1_copyInto, 0, 0, index);
+          arrayCopy(tmp_0, destination, 0, 0, index);
           // Inline function 'kotlin.collections.copyInto' call
-          var tmp2_copyInto = this.keyValues_1;
-          var tmp3_copyInto = index << 1;
-          arrayCopy(oarray, tmp2_copyInto, 0, 0, tmp3_copyInto);
+          var destination_0 = this.keyValues_1;
+          var endIndex = index << 1;
+          arrayCopy(oarray, destination_0, 0, 0, endIndex);
         }
         if (index < nsize) {
           if (false) {
             println('SimpleArrayMap remove: copy from ' + (index + 1 | 0) + '-' + nsize + ' to ' + index);
           }
           // Inline function 'kotlin.collections.copyInto' call
-          var tmp4_copyInto = this.hashes_1;
-          var tmp5_copyInto = index + 1 | 0;
-          var tmp6_copyInto = nsize + 1 | 0;
+          var destination_1 = this.hashes_1;
+          var startIndex = index + 1 | 0;
+          var endIndex_0 = nsize + 1 | 0;
           // Inline function 'kotlin.js.unsafeCast' call
           // Inline function 'kotlin.js.asDynamic' call
           var tmp_1 = ohashes;
           // Inline function 'kotlin.js.unsafeCast' call
           // Inline function 'kotlin.js.asDynamic' call
-          arrayCopy(tmp_1, tmp4_copyInto, index, tmp5_copyInto, tmp6_copyInto);
+          arrayCopy(tmp_1, destination_1, index, startIndex, endIndex_0);
           // Inline function 'kotlin.collections.copyInto' call
-          var tmp7_copyInto = this.keyValues_1;
-          var tmp8_copyInto = index << 1;
-          var tmp9_copyInto = (index + 1 | 0) << 1;
-          var tmp10_copyInto = (nsize + 1 | 0) << 1;
-          arrayCopy(oarray, tmp7_copyInto, tmp8_copyInto, tmp9_copyInto, tmp10_copyInto);
+          var destination_2 = this.keyValues_1;
+          var destinationOffset = index << 1;
+          var startIndex_0 = (index + 1 | 0) << 1;
+          var endIndex_1 = (nsize + 1 | 0) << 1;
+          arrayCopy(oarray, destination_2, destinationOffset, startIndex_0, endIndex_1);
         }
       } else {
         if (index < nsize) {
@@ -8786,23 +8682,23 @@
             println('SimpleArrayMap remove: move ' + (index + 1 | 0) + '-' + nsize + ' to ' + index);
           }
           // Inline function 'kotlin.collections.copyInto' call
-          var tmp11_copyInto = this.hashes_1;
-          var tmp12_copyInto = this.hashes_1;
-          var tmp13_copyInto = index + 1 | 0;
-          var tmp14_copyInto = nsize + 1 | 0;
+          var this_0 = this.hashes_1;
+          var destination_3 = this.hashes_1;
+          var startIndex_1 = index + 1 | 0;
+          var endIndex_2 = nsize + 1 | 0;
           // Inline function 'kotlin.js.unsafeCast' call
           // Inline function 'kotlin.js.asDynamic' call
-          var tmp_2 = tmp11_copyInto;
+          var tmp_2 = this_0;
           // Inline function 'kotlin.js.unsafeCast' call
           // Inline function 'kotlin.js.asDynamic' call
-          arrayCopy(tmp_2, tmp12_copyInto, index, tmp13_copyInto, tmp14_copyInto);
+          arrayCopy(tmp_2, destination_3, index, startIndex_1, endIndex_2);
           // Inline function 'kotlin.collections.copyInto' call
-          var tmp15_copyInto = this.keyValues_1;
-          var tmp16_copyInto = this.keyValues_1;
-          var tmp17_copyInto = index << 1;
-          var tmp18_copyInto = (index + 1 | 0) << 1;
-          var tmp19_copyInto = (nsize + 1 | 0) << 1;
-          arrayCopy(tmp15_copyInto, tmp16_copyInto, tmp17_copyInto, tmp18_copyInto, tmp19_copyInto);
+          var this_1 = this.keyValues_1;
+          var destination_4 = this.keyValues_1;
+          var destinationOffset_0 = index << 1;
+          var startIndex_2 = (index + 1 | 0) << 1;
+          var endIndex_3 = (nsize + 1 | 0) << 1;
+          arrayCopy(this_1, destination_4, destinationOffset_0, startIndex_2, endIndex_3);
         }
         this.keyValues_1[nsize << 1] = null;
         this.keyValues_1[(nsize << 1) + 1 | 0] = null;
@@ -8812,18 +8708,18 @@
       }
       this._size_1 = nsize;
     }
-    return (old == null ? true : isObject(old)) ? old : THROW_CCE();
+    return (old == null ? true : !(old == null)) ? old : THROW_CCE();
   };
-  protoOf(SimpleArrayMap).replace_74alw7_k$ = function (key, value) {
+  protoOf(SimpleArrayMap).replace_em6wvl_k$ = function (key, value) {
     var index = this.indexOfKey_ht9ei1_k$(key);
-    return index >= 0 ? this.setValueAt_pzoq2_k$(index, value) : null;
+    return index >= 0 ? this.setValueAt_ro215_k$(index, value) : null;
   };
-  protoOf(SimpleArrayMap).replace_mod94e_k$ = function (key, oldValue, newValue) {
+  protoOf(SimpleArrayMap).replace_x39wea_k$ = function (key, oldValue, newValue) {
     var index = this.indexOfKey_ht9ei1_k$(key);
     if (index >= 0) {
-      var mapValue = this.valueAt_mb56gt_k$(index);
+      var mapValue = this.valueAt_sbdne4_k$(index);
       if (mapValue === oldValue) {
-        this.setValueAt_pzoq2_k$(index, newValue);
+        this.setValueAt_ro215_k$(index, newValue);
         return true;
       }
     }
@@ -8845,11 +8741,11 @@
           do {
             var i = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
-            var key = this.keyAt_krkslr_k$(i);
-            var mine = this.valueAt_mb56gt_k$(i);
-            var theirs = map.get_1mhr4y_k$(key);
+            var key = this.keyAt_v5apcq_k$(i);
+            var mine = this.valueAt_sbdne4_k$(i);
+            var theirs = map.get_wei43m_k$(key);
             if (mine == null) {
-              if (!(theirs == null) ? true : !map.containsKey_wgk31w_k$(key)) {
+              if (!(theirs == null) ? true : !map.containsKey_aw81wo_k$(key)) {
                 return false;
               }
             } else if (!equals(mine, theirs)) {
@@ -8870,17 +8766,17 @@
             do {
               var i_0 = inductionVariable_0;
               inductionVariable_0 = inductionVariable_0 + 1 | 0;
-              var key_0 = this.keyAt_krkslr_k$(i_0);
-              var mine_0 = this.valueAt_mb56gt_k$(i_0);
+              var key_0 = this.keyAt_v5apcq_k$(i_0);
+              var mine_0 = this.valueAt_sbdne4_k$(i_0);
               // Inline function 'kotlin.collections.get' call
-              var theirs_0 = (isInterface(map_0, Map) ? map_0 : THROW_CCE()).get_1mhr4y_k$(key_0);
+              var theirs_0 = (isInterface(map_0, Map) ? map_0 : THROW_CCE()).get_wei43m_k$(key_0);
               if (mine_0 == null) {
                 var tmp;
                 if (!(theirs_0 == null)) {
                   tmp = true;
                 } else {
                   // Inline function 'kotlin.collections.containsKey' call
-                  tmp = !(isInterface(map_0, Map) ? map_0 : THROW_CCE()).containsKey_wgk31w_k$(key_0);
+                  tmp = !(isInterface(map_0, Map) ? map_0 : THROW_CCE()).containsKey_aw81wo_k$(key_0);
                 }
                 if (tmp) {
                   return false;
@@ -8929,7 +8825,7 @@
       return '{}';
     }
     var buffer = StringBuilder_init_$Create$(imul(this._size_1, 28));
-    buffer.append_t8oh9e_k$(_Char___init__impl__6a9atx(123));
+    buffer.append_am5a4z_k$(_Char___init__impl__6a9atx(123));
     var inductionVariable = 0;
     var last = this._size_1;
     if (inductionVariable < last)
@@ -8937,24 +8833,24 @@
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
         if (i > 0) {
-          buffer.append_ssq29y_k$(', ');
+          buffer.append_22ad7x_k$(', ');
         }
-        var key = this.keyAt_krkslr_k$(i);
+        var key = this.keyAt_v5apcq_k$(i);
         if (!(key === this)) {
           buffer.append_t8pm91_k$(key);
         } else {
-          buffer.append_ssq29y_k$('(this Map)');
+          buffer.append_22ad7x_k$('(this Map)');
         }
-        buffer.append_t8oh9e_k$(_Char___init__impl__6a9atx(61));
-        var value = this.valueAt_mb56gt_k$(i);
+        buffer.append_am5a4z_k$(_Char___init__impl__6a9atx(61));
+        var value = this.valueAt_sbdne4_k$(i);
         if (!(value === this)) {
           buffer.append_t8pm91_k$(value);
         } else {
-          buffer.append_ssq29y_k$('(this Map)');
+          buffer.append_22ad7x_k$('(this Map)');
         }
       }
        while (inductionVariable < last);
-    buffer.append_t8oh9e_k$(_Char___init__impl__6a9atx(125));
+    buffer.append_am5a4z_k$(_Char___init__impl__6a9atx(125));
     return buffer.toString();
   };
   function SimpleArrayMap() {
@@ -9091,30 +8987,30 @@
   protoOf(FontListFontFamily).get_size_woubt6_k$ = function () {
     return this.$$delegate_0__1.get_size_woubt6_k$();
   };
-  protoOf(FontListFontFamily).contains_m15m86_k$ = function (element) {
-    return this.$$delegate_0__1.contains_2ehdt1_k$(element);
+  protoOf(FontListFontFamily).contains_7cf4hq_k$ = function (element) {
+    return this.$$delegate_0__1.contains_aljjnj_k$(element);
   };
-  protoOf(FontListFontFamily).contains_2ehdt1_k$ = function (element) {
+  protoOf(FontListFontFamily).contains_aljjnj_k$ = function (element) {
     if (!(!(element == null) ? isInterface(element, Font) : false))
       return false;
-    return this.contains_m15m86_k$((!(element == null) ? isInterface(element, Font) : false) ? element : THROW_CCE());
+    return this.contains_7cf4hq_k$((!(element == null) ? isInterface(element, Font) : false) ? element : THROW_CCE());
   };
-  protoOf(FontListFontFamily).containsAll_3sdfdp_k$ = function (elements) {
-    return this.$$delegate_0__1.containsAll_jr3fla_k$(elements);
+  protoOf(FontListFontFamily).containsAll_ppytrt_k$ = function (elements) {
+    return this.$$delegate_0__1.containsAll_xk45sd_k$(elements);
   };
-  protoOf(FontListFontFamily).containsAll_jr3fla_k$ = function (elements) {
-    return this.containsAll_3sdfdp_k$(elements);
+  protoOf(FontListFontFamily).containsAll_xk45sd_k$ = function (elements) {
+    return this.containsAll_ppytrt_k$(elements);
   };
-  protoOf(FontListFontFamily).get_fkrdnv_k$ = function (index) {
-    return this.$$delegate_0__1.get_fkrdnv_k$(index);
+  protoOf(FontListFontFamily).get_c1px32_k$ = function (index) {
+    return this.$$delegate_0__1.get_c1px32_k$(index);
   };
-  protoOf(FontListFontFamily).indexOf_st0xpg_k$ = function (element) {
-    return this.$$delegate_0__1.indexOf_dcv8dt_k$(element);
+  protoOf(FontListFontFamily).indexOf_iinxgo_k$ = function (element) {
+    return this.$$delegate_0__1.indexOf_si1fv9_k$(element);
   };
-  protoOf(FontListFontFamily).indexOf_dcv8dt_k$ = function (element) {
+  protoOf(FontListFontFamily).indexOf_si1fv9_k$ = function (element) {
     if (!(!(element == null) ? isInterface(element, Font) : false))
       return -1;
-    return this.indexOf_st0xpg_k$((!(element == null) ? isInterface(element, Font) : false) ? element : THROW_CCE());
+    return this.indexOf_iinxgo_k$((!(element == null) ? isInterface(element, Font) : false) ? element : THROW_CCE());
   };
   protoOf(FontListFontFamily).isEmpty_y1axqb_k$ = function () {
     return this.$$delegate_0__1.isEmpty_y1axqb_k$();
@@ -9122,22 +9018,22 @@
   protoOf(FontListFontFamily).iterator_jk1svi_k$ = function () {
     return this.$$delegate_0__1.iterator_jk1svi_k$();
   };
-  protoOf(FontListFontFamily).lastIndexOf_3okdbi_k$ = function (element) {
-    return this.$$delegate_0__1.lastIndexOf_rzx8t5_k$(element);
+  protoOf(FontListFontFamily).lastIndexOf_mex92q_k$ = function (element) {
+    return this.$$delegate_0__1.lastIndexOf_v2p1fv_k$(element);
   };
-  protoOf(FontListFontFamily).lastIndexOf_rzx8t5_k$ = function (element) {
+  protoOf(FontListFontFamily).lastIndexOf_v2p1fv_k$ = function (element) {
     if (!(!(element == null) ? isInterface(element, Font) : false))
       return -1;
-    return this.lastIndexOf_3okdbi_k$((!(element == null) ? isInterface(element, Font) : false) ? element : THROW_CCE());
+    return this.lastIndexOf_mex92q_k$((!(element == null) ? isInterface(element, Font) : false) ? element : THROW_CCE());
   };
   protoOf(FontListFontFamily).listIterator_xjshxw_k$ = function () {
     return this.$$delegate_0__1.listIterator_xjshxw_k$();
   };
-  protoOf(FontListFontFamily).listIterator_5hanv9_k$ = function (index) {
-    return this.$$delegate_0__1.listIterator_5hanv9_k$(index);
+  protoOf(FontListFontFamily).listIterator_70e65o_k$ = function (index) {
+    return this.$$delegate_0__1.listIterator_70e65o_k$(index);
   };
-  protoOf(FontListFontFamily).subList_d153ha_k$ = function (fromIndex, toIndex) {
-    return this.$$delegate_0__1.subList_d153ha_k$(fromIndex, toIndex);
+  protoOf(FontListFontFamily).subList_xle3r2_k$ = function (fromIndex, toIndex) {
+    return this.$$delegate_0__1.subList_xle3r2_k$(fromIndex, toIndex);
   };
   protoOf(FontListFontFamily).get_fonts_irho7v_k$ = function () {
     return this.fonts_1;
@@ -9208,21 +9104,17 @@
   }
   function TypefaceRequestCache$runCached$lambda(this$0, $typefaceRequest) {
     return function (finalResult) {
-      var tmp$ret$1;
       // Inline function 'androidx.compose.ui.text.synchronized' call
-      var tmp0_synchronized = this$0.lock_1;
-      var tmp$ret$0;
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+      this$0.lock_1;
       var tmp;
       if (finalResult.get_cacheable_mudhp_k$()) {
-        this$0.resultCache_1.put_3mhbri_k$($typefaceRequest, finalResult);
+        this$0.resultCache_1.put_4fpzoq_k$($typefaceRequest, finalResult);
         tmp = Unit_getInstance();
       } else {
-        this$0.resultCache_1.remove_8hbkc0_k$($typefaceRequest);
+        this$0.resultCache_1.remove_gppy8k_k$($typefaceRequest);
         tmp = Unit_getInstance();
       }
-      tmp$ret$0 = tmp;
-      tmp$ret$1 = tmp$ret$0;
       return Unit_getInstance();
     };
   }
@@ -9233,12 +9125,12 @@
   protoOf(TypefaceRequestCache).get_lock_wopyt0_k$ = function () {
     return this.lock_1;
   };
-  protoOf(TypefaceRequestCache).runCached_i96p5x_k$ = function (typefaceRequest, resolveTypeface) {
+  protoOf(TypefaceRequestCache).runCached_m71hct_k$ = function (typefaceRequest, resolveTypeface) {
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.lock_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.lock_1;
     // Inline function 'androidx.compose.ui.text.font.TypefaceRequestCache.runCached.<anonymous>' call
-    var tmp0_safe_receiver = this.resultCache_1.get_1mhr4y_k$(typefaceRequest);
+    var tmp0_safe_receiver = this.resultCache_1.get_wei43m_k$(typefaceRequest);
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -9250,7 +9142,7 @@
       if (tmp0_safe_receiver.get_cacheable_mudhp_k$()) {
         return tmp0_safe_receiver;
       } else {
-        tmp_0 = this.resultCache_1.remove_8hbkc0_k$(typefaceRequest);
+        tmp_0 = this.resultCache_1.remove_gppy8k_k$(typefaceRequest);
       }
       tmp = tmp_0;
     }
@@ -9268,28 +9160,28 @@
     }
     var currentTypefaceResult = tmp_1;
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.lock_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.lock_1;
     var tmp_3;
-    if (this.resultCache_1.get_1mhr4y_k$(typefaceRequest) == null ? currentTypefaceResult.get_cacheable_mudhp_k$() : false) {
-      this.resultCache_1.put_3mhbri_k$(typefaceRequest, currentTypefaceResult);
+    if (this.resultCache_1.get_wei43m_k$(typefaceRequest) == null ? currentTypefaceResult.get_cacheable_mudhp_k$() : false) {
+      this.resultCache_1.put_4fpzoq_k$(typefaceRequest, currentTypefaceResult);
       tmp_3 = Unit_getInstance();
     }
     return currentTypefaceResult;
   };
-  protoOf(TypefaceRequestCache).preWarmCache_a6a4xg_k$ = function (typefaceRequests, resolveTypeface) {
+  protoOf(TypefaceRequestCache).preWarmCache_12tul7_k$ = function (typefaceRequests, resolveTypeface) {
     var inductionVariable = 0;
     var last = typefaceRequests.get_size_woubt6_k$() - 1 | 0;
     if (inductionVariable <= last)
       $l$loop_0: do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var typeRequest = typefaceRequests.get_fkrdnv_k$(i);
+        var typeRequest = typefaceRequests.get_c1px32_k$(i);
         // Inline function 'androidx.compose.ui.text.synchronized' call
-        this.lock_1;
         // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+        this.lock_1;
         // Inline function 'androidx.compose.ui.text.font.TypefaceRequestCache.preWarmCache.<anonymous>' call
-        var prior = this.resultCache_1.get_1mhr4y_k$(typeRequest);
+        var prior = this.resultCache_1.get_wei43m_k$(typeRequest);
         if (!(prior == null))
           continue $l$loop_0;
         var tmp;
@@ -9308,24 +9200,24 @@
         if (next instanceof Async)
           continue $l$loop_0;
         // Inline function 'androidx.compose.ui.text.synchronized' call
-        this.lock_1;
         // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+        this.lock_1;
         // Inline function 'androidx.compose.ui.text.font.TypefaceRequestCache.preWarmCache.<anonymous>' call
-        this.resultCache_1.put_3mhbri_k$(typeRequest, next);
+        this.resultCache_1.put_4fpzoq_k$(typeRequest, next);
       }
        while (inductionVariable <= last);
   };
-  protoOf(TypefaceRequestCache).get_kfouzs_k$ = function (typefaceRequest) {
+  protoOf(TypefaceRequestCache).get_lv4i8a_k$ = function (typefaceRequest) {
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.lock_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.lock_1;
     // Inline function 'androidx.compose.ui.text.font.TypefaceRequestCache.get.<anonymous>' call
-    return this.resultCache_1.get_1mhr4y_k$(typefaceRequest);
+    return this.resultCache_1.get_wei43m_k$(typefaceRequest);
   };
   protoOf(TypefaceRequestCache).get_size_woubt6_k$ = function () {
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.lock_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.lock_1;
     // Inline function 'androidx.compose.ui.text.font.TypefaceRequestCache.<get-size>.<anonymous>' call
     return this.resultCache_1.get_size_woubt6_k$();
   };
@@ -9342,10 +9234,10 @@
   protoOf(TypefaceRequest).get_fontWeight_wbif2o_k$ = function () {
     return this.fontWeight_1;
   };
-  protoOf(TypefaceRequest).get_fontStyle_htc78e_k$ = function () {
+  protoOf(TypefaceRequest).get_fontStyle_nhruzn_k$ = function () {
     return this.fontStyle_1;
   };
-  protoOf(TypefaceRequest).get_fontSynthesis_f3q6y0_k$ = function () {
+  protoOf(TypefaceRequest).get_fontSynthesis_yx849j_k$ = function () {
     return this.fontSynthesis_1;
   };
   protoOf(TypefaceRequest).get_resourceLoaderCacheKey_29b1wn_k$ = function () {
@@ -9357,25 +9249,25 @@
   protoOf(TypefaceRequest).component2_7eebsb_k$ = function () {
     return this.fontWeight_1;
   };
-  protoOf(TypefaceRequest).component3_phv0lb_k$ = function () {
+  protoOf(TypefaceRequest).component3_484z5s_k$ = function () {
     return this.fontStyle_1;
   };
-  protoOf(TypefaceRequest).component4_rmvhp9_k$ = function () {
+  protoOf(TypefaceRequest).component4_6mpqxo_k$ = function () {
     return this.fontSynthesis_1;
   };
   protoOf(TypefaceRequest).component5_7eebs8_k$ = function () {
     return this.resourceLoaderCacheKey_1;
   };
-  protoOf(TypefaceRequest).copy_thy6aa_k$ = function (fontFamily, fontWeight, fontStyle, fontSynthesis, resourceLoaderCacheKey) {
+  protoOf(TypefaceRequest).copy_j9k4y4_k$ = function (fontFamily, fontWeight, fontStyle, fontSynthesis, resourceLoaderCacheKey) {
     return new TypefaceRequest(fontFamily, fontWeight, fontStyle, fontSynthesis, resourceLoaderCacheKey);
   };
-  protoOf(TypefaceRequest).copy$default_13mkx7_k$ = function (fontFamily, fontWeight, fontStyle, fontSynthesis, resourceLoaderCacheKey, $super) {
+  protoOf(TypefaceRequest).copy$default_dq30up_k$ = function (fontFamily, fontWeight, fontStyle, fontSynthesis, resourceLoaderCacheKey, $super) {
     fontFamily = fontFamily === VOID ? this.fontFamily_1 : fontFamily;
     fontWeight = fontWeight === VOID ? this.fontWeight_1 : fontWeight;
     fontStyle = fontStyle === VOID ? this.fontStyle_1 : fontStyle;
     fontSynthesis = fontSynthesis === VOID ? this.fontSynthesis_1 : fontSynthesis;
     resourceLoaderCacheKey = resourceLoaderCacheKey === VOID ? this.resourceLoaderCacheKey_1 : resourceLoaderCacheKey;
-    return $super === VOID ? this.copy_thy6aa_k$(fontFamily, fontWeight, fontStyle, fontSynthesis, resourceLoaderCacheKey) : $super.copy_thy6aa_k$.call(this, fontFamily, fontWeight, new FontStyle(fontStyle), new FontSynthesis(fontSynthesis), resourceLoaderCacheKey);
+    return $super === VOID ? this.copy_j9k4y4_k$(fontFamily, fontWeight, fontStyle, fontSynthesis, resourceLoaderCacheKey) : $super.copy_j9k4y4_k$.call(this, fontFamily, fontWeight, new FontStyle(fontStyle), new FontSynthesis(fontSynthesis), resourceLoaderCacheKey);
   };
   protoOf(TypefaceRequest).toString = function () {
     return 'TypefaceRequest(fontFamily=' + this.fontFamily_1 + ', fontWeight=' + this.fontWeight_1 + ', fontStyle=' + new FontStyle(this.fontStyle_1) + ', fontSynthesis=' + new FontSynthesis(this.fontSynthesis_1) + ', resourceLoaderCacheKey=' + toString_0(this.resourceLoaderCacheKey_1) + ')';
@@ -9455,12 +9347,12 @@
     return $this.createDefaultTypeface_1;
   }
   function resolve($this, typefaceRequest) {
-    var result = $this.typefaceRequestCache_1.runCached_i96p5x_k$(typefaceRequest, FontFamilyResolverImpl$resolve$lambda($this, typefaceRequest));
+    var result = $this.typefaceRequestCache_1.runCached_m71hct_k$(typefaceRequest, FontFamilyResolverImpl$resolve$lambda($this, typefaceRequest));
     return result;
   }
   function FontFamilyResolverImpl$createDefaultTypeface$lambda(this$0) {
     return function (it) {
-      return resolve(this$0, it.copy$default_13mkx7_k$(null)).get_value_j01efc_k$();
+      return resolve(this$0, it.copy$default_dq30up_k$(null)).get_value_j01efc_k$();
     };
   }
   function FontFamilyResolverImpl$preload$lambda$lambda(it) {
@@ -9471,10 +9363,10 @@
   }
   function FontFamilyResolverImpl$preload$lambda(this$0) {
     return function (typeRequest) {
-      var tmp0_elvis_lhs = this$0.fontListFontFamilyTypefaceAdapter_1.resolve_wbzvw9_k$(typeRequest, this$0.platformFontLoader_1, FontFamilyResolverImpl$preload$lambda$lambda, this$0.createDefaultTypeface_1);
+      var tmp0_elvis_lhs = this$0.fontListFontFamilyTypefaceAdapter_1.resolve_wywkvk_k$(typeRequest, this$0.platformFontLoader_1, FontFamilyResolverImpl$preload$lambda$lambda, this$0.createDefaultTypeface_1);
       var tmp;
       if (tmp0_elvis_lhs == null) {
-        tmp = this$0.platformFamilyTypefaceAdapter_1.resolve_wbzvw9_k$(typeRequest, this$0.platformFontLoader_1, FontFamilyResolverImpl$preload$lambda$lambda_0, this$0.createDefaultTypeface_1);
+        tmp = this$0.platformFamilyTypefaceAdapter_1.resolve_wywkvk_k$(typeRequest, this$0.platformFontLoader_1, FontFamilyResolverImpl$preload$lambda$lambda_0, this$0.createDefaultTypeface_1);
       } else {
         tmp = tmp0_elvis_lhs;
       }
@@ -9490,8 +9382,8 @@
   }
   function FontFamilyResolverImpl$resolve$lambda(this$0, $typefaceRequest) {
     return function (onAsyncCompletion) {
-      var tmp0_elvis_lhs = this$0.fontListFontFamilyTypefaceAdapter_1.resolve_wbzvw9_k$($typefaceRequest, this$0.platformFontLoader_1, onAsyncCompletion, this$0.createDefaultTypeface_1);
-      var tmp1_elvis_lhs = tmp0_elvis_lhs == null ? this$0.platformFamilyTypefaceAdapter_1.resolve_wbzvw9_k$($typefaceRequest, this$0.platformFontLoader_1, onAsyncCompletion, this$0.createDefaultTypeface_1) : tmp0_elvis_lhs;
+      var tmp0_elvis_lhs = this$0.fontListFontFamilyTypefaceAdapter_1.resolve_wywkvk_k$($typefaceRequest, this$0.platformFontLoader_1, onAsyncCompletion, this$0.createDefaultTypeface_1);
+      var tmp1_elvis_lhs = tmp0_elvis_lhs == null ? this$0.platformFamilyTypefaceAdapter_1.resolve_wywkvk_k$($typefaceRequest, this$0.platformFontLoader_1, onAsyncCompletion, this$0.createDefaultTypeface_1) : tmp0_elvis_lhs;
       var tmp;
       if (tmp1_elvis_lhs == null) {
         throw IllegalStateException_init_$Create$('Could not load font');
@@ -9513,33 +9405,33 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
+            this.set_exceptionState_fex74n_k$(2);
             var tmp_0 = this.fontFamily_1;
             if (!(tmp_0 instanceof FontListFontFamily))
               return Unit_getInstance();
-            this.set_state_a96kl8_k$(1);
-            suspendResult = this._this__u8e3s4__1.fontListFontFamilyTypefaceAdapter_1.preload_5j1p48_k$(this.fontFamily_1, this._this__u8e3s4__1.platformFontLoader_1, this);
+            this.set_state_rjd8d0_k$(1);
+            suspendResult = this._this__u8e3s4__1.fontListFontFamilyTypefaceAdapter_1.preload_2axpx6_k$(this.fontFamily_1, this._this__u8e3s4__1.platformFontLoader_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 1:
-            var tmp0_fastMap = this.fontFamily_1.get_fonts_irho7v_k$();
-            var target = ArrayList_init_$Create$_0(tmp0_fastMap.get_size_woubt6_k$());
+            var this_0 = this.fontFamily_1.get_fonts_irho7v_k$();
+            var target = ArrayList_init_$Create$_0(this_0.get_size_woubt6_k$());
             var inductionVariable = 0;
-            var last = tmp0_fastMap.get_size_woubt6_k$() - 1 | 0;
+            var last = this_0.get_size_woubt6_k$() - 1 | 0;
             if (inductionVariable <= last)
               do {
                 var index = inductionVariable;
                 inductionVariable = inductionVariable + 1 | 0;
-                var item = tmp0_fastMap.get_fkrdnv_k$(index);
-                var tmp0_plusAssign = new TypefaceRequest(this._this__u8e3s4__1.platformResolveInterceptor_1.interceptFontFamily_ok416z_k$(this.fontFamily_1), this._this__u8e3s4__1.platformResolveInterceptor_1.interceptFontWeight_yj7vf0_k$(item.get_weight_lbhkzl_k$()), this._this__u8e3s4__1.platformResolveInterceptor_1.interceptFontStyle_aqbvzf_k$(item.get_style_e2e1yp_k$()), Companion_getInstance_26().get_All_wqntwc_k$(), this._this__u8e3s4__1.platformFontLoader_1.get_cacheKey_w22q12_k$());
-                target.add_1j60pz_k$(tmp0_plusAssign);
+                var item = this_0.get_c1px32_k$(index);
+                var element = new TypefaceRequest(this._this__u8e3s4__1.platformResolveInterceptor_1.interceptFontFamily_gv8ky1_k$(this.fontFamily_1), this._this__u8e3s4__1.platformResolveInterceptor_1.interceptFontWeight_3o5olg_k$(item.get_weight_lbhkzl_k$()), this._this__u8e3s4__1.platformResolveInterceptor_1.interceptFontStyle_a5zuhs_k$(item.get_style_fnlxse_k$()), Companion_getInstance_26().get_All_bqi34r_k$(), this._this__u8e3s4__1.platformFontLoader_1.get_cacheKey_w22q12_k$());
+                target.add_utx5q5_k$(element);
               }
                while (inductionVariable <= last);
             var typeRequests = target;
-            this._this__u8e3s4__1.typefaceRequestCache_1.preWarmCache_a6a4xg_k$(typeRequests, FontFamilyResolverImpl$preload$lambda(this._this__u8e3s4__1));
+            this._this__u8e3s4__1.typefaceRequestCache_1.preWarmCache_12tul7_k$(typeRequests, FontFamilyResolverImpl$preload$lambda(this._this__u8e3s4__1));
             return Unit_getInstance();
           case 2:
             throw this.get_exception_x0n6w6_k$();
@@ -9549,8 +9441,8 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
@@ -9571,14 +9463,14 @@
   protoOf(FontFamilyResolverImpl).get_platformFontLoader_35ioim_k$ = function () {
     return this.platformFontLoader_1;
   };
-  protoOf(FontFamilyResolverImpl).preload_i81elv_k$ = function (fontFamily, $completion) {
+  protoOf(FontFamilyResolverImpl).preload_4qpbwt_k$ = function (fontFamily, $completion) {
     var tmp = new $preloadCOROUTINE$0(this, fontFamily, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(FontFamilyResolverImpl).resolve_3z78ru_k$ = function (fontFamily, fontWeight, fontStyle, fontSynthesis) {
-    return resolve(this, new TypefaceRequest(this.platformResolveInterceptor_1.interceptFontFamily_ok416z_k$(fontFamily), this.platformResolveInterceptor_1.interceptFontWeight_yj7vf0_k$(fontWeight), this.platformResolveInterceptor_1.interceptFontStyle_aqbvzf_k$(fontStyle), this.platformResolveInterceptor_1.interceptFontSynthesis_3mzb7i_k$(fontSynthesis), this.platformFontLoader_1.get_cacheKey_w22q12_k$()));
+  protoOf(FontFamilyResolverImpl).resolve_q3h1fi_k$ = function (fontFamily, fontWeight, fontStyle, fontSynthesis) {
+    return resolve(this, new TypefaceRequest(this.platformResolveInterceptor_1.interceptFontFamily_gv8ky1_k$(fontFamily), this.platformResolveInterceptor_1.interceptFontWeight_3o5olg_k$(fontWeight), this.platformResolveInterceptor_1.interceptFontStyle_a5zuhs_k$(fontStyle), this.platformResolveInterceptor_1.interceptFontSynthesis_3g2w1p_k$(fontSynthesis), this.platformFontLoader_1.get_cacheKey_w22q12_k$()));
   };
   function PlatformResolveInterceptor$Companion$Default$1() {
   }
@@ -9662,13 +9554,13 @@
   protoOf(Key).component2_7eebsb_k$ = function () {
     return this.loaderKey_1;
   };
-  protoOf(Key).copy_m7n4q9_k$ = function (font, loaderKey) {
+  protoOf(Key).copy_4ipj8r_k$ = function (font, loaderKey) {
     return new Key(font, loaderKey);
   };
-  protoOf(Key).copy$default_mop9ks_k$ = function (font, loaderKey, $super) {
+  protoOf(Key).copy$default_domdyh_k$ = function (font, loaderKey, $super) {
     font = font === VOID ? this.font_1 : font;
     loaderKey = loaderKey === VOID ? this.loaderKey_1 : loaderKey;
-    return $super === VOID ? this.copy_m7n4q9_k$(font, loaderKey) : $super.copy_m7n4q9_k$.call(this, font, loaderKey);
+    return $super === VOID ? this.copy_4ipj8r_k$(font, loaderKey) : $super.copy_4ipj8r_k$.call(this, font, loaderKey);
   };
   protoOf(Key).toString = function () {
     return 'Key(font=' + this.font_1 + ', loaderKey=' + toString_0(this.loaderKey_1) + ')';
@@ -9714,16 +9606,16 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
+            this.set_exceptionState_fex74n_k$(2);
             this.key0__1 = new Key(this.font_1, this.platformFontLoader_1.get_cacheKey_w22q12_k$());
             this._this__u8e3s4__1.cacheLock_1;
-            var tmp0_elvis_lhs = this._this__u8e3s4__1.resultCache_1.get_1mhr4y_k$(this.key0__1);
-            var priorResult = tmp0_elvis_lhs == null ? this._this__u8e3s4__1.permanentCache_1.get_1mhr4y_k$(this.key0__1) : tmp0_elvis_lhs;
+            var tmp0_elvis_lhs = this._this__u8e3s4__1.resultCache_1.get_wei43m_k$(this.key0__1);
+            var priorResult = tmp0_elvis_lhs == null ? this._this__u8e3s4__1.permanentCache_1.get_wei43m_k$(this.key0__1) : tmp0_elvis_lhs;
             if (!(priorResult == null)) {
               return _AsyncTypefaceResult___get_result__impl__kpcqqb(priorResult.result_1);
             }
 
-            this.set_state_a96kl8_k$(1);
+            this.set_state_rjd8d0_k$(1);
             suspendResult = this.block_1(this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
@@ -9731,17 +9623,17 @@
 
             continue $sm;
           case 1:
-            var tmp1_also = suspendResult;
+            var this_0 = suspendResult;
             this._this__u8e3s4__1.cacheLock_1;
-            if (tmp1_also == null) {
-              this._this__u8e3s4__1.permanentCache_1.put_3mhbri_k$(this.key0__1, new AsyncTypefaceResult(this._this__u8e3s4__1.PermanentFailure_1));
+            if (this_0 == null) {
+              this._this__u8e3s4__1.permanentCache_1.put_4fpzoq_k$(this.key0__1, new AsyncTypefaceResult(this._this__u8e3s4__1.PermanentFailure_1));
             } else if (this.forever_1) {
-              this._this__u8e3s4__1.permanentCache_1.put_3mhbri_k$(this.key0__1, new AsyncTypefaceResult(_AsyncTypefaceResult___init__impl__h4msax(tmp1_also)));
+              this._this__u8e3s4__1.permanentCache_1.put_4fpzoq_k$(this.key0__1, new AsyncTypefaceResult(_AsyncTypefaceResult___init__impl__h4msax(this_0)));
             } else {
-              this._this__u8e3s4__1.resultCache_1.put_3mhbri_k$(this.key0__1, new AsyncTypefaceResult(_AsyncTypefaceResult___init__impl__h4msax(tmp1_also)));
+              this._this__u8e3s4__1.resultCache_1.put_4fpzoq_k$(this.key0__1, new AsyncTypefaceResult(_AsyncTypefaceResult___init__impl__h4msax(this_0)));
             }
 
-            return tmp1_also;
+            return this_0;
           case 2:
             throw this.get_exception_x0n6w6_k$();
         }
@@ -9750,8 +9642,8 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
@@ -9762,64 +9654,64 @@
     this.permanentCache_1 = SimpleArrayMap_init_$Create$();
     this.cacheLock_1 = createSynchronizedObject();
   }
-  protoOf(AsyncTypefaceCache).put_z5rljh_k$ = function (font, platformFontLoader, result, forever) {
+  protoOf(AsyncTypefaceCache).put_mkf84z_k$ = function (font, platformFontLoader, result, forever) {
     var key = new Key(font, platformFontLoader.get_cacheKey_w22q12_k$());
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.cacheLock_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.cacheLock_1;
     // Inline function 'androidx.compose.ui.text.font.AsyncTypefaceCache.put.<anonymous>' call
     var tmp;
     if (result == null) {
-      tmp = this.permanentCache_1.put_3mhbri_k$(key, new AsyncTypefaceResult(this.PermanentFailure_1));
+      tmp = this.permanentCache_1.put_4fpzoq_k$(key, new AsyncTypefaceResult(this.PermanentFailure_1));
     } else if (forever) {
-      tmp = this.permanentCache_1.put_3mhbri_k$(key, new AsyncTypefaceResult(_AsyncTypefaceResult___init__impl__h4msax(result)));
+      tmp = this.permanentCache_1.put_4fpzoq_k$(key, new AsyncTypefaceResult(_AsyncTypefaceResult___init__impl__h4msax(result)));
     } else {
-      tmp = this.resultCache_1.put_3mhbri_k$(key, new AsyncTypefaceResult(_AsyncTypefaceResult___init__impl__h4msax(result)));
+      tmp = this.resultCache_1.put_4fpzoq_k$(key, new AsyncTypefaceResult(_AsyncTypefaceResult___init__impl__h4msax(result)));
     }
   };
-  protoOf(AsyncTypefaceCache).put$default_nsl9nj_k$ = function (font, platformFontLoader, result, forever, $super) {
+  protoOf(AsyncTypefaceCache).put$default_5282m1_k$ = function (font, platformFontLoader, result, forever, $super) {
     forever = forever === VOID ? false : forever;
     var tmp;
     if ($super === VOID) {
-      this.put_z5rljh_k$(font, platformFontLoader, result, forever);
+      this.put_mkf84z_k$(font, platformFontLoader, result, forever);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.put_z5rljh_k$.call(this, font, platformFontLoader, result, forever);
+      tmp = $super.put_mkf84z_k$.call(this, font, platformFontLoader, result, forever);
     }
     return tmp;
   };
-  protoOf(AsyncTypefaceCache).get_q1bm7w_k$ = function (font, platformFontLoader) {
+  protoOf(AsyncTypefaceCache).get_667wvm_k$ = function (font, platformFontLoader) {
     var key = new Key(font, platformFontLoader.get_cacheKey_w22q12_k$());
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.cacheLock_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.cacheLock_1;
     // Inline function 'androidx.compose.ui.text.font.AsyncTypefaceCache.get.<anonymous>' call
-    var tmp0_elvis_lhs = this.resultCache_1.get_1mhr4y_k$(key);
-    return tmp0_elvis_lhs == null ? this.permanentCache_1.get_1mhr4y_k$(key) : tmp0_elvis_lhs;
+    var tmp0_elvis_lhs = this.resultCache_1.get_wei43m_k$(key);
+    return tmp0_elvis_lhs == null ? this.permanentCache_1.get_wei43m_k$(key) : tmp0_elvis_lhs;
   };
-  protoOf(AsyncTypefaceCache).runCached_dc5hvi_k$ = function (font, platformFontLoader, forever, block, $completion) {
+  protoOf(AsyncTypefaceCache).runCached_axcv1l_k$ = function (font, platformFontLoader, forever, block, $completion) {
     var tmp = new $runCachedCOROUTINE$1(this, font, platformFontLoader, forever, block, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(AsyncTypefaceCache).runCachedBlocking_wh48iw_k$ = function (font, platformFontLoader, block) {
+  protoOf(AsyncTypefaceCache).runCachedBlocking_6vvwv0_k$ = function (font, platformFontLoader, block) {
     // Inline function 'androidx.compose.ui.text.synchronized' call
-    this.cacheLock_1;
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+    this.cacheLock_1;
     var key = new Key(font, platformFontLoader.get_cacheKey_w22q12_k$());
-    var tmp0_elvis_lhs = this.resultCache_1.get_1mhr4y_k$(key);
-    var priorResult = tmp0_elvis_lhs == null ? this.permanentCache_1.get_1mhr4y_k$(key) : tmp0_elvis_lhs;
+    var tmp0_elvis_lhs = this.resultCache_1.get_wei43m_k$(key);
+    var priorResult = tmp0_elvis_lhs == null ? this.permanentCache_1.get_wei43m_k$(key) : tmp0_elvis_lhs;
     var tmp;
     if (!(priorResult == null)) {
       return _AsyncTypefaceResult___get_result__impl__kpcqqb(priorResult.result_1);
     }
     // Inline function 'kotlin.also' call
-    var tmp1_also = block();
+    var this_0 = block();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.font.AsyncTypefaceCache.runCachedBlocking.<anonymous>' call
-    this.put$default_nsl9nj_k$(font, platformFontLoader, tmp1_also);
-    return tmp1_also;
+    this.put$default_5282m1_k$(font, platformFontLoader, this_0);
+    return this_0;
   };
   function _get_fontList__196yaq($this) {
     return $this.fontList_1;
@@ -9837,22 +9729,24 @@
     return $this.platformFontLoader_1;
   }
   function _set_value__lx0xdg($this, _set____db54di) {
+    var this_0 = $this.value$delegate_1;
     value$factory();
-    return $this.value$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   }
-  function AsyncFontListLoader$load$slambda(this$0, $item, resultContinuation) {
+  function AsyncFontListLoader$load$slambda(this$0, $font, resultContinuation) {
     this.this$0__1 = this$0;
-    this.$item_1 = $item;
+    this.$font_1 = $font;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(AsyncFontListLoader$load$slambda).invoke_p0bf06_k$ = function ($completion) {
-    var tmp = this.create_lvr374_k$($completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(AsyncFontListLoader$load$slambda).invoke_vgi6qb_k$ = function ($completion) {
+    var tmp = this.create_d196fn_k$($completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(AsyncFontListLoader$load$slambda).invoke_34if6s_k$ = function ($completion) {
-    return this.invoke_p0bf06_k$($completion);
+  protoOf(AsyncFontListLoader$load$slambda).invoke_ib42db_k$ = function ($completion) {
+    return this.invoke_vgi6qb_k$($completion);
   };
   protoOf(AsyncFontListLoader$load$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -9861,9 +9755,9 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
-            suspendResult = this.this$0__1.loadWithTimeoutOrNull_1il4qe_k$(this.$item_1, this);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
+            suspendResult = this.this$0__1.loadWithTimeoutOrNull_6bbr8n_k$(this.$font_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -9879,19 +9773,19 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(AsyncFontListLoader$load$slambda).create_lvr374_k$ = function (completion) {
-    return new AsyncFontListLoader$load$slambda(this.this$0__1, this.$item_1, completion);
+  protoOf(AsyncFontListLoader$load$slambda).create_d196fn_k$ = function (completion) {
+    return new AsyncFontListLoader$load$slambda(this.this$0__1, this.$font_1, completion);
   };
-  function AsyncFontListLoader$load$slambda_0(this$0, $item, resultContinuation) {
-    var i = new AsyncFontListLoader$load$slambda(this$0, $item, resultContinuation);
+  function AsyncFontListLoader$load$slambda_0(this$0, $font, resultContinuation) {
+    var i = new AsyncFontListLoader$load$slambda(this$0, $font, resultContinuation);
     var l = function ($completion) {
-      return i.invoke_p0bf06_k$($completion);
+      return i.invoke_vgi6qb_k$($completion);
     };
     l.$arity = 0;
     return l;
@@ -9901,14 +9795,14 @@
     this.$this_loadWithTimeoutOrNull_1 = $this_loadWithTimeoutOrNull;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(AsyncFontListLoader$loadWithTimeoutOrNull$slambda).invoke_cvgqj3_k$ = function ($this$withTimeoutOrNull, $completion) {
-    var tmp = this.create_b6qu53_k$($this$withTimeoutOrNull, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(AsyncFontListLoader$loadWithTimeoutOrNull$slambda).invoke_ri3sjx_k$ = function ($this$withTimeoutOrNull, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$withTimeoutOrNull, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(AsyncFontListLoader$loadWithTimeoutOrNull$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_cvgqj3_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(AsyncFontListLoader$loadWithTimeoutOrNull$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_ri3sjx_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(AsyncFontListLoader$loadWithTimeoutOrNull$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -9917,9 +9811,9 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
-            suspendResult = this.this$0__1.platformFontLoader_1.awaitLoad_kuymx_k$(this.$this_loadWithTimeoutOrNull_1, this);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
+            suspendResult = this.this$0__1.platformFontLoader_1.awaitLoad_quf34a_k$(this.$this_loadWithTimeoutOrNull_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -9935,24 +9829,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(AsyncFontListLoader$loadWithTimeoutOrNull$slambda).create_b6qu53_k$ = function ($this$withTimeoutOrNull, completion) {
+  protoOf(AsyncFontListLoader$loadWithTimeoutOrNull$slambda).create_rcuf4x_k$ = function ($this$withTimeoutOrNull, completion) {
     var i = new AsyncFontListLoader$loadWithTimeoutOrNull$slambda(this.this$0__1, this.$this_loadWithTimeoutOrNull_1, completion);
     i.$this$withTimeoutOrNull_1 = $this$withTimeoutOrNull;
     return i;
   };
-  protoOf(AsyncFontListLoader$loadWithTimeoutOrNull$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(AsyncFontListLoader$loadWithTimeoutOrNull$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function AsyncFontListLoader$loadWithTimeoutOrNull$slambda_0(this$0, $this_loadWithTimeoutOrNull, resultContinuation) {
     var i = new AsyncFontListLoader$loadWithTimeoutOrNull$slambda(this$0, $this_loadWithTimeoutOrNull, resultContinuation);
     var l = function ($this$withTimeoutOrNull, $completion) {
-      return i.invoke_cvgqj3_k$($this$withTimeoutOrNull, $completion);
+      return i.invoke_ri3sjx_k$($this$withTimeoutOrNull, $completion);
     };
     l.$arity = 1;
     return l;
@@ -9968,49 +9862,51 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(12);
-            this.set_state_a96kl8_k$(1);
+            this.set_exceptionState_fex74n_k$(12);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 1:
-            this.set_state_a96kl8_k$(2);
+            this.set_state_rjd8d0_k$(2);
             continue $sm;
           case 2:
-            this.set_exceptionState_s9sevl_k$(11);
+            this.set_exceptionState_fex74n_k$(11);
             var tmp_0 = this;
-            tmp_0.tmp0_fastForEach2__1 = this._this__u8e3s4__1.fontList_1;
-            this.tmp0_iterator3__1 = get_indices(this.tmp0_fastForEach2__1).iterator_jk1svi_k$();
-            this.set_state_a96kl8_k$(3);
+            tmp_0.this2__1 = this._this__u8e3s4__1.fontList_1;
+            this.tmp0_iterator3__1 = get_indices(this.this2__1).iterator_jk1svi_k$();
+            this.set_state_rjd8d0_k$(3);
             continue $sm;
           case 3:
             if (!this.tmp0_iterator3__1.hasNext_bitz1p_k$()) {
-              this.set_state_a96kl8_k$(9);
+              this.set_state_rjd8d0_k$(9);
               continue $sm;
             }
 
             this.index4__1 = this.tmp0_iterator3__1.next_20eer_k$();
-            this.item5__1 = this.tmp0_fastForEach2__1.get_fkrdnv_k$(this.index4__1);
-            if (this.item5__1.get_loadingStrategy_w877gz_k$() === Companion_getInstance_24().get_Async_e1a1ve_k$()) {
-              this.set_state_a96kl8_k$(4);
-              suspendResult = this._this__u8e3s4__1.asyncTypefaceCache_1.runCached_dc5hvi_k$(this.item5__1, this._this__u8e3s4__1.platformFontLoader_1, false, AsyncFontListLoader$load$slambda_0(this._this__u8e3s4__1, this.item5__1, null), this);
+            this.item5__1 = this.this2__1.get_c1px32_k$(this.index4__1);
+            var tmp_1 = this;
+            tmp_1.font6__1 = this.item5__1;
+            if (this.font6__1.get_loadingStrategy_s3fce_k$() === Companion_getInstance_24().get_Async_nzjdad_k$()) {
+              this.set_state_rjd8d0_k$(4);
+              suspendResult = this._this__u8e3s4__1.asyncTypefaceCache_1.runCached_axcv1l_k$(this.font6__1, this._this__u8e3s4__1.platformFontLoader_1, false, AsyncFontListLoader$load$slambda_0(this._this__u8e3s4__1, this.font6__1, null), this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
               continue $sm;
             } else {
-              this.set_state_a96kl8_k$(7);
+              this.set_state_rjd8d0_k$(7);
               continue $sm;
             }
 
           case 4:
-            this.typeface6__1 = suspendResult;
-            if (!(this.typeface6__1 == null)) {
-              _set_value__lx0xdg(this._this__u8e3s4__1, synthesizeTypeface(this._this__u8e3s4__1.typefaceRequest_1.get_fontSynthesis_f3q6y0_k$(), this.typeface6__1, this.item5__1, this._this__u8e3s4__1.typefaceRequest_1.get_fontWeight_wbif2o_k$(), this._this__u8e3s4__1.typefaceRequest_1.get_fontStyle_htc78e_k$()));
+            this.typeface7__1 = suspendResult;
+            if (!(this.typeface7__1 == null)) {
+              _set_value__lx0xdg(this._this__u8e3s4__1, synthesizeTypeface(this._this__u8e3s4__1.typefaceRequest_1.get_fontSynthesis_yx849j_k$(), this.typeface7__1, this.font6__1, this._this__u8e3s4__1.typefaceRequest_1.get_fontWeight_wbif2o_k$(), this._this__u8e3s4__1.typefaceRequest_1.get_fontStyle_nhruzn_k$()));
               this.tmp$ret$01__1 = Unit_getInstance();
-              this.set_exceptionState_s9sevl_k$(12);
-              this.set_state_a96kl8_k$(8);
+              this.set_exceptionState_fex74n_k$(12);
+              this.set_state_rjd8d0_k$(8);
               continue $sm;
             } else {
-              this.set_state_a96kl8_k$(5);
+              this.set_state_rjd8d0_k$(5);
               suspendResult = yield_0(this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
@@ -10019,31 +9915,33 @@
             }
 
           case 5:
-            this.set_state_a96kl8_k$(6);
+            this.set_state_rjd8d0_k$(6);
             continue $sm;
           case 6:
-            this.set_state_a96kl8_k$(7);
+            this.set_state_rjd8d0_k$(7);
             continue $sm;
           case 7:
-            this.set_state_a96kl8_k$(3);
+            this.set_state_rjd8d0_k$(3);
             continue $sm;
           case 8:
+            this.set_exceptionState_fex74n_k$(12);
             var shouldCache = get_isActive(this.get_context_h02k06_k$());
             this._this__u8e3s4__1.cacheable_1 = false;
             this._this__u8e3s4__1.onCompletion_1(new Immutable(this._this__u8e3s4__1.get_value_j01efc_k$(), shouldCache));
             return Unit_getInstance();
           case 9:
             this.tmp$ret$20__1 = Unit_getInstance();
-            this.set_exceptionState_s9sevl_k$(12);
-            this.set_state_a96kl8_k$(10);
+            this.set_exceptionState_fex74n_k$(12);
+            this.set_state_rjd8d0_k$(10);
             continue $sm;
           case 10:
+            this.set_exceptionState_fex74n_k$(12);
             var shouldCache_0 = get_isActive(this.get_context_h02k06_k$());
             this._this__u8e3s4__1.cacheable_1 = false;
             this._this__u8e3s4__1.onCompletion_1(new Immutable(this._this__u8e3s4__1.get_value_j01efc_k$(), shouldCache_0));
             return Unit_getInstance();
           case 11:
-            this.set_exceptionState_s9sevl_k$(12);
+            this.set_exceptionState_fex74n_k$(12);
             var t = this.get_exception_x0n6w6_k$();
             var shouldCache_1 = get_isActive(this.get_context_h02k06_k$());
             this._this__u8e3s4__1.cacheable_1 = false;
@@ -10057,8 +9955,8 @@
         if (this.get_exceptionState_wflpxn_k$() === 12) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
@@ -10075,9 +9973,9 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(3);
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
+            this.set_exceptionState_fex74n_k$(3);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
             var tmp_0 = Companion_getInstance_20().get_MaximumAsyncTimeoutMillis_x7fazm_k$();
             suspendResult = withTimeoutOrNull(tmp_0, AsyncFontListLoader$loadWithTimeoutOrNull$slambda_0(this._this__u8e3s4__1, this._this__u8e3s4__2, null), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
@@ -10087,11 +9985,11 @@
             continue $sm;
           case 1:
             this.TRY_RESULT0__1 = suspendResult;
-            this.set_exceptionState_s9sevl_k$(3);
-            this.set_state_a96kl8_k$(4);
+            this.set_exceptionState_fex74n_k$(3);
+            this.set_state_rjd8d0_k$(4);
             continue $sm;
           case 2:
-            this.set_exceptionState_s9sevl_k$(3);
+            this.set_exceptionState_fex74n_k$(3);
             var tmp_1 = this.get_exception_x0n6w6_k$();
             if (tmp_1 instanceof CancellationException) {
               var cancel = this.get_exception_x0n6w6_k$();
@@ -10103,21 +10001,21 @@
                 throw cancel;
               }
               tmp_2.TRY_RESULT0__1 = tmp_3;
-              this.set_state_a96kl8_k$(4);
+              this.set_state_rjd8d0_k$(4);
               continue $sm;
             } else {
               var tmp_4 = this.get_exception_x0n6w6_k$();
               if (tmp_4 instanceof Exception) {
                 var uncaughtFontLoadException = this.get_exception_x0n6w6_k$();
                 var tmp_5 = this;
-                var tmp0_safe_receiver = this.get_context_h02k06_k$().get_j1ktw6_k$(Key_getInstance());
+                var tmp0_safe_receiver = this.get_context_h02k06_k$().get_y2st91_k$(Key_getInstance());
                 if (tmp0_safe_receiver == null)
                   null;
                 else {
-                  tmp0_safe_receiver.handleException_w1h9is_k$(this.get_context_h02k06_k$(), IllegalStateException_init_$Create$_0('Unable to load font ' + this._this__u8e3s4__2, uncaughtFontLoadException));
+                  tmp0_safe_receiver.handleException_e679jj_k$(this.get_context_h02k06_k$(), IllegalStateException_init_$Create$_0('Unable to load font ' + this._this__u8e3s4__2, uncaughtFontLoadException));
                 }
                 tmp_5.TRY_RESULT0__1 = null;
-                this.set_state_a96kl8_k$(4);
+                this.set_state_rjd8d0_k$(4);
                 continue $sm;
               } else {
                 throw this.get_exception_x0n6w6_k$();
@@ -10127,7 +10025,7 @@
           case 3:
             throw this.get_exception_x0n6w6_k$();
           case 4:
-            this.set_exceptionState_s9sevl_k$(3);
+            this.set_exceptionState_fex74n_k$(3);
             return this.TRY_RESULT0__1;
         }
       } catch ($p) {
@@ -10135,8 +10033,8 @@
         if (this.get_exceptionState_wflpxn_k$() === 3) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
@@ -10152,47 +10050,48 @@
   }
   protoOf(AsyncFontListLoader).get_value_j01efc_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.value$delegate_1;
     value$factory_0();
-    return this.value$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(AsyncFontListLoader).set_cacheable_mjhhdi_k$ = function (_set____db54di) {
+  protoOf(AsyncFontListLoader).set_cacheable_iwx8y2_k$ = function (_set____db54di) {
     this.cacheable_1 = _set____db54di;
   };
   protoOf(AsyncFontListLoader).get_cacheable_mudhp_k$ = function () {
     return this.cacheable_1;
   };
-  protoOf(AsyncFontListLoader).load_ne61sj_k$ = function ($completion) {
+  protoOf(AsyncFontListLoader).load_uj0wpb_k$ = function ($completion) {
     var tmp = new $loadCOROUTINE$2(this, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(AsyncFontListLoader).loadWithTimeoutOrNull_1il4qe_k$ = function (_this__u8e3s4, $completion) {
+  protoOf(AsyncFontListLoader).loadWithTimeoutOrNull_6bbr8n_k$ = function (_this__u8e3s4, $completion) {
     var tmp = new $loadWithTimeoutOrNullCOROUTINE$3(this, _this__u8e3s4, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
   function _no_name_provided__qut3iv() {
     AbstractCoroutineContextElement.call(this, Key_getInstance());
   }
-  protoOf(_no_name_provided__qut3iv).handleException_w1h9is_k$ = function (context, exception) {
+  protoOf(_no_name_provided__qut3iv).handleException_e679jj_k$ = function (context, exception) {
     // Inline function 'androidx.compose.ui.text.font.Companion.DropExceptionHandler.<anonymous>' call
     return Unit_getInstance();
   };
-  function FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda($resourceLoader, $item, resultContinuation) {
+  function FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda($resourceLoader, $font, resultContinuation) {
     this.$resourceLoader_1 = $resourceLoader;
-    this.$item_1 = $item;
+    this.$font_1 = $font;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda).invoke_cvgqj3_k$ = function ($this$withTimeout, $completion) {
-    var tmp = this.create_b6qu53_k$($this$withTimeout, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda).invoke_ri3sjx_k$ = function ($this$withTimeout, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$withTimeout, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_cvgqj3_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_ri3sjx_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -10201,9 +10100,9 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
-            suspendResult = this.$resourceLoader_1.awaitLoad_kuymx_k$(this.$item_1, this);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
+            suspendResult = this.$resourceLoader_1.awaitLoad_quf34a_k$(this.$font_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -10219,41 +10118,41 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda).create_b6qu53_k$ = function ($this$withTimeout, completion) {
-    var i = new FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda(this.$resourceLoader_1, this.$item_1, completion);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda).create_rcuf4x_k$ = function ($this$withTimeout, completion) {
+    var i = new FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda(this.$resourceLoader_1, this.$font_1, completion);
     i.$this$withTimeout_1 = $this$withTimeout;
     return i;
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
-  function FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda_0($resourceLoader, $item, resultContinuation) {
-    var i = new FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda($resourceLoader, $item, resultContinuation);
+  function FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda_0($resourceLoader, $font, resultContinuation) {
+    var i = new FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda($resourceLoader, $font, resultContinuation);
     var l = function ($this$withTimeout, $completion) {
-      return i.invoke_cvgqj3_k$($this$withTimeout, $completion);
+      return i.invoke_ri3sjx_k$($this$withTimeout, $completion);
     };
     l.$arity = 1;
     return l;
   }
-  function FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda($item, $resourceLoader, resultContinuation) {
-    this.$item_1 = $item;
+  function FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda($font, $resourceLoader, resultContinuation) {
+    this.$font_1 = $font;
     this.$resourceLoader_1 = $resourceLoader;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda).invoke_p0bf06_k$ = function ($completion) {
-    var tmp = this.create_lvr374_k$($completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda).invoke_vgi6qb_k$ = function ($completion) {
+    var tmp = this.create_d196fn_k$($completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda).invoke_34if6s_k$ = function ($completion) {
-    return this.invoke_p0bf06_k$($completion);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda).invoke_ib42db_k$ = function ($completion) {
+    return this.invoke_vgi6qb_k$($completion);
   };
   protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -10262,11 +10161,11 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(3);
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
+            this.set_exceptionState_fex74n_k$(3);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
             var tmp_0 = Companion_getInstance_20().get_MaximumAsyncTimeoutMillis_x7fazm_k$();
-            suspendResult = withTimeout(tmp_0, FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda_0(this.$resourceLoader_1, this.$item_1, null), this);
+            suspendResult = withTimeout(tmp_0, FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda$slambda_0(this.$resourceLoader_1, this.$font_1, null), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -10274,16 +10173,16 @@
             continue $sm;
           case 1:
             this.TRY_RESULT0__1 = suspendResult;
-            this.set_exceptionState_s9sevl_k$(3);
-            this.set_state_a96kl8_k$(4);
+            this.set_exceptionState_fex74n_k$(3);
+            this.set_state_rjd8d0_k$(4);
             continue $sm;
           case 2:
-            this.set_exceptionState_s9sevl_k$(3);
+            this.set_exceptionState_fex74n_k$(3);
             var tmp_1 = this.get_exception_x0n6w6_k$();
             if (tmp_1 instanceof Exception) {
               var cause = this.get_exception_x0n6w6_k$();
               var tmp_2 = this;
-              throw IllegalStateException_init_$Create$_0('Unable to load font ' + this.$item_1, cause);
+              throw IllegalStateException_init_$Create$_0('Unable to load font ' + this.$font_1, cause);
             } else {
               throw this.get_exception_x0n6w6_k$();
             }
@@ -10291,11 +10190,11 @@
           case 3:
             throw this.get_exception_x0n6w6_k$();
           case 4:
-            this.set_exceptionState_s9sevl_k$(3);
+            this.set_exceptionState_fex74n_k$(3);
             var tmp0_elvis_lhs = this.TRY_RESULT0__1;
             var tmp_3;
             if (tmp0_elvis_lhs == null) {
-              throw IllegalStateException_init_$Create$('Unable to load font ' + this.$item_1);
+              throw IllegalStateException_init_$Create$('Unable to load font ' + this.$font_1);
             } else {
               tmp_3 = tmp0_elvis_lhs;
             }
@@ -10307,37 +10206,37 @@
         if (this.get_exceptionState_wflpxn_k$() === 3) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda).create_lvr374_k$ = function (completion) {
-    return new FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda(this.$item_1, this.$resourceLoader_1, completion);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda).create_d196fn_k$ = function (completion) {
+    return new FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda(this.$font_1, this.$resourceLoader_1, completion);
   };
-  function FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda_0($item, $resourceLoader, resultContinuation) {
-    var i = new FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda($item, $resourceLoader, resultContinuation);
+  function FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda_0($font, $resourceLoader, resultContinuation) {
+    var i = new FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda($font, $resourceLoader, resultContinuation);
     var l = function ($completion) {
-      return i.invoke_p0bf06_k$($completion);
+      return i.invoke_vgi6qb_k$($completion);
     };
     l.$arity = 0;
     return l;
   }
-  function FontListFontFamilyTypefaceAdapter$preload$slambda$slambda(this$0, $item, $resourceLoader, resultContinuation) {
+  function FontListFontFamilyTypefaceAdapter$preload$slambda$slambda(this$0, $font, $resourceLoader, resultContinuation) {
     this.this$0__1 = this$0;
-    this.$item_1 = $item;
+    this.$font_1 = $font;
     this.$resourceLoader_1 = $resourceLoader;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda).invoke_cvgqj3_k$ = function ($this$async, $completion) {
-    var tmp = this.create_b6qu53_k$($this$async, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda).invoke_ri3sjx_k$ = function ($this$async, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$async, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_cvgqj3_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_ri3sjx_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -10346,9 +10245,9 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
-            suspendResult = this.this$0__1.asyncTypefaceCache_1.runCached_dc5hvi_k$(this.$item_1, this.$resourceLoader_1, true, FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda_0(this.$item_1, this.$resourceLoader_1, null), this);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
+            suspendResult = this.this$0__1.asyncTypefaceCache_1.runCached_axcv1l_k$(this.$font_1, this.$resourceLoader_1, true, FontListFontFamilyTypefaceAdapter$preload$slambda$slambda$slambda_0(this.$font_1, this.$resourceLoader_1, null), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -10364,24 +10263,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda).create_b6qu53_k$ = function ($this$async, completion) {
-    var i = new FontListFontFamilyTypefaceAdapter$preload$slambda$slambda(this.this$0__1, this.$item_1, this.$resourceLoader_1, completion);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda).create_rcuf4x_k$ = function ($this$async, completion) {
+    var i = new FontListFontFamilyTypefaceAdapter$preload$slambda$slambda(this.this$0__1, this.$font_1, this.$resourceLoader_1, completion);
     i.$this$async_1 = $this$async;
     return i;
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
-  function FontListFontFamilyTypefaceAdapter$preload$slambda$slambda_0(this$0, $item, $resourceLoader, resultContinuation) {
-    var i = new FontListFontFamilyTypefaceAdapter$preload$slambda$slambda(this$0, $item, $resourceLoader, resultContinuation);
+  function FontListFontFamilyTypefaceAdapter$preload$slambda$slambda_0(this$0, $font, $resourceLoader, resultContinuation) {
+    var i = new FontListFontFamilyTypefaceAdapter$preload$slambda$slambda(this$0, $font, $resourceLoader, resultContinuation);
     var l = function ($this$async, $completion) {
-      return i.invoke_cvgqj3_k$($this$async, $completion);
+      return i.invoke_ri3sjx_k$($this$async, $completion);
     };
     l.$arity = 1;
     return l;
@@ -10423,14 +10322,14 @@
     this.$resourceLoader_1 = $resourceLoader;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda).invoke_d6gbsu_k$ = function ($this$coroutineScope, $completion) {
-    var tmp = this.create_b6qu53_k$($this$coroutineScope, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda).invoke_d9fzmj_k$ = function ($this$coroutineScope, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$coroutineScope, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -10439,20 +10338,21 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
-            var set = HashSet_init_$Create$(this.$asyncLoads_1.get_size_woubt6_k$());
-            var target = ArrayList_init_$Create$_0(this.$asyncLoads_1.get_size_woubt6_k$());
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
+            var this_0 = this.$asyncLoads_1;
+            var set = HashSet_init_$Create$(this_0.get_size_woubt6_k$());
+            var target = ArrayList_init_$Create$_0(this_0.get_size_woubt6_k$());
             var inductionVariable = 0;
-            var last = this.$asyncLoads_1.get_size_woubt6_k$() - 1 | 0;
+            var last = this_0.get_size_woubt6_k$() - 1 | 0;
             if (inductionVariable <= last)
               do {
                 var index = inductionVariable;
                 inductionVariable = inductionVariable + 1 | 0;
-                var item = this.$asyncLoads_1.get_fkrdnv_k$(index);
+                var item = this_0.get_c1px32_k$(index);
                 var key = item;
-                if (set.add_1j60pz_k$(key)) {
-                  target.add_1j60pz_k$(item);
+                if (set.add_utx5q5_k$(key)) {
+                  target.add_utx5q5_k$(item);
                 }
               }
                while (inductionVariable <= last);
@@ -10463,9 +10363,9 @@
               do {
                 var index_0 = inductionVariable_0;
                 inductionVariable_0 = inductionVariable_0 + 1 | 0;
-                var item_0 = target.get_fkrdnv_k$(index_0);
-                var tmp0_plusAssign = async(this.$this$coroutineScope_1, VOID, VOID, FontListFontFamilyTypefaceAdapter$preload$slambda$slambda_0(this.this$0__1, item_0, this.$resourceLoader_1, null));
-                target_0.add_1j60pz_k$(tmp0_plusAssign);
+                var item_0 = target.get_c1px32_k$(index_0);
+                var element = async(this.$this$coroutineScope_1, VOID, VOID, FontListFontFamilyTypefaceAdapter$preload$slambda$slambda_0(this.this$0__1, item_0, this.$resourceLoader_1, null));
+                target_0.add_utx5q5_k$(element);
               }
                while (inductionVariable_0 <= last_0);
             suspendResult = joinAll(target_0, this);
@@ -10484,24 +10384,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda).create_b6qu53_k$ = function ($this$coroutineScope, completion) {
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda).create_rcuf4x_k$ = function ($this$coroutineScope, completion) {
     var i = new FontListFontFamilyTypefaceAdapter$preload$slambda(this.$asyncLoads_1, this.this$0__1, this.$resourceLoader_1, completion);
     i.$this$coroutineScope_1 = $this$coroutineScope;
     return i;
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(FontListFontFamilyTypefaceAdapter$preload$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function FontListFontFamilyTypefaceAdapter$preload$slambda_0($asyncLoads, this$0, $resourceLoader, resultContinuation) {
     var i = new FontListFontFamilyTypefaceAdapter$preload$slambda($asyncLoads, this$0, $resourceLoader, resultContinuation);
     var l = function ($this$coroutineScope, $completion) {
-      return i.invoke_d6gbsu_k$($this$coroutineScope, $completion);
+      return i.invoke_d9fzmj_k$($this$coroutineScope, $completion);
     };
     l.$arity = 1;
     return l;
@@ -10510,14 +10410,14 @@
     this.$asyncLoader_1 = $asyncLoader;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(FontListFontFamilyTypefaceAdapter$resolve$slambda).invoke_d6gbsu_k$ = function ($this$launch, $completion) {
-    var tmp = this.create_b6qu53_k$($this$launch, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(FontListFontFamilyTypefaceAdapter$resolve$slambda).invoke_d9fzmj_k$ = function ($this$launch, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$launch, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$resolve$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(FontListFontFamilyTypefaceAdapter$resolve$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(FontListFontFamilyTypefaceAdapter$resolve$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -10526,9 +10426,9 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
-            suspendResult = this.$asyncLoader_1.load_ne61sj_k$(this);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
+            suspendResult = this.$asyncLoader_1.load_uj0wpb_k$(this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -10544,24 +10444,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$resolve$slambda).create_b6qu53_k$ = function ($this$launch, completion) {
+  protoOf(FontListFontFamilyTypefaceAdapter$resolve$slambda).create_rcuf4x_k$ = function ($this$launch, completion) {
     var i = new FontListFontFamilyTypefaceAdapter$resolve$slambda(this.$asyncLoader_1, completion);
     i.$this$launch_1 = $this$launch;
     return i;
   };
-  protoOf(FontListFontFamilyTypefaceAdapter$resolve$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(FontListFontFamilyTypefaceAdapter$resolve$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function FontListFontFamilyTypefaceAdapter$resolve$slambda_0($asyncLoader, resultContinuation) {
     var i = new FontListFontFamilyTypefaceAdapter$resolve$slambda($asyncLoader, resultContinuation);
     var l = function ($this$launch, $completion) {
-      return i.invoke_d6gbsu_k$($this$launch, $completion);
+      return i.invoke_d9fzmj_k$($this$launch, $completion);
     };
     l.$arity = 1;
     return l;
@@ -10571,32 +10471,32 @@
     asyncTypefaceCache = asyncTypefaceCache === VOID ? new AsyncTypefaceCache() : asyncTypefaceCache;
     injectedContext = injectedContext === VOID ? EmptyCoroutineContext_getInstance() : injectedContext;
     this.asyncTypefaceCache_1 = asyncTypefaceCache;
-    this.asyncLoadScope_1 = CoroutineScope_0(Companion_getInstance_23().DropExceptionHandler_1.plus_rgw9wi_k$(injectedContext).plus_rgw9wi_k$(SupervisorJob(injectedContext.get_j1ktw6_k$(Key_getInstance_0()))));
+    this.asyncLoadScope_1 = CoroutineScope_0(Companion_getInstance_23().DropExceptionHandler_1.plus_s13ygv_k$(injectedContext).plus_s13ygv_k$(SupervisorJob(injectedContext.get_y2st91_k$(Key_getInstance_0()))));
   }
-  protoOf(FontListFontFamilyTypefaceAdapter).preload_5j1p48_k$ = function (family, resourceLoader, $completion) {
+  protoOf(FontListFontFamilyTypefaceAdapter).preload_2axpx6_k$ = function (family, resourceLoader, $completion) {
     if (!(family instanceof FontListFontFamily))
       return Unit_getInstance();
     var allFonts = family.get_fonts_irho7v_k$();
     // Inline function 'androidx.compose.ui.text.fastDistinctBy' call
     // Inline function 'androidx.compose.ui.util.fastMap' call
     // Inline function 'androidx.compose.ui.text.fastFilter' call
-    var tmp0_fastFilter = family.get_fonts_irho7v_k$();
+    var this_0 = family.get_fonts_irho7v_k$();
     // Inline function 'kotlin.contracts.contract' call
-    var target = ArrayList_init_$Create$_0(tmp0_fastFilter.get_size_woubt6_k$());
+    var target = ArrayList_init_$Create$_0(this_0.get_size_woubt6_k$());
     // Inline function 'androidx.compose.ui.util.fastForEach' call
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
-    var last = tmp0_fastFilter.get_size_woubt6_k$() - 1 | 0;
+    var last = this_0.get_size_woubt6_k$() - 1 | 0;
     if (inductionVariable <= last)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = tmp0_fastFilter.get_fkrdnv_k$(index);
+        var item = this_0.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
         // Inline function 'androidx.compose.ui.text.font.FontListFontFamilyTypefaceAdapter.preload.<anonymous>' call
-        if (item.get_loadingStrategy_w877gz_k$() === Companion_getInstance_24().get_Async_e1a1ve_k$()) {
+        if (item.get_loadingStrategy_s3fce_k$() === Companion_getInstance_24().get_Async_nzjdad_k$()) {
           // Inline function 'kotlin.collections.plusAssign' call
-          target.add_1j60pz_k$(item);
+          target.add_utx5q5_k$(item);
         }
       }
        while (inductionVariable <= last);
@@ -10610,12 +10510,12 @@
       do {
         var index_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var item_0 = target.get_fkrdnv_k$(index_0);
+        var item_0 = target.get_c1px32_k$(index_0);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.font.FontListFontFamilyTypefaceAdapter.preload.<anonymous>' call
-        var tmp0_plusAssign = to(item_0.get_weight_lbhkzl_k$(), new FontStyle(item_0.get_style_e2e1yp_k$()));
-        target_0.add_1j60pz_k$(tmp0_plusAssign);
+        var element = to(item_0.get_weight_lbhkzl_k$(), new FontStyle(item_0.get_style_fnlxse_k$()));
+        target_0.add_utx5q5_k$(element);
       }
        while (inductionVariable_0 <= last_0);
     // Inline function 'kotlin.contracts.contract' call
@@ -10629,13 +10529,13 @@
       do {
         var index_1 = inductionVariable_1;
         inductionVariable_1 = inductionVariable_1 + 1 | 0;
-        var item_1 = target_0.get_fkrdnv_k$(index_1);
+        var item_1 = target_0.get_c1px32_k$(index_1);
         // Inline function 'androidx.compose.ui.text.fastDistinctBy.<anonymous>' call
         // Inline function 'androidx.compose.ui.text.font.FontListFontFamilyTypefaceAdapter.preload.<anonymous>' call
         var key = item_1;
-        if (set.add_1j60pz_k$(key)) {
+        if (set.add_utx5q5_k$(key)) {
           // Inline function 'kotlin.collections.plusAssign' call
-          target_1.add_1j60pz_k$(item_1);
+          target_1.add_utx5q5_k$(item_1);
         }
       }
        while (inductionVariable_1 <= last_1);
@@ -10650,25 +10550,25 @@
       do {
         var index_2 = inductionVariable_2;
         inductionVariable_2 = inductionVariable_2 + 1 | 0;
-        var item_2 = asyncStyles.get_fkrdnv_k$(index_2);
+        var item_2 = asyncStyles.get_c1px32_k$(index_2);
         // Inline function 'androidx.compose.ui.text.font.FontListFontFamilyTypefaceAdapter.preload.<anonymous>' call
         var fontWeight = item_2.component1_7eebsc_k$();
         var fontStyle = item_2.component2_7eebsb_k$().value_1;
-        var matched = Companion_getInstance_23().fontMatcher_1.matchFont_7ocsoc_k$(allFonts, fontWeight, fontStyle);
-        var typeRequest = new TypefaceRequest(family, fontWeight, fontStyle, Companion_getInstance_26().get_All_wqntwc_k$(), resourceLoader.get_cacheKey_w22q12_k$());
+        var matched = Companion_getInstance_23().fontMatcher_1.matchFont_6opk8k_k$(allFonts, fontWeight, fontStyle);
+        var typeRequest = new TypefaceRequest(family, fontWeight, fontStyle, Companion_getInstance_26().get_All_bqi34r_k$(), resourceLoader.get_cacheKey_w22q12_k$());
         var asyncFontsToLoad = firstImmediatelyAvailable(matched, typeRequest, this.asyncTypefaceCache_1, resourceLoader, FontListFontFamilyTypefaceAdapter$preload$lambda).component1_7eebsc_k$();
         if (!(asyncFontsToLoad == null)) {
-          asyncLoads.add_1j60pz_k$(first_0(asyncFontsToLoad));
+          asyncLoads.add_utx5q5_k$(first_0(asyncFontsToLoad));
         }
       }
        while (inductionVariable_2 <= last_2);
     return coroutineScope(FontListFontFamilyTypefaceAdapter$preload$slambda_0(asyncLoads, this, resourceLoader, null), $completion);
   };
-  protoOf(FontListFontFamilyTypefaceAdapter).resolve_wbzvw9_k$ = function (typefaceRequest, platformFontLoader, onAsyncCompletion, createDefaultTypeface) {
+  protoOf(FontListFontFamilyTypefaceAdapter).resolve_wywkvk_k$ = function (typefaceRequest, platformFontLoader, onAsyncCompletion, createDefaultTypeface) {
     var tmp = typefaceRequest.get_fontFamily_ulphcs_k$();
     if (!(tmp instanceof FontListFontFamily))
       return null;
-    var matched = Companion_getInstance_23().fontMatcher_1.matchFont_7ocsoc_k$(typefaceRequest.get_fontFamily_ulphcs_k$().get_fonts_irho7v_k$(), typefaceRequest.get_fontWeight_wbif2o_k$(), typefaceRequest.get_fontStyle_htc78e_k$());
+    var matched = Companion_getInstance_23().fontMatcher_1.matchFont_6opk8k_k$(typefaceRequest.get_fontFamily_ulphcs_k$().get_fonts_irho7v_k$(), typefaceRequest.get_fontWeight_wbif2o_k$(), typefaceRequest.get_fontStyle_nhruzn_k$());
     var tmp0_container = firstImmediatelyAvailable(matched, typefaceRequest, this.asyncTypefaceCache_1, platformFontLoader, createDefaultTypeface);
     var asyncFontsToLoad = tmp0_container.component1_7eebsc_k$();
     var synthesizedTypeface = tmp0_container.component2_7eebsb_k$();
@@ -10688,18 +10588,18 @@
       $l$loop: do {
         var idx = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var font = _this__u8e3s4.get_fkrdnv_k$(idx);
-        var tmp1_subject = font.get_loadingStrategy_w877gz_k$();
-        if (tmp1_subject === Companion_getInstance_24().get_Blocking_pdgcwr_k$()) {
+        var font = _this__u8e3s4.get_c1px32_k$(idx);
+        var tmp1_subject = font.get_loadingStrategy_s3fce_k$();
+        if (tmp1_subject === Companion_getInstance_24().get_Blocking_7mu9wm_k$()) {
           var tmp$ret$0;
           $l$block: {
             // Inline function 'androidx.compose.ui.text.font.AsyncTypefaceCache.runCachedBlocking' call
             // Inline function 'androidx.compose.ui.text.synchronized' call
-            asyncTypefaceCache.cacheLock_1;
             // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+            asyncTypefaceCache.cacheLock_1;
             var key = new Key(font, platformFontLoader.get_cacheKey_w22q12_k$());
-            var tmp0_elvis_lhs = asyncTypefaceCache.resultCache_1.get_1mhr4y_k$(key);
-            var priorResult = tmp0_elvis_lhs == null ? asyncTypefaceCache.permanentCache_1.get_1mhr4y_k$(key) : tmp0_elvis_lhs;
+            var tmp0_elvis_lhs = asyncTypefaceCache.resultCache_1.get_wei43m_k$(key);
+            var priorResult = tmp0_elvis_lhs == null ? asyncTypefaceCache.permanentCache_1.get_wei43m_k$(key) : tmp0_elvis_lhs;
             var tmp;
             if (!(priorResult == null)) {
               tmp$ret$0 = _AsyncTypefaceResult___get_result__impl__kpcqqb(priorResult.result_1);
@@ -10709,7 +10609,7 @@
             // Inline function 'androidx.compose.ui.text.font.firstImmediatelyAvailable.<anonymous>' call
             var tmp_0;
             try {
-              tmp_0 = platformFontLoader.loadBlocking_w5fd92_k$(font);
+              tmp_0 = platformFontLoader.loadBlocking_4ao78a_k$(font);
             } catch ($p) {
               var tmp_1;
               if ($p instanceof Exception) {
@@ -10721,7 +10621,7 @@
             }
             // Inline function 'kotlin.contracts.contract' call
             // Inline function 'androidx.compose.ui.text.font.AsyncTypefaceCache.runCachedBlocking.<anonymous>' call
-            asyncTypefaceCache.put$default_nsl9nj_k$(font, platformFontLoader, tmp_0);
+            asyncTypefaceCache.put$default_5282m1_k$(font, platformFontLoader, tmp_0);
             tmp$ret$0 = tmp_0;
           }
           var tmp2_elvis_lhs = tmp$ret$0;
@@ -10732,17 +10632,17 @@
             tmp_2 = tmp2_elvis_lhs;
           }
           var result = tmp_2;
-          return to(asyncFontsToLoad, synthesizeTypeface(typefaceRequest.get_fontSynthesis_f3q6y0_k$(), result, font, typefaceRequest.get_fontWeight_wbif2o_k$(), typefaceRequest.get_fontStyle_htc78e_k$()));
-        } else if (tmp1_subject === Companion_getInstance_24().get_OptionalLocal_iiqguv_k$()) {
+          return to(asyncFontsToLoad, synthesizeTypeface(typefaceRequest.get_fontSynthesis_yx849j_k$(), result, font, typefaceRequest.get_fontWeight_wbif2o_k$(), typefaceRequest.get_fontStyle_nhruzn_k$()));
+        } else if (tmp1_subject === Companion_getInstance_24().get_OptionalLocal_ehk5yi_k$()) {
           var tmp$ret$5;
           $l$block_0: {
             // Inline function 'androidx.compose.ui.text.font.AsyncTypefaceCache.runCachedBlocking' call
             // Inline function 'androidx.compose.ui.text.synchronized' call
-            asyncTypefaceCache.cacheLock_1;
             // Inline function 'kotlinx.atomicfu.locks.synchronized' call
+            asyncTypefaceCache.cacheLock_1;
             var key_0 = new Key(font, platformFontLoader.get_cacheKey_w22q12_k$());
-            var tmp0_elvis_lhs_0 = asyncTypefaceCache.resultCache_1.get_1mhr4y_k$(key_0);
-            var priorResult_0 = tmp0_elvis_lhs_0 == null ? asyncTypefaceCache.permanentCache_1.get_1mhr4y_k$(key_0) : tmp0_elvis_lhs_0;
+            var tmp0_elvis_lhs_0 = asyncTypefaceCache.resultCache_1.get_wei43m_k$(key_0);
+            var priorResult_0 = tmp0_elvis_lhs_0 == null ? asyncTypefaceCache.permanentCache_1.get_wei43m_k$(key_0) : tmp0_elvis_lhs_0;
             var tmp_3;
             if (!(priorResult_0 == null)) {
               tmp$ret$5 = _AsyncTypefaceResult___get_result__impl__kpcqqb(priorResult_0.result_1);
@@ -10757,8 +10657,8 @@
               // Inline function 'kotlin.Companion.success' call
               Companion_getInstance_4();
               // Inline function 'androidx.compose.ui.text.font.firstImmediatelyAvailable.<anonymous>.<anonymous>' call
-              var tmp1_success = platformFontLoader.loadBlocking_w5fd92_k$(font);
-              tmp_4 = _Result___init__impl__xyqfz8(tmp1_success);
+              var value = platformFontLoader.loadBlocking_4ao78a_k$(font);
+              tmp_4 = _Result___init__impl__xyqfz8(value);
             } catch ($p) {
               var tmp_5;
               if ($p instanceof Error) {
@@ -10771,36 +10671,36 @@
               }
               tmp_4 = tmp_5;
             }
-            var tmp0_getOrNull = tmp_4;
+            var this_0 = tmp_4;
             var tmp_6;
-            if (_Result___get_isFailure__impl__jpiriv(tmp0_getOrNull)) {
+            if (_Result___get_isFailure__impl__jpiriv(this_0)) {
               tmp_6 = null;
             } else {
-              var tmp_7 = _Result___get_value__impl__bjfvqg(tmp0_getOrNull);
-              tmp_6 = (tmp_7 == null ? true : isObject(tmp_7)) ? tmp_7 : THROW_CCE();
+              var tmp_7 = _Result___get_value__impl__bjfvqg(this_0);
+              tmp_6 = (tmp_7 == null ? true : !(tmp_7 == null)) ? tmp_7 : THROW_CCE();
             }
-            var tmp1_also = tmp_6;
+            var this_1 = tmp_6;
             // Inline function 'kotlin.contracts.contract' call
             // Inline function 'androidx.compose.ui.text.font.AsyncTypefaceCache.runCachedBlocking.<anonymous>' call
-            asyncTypefaceCache.put$default_nsl9nj_k$(font, platformFontLoader, tmp1_also);
-            tmp$ret$5 = tmp1_also;
+            asyncTypefaceCache.put$default_5282m1_k$(font, platformFontLoader, this_1);
+            tmp$ret$5 = this_1;
           }
           var result_0 = tmp$ret$5;
           if (!(result_0 == null)) {
-            return to(asyncFontsToLoad, synthesizeTypeface(typefaceRequest.get_fontSynthesis_f3q6y0_k$(), result_0, font, typefaceRequest.get_fontWeight_wbif2o_k$(), typefaceRequest.get_fontStyle_htc78e_k$()));
+            return to(asyncFontsToLoad, synthesizeTypeface(typefaceRequest.get_fontSynthesis_yx849j_k$(), result_0, font, typefaceRequest.get_fontWeight_wbif2o_k$(), typefaceRequest.get_fontStyle_nhruzn_k$()));
           }
-        } else if (tmp1_subject === Companion_getInstance_24().get_Async_e1a1ve_k$()) {
-          var cacheResult = asyncTypefaceCache.get_q1bm7w_k$(font, platformFontLoader);
+        } else if (tmp1_subject === Companion_getInstance_24().get_Async_nzjdad_k$()) {
+          var cacheResult = asyncTypefaceCache.get_667wvm_k$(font, platformFontLoader);
           if (cacheResult == null) {
             if (asyncFontsToLoad == null) {
               asyncFontsToLoad = mutableListOf([font]);
             } else {
-              asyncFontsToLoad.add_1j60pz_k$(font);
+              asyncFontsToLoad.add_utx5q5_k$(font);
             }
           } else if (_AsyncTypefaceResult___get_isPermanentFailure__impl__sthpca(cacheResult.result_1)) {
             continue $l$loop;
           } else if (!(_AsyncTypefaceResult___get_result__impl__kpcqqb(cacheResult.result_1) == null)) {
-            return to(asyncFontsToLoad, synthesizeTypeface(typefaceRequest.get_fontSynthesis_f3q6y0_k$(), _AsyncTypefaceResult___get_result__impl__kpcqqb(cacheResult.result_1), font, typefaceRequest.get_fontWeight_wbif2o_k$(), typefaceRequest.get_fontStyle_htc78e_k$()));
+            return to(asyncFontsToLoad, synthesizeTypeface(typefaceRequest.get_fontSynthesis_yx849j_k$(), _AsyncTypefaceResult___get_result__impl__kpcqqb(cacheResult.result_1), font, typefaceRequest.get_fontWeight_wbif2o_k$(), typefaceRequest.get_fontStyle_nhruzn_k$()));
           }
         } else
           throw IllegalStateException_init_$Create$('Unknown font type ' + font);
@@ -10838,13 +10738,13 @@
     this.OptionalLocal_1 = _FontLoadingStrategy___init__impl__if1sp3(1);
     this.Async_1 = _FontLoadingStrategy___init__impl__if1sp3(2);
   }
-  protoOf(Companion_7).get_Blocking_pdgcwr_k$ = function () {
+  protoOf(Companion_7).get_Blocking_7mu9wm_k$ = function () {
     return this.Blocking_1;
   };
-  protoOf(Companion_7).get_OptionalLocal_iiqguv_k$ = function () {
+  protoOf(Companion_7).get_OptionalLocal_ehk5yi_k$ = function () {
     return this.OptionalLocal_1;
   };
-  protoOf(Companion_7).get_Async_e1a1ve_k$ = function () {
+  protoOf(Companion_7).get_Async_nzjdad_k$ = function () {
     return this.Async_1;
   };
   var Companion_instance_7;
@@ -10878,7 +10778,7 @@
   };
   function FontMatcher() {
   }
-  protoOf(FontMatcher).matchFont_7ocsoc_k$ = function (fontList, fontWeight, fontStyle) {
+  protoOf(FontMatcher).matchFont_6opk8k_k$ = function (fontList, fontWeight, fontStyle) {
     // Inline function 'kotlin.let' call
     // Inline function 'androidx.compose.ui.text.fastFilter' call
     // Inline function 'kotlin.contracts.contract' call
@@ -10891,12 +10791,12 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = fontList.get_fkrdnv_k$(index);
+        var item = fontList.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
         // Inline function 'androidx.compose.ui.text.font.FontMatcher.matchFont.<anonymous>' call
-        if (item.get_weight_lbhkzl_k$().equals(fontWeight) ? item.get_style_e2e1yp_k$() === fontStyle : false) {
+        if (item.get_weight_lbhkzl_k$().equals(fontWeight) ? item.get_style_fnlxse_k$() === fontStyle : false) {
           // Inline function 'kotlin.collections.plusAssign' call
-          target.add_1j60pz_k$(item);
+          target.add_utx5q5_k$(item);
         }
       }
        while (inductionVariable <= last);
@@ -10918,12 +10818,12 @@
       do {
         var index_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var item_0 = fontList.get_fkrdnv_k$(index_0);
+        var item_0 = fontList.get_c1px32_k$(index_0);
         // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
         // Inline function 'androidx.compose.ui.text.font.FontMatcher.matchFont.<anonymous>' call
-        if (item_0.get_style_e2e1yp_k$() === fontStyle) {
+        if (item_0.get_style_fnlxse_k$() === fontStyle) {
           // Inline function 'kotlin.collections.plusAssign' call
-          target_0.add_1j60pz_k$(item_0);
+          target_0.add_utx5q5_k$(item_0);
         }
       }
        while (inductionVariable_0 <= last_0);
@@ -10936,7 +10836,7 @@
     }
     var fontsToSearch = tmp_0;
     var tmp_1;
-    if (fontWeight.compareTo_ag9b1f_k$(Companion_getInstance_27().get_W400_wobb2e_k$()) < 0) {
+    if (fontWeight.compareTo_mrh9jv_k$(Companion_getInstance_27().get_W400_wobb2e_k$()) < 0) {
       // Inline function 'androidx.compose.ui.text.font.FontMatcher.filterByClosestWeight' call
       var bestWeightAbove = null;
       var bestWeightBelow = null;
@@ -10946,20 +10846,20 @@
         $l$loop_1: do {
           var index_1 = inductionVariable_1;
           inductionVariable_1 = inductionVariable_1 + 1 | 0;
-          var font = fontsToSearch.get_fkrdnv_k$(index_1);
+          var font = fontsToSearch.get_c1px32_k$(index_1);
           var possibleWeight = font.get_weight_lbhkzl_k$();
-          if (!(null == null) ? possibleWeight.compareTo_ag9b1f_k$(null) < 0 : false) {
+          if (!(null == null) ? possibleWeight.compareTo_mrh9jv_k$(null) < 0 : false) {
             continue $l$loop_1;
           }
-          if (!(null == null) ? possibleWeight.compareTo_ag9b1f_k$(null) > 0 : false) {
+          if (!(null == null) ? possibleWeight.compareTo_mrh9jv_k$(null) > 0 : false) {
             continue $l$loop_1;
           }
-          if (possibleWeight.compareTo_ag9b1f_k$(fontWeight) < 0) {
-            if (bestWeightBelow == null ? true : possibleWeight.compareTo_ag9b1f_k$(bestWeightBelow) > 0) {
+          if (possibleWeight.compareTo_mrh9jv_k$(fontWeight) < 0) {
+            if (bestWeightBelow == null ? true : possibleWeight.compareTo_mrh9jv_k$(bestWeightBelow) > 0) {
               bestWeightBelow = possibleWeight;
             }
-          } else if (possibleWeight.compareTo_ag9b1f_k$(fontWeight) > 0) {
-            if (bestWeightAbove == null ? true : possibleWeight.compareTo_ag9b1f_k$(bestWeightAbove) < 0) {
+          } else if (possibleWeight.compareTo_mrh9jv_k$(fontWeight) > 0) {
+            if (bestWeightAbove == null ? true : possibleWeight.compareTo_mrh9jv_k$(bestWeightAbove) < 0) {
               bestWeightAbove = possibleWeight;
             }
           } else {
@@ -10970,8 +10870,13 @@
         }
          while (inductionVariable_1 <= last_1);
       var tmp_2;
-      var tmp1_elvis_lhs = bestWeightBelow;
-      tmp_2 = tmp1_elvis_lhs == null ? bestWeightAbove : tmp1_elvis_lhs;
+      if (true) {
+        var tmp1_elvis_lhs = bestWeightBelow;
+        tmp_2 = tmp1_elvis_lhs == null ? bestWeightAbove : tmp1_elvis_lhs;
+      } else {
+        var tmp2_elvis_lhs = bestWeightAbove;
+        tmp_2 = tmp2_elvis_lhs == null ? bestWeightBelow : tmp2_elvis_lhs;
+      }
       var bestWeight = tmp_2;
       // Inline function 'androidx.compose.ui.text.fastFilter' call
       // Inline function 'kotlin.contracts.contract' call
@@ -10984,17 +10889,17 @@
         do {
           var index_2 = inductionVariable_2;
           inductionVariable_2 = inductionVariable_2 + 1 | 0;
-          var item_1 = fontsToSearch.get_fkrdnv_k$(index_2);
+          var item_1 = fontsToSearch.get_c1px32_k$(index_2);
           // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
           // Inline function 'androidx.compose.ui.text.font.FontMatcher.filterByClosestWeight.<anonymous>' call
           if (item_1.get_weight_lbhkzl_k$().equals(bestWeight)) {
             // Inline function 'kotlin.collections.plusAssign' call
-            target_1.add_1j60pz_k$(item_1);
+            target_1.add_utx5q5_k$(item_1);
           }
         }
          while (inductionVariable_2 <= last_2);
       tmp_1 = target_1;
-    } else if (fontWeight.compareTo_ag9b1f_k$(Companion_getInstance_27().get_W500_wobbt3_k$()) > 0) {
+    } else if (fontWeight.compareTo_mrh9jv_k$(Companion_getInstance_27().get_W500_wobbt3_k$()) > 0) {
       // Inline function 'androidx.compose.ui.text.font.FontMatcher.filterByClosestWeight' call
       var bestWeightAbove_0 = null;
       var bestWeightBelow_0 = null;
@@ -11004,20 +10909,20 @@
         $l$loop_4: do {
           var index_3 = inductionVariable_3;
           inductionVariable_3 = inductionVariable_3 + 1 | 0;
-          var font_0 = fontsToSearch.get_fkrdnv_k$(index_3);
+          var font_0 = fontsToSearch.get_c1px32_k$(index_3);
           var possibleWeight_0 = font_0.get_weight_lbhkzl_k$();
-          if (!(null == null) ? possibleWeight_0.compareTo_ag9b1f_k$(null) < 0 : false) {
+          if (!(null == null) ? possibleWeight_0.compareTo_mrh9jv_k$(null) < 0 : false) {
             continue $l$loop_4;
           }
-          if (!(null == null) ? possibleWeight_0.compareTo_ag9b1f_k$(null) > 0 : false) {
+          if (!(null == null) ? possibleWeight_0.compareTo_mrh9jv_k$(null) > 0 : false) {
             continue $l$loop_4;
           }
-          if (possibleWeight_0.compareTo_ag9b1f_k$(fontWeight) < 0) {
-            if (bestWeightBelow_0 == null ? true : possibleWeight_0.compareTo_ag9b1f_k$(bestWeightBelow_0) > 0) {
+          if (possibleWeight_0.compareTo_mrh9jv_k$(fontWeight) < 0) {
+            if (bestWeightBelow_0 == null ? true : possibleWeight_0.compareTo_mrh9jv_k$(bestWeightBelow_0) > 0) {
               bestWeightBelow_0 = possibleWeight_0;
             }
-          } else if (possibleWeight_0.compareTo_ag9b1f_k$(fontWeight) > 0) {
-            if (bestWeightAbove_0 == null ? true : possibleWeight_0.compareTo_ag9b1f_k$(bestWeightAbove_0) < 0) {
+          } else if (possibleWeight_0.compareTo_mrh9jv_k$(fontWeight) > 0) {
+            if (bestWeightAbove_0 == null ? true : possibleWeight_0.compareTo_mrh9jv_k$(bestWeightAbove_0) < 0) {
               bestWeightAbove_0 = possibleWeight_0;
             }
           } else {
@@ -11032,8 +10937,8 @@
         var tmp1_elvis_lhs_0 = bestWeightBelow_0;
         tmp_3 = tmp1_elvis_lhs_0 == null ? bestWeightAbove_0 : tmp1_elvis_lhs_0;
       } else {
-        var tmp2_elvis_lhs = bestWeightAbove_0;
-        tmp_3 = tmp2_elvis_lhs == null ? bestWeightBelow_0 : tmp2_elvis_lhs;
+        var tmp2_elvis_lhs_0 = bestWeightAbove_0;
+        tmp_3 = tmp2_elvis_lhs_0 == null ? bestWeightBelow_0 : tmp2_elvis_lhs_0;
       }
       var bestWeight_0 = tmp_3;
       // Inline function 'androidx.compose.ui.text.fastFilter' call
@@ -11047,12 +10952,12 @@
         do {
           var index_4 = inductionVariable_4;
           inductionVariable_4 = inductionVariable_4 + 1 | 0;
-          var item_2 = fontsToSearch.get_fkrdnv_k$(index_4);
+          var item_2 = fontsToSearch.get_c1px32_k$(index_4);
           // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
           // Inline function 'androidx.compose.ui.text.font.FontMatcher.filterByClosestWeight.<anonymous>' call
           if (item_2.get_weight_lbhkzl_k$().equals(bestWeight_0)) {
             // Inline function 'kotlin.collections.plusAssign' call
-            target_2.add_1j60pz_k$(item_2);
+            target_2.add_utx5q5_k$(item_2);
           }
         }
          while (inductionVariable_4 <= last_4);
@@ -11060,7 +10965,7 @@
     } else {
       // Inline function 'kotlin.collections.ifEmpty' call
       // Inline function 'androidx.compose.ui.text.font.FontMatcher.filterByClosestWeight' call
-      var tmp2_filterByClosestWeight = Companion_getInstance_27().get_W500_wobbt3_k$();
+      var maxSearchRange = Companion_getInstance_27().get_W500_wobbt3_k$();
       var bestWeightAbove_1 = null;
       var bestWeightBelow_1 = null;
       var inductionVariable_5 = 0;
@@ -11069,20 +10974,20 @@
         $l$loop_7: do {
           var index_5 = inductionVariable_5;
           inductionVariable_5 = inductionVariable_5 + 1 | 0;
-          var font_1 = fontsToSearch.get_fkrdnv_k$(index_5);
+          var font_1 = fontsToSearch.get_c1px32_k$(index_5);
           var possibleWeight_1 = font_1.get_weight_lbhkzl_k$();
-          if (!(null == null) ? possibleWeight_1.compareTo_ag9b1f_k$(null) < 0 : false) {
+          if (!(null == null) ? possibleWeight_1.compareTo_mrh9jv_k$(null) < 0 : false) {
             continue $l$loop_7;
           }
-          if (!(tmp2_filterByClosestWeight == null) ? possibleWeight_1.compareTo_ag9b1f_k$(tmp2_filterByClosestWeight) > 0 : false) {
+          if (!(maxSearchRange == null) ? possibleWeight_1.compareTo_mrh9jv_k$(maxSearchRange) > 0 : false) {
             continue $l$loop_7;
           }
-          if (possibleWeight_1.compareTo_ag9b1f_k$(fontWeight) < 0) {
-            if (bestWeightBelow_1 == null ? true : possibleWeight_1.compareTo_ag9b1f_k$(bestWeightBelow_1) > 0) {
+          if (possibleWeight_1.compareTo_mrh9jv_k$(fontWeight) < 0) {
+            if (bestWeightBelow_1 == null ? true : possibleWeight_1.compareTo_mrh9jv_k$(bestWeightBelow_1) > 0) {
               bestWeightBelow_1 = possibleWeight_1;
             }
-          } else if (possibleWeight_1.compareTo_ag9b1f_k$(fontWeight) > 0) {
-            if (bestWeightAbove_1 == null ? true : possibleWeight_1.compareTo_ag9b1f_k$(bestWeightAbove_1) < 0) {
+          } else if (possibleWeight_1.compareTo_mrh9jv_k$(fontWeight) > 0) {
+            if (bestWeightAbove_1 == null ? true : possibleWeight_1.compareTo_mrh9jv_k$(bestWeightAbove_1) < 0) {
               bestWeightAbove_1 = possibleWeight_1;
             }
           } else {
@@ -11097,8 +11002,8 @@
         var tmp1_elvis_lhs_1 = bestWeightBelow_1;
         tmp_4 = tmp1_elvis_lhs_1 == null ? bestWeightAbove_1 : tmp1_elvis_lhs_1;
       } else {
-        var tmp2_elvis_lhs_0 = bestWeightAbove_1;
-        tmp_4 = tmp2_elvis_lhs_0 == null ? bestWeightBelow_1 : tmp2_elvis_lhs_0;
+        var tmp2_elvis_lhs_1 = bestWeightAbove_1;
+        tmp_4 = tmp2_elvis_lhs_1 == null ? bestWeightBelow_1 : tmp2_elvis_lhs_1;
       }
       var bestWeight_1 = tmp_4;
       // Inline function 'androidx.compose.ui.text.fastFilter' call
@@ -11112,12 +11017,12 @@
         do {
           var index_6 = inductionVariable_6;
           inductionVariable_6 = inductionVariable_6 + 1 | 0;
-          var item_3 = fontsToSearch.get_fkrdnv_k$(index_6);
+          var item_3 = fontsToSearch.get_c1px32_k$(index_6);
           // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
           // Inline function 'androidx.compose.ui.text.font.FontMatcher.filterByClosestWeight.<anonymous>' call
           if (item_3.get_weight_lbhkzl_k$().equals(bestWeight_1)) {
             // Inline function 'kotlin.collections.plusAssign' call
-            target_3.add_1j60pz_k$(item_3);
+            target_3.add_utx5q5_k$(item_3);
           }
         }
          while (inductionVariable_6 <= last_6);
@@ -11125,7 +11030,7 @@
       if (target_3.isEmpty_y1axqb_k$()) {
         // Inline function 'androidx.compose.ui.text.font.FontMatcher.matchFont.<anonymous>' call
         // Inline function 'androidx.compose.ui.text.font.FontMatcher.filterByClosestWeight' call
-        var tmp0_filterByClosestWeight = Companion_getInstance_27().get_W500_wobbt3_k$();
+        var minSearchRange = Companion_getInstance_27().get_W500_wobbt3_k$();
         var bestWeightAbove_2 = null;
         var bestWeightBelow_2 = null;
         var inductionVariable_7 = 0;
@@ -11134,20 +11039,20 @@
           $l$loop_10: do {
             var index_7 = inductionVariable_7;
             inductionVariable_7 = inductionVariable_7 + 1 | 0;
-            var font_2 = fontsToSearch.get_fkrdnv_k$(index_7);
+            var font_2 = fontsToSearch.get_c1px32_k$(index_7);
             var possibleWeight_2 = font_2.get_weight_lbhkzl_k$();
-            if (!(tmp0_filterByClosestWeight == null) ? possibleWeight_2.compareTo_ag9b1f_k$(tmp0_filterByClosestWeight) < 0 : false) {
+            if (!(minSearchRange == null) ? possibleWeight_2.compareTo_mrh9jv_k$(minSearchRange) < 0 : false) {
               continue $l$loop_10;
             }
-            if (!(null == null) ? possibleWeight_2.compareTo_ag9b1f_k$(null) > 0 : false) {
+            if (!(null == null) ? possibleWeight_2.compareTo_mrh9jv_k$(null) > 0 : false) {
               continue $l$loop_10;
             }
-            if (possibleWeight_2.compareTo_ag9b1f_k$(fontWeight) < 0) {
-              if (bestWeightBelow_2 == null ? true : possibleWeight_2.compareTo_ag9b1f_k$(bestWeightBelow_2) > 0) {
+            if (possibleWeight_2.compareTo_mrh9jv_k$(fontWeight) < 0) {
+              if (bestWeightBelow_2 == null ? true : possibleWeight_2.compareTo_mrh9jv_k$(bestWeightBelow_2) > 0) {
                 bestWeightBelow_2 = possibleWeight_2;
               }
-            } else if (possibleWeight_2.compareTo_ag9b1f_k$(fontWeight) > 0) {
-              if (bestWeightAbove_2 == null ? true : possibleWeight_2.compareTo_ag9b1f_k$(bestWeightAbove_2) < 0) {
+            } else if (possibleWeight_2.compareTo_mrh9jv_k$(fontWeight) > 0) {
+              if (bestWeightAbove_2 == null ? true : possibleWeight_2.compareTo_mrh9jv_k$(bestWeightAbove_2) < 0) {
                 bestWeightAbove_2 = possibleWeight_2;
               }
             } else {
@@ -11162,8 +11067,8 @@
           var tmp1_elvis_lhs_2 = bestWeightBelow_2;
           tmp_6 = tmp1_elvis_lhs_2 == null ? bestWeightAbove_2 : tmp1_elvis_lhs_2;
         } else {
-          var tmp2_elvis_lhs_1 = bestWeightAbove_2;
-          tmp_6 = tmp2_elvis_lhs_1 == null ? bestWeightBelow_2 : tmp2_elvis_lhs_1;
+          var tmp2_elvis_lhs_2 = bestWeightAbove_2;
+          tmp_6 = tmp2_elvis_lhs_2 == null ? bestWeightBelow_2 : tmp2_elvis_lhs_2;
         }
         var bestWeight_2 = tmp_6;
         // Inline function 'androidx.compose.ui.text.fastFilter' call
@@ -11177,12 +11082,12 @@
           do {
             var index_8 = inductionVariable_8;
             inductionVariable_8 = inductionVariable_8 + 1 | 0;
-            var item_4 = fontsToSearch.get_fkrdnv_k$(index_8);
+            var item_4 = fontsToSearch.get_c1px32_k$(index_8);
             // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
             // Inline function 'androidx.compose.ui.text.font.FontMatcher.filterByClosestWeight.<anonymous>' call
             if (item_4.get_weight_lbhkzl_k$().equals(bestWeight_2)) {
               // Inline function 'kotlin.collections.plusAssign' call
-              target_4.add_1j60pz_k$(item_4);
+              target_4.add_utx5q5_k$(item_4);
             }
           }
            while (inductionVariable_8 <= last_8);
@@ -11195,7 +11100,7 @@
     var result = tmp_1;
     return result;
   };
-  protoOf(FontMatcher).filterByClosestWeight_p3e8ge_k$ = function (_this__u8e3s4, fontWeight, preferBelow, minSearchRange, maxSearchRange) {
+  protoOf(FontMatcher).filterByClosestWeight_k26piv_k$ = function (_this__u8e3s4, fontWeight, preferBelow, minSearchRange, maxSearchRange) {
     var bestWeightAbove = null;
     var bestWeightBelow = null;
     var inductionVariable = 0;
@@ -11204,20 +11109,20 @@
       $l$loop_1: do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var font = _this__u8e3s4.get_fkrdnv_k$(index);
+        var font = _this__u8e3s4.get_c1px32_k$(index);
         var possibleWeight = font.get_weight_lbhkzl_k$();
-        if (!(minSearchRange == null) ? possibleWeight.compareTo_ag9b1f_k$(minSearchRange) < 0 : false) {
+        if (!(minSearchRange == null) ? possibleWeight.compareTo_mrh9jv_k$(minSearchRange) < 0 : false) {
           continue $l$loop_1;
         }
-        if (!(maxSearchRange == null) ? possibleWeight.compareTo_ag9b1f_k$(maxSearchRange) > 0 : false) {
+        if (!(maxSearchRange == null) ? possibleWeight.compareTo_mrh9jv_k$(maxSearchRange) > 0 : false) {
           continue $l$loop_1;
         }
-        if (possibleWeight.compareTo_ag9b1f_k$(fontWeight) < 0) {
-          if (bestWeightBelow == null ? true : possibleWeight.compareTo_ag9b1f_k$(bestWeightBelow) > 0) {
+        if (possibleWeight.compareTo_mrh9jv_k$(fontWeight) < 0) {
+          if (bestWeightBelow == null ? true : possibleWeight.compareTo_mrh9jv_k$(bestWeightBelow) > 0) {
             bestWeightBelow = possibleWeight;
           }
-        } else if (possibleWeight.compareTo_ag9b1f_k$(fontWeight) > 0) {
-          if (bestWeightAbove == null ? true : possibleWeight.compareTo_ag9b1f_k$(bestWeightAbove) < 0) {
+        } else if (possibleWeight.compareTo_mrh9jv_k$(fontWeight) > 0) {
+          if (bestWeightAbove == null ? true : possibleWeight.compareTo_mrh9jv_k$(bestWeightAbove) < 0) {
             bestWeightAbove = possibleWeight;
           }
         } else {
@@ -11247,24 +11152,24 @@
       do {
         var index_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var item = _this__u8e3s4.get_fkrdnv_k$(index_0);
+        var item = _this__u8e3s4.get_c1px32_k$(index_0);
         // Inline function 'androidx.compose.ui.text.fastFilter.<anonymous>' call
         // Inline function 'androidx.compose.ui.text.font.FontMatcher.filterByClosestWeight.<anonymous>' call
         if (item.get_weight_lbhkzl_k$().equals(bestWeight)) {
           // Inline function 'kotlin.collections.plusAssign' call
-          target.add_1j60pz_k$(item);
+          target.add_utx5q5_k$(item);
         }
       }
        while (inductionVariable_0 <= last_0);
     return target;
   };
-  protoOf(FontMatcher).matchFont_g2rquk_k$ = function (fontFamily, fontWeight, fontStyle) {
+  protoOf(FontMatcher).matchFont_m1ise8_k$ = function (fontFamily, fontWeight, fontStyle) {
     if (!(fontFamily instanceof FontListFontFamily))
       throw IllegalArgumentException_init_$Create$('Only FontFamily instances that presents a list of Fonts can be used');
-    return this.matchFont_swq5c7_k$(fontFamily, fontWeight, fontStyle);
+    return this.matchFont_4rkgzl_k$(fontFamily, fontWeight, fontStyle);
   };
-  protoOf(FontMatcher).matchFont_swq5c7_k$ = function (fontFamily, fontWeight, fontStyle) {
-    return this.matchFont_7ocsoc_k$(fontFamily.get_fonts_irho7v_k$(), fontWeight, fontStyle);
+  protoOf(FontMatcher).matchFont_4rkgzl_k$ = function (fontFamily, fontWeight, fontStyle) {
+    return this.matchFont_6opk8k_k$(fontFamily.get_fonts_irho7v_k$(), fontWeight, fontStyle);
   };
   function _FontStyle___init__impl__jcnduf(value) {
     return value;
@@ -11280,10 +11185,10 @@
     this.Normal_1 = _FontStyle___init__impl__jcnduf(0);
     this.Italic_1 = _FontStyle___init__impl__jcnduf(1);
   }
-  protoOf(Companion_8).get_Normal_b4ik9_k$ = function () {
+  protoOf(Companion_8).get_Normal_tevh6u_k$ = function () {
     return this.Normal_1;
   };
-  protoOf(Companion_8).get_Italic_o1ev2a_k$ = function () {
+  protoOf(Companion_8).get_Italic_5ol4ot_k$ = function () {
     return this.Italic_1;
   };
   protoOf(Companion_8).values_dmh61q_k$ = function () {
@@ -11334,16 +11239,16 @@
     this.Weight_1 = _FontSynthesis___init__impl__n397bg(2);
     this.Style_1 = _FontSynthesis___init__impl__n397bg(3);
   }
-  protoOf(Companion_9).get_None_ph8z9v_k$ = function () {
+  protoOf(Companion_9).get_None_4h38ia_k$ = function () {
     return this.None_1;
   };
-  protoOf(Companion_9).get_All_wqntwc_k$ = function () {
+  protoOf(Companion_9).get_All_bqi34r_k$ = function () {
     return this.All_1;
   };
-  protoOf(Companion_9).get_Weight_p3166r_k$ = function () {
+  protoOf(Companion_9).get_Weight_42vff6_k$ = function () {
     return this.Weight_1;
   };
-  protoOf(Companion_9).get_Style_2cv83w_k$ = function () {
+  protoOf(Companion_9).get_Style_inainp_k$ = function () {
     return this.Style_1;
   };
   var Companion_instance_9;
@@ -11485,11 +11390,11 @@
   protoOf(FontWeight).get_weight_lbhkzl_k$ = function () {
     return this.weight_1;
   };
-  protoOf(FontWeight).compareTo_ag9b1f_k$ = function (other) {
+  protoOf(FontWeight).compareTo_mrh9jv_k$ = function (other) {
     return compareTo(this.weight_1, other.weight_1);
   };
-  protoOf(FontWeight).compareTo_6thzaj_k$ = function (other) {
-    return this.compareTo_ag9b1f_k$(other instanceof FontWeight ? other : THROW_CCE());
+  protoOf(FontWeight).compareTo_hpufkf_k$ = function (other) {
+    return this.compareTo_mrh9jv_k$(other instanceof FontWeight ? other : THROW_CCE());
   };
   protoOf(FontWeight).equals = function (other) {
     if (this === other)
@@ -11538,11 +11443,11 @@
   protoOf(CommitTextCommand).get_text_wouvsm_k$ = function () {
     return this.annotatedString_1.get_text_wouvsm_k$();
   };
-  protoOf(CommitTextCommand).applyTo_mffvzj_k$ = function (buffer) {
+  protoOf(CommitTextCommand).applyTo_f361h0_k$ = function (buffer) {
     if (buffer.hasComposition_fjs7rk_k$()) {
-      buffer.replace_z6e3jy_k$(buffer.get_compositionStart_3if7fj_k$(), buffer.get_compositionEnd_xx7h0a_k$(), this.get_text_wouvsm_k$());
+      buffer.replace_k5sxva_k$(buffer.get_compositionStart_3if7fj_k$(), buffer.get_compositionEnd_xx7h0a_k$(), this.get_text_wouvsm_k$());
     } else {
-      buffer.replace_z6e3jy_k$(buffer.get_selectionStart_1zskht_k$(), buffer.get_selectionEnd_mebxu0_k$(), this.get_text_wouvsm_k$());
+      buffer.replace_k5sxva_k$(buffer.get_selectionStart_1zskht_k$(), buffer.get_selectionEnd_mebxu0_k$(), this.get_text_wouvsm_k$());
     }
     var newCursor = buffer.get_cursor_c3jujj_k$();
     var tmp;
@@ -11552,7 +11457,7 @@
       tmp = (newCursor + this.newCursorPosition_1 | 0) - this.get_text_wouvsm_k$().length | 0;
     }
     var newCursorInBuffer = tmp;
-    buffer.set_cursor_2gs2kj_k$(coerceIn(newCursorInBuffer, 0, buffer.get_length_g42xv3_k$()));
+    buffer.set_cursor_c0ccid_k$(coerceIn(newCursorInBuffer, 0, buffer.get_length_g42xv3_k$()));
   };
   protoOf(CommitTextCommand).equals = function (other) {
     if (this === other)
@@ -11579,8 +11484,8 @@
   function DeleteAllCommand() {
     this.$stable_1 = 0;
   }
-  protoOf(DeleteAllCommand).applyTo_mffvzj_k$ = function (buffer) {
-    buffer.replace_z6e3jy_k$(0, buffer.get_length_g42xv3_k$(), '');
+  protoOf(DeleteAllCommand).applyTo_f361h0_k$ = function (buffer) {
+    buffer.replace_k5sxva_k$(0, buffer.get_length_g42xv3_k$(), '');
   };
   protoOf(DeleteAllCommand).equals = function (other) {
     return other instanceof DeleteAllCommand;
@@ -11597,8 +11502,8 @@
   function FinishComposingTextCommand() {
     this.$stable_1 = 0;
   }
-  protoOf(FinishComposingTextCommand).applyTo_mffvzj_k$ = function (buffer) {
-    buffer.commitComposition_8woa5a_k$();
+  protoOf(FinishComposingTextCommand).applyTo_f361h0_k$ = function (buffer) {
+    buffer.commitComposition_8w4hjx_k$();
   };
   protoOf(FinishComposingTextCommand).equals = function (other) {
     return other instanceof FinishComposingTextCommand;
@@ -11633,13 +11538,13 @@
   protoOf(DeleteSurroundingTextCommand).get_lengthAfterCursor_pm54bh_k$ = function () {
     return this.lengthAfterCursor_1;
   };
-  protoOf(DeleteSurroundingTextCommand).applyTo_mffvzj_k$ = function (buffer) {
+  protoOf(DeleteSurroundingTextCommand).applyTo_f361h0_k$ = function (buffer) {
     // Inline function 'androidx.compose.ui.text.input.addExactOrElse' call
-    var tmp0_addExactOrElse = buffer.get_selectionEnd_mebxu0_k$();
-    var tmp1_addExactOrElse = this.lengthAfterCursor_1;
-    var result = tmp0_addExactOrElse + tmp1_addExactOrElse | 0;
+    var this_0 = buffer.get_selectionEnd_mebxu0_k$();
+    var right = this.lengthAfterCursor_1;
+    var result = this_0 + right | 0;
     var tmp;
-    if (((tmp0_addExactOrElse ^ result) & (tmp1_addExactOrElse ^ result)) < 0) {
+    if (((this_0 ^ result) & (right ^ result)) < 0) {
       // Inline function 'androidx.compose.ui.text.input.DeleteSurroundingTextCommand.applyTo.<anonymous>' call
       tmp = buffer.get_length_g42xv3_k$();
     } else {
@@ -11647,17 +11552,15 @@
     }
     var end = tmp;
     var tmp_0 = buffer.get_selectionEnd_mebxu0_k$();
-    var tmp$ret$2;
     // Inline function 'kotlin.comparisons.minOf' call
-    var tmp2_minOf = buffer.get_length_g42xv3_k$();
-    tmp$ret$2 = Math.min(end, tmp2_minOf);
-    buffer.delete_pnzhq2_k$(tmp_0, tmp$ret$2);
+    var b = buffer.get_length_g42xv3_k$();
+    var tmp$ret$2 = Math.min(end, b);
+    buffer.delete_wbvee3_k$(tmp_0, tmp$ret$2);
     var tmp_1 = buffer.get_selectionStart_1zskht_k$();
     var start = subtractExactOrElse(tmp_1, this.lengthBeforeCursor_1, DeleteSurroundingTextCommand$applyTo$lambda);
-    var tmp$ret$3;
     // Inline function 'kotlin.comparisons.maxOf' call
-    tmp$ret$3 = Math.max(0, start);
-    buffer.delete_pnzhq2_k$(tmp$ret$3, buffer.get_selectionStart_1zskht_k$());
+    var tmp$ret$3 = Math.max(0, start);
+    buffer.delete_wbvee3_k$(tmp$ret$3, buffer.get_selectionStart_1zskht_k$());
   };
   protoOf(DeleteSurroundingTextCommand).equals = function (other) {
     if (this === other)
@@ -11692,13 +11595,13 @@
   protoOf(SetSelectionCommand).get_end_18j6ha_k$ = function () {
     return this.end_1;
   };
-  protoOf(SetSelectionCommand).applyTo_mffvzj_k$ = function (buffer) {
+  protoOf(SetSelectionCommand).applyTo_f361h0_k$ = function (buffer) {
     var clampedStart = coerceIn(this.start_1, 0, buffer.get_length_g42xv3_k$());
     var clampedEnd = coerceIn(this.end_1, 0, buffer.get_length_g42xv3_k$());
     if (clampedStart < clampedEnd) {
-      buffer.setSelection_d0tzo9_k$(clampedStart, clampedEnd);
+      buffer.setSelection_qn2wp2_k$(clampedStart, clampedEnd);
     } else {
-      buffer.setSelection_d0tzo9_k$(clampedEnd, clampedStart);
+      buffer.setSelection_qn2wp2_k$(clampedEnd, clampedStart);
     }
   };
   protoOf(SetSelectionCommand).equals = function (other) {
@@ -11744,22 +11647,22 @@
   protoOf(SetComposingTextCommand).get_text_wouvsm_k$ = function () {
     return this.annotatedString_1.get_text_wouvsm_k$();
   };
-  protoOf(SetComposingTextCommand).applyTo_mffvzj_k$ = function (buffer) {
+  protoOf(SetComposingTextCommand).applyTo_f361h0_k$ = function (buffer) {
     if (buffer.hasComposition_fjs7rk_k$()) {
       var compositionStart = buffer.get_compositionStart_3if7fj_k$();
-      buffer.replace_z6e3jy_k$(buffer.get_compositionStart_3if7fj_k$(), buffer.get_compositionEnd_xx7h0a_k$(), this.get_text_wouvsm_k$());
+      buffer.replace_k5sxva_k$(buffer.get_compositionStart_3if7fj_k$(), buffer.get_compositionEnd_xx7h0a_k$(), this.get_text_wouvsm_k$());
       // Inline function 'kotlin.text.isNotEmpty' call
-      var tmp0_isNotEmpty = this.get_text_wouvsm_k$();
-      if (charSequenceLength(tmp0_isNotEmpty) > 0) {
-        buffer.setComposition_3gafav_k$(compositionStart, compositionStart + this.get_text_wouvsm_k$().length | 0);
+      var this_0 = this.get_text_wouvsm_k$();
+      if (charSequenceLength(this_0) > 0) {
+        buffer.setComposition_kdu1ns_k$(compositionStart, compositionStart + this.get_text_wouvsm_k$().length | 0);
       }
     } else {
       var selectionStart = buffer.get_selectionStart_1zskht_k$();
-      buffer.replace_z6e3jy_k$(buffer.get_selectionStart_1zskht_k$(), buffer.get_selectionEnd_mebxu0_k$(), this.get_text_wouvsm_k$());
+      buffer.replace_k5sxva_k$(buffer.get_selectionStart_1zskht_k$(), buffer.get_selectionEnd_mebxu0_k$(), this.get_text_wouvsm_k$());
       // Inline function 'kotlin.text.isNotEmpty' call
-      var tmp1_isNotEmpty = this.get_text_wouvsm_k$();
-      if (charSequenceLength(tmp1_isNotEmpty) > 0) {
-        buffer.setComposition_3gafav_k$(selectionStart, selectionStart + this.get_text_wouvsm_k$().length | 0);
+      var this_1 = this.get_text_wouvsm_k$();
+      if (charSequenceLength(this_1) > 0) {
+        buffer.setComposition_kdu1ns_k$(selectionStart, selectionStart + this.get_text_wouvsm_k$().length | 0);
       }
     }
     var newCursor = buffer.get_cursor_c3jujj_k$();
@@ -11770,7 +11673,7 @@
       tmp = (newCursor + this.newCursorPosition_1 | 0) - this.get_text_wouvsm_k$().length | 0;
     }
     var newCursorInBuffer = tmp;
-    buffer.set_cursor_2gs2kj_k$(coerceIn(newCursorInBuffer, 0, buffer.get_length_g42xv3_k$()));
+    buffer.set_cursor_c0ccid_k$(coerceIn(newCursorInBuffer, 0, buffer.get_length_g42xv3_k$()));
   };
   protoOf(SetComposingTextCommand).equals = function (other) {
     if (this === other)
@@ -11805,17 +11708,17 @@
   protoOf(SetComposingRegionCommand).get_end_18j6ha_k$ = function () {
     return this.end_1;
   };
-  protoOf(SetComposingRegionCommand).applyTo_mffvzj_k$ = function (buffer) {
+  protoOf(SetComposingRegionCommand).applyTo_f361h0_k$ = function (buffer) {
     if (buffer.hasComposition_fjs7rk_k$()) {
-      buffer.commitComposition_8woa5a_k$();
+      buffer.commitComposition_8w4hjx_k$();
     }
     var clampedStart = coerceIn(this.start_1, 0, buffer.get_length_g42xv3_k$());
     var clampedEnd = coerceIn(this.end_1, 0, buffer.get_length_g42xv3_k$());
     if (clampedStart !== clampedEnd)
       if (clampedStart < clampedEnd) {
-        buffer.setComposition_3gafav_k$(clampedStart, clampedEnd);
+        buffer.setComposition_kdu1ns_k$(clampedStart, clampedEnd);
       } else {
-        buffer.setComposition_3gafav_k$(clampedEnd, clampedStart);
+        buffer.setComposition_kdu1ns_k$(clampedEnd, clampedStart);
       }
   };
   protoOf(SetComposingRegionCommand).equals = function (other) {
@@ -11858,7 +11761,7 @@
   protoOf(DeleteSurroundingTextInCodePointsCommand).get_lengthAfterCursor_pm54bh_k$ = function () {
     return this.lengthAfterCursor_1;
   };
-  protoOf(DeleteSurroundingTextInCodePointsCommand).applyTo_mffvzj_k$ = function (buffer) {
+  protoOf(DeleteSurroundingTextInCodePointsCommand).applyTo_f361h0_k$ = function (buffer) {
     var beforeLenInChars = 0;
     var inductionVariable = 0;
     var last = this.lengthBeforeCursor_1;
@@ -11868,8 +11771,8 @@
         inductionVariable = inductionVariable + 1 | 0;
         beforeLenInChars = beforeLenInChars + 1 | 0;
         if (buffer.get_selectionStart_1zskht_k$() > beforeLenInChars) {
-          var lead = buffer.get_a7b70_k$((buffer.get_selectionStart_1zskht_k$() - beforeLenInChars | 0) - 1 | 0);
-          var trail = buffer.get_a7b70_k$(buffer.get_selectionStart_1zskht_k$() - beforeLenInChars | 0);
+          var lead = buffer.get_kdzpvg_k$((buffer.get_selectionStart_1zskht_k$() - beforeLenInChars | 0) - 1 | 0);
+          var trail = buffer.get_kdzpvg_k$(buffer.get_selectionStart_1zskht_k$() - beforeLenInChars | 0);
           if (isSurrogatePair(lead, trail)) {
             beforeLenInChars = beforeLenInChars + 1 | 0;
           }
@@ -11887,8 +11790,8 @@
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
         afterLenInChars = afterLenInChars + 1 | 0;
         if ((buffer.get_selectionEnd_mebxu0_k$() + afterLenInChars | 0) < buffer.get_length_g42xv3_k$()) {
-          var lead_0 = buffer.get_a7b70_k$((buffer.get_selectionEnd_mebxu0_k$() + afterLenInChars | 0) - 1 | 0);
-          var trail_0 = buffer.get_a7b70_k$(buffer.get_selectionEnd_mebxu0_k$() + afterLenInChars | 0);
+          var lead_0 = buffer.get_kdzpvg_k$((buffer.get_selectionEnd_mebxu0_k$() + afterLenInChars | 0) - 1 | 0);
+          var trail_0 = buffer.get_kdzpvg_k$(buffer.get_selectionEnd_mebxu0_k$() + afterLenInChars | 0);
           if (isSurrogatePair(lead_0, trail_0)) {
             afterLenInChars = afterLenInChars + 1 | 0;
           }
@@ -11897,8 +11800,8 @@
           break $l$loop_0;
       }
        while (inductionVariable_0 < last_0);
-    buffer.delete_pnzhq2_k$(buffer.get_selectionEnd_mebxu0_k$(), buffer.get_selectionEnd_mebxu0_k$() + afterLenInChars | 0);
-    buffer.delete_pnzhq2_k$(buffer.get_selectionStart_1zskht_k$() - beforeLenInChars | 0, buffer.get_selectionStart_1zskht_k$());
+    buffer.delete_wbvee3_k$(buffer.get_selectionEnd_mebxu0_k$(), buffer.get_selectionEnd_mebxu0_k$() + afterLenInChars | 0);
+    buffer.delete_wbvee3_k$(buffer.get_selectionStart_1zskht_k$() - beforeLenInChars | 0, buffer.get_selectionStart_1zskht_k$());
   };
   protoOf(DeleteSurroundingTextInCodePointsCommand).equals = function (other) {
     if (this === other)
@@ -11925,23 +11828,23 @@
   function BackspaceCommand() {
     this.$stable_1 = 0;
   }
-  protoOf(BackspaceCommand).applyTo_mffvzj_k$ = function (buffer) {
+  protoOf(BackspaceCommand).applyTo_f361h0_k$ = function (buffer) {
     if (buffer.hasComposition_fjs7rk_k$()) {
-      buffer.delete_pnzhq2_k$(buffer.get_compositionStart_3if7fj_k$(), buffer.get_compositionEnd_xx7h0a_k$());
+      buffer.delete_wbvee3_k$(buffer.get_compositionStart_3if7fj_k$(), buffer.get_compositionEnd_xx7h0a_k$());
       return Unit_getInstance();
     }
     if (buffer.get_cursor_c3jujj_k$() === -1) {
       var delStart = buffer.get_selectionStart_1zskht_k$();
       var delEnd = buffer.get_selectionEnd_mebxu0_k$();
-      buffer.set_cursor_2gs2kj_k$(buffer.get_selectionStart_1zskht_k$());
-      buffer.delete_pnzhq2_k$(delStart, delEnd);
+      buffer.set_cursor_c0ccid_k$(buffer.get_selectionStart_1zskht_k$());
+      buffer.delete_wbvee3_k$(delStart, delEnd);
       return Unit_getInstance();
     }
     if (buffer.get_cursor_c3jujj_k$() === 0) {
       return Unit_getInstance();
     }
     var prevCursorPos = findPrecedingBreak(buffer.toString(), buffer.get_cursor_c3jujj_k$());
-    buffer.delete_pnzhq2_k$(prevCursorPos, buffer.get_cursor_c3jujj_k$());
+    buffer.delete_wbvee3_k$(prevCursorPos, buffer.get_cursor_c3jujj_k$());
   };
   protoOf(BackspaceCommand).equals = function (other) {
     return other instanceof BackspaceCommand;
@@ -11962,9 +11865,9 @@
   protoOf(MoveCursorCommand).get_amount_b10di9_k$ = function () {
     return this.amount_1;
   };
-  protoOf(MoveCursorCommand).applyTo_mffvzj_k$ = function (buffer) {
+  protoOf(MoveCursorCommand).applyTo_f361h0_k$ = function (buffer) {
     if (buffer.get_cursor_c3jujj_k$() === -1) {
-      buffer.set_cursor_2gs2kj_k$(buffer.get_selectionStart_1zskht_k$());
+      buffer.set_cursor_c0ccid_k$(buffer.get_selectionStart_1zskht_k$());
     }
     var newCursor = buffer.get_selectionStart_1zskht_k$();
     var bufferText = buffer.toString();
@@ -11995,7 +11898,7 @@
         }
          while (inductionVariable_0 < last_0);
     }
-    buffer.set_cursor_2gs2kj_k$(newCursor);
+    buffer.set_cursor_c0ccid_k$(newCursor);
   };
   protoOf(MoveCursorCommand).equals = function (other) {
     if (this === other)
@@ -12025,17 +11928,17 @@
     // Inline function 'kotlin.text.buildString' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = StringBuilder_init_$Create$_0();
+    var this_0 = StringBuilder_init_$Create$_0();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.input.EditProcessor.generateBatchErrorMessage.<anonymous>' call
     // Inline function 'kotlin.text.appendLine' call
     var tmp = 'Error while applying EditCommand batch to buffer (' + ('length=' + $this.mBuffer_1.get_length_g42xv3_k$() + ', ');
-    var tmp_0 = $this.mBuffer_1.get_composition_7jhfbq_k$();
-    var tmp0_appendLine = tmp + ('composition=' + (tmp_0 == null ? null : new TextRange(tmp_0)) + ', ') + ('selection=' + new TextRange($this.mBuffer_1.get_selection_iqfejd_k$()) + '):');
+    var tmp_0 = $this.mBuffer_1.get_composition_sol8g8_k$();
+    var value = tmp + ('composition=' + (tmp_0 == null ? null : new TextRange(tmp_0)) + ', ') + ('selection=' + new TextRange($this.mBuffer_1.get_selection_d115tn_k$()) + '):');
     // Inline function 'kotlin.text.appendLine' call
-    tmp0_apply.append_ssq29y_k$(tmp0_appendLine).append_t8oh9e_k$(_Char___init__impl__6a9atx(10));
-    joinTo(editCommands, tmp0_apply, '\n', VOID, VOID, VOID, VOID, EditProcessor$generateBatchErrorMessage$lambda(failedCommand, $this));
-    return tmp0_apply.toString();
+    this_0.append_22ad7x_k$(value).append_am5a4z_k$(_Char___init__impl__6a9atx(10));
+    joinTo(editCommands, this_0, '\n', VOID, VOID, VOID, VOID, EditProcessor$generateBatchErrorMessage$lambda(failedCommand, $this));
+    return this_0.toString();
   }
   function toStringForLog(_this__u8e3s4, $this) {
     var tmp;
@@ -12093,8 +11996,8 @@
     };
   }
   function EditProcessor() {
-    this.mBufferState_1 = new TextFieldValue(emptyAnnotatedString(), Companion_getInstance_18().get_Zero_e8si87_k$(), null);
-    this.mBuffer_1 = new EditingBuffer(this.mBufferState_1.get_annotatedString_5pdwrk_k$(), this.mBufferState_1.get_selection_iqfejd_k$());
+    this.mBufferState_1 = new TextFieldValue(emptyAnnotatedString(), Companion_getInstance_18().get_Zero_8je9ih_k$(), null);
+    this.mBuffer_1 = new EditingBuffer(this.mBufferState_1.get_annotatedString_5pdwrk_k$(), this.mBufferState_1.get_selection_d115tn_k$());
     this.$stable_1 = 8;
   }
   protoOf(EditProcessor).get_mBufferState_ylb5xp_k$ = function () {
@@ -12103,32 +12006,32 @@
   protoOf(EditProcessor).get_mBuffer_idx5w_k$ = function () {
     return this.mBuffer_1;
   };
-  protoOf(EditProcessor).reset_t3tuhk_k$ = function (value, textInputSession) {
+  protoOf(EditProcessor).reset_q7o20z_k$ = function (value, textInputSession) {
     var textChanged = false;
     var selectionChanged = false;
-    var tmp = value.get_composition_7jhfbq_k$();
+    var tmp = value.get_composition_sol8g8_k$();
     var tmp_0 = tmp == null ? null : new TextRange(tmp);
-    var tmp_1 = this.mBuffer_1.get_composition_7jhfbq_k$();
+    var tmp_1 = this.mBuffer_1.get_composition_sol8g8_k$();
     var compositionChanged = !equals(tmp_0, tmp_1 == null ? null : new TextRange(tmp_1));
     if (!this.mBufferState_1.get_annotatedString_5pdwrk_k$().equals(value.get_annotatedString_5pdwrk_k$())) {
-      this.mBuffer_1 = new EditingBuffer(value.get_annotatedString_5pdwrk_k$(), value.get_selection_iqfejd_k$());
+      this.mBuffer_1 = new EditingBuffer(value.get_annotatedString_5pdwrk_k$(), value.get_selection_d115tn_k$());
       textChanged = true;
-    } else if (!equals(this.mBufferState_1.get_selection_iqfejd_k$(), value.get_selection_iqfejd_k$())) {
-      this.mBuffer_1.setSelection_d0tzo9_k$(_TextRange___get_min__impl__uu95c4(value.get_selection_iqfejd_k$()), _TextRange___get_max__impl__owm8m(value.get_selection_iqfejd_k$()));
+    } else if (!equals(this.mBufferState_1.get_selection_d115tn_k$(), value.get_selection_d115tn_k$())) {
+      this.mBuffer_1.setSelection_qn2wp2_k$(_TextRange___get_min__impl__uu95c4(value.get_selection_d115tn_k$()), _TextRange___get_max__impl__owm8m(value.get_selection_d115tn_k$()));
       selectionChanged = true;
     }
-    var tmp_2 = value.get_composition_7jhfbq_k$();
+    var tmp_2 = value.get_composition_sol8g8_k$();
     if ((tmp_2 == null ? null : new TextRange(tmp_2)) == null) {
-      this.mBuffer_1.commitComposition_8woa5a_k$();
+      this.mBuffer_1.commitComposition_8w4hjx_k$();
     } else {
-      if (!_TextRange___get_collapsed__impl__cilesp(value.get_composition_7jhfbq_k$())) {
-        this.mBuffer_1.setComposition_3gafav_k$(_TextRange___get_min__impl__uu95c4(value.get_composition_7jhfbq_k$()), _TextRange___get_max__impl__owm8m(value.get_composition_7jhfbq_k$()));
+      if (!_TextRange___get_collapsed__impl__cilesp(value.get_composition_sol8g8_k$())) {
+        this.mBuffer_1.setComposition_kdu1ns_k$(_TextRange___get_min__impl__uu95c4(value.get_composition_sol8g8_k$()), _TextRange___get_max__impl__owm8m(value.get_composition_sol8g8_k$()));
       }
     }
     var tmp_3;
     if (textChanged ? true : !selectionChanged ? compositionChanged : false) {
-      this.mBuffer_1.commitComposition_8woa5a_k$();
-      tmp_3 = value.copy$default_c4y0gg_k$(VOID, VOID, null);
+      this.mBuffer_1.commitComposition_8w4hjx_k$();
+      tmp_3 = value.copy$default_xf3zur_k$(VOID, VOID, null);
     } else {
       tmp_3 = value;
     }
@@ -12138,9 +12041,9 @@
     if (textInputSession == null)
       null;
     else
-      textInputSession.updateState_h3q7x3_k$(oldValue, newValue);
+      textInputSession.updateState_n7bewf_k$(oldValue, newValue);
   };
-  protoOf(EditProcessor).apply_6gs6io_k$ = function (editCommands) {
+  protoOf(EditProcessor).apply_cotx8y_k$ = function (editCommands) {
     var lastCommand = null;
     try {
       // Inline function 'androidx.compose.ui.util.fastForEach' call
@@ -12151,10 +12054,10 @@
         do {
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var item = editCommands.get_fkrdnv_k$(index);
+          var item = editCommands.get_c1px32_k$(index);
           // Inline function 'androidx.compose.ui.text.input.EditProcessor.apply.<anonymous>' call
           lastCommand = item;
-          item.applyTo_mffvzj_k$(this.mBuffer_1);
+          item.applyTo_f361h0_k$(this.mBuffer_1);
         }
          while (inductionVariable <= last);
     } catch ($p) {
@@ -12165,7 +12068,7 @@
         throw $p;
       }
     }
-    var newState = new TextFieldValue(this.mBuffer_1.toAnnotatedString_yesz4e_k$(), this.mBuffer_1.get_selection_iqfejd_k$(), this.mBuffer_1.get_composition_7jhfbq_k$());
+    var newState = new TextFieldValue(this.mBuffer_1.toAnnotatedString_yesz4e_k$(), this.mBuffer_1.get_selection_d115tn_k$(), this.mBuffer_1.get_composition_sol8g8_k$());
     this.mBufferState_1 = newState;
     return newState;
   };
@@ -12229,12 +12132,8 @@
     this.gapBuffer_1 = new PartialGapBuffer(text.get_text_wouvsm_k$());
     this.selectionStart_1 = _TextRange___get_min__impl__uu95c4(selection);
     this.selectionEnd_1 = _TextRange___get_max__impl__owm8m(selection);
-    var tmp = this;
-    Companion_getInstance_28();
-    tmp.compositionStart_1 = -1;
-    var tmp_0 = this;
-    Companion_getInstance_28();
-    tmp_0.compositionEnd_1 = -1;
+    this.compositionStart_1 = -1;
+    this.compositionEnd_1 = -1;
     var start = _TextRange___get_min__impl__uu95c4(selection);
     var end = _TextRange___get_max__impl__owm8m(selection);
     if (start < 0 ? true : start > text.get_length_g42xv3_k$()) {
@@ -12261,11 +12160,9 @@
     return this.compositionEnd_1;
   };
   protoOf(EditingBuffer).hasComposition_fjs7rk_k$ = function () {
-    var tmp = this.compositionStart_1;
-    Companion_getInstance_28();
-    return !(tmp === -1);
+    return !(this.compositionStart_1 === -1);
   };
-  protoOf(EditingBuffer).get_composition_7jhfbq_k$ = function () {
+  protoOf(EditingBuffer).get_composition_sol8g8_k$ = function () {
     var tmp;
     if (this.hasComposition_fjs7rk_k$()) {
       tmp = TextRange_0(this.compositionStart_1, this.compositionEnd_1);
@@ -12274,25 +12171,25 @@
     }
     return tmp;
   };
-  protoOf(EditingBuffer).get_selection_iqfejd_k$ = function () {
+  protoOf(EditingBuffer).get_selection_d115tn_k$ = function () {
     return TextRange_0(this.selectionStart_1, this.selectionEnd_1);
   };
-  protoOf(EditingBuffer).set_cursor_2gs2kj_k$ = function (cursor) {
-    return this.setSelection_d0tzo9_k$(cursor, cursor);
+  protoOf(EditingBuffer).set_cursor_c0ccid_k$ = function (cursor) {
+    return this.setSelection_qn2wp2_k$(cursor, cursor);
   };
   protoOf(EditingBuffer).get_cursor_c3jujj_k$ = function () {
     return this.selectionStart_1 === this.selectionEnd_1 ? this.selectionEnd_1 : -1;
   };
-  protoOf(EditingBuffer).get_a7b70_k$ = function (index) {
-    return this.gapBuffer_1.get_a7b70_k$(index);
+  protoOf(EditingBuffer).get_kdzpvg_k$ = function (index) {
+    return this.gapBuffer_1.get_kdzpvg_k$(index);
   };
   protoOf(EditingBuffer).get_length_g42xv3_k$ = function () {
     return this.gapBuffer_1.get_length_g42xv3_k$();
   };
-  protoOf(EditingBuffer).replace_kdonvp_k$ = function (start, end, text) {
-    this.replace_z6e3jy_k$(start, end, text.get_text_wouvsm_k$());
+  protoOf(EditingBuffer).replace_nuv9id_k$ = function (start, end, text) {
+    this.replace_k5sxva_k$(start, end, text.get_text_wouvsm_k$());
   };
-  protoOf(EditingBuffer).replace_z6e3jy_k$ = function (start, end, text) {
+  protoOf(EditingBuffer).replace_k5sxva_k$ = function (start, end, text) {
     if (start < 0 ? true : start > this.gapBuffer_1.get_length_g42xv3_k$()) {
       throw IndexOutOfBoundsException_init_$Create$('start (' + start + ') offset is outside of text region ' + this.gapBuffer_1.get_length_g42xv3_k$());
     }
@@ -12302,19 +12199,15 @@
     if (start > end) {
       throw IllegalArgumentException_init_$Create$('Do not set reversed range: ' + start + ' > ' + end);
     }
-    this.gapBuffer_1.replace_z6e3jy_k$(start, end, text);
+    this.gapBuffer_1.replace_k5sxva_k$(start, end, text);
     _set_selectionStart__65lsx(this, start + text.length | 0);
     _set_selectionEnd__2o1cag(this, start + text.length | 0);
-    var tmp = this;
-    Companion_getInstance_28();
-    tmp.compositionStart_1 = -1;
-    var tmp_0 = this;
-    Companion_getInstance_28();
-    tmp_0.compositionEnd_1 = -1;
+    this.compositionStart_1 = -1;
+    this.compositionEnd_1 = -1;
   };
-  protoOf(EditingBuffer).delete_pnzhq2_k$ = function (start, end) {
+  protoOf(EditingBuffer).delete_wbvee3_k$ = function (start, end) {
     var deleteRange = TextRange_0(start, end);
-    this.gapBuffer_1.replace_z6e3jy_k$(start, end, '');
+    this.gapBuffer_1.replace_k5sxva_k$(start, end, '');
     var newSelection = updateRangeAfterDelete(TextRange_0(this.selectionStart_1, this.selectionEnd_1), deleteRange);
     _set_selectionStart__65lsx(this, _TextRange___get_min__impl__uu95c4(newSelection));
     _set_selectionEnd__2o1cag(this, _TextRange___get_max__impl__owm8m(newSelection));
@@ -12322,14 +12215,14 @@
       var compositionRange = TextRange_0(this.compositionStart_1, this.compositionEnd_1);
       var newComposition = updateRangeAfterDelete(compositionRange, deleteRange);
       if (_TextRange___get_collapsed__impl__cilesp(newComposition)) {
-        this.commitComposition_8woa5a_k$();
+        this.commitComposition_8w4hjx_k$();
       } else {
         this.compositionStart_1 = _TextRange___get_min__impl__uu95c4(newComposition);
         this.compositionEnd_1 = _TextRange___get_max__impl__owm8m(newComposition);
       }
     }
   };
-  protoOf(EditingBuffer).setSelection_d0tzo9_k$ = function (start, end) {
+  protoOf(EditingBuffer).setSelection_qn2wp2_k$ = function (start, end) {
     if (start < 0 ? true : start > this.gapBuffer_1.get_length_g42xv3_k$()) {
       throw IndexOutOfBoundsException_init_$Create$('start (' + start + ') offset is outside of text region ' + this.gapBuffer_1.get_length_g42xv3_k$());
     }
@@ -12342,7 +12235,7 @@
     _set_selectionStart__65lsx(this, start);
     _set_selectionEnd__2o1cag(this, end);
   };
-  protoOf(EditingBuffer).setComposition_3gafav_k$ = function (start, end) {
+  protoOf(EditingBuffer).setComposition_kdu1ns_k$ = function (start, end) {
     if (start < 0 ? true : start > this.gapBuffer_1.get_length_g42xv3_k$()) {
       throw IndexOutOfBoundsException_init_$Create$('start (' + start + ') offset is outside of text region ' + this.gapBuffer_1.get_length_g42xv3_k$());
     }
@@ -12355,22 +12248,14 @@
     this.compositionStart_1 = start;
     this.compositionEnd_1 = end;
   };
-  protoOf(EditingBuffer).cancelComposition_m3imwv_k$ = function () {
-    this.replace_z6e3jy_k$(this.compositionStart_1, this.compositionEnd_1, '');
-    var tmp = this;
-    Companion_getInstance_28();
-    tmp.compositionStart_1 = -1;
-    var tmp_0 = this;
-    Companion_getInstance_28();
-    tmp_0.compositionEnd_1 = -1;
+  protoOf(EditingBuffer).cancelComposition_m42fi8_k$ = function () {
+    this.replace_k5sxva_k$(this.compositionStart_1, this.compositionEnd_1, '');
+    this.compositionStart_1 = -1;
+    this.compositionEnd_1 = -1;
   };
-  protoOf(EditingBuffer).commitComposition_8woa5a_k$ = function () {
-    var tmp = this;
-    Companion_getInstance_28();
-    tmp.compositionStart_1 = -1;
-    var tmp_0 = this;
-    Companion_getInstance_28();
-    tmp_0.compositionEnd_1 = -1;
+  protoOf(EditingBuffer).commitComposition_8w4hjx_k$ = function () {
+    this.compositionStart_1 = -1;
+    this.compositionEnd_1 = -1;
   };
   protoOf(EditingBuffer).toString = function () {
     return this.gapBuffer_1.toString();
@@ -12447,15 +12332,11 @@
     Companion_getInstance_29();
     this.text_1 = text;
     this.buffer_1 = null;
-    var tmp = this;
-    Companion_getInstance_29();
-    tmp.bufStart_1 = -1;
-    var tmp_0 = this;
-    Companion_getInstance_29();
-    tmp_0.bufEnd_1 = -1;
+    this.bufStart_1 = -1;
+    this.bufEnd_1 = -1;
     this.$stable_1 = 8;
   }
-  protoOf(PartialGapBuffer).set_text_c28oiw_k$ = function (_set____db54di) {
+  protoOf(PartialGapBuffer).set_text_oy06f4_k$ = function (_set____db54di) {
     this.text_1 = _set____db54di;
   };
   protoOf(PartialGapBuffer).get_text_wouvsm_k$ = function () {
@@ -12472,7 +12353,7 @@
     var buffer = tmp;
     return (this.text_1.length - (this.bufEnd_1 - this.bufStart_1 | 0) | 0) + buffer.length_iap7oa_k$() | 0;
   };
-  protoOf(PartialGapBuffer).replace_z6e3jy_k$ = function (start, end, text) {
+  protoOf(PartialGapBuffer).replace_k5sxva_k$ = function (start, end, text) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(start <= end)) {
@@ -12489,21 +12370,15 @@
     }
     var buffer = this.buffer_1;
     if (buffer == null) {
-      var tmp$ret$2;
       // Inline function 'kotlin.comparisons.maxOf' call
-      Companion_getInstance_29();
-      var tmp = text.length;
-      Companion_getInstance_29();
-      var tmp3_maxOf = tmp + imul(2, 64) | 0;
-      tmp$ret$2 = Math.max(255, tmp3_maxOf);
+      var b = text.length + 128 | 0;
+      var tmp$ret$2 = Math.max(255, b);
       var charArray_0 = charArray(tmp$ret$2);
       // Inline function 'kotlin.comparisons.minOf' call
-      Companion_getInstance_29();
       var leftCopyCount = Math.min(start, 64);
       // Inline function 'kotlin.comparisons.minOf' call
-      var tmp5_minOf = this.text_1.length - end | 0;
-      Companion_getInstance_29();
-      var rightCopyCount = Math.min(tmp5_minOf, 64);
+      var a = this.text_1.length - end | 0;
+      var rightCopyCount = Math.min(a, 64);
       toCharArray_0(this.text_1, charArray_0, 0, start - leftCopyCount | 0, start);
       toCharArray_0(this.text_1, charArray_0, charArray_0.length - rightCopyCount | 0, end, end + rightCopyCount | 0);
       toCharArray(text, charArray_0, leftCopyCount);
@@ -12517,17 +12392,13 @@
     if (bufferStart < 0 ? true : bufferEnd > buffer.length_iap7oa_k$()) {
       this.text_1 = this.toString();
       this.buffer_1 = null;
-      var tmp_0 = this;
-      Companion_getInstance_29();
-      tmp_0.bufStart_1 = -1;
-      var tmp_1 = this;
-      Companion_getInstance_29();
-      tmp_1.bufEnd_1 = -1;
-      return this.replace_z6e3jy_k$(start, end, text);
+      this.bufStart_1 = -1;
+      this.bufEnd_1 = -1;
+      return this.replace_k5sxva_k$(start, end, text);
     }
-    buffer.replace_z6e3jy_k$(bufferStart, bufferEnd, text);
+    buffer.replace_k5sxva_k$(bufferStart, bufferEnd, text);
   };
-  protoOf(PartialGapBuffer).get_a7b70_k$ = function (index) {
+  protoOf(PartialGapBuffer).get_kdzpvg_k$ = function (index) {
     var tmp0_elvis_lhs = this.buffer_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -12541,7 +12412,7 @@
     }
     var gapBufLength = buffer.length_iap7oa_k$();
     if (index < (gapBufLength + this.bufStart_1 | 0)) {
-      return buffer.get_a7b70_k$(index - this.bufStart_1 | 0);
+      return buffer.get_kdzpvg_k$(index - this.bufStart_1 | 0);
     }
     return charSequenceGet(this.text_1, index - ((gapBufLength - this.bufEnd_1 | 0) + this.bufStart_1 | 0) | 0);
   };
@@ -12555,9 +12426,9 @@
     }
     var b = tmp;
     var sb = StringBuilder_init_$Create$_0();
-    sb.append_tbojcw_k$(this.text_1, 0, this.bufStart_1);
-    b.append_oi41kw_k$(sb);
-    sb.append_tbojcw_k$(this.text_1, this.bufEnd_1, this.text_1.length);
+    sb.append_xdc1zw_k$(this.text_1, 0, this.bufStart_1);
+    b.append_rl74gk_k$(sb);
+    sb.append_xdc1zw_k$(this.text_1, this.bufEnd_1, this.text_1.length);
     return sb.toString();
   };
   function _set_capacity__2jc21p($this, _set____db54di) {
@@ -12598,26 +12469,26 @@
     }
     var newBuffer = charArray(newCapacity);
     // Inline function 'kotlin.collections.copyInto' call
-    var tmp0_copyInto = $this.buffer_1;
-    var tmp1_copyInto = $this.gapStart_1;
+    var this_0 = $this.buffer_1;
+    var endIndex = $this.gapStart_1;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    var tmp = tmp0_copyInto;
+    var tmp = this_0;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    arrayCopy(tmp, newBuffer, 0, 0, tmp1_copyInto);
+    arrayCopy(tmp, newBuffer, 0, 0, endIndex);
     var tailLength = $this.capacity_1 - $this.gapEnd_1 | 0;
     var newEnd = newCapacity - tailLength | 0;
     // Inline function 'kotlin.collections.copyInto' call
-    var tmp2_copyInto = $this.buffer_1;
-    var tmp3_copyInto = $this.gapEnd_1;
-    var tmp4_copyInto = $this.gapEnd_1 + tailLength | 0;
+    var this_1 = $this.buffer_1;
+    var startIndex = $this.gapEnd_1;
+    var endIndex_0 = $this.gapEnd_1 + tailLength | 0;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    var tmp_0 = tmp2_copyInto;
+    var tmp_0 = this_1;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    arrayCopy(tmp_0, newBuffer, newEnd, tmp3_copyInto, tmp4_copyInto);
+    arrayCopy(tmp_0, newBuffer, newEnd, startIndex, endIndex_0);
     $this.buffer_1 = newBuffer;
     $this.capacity_1 = newCapacity;
     $this.gapEnd_1 = newEnd;
@@ -12626,16 +12497,16 @@
     if (start < $this.gapStart_1 ? end <= $this.gapStart_1 : false) {
       var copyLen = $this.gapStart_1 - end | 0;
       // Inline function 'kotlin.collections.copyInto' call
-      var tmp0_copyInto = $this.buffer_1;
-      var tmp1_copyInto = $this.buffer_1;
-      var tmp2_copyInto = $this.gapEnd_1 - copyLen | 0;
-      var tmp3_copyInto = $this.gapStart_1;
+      var this_0 = $this.buffer_1;
+      var destination = $this.buffer_1;
+      var destinationOffset = $this.gapEnd_1 - copyLen | 0;
+      var endIndex = $this.gapStart_1;
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp = tmp0_copyInto;
+      var tmp = this_0;
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      arrayCopy(tmp, tmp1_copyInto, tmp2_copyInto, end, tmp3_copyInto);
+      arrayCopy(tmp, destination, destinationOffset, end, endIndex);
       $this.gapStart_1 = start;
       $this.gapEnd_1 = $this.gapEnd_1 - copyLen | 0;
     } else if (start < $this.gapStart_1 ? end >= $this.gapStart_1 : false) {
@@ -12646,16 +12517,16 @@
       var endInBuffer = end + gapLength($this) | 0;
       var copyLen_0 = startInBuffer - $this.gapEnd_1 | 0;
       // Inline function 'kotlin.collections.copyInto' call
-      var tmp4_copyInto = $this.buffer_1;
-      var tmp5_copyInto = $this.buffer_1;
-      var tmp6_copyInto = $this.gapStart_1;
-      var tmp7_copyInto = $this.gapEnd_1;
+      var this_1 = $this.buffer_1;
+      var destination_0 = $this.buffer_1;
+      var destinationOffset_0 = $this.gapStart_1;
+      var startIndex = $this.gapEnd_1;
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp_0 = tmp4_copyInto;
+      var tmp_0 = this_1;
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      arrayCopy(tmp_0, tmp5_copyInto, tmp6_copyInto, tmp7_copyInto, startInBuffer);
+      arrayCopy(tmp_0, destination_0, destinationOffset_0, startIndex, startInBuffer);
       $this.gapStart_1 = $this.gapStart_1 + copyLen_0 | 0;
       $this.gapEnd_1 = endInBuffer;
     }
@@ -12666,20 +12537,20 @@
     this.gapStart_1 = initGapStart;
     this.gapEnd_1 = initGapEnd;
   }
-  protoOf(GapBuffer).get_a7b70_k$ = function (index) {
+  protoOf(GapBuffer).get_kdzpvg_k$ = function (index) {
     if (index < this.gapStart_1) {
       return this.buffer_1[index];
     } else {
       return this.buffer_1[(index - this.gapStart_1 | 0) + this.gapEnd_1 | 0];
     }
   };
-  protoOf(GapBuffer).replace_z6e3jy_k$ = function (start, end, text) {
+  protoOf(GapBuffer).replace_k5sxva_k$ = function (start, end, text) {
     makeSureAvailableSpace(this, text.length - (end - start | 0) | 0);
     delete_0(this, start, end);
     toCharArray(text, this.buffer_1, this.gapStart_1);
     this.gapStart_1 = this.gapStart_1 + text.length | 0;
   };
-  protoOf(GapBuffer).append_oi41kw_k$ = function (builder) {
+  protoOf(GapBuffer).append_rl74gk_k$ = function (builder) {
     appendPartOfCharArray(builder, this.buffer_1, 0, this.gapStart_1);
     appendPartOfCharArray(builder, this.buffer_1, this.gapEnd_1, this.capacity_1 - this.gapEnd_1 | 0);
   };
@@ -12688,11 +12559,11 @@
   };
   protoOf(GapBuffer).toString = function () {
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = StringBuilder_init_$Create$_0();
+    var this_0 = StringBuilder_init_$Create$_0();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.input.GapBuffer.toString.<anonymous>' call
-    tmp0_apply.append_oz4qxs_k$(tmp0_apply);
-    return tmp0_apply.toString();
+    this_0.append_jgojdo_k$(this_0);
+    return this_0.toString();
   };
   function toCharArray(_this__u8e3s4, destination, destinationOffset) {
     return toCharArray_0(_this__u8e3s4, destination, destinationOffset, 0, _this__u8e3s4.length);
@@ -12717,28 +12588,28 @@
     this.Next_1 = _ImeAction___init__impl__ucgwde(6);
     this.Done_1 = _ImeAction___init__impl__ucgwde(7);
   }
-  protoOf(Companion_13).get_Default_74yox7_k$ = function () {
+  protoOf(Companion_13).get_Default_lcd66q_k$ = function () {
     return this.Default_1;
   };
-  protoOf(Companion_13).get_None_mrn910_k$ = function () {
+  protoOf(Companion_13).get_None_5pom2x_k$ = function () {
     return this.None_1;
   };
-  protoOf(Companion_13).get_Go_nezxic_k$ = function () {
+  protoOf(Companion_13).get_Go_52bxll_k$ = function () {
     return this.Go_1;
   };
-  protoOf(Companion_13).get_Search_umu0rg_k$ = function () {
+  protoOf(Companion_13).get_Search_bwy63r_k$ = function () {
     return this.Search_1;
   };
-  protoOf(Companion_13).get_Send_m4mbb8_k$ = function () {
+  protoOf(Companion_13).get_Send_6cpjsp_k$ = function () {
     return this.Send_1;
   };
-  protoOf(Companion_13).get_Previous_rwgujx_k$ = function () {
+  protoOf(Companion_13).get_Previous_enbcba_k$ = function () {
     return this.Previous_1;
   };
-  protoOf(Companion_13).get_Next_8nlv7z_k$ = function () {
+  protoOf(Companion_13).get_Next_jtpzvy_k$ = function () {
     return this.Next_1;
   };
-  protoOf(Companion_13).get_Done_lhg5fi_k$ = function () {
+  protoOf(Companion_13).get_Done_6zvpof_k$ = function () {
     return this.Done_1;
   };
   var Companion_instance_13;
@@ -12789,10 +12660,10 @@
   function ImeOptions(singleLine, capitalization, autoCorrect, keyboardType, imeAction) {
     Companion_getInstance_31();
     singleLine = singleLine === VOID ? false : singleLine;
-    capitalization = capitalization === VOID ? Companion_getInstance_32().get_None_icfadu_k$() : capitalization;
+    capitalization = capitalization === VOID ? Companion_getInstance_32().get_None_7zn0k1_k$() : capitalization;
     autoCorrect = autoCorrect === VOID ? true : autoCorrect;
-    keyboardType = keyboardType === VOID ? Companion_getInstance_33().get_Text_qopopt_k$() : keyboardType;
-    imeAction = imeAction === VOID ? Companion_getInstance_30().get_Default_74yox7_k$() : imeAction;
+    keyboardType = keyboardType === VOID ? Companion_getInstance_33().get_Text_jtxe64_k$() : keyboardType;
+    imeAction = imeAction === VOID ? Companion_getInstance_30().get_Default_lcd66q_k$() : imeAction;
     this.singleLine_1 = singleLine;
     this.capitalization_1 = capitalization;
     this.autoCorrect_1 = autoCorrect;
@@ -12803,28 +12674,28 @@
   protoOf(ImeOptions).get_singleLine_52fw9n_k$ = function () {
     return this.singleLine_1;
   };
-  protoOf(ImeOptions).get_capitalization_vcick2_k$ = function () {
+  protoOf(ImeOptions).get_capitalization_dcjeh7_k$ = function () {
     return this.capitalization_1;
   };
   protoOf(ImeOptions).get_autoCorrect_6oo18y_k$ = function () {
     return this.autoCorrect_1;
   };
-  protoOf(ImeOptions).get_keyboardType_yaywgl_k$ = function () {
+  protoOf(ImeOptions).get_keyboardType_c7o6fc_k$ = function () {
     return this.keyboardType_1;
   };
-  protoOf(ImeOptions).get_imeAction_y0cbl_k$ = function () {
+  protoOf(ImeOptions).get_imeAction_rjbisc_k$ = function () {
     return this.imeAction_1;
   };
-  protoOf(ImeOptions).copy_nqct7b_k$ = function (singleLine, capitalization, autoCorrect, keyboardType, imeAction) {
+  protoOf(ImeOptions).copy_6g2zqv_k$ = function (singleLine, capitalization, autoCorrect, keyboardType, imeAction) {
     return new ImeOptions(singleLine, capitalization, autoCorrect, keyboardType, imeAction);
   };
-  protoOf(ImeOptions).copy$default_a4rg3w_k$ = function (singleLine, capitalization, autoCorrect, keyboardType, imeAction, $super) {
+  protoOf(ImeOptions).copy$default_oj73e6_k$ = function (singleLine, capitalization, autoCorrect, keyboardType, imeAction, $super) {
     singleLine = singleLine === VOID ? this.singleLine_1 : singleLine;
     capitalization = capitalization === VOID ? this.capitalization_1 : capitalization;
     autoCorrect = autoCorrect === VOID ? this.autoCorrect_1 : autoCorrect;
     keyboardType = keyboardType === VOID ? this.keyboardType_1 : keyboardType;
     imeAction = imeAction === VOID ? this.imeAction_1 : imeAction;
-    return $super === VOID ? this.copy_nqct7b_k$(singleLine, capitalization, autoCorrect, keyboardType, imeAction) : $super.copy_nqct7b_k$.call(this, singleLine, new KeyboardCapitalization(capitalization), autoCorrect, new KeyboardType(keyboardType), new ImeAction(imeAction));
+    return $super === VOID ? this.copy_6g2zqv_k$(singleLine, capitalization, autoCorrect, keyboardType, imeAction) : $super.copy_6g2zqv_k$.call(this, singleLine, new KeyboardCapitalization(capitalization), autoCorrect, new KeyboardType(keyboardType), new ImeAction(imeAction));
   };
   protoOf(ImeOptions).equals = function (other) {
     if (this === other)
@@ -12844,9 +12715,9 @@
     return true;
   };
   protoOf(ImeOptions).hashCode = function () {
-    var result = this.singleLine_1 | 0;
+    var result = getBooleanHashCode(this.singleLine_1);
     result = imul(31, result) + KeyboardCapitalization__hashCode_impl_6ibuz5(this.capitalization_1) | 0;
-    result = imul(31, result) + (this.autoCorrect_1 | 0) | 0;
+    result = imul(31, result) + getBooleanHashCode(this.autoCorrect_1) | 0;
     result = imul(31, result) + KeyboardType__hashCode_impl_mw6m33(this.keyboardType_1) | 0;
     result = imul(31, result) + ImeAction__hashCode_impl_m1mrob(this.imeAction_1) | 0;
     return result;
@@ -12870,16 +12741,16 @@
     this.Words_1 = _KeyboardCapitalization___init__impl__fmdpvi(2);
     this.Sentences_1 = _KeyboardCapitalization___init__impl__fmdpvi(3);
   }
-  protoOf(Companion_15).get_None_icfadu_k$ = function () {
+  protoOf(Companion_15).get_None_7zn0k1_k$ = function () {
     return this.None_1;
   };
-  protoOf(Companion_15).get_Characters_3xid7k_k$ = function () {
+  protoOf(Companion_15).get_Characters_mejxqb_k$ = function () {
     return this.Characters_1;
   };
-  protoOf(Companion_15).get_Words_8i3rrn_k$ = function () {
+  protoOf(Companion_15).get_Words_htyj68_k$ = function () {
     return this.Words_1;
   };
-  protoOf(Companion_15).get_Sentences_no7038_k$ = function () {
+  protoOf(Companion_15).get_Sentences_l0uqy1_k$ = function () {
     return this.Sentences_1;
   };
   var Companion_instance_15;
@@ -12932,31 +12803,31 @@
     this.NumberPassword_1 = _KeyboardType___init__impl__csir7k(8);
     this.Decimal_1 = _KeyboardType___init__impl__csir7k(9);
   }
-  protoOf(Companion_16).get_Text_qopopt_k$ = function () {
+  protoOf(Companion_16).get_Text_jtxe64_k$ = function () {
     return this.Text_1;
   };
-  protoOf(Companion_16).get_Ascii_71un6b_k$ = function () {
+  protoOf(Companion_16).get_Ascii_vkbm9i_k$ = function () {
     return this.Ascii_1;
   };
-  protoOf(Companion_16).get_Number_pqqf1_k$ = function () {
+  protoOf(Companion_16).get_Number_p87pi8_k$ = function () {
     return this.Number_1;
   };
-  protoOf(Companion_16).get_Phone_l5fx0w_k$ = function () {
+  protoOf(Companion_16).get_Phone_pd75v1_k$ = function () {
     return this.Phone_1;
   };
-  protoOf(Companion_16).get_Uri_qc0sdq_k$ = function () {
+  protoOf(Companion_16).get_Uri_k6mai7_k$ = function () {
     return this.Uri_1;
   };
-  protoOf(Companion_16).get_Email_lfbvmq_k$ = function () {
+  protoOf(Companion_16).get_Email_3353gh_k$ = function () {
     return this.Email_1;
   };
-  protoOf(Companion_16).get_Password_pnggc1_k$ = function () {
+  protoOf(Companion_16).get_Password_14zh8u_k$ = function () {
     return this.Password_1;
   };
-  protoOf(Companion_16).get_NumberPassword_w409hk_k$ = function () {
+  protoOf(Companion_16).get_NumberPassword_7ljaed_k$ = function () {
     return this.NumberPassword_1;
   };
-  protoOf(Companion_16).get_Decimal_f1xq8j_k$ = function () {
+  protoOf(Companion_16).get_Decimal_vgpcne_k$ = function () {
     return this.Decimal_1;
   };
   var Companion_instance_16;
@@ -12998,10 +12869,10 @@
   }
   function OffsetMapping$Companion$Identity$1() {
   }
-  protoOf(OffsetMapping$Companion$Identity$1).originalToTransformed_c5d2si_k$ = function (offset) {
+  protoOf(OffsetMapping$Companion$Identity$1).originalToTransformed_qvujev_k$ = function (offset) {
     return offset;
   };
-  protoOf(OffsetMapping$Companion$Identity$1).transformedToOriginal_xp4com_k$ = function (offset) {
+  protoOf(OffsetMapping$Companion$Identity$1).transformedToOriginal_hkmhr3_k$ = function (offset) {
     return offset;
   };
   function Companion_17() {
@@ -13035,13 +12906,16 @@
     return 8;
   }
   function _set_refCount__5vfkm3($this, _set____db54di) {
+    var this_0 = $this.refCount$delegate_1;
     refCount$factory();
-    return $this.refCount$delegate_1.set_intValue_q75ky9_k$(_set____db54di);
+    this_0.set_intValue_s3g6dz_k$(_set____db54di);
+    return Unit_getInstance();
   }
   function _get_refCount__6xgqup($this) {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = $this.refCount$delegate_1;
     refCount$factory_0();
-    return $this.refCount$delegate_1.get_intValue_mlvnn9_k$();
+    return this_0.get_intValue_mlvnn9_k$();
   }
   function _get_plugin__txgc3c($this) {
     return $this.plugin_1;
@@ -13050,14 +12924,14 @@
     this.this$0__1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda).invoke_d6gbsu_k$ = function ($this$launch, $completion) {
-    var tmp = this.create_b6qu53_k$($this$launch, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda).invoke_d9fzmj_k$ = function ($this$launch, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$launch, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -13065,7 +12939,7 @@
       try {
         var tmp = this.get_state_iypx7s_k$();
         if (tmp === 0) {
-          this.set_exceptionState_s9sevl_k$(1);
+          this.set_exceptionState_fex74n_k$(1);
           disposeTombstonedAdapters(this.this$0__1);
           return Unit_getInstance();
         } else if (tmp === 1) {
@@ -13077,18 +12951,18 @@
       }
      while (true);
   };
-  protoOf(PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda).create_b6qu53_k$ = function ($this$launch, completion) {
+  protoOf(PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda).create_rcuf4x_k$ = function ($this$launch, completion) {
     var i = new PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda(this.this$0__1, completion);
     i.$this$launch_1 = $this$launch;
     return i;
   };
-  protoOf(PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda_0(this$0, resultContinuation) {
     var i = new PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda$o$dispose$slambda(this$0, resultContinuation);
     var l = function ($this$launch, $completion) {
-      return i.invoke_d6gbsu_k$($this$launch, $completion);
+      return i.invoke_d9fzmj_k$($this$launch, $completion);
     };
     l.$arity = 1;
     return l;
@@ -13118,18 +12992,18 @@
     if ($this.adaptersMayNeedDisposal_1) {
       $this.adaptersMayNeedDisposal_1 = false;
       // Inline function 'kotlin.collections.filter' call
-      var tmp0_filter = $this.adaptersByPlugin_1.get_entries_p20ztl_k$();
       // Inline function 'kotlin.collections.filterTo' call
-      var tmp0_filterTo = ArrayList_init_$Create$();
-      var tmp0_iterator = tmp0_filter.iterator_jk1svi_k$();
+      var this_0 = $this.adaptersByPlugin_1.get_entries_p20ztl_k$();
+      var destination = ArrayList_init_$Create$();
+      var tmp0_iterator = this_0.iterator_jk1svi_k$();
       while (tmp0_iterator.hasNext_bitz1p_k$()) {
         var element = tmp0_iterator.next_20eer_k$();
         // Inline function 'androidx.compose.ui.text.input.PlatformTextInputPluginRegistryImpl.disposeTombstonedAdapters.<anonymous>' call
         if (element.get_value_j01efc_k$().get_isRefCountZero_u3zp2h_k$()) {
-          tmp0_filterTo.add_1j60pz_k$(element);
+          destination.add_utx5q5_k$(element);
         }
       }
-      var toDispose = tmp0_filterTo;
+      var toDispose = destination;
       // Inline function 'androidx.compose.ui.util.fastForEach' call
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
@@ -13138,7 +13012,7 @@
         do {
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var item = toDispose.get_fkrdnv_k$(index);
+          var item = toDispose.get_c1px32_k$(index);
           // Inline function 'androidx.compose.ui.text.input.PlatformTextInputPluginRegistryImpl.disposeTombstonedAdapters.<anonymous>' call
           // Inline function 'kotlin.collections.component1' call
           var plugin = item.get_key_18j28a_k$();
@@ -13151,7 +13025,7 @@
             $this.focusedPlugin_1 = null;
           }
           // Inline function 'kotlin.collections.minusAssign' call
-          $this.adaptersByPlugin_1.remove_8hbkc0_k$(plugin);
+          $this.adaptersByPlugin_1.remove_gppy8k_k$(plugin);
           dispose(adapter.adapter_1);
         }
          while (inductionVariable <= last);
@@ -13163,7 +13037,7 @@
     var newAdapter = isInterface(tmp, PlatformTextInputAdapter) ? tmp : THROW_CCE();
     var withRefCount = new AdapterWithRefCount($this, newAdapter);
     // Inline function 'kotlin.collections.set' call
-    $this.adaptersByPlugin_1.put_3mhbri_k$(plugin, withRefCount);
+    $this.adaptersByPlugin_1.put_4fpzoq_k$(plugin, withRefCount);
     if (false) {
       println('Instantiated new PlatformTextInputAdapter. ' + ('plugin=' + plugin + ', adapter=' + newAdapter));
     }
@@ -13200,7 +13074,7 @@
   protoOf(AdapterWithRefCount).get_isRefCountZero_u3zp2h_k$ = function () {
     return _get_refCount__6xgqup(this) === 0;
   };
-  protoOf(AdapterWithRefCount).incrementRefCount_tfesue_k$ = function () {
+  protoOf(AdapterWithRefCount).incrementRefCount_tev091_k$ = function () {
     var tmp1 = _get_refCount__6xgqup(this);
     _set_refCount__5vfkm3(this, tmp1 + 1 | 0);
     if (false) {
@@ -13230,13 +13104,13 @@
     this.$this_1 = $outer;
     this.plugin_1 = plugin;
   }
-  protoOf(AdapterInput).requestInputFocus_k3eevg_k$ = function () {
+  protoOf(AdapterInput).requestInputFocus_k3y7gt_k$ = function () {
     if (false) {
       println('PlatformTextInputAdapter requested input focus. plugin=' + this.plugin_1);
     }
     this.$this_1.focusedPlugin_1 = this.plugin_1;
   };
-  protoOf(AdapterInput).releaseInputFocus_c6njy4_k$ = function () {
+  protoOf(AdapterInput).releaseInputFocus_c63rcr_k$ = function () {
     if (false) {
       println('PlatformTextInputAdapter released input focus. plugin=' + this.plugin_1);
     }
@@ -13260,7 +13134,7 @@
     this.$scope_1 = $scope;
     this.this$0__1 = this$0;
   }
-  protoOf(_no_name_provided__qut3iv_0).dispose_3n44we_k$ = function () {
+  protoOf(_no_name_provided__qut3iv_0).dispose_3nnxhr_k$ = function () {
     // Inline function 'androidx.compose.ui.text.input.PlatformTextInputPluginRegistryImpl.rememberAdapter$composable.<anonymous>.<anonymous>' call
     if (false) {
       println('Disposing PlatformTextInputAdapter handle');
@@ -13272,10 +13146,8 @@
   };
   function PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda_0($adapterHandle, $scope, this$0) {
     return function ($this$DisposableEffect) {
-      var tmp$ret$0;
       // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      tmp$ret$0 = new _no_name_provided__qut3iv_0($adapterHandle, $scope, this$0);
-      return tmp$ret$0;
+      return new _no_name_provided__qut3iv_0($adapterHandle, $scope, this$0);
     };
   }
   function PlatformTextInputPluginRegistryImpl(factory) {
@@ -13288,100 +13160,100 @@
   protoOf(PlatformTextInputPluginRegistryImpl).get_focusedAdapter_bl8hlr_k$ = function () {
     // Inline function 'kotlin.also' call
     // Inline function 'kotlin.collections.get' call
-    var tmp0_get = this.adaptersByPlugin_1;
-    var tmp1_get = this.focusedPlugin_1;
-    var tmp0_safe_receiver = (isInterface(tmp0_get, Map) ? tmp0_get : THROW_CCE()).get_1mhr4y_k$(tmp1_get);
-    var tmp2_also = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.adapter_1;
+    var this_0 = this.adaptersByPlugin_1;
+    var key = this.focusedPlugin_1;
+    var tmp0_safe_receiver = (isInterface(this_0, Map) ? this_0 : THROW_CCE()).get_wei43m_k$(key);
+    var this_1 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.adapter_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.input.PlatformTextInputPluginRegistryImpl.<get-focusedAdapter>.<anonymous>' call
     if (false) {
-      println('Found focused PlatformTextInputAdapter: ' + tmp2_also);
+      println('Found focused PlatformTextInputAdapter: ' + this_1);
     }
-    return tmp2_also;
+    return this_1;
   };
-  protoOf(PlatformTextInputPluginRegistryImpl).rememberAdapter_s8m2ez_k$ = function (plugin) {
+  protoOf(PlatformTextInputPluginRegistryImpl).rememberAdapter_z0wi94_k$ = function (plugin) {
     illegalDecoyCallException('rememberAdapter');
   };
-  protoOf(PlatformTextInputPluginRegistryImpl).getOrCreateAdapter_gqe4gj_k$ = function (plugin) {
+  protoOf(PlatformTextInputPluginRegistryImpl).getOrCreateAdapter_h67r4g_k$ = function (plugin) {
     if (false) {
       println('Getting PlatformTextInputAdapter for plugin ' + plugin);
     }
-    var tmp = this.adaptersByPlugin_1.get_1mhr4y_k$(plugin);
+    var tmp = this.adaptersByPlugin_1.get_wei43m_k$(plugin);
     var tmp0_elvis_lhs = (tmp == null ? true : tmp instanceof AdapterWithRefCount) ? tmp : THROW_CCE();
     var adapterWithRefCount = tmp0_elvis_lhs == null ? instantiateAdapter(this, plugin) : tmp0_elvis_lhs;
-    adapterWithRefCount.incrementRefCount_tfesue_k$();
+    adapterWithRefCount.incrementRefCount_tev091_k$();
     return new AdapterHandle(adapterWithRefCount.adapter_1, PlatformTextInputPluginRegistryImpl$getOrCreateAdapter$lambda(adapterWithRefCount));
   };
-  protoOf(PlatformTextInputPluginRegistryImpl).rememberAdapter$composable_p7winm_k$ = function (plugin, $composer, $changed) {
+  protoOf(PlatformTextInputPluginRegistryImpl).rememberAdapter$composable_tede98_k$ = function (plugin, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1706325120);
+    $composer_0.startReplaceableGroup_ip860b_k$(-1706325120);
     sourceInformation($composer_0, 'C(rememberAdapter$composable)172@6998L47,177@7280L24,178@7313L1452:PlatformTextInputAdapter.kt#n30j42');
     if (isTraceInProgress()) {
       traceEventStart(-1706325120, $changed, -1, 'androidx.compose.ui.text.input.PlatformTextInputPluginRegistryImpl.rememberAdapter$composable (PlatformTextInputAdapter.kt:167)');
     }
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+    $composer_1.startReplaceableGroup_ip860b_k$(-838505973);
     sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache = $composer_1.changed_ga7h3f_k$(plugin);
+    var invalid = $composer_1.changed_ga7h3f_k$(plugin);
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_1.rememberedValue_4dg93v_k$();
     var tmp;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_5().get_Empty_i9b85g_k$()) {
+    if (invalid ? true : it === Companion_getInstance_5().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.ui.text.input.PlatformTextInputPluginRegistryImpl.rememberAdapter$composable.<anonymous>' call
-      var value = this.getOrCreateAdapter_gqe4gj_k$(plugin);
-      $composer_1.updateRememberedValue_l1colo_k$(value);
+      var value = this.getOrCreateAdapter_h67r4g_k$(plugin);
+      $composer_1.updateRememberedValue_l1wh71_k$(value);
       tmp = value;
     } else {
-      tmp = tmp0_let;
+      tmp = it;
     }
     var tmp_0 = tmp;
-    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
+    var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_1.endReplaceableGroup_ern0ak_k$();
     var adapterHandle = tmp0;
     // Inline function 'androidx.compose.runtime.rememberCoroutineScope$composable' call
     var getContext = {_v: null};
     var $composer_2 = $composer_0;
-    $composer_2.startReplaceableGroup_rp6air_k$(102870005);
+    $composer_2.startReplaceableGroup_ip860b_k$(102870005);
     sourceInformation($composer_2, 'CC(rememberCoroutineScope$composable)481@20228L144:Effects.kt#9igjgp');
-    if (!(1 === 0)) {
+    if (!((1 & 1) === 0)) {
       getContext._v = PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda;
     }
     var composer = $composer_2;
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_3 = $composer_2;
-    $composer_3.startReplaceableGroup_rp6air_k$(547886695);
+    $composer_3.startReplaceableGroup_ip860b_k$(547886695);
     sourceInformation($composer_3, 'CC(remember$composable):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
     // Inline function 'kotlin.let' call
-    var tmp0_let_0 = $composer_3.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it_0 = $composer_3.rememberedValue_4dg93v_k$();
     var tmp_1;
-    if (false ? true : tmp0_let_0 === Companion_getInstance_5().get_Empty_i9b85g_k$()) {
+    if (false ? true : it_0 === Companion_getInstance_5().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.runtime.rememberCoroutineScope$composable.<anonymous>' call
       var value_0 = new CompositionScopedCoroutineScopeCanceller(createCompositionCoroutineScope(getContext._v(), composer));
-      $composer_3.updateRememberedValue_l1colo_k$(value_0);
+      $composer_3.updateRememberedValue_l1wh71_k$(value_0);
       tmp_1 = value_0;
     } else {
-      tmp_1 = tmp0_let_0;
+      tmp_1 = it_0;
     }
     var tmp_2 = tmp_1;
-    var tmp0_0 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
-    $composer_3.endReplaceableGroup_er37p7_k$();
+    var tmp0_0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
+    $composer_3.endReplaceableGroup_ern0ak_k$();
     var wrapper = tmp0_0;
     var tmp0_1 = wrapper.get_coroutineScope_5k7h45_k$();
-    $composer_2.endReplaceableGroup_er37p7_k$();
+    $composer_2.endReplaceableGroup_ern0ak_k$();
     var scope = tmp0_1;
     DisposableEffect$composable(adapterHandle, PlatformTextInputPluginRegistryImpl$rememberAdapter$composable$lambda_0(adapterHandle, scope, this), $composer_0, 8);
     var tmp0_2 = adapterHandle.adapter_1;
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0_2;
   };
   function PlatformTextInput() {
@@ -13412,14 +13284,14 @@
     var tmp$ret$0;
     $l$block: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp0_restore = list.get_fkrdnv_k$(0);
-      var tmp1_restore = get_AnnotatedStringSaver();
-      if (equals(tmp0_restore, false)) {
+      var value = list.get_c1px32_k$(0);
+      var saver = get_AnnotatedStringSaver();
+      if (equals(value, false)) {
         tmp$ret$0 = null;
         break $l$block;
       }
       var tmp;
-      if (tmp0_restore == null) {
+      if (value == null) {
         tmp = null;
       } else {
         // Inline function 'kotlin.let' call
@@ -13428,7 +13300,7 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_0 = tmp1_restore.restore_uzeo8_k$(tmp0_restore);
+        var tmp_0 = saver.restore_fyjq85_k$(value);
         tmp = (tmp_0 == null ? true : tmp_0 instanceof AnnotatedString) ? tmp_0 : THROW_CCE();
       }
       tmp$ret$0 = tmp;
@@ -13437,14 +13309,14 @@
     var tmp$ret$5;
     $l$block_0: {
       // Inline function 'androidx.compose.ui.text.restore' call
-      var tmp2_restore = list.get_fkrdnv_k$(1);
-      var tmp3_restore = get_Saver_10(Companion_getInstance_18());
-      if (equals(tmp2_restore, false)) {
+      var value_0 = list.get_c1px32_k$(1);
+      var saver_0 = get_Saver_10(Companion_getInstance_18());
+      if (equals(value_0, false)) {
         tmp$ret$5 = null;
         break $l$block_0;
       }
       var tmp_2;
-      if (tmp2_restore == null) {
+      if (value_0 == null) {
         tmp_2 = null;
       } else {
         // Inline function 'kotlin.let' call
@@ -13453,7 +13325,7 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.restore.<anonymous>.<anonymous>' call
-        var tmp_3 = tmp3_restore.restore_uzeo8_k$(tmp2_restore);
+        var tmp_3 = saver_0.restore_fyjq85_k$(value_0);
         var tmp_4 = tmp_3 == null ? null : tmp_3.packedValue_1;
         var tmp_5;
         var tmp_6;
@@ -13478,7 +13350,7 @@
   }
   function TextFieldValue_init_$Init$(text, selection, composition, $this) {
     text = text === VOID ? '' : text;
-    selection = selection === VOID ? Companion_getInstance_18().get_Zero_e8si87_k$() : selection;
+    selection = selection === VOID ? Companion_getInstance_18().get_Zero_8je9ih_k$() : selection;
     composition = composition === VOID ? null : composition;
     TextFieldValue.call($this, AnnotatedString_init_$Create$(text), selection, composition);
     return $this;
@@ -13506,7 +13378,7 @@
   }
   function TextFieldValue(annotatedString, selection, composition) {
     Companion_getInstance_35();
-    selection = selection === VOID ? Companion_getInstance_18().get_Zero_e8si87_k$() : selection;
+    selection = selection === VOID ? Companion_getInstance_18().get_Zero_8je9ih_k$() : selection;
     composition = composition === VOID ? null : composition;
     this.annotatedString_1 = annotatedString;
     this.selection_1 = coerceIn_1(selection, 0, this.get_text_wouvsm_k$().length);
@@ -13527,44 +13399,42 @@
   protoOf(TextFieldValue).get_text_wouvsm_k$ = function () {
     return this.annotatedString_1.get_text_wouvsm_k$();
   };
-  protoOf(TextFieldValue).get_selection_iqfejd_k$ = function () {
+  protoOf(TextFieldValue).get_selection_d115tn_k$ = function () {
     return this.selection_1;
   };
-  protoOf(TextFieldValue).get_composition_7jhfbq_k$ = function () {
+  protoOf(TextFieldValue).get_composition_sol8g8_k$ = function () {
     return this.composition_1;
   };
-  protoOf(TextFieldValue).copy_5pnje4_k$ = function (annotatedString, selection, composition) {
+  protoOf(TextFieldValue).copy_hntddt_k$ = function (annotatedString, selection, composition) {
     return new TextFieldValue(annotatedString, selection, composition);
   };
-  protoOf(TextFieldValue).copy$default_c4y0gg_k$ = function (annotatedString, selection, composition, $super) {
+  protoOf(TextFieldValue).copy$default_xf3zur_k$ = function (annotatedString, selection, composition, $super) {
     annotatedString = annotatedString === VOID ? this.annotatedString_1 : annotatedString;
     selection = selection === VOID ? this.selection_1 : selection;
     composition = composition === VOID ? this.composition_1 : composition;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_5pnje4_k$(annotatedString, selection, composition);
+      tmp = this.copy_hntddt_k$(annotatedString, selection, composition);
     } else {
-      var tmp_0 = $super.copy_5pnje4_k$;
-      var tmp_1 = new TextRange(selection);
-      var tmp_2 = composition;
-      tmp = tmp_0.call(this, annotatedString, tmp_1, tmp_2 == null ? null : new TextRange(tmp_2));
+      var tmp_0 = $super.copy_hntddt_k$;
+      var tmp_1 = composition;
+      tmp = tmp_0.call(this, annotatedString, new TextRange(selection), tmp_1 == null ? null : new TextRange(tmp_1));
     }
     return tmp;
   };
-  protoOf(TextFieldValue).copy_cnpmxh_k$ = function (text, selection, composition) {
+  protoOf(TextFieldValue).copy_7dcmyi_k$ = function (text, selection, composition) {
     return new TextFieldValue(AnnotatedString_init_$Create$(text), selection, composition);
   };
-  protoOf(TextFieldValue).copy$default_sa5zg0_k$ = function (text, selection, composition, $super) {
+  protoOf(TextFieldValue).copy$default_2whmnb_k$ = function (text, selection, composition, $super) {
     selection = selection === VOID ? this.selection_1 : selection;
     composition = composition === VOID ? this.composition_1 : composition;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_cnpmxh_k$(text, selection, composition);
+      tmp = this.copy_7dcmyi_k$(text, selection, composition);
     } else {
-      var tmp_0 = $super.copy_cnpmxh_k$;
-      var tmp_1 = new TextRange(selection);
-      var tmp_2 = composition;
-      tmp = tmp_0.call(this, text, tmp_1, tmp_2 == null ? null : new TextRange(tmp_2));
+      var tmp_0 = $super.copy_7dcmyi_k$;
+      var tmp_1 = composition;
+      tmp = tmp_0.call(this, text, new TextRange(selection), tmp_1 == null ? null : new TextRange(tmp_1));
     }
     return tmp;
   };
@@ -13612,23 +13482,21 @@
     return tmp + ('composition=' + (tmp_0 == null ? null : new TextRange(tmp_0)) + ')');
   };
   function getSelectedText(_this__u8e3s4) {
-    return _this__u8e3s4.annotatedString_1.subSequence_k52qt6_k$(_this__u8e3s4.selection_1);
+    return _this__u8e3s4.annotatedString_1.subSequence_lx5l5t_k$(_this__u8e3s4.selection_1);
   }
   function getTextAfterSelection(_this__u8e3s4, maxChars) {
     var tmp = _TextRange___get_max__impl__owm8m(_this__u8e3s4.selection_1);
-    var tmp$ret$0;
     // Inline function 'kotlin.math.min' call
-    var tmp0_min = _TextRange___get_max__impl__owm8m(_this__u8e3s4.selection_1) + maxChars | 0;
-    var tmp1_min = _this__u8e3s4.get_text_wouvsm_k$().length;
-    tmp$ret$0 = Math.min(tmp0_min, tmp1_min);
-    return _this__u8e3s4.annotatedString_1.subSequence_5fh70h_k$(tmp, tmp$ret$0);
+    var a = _TextRange___get_max__impl__owm8m(_this__u8e3s4.selection_1) + maxChars | 0;
+    var b = _this__u8e3s4.get_text_wouvsm_k$().length;
+    var tmp$ret$0 = Math.min(a, b);
+    return _this__u8e3s4.annotatedString_1.subSequence_hm5hnj_k$(tmp, tmp$ret$0);
   }
   function getTextBeforeSelection(_this__u8e3s4, maxChars) {
-    var tmp$ret$0;
     // Inline function 'kotlin.math.max' call
-    var tmp0_max = _TextRange___get_min__impl__uu95c4(_this__u8e3s4.selection_1) - maxChars | 0;
-    tmp$ret$0 = Math.max(0, tmp0_max);
-    return _this__u8e3s4.annotatedString_1.subSequence_5fh70h_k$(tmp$ret$0, _TextRange___get_min__impl__uu95c4(_this__u8e3s4.selection_1));
+    var b = _TextRange___get_min__impl__uu95c4(_this__u8e3s4.selection_1) - maxChars | 0;
+    var tmp$ret$0 = Math.max(0, b);
+    return _this__u8e3s4.annotatedString_1.subSequence_hm5hnj_k$(tmp$ret$0, _TextRange___get_min__impl__uu95c4(_this__u8e3s4.selection_1));
   }
   function _get_platformTextInputService__t1msw0($this) {
     return $this.platformTextInputService_1;
@@ -13647,24 +13515,24 @@
   protoOf(TextInputService).get_currentInputSession_pf4yjo_k$ = function () {
     return this._currentInputSession_1.get_26vq_k$();
   };
-  protoOf(TextInputService).startInput_5hgpy9_k$ = function (value, imeOptions, onEditCommand, onImeActionPerformed) {
-    this.platformTextInputService_1.startInput_uss168_k$(value, imeOptions, onEditCommand, onImeActionPerformed);
+  protoOf(TextInputService).startInput_axnrsd_k$ = function (value, imeOptions, onEditCommand, onImeActionPerformed) {
+    this.platformTextInputService_1.startInput_5tdfa5_k$(value, imeOptions, onEditCommand, onImeActionPerformed);
     var nextSession = new TextInputSession(this, this.platformTextInputService_1);
-    this._currentInputSession_1.set_8wdrq0_k$(nextSession);
+    this._currentInputSession_1.set_inogor_k$(nextSession);
     return nextSession;
   };
-  protoOf(TextInputService).stopInput_e0taal_k$ = function (session) {
-    if (this._currentInputSession_1.compareAndSet_fjyh1e_k$(session, null)) {
-      this.platformTextInputService_1.stopInput_mtwgvd_k$();
+  protoOf(TextInputService).stopInput_noba9q_k$ = function (session) {
+    if (this._currentInputSession_1.compareAndSet_10iwom_k$(session, null)) {
+      this.platformTextInputService_1.stopInput_mtcoa0_k$();
     }
   };
-  protoOf(TextInputService).showSoftwareKeyboard_p4xnqy_k$ = function () {
+  protoOf(TextInputService).showSoftwareKeyboard_p5hgcb_k$ = function () {
     if (!(this._currentInputSession_1.get_26vq_k$() == null)) {
-      this.platformTextInputService_1.showSoftwareKeyboard_p4xnqy_k$();
+      this.platformTextInputService_1.showSoftwareKeyboard_p5hgcb_k$();
     }
   };
-  protoOf(TextInputService).hideSoftwareKeyboard_kb3flr_k$ = function () {
-    return this.platformTextInputService_1.hideSoftwareKeyboard_kb3flr_k$();
+  protoOf(TextInputService).hideSoftwareKeyboard_kbn874_k$ = function () {
+    return this.platformTextInputService_1.hideSoftwareKeyboard_kbn874_k$();
   };
   function PlatformTextInputService() {
   }
@@ -13676,13 +13544,13 @@
   }
   function ensureOpenSession($this, block) {
     // Inline function 'kotlin.also' call
-    var tmp0_also = $this.get_isOpen_ew3kpp_k$();
+    var this_0 = $this.get_isOpen_ew3kpp_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.input.TextInputSession.ensureOpenSession.<anonymous>' call
-    if (tmp0_also) {
+    if (this_0) {
       block();
     }
-    return tmp0_also;
+    return this_0;
   }
   function get_$stableprop_41() {
     return 0;
@@ -13695,61 +13563,61 @@
   protoOf(TextInputSession).get_isOpen_ew3kpp_k$ = function () {
     return equals(this.textInputService_1.get_currentInputSession_pf4yjo_k$(), this);
   };
-  protoOf(TextInputSession).dispose_3n44we_k$ = function () {
-    this.textInputService_1.stopInput_e0taal_k$(this);
+  protoOf(TextInputSession).dispose_3nnxhr_k$ = function () {
+    this.textInputService_1.stopInput_noba9q_k$(this);
   };
-  protoOf(TextInputSession).notifyFocusedRect_xqvesm_k$ = function (rect) {
+  protoOf(TextInputSession).notifyFocusedRect_p729hj_k$ = function (rect) {
     // Inline function 'androidx.compose.ui.text.input.TextInputSession.ensureOpenSession' call
     // Inline function 'kotlin.also' call
-    var tmp0_also = this.get_isOpen_ew3kpp_k$();
+    var this_0 = this.get_isOpen_ew3kpp_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.input.TextInputSession.ensureOpenSession.<anonymous>' call
-    if (tmp0_also) {
+    if (this_0) {
       // Inline function 'androidx.compose.ui.text.input.TextInputSession.notifyFocusedRect.<anonymous>' call
-      this.platformTextInputService_1.notifyFocusedRect_jql0y1_k$(rect);
+      this.platformTextInputService_1.notifyFocusedRect_po8zm1_k$(rect);
     }
-    return tmp0_also;
+    return this_0;
   };
-  protoOf(TextInputSession).updateState_h3q7x3_k$ = function (oldValue, newValue) {
+  protoOf(TextInputSession).updateState_n7bewf_k$ = function (oldValue, newValue) {
     // Inline function 'androidx.compose.ui.text.input.TextInputSession.ensureOpenSession' call
     // Inline function 'kotlin.also' call
-    var tmp0_also = this.get_isOpen_ew3kpp_k$();
+    var this_0 = this.get_isOpen_ew3kpp_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.input.TextInputSession.ensureOpenSession.<anonymous>' call
-    if (tmp0_also) {
+    if (this_0) {
       // Inline function 'androidx.compose.ui.text.input.TextInputSession.updateState.<anonymous>' call
-      this.platformTextInputService_1.updateState_rj03ay_k$(oldValue, newValue);
+      this.platformTextInputService_1.updateState_4gjm3l_k$(oldValue, newValue);
     }
-    return tmp0_also;
+    return this_0;
   };
   protoOf(TextInputSession).showSoftwareKeyboard_6wjho5_k$ = function () {
     // Inline function 'androidx.compose.ui.text.input.TextInputSession.ensureOpenSession' call
     // Inline function 'kotlin.also' call
-    var tmp0_also = this.get_isOpen_ew3kpp_k$();
+    var this_0 = this.get_isOpen_ew3kpp_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.input.TextInputSession.ensureOpenSession.<anonymous>' call
-    if (tmp0_also) {
+    if (this_0) {
       // Inline function 'androidx.compose.ui.text.input.TextInputSession.showSoftwareKeyboard.<anonymous>' call
-      this.platformTextInputService_1.showSoftwareKeyboard_p4xnqy_k$();
+      this.platformTextInputService_1.showSoftwareKeyboard_p5hgcb_k$();
     }
-    return tmp0_also;
+    return this_0;
   };
   protoOf(TextInputSession).hideSoftwareKeyboard_pwrw8g_k$ = function () {
     // Inline function 'androidx.compose.ui.text.input.TextInputSession.ensureOpenSession' call
     // Inline function 'kotlin.also' call
-    var tmp0_also = this.get_isOpen_ew3kpp_k$();
+    var this_0 = this.get_isOpen_ew3kpp_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.input.TextInputSession.ensureOpenSession.<anonymous>' call
-    if (tmp0_also) {
+    if (this_0) {
       // Inline function 'androidx.compose.ui.text.input.TextInputSession.hideSoftwareKeyboard.<anonymous>' call
-      this.platformTextInputService_1.hideSoftwareKeyboard_kb3flr_k$();
+      this.platformTextInputService_1.hideSoftwareKeyboard_kbn874_k$();
     }
-    return tmp0_also;
+    return this_0;
   };
   function sam$androidx_compose_ui_text_input_VisualTransformation$0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_ui_text_input_VisualTransformation$0).filter_mummpk_k$ = function (text) {
+  protoOf(sam$androidx_compose_ui_text_input_VisualTransformation$0).filter_ki86nb_k$ = function (text) {
     return this.function_1(text);
   };
   function VisualTransformation$Companion$None$lambda(text) {
@@ -13813,10 +13681,10 @@
     this.mask_1 = mask;
     this.$stable_1 = 0;
   }
-  protoOf(PasswordVisualTransformation).get_mask_wlgbee_k$ = function () {
+  protoOf(PasswordVisualTransformation).get_mask_wm03zr_k$ = function () {
     return this.mask_1;
   };
-  protoOf(PasswordVisualTransformation).filter_mummpk_k$ = function (text) {
+  protoOf(PasswordVisualTransformation).filter_ki86nb_k$ = function (text) {
     return new TransformedText(AnnotatedString_init_$Create$(repeat(toString_1(this.mask_1), text.get_text_wouvsm_k$().length)), Companion_getInstance_34().get_Identity_wza1cp_k$());
   };
   protoOf(PasswordVisualTransformation).equals = function (other) {
@@ -13835,7 +13703,7 @@
     Companion_instance_20 = this;
   }
   protoOf(Companion_20).get_current_jwi6j4_k$ = function () {
-    return get_platformLocaleDelegate().get_current_jwi6j4_k$().get_fkrdnv_k$(0);
+    return get_platformLocaleDelegate().get_current_jwi6j4_k$().get_c1px32_k$(0);
   };
   var Companion_instance_20;
   function Companion_getInstance_37() {
@@ -13844,7 +13712,7 @@
     return Companion_instance_20;
   }
   function Locale_init_$Init$(languageTag, $this) {
-    Locale.call($this, get_platformLocaleDelegate().parseLanguageTag_fhwnvy_k$(languageTag));
+    Locale.call($this, get_platformLocaleDelegate().parseLanguageTag_5wql63_k$(languageTag));
     return $this;
   }
   function Locale_init_$Create$(languageTag) {
@@ -13903,24 +13771,24 @@
   function LocaleList_init_$Init$(languageTags, $this) {
     // Inline function 'androidx.compose.ui.util.fastMap' call
     // Inline function 'androidx.compose.ui.util.fastMap' call
-    var tmp0_fastMap = split(languageTags, [',']);
+    var this_0 = split(languageTags, [',']);
     // Inline function 'kotlin.contracts.contract' call
-    var target = ArrayList_init_$Create$_0(tmp0_fastMap.get_size_woubt6_k$());
+    var target = ArrayList_init_$Create$_0(this_0.get_size_woubt6_k$());
     // Inline function 'androidx.compose.ui.util.fastForEach' call
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
-    var last = tmp0_fastMap.get_size_woubt6_k$() - 1 | 0;
+    var last = this_0.get_size_woubt6_k$() - 1 | 0;
     if (inductionVariable <= last)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = tmp0_fastMap.get_fkrdnv_k$(index);
+        var item = this_0.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.intl.LocaleList.<init>.<anonymous>' call
         // Inline function 'kotlin.text.trim' call
-        var tmp0_plusAssign = toString(trim(isCharSequence(item) ? item : THROW_CCE()));
-        target.add_1j60pz_k$(tmp0_plusAssign);
+        var element = toString(trim(isCharSequence(item) ? item : THROW_CCE()));
+        target.add_utx5q5_k$(element);
       }
        while (inductionVariable <= last);
     // Inline function 'kotlin.contracts.contract' call
@@ -13933,12 +13801,12 @@
       do {
         var index_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var item_0 = target.get_fkrdnv_k$(index_0);
+        var item_0 = target.get_c1px32_k$(index_0);
         // Inline function 'androidx.compose.ui.util.fastMap.<anonymous>' call
         // Inline function 'kotlin.collections.plusAssign' call
         // Inline function 'androidx.compose.ui.text.intl.LocaleList.<init>.<anonymous>' call
-        var tmp0_plusAssign_0 = Locale_init_$Create$(item_0);
-        target_0.add_1j60pz_k$(tmp0_plusAssign_0);
+        var element_0 = Locale_init_$Create$(item_0);
+        target_0.add_utx5q5_k$(element_0);
       }
        while (inductionVariable_0 <= last_0);
     LocaleList.call($this, target_0);
@@ -13966,25 +13834,25 @@
   protoOf(LocaleList).get_localeList_1gj9gh_k$ = function () {
     return this.localeList_1;
   };
-  protoOf(LocaleList).get_fkrdnv_k$ = function (i) {
-    return this.localeList_1.get_fkrdnv_k$(i);
+  protoOf(LocaleList).get_c1px32_k$ = function (i) {
+    return this.localeList_1.get_c1px32_k$(i);
   };
   protoOf(LocaleList).get_size_woubt6_k$ = function () {
     return this.size_1;
   };
-  protoOf(LocaleList).contains_9v037n_k$ = function (element) {
-    return this.localeList_1.contains_2ehdt1_k$(element);
+  protoOf(LocaleList).contains_3k284h_k$ = function (element) {
+    return this.localeList_1.contains_aljjnj_k$(element);
   };
-  protoOf(LocaleList).contains_2ehdt1_k$ = function (element) {
+  protoOf(LocaleList).contains_aljjnj_k$ = function (element) {
     if (!(element instanceof Locale))
       return false;
-    return this.contains_9v037n_k$(element instanceof Locale ? element : THROW_CCE());
+    return this.contains_3k284h_k$(element instanceof Locale ? element : THROW_CCE());
   };
-  protoOf(LocaleList).containsAll_tbwud6_k$ = function (elements) {
-    return this.localeList_1.containsAll_jr3fla_k$(elements);
+  protoOf(LocaleList).containsAll_vbf1sa_k$ = function (elements) {
+    return this.localeList_1.containsAll_xk45sd_k$(elements);
   };
-  protoOf(LocaleList).containsAll_jr3fla_k$ = function (elements) {
-    return this.containsAll_tbwud6_k$(elements);
+  protoOf(LocaleList).containsAll_xk45sd_k$ = function (elements) {
+    return this.containsAll_vbf1sa_k$(elements);
   };
   protoOf(LocaleList).isEmpty_y1axqb_k$ = function () {
     return this.localeList_1.isEmpty_y1axqb_k$();
@@ -14035,13 +13903,13 @@
     this.Subscript_1 = _BaselineShift___init__impl__scj05g(-0.5);
     this.None_1 = _BaselineShift___init__impl__scj05g(0.0);
   }
-  protoOf(Companion_22).get_Superscript_ei59a5_k$ = function () {
+  protoOf(Companion_22).get_Superscript_6xh4p2_k$ = function () {
     return this.Superscript_1;
   };
-  protoOf(Companion_22).get_Subscript_hglgbs_k$ = function () {
+  protoOf(Companion_22).get_Subscript_w4w7o5_k$ = function () {
     return this.Subscript_1;
   };
-  protoOf(Companion_22).get_None_burezd_k$ = function () {
+  protoOf(Companion_22).get_None_9kuyzu_k$ = function () {
     return this.None_1;
   };
   var Companion_instance_22;
@@ -14091,10 +13959,10 @@
     this.None_1 = _Hyphens___init__impl__m2cvg8(1);
     this.Auto_1 = _Hyphens___init__impl__m2cvg8(2);
   }
-  protoOf(Companion_23).get_None_c2j31f_k$ = function () {
+  protoOf(Companion_23).get_None_vxrj2y_k$ = function () {
     return this.None_1;
   };
-  protoOf(Companion_23).get_Auto_vxp5hi_k$ = function () {
+  protoOf(Companion_23).get_Auto_4wvpmr_k$ = function () {
     return this.Auto_1;
   };
   var Companion_instance_23;
@@ -14154,16 +14022,16 @@
     this.Both_1 = _Trim___init__impl__tcc1lr(17);
     this.None_1 = _Trim___init__impl__tcc1lr(0);
   }
-  protoOf(Companion_24).get_FirstLineTop_gh51xd_k$ = function () {
+  protoOf(Companion_24).get_FirstLineTop_kxvhiy_k$ = function () {
     return this.FirstLineTop_1;
   };
-  protoOf(Companion_24).get_LastLineBottom_tktzr7_k$ = function () {
+  protoOf(Companion_24).get_LastLineBottom_9prepu_k$ = function () {
     return this.LastLineBottom_1;
   };
-  protoOf(Companion_24).get_Both_d6cq5t_k$ = function () {
+  protoOf(Companion_24).get_Both_9h9iq2_k$ = function () {
     return this.Both_1;
   };
-  protoOf(Companion_24).get_None_99291i_k$ = function () {
+  protoOf(Companion_24).get_None_najgov_k$ = function () {
     return this.None_1;
   };
   var Companion_instance_24;
@@ -14173,14 +14041,10 @@
     return Companion_instance_24;
   }
   function Trim__isTrimFirstLineTop_impl_tqdsaa($this) {
-    var tmp = _get_value__a43j40_2($this);
-    Companion_getInstance_41();
-    return (tmp & 1) > 0;
+    return (_get_value__a43j40_2($this) & 1) > 0;
   }
   function Trim__isTrimLastLineBottom_impl_8k6x3e($this) {
-    var tmp = _get_value__a43j40_2($this);
-    Companion_getInstance_41();
-    return (tmp & 16) > 0;
+    return (_get_value__a43j40_2($this) & 16) > 0;
   }
   function Trim__hashCode_impl_vclj5c($this) {
     return $this;
@@ -14223,16 +14087,16 @@
     this.Proportional_1 = _Alignment___init__impl__it107q(-1.0);
     this.Bottom_1 = _Alignment___init__impl__it107q(1.0);
   }
-  protoOf(Companion_25).get_Top_qxsa30_k$ = function () {
+  protoOf(Companion_25).get_Top_1zzwrr_k$ = function () {
     return this.Top_1;
   };
-  protoOf(Companion_25).get_Center_2ofmv6_k$ = function () {
+  protoOf(Companion_25).get_Center_9xyfbt_k$ = function () {
     return this.Center_1;
   };
-  protoOf(Companion_25).get_Proportional_driab2_k$ = function () {
+  protoOf(Companion_25).get_Proportional_4me62x_k$ = function () {
     return this.Proportional_1;
   };
-  protoOf(Companion_25).get_Bottom_c1i4bw_k$ = function () {
+  protoOf(Companion_25).get_Bottom_t3fcq7_k$ = function () {
     return this.Bottom_1;
   };
   var Companion_instance_25;
@@ -14300,10 +14164,10 @@
     this.trim_1 = trim;
     this.$stable_1 = 0;
   }
-  protoOf(LineHeightStyle).get_alignment_1e7lq2_k$ = function () {
+  protoOf(LineHeightStyle).get_alignment_l3cz3f_k$ = function () {
     return this.alignment_1;
   };
-  protoOf(LineHeightStyle).get_trim_2b9cg_k$ = function () {
+  protoOf(LineHeightStyle).get_trim_cyvk3v_k$ = function () {
     return this.trim_1;
   };
   protoOf(LineHeightStyle).equals = function (other) {
@@ -14338,7 +14202,7 @@
         return ResolvedTextDirection_Rtl_getInstance();
       default:
         ResolvedTextDirection_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -14379,22 +14243,22 @@
     this.Start_1 = _TextAlign___init__impl__99wz4v(5);
     this.End_1 = _TextAlign___init__impl__99wz4v(6);
   }
-  protoOf(Companion_27).get_Left_e5glad_k$ = function () {
+  protoOf(Companion_27).get_Left_seblku_k$ = function () {
     return this.Left_1;
   };
-  protoOf(Companion_27).get_Right_evf9vi_k$ = function () {
+  protoOf(Companion_27).get_Right_dlwl8f_k$ = function () {
     return this.Right_1;
   };
-  protoOf(Companion_27).get_Center_qumdtj_k$ = function () {
+  protoOf(Companion_27).get_Center_fp5t1o_k$ = function () {
     return this.Center_1;
   };
-  protoOf(Companion_27).get_Justify_c4m1vy_k$ = function () {
+  protoOf(Companion_27).get_Justify_uf64z9_k$ = function () {
     return this.Justify_1;
   };
-  protoOf(Companion_27).get_Start_3lwnd0_k$ = function () {
+  protoOf(Companion_27).get_Start_ovf7qx_k$ = function () {
     return this.Start_1;
   };
-  protoOf(Companion_27).get_End_tzj12b_k$ = function () {
+  protoOf(Companion_27).get_End_ck95sw_k$ = function () {
     return this.End_1;
   };
   protoOf(Companion_27).values_dmh61q_k$ = function () {
@@ -14444,7 +14308,7 @@
   protoOf(Companion_28).get_LineThrough_pr9ajs_k$ = function () {
     return this.LineThrough_1;
   };
-  protoOf(Companion_28).combine_6kxqyc_k$ = function (decorations) {
+  protoOf(Companion_28).combine_yonjok_k$ = function (decorations) {
     // Inline function 'androidx.compose.ui.text.fastFold' call
     // Inline function 'kotlin.contracts.contract' call
     var accumulator = 0;
@@ -14456,7 +14320,7 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = decorations.get_fkrdnv_k$(index);
+        var item = decorations.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.fastFold.<anonymous>' call
         // Inline function 'androidx.compose.ui.text.style.Companion.combine.<anonymous>' call
         accumulator = accumulator | item.mask_1;
@@ -14482,10 +14346,10 @@
   protoOf(TextDecoration).get_mask_woqbsl_k$ = function () {
     return this.mask_1;
   };
-  protoOf(TextDecoration).plus_18b76r_k$ = function (decoration) {
+  protoOf(TextDecoration).plus_868qpp_k$ = function (decoration) {
     return new TextDecoration(this.mask_1 | decoration.mask_1);
   };
-  protoOf(TextDecoration).contains_8528ny_k$ = function (other) {
+  protoOf(TextDecoration).contains_8so89q_k$ = function (other) {
     return (this.mask_1 | other.mask_1) === this.mask_1;
   };
   protoOf(TextDecoration).toString = function () {
@@ -14495,13 +14359,13 @@
     // Inline function 'kotlin.collections.mutableListOf' call
     var values = ArrayList_init_$Create$();
     if (!((this.mask_1 & Companion_getInstance_45().Underline_1.mask_1) === 0)) {
-      values.add_1j60pz_k$('Underline');
+      values.add_utx5q5_k$('Underline');
     }
     if (!((this.mask_1 & Companion_getInstance_45().LineThrough_1.mask_1) === 0)) {
-      values.add_1j60pz_k$('LineThrough');
+      values.add_utx5q5_k$('LineThrough');
     }
     if (values.get_size_woubt6_k$() === 1) {
-      return 'TextDecoration.' + values.get_fkrdnv_k$(0);
+      return 'TextDecoration.' + values.get_c1px32_k$(0);
     }
     return 'TextDecoration[' + fastJoinToString(values, ', ') + ']';
   };
@@ -14534,19 +14398,19 @@
     this.ContentOrLtr_1 = _TextDirection___init__impl__lh8lzt(4);
     this.ContentOrRtl_1 = _TextDirection___init__impl__lh8lzt(5);
   }
-  protoOf(Companion_29).get_Ltr_y8cfpu_k$ = function () {
+  protoOf(Companion_29).get_Ltr_fd58a3_k$ = function () {
     return this.Ltr_1;
   };
-  protoOf(Companion_29).get_Rtl_52ixoy_k$ = function () {
+  protoOf(Companion_29).get_Rtl_qi5bo5_k$ = function () {
     return this.Rtl_1;
   };
-  protoOf(Companion_29).get_Content_x7rqv5_k$ = function () {
+  protoOf(Companion_29).get_Content_gdpx4s_k$ = function () {
     return this.Content_1;
   };
-  protoOf(Companion_29).get_ContentOrLtr_xdyfbs_k$ = function () {
+  protoOf(Companion_29).get_ContentOrLtr_byc1cl_k$ = function () {
     return this.ContentOrLtr_1;
   };
-  protoOf(Companion_29).get_ContentOrRtl_8hc4mg_k$ = function () {
+  protoOf(Companion_29).get_ContentOrRtl_twyiln_k$ = function () {
     return this.ContentOrRtl_1;
   };
   var Companion_instance_29;
@@ -14585,8 +14449,8 @@
     Unspecified_instance = this;
     this.$stable_1 = 0;
   }
-  protoOf(Unspecified).get_color_v34vrz_k$ = function () {
-    return Companion_getInstance().get_Unspecified_9ntdt9_k$();
+  protoOf(Unspecified).get_color_lnp1vl_k$ = function () {
+    return Companion_getInstance().get_Unspecified_j397pn_k$();
   };
   protoOf(Unspecified).get_brush_ipcjyp_k$ = function () {
     return null;
@@ -14603,23 +14467,23 @@
   function Companion_30() {
     Companion_instance_30 = this;
   }
-  protoOf(Companion_30).from_ofk88i_k$ = function (color) {
+  protoOf(Companion_30).from_ccukrb_k$ = function (color) {
     var tmp;
     // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-    if (!equals(_Color___get_value__impl__1pls5m(color), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_9ntdt9_k$()))) {
+    if (!equals(_Color___get_value__impl__1pls5m(color), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_j397pn_k$()))) {
       tmp = new ColorStyle(color);
     } else {
       tmp = Unspecified_getInstance();
     }
     return tmp;
   };
-  protoOf(Companion_30).from_4hvn90_k$ = function (brush, alpha) {
+  protoOf(Companion_30).from_6wp01d_k$ = function (brush, alpha) {
     var tmp;
     if (brush == null) {
       tmp = Unspecified_getInstance();
     } else {
       if (brush instanceof SolidColor) {
-        tmp = this.from_ofk88i_k$(modulate(brush.get_value_puk9xv_k$(), alpha));
+        tmp = this.from_ccukrb_k$(modulate(brush.get_value_za03u9_k$(), alpha));
       } else {
         if (brush instanceof ShaderBrush) {
           tmp = new BrushStyle(brush, alpha);
@@ -14658,8 +14522,8 @@
   protoOf(BrushStyle).get_alpha_iooth1_k$ = function () {
     return this.alpha_1;
   };
-  protoOf(BrushStyle).get_color_v34vrz_k$ = function () {
-    return Companion_getInstance().get_Unspecified_9ntdt9_k$();
+  protoOf(BrushStyle).get_color_lnp1vl_k$ = function () {
+    return Companion_getInstance().get_Unspecified_j397pn_k$();
   };
   protoOf(BrushStyle).get_brush_ipcjyp_k$ = function () {
     return this.value_1;
@@ -14670,13 +14534,13 @@
   protoOf(BrushStyle).component2_7eebsb_k$ = function () {
     return this.alpha_1;
   };
-  protoOf(BrushStyle).copy_9hw5mh_k$ = function (value, alpha) {
+  protoOf(BrushStyle).copy_c0jrsp_k$ = function (value, alpha) {
     return new BrushStyle(value, alpha);
   };
-  protoOf(BrushStyle).copy$default_jvij3q_k$ = function (value, alpha, $super) {
+  protoOf(BrushStyle).copy$default_nmvh3s_k$ = function (value, alpha, $super) {
     value = value === VOID ? this.value_1 : value;
     alpha = alpha === VOID ? this.alpha_1 : alpha;
-    return $super === VOID ? this.copy_9hw5mh_k$(value, alpha) : $super.copy_9hw5mh_k$.call(this, value, alpha);
+    return $super === VOID ? this.copy_c0jrsp_k$(value, alpha) : $super.copy_c0jrsp_k$.call(this, value, alpha);
   };
   protoOf(BrushStyle).toString = function () {
     return 'BrushStyle(value=' + this.value_1 + ', alpha=' + this.alpha_1 + ')';
@@ -14705,35 +14569,35 @@
     this.value_1 = value;
     // Inline function 'kotlin.require' call
     // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-    var tmp0_get_isSpecified_4wup3r = this.value_1;
+    var this_0 = this.value_1;
     // Inline function 'kotlin.contracts.contract' call
-    if (!!equals(_Color___get_value__impl__1pls5m(tmp0_get_isSpecified_4wup3r), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_9ntdt9_k$()))) {
+    if (!!equals(_Color___get_value__impl__1pls5m(this_0), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_j397pn_k$()))) {
       // Inline function 'androidx.compose.ui.text.style.ColorStyle.<anonymous>' call
       var message = 'ColorStyle value must be specified, use TextForegroundStyle.Unspecified instead.';
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
   }
-  protoOf(ColorStyle).get_value_puk9xv_k$ = function () {
+  protoOf(ColorStyle).get_value_za03u9_k$ = function () {
     return this.value_1;
   };
-  protoOf(ColorStyle).get_color_v34vrz_k$ = function () {
+  protoOf(ColorStyle).get_color_lnp1vl_k$ = function () {
     return this.value_1;
   };
   protoOf(ColorStyle).get_brush_ipcjyp_k$ = function () {
     return null;
   };
   protoOf(ColorStyle).get_alpha_iooth1_k$ = function () {
-    return _Color___get_alpha__impl__wcfyv1(this.get_color_v34vrz_k$());
+    return _Color___get_alpha__impl__wcfyv1(this.get_color_lnp1vl_k$());
   };
-  protoOf(ColorStyle).component1_j10ipl_k$ = function () {
+  protoOf(ColorStyle).component1_9lkot7_k$ = function () {
     return this.value_1;
   };
-  protoOf(ColorStyle).copy_mb92sd_k$ = function (value) {
+  protoOf(ColorStyle).copy_5oad5u_k$ = function (value) {
     return new ColorStyle(value);
   };
-  protoOf(ColorStyle).copy$default_m9kfle_k$ = function (value, $super) {
+  protoOf(ColorStyle).copy$default_uhqhaj_k$ = function (value, $super) {
     value = value === VOID ? this.value_1 : value;
-    return $super === VOID ? this.copy_mb92sd_k$(value) : $super.copy_mb92sd_k$.call(this, new Color(value));
+    return $super === VOID ? this.copy_5oad5u_k$(value) : $super.copy_5oad5u_k$.call(this, new Color(value));
   };
   protoOf(ColorStyle).toString = function () {
     return 'ColorStyle(value=' + new Color(this.value_1) + ')';
@@ -14763,7 +14627,7 @@
       tmp_0 = false;
     }
     if (tmp_0) {
-      tmp = Companion_getInstance_47().from_ofk88i_k$(lerp(start.get_color_v34vrz_k$(), stop.get_color_v34vrz_k$(), fraction));
+      tmp = Companion_getInstance_47().from_ccukrb_k$(lerp(start.get_color_lnp1vl_k$(), stop.get_color_lnp1vl_k$(), fraction));
     } else {
       var tmp_1;
       if (start instanceof BrushStyle) {
@@ -14772,7 +14636,7 @@
         tmp_1 = false;
       }
       if (tmp_1) {
-        tmp = Companion_getInstance_47().from_4hvn90_k$(lerpDiscrete(start.get_brush_ipcjyp_k$(), stop.get_brush_ipcjyp_k$(), fraction), lerp_3(start.get_alpha_iooth1_k$(), stop.get_alpha_iooth1_k$(), fraction));
+        tmp = Companion_getInstance_47().from_6wp01d_k$(lerpDiscrete(start.get_brush_ipcjyp_k$(), stop.get_brush_ipcjyp_k$(), fraction), lerp_3(start.get_alpha_iooth1_k$(), stop.get_alpha_iooth1_k$(), fraction));
       } else {
         tmp = lerpDiscrete(start, stop, fraction);
       }
@@ -14809,13 +14673,13 @@
   protoOf(TextGeometricTransform).get_skewX_iyk9d1_k$ = function () {
     return this.skewX_1;
   };
-  protoOf(TextGeometricTransform).copy_138fzp_k$ = function (scaleX, skewX) {
+  protoOf(TextGeometricTransform).copy_4tzoad_k$ = function (scaleX, skewX) {
     return new TextGeometricTransform(scaleX, skewX);
   };
-  protoOf(TextGeometricTransform).copy$default_ol9txp_k$ = function (scaleX, skewX, $super) {
+  protoOf(TextGeometricTransform).copy$default_fkrzc5_k$ = function (scaleX, skewX, $super) {
     scaleX = scaleX === VOID ? this.scaleX_1 : scaleX;
     skewX = skewX === VOID ? this.skewX_1 : skewX;
-    return $super === VOID ? this.copy_138fzp_k$(scaleX, skewX) : $super.copy_138fzp_k$.call(this, scaleX, skewX);
+    return $super === VOID ? this.copy_4tzoad_k$(scaleX, skewX) : $super.copy_4tzoad_k$.call(this, scaleX, skewX);
   };
   protoOf(TextGeometricTransform).equals = function (other) {
     if (this === other)
@@ -14863,19 +14727,19 @@
     this.restLine_1 = restLine;
     this.$stable_1 = 0;
   }
-  protoOf(TextIndent_0).get_firstLine_axcdcr_k$ = function () {
+  protoOf(TextIndent_0).get_firstLine_vqcugt_k$ = function () {
     return this.firstLine_1;
   };
-  protoOf(TextIndent_0).get_restLine_6dnanl_k$ = function () {
+  protoOf(TextIndent_0).get_restLine_r6nrrn_k$ = function () {
     return this.restLine_1;
   };
-  protoOf(TextIndent_0).copy_4au3wb_k$ = function (firstLine, restLine) {
+  protoOf(TextIndent_0).copy_cdk0dx_k$ = function (firstLine, restLine) {
     return new TextIndent_0(firstLine, restLine);
   };
-  protoOf(TextIndent_0).copy$default_ctalce_k$ = function (firstLine, restLine, $super) {
+  protoOf(TextIndent_0).copy$default_4hubtm_k$ = function (firstLine, restLine, $super) {
     firstLine = firstLine === VOID ? this.firstLine_1 : firstLine;
     restLine = restLine === VOID ? this.restLine_1 : restLine;
-    return $super === VOID ? this.copy_4au3wb_k$(firstLine, restLine) : $super.copy_4au3wb_k$.call(this, new TextUnit(firstLine), new TextUnit(restLine));
+    return $super === VOID ? this.copy_cdk0dx_k$(firstLine, restLine) : $super.copy_cdk0dx_k$.call(this, new TextUnit(firstLine), new TextUnit(restLine));
   };
   protoOf(TextIndent_0).equals = function (other) {
     if (this === other)
@@ -14914,13 +14778,13 @@
     this.Ellipsis_1 = _TextOverflow___init__impl__obguoe(2);
     this.Visible_1 = _TextOverflow___init__impl__obguoe(3);
   }
-  protoOf(Companion_33).get_Clip_a6y3d7_k$ = function () {
+  protoOf(Companion_33).get_Clip_ypf2ge_k$ = function () {
     return this.Clip_1;
   };
-  protoOf(Companion_33).get_Ellipsis_xgxit0_k$ = function () {
+  protoOf(Companion_33).get_Ellipsis_8ygjpt_k$ = function () {
     return this.Ellipsis_1;
   };
-  protoOf(Companion_33).get_Visible_2hbc1x_k$ = function () {
+  protoOf(Companion_33).get_Visible_m15n1a_k$ = function () {
     return this.Visible_1;
   };
   var Companion_instance_33;
@@ -14959,31 +14823,29 @@
     return window.navigator.languages;
   }
   function isNeutralDirection(_this__u8e3s4) {
-    var tmp0_subject = CharDirection_getInstance().of_h0dvii_k$(_this__u8e3s4);
+    var tmp0_subject = CharDirection_getInstance().of_xanmn3_k$(_this__u8e3s4);
     return ((tmp0_subject === CharDirection_getInstance().get_OTHER_NEUTRAL_x7bhv3_k$() ? true : tmp0_subject === CharDirection_getInstance().get_WHITE_SPACE_NEUTRAL_sskz73_k$()) ? true : tmp0_subject === CharDirection_getInstance().get_BOUNDARY_NEUTRAL_moyt2d_k$()) ? true : false;
   }
   function strongDirectionType(_this__u8e3s4) {
-    var tmp0_subject = CharDirection_getInstance().of_h0dvii_k$(_this__u8e3s4);
-    return tmp0_subject === CharDirection_getInstance().get_LEFT_TO_RIGHT_d09sjd_k$() ? Companion_getInstance_51().get_Ltr_iwa7dx_k$() : (tmp0_subject === CharDirection_getInstance().get_RIGHT_TO_LEFT_mqemu9_k$() ? true : tmp0_subject === CharDirection_getInstance().get_RIGHT_TO_LEFT_ARABIC_1wz4lo_k$()) ? Companion_getInstance_51().get_Rtl_a9jamz_k$() : Companion_getInstance_51().get_None_b94esb_k$();
+    var tmp0_subject = CharDirection_getInstance().of_xanmn3_k$(_this__u8e3s4);
+    return tmp0_subject === CharDirection_getInstance().get_LEFT_TO_RIGHT_d09sjd_k$() ? Companion_getInstance_51().get_Ltr_vywptz_k$() : (tmp0_subject === CharDirection_getInstance().get_RIGHT_TO_LEFT_mqemu9_k$() ? true : tmp0_subject === CharDirection_getInstance().get_RIGHT_TO_LEFT_ARABIC_1wz4lo_k$()) ? Companion_getInstance_51().get_Rtl_2t37t3_k$() : Companion_getInstance_51().get_None_1ti3nr_k$();
   }
   function toCharArray_0(_this__u8e3s4, destination, destinationOffset, startIndex, endIndex) {
     // Inline function 'kotlin.collections.forEach' call
-    var tmp0_forEach = until(startIndex, endIndex);
-    var inductionVariable = tmp0_forEach.get_first_irdx8n_k$();
-    var last = tmp0_forEach.get_last_wopotb_k$();
-    if (inductionVariable <= last)
-      do {
-        var element = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        // Inline function 'androidx.compose.ui.text.input.toCharArray.<anonymous>' call
-        destination[(destinationOffset + element | 0) - startIndex | 0] = charSequenceGet(_this__u8e3s4, element);
-      }
-       while (!(element === last));
+    var tmp0_iterator = until(startIndex, endIndex).iterator_jk1svi_k$();
+    while (tmp0_iterator.hasNext_bitz1p_k$()) {
+      var element = tmp0_iterator.next_20eer_k$();
+      // Inline function 'androidx.compose.ui.text.input.toCharArray.<anonymous>' call
+      destination[(destinationOffset + element | 0) - startIndex | 0] = charSequenceGet(_this__u8e3s4, element);
+    }
   }
   function NoCache() {
   }
-  protoOf(NoCache).get_7qedx8_k$ = function (key, loader) {
+  protoOf(NoCache).get_qk1ys5_k$ = function (key, loader) {
     return loader(key);
+  };
+  protoOf(NoCache).get_c3034i_k$ = function (key, loader) {
+    return this.get_qk1ys5_k$(!(key == null) ? key : THROW_CCE(), loader);
   };
   function synthesizeTypeface(_this__u8e3s4, typeface, font, requestedWeight, requestedStyle) {
     return typeface;
@@ -14995,7 +14857,7 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        _this__u8e3s4.append_t8oh9e_k$(charArray[i]);
+        _this__u8e3s4.append_am5a4z_k$(charArray[i]);
       }
        while (inductionVariable < last);
   }
@@ -15045,26 +14907,25 @@
   }
   function isRtl(_this__u8e3s4) {
     _init_properties_JsPlatformLocale_js_kt__92ki1d();
-    return get_rtlLanguagesSet().contains_2ehdt1_k$(_this__u8e3s4.get_language_cjhhk1_k$());
+    return get_rtlLanguagesSet().contains_aljjnj_k$(_this__u8e3s4.get_language_cjhhk1_k$());
   }
   function createPlatformLocaleDelegate$1() {
   }
   protoOf(createPlatformLocaleDelegate$1).get_current_jwi6j4_k$ = function () {
     // Inline function 'kotlin.collections.map' call
-    var tmp0_map = userPreferredLanguages();
+    var this_0 = userPreferredLanguages();
     // Inline function 'kotlin.collections.mapTo' call
-    var tmp0_mapTo = ArrayList_init_$Create$_0(collectionSizeOrDefault(tmp0_map, 10));
-    var tmp0_iterator = tmp0_map.iterator_jk1svi_k$();
+    var destination = ArrayList_init_$Create$_0(collectionSizeOrDefault(this_0, 10));
+    var tmp0_iterator = this_0.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var item = tmp0_iterator.next_20eer_k$();
-      var tmp$ret$0;
       // Inline function 'androidx.compose.ui.text.intl.<no name provided>.<get-current>.<anonymous>' call
-      tmp$ret$0 = new Locale(JsLocale_init_$Create$(item));
-      tmp0_mapTo.add_1j60pz_k$(tmp$ret$0);
+      var tmp$ret$0 = new Locale(JsLocale_init_$Create$(item));
+      destination.add_utx5q5_k$(tmp$ret$0);
     }
-    return new LocaleList(tmp0_mapTo);
+    return new LocaleList(destination);
   };
-  protoOf(createPlatformLocaleDelegate$1).parseLanguageTag_fhwnvy_k$ = function (languageTag) {
+  protoOf(createPlatformLocaleDelegate$1).parseLanguageTag_5wql63_k$ = function (languageTag) {
     return JsLocale_init_$Create$(languageTag);
   };
   var properties_initialized_JsPlatformLocale_js_kt_nild9t;
@@ -15096,7 +14957,7 @@
     }
     var tmp;
     if (font instanceof LoadedFont) {
-      tmp = Companion_getInstance_6().makeFromData$default_20w6fo_k$(Companion_getInstance_7().makeFromBytes$default_b8cybj_k$(font.get_data_wokkxf_k$()));
+      tmp = Companion_getInstance_6().makeFromData$default_spx7a0_k$(Companion_getInstance_7().makeFromBytes$default_1ffal6_k$(font.get_data_wokkxf_k$()));
     } else {
       noWhenBranchMatchedException();
     }
@@ -15113,13 +14974,13 @@
         tmp = uppercase;
       } else {
         // Inline function 'kotlin.text.plus' call
-        var tmp1_plus = charSequenceGet(uppercase, 0);
+        var this_0 = charSequenceGet(uppercase, 0);
         // Inline function 'kotlin.text.lowercase' call
         // Inline function 'kotlin.text.substring' call
         // Inline function 'kotlin.js.asDynamic' call
         // Inline function 'kotlin.js.asDynamic' call
-        var tmp2_plus = uppercase.substring(1).toLowerCase();
-        tmp = toString_1(tmp1_plus) + tmp2_plus;
+        var other = uppercase.substring(1).toLowerCase();
+        tmp = toString_1(this_0) + other;
       }
       return tmp;
     }
@@ -15127,27 +14988,26 @@
   }
   function JsStringDelegate() {
   }
-  protoOf(JsStringDelegate).toUpperCase_m677z5_k$ = function (string, locale) {
+  protoOf(JsStringDelegate).toUpperCase_ixrwdu_k$ = function (string, locale) {
     return toLocaleUpperCase(string, locale.get_language_cjhhk1_k$());
   };
-  protoOf(JsStringDelegate).toLowerCase_gkzuzk_k$ = function (string, locale) {
+  protoOf(JsStringDelegate).toLowerCase_5iiwkz_k$ = function (string, locale) {
     return toLocaleLowerCase(string, locale.get_language_cjhhk1_k$());
   };
-  protoOf(JsStringDelegate).capitalize_4m08za_k$ = function (string, locale) {
+  protoOf(JsStringDelegate).capitalize_suut0d_k$ = function (string, locale) {
     // Inline function 'kotlin.text.replaceFirstChar' call
     var tmp;
     // Inline function 'kotlin.text.isNotEmpty' call
     if (charSequenceLength(string) > 0) {
-      var tmp$ret$1;
       // Inline function 'androidx.compose.ui.text.platform.JsStringDelegate.capitalize.<anonymous>' call
-      var tmp0_anonymous = charSequenceGet(string, 0);
+      var it = charSequenceGet(string, 0);
       var tmp_0;
-      if (isLowerCase(tmp0_anonymous)) {
-        tmp_0 = titlecaseImpl(tmp0_anonymous, this, locale);
+      if (isLowerCase(it)) {
+        tmp_0 = titlecaseImpl(it, this, locale);
       } else {
-        tmp_0 = toString_1(tmp0_anonymous);
+        tmp_0 = toString_1(it);
       }
-      tmp$ret$1 = tmp_0;
+      var tmp$ret$1 = tmp_0;
       var tmp_1 = toString(tmp$ret$1);
       // Inline function 'kotlin.text.substring' call
       // Inline function 'kotlin.js.asDynamic' call
@@ -15157,15 +15017,14 @@
     }
     return tmp;
   };
-  protoOf(JsStringDelegate).decapitalize_81f6p5_k$ = function (string, locale) {
+  protoOf(JsStringDelegate).decapitalize_ce2ovw_k$ = function (string, locale) {
     // Inline function 'kotlin.text.replaceFirstChar' call
     var tmp;
     // Inline function 'kotlin.text.isNotEmpty' call
     if (charSequenceLength(string) > 0) {
-      var tmp$ret$1;
       // Inline function 'androidx.compose.ui.text.platform.JsStringDelegate.decapitalize.<anonymous>' call
-      var tmp0_anonymous = charSequenceGet(string, 0);
-      tmp$ret$1 = toLocaleLowerCase(toString_1(tmp0_anonymous), locale.get_language_cjhhk1_k$());
+      var it = charSequenceGet(string, 0);
+      var tmp$ret$1 = toLocaleLowerCase(toString_1(it), locale.get_language_cjhhk1_k$());
       var tmp_0 = toString(tmp$ret$1);
       // Inline function 'kotlin.text.substring' call
       // Inline function 'kotlin.js.asDynamic' call
@@ -15193,25 +15052,25 @@
   function Cache() {
   }
   function checkEvicted($this, now) {
-    var expireTime = now.minus_llf5ei_k$($this.expireAfterNanos_1);
+    var expireTime = now.minus_mfbszm_k$($this.expireAfterNanos_1);
     // Inline function 'kotlin.collections.forEach' call
     // Inline function 'kotlin.collections.takeWhile' call
-    var tmp0_takeWhile = $this.accessTime_1.get_keys_wop4xp_k$();
+    var this_0 = $this.accessTime_1.get_keys_wop4xp_k$();
     var list = ArrayList_init_$Create$();
-    var tmp0_iterator = tmp0_takeWhile.iterator_jk1svi_k$();
+    var tmp0_iterator = this_0.iterator_jk1svi_k$();
     $l$loop: while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var item = tmp0_iterator.next_20eer_k$();
       // Inline function 'androidx.compose.ui.text.ExpireAfterAccessCache.checkEvicted.<anonymous>' call
-      if (!(ensureNotNull($this.accessTime_1.get_1mhr4y_k$(item)).compareTo_n4fqi2_k$(expireTime) < 0))
+      if (!(ensureNotNull($this.accessTime_1.get_wei43m_k$(item)).compareTo_9jj042_k$(expireTime) < 0))
         break $l$loop;
-      list.add_1j60pz_k$(item);
+      list.add_utx5q5_k$(item);
     }
     var tmp0_iterator_0 = list.iterator_jk1svi_k$();
     while (tmp0_iterator_0.hasNext_bitz1p_k$()) {
       var element = tmp0_iterator_0.next_20eer_k$();
       // Inline function 'androidx.compose.ui.text.ExpireAfterAccessCache.checkEvicted.<anonymous>' call
-      $this.map_1.remove_8hbkc0_k$(element);
-      $this.accessTime_1.remove_8hbkc0_k$(element);
+      $this.map_1.remove_gppy8k_k$(element);
+      $this.accessTime_1.remove_gppy8k_k$(element);
     }
   }
   function currentNanoTime$ref() {
@@ -15246,29 +15105,29 @@
   protoOf(ExpireAfterAccessCache).get_accessTime_vyxjh6_k$ = function () {
     return this.accessTime_1;
   };
-  protoOf(ExpireAfterAccessCache).get_7qedx8_k$ = function (key, loader) {
-    this.accessTime_1.remove_8hbkc0_k$(key);
+  protoOf(ExpireAfterAccessCache).get_c3034i_k$ = function (key, loader) {
+    this.accessTime_1.remove_gppy8k_k$(key);
     // Inline function 'kotlin.also' call
     // Inline function 'kotlin.collections.getOrPut' call
-    var tmp0_getOrPut = this.map_1;
-    var value = tmp0_getOrPut.get_1mhr4y_k$(key);
+    var this_0 = this.map_1;
+    var value = this_0.get_wei43m_k$(key);
     var tmp;
     if (value == null) {
       // Inline function 'androidx.compose.ui.text.ExpireAfterAccessCache.get.<anonymous>' call
       var answer = loader(key);
-      tmp0_getOrPut.put_3mhbri_k$(key, answer);
+      this_0.put_4fpzoq_k$(key, answer);
       tmp = answer;
     } else {
       tmp = value;
     }
-    var tmp1_also = tmp;
+    var this_1 = tmp;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.ExpireAfterAccessCache.get.<anonymous>' call
     var now = this.currentNanos_1();
     // Inline function 'kotlin.collections.set' call
-    this.accessTime_1.put_3mhbri_k$(key, now);
+    this.accessTime_1.put_4fpzoq_k$(key, now);
     checkEvicted(this, now);
-    return tmp1_also;
+    return this_1;
   };
   function get_PUSH_DIRECTIONAL_ISOLATE_RANGE() {
     _init_properties_CharHelpers_skiko_kt__8ej40s();
@@ -15287,13 +15146,13 @@
     this.Ltr_1 = _StrongDirectionType___init__impl__59uet3(1);
     this.Rtl_1 = _StrongDirectionType___init__impl__59uet3(2);
   }
-  protoOf(Companion_34).get_None_b94esb_k$ = function () {
+  protoOf(Companion_34).get_None_1ti3nr_k$ = function () {
     return this.None_1;
   };
-  protoOf(Companion_34).get_Ltr_iwa7dx_k$ = function () {
+  protoOf(Companion_34).get_Ltr_vywptz_k$ = function () {
     return this.Ltr_1;
   };
-  protoOf(Companion_34).get_Rtl_a9jamz_k$ = function () {
+  protoOf(Companion_34).get_Rtl_2t37t3_k$ = function () {
     return this.Rtl_1;
   };
   var Companion_instance_34;
@@ -15362,7 +15221,7 @@
   }
   function toCodePoint(_this__u8e3s4, high, low) {
     _init_properties_CharHelpers_skiko_kt__8ej40s();
-    return (Char__minus_impl_a2frrh(high, _this__u8e3s4.get_MIN_HIGH_SURROGATE_t7mej6_k$()) << 10 | Char__minus_impl_a2frrh(low, _this__u8e3s4.get_MIN_LOW_SURROGATE_mxezgo_k$())) + 65536 | 0;
+    return (Char__minus_impl_a2frrh(high, Companion_getInstance_8().get_MIN_HIGH_SURROGATE_t8674j_k$()) << 10 | Char__minus_impl_a2frrh(low, Companion_getInstance_8().get_MIN_LOW_SURROGATE_mwv6vb_k$())) + 65536 | 0;
   }
   function get_codePoints(_this__u8e3s4) {
     _init_properties_CharHelpers_skiko_kt__8ej40s();
@@ -15382,28 +15241,28 @@
   var MIN_SUPPLEMENTARY_CODE_POINT;
   function findPrecedingBreak(_this__u8e3s4, index) {
     _init_properties_CharHelpers_skiko_kt__8ej40s();
-    var it = Companion_getInstance_9().makeCharacterInstance$default_lxnpdw_k$();
-    it.setText_nscvi8_k$(_this__u8e3s4);
-    return it.preceding_i4vixu_k$(index);
+    var it = Companion_getInstance_9().makeCharacterInstance$default_7rwuey_k$();
+    it.setText_1jlejc_k$(_this__u8e3s4);
+    return it.preceding_v1dyyd_k$(index);
   }
   function findFollowingBreak(_this__u8e3s4, index) {
     _init_properties_CharHelpers_skiko_kt__8ej40s();
-    var it = Companion_getInstance_9().makeCharacterInstance$default_lxnpdw_k$();
-    it.setText_nscvi8_k$(_this__u8e3s4);
-    return it.following_1lapf4_k$(index);
+    var it = Companion_getInstance_9().makeCharacterInstance$default_7rwuey_k$();
+    it.setText_1jlejc_k$(_this__u8e3s4);
+    return it.following_j6g4t5_k$(index);
   }
   function _get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj($this_codePointsOutsideDirectionalIsolate, resultContinuation) {
     this.$this_codePointsOutsideDirectionalIsolate_1 = $this_codePointsOutsideDirectionalIsolate;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(_get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj).invoke_tqy55q_k$ = function ($this$sequence, $completion) {
-    var tmp = this.create_gr0g8x_k$($this$sequence, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(_get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj).invoke_pgsqqr_k$ = function ($this$sequence, $completion) {
+    var tmp = this.create_rkcuc7_k$($this$sequence, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(_get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_tqy55q_k$(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
+  protoOf(_get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_pgsqqr_k$(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
   };
   protoOf(_get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -15412,14 +15271,14 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(5);
+            this.set_exceptionState_fex74n_k$(5);
             this.openIsolateCount0__1 = 0;
             this.tmp0_iterator1__1 = get_codePoints(this.$this_codePointsOutsideDirectionalIsolate_1).iterator_jk1svi_k$();
-            this.set_state_a96kl8_k$(1);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 1:
             if (!this.tmp0_iterator1__1.hasNext_bitz1p_k$()) {
-              this.set_state_a96kl8_k$(4);
+              this.set_state_rjd8d0_k$(4);
               continue $sm;
             }
 
@@ -15430,35 +15289,35 @@
             var containsArg = this.codePoint2__1;
             if (containsLower <= containsArg ? containsArg <= containsUpper : false) {
               this.openIsolateCount0__1 = this.openIsolateCount0__1 + 1 | 0;
-              this.set_state_a96kl8_k$(3);
+              this.set_state_rjd8d0_k$(3);
               continue $sm;
             } else {
               if (this.codePoint2__1 === 8297) {
                 if (this.openIsolateCount0__1 > 0) {
                   this.openIsolateCount0__1 = this.openIsolateCount0__1 - 1 | 0;
                 }
-                this.set_state_a96kl8_k$(3);
+                this.set_state_rjd8d0_k$(3);
                 continue $sm;
               } else {
                 if (this.openIsolateCount0__1 === 0) {
-                  this.set_state_a96kl8_k$(2);
-                  suspendResult = this.$this$sequence_1.yield_24z9an_k$(this.codePoint2__1, this);
+                  this.set_state_rjd8d0_k$(2);
+                  suspendResult = this.$this$sequence_1.yield_3xhcex_k$(this.codePoint2__1, this);
                   if (suspendResult === get_COROUTINE_SUSPENDED()) {
                     return suspendResult;
                   }
                   continue $sm;
                 } else {
-                  this.set_state_a96kl8_k$(3);
+                  this.set_state_rjd8d0_k$(3);
                   continue $sm;
                 }
               }
             }
 
           case 2:
-            this.set_state_a96kl8_k$(3);
+            this.set_state_rjd8d0_k$(3);
             continue $sm;
           case 3:
-            this.set_state_a96kl8_k$(1);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 4:
             return Unit_getInstance();
@@ -15470,24 +15329,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 5) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(_get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj).create_gr0g8x_k$ = function ($this$sequence, completion) {
+  protoOf(_get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj).create_rkcuc7_k$ = function ($this$sequence, completion) {
     var i = new _get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj(this.$this_codePointsOutsideDirectionalIsolate_1, completion);
     i.$this$sequence_1 = $this$sequence;
     return i;
   };
-  protoOf(_get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj).create_xubfvz_k$ = function (value, completion) {
-    return this.create_gr0g8x_k$(value instanceof SequenceScope ? value : THROW_CCE(), completion);
+  protoOf(_get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rkcuc7_k$(value instanceof SequenceScope ? value : THROW_CCE(), completion);
   };
   function _get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj_0($this_codePointsOutsideDirectionalIsolate, resultContinuation) {
     var i = new _get_codePointsOutsideDirectionalIsolate_$slambda_cun5rj($this_codePointsOutsideDirectionalIsolate, resultContinuation);
     var l = function ($this$sequence, $completion) {
-      return i.invoke_tqy55q_k$($this$sequence, $completion);
+      return i.invoke_pgsqqr_k$($this$sequence, $completion);
     };
     l.$arity = 1;
     return l;
@@ -15496,14 +15355,14 @@
     this.$this_codePoints_1 = $this_codePoints;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(_get_codePoints_$slambda_43x8dt).invoke_tqy55q_k$ = function ($this$sequence, $completion) {
-    var tmp = this.create_gr0g8x_k$($this$sequence, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(_get_codePoints_$slambda_43x8dt).invoke_pgsqqr_k$ = function ($this$sequence, $completion) {
+    var tmp = this.create_rkcuc7_k$($this$sequence, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(_get_codePoints_$slambda_43x8dt).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_tqy55q_k$(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
+  protoOf(_get_codePoints_$slambda_43x8dt).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_pgsqqr_k$(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
   };
   protoOf(_get_codePoints_$slambda_43x8dt).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -15512,19 +15371,19 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(4);
+            this.set_exceptionState_fex74n_k$(4);
             this.index0__1 = 0;
-            this.set_state_a96kl8_k$(1);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 1:
             if (!(this.index0__1 < this.$this_codePoints_1.length)) {
-              this.set_state_a96kl8_k$(3);
+              this.set_state_rjd8d0_k$(3);
               continue $sm;
             }
 
             this.codePoint1__1 = codePointAt(this.$this_codePoints_1, this.index0__1);
-            this.set_state_a96kl8_k$(2);
-            suspendResult = this.$this$sequence_1.yield_24z9an_k$(this.codePoint1__1, this);
+            this.set_state_rjd8d0_k$(2);
+            suspendResult = this.$this$sequence_1.yield_3xhcex_k$(this.codePoint1__1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -15532,7 +15391,7 @@
             continue $sm;
           case 2:
             this.index0__1 = this.index0__1 + charCount(this.codePoint1__1) | 0;
-            this.set_state_a96kl8_k$(1);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 3:
             return Unit_getInstance();
@@ -15544,24 +15403,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 4) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(_get_codePoints_$slambda_43x8dt).create_gr0g8x_k$ = function ($this$sequence, completion) {
+  protoOf(_get_codePoints_$slambda_43x8dt).create_rkcuc7_k$ = function ($this$sequence, completion) {
     var i = new _get_codePoints_$slambda_43x8dt(this.$this_codePoints_1, completion);
     i.$this$sequence_1 = $this$sequence;
     return i;
   };
-  protoOf(_get_codePoints_$slambda_43x8dt).create_xubfvz_k$ = function (value, completion) {
-    return this.create_gr0g8x_k$(value instanceof SequenceScope ? value : THROW_CCE(), completion);
+  protoOf(_get_codePoints_$slambda_43x8dt).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rkcuc7_k$(value instanceof SequenceScope ? value : THROW_CCE(), completion);
   };
   function _get_codePoints_$slambda_43x8dt_0($this_codePoints, resultContinuation) {
     var i = new _get_codePoints_$slambda_43x8dt($this_codePoints, resultContinuation);
     var l = function ($this$sequence, $completion) {
-      return i.invoke_tqy55q_k$($this$sequence, $completion);
+      return i.invoke_pgsqqr_k$($this$sequence, $completion);
     };
     l.$arity = 1;
     return l;
@@ -15593,7 +15452,7 @@
     Companion_getInstance_52();
     this.$stable_1 = 0;
   }
-  protoOf(PlatformParagraphStyle).merge_phrebc_k$ = function (other) {
+  protoOf(PlatformParagraphStyle).merge_553efx_k$ = function (other) {
     return this;
   };
   protoOf(PlatformParagraphStyle).equals = function (other) {
@@ -15626,7 +15485,7 @@
     Companion_getInstance_53();
     this.$stable_1 = 0;
   }
-  protoOf(PlatformSpanStyle).merge_o4jtak_k$ = function (other) {
+  protoOf(PlatformSpanStyle).merge_ap0tcl_k$ = function (other) {
     return this;
   };
   protoOf(PlatformSpanStyle).equals = function (other) {
@@ -15756,12 +15615,12 @@
       var descent = metrics.get_descent_r0gq8h_k$();
       var baseline = $this.paragraph_1.get_alphabeticBaseline_rczsqt_k$();
       // Inline function 'kotlin.with' call
-      var tmp0_with = $this.layouter_1.get_paragraphStyle_27utpo_k$().get_strutStyle_9kfpti_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.SkiaParagraph.<get-lineMetrics>.<anonymous>' call
+      var $this$with = $this.layouter_1.get_paragraphStyle_27utpo_k$().get_strutStyle_9kfpti_k$();
       var tmp_0;
-      if (((tmp0_with.get_isEnabled_roz1ma_k$() ? !tmp0_with.get_isHeightForced_n6afgt_k$() : false) ? tmp0_with.get_isHeightOverridden_qmvgge_k$() : false) ? tmp0_with.get_fontSize_pr9n47_k$() > 0.0 : false) {
-        tmp_0 = tmp0_with.get_height_e7t92o_k$() * tmp0_with.get_fontSize_pr9n47_k$();
+      if ((($this$with.get_isEnabled_roz1ma_k$() ? !$this$with.get_isHeightForced_n6afgt_k$() : false) ? $this$with.get_isHeightOverridden_qmvgge_k$() : false) ? $this$with.get_fontSize_pr9n47_k$() > 0.0 : false) {
+        tmp_0 = $this$with.get_height_e7t92o_k$() * $this$with.get_fontSize_pr9n47_k$();
       } else {
         tmp_0 = ascent + descent;
       }
@@ -15787,7 +15646,7 @@
     }
     var to = offset + 1 | 0;
     while (to <= _get_text__de5ose_0($this).length) {
-      var box = firstOrNull($this.paragraph_1.getRectsForRange_8yx14g_k$(offset, to, RectHeightMode_STRUT_getInstance(), RectWidthMode_TIGHT_getInstance()));
+      var box = firstOrNull($this.paragraph_1.getRectsForRange_leji5d_k$(offset, to, RectHeightMode_STRUT_getInstance(), RectWidthMode_TIGHT_getInstance()));
       if (!(box == null)) {
         return box;
       }
@@ -15807,7 +15666,7 @@
     var from = offset - 1 | 0;
     var isRtl = $this.paragraphIntrinsics_1.get_textDirection_cl6v6f_k$().equals(ResolvedTextDirection_Rtl_getInstance());
     while (from >= 0) {
-      var box = firstOrNull($this.paragraph_1.getRectsForRange_8yx14g_k$(from, end, RectHeightMode_STRUT_getInstance(), RectWidthMode_TIGHT_getInstance()));
+      var box = firstOrNull($this.paragraph_1.getRectsForRange_leji5d_k$(from, end, RectHeightMode_STRUT_getInstance(), RectWidthMode_TIGHT_getInstance()));
       if (box == null)
         from = from - 1 | 0;
       else if (charSequenceGet(_get_text__de5ose_0($this), from) === _Char___init__impl__6a9atx(10)) {
@@ -15823,7 +15682,7 @@
             var rect_0 = new Rect_0($this.get_width_j0q4yl_k$(), box.get_rect_wotlbh_k$().get_bottom_bj8ras_k$(), $this.get_width_j0q4yl_k$(), bottom_0);
             tmp_0 = new TextBox(rect_0, box.get_direction_7ekune_k$());
           } else {
-            var nextBox = first_1($this.paragraph_1.getRectsForRange_8yx14g_k$(offset, offset + 1 | 0, RectHeightMode_STRUT_getInstance(), RectWidthMode_TIGHT_getInstance()));
+            var nextBox = first_1($this.paragraph_1.getRectsForRange_leji5d_k$(offset, offset + 1 | 0, RectHeightMode_STRUT_getInstance(), RectWidthMode_TIGHT_getInstance()));
             var rect_1 = new Rect_0(nextBox.get_rect_wotlbh_k$().get_left_woprgw_k$(), nextBox.get_rect_wotlbh_k$().get_top_18ivbo_k$(), nextBox.get_rect_wotlbh_k$().get_left_woprgw_k$(), nextBox.get_rect_wotlbh_k$().get_bottom_bj8ras_k$());
             tmp_0 = new TextBox(rect_1, nextBox.get_direction_7ekune_k$());
           }
@@ -15857,13 +15716,13 @@
     tmp.paragraphIntrinsics_1 = intrinsics instanceof SkiaParagraphIntrinsics ? intrinsics : THROW_CCE();
     var tmp_0 = this;
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = this.paragraphIntrinsics_1.layouter_lcs8mh_k$();
+    var this_0 = this.paragraphIntrinsics_1.layouter_lcs8mh_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.SkiaParagraph.layouter.<anonymous>' call
-    tmp0_apply.setParagraphStyle_598qju_k$(this.maxLines_1, this.ellipsisChar_1);
-    tmp_0.layouter_1 = tmp0_apply;
-    this.paragraph_1 = this.layouter_1.layoutParagraph_5lbvna_k$(this.get_width_j0q4yl_k$());
-    this.paragraph_1.layout_foik1o_k$(this.get_width_j0q4yl_k$());
+    this_0.setParagraphStyle_hogelz_k$(this.maxLines_1, this.ellipsisChar_1);
+    tmp_0.layouter_1 = this_0;
+    this.paragraph_1 = this.layouter_1.layoutParagraph_6xbnfw_k$(this.get_width_j0q4yl_k$());
+    this.paragraph_1.layout_x0f0tu_k$(this.get_width_j0q4yl_k$());
   }
   protoOf(SkiaParagraph).get_maxLines_pclpoc_k$ = function () {
     return this.maxLines_1;
@@ -15871,7 +15730,7 @@
   protoOf(SkiaParagraph).get_ellipsis_sol6jq_k$ = function () {
     return this.ellipsis_1;
   };
-  protoOf(SkiaParagraph).get_constraints_khg0u2_k$ = function () {
+  protoOf(SkiaParagraph).get_constraints_y0yfdk_k$ = function () {
     return this.constraints_1;
   };
   protoOf(SkiaParagraph).get_width_j0q4yl_k$ = function () {
@@ -15928,77 +15787,76 @@
   };
   protoOf(SkiaParagraph).get_placeholderRects_1ky2fv_k$ = function () {
     // Inline function 'kotlin.collections.map' call
-    var tmp0_map = this.paragraph_1.get_rectsForPlaceholders_vi296l_k$();
+    var this_0 = this.paragraph_1.get_rectsForPlaceholders_vi296l_k$();
     // Inline function 'kotlin.collections.mapTo' call
-    var tmp0_mapTo = ArrayList_init_$Create$_0(tmp0_map.length);
+    var destination = ArrayList_init_$Create$_0(this_0.length);
     var inductionVariable = 0;
-    var last = tmp0_map.length;
+    var last = this_0.length;
     while (inductionVariable < last) {
-      var item = tmp0_map[inductionVariable];
+      var item = this_0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      var tmp$ret$0;
       // Inline function 'androidx.compose.ui.text.SkiaParagraph.<get-placeholderRects>.<anonymous>' call
-      tmp$ret$0 = toComposeRect(item.get_rect_wotlbh_k$());
-      tmp0_mapTo.add_1j60pz_k$(tmp$ret$0);
+      var tmp$ret$0 = toComposeRect(item.get_rect_wotlbh_k$());
+      destination.add_utx5q5_k$(tmp$ret$0);
     }
-    return tmp0_mapTo;
+    return destination;
   };
-  protoOf(SkiaParagraph).getPathForRange_i163f3_k$ = function (start, end) {
-    var boxes = this.paragraph_1.getRectsForRange_8yx14g_k$(start, end, RectHeightMode_MAX_getInstance(), RectWidthMode_TIGHT_getInstance());
+  protoOf(SkiaParagraph).getPathForRange_bge8b5_k$ = function (start, end) {
+    var boxes = this.paragraph_1.getRectsForRange_leji5d_k$(start, end, RectHeightMode_MAX_getInstance(), RectWidthMode_TIGHT_getInstance());
     var path = Path();
     var inductionVariable = 0;
     var last = boxes.length;
     while (inductionVariable < last) {
       var b = boxes[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      asSkiaPath(path).addRect$default_4sb546_k$(b.get_rect_wotlbh_k$());
+      asSkiaPath(path).addRect$default_mv5gnm_k$(b.get_rect_wotlbh_k$());
     }
     return path;
   };
-  protoOf(SkiaParagraph).getCursorRect_x5c8fl_k$ = function (offset) {
-    var horizontal = this.getHorizontalPosition_b8vvic_k$(offset, true);
+  protoOf(SkiaParagraph).getCursorRect_gdluko_k$ = function (offset) {
+    var horizontal = this.getHorizontalPosition_9mx7bk_k$(offset, true);
     var line = ensureNotNull(lineMetricsForOffset(this, offset));
     var isNewEmptyLine = (offset - 1 | 0) === line.get_startIndex_oi1lp5_k$() ? offset === _get_text__de5ose_0(this).length : false;
     var metrics = this.layouter_1.get_defaultFont_6nsy4n_k$().get_metrics_h2mme2_k$();
     // Inline function 'kotlin.let' call
-    var tmp0_let = line.get_ascent_b435cz_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.SkiaParagraph.getCursorRect.<anonymous>' call
+    var it = line.get_ascent_b435cz_k$();
     var tmp;
     if (isNewEmptyLine) {
       var ascent = -metrics.get_ascent_b435cz_k$();
-      tmp = coerceAtMost(tmp0_let, ascent);
+      tmp = coerceAtMost(it, ascent);
     } else {
-      tmp = tmp0_let;
+      tmp = it;
     }
     var asc = tmp;
     // Inline function 'kotlin.let' call
-    var tmp1_let = line.get_descent_r0gq8h_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.SkiaParagraph.getCursorRect.<anonymous>' call
+    var it_0 = line.get_descent_r0gq8h_k$();
     var tmp_0;
     if (isNewEmptyLine) {
       var descent = metrics.get_descent_r0gq8h_k$();
-      tmp_0 = coerceAtMost(tmp1_let, descent);
+      tmp_0 = coerceAtMost(it_0, descent);
     } else {
-      tmp_0 = tmp1_let;
+      tmp_0 = it_0;
     }
     var desc = tmp_0;
     return new Rect_1(horizontal, line.get_baseline_arnwum_k$() - asc, horizontal, line.get_baseline_arnwum_k$() + desc);
   };
-  protoOf(SkiaParagraph).getLineLeft_w1obtc_k$ = function (lineIndex) {
+  protoOf(SkiaParagraph).getLineLeft_799m07_k$ = function (lineIndex) {
     var tmp0_safe_receiver = getOrNull(_get_lineMetrics__5iiuki(this), lineIndex);
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_left_woprgw_k$();
     var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver;
     return tmp2_elvis_lhs == null ? 0.0 : tmp2_elvis_lhs;
   };
-  protoOf(SkiaParagraph).getLineRight_bo0e7j_k$ = function (lineIndex) {
+  protoOf(SkiaParagraph).getLineRight_j8rtqe_k$ = function (lineIndex) {
     var tmp0_safe_receiver = getOrNull(_get_lineMetrics__5iiuki(this), lineIndex);
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_right_ixz7xv_k$();
     var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver;
     return tmp2_elvis_lhs == null ? 0.0 : tmp2_elvis_lhs;
   };
-  protoOf(SkiaParagraph).getLineTop_8a2w7q_k$ = function (lineIndex) {
+  protoOf(SkiaParagraph).getLineTop_q0a6r_k$ = function (lineIndex) {
     var tmp0_safe_receiver = getOrNull(_get_lineMetrics__5iiuki(this), lineIndex);
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -16008,13 +15866,13 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.SkiaParagraph.getLineTop.<anonymous>' call
       // Inline function 'kotlin.math.floor' call
-      var tmp0_floor = tmp0_safe_receiver.get_baseline_arnwum_k$() - tmp0_safe_receiver.get_ascent_b435cz_k$();
-      tmp = Math.floor(tmp0_floor);
+      var x = tmp0_safe_receiver.get_baseline_arnwum_k$() - tmp0_safe_receiver.get_ascent_b435cz_k$();
+      tmp = Math.floor(x);
     }
     var tmp1_elvis_lhs = tmp;
     return tmp1_elvis_lhs == null ? 0.0 : tmp1_elvis_lhs;
   };
-  protoOf(SkiaParagraph).getLineBottom_spjtf0_k$ = function (lineIndex) {
+  protoOf(SkiaParagraph).getLineBottom_yhu6bn_k$ = function (lineIndex) {
     var tmp0_safe_receiver = getOrNull(_get_lineMetrics__5iiuki(this), lineIndex);
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -16024,30 +15882,30 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.SkiaParagraph.getLineBottom.<anonymous>' call
       // Inline function 'kotlin.math.floor' call
-      var tmp0_floor = tmp0_safe_receiver.get_baseline_arnwum_k$() + tmp0_safe_receiver.get_descent_r0gq8h_k$();
-      tmp = Math.floor(tmp0_floor);
+      var x = tmp0_safe_receiver.get_baseline_arnwum_k$() + tmp0_safe_receiver.get_descent_r0gq8h_k$();
+      tmp = Math.floor(x);
     }
     var tmp1_elvis_lhs = tmp;
     return tmp1_elvis_lhs == null ? 0.0 : tmp1_elvis_lhs;
   };
-  protoOf(SkiaParagraph).getLineHeight_ba5d5c_k$ = function (lineIndex) {
+  protoOf(SkiaParagraph).getLineHeight_hm3g1l_k$ = function (lineIndex) {
     var tmp0_safe_receiver = getOrNull(_get_lineMetrics__5iiuki(this), lineIndex);
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_height_e7t92o_k$();
     var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver;
     return tmp2_elvis_lhs == null ? 0.0 : tmp2_elvis_lhs;
   };
-  protoOf(SkiaParagraph).getLineWidth_ia4jjv_k$ = function (lineIndex) {
+  protoOf(SkiaParagraph).getLineWidth_vd5x7g_k$ = function (lineIndex) {
     var tmp0_safe_receiver = getOrNull(_get_lineMetrics__5iiuki(this), lineIndex);
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_width_j0q4yl_k$();
     var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver;
     return tmp2_elvis_lhs == null ? 0.0 : tmp2_elvis_lhs;
   };
-  protoOf(SkiaParagraph).getLineStart_504snr_k$ = function (lineIndex) {
+  protoOf(SkiaParagraph).getLineStart_clke9s_k$ = function (lineIndex) {
     var tmp0_safe_receiver = getOrNull(_get_lineMetrics__5iiuki(this), lineIndex);
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_startIndex_oi1lp5_k$();
     return tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
   };
-  protoOf(SkiaParagraph).getLineEnd_7kqxuy_k$ = function (lineIndex, visibleEnd) {
+  protoOf(SkiaParagraph).getLineEnd_o6geci_k$ = function (lineIndex, visibleEnd) {
     var tmp0_elvis_lhs = getOrNull(_get_lineMetrics__5iiuki(this), lineIndex);
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -16072,30 +15930,30 @@
     }
     return tmp_0;
   };
-  protoOf(SkiaParagraph).isLineEllipsized_r1ol1o_k$ = function (lineIndex) {
+  protoOf(SkiaParagraph).isLineEllipsized_1fausj_k$ = function (lineIndex) {
     return false;
   };
-  protoOf(SkiaParagraph).getLineForOffset_9a3vwv_k$ = function (offset) {
+  protoOf(SkiaParagraph).getLineForOffset_jakwx2_k$ = function (offset) {
     var tmp0_safe_receiver = lineMetricsForOffset(this, offset);
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_lineNumber_pm7qca_k$();
     return tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
   };
-  protoOf(SkiaParagraph).getLineForVerticalPosition_c1p2r4_k$ = function (vertical) {
+  protoOf(SkiaParagraph).getLineForVerticalPosition_lon9k6_k$ = function (vertical) {
     var tmp0_safe_receiver = getLineMetricsForVerticalPosition(this, vertical);
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_lineNumber_pm7qca_k$();
     return tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
   };
-  protoOf(SkiaParagraph).getHorizontalPosition_b8vvic_k$ = function (offset, usePrimaryDirection) {
+  protoOf(SkiaParagraph).getHorizontalPosition_9mx7bk_k$ = function (offset, usePrimaryDirection) {
     var prevBox = getBoxBackwardByOffset$default(this, offset);
     var nextBox = getBoxForwardByOffset(this, offset);
     var isRtl = this.paragraphIntrinsics_1.get_textDirection_cl6v6f_k$().equals(ResolvedTextDirection_Rtl_getInstance());
     var isLtr = !isRtl;
     return (prevBox == null ? nextBox == null : false) ? isRtl ? this.get_width_j0q4yl_k$() : 0.0 : prevBox == null ? cursorHorizontalPosition(ensureNotNull(nextBox), true) : nextBox == null ? cursorHorizontalPosition(prevBox) : nextBox.get_direction_7ekune_k$().equals(prevBox.get_direction_7ekune_k$()) ? cursorHorizontalPosition(nextBox, true) : (isLtr ? prevBox.get_direction_7ekune_k$().equals(Direction_LTR_getInstance()) : false) ? cursorHorizontalPosition(nextBox, true) : (isRtl ? prevBox.get_direction_7ekune_k$().equals(Direction_RTL_getInstance()) : false) ? cursorHorizontalPosition(nextBox, true) : usePrimaryDirection ? cursorHorizontalPosition(prevBox) : cursorHorizontalPosition(nextBox, true);
   };
-  protoOf(SkiaParagraph).getParagraphDirection_x8sft2_k$ = function (offset) {
+  protoOf(SkiaParagraph).getParagraphDirection_qweb73_k$ = function (offset) {
     return this.paragraphIntrinsics_1.get_textDirection_cl6v6f_k$();
   };
-  protoOf(SkiaParagraph).getBidiRunDirection_dqdnqj_k$ = function (offset) {
+  protoOf(SkiaParagraph).getBidiRunDirection_c67d8i_k$ = function (offset) {
     var tmp0_safe_receiver = getBoxForwardByOffset(this, offset);
     var tmp1_subject = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_direction_7ekune_k$();
     var tmp;
@@ -16115,8 +15973,8 @@
     }
     return tmp;
   };
-  protoOf(SkiaParagraph).getOffsetForPosition_f04xcw_k$ = function (position) {
-    var glyphPosition = this.paragraph_1.getGlyphPositionAtCoordinate_iqdtii_k$(_Offset___get_x__impl__xvi35n(position), _Offset___get_y__impl__8bzhra(position)).get_position_jfponi_k$();
+  protoOf(SkiaParagraph).getOffsetForPosition_12t0zj_k$ = function (position) {
+    var glyphPosition = this.paragraph_1.getGlyphPositionAtCoordinate_djajfu_k$(_Offset___get_x__impl__xvi35n(position), _Offset___get_y__impl__8bzhra(position)).get_position_jfponi_k$();
     var tmp0_elvis_lhs = getLineMetricsForVerticalPosition(this, _Offset___get_y__impl__8bzhra(position));
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -16131,7 +15989,7 @@
     }
     var tmp_0;
     if (isNotEmptyLine) {
-      tmp_0 = this.paragraph_1.getRectsForRange_8yx14g_k$(expectedLine.get_startIndex_oi1lp5_k$(), expectedLine.get_isHardBreak_lhleg1_k$() ? expectedLine.get_endIndex_3lslfk_k$() : expectedLine.get_endIndex_3lslfk_k$() - 1 | 0, RectHeightMode_STRUT_getInstance(), RectWidthMode_TIGHT_getInstance());
+      tmp_0 = this.paragraph_1.getRectsForRange_leji5d_k$(expectedLine.get_startIndex_oi1lp5_k$(), expectedLine.get_isHardBreak_lhleg1_k$() ? expectedLine.get_endIndex_3lslfk_k$() : expectedLine.get_endIndex_3lslfk_k$() - 1 | 0, RectHeightMode_STRUT_getInstance(), RectWidthMode_TIGHT_getInstance());
     } else {
       tmp_0 = null;
     }
@@ -16149,9 +16007,9 @@
     }
     var correctedGlyphPosition = glyphPosition;
     if (_Offset___get_x__impl__xvi35n(position) <= leftX) {
-      correctedGlyphPosition = this.paragraph_1.getGlyphPositionAtCoordinate_iqdtii_k$(leftX + 1.0, _Offset___get_y__impl__8bzhra(position)).get_position_jfponi_k$();
+      correctedGlyphPosition = this.paragraph_1.getGlyphPositionAtCoordinate_djajfu_k$(leftX + 1.0, _Offset___get_y__impl__8bzhra(position)).get_position_jfponi_k$();
     } else if (_Offset___get_x__impl__xvi35n(position) >= rightX) {
-      correctedGlyphPosition = this.paragraph_1.getGlyphPositionAtCoordinate_iqdtii_k$(rightX - 1.0, _Offset___get_y__impl__8bzhra(position)).get_position_jfponi_k$();
+      correctedGlyphPosition = this.paragraph_1.getGlyphPositionAtCoordinate_djajfu_k$(rightX - 1.0, _Offset___get_y__impl__8bzhra(position)).get_position_jfponi_k$();
       var tmp_1;
       if (0 <= correctedGlyphPosition ? correctedGlyphPosition <= (charSequenceLength(_get_text__de5ose_0(this)) - 1 | 0) : false) {
         tmp_1 = isNeutralDirection(codePointAt(_get_text__de5ose_0(this), correctedGlyphPosition));
@@ -16172,12 +16030,12 @@
     }
     return correctedGlyphPosition;
   };
-  protoOf(SkiaParagraph).getBoundingBox_urudbk_k$ = function (offset) {
+  protoOf(SkiaParagraph).getBoundingBox_xfho9l_k$ = function (offset) {
     var tmp0_elvis_lhs = getBoxForwardByOffset(this, offset);
     var box = tmp0_elvis_lhs == null ? ensureNotNull(getBoxBackwardByOffset(this, offset, _get_text__de5ose_0(this).length)) : tmp0_elvis_lhs;
     return toComposeRect(box.get_rect_wotlbh_k$());
   };
-  protoOf(SkiaParagraph).getWordBoundary_qx0177_k$ = function (offset) {
+  protoOf(SkiaParagraph).getWordBoundary_s8pru_k$ = function (offset) {
     // Inline function 'androidx.compose.ui.text.SkiaParagraph.checkOffsetIsValid' call
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
@@ -16189,47 +16047,47 @@
     if ((offset < _get_text__de5ose_0(this).length ? isWhitespace(charSequenceGet(_get_text__de5ose_0(this), offset)) : false) ? true : offset === _get_text__de5ose_0(this).length) {
       var tmp;
       if (offset > 0 ? !isWhitespace(charSequenceGet(_get_text__de5ose_0(this), offset - 1 | 0)) : false) {
-        tmp = toTextRange(this.paragraph_1.getWordBoundary_3s8nhz_k$(offset - 1 | 0));
+        tmp = toTextRange(this.paragraph_1.getWordBoundary_w7r0s2_k$(offset - 1 | 0));
       } else {
         tmp = TextRange_0(offset, offset);
       }
       return tmp;
     }
-    return toTextRange(this.paragraph_1.getWordBoundary_3s8nhz_k$(offset));
+    return toTextRange(this.paragraph_1.getWordBoundary_w7r0s2_k$(offset));
   };
-  protoOf(SkiaParagraph).paint_aoyx3m_k$ = function (canvas, color, shadow, textDecoration) {
+  protoOf(SkiaParagraph).paint_xx9kwo_k$ = function (canvas, color, shadow, textDecoration) {
     var tmp = this;
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.layouter_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.SkiaParagraph.paint.<anonymous>' call
-    tmp0_with.setTextStyle_ini1gz_k$(color, shadow, textDecoration);
-    tmp.paragraph_1 = tmp0_with.layoutParagraph_5lbvna_k$(this.get_width_j0q4yl_k$());
-    this.paragraph_1.paint_86qq3w_k$(get_nativeCanvas(canvas), 0.0, 0.0);
+    var $this$with = this.layouter_1;
+    $this$with.setTextStyle_v5mujq_k$(color, shadow, textDecoration);
+    tmp.paragraph_1 = $this$with.layoutParagraph_6xbnfw_k$(this.get_width_j0q4yl_k$());
+    this.paragraph_1.paint_utwq50_k$(get_nativeCanvas(canvas), 0.0, 0.0);
   };
-  protoOf(SkiaParagraph).paint_4tn74y_k$ = function (canvas, color, shadow, textDecoration, drawStyle, blendMode) {
+  protoOf(SkiaParagraph).paint_qj08y1_k$ = function (canvas, color, shadow, textDecoration, drawStyle, blendMode) {
     var tmp = this;
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.layouter_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.SkiaParagraph.paint.<anonymous>' call
-    tmp0_with.setTextStyle_ini1gz_k$(color, shadow, textDecoration);
-    tmp0_with.setDrawStyle_z7gxxn_k$(drawStyle);
-    tmp0_with.setBlendMode_ntuyva_k$(blendMode);
-    tmp.paragraph_1 = tmp0_with.layoutParagraph_5lbvna_k$(this.get_width_j0q4yl_k$());
-    this.paragraph_1.paint_86qq3w_k$(get_nativeCanvas(canvas), 0.0, 0.0);
+    var $this$with = this.layouter_1;
+    $this$with.setTextStyle_v5mujq_k$(color, shadow, textDecoration);
+    $this$with.setDrawStyle_16xwa2_k$(drawStyle);
+    $this$with.setBlendMode_61cb32_k$(blendMode);
+    tmp.paragraph_1 = $this$with.layoutParagraph_6xbnfw_k$(this.get_width_j0q4yl_k$());
+    this.paragraph_1.paint_utwq50_k$(get_nativeCanvas(canvas), 0.0, 0.0);
   };
-  protoOf(SkiaParagraph).paint_noetbf_k$ = function (canvas, brush, alpha, shadow, textDecoration, drawStyle, blendMode) {
+  protoOf(SkiaParagraph).paint_t6aqss_k$ = function (canvas, brush, alpha, shadow, textDecoration, drawStyle, blendMode) {
     var tmp = this;
     // Inline function 'kotlin.with' call
-    var tmp0_with = this.layouter_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.SkiaParagraph.paint.<anonymous>' call
-    tmp0_with.setTextStyle_mi0rzm_k$(brush, Size(this.get_width_j0q4yl_k$(), this.get_height_e7t92o_k$()), alpha, shadow, textDecoration);
-    tmp0_with.setDrawStyle_z7gxxn_k$(drawStyle);
-    tmp0_with.setBlendMode_ntuyva_k$(blendMode);
-    tmp.paragraph_1 = tmp0_with.layoutParagraph_5lbvna_k$(this.get_width_j0q4yl_k$());
-    this.paragraph_1.paint_86qq3w_k$(get_nativeCanvas(canvas), 0.0, 0.0);
+    var $this$with = this.layouter_1;
+    $this$with.setTextStyle_4rebey_k$(brush, Size(this.get_width_j0q4yl_k$(), this.get_height_e7t92o_k$()), alpha, shadow, textDecoration);
+    $this$with.setDrawStyle_16xwa2_k$(drawStyle);
+    $this$with.setBlendMode_61cb32_k$(blendMode);
+    tmp.paragraph_1 = $this$with.layoutParagraph_6xbnfw_k$(this.get_width_j0q4yl_k$());
+    this.paragraph_1.paint_utwq50_k$(get_nativeCanvas(canvas), 0.0, 0.0);
   };
   function toTextRange(_this__u8e3s4) {
     return TextRange_0(_this__u8e3s4.get_start_iypx6h_k$(), _this__u8e3s4.get_end_18j6ha_k$());
@@ -16247,13 +16105,13 @@
   }
   function PlatformFontFamilyTypefaceAdapter() {
   }
-  protoOf(PlatformFontFamilyTypefaceAdapter).resolve_wbzvw9_k$ = function (typefaceRequest, platformFontLoader, onAsyncCompletion, createDefaultTypeface) {
+  protoOf(PlatformFontFamilyTypefaceAdapter).resolve_wywkvk_k$ = function (typefaceRequest, platformFontLoader, onAsyncCompletion, createDefaultTypeface) {
     var tmp = typefaceRequest.get_fontFamily_ulphcs_k$();
     if (tmp instanceof FontListFontFamily)
       return null;
     var skiaFontLoader = platformFontLoader instanceof SkiaFontLoader ? platformFontLoader : THROW_CCE();
     var tmp0_elvis_lhs = typefaceRequest.get_fontFamily_ulphcs_k$();
-    var result = skiaFontLoader.loadPlatformTypes_tevpy8_k$(tmp0_elvis_lhs == null ? Companion_getInstance_21().get_Default_goqax4_k$() : tmp0_elvis_lhs, typefaceRequest.get_fontWeight_wbif2o_k$(), typefaceRequest.get_fontStyle_htc78e_k$());
+    var result = skiaFontLoader.loadPlatformTypes_4rma5w_k$(tmp0_elvis_lhs == null ? Companion_getInstance_21().get_Default_goqax4_k$() : tmp0_elvis_lhs, typefaceRequest.get_fontWeight_wbif2o_k$(), typefaceRequest.get_fontStyle_nhruzn_k$());
     return new Immutable(result);
   };
   function _get_fontCache__rq14qm($this) {
@@ -16267,18 +16125,18 @@
   protoOf(SkiaFontLoader).get_fontCollection_kf4vje_k$ = function () {
     return this.fontCache_1.get_fonts_irho7v_k$();
   };
-  protoOf(SkiaFontLoader).loadBlocking_w5fd92_k$ = function (font) {
+  protoOf(SkiaFontLoader).loadBlocking_4ao78a_k$ = function (font) {
     if (!(font instanceof PlatformFont)) {
-      if (!(font.get_loadingStrategy_w877gz_k$() === Companion_getInstance_24().get_OptionalLocal_iiqguv_k$())) {
+      if (!(font.get_loadingStrategy_s3fce_k$() === Companion_getInstance_24().get_OptionalLocal_ehk5yi_k$())) {
         throw IllegalArgumentException_init_$Create$('Unsupported font type: ' + font);
       }
       return null;
     }
-    var tmp0_subject = font.get_loadingStrategy_w877gz_k$();
+    var tmp0_subject = font.get_loadingStrategy_s3fce_k$();
     var tmp;
-    if (tmp0_subject === Companion_getInstance_24().get_Blocking_pdgcwr_k$()) {
-      tmp = this.fontCache_1.load_oz8zua_k$(font);
-    } else if (tmp0_subject === Companion_getInstance_24().get_OptionalLocal_iiqguv_k$()) {
+    if (tmp0_subject === Companion_getInstance_24().get_Blocking_7mu9wm_k$()) {
+      tmp = this.fontCache_1.load_baqy1w_k$(font);
+    } else if (tmp0_subject === Companion_getInstance_24().get_OptionalLocal_ehk5yi_k$()) {
       // Inline function 'kotlin.Result.getOrNull' call
       // Inline function 'kotlin.runCatching' call
       var tmp_0;
@@ -16286,8 +16144,8 @@
         // Inline function 'kotlin.Companion.success' call
         Companion_getInstance_4();
         // Inline function 'androidx.compose.ui.text.font.SkiaFontLoader.loadBlocking.<anonymous>' call
-        var tmp1_success = this.fontCache_1.load_oz8zua_k$(font);
-        tmp_0 = _Result___init__impl__xyqfz8(tmp1_success);
+        var value = this.fontCache_1.load_baqy1w_k$(font);
+        tmp_0 = _Result___init__impl__xyqfz8(value);
       } catch ($p) {
         var tmp_1;
         if ($p instanceof Error) {
@@ -16300,35 +16158,35 @@
         }
         tmp_0 = tmp_1;
       }
-      var tmp0_getOrNull = tmp_0;
+      var this_0 = tmp_0;
       var tmp_2;
-      if (_Result___get_isFailure__impl__jpiriv(tmp0_getOrNull)) {
+      if (_Result___get_isFailure__impl__jpiriv(this_0)) {
         tmp_2 = null;
       } else {
-        var tmp_3 = _Result___get_value__impl__bjfvqg(tmp0_getOrNull);
-        tmp_2 = (tmp_3 == null ? true : isObject(tmp_3)) ? tmp_3 : THROW_CCE();
+        var tmp_3 = _Result___get_value__impl__bjfvqg(this_0);
+        tmp_2 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
       }
       tmp = tmp_2;
-    } else if (tmp0_subject === Companion_getInstance_24().get_Async_e1a1ve_k$()) {
+    } else if (tmp0_subject === Companion_getInstance_24().get_Async_nzjdad_k$()) {
       throw UnsupportedOperationException_init_$Create$('Unsupported Async font load path');
     } else {
-      throw IllegalArgumentException_init_$Create$('Unknown loading type ' + new FontLoadingStrategy(font.get_loadingStrategy_w877gz_k$()));
+      throw IllegalArgumentException_init_$Create$('Unknown loading type ' + new FontLoadingStrategy(font.get_loadingStrategy_s3fce_k$()));
     }
     return tmp;
   };
-  protoOf(SkiaFontLoader).loadPlatformTypes_tevpy8_k$ = function (fontFamily, fontWeight, fontStyle) {
-    return this.fontCache_1.loadPlatformTypes_tevpy8_k$(fontFamily, fontWeight, fontStyle);
+  protoOf(SkiaFontLoader).loadPlatformTypes_4rma5w_k$ = function (fontFamily, fontWeight, fontStyle) {
+    return this.fontCache_1.loadPlatformTypes_4rma5w_k$(fontFamily, fontWeight, fontStyle);
   };
-  protoOf(SkiaFontLoader).loadPlatformTypes$default_2d4f0c_k$ = function (fontFamily, fontWeight, fontStyle, $super) {
+  protoOf(SkiaFontLoader).loadPlatformTypes$default_p4u6as_k$ = function (fontFamily, fontWeight, fontStyle, $super) {
     fontWeight = fontWeight === VOID ? Companion_getInstance_27().get_Normal_22avww_k$() : fontWeight;
-    fontStyle = fontStyle === VOID ? Companion_getInstance_25().get_Normal_b4ik9_k$() : fontStyle;
-    return $super === VOID ? this.loadPlatformTypes_tevpy8_k$(fontFamily, fontWeight, fontStyle) : $super.loadPlatformTypes_tevpy8_k$.call(this, fontFamily, fontWeight, new FontStyle(fontStyle));
+    fontStyle = fontStyle === VOID ? Companion_getInstance_25().get_Normal_tevh6u_k$() : fontStyle;
+    return $super === VOID ? this.loadPlatformTypes_4rma5w_k$(fontFamily, fontWeight, fontStyle) : $super.loadPlatformTypes_4rma5w_k$.call(this, fontFamily, fontWeight, new FontStyle(fontStyle));
   };
-  protoOf(SkiaFontLoader).awaitLoad_hbev9p_k$ = function (font, $completion) {
-    return this.loadBlocking_w5fd92_k$(font);
+  protoOf(SkiaFontLoader).awaitLoad_kvuun9_k$ = function (font, $completion) {
+    return this.loadBlocking_4ao78a_k$(font);
   };
-  protoOf(SkiaFontLoader).awaitLoad_kuymx_k$ = function (font, $completion) {
-    return this.awaitLoad_hbev9p_k$(font, $completion);
+  protoOf(SkiaFontLoader).awaitLoad_quf34a_k$ = function (font, $completion) {
+    return this.awaitLoad_kvuun9_k$(font, $completion);
   };
   protoOf(SkiaFontLoader).get_cacheKey_w22q12_k$ = function () {
     return this.cacheKey_1;
@@ -16369,31 +16227,31 @@
   protoOf(ParagraphLayouter).get_paragraphStyle_27utpo_k$ = function () {
     return this.builder_1.get_paragraphStyle_27utpo_k$();
   };
-  protoOf(ParagraphLayouter).setParagraphStyle_598qju_k$ = function (maxLines, ellipsis) {
+  protoOf(ParagraphLayouter).setParagraphStyle_hogelz_k$ = function (maxLines, ellipsis) {
     if (!(this.builder_1.get_maxLines_pclpoc_k$() === maxLines) ? true : !(this.builder_1.get_ellipsis_sol6jq_k$() === ellipsis)) {
-      this.builder_1.set_maxLines_gpw0p4_k$(maxLines);
-      this.builder_1.set_ellipsis_bpvke4_k$(ellipsis);
+      this.builder_1.set_maxLines_r9wcpc_k$(maxLines);
+      this.builder_1.set_ellipsis_iwgwtg_k$(ellipsis);
       this.paragraphCache_1 = null;
     }
   };
-  protoOf(ParagraphLayouter).setTextStyle_ini1gz_k$ = function (color, shadow, textDecoration) {
+  protoOf(ParagraphLayouter).setTextStyle_v5mujq_k$ = function (color, shadow, textDecoration) {
     // Inline function 'androidx.compose.ui.graphics.takeOrElse' call
     var tmp;
     // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-    if (!equals(_Color___get_value__impl__1pls5m(color), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_9ntdt9_k$()))) {
+    if (!equals(_Color___get_value__impl__1pls5m(color), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_j397pn_k$()))) {
       tmp = color;
     } else {
       // Inline function 'androidx.compose.ui.text.platform.ParagraphLayouter.setTextStyle.<anonymous>' call
-      tmp = this.builder_1.get_textStyle_8tt25h_k$().get_color_v34vrz_k$();
+      tmp = this.builder_1.get_textStyle_8tt25h_k$().get_color_lnp1vl_k$();
     }
     var actualColor = tmp;
-    if ((!equals(this.builder_1.get_textStyle_8tt25h_k$().get_color_v34vrz_k$(), actualColor) ? true : !equals(this.builder_1.get_textStyle_8tt25h_k$().get_shadow_jgtb8p_k$(), shadow)) ? true : !equals(this.builder_1.get_textStyle_8tt25h_k$().get_textDecoration_itgjwm_k$(), textDecoration)) {
-      this.builder_1.set_textStyle_x7o2al_k$(this.builder_1.get_textStyle_8tt25h_k$().copy$default_yckbkh_k$(actualColor, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, textDecoration, shadow));
+    if ((!equals(this.builder_1.get_textStyle_8tt25h_k$().get_color_lnp1vl_k$(), actualColor) ? true : !equals(this.builder_1.get_textStyle_8tt25h_k$().get_shadow_jgtb8p_k$(), shadow)) ? true : !equals(this.builder_1.get_textStyle_8tt25h_k$().get_textDecoration_itgjwm_k$(), textDecoration)) {
+      this.builder_1.set_textStyle_ovup7l_k$(this.builder_1.get_textStyle_8tt25h_k$().copy$default_82cxxr_k$(actualColor, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, textDecoration, shadow));
       this.paragraphCache_1 = null;
     }
   };
-  protoOf(ParagraphLayouter).setTextStyle_mi0rzm_k$ = function (brush, brushSize, alpha, shadow, textDecoration) {
-    var actualSize = this.builder_1.get_brushSize_efc3n8_k$();
+  protoOf(ParagraphLayouter).setTextStyle_4rebey_k$ = function (brush, brushSize, alpha, shadow, textDecoration) {
+    var actualSize = this.builder_1.get_brushSize_5w3nu2_k$();
     var tmp;
     var tmp_0;
     var tmp_1;
@@ -16404,7 +16262,7 @@
       tmp_4 = true;
     } else {
       // Inline function 'androidx.compose.ui.geometry.isUnspecified' call
-      tmp_4 = _Size___get_packedValue__impl__7rlt1o(actualSize).equals(_Size___get_packedValue__impl__7rlt1o(Companion_getInstance_10().get_Unspecified_o59ai8_k$()));
+      tmp_4 = _Size___get_packedValue__impl__7rlt1o(actualSize).equals(_Size___get_packedValue__impl__7rlt1o(Companion_getInstance_10().get_Unspecified_3ttj0y_k$()));
     }
     if (tmp_4) {
       tmp_3 = true;
@@ -16432,53 +16290,54 @@
       tmp = !equals(this.builder_1.get_textStyle_8tt25h_k$().get_textDecoration_itgjwm_k$(), textDecoration);
     }
     if (tmp) {
-      this.builder_1.set_textStyle_x7o2al_k$(this.builder_1.get_textStyle_8tt25h_k$().copy$default_vazj2t_k$(brush, alpha, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, textDecoration, shadow));
-      this.builder_1.set_brushSize_xjiodu_k$(brushSize);
+      this.builder_1.set_textStyle_ovup7l_k$(this.builder_1.get_textStyle_8tt25h_k$().copy$default_tzbh93_k$(brush, alpha, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, textDecoration, shadow));
+      this.builder_1.set_brushSize_u1ysdq_k$(brushSize);
       this.paragraphCache_1 = null;
     }
   };
-  protoOf(ParagraphLayouter).setDrawStyle_z7gxxn_k$ = function (drawStyle) {
+  protoOf(ParagraphLayouter).setDrawStyle_16xwa2_k$ = function (drawStyle) {
     if (!equals(this.builder_1.get_drawStyle_arbehw_k$(), drawStyle)) {
-      this.builder_1.set_drawStyle_v6gf4q_k$(drawStyle);
+      this.builder_1.set_drawStyle_e0kgyj_k$(drawStyle);
       this.paragraphCache_1 = null;
     }
   };
-  protoOf(ParagraphLayouter).setBlendMode_ntuyva_k$ = function (blendMode) {
-    if (!(this.builder_1.get_blendMode_m8dzwh_k$() === blendMode)) {
-      this.builder_1.set_blendMode_gchh35_k$(blendMode);
+  protoOf(ParagraphLayouter).setBlendMode_61cb32_k$ = function (blendMode) {
+    if (!(this.builder_1.get_blendMode_si209t_k$() === blendMode)) {
+      this.builder_1.set_blendMode_1e5m6b_k$(blendMode);
       this.paragraphCache_1 = null;
     }
   };
-  protoOf(ParagraphLayouter).layoutParagraph_5lbvna_k$ = function (width) {
+  protoOf(ParagraphLayouter).layoutParagraph_6xbnfw_k$ = function (width) {
     var paragraph = this.paragraphCache_1;
     var tmp;
     if (!(paragraph == null)) {
       if (!sameValueAs(this.width_1, width)) {
         this.width_1 = width;
-        paragraph.layout_foik1o_k$(width);
+        paragraph.layout_x0f0tu_k$(width);
       }
       tmp = paragraph;
     } else {
       // Inline function 'kotlin.apply' call
-      var tmp0_apply = this.builder_1.build_1k0s4u_k$();
+      var this_0 = this.builder_1.build_1k0s4u_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.platform.ParagraphLayouter.layoutParagraph.<anonymous>' call
-      this.paragraphCache_1 = tmp0_apply;
-      tmp0_apply.layout_foik1o_k$(width);
-      tmp = tmp0_apply;
+      this.paragraphCache_1 = this_0;
+      this_0.layout_x0f0tu_k$(width);
+      tmp = this_0;
     }
     return tmp;
   };
   function sameValueAs(_this__u8e3s4, other) {
     // Inline function 'kotlin.math.abs' call
-    var tmp0_abs = _this__u8e3s4 - other;
-    return Math.abs(tmp0_abs) < 1.0E-5;
+    var x = _this__u8e3s4 - other;
+    return Math.abs(x) < 1.0E-5;
   }
   function get_GenericFontFamiliesMapping() {
     _init_properties_PlatformFont_skiko_kt__1fvojb();
     // Inline function 'kotlin.getValue' call
+    var this_0 = GenericFontFamiliesMapping$delegate;
     GenericFontFamiliesMapping$factory();
-    return GenericFontFamiliesMapping$delegate.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   }
   var GenericFontFamiliesMapping$delegate;
   var Platform_Unknown_instance;
@@ -16512,7 +16371,7 @@
         return Platform_Android_getInstance();
       default:
         Platform_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -16561,11 +16420,11 @@
   protoOf(FontLoader).get_fontFamilyResolver_9o0fjy_k$ = function () {
     return this.fontFamilyResolver_1;
   };
-  protoOf(FontLoader).load_oj7ae9_k$ = function (font) {
+  protoOf(FontLoader).load_1hfgn9_k$ = function (font) {
     if (!(font instanceof PlatformFont)) {
       throw IllegalArgumentException_init_$Create$('Unsupported font type: ' + font);
     }
-    return ensureNotNull(this.fontCache_1.load_oz8zua_k$(font).typeface_1);
+    return ensureNotNull(this.fontCache_1.load_baqy1w_k$(font).typeface_1);
   };
   function _get_fontProvider__mhw44r($this) {
     return $this.fontProvider_1;
@@ -16577,20 +16436,20 @@
     return $this.typefacesCache_1;
   }
   function mapGenericFontFamily($this, generic) {
-    var tmp0_elvis_lhs = get_GenericFontFamiliesMapping().get_1mhr4y_k$(generic.get_name_woqyms_k$());
+    var tmp0_elvis_lhs = get_GenericFontFamiliesMapping().get_wei43m_k$(generic.get_name_woqyms_k$());
     var tmp;
     if (tmp0_elvis_lhs == null) {
-      var tmp0_error = 'Unknown generic font family ' + generic.get_name_woqyms_k$();
-      throw IllegalStateException_init_$Create$(toString(tmp0_error));
+      var message = 'Unknown generic font family ' + generic.get_name_woqyms_k$();
+      throw IllegalStateException_init_$Create$(toString(message));
     } else {
       tmp = tmp0_elvis_lhs;
     }
     return tmp;
   }
   function ensureRegistered($this, typeface, key) {
-    if (!$this.registered_1.contains_2ehdt1_k$(key)) {
-      $this.fontProvider_1.registerTypeface_apdxu9_k$(typeface, key);
-      $this.registered_1.add_1j60pz_k$(key);
+    if (!$this.registered_1.contains_aljjnj_k$(key)) {
+      $this.fontProvider_1.registerTypeface_y1keh7_k$(typeface, key);
+      $this.registered_1.add_utx5q5_k$(key);
     }
   }
   function ensureRegistered_0($this, fontFamily) {
@@ -16629,30 +16488,29 @@
     this.fontProvider_1 = new TypefaceFontProvider();
     this.registered_1 = HashSet_init_$Create$_0();
     this.typefacesCache_1 = new ExpireAfterAccessCache(new Long(-129542144, 13));
-    this.fonts_1.setDefaultFontManager_qraotu_k$(Companion_getInstance_11().get_default_qtagd4_k$());
-    this.fonts_1.setAssetFontManager_nxzdib_k$(this.fontProvider_1);
+    this.fonts_1.setDefaultFontManager_gweqxp_k$(Companion_getInstance_11().get_default_qtagd4_k$());
+    this.fonts_1.setAssetFontManager_9z4eus_k$(this.fontProvider_1);
   }
   protoOf(FontCache).get_fonts_irho7v_k$ = function () {
     return this.fonts_1;
   };
-  protoOf(FontCache).load_oz8zua_k$ = function (font) {
+  protoOf(FontCache).load_baqy1w_k$ = function (font) {
     var tmp = font.get_cacheKey_w22q12_k$();
-    var typeface = this.typefacesCache_1.get_7qedx8_k$(tmp, FontCache$load$lambda(font));
+    var typeface = this.typefacesCache_1.get_c3034i_k$(tmp, FontCache$load$lambda(font));
     ensureRegistered(this, typeface, font.get_cacheKey_w22q12_k$());
     return new FontLoadResult(typeface, listOf_0(font.get_cacheKey_w22q12_k$()));
   };
-  protoOf(FontCache).loadPlatformTypes_tevpy8_k$ = function (fontFamily, fontWeight, fontStyle) {
+  protoOf(FontCache).loadPlatformTypes_4rma5w_k$ = function (fontFamily, fontWeight, fontStyle) {
     var aliases = ensureRegistered_0(this, fontFamily);
-    var style = toSkFontStyle(fontStyle).withWeight_dafbdv_k$(fontWeight.get_weight_lbhkzl_k$());
-    var tmp$ret$0;
+    var style = toSkFontStyle(fontStyle).withWeight_ue6mre_k$(fontWeight.get_weight_lbhkzl_k$());
     // Inline function 'kotlin.collections.toTypedArray' call
-    tmp$ret$0 = copyToArray(aliases);
-    return new FontLoadResult(first_1(this.fonts_1.findTypefaces_6egsg0_k$(tmp$ret$0, style)), aliases);
+    var tmp$ret$0 = copyToArray(aliases);
+    return new FontLoadResult(first_1(this.fonts_1.findTypefaces_448rqd_k$(tmp$ret$0, style)), aliases);
   };
-  protoOf(FontCache).loadPlatformTypes$default_t5e8tj_k$ = function (fontFamily, fontWeight, fontStyle, $super) {
+  protoOf(FontCache).loadPlatformTypes$default_ho20jj_k$ = function (fontFamily, fontWeight, fontStyle, $super) {
     fontWeight = fontWeight === VOID ? Companion_getInstance_27().get_Normal_22avww_k$() : fontWeight;
-    fontStyle = fontStyle === VOID ? Companion_getInstance_25().get_Normal_b4ik9_k$() : fontStyle;
-    return $super === VOID ? this.loadPlatformTypes_tevpy8_k$(fontFamily, fontWeight, fontStyle) : $super.loadPlatformTypes_tevpy8_k$.call(this, fontFamily, fontWeight, new FontStyle(fontStyle));
+    fontStyle = fontStyle === VOID ? Companion_getInstance_25().get_Normal_tevh6u_k$() : fontStyle;
+    return $super === VOID ? this.loadPlatformTypes_4rma5w_k$(fontFamily, fontWeight, fontStyle) : $super.loadPlatformTypes_4rma5w_k$.call(this, fontFamily, fontWeight, new FontStyle(fontStyle));
   };
   function SkiaBackedTypeface(alias, nativeTypeface) {
     this.alias_1 = alias;
@@ -16677,7 +16535,7 @@
     this.data_1 = data;
     this.weight_1 = weight;
     this.style_1 = style;
-    this.loadingStrategy_1 = Companion_getInstance_24().get_Blocking_pdgcwr_k$();
+    this.loadingStrategy_1 = Companion_getInstance_24().get_Blocking_7mu9wm_k$();
     this.$stable_2 = 0;
   }
   protoOf(LoadedFont).get_identity_y1rl2x_k$ = function () {
@@ -16689,10 +16547,10 @@
   protoOf(LoadedFont).get_weight_lbhkzl_k$ = function () {
     return this.weight_1;
   };
-  protoOf(LoadedFont).get_style_e2e1yp_k$ = function () {
+  protoOf(LoadedFont).get_style_fnlxse_k$ = function () {
     return this.style_1;
   };
-  protoOf(LoadedFont).get_loadingStrategy_w877gz_k$ = function () {
+  protoOf(LoadedFont).get_loadingStrategy_s3fce_k$ = function () {
     return this.loadingStrategy_1;
   };
   protoOf(LoadedFont).equals = function (other) {
@@ -16792,24 +16650,24 @@
     shadow = shadow === VOID ? null : shadow;
     decoration = decoration === VOID ? null : decoration;
     drawStyle = drawStyle === VOID ? null : drawStyle;
-    blendMode = blendMode === VOID ? Companion_getInstance_12().get_SrcOver_uyf80z_k$() : blendMode;
-    canvas.save_erlm4_k$();
+    blendMode = blendMode === VOID ? Companion_getInstance_12().get_SrcOver_anr685_k$() : blendMode;
+    canvas.save_fbe7h_k$();
     // Inline function 'androidx.compose.ui.util.fastForEach' call
-    var tmp0_fastForEach = _this__u8e3s4.get_paragraphInfoList_5kk1wv_k$();
+    var this_0 = _this__u8e3s4.get_paragraphInfoList_5kk1wv_k$();
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
-    var last = tmp0_fastForEach.get_size_woubt6_k$() - 1 | 0;
+    var last = this_0.get_size_woubt6_k$() - 1 | 0;
     if (inductionVariable <= last)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = tmp0_fastForEach.get_fkrdnv_k$(index);
+        var item = this_0.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.text.platform.drawMultiParagraph.<anonymous>' call
-        item.get_paragraph_ua17wb_k$().paint_noetbf_k$(canvas, brush, alpha, shadow, decoration, drawStyle, blendMode);
-        canvas.translate_62wf99_k$(0.0, item.get_paragraph_ua17wb_k$().get_height_e7t92o_k$());
+        item.get_paragraph_ua17wb_k$().paint_t6aqss_k$(canvas, brush, alpha, shadow, decoration, drawStyle, blendMode);
+        canvas.translate_7gghdu_k$(0.0, item.get_paragraph_ua17wb_k$().get_height_e7t92o_k$());
       }
        while (inductionVariable <= last);
-    canvas.restore_a2id37_k$();
+    canvas.restore_a1ykhu_k$();
   }
   function get_DefaultFontSize_0() {
     _init_properties_SkiaParagraph_skiko_kt__cbqn0t();
@@ -16822,28 +16680,28 @@
   }
   var skTextStylesCache;
   function ComputedStyle_init_$Init$(density, spanStyle, brushSize, blendMode, $this) {
-    brushSize = brushSize === VOID ? Companion_getInstance_10().get_Unspecified_o59ai8_k$() : brushSize;
-    blendMode = blendMode === VOID ? Companion_getInstance_0().get_DefaultBlendMode_8kor9s_k$() : blendMode;
+    brushSize = brushSize === VOID ? Companion_getInstance_10().get_Unspecified_3ttj0y_k$() : brushSize;
+    blendMode = blendMode === VOID ? Companion_getInstance_0().get_DefaultBlendMode_svct2m_k$() : blendMode;
     var tmp = spanStyle.get_textForegroundStyle_1frzu0_k$();
     // Inline function 'kotlin.with' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.text.platform.ComputedStyle.<init>.<anonymous>' call
-    var tmp_0 = density.toPx_x7oik4_k$(spanStyle.get_fontSize_61k213_k$());
+    var tmp_0 = density.toPx_plt68j_k$(spanStyle.get_fontSize_ergf2z_k$());
     var tmp_1 = spanStyle.get_fontWeight_wbif2o_k$();
-    var tmp_2 = spanStyle.get_fontStyle_fze7ml_k$();
-    var tmp_3 = spanStyle.get_fontSynthesis_t08ei1_k$();
+    var tmp_2 = spanStyle.get_fontStyle_hzv4zg_k$();
+    var tmp_3 = spanStyle.get_fontSynthesis_h5auiy_k$();
     var tmp_4 = spanStyle.get_fontFamily_ulphcs_k$();
     var tmp_5 = spanStyle.get_fontFeatureSettings_a47533_k$();
     var tmp_6;
-    if (get_isUnspecified(spanStyle.get_letterSpacing_u0tnf8_k$())) {
+    if (get_isUnspecified(spanStyle.get_letterSpacing_k79xfu_k$())) {
       tmp_6 = null;
     } else {
       // Inline function 'kotlin.with' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.platform.ComputedStyle.<init>.<anonymous>' call
-      tmp_6 = density.toPx_x7oik4_k$(spanStyle.get_letterSpacing_u0tnf8_k$());
+      tmp_6 = density.toPx_plt68j_k$(spanStyle.get_letterSpacing_k79xfu_k$());
     }
-    ComputedStyle.call($this, tmp, brushSize, tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp_5, tmp_6, spanStyle.get_baselineShift_yg9i0p_k$(), spanStyle.get_textGeometricTransform_tdfmin_k$(), spanStyle.get_localeList_1gj9gh_k$(), spanStyle.get_background_ubksc_k$(), spanStyle.get_textDecoration_itgjwm_k$(), spanStyle.get_shadow_jgtb8p_k$(), spanStyle.get_drawStyle_arbehw_k$(), blendMode);
+    ComputedStyle.call($this, tmp, brushSize, tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp_5, tmp_6, spanStyle.get_baselineShift_99zyho_k$(), spanStyle.get_textGeometricTransform_tdfmin_k$(), spanStyle.get_localeList_1gj9gh_k$(), spanStyle.get_background_8l4942_k$(), spanStyle.get_textDecoration_itgjwm_k$(), spanStyle.get_shadow_jgtb8p_k$(), spanStyle.get_drawStyle_arbehw_k$(), blendMode);
     return $this;
   }
   function ComputedStyle_init_$Create$(density, spanStyle, brushSize, blendMode) {
@@ -16851,24 +16709,24 @@
   }
   function toTextPaint($this) {
     // Inline function 'kotlin.let' call
-    var tmp0_let = Paint_init_$Create$();
+    var this_0 = Paint_init_$Create$();
     // Inline function 'kotlin.contracts.contract' call
     var tmp$ret$2;
     $l$block: {
       // Inline function 'androidx.compose.ui.text.platform.ComputedStyle.toTextPaint.<anonymous>' call
       // Inline function 'kotlin.with' call
-      var tmp0_with = asComposePaint(tmp0_let);
       // Inline function 'kotlin.contracts.contract' call
-      tmp0_with.set_color_b5evhd_k$($this.textForegroundStyle_1.get_color_v34vrz_k$());
-      applyBrush(tmp0_with, $this.textForegroundStyle_1.get_brush_ipcjyp_k$(), $this.brushSize_1, $this.textForegroundStyle_1.get_alpha_iooth1_k$());
-      applyDrawStyle(tmp0_with, $this.drawStyle_1);
-      tmp0_with.set_blendMode_gchh35_k$($this.blendMode_1);
+      var $this$with = asComposePaint(this_0);
+      $this$with.set_color_m2amxp_k$($this.textForegroundStyle_1.get_color_lnp1vl_k$());
+      applyBrush($this$with, $this.textForegroundStyle_1.get_brush_ipcjyp_k$(), $this.brushSize_1, $this.textForegroundStyle_1.get_alpha_iooth1_k$());
+      applyDrawStyle($this$with, $this.drawStyle_1);
+      $this$with.set_blendMode_1e5m6b_k$($this.blendMode_1);
       // Inline function 'kotlin.takeIf' call
       // Inline function 'kotlin.contracts.contract' call
       var tmp;
       // Inline function 'androidx.compose.ui.text.platform.ComputedStyle.toTextPaint.<anonymous>.<anonymous>.<anonymous>' call
-      if ((!(tmp0_with.get_shader_jgtazy_k$() == null) ? true : !(tmp0_with.get_style_cnsirn_k$() === Companion_getInstance_13().get_Fill_xeknbt_k$())) ? true : !tmp0_let.get_isSrcOver_xdt2zf_k$()) {
-        tmp = tmp0_let;
+      if ((!($this$with.get_shader_jgtazy_k$() == null) ? true : !($this$with.get_style_h1bxuj_k$() === Companion_getInstance_13().get_Fill_7xey15_k$())) ? true : !this_0.get_isSrcOver_xdt2zf_k$()) {
+        tmp = this_0;
       } else {
         tmp = null;
       }
@@ -16878,7 +16736,7 @@
     return tmp$ret$2;
   }
   function ComputedStyle(textForegroundStyle, brushSize, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, blendMode) {
-    background = background === VOID ? Companion_getInstance().get_Unspecified_9ntdt9_k$() : background;
+    background = background === VOID ? Companion_getInstance().get_Unspecified_j397pn_k$() : background;
     this.textForegroundStyle_1 = textForegroundStyle;
     this.brushSize_1 = brushSize;
     this.fontSize_1 = fontSize;
@@ -16897,118 +16755,118 @@
     this.drawStyle_1 = drawStyle;
     this.blendMode_1 = blendMode;
   }
-  protoOf(ComputedStyle).set_textForegroundStyle_fp3poa_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_textForegroundStyle_kdgspt_k$ = function (_set____db54di) {
     this.textForegroundStyle_1 = _set____db54di;
   };
   protoOf(ComputedStyle).get_textForegroundStyle_1frzu0_k$ = function () {
     return this.textForegroundStyle_1;
   };
-  protoOf(ComputedStyle).set_brushSize_xjiodu_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_brushSize_u1ysdq_k$ = function (_set____db54di) {
     this.brushSize_1 = _set____db54di;
   };
-  protoOf(ComputedStyle).get_brushSize_efc3n8_k$ = function () {
+  protoOf(ComputedStyle).get_brushSize_5w3nu2_k$ = function () {
     return this.brushSize_1;
   };
-  protoOf(ComputedStyle).set_fontSize_ucdk6o_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_fontSize_ywm6aj_k$ = function (_set____db54di) {
     this.fontSize_1 = _set____db54di;
   };
   protoOf(ComputedStyle).get_fontSize_pr9n47_k$ = function () {
     return this.fontSize_1;
   };
-  protoOf(ComputedStyle).set_fontWeight_lntfjf_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_fontWeight_pwfx34_k$ = function (_set____db54di) {
     this.fontWeight_1 = _set____db54di;
   };
   protoOf(ComputedStyle).get_fontWeight_wbif2o_k$ = function () {
     return this.fontWeight_1;
   };
-  protoOf(ComputedStyle).set_fontStyle_3v7dr7_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_fontStyle_h15b5y_k$ = function (_set____db54di) {
     this.fontStyle_1 = _set____db54di;
   };
-  protoOf(ComputedStyle).get_fontStyle_fze7ml_k$ = function () {
+  protoOf(ComputedStyle).get_fontStyle_hzv4zg_k$ = function () {
     return this.fontStyle_1;
   };
-  protoOf(ComputedStyle).set_fontSynthesis_g5z66v_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_fontSynthesis_i57yq4_k$ = function (_set____db54di) {
     this.fontSynthesis_1 = _set____db54di;
   };
-  protoOf(ComputedStyle).get_fontSynthesis_t08ei1_k$ = function () {
+  protoOf(ComputedStyle).get_fontSynthesis_h5auiy_k$ = function () {
     return this.fontSynthesis_1;
   };
-  protoOf(ComputedStyle).set_fontFamily_jtv90r_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_fontFamily_maldhw_k$ = function (_set____db54di) {
     this.fontFamily_1 = _set____db54di;
   };
   protoOf(ComputedStyle).get_fontFamily_ulphcs_k$ = function () {
     return this.fontFamily_1;
   };
-  protoOf(ComputedStyle).set_fontFeatureSettings_l7hb6q_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_fontFeatureSettings_kup0sq_k$ = function (_set____db54di) {
     this.fontFeatureSettings_1 = _set____db54di;
   };
   protoOf(ComputedStyle).get_fontFeatureSettings_a47533_k$ = function () {
     return this.fontFeatureSettings_1;
   };
-  protoOf(ComputedStyle).set_letterSpacing_liw6qo_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_letterSpacing_d8gj3f_k$ = function (_set____db54di) {
     this.letterSpacing_1 = _set____db54di;
   };
   protoOf(ComputedStyle).get_letterSpacing_xp4v84_k$ = function () {
     return this.letterSpacing_1;
   };
-  protoOf(ComputedStyle).set_baselineShift_espa4p_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_baselineShift_eg376w_k$ = function (_set____db54di) {
     this.baselineShift_1 = _set____db54di;
   };
-  protoOf(ComputedStyle).get_baselineShift_yg9i0p_k$ = function () {
+  protoOf(ComputedStyle).get_baselineShift_99zyho_k$ = function () {
     return this.baselineShift_1;
   };
-  protoOf(ComputedStyle).set_textGeometricTransform_mbxvkr_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_textGeometricTransform_xpqoye_k$ = function (_set____db54di) {
     this.textGeometricTransform_1 = _set____db54di;
   };
   protoOf(ComputedStyle).get_textGeometricTransform_tdfmin_k$ = function () {
     return this.textGeometricTransform_1;
   };
-  protoOf(ComputedStyle).set_localeList_cmua65_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_localeList_mjnofb_k$ = function (_set____db54di) {
     this.localeList_1 = _set____db54di;
   };
   protoOf(ComputedStyle).get_localeList_1gj9gh_k$ = function () {
     return this.localeList_1;
   };
-  protoOf(ComputedStyle).set_background_kwyuos_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_background_jj6oi0_k$ = function (_set____db54di) {
     this.background_1 = _set____db54di;
   };
-  protoOf(ComputedStyle).get_background_ubksc_k$ = function () {
+  protoOf(ComputedStyle).get_background_8l4942_k$ = function () {
     return this.background_1;
   };
-  protoOf(ComputedStyle).set_textDecoration_q8ys1_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_textDecoration_xbo67o_k$ = function (_set____db54di) {
     this.textDecoration_1 = _set____db54di;
   };
   protoOf(ComputedStyle).get_textDecoration_itgjwm_k$ = function () {
     return this.textDecoration_1;
   };
-  protoOf(ComputedStyle).set_shadow_z65f6i_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_shadow_bl41xa_k$ = function (_set____db54di) {
     this.shadow_1 = _set____db54di;
   };
   protoOf(ComputedStyle).get_shadow_jgtb8p_k$ = function () {
     return this.shadow_1;
   };
-  protoOf(ComputedStyle).set_drawStyle_v6gf4q_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_drawStyle_e0kgyj_k$ = function (_set____db54di) {
     this.drawStyle_1 = _set____db54di;
   };
   protoOf(ComputedStyle).get_drawStyle_arbehw_k$ = function () {
     return this.drawStyle_1;
   };
-  protoOf(ComputedStyle).set_blendMode_gchh35_k$ = function (_set____db54di) {
+  protoOf(ComputedStyle).set_blendMode_1e5m6b_k$ = function (_set____db54di) {
     this.blendMode_1 = _set____db54di;
   };
-  protoOf(ComputedStyle).get_blendMode_m8dzwh_k$ = function () {
+  protoOf(ComputedStyle).get_blendMode_si209t_k$ = function () {
     return this.blendMode_1;
   };
-  protoOf(ComputedStyle).toSkTextStyle_9a1jf_k$ = function (fontFamilyResolver) {
+  protoOf(ComputedStyle).toSkTextStyle_msc8ka_k$ = function (fontFamilyResolver) {
     var res = TextStyle_init_$Create$();
     // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-    var tmp0_get_isSpecified_4wup3r = this.textForegroundStyle_1.get_color_v34vrz_k$();
-    if (!equals(_Color___get_value__impl__1pls5m(tmp0_get_isSpecified_4wup3r), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_9ntdt9_k$()))) {
-      res.set_color_n2ch1y_k$(toArgb(this.textForegroundStyle_1.get_color_v34vrz_k$()));
+    var this_0 = this.textForegroundStyle_1.get_color_lnp1vl_k$();
+    if (!equals(_Color___get_value__impl__1pls5m(this_0), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_j397pn_k$()))) {
+      res.set_color_7ztbpe_k$(toArgb(this.textForegroundStyle_1.get_color_lnp1vl_k$()));
     }
     var foreground = toTextPaint(this);
     if (!(foreground == null)) {
-      res.set_foreground_yky9kj_k$(foreground);
+      res.set_foreground_im42hg_k$(foreground);
     }
     var tmp0_safe_receiver = this.fontStyle_1;
     var tmp = tmp0_safe_receiver;
@@ -17016,8 +16874,10 @@
       null;
     else {
       // Inline function 'kotlin.let' call
+      var tmp_0 = tmp0_safe_receiver;
       // Inline function 'kotlin.contracts.contract' call
-      res.set_fontStyle_v4cfyn_k$(toSkFontStyle(tmp0_safe_receiver));
+      var it = (tmp_0 == null ? null : new FontStyle(tmp_0)).value_1;
+      res.set_fontStyle_vxzafm_k$(toSkFontStyle(it));
     }
     var tmp1_safe_receiver = this.textDecoration_1;
     if (tmp1_safe_receiver == null)
@@ -17025,15 +16885,15 @@
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
-      res.set_decorationStyle_ju3chb_k$(toSkDecorationStyle(tmp1_safe_receiver, this.textForegroundStyle_1.get_color_v34vrz_k$()));
+      res.set_decorationStyle_6iapf7_k$(toSkDecorationStyle(tmp1_safe_receiver, this.textForegroundStyle_1.get_color_lnp1vl_k$()));
     }
-    if (!equals(this.background_1, Companion_getInstance().get_Unspecified_9ntdt9_k$())) {
+    if (!equals(this.background_1, Companion_getInstance().get_Unspecified_j397pn_k$())) {
       // Inline function 'kotlin.also' call
-      var tmp1_also = Paint_init_$Create$();
+      var this_1 = Paint_init_$Create$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.platform.ComputedStyle.toSkTextStyle.<anonymous>' call
-      tmp1_also.set_color_n2ch1y_k$(toArgb(this.background_1));
-      res.set_background_4t8lag_k$(tmp1_also);
+      this_1.set_color_7ztbpe_k$(toArgb(this.background_1));
+      res.set_background_zaucsh_k$(this_1);
     }
     var tmp2_safe_receiver = this.fontWeight_1;
     if (tmp2_safe_receiver == null)
@@ -17041,7 +16901,7 @@
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
-      res.set_fontStyle_v4cfyn_k$(res.get_fontStyle_h4vaiv_k$().withWeight_dafbdv_k$(tmp2_safe_receiver.get_weight_lbhkzl_k$()));
+      res.set_fontStyle_vxzafm_k$(res.get_fontStyle_h4vaiv_k$().withWeight_ue6mre_k$(tmp2_safe_receiver.get_weight_lbhkzl_k$()));
     }
     var tmp3_safe_receiver = this.shadow_1;
     if (tmp3_safe_receiver == null)
@@ -17050,7 +16910,7 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.platform.ComputedStyle.toSkTextStyle.<anonymous>' call
-      res.addShadow_rsdpq6_k$(toSkShadow(tmp3_safe_receiver));
+      res.addShadow_pe2457_k$(toSkShadow(tmp3_safe_receiver));
     }
     var tmp4_safe_receiver = this.letterSpacing_1;
     if (tmp4_safe_receiver == null)
@@ -17058,15 +16918,14 @@
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
-      res.set_letterSpacing_xkr43h_k$(tmp4_safe_receiver);
+      res.set_letterSpacing_k6mf0o_k$(tmp4_safe_receiver);
     }
-    var tmp_0 = Companion_getInstance_14();
-    var tmp$ret$8;
+    var tmp_1 = Companion_getInstance_14();
     // Inline function 'kotlin.text.orEmpty' call
     var tmp0_elvis_lhs = this.fontFeatureSettings_1;
-    tmp$ret$8 = tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
-    res.addFontFeatures_3au7u3_k$(tmp_0.parseW3_w7ggfi_k$(tmp$ret$8));
-    res.set_fontSize_ucdk6o_k$(this.fontSize_1);
+    var tmp$ret$8 = tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
+    res.addFontFeatures_lx2w9d_k$(tmp_1.parseW3_f4iaol_k$(tmp$ret$8));
+    res.set_fontSize_ywm6aj_k$(this.fontSize_1);
     var tmp5_safe_receiver = this.fontFamily_1;
     if (tmp5_safe_receiver == null)
       null;
@@ -17074,47 +16933,48 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       var tmp0_elvis_lhs_0 = this.fontWeight_1;
-      var tmp_1 = tmp0_elvis_lhs_0 == null ? Companion_getInstance_27().get_Normal_22avww_k$() : tmp0_elvis_lhs_0;
+      var tmp_2 = tmp0_elvis_lhs_0 == null ? Companion_getInstance_27().get_Normal_22avww_k$() : tmp0_elvis_lhs_0;
       var tmp1_elvis_lhs = this.fontStyle_1;
-      var tmp_2;
-      var tmp_3 = tmp1_elvis_lhs;
-      if ((tmp_3 == null ? null : new FontStyle(tmp_3)) == null) {
-        tmp_2 = Companion_getInstance_25().get_Normal_b4ik9_k$();
+      var tmp_3;
+      var tmp_4 = tmp1_elvis_lhs;
+      if ((tmp_4 == null ? null : new FontStyle(tmp_4)) == null) {
+        tmp_3 = Companion_getInstance_25().get_Normal_tevh6u_k$();
       } else {
-        tmp_2 = tmp1_elvis_lhs;
+        tmp_3 = tmp1_elvis_lhs;
       }
-      var tmp_4 = tmp_2;
+      var tmp_5 = tmp_3;
       var tmp2_elvis_lhs = this.fontSynthesis_1;
-      var tmp_5;
-      var tmp_6 = tmp2_elvis_lhs;
-      if ((tmp_6 == null ? null : new FontSynthesis(tmp_6)) == null) {
-        tmp_5 = Companion_getInstance_26().get_None_ph8z9v_k$();
+      var tmp_6;
+      var tmp_7 = tmp2_elvis_lhs;
+      if ((tmp_7 == null ? null : new FontSynthesis(tmp_7)) == null) {
+        tmp_6 = Companion_getInstance_26().get_None_4h38ia_k$();
       } else {
-        tmp_5 = tmp2_elvis_lhs;
+        tmp_6 = tmp2_elvis_lhs;
       }
-      var tmp_7 = fontFamilyResolver.resolve_3z78ru_k$(tmp5_safe_receiver, tmp_1, tmp_4, tmp_5).get_value_j01efc_k$();
-      var resolved = tmp_7 instanceof FontLoadResult ? tmp_7 : THROW_CCE();
-      var tmp$ret$9;
+      var tmp_8 = fontFamilyResolver.resolve_q3h1fi_k$(tmp5_safe_receiver, tmp_2, tmp_5, tmp_6).get_value_j01efc_k$();
+      var resolved = tmp_8 instanceof FontLoadResult ? tmp_8 : THROW_CCE();
       // Inline function 'kotlin.collections.toTypedArray' call
-      var tmp0_toTypedArray = resolved.get_aliases_duxpez_k$();
-      tmp$ret$9 = copyToArray(tmp0_toTypedArray);
-      res.set_fontFamilies_tfym8e_k$(tmp$ret$9);
+      var this_2 = resolved.get_aliases_duxpez_k$();
+      var tmp$ret$9 = copyToArray(this_2);
+      res.set_fontFamilies_1qji0k_k$(tmp$ret$9);
     }
     var tmp6_safe_receiver = this.baselineShift_1;
-    var tmp_8 = tmp6_safe_receiver;
-    if ((tmp_8 == null ? null : new BaselineShift(tmp_8)) == null)
+    var tmp_9 = tmp6_safe_receiver;
+    if ((tmp_9 == null ? null : new BaselineShift(tmp_9)) == null)
       null;
     else {
       // Inline function 'kotlin.let' call
+      var tmp_10 = tmp6_safe_receiver;
       // Inline function 'kotlin.contracts.contract' call
+      var it_0 = (tmp_10 == null ? null : new BaselineShift(tmp_10)).multiplier_1;
       var fontMetrics = res.get_fontMetrics_c0s645_k$();
-      res.set_baselineShift_ci5bwd_k$(_BaselineShift___get_multiplier__impl__qhmjek(tmp6_safe_receiver) * fontMetrics.get_ascent_b435cz_k$());
+      res.set_baselineShift_pi9thk_k$(_BaselineShift___get_multiplier__impl__qhmjek(it_0) * fontMetrics.get_ascent_b435cz_k$());
     }
     return res;
   };
-  protoOf(ComputedStyle).merge_y90v2p_k$ = function (density, other) {
-    var fontSize = fontSizeInHierarchy(density, this.fontSize_1, other.get_fontSize_61k213_k$());
-    this.textForegroundStyle_1 = this.textForegroundStyle_1.merge_o4w5dp_k$(other.get_textForegroundStyle_1frzu0_k$());
+  protoOf(ComputedStyle).merge_2xkpvi_k$ = function (density, other) {
+    var fontSize = fontSizeInHierarchy(density, this.fontSize_1, other.get_fontSize_ergf2z_k$());
+    this.textForegroundStyle_1 = this.textForegroundStyle_1.merge_b7txoj_k$(other.get_textForegroundStyle_1frzu0_k$());
     var tmp0_safe_receiver = other.get_fontFamily_ulphcs_k$();
     if (tmp0_safe_receiver == null)
       null;
@@ -17132,23 +16992,25 @@
       // Inline function 'kotlin.contracts.contract' call
       this.fontWeight_1 = tmp1_safe_receiver;
     }
-    var tmp2_safe_receiver = other.get_fontStyle_fze7ml_k$();
+    var tmp2_safe_receiver = other.get_fontStyle_hzv4zg_k$();
     var tmp = tmp2_safe_receiver;
     if ((tmp == null ? null : new FontStyle(tmp)) == null)
       null;
     else {
       // Inline function 'kotlin.let' call
+      var tmp_0 = tmp2_safe_receiver;
       // Inline function 'kotlin.contracts.contract' call
-      this.fontStyle_1 = tmp2_safe_receiver;
+      this.fontStyle_1 = (tmp_0 == null ? null : new FontStyle(tmp_0)).value_1;
     }
-    var tmp3_safe_receiver = other.get_fontSynthesis_t08ei1_k$();
-    var tmp_0 = tmp3_safe_receiver;
-    if ((tmp_0 == null ? null : new FontSynthesis(tmp_0)) == null)
+    var tmp3_safe_receiver = other.get_fontSynthesis_h5auiy_k$();
+    var tmp_1 = tmp3_safe_receiver;
+    if ((tmp_1 == null ? null : new FontSynthesis(tmp_1)) == null)
       null;
     else {
       // Inline function 'kotlin.let' call
+      var tmp_2 = tmp3_safe_receiver;
       // Inline function 'kotlin.contracts.contract' call
-      this.fontSynthesis_1 = tmp3_safe_receiver;
+      this.fontSynthesis_1 = (tmp_2 == null ? null : new FontSynthesis(tmp_2)).value_1;
     }
     var tmp4_safe_receiver = other.get_fontFeatureSettings_a47533_k$();
     if (tmp4_safe_receiver == null)
@@ -17158,33 +17020,34 @@
       // Inline function 'kotlin.contracts.contract' call
       this.fontFeatureSettings_1 = tmp4_safe_receiver;
     }
-    if (!get_isUnspecified(other.get_letterSpacing_u0tnf8_k$())) {
-      var tmp_1 = this;
+    if (!get_isUnspecified(other.get_letterSpacing_k79xfu_k$())) {
+      var tmp_3 = this;
       // Inline function 'kotlin.with' call
-      var tmp0_with = other.get_letterSpacing_u0tnf8_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.platform.ComputedStyle.merge.<anonymous>' call
-      var tmp_2;
-      if (_TextUnit___get_isEm__impl__esrmtl(tmp0_with)) {
-        tmp_2 = fontSize * _TextUnit___get_value__impl__hpbx0k(tmp0_with);
-      } else if (_TextUnit___get_isSp__impl__8c3r6q(tmp0_with)) {
+      var $this$with = other.get_letterSpacing_k79xfu_k$();
+      var tmp_4;
+      if (_TextUnit___get_isEm__impl__esrmtl($this$with)) {
+        tmp_4 = fontSize * _TextUnit___get_value__impl__hpbx0k($this$with);
+      } else if (_TextUnit___get_isSp__impl__8c3r6q($this$with)) {
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.platform.ComputedStyle.merge.<anonymous>.<anonymous>' call
-        tmp_2 = density.toPx_x7oik4_k$(tmp0_with);
+        tmp_4 = density.toPx_plt68j_k$($this$with);
       } else {
         throw UnsupportedOperationException_init_$Create$_0();
       }
-      tmp_1.letterSpacing_1 = tmp_2;
+      tmp_3.letterSpacing_1 = tmp_4;
     }
-    var tmp5_safe_receiver = other.get_baselineShift_yg9i0p_k$();
-    var tmp_3 = tmp5_safe_receiver;
-    if ((tmp_3 == null ? null : new BaselineShift(tmp_3)) == null)
+    var tmp5_safe_receiver = other.get_baselineShift_99zyho_k$();
+    var tmp_5 = tmp5_safe_receiver;
+    if ((tmp_5 == null ? null : new BaselineShift(tmp_5)) == null)
       null;
     else {
       // Inline function 'kotlin.let' call
+      var tmp_6 = tmp5_safe_receiver;
       // Inline function 'kotlin.contracts.contract' call
-      this.baselineShift_1 = tmp5_safe_receiver;
+      this.baselineShift_1 = (tmp_6 == null ? null : new BaselineShift(tmp_6)).multiplier_1;
     }
     var tmp6_safe_receiver = other.get_textGeometricTransform_tdfmin_k$();
     if (tmp6_safe_receiver == null)
@@ -17203,9 +17066,9 @@
       this.localeList_1 = tmp7_safe_receiver;
     }
     // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-    var tmp1_get_isSpecified_hgvfca = other.get_background_ubksc_k$();
-    if (!equals(_Color___get_value__impl__1pls5m(tmp1_get_isSpecified_hgvfca), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_9ntdt9_k$()))) {
-      this.background_1 = other.get_background_ubksc_k$();
+    var this_0 = other.get_background_8l4942_k$();
+    if (!equals(_Color___get_value__impl__1pls5m(this_0), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_j397pn_k$()))) {
+      this.background_1 = other.get_background_8l4942_k$();
     }
     var tmp8_safe_receiver = other.get_textDecoration_itgjwm_k$();
     if (tmp8_safe_receiver == null)
@@ -17235,7 +17098,7 @@
   protoOf(ComputedStyle).component1_7eebsc_k$ = function () {
     return this.textForegroundStyle_1;
   };
-  protoOf(ComputedStyle).component2_qeport_k$ = function () {
+  protoOf(ComputedStyle).component2_oaylq1_k$ = function () {
     return this.brushSize_1;
   };
   protoOf(ComputedStyle).component3_7eebsa_k$ = function () {
@@ -17244,10 +17107,10 @@
   protoOf(ComputedStyle).component4_7eebs9_k$ = function () {
     return this.fontWeight_1;
   };
-  protoOf(ComputedStyle).component5_u3lkki_k$ = function () {
+  protoOf(ComputedStyle).component5_s34n7n_k$ = function () {
     return this.fontStyle_1;
   };
-  protoOf(ComputedStyle).component6_ca6sw6_k$ = function () {
+  protoOf(ComputedStyle).component6_f98x3_k$ = function () {
     return this.fontSynthesis_1;
   };
   protoOf(ComputedStyle).component7_7eebs6_k$ = function () {
@@ -17259,7 +17122,7 @@
   protoOf(ComputedStyle).component9_7eebs4_k$ = function () {
     return this.letterSpacing_1;
   };
-  protoOf(ComputedStyle).component10_y4gzsx_k$ = function () {
+  protoOf(ComputedStyle).component10_8y7g9w_k$ = function () {
     return this.baselineShift_1;
   };
   protoOf(ComputedStyle).component11_gazzfn_k$ = function () {
@@ -17268,7 +17131,7 @@
   protoOf(ComputedStyle).component12_gazzfm_k$ = function () {
     return this.localeList_1;
   };
-  protoOf(ComputedStyle).component13_1d0kik_k$ = function () {
+  protoOf(ComputedStyle).component13_asgeey_k$ = function () {
     return this.background_1;
   };
   protoOf(ComputedStyle).component14_gazzfk_k$ = function () {
@@ -17280,13 +17143,13 @@
   protoOf(ComputedStyle).component16_gazzfi_k$ = function () {
     return this.drawStyle_1;
   };
-  protoOf(ComputedStyle).component17_h0h1xl_k$ = function () {
+  protoOf(ComputedStyle).component17_xpyy8p_k$ = function () {
     return this.blendMode_1;
   };
-  protoOf(ComputedStyle).copy_7xktnn_k$ = function (textForegroundStyle, brushSize, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, blendMode) {
+  protoOf(ComputedStyle).copy_x4jhhp_k$ = function (textForegroundStyle, brushSize, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, blendMode) {
     return new ComputedStyle(textForegroundStyle, brushSize, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, blendMode);
   };
-  protoOf(ComputedStyle).copy$default_6g5kfw_k$ = function (textForegroundStyle, brushSize, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, blendMode, $super) {
+  protoOf(ComputedStyle).copy$default_uazbm4_k$ = function (textForegroundStyle, brushSize, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, blendMode, $super) {
     textForegroundStyle = textForegroundStyle === VOID ? this.textForegroundStyle_1 : textForegroundStyle;
     brushSize = brushSize === VOID ? this.brushSize_1 : brushSize;
     fontSize = fontSize === VOID ? this.fontSize_1 : fontSize;
@@ -17306,22 +17169,21 @@
     blendMode = blendMode === VOID ? this.blendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      tmp = this.copy_7xktnn_k$(textForegroundStyle, brushSize, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, blendMode);
+      tmp = this.copy_x4jhhp_k$(textForegroundStyle, brushSize, fontSize, fontWeight, fontStyle, fontSynthesis, fontFamily, fontFeatureSettings, letterSpacing, baselineShift, textGeometricTransform, localeList, background, textDecoration, shadow, drawStyle, blendMode);
     } else {
-      var tmp_0 = $super.copy_7xktnn_k$;
-      var tmp_1 = new Size_0(brushSize);
-      var tmp_2 = fontStyle;
-      var tmp_3 = tmp_2 == null ? null : new FontStyle(tmp_2);
-      var tmp_4 = fontSynthesis;
-      var tmp_5 = tmp_4 == null ? null : new FontSynthesis(tmp_4);
-      var tmp_6 = baselineShift;
-      tmp = tmp_0.call(this, textForegroundStyle, tmp_1, fontSize, fontWeight, tmp_3, tmp_5, fontFamily, fontFeatureSettings, letterSpacing, tmp_6 == null ? null : new BaselineShift(tmp_6), textGeometricTransform, localeList, new Color(background), textDecoration, shadow, drawStyle, new BlendMode(blendMode));
+      var tmp_0 = $super.copy_x4jhhp_k$;
+      var tmp_1 = fontStyle;
+      var tmp_2 = tmp_1 == null ? null : new FontStyle(tmp_1);
+      var tmp_3 = fontSynthesis;
+      var tmp_4 = tmp_3 == null ? null : new FontSynthesis(tmp_3);
+      var tmp_5 = baselineShift;
+      tmp = tmp_0.call(this, textForegroundStyle, new Size_0(brushSize), fontSize, fontWeight, tmp_2, tmp_4, fontFamily, fontFeatureSettings, letterSpacing, tmp_5 == null ? null : new BaselineShift(tmp_5), textGeometricTransform, localeList, new Color(background), textDecoration, shadow, drawStyle, new BlendMode(blendMode));
     }
     return tmp;
   };
   protoOf(ComputedStyle).toString = function () {
     var tmp = this.textForegroundStyle_1;
-    var tmp_0 = new Size_0(this.brushSize_1);
+    var tmp_0 = this.brushSize_1;
     var tmp_1 = this.fontSize_1;
     var tmp_2 = this.fontWeight_1;
     var tmp_3 = this.fontStyle_1;
@@ -17332,7 +17194,7 @@
     var tmp_8 = this.fontFeatureSettings_1;
     var tmp_9 = this.letterSpacing_1;
     var tmp_10 = this.baselineShift_1;
-    return 'ComputedStyle(textForegroundStyle=' + tmp + ', brushSize=' + tmp_0 + ', fontSize=' + tmp_1 + ', fontWeight=' + tmp_2 + ', fontStyle=' + tmp_4 + ', fontSynthesis=' + tmp_6 + ', fontFamily=' + tmp_7 + ', fontFeatureSettings=' + tmp_8 + ', letterSpacing=' + tmp_9 + ', baselineShift=' + (tmp_10 == null ? null : new BaselineShift(tmp_10)) + ', textGeometricTransform=' + this.textGeometricTransform_1 + ', localeList=' + this.localeList_1 + ', background=' + new Color(this.background_1) + ', textDecoration=' + this.textDecoration_1 + ', shadow=' + this.shadow_1 + ', drawStyle=' + this.drawStyle_1 + ', blendMode=' + new BlendMode(this.blendMode_1) + ')';
+    return 'ComputedStyle(textForegroundStyle=' + tmp + ', brushSize=' + new Size_0(tmp_0) + ', fontSize=' + tmp_1 + ', fontWeight=' + tmp_2 + ', fontStyle=' + tmp_4 + ', fontSynthesis=' + tmp_6 + ', fontFamily=' + tmp_7 + ', fontFeatureSettings=' + tmp_8 + ', letterSpacing=' + tmp_9 + ', baselineShift=' + (tmp_10 == null ? null : new BaselineShift(tmp_10)) + ', textGeometricTransform=' + this.textGeometricTransform_1 + ', localeList=' + this.localeList_1 + ', background=' + new Color(this.background_1) + ', textDecoration=' + this.textDecoration_1 + ', shadow=' + this.shadow_1 + ', drawStyle=' + this.drawStyle_1 + ', blendMode=' + new BlendMode(this.blendMode_1) + ')';
   };
   protoOf(ComputedStyle).hashCode = function () {
     var result = hashCode(this.textForegroundStyle_1);
@@ -17431,13 +17293,13 @@
   };
   function toSkFontStyle(_this__u8e3s4) {
     _init_properties_SkiaParagraph_skiko_kt__cbqn0t();
-    return _this__u8e3s4 === Companion_getInstance_25().get_Italic_o1ev2a_k$() ? Companion_getInstance_15().get_ITALIC_qnnif_k$() : Companion_getInstance_15().get_NORMAL_1k4cts_k$();
+    return _this__u8e3s4 === Companion_getInstance_25().get_Italic_5ol4ot_k$() ? Companion_getInstance_15().get_ITALIC_qnnif_k$() : Companion_getInstance_15().get_NORMAL_1k4cts_k$();
   }
   function toSkDecorationStyle(_this__u8e3s4, color) {
     _init_properties_SkiaParagraph_skiko_kt__cbqn0t();
-    var underline = _this__u8e3s4.contains_8528ny_k$(Companion_getInstance_45().get_Underline_oo7egz_k$());
+    var underline = _this__u8e3s4.contains_8so89q_k$(Companion_getInstance_45().get_Underline_oo7egz_k$());
     var overline = false;
-    var lineThrough = _this__u8e3s4.contains_8528ny_k$(Companion_getInstance_45().get_LineThrough_pr9ajs_k$());
+    var lineThrough = _this__u8e3s4.contains_8so89q_k$(Companion_getInstance_45().get_LineThrough_pr9ajs_k$());
     var gaps = false;
     var lineStyle = DecorationLineStyle_SOLID_getInstance();
     var thicknessMultiplier = 1.0;
@@ -17445,7 +17307,7 @@
   }
   function toSkShadow(_this__u8e3s4) {
     _init_properties_SkiaParagraph_skiko_kt__cbqn0t();
-    return new Shadow_0(toArgb(_this__u8e3s4.get_color_v34vrz_k$()), _Offset___get_x__impl__xvi35n(_this__u8e3s4.get_offset_y9g6r4_k$()), _Offset___get_y__impl__8bzhra(_this__u8e3s4.get_offset_y9g6r4_k$()), _this__u8e3s4.get_blurRadius_r8jo0y_k$());
+    return new Shadow_0(toArgb(_this__u8e3s4.get_color_lnp1vl_k$()), _Offset___get_x__impl__xvi35n(_this__u8e3s4.get_offset_slhc8e_k$()), _Offset___get_y__impl__8bzhra(_this__u8e3s4.get_offset_slhc8e_k$()), _this__u8e3s4.get_blurRadius_r8jo0y_k$());
   }
   function fontSizeInHierarchy(density, base, other) {
     _init_properties_SkiaParagraph_skiko_kt__cbqn0t();
@@ -17458,9 +17320,10 @@
       // Inline function 'kotlin.with' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.platform.fontSizeInHierarchy.<anonymous>' call
-      tmp = density.toPx_x7oik4_k$(other);
+      tmp = density.toPx_plt68j_k$(other);
     } else {
-      throw IllegalStateException_init_$Create$('Unexpected size in fontSizeInHierarchy');
+      var message = 'Unexpected size in fontSizeInHierarchy';
+      throw IllegalStateException_init_$Create$(toString(message));
     }
     return tmp;
   }
@@ -17512,13 +17375,13 @@
   protoOf(StyleAdd).component2_7eebsb_k$ = function () {
     return this.style_1;
   };
-  protoOf(StyleAdd).copy_xm3ya_k$ = function (position, style) {
+  protoOf(StyleAdd).copy_laiai5_k$ = function (position, style) {
     return new StyleAdd(position, style);
   };
-  protoOf(StyleAdd).copy$default_emai2u_k$ = function (position, style, $super) {
+  protoOf(StyleAdd).copy$default_s6vvkq_k$ = function (position, style, $super) {
     position = position === VOID ? this.position_1 : position;
     style = style === VOID ? this.style_1 : style;
-    return $super === VOID ? this.copy_xm3ya_k$(position, style) : $super.copy_xm3ya_k$.call(this, position, style);
+    return $super === VOID ? this.copy_laiai5_k$(position, style) : $super.copy_laiai5_k$.call(this, position, style);
   };
   protoOf(StyleAdd).toString = function () {
     return 'StyleAdd(position=' + this.position_1 + ', style=' + this.style_1 + ')';
@@ -17551,13 +17414,13 @@
   protoOf(PutPlaceholder).get_cut_18j7s7_k$ = function () {
     return this.cut_1;
   };
-  protoOf(PutPlaceholder).set_width_7urlas_k$ = function (_set____db54di) {
+  protoOf(PutPlaceholder).set_width_h6zvj3_k$ = function (_set____db54di) {
     this.width_1 = _set____db54di;
   };
   protoOf(PutPlaceholder).get_width_j0q4yl_k$ = function () {
     return this.width_1;
   };
-  protoOf(PutPlaceholder).set_height_nuysnb_k$ = function (_set____db54di) {
+  protoOf(PutPlaceholder).set_height_w1sw3g_k$ = function (_set____db54di) {
     this.height_1 = _set____db54di;
   };
   protoOf(PutPlaceholder).get_height_e7t92o_k$ = function () {
@@ -17565,8 +17428,9 @@
   };
   protoOf(PutPlaceholder).get_position_jfponi_k$ = function () {
     // Inline function 'kotlin.getValue' call
+    var this_0 = this.position$delegate_1;
     position$factory_0();
-    return this.position$delegate_1.get();
+    return this_0.get();
   };
   protoOf(PutPlaceholder).component1_7eebsc_k$ = function () {
     return this.cut_1;
@@ -17577,14 +17441,14 @@
   protoOf(PutPlaceholder).component3_7eebsa_k$ = function () {
     return this.height_1;
   };
-  protoOf(PutPlaceholder).copy_rklg67_k$ = function (cut, width, height) {
+  protoOf(PutPlaceholder).copy_py3n8e_k$ = function (cut, width, height) {
     return new PutPlaceholder(cut, width, height);
   };
-  protoOf(PutPlaceholder).copy$default_co8ta2_k$ = function (cut, width, height, $super) {
+  protoOf(PutPlaceholder).copy$default_xwjqdu_k$ = function (cut, width, height, $super) {
     cut = cut === VOID ? this.cut_1 : cut;
     width = width === VOID ? this.width_1 : width;
     height = height === VOID ? this.height_1 : height;
-    return $super === VOID ? this.copy_rklg67_k$(cut, width, height) : $super.copy_rklg67_k$.call(this, cut, width, height);
+    return $super === VOID ? this.copy_py3n8e_k$(cut, width, height) : $super.copy_py3n8e_k$.call(this, cut, width, height);
   };
   protoOf(PutPlaceholder).toString = function () {
     return 'PutPlaceholder(cut=' + this.cut_1 + ', width=' + this.width_1 + ', height=' + this.height_1 + ')';
@@ -17620,18 +17484,19 @@
   };
   protoOf(EndPlaceholder).get_position_jfponi_k$ = function () {
     // Inline function 'kotlin.getValue' call
+    var this_0 = this.position$delegate_1;
     position$factory_2();
-    return this.position$delegate_1.get();
+    return this_0.get();
   };
   protoOf(EndPlaceholder).component1_7eebsc_k$ = function () {
     return this.cut_1;
   };
-  protoOf(EndPlaceholder).copy_juie51_k$ = function (cut) {
+  protoOf(EndPlaceholder).copy_kb6psi_k$ = function (cut) {
     return new EndPlaceholder(cut);
   };
-  protoOf(EndPlaceholder).copy$default_o7hp8c_k$ = function (cut, $super) {
+  protoOf(EndPlaceholder).copy$default_45vb9g_k$ = function (cut, $super) {
     cut = cut === VOID ? this.cut_1 : cut;
-    return $super === VOID ? this.copy_juie51_k$(cut) : $super.copy_juie51_k$.call(this, cut);
+    return $super === VOID ? this.copy_kb6psi_k$(cut) : $super.copy_kb6psi_k$.call(this, cut);
   };
   protoOf(EndPlaceholder).toString = function () {
     return 'EndPlaceholder(cut=' + this.cut_1 + ')';
@@ -17679,13 +17544,13 @@
   protoOf(StyleAdd_0).component2_7eebsb_k$ = function () {
     return this.style_1;
   };
-  protoOf(StyleAdd_0).copy_ql720e_k$ = function (position, style) {
+  protoOf(StyleAdd_0).copy_vvecmi_k$ = function (position, style) {
     return new StyleAdd_0(position, style);
   };
-  protoOf(StyleAdd_0).copy$default_tmp66q_k$ = function (position, style, $super) {
+  protoOf(StyleAdd_0).copy$default_6k9ayl_k$ = function (position, style, $super) {
     position = position === VOID ? this.position_1 : position;
     style = style === VOID ? this.style_1 : style;
-    return $super === VOID ? this.copy_ql720e_k$(position, style) : $super.copy_ql720e_k$.call(this, position, style);
+    return $super === VOID ? this.copy_vvecmi_k$(position, style) : $super.copy_vvecmi_k$.call(this, position, style);
   };
   protoOf(StyleAdd_0).toString = function () {
     return 'StyleAdd(position=' + this.position_1 + ', style=' + this.style_1 + ')';
@@ -17725,13 +17590,13 @@
   protoOf(StyleRemove).component2_7eebsb_k$ = function () {
     return this.style_1;
   };
-  protoOf(StyleRemove).copy_ql720e_k$ = function (position, style) {
+  protoOf(StyleRemove).copy_vvecmi_k$ = function (position, style) {
     return new StyleRemove(position, style);
   };
-  protoOf(StyleRemove).copy$default_ewmr9n_k$ = function (position, style, $super) {
+  protoOf(StyleRemove).copy$default_ygqbhq_k$ = function (position, style, $super) {
     position = position === VOID ? this.position_1 : position;
     style = style === VOID ? this.style_1 : style;
-    return $super === VOID ? this.copy_ql720e_k$(position, style) : $super.copy_ql720e_k$.call(this, position, style);
+    return $super === VOID ? this.copy_vvecmi_k$(position, style) : $super.copy_vvecmi_k$.call(this, position, style);
   };
   protoOf(StyleRemove).toString = function () {
     return 'StyleRemove(position=' + this.position_1 + ', style=' + this.style_1 + ')';
@@ -17771,13 +17636,13 @@
   protoOf(PutPlaceholder_0).component2_7eebsb_k$ = function () {
     return this.placeholder_1;
   };
-  protoOf(PutPlaceholder_0).copy_893v0i_k$ = function (position, placeholder) {
+  protoOf(PutPlaceholder_0).copy_lkujcy_k$ = function (position, placeholder) {
     return new PutPlaceholder_0(position, placeholder);
   };
-  protoOf(PutPlaceholder_0).copy$default_as3sfm_k$ = function (position, placeholder, $super) {
+  protoOf(PutPlaceholder_0).copy$default_foy0tf_k$ = function (position, placeholder, $super) {
     position = position === VOID ? this.position_1 : position;
     placeholder = placeholder === VOID ? this.placeholder_1 : placeholder;
-    return $super === VOID ? this.copy_893v0i_k$(position, placeholder) : $super.copy_893v0i_k$.call(this, position, placeholder);
+    return $super === VOID ? this.copy_lkujcy_k$(position, placeholder) : $super.copy_lkujcy_k$.call(this, position, placeholder);
   };
   protoOf(PutPlaceholder_0).toString = function () {
     return 'PutPlaceholder(position=' + this.position_1 + ', placeholder=' + this.placeholder_1 + ')';
@@ -17810,12 +17675,12 @@
   protoOf(EndPlaceholder_0).component1_7eebsc_k$ = function () {
     return this.position_1;
   };
-  protoOf(EndPlaceholder_0).copy_u8zkvg_k$ = function (position) {
+  protoOf(EndPlaceholder_0).copy_ns6qmb_k$ = function (position) {
     return new EndPlaceholder_0(position);
   };
-  protoOf(EndPlaceholder_0).copy$default_kyb18b_k$ = function (position, $super) {
+  protoOf(EndPlaceholder_0).copy$default_aj7p6t_k$ = function (position, $super) {
     position = position === VOID ? this.position_1 : position;
-    return $super === VOID ? this.copy_u8zkvg_k$(position) : $super.copy_u8zkvg_k$.call(this, position);
+    return $super === VOID ? this.copy_ns6qmb_k$(position) : $super.copy_ns6qmb_k$.call(this, position);
   };
   protoOf(EndPlaceholder_0).toString = function () {
     return 'EndPlaceholder(position=' + this.position_1 + ')';
@@ -17879,22 +17744,21 @@
     var tmp0_iterator = spans.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var span = tmp0_iterator.next_20eer_k$();
-      cuts.add_1j60pz_k$(new StyleAdd_0(span.get_start_iypx6h_k$(), span.get_item_woo5lo_k$()));
-      cuts.add_1j60pz_k$(new StyleRemove(span.get_end_18j6ha_k$(), span.get_item_woo5lo_k$()));
+      cuts.add_utx5q5_k$(new StyleAdd_0(span.get_start_iypx6h_k$(), span.get_item_woo5lo_k$()));
+      cuts.add_utx5q5_k$(new StyleRemove(span.get_end_18j6ha_k$(), span.get_item_woo5lo_k$()));
     }
     var tmp1_iterator = placeholders.iterator_jk1svi_k$();
     while (tmp1_iterator.hasNext_bitz1p_k$()) {
       var placeholder = tmp1_iterator.next_20eer_k$();
-      cuts.add_1j60pz_k$(new PutPlaceholder_0(placeholder.get_start_iypx6h_k$(), placeholder.get_item_woo5lo_k$()));
-      cuts.add_1j60pz_k$(new EndPlaceholder_0(placeholder.get_end_18j6ha_k$()));
+      cuts.add_utx5q5_k$(new PutPlaceholder_0(placeholder.get_start_iypx6h_k$(), placeholder.get_item_woo5lo_k$()));
+      cuts.add_utx5q5_k$(new EndPlaceholder_0(placeholder.get_end_18j6ha_k$()));
     }
     var ops = mutableListOf([new StyleAdd(0, _get_defaultStyle__bt02u3($this))]);
     // Inline function 'kotlin.collections.sortBy' call
     if (cuts.get_size_woubt6_k$() > 1) {
-      var tmp$ret$1;
       // Inline function 'kotlin.comparisons.compareBy' call
       var tmp = ParagraphBuilder$makeOps$lambda;
-      tmp$ret$1 = new sam$kotlin_Comparator$0_0(tmp);
+      var tmp$ret$1 = new sam$kotlin_Comparator$0_0(tmp);
       sortWith(cuts, tmp$ret$1);
     }
     var activeStyles = mutableListOf([_get_initialStyle__6to25e($this)]);
@@ -17902,31 +17766,31 @@
     while (tmp2_iterator.hasNext_bitz1p_k$()) {
       var cut = tmp2_iterator.next_20eer_k$();
       if (cut instanceof StyleAdd_0) {
-        activeStyles.add_1j60pz_k$(cut.style_1);
+        activeStyles.add_utx5q5_k$(cut.style_1);
         var prev = previousStyleAddAtTheSamePosition($this, cut.get_position_jfponi_k$(), ops);
         if (prev == null) {
           var tmp_0 = cut.get_position_jfponi_k$();
           // Inline function 'kotlin.also' call
-          var tmp0_also = mergeStyles($this, activeStyles);
+          var this_0 = mergeStyles($this, activeStyles);
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.ui.text.platform.ParagraphBuilder.makeOps.<anonymous>' call
-          tmp0_also.merge_y90v2p_k$($this.density_1, cut.style_1);
-          ops.add_1j60pz_k$(new StyleAdd(tmp_0, tmp0_also));
+          this_0.merge_2xkpvi_k$($this.density_1, cut.style_1);
+          ops.add_utx5q5_k$(new StyleAdd(tmp_0, this_0));
         } else {
-          prev.style_1.merge_y90v2p_k$($this.density_1, cut.style_1);
+          prev.style_1.merge_2xkpvi_k$($this.density_1, cut.style_1);
         }
       } else {
         if (cut instanceof StyleRemove) {
-          activeStyles.remove_8hbkc6_k$(cut.style_1);
-          ops.add_1j60pz_k$(new StyleAdd(cut.get_position_jfponi_k$(), mergeStyles($this, activeStyles)));
+          activeStyles.remove_cedx0m_k$(cut.style_1);
+          ops.add_utx5q5_k$(new StyleAdd(cut.get_position_jfponi_k$(), mergeStyles($this, activeStyles)));
         } else {
           if (cut instanceof PutPlaceholder_0) {
             var currentStyle = mergeStyles($this, activeStyles);
-            var op = new PutPlaceholder(cut, fontSizeInHierarchy($this.density_1, currentStyle.fontSize_1, cut.placeholder_1.get_width_832krh_k$()), fontSizeInHierarchy($this.density_1, currentStyle.fontSize_1, cut.placeholder_1.get_height_owlek0_k$()));
-            ops.add_1j60pz_k$(op);
+            var op = new PutPlaceholder(cut, fontSizeInHierarchy($this.density_1, currentStyle.fontSize_1, cut.placeholder_1.get_width_sw31vj_k$()), fontSizeInHierarchy($this.density_1, currentStyle.fontSize_1, cut.placeholder_1.get_height_pbi6b2_k$()));
+            ops.add_utx5q5_k$(op);
           } else {
             if (cut instanceof EndPlaceholder_0) {
-              ops.add_1j60pz_k$(new EndPlaceholder(cut));
+              ops.add_utx5q5_k$(new EndPlaceholder(cut));
             }
           }
         }
@@ -17935,14 +17799,14 @@
     return ops;
   }
   function mergeStyles($this, activeStyles) {
-    var style = ComputedStyle_init_$Create$($this.density_1, activeStyles.get_fkrdnv_k$(0), $this.brushSize_1, $this.blendMode_1);
+    var style = ComputedStyle_init_$Create$($this.density_1, activeStyles.get_c1px32_k$(0), $this.brushSize_1, $this.blendMode_1);
     var inductionVariable = 1;
     var last = activeStyles.get_size_woubt6_k$();
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        style.merge_y90v2p_k$($this.density_1, activeStyles.get_fkrdnv_k$(i));
+        style.merge_2xkpvi_k$($this.density_1, activeStyles.get_c1px32_k$(i));
       }
        while (inductionVariable < last);
     return style;
@@ -17960,47 +17824,50 @@
   }
   function textStyleToParagraphStyle($this, style, computedStyle) {
     var pStyle = new ParagraphStyle();
-    pStyle.set_textStyle_dpq9o1_k$(makeSkTextStyle($this, computedStyle));
-    var tmp0_safe_receiver = style.get_textAlign_ihj0br_k$();
+    pStyle.set_textStyle_unmu3t_k$(makeSkTextStyle($this, computedStyle));
+    var tmp0_safe_receiver = style.get_textAlign_c2c4cc_k$();
     var tmp = tmp0_safe_receiver;
     if ((tmp == null ? null : new TextAlign(tmp)) == null)
       null;
     else {
       // Inline function 'kotlin.let' call
+      var tmp_0 = tmp0_safe_receiver;
       // Inline function 'kotlin.contracts.contract' call
-      pStyle.set_alignment_vl4ggh_k$(toSkAlignment(tmp0_safe_receiver));
+      var it = (tmp_0 == null ? null : new TextAlign(tmp_0)).value_1;
+      pStyle.set_alignment_z9alxm_k$(toSkAlignment(it));
     }
     // Inline function 'androidx.compose.ui.unit.isSpecified' call
-    var tmp0_get_isSpecified_4wup3r = style.get_lineHeight_oovvjw_k$();
-    if (!get_isUnspecified(tmp0_get_isSpecified_4wup3r)) {
+    var this_0 = style.get_lineHeight_3vvefu_k$();
+    if (!get_isUnspecified(this_0)) {
       var strutStyle = StrutStyle_init_$Create$();
-      strutStyle.set_isEnabled_65t46p_k$(true);
-      strutStyle.set_isHeightOverridden_tb0fyx_k$(true);
+      strutStyle.set_isEnabled_abraij_k$(true);
+      strutStyle.set_isHeightOverridden_52ioib_k$(true);
       // Inline function 'kotlin.with' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.platform.ParagraphBuilder.textStyleToParagraphStyle.<anonymous>' call
-      var fontSize = $this.density_1.toPx_x7oik4_k$(orDefaultFontSize(style.get_fontSize_61k213_k$()));
+      var fontSize = $this.density_1.toPx_plt68j_k$(orDefaultFontSize(style.get_fontSize_ergf2z_k$()));
       // Inline function 'kotlin.with' call
-      var tmp2_with = style.get_lineHeight_oovvjw_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.text.platform.ParagraphBuilder.textStyleToParagraphStyle.<anonymous>' call
-      var tmp_0;
-      if (_TextUnit___get_isSp__impl__8c3r6q(tmp2_with)) {
+      var $this$with = style.get_lineHeight_3vvefu_k$();
+      var tmp_1;
+      if (_TextUnit___get_isSp__impl__8c3r6q($this$with)) {
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.text.platform.ParagraphBuilder.textStyleToParagraphStyle.<anonymous>.<anonymous>' call
-        tmp_0 = $this.density_1.toPx_x7oik4_k$(tmp2_with);
-      } else if (_TextUnit___get_isEm__impl__esrmtl(tmp2_with)) {
-        tmp_0 = fontSize * _TextUnit___get_value__impl__hpbx0k(tmp2_with);
+        tmp_1 = $this.density_1.toPx_plt68j_k$($this$with);
+      } else if (_TextUnit___get_isEm__impl__esrmtl($this$with)) {
+        tmp_1 = fontSize * _TextUnit___get_value__impl__hpbx0k($this$with);
       } else {
-        throw IllegalStateException_init_$Create$('Unexpected size in textStyleToParagraphStyle');
+        var message = 'Unexpected size in textStyleToParagraphStyle';
+        throw IllegalStateException_init_$Create$(toString(message));
       }
-      var lineHeight = tmp_0;
-      strutStyle.set_height_nuysnb_k$(lineHeight / fontSize);
-      strutStyle.set_fontSize_ucdk6o_k$(fontSize);
-      pStyle.set_strutStyle_yeqgid_k$(strutStyle);
+      var lineHeight = tmp_1;
+      strutStyle.set_height_w1sw3g_k$(lineHeight / fontSize);
+      strutStyle.set_fontSize_ywm6aj_k$(fontSize);
+      pStyle.set_strutStyle_4sjo5p_k$(strutStyle);
     }
-    pStyle.set_direction_yz5smn_k$(toSkDirection($this.textDirection_1));
+    pStyle.set_direction_nipmfu_k$(toSkDirection($this.textDirection_1));
     var tmp1_safe_receiver = $this.textStyle_1.get_textIndent_5mau2q_k$();
     if (tmp1_safe_receiver == null)
       null;
@@ -18008,37 +17875,36 @@
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'kotlin.with' call
-      var tmp0_with = $this.density_1;
       // Inline function 'kotlin.contracts.contract' call
-      pStyle.set_textIndent_76en2z_k$(new TextIndent(tmp0_with.toPx_x7oik4_k$(tmp1_safe_receiver.get_firstLine_axcdcr_k$()), tmp0_with.toPx_x7oik4_k$(tmp1_safe_receiver.get_restLine_6dnanl_k$())));
+      var $this$with_0 = $this.density_1;
+      pStyle.set_textIndent_g4aksn_k$(new TextIndent($this$with_0.toPx_plt68j_k$(tmp1_safe_receiver.get_firstLine_vqcugt_k$()), $this$with_0.toPx_plt68j_k$(tmp1_safe_receiver.get_restLine_r6nrrn_k$())));
     }
     return pStyle;
   }
   function makeSkTextStyle($this, style) {
     var tmp = get_skTextStylesCache();
-    return tmp.get_7qedx8_k$(style, ParagraphBuilder$makeSkTextStyle$lambda($this));
+    return tmp.get_qk1ys5_k$(style, ParagraphBuilder$makeSkTextStyle$lambda($this));
   }
   function sam$kotlin_Comparator$0_0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$kotlin_Comparator$0_0).compare_6tbigh_k$ = function (a, b) {
+  protoOf(sam$kotlin_Comparator$0_0).compare_bczr_k$ = function (a, b) {
     return this.function_1(a, b);
   };
   protoOf(sam$kotlin_Comparator$0_0).compare = function (a, b) {
-    return this.compare_6tbigh_k$(a, b);
+    return this.compare_bczr_k$(a, b);
   };
   function ParagraphBuilder$makeOps$lambda(a, b) {
     // Inline function 'kotlin.comparisons.compareValuesBy' call
     // Inline function 'androidx.compose.ui.text.platform.ParagraphBuilder.makeOps.<anonymous>' call
     var tmp = a.get_position_jfponi_k$();
-    var tmp$ret$1;
     // Inline function 'androidx.compose.ui.text.platform.ParagraphBuilder.makeOps.<anonymous>' call
-    tmp$ret$1 = b.get_position_jfponi_k$();
+    var tmp$ret$1 = b.get_position_jfponi_k$();
     return compareValues(tmp, tmp$ret$1);
   }
   function ParagraphBuilder$makeSkTextStyle$lambda(this$0) {
     return function (it) {
-      return it.toSkTextStyle_9a1jf_k$(this$0.fontFamilyResolver_1);
+      return it.toSkTextStyle_msc8ka_k$(this$0.fontFamilyResolver_1);
     };
   }
   function ParagraphBuilder$defaultFont$delegate$lambda(this$0) {
@@ -18048,38 +17914,33 @@
       if (tmp0_safe_receiver == null) {
         tmp = null;
       } else {
-        var tmp$ret$1;
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
-        var tmp$ret$0;
         // Inline function 'androidx.compose.ui.text.platform.ParagraphBuilder.defaultFont$delegate.<anonymous>.<anonymous>' call
         var tmp0_elvis_lhs = this$0.textStyle_1.get_fontWeight_wbif2o_k$();
         var tmp_0 = tmp0_elvis_lhs == null ? Companion_getInstance_27().get_Normal_22avww_k$() : tmp0_elvis_lhs;
-        var tmp1_elvis_lhs = this$0.textStyle_1.get_fontStyle_fze7ml_k$();
+        var tmp1_elvis_lhs = this$0.textStyle_1.get_fontStyle_hzv4zg_k$();
         var tmp_1;
         var tmp_2 = tmp1_elvis_lhs;
         if ((tmp_2 == null ? null : new FontStyle(tmp_2)) == null) {
-          tmp_1 = Companion_getInstance_25().get_Normal_b4ik9_k$();
+          tmp_1 = Companion_getInstance_25().get_Normal_tevh6u_k$();
         } else {
           tmp_1 = tmp1_elvis_lhs;
         }
         var tmp_3 = tmp_1;
-        var tmp2_elvis_lhs = this$0.textStyle_1.get_fontSynthesis_t08ei1_k$();
+        var tmp2_elvis_lhs = this$0.textStyle_1.get_fontSynthesis_h5auiy_k$();
         var tmp_4;
         var tmp_5 = tmp2_elvis_lhs;
         if ((tmp_5 == null ? null : new FontSynthesis(tmp_5)) == null) {
-          tmp_4 = Companion_getInstance_26().get_All_wqntwc_k$();
+          tmp_4 = Companion_getInstance_26().get_All_bqi34r_k$();
         } else {
           tmp_4 = tmp2_elvis_lhs;
         }
-        var tmp_6 = this$0.fontFamilyResolver_1.resolve_3z78ru_k$(tmp0_safe_receiver, tmp_0, tmp_3, tmp_4).get_value_j01efc_k$();
-        tmp$ret$0 = tmp_6 instanceof FontLoadResult ? tmp_6 : THROW_CCE();
-        tmp$ret$1 = tmp$ret$0;
-        tmp = tmp$ret$1;
+        var tmp_6 = this$0.fontFamilyResolver_1.resolve_q3h1fi_k$(tmp0_safe_receiver, tmp_0, tmp_3, tmp_4).get_value_j01efc_k$();
+        tmp = tmp_6 instanceof FontLoadResult ? tmp_6 : THROW_CCE();
       }
       var loadResult = tmp;
-      var tmp1_safe_receiver = loadResult;
-      return Font_init_$Create$(tmp1_safe_receiver == null ? null : tmp1_safe_receiver.get_typeface_s1tqao_k$(), _get_defaultStyle__bt02u3(this$0).fontSize_1);
+      return Font_init_$Create$(loadResult == null ? null : loadResult.get_typeface_s1tqao_k$(), _get_defaultStyle__bt02u3(this$0).fontSize_1);
     };
   }
   function ParagraphBuilder$defaultHeight$delegate$lambda(this$0) {
@@ -18088,11 +17949,11 @@
     };
   }
   function ParagraphBuilder_0(fontFamilyResolver, text, textStyle, brushSize, ellipsis, maxLines, spanStyles, placeholders, density, textDirection, drawStyle, blendMode) {
-    brushSize = brushSize === VOID ? Companion_getInstance_10().get_Unspecified_o59ai8_k$() : brushSize;
+    brushSize = brushSize === VOID ? Companion_getInstance_10().get_Unspecified_3ttj0y_k$() : brushSize;
     ellipsis = ellipsis === VOID ? '' : ellipsis;
     maxLines = maxLines === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : maxLines;
     drawStyle = drawStyle === VOID ? null : drawStyle;
-    blendMode = blendMode === VOID ? Companion_getInstance_0().get_DefaultBlendMode_8kor9s_k$() : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_0().get_DefaultBlendMode_svct2m_k$() : blendMode;
     this.fontFamilyResolver_1 = fontFamilyResolver;
     this.text_1 = text;
     this.textStyle_1 = textStyle;
@@ -18116,25 +17977,25 @@
   protoOf(ParagraphBuilder_0).get_text_wouvsm_k$ = function () {
     return this.text_1;
   };
-  protoOf(ParagraphBuilder_0).set_textStyle_x7o2al_k$ = function (_set____db54di) {
+  protoOf(ParagraphBuilder_0).set_textStyle_ovup7l_k$ = function (_set____db54di) {
     this.textStyle_1 = _set____db54di;
   };
   protoOf(ParagraphBuilder_0).get_textStyle_8tt25h_k$ = function () {
     return this.textStyle_1;
   };
-  protoOf(ParagraphBuilder_0).set_brushSize_xjiodu_k$ = function (_set____db54di) {
+  protoOf(ParagraphBuilder_0).set_brushSize_u1ysdq_k$ = function (_set____db54di) {
     this.brushSize_1 = _set____db54di;
   };
-  protoOf(ParagraphBuilder_0).get_brushSize_efc3n8_k$ = function () {
+  protoOf(ParagraphBuilder_0).get_brushSize_5w3nu2_k$ = function () {
     return this.brushSize_1;
   };
-  protoOf(ParagraphBuilder_0).set_ellipsis_bpvke4_k$ = function (_set____db54di) {
+  protoOf(ParagraphBuilder_0).set_ellipsis_iwgwtg_k$ = function (_set____db54di) {
     this.ellipsis_1 = _set____db54di;
   };
   protoOf(ParagraphBuilder_0).get_ellipsis_sol6jq_k$ = function () {
     return this.ellipsis_1;
   };
-  protoOf(ParagraphBuilder_0).set_maxLines_gpw0p4_k$ = function (_set____db54di) {
+  protoOf(ParagraphBuilder_0).set_maxLines_r9wcpc_k$ = function (_set____db54di) {
     this.maxLines_1 = _set____db54di;
   };
   protoOf(ParagraphBuilder_0).get_maxLines_pclpoc_k$ = function () {
@@ -18152,16 +18013,16 @@
   protoOf(ParagraphBuilder_0).get_textDirection_cl6v6f_k$ = function () {
     return this.textDirection_1;
   };
-  protoOf(ParagraphBuilder_0).set_drawStyle_v6gf4q_k$ = function (_set____db54di) {
+  protoOf(ParagraphBuilder_0).set_drawStyle_e0kgyj_k$ = function (_set____db54di) {
     this.drawStyle_1 = _set____db54di;
   };
   protoOf(ParagraphBuilder_0).get_drawStyle_arbehw_k$ = function () {
     return this.drawStyle_1;
   };
-  protoOf(ParagraphBuilder_0).set_blendMode_gchh35_k$ = function (_set____db54di) {
+  protoOf(ParagraphBuilder_0).set_blendMode_1e5m6b_k$ = function (_set____db54di) {
     this.blendMode_1 = _set____db54di;
   };
-  protoOf(ParagraphBuilder_0).get_blendMode_m8dzwh_k$ = function () {
+  protoOf(ParagraphBuilder_0).get_blendMode_si209t_k$ = function () {
     return this.blendMode_1;
   };
   protoOf(ParagraphBuilder_0).get_paragraphStyle_27utpo_k$ = function () {
@@ -18180,8 +18041,8 @@
     var ps = textStyleToParagraphStyle(this, this.textStyle_1, _get_defaultStyle__bt02u3(this));
     this.paragraphStyle_1 = ps;
     if (!(this.maxLines_1 === IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$())) {
-      ps.set_maxLinesCount_1kfq07_k$(this.maxLines_1);
-      ps.set_ellipsis_b72e69_k$(this.ellipsis_1);
+      ps.set_maxLinesCount_v5fbw1_k$(this.maxLines_1);
+      ps.set_ellipsis_7c9ky1_k$(this.ellipsis_1);
     }
     var tmp = this.fontFamilyResolver_1;
     var platformFontLoader = (tmp instanceof FontFamilyResolverImpl ? tmp : THROW_CCE()).get_platformFontLoader_35ioim_k$();
@@ -18198,7 +18059,7 @@
     while (tmp1_iterator.hasNext_bitz1p_k$()) {
       var op = tmp1_iterator.next_20eer_k$();
       if (addText ? pos < op.get_position_jfponi_k$() : false) {
-        pb.addText_jamnxp_k$(toString(charSequenceSubSequence(this.text_1, pos, op.get_position_jfponi_k$())));
+        pb.addText_gwm184_k$(toString(charSequenceSubSequence(this.text_1, pos, op.get_position_jfponi_k$())));
       }
       if (op instanceof StyleAdd) {
         var tmp_1 = op.style_1.fontFamily_1;
@@ -18208,7 +18069,7 @@
         var tmp_3;
         var tmp_4 = tmp4_elvis_lhs;
         if ((tmp_4 == null ? null : new FontStyle(tmp_4)) == null) {
-          tmp_3 = Companion_getInstance_25().get_Normal_b4ik9_k$();
+          tmp_3 = Companion_getInstance_25().get_Normal_tevh6u_k$();
         } else {
           tmp_3 = tmp4_elvis_lhs;
         }
@@ -18217,16 +18078,16 @@
         var tmp_6;
         var tmp_7 = tmp5_elvis_lhs;
         if ((tmp_7 == null ? null : new FontSynthesis(tmp_7)) == null) {
-          tmp_6 = Companion_getInstance_26().get_All_wqntwc_k$();
+          tmp_6 = Companion_getInstance_26().get_All_bqi34r_k$();
         } else {
           tmp_6 = tmp5_elvis_lhs;
         }
-        this.fontFamilyResolver_1.resolve_3z78ru_k$(tmp_1, tmp_2, tmp_5, tmp_6);
-        pb.pushStyle_ypbmq9_k$(makeSkTextStyle(this, op.style_1));
+        this.fontFamilyResolver_1.resolve_q3h1fi_k$(tmp_1, tmp_2, tmp_5, tmp_6);
+        pb.pushStyle_psv2ye_k$(makeSkTextStyle(this, op.style_1));
       } else {
         if (op instanceof PutPlaceholder) {
-          var placeholderStyle = new PlaceholderStyle(op.width_1, op.height_1, toSkPlaceholderAlignment(op.cut_1.placeholder_1.get_placeholderVerticalAlign_amg7on_k$()), BaselineMode_ALPHABETIC_getInstance(), 0.0);
-          pb.addPlaceholder_xmxrm5_k$(placeholderStyle);
+          var placeholderStyle = new PlaceholderStyle(op.width_1, op.height_1, toSkPlaceholderAlignment(op.cut_1.placeholder_1.get_placeholderVerticalAlign_kmyoon_k$()), BaselineMode_ALPHABETIC_getInstance(), 0.0);
+          pb.addPlaceholder_rs6avq_k$(placeholderStyle);
           addText = false;
         } else {
           if (op instanceof EndPlaceholder) {
@@ -18237,75 +18098,79 @@
       pos = op.get_position_jfponi_k$();
     }
     if (addText ? pos < this.text_1.length : false) {
-      pb.addText_jamnxp_k$(toString(charSequenceSubSequence(this.text_1, pos, this.text_1.length)));
+      pb.addText_gwm184_k$(toString(charSequenceSubSequence(this.text_1, pos, this.text_1.length)));
     }
     return pb.build_1k0s4u_k$();
   };
   protoOf(ParagraphBuilder_0).get_defaultFont_6nsy4n_k$ = function () {
     // Inline function 'kotlin.getValue' call
+    var this_0 = this.defaultFont$delegate_1;
     defaultFont$factory();
-    return this.defaultFont$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   protoOf(ParagraphBuilder_0).get_defaultHeight_9g40wv_k$ = function () {
     // Inline function 'kotlin.getValue' call
+    var this_0 = this.defaultHeight$delegate_1;
     defaultHeight$factory();
-    return this.defaultHeight$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   function copyWithDefaultFontSize(_this__u8e3s4, drawStyle) {
     drawStyle = drawStyle === VOID ? null : drawStyle;
     _init_properties_SkiaParagraph_skiko_kt__cbqn0t();
-    var fontSize = orDefaultFontSize(_this__u8e3s4.get_fontSize_61k213_k$());
+    var fontSize = orDefaultFontSize(_this__u8e3s4.get_fontSize_ergf2z_k$());
     var tmp;
-    if (_TextUnit___get_isEm__impl__esrmtl(_this__u8e3s4.get_letterSpacing_u0tnf8_k$())) {
+    if (_TextUnit___get_isEm__impl__esrmtl(_this__u8e3s4.get_letterSpacing_k79xfu_k$())) {
       // Inline function 'androidx.compose.ui.unit.TextUnit.times' call
-      var tmp0_times = _TextUnit___get_value__impl__hpbx0k(_this__u8e3s4.get_letterSpacing_u0tnf8_k$());
+      var other = _TextUnit___get_value__impl__hpbx0k(_this__u8e3s4.get_letterSpacing_k79xfu_k$());
       checkArithmetic(fontSize);
-      tmp = pack(_TextUnit___get_rawType__impl__tu8yq5(fontSize), _TextUnit___get_value__impl__hpbx0k(fontSize) * tmp0_times);
+      tmp = pack(_TextUnit___get_rawType__impl__tu8yq5(fontSize), _TextUnit___get_value__impl__hpbx0k(fontSize) * other);
     } else {
-      tmp = _this__u8e3s4.get_letterSpacing_u0tnf8_k$();
+      tmp = _this__u8e3s4.get_letterSpacing_k79xfu_k$();
     }
     var letterSpacing = tmp;
-    return _this__u8e3s4.copy$default_r9acpp_k$(VOID, fontSize, VOID, VOID, VOID, VOID, VOID, letterSpacing, VOID, VOID, VOID, VOID, VOID, VOID, VOID, drawStyle);
+    return _this__u8e3s4.copy$default_yo6fbs_k$(VOID, fontSize, VOID, VOID, VOID, VOID, VOID, letterSpacing, VOID, VOID, VOID, VOID, VOID, VOID, VOID, drawStyle);
   }
   function toSkPlaceholderAlignment(_this__u8e3s4) {
     _init_properties_SkiaParagraph_skiko_kt__cbqn0t();
     var tmp;
-    if (_this__u8e3s4 === Companion_getInstance_16().get_AboveBaseline_fxmzdx_k$()) {
+    if (_this__u8e3s4 === Companion_getInstance_16().get_AboveBaseline_nu267x_k$()) {
       tmp = PlaceholderAlignment_ABOVE_BASELINE_getInstance();
-    } else if (_this__u8e3s4 === Companion_getInstance_16().get_TextTop_8n8utb_k$()) {
+    } else if (_this__u8e3s4 === Companion_getInstance_16().get_TextTop_v4gasj_k$()) {
       tmp = PlaceholderAlignment_TOP_getInstance();
-    } else if (_this__u8e3s4 === Companion_getInstance_16().get_TextBottom_9104cj_k$()) {
+    } else if (_this__u8e3s4 === Companion_getInstance_16().get_TextBottom_m8es0r_k$()) {
       tmp = PlaceholderAlignment_BOTTOM_getInstance();
-    } else if (_this__u8e3s4 === Companion_getInstance_16().get_TextCenter_37ollf_k$()) {
+    } else if (_this__u8e3s4 === Companion_getInstance_16().get_TextCenter_yh3hyp_k$()) {
       tmp = PlaceholderAlignment_MIDDLE_getInstance();
-    } else if (_this__u8e3s4 === Companion_getInstance_16().get_Top_qulelq_k$()) {
+    } else if (_this__u8e3s4 === Companion_getInstance_16().get_Top_4ethrk_k$()) {
       tmp = PlaceholderAlignment_TOP_getInstance();
-    } else if (_this__u8e3s4 === Companion_getInstance_16().get_Bottom_kiigty_k$()) {
+    } else if (_this__u8e3s4 === Companion_getInstance_16().get_Bottom_aqwfjc_k$()) {
       tmp = PlaceholderAlignment_BOTTOM_getInstance();
-    } else if (_this__u8e3s4 === Companion_getInstance_16().get_Center_89tqw0_k$()) {
+    } else if (_this__u8e3s4 === Companion_getInstance_16().get_Center_mzl5ha_k$()) {
       tmp = PlaceholderAlignment_MIDDLE_getInstance();
     } else {
-      throw IllegalStateException_init_$Create$('Invalid PlaceholderVerticalAlign.');
+      var message = 'Invalid PlaceholderVerticalAlign.';
+      throw IllegalStateException_init_$Create$(toString(message));
     }
     return tmp;
   }
   function toSkAlignment(_this__u8e3s4) {
     _init_properties_SkiaParagraph_skiko_kt__cbqn0t();
     var tmp;
-    if (_this__u8e3s4 === Companion_getInstance_44().get_Left_e5glad_k$()) {
+    if (_this__u8e3s4 === Companion_getInstance_44().get_Left_seblku_k$()) {
       tmp = Alignment_LEFT_getInstance();
-    } else if (_this__u8e3s4 === Companion_getInstance_44().get_Right_evf9vi_k$()) {
+    } else if (_this__u8e3s4 === Companion_getInstance_44().get_Right_dlwl8f_k$()) {
       tmp = Alignment_RIGHT_getInstance();
-    } else if (_this__u8e3s4 === Companion_getInstance_44().get_Center_qumdtj_k$()) {
+    } else if (_this__u8e3s4 === Companion_getInstance_44().get_Center_fp5t1o_k$()) {
       tmp = Alignment_CENTER_getInstance();
-    } else if (_this__u8e3s4 === Companion_getInstance_44().get_Justify_c4m1vy_k$()) {
+    } else if (_this__u8e3s4 === Companion_getInstance_44().get_Justify_uf64z9_k$()) {
       tmp = Alignment_JUSTIFY_getInstance();
-    } else if (_this__u8e3s4 === Companion_getInstance_44().get_Start_3lwnd0_k$()) {
+    } else if (_this__u8e3s4 === Companion_getInstance_44().get_Start_ovf7qx_k$()) {
       tmp = Alignment_START_getInstance();
-    } else if (_this__u8e3s4 === Companion_getInstance_44().get_End_tzj12b_k$()) {
+    } else if (_this__u8e3s4 === Companion_getInstance_44().get_End_ck95sw_k$()) {
       tmp = Alignment_END_getInstance();
     } else {
-      throw IllegalStateException_init_$Create$('Invalid TextAlign');
+      var message = 'Invalid TextAlign';
+      throw IllegalStateException_init_$Create$(toString(message));
     }
     return tmp;
   }
@@ -18316,10 +18181,10 @@
       tmp = get_DefaultFontSize_0();
     } else if (_TextUnit___get_isEm__impl__esrmtl(_this__u8e3s4)) {
       // Inline function 'androidx.compose.ui.unit.TextUnit.times' call
-      var tmp0_times = get_DefaultFontSize_0();
-      var tmp1_times = _TextUnit___get_value__impl__hpbx0k(_this__u8e3s4);
-      checkArithmetic(tmp0_times);
-      tmp = pack(_TextUnit___get_rawType__impl__tu8yq5(tmp0_times), _TextUnit___get_value__impl__hpbx0k(tmp0_times) * tmp1_times);
+      var this_0 = get_DefaultFontSize_0();
+      var other = _TextUnit___get_value__impl__hpbx0k(_this__u8e3s4);
+      checkArithmetic(this_0);
+      tmp = pack(_TextUnit___get_rawType__impl__tu8yq5(this_0), _TextUnit___get_value__impl__hpbx0k(this_0) * other);
     } else {
       tmp = _this__u8e3s4;
     }
@@ -18423,19 +18288,19 @@
     this.placeholders_1 = placeholders;
     this.density_1 = density;
     this.fontFamilyResolver_1 = fontFamilyResolver;
-    this.textDirection_1 = resolveTextDirection_1(this.text_1, this.style_1.get_textDirection_fsfodj_k$(), this.style_1.get_localeList_1gj9gh_k$());
+    this.textDirection_1 = resolveTextDirection_1(this.text_1, this.style_1.get_textDirection_u2eu2k_k$(), this.style_1.get_localeList_1gj9gh_k$());
     this.layouter_1 = newLayouter(this);
     this.minIntrinsicWidth_1 = 0.0;
     this.maxIntrinsicWidth_1 = 0.0;
-    var para = ensureNotNull(this.layouter_1).layoutParagraph_5lbvna_k$(FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$());
+    var para = ensureNotNull(this.layouter_1).layoutParagraph_6xbnfw_k$(FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$());
     var tmp = this;
     // Inline function 'kotlin.math.ceil' call
-    var tmp0_ceil = para.get_minIntrinsicWidth_lmc1rq_k$();
-    tmp.minIntrinsicWidth_1 = Math.ceil(tmp0_ceil);
+    var x = para.get_minIntrinsicWidth_lmc1rq_k$();
+    tmp.minIntrinsicWidth_1 = Math.ceil(x);
     var tmp_0 = this;
     // Inline function 'kotlin.math.ceil' call
-    var tmp1_ceil = para.get_maxIntrinsicWidth_b4gk2k_k$();
-    tmp_0.maxIntrinsicWidth_1 = Math.ceil(tmp1_ceil);
+    var x_0 = para.get_maxIntrinsicWidth_b4gk2k_k$();
+    tmp_0.maxIntrinsicWidth_1 = Math.ceil(x_0);
   }
   protoOf(SkiaParagraphIntrinsics).get_text_wouvsm_k$ = function () {
     return this.text_1;
@@ -18461,30 +18326,31 @@
     var tmp;
     var tmp_0 = textDirection;
     if ((tmp_0 == null ? null : new TextDirection(tmp_0)) == null) {
-      tmp = Companion_getInstance_46().get_Content_x7rqv5_k$();
+      tmp = Companion_getInstance_46().get_Content_gdpx4s_k$();
     } else {
       tmp = textDirection;
     }
     var tmp1_subject = tmp;
     var tmp_1;
-    if (tmp1_subject === Companion_getInstance_46().get_Ltr_y8cfpu_k$()) {
+    if (tmp1_subject === Companion_getInstance_46().get_Ltr_fd58a3_k$()) {
       tmp_1 = ResolvedTextDirection_Ltr_getInstance();
-    } else if (tmp1_subject === Companion_getInstance_46().get_Rtl_52ixoy_k$()) {
+    } else if (tmp1_subject === Companion_getInstance_46().get_Rtl_qi5bo5_k$()) {
       tmp_1 = ResolvedTextDirection_Rtl_getInstance();
-    } else if (tmp1_subject === Companion_getInstance_46().get_Content_x7rqv5_k$()) {
+    } else if (tmp1_subject === Companion_getInstance_46().get_Content_gdpx4s_k$()) {
       tmp_1 = contentBasedTextDirection(text, resolveTextDirection$lambda(localeList));
-    } else if (tmp1_subject === Companion_getInstance_46().get_ContentOrLtr_xdyfbs_k$()) {
+    } else if (tmp1_subject === Companion_getInstance_46().get_ContentOrLtr_byc1cl_k$()) {
       tmp_1 = contentBasedTextDirection(text, resolveTextDirection$lambda_0);
-    } else if (tmp1_subject === Companion_getInstance_46().get_ContentOrRtl_8hc4mg_k$()) {
+    } else if (tmp1_subject === Companion_getInstance_46().get_ContentOrRtl_twyiln_k$()) {
       tmp_1 = contentBasedTextDirection(text, resolveTextDirection$lambda_1);
     } else {
-      throw IllegalStateException_init_$Create$('Invalid TextDirection.');
+      var message = 'Invalid TextDirection.';
+      throw IllegalStateException_init_$Create$(toString(message));
     }
     return tmp_1;
   }
   function contentBasedTextDirection(text, fallback) {
     var tmp0_subject = firstStrongDirectionType(text);
-    return tmp0_subject === Companion_getInstance_51().get_Ltr_iwa7dx_k$() ? ResolvedTextDirection_Ltr_getInstance() : tmp0_subject === Companion_getInstance_51().get_Rtl_a9jamz_k$() ? ResolvedTextDirection_Rtl_getInstance() : fallback();
+    return tmp0_subject === Companion_getInstance_51().get_Ltr_vywptz_k$() ? ResolvedTextDirection_Ltr_getInstance() : tmp0_subject === Companion_getInstance_51().get_Rtl_2t37t3_k$() ? ResolvedTextDirection_Rtl_getInstance() : fallback();
   }
   function localeBasedTextDirection(locale) {
     var tmp;
@@ -18513,8 +18379,8 @@
     var tmp_0;
     if (brush instanceof SolidColor) {
       // Inline function 'androidx.compose.ui.graphics.isSpecified' call
-      var tmp0_get_isSpecified_4wup3r = brush.get_value_puk9xv_k$();
-      tmp_0 = !equals(_Color___get_value__impl__1pls5m(tmp0_get_isSpecified_4wup3r), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_9ntdt9_k$()));
+      var this_0 = brush.get_value_za03u9_k$();
+      tmp_0 = !equals(_Color___get_value__impl__1pls5m(this_0), _Color___get_value__impl__1pls5m(Companion_getInstance().get_Unspecified_j397pn_k$()));
     } else {
       tmp_0 = false;
     }
@@ -18524,31 +18390,31 @@
       var tmp_1;
       if (brush instanceof ShaderBrush) {
         // Inline function 'androidx.compose.ui.geometry.isSpecified' call
-        tmp_1 = !_Size___get_packedValue__impl__7rlt1o(size).equals(_Size___get_packedValue__impl__7rlt1o(Companion_getInstance_10().get_Unspecified_o59ai8_k$()));
+        tmp_1 = !_Size___get_packedValue__impl__7rlt1o(size).equals(_Size___get_packedValue__impl__7rlt1o(Companion_getInstance_10().get_Unspecified_3ttj0y_k$()));
       } else {
         tmp_1 = false;
       }
       tmp = tmp_1;
     }
     if (tmp) {
-      brush.applyTo_w34vc_k$(size, _this__u8e3s4, isNaN_0(alpha) ? 1.0 : coerceIn_0(alpha, 0.0, 1.0));
+      brush.applyTo_5ix92b_k$(size, _this__u8e3s4, isNaN_0(alpha) ? 1.0 : coerceIn_0(alpha, 0.0, 1.0));
     } else {
       if (brush == null) {
-        _this__u8e3s4.set_shader_bd5o0m_k$(null);
+        _this__u8e3s4.set_shader_tgaw5e_k$(null);
       }
     }
   }
   function applyDrawStyle(_this__u8e3s4, drawStyle) {
     if (equals(drawStyle, Fill_getInstance()) ? true : drawStyle == null) {
-      _this__u8e3s4.set_style_yrvwzh_k$(Companion_getInstance_13().get_Fill_xeknbt_k$());
+      _this__u8e3s4.set_style_t4zhmv_k$(Companion_getInstance_13().get_Fill_7xey15_k$());
     } else {
       if (drawStyle instanceof Stroke) {
-        _this__u8e3s4.set_style_yrvwzh_k$(Companion_getInstance_13().get_Stroke_dv2xoc_k$());
-        _this__u8e3s4.set_strokeWidth_3zju8k_k$(drawStyle.get_width_j0q4yl_k$());
-        _this__u8e3s4.set_strokeMiterLimit_jliqsy_k$(drawStyle.get_miter_iv8ijg_k$());
-        _this__u8e3s4.set_strokeJoin_oa46bf_k$(drawStyle.get_join_s7mxx9_k$());
-        _this__u8e3s4.set_strokeCap_un0ni9_k$(drawStyle.get_cap_nlcndj_k$());
-        _this__u8e3s4.set_pathEffect_eo4nwm_k$(drawStyle.get_pathEffect_d6tz6p_k$());
+        _this__u8e3s4.set_style_t4zhmv_k$(Companion_getInstance_13().get_Stroke_fu1ixu_k$());
+        _this__u8e3s4.set_strokeWidth_owqvpl_k$(drawStyle.get_width_j0q4yl_k$());
+        _this__u8e3s4.set_strokeMiterLimit_tej6nx_k$(drawStyle.get_miter_iv8ijg_k$());
+        _this__u8e3s4.set_strokeJoin_yrffuj_k$(drawStyle.get_join_i4bzz3_k$());
+        _this__u8e3s4.set_strokeCap_x8rhz1_k$(drawStyle.get_cap_3aolkp_k$());
+        _this__u8e3s4.set_pathEffect_h6g9g6_k$(drawStyle.get_pathEffect_d6tz6p_k$());
       }
     }
   }
@@ -18564,13 +18430,13 @@
     this.Heading_1 = _LineBreak___init__impl__o5i11q(2);
     this.Paragraph_1 = _LineBreak___init__impl__o5i11q(3);
   }
-  protoOf(Companion_37).get_Simple_6j3yz1_k$ = function () {
+  protoOf(Companion_37).get_Simple_z0fu2y_k$ = function () {
     return this.Simple_1;
   };
-  protoOf(Companion_37).get_Heading_5udlkf_k$ = function () {
+  protoOf(Companion_37).get_Heading_ybpgoc_k$ = function () {
     return this.Heading_1;
   };
-  protoOf(Companion_37).get_Paragraph_5bmtkz_k$ = function () {
+  protoOf(Companion_37).get_Paragraph_xsyoow_k$ = function () {
     return this.Paragraph_1;
   };
   var Companion_instance_37;
@@ -18630,26 +18496,22 @@
     this.$stable_1 = 0;
   }
   //region block: post-declaration
-  protoOf(FontFamilyResolverImpl).resolve$default_ealfa6_k$ = resolve$default;
-  protoOf(PlatformResolveInterceptor$Companion$Default$1).interceptFontFamily_ok416z_k$ = interceptFontFamily;
-  protoOf(PlatformResolveInterceptor$Companion$Default$1).interceptFontWeight_yj7vf0_k$ = interceptFontWeight;
-  protoOf(PlatformResolveInterceptor$Companion$Default$1).interceptFontStyle_aqbvzf_k$ = interceptFontStyle;
-  protoOf(PlatformResolveInterceptor$Companion$Default$1).interceptFontSynthesis_3mzb7i_k$ = interceptFontSynthesis;
-  protoOf(_no_name_provided__qut3iv).get_j1ktw6_k$ = get;
-  protoOf(_no_name_provided__qut3iv).fold_iindx8_k$ = fold;
-  protoOf(_no_name_provided__qut3iv).minusKey_y21q55_k$ = minusKey;
-  protoOf(_no_name_provided__qut3iv).plus_rgw9wi_k$ = plus_0;
-  protoOf(Unspecified).merge_o4w5dp_k$ = merge;
-  protoOf(Unspecified).takeOrElse_9aen5f_k$ = takeOrElse;
-  protoOf(BrushStyle).merge_o4w5dp_k$ = merge;
-  protoOf(BrushStyle).takeOrElse_9aen5f_k$ = takeOrElse;
-  protoOf(ColorStyle).merge_o4w5dp_k$ = merge;
-  protoOf(ColorStyle).takeOrElse_9aen5f_k$ = takeOrElse;
-  protoOf(PlatformFont).get_loadingStrategy_w877gz_k$ = get_loadingStrategy;
-  protoOf(SkiaParagraph).getLineEnd$default_2dljqm_k$ = getLineEnd$default;
-  protoOf(SkiaParagraph).paint$default_tquhh8_k$ = paint$default;
-  protoOf(SkiaParagraph).paint$default_dbe40g_k$ = paint$default_0;
-  protoOf(SkiaParagraph).paint$default_e5q6qb_k$ = paint$default_1;
+  protoOf(FontFamilyResolverImpl).resolve$default_51n6kl_k$ = resolve$default;
+  protoOf(PlatformResolveInterceptor$Companion$Default$1).interceptFontFamily_gv8ky1_k$ = interceptFontFamily;
+  protoOf(PlatformResolveInterceptor$Companion$Default$1).interceptFontWeight_3o5olg_k$ = interceptFontWeight;
+  protoOf(PlatformResolveInterceptor$Companion$Default$1).interceptFontStyle_a5zuhs_k$ = interceptFontStyle;
+  protoOf(PlatformResolveInterceptor$Companion$Default$1).interceptFontSynthesis_3g2w1p_k$ = interceptFontSynthesis;
+  protoOf(Unspecified).merge_b7txoj_k$ = merge;
+  protoOf(Unspecified).takeOrElse_vujaw_k$ = takeOrElse;
+  protoOf(BrushStyle).merge_b7txoj_k$ = merge;
+  protoOf(BrushStyle).takeOrElse_vujaw_k$ = takeOrElse;
+  protoOf(ColorStyle).merge_b7txoj_k$ = merge;
+  protoOf(ColorStyle).takeOrElse_vujaw_k$ = takeOrElse;
+  protoOf(PlatformFont).get_loadingStrategy_s3fce_k$ = get_loadingStrategy;
+  protoOf(SkiaParagraph).getLineEnd$default_nax8ot_k$ = getLineEnd$default;
+  protoOf(SkiaParagraph).paint$default_n29wsh_k$ = paint$default;
+  protoOf(SkiaParagraph).paint$default_f7qoik_k$ = paint$default_0;
+  protoOf(SkiaParagraph).paint$default_9oas5_k$ = paint$default_1;
   protoOf(SkiaParagraphIntrinsics).get_hasStaleResolvedFonts_tun9ic_k$ = get_hasStaleResolvedFonts;
   //endregion
   //region block: init

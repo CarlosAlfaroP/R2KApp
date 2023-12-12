@@ -1,11 +1,11 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin-kotlin-stdlib-js-ir.js', './compose-multiplatform-core-ui-geometry.js', './compose-multiplatform-core-ui-unit.js', './compose-multiplatform-core-ui-util.js', './skiko-kjs.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js', './compose-multiplatform-core-ui-geometry.js', './compose-multiplatform-core-ui-unit.js', './compose-multiplatform-core-ui-util.js', './skiko-kjs.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./compose-multiplatform-core-ui-util.js'), require('./skiko-kjs.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./compose-multiplatform-core-ui-util.js'), require('./skiko-kjs.js'));
   else {
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'compose-multiplatform-core-ui-graphics'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'compose-multiplatform-core-ui-graphics'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-ui-graphics'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'compose-multiplatform-core-ui-graphics'.");
     }
     if (typeof this['compose-multiplatform-core-ui-geometry'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-ui-graphics'. Its dependency 'compose-multiplatform-core-ui-geometry' was not found. Please, check whether 'compose-multiplatform-core-ui-geometry' is loaded prior to 'compose-multiplatform-core-ui-graphics'.");
@@ -19,91 +19,91 @@
     if (typeof this['skiko-kjs'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-ui-graphics'. Its dependency 'skiko-kjs' was not found. Please, check whether 'skiko-kjs' is loaded prior to 'compose-multiplatform-core-ui-graphics'.");
     }
-    root['compose-multiplatform-core-ui-graphics'] = factory(typeof this['compose-multiplatform-core-ui-graphics'] === 'undefined' ? {} : this['compose-multiplatform-core-ui-graphics'], this['kotlin-kotlin-stdlib-js-ir'], this['compose-multiplatform-core-ui-geometry'], this['compose-multiplatform-core-ui-unit'], this['compose-multiplatform-core-ui-util'], this['skiko-kjs']);
+    root['compose-multiplatform-core-ui-graphics'] = factory(typeof this['compose-multiplatform-core-ui-graphics'] === 'undefined' ? {} : this['compose-multiplatform-core-ui-graphics'], this['kotlin-kotlin-stdlib'], this['compose-multiplatform-core-ui-geometry'], this['compose-multiplatform-core-ui-unit'], this['compose-multiplatform-core-ui-util'], this['skiko-kjs']);
   }
 }(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_compose_ui_ui_geometry, kotlin_org_jetbrains_compose_ui_ui_unit, kotlin_org_jetbrains_compose_ui_ui_util, kotlin_org_jetbrains_skiko_skiko) {
   'use strict';
   //region block: imports
   var imul = Math.imul;
   var sign = Math.sign;
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var objectMeta = kotlin_kotlin.$_$.qd;
-  var VOID = kotlin_kotlin.$_$.bj;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
-  var THROW_CCE = kotlin_kotlin.$_$.lh;
-  var classMeta = kotlin_kotlin.$_$.ec;
-  var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u1;
-  var Size__isEmpty_impl_o9ye97 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.m1;
-  var equals = kotlin_kotlin.$_$.ic;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
-  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.s1;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var objectMeta = kotlin_kotlin.$_$.td;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var THROW_CCE = kotlin_kotlin.$_$.qh;
+  var classMeta = kotlin_kotlin.$_$.hc;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.k;
+  var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.s1;
+  var VOID = kotlin_kotlin.$_$.e;
   var Offset = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.e;
   var Offset_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.d;
-  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.l4;
+  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.n4;
+  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u1;
+  var Size__isEmpty_impl_o9ye97 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.m1;
+  var equals = kotlin_kotlin.$_$.lc;
   var _Offset___get_x__impl__xvi35n = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.i1;
-  var isFinite = kotlin_kotlin.$_$.fi;
+  var isFinite = kotlin_kotlin.$_$.li;
   var _Offset___get_y__impl__8bzhra = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.j1;
   var Size = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.k;
   var _Size___get_width__impl__58y75t = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.p1;
   var _Size___get_height__impl__a04p02 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l1;
-  var hashCode = kotlin_kotlin.$_$.qc;
+  var hashCode = kotlin_kotlin.$_$.uc;
   var Offset__hashCode_impl_hbql41 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.c1;
   var get_isFinite = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.o;
   var get_center = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.n;
   var get_isUnspecified = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.r;
   var _Size___get_minDimension__impl__4iso0r = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.n1;
-  var getNumberHashCode = kotlin_kotlin.$_$.mc;
+  var getNumberHashCode = kotlin_kotlin.$_$.qc;
   var get_isSpecified = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.q;
-  var Unit_getInstance = kotlin_kotlin.$_$.z4;
+  var Unit_getInstance = kotlin_kotlin.$_$.b5;
   var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s3;
   var IntSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x;
   var IntOffset = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w;
   var IntSize_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.y;
-  var interfaceMeta = kotlin_kotlin.$_$.sc;
-  var _ULong___get_data__impl__fggpzb = kotlin_kotlin.$_$.q3;
-  var Long = kotlin_kotlin.$_$.eh;
-  var _ULong___init__impl__c78o9k = kotlin_kotlin.$_$.p3;
-  var ulongToDouble = kotlin_kotlin.$_$.aj;
-  var toString = kotlin_kotlin.$_$.wd;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.v1;
-  var ULong__hashCode_impl_6hv2lb = kotlin_kotlin.$_$.r3;
-  var numberToInt = kotlin_kotlin.$_$.nd;
-  var toLong = kotlin_kotlin.$_$.ud;
+  var interfaceMeta = kotlin_kotlin.$_$.wc;
+  var Long = kotlin_kotlin.$_$.jh;
+  var _ULong___init__impl__c78o9k = kotlin_kotlin.$_$.r3;
+  var _ULong___get_data__impl__fggpzb = kotlin_kotlin.$_$.s3;
+  var ulongToDouble = kotlin_kotlin.$_$.gj;
+  var toString = kotlin_kotlin.$_$.zd;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.w1;
+  var ULong__hashCode_impl_6hv2lb = kotlin_kotlin.$_$.t3;
+  var numberToInt = kotlin_kotlin.$_$.qd;
+  var toLong = kotlin_kotlin.$_$.xd;
   var lerp = kotlin_org_jetbrains_compose_ui_ui_util.$_$.a;
-  var fill = kotlin_kotlin.$_$.r7;
-  var arrayCopy = kotlin_kotlin.$_$.g6;
-  var get_PI = kotlin_kotlin.$_$.xd;
-  var toRawBits = kotlin_kotlin.$_$.vi;
-  var toShort = kotlin_kotlin.$_$.vd;
-  var toByte = kotlin_kotlin.$_$.td;
-  var numberToLong = kotlin_kotlin.$_$.od;
-  var floatFromBits = kotlin_kotlin.$_$.kc;
-  var compareTo = kotlin_kotlin.$_$.fc;
-  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.i1;
-  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.o2;
-  var toString_0 = kotlin_kotlin.$_$.mg;
-  var Regex_init_$Create$ = kotlin_kotlin.$_$.g1;
-  var Comparable = kotlin_kotlin.$_$.xg;
+  var fill = kotlin_kotlin.$_$.t7;
+  var arrayCopy = kotlin_kotlin.$_$.i6;
+  var get_PI = kotlin_kotlin.$_$.ae;
+  var toRawBits = kotlin_kotlin.$_$.bj;
+  var toShort = kotlin_kotlin.$_$.yd;
+  var toByte = kotlin_kotlin.$_$.wd;
+  var numberToLong = kotlin_kotlin.$_$.rd;
+  var floatFromBits = kotlin_kotlin.$_$.nc;
+  var compareTo = kotlin_kotlin.$_$.ic;
+  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.j1;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.q2;
+  var toString_0 = kotlin_kotlin.$_$.qg;
+  var Regex_init_$Create$ = kotlin_kotlin.$_$.h1;
+  var Comparable = kotlin_kotlin.$_$.ch;
   var Rect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.h;
-  var trimIndent = kotlin_kotlin.$_$.pg;
+  var trimIndent = kotlin_kotlin.$_$.tg;
   var get_boundingRect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.m;
   var _CornerRadius___get_x__impl__1594cn = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.v;
   var _CornerRadius___get_y__impl__tyvleu = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.w;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.li;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.ri;
   var CornerRadius = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.a;
   var toRect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u;
   var lerp_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.s;
-  var objectCreate = kotlin_kotlin.$_$.pd;
-  var charSequenceLength = kotlin_kotlin.$_$.cc;
-  var toBits = kotlin_kotlin.$_$.ti;
+  var objectCreate = kotlin_kotlin.$_$.sd;
+  var charSequenceLength = kotlin_kotlin.$_$.fc;
+  var toBits = kotlin_kotlin.$_$.zi;
   var getKClassFromExpression = kotlin_kotlin.$_$.b;
-  var getStringHashCode = kotlin_kotlin.$_$.pc;
-  var withSign = kotlin_kotlin.$_$.he;
-  var coerceIn = kotlin_kotlin.$_$.pe;
-  var coerceIn_0 = kotlin_kotlin.$_$.oe;
-  var contentEquals = kotlin_kotlin.$_$.v6;
-  var contentHashCode = kotlin_kotlin.$_$.y6;
-  var isNaN_0 = kotlin_kotlin.$_$.ii;
+  var getStringHashCode = kotlin_kotlin.$_$.tc;
+  var withSign = kotlin_kotlin.$_$.ke;
+  var coerceIn = kotlin_kotlin.$_$.se;
+  var coerceIn_0 = kotlin_kotlin.$_$.re;
+  var contentEquals = kotlin_kotlin.$_$.x6;
+  var contentHashCode = kotlin_kotlin.$_$.a7;
+  var isNaN_0 = kotlin_kotlin.$_$.oi;
   var LayoutDirection_Ltr_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w1;
   var Size_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l;
   var Size__hashCode_impl_2h1qpd = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.k1;
@@ -124,33 +124,34 @@
   var Companion_getInstance_2 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.r1;
   var CornerRadius_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.b;
   var Density_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q;
-  var Annotation = kotlin_kotlin.$_$.tg;
-  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.k2;
+  var Annotation = kotlin_kotlin.$_$.yg;
+  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.m2;
   var _IntSize___get_height__impl__prv63b = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w2;
   var _IntSize___get_width__impl__d9yl4o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x2;
   var _IntOffset___get_y__impl__2avpwj = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u2;
   var _IntOffset___get_x__impl__qiqr5o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t2;
-  var roundToInt = kotlin_kotlin.$_$.ce;
+  var roundToInt = kotlin_kotlin.$_$.fe;
   var toSize_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v1;
   var IntOffset__hashCode_impl_w5rrxs = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s2;
   var IntSize__hashCode_impl_gm9mta = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v2;
   var Rect_0 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.g;
-  var longArrayOf = kotlin_kotlin.$_$.hd;
-  var _ULongArray___init__impl__twm1l3 = kotlin_kotlin.$_$.t3;
-  var charSequenceGet = kotlin_kotlin.$_$.bc;
-  var Char__minus_impl_a2frrh = kotlin_kotlin.$_$.r2;
-  var numberToChar = kotlin_kotlin.$_$.ld;
-  var Char__toInt_impl_vasixd = kotlin_kotlin.$_$.t2;
-  var ulongCompare = kotlin_kotlin.$_$.zi;
-  var toDouble = kotlin_kotlin.$_$.ig;
-  var ULongArray__get_impl_pr71q9 = kotlin_kotlin.$_$.u3;
-  var countLeadingZeroBits = kotlin_kotlin.$_$.zh;
-  var DoubleCompanionObject_getInstance = kotlin_kotlin.$_$.k4;
-  var doubleFromBits = kotlin_kotlin.$_$.hc;
-  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
-  var Char = kotlin_kotlin.$_$.vg;
-  var Char__compareTo_impl_ypi4mb = kotlin_kotlin.$_$.p2;
-  var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.c2;
+  var longArrayOf = kotlin_kotlin.$_$.kd;
+  var _ULongArray___init__impl__twm1l3 = kotlin_kotlin.$_$.v3;
+  var charSequenceGet = kotlin_kotlin.$_$.ec;
+  var Char__minus_impl_a2frrh = kotlin_kotlin.$_$.t2;
+  var numberToChar = kotlin_kotlin.$_$.od;
+  var Char__toInt_impl_vasixd = kotlin_kotlin.$_$.v2;
+  var ulongCompare = kotlin_kotlin.$_$.fj;
+  var toDouble = kotlin_kotlin.$_$.mg;
+  var ULongArray__get_impl_pr71q9 = kotlin_kotlin.$_$.w3;
+  var countLeadingZeroBits = kotlin_kotlin.$_$.fi;
+  var DoubleCompanionObject_getInstance = kotlin_kotlin.$_$.m4;
+  var doubleFromBits = kotlin_kotlin.$_$.kc;
+  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.l;
+  var getBooleanHashCode = kotlin_kotlin.$_$.oc;
+  var toString_1 = kotlin_kotlin.$_$.w2;
+  var Char__compareTo_impl_ypi4mb = kotlin_kotlin.$_$.r2;
+  var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.d2;
   var BlendMode_SRC_OVER_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.r1;
   var BlendMode_LUMINOSITY_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.g1;
   var BlendMode_COLOR_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.u;
@@ -184,8 +185,8 @@
   var Companion_getInstance_3 = kotlin_org_jetbrains_skiko_skiko.$_$.g8;
   var Companion_getInstance_4 = kotlin_org_jetbrains_skiko_skiko.$_$.f8;
   var Companion_getInstance_5 = kotlin_org_jetbrains_skiko_skiko.$_$.a8;
-  var until = kotlin_kotlin.$_$.ve;
-  var step = kotlin_kotlin.$_$.ue;
+  var until = kotlin_kotlin.$_$.ye;
+  var step = kotlin_kotlin.$_$.xe;
   var ClipMode_INTERSECT_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.v1;
   var ClipMode_DIFFERENCE_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.u1;
   var Matrix44 = kotlin_org_jetbrains_skiko_skiko.$_$.b9;
@@ -216,7 +217,7 @@
   var PathDirection_COUNTER_CLOCKWISE_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.t2;
   var Companion_getInstance_6 = kotlin_org_jetbrains_skiko_skiko.$_$.c8;
   var Companion_getInstance_7 = kotlin_org_jetbrains_skiko_skiko.$_$.d8;
-  var UnsupportedOperationException_init_$Create$_0 = kotlin_kotlin.$_$.l2;
+  var UnsupportedOperationException_init_$Create$_0 = kotlin_kotlin.$_$.n2;
   var Companion_getInstance_8 = kotlin_org_jetbrains_skiko_skiko.$_$.e8;
   var Style_TRANSLATE_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.w2;
   var Style_ROTATE_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.v2;
@@ -234,13 +235,13 @@
   var ColorType_RGB_565_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.c2;
   var ColorType_ALPHA_8_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.z1;
   var Companion_getInstance_11 = kotlin_org_jetbrains_skiko_skiko.$_$.u7;
-  var abs = kotlin_kotlin.$_$.yd;
+  var abs = kotlin_kotlin.$_$.be;
   var ColorType_BGRA_8888_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.a2;
   var ColorAlphaType_UNPREMUL_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.y1;
-  var ensureNotNull = kotlin_kotlin.$_$.di;
+  var ensureNotNull = kotlin_kotlin.$_$.ji;
   var Companion_getInstance_12 = kotlin_org_jetbrains_skiko_skiko.$_$.b8;
   var Companion_getInstance_13 = kotlin_org_jetbrains_skiko_skiko.$_$.h8;
-  var toFloatArray = kotlin_kotlin.$_$.ba;
+  var toFloatArray = kotlin_kotlin.$_$.ea;
   var GradientStyle = kotlin_org_jetbrains_skiko_skiko.$_$.y8;
   var FilterTileMode_CLAMP_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.f2;
   var FilterTileMode_DECAL_getInstance = kotlin_org_jetbrains_skiko_skiko.$_$.g2;
@@ -253,9 +254,9 @@
   //region block: pre-declaration
   setMetadataFor(Companion, 'Companion', objectMeta);
   setMetadataFor(BlendMode, 'BlendMode', classMeta);
+  setMetadataFor(Companion_0, 'Companion', objectMeta);
   setMetadataFor(Brush, 'Brush', classMeta);
   setMetadataFor(ShaderBrush, 'ShaderBrush', classMeta, Brush);
-  setMetadataFor(Companion_0, 'Companion', objectMeta);
   setMetadataFor(SolidColor, 'SolidColor', classMeta, Brush);
   setMetadataFor(LinearGradient, 'LinearGradient', classMeta, ShaderBrush);
   setMetadataFor(RadialGradient, 'RadialGradient', classMeta, ShaderBrush);
@@ -264,24 +265,24 @@
     sy = sy === VOID ? sx : sy;
     var tmp;
     if ($super === VOID) {
-      this.scale_sphyvb_k$(sx, sy);
+      this.scale_ba85bu_k$(sx, sy);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.scale_sphyvb_k$.call(this, sx, sy);
+      tmp = $super.scale_ba85bu_k$.call(this, sx, sy);
     }
     return tmp;
   }
   function skewRad(sxRad, syRad) {
-    this.skew_hcshkp_k$(degrees(sxRad), degrees(syRad));
+    this.skew_kgli2i_k$(degrees(sxRad), degrees(syRad));
   }
   function clipRect(rect, clipOp) {
-    return this.clipRect_si0ig1_k$(rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), clipOp);
+    return this.clipRect_3spswv_k$(rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), clipOp);
   }
   function clipRect$default(rect, clipOp, $super) {
-    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_ow3v69_k$() : clipOp;
+    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_gpxc6n_k$() : clipOp;
     var tmp;
     if ($super === VOID) {
-      this.clipRect_5p7fgn_k$(rect, clipOp);
+      this.clipRect_oj1pv4_k$(rect, clipOp);
       tmp = Unit_getInstance();
     } else {
       clipRect(rect, clipOp);
@@ -290,50 +291,50 @@
     return tmp;
   }
   function clipRect$default_0(left, top, right, bottom, clipOp, $super) {
-    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_ow3v69_k$() : clipOp;
+    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_gpxc6n_k$() : clipOp;
     var tmp;
     if ($super === VOID) {
-      this.clipRect_si0ig1_k$(left, top, right, bottom, clipOp);
+      this.clipRect_3spswv_k$(left, top, right, bottom, clipOp);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.clipRect_si0ig1_k$.call(this, left, top, right, bottom, new ClipOp(clipOp));
+      tmp = $super.clipRect_3spswv_k$.call(this, left, top, right, bottom, new ClipOp(clipOp));
     }
     return tmp;
   }
   function clipPath$default(path, clipOp, $super) {
-    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_ow3v69_k$() : clipOp;
+    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_gpxc6n_k$() : clipOp;
     var tmp;
     if ($super === VOID) {
-      this.clipPath_kn87dc_k$(path, clipOp);
+      this.clipPath_tlqunt_k$(path, clipOp);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.clipPath_kn87dc_k$.call(this, path, new ClipOp(clipOp));
+      tmp = $super.clipPath_tlqunt_k$.call(this, path, new ClipOp(clipOp));
     }
     return tmp;
   }
   function drawRect(rect, paint) {
-    return this.drawRect_iwqaze_k$(rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), paint);
+    return this.drawRect_njf28a_k$(rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), paint);
   }
   function drawOval(rect, paint) {
-    return this.drawOval_wmf8q4_k$(rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), paint);
+    return this.drawOval_laorgo_k$(rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), paint);
   }
   function drawArc(rect, startAngle, sweepAngle, useCenter, paint) {
-    return this.drawArc_xj6sd2_k$(rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), startAngle, sweepAngle, useCenter, paint);
+    return this.drawArc_ud0hdz_k$(rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), startAngle, sweepAngle, useCenter, paint);
   }
   function drawArcRad(rect, startAngleRad, sweepAngleRad, useCenter, paint) {
-    this.drawArc_wasmwu_k$(rect, degrees(startAngleRad), degrees(sweepAngleRad), useCenter, paint);
+    this.drawArc_j2ua6c_k$(rect, degrees(startAngleRad), degrees(sweepAngleRad), useCenter, paint);
   }
   function drawImageRect$default(image, srcOffset, srcSize, dstOffset, dstSize, paint, $super) {
-    srcOffset = srcOffset === VOID ? Companion_getInstance_1().get_Zero_c6qc7y_k$() : srcOffset;
+    srcOffset = srcOffset === VOID ? Companion_getInstance_1().get_Zero_6hc3i8_k$() : srcOffset;
     srcSize = srcSize === VOID ? IntSize(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()) : srcSize;
-    dstOffset = dstOffset === VOID ? Companion_getInstance_1().get_Zero_c6qc7y_k$() : dstOffset;
+    dstOffset = dstOffset === VOID ? Companion_getInstance_1().get_Zero_6hc3i8_k$() : dstOffset;
     dstSize = dstSize === VOID ? srcSize : dstSize;
     var tmp;
     if ($super === VOID) {
-      this.drawImageRect_pn8joi_k$(image, srcOffset, srcSize, dstOffset, dstSize, paint);
+      this.drawImageRect_5h5ih1_k$(image, srcOffset, srcSize, dstOffset, dstSize, paint);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawImageRect_pn8joi_k$.call(this, image, new IntOffset(srcOffset), new IntSize_0(srcSize), new IntOffset(dstOffset), new IntSize_0(dstSize), paint);
+      tmp = $super.drawImageRect_5h5ih1_k$.call(this, image, new IntOffset(srcOffset), new IntSize_0(srcSize), new IntOffset(dstOffset), new IntSize_0(dstSize), paint);
     }
     return tmp;
   }
@@ -360,10 +361,10 @@
     stride = stride === VOID ? width : stride;
     var tmp;
     if ($super === VOID) {
-      this.readPixels_foa4om_k$(buffer, startX, startY, width, height, bufferOffset, stride);
+      this.readPixels_vm93oo_k$(buffer, startX, startY, width, height, bufferOffset, stride);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.readPixels_foa4om_k$.call(this, buffer, startX, startY, width, height, bufferOffset, stride);
+      tmp = $super.readPixels_vm93oo_k$.call(this, buffer, startX, startY, width, height, bufferOffset, stride);
     }
     return tmp;
   }
@@ -381,21 +382,21 @@
   setMetadataFor(PaintingStyle, 'PaintingStyle', classMeta);
   setMetadataFor(Companion_10, 'Companion', objectMeta);
   function arcToRad(rect, startAngleRadians, sweepAngleRadians, forceMoveTo) {
-    this.arcTo_948klo_k$(rect, degrees(startAngleRadians), degrees(sweepAngleRadians), forceMoveTo);
+    this.arcTo_glfct3_k$(rect, degrees(startAngleRadians), degrees(sweepAngleRadians), forceMoveTo);
   }
   function addPath$default(path, offset, $super) {
-    offset = offset === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : offset;
+    offset = offset === VOID ? Companion_getInstance().get_Zero_k6n73t_k$() : offset;
     var tmp;
     if ($super === VOID) {
-      this.addPath_9947vg_k$(path, offset);
+      this.addPath_mtr781_k$(path, offset);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.addPath_9947vg_k$.call(this, path, new Offset(offset));
+      tmp = $super.addPath_mtr781_k$.call(this, path, new Offset(offset));
     }
     return tmp;
   }
   function rewind() {
-    this.reset_5tn5dq_k$();
+    this.reset_5u6xz3_k$();
   }
   function transform(matrix) {
   }
@@ -408,7 +409,7 @@
   setMetadataFor(PathFillType, 'PathFillType', classMeta);
   function getSegment$default(startDistance, stopDistance, destination, startWithMoveTo, $super) {
     startWithMoveTo = startWithMoveTo === VOID ? true : startWithMoveTo;
-    return $super === VOID ? this.getSegment_54x8z1_k$(startDistance, stopDistance, destination, startWithMoveTo) : $super.getSegment_54x8z1_k$.call(this, startDistance, stopDistance, destination, startWithMoveTo);
+    return $super === VOID ? this.getSegment_x6ele9_k$(startDistance, stopDistance, destination, startWithMoveTo) : $super.getSegment_x6ele9_k$.call(this, startDistance, stopDistance, destination, startWithMoveTo);
   }
   setMetadataFor(PathMeasure, 'PathMeasure', interfaceMeta);
   setMetadataFor(Companion_14, 'Companion', objectMeta);
@@ -418,7 +419,7 @@
   setMetadataFor(Shape, 'Shape', interfaceMeta);
   setMetadataFor(RectangleShape$1, VOID, classMeta, VOID, [Shape]);
   setMetadataFor(Companion_16, 'Companion', objectMeta);
-  setMetadataFor(Shadow, 'Shadow', classMeta);
+  setMetadataFor(Shadow, 'Shadow', classMeta, VOID, VOID, Shadow);
   setMetadataFor(Companion_17, 'Companion', objectMeta);
   setMetadataFor(StrokeCap, 'StrokeCap', classMeta);
   setMetadataFor(Companion_18, 'Companion', objectMeta);
@@ -463,112 +464,98 @@
   setMetadataFor(TransferParameters, 'TransferParameters', classMeta);
   setMetadataFor(WhitePoint, 'WhitePoint', classMeta);
   setMetadataFor(Xyz, 'Xyz', classMeta, ColorSpace);
-  setMetadataFor(DrawParams, 'DrawParams', classMeta);
+  setMetadataFor(DrawParams, 'DrawParams', classMeta, VOID, VOID, DrawParams);
   setMetadataFor(DrawContext, 'DrawContext', interfaceMeta);
   setMetadataFor(CanvasDrawScope$drawContext$1, VOID, classMeta, VOID, [DrawContext]);
   function get_center_0() {
-    return get_center(this.get_drawContext_ffwztu_k$().get_size_x9ctfw_k$());
+    return get_center(this.get_drawContext_ffwztu_k$().get_size_cxx1ym_k$());
   }
   function get_size() {
-    return this.get_drawContext_ffwztu_k$().get_size_x9ctfw_k$();
+    return this.get_drawContext_ffwztu_k$().get_size_cxx1ym_k$();
   }
   function drawLine$default(brush, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode, $super) {
-    var tmp;
-    if (strokeWidth === VOID) {
-      Companion_getInstance_45();
-      tmp = 0.0;
-    } else {
-      tmp = strokeWidth;
-    }
-    strokeWidth = tmp;
+    strokeWidth = strokeWidth === VOID ? 0.0 : strokeWidth;
     cap = cap === VOID ? Companion_getInstance_45().DefaultCap_1 : cap;
     pathEffect = pathEffect === VOID ? null : pathEffect;
     alpha = alpha === VOID ? 1.0 : alpha;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
-    var tmp_0;
+    var tmp;
     if ($super === VOID) {
-      this.drawLine_94tzv7_k$(brush, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode);
-      tmp_0 = Unit_getInstance();
+      this.drawLine_b39977_k$(brush, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode);
+      tmp = Unit_getInstance();
     } else {
-      tmp_0 = $super.drawLine_94tzv7_k$.call(this, brush, new Offset(start), new Offset(end), strokeWidth, new StrokeCap(cap), pathEffect, alpha, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawLine_b39977_k$.call(this, brush, new Offset(start), new Offset(end), strokeWidth, new StrokeCap(cap), pathEffect, alpha, colorFilter, new BlendMode(blendMode));
     }
-    return tmp_0;
+    return tmp;
   }
   function drawLine$default_0(color, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode, $super) {
-    var tmp;
-    if (strokeWidth === VOID) {
-      Companion_getInstance_45();
-      tmp = 0.0;
-    } else {
-      tmp = strokeWidth;
-    }
-    strokeWidth = tmp;
+    strokeWidth = strokeWidth === VOID ? 0.0 : strokeWidth;
     cap = cap === VOID ? Companion_getInstance_45().DefaultCap_1 : cap;
     pathEffect = pathEffect === VOID ? null : pathEffect;
     alpha = alpha === VOID ? 1.0 : alpha;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
-    var tmp_0;
+    var tmp;
     if ($super === VOID) {
-      this.drawLine_qcvbii_k$(color, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode);
-      tmp_0 = Unit_getInstance();
+      this.drawLine_ki2hwq_k$(color, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode);
+      tmp = Unit_getInstance();
     } else {
-      tmp_0 = $super.drawLine_qcvbii_k$.call(this, new Color(color), new Offset(start), new Offset(end), strokeWidth, new StrokeCap(cap), pathEffect, alpha, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawLine_ki2hwq_k$.call(this, new Color(color), new Offset(start), new Offset(end), strokeWidth, new StrokeCap(cap), pathEffect, alpha, colorFilter, new BlendMode(blendMode));
     }
-    return tmp_0;
+    return tmp;
   }
   function drawRect$default(brush, topLeft, size, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
-    size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
+    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_k6n73t_k$() : topLeft;
+    size = size === VOID ? offsetSize(this.get_size_cxx1ym_k$(), this, topLeft) : size;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawRect_4jm64w_k$(brush, topLeft, size, alpha, style, colorFilter, blendMode);
+      this.drawRect_t09b9w_k$(brush, topLeft, size, alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawRect_4jm64w_k$.call(this, brush, new Offset(topLeft), new Size_0(size), alpha, style, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawRect_t09b9w_k$.call(this, brush, new Offset(topLeft), new Size_0(size), alpha, style, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
   function drawRect$default_0(color, topLeft, size, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
-    size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
+    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_k6n73t_k$() : topLeft;
+    size = size === VOID ? offsetSize(this.get_size_cxx1ym_k$(), this, topLeft) : size;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawRect_srg7q1_k$(color, topLeft, size, alpha, style, colorFilter, blendMode);
+      this.drawRect_6sw8uj_k$(color, topLeft, size, alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawRect_srg7q1_k$.call(this, new Color(color), new Offset(topLeft), new Size_0(size), alpha, style, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawRect_6sw8uj_k$.call(this, new Color(color), new Offset(topLeft), new Size_0(size), alpha, style, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
   function drawImage$default(image, topLeft, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
+    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_k6n73t_k$() : topLeft;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawImage_bk8e6s_k$(image, topLeft, alpha, style, colorFilter, blendMode);
+      this.drawImage_7hd74h_k$(image, topLeft, alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawImage_bk8e6s_k$.call(this, image, new Offset(topLeft), alpha, style, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawImage_7hd74h_k$.call(this, image, new Offset(topLeft), alpha, style, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
   function drawImage$default_0(image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode, $super) {
-    srcOffset = srcOffset === VOID ? Companion_getInstance_1().get_Zero_c6qc7y_k$() : srcOffset;
+    srcOffset = srcOffset === VOID ? Companion_getInstance_1().get_Zero_6hc3i8_k$() : srcOffset;
     srcSize = srcSize === VOID ? IntSize(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()) : srcSize;
-    dstOffset = dstOffset === VOID ? Companion_getInstance_1().get_Zero_c6qc7y_k$() : dstOffset;
+    dstOffset = dstOffset === VOID ? Companion_getInstance_1().get_Zero_6hc3i8_k$() : dstOffset;
     dstSize = dstSize === VOID ? srcSize : dstSize;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
@@ -576,20 +563,20 @@
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawImage_td6jz_k$(image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode);
+      this.drawImage_17v7pj_k$(image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawImage_td6jz_k$.call(this, image, new IntOffset(srcOffset), new IntSize_0(srcSize), new IntOffset(dstOffset), new IntSize_0(dstSize), alpha, style, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawImage_17v7pj_k$.call(this, image, new IntOffset(srcOffset), new IntSize_0(srcSize), new IntOffset(dstOffset), new IntSize_0(dstSize), alpha, style, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
   function drawImage(image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode, filterQuality) {
-    this.drawImage$default_q3yuzr_k$(image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode);
+    this.drawImage$default_qql6c2_k$(image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode);
   }
   function drawImage$default_1(image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode, filterQuality, $super) {
-    srcOffset = srcOffset === VOID ? Companion_getInstance_1().get_Zero_c6qc7y_k$() : srcOffset;
+    srcOffset = srcOffset === VOID ? Companion_getInstance_1().get_Zero_6hc3i8_k$() : srcOffset;
     srcSize = srcSize === VOID ? IntSize(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()) : srcSize;
-    dstOffset = dstOffset === VOID ? Companion_getInstance_1().get_Zero_c6qc7y_k$() : dstOffset;
+    dstOffset = dstOffset === VOID ? Companion_getInstance_1().get_Zero_6hc3i8_k$() : dstOffset;
     dstSize = dstSize === VOID ? srcSize : dstSize;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
@@ -598,7 +585,7 @@
     filterQuality = filterQuality === VOID ? Companion_getInstance_44().DefaultFilterQuality_1 : filterQuality;
     var tmp;
     if ($super === VOID) {
-      this.drawImage_riofdh_k$(image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode, filterQuality);
+      this.drawImage_9mpi8u_k$(image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode, filterQuality);
       tmp = Unit_getInstance();
     } else {
       drawImage(image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode, filterQuality);
@@ -607,132 +594,132 @@
     return tmp;
   }
   function drawRoundRect$default(brush, topLeft, size, cornerRadius, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
-    size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
-    cornerRadius = cornerRadius === VOID ? Companion_getInstance_2().get_Zero_5wbciv_k$() : cornerRadius;
+    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_k6n73t_k$() : topLeft;
+    size = size === VOID ? offsetSize(this.get_size_cxx1ym_k$(), this, topLeft) : size;
+    cornerRadius = cornerRadius === VOID ? Companion_getInstance_2().get_Zero_r4zx17_k$() : cornerRadius;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawRoundRect_nkvmol_k$(brush, topLeft, size, cornerRadius, alpha, style, colorFilter, blendMode);
+      this.drawRoundRect_gbkwec_k$(brush, topLeft, size, cornerRadius, alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawRoundRect_nkvmol_k$.call(this, brush, new Offset(topLeft), new Size_0(size), new CornerRadius_0(cornerRadius), alpha, style, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawRoundRect_gbkwec_k$.call(this, brush, new Offset(topLeft), new Size_0(size), new CornerRadius_0(cornerRadius), alpha, style, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
   function drawRoundRect$default_0(color, topLeft, size, cornerRadius, style, alpha, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
-    size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
-    cornerRadius = cornerRadius === VOID ? Companion_getInstance_2().get_Zero_5wbciv_k$() : cornerRadius;
+    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_k6n73t_k$() : topLeft;
+    size = size === VOID ? offsetSize(this.get_size_cxx1ym_k$(), this, topLeft) : size;
+    cornerRadius = cornerRadius === VOID ? Companion_getInstance_2().get_Zero_r4zx17_k$() : cornerRadius;
     style = style === VOID ? Fill_getInstance() : style;
     alpha = alpha === VOID ? 1.0 : alpha;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawRoundRect_q7amlu_k$(color, topLeft, size, cornerRadius, style, alpha, colorFilter, blendMode);
+      this.drawRoundRect_bjcn4f_k$(color, topLeft, size, cornerRadius, style, alpha, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawRoundRect_q7amlu_k$.call(this, new Color(color), new Offset(topLeft), new Size_0(size), new CornerRadius_0(cornerRadius), style, alpha, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawRoundRect_bjcn4f_k$.call(this, new Color(color), new Offset(topLeft), new Size_0(size), new CornerRadius_0(cornerRadius), style, alpha, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
   function drawCircle$default(brush, radius, center, alpha, style, colorFilter, blendMode, $super) {
-    radius = radius === VOID ? _Size___get_minDimension__impl__4iso0r(this.get_size_x9ctfw_k$()) / 2.0 : radius;
-    center = center === VOID ? this.get_center_568eeq_k$() : center;
+    radius = radius === VOID ? _Size___get_minDimension__impl__4iso0r(this.get_size_cxx1ym_k$()) / 2.0 : radius;
+    center = center === VOID ? this.get_center_dcexec_k$() : center;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawCircle_sp46sp_k$(brush, radius, center, alpha, style, colorFilter, blendMode);
+      this.drawCircle_mukkgw_k$(brush, radius, center, alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawCircle_sp46sp_k$.call(this, brush, radius, new Offset(center), alpha, style, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawCircle_mukkgw_k$.call(this, brush, radius, new Offset(center), alpha, style, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
   function drawCircle$default_0(color, radius, center, alpha, style, colorFilter, blendMode, $super) {
-    radius = radius === VOID ? _Size___get_minDimension__impl__4iso0r(this.get_size_x9ctfw_k$()) / 2.0 : radius;
-    center = center === VOID ? this.get_center_568eeq_k$() : center;
+    radius = radius === VOID ? _Size___get_minDimension__impl__4iso0r(this.get_size_cxx1ym_k$()) / 2.0 : radius;
+    center = center === VOID ? this.get_center_dcexec_k$() : center;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawCircle_n7txn6_k$(color, radius, center, alpha, style, colorFilter, blendMode);
+      this.drawCircle_45hmy1_k$(color, radius, center, alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawCircle_n7txn6_k$.call(this, new Color(color), radius, new Offset(center), alpha, style, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawCircle_45hmy1_k$.call(this, new Color(color), radius, new Offset(center), alpha, style, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
   function drawOval$default(brush, topLeft, size, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
-    size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
+    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_k6n73t_k$() : topLeft;
+    size = size === VOID ? offsetSize(this.get_size_cxx1ym_k$(), this, topLeft) : size;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawOval_poyb4u_k$(brush, topLeft, size, alpha, style, colorFilter, blendMode);
+      this.drawOval_euvgam_k$(brush, topLeft, size, alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawOval_poyb4u_k$.call(this, brush, new Offset(topLeft), new Size_0(size), alpha, style, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawOval_euvgam_k$.call(this, brush, new Offset(topLeft), new Size_0(size), alpha, style, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
   function drawOval$default_0(color, topLeft, size, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
-    size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
+    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_k6n73t_k$() : topLeft;
+    size = size === VOID ? offsetSize(this.get_size_cxx1ym_k$(), this, topLeft) : size;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawOval_1h49jp_k$(color, topLeft, size, alpha, style, colorFilter, blendMode);
+      this.drawOval_xyvj95_k$(color, topLeft, size, alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawOval_1h49jp_k$.call(this, new Color(color), new Offset(topLeft), new Size_0(size), alpha, style, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawOval_xyvj95_k$.call(this, new Color(color), new Offset(topLeft), new Size_0(size), alpha, style, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
   function drawArc$default(brush, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
-    size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
+    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_k6n73t_k$() : topLeft;
+    size = size === VOID ? offsetSize(this.get_size_cxx1ym_k$(), this, topLeft) : size;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawArc_vjjneq_k$(brush, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode);
+      this.drawArc_7lpe6v_k$(brush, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawArc_vjjneq_k$.call(this, brush, startAngle, sweepAngle, useCenter, new Offset(topLeft), new Size_0(size), alpha, style, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawArc_7lpe6v_k$.call(this, brush, startAngle, sweepAngle, useCenter, new Offset(topLeft), new Size_0(size), alpha, style, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
   function drawArc$default_0(color, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode, $super) {
-    topLeft = topLeft === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : topLeft;
-    size = size === VOID ? offsetSize(this.get_size_x9ctfw_k$(), this, topLeft) : size;
+    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_k6n73t_k$() : topLeft;
+    size = size === VOID ? offsetSize(this.get_size_cxx1ym_k$(), this, topLeft) : size;
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawArc_y7e861_k$(color, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode);
+      this.drawArc_oz1pds_k$(color, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawArc_y7e861_k$.call(this, new Color(color), startAngle, sweepAngle, useCenter, new Offset(topLeft), new Size_0(size), alpha, style, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawArc_oz1pds_k$.call(this, new Color(color), startAngle, sweepAngle, useCenter, new Offset(topLeft), new Size_0(size), alpha, style, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
@@ -743,10 +730,10 @@
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawPath_vpl0ok_k$(path, color, alpha, style, colorFilter, blendMode);
+      this.drawPath_mbkbcp_k$(path, color, alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawPath_vpl0ok_k$.call(this, path, new Color(color), alpha, style, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawPath_mbkbcp_k$.call(this, path, new Color(color), alpha, style, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
@@ -757,87 +744,73 @@
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
     var tmp;
     if ($super === VOID) {
-      this.drawPath_vsb9f_k$(path, brush, alpha, style, colorFilter, blendMode);
+      this.drawPath_2qit1e_k$(path, brush, alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.drawPath_vsb9f_k$.call(this, path, brush, alpha, style, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawPath_2qit1e_k$.call(this, path, brush, alpha, style, colorFilter, new BlendMode(blendMode));
     }
     return tmp;
   }
   function drawPoints$default(points, pointMode, color, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode, $super) {
-    var tmp;
-    if (strokeWidth === VOID) {
-      Companion_getInstance_45();
-      tmp = 0.0;
-    } else {
-      tmp = strokeWidth;
-    }
-    strokeWidth = tmp;
-    cap = cap === VOID ? Companion_getInstance_32().get_Butt_vf89me_k$() : cap;
+    strokeWidth = strokeWidth === VOID ? 0.0 : strokeWidth;
+    cap = cap === VOID ? Companion_getInstance_32().get_Butt_jb7qjw_k$() : cap;
     pathEffect = pathEffect === VOID ? null : pathEffect;
     alpha = alpha === VOID ? 1.0 : alpha;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
-    var tmp_0;
+    var tmp;
     if ($super === VOID) {
-      this.drawPoints_tvcs0g_k$(points, pointMode, color, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode);
-      tmp_0 = Unit_getInstance();
+      this.drawPoints_l9lrzm_k$(points, pointMode, color, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode);
+      tmp = Unit_getInstance();
     } else {
-      tmp_0 = $super.drawPoints_tvcs0g_k$.call(this, points, new PointMode(pointMode), new Color(color), strokeWidth, new StrokeCap(cap), pathEffect, alpha, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawPoints_l9lrzm_k$.call(this, points, new PointMode(pointMode), new Color(color), strokeWidth, new StrokeCap(cap), pathEffect, alpha, colorFilter, new BlendMode(blendMode));
     }
-    return tmp_0;
+    return tmp;
   }
   function drawPoints$default_0(points, pointMode, brush, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode, $super) {
-    var tmp;
-    if (strokeWidth === VOID) {
-      Companion_getInstance_45();
-      tmp = 0.0;
-    } else {
-      tmp = strokeWidth;
-    }
-    strokeWidth = tmp;
-    cap = cap === VOID ? Companion_getInstance_32().get_Butt_vf89me_k$() : cap;
+    strokeWidth = strokeWidth === VOID ? 0.0 : strokeWidth;
+    cap = cap === VOID ? Companion_getInstance_32().get_Butt_jb7qjw_k$() : cap;
     pathEffect = pathEffect === VOID ? null : pathEffect;
     alpha = alpha === VOID ? 1.0 : alpha;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     blendMode = blendMode === VOID ? Companion_getInstance_44().DefaultBlendMode_1 : blendMode;
-    var tmp_0;
+    var tmp;
     if ($super === VOID) {
-      this.drawPoints_yexgjr_k$(points, pointMode, brush, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode);
-      tmp_0 = Unit_getInstance();
+      this.drawPoints_7jhunr_k$(points, pointMode, brush, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode);
+      tmp = Unit_getInstance();
     } else {
-      tmp_0 = $super.drawPoints_yexgjr_k$.call(this, points, new PointMode(pointMode), brush, strokeWidth, new StrokeCap(cap), pathEffect, alpha, colorFilter, new BlendMode(blendMode));
+      tmp = $super.drawPoints_7jhunr_k$.call(this, points, new PointMode(pointMode), brush, strokeWidth, new StrokeCap(cap), pathEffect, alpha, colorFilter, new BlendMode(blendMode));
     }
-    return tmp_0;
+    return tmp;
   }
   setMetadataFor(DrawScope, 'DrawScope', interfaceMeta, VOID, [Density_0]);
-  setMetadataFor(CanvasDrawScope, 'CanvasDrawScope', classMeta, VOID, [DrawScope]);
+  setMetadataFor(CanvasDrawScope, 'CanvasDrawScope', classMeta, VOID, [DrawScope], CanvasDrawScope);
   function get_center_1() {
-    return Offset_0(_Size___get_width__impl__58y75t(this.get_size_x9ctfw_k$()) / 2, _Size___get_height__impl__a04p02(this.get_size_x9ctfw_k$()) / 2);
+    return Offset_0(_Size___get_width__impl__58y75t(this.get_size_cxx1ym_k$()) / 2, _Size___get_height__impl__a04p02(this.get_size_cxx1ym_k$()) / 2);
   }
   function clipRect$default_1(left, top, right, bottom, clipOp, $super) {
     left = left === VOID ? 0.0 : left;
     top = top === VOID ? 0.0 : top;
-    right = right === VOID ? _Size___get_width__impl__58y75t(this.get_size_x9ctfw_k$()) : right;
-    bottom = bottom === VOID ? _Size___get_height__impl__a04p02(this.get_size_x9ctfw_k$()) : bottom;
-    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_ow3v69_k$() : clipOp;
+    right = right === VOID ? _Size___get_width__impl__58y75t(this.get_size_cxx1ym_k$()) : right;
+    bottom = bottom === VOID ? _Size___get_height__impl__a04p02(this.get_size_cxx1ym_k$()) : bottom;
+    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_gpxc6n_k$() : clipOp;
     var tmp;
     if ($super === VOID) {
-      this.clipRect_si0ig1_k$(left, top, right, bottom, clipOp);
+      this.clipRect_3spswv_k$(left, top, right, bottom, clipOp);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.clipRect_si0ig1_k$.call(this, left, top, right, bottom, new ClipOp(clipOp));
+      tmp = $super.clipRect_3spswv_k$.call(this, left, top, right, bottom, new ClipOp(clipOp));
     }
     return tmp;
   }
   function clipPath$default_0(path, clipOp, $super) {
-    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_ow3v69_k$() : clipOp;
+    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_gpxc6n_k$() : clipOp;
     var tmp;
     if ($super === VOID) {
-      this.clipPath_kn87dc_k$(path, clipOp);
+      this.clipPath_tlqunt_k$(path, clipOp);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.clipPath_kn87dc_k$.call(this, path, new ClipOp(clipOp));
+      tmp = $super.clipPath_tlqunt_k$.call(this, path, new ClipOp(clipOp));
     }
     return tmp;
   }
@@ -846,32 +819,32 @@
     top = top === VOID ? 0.0 : top;
     var tmp;
     if ($super === VOID) {
-      this.translate_62wf99_k$(left, top);
+      this.translate_7gghdu_k$(left, top);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.translate_62wf99_k$.call(this, left, top);
+      tmp = $super.translate_7gghdu_k$.call(this, left, top);
     }
     return tmp;
   }
   function rotate$default(degrees, pivot, $super) {
-    pivot = pivot === VOID ? this.get_center_568eeq_k$() : pivot;
+    pivot = pivot === VOID ? this.get_center_dcexec_k$() : pivot;
     var tmp;
     if ($super === VOID) {
-      this.rotate_qski4n_k$(degrees, pivot);
+      this.rotate_y7zh1f_k$(degrees, pivot);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.rotate_qski4n_k$.call(this, degrees, new Offset(pivot));
+      tmp = $super.rotate_y7zh1f_k$.call(this, degrees, new Offset(pivot));
     }
     return tmp;
   }
   function scale$default_0(scaleX, scaleY, pivot, $super) {
-    pivot = pivot === VOID ? this.get_center_568eeq_k$() : pivot;
+    pivot = pivot === VOID ? this.get_center_dcexec_k$() : pivot;
     var tmp;
     if ($super === VOID) {
-      this.scale_qp5ya8_k$(scaleX, scaleY, pivot);
+      this.scale_rbtyk0_k$(scaleX, scaleY, pivot);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.scale_qp5ya8_k$.call(this, scaleX, scaleY, new Offset(pivot));
+      tmp = $super.scale_rbtyk0_k$.call(this, scaleX, scaleY, new Offset(pivot));
     }
     return tmp;
   }
@@ -882,15 +855,15 @@
   setMetadataFor(Companion_29, 'Companion', objectMeta);
   setMetadataFor(Fill, 'Fill', objectMeta, DrawStyle);
   setMetadataFor(Companion_30, 'Companion', objectMeta);
-  setMetadataFor(Stroke, 'Stroke', classMeta, DrawStyle);
+  setMetadataFor(Stroke, 'Stroke', classMeta, DrawStyle, VOID, Stroke);
   setMetadataFor(DrawScopeMarker, 'DrawScopeMarker', classMeta, VOID, [Annotation]);
-  setMetadataFor(EmptyCanvas, 'EmptyCanvas', classMeta, VOID, [Canvas]);
+  setMetadataFor(EmptyCanvas, 'EmptyCanvas', classMeta, VOID, [Canvas], EmptyCanvas);
   setMetadataFor(Painter, 'Painter', classMeta);
   setMetadataFor(BitmapPainter, 'BitmapPainter', classMeta, Painter);
+  setMetadataFor(FloatResult, 'FloatResult', classMeta, VOID, VOID, FloatResult);
   setMetadataFor(Companion_31, 'Companion', objectMeta);
-  setMetadataFor(FastFloatParser, 'FastFloatParser', classMeta);
-  setMetadataFor(FloatResult, 'FloatResult', classMeta);
-  setMetadataFor(PathBuilder, 'PathBuilder', classMeta);
+  setMetadataFor(FastFloatParser, 'FastFloatParser', classMeta, VOID, VOID, FastFloatParser);
+  setMetadataFor(PathBuilder, 'PathBuilder', classMeta, VOID, VOID, PathBuilder);
   setMetadataFor(PathNode, 'PathNode', classMeta);
   setMetadataFor(Close, 'Close', objectMeta, PathNode);
   setMetadataFor(RelativeMoveTo, 'RelativeMoveTo', classMeta, PathNode);
@@ -911,13 +884,13 @@
   setMetadataFor(ReflectiveQuadTo, 'ReflectiveQuadTo', classMeta, PathNode);
   setMetadataFor(RelativeArcTo, 'RelativeArcTo', classMeta, PathNode);
   setMetadataFor(ArcTo, 'ArcTo', classMeta, PathNode);
-  setMetadataFor(PathParser, 'PathParser', classMeta);
+  setMetadataFor(PathParser, 'PathParser', classMeta, VOID, VOID, PathParser);
   setMetadataFor(NoOp, 'NoOp', classMeta, VOID, [Annotation]);
   setMetadataFor(SkiaBackedCanvas, 'SkiaBackedCanvas', classMeta, VOID, [Canvas]);
-  setMetadataFor(SkiaBackedPaint, 'SkiaBackedPaint', classMeta, VOID, [Paint]);
-  setMetadataFor(SkiaBackedPath, 'SkiaBackedPath', classMeta, VOID, [Path]);
+  setMetadataFor(SkiaBackedPaint, 'SkiaBackedPaint', classMeta, VOID, [Paint], SkiaBackedPaint);
+  setMetadataFor(SkiaBackedPath, 'SkiaBackedPath', classMeta, VOID, [Path], SkiaBackedPath);
   setMetadataFor(SkiaBackedPathEffect, 'SkiaBackedPathEffect', classMeta, VOID, [PathEffect]);
-  setMetadataFor(SkiaBackedPathMeasure, 'SkiaBackedPathMeasure', classMeta, VOID, [PathMeasure]);
+  setMetadataFor(SkiaBackedPathMeasure, 'SkiaBackedPathMeasure', classMeta, VOID, [PathMeasure], SkiaBackedPathMeasure);
   setMetadataFor(RenderEffect, 'RenderEffect', classMeta);
   setMetadataFor(SkiaBackedImageBitmap, 'SkiaBackedImageBitmap', classMeta, VOID, [ImageBitmap]);
   //endregion
@@ -959,91 +932,91 @@
     this.Color_1 = _BlendMode___init__impl__q6jalh(27);
     this.Luminosity_1 = _BlendMode___init__impl__q6jalh(28);
   }
-  protoOf(Companion).get_Clear_9hhqh4_k$ = function () {
+  protoOf(Companion).get_Clear_ts5s9y_k$ = function () {
     return this.Clear_1;
   };
-  protoOf(Companion).get_Src_o7e167_k$ = function () {
+  protoOf(Companion).get_Src_3wpzdd_k$ = function () {
     return this.Src_1;
   };
-  protoOf(Companion).get_Dst_o5v574_k$ = function () {
+  protoOf(Companion).get_Dst_qkkuz6_k$ = function () {
     return this.Dst_1;
   };
-  protoOf(Companion).get_SrcOver_uyf80z_k$ = function () {
+  protoOf(Companion).get_SrcOver_anr685_k$ = function () {
     return this.SrcOver_1;
   };
-  protoOf(Companion).get_DstOver_h25nrw_k$ = function () {
+  protoOf(Companion).get_DstOver_xoacee_k$ = function () {
     return this.DstOver_1;
   };
-  protoOf(Companion).get_SrcIn_yyf2fo_k$ = function () {
+  protoOf(Companion).get_SrcIn_enr0mu_k$ = function () {
     return this.SrcIn_1;
   };
-  protoOf(Companion).get_DstIn_7c3x3p_k$ = function () {
+  protoOf(Companion).get_DstIn_cyk4p5_k$ = function () {
     return this.DstIn_1;
   };
-  protoOf(Companion).get_SrcOut_78cqo7_k$ = function () {
+  protoOf(Companion).get_SrcOut_d2bb4n_k$ = function () {
     return this.SrcOut_1;
   };
-  protoOf(Companion).get_DstOut_3e3t2e_k$ = function () {
+  protoOf(Companion).get_DstOut_gwk8qg_k$ = function () {
     return this.DstOut_1;
   };
-  protoOf(Companion).get_SrcAtop_erwkkd_k$ = function () {
+  protoOf(Companion).get_SrcAtop_z2kmd7_k$ = function () {
     return this.SrcAtop_1;
   };
-  protoOf(Companion).get_DstAtop_88mllw_k$ = function () {
+  protoOf(Companion).get_DstAtop_c21g6y_k$ = function () {
     return this.DstAtop_1;
   };
-  protoOf(Companion).get_Xor_7r0wg6_k$ = function () {
+  protoOf(Companion).get_Xor_cjn5co_k$ = function () {
     return this.Xor_1;
   };
-  protoOf(Companion).get_Plus_sl45pl_k$ = function () {
+  protoOf(Companion).get_Plus_m5bugp_k$ = function () {
     return this.Plus_1;
   };
-  protoOf(Companion).get_Modulate_xd1sfq_k$ = function () {
+  protoOf(Companion).get_Modulate_d2dqmw_k$ = function () {
     return this.Modulate_1;
   };
-  protoOf(Companion).get_Screen_76rbx3_k$ = function () {
+  protoOf(Companion).get_Screen_rhfdpx_k$ = function () {
     return this.Screen_1;
   };
-  protoOf(Companion).get_Overlay_2mxasb_k$ = function () {
+  protoOf(Companion).get_Overlay_hnqr0j_k$ = function () {
     return this.Overlay_1;
   };
-  protoOf(Companion).get_Darken_1ojojo_k$ = function () {
+  protoOf(Companion).get_Darken_lz7qci_k$ = function () {
     return this.Darken_1;
   };
-  protoOf(Companion).get_Lighten_afcpbe_k$ = function () {
+  protoOf(Companion).get_Lighten_9vbchg_k$ = function () {
     return this.Lighten_1;
   };
-  protoOf(Companion).get_ColorDodge_gwt0pb_k$ = function () {
+  protoOf(Companion).get_ColorDodge_xtmzgz_k$ = function () {
     return this.ColorDodge_1;
   };
-  protoOf(Companion).get_ColorBurn_55chr1_k$ = function () {
+  protoOf(Companion).get_ColorBurn_f5bk1t_k$ = function () {
     return this.ColorBurn_1;
   };
-  protoOf(Companion).get_Hardlight_ie4bsm_k$ = function () {
+  protoOf(Companion).get_Hardlight_1wjq08_k$ = function () {
     return this.Hardlight_1;
   };
-  protoOf(Companion).get_Softlight_3emetl_k$ = function () {
+  protoOf(Companion).get_Softlight_npagmf_k$ = function () {
     return this.Softlight_1;
   };
-  protoOf(Companion).get_Difference_k61r8m_k$ = function () {
+  protoOf(Companion).get_Difference_uke8xo_k$ = function () {
     return this.Difference_1;
   };
-  protoOf(Companion).get_Exclusion_cabql5_k$ = function () {
+  protoOf(Companion).get_Exclusion_80cb7p_k$ = function () {
     return this.Exclusion_1;
   };
-  protoOf(Companion).get_Multiply_bawk0x_k$ = function () {
+  protoOf(Companion).get_Multiply_8zrhrx_k$ = function () {
     return this.Multiply_1;
   };
-  protoOf(Companion).get_Hue_1rhqm5_k$ = function () {
+  protoOf(Companion).get_Hue_m25sez_k$ = function () {
     return this.Hue_1;
   };
-  protoOf(Companion).get_Saturation_y5o6lt_k$ = function () {
+  protoOf(Companion).get_Saturation_gkrtkh_k$ = function () {
     return this.Saturation_1;
   };
-  protoOf(Companion).get_Color_2ootbm_k$ = function () {
+  protoOf(Companion).get_Color_mzcv4g_k$ = function () {
     return this.Color_1;
   };
-  protoOf(Companion).get_Luminosity_99tf6q_k$ = function () {
+  protoOf(Companion).get_Luminosity_tkhgzk_k$ = function () {
     return this.Luminosity_1;
   };
   var Companion_instance;
@@ -1078,6 +1051,212 @@
   protoOf(BlendMode).equals = function (other) {
     return BlendMode__equals_impl_1tm25i(this.value_1, other);
   };
+  function Companion_0() {
+    Companion_instance_0 = this;
+  }
+  protoOf(Companion_0).linearGradient_gq8lze_k$ = function (colorStops, start, end, tileMode) {
+    // Inline function 'kotlin.collections.List' call
+    // Inline function 'kotlin.collections.MutableList' call
+    var size = colorStops.length;
+    var list = ArrayList_init_$Create$(size);
+    // Inline function 'kotlin.repeat' call
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    if (inductionVariable < size)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        // Inline function 'kotlin.collections.MutableList.<anonymous>' call
+        // Inline function 'androidx.compose.ui.graphics.Companion.linearGradient.<anonymous>' call
+        var tmp$ret$0 = colorStops[index].get_second_jf7fjx_k$().value_1;
+        list.add_utx5q5_k$(new Color(tmp$ret$0));
+      }
+       while (inductionVariable < size);
+    var tmp = list;
+    // Inline function 'kotlin.collections.List' call
+    // Inline function 'kotlin.collections.MutableList' call
+    var size_0 = colorStops.length;
+    var list_0 = ArrayList_init_$Create$(size_0);
+    // Inline function 'kotlin.repeat' call
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable_0 = 0;
+    if (inductionVariable_0 < size_0)
+      do {
+        var index_0 = inductionVariable_0;
+        inductionVariable_0 = inductionVariable_0 + 1 | 0;
+        // Inline function 'kotlin.collections.MutableList.<anonymous>' call
+        // Inline function 'androidx.compose.ui.graphics.Companion.linearGradient.<anonymous>' call
+        var tmp$ret$3 = colorStops[index_0].get_first_irdx8n_k$();
+        list_0.add_utx5q5_k$(tmp$ret$3);
+      }
+       while (inductionVariable_0 < size_0);
+    return new LinearGradient(tmp, list_0, start, end, tileMode);
+  };
+  protoOf(Companion_0).linearGradient$default_ae8y8j_k$ = function (colorStops, start, end, tileMode, $super) {
+    start = start === VOID ? Companion_getInstance().get_Zero_k6n73t_k$() : start;
+    end = end === VOID ? Companion_getInstance().get_Infinite_g7y28d_k$() : end;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_ddetsd_k$() : tileMode;
+    return $super === VOID ? this.linearGradient_gq8lze_k$(colorStops, start, end, tileMode) : $super.linearGradient_gq8lze_k$.call(this, colorStops, new Offset(start), new Offset(end), new TileMode(tileMode));
+  };
+  protoOf(Companion_0).linearGradient_qfnkcn_k$ = function (colors, start, end, tileMode) {
+    return new LinearGradient(colors, null, start, end, tileMode);
+  };
+  protoOf(Companion_0).linearGradient$default_6dexgc_k$ = function (colors, start, end, tileMode, $super) {
+    start = start === VOID ? Companion_getInstance().get_Zero_k6n73t_k$() : start;
+    end = end === VOID ? Companion_getInstance().get_Infinite_g7y28d_k$() : end;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_ddetsd_k$() : tileMode;
+    return $super === VOID ? this.linearGradient_qfnkcn_k$(colors, start, end, tileMode) : $super.linearGradient_qfnkcn_k$.call(this, colors, new Offset(start), new Offset(end), new TileMode(tileMode));
+  };
+  protoOf(Companion_0).horizontalGradient_ror43s_k$ = function (colors, startX, endX, tileMode) {
+    return this.linearGradient_qfnkcn_k$(colors, Offset_0(startX, 0.0), Offset_0(endX, 0.0), tileMode);
+  };
+  protoOf(Companion_0).horizontalGradient$default_bgcgs7_k$ = function (colors, startX, endX, tileMode, $super) {
+    startX = startX === VOID ? 0.0 : startX;
+    endX = endX === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : endX;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_ddetsd_k$() : tileMode;
+    return $super === VOID ? this.horizontalGradient_ror43s_k$(colors, startX, endX, tileMode) : $super.horizontalGradient_ror43s_k$.call(this, colors, startX, endX, new TileMode(tileMode));
+  };
+  protoOf(Companion_0).horizontalGradient_1uxp91_k$ = function (colorStops, startX, endX, tileMode) {
+    return this.linearGradient_gq8lze_k$(colorStops.slice(), Offset_0(startX, 0.0), Offset_0(endX, 0.0), tileMode);
+  };
+  protoOf(Companion_0).horizontalGradient$default_ptsma8_k$ = function (colorStops, startX, endX, tileMode, $super) {
+    startX = startX === VOID ? 0.0 : startX;
+    endX = endX === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : endX;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_ddetsd_k$() : tileMode;
+    return $super === VOID ? this.horizontalGradient_1uxp91_k$(colorStops, startX, endX, tileMode) : $super.horizontalGradient_1uxp91_k$.call(this, colorStops, startX, endX, new TileMode(tileMode));
+  };
+  protoOf(Companion_0).verticalGradient_hgetkm_k$ = function (colors, startY, endY, tileMode) {
+    return this.linearGradient_qfnkcn_k$(colors, Offset_0(0.0, startY), Offset_0(0.0, endY), tileMode);
+  };
+  protoOf(Companion_0).verticalGradient$default_wik409_k$ = function (colors, startY, endY, tileMode, $super) {
+    startY = startY === VOID ? 0.0 : startY;
+    endY = endY === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : endY;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_ddetsd_k$() : tileMode;
+    return $super === VOID ? this.verticalGradient_hgetkm_k$(colors, startY, endY, tileMode) : $super.verticalGradient_hgetkm_k$.call(this, colors, startY, endY, new TileMode(tileMode));
+  };
+  protoOf(Companion_0).verticalGradient_kcmod5_k$ = function (colorStops, startY, endY, tileMode) {
+    return this.linearGradient_gq8lze_k$(colorStops.slice(), Offset_0(0.0, startY), Offset_0(0.0, endY), tileMode);
+  };
+  protoOf(Companion_0).verticalGradient$default_hhpt8i_k$ = function (colorStops, startY, endY, tileMode, $super) {
+    startY = startY === VOID ? 0.0 : startY;
+    endY = endY === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : endY;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_ddetsd_k$() : tileMode;
+    return $super === VOID ? this.verticalGradient_kcmod5_k$(colorStops, startY, endY, tileMode) : $super.verticalGradient_kcmod5_k$.call(this, colorStops, startY, endY, new TileMode(tileMode));
+  };
+  protoOf(Companion_0).radialGradient_q9mw3i_k$ = function (colorStops, center, radius, tileMode) {
+    // Inline function 'kotlin.collections.List' call
+    // Inline function 'kotlin.collections.MutableList' call
+    var size = colorStops.length;
+    var list = ArrayList_init_$Create$(size);
+    // Inline function 'kotlin.repeat' call
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    if (inductionVariable < size)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        // Inline function 'kotlin.collections.MutableList.<anonymous>' call
+        // Inline function 'androidx.compose.ui.graphics.Companion.radialGradient.<anonymous>' call
+        var tmp$ret$0 = colorStops[index].get_second_jf7fjx_k$().value_1;
+        list.add_utx5q5_k$(new Color(tmp$ret$0));
+      }
+       while (inductionVariable < size);
+    var tmp = list;
+    // Inline function 'kotlin.collections.List' call
+    // Inline function 'kotlin.collections.MutableList' call
+    var size_0 = colorStops.length;
+    var list_0 = ArrayList_init_$Create$(size_0);
+    // Inline function 'kotlin.repeat' call
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable_0 = 0;
+    if (inductionVariable_0 < size_0)
+      do {
+        var index_0 = inductionVariable_0;
+        inductionVariable_0 = inductionVariable_0 + 1 | 0;
+        // Inline function 'kotlin.collections.MutableList.<anonymous>' call
+        // Inline function 'androidx.compose.ui.graphics.Companion.radialGradient.<anonymous>' call
+        var tmp$ret$3 = colorStops[index_0].get_first_irdx8n_k$();
+        list_0.add_utx5q5_k$(tmp$ret$3);
+      }
+       while (inductionVariable_0 < size_0);
+    return new RadialGradient(tmp, list_0, center, radius, tileMode);
+  };
+  protoOf(Companion_0).radialGradient$default_wwbz6v_k$ = function (colorStops, center, radius, tileMode, $super) {
+    center = center === VOID ? Companion_getInstance().get_Unspecified_gis8po_k$() : center;
+    radius = radius === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : radius;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_ddetsd_k$() : tileMode;
+    return $super === VOID ? this.radialGradient_q9mw3i_k$(colorStops, center, radius, tileMode) : $super.radialGradient_q9mw3i_k$.call(this, colorStops, new Offset(center), radius, new TileMode(tileMode));
+  };
+  protoOf(Companion_0).radialGradient_clg4pn_k$ = function (colors, center, radius, tileMode) {
+    return new RadialGradient(colors, null, center, radius, tileMode);
+  };
+  protoOf(Companion_0).radialGradient$default_upgqlg_k$ = function (colors, center, radius, tileMode, $super) {
+    center = center === VOID ? Companion_getInstance().get_Unspecified_gis8po_k$() : center;
+    radius = radius === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : radius;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_ddetsd_k$() : tileMode;
+    return $super === VOID ? this.radialGradient_clg4pn_k$(colors, center, radius, tileMode) : $super.radialGradient_clg4pn_k$.call(this, colors, new Offset(center), radius, new TileMode(tileMode));
+  };
+  protoOf(Companion_0).sweepGradient_pf4hbc_k$ = function (colorStops, center) {
+    // Inline function 'kotlin.collections.List' call
+    // Inline function 'kotlin.collections.MutableList' call
+    var size = colorStops.length;
+    var list = ArrayList_init_$Create$(size);
+    // Inline function 'kotlin.repeat' call
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    if (inductionVariable < size)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        // Inline function 'kotlin.collections.MutableList.<anonymous>' call
+        // Inline function 'androidx.compose.ui.graphics.Companion.sweepGradient.<anonymous>' call
+        var tmp$ret$0 = colorStops[index].get_second_jf7fjx_k$().value_1;
+        list.add_utx5q5_k$(new Color(tmp$ret$0));
+      }
+       while (inductionVariable < size);
+    // Inline function 'kotlin.collections.List' call
+    // Inline function 'kotlin.collections.MutableList' call
+    var size_0 = colorStops.length;
+    var list_0 = ArrayList_init_$Create$(size_0);
+    // Inline function 'kotlin.repeat' call
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable_0 = 0;
+    if (inductionVariable_0 < size_0)
+      do {
+        var index_0 = inductionVariable_0;
+        inductionVariable_0 = inductionVariable_0 + 1 | 0;
+        // Inline function 'kotlin.collections.MutableList.<anonymous>' call
+        // Inline function 'androidx.compose.ui.graphics.Companion.sweepGradient.<anonymous>' call
+        var tmp$ret$3 = colorStops[index_0].get_first_irdx8n_k$();
+        list_0.add_utx5q5_k$(tmp$ret$3);
+      }
+       while (inductionVariable_0 < size_0);
+    return new SweepGradient(center, list, list_0);
+  };
+  protoOf(Companion_0).sweepGradient$default_k6onmt_k$ = function (colorStops, center, $super) {
+    center = center === VOID ? Companion_getInstance().get_Unspecified_gis8po_k$() : center;
+    return $super === VOID ? this.sweepGradient_pf4hbc_k$(colorStops, center) : $super.sweepGradient_pf4hbc_k$.call(this, colorStops, new Offset(center));
+  };
+  protoOf(Companion_0).sweepGradient_xb7pvp_k$ = function (colors, center) {
+    return new SweepGradient(center, colors, null);
+  };
+  protoOf(Companion_0).sweepGradient$default_odlf72_k$ = function (colors, center, $super) {
+    center = center === VOID ? Companion_getInstance().get_Unspecified_gis8po_k$() : center;
+    return $super === VOID ? this.sweepGradient_xb7pvp_k$(colors, center) : $super.sweepGradient_xb7pvp_k$.call(this, colors, new Offset(center));
+  };
+  var Companion_instance_0;
+  function Companion_getInstance_15() {
+    if (Companion_instance_0 == null)
+      new Companion_0();
+    return Companion_instance_0;
+  }
+  function Brush() {
+    Companion_getInstance_15();
+    this.intrinsicSize_1 = Companion_getInstance_0().get_Unspecified_3ttj0y_k$();
+  }
+  protoOf(Brush).get_intrinsicSize_culx5t_k$ = function () {
+    return this.intrinsicSize_1;
+  };
   function _set_internalShader__t1be7f($this, _set____db54di) {
     $this.internalShader_1 = _set____db54di;
   }
@@ -1093,265 +1272,53 @@
   function ShaderBrush() {
     Brush.call(this);
     this.internalShader_1 = null;
-    this.createdSize_1 = Companion_getInstance().get_Unspecified_o59ai8_k$();
+    this.createdSize_1 = Companion_getInstance_0().get_Unspecified_3ttj0y_k$();
   }
-  protoOf(ShaderBrush).applyTo_w34vc_k$ = function (size, p, alpha) {
+  protoOf(ShaderBrush).applyTo_5ix92b_k$ = function (size, p, alpha) {
     var shader = this.internalShader_1;
     if (shader == null ? true : !equals(this.createdSize_1, size)) {
       if (Size__isEmpty_impl_o9ye97(size)) {
         shader = null;
         this.internalShader_1 = null;
-        this.createdSize_1 = Companion_getInstance().get_Unspecified_o59ai8_k$();
+        this.createdSize_1 = Companion_getInstance_0().get_Unspecified_3ttj0y_k$();
       } else {
         // Inline function 'kotlin.also' call
-        var tmp0_also = this.createShader_myfnlm_k$(size);
+        var this_0 = this.createShader_k0897f_k$(size);
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.graphics.ShaderBrush.applyTo.<anonymous>' call
-        this.internalShader_1 = tmp0_also;
-        shader = tmp0_also;
+        this.internalShader_1 = this_0;
+        shader = this_0;
         this.createdSize_1 = size;
       }
     }
-    if (!equals(p.get_color_v34vrz_k$(), Companion_getInstance_17().get_Black_wh3yn9_k$())) {
-      p.set_color_b5evhd_k$(Companion_getInstance_17().get_Black_wh3yn9_k$());
+    if (!equals(p.get_color_lnp1vl_k$(), Companion_getInstance_17().get_Black_t4k9fh_k$())) {
+      p.set_color_m2amxp_k$(Companion_getInstance_17().get_Black_t4k9fh_k$());
     }
     if (!equals(p.get_shader_jgtazy_k$(), shader)) {
-      p.set_shader_bd5o0m_k$(shader);
+      p.set_shader_tgaw5e_k$(shader);
     }
     if (!(p.get_alpha_iooth1_k$() === alpha)) {
-      p.set_alpha_k1tx50_k$(alpha);
+      p.set_alpha_tvzcqh_k$(alpha);
     }
-  };
-  function Companion_0() {
-    Companion_instance_0 = this;
-  }
-  protoOf(Companion_0).linearGradient_hzla25_k$ = function (colorStops, start, end, tileMode) {
-    // Inline function 'kotlin.collections.List' call
-    var tmp0_List = colorStops.length;
-    // Inline function 'kotlin.collections.MutableList' call
-    var list = ArrayList_init_$Create$(tmp0_List);
-    // Inline function 'kotlin.repeat' call
-    // Inline function 'kotlin.contracts.contract' call
-    var inductionVariable = 0;
-    if (inductionVariable < tmp0_List)
-      do {
-        var index = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        // Inline function 'kotlin.collections.MutableList.<anonymous>' call
-        var tmp$ret$0;
-        // Inline function 'androidx.compose.ui.graphics.Companion.linearGradient.<anonymous>' call
-        tmp$ret$0 = colorStops[index].get_second_jf7fjx_k$().value_1;
-        list.add_1j60pz_k$(new Color(tmp$ret$0));
-      }
-       while (inductionVariable < tmp0_List);
-    var tmp = list;
-    // Inline function 'kotlin.collections.List' call
-    var tmp1_List = colorStops.length;
-    // Inline function 'kotlin.collections.MutableList' call
-    var list_0 = ArrayList_init_$Create$(tmp1_List);
-    // Inline function 'kotlin.repeat' call
-    // Inline function 'kotlin.contracts.contract' call
-    var inductionVariable_0 = 0;
-    if (inductionVariable_0 < tmp1_List)
-      do {
-        var index_0 = inductionVariable_0;
-        inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        // Inline function 'kotlin.collections.MutableList.<anonymous>' call
-        var tmp$ret$3;
-        // Inline function 'androidx.compose.ui.graphics.Companion.linearGradient.<anonymous>' call
-        tmp$ret$3 = colorStops[index_0].get_first_irdx8n_k$();
-        list_0.add_1j60pz_k$(tmp$ret$3);
-      }
-       while (inductionVariable_0 < tmp1_List);
-    return new LinearGradient(tmp, list_0, start, end, tileMode);
-  };
-  protoOf(Companion_0).linearGradient$default_n2weej_k$ = function (colorStops, start, end, tileMode, $super) {
-    start = start === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : start;
-    end = end === VOID ? Companion_getInstance_0().get_Infinite_oe4l7z_k$() : end;
-    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
-    return $super === VOID ? this.linearGradient_hzla25_k$(colorStops, start, end, tileMode) : $super.linearGradient_hzla25_k$.call(this, colorStops, new Offset(start), new Offset(end), new TileMode(tileMode));
-  };
-  protoOf(Companion_0).linearGradient_shb1il_k$ = function (colors, start, end, tileMode) {
-    return new LinearGradient(colors, null, start, end, tileMode);
-  };
-  protoOf(Companion_0).linearGradient$default_idz3kv_k$ = function (colors, start, end, tileMode, $super) {
-    start = start === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : start;
-    end = end === VOID ? Companion_getInstance_0().get_Infinite_oe4l7z_k$() : end;
-    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
-    return $super === VOID ? this.linearGradient_shb1il_k$(colors, start, end, tileMode) : $super.linearGradient_shb1il_k$.call(this, colors, new Offset(start), new Offset(end), new TileMode(tileMode));
-  };
-  protoOf(Companion_0).horizontalGradient_tfs9xe_k$ = function (colors, startX, endX, tileMode) {
-    return this.linearGradient_shb1il_k$(colors, Offset_0(startX, 0.0), Offset_0(endX, 0.0), tileMode);
-  };
-  protoOf(Companion_0).horizontalGradient$default_d80ehs_k$ = function (colors, startX, endX, tileMode, $super) {
-    startX = startX === VOID ? 0.0 : startX;
-    endX = endX === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : endX;
-    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
-    return $super === VOID ? this.horizontalGradient_tfs9xe_k$(colors, startX, endX, tileMode) : $super.horizontalGradient_tfs9xe_k$.call(this, colors, startX, endX, new TileMode(tileMode));
-  };
-  protoOf(Companion_0).horizontalGradient_i469mu_k$ = function (colorStops, startX, endX, tileMode) {
-    return this.linearGradient_hzla25_k$(colorStops.slice(), Offset_0(startX, 0.0), Offset_0(endX, 0.0), tileMode);
-  };
-  protoOf(Companion_0).horizontalGradient$default_mfit2q_k$ = function (colorStops, startX, endX, tileMode, $super) {
-    startX = startX === VOID ? 0.0 : startX;
-    endX = endX === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : endX;
-    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
-    return $super === VOID ? this.horizontalGradient_i469mu_k$(colorStops, startX, endX, tileMode) : $super.horizontalGradient_i469mu_k$.call(this, colorStops, startX, endX, new TileMode(tileMode));
-  };
-  protoOf(Companion_0).verticalGradient_d79o9c_k$ = function (colors, startY, endY, tileMode) {
-    return this.linearGradient_shb1il_k$(colors, Offset_0(0.0, startY), Offset_0(0.0, endY), tileMode);
-  };
-  protoOf(Companion_0).verticalGradient$default_ic5ss2_k$ = function (colors, startY, endY, tileMode, $super) {
-    startY = startY === VOID ? 0.0 : startY;
-    endY = endY === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : endY;
-    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
-    return $super === VOID ? this.verticalGradient_d79o9c_k$(colors, startY, endY, tileMode) : $super.verticalGradient_d79o9c_k$.call(this, colors, startY, endY, new TileMode(tileMode));
-  };
-  protoOf(Companion_0).verticalGradient_inf80c_k$ = function (colorStops, startY, endY, tileMode) {
-    return this.linearGradient_hzla25_k$(colorStops.slice(), Offset_0(0.0, startY), Offset_0(0.0, endY), tileMode);
-  };
-  protoOf(Companion_0).verticalGradient$default_cxjvk4_k$ = function (colorStops, startY, endY, tileMode, $super) {
-    startY = startY === VOID ? 0.0 : startY;
-    endY = endY === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : endY;
-    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
-    return $super === VOID ? this.verticalGradient_inf80c_k$(colorStops, startY, endY, tileMode) : $super.verticalGradient_inf80c_k$.call(this, colorStops, startY, endY, new TileMode(tileMode));
-  };
-  protoOf(Companion_0).radialGradient_ge8bks_k$ = function (colorStops, center, radius, tileMode) {
-    // Inline function 'kotlin.collections.List' call
-    var tmp0_List = colorStops.length;
-    // Inline function 'kotlin.collections.MutableList' call
-    var list = ArrayList_init_$Create$(tmp0_List);
-    // Inline function 'kotlin.repeat' call
-    // Inline function 'kotlin.contracts.contract' call
-    var inductionVariable = 0;
-    if (inductionVariable < tmp0_List)
-      do {
-        var index = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        // Inline function 'kotlin.collections.MutableList.<anonymous>' call
-        var tmp$ret$0;
-        // Inline function 'androidx.compose.ui.graphics.Companion.radialGradient.<anonymous>' call
-        tmp$ret$0 = colorStops[index].get_second_jf7fjx_k$().value_1;
-        list.add_1j60pz_k$(new Color(tmp$ret$0));
-      }
-       while (inductionVariable < tmp0_List);
-    var tmp = list;
-    // Inline function 'kotlin.collections.List' call
-    var tmp1_List = colorStops.length;
-    // Inline function 'kotlin.collections.MutableList' call
-    var list_0 = ArrayList_init_$Create$(tmp1_List);
-    // Inline function 'kotlin.repeat' call
-    // Inline function 'kotlin.contracts.contract' call
-    var inductionVariable_0 = 0;
-    if (inductionVariable_0 < tmp1_List)
-      do {
-        var index_0 = inductionVariable_0;
-        inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        // Inline function 'kotlin.collections.MutableList.<anonymous>' call
-        var tmp$ret$3;
-        // Inline function 'androidx.compose.ui.graphics.Companion.radialGradient.<anonymous>' call
-        tmp$ret$3 = colorStops[index_0].get_first_irdx8n_k$();
-        list_0.add_1j60pz_k$(tmp$ret$3);
-      }
-       while (inductionVariable_0 < tmp1_List);
-    return new RadialGradient(tmp, list_0, center, radius, tileMode);
-  };
-  protoOf(Companion_0).radialGradient$default_qhhcp2_k$ = function (colorStops, center, radius, tileMode, $super) {
-    center = center === VOID ? Companion_getInstance_0().get_Unspecified_ooyrpa_k$() : center;
-    radius = radius === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : radius;
-    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
-    return $super === VOID ? this.radialGradient_ge8bks_k$(colorStops, center, radius, tileMode) : $super.radialGradient_ge8bks_k$.call(this, colorStops, new Offset(center), radius, new TileMode(tileMode));
-  };
-  protoOf(Companion_0).radialGradient_x8fw6i_k$ = function (colors, center, radius, tileMode) {
-    return new RadialGradient(colors, null, center, radius, tileMode);
-  };
-  protoOf(Companion_0).radialGradient$default_sd2nry_k$ = function (colors, center, radius, tileMode, $super) {
-    center = center === VOID ? Companion_getInstance_0().get_Unspecified_ooyrpa_k$() : center;
-    radius = radius === VOID ? FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() : radius;
-    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
-    return $super === VOID ? this.radialGradient_x8fw6i_k$(colors, center, radius, tileMode) : $super.radialGradient_x8fw6i_k$.call(this, colors, new Offset(center), radius, new TileMode(tileMode));
-  };
-  protoOf(Companion_0).sweepGradient_nrx7hj_k$ = function (colorStops, center) {
-    // Inline function 'kotlin.collections.List' call
-    var tmp0_List = colorStops.length;
-    // Inline function 'kotlin.collections.MutableList' call
-    var list = ArrayList_init_$Create$(tmp0_List);
-    // Inline function 'kotlin.repeat' call
-    // Inline function 'kotlin.contracts.contract' call
-    var inductionVariable = 0;
-    if (inductionVariable < tmp0_List)
-      do {
-        var index = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        // Inline function 'kotlin.collections.MutableList.<anonymous>' call
-        var tmp$ret$0;
-        // Inline function 'androidx.compose.ui.graphics.Companion.sweepGradient.<anonymous>' call
-        tmp$ret$0 = colorStops[index].get_second_jf7fjx_k$().value_1;
-        list.add_1j60pz_k$(new Color(tmp$ret$0));
-      }
-       while (inductionVariable < tmp0_List);
-    // Inline function 'kotlin.collections.List' call
-    var tmp1_List = colorStops.length;
-    // Inline function 'kotlin.collections.MutableList' call
-    var list_0 = ArrayList_init_$Create$(tmp1_List);
-    // Inline function 'kotlin.repeat' call
-    // Inline function 'kotlin.contracts.contract' call
-    var inductionVariable_0 = 0;
-    if (inductionVariable_0 < tmp1_List)
-      do {
-        var index_0 = inductionVariable_0;
-        inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        // Inline function 'kotlin.collections.MutableList.<anonymous>' call
-        var tmp$ret$3;
-        // Inline function 'androidx.compose.ui.graphics.Companion.sweepGradient.<anonymous>' call
-        tmp$ret$3 = colorStops[index_0].get_first_irdx8n_k$();
-        list_0.add_1j60pz_k$(tmp$ret$3);
-      }
-       while (inductionVariable_0 < tmp1_List);
-    return new SweepGradient(center, list, list_0);
-  };
-  protoOf(Companion_0).sweepGradient$default_7o0bdt_k$ = function (colorStops, center, $super) {
-    center = center === VOID ? Companion_getInstance_0().get_Unspecified_ooyrpa_k$() : center;
-    return $super === VOID ? this.sweepGradient_nrx7hj_k$(colorStops, center) : $super.sweepGradient_nrx7hj_k$.call(this, colorStops, new Offset(center));
-  };
-  protoOf(Companion_0).sweepGradient_uggmap_k$ = function (colors, center) {
-    return new SweepGradient(center, colors, null);
-  };
-  protoOf(Companion_0).sweepGradient$default_ccaoht_k$ = function (colors, center, $super) {
-    center = center === VOID ? Companion_getInstance_0().get_Unspecified_ooyrpa_k$() : center;
-    return $super === VOID ? this.sweepGradient_uggmap_k$(colors, center) : $super.sweepGradient_uggmap_k$.call(this, colors, new Offset(center));
-  };
-  var Companion_instance_0;
-  function Companion_getInstance_15() {
-    if (Companion_instance_0 == null)
-      new Companion_0();
-    return Companion_instance_0;
-  }
-  function Brush() {
-    Companion_getInstance_15();
-    this.intrinsicSize_1 = Companion_getInstance().get_Unspecified_o59ai8_k$();
-  }
-  protoOf(Brush).get_intrinsicSize_x61on3_k$ = function () {
-    return this.intrinsicSize_1;
   };
   function SolidColor(value) {
     Brush.call(this);
     this.value_1 = value;
   }
-  protoOf(SolidColor).get_value_puk9xv_k$ = function () {
+  protoOf(SolidColor).get_value_za03u9_k$ = function () {
     return this.value_1;
   };
-  protoOf(SolidColor).applyTo_w34vc_k$ = function (size, p, alpha) {
-    p.set_alpha_k1tx50_k$(get_DefaultAlpha());
+  protoOf(SolidColor).applyTo_5ix92b_k$ = function (size, p, alpha) {
+    p.set_alpha_tvzcqh_k$(get_DefaultAlpha());
     var tmp;
     if (!(alpha === get_DefaultAlpha())) {
       tmp = Color__copy$default_impl_ectz3s(this.value_1, _Color___get_alpha__impl__wcfyv1(this.value_1) * alpha);
     } else {
       tmp = this.value_1;
     }
-    p.set_color_b5evhd_k$(tmp);
+    p.set_color_m2amxp_k$(tmp);
     if (!(p.get_shader_jgtazy_k$() == null)) {
-      p.set_shader_bd5o0m_k$(null);
+      p.set_shader_tgaw5e_k$(null);
     }
   };
   protoOf(SolidColor).equals = function (other) {
@@ -1386,7 +1353,7 @@
   }
   function LinearGradient(colors, stops, start, end, tileMode) {
     stops = stops === VOID ? null : stops;
-    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_ddetsd_k$() : tileMode;
     ShaderBrush.call(this);
     this.colors_1 = colors;
     this.stops_1 = stops;
@@ -1394,12 +1361,12 @@
     this.end_1 = end;
     this.tileMode_1 = tileMode;
   }
-  protoOf(LinearGradient).get_intrinsicSize_x61on3_k$ = function () {
+  protoOf(LinearGradient).get_intrinsicSize_culx5t_k$ = function () {
     var tmp;
     if (isFinite(_Offset___get_x__impl__xvi35n(this.start_1)) ? isFinite(_Offset___get_x__impl__xvi35n(this.end_1)) : false) {
       // Inline function 'kotlin.math.abs' call
-      var tmp0_abs = _Offset___get_x__impl__xvi35n(this.start_1) - _Offset___get_x__impl__xvi35n(this.end_1);
-      tmp = Math.abs(tmp0_abs);
+      var x = _Offset___get_x__impl__xvi35n(this.start_1) - _Offset___get_x__impl__xvi35n(this.end_1);
+      tmp = Math.abs(x);
     } else {
       tmp = FloatCompanionObject_getInstance().get_NaN_18jnv2_k$();
     }
@@ -1407,14 +1374,14 @@
     var tmp_1;
     if (isFinite(_Offset___get_y__impl__8bzhra(this.start_1)) ? isFinite(_Offset___get_y__impl__8bzhra(this.end_1)) : false) {
       // Inline function 'kotlin.math.abs' call
-      var tmp1_abs = _Offset___get_y__impl__8bzhra(this.start_1) - _Offset___get_y__impl__8bzhra(this.end_1);
-      tmp_1 = Math.abs(tmp1_abs);
+      var x_0 = _Offset___get_y__impl__8bzhra(this.start_1) - _Offset___get_y__impl__8bzhra(this.end_1);
+      tmp_1 = Math.abs(x_0);
     } else {
       tmp_1 = FloatCompanionObject_getInstance().get_NaN_18jnv2_k$();
     }
     return Size(tmp_0, tmp_1);
   };
-  protoOf(LinearGradient).createShader_myfnlm_k$ = function (size) {
+  protoOf(LinearGradient).createShader_k0897f_k$ = function (size) {
     var startX = _Offset___get_x__impl__xvi35n(this.start_1) === FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() ? _Size___get_width__impl__58y75t(size) : _Offset___get_x__impl__xvi35n(this.start_1);
     var startY = _Offset___get_y__impl__8bzhra(this.start_1) === FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() ? _Size___get_height__impl__a04p02(size) : _Offset___get_y__impl__8bzhra(this.start_1);
     var endX = _Offset___get_x__impl__xvi35n(this.end_1) === FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$() ? _Size___get_width__impl__58y75t(size) : _Offset___get_x__impl__xvi35n(this.end_1);
@@ -1476,7 +1443,7 @@
   }
   function RadialGradient(colors, stops, center, radius, tileMode) {
     stops = stops === VOID ? null : stops;
-    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_ddetsd_k$() : tileMode;
     ShaderBrush.call(this);
     this.colors_1 = colors;
     this.stops_1 = stops;
@@ -1484,10 +1451,10 @@
     this.radius_1 = radius;
     this.tileMode_1 = tileMode;
   }
-  protoOf(RadialGradient).get_intrinsicSize_x61on3_k$ = function () {
-    return isFinite(this.radius_1) ? Size(this.radius_1 * 2, this.radius_1 * 2) : Companion_getInstance().get_Unspecified_o59ai8_k$();
+  protoOf(RadialGradient).get_intrinsicSize_culx5t_k$ = function () {
+    return isFinite(this.radius_1) ? Size(this.radius_1 * 2, this.radius_1 * 2) : Companion_getInstance_0().get_Unspecified_3ttj0y_k$();
   };
-  protoOf(RadialGradient).createShader_myfnlm_k$ = function (size) {
+  protoOf(RadialGradient).createShader_k0897f_k$ = function (size) {
     var centerX;
     var centerY;
     if (get_isUnspecified(this.center_1)) {
@@ -1554,7 +1521,7 @@
     this.colors_1 = colors;
     this.stops_1 = stops;
   }
-  protoOf(SweepGradient).createShader_myfnlm_k$ = function (size) {
+  protoOf(SweepGradient).createShader_k0897f_k$ = function (size) {
     var tmp;
     if (get_isUnspecified(this.center_1)) {
       tmp = get_center(size);
@@ -1591,16 +1558,16 @@
   };
   function Canvas() {
   }
-  function Canvas_0(image) {
-    return ActualCanvas(image);
-  }
   function withSaveLayer(_this__u8e3s4, bounds, paint, block) {
     try {
-      _this__u8e3s4.saveLayer_f9ux7q_k$(bounds, paint);
+      _this__u8e3s4.saveLayer_j9hvqf_k$(bounds, paint);
       block();
     }finally {
-      _this__u8e3s4.restore_a2id37_k$();
+      _this__u8e3s4.restore_a1ykhu_k$();
     }
+  }
+  function Canvas_0(image) {
+    return ActualCanvas(image);
   }
   function _ClipOp___init__impl__pqwwy8(value) {
     return value;
@@ -1613,10 +1580,10 @@
     this.Difference_1 = _ClipOp___init__impl__pqwwy8(0);
     this.Intersect_1 = _ClipOp___init__impl__pqwwy8(1);
   }
-  protoOf(Companion_1).get_Difference_tu92bl_k$ = function () {
+  protoOf(Companion_1).get_Difference_lo2jbz_k$ = function () {
     return this.Difference_1;
   };
-  protoOf(Companion_1).get_Intersect_ow3v69_k$ = function () {
+  protoOf(Companion_1).get_Intersect_gpxc6n_k$ = function () {
     return this.Intersect_1;
   };
   var Companion_instance_1;
@@ -1656,21 +1623,21 @@
     var tmp = v * s;
     // Inline function 'kotlin.math.max' call
     // Inline function 'kotlin.comparisons.minOf' call
-    var tmp0_minOf = 4 - k;
-    var tmp1_max = Math.min(k, tmp0_minOf, 1.0);
-    return v - tmp * Math.max(0.0, tmp1_max);
+    var b = 4 - k;
+    var b_0 = Math.min(k, b, 1.0);
+    return v - tmp * Math.max(0.0, b_0);
   }
   function hslToRgbComponent($this, n, h, s, l) {
     var k = (n + h / 30.0) % 12.0;
     // Inline function 'kotlin.math.min' call
-    var tmp0_min = 1.0 - l;
-    var a = s * Math.min(l, tmp0_min);
+    var b = 1.0 - l;
+    var a = s * Math.min(l, b);
     // Inline function 'kotlin.math.max' call
     // Inline function 'kotlin.comparisons.minOf' call
-    var tmp1_minOf = k - 3;
-    var tmp2_minOf = 9 - k;
-    var tmp3_max = Math.min(tmp1_minOf, tmp2_minOf, 1.0);
-    return l - a * Math.max(-1.0, tmp3_max);
+    var a_0 = k - 3;
+    var b_0 = 9 - k;
+    var b_1 = Math.min(a_0, b_0, 1.0);
+    return l - a * Math.max(-1.0, b_1);
   }
   function _Color___init__impl__r6cqi2(value) {
     return value;
@@ -1680,13 +1647,14 @@
   }
   function _Color___get_colorSpace__impl__jqqozk($this) {
     // Inline function 'androidx.compose.ui.graphics.colorspace.ColorSpaces.getColorSpace' call
-    var tmp2_getColorSpace = ColorSpaces_getInstance();
+    var this_0 = ColorSpaces_getInstance();
     // Inline function 'kotlin.ULong.toInt' call
     // Inline function 'kotlin.ULong.and' call
-    var tmp0_and = _Color___get_value__impl__1pls5m($this);
-    var tmp1_toInt = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp0_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(63, 0)))));
-    var tmp3_getColorSpace = _ULong___get_data__impl__fggpzb(tmp1_toInt).toInt_1tsl84_k$();
-    return tmp2_getColorSpace.get_ColorSpacesArray_qsodou_k$()[tmp3_getColorSpace];
+    var this_1 = _Color___get_value__impl__1pls5m($this);
+    var other = _ULong___init__impl__c78o9k(new Long(63, 0));
+    var this_2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_1).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other)));
+    var id = _ULong___get_data__impl__fggpzb(this_2).toInt_1tsl84_k$();
+    return this_0.get_ColorSpacesArray_qsodou_k$()[id];
   }
   function Color__convert_impl_so5m8t($this, colorSpace) {
     var thisColorSpace = _Color___get_colorSpace__impl__jqqozk($this);
@@ -1694,116 +1662,121 @@
       return $this;
     }
     var connector = connect(thisColorSpace, colorSpace);
-    return connector.transformToColor_9he873_k$(_Color___get_red__impl__cwrsk6($this), _Color___get_green__impl__bta9rs($this), _Color___get_blue__impl__xwez13($this), _Color___get_alpha__impl__wcfyv1($this));
+    return connector.transformToColor_57p277_k$(_Color___get_red__impl__cwrsk6($this), _Color___get_green__impl__bta9rs($this), _Color___get_blue__impl__xwez13($this), _Color___get_alpha__impl__wcfyv1($this));
   }
   function _Color___get_red__impl__cwrsk6($this) {
     var tmp;
-    var tmp$ret$0;
     // Inline function 'kotlin.ULong.and' call
-    var tmp0_and = _Color___get_value__impl__1pls5m($this);
-    tmp$ret$0 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp0_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(63, 0)))));
+    var this_0 = _Color___get_value__impl__1pls5m($this);
+    var other = _ULong___init__impl__c78o9k(new Long(63, 0));
+    var tmp$ret$0 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_0).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other)));
     if (equals(tmp$ret$0, _ULong___init__impl__c78o9k(new Long(0, 0)))) {
       // Inline function 'kotlin.ULong.toFloat' call
       // Inline function 'kotlin.ULong.and' call
       // Inline function 'kotlin.ULong.shr' call
-      var tmp1_shr = _Color___get_value__impl__1pls5m($this);
-      var tmp2_and = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp1_shr).ushr_rr8rvr_k$(48));
-      var tmp3_toFloat = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp2_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(255, 0)))));
+      var this_1 = _Color___get_value__impl__1pls5m($this);
+      var this_2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_1).ushr_z7nmq8_k$(48));
+      var other_0 = _ULong___init__impl__c78o9k(new Long(255, 0));
       // Inline function 'kotlin.ULong.toDouble' call
-      tmp = ulongToDouble(_ULong___get_data__impl__fggpzb(tmp3_toFloat)) / 255.0;
+      var this_3 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_2).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other_0)));
+      tmp = ulongToDouble(_ULong___get_data__impl__fggpzb(this_3)) / 255.0;
     } else {
-      var tmp$ret$7;
       // Inline function 'kotlin.ULong.toShort' call
       // Inline function 'kotlin.ULong.and' call
       // Inline function 'kotlin.ULong.shr' call
-      var tmp4_shr = _Color___get_value__impl__1pls5m($this);
-      var tmp5_and = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp4_shr).ushr_rr8rvr_k$(48));
-      var tmp6_toShort = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp5_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(65535, 0)))));
-      tmp$ret$7 = _ULong___get_data__impl__fggpzb(tmp6_toShort).toShort_ja8oqn_k$();
+      var this_4 = _Color___get_value__impl__1pls5m($this);
+      var this_5 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_4).ushr_z7nmq8_k$(48));
+      var other_1 = _ULong___init__impl__c78o9k(new Long(65535, 0));
+      var this_6 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_5).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other_1)));
+      var tmp$ret$7 = _ULong___get_data__impl__fggpzb(this_6).toShort_ja8oqn_k$();
       tmp = Float16__toFloat_impl_6i8dal(_Float16___init__impl__fckrew(tmp$ret$7));
     }
     return tmp;
   }
   function _Color___get_green__impl__bta9rs($this) {
     var tmp;
-    var tmp$ret$0;
     // Inline function 'kotlin.ULong.and' call
-    var tmp0_and = _Color___get_value__impl__1pls5m($this);
-    tmp$ret$0 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp0_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(63, 0)))));
+    var this_0 = _Color___get_value__impl__1pls5m($this);
+    var other = _ULong___init__impl__c78o9k(new Long(63, 0));
+    var tmp$ret$0 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_0).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other)));
     if (equals(tmp$ret$0, _ULong___init__impl__c78o9k(new Long(0, 0)))) {
       // Inline function 'kotlin.ULong.toFloat' call
       // Inline function 'kotlin.ULong.and' call
       // Inline function 'kotlin.ULong.shr' call
-      var tmp1_shr = _Color___get_value__impl__1pls5m($this);
-      var tmp2_and = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp1_shr).ushr_rr8rvr_k$(40));
-      var tmp3_toFloat = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp2_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(255, 0)))));
+      var this_1 = _Color___get_value__impl__1pls5m($this);
+      var this_2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_1).ushr_z7nmq8_k$(40));
+      var other_0 = _ULong___init__impl__c78o9k(new Long(255, 0));
       // Inline function 'kotlin.ULong.toDouble' call
-      tmp = ulongToDouble(_ULong___get_data__impl__fggpzb(tmp3_toFloat)) / 255.0;
+      var this_3 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_2).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other_0)));
+      tmp = ulongToDouble(_ULong___get_data__impl__fggpzb(this_3)) / 255.0;
     } else {
-      var tmp$ret$7;
       // Inline function 'kotlin.ULong.toShort' call
       // Inline function 'kotlin.ULong.and' call
       // Inline function 'kotlin.ULong.shr' call
-      var tmp4_shr = _Color___get_value__impl__1pls5m($this);
-      var tmp5_and = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp4_shr).ushr_rr8rvr_k$(32));
-      var tmp6_toShort = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp5_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(65535, 0)))));
-      tmp$ret$7 = _ULong___get_data__impl__fggpzb(tmp6_toShort).toShort_ja8oqn_k$();
+      var this_4 = _Color___get_value__impl__1pls5m($this);
+      var this_5 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_4).ushr_z7nmq8_k$(32));
+      var other_1 = _ULong___init__impl__c78o9k(new Long(65535, 0));
+      var this_6 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_5).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other_1)));
+      var tmp$ret$7 = _ULong___get_data__impl__fggpzb(this_6).toShort_ja8oqn_k$();
       tmp = Float16__toFloat_impl_6i8dal(_Float16___init__impl__fckrew(tmp$ret$7));
     }
     return tmp;
   }
   function _Color___get_blue__impl__xwez13($this) {
     var tmp;
-    var tmp$ret$0;
     // Inline function 'kotlin.ULong.and' call
-    var tmp0_and = _Color___get_value__impl__1pls5m($this);
-    tmp$ret$0 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp0_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(63, 0)))));
+    var this_0 = _Color___get_value__impl__1pls5m($this);
+    var other = _ULong___init__impl__c78o9k(new Long(63, 0));
+    var tmp$ret$0 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_0).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other)));
     if (equals(tmp$ret$0, _ULong___init__impl__c78o9k(new Long(0, 0)))) {
       // Inline function 'kotlin.ULong.toFloat' call
       // Inline function 'kotlin.ULong.and' call
       // Inline function 'kotlin.ULong.shr' call
-      var tmp1_shr = _Color___get_value__impl__1pls5m($this);
-      var tmp2_and = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp1_shr).ushr_rr8rvr_k$(32));
-      var tmp3_toFloat = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp2_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(255, 0)))));
+      var this_1 = _Color___get_value__impl__1pls5m($this);
+      var this_2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_1).ushr_z7nmq8_k$(32));
+      var other_0 = _ULong___init__impl__c78o9k(new Long(255, 0));
       // Inline function 'kotlin.ULong.toDouble' call
-      tmp = ulongToDouble(_ULong___get_data__impl__fggpzb(tmp3_toFloat)) / 255.0;
+      var this_3 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_2).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other_0)));
+      tmp = ulongToDouble(_ULong___get_data__impl__fggpzb(this_3)) / 255.0;
     } else {
-      var tmp$ret$7;
       // Inline function 'kotlin.ULong.toShort' call
       // Inline function 'kotlin.ULong.and' call
       // Inline function 'kotlin.ULong.shr' call
-      var tmp4_shr = _Color___get_value__impl__1pls5m($this);
-      var tmp5_and = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp4_shr).ushr_rr8rvr_k$(16));
-      var tmp6_toShort = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp5_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(65535, 0)))));
-      tmp$ret$7 = _ULong___get_data__impl__fggpzb(tmp6_toShort).toShort_ja8oqn_k$();
+      var this_4 = _Color___get_value__impl__1pls5m($this);
+      var this_5 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_4).ushr_z7nmq8_k$(16));
+      var other_1 = _ULong___init__impl__c78o9k(new Long(65535, 0));
+      var this_6 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_5).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other_1)));
+      var tmp$ret$7 = _ULong___get_data__impl__fggpzb(this_6).toShort_ja8oqn_k$();
       tmp = Float16__toFloat_impl_6i8dal(_Float16___init__impl__fckrew(tmp$ret$7));
     }
     return tmp;
   }
   function _Color___get_alpha__impl__wcfyv1($this) {
     var tmp;
-    var tmp$ret$0;
     // Inline function 'kotlin.ULong.and' call
-    var tmp0_and = _Color___get_value__impl__1pls5m($this);
-    tmp$ret$0 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp0_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(63, 0)))));
+    var this_0 = _Color___get_value__impl__1pls5m($this);
+    var other = _ULong___init__impl__c78o9k(new Long(63, 0));
+    var tmp$ret$0 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_0).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other)));
     if (equals(tmp$ret$0, _ULong___init__impl__c78o9k(new Long(0, 0)))) {
       // Inline function 'kotlin.ULong.toFloat' call
       // Inline function 'kotlin.ULong.and' call
       // Inline function 'kotlin.ULong.shr' call
-      var tmp1_shr = _Color___get_value__impl__1pls5m($this);
-      var tmp2_and = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp1_shr).ushr_rr8rvr_k$(56));
-      var tmp3_toFloat = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp2_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(255, 0)))));
+      var this_1 = _Color___get_value__impl__1pls5m($this);
+      var this_2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_1).ushr_z7nmq8_k$(56));
+      var other_0 = _ULong___init__impl__c78o9k(new Long(255, 0));
       // Inline function 'kotlin.ULong.toDouble' call
-      tmp = ulongToDouble(_ULong___get_data__impl__fggpzb(tmp3_toFloat)) / 255.0;
+      var this_3 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_2).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other_0)));
+      tmp = ulongToDouble(_ULong___get_data__impl__fggpzb(this_3)) / 255.0;
     } else {
       // Inline function 'kotlin.ULong.toFloat' call
       // Inline function 'kotlin.ULong.and' call
       // Inline function 'kotlin.ULong.shr' call
-      var tmp4_shr = _Color___get_value__impl__1pls5m($this);
-      var tmp5_and = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp4_shr).ushr_rr8rvr_k$(6));
-      var tmp6_toFloat = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp5_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(1023, 0)))));
+      var this_4 = _Color___get_value__impl__1pls5m($this);
+      var this_5 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_4).ushr_z7nmq8_k$(6));
+      var other_1 = _ULong___init__impl__c78o9k(new Long(1023, 0));
       // Inline function 'kotlin.ULong.toDouble' call
-      tmp = ulongToDouble(_ULong___get_data__impl__fggpzb(tmp6_toFloat)) / 1023.0;
+      var this_6 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_5).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other_1)));
+      tmp = ulongToDouble(_ULong___get_data__impl__fggpzb(this_6)) / 1023.0;
     }
     return tmp;
   }
@@ -1834,9 +1807,8 @@
     if ($super === VOID) {
       tmp = Color__copy_impl_qlvcl1($this, alpha, red, green, blue);
     } else {
-      var tmp_0 = new Color($this);
-      var tmp_1 = $super;
-      tmp = (tmp_1 == null ? null : new Color(tmp_1)).copy_bz6bui_k$.call(tmp_0, alpha, red, green, blue).value_1;
+      var tmp_0 = $super;
+      tmp = (tmp_0 == null ? null : new Color(tmp_0)).copy_l5ng0s_k$.call(new Color($this), alpha, red, green, blue).value_1;
     }
     return tmp;
   }
@@ -1859,46 +1831,46 @@
     this.Transparent_1 = Color_3(0);
     this.Unspecified_1 = Color_0(0.0, 0.0, 0.0, 0.0, ColorSpaces_getInstance().get_Unspecified_el0w4u_k$());
   }
-  protoOf(Companion_2).get_Black_wh3yn9_k$ = function () {
+  protoOf(Companion_2).get_Black_t4k9fh_k$ = function () {
     return this.Black_1;
   };
-  protoOf(Companion_2).get_DarkGray_gff893_k$ = function () {
+  protoOf(Companion_2).get_DarkGray_6zzecp_k$ = function () {
     return this.DarkGray_1;
   };
-  protoOf(Companion_2).get_Gray_32p7wv_k$ = function () {
+  protoOf(Companion_2).get_Gray_ci51t9_k$ = function () {
     return this.Gray_1;
   };
-  protoOf(Companion_2).get_LightGray_ivooxh_k$ = function () {
+  protoOf(Companion_2).get_LightGray_9g8v13_k$ = function () {
     return this.LightGray_1;
   };
-  protoOf(Companion_2).get_White_rvz4cb_k$ = function () {
+  protoOf(Companion_2).get_White_xpp3qf_k$ = function () {
     return this.White_1;
   };
-  protoOf(Companion_2).get_Red_fzly7h_k$ = function () {
+  protoOf(Companion_2).get_Red_6k64b3_k$ = function () {
     return this.Red_1;
   };
-  protoOf(Companion_2).get_Green_91utzz_k$ = function () {
+  protoOf(Companion_2).get_Green_dkzwf_k$ = function () {
     return this.Green_1;
   };
-  protoOf(Companion_2).get_Blue_ucp8js_k$ = function () {
+  protoOf(Companion_2).get_Blue_kx9ene_k$ = function () {
     return this.Blue_1;
   };
-  protoOf(Companion_2).get_Yellow_yypdia_k$ = function () {
+  protoOf(Companion_2).get_Yellow_pj9jlw_k$ = function () {
     return this.Yellow_1;
   };
-  protoOf(Companion_2).get_Cyan_5ocx2p_k$ = function () {
+  protoOf(Companion_2).get_Cyan_3r2wtp_k$ = function () {
     return this.Cyan_1;
   };
-  protoOf(Companion_2).get_Magenta_a957np_k$ = function () {
+  protoOf(Companion_2).get_Magenta_tpdrb_k$ = function () {
     return this.Magenta_1;
   };
-  protoOf(Companion_2).get_Transparent_8zprqq_k$ = function () {
+  protoOf(Companion_2).get_Transparent_if5ln4_k$ = function () {
     return this.Transparent_1;
   };
-  protoOf(Companion_2).get_Unspecified_9ntdt9_k$ = function () {
+  protoOf(Companion_2).get_Unspecified_j397pn_k$ = function () {
     return this.Unspecified_1;
   };
-  protoOf(Companion_2).hsv_eajx0j_k$ = function (hue, saturation, value, alpha, colorSpace) {
+  protoOf(Companion_2).hsv_lsakwl_k$ = function (hue, saturation, value, alpha, colorSpace) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(((0.0 <= hue ? hue <= 360.0 : false) ? 0.0 <= saturation ? saturation <= 1.0 : false : false) ? 0.0 <= value ? value <= 1.0 : false : false)) {
@@ -1911,12 +1883,12 @@
     var blue = hsvToRgbComponent(this, 1, hue, saturation, value);
     return Color_0(red, green, blue, alpha, colorSpace);
   };
-  protoOf(Companion_2).hsv$default_scpuym_k$ = function (hue, saturation, value, alpha, colorSpace, $super) {
+  protoOf(Companion_2).hsv$default_arp9ku_k$ = function (hue, saturation, value, alpha, colorSpace, $super) {
     alpha = alpha === VOID ? 1.0 : alpha;
     colorSpace = colorSpace === VOID ? ColorSpaces_getInstance().get_Srgb_woa2g3_k$() : colorSpace;
-    return $super === VOID ? this.hsv_eajx0j_k$(hue, saturation, value, alpha, colorSpace) : $super.hsv_eajx0j_k$.call(this, hue, saturation, value, alpha, colorSpace).value_1;
+    return $super === VOID ? this.hsv_lsakwl_k$(hue, saturation, value, alpha, colorSpace) : $super.hsv_lsakwl_k$.call(this, hue, saturation, value, alpha, colorSpace).value_1;
   };
-  protoOf(Companion_2).hsl_k9g3wz_k$ = function (hue, saturation, lightness, alpha, colorSpace) {
+  protoOf(Companion_2).hsl_3aq49t_k$ = function (hue, saturation, lightness, alpha, colorSpace) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(((0.0 <= hue ? hue <= 360.0 : false) ? 0.0 <= saturation ? saturation <= 1.0 : false : false) ? 0.0 <= lightness ? lightness <= 1.0 : false : false)) {
@@ -1929,10 +1901,10 @@
     var blue = hslToRgbComponent(this, 4, hue, saturation, lightness);
     return Color_0(red, green, blue, alpha, colorSpace);
   };
-  protoOf(Companion_2).hsl$default_7ujrjo_k$ = function (hue, saturation, lightness, alpha, colorSpace, $super) {
+  protoOf(Companion_2).hsl$default_16toy0_k$ = function (hue, saturation, lightness, alpha, colorSpace, $super) {
     alpha = alpha === VOID ? 1.0 : alpha;
     colorSpace = colorSpace === VOID ? ColorSpaces_getInstance().get_Srgb_woa2g3_k$() : colorSpace;
-    return $super === VOID ? this.hsl_k9g3wz_k$(hue, saturation, lightness, alpha, colorSpace) : $super.hsl_k9g3wz_k$.call(this, hue, saturation, lightness, alpha, colorSpace).value_1;
+    return $super === VOID ? this.hsl_3aq49t_k$(hue, saturation, lightness, alpha, colorSpace) : $super.hsl_3aq49t_k$.call(this, hue, saturation, lightness, alpha, colorSpace).value_1;
   };
   var Companion_instance_2;
   function Companion_getInstance_17() {
@@ -1980,9 +1952,9 @@
   function toArgb(_this__u8e3s4) {
     // Inline function 'kotlin.ULong.toInt' call
     // Inline function 'kotlin.ULong.shr' call
-    var tmp0_shr = _Color___get_value__impl__1pls5m(Color__convert_impl_so5m8t(_this__u8e3s4, ColorSpaces_getInstance().get_Srgb_woa2g3_k$()));
-    var tmp1_toInt = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp0_shr).ushr_rr8rvr_k$(32));
-    return _ULong___get_data__impl__fggpzb(tmp1_toInt).toInt_1tsl84_k$();
+    var this_0 = _Color___get_value__impl__1pls5m(Color__convert_impl_so5m8t(_this__u8e3s4, ColorSpaces_getInstance().get_Srgb_woa2g3_k$()));
+    var this_1 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_0).ushr_z7nmq8_k$(32));
+    return _ULong___get_data__impl__fggpzb(this_1).toInt_1tsl84_k$();
   }
   function Color_0(red, green, blue, alpha, colorSpace) {
     alpha = alpha === VOID ? 1.0 : alpha;
@@ -1991,16 +1963,16 @@
     var tmp;
     var tmp_0;
     var tmp_1;
-    var containsLower = colorSpace.getMinValue_7r60q4_k$(0);
-    if (red <= colorSpace.getMaxValue_8bwqwu_k$(0) ? containsLower <= red : false) {
-      var containsLower_0 = colorSpace.getMinValue_7r60q4_k$(1);
-      tmp_1 = green <= colorSpace.getMaxValue_8bwqwu_k$(1) ? containsLower_0 <= green : false;
+    var containsLower = colorSpace.getMinValue_3znj7n_k$(0);
+    if (red <= colorSpace.getMaxValue_kswgkr_k$(0) ? containsLower <= red : false) {
+      var containsLower_0 = colorSpace.getMinValue_3znj7n_k$(1);
+      tmp_1 = green <= colorSpace.getMaxValue_kswgkr_k$(1) ? containsLower_0 <= green : false;
     } else {
       tmp_1 = false;
     }
     if (tmp_1) {
-      var containsLower_1 = colorSpace.getMinValue_7r60q4_k$(2);
-      tmp_0 = blue <= colorSpace.getMaxValue_8bwqwu_k$(2) ? containsLower_1 <= blue : false;
+      var containsLower_1 = colorSpace.getMinValue_3znj7n_k$(2);
+      tmp_0 = blue <= colorSpace.getMaxValue_kswgkr_k$(2) ? containsLower_1 <= blue : false;
     } else {
       tmp_0 = false;
     }
@@ -2017,13 +1989,13 @@
     }
     if (colorSpace.get_isSrgb_ew666l_k$()) {
       var argb = numberToInt(alpha * 255.0 + 0.5) << 24 | numberToInt(red * 255.0 + 0.5) << 16 | numberToInt(green * 255.0 + 0.5) << 8 | numberToInt(blue * 255.0 + 0.5);
-      var tmp$ret$3;
       // Inline function 'kotlin.ULong.shl' call
       // Inline function 'kotlin.ULong.and' call
       // Inline function 'kotlin.toULong' call
-      var tmp1_and = _ULong___init__impl__c78o9k(toLong(argb));
-      var tmp2_shl = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp1_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(-1, 0)))));
-      tmp$ret$3 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp2_shl).shl_po5ip6_k$(32));
+      var this_0 = _ULong___init__impl__c78o9k(toLong(argb));
+      var other = _ULong___init__impl__c78o9k(new Long(-1, 0));
+      var this_1 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_0).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other)));
+      var tmp$ret$3 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_1).shl_bg8if3_k$(32));
       return _Color___init__impl__r6cqi2(tmp$ret$3);
     }
     // Inline function 'kotlin.require' call
@@ -2044,13 +2016,11 @@
     var r = _Float16___init__impl__fckrew_0(red);
     var g = _Float16___init__impl__fckrew_0(green);
     var b = _Float16___init__impl__fckrew_0(blue);
-    var tmp$ret$7;
     // Inline function 'kotlin.math.max' call
     // Inline function 'kotlin.math.min' call
-    var tmp5_max = Math.min(alpha, 1.0);
-    tmp$ret$7 = Math.max(0.0, tmp5_max);
+    var b_0 = Math.min(alpha, 1.0);
+    var tmp$ret$7 = Math.max(0.0, b_0);
     var a = numberToInt(tmp$ret$7 * 1023.0 + 0.5);
-    var tmp$ret$25;
     // Inline function 'kotlin.ULong.or' call
     // Inline function 'kotlin.ULong.or' call
     // Inline function 'kotlin.ULong.or' call
@@ -2058,63 +2028,68 @@
     // Inline function 'kotlin.ULong.shl' call
     // Inline function 'kotlin.ULong.and' call
     // Inline function 'kotlin.toULong' call
-    var tmp6_toULong = _Float16___get_halfValue__impl__89tmwx(r);
-    var tmp7_and = _ULong___init__impl__c78o9k(toLong(tmp6_toULong));
-    var tmp8_shl = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp7_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(65535, 0)))));
-    var tmp12_or = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp8_shl).shl_po5ip6_k$(48));
+    var this_2 = _Float16___get_halfValue__impl__89tmwx(r);
+    var this_3 = _ULong___init__impl__c78o9k(toLong(this_2));
+    var other_0 = _ULong___init__impl__c78o9k(new Long(65535, 0));
+    var this_4 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_3).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other_0)));
+    var this_5 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_4).shl_bg8if3_k$(48));
     // Inline function 'kotlin.ULong.shl' call
     // Inline function 'kotlin.ULong.and' call
     // Inline function 'kotlin.toULong' call
-    var tmp9_toULong = _Float16___get_halfValue__impl__89tmwx(g);
-    var tmp10_and = _ULong___init__impl__c78o9k(toLong(tmp9_toULong));
-    var tmp11_shl = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp10_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(65535, 0)))));
-    var tmp13_or = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp11_shl).shl_po5ip6_k$(32));
-    var tmp17_or = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp12_or).or_s401rn_k$(_ULong___get_data__impl__fggpzb(tmp13_or)));
+    var this_6 = _Float16___get_halfValue__impl__89tmwx(g);
+    var this_7 = _ULong___init__impl__c78o9k(toLong(this_6));
+    var other_1 = _ULong___init__impl__c78o9k(new Long(65535, 0));
+    var this_8 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_7).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other_1)));
+    var other_2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_8).shl_bg8if3_k$(32));
+    var this_9 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_5).or_v7fvkl_k$(_ULong___get_data__impl__fggpzb(other_2)));
     // Inline function 'kotlin.ULong.shl' call
     // Inline function 'kotlin.ULong.and' call
     // Inline function 'kotlin.toULong' call
-    var tmp14_toULong = _Float16___get_halfValue__impl__89tmwx(b);
-    var tmp15_and = _ULong___init__impl__c78o9k(toLong(tmp14_toULong));
-    var tmp16_shl = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp15_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(65535, 0)))));
-    var tmp18_or = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp16_shl).shl_po5ip6_k$(16));
-    var tmp21_or = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp17_or).or_s401rn_k$(_ULong___get_data__impl__fggpzb(tmp18_or)));
+    var this_10 = _Float16___get_halfValue__impl__89tmwx(b);
+    var this_11 = _ULong___init__impl__c78o9k(toLong(this_10));
+    var other_3 = _ULong___init__impl__c78o9k(new Long(65535, 0));
+    var this_12 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_11).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other_3)));
+    var other_4 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_12).shl_bg8if3_k$(16));
+    var this_13 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_9).or_v7fvkl_k$(_ULong___get_data__impl__fggpzb(other_4)));
     // Inline function 'kotlin.ULong.shl' call
     // Inline function 'kotlin.ULong.and' call
     // Inline function 'kotlin.toULong' call
-    var tmp19_and = _ULong___init__impl__c78o9k(toLong(a));
-    var tmp20_shl = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp19_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(1023, 0)))));
-    var tmp22_or = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp20_shl).shl_po5ip6_k$(6));
-    var tmp24_or = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp21_or).or_s401rn_k$(_ULong___get_data__impl__fggpzb(tmp22_or)));
+    var this_14 = _ULong___init__impl__c78o9k(toLong(a));
+    var other_5 = _ULong___init__impl__c78o9k(new Long(1023, 0));
+    var this_15 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_14).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other_5)));
+    var other_6 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_15).shl_bg8if3_k$(6));
+    var this_16 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_13).or_v7fvkl_k$(_ULong___get_data__impl__fggpzb(other_6)));
     // Inline function 'kotlin.ULong.and' call
     // Inline function 'kotlin.toULong' call
-    var tmp23_and = _ULong___init__impl__c78o9k(toLong(id));
-    var tmp25_or = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp23_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(63, 0)))));
-    tmp$ret$25 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp24_or).or_s401rn_k$(_ULong___get_data__impl__fggpzb(tmp25_or)));
+    var this_17 = _ULong___init__impl__c78o9k(toLong(id));
+    var other_7 = _ULong___init__impl__c78o9k(new Long(63, 0));
+    var other_8 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_17).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other_7)));
+    var tmp$ret$25 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_16).or_v7fvkl_k$(_ULong___get_data__impl__fggpzb(other_8)));
     return _Color___init__impl__r6cqi2(tmp$ret$25);
   }
   function Color_1(color) {
-    var tmp$ret$2;
     // Inline function 'kotlin.ULong.shl' call
     // Inline function 'kotlin.ULong.and' call
     // Inline function 'kotlin.toULong' call
-    var tmp0_and = _ULong___init__impl__c78o9k(color);
-    var tmp1_shl = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp0_and).and_jhajnj_k$(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(-1, 0)))));
-    tmp$ret$2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp1_shl).shl_po5ip6_k$(32));
+    var this_0 = _ULong___init__impl__c78o9k(color);
+    var other = _ULong___init__impl__c78o9k(new Long(-1, 0));
+    var this_1 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_0).and_4spn93_k$(_ULong___get_data__impl__fggpzb(other)));
+    var tmp$ret$2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_1).shl_bg8if3_k$(32));
     return _Color___init__impl__r6cqi2(tmp$ret$2);
   }
   function luminance(_this__u8e3s4) {
     var colorSpace = _Color___get_colorSpace__impl__jqqozk(_this__u8e3s4);
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!equals(colorSpace.get_model_rk6821_k$(), Companion_getInstance_37().get_Rgb_hxm2yj_k$())) {
+    if (!equals(colorSpace.get_model_b1t9lk_k$(), Companion_getInstance_37().get_Rgb_ehihd0_k$())) {
       // Inline function 'androidx.compose.ui.graphics.luminance.<anonymous>' call
-      var message = 'The specified color must be encoded in an RGB color space. ' + ('The supplied color space is ' + new ColorModel(colorSpace.get_model_rk6821_k$()));
+      var message = 'The specified color must be encoded in an RGB color space. ' + ('The supplied color space is ' + new ColorModel(colorSpace.get_model_b1t9lk_k$()));
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     var eotf = (colorSpace instanceof Rgb ? colorSpace : THROW_CCE()).get_eotfFunc_j2khmx_k$();
-    var r = eotf.invoke_z1dtyv_k$(_Color___get_red__impl__cwrsk6(_this__u8e3s4));
-    var g = eotf.invoke_z1dtyv_k$(_Color___get_green__impl__bta9rs(_this__u8e3s4));
-    var b = eotf.invoke_z1dtyv_k$(_Color___get_blue__impl__xwez13(_this__u8e3s4));
+    var r = eotf.invoke_e0thbm_k$(_Color___get_red__impl__cwrsk6(_this__u8e3s4));
+    var g = eotf.invoke_e0thbm_k$(_Color___get_green__impl__bta9rs(_this__u8e3s4));
+    var b = eotf.invoke_e0thbm_k$(_Color___get_blue__impl__xwez13(_this__u8e3s4));
     return saturate(0.2126 * r + 0.7152 * g + 0.0722 * b);
   }
   function compositeOver(_this__u8e3s4, background) {
@@ -2123,17 +2098,17 @@
     var fgA = _Color___get_alpha__impl__wcfyv1(fg);
     var a = fgA + bgA * (1.0 - fgA);
     // Inline function 'androidx.compose.ui.graphics.compositeComponent' call
-    var tmp0_compositeComponent = _Color___get_red__impl__cwrsk6(fg);
-    var tmp1_compositeComponent = _Color___get_red__impl__cwrsk6(background);
-    var r = a === 0.0 ? 0.0 : (tmp0_compositeComponent * fgA + tmp1_compositeComponent * bgA * (1.0 - fgA)) / a;
+    var fgC = _Color___get_red__impl__cwrsk6(fg);
+    var bgC = _Color___get_red__impl__cwrsk6(background);
+    var r = a === 0.0 ? 0.0 : (fgC * fgA + bgC * bgA * (1.0 - fgA)) / a;
     // Inline function 'androidx.compose.ui.graphics.compositeComponent' call
-    var tmp2_compositeComponent = _Color___get_green__impl__bta9rs(fg);
-    var tmp3_compositeComponent = _Color___get_green__impl__bta9rs(background);
-    var g = a === 0.0 ? 0.0 : (tmp2_compositeComponent * fgA + tmp3_compositeComponent * bgA * (1.0 - fgA)) / a;
+    var fgC_0 = _Color___get_green__impl__bta9rs(fg);
+    var bgC_0 = _Color___get_green__impl__bta9rs(background);
+    var g = a === 0.0 ? 0.0 : (fgC_0 * fgA + bgC_0 * bgA * (1.0 - fgA)) / a;
     // Inline function 'androidx.compose.ui.graphics.compositeComponent' call
-    var tmp4_compositeComponent = _Color___get_blue__impl__xwez13(fg);
-    var tmp5_compositeComponent = _Color___get_blue__impl__xwez13(background);
-    var b = a === 0.0 ? 0.0 : (tmp4_compositeComponent * fgA + tmp5_compositeComponent * bgA * (1.0 - fgA)) / a;
+    var fgC_1 = _Color___get_blue__impl__xwez13(fg);
+    var bgC_1 = _Color___get_blue__impl__xwez13(background);
+    var b = a === 0.0 ? 0.0 : (fgC_1 * fgA + bgC_1 * bgA * (1.0 - fgA)) / a;
     return Color_0(r, g, b, a, _Color___get_colorSpace__impl__jqqozk(background));
   }
   function Color_2(red, green, blue, alpha) {
@@ -2142,11 +2117,10 @@
     return Color_3(color);
   }
   function Color_3(color) {
-    var tmp$ret$1;
     // Inline function 'kotlin.ULong.shl' call
     // Inline function 'kotlin.toULong' call
-    var tmp0_shl = _ULong___init__impl__c78o9k(toLong(color));
-    tmp$ret$1 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp0_shl).shl_po5ip6_k$(32));
+    var this_0 = _ULong___init__impl__c78o9k(toLong(color));
+    var tmp$ret$1 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_0).shl_bg8if3_k$(32));
     return _Color___init__impl__r6cqi2(tmp$ret$1);
   }
   function saturate(v) {
@@ -2182,17 +2156,17 @@
   function Companion_3() {
     Companion_instance_3 = this;
   }
-  protoOf(Companion_3).tint_oz42r0_k$ = function (color, blendMode) {
+  protoOf(Companion_3).tint_547dqc_k$ = function (color, blendMode) {
     return actualTintColorFilter(color, blendMode);
   };
-  protoOf(Companion_3).tint$default_or1h4c_k$ = function (color, blendMode, $super) {
-    blendMode = blendMode === VOID ? Companion_getInstance_14().get_SrcIn_yyf2fo_k$() : blendMode;
-    return $super === VOID ? this.tint_oz42r0_k$(color, blendMode) : $super.tint_oz42r0_k$.call(this, new Color(color), new BlendMode(blendMode));
+  protoOf(Companion_3).tint$default_jnxvki_k$ = function (color, blendMode, $super) {
+    blendMode = blendMode === VOID ? Companion_getInstance_14().get_SrcIn_enr0mu_k$() : blendMode;
+    return $super === VOID ? this.tint_547dqc_k$(color, blendMode) : $super.tint_547dqc_k$.call(this, new Color(color), new BlendMode(blendMode));
   };
-  protoOf(Companion_3).colorMatrix_16db4l_k$ = function (colorMatrix) {
+  protoOf(Companion_3).colorMatrix_vyb9m8_k$ = function (colorMatrix) {
     return actualColorMatrixColorFilter(colorMatrix);
   };
-  protoOf(Companion_3).lighting_pskwdw_k$ = function (multiply, add) {
+  protoOf(Companion_3).lighting_s3t6fu_k$ = function (multiply, add) {
     return actualLightingColorFilter(multiply, add);
   };
   var Companion_instance_3;
@@ -2231,25 +2205,25 @@
   function ColorMatrix__reset_impl_aaa3ky($this) {
     fill(_ColorMatrix___get_values__impl__bpwpry($this), 0.0);
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[0] = 1.0;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 0 | 0] = 1.0;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[12] = 1.0;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 2 | 0] = 1.0;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[6] = 1.0;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 1 | 0] = 1.0;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[18] = 1.0;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(3, 5) + 3 | 0] = 1.0;
   }
   function ColorMatrix__set_impl_33f5gv_0($this, src) {
     // Inline function 'kotlin.collections.copyInto' call
-    var tmp0_copyInto = _ColorMatrix___get_values__impl__bpwpry(src);
-    var tmp1_copyInto = _ColorMatrix___get_values__impl__bpwpry($this);
-    var tmp2_copyInto = tmp0_copyInto.length;
+    var this_0 = _ColorMatrix___get_values__impl__bpwpry(src);
+    var destination = _ColorMatrix___get_values__impl__bpwpry($this);
+    var endIndex = this_0.length;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    var tmp = tmp0_copyInto;
+    var tmp = this_0;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    arrayCopy(tmp, tmp1_copyInto, 0, 0, tmp2_copyInto);
+    arrayCopy(tmp, destination, 0, 0, endIndex);
   }
   function rotateInternal($this, degrees, block) {
     ColorMatrix__reset_impl_aaa3ky($this);
@@ -2266,147 +2240,147 @@
     var v02 = dot($this, $this, 0, colorMatrix, 2);
     var v03 = dot($this, $this, 0, colorMatrix, 3);
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp = _ColorMatrix___get_values__impl__bpwpry($this)[0];
+    var tmp = _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_0 = tmp * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[4];
+    var tmp_0 = tmp * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(0, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_1 = _ColorMatrix___get_values__impl__bpwpry($this)[1];
+    var tmp_1 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_2 = tmp_0 + tmp_1 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[9];
+    var tmp_2 = tmp_0 + tmp_1 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(1, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_3 = _ColorMatrix___get_values__impl__bpwpry($this)[2];
+    var tmp_3 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_4 = tmp_2 + tmp_3 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[14];
+    var tmp_4 = tmp_2 + tmp_3 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(2, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_5 = _ColorMatrix___get_values__impl__bpwpry($this)[3];
+    var tmp_5 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_6 = tmp_4 + tmp_5 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[19];
+    var tmp_6 = tmp_4 + tmp_5 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(3, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var v04 = tmp_6 + _ColorMatrix___get_values__impl__bpwpry($this)[4];
+    var v04 = tmp_6 + _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 4 | 0];
     var v10 = dot($this, $this, 1, colorMatrix, 0);
     var v11 = dot($this, $this, 1, colorMatrix, 1);
     var v12 = dot($this, $this, 1, colorMatrix, 2);
     var v13 = dot($this, $this, 1, colorMatrix, 3);
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_7 = _ColorMatrix___get_values__impl__bpwpry($this)[5];
+    var tmp_7 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_8 = tmp_7 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[4];
+    var tmp_8 = tmp_7 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(0, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_9 = _ColorMatrix___get_values__impl__bpwpry($this)[6];
+    var tmp_9 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_10 = tmp_8 + tmp_9 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[9];
+    var tmp_10 = tmp_8 + tmp_9 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(1, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_11 = _ColorMatrix___get_values__impl__bpwpry($this)[7];
+    var tmp_11 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_12 = tmp_10 + tmp_11 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[14];
+    var tmp_12 = tmp_10 + tmp_11 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(2, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_13 = _ColorMatrix___get_values__impl__bpwpry($this)[8];
+    var tmp_13 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_14 = tmp_12 + tmp_13 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[19];
+    var tmp_14 = tmp_12 + tmp_13 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(3, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var v14 = tmp_14 + _ColorMatrix___get_values__impl__bpwpry($this)[9];
+    var v14 = tmp_14 + _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 4 | 0];
     var v20 = dot($this, $this, 2, colorMatrix, 0);
     var v21 = dot($this, $this, 2, colorMatrix, 1);
     var v22 = dot($this, $this, 2, colorMatrix, 2);
     var v23 = dot($this, $this, 2, colorMatrix, 3);
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_15 = _ColorMatrix___get_values__impl__bpwpry($this)[10];
+    var tmp_15 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_16 = tmp_15 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[4];
+    var tmp_16 = tmp_15 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(0, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_17 = _ColorMatrix___get_values__impl__bpwpry($this)[11];
+    var tmp_17 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_18 = tmp_16 + tmp_17 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[9];
+    var tmp_18 = tmp_16 + tmp_17 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(1, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_19 = _ColorMatrix___get_values__impl__bpwpry($this)[12];
+    var tmp_19 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_20 = tmp_18 + tmp_19 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[14];
+    var tmp_20 = tmp_18 + tmp_19 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(2, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_21 = _ColorMatrix___get_values__impl__bpwpry($this)[13];
+    var tmp_21 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_22 = tmp_20 + tmp_21 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[19];
+    var tmp_22 = tmp_20 + tmp_21 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(3, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var v24 = tmp_22 + _ColorMatrix___get_values__impl__bpwpry($this)[14];
+    var v24 = tmp_22 + _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 4 | 0];
     var v30 = dot($this, $this, 3, colorMatrix, 0);
     var v31 = dot($this, $this, 3, colorMatrix, 1);
     var v32 = dot($this, $this, 3, colorMatrix, 2);
     var v33 = dot($this, $this, 3, colorMatrix, 3);
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_23 = _ColorMatrix___get_values__impl__bpwpry($this)[15];
+    var tmp_23 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(3, 5) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_24 = tmp_23 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[4];
+    var tmp_24 = tmp_23 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(0, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_25 = _ColorMatrix___get_values__impl__bpwpry($this)[16];
+    var tmp_25 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(3, 5) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_26 = tmp_24 + tmp_25 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[9];
+    var tmp_26 = tmp_24 + tmp_25 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(1, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_27 = _ColorMatrix___get_values__impl__bpwpry($this)[17];
+    var tmp_27 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(3, 5) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_28 = tmp_26 + tmp_27 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[14];
+    var tmp_28 = tmp_26 + tmp_27 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(2, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_29 = _ColorMatrix___get_values__impl__bpwpry($this)[18];
+    var tmp_29 = _ColorMatrix___get_values__impl__bpwpry($this)[imul(3, 5) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_30 = tmp_28 + tmp_29 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[19];
+    var tmp_30 = tmp_28 + tmp_29 * _ColorMatrix___get_values__impl__bpwpry(colorMatrix)[imul(3, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var v34 = tmp_30 + _ColorMatrix___get_values__impl__bpwpry($this)[19];
+    var v34 = tmp_30 + _ColorMatrix___get_values__impl__bpwpry($this)[imul(3, 5) + 4 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[0] = v00;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 0 | 0] = v00;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[1] = v01;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 1 | 0] = v01;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[2] = v02;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 2 | 0] = v02;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[3] = v03;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 3 | 0] = v03;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[4] = v04;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 4 | 0] = v04;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[5] = v10;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 0 | 0] = v10;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[6] = v11;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 1 | 0] = v11;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[7] = v12;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 2 | 0] = v12;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[8] = v13;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 3 | 0] = v13;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[9] = v14;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 4 | 0] = v14;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[10] = v20;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 0 | 0] = v20;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[11] = v21;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 1 | 0] = v21;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[12] = v22;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 2 | 0] = v22;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[13] = v23;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 3 | 0] = v23;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[14] = v24;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 4 | 0] = v24;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[15] = v30;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(3, 5) + 0 | 0] = v30;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[16] = v31;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(3, 5) + 1 | 0] = v31;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[17] = v32;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(3, 5) + 2 | 0] = v32;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[18] = v33;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(3, 5) + 3 | 0] = v33;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[19] = v34;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(3, 5) + 4 | 0] = v34;
   }
   function dot($this, m1, row, m2, column) {
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
     var tmp = _ColorMatrix___get_values__impl__bpwpry(m1)[imul(row, 5) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_0 = tmp * _ColorMatrix___get_values__impl__bpwpry(m2)[0 + column | 0];
+    var tmp_0 = tmp * _ColorMatrix___get_values__impl__bpwpry(m2)[imul(0, 5) + column | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
     var tmp_1 = _ColorMatrix___get_values__impl__bpwpry(m1)[imul(row, 5) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_2 = tmp_0 + tmp_1 * _ColorMatrix___get_values__impl__bpwpry(m2)[5 + column | 0];
+    var tmp_2 = tmp_0 + tmp_1 * _ColorMatrix___get_values__impl__bpwpry(m2)[imul(1, 5) + column | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
     var tmp_3 = _ColorMatrix___get_values__impl__bpwpry(m1)[imul(row, 5) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    var tmp_4 = tmp_2 + tmp_3 * _ColorMatrix___get_values__impl__bpwpry(m2)[10 + column | 0];
+    var tmp_4 = tmp_2 + tmp_3 * _ColorMatrix___get_values__impl__bpwpry(m2)[imul(2, 5) + column | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
     var tmp_5 = _ColorMatrix___get_values__impl__bpwpry(m1)[imul(row, 5) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.get' call
-    return tmp_4 + tmp_5 * _ColorMatrix___get_values__impl__bpwpry(m2)[15 + column | 0];
+    return tmp_4 + tmp_5 * _ColorMatrix___get_values__impl__bpwpry(m2)[imul(3, 5) + column | 0];
   }
   function ColorMatrix__setToSaturation_impl_j3wbeq($this, sat) {
     ColorMatrix__reset_impl_aaa3ky($this);
@@ -2415,37 +2389,37 @@
     var G = 0.715 * invSat;
     var B = 0.072 * invSat;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    var tmp0_set = R + sat;
-    _ColorMatrix___get_values__impl__bpwpry($this)[0] = tmp0_set;
+    var v = R + sat;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 0 | 0] = v;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[1] = G;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 1 | 0] = G;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[2] = B;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 2 | 0] = B;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[5] = R;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 0 | 0] = R;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    var tmp1_set = G + sat;
-    _ColorMatrix___get_values__impl__bpwpry($this)[6] = tmp1_set;
+    var v_0 = G + sat;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 1 | 0] = v_0;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[7] = B;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 2 | 0] = B;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[10] = R;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 0 | 0] = R;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[11] = G;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 1 | 0] = G;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    var tmp2_set = B + sat;
-    _ColorMatrix___get_values__impl__bpwpry($this)[12] = tmp2_set;
+    var v_1 = B + sat;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 2 | 0] = v_1;
   }
   function ColorMatrix__setToScale_impl_162gnw($this, redScale, greenScale, blueScale, alphaScale) {
     ColorMatrix__reset_impl_aaa3ky($this);
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[0] = redScale;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 0 | 0] = redScale;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[6] = greenScale;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 1 | 0] = greenScale;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[12] = blueScale;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 2 | 0] = blueScale;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[18] = alphaScale;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(3, 5) + 3 | 0] = alphaScale;
   }
   function ColorMatrix__setToRotateRed_impl_xjp2wg($this, degrees) {
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.rotateInternal' call
@@ -2457,14 +2431,14 @@
     var sine = Math.sin(radians);
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.setToRotateRed.<anonymous>' call
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[12] = cosine;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 2 | 0] = cosine;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[6] = cosine;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 1 | 0] = cosine;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[7] = sine;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 2 | 0] = sine;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    var tmp0_set = -sine;
-    _ColorMatrix___get_values__impl__bpwpry($this)[11] = tmp0_set;
+    var v = -sine;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 1 | 0] = v;
   }
   function ColorMatrix__setToRotateGreen_impl_7547ya($this, degrees) {
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.rotateInternal' call
@@ -2476,14 +2450,14 @@
     var sine = Math.sin(radians);
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.setToRotateGreen.<anonymous>' call
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[12] = cosine;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 2 | 0] = cosine;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[0] = cosine;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 0 | 0] = cosine;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    var tmp0_set = -sine;
-    _ColorMatrix___get_values__impl__bpwpry($this)[2] = tmp0_set;
+    var v = -sine;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 2 | 0] = v;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[10] = sine;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 0 | 0] = sine;
   }
   function ColorMatrix__setToRotateBlue_impl_68t0yn($this, degrees) {
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.rotateInternal' call
@@ -2495,52 +2469,52 @@
     var sine = Math.sin(radians);
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.setToRotateBlue.<anonymous>' call
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[6] = cosine;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 1 | 0] = cosine;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[0] = cosine;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 0 | 0] = cosine;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[1] = sine;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 1 | 0] = sine;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    var tmp0_set = -sine;
-    _ColorMatrix___get_values__impl__bpwpry($this)[5] = tmp0_set;
+    var v = -sine;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 0 | 0] = v;
   }
   function ColorMatrix__convertRgbToYuv_impl_9vsur8($this) {
     ColorMatrix__reset_impl_aaa3ky($this);
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[0] = 0.299;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 0 | 0] = 0.299;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[1] = 0.587;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 1 | 0] = 0.587;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[2] = 0.114;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 2 | 0] = 0.114;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[5] = -0.16874;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 0 | 0] = -0.16874;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[6] = -0.33126;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 1 | 0] = -0.33126;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[7] = 0.5;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 2 | 0] = 0.5;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[10] = 0.5;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 0 | 0] = 0.5;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[11] = -0.41869;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 1 | 0] = -0.41869;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[12] = -0.08131;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 2 | 0] = -0.08131;
   }
   function ColorMatrix__convertYuvToRgb_impl_um2qre($this) {
     ColorMatrix__reset_impl_aaa3ky($this);
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[2] = 1.402;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(0, 5) + 2 | 0] = 1.402;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[5] = 1.0;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 0 | 0] = 1.0;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[6] = -0.34414;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 1 | 0] = -0.34414;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[7] = -0.71414;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(1, 5) + 2 | 0] = -0.71414;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[10] = 1.0;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 0 | 0] = 1.0;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[11] = 1.772;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 1 | 0] = 1.772;
     // Inline function 'androidx.compose.ui.graphics.ColorMatrix.set' call
-    _ColorMatrix___get_values__impl__bpwpry($this)[12] = 0.0;
+    _ColorMatrix___get_values__impl__bpwpry($this)[imul(2, 5) + 2 | 0] = 0.0;
   }
   function ColorMatrix__toString_impl_7jheub($this) {
     return 'ColorMatrix(values=' + toString($this) + ')';
@@ -2588,16 +2562,16 @@
     this.Medium_1 = _FilterQuality___init__impl__nv51aq(2);
     this.High_1 = _FilterQuality___init__impl__nv51aq(3);
   }
-  protoOf(Companion_4).get_None_8r7mce_k$ = function () {
+  protoOf(Companion_4).get_None_wkrz0k_k$ = function () {
     return this.None_1;
   };
-  protoOf(Companion_4).get_Low_lx4az0_k$ = function () {
+  protoOf(Companion_4).get_Low_7s05n6_k$ = function () {
     return this.Low_1;
   };
-  protoOf(Companion_4).get_Medium_l95upr_k$ = function () {
+  protoOf(Companion_4).get_Medium_8fylwf_k$ = function () {
     return this.Medium_1;
   };
-  protoOf(Companion_4).get_High_utfc24_k$ = function () {
+  protoOf(Companion_4).get_High_14avfy_k$ = function () {
     return this.High_1;
   };
   var Companion_instance_4;
@@ -2754,13 +2728,8 @@
   }
   function Float16__toFloat_impl_6i8dal($this) {
     var bits = _Float16___get_halfValue__impl__89tmwx($this) & 65535;
-    Companion_getInstance_20();
     var s = bits & 32768;
-    Companion_getInstance_20();
-    var tmp = bits >>> 10 | 0;
-    Companion_getInstance_20();
-    var e = tmp & 31;
-    Companion_getInstance_20();
+    var e = (bits >>> 10 | 0) & 31;
     var m = bits & 1023;
     var outE = 0;
     var outM = 0;
@@ -2768,9 +2737,8 @@
       if (!(m === 0)) {
         // Inline function 'kotlin.fromBits' call
         FloatCompanionObject_getInstance();
-        Companion_getInstance_20();
-        var tmp1_fromBits = 1056964608 + m | 0;
-        var o = floatFromBits(tmp1_fromBits);
+        var bits_0 = 1056964608 + m | 0;
+        var o = floatFromBits(bits_0);
         o = o - Companion_getInstance_20().FP32_DENORMAL_FLOAT_1;
         return s === 0 ? o : -o;
       }
@@ -2779,21 +2747,13 @@
       if (e === 31) {
         outE = 255;
         if (!(outM === 0)) {
-          var tmp_0 = outM;
-          Companion_getInstance_20();
-          outM = tmp_0 | 4194304;
+          outM = outM | 4194304;
         }
       } else {
-        Companion_getInstance_20();
-        var tmp_1 = e - 15 | 0;
-        Companion_getInstance_20();
-        outE = tmp_1 + 127 | 0;
+        outE = (e - 15 | 0) + 127 | 0;
       }
     }
-    var tmp_2 = s << 16;
-    var tmp_3 = outE;
-    Companion_getInstance_20();
-    var out = tmp_2 | tmp_3 << 23 | outM;
+    var out = s << 16 | outE << 23 | outM;
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
     return floatFromBits(out);
@@ -2825,8 +2785,7 @@
     return compareTo(toCompareValue(Companion_getInstance_20(), _Float16___get_halfValue__impl__89tmwx($this)), toCompareValue(Companion_getInstance_20(), _Float16___get_halfValue__impl__89tmwx(other)));
   }
   function Float16__compareTo_impl_vr2ku_0($this, other) {
-    var tmp = $this.halfValue_1;
-    return Float16__compareTo_impl_vr2ku(tmp, other instanceof Float16 ? other.halfValue_1 : THROW_CCE());
+    return Float16__compareTo_impl_vr2ku($this.halfValue_1, other instanceof Float16 ? other.halfValue_1 : THROW_CCE());
   }
   function _Float16___get_sign__impl__t10b9g($this) {
     if (Float16__isNaN_impl_8e8jh($this)) {
@@ -2840,26 +2799,17 @@
       return $this;
   }
   function Float16__withSign_impl_b0tr55($this, sign) {
-    var tmp = _Float16___get_halfValue__impl__89tmwx(sign);
-    Companion_getInstance_20();
-    var tmp_0 = tmp & 32768;
-    var tmp_1 = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_20();
-    return _Float16___init__impl__fckrew(toShort(tmp_0 | tmp_1 & 32767));
+    return _Float16___init__impl__fckrew(toShort(_Float16___get_halfValue__impl__89tmwx(sign) & 32768 | _Float16___get_halfValue__impl__89tmwx($this) & 32767));
   }
   function Float16__absoluteValue_impl_nv6ulo($this) {
-    var tmp = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_20();
-    return _Float16___init__impl__fckrew(toShort(tmp & 32767));
+    return _Float16___init__impl__fckrew(toShort(_Float16___get_halfValue__impl__89tmwx($this) & 32767));
   }
   function Float16__round_impl_4qwlz4($this) {
     var bits = _Float16___get_halfValue__impl__89tmwx($this) & 65535;
     var e = bits & 32767;
     var result = bits;
     if (e < 15360) {
-      var tmp = result;
-      Companion_getInstance_20();
-      result = tmp & 32768;
+      result = result & 32768;
       result = result | 15360 & (e >= 14336 ? 65535 : 0);
     } else if (e < 25600) {
       e = 25 - (e >> 10) | 0;
@@ -2874,9 +2824,7 @@
     var e = bits & 32767;
     var result = bits;
     if (e < 15360) {
-      var tmp = result;
-      Companion_getInstance_20();
-      result = tmp & 32768;
+      result = result & 32768;
       result = result | 15360 & (-(~(bits >> 15) & (!(e === 0) ? 1 : 0)) | 0);
     } else if (e < 25600) {
       e = 25 - (e >> 10) | 0;
@@ -2891,9 +2839,7 @@
     var e = bits & 32767;
     var result = bits;
     if (e < 15360) {
-      var tmp = result;
-      Companion_getInstance_20();
-      result = tmp & 32768;
+      result = result & 32768;
       result = result | 15360 & (bits > 32768 ? 65535 : 0);
     } else if (e < 25600) {
       e = 25 - (e >> 10) | 0;
@@ -2908,9 +2854,7 @@
     var e = bits & 32767;
     var result = bits;
     if (e < 15360) {
-      var tmp = result;
-      Companion_getInstance_20();
-      result = tmp & 32768;
+      result = result & 32768;
     } else if (e < 25600) {
       e = 25 - (e >> 10) | 0;
       var mask = (1 << e) - 1 | 0;
@@ -2919,103 +2863,63 @@
     return _Float16___init__impl__fckrew(toShort(result));
   }
   function _Float16___get_exponent__impl__3tixn6($this) {
-    var tmp = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_20();
-    var tmp_0 = tmp >>> 10 | 0;
-    Companion_getInstance_20();
-    var tmp_1 = tmp_0 & 31;
-    Companion_getInstance_20();
-    return tmp_1 - 15 | 0;
+    return ((_Float16___get_halfValue__impl__89tmwx($this) >>> 10 | 0) & 31) - 15 | 0;
   }
   function _Float16___get_significand__impl__ku8yuy($this) {
-    var tmp = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_20();
-    return tmp & 1023;
+    return _Float16___get_halfValue__impl__89tmwx($this) & 1023;
   }
   function Float16__isNaN_impl_8e8jh($this) {
-    var tmp = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_20();
-    var tmp_0 = tmp & 32767;
-    Companion_getInstance_20();
-    return tmp_0 > 31744;
+    return (_Float16___get_halfValue__impl__89tmwx($this) & 32767) > 31744;
   }
   function Float16__isInfinite_impl_9h5mgi($this) {
-    var tmp = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_20();
-    var tmp_0 = tmp & 32767;
-    Companion_getInstance_20();
-    return tmp_0 === 31744;
+    return (_Float16___get_halfValue__impl__89tmwx($this) & 32767) === 31744;
   }
   function Float16__isFinite_impl_8t6ust($this) {
-    var tmp = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_20();
-    var tmp_0 = tmp & 32767;
-    Companion_getInstance_20();
-    return !(tmp_0 === 31744);
+    return !((_Float16___get_halfValue__impl__89tmwx($this) & 32767) === 31744);
   }
   function Float16__isNormalized_impl_l312k5($this) {
-    var tmp;
-    var tmp_0 = _Float16___get_halfValue__impl__89tmwx($this);
-    Companion_getInstance_20();
-    if (!((tmp_0 & 31744) === 0)) {
-      var tmp_1 = _Float16___get_halfValue__impl__89tmwx($this);
-      Companion_getInstance_20();
-      var tmp_2 = tmp_1 & 31744;
-      Companion_getInstance_20();
-      tmp = !(tmp_2 === 31744);
-    } else {
-      tmp = false;
-    }
-    return tmp;
+    return !((_Float16___get_halfValue__impl__89tmwx($this) & 31744) === 0) ? !((_Float16___get_halfValue__impl__89tmwx($this) & 31744) === 31744) : false;
   }
   function Float16__toHexString_impl_o1d02l($this) {
     var o = StringBuilder_init_$Create$();
     var bits = _Float16___get_halfValue__impl__89tmwx($this) & 65535;
-    Companion_getInstance_20();
     var s = bits >>> 15 | 0;
-    Companion_getInstance_20();
-    var tmp = bits >>> 10 | 0;
-    Companion_getInstance_20();
-    var e = tmp & 31;
-    Companion_getInstance_20();
+    var e = (bits >>> 10 | 0) & 31;
     var m = bits & 1023;
     if (e === 31) {
       if (m === 0) {
         if (!(s === 0)) {
-          o.append_t8oh9e_k$(_Char___init__impl__6a9atx(45));
+          o.append_am5a4z_k$(_Char___init__impl__6a9atx(45));
         }
-        o.append_ssq29y_k$('Infinity');
+        o.append_22ad7x_k$('Infinity');
       } else {
-        o.append_ssq29y_k$('NaN');
+        o.append_22ad7x_k$('NaN');
       }
     } else {
       if (s === 1) {
-        o.append_t8oh9e_k$(_Char___init__impl__6a9atx(45));
+        o.append_am5a4z_k$(_Char___init__impl__6a9atx(45));
       }
       if (e === 0) {
         if (m === 0) {
-          o.append_ssq29y_k$('0x0.0p0');
+          o.append_22ad7x_k$('0x0.0p0');
         } else {
-          o.append_ssq29y_k$('0x0.');
+          o.append_22ad7x_k$('0x0.');
           var significand = toString_0(m, 16);
-          var tmp$ret$1;
           // Inline function 'kotlin.text.replaceFirst' call
           // Inline function 'kotlin.text.toRegex' call
-          tmp$ret$1 = Regex_init_$Create$('0{2,}$').replaceFirst_hwe6o0_k$(significand, '');
-          o.append_ssq29y_k$(tmp$ret$1);
-          o.append_ssq29y_k$('p-14');
+          var tmp$ret$1 = Regex_init_$Create$('0{2,}$').replaceFirst_5kvbqf_k$(significand, '');
+          o.append_22ad7x_k$(tmp$ret$1);
+          o.append_22ad7x_k$('p-14');
         }
       } else {
-        o.append_ssq29y_k$('0x1.');
+        o.append_22ad7x_k$('0x1.');
         var significand_0 = toString_0(m, 16);
-        var tmp$ret$3;
         // Inline function 'kotlin.text.replaceFirst' call
         // Inline function 'kotlin.text.toRegex' call
-        tmp$ret$3 = Regex_init_$Create$('0{2,}$').replaceFirst_hwe6o0_k$(significand_0, '');
-        o.append_ssq29y_k$(tmp$ret$3);
-        o.append_t8oh9e_k$(_Char___init__impl__6a9atx(112));
-        Companion_getInstance_20();
-        o.append_ssq29y_k$((e - 15 | 0).toString());
+        var tmp$ret$3 = Regex_init_$Create$('0{2,}$').replaceFirst_5kvbqf_k$(significand_0, '');
+        o.append_22ad7x_k$(tmp$ret$3);
+        o.append_am5a4z_k$(_Char___init__impl__6a9atx(112));
+        o.append_22ad7x_k$((e - 15 | 0).toString());
       }
     }
     return o.toString();
@@ -3055,13 +2959,13 @@
     var tmp = this;
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp1_fromBits = 1056964608;
-    tmp.FP32_DENORMAL_FLOAT_1 = floatFromBits(tmp1_fromBits);
+    var bits = 1056964608;
+    tmp.FP32_DENORMAL_FLOAT_1 = floatFromBits(bits);
   }
   protoOf(Companion_5).get_Size_wo9w8a_k$ = function () {
     return this.Size_1;
   };
-  protoOf(Companion_5).get_Epsilon_uqs4fs_k$ = function () {
+  protoOf(Companion_5).get_Epsilon_21qsq_k$ = function () {
     return this.Epsilon_1;
   };
   protoOf(Companion_5).get_MaxExponent_rspx06_k$ = function () {
@@ -3070,31 +2974,31 @@
   protoOf(Companion_5).get_MinExponent_w12emw_k$ = function () {
     return this.MinExponent_1;
   };
-  protoOf(Companion_5).get_LowestValue_trry71_k$ = function () {
+  protoOf(Companion_5).get_LowestValue_agi8jl_k$ = function () {
     return this.LowestValue_1;
   };
-  protoOf(Companion_5).get_MaxValue_n7sqoz_k$ = function () {
+  protoOf(Companion_5).get_MaxValue_7l14jj_k$ = function () {
     return this.MaxValue_1;
   };
-  protoOf(Companion_5).get_MinNormal_5b73h3_k$ = function () {
+  protoOf(Companion_5).get_MinNormal_yx339j_k$ = function () {
     return this.MinNormal_1;
   };
-  protoOf(Companion_5).get_MinValue_webzhr_k$ = function () {
+  protoOf(Companion_5).get_MinValue_7ty78v_k$ = function () {
     return this.MinValue_1;
   };
-  protoOf(Companion_5).get_NaN_11glfr_k$ = function () {
+  protoOf(Companion_5).get_NaN_trd9sr_k$ = function () {
     return this.NaN_1;
   };
-  protoOf(Companion_5).get_NegativeInfinity_d523fx_k$ = function () {
+  protoOf(Companion_5).get_NegativeInfinity_r383ap_k$ = function () {
     return this.NegativeInfinity_1;
   };
-  protoOf(Companion_5).get_NegativeZero_isdqb1_k$ = function () {
+  protoOf(Companion_5).get_NegativeZero_lfwgfl_k$ = function () {
     return this.NegativeZero_1;
   };
-  protoOf(Companion_5).get_PositiveInfinity_6gf60h_k$ = function () {
+  protoOf(Companion_5).get_PositiveInfinity_xrv0q5_k$ = function () {
     return this.PositiveInfinity_1;
   };
-  protoOf(Companion_5).get_PositiveZero_op9tfz_k$ = function () {
+  protoOf(Companion_5).get_PositiveZero_63k1sj_k$ = function () {
     return this.PositiveZero_1;
   };
   var Companion_instance_5;
@@ -3120,10 +3024,10 @@
   protoOf(Float16).toString = function () {
     return Float16__toString_impl_at3wqo(this.halfValue_1);
   };
-  protoOf(Float16).compareTo_pe5tm2_k$ = function (other) {
+  protoOf(Float16).compareTo_y745qz_k$ = function (other) {
     return Float16__compareTo_impl_vr2ku(this.halfValue_1, other);
   };
-  protoOf(Float16).compareTo_6thzaj_k$ = function (other) {
+  protoOf(Float16).compareTo_hpufkf_k$ = function (other) {
     return Float16__compareTo_impl_vr2ku_0(this, other);
   };
   protoOf(Float16).hashCode = function () {
@@ -3163,19 +3067,19 @@
     this.F16__1 = _ImageBitmapConfig___init__impl__wfx9yl(3);
     this.Gpu_1 = _ImageBitmapConfig___init__impl__wfx9yl(4);
   }
-  protoOf(Companion_7).get_Argb8888_tpu17z_k$ = function () {
+  protoOf(Companion_7).get_Argb8888_epitdf_k$ = function () {
     return this.Argb8888__1;
   };
-  protoOf(Companion_7).get_Alpha8_zceb6n_k$ = function () {
+  protoOf(Companion_7).get_Alpha8_8qn3sx_k$ = function () {
     return this.Alpha8__1;
   };
-  protoOf(Companion_7).get_Rgb565_i09itw_k$ = function () {
+  protoOf(Companion_7).get_Rgb565_qf3bri_k$ = function () {
     return this.Rgb565__1;
   };
-  protoOf(Companion_7).get_F16_f3achu_k$ = function () {
+  protoOf(Companion_7).get_F16_tc2i3k_k$ = function () {
     return this.F16__1;
   };
-  protoOf(Companion_7).get_Gpu_p1fzpd_k$ = function () {
+  protoOf(Companion_7).get_Gpu_jdwuw1_k$ = function () {
     return this.Gpu_1;
   };
   var Companion_instance_7;
@@ -3234,26 +3138,25 @@
     var x = _Offset___get_x__impl__xvi35n(point);
     var y = _Offset___get_y__impl__8bzhra(point);
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp = _Matrix___get_values__impl__fblr7b($this)[3] * x;
+    var tmp = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 3 | 0] * x;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_0 = tmp + _Matrix___get_values__impl__fblr7b($this)[7] * y;
+    var tmp_0 = tmp + _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 3 | 0] * y;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var z = tmp_0 + _Matrix___get_values__impl__fblr7b($this)[15];
+    var z = tmp_0 + _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 3 | 0];
     var inverseZ = 1 / z;
     var pZ = isFinite(inverseZ) ? inverseZ : 0.0;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_1 = _Matrix___get_values__impl__fblr7b($this)[0] * x;
+    var tmp_1 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0] * x;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_2 = tmp_1 + _Matrix___get_values__impl__fblr7b($this)[4] * y;
+    var tmp_2 = tmp_1 + _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0] * y;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_3 = pZ * (tmp_2 + _Matrix___get_values__impl__fblr7b($this)[12]);
+    var tmp_3 = pZ * (tmp_2 + _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 0 | 0]);
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_4 = _Matrix___get_values__impl__fblr7b($this)[1] * x;
+    var tmp_4 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0] * x;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_5 = tmp_4 + _Matrix___get_values__impl__fblr7b($this)[5] * y;
-    var tmp$ret$8;
+    var tmp_5 = tmp_4 + _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0] * y;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    tmp$ret$8 = _Matrix___get_values__impl__fblr7b($this)[13];
+    var tmp$ret$8 = _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 1 | 0];
     return Offset_0(tmp_3, pZ * (tmp_5 + tmp$ret$8));
   }
   function Matrix__map_impl_7meu7m_0($this, rect) {
@@ -3263,44 +3166,44 @@
     var p4 = Matrix__map_impl_7meu7m($this, Offset_0(rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$()));
     // Inline function 'kotlin.math.min' call
     // Inline function 'kotlin.math.min' call
-    var tmp0_min = _Offset___get_x__impl__xvi35n(p0);
-    var tmp1_min = _Offset___get_x__impl__xvi35n(p1);
-    var tmp4_min = Math.min(tmp0_min, tmp1_min);
+    var a = _Offset___get_x__impl__xvi35n(p0);
+    var b = _Offset___get_x__impl__xvi35n(p1);
+    var a_0 = Math.min(a, b);
     // Inline function 'kotlin.math.min' call
-    var tmp2_min = _Offset___get_x__impl__xvi35n(p3);
-    var tmp3_min = _Offset___get_x__impl__xvi35n(p4);
-    var tmp5_min = Math.min(tmp2_min, tmp3_min);
-    var left = Math.min(tmp4_min, tmp5_min);
+    var a_1 = _Offset___get_x__impl__xvi35n(p3);
+    var b_0 = _Offset___get_x__impl__xvi35n(p4);
+    var b_1 = Math.min(a_1, b_0);
+    var left = Math.min(a_0, b_1);
     // Inline function 'kotlin.math.min' call
     // Inline function 'kotlin.math.min' call
-    var tmp6_min = _Offset___get_y__impl__8bzhra(p0);
-    var tmp7_min = _Offset___get_y__impl__8bzhra(p1);
-    var tmp10_min = Math.min(tmp6_min, tmp7_min);
+    var a_2 = _Offset___get_y__impl__8bzhra(p0);
+    var b_2 = _Offset___get_y__impl__8bzhra(p1);
+    var a_3 = Math.min(a_2, b_2);
     // Inline function 'kotlin.math.min' call
-    var tmp8_min = _Offset___get_y__impl__8bzhra(p3);
-    var tmp9_min = _Offset___get_y__impl__8bzhra(p4);
-    var tmp11_min = Math.min(tmp8_min, tmp9_min);
-    var top = Math.min(tmp10_min, tmp11_min);
+    var a_4 = _Offset___get_y__impl__8bzhra(p3);
+    var b_3 = _Offset___get_y__impl__8bzhra(p4);
+    var b_4 = Math.min(a_4, b_3);
+    var top = Math.min(a_3, b_4);
     // Inline function 'kotlin.math.max' call
     // Inline function 'kotlin.math.max' call
-    var tmp12_max = _Offset___get_x__impl__xvi35n(p0);
-    var tmp13_max = _Offset___get_x__impl__xvi35n(p1);
-    var tmp16_max = Math.max(tmp12_max, tmp13_max);
+    var a_5 = _Offset___get_x__impl__xvi35n(p0);
+    var b_5 = _Offset___get_x__impl__xvi35n(p1);
+    var a_6 = Math.max(a_5, b_5);
     // Inline function 'kotlin.math.max' call
-    var tmp14_max = _Offset___get_x__impl__xvi35n(p3);
-    var tmp15_max = _Offset___get_x__impl__xvi35n(p4);
-    var tmp17_max = Math.max(tmp14_max, tmp15_max);
-    var right = Math.max(tmp16_max, tmp17_max);
+    var a_7 = _Offset___get_x__impl__xvi35n(p3);
+    var b_6 = _Offset___get_x__impl__xvi35n(p4);
+    var b_7 = Math.max(a_7, b_6);
+    var right = Math.max(a_6, b_7);
     // Inline function 'kotlin.math.max' call
     // Inline function 'kotlin.math.max' call
-    var tmp18_max = _Offset___get_y__impl__8bzhra(p0);
-    var tmp19_max = _Offset___get_y__impl__8bzhra(p1);
-    var tmp22_max = Math.max(tmp18_max, tmp19_max);
+    var a_8 = _Offset___get_y__impl__8bzhra(p0);
+    var b_8 = _Offset___get_y__impl__8bzhra(p1);
+    var a_9 = Math.max(a_8, b_8);
     // Inline function 'kotlin.math.max' call
-    var tmp20_max = _Offset___get_y__impl__8bzhra(p3);
-    var tmp21_max = _Offset___get_y__impl__8bzhra(p4);
-    var tmp23_max = Math.max(tmp20_max, tmp21_max);
-    var bottom = Math.max(tmp22_max, tmp23_max);
+    var a_10 = _Offset___get_y__impl__8bzhra(p3);
+    var b_9 = _Offset___get_y__impl__8bzhra(p4);
+    var b_10 = Math.max(a_10, b_9);
+    var bottom = Math.max(a_9, b_10);
     return new Rect(left, top, right, bottom);
   }
   function Matrix__map_impl_7meu7m_1($this, rect) {
@@ -3308,54 +3211,50 @@
     var p1 = Matrix__map_impl_7meu7m($this, Offset_0(rect.get_left_woprgw_k$(), rect.get_bottom_bj8ras_k$()));
     var p3 = Matrix__map_impl_7meu7m($this, Offset_0(rect.get_right_ixz7xv_k$(), rect.get_top_18ivbo_k$()));
     var p4 = Matrix__map_impl_7meu7m($this, Offset_0(rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$()));
-    var tmp$ret$2;
     // Inline function 'kotlin.math.min' call
     // Inline function 'kotlin.math.min' call
-    var tmp0_min = _Offset___get_x__impl__xvi35n(p0);
-    var tmp1_min = _Offset___get_x__impl__xvi35n(p1);
-    var tmp4_min = Math.min(tmp0_min, tmp1_min);
+    var a = _Offset___get_x__impl__xvi35n(p0);
+    var b = _Offset___get_x__impl__xvi35n(p1);
+    var a_0 = Math.min(a, b);
     // Inline function 'kotlin.math.min' call
-    var tmp2_min = _Offset___get_x__impl__xvi35n(p3);
-    var tmp3_min = _Offset___get_x__impl__xvi35n(p4);
-    var tmp5_min = Math.min(tmp2_min, tmp3_min);
-    tmp$ret$2 = Math.min(tmp4_min, tmp5_min);
-    rect.set_left_i6srx5_k$(tmp$ret$2);
-    var tmp$ret$5;
+    var a_1 = _Offset___get_x__impl__xvi35n(p3);
+    var b_0 = _Offset___get_x__impl__xvi35n(p4);
+    var b_1 = Math.min(a_1, b_0);
+    var tmp$ret$2 = Math.min(a_0, b_1);
+    rect.set_left_bnynok_k$(tmp$ret$2);
     // Inline function 'kotlin.math.min' call
     // Inline function 'kotlin.math.min' call
-    var tmp6_min = _Offset___get_y__impl__8bzhra(p0);
-    var tmp7_min = _Offset___get_y__impl__8bzhra(p1);
-    var tmp10_min = Math.min(tmp6_min, tmp7_min);
+    var a_2 = _Offset___get_y__impl__8bzhra(p0);
+    var b_2 = _Offset___get_y__impl__8bzhra(p1);
+    var a_3 = Math.min(a_2, b_2);
     // Inline function 'kotlin.math.min' call
-    var tmp8_min = _Offset___get_y__impl__8bzhra(p3);
-    var tmp9_min = _Offset___get_y__impl__8bzhra(p4);
-    var tmp11_min = Math.min(tmp8_min, tmp9_min);
-    tmp$ret$5 = Math.min(tmp10_min, tmp11_min);
-    rect.set_top_62laxx_k$(tmp$ret$5);
-    var tmp$ret$8;
+    var a_4 = _Offset___get_y__impl__8bzhra(p3);
+    var b_3 = _Offset___get_y__impl__8bzhra(p4);
+    var b_4 = Math.min(a_4, b_3);
+    var tmp$ret$5 = Math.min(a_3, b_4);
+    rect.set_top_q4a9n4_k$(tmp$ret$5);
     // Inline function 'kotlin.math.max' call
     // Inline function 'kotlin.math.max' call
-    var tmp12_max = _Offset___get_x__impl__xvi35n(p0);
-    var tmp13_max = _Offset___get_x__impl__xvi35n(p1);
-    var tmp16_max = Math.max(tmp12_max, tmp13_max);
+    var a_5 = _Offset___get_x__impl__xvi35n(p0);
+    var b_5 = _Offset___get_x__impl__xvi35n(p1);
+    var a_6 = Math.max(a_5, b_5);
     // Inline function 'kotlin.math.max' call
-    var tmp14_max = _Offset___get_x__impl__xvi35n(p3);
-    var tmp15_max = _Offset___get_x__impl__xvi35n(p4);
-    var tmp17_max = Math.max(tmp14_max, tmp15_max);
-    tmp$ret$8 = Math.max(tmp16_max, tmp17_max);
-    rect.set_right_uydszm_k$(tmp$ret$8);
-    var tmp$ret$11;
+    var a_7 = _Offset___get_x__impl__xvi35n(p3);
+    var b_6 = _Offset___get_x__impl__xvi35n(p4);
+    var b_7 = Math.max(a_7, b_6);
+    var tmp$ret$8 = Math.max(a_6, b_7);
+    rect.set_right_ihmog9_k$(tmp$ret$8);
     // Inline function 'kotlin.math.max' call
     // Inline function 'kotlin.math.max' call
-    var tmp18_max = _Offset___get_y__impl__8bzhra(p0);
-    var tmp19_max = _Offset___get_y__impl__8bzhra(p1);
-    var tmp22_max = Math.max(tmp18_max, tmp19_max);
+    var a_8 = _Offset___get_y__impl__8bzhra(p0);
+    var b_8 = _Offset___get_y__impl__8bzhra(p1);
+    var a_9 = Math.max(a_8, b_8);
     // Inline function 'kotlin.math.max' call
-    var tmp20_max = _Offset___get_y__impl__8bzhra(p3);
-    var tmp21_max = _Offset___get_y__impl__8bzhra(p4);
-    var tmp23_max = Math.max(tmp20_max, tmp21_max);
-    tmp$ret$11 = Math.max(tmp22_max, tmp23_max);
-    rect.set_bottom_y9ard7_k$(tmp$ret$11);
+    var a_10 = _Offset___get_y__impl__8bzhra(p3);
+    var b_9 = _Offset___get_y__impl__8bzhra(p4);
+    var b_10 = Math.max(a_10, b_9);
+    var tmp$ret$11 = Math.max(a_9, b_10);
+    rect.set_bottom_hrdqf4_k$(tmp$ret$11);
   }
   function Matrix__timesAssign_impl_oas521($this, m) {
     var v00 = dot_0($this, 0, m, 0);
@@ -3375,107 +3274,106 @@
     var v32 = dot_0($this, 3, m, 2);
     var v33 = dot_0($this, 3, m, 3);
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[0] = v00;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0] = v00;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[1] = v01;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0] = v01;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[2] = v02;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0] = v02;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[3] = v03;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 3 | 0] = v03;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[4] = v10;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0] = v10;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[5] = v11;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0] = v11;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[6] = v12;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0] = v12;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[7] = v13;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 3 | 0] = v13;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[8] = v20;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 0 | 0] = v20;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[9] = v21;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 1 | 0] = v21;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[10] = v22;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 2 | 0] = v22;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[11] = v23;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 3 | 0] = v23;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[12] = v30;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 0 | 0] = v30;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[13] = v31;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 1 | 0] = v31;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[14] = v32;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 2 | 0] = v32;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[15] = v33;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 3 | 0] = v33;
   }
   function Matrix__toString_impl_l0abk0($this) {
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp = _Matrix___get_values__impl__fblr7b($this)[0];
+    var tmp = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_0 = _Matrix___get_values__impl__fblr7b($this)[1];
+    var tmp_0 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_1 = _Matrix___get_values__impl__fblr7b($this)[2];
+    var tmp_1 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_2 = _Matrix___get_values__impl__fblr7b($this)[3];
+    var tmp_2 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_3 = _Matrix___get_values__impl__fblr7b($this)[4];
+    var tmp_3 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_4 = _Matrix___get_values__impl__fblr7b($this)[5];
+    var tmp_4 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_5 = _Matrix___get_values__impl__fblr7b($this)[6];
+    var tmp_5 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_6 = _Matrix___get_values__impl__fblr7b($this)[7];
+    var tmp_6 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_7 = _Matrix___get_values__impl__fblr7b($this)[8];
+    var tmp_7 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_8 = _Matrix___get_values__impl__fblr7b($this)[9];
+    var tmp_8 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_9 = _Matrix___get_values__impl__fblr7b($this)[10];
+    var tmp_9 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_10 = _Matrix___get_values__impl__fblr7b($this)[11];
+    var tmp_10 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_11 = _Matrix___get_values__impl__fblr7b($this)[12];
+    var tmp_11 = _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_12 = _Matrix___get_values__impl__fblr7b($this)[13];
+    var tmp_12 = _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_13 = _Matrix___get_values__impl__fblr7b($this)[14];
-    var tmp$ret$15;
+    var tmp_13 = _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    tmp$ret$15 = _Matrix___get_values__impl__fblr7b($this)[15];
+    var tmp$ret$15 = _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 3 | 0];
     return trimIndent('\n            |' + tmp + ' ' + tmp_0 + ' ' + tmp_1 + ' ' + tmp_2 + '|\n            |' + tmp_3 + ' ' + tmp_4 + ' ' + tmp_5 + ' ' + tmp_6 + '|\n            |' + tmp_7 + ' ' + tmp_8 + ' ' + tmp_9 + ' ' + tmp_10 + '|\n            |' + tmp_11 + ' ' + tmp_12 + ' ' + tmp_13 + ' ' + tmp$ret$15 + '|\n        ');
   }
   function Matrix__invert_impl_9xyo46($this) {
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a00 = _Matrix___get_values__impl__fblr7b($this)[0];
+    var a00 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a01 = _Matrix___get_values__impl__fblr7b($this)[1];
+    var a01 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a02 = _Matrix___get_values__impl__fblr7b($this)[2];
+    var a02 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a03 = _Matrix___get_values__impl__fblr7b($this)[3];
+    var a03 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a10 = _Matrix___get_values__impl__fblr7b($this)[4];
+    var a10 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a11 = _Matrix___get_values__impl__fblr7b($this)[5];
+    var a11 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a12 = _Matrix___get_values__impl__fblr7b($this)[6];
+    var a12 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a13 = _Matrix___get_values__impl__fblr7b($this)[7];
+    var a13 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a20 = _Matrix___get_values__impl__fblr7b($this)[8];
+    var a20 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a21 = _Matrix___get_values__impl__fblr7b($this)[9];
+    var a21 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a22 = _Matrix___get_values__impl__fblr7b($this)[10];
+    var a22 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a23 = _Matrix___get_values__impl__fblr7b($this)[11];
+    var a23 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a30 = _Matrix___get_values__impl__fblr7b($this)[12];
+    var a30 = _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a31 = _Matrix___get_values__impl__fblr7b($this)[13];
+    var a31 = _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a32 = _Matrix___get_values__impl__fblr7b($this)[14];
+    var a32 = _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a33 = _Matrix___get_values__impl__fblr7b($this)[15];
+    var a33 = _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 3 | 0];
     var b00 = a00 * a11 - a01 * a10;
     var b01 = a00 * a12 - a02 * a10;
     var b02 = a00 * a13 - a03 * a10;
@@ -3494,53 +3392,53 @@
     }
     var invDet = 1.0 / det;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp0_set = (a11 * b11 - a12 * b10 + a13 * b09) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[0] = tmp0_set;
+    var v = (a11 * b11 - a12 * b10 + a13 * b09) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0] = v;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp1_set = (-a01 * b11 + a02 * b10 - a03 * b09) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[1] = tmp1_set;
+    var v_0 = (-a01 * b11 + a02 * b10 - a03 * b09) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0] = v_0;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp2_set = (a31 * b05 - a32 * b04 + a33 * b03) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[2] = tmp2_set;
+    var v_1 = (a31 * b05 - a32 * b04 + a33 * b03) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0] = v_1;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp3_set = (-a21 * b05 + a22 * b04 - a23 * b03) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[3] = tmp3_set;
+    var v_2 = (-a21 * b05 + a22 * b04 - a23 * b03) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 3 | 0] = v_2;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp4_set = (-a10 * b11 + a12 * b08 - a13 * b07) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[4] = tmp4_set;
+    var v_3 = (-a10 * b11 + a12 * b08 - a13 * b07) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0] = v_3;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp5_set = (a00 * b11 - a02 * b08 + a03 * b07) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[5] = tmp5_set;
+    var v_4 = (a00 * b11 - a02 * b08 + a03 * b07) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0] = v_4;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp6_set = (-a30 * b05 + a32 * b02 - a33 * b01) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[6] = tmp6_set;
+    var v_5 = (-a30 * b05 + a32 * b02 - a33 * b01) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0] = v_5;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp7_set = (a20 * b05 - a22 * b02 + a23 * b01) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[7] = tmp7_set;
+    var v_6 = (a20 * b05 - a22 * b02 + a23 * b01) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 3 | 0] = v_6;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp8_set = (a10 * b10 - a11 * b08 + a13 * b06) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[8] = tmp8_set;
+    var v_7 = (a10 * b10 - a11 * b08 + a13 * b06) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 0 | 0] = v_7;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp9_set = (-a00 * b10 + a01 * b08 - a03 * b06) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[9] = tmp9_set;
+    var v_8 = (-a00 * b10 + a01 * b08 - a03 * b06) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 1 | 0] = v_8;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp10_set = (a30 * b04 - a31 * b02 + a33 * b00) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[10] = tmp10_set;
+    var v_9 = (a30 * b04 - a31 * b02 + a33 * b00) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 2 | 0] = v_9;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp11_set = (-a20 * b04 + a21 * b02 - a23 * b00) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[11] = tmp11_set;
+    var v_10 = (-a20 * b04 + a21 * b02 - a23 * b00) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 3 | 0] = v_10;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp12_set = (-a10 * b09 + a11 * b07 - a12 * b06) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[12] = tmp12_set;
+    var v_11 = (-a10 * b09 + a11 * b07 - a12 * b06) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 0 | 0] = v_11;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp13_set = (a00 * b09 - a01 * b07 + a02 * b06) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[13] = tmp13_set;
+    var v_12 = (a00 * b09 - a01 * b07 + a02 * b06) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 1 | 0] = v_12;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp14_set = (-a30 * b03 + a31 * b01 - a32 * b00) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[14] = tmp14_set;
+    var v_13 = (-a30 * b03 + a31 * b01 - a32 * b00) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 2 | 0] = v_13;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    var tmp15_set = (a20 * b03 - a21 * b01 + a22 * b00) * invDet;
-    _Matrix___get_values__impl__fblr7b($this)[15] = tmp15_set;
+    var v_14 = (a20 * b03 - a21 * b01 + a22 * b00) * invDet;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 3 | 0] = v_14;
   }
   function Matrix__reset_impl_4l49i7($this) {
     var inductionVariable = 0;
@@ -3554,8 +3452,8 @@
             var r = inductionVariable_0;
             inductionVariable_0 = inductionVariable_0 + 1 | 0;
             // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-            var tmp0_set = c === r ? 1.0 : 0.0;
-            _Matrix___get_values__impl__fblr7b($this)[imul(r, 4) + c | 0] = tmp0_set;
+            var v = c === r ? 1.0 : 0.0;
+            _Matrix___get_values__impl__fblr7b($this)[imul(r, 4) + c | 0] = v;
           }
            while (inductionVariable_0 <= 3);
       }
@@ -3573,197 +3471,197 @@
   }
   function Matrix__rotateX_impl_3e5y7j($this, degrees) {
     // Inline function 'kotlin.math.cos' call
-    var tmp0_cos = degrees * get_PI() / 180.0;
-    var c = Math.cos(tmp0_cos);
+    var x = degrees * get_PI() / 180.0;
+    var c = Math.cos(x);
     // Inline function 'kotlin.math.sin' call
-    var tmp1_sin = degrees * get_PI() / 180.0;
-    var s = Math.sin(tmp1_sin);
+    var x_0 = degrees * get_PI() / 180.0;
+    var s = Math.sin(x_0);
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a01 = _Matrix___get_values__impl__fblr7b($this)[1];
+    var a01 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a02 = _Matrix___get_values__impl__fblr7b($this)[2];
+    var a02 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0];
     var v01 = a01 * c - a02 * s;
     var v02 = a01 * s + a02 * c;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a11 = _Matrix___get_values__impl__fblr7b($this)[5];
+    var a11 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a12 = _Matrix___get_values__impl__fblr7b($this)[6];
+    var a12 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0];
     var v11 = a11 * c - a12 * s;
     var v12 = a11 * s + a12 * c;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a21 = _Matrix___get_values__impl__fblr7b($this)[9];
+    var a21 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a22 = _Matrix___get_values__impl__fblr7b($this)[10];
+    var a22 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 2 | 0];
     var v21 = a21 * c - a22 * s;
     var v22 = a21 * s + a22 * c;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a31 = _Matrix___get_values__impl__fblr7b($this)[13];
+    var a31 = _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a32 = _Matrix___get_values__impl__fblr7b($this)[14];
+    var a32 = _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 2 | 0];
     var v31 = a31 * c - a32 * s;
     var v32 = a31 * s + a32 * c;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[1] = v01;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0] = v01;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[2] = v02;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0] = v02;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[5] = v11;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0] = v11;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[6] = v12;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0] = v12;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[9] = v21;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 1 | 0] = v21;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[10] = v22;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 2 | 0] = v22;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[13] = v31;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 1 | 0] = v31;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[14] = v32;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 2 | 0] = v32;
   }
   function Matrix__rotateY_impl_2x4btc($this, degrees) {
     // Inline function 'kotlin.math.cos' call
-    var tmp0_cos = degrees * get_PI() / 180.0;
-    var c = Math.cos(tmp0_cos);
+    var x = degrees * get_PI() / 180.0;
+    var c = Math.cos(x);
     // Inline function 'kotlin.math.sin' call
-    var tmp1_sin = degrees * get_PI() / 180.0;
-    var s = Math.sin(tmp1_sin);
+    var x_0 = degrees * get_PI() / 180.0;
+    var s = Math.sin(x_0);
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a00 = _Matrix___get_values__impl__fblr7b($this)[0];
+    var a00 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a02 = _Matrix___get_values__impl__fblr7b($this)[2];
+    var a02 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0];
     var v00 = a00 * c + a02 * s;
     var v02 = -a00 * s + a02 * c;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a10 = _Matrix___get_values__impl__fblr7b($this)[4];
+    var a10 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a12 = _Matrix___get_values__impl__fblr7b($this)[6];
+    var a12 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0];
     var v10 = a10 * c + a12 * s;
     var v12 = -a10 * s + a12 * c;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a20 = _Matrix___get_values__impl__fblr7b($this)[8];
+    var a20 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a22 = _Matrix___get_values__impl__fblr7b($this)[10];
+    var a22 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 2 | 0];
     var v20 = a20 * c + a22 * s;
     var v22 = -a20 * s + a22 * c;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a30 = _Matrix___get_values__impl__fblr7b($this)[12];
+    var a30 = _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a32 = _Matrix___get_values__impl__fblr7b($this)[14];
+    var a32 = _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 2 | 0];
     var v30 = a30 * c + a32 * s;
     var v32 = -a30 * s + a32 * c;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[0] = v00;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0] = v00;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[2] = v02;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0] = v02;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[4] = v10;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0] = v10;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[6] = v12;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0] = v12;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[8] = v20;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 0 | 0] = v20;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[10] = v22;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 2 | 0] = v22;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[12] = v30;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 0 | 0] = v30;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[14] = v32;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 2 | 0] = v32;
   }
   function Matrix__rotateZ_impl_2g2pf5($this, degrees) {
     // Inline function 'kotlin.math.cos' call
-    var tmp0_cos = degrees * get_PI() / 180.0;
-    var c = Math.cos(tmp0_cos);
+    var x = degrees * get_PI() / 180.0;
+    var c = Math.cos(x);
     // Inline function 'kotlin.math.sin' call
-    var tmp1_sin = degrees * get_PI() / 180.0;
-    var s = Math.sin(tmp1_sin);
+    var x_0 = degrees * get_PI() / 180.0;
+    var s = Math.sin(x_0);
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a00 = _Matrix___get_values__impl__fblr7b($this)[0];
+    var a00 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a10 = _Matrix___get_values__impl__fblr7b($this)[4];
+    var a10 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0];
     var v00 = c * a00 + s * a10;
     var v10 = -s * a00 + c * a10;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a01 = _Matrix___get_values__impl__fblr7b($this)[1];
+    var a01 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a11 = _Matrix___get_values__impl__fblr7b($this)[5];
+    var a11 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0];
     var v01 = c * a01 + s * a11;
     var v11 = -s * a01 + c * a11;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a02 = _Matrix___get_values__impl__fblr7b($this)[2];
+    var a02 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a12 = _Matrix___get_values__impl__fblr7b($this)[6];
+    var a12 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0];
     var v02 = c * a02 + s * a12;
     var v12 = -s * a02 + c * a12;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a03 = _Matrix___get_values__impl__fblr7b($this)[3];
+    var a03 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var a13 = _Matrix___get_values__impl__fblr7b($this)[7];
+    var a13 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 3 | 0];
     var v03 = c * a03 + s * a13;
     var v13 = -s * a03 + c * a13;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[0] = v00;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0] = v00;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[1] = v01;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0] = v01;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[2] = v02;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0] = v02;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[3] = v03;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 3 | 0] = v03;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[4] = v10;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0] = v10;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[5] = v11;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0] = v11;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[6] = v12;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0] = v12;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[7] = v13;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 3 | 0] = v13;
   }
   function Matrix__scale_impl_6w89a4($this, x, y, z) {
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp0_set = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0] * x;
-    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0] = tmp0_set;
+    var v = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0] * x;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0] = v;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp1_set = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0] * x;
-    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0] = tmp1_set;
+    var v_0 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0] * x;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0] = v_0;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp2_set = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0] * x;
-    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0] = tmp2_set;
+    var v_1 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0] * x;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0] = v_1;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp3_set = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 3 | 0] * x;
-    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 3 | 0] = tmp3_set;
+    var v_2 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 3 | 0] * x;
+    _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 3 | 0] = v_2;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp4_set = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0] * y;
-    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0] = tmp4_set;
+    var v_3 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0] * y;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0] = v_3;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp5_set = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0] * y;
-    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0] = tmp5_set;
+    var v_4 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0] * y;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0] = v_4;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp6_set = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0] * y;
-    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0] = tmp6_set;
+    var v_5 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0] * y;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0] = v_5;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp7_set = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 3 | 0] * y;
-    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 3 | 0] = tmp7_set;
+    var v_6 = _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 3 | 0] * y;
+    _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 3 | 0] = v_6;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp8_set = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 0 | 0] * z;
-    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 0 | 0] = tmp8_set;
+    var v_7 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 0 | 0] * z;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 0 | 0] = v_7;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp9_set = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 1 | 0] * z;
-    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 1 | 0] = tmp9_set;
+    var v_8 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 1 | 0] * z;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 1 | 0] = v_8;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp10_set = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 2 | 0] * z;
-    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 2 | 0] = tmp10_set;
+    var v_9 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 2 | 0] * z;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 2 | 0] = v_9;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp11_set = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 3 | 0] * z;
-    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 3 | 0] = tmp11_set;
+    var v_10 = _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 3 | 0] * z;
+    _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 3 | 0] = v_10;
   }
   function Matrix__scale$default_impl_snaws9($this, x, y, z, $super) {
     x = x === VOID ? 1.0 : x;
@@ -3774,53 +3672,52 @@
       Matrix__scale_impl_6w89a4($this, x, y, z);
       tmp = Unit_getInstance();
     } else {
-      var tmp_0 = new Matrix($this);
-      var tmp_1 = $super;
-      tmp = (tmp_1 == null ? null : new Matrix(tmp_1)).scale_4t98rx_k$.call(tmp_0, x, y, z);
+      var tmp_0 = $super;
+      tmp = (tmp_0 == null ? null : new Matrix(tmp_0)).scale_4b4tia_k$.call(new Matrix($this), x, y, z);
     }
     return tmp;
   }
   function Matrix__translate_impl_1hftog($this, x, y, z) {
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp = _Matrix___get_values__impl__fblr7b($this)[0] * x;
+    var tmp = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 0 | 0] * x;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_0 = tmp + _Matrix___get_values__impl__fblr7b($this)[4] * y;
+    var tmp_0 = tmp + _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 0 | 0] * y;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_1 = tmp_0 + _Matrix___get_values__impl__fblr7b($this)[8] * z;
+    var tmp_1 = tmp_0 + _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 0 | 0] * z;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var t1 = tmp_1 + _Matrix___get_values__impl__fblr7b($this)[12];
+    var t1 = tmp_1 + _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_2 = _Matrix___get_values__impl__fblr7b($this)[1] * x;
+    var tmp_2 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 1 | 0] * x;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_3 = tmp_2 + _Matrix___get_values__impl__fblr7b($this)[5] * y;
+    var tmp_3 = tmp_2 + _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 1 | 0] * y;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_4 = tmp_3 + _Matrix___get_values__impl__fblr7b($this)[9] * z;
+    var tmp_4 = tmp_3 + _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 1 | 0] * z;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var t2 = tmp_4 + _Matrix___get_values__impl__fblr7b($this)[13];
+    var t2 = tmp_4 + _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_5 = _Matrix___get_values__impl__fblr7b($this)[2] * x;
+    var tmp_5 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 2 | 0] * x;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_6 = tmp_5 + _Matrix___get_values__impl__fblr7b($this)[6] * y;
+    var tmp_6 = tmp_5 + _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 2 | 0] * y;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_7 = tmp_6 + _Matrix___get_values__impl__fblr7b($this)[10] * z;
+    var tmp_7 = tmp_6 + _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 2 | 0] * z;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var t3 = tmp_7 + _Matrix___get_values__impl__fblr7b($this)[14];
+    var t3 = tmp_7 + _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_8 = _Matrix___get_values__impl__fblr7b($this)[3] * x;
+    var tmp_8 = _Matrix___get_values__impl__fblr7b($this)[imul(0, 4) + 3 | 0] * x;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_9 = tmp_8 + _Matrix___get_values__impl__fblr7b($this)[7] * y;
+    var tmp_9 = tmp_8 + _Matrix___get_values__impl__fblr7b($this)[imul(1, 4) + 3 | 0] * y;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_10 = tmp_9 + _Matrix___get_values__impl__fblr7b($this)[11] * z;
+    var tmp_10 = tmp_9 + _Matrix___get_values__impl__fblr7b($this)[imul(2, 4) + 3 | 0] * z;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var t4 = tmp_10 + _Matrix___get_values__impl__fblr7b($this)[15];
+    var t4 = tmp_10 + _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[12] = t1;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 0 | 0] = t1;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[13] = t2;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 1 | 0] = t2;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[14] = t3;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 2 | 0] = t3;
     // Inline function 'androidx.compose.ui.graphics.Matrix.set' call
-    _Matrix___get_values__impl__fblr7b($this)[15] = t4;
+    _Matrix___get_values__impl__fblr7b($this)[imul(3, 4) + 3 | 0] = t4;
   }
   function Matrix__translate$default_impl_10t8ql($this, x, y, z, $super) {
     x = x === VOID ? 0.0 : x;
@@ -3831,9 +3728,8 @@
       Matrix__translate_impl_1hftog($this, x, y, z);
       tmp = Unit_getInstance();
     } else {
-      var tmp_0 = new Matrix($this);
-      var tmp_1 = $super;
-      tmp = (tmp_1 == null ? null : new Matrix(tmp_1)).translate_klqng1_k$.call(tmp_0, x, y, z);
+      var tmp_0 = $super;
+      tmp = (tmp_0 == null ? null : new Matrix(tmp_0)).translate_bcz2fu_k$.call(new Matrix($this), x, y, z);
     }
     return tmp;
   }
@@ -3918,19 +3814,19 @@
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
     var tmp = _Matrix___get_values__impl__fblr7b(m1)[imul(row, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_0 = tmp * _Matrix___get_values__impl__fblr7b(m2)[0 + column | 0];
+    var tmp_0 = tmp * _Matrix___get_values__impl__fblr7b(m2)[imul(0, 4) + column | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
     var tmp_1 = _Matrix___get_values__impl__fblr7b(m1)[imul(row, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_2 = tmp_0 + tmp_1 * _Matrix___get_values__impl__fblr7b(m2)[4 + column | 0];
+    var tmp_2 = tmp_0 + tmp_1 * _Matrix___get_values__impl__fblr7b(m2)[imul(1, 4) + column | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
     var tmp_3 = _Matrix___get_values__impl__fblr7b(m1)[imul(row, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_4 = tmp_2 + tmp_3 * _Matrix___get_values__impl__fblr7b(m2)[8 + column | 0];
+    var tmp_4 = tmp_2 + tmp_3 * _Matrix___get_values__impl__fblr7b(m2)[imul(2, 4) + column | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
     var tmp_5 = _Matrix___get_values__impl__fblr7b(m1)[imul(row, 4) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    return tmp_4 + tmp_5 * _Matrix___get_values__impl__fblr7b(m2)[12 + column | 0];
+    return tmp_4 + tmp_5 * _Matrix___get_values__impl__fblr7b(m2)[imul(3, 4) + column | 0];
   }
   function isIdentity(_this__u8e3s4) {
     var inductionVariable = 0;
@@ -3983,11 +3879,11 @@
     var tmp_0;
     if (!hasSameCornerRadius(this.roundRect_1)) {
       // Inline function 'kotlin.apply' call
-      var tmp0_apply = Path_0();
+      var this_0 = Path_0();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.graphics.Rounded.<anonymous>' call
-      tmp0_apply.addRoundRect_kr3fpw_k$(this.roundRect_1);
-      tmp_0 = tmp0_apply;
+      this_0.addRoundRect_w1epq0_k$(this.roundRect_1);
+      tmp_0 = this_0;
     } else {
       tmp_0 = null;
     }
@@ -4039,42 +3935,42 @@
   function Outline() {
   }
   function hasSameCornerRadius(_this__u8e3s4) {
-    var sameRadiusX = (_CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_bottomLeftCornerRadius_na53na_k$()) === _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_bottomRightCornerRadius_vv4dft_k$()) ? _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_bottomRightCornerRadius_vv4dft_k$()) === _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_topRightCornerRadius_h21xrz_k$()) : false) ? _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_topRightCornerRadius_h21xrz_k$()) === _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_topLeftCornerRadius_nzteym_k$()) : false;
-    var sameRadiusY = (_CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_bottomLeftCornerRadius_na53na_k$()) === _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_bottomRightCornerRadius_vv4dft_k$()) ? _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_bottomRightCornerRadius_vv4dft_k$()) === _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_topRightCornerRadius_h21xrz_k$()) : false) ? _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_topRightCornerRadius_h21xrz_k$()) === _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_topLeftCornerRadius_nzteym_k$()) : false;
+    var sameRadiusX = (_CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_bottomLeftCornerRadius_9r65ws_k$()) === _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_bottomRightCornerRadius_166w49_k$()) ? _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_bottomRightCornerRadius_166w49_k$()) === _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_topRightCornerRadius_kxqun3_k$()) : false) ? _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_topRightCornerRadius_kxqun3_k$()) === _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_topLeftCornerRadius_91hulg_k$()) : false;
+    var sameRadiusY = (_CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_bottomLeftCornerRadius_9r65ws_k$()) === _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_bottomRightCornerRadius_166w49_k$()) ? _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_bottomRightCornerRadius_166w49_k$()) === _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_topRightCornerRadius_kxqun3_k$()) : false) ? _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_topRightCornerRadius_kxqun3_k$()) === _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_topLeftCornerRadius_91hulg_k$()) : false;
     return sameRadiusX ? sameRadiusY : false;
   }
   function drawOutline(_this__u8e3s4, outline, color, alpha, style, colorFilter, blendMode) {
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_44().get_DefaultBlendMode_8kor9s_k$() : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().get_DefaultBlendMode_svct2m_k$() : blendMode;
     // Inline function 'androidx.compose.ui.graphics.drawOutlineHelper' call
     var tmp;
     if (outline instanceof Rectangle) {
-      var tmp0_anonymous = outline.rect_1;
-      _this__u8e3s4.drawRect_srg7q1_k$(color, topLeft(tmp0_anonymous), size(tmp0_anonymous), alpha, style, colorFilter, blendMode);
+      var rect = outline.rect_1;
+      _this__u8e3s4.drawRect_6sw8uj_k$(color, topLeft(rect), size(rect), alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
       if (outline instanceof Rounded) {
         var path = outline.roundRectPath_1;
         var tmp_0;
         if (!(path == null)) {
-          _this__u8e3s4.drawPath_vpl0ok_k$(path, color, alpha, style, colorFilter, blendMode);
+          _this__u8e3s4.drawPath_mbkbcp_k$(path, color, alpha, style, colorFilter, blendMode);
           tmp_0 = Unit_getInstance();
         } else {
-          var tmp1_anonymous = outline.roundRect_1;
-          var radius = _CornerRadius___get_x__impl__1594cn(tmp1_anonymous.get_bottomLeftCornerRadius_na53na_k$());
-          var tmp0_topLeft = topLeft_0(tmp1_anonymous);
-          var tmp1_size = size_0(tmp1_anonymous);
+          var rrect = outline.roundRect_1;
+          var radius = _CornerRadius___get_x__impl__1594cn(rrect.get_bottomLeftCornerRadius_9r65ws_k$());
+          var tmp0_topLeft = topLeft_0(rrect);
+          var tmp1_size = size_0(rrect);
           var tmp2_cornerRadius = CornerRadius(radius);
-          _this__u8e3s4.drawRoundRect_q7amlu_k$(color, tmp0_topLeft, tmp1_size, tmp2_cornerRadius, style, alpha, colorFilter, blendMode);
+          _this__u8e3s4.drawRoundRect_bjcn4f_k$(color, tmp0_topLeft, tmp1_size, tmp2_cornerRadius, style, alpha, colorFilter, blendMode);
           tmp_0 = Unit_getInstance();
         }
         tmp = tmp_0;
       } else {
         if (outline instanceof Generic) {
-          var tmp2_anonymous = outline.path_1;
-          _this__u8e3s4.drawPath_vpl0ok_k$(tmp2_anonymous, color, alpha, style, colorFilter, blendMode);
+          var path_0 = outline.path_1;
+          _this__u8e3s4.drawPath_mbkbcp_k$(path_0, color, alpha, style, colorFilter, blendMode);
           tmp = Unit_getInstance();
         } else {
           noWhenBranchMatchedException();
@@ -4087,31 +3983,31 @@
     alpha = alpha === VOID ? 1.0 : alpha;
     style = style === VOID ? Fill_getInstance() : style;
     colorFilter = colorFilter === VOID ? null : colorFilter;
-    blendMode = blendMode === VOID ? Companion_getInstance_44().get_DefaultBlendMode_8kor9s_k$() : blendMode;
+    blendMode = blendMode === VOID ? Companion_getInstance_44().get_DefaultBlendMode_svct2m_k$() : blendMode;
     // Inline function 'androidx.compose.ui.graphics.drawOutlineHelper' call
     var tmp;
     if (outline instanceof Rectangle) {
-      var tmp0_anonymous = outline.rect_1;
-      _this__u8e3s4.drawRect_4jm64w_k$(brush, topLeft(tmp0_anonymous), size(tmp0_anonymous), alpha, style, colorFilter, blendMode);
+      var rect = outline.rect_1;
+      _this__u8e3s4.drawRect_t09b9w_k$(brush, topLeft(rect), size(rect), alpha, style, colorFilter, blendMode);
       tmp = Unit_getInstance();
     } else {
       if (outline instanceof Rounded) {
         var path = outline.roundRectPath_1;
         var tmp_0;
         if (!(path == null)) {
-          _this__u8e3s4.drawPath_vsb9f_k$(path, brush, alpha, style, colorFilter, blendMode);
+          _this__u8e3s4.drawPath_2qit1e_k$(path, brush, alpha, style, colorFilter, blendMode);
           tmp_0 = Unit_getInstance();
         } else {
-          var tmp1_anonymous = outline.roundRect_1;
-          var radius = _CornerRadius___get_x__impl__1594cn(tmp1_anonymous.get_bottomLeftCornerRadius_na53na_k$());
-          _this__u8e3s4.drawRoundRect_nkvmol_k$(brush, topLeft_0(tmp1_anonymous), size_0(tmp1_anonymous), CornerRadius(radius), alpha, style, colorFilter, blendMode);
+          var rrect = outline.roundRect_1;
+          var radius = _CornerRadius___get_x__impl__1594cn(rrect.get_bottomLeftCornerRadius_9r65ws_k$());
+          _this__u8e3s4.drawRoundRect_gbkwec_k$(brush, topLeft_0(rrect), size_0(rrect), CornerRadius(radius), alpha, style, colorFilter, blendMode);
           tmp_0 = Unit_getInstance();
         }
         tmp = tmp_0;
       } else {
         if (outline instanceof Generic) {
-          var tmp2_anonymous = outline.path_1;
-          _this__u8e3s4.drawPath_vsb9f_k$(tmp2_anonymous, brush, alpha, style, colorFilter, blendMode);
+          var path_0 = outline.path_1;
+          _this__u8e3s4.drawPath_2qit1e_k$(path_0, brush, alpha, style, colorFilter, blendMode);
           tmp = Unit_getInstance();
         } else {
           noWhenBranchMatchedException();
@@ -4173,10 +4069,10 @@
     this.Fill_1 = _PaintingStyle___init__impl__pwxppo(0);
     this.Stroke_1 = _PaintingStyle___init__impl__pwxppo(1);
   }
-  protoOf(Companion_9).get_Fill_xeknbt_k$ = function () {
+  protoOf(Companion_9).get_Fill_7xey15_k$ = function () {
     return this.Fill_1;
   };
-  protoOf(Companion_9).get_Stroke_dv2xoc_k$ = function () {
+  protoOf(Companion_9).get_Stroke_fu1ixu_k$ = function () {
     return this.Stroke_1;
   };
   var Companion_instance_9;
@@ -4214,9 +4110,9 @@
   function Companion_10() {
     Companion_instance_10 = this;
   }
-  protoOf(Companion_10).combine_ydees8_k$ = function (operation, path1, path2) {
+  protoOf(Companion_10).combine_eaz7cj_k$ = function (operation, path1, path2) {
     var path = Path_0();
-    if (path.op_eh4rey_k$(path1, path2, operation)) {
+    if (path.op_fj0csx_k$(path1, path2, operation)) {
       return path;
     }
     throw IllegalArgumentException_init_$Create$('Path.combine() failed.  This may be due an invalid path; in particular, check for NaN values.');
@@ -4232,20 +4128,20 @@
   function Companion_11() {
     Companion_instance_11 = this;
   }
-  protoOf(Companion_11).cornerPathEffect_fpocxv_k$ = function (radius) {
+  protoOf(Companion_11).cornerPathEffect_rwk5o3_k$ = function (radius) {
     return actualCornerPathEffect(radius);
   };
-  protoOf(Companion_11).dashPathEffect_iz0b5x_k$ = function (intervals, phase) {
+  protoOf(Companion_11).dashPathEffect_ko9kiw_k$ = function (intervals, phase) {
     return actualDashPathEffect(intervals, phase);
   };
-  protoOf(Companion_11).dashPathEffect$default_de05s1_k$ = function (intervals, phase, $super) {
+  protoOf(Companion_11).dashPathEffect$default_i901tt_k$ = function (intervals, phase, $super) {
     phase = phase === VOID ? 0.0 : phase;
-    return $super === VOID ? this.dashPathEffect_iz0b5x_k$(intervals, phase) : $super.dashPathEffect_iz0b5x_k$.call(this, intervals, phase);
+    return $super === VOID ? this.dashPathEffect_ko9kiw_k$(intervals, phase) : $super.dashPathEffect_ko9kiw_k$.call(this, intervals, phase);
   };
-  protoOf(Companion_11).chainPathEffect_8y4kg7_k$ = function (outer, inner) {
+  protoOf(Companion_11).chainPathEffect_466mix_k$ = function (outer, inner) {
     return actualChainPathEffect(outer, inner);
   };
-  protoOf(Companion_11).stampedPathEffect_uzafgs_k$ = function (shape, advance, phase, style) {
+  protoOf(Companion_11).stampedPathEffect_f8wkf0_k$ = function (shape, advance, phase, style) {
     return actualStampedPathEffect(shape, advance, phase, style);
   };
   var Companion_instance_11;
@@ -4268,13 +4164,13 @@
     this.Rotate_1 = _StampedPathEffectStyle___init__impl__ekt0so(1);
     this.Morph_1 = _StampedPathEffectStyle___init__impl__ekt0so(2);
   }
-  protoOf(Companion_12).get_Translate_oyad1i_k$ = function () {
+  protoOf(Companion_12).get_Translate_xeseg8_k$ = function () {
     return this.Translate_1;
   };
-  protoOf(Companion_12).get_Rotate_t1fpff_k$ = function () {
+  protoOf(Companion_12).get_Rotate_kkxo0p_k$ = function () {
     return this.Rotate_1;
   };
-  protoOf(Companion_12).get_Morph_35mk00_k$ = function () {
+  protoOf(Companion_12).get_Morph_bm4leq_k$ = function () {
     return this.Morph_1;
   };
   var Companion_instance_12;
@@ -4320,10 +4216,10 @@
     this.NonZero_1 = _PathFillType___init__impl__d59lzz(0);
     this.EvenOdd_1 = _PathFillType___init__impl__d59lzz(1);
   }
-  protoOf(Companion_13).get_NonZero_j4d1fu_k$ = function () {
+  protoOf(Companion_13).get_NonZero_dwy848_k$ = function () {
     return this.NonZero_1;
   };
-  protoOf(Companion_13).get_EvenOdd_pai4nq_k$ = function () {
+  protoOf(Companion_13).get_EvenOdd_cpanrc_k$ = function () {
     return this.EvenOdd_1;
   };
   var Companion_instance_13;
@@ -4374,19 +4270,19 @@
     this.Xor_1 = _PathOperation___init__impl__8ddeif(3);
     this.ReverseDifference_1 = _PathOperation___init__impl__8ddeif(4);
   }
-  protoOf(Companion_14).get_Difference_61syb0_k$ = function () {
+  protoOf(Companion_14).get_Difference_nnbib6_k$ = function () {
     return this.Difference_1;
   };
-  protoOf(Companion_14).get_Intersect_pr81lo_k$ = function () {
+  protoOf(Companion_14).get_Intersect_3xwf0i_k$ = function () {
     return this.Intersect_1;
   };
-  protoOf(Companion_14).get_Union_6aiks4_k$ = function () {
+  protoOf(Companion_14).get_Union_z1h0ku_k$ = function () {
     return this.Union_1;
   };
-  protoOf(Companion_14).get_Xor_ja5law_k$ = function () {
+  protoOf(Companion_14).get_Xor_aeyvba_k$ = function () {
     return this.Xor_1;
   };
-  protoOf(Companion_14).get_ReverseDifference_yow8fw_k$ = function () {
+  protoOf(Companion_14).get_ReverseDifference_4zrrtq_k$ = function () {
     return this.ReverseDifference_1;
   };
   var Companion_instance_14;
@@ -4433,13 +4329,13 @@
     this.Lines_1 = _PointMode___init__impl__mgo5cq(1);
     this.Polygon_1 = _PointMode___init__impl__mgo5cq(2);
   }
-  protoOf(Companion_15).get_Points_g9arr3_k$ = function () {
+  protoOf(Companion_15).get_Points_yh58f7_k$ = function () {
     return this.Points_1;
   };
-  protoOf(Companion_15).get_Lines_pf6qy3_k$ = function () {
+  protoOf(Companion_15).get_Lines_54ip59_k$ = function () {
     return this.Lines_1;
   };
-  protoOf(Companion_15).get_Polygon_n5et2y_k$ = function () {
+  protoOf(Companion_15).get_Polygon_rl173c_k$ = function () {
     return this.Polygon_1;
   };
   var Companion_instance_15;
@@ -4481,7 +4377,7 @@
   var RectangleShape;
   function RectangleShape$1() {
   }
-  protoOf(RectangleShape$1).createOutline_p92zi6_k$ = function (size, layoutDirection, density) {
+  protoOf(RectangleShape$1).createOutline_jco4cb_k$ = function (size, layoutDirection, density) {
     return new Rectangle(toRect(size));
   };
   protoOf(RectangleShape$1).toString = function () {
@@ -4496,12 +4392,12 @@
   }
   function LinearGradientShader(from, to, colors, colorStops, tileMode) {
     colorStops = colorStops === VOID ? null : colorStops;
-    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_ddetsd_k$() : tileMode;
     return ActualLinearGradientShader(from, to, colors, colorStops, tileMode);
   }
   function RadialGradientShader(center, radius, colors, colorStops, tileMode) {
     colorStops = colorStops === VOID ? null : colorStops;
-    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_q8g1jp_k$() : tileMode;
+    tileMode = tileMode === VOID ? Companion_getInstance_34().get_Clamp_ddetsd_k$() : tileMode;
     return ActualRadialGradientShader(center, radius, colors, colorStops, tileMode);
   }
   function SweepGradientShader(center, colors, colorStops) {
@@ -4524,16 +4420,16 @@
   function Shadow(color, offset, blurRadius) {
     Companion_getInstance_31();
     color = color === VOID ? Color_1(new Long(-16777216, 0)) : color;
-    offset = offset === VOID ? Companion_getInstance_0().get_Zero_sctq3f_k$() : offset;
+    offset = offset === VOID ? Companion_getInstance().get_Zero_k6n73t_k$() : offset;
     blurRadius = blurRadius === VOID ? 0.0 : blurRadius;
     this.color_1 = color;
     this.offset_1 = offset;
     this.blurRadius_1 = blurRadius;
   }
-  protoOf(Shadow).get_color_v34vrz_k$ = function () {
+  protoOf(Shadow).get_color_lnp1vl_k$ = function () {
     return this.color_1;
   };
-  protoOf(Shadow).get_offset_y9g6r4_k$ = function () {
+  protoOf(Shadow).get_offset_slhc8e_k$ = function () {
     return this.offset_1;
   };
   protoOf(Shadow).get_blurRadius_r8jo0y_k$ = function () {
@@ -4561,14 +4457,14 @@
   protoOf(Shadow).toString = function () {
     return 'Shadow(color=' + new Color(this.color_1) + ', offset=' + new Offset(this.offset_1) + ', blurRadius=' + this.blurRadius_1 + ')';
   };
-  protoOf(Shadow).copy_rnsz8_k$ = function (color, offset, blurRadius) {
+  protoOf(Shadow).copy_qipu7k_k$ = function (color, offset, blurRadius) {
     return new Shadow(color, offset, blurRadius);
   };
-  protoOf(Shadow).copy$default_3br38s_k$ = function (color, offset, blurRadius, $super) {
+  protoOf(Shadow).copy$default_jajr59_k$ = function (color, offset, blurRadius, $super) {
     color = color === VOID ? this.color_1 : color;
     offset = offset === VOID ? this.offset_1 : offset;
     blurRadius = blurRadius === VOID ? this.blurRadius_1 : blurRadius;
-    return $super === VOID ? this.copy_rnsz8_k$(color, offset, blurRadius) : $super.copy_rnsz8_k$.call(this, new Color(color), new Offset(offset), blurRadius);
+    return $super === VOID ? this.copy_qipu7k_k$(color, offset, blurRadius) : $super.copy_qipu7k_k$.call(this, new Color(color), new Offset(offset), blurRadius);
   };
   function lerp_2(start, stop, fraction) {
     return new Shadow(lerp_1(start.color_1, stop.color_1, fraction), lerp_0(start.offset_1, stop.offset_1, fraction), lerp(start.blurRadius_1, stop.blurRadius_1, fraction));
@@ -4587,13 +4483,13 @@
     this.Round_1 = _StrokeCap___init__impl__kfgr27(1);
     this.Square_1 = _StrokeCap___init__impl__kfgr27(2);
   }
-  protoOf(Companion_17).get_Butt_vf89me_k$ = function () {
+  protoOf(Companion_17).get_Butt_jb7qjw_k$ = function () {
     return this.Butt_1;
   };
-  protoOf(Companion_17).get_Round_x6oq4t_k$ = function () {
+  protoOf(Companion_17).get_Round_hjra1h_k$ = function () {
     return this.Round_1;
   };
-  protoOf(Companion_17).get_Square_xmkdw4_k$ = function () {
+  protoOf(Companion_17).get_Square_dbwc3a_k$ = function () {
     return this.Square_1;
   };
   var Companion_instance_17;
@@ -4640,13 +4536,13 @@
     this.Round_1 = _StrokeJoin___init__impl__ig23zz(1);
     this.Bevel_1 = _StrokeJoin___init__impl__ig23zz(2);
   }
-  protoOf(Companion_18).get_Miter_rcwd8a_k$ = function () {
+  protoOf(Companion_18).get_Miter_xkwqso_k$ = function () {
     return this.Miter_1;
   };
-  protoOf(Companion_18).get_Round_ybuhov_k$ = function () {
+  protoOf(Companion_18).get_Round_o8jjqp_k$ = function () {
     return this.Round_1;
   };
-  protoOf(Companion_18).get_Bevel_1szraz_k$ = function () {
+  protoOf(Companion_18).get_Bevel_8ab6n7_k$ = function () {
     return this.Bevel_1;
   };
   var Companion_instance_18;
@@ -4694,16 +4590,16 @@
     this.Mirror_1 = _TileMode___init__impl__syhjao(2);
     this.Decal_1 = _TileMode___init__impl__syhjao(3);
   }
-  protoOf(Companion_19).get_Clamp_q8g1jp_k$ = function () {
+  protoOf(Companion_19).get_Clamp_ddetsd_k$ = function () {
     return this.Clamp_1;
   };
-  protoOf(Companion_19).get_Repeated_k0uuck_k$ = function () {
+  protoOf(Companion_19).get_Repeated_jl00zi_k$ = function () {
     return this.Repeated_1;
   };
-  protoOf(Companion_19).get_Mirror_3kopi9_k$ = function () {
+  protoOf(Companion_19).get_Mirror_rukh4t_k$ = function () {
     return this.Mirror_1;
   };
-  protoOf(Companion_19).get_Decal_z0hn4z_k$ = function () {
+  protoOf(Companion_19).get_Decal_4ld873_k$ = function () {
     return this.Decal_1;
   };
   var Companion_instance_19;
@@ -4750,13 +4646,13 @@
     this.TriangleStrip_1 = _VertexMode___init__impl__btp65i(1);
     this.TriangleFan_1 = _VertexMode___init__impl__btp65i(2);
   }
-  protoOf(Companion_20).get_Triangles_3v3h75_k$ = function () {
+  protoOf(Companion_20).get_Triangles_687gr1_k$ = function () {
     return this.Triangles_1;
   };
-  protoOf(Companion_20).get_TriangleStrip_fj1wve_k$ = function () {
+  protoOf(Companion_20).get_TriangleStrip_pmcutk_k$ = function () {
     return this.TriangleStrip_1;
   };
-  protoOf(Companion_20).get_TriangleFan_hugsxb_k$ = function () {
+  protoOf(Companion_20).get_TriangleFan_rxrqvh_k$ = function () {
     return this.TriangleFan_1;
   };
   var Companion_instance_20;
@@ -4797,7 +4693,7 @@
     var tmp_1 = new Int32Array(tmp_0);
     while (tmp < tmp_0) {
       var tmp_2 = tmp;
-      tmp_1[tmp_2] = toArgb(colors.get_fkrdnv_k$(tmp_2).value_1);
+      tmp_1[tmp_2] = toArgb(colors.get_c1px32_k$(tmp_2).value_1);
       tmp = tmp + 1 | 0;
     }
     return tmp_1;
@@ -4809,7 +4705,7 @@
     while (tmp < tmp_0) {
       var tmp_2 = tmp;
       var pointIndex = tmp_2 / 2 | 0;
-      var point = points.get_fkrdnv_k$(pointIndex).packedValue_1;
+      var point = points.get_c1px32_k$(pointIndex).packedValue_1;
       var tmp_3;
       if ((tmp_2 % 2 | 0) === 0) {
         tmp_3 = _Offset___get_x__impl__xvi35n(point);
@@ -4845,7 +4741,7 @@
         do {
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var item = indices.get_fkrdnv_k$(index);
+          var item = indices.get_c1px32_k$(index);
           // Inline function 'androidx.compose.ui.util.fastAny.<anonymous>' call
           if (outOfBounds(item)) {
             tmp$ret$0 = true;
@@ -4866,12 +4762,12 @@
     var tmp_2 = new Int16Array(tmp_1);
     while (tmp_0 < tmp_1) {
       var tmp_3 = tmp_0;
-      tmp_2[tmp_3] = toShort(indices.get_fkrdnv_k$(tmp_3));
+      tmp_2[tmp_3] = toShort(indices.get_c1px32_k$(tmp_3));
       tmp_0 = tmp_0 + 1 | 0;
     }
     tmp.indices_1 = tmp_2;
   }
-  protoOf(Vertices).get_vertexMode_afoau9_k$ = function () {
+  protoOf(Vertices).get_vertexMode_kiz8sf_k$ = function () {
     return this.vertexMode_1;
   };
   protoOf(Vertices).get_positions_ya7scf_k$ = function () {
@@ -4887,27 +4783,24 @@
     return this.indices_1;
   };
   function Adaptation$Companion$Bradford$1() {
-    var tmp$ret$0;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([0.8951, -0.7502, 0.0389, 0.2664, 1.7135, -0.0685, -0.1614, 0.0367, 1.0296]);
+    var tmp$ret$0 = new Float32Array([0.8951, -0.7502, 0.0389, 0.2664, 1.7135, -0.0685, -0.1614, 0.0367, 1.0296]);
     Adaptation.call(this, tmp$ret$0);
   }
   protoOf(Adaptation$Companion$Bradford$1).toString = function () {
     return 'Bradford';
   };
   function Adaptation$Companion$VonKries$1() {
-    var tmp$ret$0;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([0.40024, -0.2263, 0.0, 0.7076, 1.16532, 0.0, -0.08081, 0.0457, 0.91822]);
+    var tmp$ret$0 = new Float32Array([0.40024, -0.2263, 0.0, 0.7076, 1.16532, 0.0, -0.08081, 0.0457, 0.91822]);
     Adaptation.call(this, tmp$ret$0);
   }
   protoOf(Adaptation$Companion$VonKries$1).toString = function () {
     return 'VonKries';
   };
   function Adaptation$Companion$Ciecat02$1() {
-    var tmp$ret$0;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([0.7328, -0.7036, 0.003, 0.4296, 1.6975, 0.0136, -0.1624, 0.0061, 0.9834]);
+    var tmp$ret$0 = new Float32Array([0.7328, -0.7036, 0.003, 0.4296, 1.6975, 0.0136, -0.1624, 0.0061, 0.9834]);
     Adaptation.call(this, tmp$ret$0);
   }
   protoOf(Adaptation$Companion$Ciecat02$1).toString = function () {
@@ -4952,41 +4845,37 @@
   }
   function _ColorModel___get_componentCount__impl__au0uoc($this) {
     // Inline function 'androidx.compose.ui.util.unpackInt1' call
-    return _ColorModel___get_packedValue__impl__uvxrhj($this).shr_wjue3g_k$(32).toInt_1tsl84_k$();
+    return _ColorModel___get_packedValue__impl__uvxrhj($this).shr_9fl3wl_k$(32).toInt_1tsl84_k$();
   }
   function Companion_22() {
     Companion_instance_22 = this;
     var tmp = this;
-    var tmp$ret$0;
     // Inline function 'androidx.compose.ui.util.packInts' call
-    tmp$ret$0 = new Long(0, 3);
+    var tmp$ret$0 = toLong(3).shl_bg8if3_k$(32).or_v7fvkl_k$(toLong(0).and_4spn93_k$(new Long(-1, 0)));
     tmp.Rgb_1 = _ColorModel___init__impl__b968n9(tmp$ret$0);
     var tmp_0 = this;
-    var tmp$ret$1;
     // Inline function 'androidx.compose.ui.util.packInts' call
-    tmp$ret$1 = new Long(1, 3);
+    var tmp$ret$1 = toLong(3).shl_bg8if3_k$(32).or_v7fvkl_k$(toLong(1).and_4spn93_k$(new Long(-1, 0)));
     tmp_0.Xyz_1 = _ColorModel___init__impl__b968n9(tmp$ret$1);
     var tmp_1 = this;
-    var tmp$ret$2;
     // Inline function 'androidx.compose.ui.util.packInts' call
-    tmp$ret$2 = new Long(2, 3);
+    var tmp$ret$2 = toLong(3).shl_bg8if3_k$(32).or_v7fvkl_k$(toLong(2).and_4spn93_k$(new Long(-1, 0)));
     tmp_1.Lab_1 = _ColorModel___init__impl__b968n9(tmp$ret$2);
     var tmp_2 = this;
-    var tmp$ret$3;
     // Inline function 'androidx.compose.ui.util.packInts' call
-    tmp$ret$3 = new Long(3, 4);
+    var tmp$ret$3 = toLong(4).shl_bg8if3_k$(32).or_v7fvkl_k$(toLong(3).and_4spn93_k$(new Long(-1, 0)));
     tmp_2.Cmyk_1 = _ColorModel___init__impl__b968n9(tmp$ret$3);
   }
-  protoOf(Companion_22).get_Rgb_hxm2yj_k$ = function () {
+  protoOf(Companion_22).get_Rgb_ehihd0_k$ = function () {
     return this.Rgb_1;
   };
-  protoOf(Companion_22).get_Xyz_dr76iv_k$ = function () {
+  protoOf(Companion_22).get_Xyz_inxdso_k$ = function () {
     return this.Xyz_1;
   };
-  protoOf(Companion_22).get_Lab_uzchff_k$ = function () {
+  protoOf(Companion_22).get_Lab_1fs2w4_k$ = function () {
     return this.Lab_1;
   };
-  protoOf(Companion_22).get_Cmyk_iotmf0_k$ = function () {
+  protoOf(Companion_22).get_Cmyk_dqaxwj_k$ = function () {
     return this.Cmyk_1;
   };
   var Companion_instance_22;
@@ -5023,7 +4912,6 @@
     return ColorModel__equals_impl_dbkfqg(this.packedValue_1, other);
   };
   function ColorSpace_init_$Init$(name, model, $this) {
-    Companion_getInstance_38();
     ColorSpace.call($this, name, model, -1);
     return $this;
   }
@@ -5053,28 +4941,18 @@
     this.model_1 = model;
     this.id_1 = id;
     // Inline function 'kotlin.text.isEmpty' call
-    var tmp0_isEmpty = this.name_1;
-    if (charSequenceLength(tmp0_isEmpty) === 0) {
+    var this_0 = this.name_1;
+    if (charSequenceLength(this_0) === 0) {
       throw IllegalArgumentException_init_$Create$('The name of a color space cannot be null and must contain at least 1 character');
     }
-    var tmp;
-    Companion_getInstance_38();
-    if (this.id_1 < -1) {
-      tmp = true;
-    } else {
-      Companion_getInstance_38();
-      tmp = this.id_1 > 63;
-    }
-    if (tmp) {
-      Companion_getInstance_38();
-      Companion_getInstance_38();
-      throw IllegalArgumentException_init_$Create$('The id must be between ' + -1 + ' and ' + 63);
+    if (this.id_1 < -1 ? true : this.id_1 > 63) {
+      throw IllegalArgumentException_init_$Create$('The id must be between -1 and 63');
     }
   }
   protoOf(ColorSpace).get_name_woqyms_k$ = function () {
     return this.name_1;
   };
-  protoOf(ColorSpace).get_model_rk6821_k$ = function () {
+  protoOf(ColorSpace).get_model_b1t9lk_k$ = function () {
     return this.model_1;
   };
   protoOf(ColorSpace).get_id_kntnx8_k$ = function () {
@@ -5086,35 +4964,34 @@
   protoOf(ColorSpace).get_isSrgb_ew666l_k$ = function () {
     return false;
   };
-  protoOf(ColorSpace).toXyz_htgd3k_k$ = function (r, g, b) {
-    var tmp$ret$0;
+  protoOf(ColorSpace).toXyz_k9kag6_k$ = function (r, g, b) {
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([r, g, b]);
-    return this.toXyz_ox86g9_k$(tmp$ret$0);
+    var tmp$ret$0 = new Float32Array([r, g, b]);
+    return this.toXyz_c5nzk6_k$(tmp$ret$0);
   };
-  protoOf(ColorSpace).toXy_sdu2b2_k$ = function (v0, v1, v2) {
-    var xyz = this.toXyz_htgd3k_k$(v0, v1, v2);
+  protoOf(ColorSpace).toXy_53ljx8_k$ = function (v0, v1, v2) {
+    var xyz = this.toXyz_k9kag6_k$(v0, v1, v2);
     // Inline function 'androidx.compose.ui.util.packFloats' call
-    var tmp0_packFloats = xyz[0];
-    var tmp1_packFloats = xyz[1];
-    var v1_0 = toLong(toBits(tmp0_packFloats));
-    var v2_0 = toLong(toBits(tmp1_packFloats));
-    return v1_0.shl_po5ip6_k$(32).or_s401rn_k$(v2_0.and_jhajnj_k$(new Long(-1, 0)));
+    var val1 = xyz[0];
+    var val2 = xyz[1];
+    var v1_0 = toLong(toBits(val1));
+    var v2_0 = toLong(toBits(val2));
+    return v1_0.shl_bg8if3_k$(32).or_v7fvkl_k$(v2_0.and_4spn93_k$(new Long(-1, 0)));
   };
-  protoOf(ColorSpace).toZ_3nx4hd_k$ = function (v0, v1, v2) {
-    var xyz = this.toXyz_htgd3k_k$(v0, v1, v2);
+  protoOf(ColorSpace).toZ_xzs7on_k$ = function (v0, v1, v2) {
+    var xyz = this.toXyz_k9kag6_k$(v0, v1, v2);
     return xyz[2];
   };
-  protoOf(ColorSpace).xyzaToColor_orha54_k$ = function (x, y, z, a, colorSpace) {
-    var colors = this.fromXyz_sxy01r_k$(x, y, z);
+  protoOf(ColorSpace).xyzaToColor_fee27c_k$ = function (x, y, z, a, colorSpace) {
+    var colors = this.fromXyz_w96f5j_k$(x, y, z);
     return Color_0(colors[0], colors[1], colors[2], a, colorSpace);
   };
-  protoOf(ColorSpace).fromXyz_sxy01r_k$ = function (x, y, z) {
+  protoOf(ColorSpace).fromXyz_w96f5j_k$ = function (x, y, z) {
     var xyz = new Float32Array(_ColorModel___get_componentCount__impl__au0uoc(this.model_1));
     xyz[0] = x;
     xyz[1] = y;
     xyz[2] = z;
-    return this.fromXyz_idrdie_k$(xyz);
+    return this.fromXyz_ghg1av_k$(xyz);
   };
   protoOf(ColorSpace).toString = function () {
     return this.name_1 + ' (id=' + this.id_1 + ', model=' + new ColorModel(this.model_1) + ')';
@@ -5139,22 +5016,22 @@
   };
   function connect(_this__u8e3s4, destination, intent) {
     destination = destination === VOID ? ColorSpaces_getInstance().get_Srgb_woa2g3_k$() : destination;
-    intent = intent === VOID ? Companion_getInstance_42().get_Perceptual_20219r_k$() : intent;
+    intent = intent === VOID ? Companion_getInstance_42().get_Perceptual_orjm5u_k$() : intent;
     if (_this__u8e3s4 === ColorSpaces_getInstance().get_Srgb_woa2g3_k$()) {
       if (destination === ColorSpaces_getInstance().get_Srgb_woa2g3_k$()) {
         return Companion_getInstance_39().get_SrgbIdentity_7ohf7j_k$();
       }
-      if (destination === ColorSpaces_getInstance().get_Oklab_ierso8_k$() ? intent === Companion_getInstance_42().get_Perceptual_20219r_k$() : false) {
+      if (destination === ColorSpaces_getInstance().get_Oklab_ierso8_k$() ? intent === Companion_getInstance_42().get_Perceptual_orjm5u_k$() : false) {
         return Companion_getInstance_39().get_SrgbToOklabPerceptual_ubj5w0_k$();
       }
-    } else if ((_this__u8e3s4 === ColorSpaces_getInstance().get_Oklab_ierso8_k$() ? destination === ColorSpaces_getInstance().get_Srgb_woa2g3_k$() : false) ? intent === Companion_getInstance_42().get_Perceptual_20219r_k$() : false) {
+    } else if ((_this__u8e3s4 === ColorSpaces_getInstance().get_Oklab_ierso8_k$() ? destination === ColorSpaces_getInstance().get_Srgb_woa2g3_k$() : false) ? intent === Companion_getInstance_42().get_Perceptual_orjm5u_k$() : false) {
       return Companion_getInstance_39().get_OklabToSrgbPerceptual_iguhs6_k$();
     }
     if (_this__u8e3s4 === destination) {
-      return Companion_getInstance_39().identity_orxv0l_k$(_this__u8e3s4);
+      return Companion_getInstance_39().identity_5fevof_k$(_this__u8e3s4);
     }
     var tmp;
-    if (equals(_this__u8e3s4.model_1, Companion_getInstance_37().get_Rgb_hxm2yj_k$()) ? equals(destination.model_1, Companion_getInstance_37().get_Rgb_hxm2yj_k$()) : false) {
+    if (equals(_this__u8e3s4.model_1, Companion_getInstance_37().get_Rgb_ehihd0_k$()) ? equals(destination.model_1, Companion_getInstance_37().get_Rgb_ehihd0_k$()) : false) {
       var tmp_0 = _this__u8e3s4 instanceof Rgb ? _this__u8e3s4 : THROW_CCE();
       tmp = new RgbConnector(tmp_0, destination instanceof Rgb ? destination : THROW_CCE(), intent);
     } else {
@@ -5170,7 +5047,7 @@
   }
   function adapt(_this__u8e3s4, whitePoint, adaptation) {
     adaptation = adaptation === VOID ? Companion_getInstance_36().get_Bradford_vb0mll_k$() : adaptation;
-    if (equals(_this__u8e3s4.model_1, Companion_getInstance_37().get_Rgb_hxm2yj_k$())) {
+    if (equals(_this__u8e3s4.model_1, Companion_getInstance_37().get_Rgb_ehihd0_k$())) {
       var rgb = _this__u8e3s4 instanceof Rgb ? _this__u8e3s4 : THROW_CCE();
       if (compare_1(rgb.get_whitePoint_g4n5ow_k$(), whitePoint)) {
         return _this__u8e3s4;
@@ -5194,8 +5071,8 @@
         var tmp;
         if (!(compareTo(a[i], b[i]) === 0)) {
           // Inline function 'kotlin.math.abs' call
-          var tmp0_abs = a[i] - b[i];
-          tmp = Math.abs(tmp0_abs) > 0.001;
+          var x = a[i] - b[i];
+          tmp = Math.abs(x) > 0.001;
         } else {
           tmp = false;
         }
@@ -5215,50 +5092,50 @@
     var tmp_5;
     if (!(b == null)) {
       // Inline function 'kotlin.math.abs' call
-      var tmp0_abs = a.get_a_1mhr5k_k$() - b.get_a_1mhr5k_k$();
-      tmp_5 = Math.abs(tmp0_abs) < 0.001;
+      var x = a.get_a_1mhr5k_k$() - b.get_a_1mhr5k_k$();
+      tmp_5 = Math.abs(x) < 0.001;
     } else {
       tmp_5 = false;
     }
     if (tmp_5) {
       // Inline function 'kotlin.math.abs' call
-      var tmp1_abs = a.get_b_1mhr5l_k$() - b.get_b_1mhr5l_k$();
-      tmp_4 = Math.abs(tmp1_abs) < 0.001;
+      var x_0 = a.get_b_1mhr5l_k$() - b.get_b_1mhr5l_k$();
+      tmp_4 = Math.abs(x_0) < 0.001;
     } else {
       tmp_4 = false;
     }
     if (tmp_4) {
       // Inline function 'kotlin.math.abs' call
-      var tmp2_abs = a.get_c_1mhr5m_k$() - b.get_c_1mhr5m_k$();
-      tmp_3 = Math.abs(tmp2_abs) < 0.001;
+      var x_1 = a.get_c_1mhr5m_k$() - b.get_c_1mhr5m_k$();
+      tmp_3 = Math.abs(x_1) < 0.001;
     } else {
       tmp_3 = false;
     }
     if (tmp_3) {
       // Inline function 'kotlin.math.abs' call
-      var tmp3_abs = a.get_d_1mhr5n_k$() - b.get_d_1mhr5n_k$();
-      tmp_2 = Math.abs(tmp3_abs) < 0.002;
+      var x_2 = a.get_d_1mhr5n_k$() - b.get_d_1mhr5n_k$();
+      tmp_2 = Math.abs(x_2) < 0.002;
     } else {
       tmp_2 = false;
     }
     if (tmp_2) {
       // Inline function 'kotlin.math.abs' call
-      var tmp4_abs = a.get_e_1mhr5o_k$() - b.get_e_1mhr5o_k$();
-      tmp_1 = Math.abs(tmp4_abs) < 0.001;
+      var x_3 = a.get_e_1mhr5o_k$() - b.get_e_1mhr5o_k$();
+      tmp_1 = Math.abs(x_3) < 0.001;
     } else {
       tmp_1 = false;
     }
     if (tmp_1) {
       // Inline function 'kotlin.math.abs' call
-      var tmp5_abs = a.get_f_1mhr5p_k$() - b.get_f_1mhr5p_k$();
-      tmp_0 = Math.abs(tmp5_abs) < 0.001;
+      var x_4 = a.get_f_1mhr5p_k$() - b.get_f_1mhr5p_k$();
+      tmp_0 = Math.abs(x_4) < 0.001;
     } else {
       tmp_0 = false;
     }
     if (tmp_0) {
       // Inline function 'kotlin.math.abs' call
-      var tmp6_abs = a.get_gamma_irsi2m_k$() - b.get_gamma_irsi2m_k$();
-      tmp = Math.abs(tmp6_abs) < 0.001;
+      var x_5 = a.get_gamma_irsi2m_k$() - b.get_gamma_irsi2m_k$();
+      tmp = Math.abs(x_5) < 0.001;
     } else {
       tmp = false;
     }
@@ -5287,11 +5164,11 @@
       return true;
     var tmp;
     // Inline function 'kotlin.math.abs' call
-    var tmp0_abs = a.get_x_1mhr67_k$() - b.get_x_1mhr67_k$();
-    if (Math.abs(tmp0_abs) < 0.001) {
+    var x = a.get_x_1mhr67_k$() - b.get_x_1mhr67_k$();
+    if (Math.abs(x) < 0.001) {
       // Inline function 'kotlin.math.abs' call
-      var tmp1_abs = a.get_y_1mhr68_k$() - b.get_y_1mhr68_k$();
-      tmp = Math.abs(tmp1_abs) < 0.001;
+      var x_0 = a.get_y_1mhr68_k$() - b.get_y_1mhr68_k$();
+      tmp = Math.abs(x_0) < 0.001;
     } else {
       tmp = false;
     }
@@ -5351,8 +5228,8 @@
     var tmp;
     if (x >= d * c) {
       // Inline function 'kotlin.math.pow' call
-      var tmp0_pow = 1.0 / g;
-      tmp = (Math.pow(x, tmp0_pow) - b) / a;
+      var x_0 = 1.0 / g;
+      tmp = (Math.pow(x, x_0) - b) / a;
     } else {
       tmp = x / c;
     }
@@ -5362,9 +5239,9 @@
     var tmp;
     if (x >= d * c) {
       // Inline function 'kotlin.math.pow' call
-      var tmp0_pow = x - e;
-      var tmp1_pow = 1.0 / g;
-      tmp = (Math.pow(tmp0_pow, tmp1_pow) - b) / a;
+      var this_0 = x - e;
+      var x_0 = 1.0 / g;
+      tmp = (Math.pow(this_0, x_0) - b) / a;
     } else {
       tmp = (x - f) / c;
     }
@@ -5374,8 +5251,8 @@
     var tmp;
     if (x >= d) {
       // Inline function 'kotlin.math.pow' call
-      var tmp0_pow = a * x + b;
-      tmp = Math.pow(tmp0_pow, g);
+      var this_0 = a * x + b;
+      tmp = Math.pow(this_0, g);
     } else {
       tmp = c * x;
     }
@@ -5385,8 +5262,8 @@
     var tmp;
     if (x >= d) {
       // Inline function 'kotlin.math.pow' call
-      var tmp0_pow = a * x + b;
-      tmp = Math.pow(tmp0_pow, g) + e;
+      var this_0 = a * x + b;
+      tmp = Math.pow(this_0, g) + e;
     } else {
       tmp = c * x + f;
     }
@@ -5398,7 +5275,7 @@
   function sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0).invoke_z1dtyv_k$ = function (double) {
+  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0).invoke_e0thbm_k$ = function (double) {
     return this.function_1(double);
   };
   function ColorSpaces$ExtendedSrgb$lambda(x) {
@@ -5427,50 +5304,41 @@
     tmp_1.ExtendedSrgb_1 = new Rgb('scRGB-nl IEC 61966-2-2:2003', this.SrgbPrimaries_1, tmp_2, null, tmp_4, new sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0(tmp_5), -0.799, 2.399, this.SrgbTransferParameters_1, 2);
     this.LinearExtendedSrgb_1 = Rgb_init_$Create$_6('scRGB IEC 61966-2-2:2003', this.SrgbPrimaries_1, Illuminant_getInstance().get_D65_18jwbq_k$(), 1.0, -0.5, 7.499, 3);
     var tmp_6 = this;
-    var tmp$ret$2;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$2 = new Float32Array([0.64, 0.33, 0.3, 0.6, 0.15, 0.06]);
+    var tmp$ret$2 = new Float32Array([0.64, 0.33, 0.3, 0.6, 0.15, 0.06]);
     tmp_6.Bt709__1 = Rgb_init_$Create$_3('Rec. ITU-R BT.709-5', tmp$ret$2, Illuminant_getInstance().get_D65_18jwbq_k$(), new TransferParameters(2.2222222222222223, 0.9099181073703367, 0.09008189262966333, 0.2222222222222222, 0.081), 4);
     var tmp_7 = this;
-    var tmp$ret$3;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$3 = new Float32Array([0.708, 0.292, 0.17, 0.797, 0.131, 0.046]);
+    var tmp$ret$3 = new Float32Array([0.708, 0.292, 0.17, 0.797, 0.131, 0.046]);
     tmp_7.Bt2020__1 = Rgb_init_$Create$_3('Rec. ITU-R BT.2020-1', tmp$ret$3, Illuminant_getInstance().get_D65_18jwbq_k$(), new TransferParameters(2.2222222222222223, 0.9096697898662786, 0.09033021013372146, 0.2222222222222222, 0.08145), 5);
     var tmp_8 = this;
-    var tmp$ret$4;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$4 = new Float32Array([0.68, 0.32, 0.265, 0.69, 0.15, 0.06]);
+    var tmp$ret$4 = new Float32Array([0.68, 0.32, 0.265, 0.69, 0.15, 0.06]);
     tmp_8.DciP3__1 = Rgb_init_$Create$_6('SMPTE RP 431-2-2007 DCI (P3)', tmp$ret$4, new WhitePoint(0.314, 0.351), 2.6, 0.0, 1.0, 6);
     var tmp_9 = this;
-    var tmp$ret$5;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$5 = new Float32Array([0.68, 0.32, 0.265, 0.69, 0.15, 0.06]);
+    var tmp$ret$5 = new Float32Array([0.68, 0.32, 0.265, 0.69, 0.15, 0.06]);
     tmp_9.DisplayP3__1 = Rgb_init_$Create$_3('Display P3', tmp$ret$5, Illuminant_getInstance().get_D65_18jwbq_k$(), this.SrgbTransferParameters_1, 7);
     this.Ntsc1953__1 = Rgb_init_$Create$_3('NTSC (1953)', this.Ntsc1953Primaries_1, Illuminant_getInstance().get_C_1mhr4q_k$(), new TransferParameters(2.2222222222222223, 0.9099181073703367, 0.09008189262966333, 0.2222222222222222, 0.081), 8);
     var tmp_10 = this;
-    var tmp$ret$6;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$6 = new Float32Array([0.63, 0.34, 0.31, 0.595, 0.155, 0.07]);
+    var tmp$ret$6 = new Float32Array([0.63, 0.34, 0.31, 0.595, 0.155, 0.07]);
     tmp_10.SmpteC_1 = Rgb_init_$Create$_3('SMPTE-C RGB', tmp$ret$6, Illuminant_getInstance().get_D65_18jwbq_k$(), new TransferParameters(2.2222222222222223, 0.9099181073703367, 0.09008189262966333, 0.2222222222222222, 0.081), 9);
     var tmp_11 = this;
-    var tmp$ret$7;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$7 = new Float32Array([0.64, 0.33, 0.21, 0.71, 0.15, 0.06]);
+    var tmp$ret$7 = new Float32Array([0.64, 0.33, 0.21, 0.71, 0.15, 0.06]);
     tmp_11.AdobeRgb_1 = Rgb_init_$Create$_6('Adobe RGB (1998)', tmp$ret$7, Illuminant_getInstance().get_D65_18jwbq_k$(), 2.2, 0.0, 1.0, 10);
     var tmp_12 = this;
-    var tmp$ret$8;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$8 = new Float32Array([0.7347, 0.2653, 0.1596, 0.8404, 0.0366, 1.0E-4]);
+    var tmp$ret$8 = new Float32Array([0.7347, 0.2653, 0.1596, 0.8404, 0.0366, 1.0E-4]);
     tmp_12.ProPhotoRgb_1 = Rgb_init_$Create$_3('ROMM RGB ISO 22028-2:2013', tmp$ret$8, Illuminant_getInstance().get_D50_18jwcq_k$(), new TransferParameters(1.8, 1.0, 0.0, 0.0625, 0.031248), 11);
     var tmp_13 = this;
-    var tmp$ret$9;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$9 = new Float32Array([0.7347, 0.2653, 0.0, 1.0, 1.0E-4, -0.077]);
+    var tmp$ret$9 = new Float32Array([0.7347, 0.2653, 0.0, 1.0, 1.0E-4, -0.077]);
     tmp_13.Aces_1 = Rgb_init_$Create$_6('SMPTE ST 2065-1:2012 ACES', tmp$ret$9, Illuminant_getInstance().get_D60_18jwbv_k$(), 1.0, -65504.0, 65504.0, 12);
     var tmp_14 = this;
-    var tmp$ret$10;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$10 = new Float32Array([0.713, 0.293, 0.165, 0.83, 0.128, 0.044]);
+    var tmp$ret$10 = new Float32Array([0.713, 0.293, 0.165, 0.83, 0.128, 0.044]);
     tmp_14.Acescg_1 = Rgb_init_$Create$_6('Academy S-2014-004 ACEScg', tmp$ret$10, Illuminant_getInstance().get_D60_18jwbv_k$(), 1.0, -65504.0, 65504.0, 13);
     this.CieXyz_1 = new Xyz('Generic XYZ', 14);
     this.CieLab_1 = new Lab('Generic L*a*b*', 15);
@@ -5545,14 +5413,14 @@
   protoOf(ColorSpaces).get_Oklab_ierso8_k$ = function () {
     return this.Oklab_1;
   };
-  protoOf(ColorSpaces).match_gsgfej_k$ = function (toXYZD50, function_0) {
+  protoOf(ColorSpaces).match_edbbcy_k$ = function (toXYZD50, function_0) {
     var indexedObject = this.ColorSpacesArray_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     while (inductionVariable < last) {
       var colorSpace = indexedObject[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      if (equals(colorSpace.get_model_rk6821_k$(), Companion_getInstance_37().get_Rgb_hxm2yj_k$())) {
+      if (equals(colorSpace.get_model_b1t9lk_k$(), Companion_getInstance_37().get_Rgb_ehihd0_k$())) {
         var tmp = adapt(colorSpace, Illuminant_getInstance().get_D50_18jwcq_k$());
         var rgb = tmp instanceof Rgb ? tmp : THROW_CCE();
         if (compare(toXYZD50, rgb.get_transform_px941v_k$()) ? compare_0(function_0, rgb.get_transferParameters_ak703m_k$()) : false) {
@@ -5562,7 +5430,7 @@
     }
     return null;
   };
-  protoOf(ColorSpaces).getColorSpace_n6qo08_k$ = function (id) {
+  protoOf(ColorSpaces).getColorSpace_ree0gv_k$ = function (id) {
     return this.ColorSpacesArray_1[id];
   };
   protoOf(ColorSpaces).get_ColorSpacesArray_qsodou_k$ = function () {
@@ -5593,36 +5461,33 @@
       var dstXYZ = destination.get_whitePoint_g4n5ow_k$().toXyz_1tswm6_k$();
       if (!compare_1(source.get_whitePoint_g4n5ow_k$(), Illuminant_getInstance().get_D50_18jwcq_k$())) {
         var tmp = Companion_getInstance_36().get_Bradford_vb0mll_k$().get_transform_px941v_k$();
-        var tmp$ret$1;
         // Inline function 'kotlin.collections.copyOf' call
         // Inline function 'kotlin.js.asDynamic' call
-        tmp$ret$1 = Illuminant_getInstance().get_D50Xyz_3l7ykd_k$().slice();
+        var tmp$ret$1 = Illuminant_getInstance().get_D50Xyz_3l7ykd_k$().slice();
         var srcAdaptation = chromaticAdaptation(tmp, srcXYZ, tmp$ret$1);
         transform = mul3x3(srcAdaptation, source.get_transform_px941v_k$());
       }
       if (!compare_1(destination.get_whitePoint_g4n5ow_k$(), Illuminant_getInstance().get_D50_18jwcq_k$())) {
         var tmp_0 = Companion_getInstance_36().get_Bradford_vb0mll_k$().get_transform_px941v_k$();
-        var tmp$ret$3;
         // Inline function 'kotlin.collections.copyOf' call
         // Inline function 'kotlin.js.asDynamic' call
-        tmp$ret$3 = Illuminant_getInstance().get_D50Xyz_3l7ykd_k$().slice();
+        var tmp$ret$3 = Illuminant_getInstance().get_D50Xyz_3l7ykd_k$().slice();
         var dstAdaptation = chromaticAdaptation(tmp_0, dstXYZ, tmp$ret$3);
         inverseTransform = inverse3x3(mul3x3(dstAdaptation, destination.get_transform_px941v_k$()));
       }
-      if (intent === Companion_getInstance_42().get_Absolute_4abvrf_k$()) {
-        var tmp$ret$4;
+      if (intent === Companion_getInstance_42().get_Absolute_v1xj70_k$()) {
         // Inline function 'kotlin.floatArrayOf' call
-        tmp$ret$4 = new Float32Array([srcXYZ[0] / dstXYZ[0], srcXYZ[1] / dstXYZ[1], srcXYZ[2] / dstXYZ[2]]);
+        var tmp$ret$4 = new Float32Array([srcXYZ[0] / dstXYZ[0], srcXYZ[1] / dstXYZ[1], srcXYZ[2] / dstXYZ[2]]);
         transform = mul3x3Diag(tmp$ret$4, transform);
       }
       return mul3x3(inverseTransform, transform);
     }
   }
   function computeTransform_0($this, source, destination, intent) {
-    if (!(intent === Companion_getInstance_42().get_Absolute_4abvrf_k$()))
+    if (!(intent === Companion_getInstance_42().get_Absolute_v1xj70_k$()))
       return null;
-    var srcRGB = equals(source.get_model_rk6821_k$(), Companion_getInstance_37().get_Rgb_hxm2yj_k$());
-    var dstRGB = equals(destination.get_model_rk6821_k$(), Companion_getInstance_37().get_Rgb_hxm2yj_k$());
+    var srcRGB = equals(source.get_model_b1t9lk_k$(), Companion_getInstance_37().get_Rgb_ehihd0_k$());
+    var dstRGB = equals(destination.get_model_b1t9lk_k$(), Companion_getInstance_37().get_Rgb_ehihd0_k$());
     if (srcRGB ? dstRGB : false)
       return null;
     if (srcRGB ? true : dstRGB) {
@@ -5636,12 +5501,12 @@
     return null;
   }
   function Connector$Companion$identity$1($source) {
-    Connector_init_$Init$($source, $source, Companion_getInstance_42().get_Relative_yydwow_k$(), this);
+    Connector_init_$Init$($source, $source, Companion_getInstance_42().get_Relative_86s99b_k$(), this);
   }
-  protoOf(Connector$Companion$identity$1).transform_aitls9_k$ = function (v) {
+  protoOf(Connector$Companion$identity$1).transform_82bv4k_k$ = function (v) {
     return v;
   };
-  protoOf(Connector$Companion$identity$1).transformToColor_9he873_k$ = function (r, g, b, a) {
+  protoOf(Connector$Companion$identity$1).transformToColor_57p277_k$ = function (r, g, b, a) {
     return Color_0(r, g, b, a, this.destination_1);
   };
   function _get_transformSource__ks0k3a($this) {
@@ -5654,9 +5519,9 @@
     return $this.transform_1;
   }
   function Connector_init_$Init$(source, destination, intent, $this) {
-    var tmp = equals(source.get_model_rk6821_k$(), Companion_getInstance_37().get_Rgb_hxm2yj_k$()) ? adapt(source, Illuminant_getInstance().get_D50_18jwcq_k$()) : source;
+    var tmp = equals(source.get_model_b1t9lk_k$(), Companion_getInstance_37().get_Rgb_ehihd0_k$()) ? adapt(source, Illuminant_getInstance().get_D50_18jwcq_k$()) : source;
     var tmp_0;
-    if (equals(destination.get_model_rk6821_k$(), Companion_getInstance_37().get_Rgb_hxm2yj_k$())) {
+    if (equals(destination.get_model_b1t9lk_k$(), Companion_getInstance_37().get_Rgb_ehihd0_k$())) {
       tmp_0 = adapt(destination, Illuminant_getInstance().get_D50_18jwcq_k$());
     } else {
       tmp_0 = destination;
@@ -5673,35 +5538,35 @@
     this.mDestination_1 = mDestination;
     this.mTransform_1 = computeTransform(this, this.mSource_1, this.mDestination_1, intent);
   }
-  protoOf(RgbConnector).transform_aitls9_k$ = function (v) {
-    v[0] = this.mSource_1.get_eotfFunc_j2khmx_k$().invoke_z1dtyv_k$(v[0]);
-    v[1] = this.mSource_1.get_eotfFunc_j2khmx_k$().invoke_z1dtyv_k$(v[1]);
-    v[2] = this.mSource_1.get_eotfFunc_j2khmx_k$().invoke_z1dtyv_k$(v[2]);
+  protoOf(RgbConnector).transform_82bv4k_k$ = function (v) {
+    v[0] = this.mSource_1.get_eotfFunc_j2khmx_k$().invoke_e0thbm_k$(v[0]);
+    v[1] = this.mSource_1.get_eotfFunc_j2khmx_k$().invoke_e0thbm_k$(v[1]);
+    v[2] = this.mSource_1.get_eotfFunc_j2khmx_k$().invoke_e0thbm_k$(v[2]);
     mul3x3Float3(this.mTransform_1, v);
-    v[0] = this.mDestination_1.get_oetfFunc_igma2d_k$().invoke_z1dtyv_k$(v[0]);
-    v[1] = this.mDestination_1.get_oetfFunc_igma2d_k$().invoke_z1dtyv_k$(v[1]);
-    v[2] = this.mDestination_1.get_oetfFunc_igma2d_k$().invoke_z1dtyv_k$(v[2]);
+    v[0] = this.mDestination_1.get_oetfFunc_igma2d_k$().invoke_e0thbm_k$(v[0]);
+    v[1] = this.mDestination_1.get_oetfFunc_igma2d_k$().invoke_e0thbm_k$(v[1]);
+    v[2] = this.mDestination_1.get_oetfFunc_igma2d_k$().invoke_e0thbm_k$(v[2]);
     return v;
   };
-  protoOf(RgbConnector).transformToColor_9he873_k$ = function (r, g, b, a) {
-    var v0 = this.mSource_1.get_eotfFunc_j2khmx_k$().invoke_z1dtyv_k$(r);
-    var v1 = this.mSource_1.get_eotfFunc_j2khmx_k$().invoke_z1dtyv_k$(g);
-    var v2 = this.mSource_1.get_eotfFunc_j2khmx_k$().invoke_z1dtyv_k$(b);
+  protoOf(RgbConnector).transformToColor_57p277_k$ = function (r, g, b, a) {
+    var v0 = this.mSource_1.get_eotfFunc_j2khmx_k$().invoke_e0thbm_k$(r);
+    var v1 = this.mSource_1.get_eotfFunc_j2khmx_k$().invoke_e0thbm_k$(g);
+    var v2 = this.mSource_1.get_eotfFunc_j2khmx_k$().invoke_e0thbm_k$(b);
     var v01 = mul3x3Float3_0(this.mTransform_1, v0, v1, v2);
     var v11 = mul3x3Float3_1(this.mTransform_1, v0, v1, v2);
     var v21 = mul3x3Float3_2(this.mTransform_1, v0, v1, v2);
-    var v02 = this.mDestination_1.get_oetfFunc_igma2d_k$().invoke_z1dtyv_k$(v01);
-    var v12 = this.mDestination_1.get_oetfFunc_igma2d_k$().invoke_z1dtyv_k$(v11);
-    var v22 = this.mDestination_1.get_oetfFunc_igma2d_k$().invoke_z1dtyv_k$(v21);
+    var v02 = this.mDestination_1.get_oetfFunc_igma2d_k$().invoke_e0thbm_k$(v01);
+    var v12 = this.mDestination_1.get_oetfFunc_igma2d_k$().invoke_e0thbm_k$(v11);
+    var v22 = this.mDestination_1.get_oetfFunc_igma2d_k$().invoke_e0thbm_k$(v21);
     return Color_0(v02, v12, v22, a, this.mDestination_1);
   };
   function Companion_24() {
     Companion_instance_24 = this;
-    this.SrgbIdentity_1 = this.identity_orxv0l_k$(ColorSpaces_getInstance().get_Srgb_woa2g3_k$());
-    this.SrgbToOklabPerceptual_1 = Connector_init_$Create$(ColorSpaces_getInstance().get_Srgb_woa2g3_k$(), ColorSpaces_getInstance().get_Oklab_ierso8_k$(), Companion_getInstance_42().get_Perceptual_20219r_k$());
-    this.OklabToSrgbPerceptual_1 = Connector_init_$Create$(ColorSpaces_getInstance().get_Oklab_ierso8_k$(), ColorSpaces_getInstance().get_Srgb_woa2g3_k$(), Companion_getInstance_42().get_Perceptual_20219r_k$());
+    this.SrgbIdentity_1 = this.identity_5fevof_k$(ColorSpaces_getInstance().get_Srgb_woa2g3_k$());
+    this.SrgbToOklabPerceptual_1 = Connector_init_$Create$(ColorSpaces_getInstance().get_Srgb_woa2g3_k$(), ColorSpaces_getInstance().get_Oklab_ierso8_k$(), Companion_getInstance_42().get_Perceptual_orjm5u_k$());
+    this.OklabToSrgbPerceptual_1 = Connector_init_$Create$(ColorSpaces_getInstance().get_Oklab_ierso8_k$(), ColorSpaces_getInstance().get_Srgb_woa2g3_k$(), Companion_getInstance_42().get_Perceptual_orjm5u_k$());
   }
-  protoOf(Companion_24).identity_orxv0l_k$ = function (source) {
+  protoOf(Companion_24).identity_5fevof_k$ = function (source) {
     return new Connector$Companion$identity$1(source);
   };
   protoOf(Companion_24).get_SrgbIdentity_7ohf7j_k$ = function () {
@@ -5734,43 +5599,42 @@
   protoOf(Connector).get_destination_9r3c63_k$ = function () {
     return this.destination_1;
   };
-  protoOf(Connector).get_renderIntent_qndnh6_k$ = function () {
+  protoOf(Connector).get_renderIntent_47zyf_k$ = function () {
     return this.renderIntent_1;
   };
-  protoOf(Connector).transform_2zmpfm_k$ = function (r, g, b) {
-    var tmp$ret$0;
+  protoOf(Connector).transform_px7d8_k$ = function (r, g, b) {
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([r, g, b]);
-    return this.transform_aitls9_k$(tmp$ret$0);
+    var tmp$ret$0 = new Float32Array([r, g, b]);
+    return this.transform_82bv4k_k$(tmp$ret$0);
   };
-  protoOf(Connector).transform_aitls9_k$ = function (v) {
-    var xyz = this.transformSource_1.toXyz_ox86g9_k$(v);
+  protoOf(Connector).transform_82bv4k_k$ = function (v) {
+    var xyz = this.transformSource_1.toXyz_c5nzk6_k$(v);
     if (!(this.transform_1 == null)) {
       xyz[0] = xyz[0] * this.transform_1[0];
       xyz[1] = xyz[1] * this.transform_1[1];
       xyz[2] = xyz[2] * this.transform_1[2];
     }
-    return this.transformDestination_1.fromXyz_idrdie_k$(xyz);
+    return this.transformDestination_1.fromXyz_ghg1av_k$(xyz);
   };
-  protoOf(Connector).transformToColor_9he873_k$ = function (r, g, b, a) {
-    var packed = this.transformSource_1.toXy_sdu2b2_k$(r, g, b);
+  protoOf(Connector).transformToColor_57p277_k$ = function (r, g, b, a) {
+    var packed = this.transformSource_1.toXy_53ljx8_k$(r, g, b);
     // Inline function 'androidx.compose.ui.util.unpackFloat1' call
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp1_fromBits = packed.shr_wjue3g_k$(32).toInt_1tsl84_k$();
-    var x = floatFromBits(tmp1_fromBits);
+    var bits = packed.shr_9fl3wl_k$(32).toInt_1tsl84_k$();
+    var x = floatFromBits(bits);
     // Inline function 'androidx.compose.ui.util.unpackFloat2' call
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp1_fromBits_0 = packed.and_jhajnj_k$(new Long(-1, 0)).toInt_1tsl84_k$();
-    var y = floatFromBits(tmp1_fromBits_0);
-    var z = this.transformSource_1.toZ_3nx4hd_k$(r, g, b);
+    var bits_0 = packed.and_4spn93_k$(new Long(-1, 0)).toInt_1tsl84_k$();
+    var y = floatFromBits(bits_0);
+    var z = this.transformSource_1.toZ_xzs7on_k$(r, g, b);
     if (!(this.transform_1 == null)) {
       x = x * this.transform_1[0];
       y = y * this.transform_1[1];
       z = z * this.transform_1[2];
     }
-    return this.transformDestination_1.xyzaToColor_orha54_k$(x, y, z, a, this.destination_1);
+    return this.transformDestination_1.xyzaToColor_fee27c_k$(x, y, z, a, this.destination_1);
   };
   function Illuminant() {
     Illuminant_instance = this;
@@ -5850,205 +5714,121 @@
   }
   function Lab(name, id) {
     Companion_getInstance_40();
-    ColorSpace.call(this, name, Companion_getInstance_37().get_Lab_uzchff_k$(), id);
+    ColorSpace.call(this, name, Companion_getInstance_37().get_Lab_1fs2w4_k$(), id);
   }
   protoOf(Lab).get_isWideGamut_oxj4to_k$ = function () {
     return true;
   };
-  protoOf(Lab).getMinValue_7r60q4_k$ = function (component) {
+  protoOf(Lab).getMinValue_3znj7n_k$ = function (component) {
     return component === 0 ? 0.0 : -128.0;
   };
-  protoOf(Lab).getMaxValue_8bwqwu_k$ = function (component) {
+  protoOf(Lab).getMaxValue_kswgkr_k$ = function (component) {
     return component === 0 ? 100.0 : 128.0;
   };
-  protoOf(Lab).toXyz_ox86g9_k$ = function (v) {
+  protoOf(Lab).toXyz_c5nzk6_k$ = function (v) {
     v[0] = coerceIn(v[0], 0.0, 100.0);
     v[1] = coerceIn(v[1], -128.0, 128.0);
     v[2] = coerceIn(v[2], -128.0, 128.0);
     var fy = (v[0] + 16.0) / 116.0;
     var fx = fy + v[1] * 0.002;
     var fz = fy - v[2] * 0.005;
-    var tmp;
-    Companion_getInstance_40();
-    if (fx > 0.20689656) {
-      tmp = fx * fx * fx;
-    } else {
-      Companion_getInstance_40();
-      var tmp_0 = 1.0 / 7.787037;
-      Companion_getInstance_40();
-      tmp = tmp_0 * (fx - 0.13793103);
-    }
-    var x = tmp;
-    var tmp_1;
-    Companion_getInstance_40();
-    if (fy > 0.20689656) {
-      tmp_1 = fy * fy * fy;
-    } else {
-      Companion_getInstance_40();
-      var tmp_2 = 1.0 / 7.787037;
-      Companion_getInstance_40();
-      tmp_1 = tmp_2 * (fy - 0.13793103);
-    }
-    var y = tmp_1;
-    var tmp_3;
-    Companion_getInstance_40();
-    if (fz > 0.20689656) {
-      tmp_3 = fz * fz * fz;
-    } else {
-      Companion_getInstance_40();
-      var tmp_4 = 1.0 / 7.787037;
-      Companion_getInstance_40();
-      tmp_3 = tmp_4 * (fz - 0.13793103);
-    }
-    var z = tmp_3;
+    var x = fx > 0.20689656 ? fx * fx * fx : 0.12841854995680643 * (fx - 0.13793103);
+    var y = fy > 0.20689656 ? fy * fy * fy : 0.12841854995680643 * (fy - 0.13793103);
+    var z = fz > 0.20689656 ? fz * fz * fz : 0.12841854995680643 * (fz - 0.13793103);
     v[0] = x * Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[0];
     v[1] = y * Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[1];
     v[2] = z * Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[2];
     return v;
   };
-  protoOf(Lab).toXy_sdu2b2_k$ = function (v0, v1, v2) {
+  protoOf(Lab).toXy_53ljx8_k$ = function (v0, v1, v2) {
     var v00 = coerceIn(v0, 0.0, 100.0);
     var v10 = coerceIn(v0, -128.0, 128.0);
     var fy = (v00 + 16.0) / 116.0;
     var fx = fy + v10 * 0.002;
-    var tmp;
-    Companion_getInstance_40();
-    if (fx > 0.20689656) {
-      tmp = fx * fx * fx;
-    } else {
-      Companion_getInstance_40();
-      var tmp_0 = 1.0 / 7.787037;
-      Companion_getInstance_40();
-      tmp = tmp_0 * (fx - 0.13793103);
-    }
-    var x = tmp;
-    var tmp_1;
-    Companion_getInstance_40();
-    if (fy > 0.20689656) {
-      tmp_1 = fy * fy * fy;
-    } else {
-      Companion_getInstance_40();
-      var tmp_2 = 1.0 / 7.787037;
-      Companion_getInstance_40();
-      tmp_1 = tmp_2 * (fy - 0.13793103);
-    }
-    var y = tmp_1;
+    var x = fx > 0.20689656 ? fx * fx * fx : 0.12841854995680643 * (fx - 0.13793103);
+    var y = fy > 0.20689656 ? fy * fy * fy : 0.12841854995680643 * (fy - 0.13793103);
     // Inline function 'androidx.compose.ui.util.packFloats' call
-    var tmp0_packFloats = x * Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[0];
-    var tmp1_packFloats = y * Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[1];
-    var v1_0 = toLong(toBits(tmp0_packFloats));
-    var v2_0 = toLong(toBits(tmp1_packFloats));
-    return v1_0.shl_po5ip6_k$(32).or_s401rn_k$(v2_0.and_jhajnj_k$(new Long(-1, 0)));
+    var val1 = x * Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[0];
+    var val2 = y * Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[1];
+    var v1_0 = toLong(toBits(val1));
+    var v2_0 = toLong(toBits(val2));
+    return v1_0.shl_bg8if3_k$(32).or_v7fvkl_k$(v2_0.and_4spn93_k$(new Long(-1, 0)));
   };
-  protoOf(Lab).toZ_3nx4hd_k$ = function (v0, v1, v2) {
+  protoOf(Lab).toZ_xzs7on_k$ = function (v0, v1, v2) {
     var v00 = coerceIn(v0, 0.0, 100.0);
     var v20 = coerceIn(v2, -128.0, 128.0);
     var fy = (v00 + 16.0) / 116.0;
     var fz = fy - v20 * 0.005;
-    var tmp;
-    Companion_getInstance_40();
-    if (fz > 0.20689656) {
-      tmp = fz * fz * fz;
-    } else {
-      Companion_getInstance_40();
-      var tmp_0 = 1.0 / 7.787037;
-      Companion_getInstance_40();
-      tmp = tmp_0 * (fz - 0.13793103);
-    }
-    var z = tmp;
+    var z = fz > 0.20689656 ? fz * fz * fz : 0.12841854995680643 * (fz - 0.13793103);
     return z * Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[2];
   };
-  protoOf(Lab).xyzaToColor_orha54_k$ = function (x, y, z, a, colorSpace) {
+  protoOf(Lab).xyzaToColor_fee27c_k$ = function (x, y, z, a, colorSpace) {
     var x1 = x / Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[0];
     var y1 = y / Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[1];
     var z1 = z / Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[2];
     var tmp;
-    Companion_getInstance_40();
     if (x1 > 0.008856452) {
       // Inline function 'kotlin.math.pow' call
-      var tmp0_pow = 1.0 / 3.0;
-      tmp = Math.pow(x1, tmp0_pow);
+      var x_0 = 0.3333333333333333;
+      tmp = Math.pow(x1, x_0);
     } else {
-      Companion_getInstance_40();
-      var tmp_0 = 7.787037 * x1;
-      Companion_getInstance_40();
-      tmp = tmp_0 + 0.13793103;
+      tmp = 7.787037 * x1 + 0.13793103;
     }
     var fx = tmp;
-    var tmp_1;
-    Companion_getInstance_40();
+    var tmp_0;
     if (y1 > 0.008856452) {
       // Inline function 'kotlin.math.pow' call
-      var tmp1_pow = 1.0 / 3.0;
-      tmp_1 = Math.pow(y1, tmp1_pow);
+      var x_1 = 0.3333333333333333;
+      tmp_0 = Math.pow(y1, x_1);
     } else {
-      Companion_getInstance_40();
-      var tmp_2 = 7.787037 * y1;
-      Companion_getInstance_40();
-      tmp_1 = tmp_2 + 0.13793103;
+      tmp_0 = 7.787037 * y1 + 0.13793103;
     }
-    var fy = tmp_1;
-    var tmp_3;
-    Companion_getInstance_40();
+    var fy = tmp_0;
+    var tmp_1;
     if (z1 > 0.008856452) {
       // Inline function 'kotlin.math.pow' call
-      var tmp2_pow = 1.0 / 3.0;
-      tmp_3 = Math.pow(z1, tmp2_pow);
+      var x_2 = 0.3333333333333333;
+      tmp_1 = Math.pow(z1, x_2);
     } else {
-      Companion_getInstance_40();
-      var tmp_4 = 7.787037 * z1;
-      Companion_getInstance_40();
-      tmp_3 = tmp_4 + 0.13793103;
+      tmp_1 = 7.787037 * z1 + 0.13793103;
     }
-    var fz = tmp_3;
+    var fz = tmp_1;
     var l = 116.0 * fy - 16.0;
     var a1 = 500.0 * (fx - fy);
     var b = 200.0 * (fy - fz);
     return Color_0(coerceIn(l, 0.0, 100.0), coerceIn(a1, -128.0, 128.0), coerceIn(b, -128.0, 128.0), a, colorSpace);
   };
-  protoOf(Lab).fromXyz_idrdie_k$ = function (v) {
+  protoOf(Lab).fromXyz_ghg1av_k$ = function (v) {
     var x = v[0] / Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[0];
     var y = v[1] / Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[1];
     var z = v[2] / Illuminant_getInstance().get_D50Xyz_3l7ykd_k$()[2];
     var tmp;
-    Companion_getInstance_40();
     if (x > 0.008856452) {
       // Inline function 'kotlin.math.pow' call
-      var tmp0_pow = 1.0 / 3.0;
-      tmp = Math.pow(x, tmp0_pow);
+      var x_0 = 0.3333333333333333;
+      tmp = Math.pow(x, x_0);
     } else {
-      Companion_getInstance_40();
-      var tmp_0 = 7.787037 * x;
-      Companion_getInstance_40();
-      tmp = tmp_0 + 0.13793103;
+      tmp = 7.787037 * x + 0.13793103;
     }
     var fx = tmp;
-    var tmp_1;
-    Companion_getInstance_40();
+    var tmp_0;
     if (y > 0.008856452) {
       // Inline function 'kotlin.math.pow' call
-      var tmp1_pow = 1.0 / 3.0;
-      tmp_1 = Math.pow(y, tmp1_pow);
+      var x_1 = 0.3333333333333333;
+      tmp_0 = Math.pow(y, x_1);
     } else {
-      Companion_getInstance_40();
-      var tmp_2 = 7.787037 * y;
-      Companion_getInstance_40();
-      tmp_1 = tmp_2 + 0.13793103;
+      tmp_0 = 7.787037 * y + 0.13793103;
     }
-    var fy = tmp_1;
-    var tmp_3;
-    Companion_getInstance_40();
+    var fy = tmp_0;
+    var tmp_1;
     if (z > 0.008856452) {
       // Inline function 'kotlin.math.pow' call
-      var tmp2_pow = 1.0 / 3.0;
-      tmp_3 = Math.pow(z, tmp2_pow);
+      var x_2 = 0.3333333333333333;
+      tmp_1 = Math.pow(z, x_2);
     } else {
-      Companion_getInstance_40();
-      var tmp_4 = 7.787037 * z;
-      Companion_getInstance_40();
-      tmp_3 = tmp_4 + 0.13793103;
+      tmp_1 = 7.787037 * z + 0.13793103;
     }
-    var fz = tmp_3;
+    var fz = tmp_1;
     var l = 116.0 * fy - 16.0;
     var a = 500.0 * (fx - fy);
     var b = 200.0 * (fy - fz);
@@ -6072,9 +5852,8 @@
   function Companion_26() {
     Companion_instance_26 = this;
     var tmp = this;
-    var tmp$ret$0;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([0.818933, 0.032984544, 0.0482003, 0.36186674, 0.9293119, 0.26436627, -0.12885971, 0.03614564, 0.6338517]);
+    var tmp$ret$0 = new Float32Array([0.818933, 0.032984544, 0.0482003, 0.36186674, 0.9293119, 0.26436627, -0.12885971, 0.03614564, 0.6338517]);
     tmp.M1__1 = mul3x3(tmp$ret$0, chromaticAdaptation(Companion_getInstance_36().get_Bradford_vb0mll_k$().get_transform_px941v_k$(), Illuminant_getInstance().get_D50_18jwcq_k$().toXyz_1tswm6_k$(), Illuminant_getInstance().get_D65_18jwbq_k$().toXyz_1tswm6_k$()));
     var tmp_0 = this;
     // Inline function 'kotlin.floatArrayOf' call
@@ -6090,18 +5869,18 @@
   }
   function Oklab(name, id) {
     Companion_getInstance_41();
-    ColorSpace.call(this, name, Companion_getInstance_37().get_Lab_uzchff_k$(), id);
+    ColorSpace.call(this, name, Companion_getInstance_37().get_Lab_1fs2w4_k$(), id);
   }
   protoOf(Oklab).get_isWideGamut_oxj4to_k$ = function () {
     return true;
   };
-  protoOf(Oklab).getMinValue_7r60q4_k$ = function (component) {
+  protoOf(Oklab).getMinValue_3znj7n_k$ = function (component) {
     return component === 0 ? 0.0 : -0.5;
   };
-  protoOf(Oklab).getMaxValue_8bwqwu_k$ = function (component) {
+  protoOf(Oklab).getMaxValue_kswgkr_k$ = function (component) {
     return component === 0 ? 1.0 : 0.5;
   };
-  protoOf(Oklab).toXyz_ox86g9_k$ = function (v) {
+  protoOf(Oklab).toXyz_c5nzk6_k$ = function (v) {
     v[0] = coerceIn(v[0], 0.0, 1.0);
     v[1] = coerceIn(v[1], -0.5, 0.5);
     v[2] = coerceIn(v[2], -0.5, 0.5);
@@ -6112,7 +5891,7 @@
     mul3x3Float3(Companion_getInstance_41().InverseM1__1, v);
     return v;
   };
-  protoOf(Oklab).toXy_sdu2b2_k$ = function (v0, v1, v2) {
+  protoOf(Oklab).toXy_53ljx8_k$ = function (v0, v1, v2) {
     var v00 = coerceIn(v0, 0.0, 1.0);
     var v10 = coerceIn(v1, -0.5, 0.5);
     var v20 = coerceIn(v2, -0.5, 0.5);
@@ -6127,9 +5906,9 @@
     // Inline function 'androidx.compose.ui.util.packFloats' call
     var v1_0 = toLong(toBits(v03));
     var v2_0 = toLong(toBits(v13));
-    return v1_0.shl_po5ip6_k$(32).or_s401rn_k$(v2_0.and_jhajnj_k$(new Long(-1, 0)));
+    return v1_0.shl_bg8if3_k$(32).or_v7fvkl_k$(v2_0.and_4spn93_k$(new Long(-1, 0)));
   };
-  protoOf(Oklab).toZ_3nx4hd_k$ = function (v0, v1, v2) {
+  protoOf(Oklab).toZ_xzs7on_k$ = function (v0, v1, v2) {
     var v00 = coerceIn(v0, 0.0, 1.0);
     var v10 = coerceIn(v1, -0.5, 0.5);
     var v20 = coerceIn(v2, -0.5, 0.5);
@@ -6142,71 +5921,71 @@
     var v23 = mul3x3Float3_2(Companion_getInstance_41().InverseM1__1, v02, v12, v22);
     return v23;
   };
-  protoOf(Oklab).xyzaToColor_orha54_k$ = function (x, y, z, a, colorSpace) {
+  protoOf(Oklab).xyzaToColor_fee27c_k$ = function (x, y, z, a, colorSpace) {
     var v0 = mul3x3Float3_0(Companion_getInstance_41().M1__1, x, y, z);
     var v1 = mul3x3Float3_1(Companion_getInstance_41().M1__1, x, y, z);
     var v2 = mul3x3Float3_2(Companion_getInstance_41().M1__1, x, y, z);
     // Inline function 'kotlin.math.sign' call
-    var tmp0_sign = v0;
-    var tmp = sign(tmp0_sign);
+    var x_0 = v0;
+    var tmp = sign(x_0);
     // Inline function 'kotlin.math.pow' call
     // Inline function 'kotlin.math.abs' call
-    var tmp1_abs = v0;
-    var tmp2_pow = Math.abs(tmp1_abs);
-    var tmp3_pow = 1.0 / 3.0;
-    v0 = tmp * Math.pow(tmp2_pow, tmp3_pow);
+    var x_1 = v0;
+    var this_0 = Math.abs(x_1);
+    var x_2 = 0.3333333333333333;
+    v0 = tmp * Math.pow(this_0, x_2);
     // Inline function 'kotlin.math.sign' call
-    var tmp4_sign = v1;
-    var tmp_0 = sign(tmp4_sign);
+    var x_3 = v1;
+    var tmp_0 = sign(x_3);
     // Inline function 'kotlin.math.pow' call
     // Inline function 'kotlin.math.abs' call
-    var tmp5_abs = v1;
-    var tmp6_pow = Math.abs(tmp5_abs);
-    var tmp7_pow = 1.0 / 3.0;
-    v1 = tmp_0 * Math.pow(tmp6_pow, tmp7_pow);
+    var x_4 = v1;
+    var this_1 = Math.abs(x_4);
+    var x_5 = 0.3333333333333333;
+    v1 = tmp_0 * Math.pow(this_1, x_5);
     // Inline function 'kotlin.math.sign' call
-    var tmp8_sign = v2;
-    var tmp_1 = sign(tmp8_sign);
+    var x_6 = v2;
+    var tmp_1 = sign(x_6);
     // Inline function 'kotlin.math.pow' call
     // Inline function 'kotlin.math.abs' call
-    var tmp9_abs = v2;
-    var tmp10_pow = Math.abs(tmp9_abs);
-    var tmp11_pow = 1.0 / 3.0;
-    v2 = tmp_1 * Math.pow(tmp10_pow, tmp11_pow);
+    var x_7 = v2;
+    var this_2 = Math.abs(x_7);
+    var x_8 = 0.3333333333333333;
+    v2 = tmp_1 * Math.pow(this_2, x_8);
     var v01 = mul3x3Float3_0(Companion_getInstance_41().M2__1, v0, v1, v2);
     var v11 = mul3x3Float3_1(Companion_getInstance_41().M2__1, v0, v1, v2);
     var v21 = mul3x3Float3_2(Companion_getInstance_41().M2__1, v0, v1, v2);
     return Color_0(v01, v11, v21, a, colorSpace);
   };
-  protoOf(Oklab).fromXyz_idrdie_k$ = function (v) {
+  protoOf(Oklab).fromXyz_ghg1av_k$ = function (v) {
     mul3x3Float3(Companion_getInstance_41().M1__1, v);
     // Inline function 'kotlin.math.sign' call
-    var tmp0_sign = v[0];
-    var tmp = sign(tmp0_sign);
+    var x = v[0];
+    var tmp = sign(x);
     // Inline function 'kotlin.math.pow' call
     // Inline function 'kotlin.math.abs' call
-    var tmp1_abs = v[0];
-    var tmp2_pow = Math.abs(tmp1_abs);
-    var tmp3_pow = 1.0 / 3.0;
-    v[0] = tmp * Math.pow(tmp2_pow, tmp3_pow);
+    var x_0 = v[0];
+    var this_0 = Math.abs(x_0);
+    var x_1 = 0.3333333333333333;
+    v[0] = tmp * Math.pow(this_0, x_1);
     // Inline function 'kotlin.math.sign' call
-    var tmp4_sign = v[1];
-    var tmp_0 = sign(tmp4_sign);
+    var x_2 = v[1];
+    var tmp_0 = sign(x_2);
     // Inline function 'kotlin.math.pow' call
     // Inline function 'kotlin.math.abs' call
-    var tmp5_abs = v[1];
-    var tmp6_pow = Math.abs(tmp5_abs);
-    var tmp7_pow = 1.0 / 3.0;
-    v[1] = tmp_0 * Math.pow(tmp6_pow, tmp7_pow);
+    var x_3 = v[1];
+    var this_1 = Math.abs(x_3);
+    var x_4 = 0.3333333333333333;
+    v[1] = tmp_0 * Math.pow(this_1, x_4);
     // Inline function 'kotlin.math.sign' call
-    var tmp8_sign = v[2];
-    var tmp_1 = sign(tmp8_sign);
+    var x_5 = v[2];
+    var tmp_1 = sign(x_5);
     // Inline function 'kotlin.math.pow' call
     // Inline function 'kotlin.math.abs' call
-    var tmp9_abs = v[2];
-    var tmp10_pow = Math.abs(tmp9_abs);
-    var tmp11_pow = 1.0 / 3.0;
-    v[2] = tmp_1 * Math.pow(tmp10_pow, tmp11_pow);
+    var x_6 = v[2];
+    var this_2 = Math.abs(x_6);
+    var x_7 = 0.3333333333333333;
+    v[2] = tmp_1 * Math.pow(this_2, x_7);
     mul3x3Float3(Companion_getInstance_41().M2__1, v);
     return v;
   };
@@ -6223,16 +6002,16 @@
     this.Saturation_1 = _RenderIntent___init__impl__jceahd(2);
     this.Absolute_1 = _RenderIntent___init__impl__jceahd(3);
   }
-  protoOf(Companion_27).get_Perceptual_20219r_k$ = function () {
+  protoOf(Companion_27).get_Perceptual_orjm5u_k$ = function () {
     return this.Perceptual_1;
   };
-  protoOf(Companion_27).get_Relative_yydwow_k$ = function () {
+  protoOf(Companion_27).get_Relative_86s99b_k$ = function () {
     return this.Relative_1;
   };
-  protoOf(Companion_27).get_Saturation_agk0g6_k$ = function () {
+  protoOf(Companion_27).get_Saturation_xsye3d_k$ = function () {
     return this.Saturation_1;
   };
-  protoOf(Companion_27).get_Absolute_4abvrf_k$ = function () {
+  protoOf(Companion_27).get_Absolute_v1xj70_k$ = function () {
     return this.Absolute_1;
   };
   var Companion_instance_27;
@@ -6295,11 +6074,11 @@
     return true;
   }
   function compare_2($this, point, a, b) {
-    var rA = a.invoke_z1dtyv_k$(point);
-    var rB = b.invoke_z1dtyv_k$(point);
+    var rA = a.invoke_e0thbm_k$(point);
+    var rB = b.invoke_e0thbm_k$(point);
     // Inline function 'kotlin.math.abs' call
-    var tmp0_abs = rA - rB;
-    return Math.abs(tmp0_abs) <= 0.001;
+    var x = rA - rB;
+    return Math.abs(x) <= 0.001;
   }
   function isWideGamut($this, primaries, min, max) {
     return (area($this, primaries) / area($this, ColorSpaces_getInstance().get_Ntsc1953Primaries_s9kth_k$()) > 0.9 ? contains($this, primaries, ColorSpaces_getInstance().get_SrgbPrimaries_e57bel_k$()) : false) ? true : min < 0.0 ? max > 1.0 : false;
@@ -6321,18 +6100,17 @@
   function contains($this, p1, p2) {
     // Inline function 'kotlin.floatArrayOf' call
     var p0 = new Float32Array([p1[0] - p2[0], p1[1] - p2[1], p1[2] - p2[2], p1[3] - p2[3], p1[4] - p2[4], p1[5] - p2[5]]);
-    if (cross($this, p0[0], p0[1], p2[0] - p2[4], p2[1] - p2[5]) < 0 ? true : cross($this, p2[0] - p2[2], p2[1] - p2[3], p0[0], p0[1]) < 0) {
+    if (cross($this, p0[0], p0[1], p2[0] - p2[4], p2[1] - p2[5]) < 0.0 ? true : cross($this, p2[0] - p2[2], p2[1] - p2[3], p0[0], p0[1]) < 0.0) {
       return false;
     }
-    if (cross($this, p0[2], p0[3], p2[2] - p2[0], p2[3] - p2[1]) < 0 ? true : cross($this, p2[2] - p2[4], p2[3] - p2[5], p0[2], p0[3]) < 0) {
+    if (cross($this, p0[2], p0[3], p2[2] - p2[0], p2[3] - p2[1]) < 0.0 ? true : cross($this, p2[2] - p2[4], p2[3] - p2[5], p0[2], p0[3]) < 0.0) {
       return false;
     }
-    return !(cross($this, p0[4], p0[5], p2[4] - p2[2], p2[5] - p2[3]) < 0 ? true : cross($this, p2[4] - p2[0], p2[5] - p2[1], p0[4], p0[5]) < 0);
+    return !(cross($this, p0[4], p0[5], p2[4] - p2[2], p2[5] - p2[3]) < 0.0 ? true : cross($this, p2[4] - p2[0], p2[5] - p2[1], p0[4], p0[5]) < 0.0);
   }
   function computeWhitePoint($this, toXYZ) {
-    var tmp$ret$0;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([1.0, 1.0, 1.0]);
+    var tmp$ret$0 = new Float32Array([1.0, 1.0, 1.0]);
     var w = mul3x3Float3(toXYZ, tmp$ret$0);
     var sum = w[0] + w[1] + w[2];
     return new WhitePoint(w[0] / sum, w[1] / sum);
@@ -6391,7 +6169,7 @@
   function sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_0).invoke_z1dtyv_k$ = function (double) {
+  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_0).invoke_e0thbm_k$ = function (double) {
     return this.function_1(double);
   };
   function Rgb$Companion$DoubleIdentity$lambda(d) {
@@ -6404,7 +6182,7 @@
     return $this.max_1;
   }
   function Rgb_init_$Init$(name, toXYZ, oetf, eotf, $this) {
-    var tmp = Companion_getInstance_43().computePrimaries_bmzsl0_k$(toXYZ);
+    var tmp = Companion_getInstance_43().computePrimaries_dtimn_k$(toXYZ);
     var tmp_0 = computeWhitePoint(Companion_getInstance_43(), toXYZ);
     var tmp_1 = Rgb$_init_$lambda_yyl4se(oetf);
     var tmp_2 = new sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_3(tmp_1);
@@ -6426,7 +6204,7 @@
     return Rgb_init_$Init$_0(name, primaries, whitePoint, oetf, eotf, min, max, objectCreate(protoOf(Rgb)));
   }
   function Rgb_init_$Init$_1(name, toXYZ, function_0, $this) {
-    Rgb_init_$Init$_3(name, Companion_getInstance_43().computePrimaries_bmzsl0_k$(toXYZ), computeWhitePoint(Companion_getInstance_43(), toXYZ), function_0, Companion_getInstance_38().get_MinId_idmyf8_k$(), $this);
+    Rgb_init_$Init$_3(name, Companion_getInstance_43().computePrimaries_dtimn_k$(toXYZ), computeWhitePoint(Companion_getInstance_43(), toXYZ), function_0, Companion_getInstance_38().get_MinId_idmyf8_k$(), $this);
     return $this;
   }
   function Rgb_init_$Create$_1(name, toXYZ, function_0) {
@@ -6464,7 +6242,7 @@
     return Rgb_init_$Init$_3(name, primaries, whitePoint, function_0, id, objectCreate(protoOf(Rgb)));
   }
   function Rgb_init_$Init$_4(name, toXYZ, gamma, $this) {
-    Rgb_init_$Init$_6(name, Companion_getInstance_43().computePrimaries_bmzsl0_k$(toXYZ), computeWhitePoint(Companion_getInstance_43(), toXYZ), gamma, 0.0, 1.0, Companion_getInstance_38().get_MinId_idmyf8_k$(), $this);
+    Rgb_init_$Init$_6(name, Companion_getInstance_43().computePrimaries_dtimn_k$(toXYZ), computeWhitePoint(Companion_getInstance_43(), toXYZ), gamma, 0.0, 1.0, Companion_getInstance_38().get_MinId_idmyf8_k$(), $this);
     return $this;
   }
   function Rgb_init_$Create$_4(name, toXYZ, gamma) {
@@ -6512,18 +6290,15 @@
     var tmp_0 = Rgb$Companion$DoubleIdentity$lambda;
     tmp.DoubleIdentity_1 = new sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_0(tmp_0);
   }
-  protoOf(Companion_28).computePrimaries_bmzsl0_k$ = function (toXYZ) {
-    var tmp$ret$0;
+  protoOf(Companion_28).computePrimaries_dtimn_k$ = function (toXYZ) {
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([1.0, 0.0, 0.0]);
+    var tmp$ret$0 = new Float32Array([1.0, 0.0, 0.0]);
     var r = mul3x3Float3(toXYZ, tmp$ret$0);
-    var tmp$ret$1;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$1 = new Float32Array([0.0, 1.0, 0.0]);
+    var tmp$ret$1 = new Float32Array([0.0, 1.0, 0.0]);
     var g = mul3x3Float3(toXYZ, tmp$ret$1);
-    var tmp$ret$2;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$2 = new Float32Array([0.0, 0.0, 1.0]);
+    var tmp$ret$2 = new Float32Array([0.0, 0.0, 1.0]);
     var b = mul3x3Float3(toXYZ, tmp$ret$2);
     var rSum = r[0] + r[1] + r[2];
     var gSum = g[0] + g[1] + g[2];
@@ -6540,57 +6315,57 @@
   function sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_1(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_1).invoke_z1dtyv_k$ = function (double) {
+  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_1).invoke_e0thbm_k$ = function (double) {
     return this.function_1(double);
   };
   function sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_2(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_2).invoke_z1dtyv_k$ = function (double) {
+  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_2).invoke_e0thbm_k$ = function (double) {
     return this.function_1(double);
   };
   function sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_3(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_3).invoke_z1dtyv_k$ = function (double) {
+  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_3).invoke_e0thbm_k$ = function (double) {
     return this.function_1(double);
   };
   function sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_4(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_4).invoke_z1dtyv_k$ = function (double) {
+  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_4).invoke_e0thbm_k$ = function (double) {
     return this.function_1(double);
   };
   function sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_5(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_5).invoke_z1dtyv_k$ = function (double) {
+  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_5).invoke_e0thbm_k$ = function (double) {
     return this.function_1(double);
   };
   function sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_6(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_6).invoke_z1dtyv_k$ = function (double) {
+  protoOf(sam$androidx_compose_ui_graphics_colorspace_DoubleFunction$0_6).invoke_e0thbm_k$ = function (double) {
     return this.function_1(double);
   };
   function Rgb$oetf$lambda(this$0) {
     return function (x) {
-      return coerceIn_0(this$0.oetfOrig_1.invoke_z1dtyv_k$(x), this$0.min_1, this$0.max_1);
+      return coerceIn_0(this$0.oetfOrig_1.invoke_e0thbm_k$(x), this$0.min_1, this$0.max_1);
     };
   }
   function Rgb$oetfFunc$lambda(this$0) {
     return function (x) {
-      return coerceIn_0(this$0.oetfOrig_1.invoke_z1dtyv_k$(x), this$0.min_1, this$0.max_1);
+      return coerceIn_0(this$0.oetfOrig_1.invoke_e0thbm_k$(x), this$0.min_1, this$0.max_1);
     };
   }
   function Rgb$eotf$lambda(this$0) {
     return function (x) {
-      return this$0.eotfOrig_1.invoke_z1dtyv_k$(coerceIn_0(x, this$0.min_1, this$0.max_1));
+      return this$0.eotfOrig_1.invoke_e0thbm_k$(coerceIn_0(x, this$0.min_1, this$0.max_1));
     };
   }
   function Rgb$eotfFunc$lambda(this$0) {
     return function (x) {
-      return this$0.eotfOrig_1.invoke_z1dtyv_k$(coerceIn_0(x, this$0.min_1, this$0.max_1));
+      return this$0.eotfOrig_1.invoke_e0thbm_k$(coerceIn_0(x, this$0.min_1, this$0.max_1));
     };
   }
   function Rgb$_init_$lambda_yyl4se($oetf) {
@@ -6635,26 +6410,23 @@
   }
   function Rgb$_init_$lambda_yyl4se_7($gamma) {
     return function (x) {
-      var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
-      var tmp0_pow = x < 0.0 ? 0.0 : x;
-      var tmp1_pow = 1.0 / $gamma;
-      tmp$ret$0 = Math.pow(tmp0_pow, tmp1_pow);
-      return tmp$ret$0;
+      var this_0 = x < 0.0 ? 0.0 : x;
+      var x_0 = 1.0 / $gamma;
+      return Math.pow(this_0, x_0);
     };
   }
   function Rgb$_init_$lambda_yyl4se_8($gamma) {
     return function (x) {
-      var tmp$ret$0;
       // Inline function 'kotlin.math.pow' call
-      var tmp0_pow = x < 0.0 ? 0.0 : x;
-      tmp$ret$0 = Math.pow(tmp0_pow, $gamma);
-      return tmp$ret$0;
+      var this_0 = x < 0.0 ? 0.0 : x;
+      var x_0 = $gamma;
+      return Math.pow(this_0, x_0);
     };
   }
   function Rgb(name, primaries, whitePoint, transform, oetf, eotf, min, max, transferParameters, id) {
     Companion_getInstance_43();
-    ColorSpace.call(this, name, Companion_getInstance_37().get_Rgb_hxm2yj_k$(), id);
+    ColorSpace.call(this, name, Companion_getInstance_37().get_Rgb_ehihd0_k$(), id);
     this.whitePoint_1 = whitePoint;
     this.min_1 = min;
     this.max_1 = max;
@@ -6744,110 +6516,108 @@
     // Inline function 'kotlin.js.asDynamic' call
     return this.inverseTransform_1.slice();
   };
-  protoOf(Rgb).getPrimaries_y37ab9_k$ = function (primaries) {
+  protoOf(Rgb).getPrimaries_cgd4eq_k$ = function (primaries) {
     // Inline function 'kotlin.collections.copyInto' call
-    var tmp0_copyInto = this.primaries_1;
-    var tmp1_copyInto = tmp0_copyInto.length;
+    var this_0 = this.primaries_1;
+    var endIndex = this_0.length;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    var tmp = tmp0_copyInto;
+    var tmp = this_0;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    arrayCopy(tmp, primaries, 0, 0, tmp1_copyInto);
+    arrayCopy(tmp, primaries, 0, 0, endIndex);
     return primaries;
   };
-  protoOf(Rgb).getTransform_qtf3nl_k$ = function (transform) {
+  protoOf(Rgb).getTransform_ho9wm6_k$ = function (transform) {
     // Inline function 'kotlin.collections.copyInto' call
-    var tmp0_copyInto = this.transform_1;
-    var tmp1_copyInto = tmp0_copyInto.length;
+    var this_0 = this.transform_1;
+    var endIndex = this_0.length;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    var tmp = tmp0_copyInto;
+    var tmp = this_0;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    arrayCopy(tmp, transform, 0, 0, tmp1_copyInto);
+    arrayCopy(tmp, transform, 0, 0, endIndex);
     return transform;
   };
-  protoOf(Rgb).getInverseTransform_wdrspp_k$ = function (inverseTransform) {
+  protoOf(Rgb).getInverseTransform_9xw33u_k$ = function (inverseTransform) {
     // Inline function 'kotlin.collections.copyInto' call
-    var tmp0_copyInto = this.inverseTransform_1;
-    var tmp1_copyInto = tmp0_copyInto.length;
+    var this_0 = this.inverseTransform_1;
+    var endIndex = this_0.length;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    var tmp = tmp0_copyInto;
+    var tmp = this_0;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    arrayCopy(tmp, inverseTransform, 0, 0, tmp1_copyInto);
+    arrayCopy(tmp, inverseTransform, 0, 0, endIndex);
     return inverseTransform;
   };
-  protoOf(Rgb).getMinValue_7r60q4_k$ = function (component) {
+  protoOf(Rgb).getMinValue_3znj7n_k$ = function (component) {
     return this.min_1;
   };
-  protoOf(Rgb).getMaxValue_8bwqwu_k$ = function (component) {
+  protoOf(Rgb).getMaxValue_kswgkr_k$ = function (component) {
     return this.max_1;
   };
-  protoOf(Rgb).toLinear_913fy_k$ = function (r, g, b) {
-    var tmp$ret$0;
+  protoOf(Rgb).toLinear_rejvnc_k$ = function (r, g, b) {
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([r, g, b]);
-    return this.toLinear_7ax7rf_k$(tmp$ret$0);
+    var tmp$ret$0 = new Float32Array([r, g, b]);
+    return this.toLinear_yopst4_k$(tmp$ret$0);
   };
-  protoOf(Rgb).toLinear_7ax7rf_k$ = function (v) {
-    v[0] = this.eotfFunc_1.invoke_z1dtyv_k$(v[0]);
-    v[1] = this.eotfFunc_1.invoke_z1dtyv_k$(v[1]);
-    v[2] = this.eotfFunc_1.invoke_z1dtyv_k$(v[2]);
+  protoOf(Rgb).toLinear_yopst4_k$ = function (v) {
+    v[0] = this.eotfFunc_1.invoke_e0thbm_k$(v[0]);
+    v[1] = this.eotfFunc_1.invoke_e0thbm_k$(v[1]);
+    v[2] = this.eotfFunc_1.invoke_e0thbm_k$(v[2]);
     return v;
   };
-  protoOf(Rgb).fromLinear_df0aht_k$ = function (r, g, b) {
-    var tmp$ret$0;
+  protoOf(Rgb).fromLinear_2dvbiv_k$ = function (r, g, b) {
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([r, g, b]);
-    return this.fromLinear_yxqibq_k$(tmp$ret$0);
+    var tmp$ret$0 = new Float32Array([r, g, b]);
+    return this.fromLinear_qsrtdj_k$(tmp$ret$0);
   };
-  protoOf(Rgb).fromLinear_yxqibq_k$ = function (v) {
-    v[0] = this.oetfFunc_1.invoke_z1dtyv_k$(v[0]);
-    v[1] = this.oetfFunc_1.invoke_z1dtyv_k$(v[1]);
-    v[2] = this.oetfFunc_1.invoke_z1dtyv_k$(v[2]);
+  protoOf(Rgb).fromLinear_qsrtdj_k$ = function (v) {
+    v[0] = this.oetfFunc_1.invoke_e0thbm_k$(v[0]);
+    v[1] = this.oetfFunc_1.invoke_e0thbm_k$(v[1]);
+    v[2] = this.oetfFunc_1.invoke_e0thbm_k$(v[2]);
     return v;
   };
-  protoOf(Rgb).toXyz_ox86g9_k$ = function (v) {
-    v[0] = this.eotfFunc_1.invoke_z1dtyv_k$(v[0]);
-    v[1] = this.eotfFunc_1.invoke_z1dtyv_k$(v[1]);
-    v[2] = this.eotfFunc_1.invoke_z1dtyv_k$(v[2]);
+  protoOf(Rgb).toXyz_c5nzk6_k$ = function (v) {
+    v[0] = this.eotfFunc_1.invoke_e0thbm_k$(v[0]);
+    v[1] = this.eotfFunc_1.invoke_e0thbm_k$(v[1]);
+    v[2] = this.eotfFunc_1.invoke_e0thbm_k$(v[2]);
     return mul3x3Float3(this.transform_1, v);
   };
-  protoOf(Rgb).toXy_sdu2b2_k$ = function (v0, v1, v2) {
-    var v00 = this.eotfFunc_1.invoke_z1dtyv_k$(v0);
-    var v10 = this.eotfFunc_1.invoke_z1dtyv_k$(v1);
-    var v20 = this.eotfFunc_1.invoke_z1dtyv_k$(v2);
+  protoOf(Rgb).toXy_53ljx8_k$ = function (v0, v1, v2) {
+    var v00 = this.eotfFunc_1.invoke_e0thbm_k$(v0);
+    var v10 = this.eotfFunc_1.invoke_e0thbm_k$(v1);
+    var v20 = this.eotfFunc_1.invoke_e0thbm_k$(v2);
     var x = mul3x3Float3_0(this.transform_1, v00, v10, v20);
     var y = mul3x3Float3_1(this.transform_1, v00, v10, v20);
     // Inline function 'androidx.compose.ui.util.packFloats' call
     var v1_0 = toLong(toBits(x));
     var v2_0 = toLong(toBits(y));
-    return v1_0.shl_po5ip6_k$(32).or_s401rn_k$(v2_0.and_jhajnj_k$(new Long(-1, 0)));
+    return v1_0.shl_bg8if3_k$(32).or_v7fvkl_k$(v2_0.and_4spn93_k$(new Long(-1, 0)));
   };
-  protoOf(Rgb).toZ_3nx4hd_k$ = function (v0, v1, v2) {
-    var v00 = this.eotfFunc_1.invoke_z1dtyv_k$(v0);
-    var v10 = this.eotfFunc_1.invoke_z1dtyv_k$(v1);
-    var v20 = this.eotfFunc_1.invoke_z1dtyv_k$(v2);
+  protoOf(Rgb).toZ_xzs7on_k$ = function (v0, v1, v2) {
+    var v00 = this.eotfFunc_1.invoke_e0thbm_k$(v0);
+    var v10 = this.eotfFunc_1.invoke_e0thbm_k$(v1);
+    var v20 = this.eotfFunc_1.invoke_e0thbm_k$(v2);
     var z = mul3x3Float3_2(this.transform_1, v00, v10, v20);
     return z;
   };
-  protoOf(Rgb).xyzaToColor_orha54_k$ = function (x, y, z, a, colorSpace) {
+  protoOf(Rgb).xyzaToColor_fee27c_k$ = function (x, y, z, a, colorSpace) {
     var v0 = mul3x3Float3_0(this.inverseTransform_1, x, y, z);
     var v1 = mul3x3Float3_1(this.inverseTransform_1, x, y, z);
     var v2 = mul3x3Float3_2(this.inverseTransform_1, x, y, z);
-    v0 = this.oetfFunc_1.invoke_z1dtyv_k$(v0);
-    v1 = this.oetfFunc_1.invoke_z1dtyv_k$(v1);
-    v2 = this.oetfFunc_1.invoke_z1dtyv_k$(v2);
+    v0 = this.oetfFunc_1.invoke_e0thbm_k$(v0);
+    v1 = this.oetfFunc_1.invoke_e0thbm_k$(v1);
+    v2 = this.oetfFunc_1.invoke_e0thbm_k$(v2);
     return Color_0(v0, v1, v2, a, colorSpace);
   };
-  protoOf(Rgb).fromXyz_idrdie_k$ = function (v) {
+  protoOf(Rgb).fromXyz_ghg1av_k$ = function (v) {
     mul3x3Float3(this.inverseTransform_1, v);
-    v[0] = this.oetfFunc_1.invoke_z1dtyv_k$(v[0]);
-    v[1] = this.oetfFunc_1.invoke_z1dtyv_k$(v[1]);
-    v[2] = this.oetfFunc_1.invoke_z1dtyv_k$(v[2]);
+    v[0] = this.oetfFunc_1.invoke_e0thbm_k$(v[0]);
+    v[1] = this.oetfFunc_1.invoke_e0thbm_k$(v[1]);
+    v[2] = this.oetfFunc_1.invoke_e0thbm_k$(v[2]);
     return v;
   };
   protoOf(Rgb).equals = function (other) {
@@ -6962,10 +6732,10 @@
   protoOf(TransferParameters).component7_7eebs6_k$ = function () {
     return this.f_1;
   };
-  protoOf(TransferParameters).copy_hfgv4i_k$ = function (gamma, a, b, c, d, e, f) {
+  protoOf(TransferParameters).copy_rkiwfl_k$ = function (gamma, a, b, c, d, e, f) {
     return new TransferParameters(gamma, a, b, c, d, e, f);
   };
-  protoOf(TransferParameters).copy$default_b6zvc_k$ = function (gamma, a, b, c, d, e, f, $super) {
+  protoOf(TransferParameters).copy$default_nnwetz_k$ = function (gamma, a, b, c, d, e, f, $super) {
     gamma = gamma === VOID ? this.gamma_1 : gamma;
     a = a === VOID ? this.a_1 : a;
     b = b === VOID ? this.b_1 : b;
@@ -6973,7 +6743,7 @@
     d = d === VOID ? this.d_1 : d;
     e = e === VOID ? this.e_1 : e;
     f = f === VOID ? this.f_1 : f;
-    return $super === VOID ? this.copy_hfgv4i_k$(gamma, a, b, c, d, e, f) : $super.copy_hfgv4i_k$.call(this, gamma, a, b, c, d, e, f);
+    return $super === VOID ? this.copy_rkiwfl_k$(gamma, a, b, c, d, e, f) : $super.copy_rkiwfl_k$.call(this, gamma, a, b, c, d, e, f);
   };
   protoOf(TransferParameters).toString = function () {
     return 'TransferParameters(gamma=' + this.gamma_1 + ', a=' + this.a_1 + ', b=' + this.b_1 + ', c=' + this.c_1 + ', d=' + this.d_1 + ', e=' + this.e_1 + ', f=' + this.f_1 + ')';
@@ -7044,13 +6814,13 @@
   protoOf(WhitePoint).component2_7eebsb_k$ = function () {
     return this.y_1;
   };
-  protoOf(WhitePoint).copy_138fzp_k$ = function (x, y) {
+  protoOf(WhitePoint).copy_4tzoad_k$ = function (x, y) {
     return new WhitePoint(x, y);
   };
-  protoOf(WhitePoint).copy$default_a0mf90_k$ = function (x, y, $super) {
+  protoOf(WhitePoint).copy$default_9j5tee_k$ = function (x, y, $super) {
     x = x === VOID ? this.x_1 : x;
     y = y === VOID ? this.y_1 : y;
-    return $super === VOID ? this.copy_138fzp_k$(x, y) : $super.copy_138fzp_k$.call(this, x, y);
+    return $super === VOID ? this.copy_4tzoad_k$(x, y) : $super.copy_4tzoad_k$.call(this, x, y);
   };
   protoOf(WhitePoint).toString = function () {
     return 'WhitePoint(x=' + this.x_1 + ', y=' + this.y_1 + ')';
@@ -7076,38 +6846,38 @@
     return coerceIn(x, -2.0, 2.0);
   }
   function Xyz(name, id) {
-    ColorSpace.call(this, name, Companion_getInstance_37().get_Xyz_dr76iv_k$(), id);
+    ColorSpace.call(this, name, Companion_getInstance_37().get_Xyz_inxdso_k$(), id);
   }
   protoOf(Xyz).get_isWideGamut_oxj4to_k$ = function () {
     return true;
   };
-  protoOf(Xyz).getMinValue_7r60q4_k$ = function (component) {
+  protoOf(Xyz).getMinValue_3znj7n_k$ = function (component) {
     return -2.0;
   };
-  protoOf(Xyz).getMaxValue_8bwqwu_k$ = function (component) {
+  protoOf(Xyz).getMaxValue_kswgkr_k$ = function (component) {
     return 2.0;
   };
-  protoOf(Xyz).toXyz_ox86g9_k$ = function (v) {
+  protoOf(Xyz).toXyz_c5nzk6_k$ = function (v) {
     v[0] = clamp(this, v[0]);
     v[1] = clamp(this, v[1]);
     v[2] = clamp(this, v[2]);
     return v;
   };
-  protoOf(Xyz).toXy_sdu2b2_k$ = function (v0, v1, v2) {
+  protoOf(Xyz).toXy_53ljx8_k$ = function (v0, v1, v2) {
     // Inline function 'androidx.compose.ui.util.packFloats' call
-    var tmp0_packFloats = clamp(this, v0);
-    var tmp1_packFloats = clamp(this, v1);
-    var v1_0 = toLong(toBits(tmp0_packFloats));
-    var v2_0 = toLong(toBits(tmp1_packFloats));
-    return v1_0.shl_po5ip6_k$(32).or_s401rn_k$(v2_0.and_jhajnj_k$(new Long(-1, 0)));
+    var val1 = clamp(this, v0);
+    var val2 = clamp(this, v1);
+    var v1_0 = toLong(toBits(val1));
+    var v2_0 = toLong(toBits(val2));
+    return v1_0.shl_bg8if3_k$(32).or_v7fvkl_k$(v2_0.and_4spn93_k$(new Long(-1, 0)));
   };
-  protoOf(Xyz).toZ_3nx4hd_k$ = function (v0, v1, v2) {
+  protoOf(Xyz).toZ_xzs7on_k$ = function (v0, v1, v2) {
     return clamp(this, v2);
   };
-  protoOf(Xyz).xyzaToColor_orha54_k$ = function (x, y, z, a, colorSpace) {
+  protoOf(Xyz).xyzaToColor_fee27c_k$ = function (x, y, z, a, colorSpace) {
     return Color_0(clamp(this, x), clamp(this, y), clamp(this, z), a, colorSpace);
   };
-  protoOf(Xyz).fromXyz_idrdie_k$ = function (v) {
+  protoOf(Xyz).fromXyz_ghg1av_k$ = function (v) {
     v[0] = clamp(this, v[0]);
     v[1] = clamp(this, v[1]);
     v[2] = clamp(this, v[2]);
@@ -7136,14 +6906,14 @@
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.also' call
       // Inline function 'kotlin.apply' call
-      var tmp0_apply = Paint_0();
+      var this_0 = Paint_0();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.obtainFillPaint.<anonymous>' call
-      tmp0_apply.set_style_yrvwzh_k$(Companion_getInstance_24().get_Fill_xeknbt_k$());
+      this_0.set_style_t4zhmv_k$(Companion_getInstance_24().get_Fill_7xey15_k$());
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.obtainFillPaint.<anonymous>' call
-      $this.fillPaint_1 = tmp0_apply;
-      tmp = tmp0_apply;
+      $this.fillPaint_1 = this_0;
+      tmp = this_0;
     } else {
       tmp = tmp0_elvis_lhs;
     }
@@ -7155,14 +6925,14 @@
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.also' call
       // Inline function 'kotlin.apply' call
-      var tmp0_apply = Paint_0();
+      var this_0 = Paint_0();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.obtainStrokePaint.<anonymous>' call
-      tmp0_apply.set_style_yrvwzh_k$(Companion_getInstance_24().get_Stroke_dv2xoc_k$());
+      this_0.set_style_t4zhmv_k$(Companion_getInstance_24().get_Stroke_fu1ixu_k$());
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.obtainStrokePaint.<anonymous>' call
-      $this.strokePaint_1 = tmp0_apply;
-      tmp = tmp0_apply;
+      $this.strokePaint_1 = this_0;
+      tmp = this_0;
     } else {
       tmp = tmp0_elvis_lhs;
     }
@@ -7175,25 +6945,25 @@
     } else {
       if (drawStyle instanceof Stroke) {
         // Inline function 'kotlin.apply' call
-        var tmp0_apply = obtainStrokePaint($this);
+        var this_0 = obtainStrokePaint($this);
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.selectPaint.<anonymous>' call
-        if (!(tmp0_apply.get_strokeWidth_pbded7_k$() === drawStyle.get_width_j0q4yl_k$())) {
-          tmp0_apply.set_strokeWidth_3zju8k_k$(drawStyle.get_width_j0q4yl_k$());
+        if (!(this_0.get_strokeWidth_pbded7_k$() === drawStyle.get_width_j0q4yl_k$())) {
+          this_0.set_strokeWidth_owqvpl_k$(drawStyle.get_width_j0q4yl_k$());
         }
-        if (!(tmp0_apply.get_strokeCap_du2v9b_k$() === drawStyle.get_cap_nlcndj_k$())) {
-          tmp0_apply.set_strokeCap_un0ni9_k$(drawStyle.get_cap_nlcndj_k$());
+        if (!(this_0.get_strokeCap_6gl6jj_k$() === drawStyle.get_cap_3aolkp_k$())) {
+          this_0.set_strokeCap_x8rhz1_k$(drawStyle.get_cap_3aolkp_k$());
         }
-        if (!(tmp0_apply.get_strokeMiterLimit_p3434n_k$() === drawStyle.get_miter_iv8ijg_k$())) {
-          tmp0_apply.set_strokeMiterLimit_jliqsy_k$(drawStyle.get_miter_iv8ijg_k$());
+        if (!(this_0.get_strokeMiterLimit_p3434n_k$() === drawStyle.get_miter_iv8ijg_k$())) {
+          this_0.set_strokeMiterLimit_tej6nx_k$(drawStyle.get_miter_iv8ijg_k$());
         }
-        if (!(tmp0_apply.get_strokeJoin_t4v9w5_k$() === drawStyle.get_join_s7mxx9_k$())) {
-          tmp0_apply.set_strokeJoin_oa46bf_k$(drawStyle.get_join_s7mxx9_k$());
+        if (!(this_0.get_strokeJoin_j1kbxz_k$() === drawStyle.get_join_i4bzz3_k$())) {
+          this_0.set_strokeJoin_yrffuj_k$(drawStyle.get_join_i4bzz3_k$());
         }
-        if (!equals(tmp0_apply.get_pathEffect_d6tz6p_k$(), drawStyle.get_pathEffect_d6tz6p_k$())) {
-          tmp0_apply.set_pathEffect_eo4nwm_k$(drawStyle.get_pathEffect_d6tz6p_k$());
+        if (!equals(this_0.get_pathEffect_d6tz6p_k$(), drawStyle.get_pathEffect_d6tz6p_k$())) {
+          this_0.set_pathEffect_h6g9g6_k$(drawStyle.get_pathEffect_d6tz6p_k$());
         }
-        tmp = tmp0_apply;
+        tmp = this_0;
       } else {
         noWhenBranchMatchedException();
       }
@@ -7202,136 +6972,136 @@
   }
   function configurePaint($this, brush, style, alpha, colorFilter, blendMode, filterQuality) {
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = selectPaint($this, style);
+    var this_0 = selectPaint($this, style);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.configurePaint.<anonymous>' call
     if (!(brush == null)) {
-      brush.applyTo_w34vc_k$($this.get_size_x9ctfw_k$(), tmp0_apply, alpha);
-    } else if (!(tmp0_apply.get_alpha_iooth1_k$() === alpha)) {
-      tmp0_apply.set_alpha_k1tx50_k$(alpha);
+      brush.applyTo_5ix92b_k$($this.get_size_cxx1ym_k$(), this_0, alpha);
+    } else if (!(this_0.get_alpha_iooth1_k$() === alpha)) {
+      this_0.set_alpha_tvzcqh_k$(alpha);
     }
-    if (!equals(tmp0_apply.get_colorFilter_nt8pqq_k$(), colorFilter)) {
-      tmp0_apply.set_colorFilter_l1l4p0_k$(colorFilter);
+    if (!equals(this_0.get_colorFilter_nt8pqq_k$(), colorFilter)) {
+      this_0.set_colorFilter_dtpxr0_k$(colorFilter);
     }
-    if (!(tmp0_apply.get_blendMode_m8dzwh_k$() === blendMode)) {
-      tmp0_apply.set_blendMode_gchh35_k$(blendMode);
+    if (!(this_0.get_blendMode_si209t_k$() === blendMode)) {
+      this_0.set_blendMode_1e5m6b_k$(blendMode);
     }
-    if (!(tmp0_apply.get_filterQuality_2xbue9_k$() === filterQuality)) {
-      tmp0_apply.set_filterQuality_8e157j_k$(filterQuality);
+    if (!(this_0.get_filterQuality_wmgb0f_k$() === filterQuality)) {
+      this_0.set_filterQuality_eye4f7_k$(filterQuality);
     }
-    return tmp0_apply;
+    return this_0;
   }
   function configurePaint$default($this, brush, style, alpha, colorFilter, blendMode, filterQuality, $super) {
-    filterQuality = filterQuality === VOID ? Companion_getInstance_44().get_DefaultFilterQuality_lpc3m8_k$() : filterQuality;
+    filterQuality = filterQuality === VOID ? Companion_getInstance_44().get_DefaultFilterQuality_7zsczy_k$() : filterQuality;
     return configurePaint($this, brush, style, alpha, colorFilter, blendMode, filterQuality);
   }
   function configurePaint_0($this, color, style, alpha, colorFilter, blendMode, filterQuality) {
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = selectPaint($this, style);
+    var this_0 = selectPaint($this, style);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.configurePaint.<anonymous>' call
     var targetColor = modulate(color, $this, alpha);
-    if (!equals(tmp0_apply.get_color_v34vrz_k$(), targetColor)) {
-      tmp0_apply.set_color_b5evhd_k$(targetColor);
+    if (!equals(this_0.get_color_lnp1vl_k$(), targetColor)) {
+      this_0.set_color_m2amxp_k$(targetColor);
     }
-    if (!(tmp0_apply.get_shader_jgtazy_k$() == null)) {
-      tmp0_apply.set_shader_bd5o0m_k$(null);
+    if (!(this_0.get_shader_jgtazy_k$() == null)) {
+      this_0.set_shader_tgaw5e_k$(null);
     }
-    if (!equals(tmp0_apply.get_colorFilter_nt8pqq_k$(), colorFilter)) {
-      tmp0_apply.set_colorFilter_l1l4p0_k$(colorFilter);
+    if (!equals(this_0.get_colorFilter_nt8pqq_k$(), colorFilter)) {
+      this_0.set_colorFilter_dtpxr0_k$(colorFilter);
     }
-    if (!(tmp0_apply.get_blendMode_m8dzwh_k$() === blendMode)) {
-      tmp0_apply.set_blendMode_gchh35_k$(blendMode);
+    if (!(this_0.get_blendMode_si209t_k$() === blendMode)) {
+      this_0.set_blendMode_1e5m6b_k$(blendMode);
     }
-    if (!(tmp0_apply.get_filterQuality_2xbue9_k$() === filterQuality)) {
-      tmp0_apply.set_filterQuality_8e157j_k$(filterQuality);
+    if (!(this_0.get_filterQuality_wmgb0f_k$() === filterQuality)) {
+      this_0.set_filterQuality_eye4f7_k$(filterQuality);
     }
-    return tmp0_apply;
+    return this_0;
   }
   function configurePaint$default_0($this, color, style, alpha, colorFilter, blendMode, filterQuality, $super) {
-    filterQuality = filterQuality === VOID ? Companion_getInstance_44().get_DefaultFilterQuality_lpc3m8_k$() : filterQuality;
+    filterQuality = filterQuality === VOID ? Companion_getInstance_44().get_DefaultFilterQuality_7zsczy_k$() : filterQuality;
     return configurePaint_0($this, color, style, alpha, colorFilter, blendMode, filterQuality);
   }
   function configureStrokePaint($this, color, strokeWidth, miter, cap, join, pathEffect, alpha, colorFilter, blendMode, filterQuality) {
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = obtainStrokePaint($this);
+    var this_0 = obtainStrokePaint($this);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.configureStrokePaint.<anonymous>' call
     var targetColor = modulate(color, $this, alpha);
-    if (!equals(tmp0_apply.get_color_v34vrz_k$(), targetColor)) {
-      tmp0_apply.set_color_b5evhd_k$(targetColor);
+    if (!equals(this_0.get_color_lnp1vl_k$(), targetColor)) {
+      this_0.set_color_m2amxp_k$(targetColor);
     }
-    if (!(tmp0_apply.get_shader_jgtazy_k$() == null)) {
-      tmp0_apply.set_shader_bd5o0m_k$(null);
+    if (!(this_0.get_shader_jgtazy_k$() == null)) {
+      this_0.set_shader_tgaw5e_k$(null);
     }
-    if (!equals(tmp0_apply.get_colorFilter_nt8pqq_k$(), colorFilter)) {
-      tmp0_apply.set_colorFilter_l1l4p0_k$(colorFilter);
+    if (!equals(this_0.get_colorFilter_nt8pqq_k$(), colorFilter)) {
+      this_0.set_colorFilter_dtpxr0_k$(colorFilter);
     }
-    if (!(tmp0_apply.get_blendMode_m8dzwh_k$() === blendMode)) {
-      tmp0_apply.set_blendMode_gchh35_k$(blendMode);
+    if (!(this_0.get_blendMode_si209t_k$() === blendMode)) {
+      this_0.set_blendMode_1e5m6b_k$(blendMode);
     }
-    if (!(tmp0_apply.get_strokeWidth_pbded7_k$() === strokeWidth)) {
-      tmp0_apply.set_strokeWidth_3zju8k_k$(strokeWidth);
+    if (!(this_0.get_strokeWidth_pbded7_k$() === strokeWidth)) {
+      this_0.set_strokeWidth_owqvpl_k$(strokeWidth);
     }
-    if (!(tmp0_apply.get_strokeMiterLimit_p3434n_k$() === miter)) {
-      tmp0_apply.set_strokeMiterLimit_jliqsy_k$(miter);
+    if (!(this_0.get_strokeMiterLimit_p3434n_k$() === miter)) {
+      this_0.set_strokeMiterLimit_tej6nx_k$(miter);
     }
-    if (!(tmp0_apply.get_strokeCap_du2v9b_k$() === cap)) {
-      tmp0_apply.set_strokeCap_un0ni9_k$(cap);
+    if (!(this_0.get_strokeCap_6gl6jj_k$() === cap)) {
+      this_0.set_strokeCap_x8rhz1_k$(cap);
     }
-    if (!(tmp0_apply.get_strokeJoin_t4v9w5_k$() === join)) {
-      tmp0_apply.set_strokeJoin_oa46bf_k$(join);
+    if (!(this_0.get_strokeJoin_j1kbxz_k$() === join)) {
+      this_0.set_strokeJoin_yrffuj_k$(join);
     }
-    if (!equals(tmp0_apply.get_pathEffect_d6tz6p_k$(), pathEffect)) {
-      tmp0_apply.set_pathEffect_eo4nwm_k$(pathEffect);
+    if (!equals(this_0.get_pathEffect_d6tz6p_k$(), pathEffect)) {
+      this_0.set_pathEffect_h6g9g6_k$(pathEffect);
     }
-    if (!(tmp0_apply.get_filterQuality_2xbue9_k$() === filterQuality)) {
-      tmp0_apply.set_filterQuality_8e157j_k$(filterQuality);
+    if (!(this_0.get_filterQuality_wmgb0f_k$() === filterQuality)) {
+      this_0.set_filterQuality_eye4f7_k$(filterQuality);
     }
-    return tmp0_apply;
+    return this_0;
   }
   function configureStrokePaint$default($this, color, strokeWidth, miter, cap, join, pathEffect, alpha, colorFilter, blendMode, filterQuality, $super) {
-    filterQuality = filterQuality === VOID ? Companion_getInstance_44().get_DefaultFilterQuality_lpc3m8_k$() : filterQuality;
+    filterQuality = filterQuality === VOID ? Companion_getInstance_44().get_DefaultFilterQuality_7zsczy_k$() : filterQuality;
     return configureStrokePaint($this, color, strokeWidth, miter, cap, join, pathEffect, alpha, colorFilter, blendMode, filterQuality);
   }
   function configureStrokePaint_0($this, brush, strokeWidth, miter, cap, join, pathEffect, alpha, colorFilter, blendMode, filterQuality) {
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = obtainStrokePaint($this);
+    var this_0 = obtainStrokePaint($this);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.configureStrokePaint.<anonymous>' call
     if (!(brush == null)) {
-      brush.applyTo_w34vc_k$($this.get_size_x9ctfw_k$(), tmp0_apply, alpha);
-    } else if (!(tmp0_apply.get_alpha_iooth1_k$() === alpha)) {
-      tmp0_apply.set_alpha_k1tx50_k$(alpha);
+      brush.applyTo_5ix92b_k$($this.get_size_cxx1ym_k$(), this_0, alpha);
+    } else if (!(this_0.get_alpha_iooth1_k$() === alpha)) {
+      this_0.set_alpha_tvzcqh_k$(alpha);
     }
-    if (!equals(tmp0_apply.get_colorFilter_nt8pqq_k$(), colorFilter)) {
-      tmp0_apply.set_colorFilter_l1l4p0_k$(colorFilter);
+    if (!equals(this_0.get_colorFilter_nt8pqq_k$(), colorFilter)) {
+      this_0.set_colorFilter_dtpxr0_k$(colorFilter);
     }
-    if (!(tmp0_apply.get_blendMode_m8dzwh_k$() === blendMode)) {
-      tmp0_apply.set_blendMode_gchh35_k$(blendMode);
+    if (!(this_0.get_blendMode_si209t_k$() === blendMode)) {
+      this_0.set_blendMode_1e5m6b_k$(blendMode);
     }
-    if (!(tmp0_apply.get_strokeWidth_pbded7_k$() === strokeWidth)) {
-      tmp0_apply.set_strokeWidth_3zju8k_k$(strokeWidth);
+    if (!(this_0.get_strokeWidth_pbded7_k$() === strokeWidth)) {
+      this_0.set_strokeWidth_owqvpl_k$(strokeWidth);
     }
-    if (!(tmp0_apply.get_strokeMiterLimit_p3434n_k$() === miter)) {
-      tmp0_apply.set_strokeMiterLimit_jliqsy_k$(miter);
+    if (!(this_0.get_strokeMiterLimit_p3434n_k$() === miter)) {
+      this_0.set_strokeMiterLimit_tej6nx_k$(miter);
     }
-    if (!(tmp0_apply.get_strokeCap_du2v9b_k$() === cap)) {
-      tmp0_apply.set_strokeCap_un0ni9_k$(cap);
+    if (!(this_0.get_strokeCap_6gl6jj_k$() === cap)) {
+      this_0.set_strokeCap_x8rhz1_k$(cap);
     }
-    if (!(tmp0_apply.get_strokeJoin_t4v9w5_k$() === join)) {
-      tmp0_apply.set_strokeJoin_oa46bf_k$(join);
+    if (!(this_0.get_strokeJoin_j1kbxz_k$() === join)) {
+      this_0.set_strokeJoin_yrffuj_k$(join);
     }
-    if (!equals(tmp0_apply.get_pathEffect_d6tz6p_k$(), pathEffect)) {
-      tmp0_apply.set_pathEffect_eo4nwm_k$(pathEffect);
+    if (!equals(this_0.get_pathEffect_d6tz6p_k$(), pathEffect)) {
+      this_0.set_pathEffect_h6g9g6_k$(pathEffect);
     }
-    if (!(tmp0_apply.get_filterQuality_2xbue9_k$() === filterQuality)) {
-      tmp0_apply.set_filterQuality_8e157j_k$(filterQuality);
+    if (!(this_0.get_filterQuality_wmgb0f_k$() === filterQuality)) {
+      this_0.set_filterQuality_eye4f7_k$(filterQuality);
     }
-    return tmp0_apply;
+    return this_0;
   }
   function configureStrokePaint$default_0($this, brush, strokeWidth, miter, cap, join, pathEffect, alpha, colorFilter, blendMode, filterQuality, $super) {
-    filterQuality = filterQuality === VOID ? Companion_getInstance_44().get_DefaultFilterQuality_lpc3m8_k$() : filterQuality;
+    filterQuality = filterQuality === VOID ? Companion_getInstance_44().get_DefaultFilterQuality_7zsczy_k$() : filterQuality;
     return configureStrokePaint_0($this, brush, strokeWidth, miter, cap, join, pathEffect, alpha, colorFilter, blendMode, filterQuality);
   }
   function modulate(_this__u8e3s4, $this, alpha) {
@@ -7347,34 +7117,34 @@
     density = density === VOID ? get_DefaultDensity() : density;
     layoutDirection = layoutDirection === VOID ? LayoutDirection_Ltr_getInstance() : layoutDirection;
     canvas = canvas === VOID ? new EmptyCanvas() : canvas;
-    size = size === VOID ? Companion_getInstance().get_Zero_mv7bl9_k$() : size;
+    size = size === VOID ? Companion_getInstance_0().get_Zero_rugywl_k$() : size;
     this.density_1 = density;
     this.layoutDirection_1 = layoutDirection;
     this.canvas_1 = canvas;
     this.size_1 = size;
   }
-  protoOf(DrawParams).set_density_kzqph6_k$ = function (_set____db54di) {
+  protoOf(DrawParams).set_density_qzk27e_k$ = function (_set____db54di) {
     this.density_1 = _set____db54di;
   };
   protoOf(DrawParams).get_density_qy0267_k$ = function () {
     return this.density_1;
   };
-  protoOf(DrawParams).set_layoutDirection_g6d9ui_k$ = function (_set____db54di) {
+  protoOf(DrawParams).set_layoutDirection_vthtz8_k$ = function (_set____db54di) {
     this.layoutDirection_1 = _set____db54di;
   };
   protoOf(DrawParams).get_layoutDirection_7e37v0_k$ = function () {
     return this.layoutDirection_1;
   };
-  protoOf(DrawParams).set_canvas_eyjvr_k$ = function (_set____db54di) {
+  protoOf(DrawParams).set_canvas_1yi0mf_k$ = function (_set____db54di) {
     this.canvas_1 = _set____db54di;
   };
   protoOf(DrawParams).get_canvas_bshgm9_k$ = function () {
     return this.canvas_1;
   };
-  protoOf(DrawParams).set_size_xj1bzm_k$ = function (_set____db54di) {
+  protoOf(DrawParams).set_size_6a0e6q_k$ = function (_set____db54di) {
     this.size_1 = _set____db54di;
   };
-  protoOf(DrawParams).get_size_x9ctfw_k$ = function () {
+  protoOf(DrawParams).get_size_cxx1ym_k$ = function () {
     return this.size_1;
   };
   protoOf(DrawParams).component1_7eebsc_k$ = function () {
@@ -7386,18 +7156,18 @@
   protoOf(DrawParams).component3_7eebsa_k$ = function () {
     return this.canvas_1;
   };
-  protoOf(DrawParams).component4_e3pqs9_k$ = function () {
+  protoOf(DrawParams).component4_67q0p1_k$ = function () {
     return this.size_1;
   };
-  protoOf(DrawParams).copy_vtyzqi_k$ = function (density, layoutDirection, canvas, size) {
+  protoOf(DrawParams).copy_bmi7ja_k$ = function (density, layoutDirection, canvas, size) {
     return new DrawParams(density, layoutDirection, canvas, size);
   };
-  protoOf(DrawParams).copy$default_y1o7hl_k$ = function (density, layoutDirection, canvas, size, $super) {
+  protoOf(DrawParams).copy$default_ukqhqd_k$ = function (density, layoutDirection, canvas, size, $super) {
     density = density === VOID ? this.density_1 : density;
     layoutDirection = layoutDirection === VOID ? this.layoutDirection_1 : layoutDirection;
     canvas = canvas === VOID ? this.canvas_1 : canvas;
     size = size === VOID ? this.size_1 : size;
-    return $super === VOID ? this.copy_vtyzqi_k$(density, layoutDirection, canvas, size) : $super.copy_vtyzqi_k$.call(this, density, layoutDirection, canvas, new Size_0(size));
+    return $super === VOID ? this.copy_bmi7ja_k$(density, layoutDirection, canvas, size) : $super.copy_bmi7ja_k$.call(this, density, layoutDirection, canvas, new Size_0(size));
   };
   protoOf(DrawParams).toString = function () {
     return 'DrawParams(density=' + this.density_1 + ', layoutDirection=' + this.layoutDirection_1 + ', canvas=' + this.canvas_1 + ', size=' + new Size_0(this.size_1) + ')';
@@ -7432,10 +7202,10 @@
   protoOf(CanvasDrawScope$drawContext$1).get_canvas_bshgm9_k$ = function () {
     return this.this$0__1.drawParams_1.canvas_1;
   };
-  protoOf(CanvasDrawScope$drawContext$1).set_size_xj1bzm_k$ = function (value) {
+  protoOf(CanvasDrawScope$drawContext$1).set_size_6a0e6q_k$ = function (value) {
     this.this$0__1.drawParams_1.size_1 = value;
   };
-  protoOf(CanvasDrawScope$drawContext$1).get_size_x9ctfw_k$ = function () {
+  protoOf(CanvasDrawScope$drawContext$1).get_size_cxx1ym_k$ = function () {
     return this.this$0__1.drawParams_1.size_1;
   };
   protoOf(CanvasDrawScope$drawContext$1).get_transform_px941v_k$ = function () {
@@ -7463,88 +7233,88 @@
   protoOf(CanvasDrawScope).get_drawContext_ffwztu_k$ = function () {
     return this.drawContext_1;
   };
-  protoOf(CanvasDrawScope).drawLine_94tzv7_k$ = function (brush, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawLine_uyv0nw_k$(start, end, configureStrokePaint$default_0(this, brush, strokeWidth, Companion_getInstance_45().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_33().get_Miter_rcwd8a_k$(), pathEffect, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawLine_b39977_k$ = function (brush, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawLine_p9lnhi_k$(start, end, configureStrokePaint$default_0(this, brush, strokeWidth, Companion_getInstance_45().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_33().get_Miter_xkwqso_k$(), pathEffect, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawLine_qcvbii_k$ = function (color, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawLine_uyv0nw_k$(start, end, configureStrokePaint$default(this, color, strokeWidth, Companion_getInstance_45().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_33().get_Miter_rcwd8a_k$(), pathEffect, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawLine_ki2hwq_k$ = function (color, start, end, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawLine_p9lnhi_k$(start, end, configureStrokePaint$default(this, color, strokeWidth, Companion_getInstance_45().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_33().get_Miter_xkwqso_k$(), pathEffect, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawRect_4jm64w_k$ = function (brush, topLeft, size, alpha, style, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawRect_iwqaze_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawRect_t09b9w_k$ = function (brush, topLeft, size, alpha, style, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawRect_njf28a_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawRect_srg7q1_k$ = function (color, topLeft, size, alpha, style, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawRect_iwqaze_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), configurePaint$default_0(this, color, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawRect_6sw8uj_k$ = function (color, topLeft, size, alpha, style, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawRect_njf28a_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), configurePaint$default_0(this, color, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawImage_bk8e6s_k$ = function (image, topLeft, alpha, style, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawImage_wbfair_k$(image, topLeft, configurePaint$default(this, null, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawImage_7hd74h_k$ = function (image, topLeft, alpha, style, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawImage_lx1b1t_k$(image, topLeft, configurePaint$default(this, null, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawImage_td6jz_k$ = function (image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawImageRect_pn8joi_k$(image, srcOffset, srcSize, dstOffset, dstSize, configurePaint$default(this, null, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawImage_17v7pj_k$ = function (image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawImageRect_5h5ih1_k$(image, srcOffset, srcSize, dstOffset, dstSize, configurePaint$default(this, null, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawImage_riofdh_k$ = function (image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode, filterQuality) {
-    return this.drawParams_1.canvas_1.drawImageRect_pn8joi_k$(image, srcOffset, srcSize, dstOffset, dstSize, configurePaint(this, null, style, alpha, colorFilter, blendMode, filterQuality));
+  protoOf(CanvasDrawScope).drawImage_9mpi8u_k$ = function (image, srcOffset, srcSize, dstOffset, dstSize, alpha, style, colorFilter, blendMode, filterQuality) {
+    return this.drawParams_1.canvas_1.drawImageRect_5h5ih1_k$(image, srcOffset, srcSize, dstOffset, dstSize, configurePaint(this, null, style, alpha, colorFilter, blendMode, filterQuality));
   };
-  protoOf(CanvasDrawScope).drawRoundRect_nkvmol_k$ = function (brush, topLeft, size, cornerRadius, alpha, style, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawRoundRect_8v0cs4_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), _CornerRadius___get_x__impl__1594cn(cornerRadius), _CornerRadius___get_y__impl__tyvleu(cornerRadius), configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawRoundRect_gbkwec_k$ = function (brush, topLeft, size, cornerRadius, alpha, style, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawRoundRect_s5vrm8_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), _CornerRadius___get_x__impl__1594cn(cornerRadius), _CornerRadius___get_y__impl__tyvleu(cornerRadius), configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawRoundRect_q7amlu_k$ = function (color, topLeft, size, cornerRadius, style, alpha, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawRoundRect_8v0cs4_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), _CornerRadius___get_x__impl__1594cn(cornerRadius), _CornerRadius___get_y__impl__tyvleu(cornerRadius), configurePaint$default_0(this, color, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawRoundRect_bjcn4f_k$ = function (color, topLeft, size, cornerRadius, style, alpha, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawRoundRect_s5vrm8_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), _CornerRadius___get_x__impl__1594cn(cornerRadius), _CornerRadius___get_y__impl__tyvleu(cornerRadius), configurePaint$default_0(this, color, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawCircle_sp46sp_k$ = function (brush, radius, center, alpha, style, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawCircle_8yzxtr_k$(center, radius, configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawCircle_mukkgw_k$ = function (brush, radius, center, alpha, style, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawCircle_l6ouf0_k$(center, radius, configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawCircle_n7txn6_k$ = function (color, radius, center, alpha, style, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawCircle_8yzxtr_k$(center, radius, configurePaint$default_0(this, color, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawCircle_45hmy1_k$ = function (color, radius, center, alpha, style, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawCircle_l6ouf0_k$(center, radius, configurePaint$default_0(this, color, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawOval_poyb4u_k$ = function (brush, topLeft, size, alpha, style, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawOval_wmf8q4_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawOval_euvgam_k$ = function (brush, topLeft, size, alpha, style, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawOval_laorgo_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawOval_1h49jp_k$ = function (color, topLeft, size, alpha, style, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawOval_wmf8q4_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), configurePaint$default_0(this, color, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawOval_xyvj95_k$ = function (color, topLeft, size, alpha, style, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawOval_laorgo_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), configurePaint$default_0(this, color, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawArc_vjjneq_k$ = function (brush, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawArc_xj6sd2_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), startAngle, sweepAngle, useCenter, configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawArc_7lpe6v_k$ = function (brush, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawArc_ud0hdz_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), startAngle, sweepAngle, useCenter, configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawArc_y7e861_k$ = function (color, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawArc_xj6sd2_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), startAngle, sweepAngle, useCenter, configurePaint$default_0(this, color, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawArc_oz1pds_k$ = function (color, startAngle, sweepAngle, useCenter, topLeft, size, alpha, style, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawArc_ud0hdz_k$(_Offset___get_x__impl__xvi35n(topLeft), _Offset___get_y__impl__8bzhra(topLeft), _Offset___get_x__impl__xvi35n(topLeft) + _Size___get_width__impl__58y75t(size), _Offset___get_y__impl__8bzhra(topLeft) + _Size___get_height__impl__a04p02(size), startAngle, sweepAngle, useCenter, configurePaint$default_0(this, color, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawPath_vpl0ok_k$ = function (path, color, alpha, style, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawPath_843lu1_k$(path, configurePaint$default_0(this, color, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawPath_mbkbcp_k$ = function (path, color, alpha, style, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawPath_2all12_k$(path, configurePaint$default_0(this, color, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawPath_vsb9f_k$ = function (path, brush, alpha, style, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawPath_843lu1_k$(path, configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawPath_2qit1e_k$ = function (path, brush, alpha, style, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawPath_2all12_k$(path, configurePaint$default(this, brush, style, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawPoints_tvcs0g_k$ = function (points, pointMode, color, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawPoints_7nk41w_k$(pointMode, points, configureStrokePaint$default(this, color, strokeWidth, Companion_getInstance_45().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_33().get_Miter_rcwd8a_k$(), pathEffect, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawPoints_l9lrzm_k$ = function (points, pointMode, color, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawPoints_buyvum_k$(pointMode, points, configureStrokePaint$default(this, color, strokeWidth, Companion_getInstance_45().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_33().get_Miter_xkwqso_k$(), pathEffect, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).drawPoints_yexgjr_k$ = function (points, pointMode, brush, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode) {
-    return this.drawParams_1.canvas_1.drawPoints_7nk41w_k$(pointMode, points, configureStrokePaint$default_0(this, brush, strokeWidth, Companion_getInstance_45().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_33().get_Miter_rcwd8a_k$(), pathEffect, alpha, colorFilter, blendMode));
+  protoOf(CanvasDrawScope).drawPoints_7jhunr_k$ = function (points, pointMode, brush, strokeWidth, cap, pathEffect, alpha, colorFilter, blendMode) {
+    return this.drawParams_1.canvas_1.drawPoints_buyvum_k$(pointMode, points, configureStrokePaint$default_0(this, brush, strokeWidth, Companion_getInstance_45().get_DefaultMiter_3rtz6b_k$(), cap, Companion_getInstance_33().get_Miter_xkwqso_k$(), pathEffect, alpha, colorFilter, blendMode));
   };
-  protoOf(CanvasDrawScope).draw_3qpj3e_k$ = function (density, layoutDirection, canvas, size, block) {
+  protoOf(CanvasDrawScope).draw_phznm5_k$ = function (density, layoutDirection, canvas, size, block) {
     var tmp0_container = this.drawParams_1;
     var prevDensity = tmp0_container.component1_7eebsc_k$();
     var prevLayoutDirection = tmp0_container.component2_7eebsb_k$();
     var prevCanvas = tmp0_container.component3_7eebsa_k$();
-    var prevSize = tmp0_container.component4_e3pqs9_k$();
+    var prevSize = tmp0_container.component4_67q0p1_k$();
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = this.drawParams_1;
+    var this_0 = this.drawParams_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.draw.<anonymous>' call
-    tmp0_apply.density_1 = density;
-    tmp0_apply.layoutDirection_1 = layoutDirection;
-    tmp0_apply.canvas_1 = canvas;
-    tmp0_apply.size_1 = size;
-    canvas.save_erlm4_k$();
+    this_0.density_1 = density;
+    this_0.layoutDirection_1 = layoutDirection;
+    this_0.canvas_1 = canvas;
+    this_0.size_1 = size;
+    canvas.save_fbe7h_k$();
     block(this);
-    canvas.restore_a2id37_k$();
+    canvas.restore_a1ykhu_k$();
     // Inline function 'kotlin.apply' call
-    var tmp1_apply = this.drawParams_1;
+    var this_1 = this.drawParams_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.drawscope.CanvasDrawScope.draw.<anonymous>' call
-    tmp1_apply.density_1 = prevDensity;
-    tmp1_apply.layoutDirection_1 = prevLayoutDirection;
-    tmp1_apply.canvas_1 = prevCanvas;
-    tmp1_apply.size_1 = prevSize;
+    this_1.density_1 = prevDensity;
+    this_1.layoutDirection_1 = prevLayoutDirection;
+    this_1.canvas_1 = prevCanvas;
+    this_1.size_1 = prevSize;
   };
   function asDrawTransform(_this__u8e3s4) {
     _init_properties_CanvasDrawScope_kt__90zepm();
@@ -7553,56 +7323,56 @@
   function asDrawTransform$1($this_asDrawTransform) {
     this.$this_asDrawTransform_1 = $this_asDrawTransform;
   }
-  protoOf(asDrawTransform$1).get_size_x9ctfw_k$ = function () {
-    return this.$this_asDrawTransform_1.get_size_x9ctfw_k$();
+  protoOf(asDrawTransform$1).get_size_cxx1ym_k$ = function () {
+    return this.$this_asDrawTransform_1.get_size_cxx1ym_k$();
   };
-  protoOf(asDrawTransform$1).get_center_568eeq_k$ = function () {
-    return get_center(this.get_size_x9ctfw_k$());
+  protoOf(asDrawTransform$1).get_center_dcexec_k$ = function () {
+    return get_center(this.get_size_cxx1ym_k$());
   };
-  protoOf(asDrawTransform$1).inset_n0cgms_k$ = function (left, top, right, bottom) {
+  protoOf(asDrawTransform$1).inset_ja77zn_k$ = function (left, top, right, bottom) {
     // Inline function 'kotlin.let' call
-    var tmp0_let = this.$this_asDrawTransform_1.get_canvas_bshgm9_k$();
     // Inline function 'kotlin.contracts.contract' call
-    var updatedSize = Size(_Size___get_width__impl__58y75t(this.get_size_x9ctfw_k$()) - (left + right), _Size___get_height__impl__a04p02(this.get_size_x9ctfw_k$()) - (top + bottom));
+    var it = this.$this_asDrawTransform_1.get_canvas_bshgm9_k$();
+    var updatedSize = Size(_Size___get_width__impl__58y75t(this.get_size_cxx1ym_k$()) - (left + right), _Size___get_height__impl__a04p02(this.get_size_cxx1ym_k$()) - (top + bottom));
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(_Size___get_width__impl__58y75t(updatedSize) >= 0 ? _Size___get_height__impl__a04p02(updatedSize) >= 0 : false)) {
+    if (!(_Size___get_width__impl__58y75t(updatedSize) >= 0.0 ? _Size___get_height__impl__a04p02(updatedSize) >= 0.0 : false)) {
       // Inline function 'androidx.compose.ui.graphics.drawscope.<no name provided>.inset.<anonymous>.<anonymous>' call
       var message = 'Width and height must be greater than or equal to zero';
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    this.$this_asDrawTransform_1.set_size_xj1bzm_k$(updatedSize);
-    tmp0_let.translate_62wf99_k$(left, top);
+    this.$this_asDrawTransform_1.set_size_6a0e6q_k$(updatedSize);
+    it.translate_7gghdu_k$(left, top);
   };
-  protoOf(asDrawTransform$1).clipRect_si0ig1_k$ = function (left, top, right, bottom, clipOp) {
-    this.$this_asDrawTransform_1.get_canvas_bshgm9_k$().clipRect_si0ig1_k$(left, top, right, bottom, clipOp);
+  protoOf(asDrawTransform$1).clipRect_3spswv_k$ = function (left, top, right, bottom, clipOp) {
+    this.$this_asDrawTransform_1.get_canvas_bshgm9_k$().clipRect_3spswv_k$(left, top, right, bottom, clipOp);
   };
-  protoOf(asDrawTransform$1).clipPath_kn87dc_k$ = function (path, clipOp) {
-    this.$this_asDrawTransform_1.get_canvas_bshgm9_k$().clipPath_kn87dc_k$(path, clipOp);
+  protoOf(asDrawTransform$1).clipPath_tlqunt_k$ = function (path, clipOp) {
+    this.$this_asDrawTransform_1.get_canvas_bshgm9_k$().clipPath_tlqunt_k$(path, clipOp);
   };
-  protoOf(asDrawTransform$1).translate_62wf99_k$ = function (left, top) {
-    this.$this_asDrawTransform_1.get_canvas_bshgm9_k$().translate_62wf99_k$(left, top);
+  protoOf(asDrawTransform$1).translate_7gghdu_k$ = function (left, top) {
+    this.$this_asDrawTransform_1.get_canvas_bshgm9_k$().translate_7gghdu_k$(left, top);
   };
-  protoOf(asDrawTransform$1).rotate_qski4n_k$ = function (degrees, pivot) {
+  protoOf(asDrawTransform$1).rotate_y7zh1f_k$ = function (degrees, pivot) {
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = this.$this_asDrawTransform_1.get_canvas_bshgm9_k$();
+    var this_0 = this.$this_asDrawTransform_1.get_canvas_bshgm9_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.drawscope.<no name provided>.rotate.<anonymous>' call
-    tmp0_apply.translate_62wf99_k$(_Offset___get_x__impl__xvi35n(pivot), _Offset___get_y__impl__8bzhra(pivot));
-    tmp0_apply.rotate_ypq2w2_k$(degrees);
-    tmp0_apply.translate_62wf99_k$(-_Offset___get_x__impl__xvi35n(pivot), -_Offset___get_y__impl__8bzhra(pivot));
+    this_0.translate_7gghdu_k$(_Offset___get_x__impl__xvi35n(pivot), _Offset___get_y__impl__8bzhra(pivot));
+    this_0.rotate_qe8u4z_k$(degrees);
+    this_0.translate_7gghdu_k$(-_Offset___get_x__impl__xvi35n(pivot), -_Offset___get_y__impl__8bzhra(pivot));
   };
-  protoOf(asDrawTransform$1).scale_qp5ya8_k$ = function (scaleX, scaleY, pivot) {
+  protoOf(asDrawTransform$1).scale_rbtyk0_k$ = function (scaleX, scaleY, pivot) {
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = this.$this_asDrawTransform_1.get_canvas_bshgm9_k$();
+    var this_0 = this.$this_asDrawTransform_1.get_canvas_bshgm9_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.drawscope.<no name provided>.scale.<anonymous>' call
-    tmp0_apply.translate_62wf99_k$(_Offset___get_x__impl__xvi35n(pivot), _Offset___get_y__impl__8bzhra(pivot));
-    tmp0_apply.scale_sphyvb_k$(scaleX, scaleY);
-    tmp0_apply.translate_62wf99_k$(-_Offset___get_x__impl__xvi35n(pivot), -_Offset___get_y__impl__8bzhra(pivot));
+    this_0.translate_7gghdu_k$(_Offset___get_x__impl__xvi35n(pivot), _Offset___get_y__impl__8bzhra(pivot));
+    this_0.scale_ba85bu_k$(scaleX, scaleY);
+    this_0.translate_7gghdu_k$(-_Offset___get_x__impl__xvi35n(pivot), -_Offset___get_y__impl__8bzhra(pivot));
   };
-  protoOf(asDrawTransform$1).transform_v2nyvt_k$ = function (matrix) {
-    this.$this_asDrawTransform_1.get_canvas_bshgm9_k$().concat_oxfhdd_k$(matrix);
+  protoOf(asDrawTransform$1).transform_3go53t_k$ = function (matrix) {
+    this.$this_asDrawTransform_1.get_canvas_bshgm9_k$().concat_no6uof_k$(matrix);
   };
   var properties_initialized_CanvasDrawScope_kt_93ztlk;
   function _init_properties_CanvasDrawScope_kt__90zepm() {
@@ -7622,13 +7392,13 @@
   }
   function Companion_29() {
     Companion_instance_29 = this;
-    this.DefaultBlendMode_1 = Companion_getInstance_14().get_SrcOver_uyf80z_k$();
-    this.DefaultFilterQuality_1 = Companion_getInstance_19().get_Low_lx4az0_k$();
+    this.DefaultBlendMode_1 = Companion_getInstance_14().get_SrcOver_anr685_k$();
+    this.DefaultFilterQuality_1 = Companion_getInstance_19().get_Low_7s05n6_k$();
   }
-  protoOf(Companion_29).get_DefaultBlendMode_8kor9s_k$ = function () {
+  protoOf(Companion_29).get_DefaultBlendMode_svct2m_k$ = function () {
     return this.DefaultBlendMode_1;
   };
-  protoOf(Companion_29).get_DefaultFilterQuality_lpc3m8_k$ = function () {
+  protoOf(Companion_29).get_DefaultFilterQuality_7zsczy_k$ = function () {
     return this.DefaultFilterQuality_1;
   };
   var Companion_instance_29;
@@ -7653,8 +7423,8 @@
     Companion_instance_30 = this;
     this.HairlineWidth_1 = 0.0;
     this.DefaultMiter_1 = 4.0;
-    this.DefaultCap_1 = Companion_getInstance_32().get_Butt_vf89me_k$();
-    this.DefaultJoin_1 = Companion_getInstance_33().get_Miter_rcwd8a_k$();
+    this.DefaultCap_1 = Companion_getInstance_32().get_Butt_jb7qjw_k$();
+    this.DefaultJoin_1 = Companion_getInstance_33().get_Miter_xkwqso_k$();
   }
   protoOf(Companion_30).get_HairlineWidth_tck213_k$ = function () {
     return this.HairlineWidth_1;
@@ -7662,10 +7432,10 @@
   protoOf(Companion_30).get_DefaultMiter_3rtz6b_k$ = function () {
     return this.DefaultMiter_1;
   };
-  protoOf(Companion_30).get_DefaultCap_alsnaw_k$ = function () {
+  protoOf(Companion_30).get_DefaultCap_uwgp3q_k$ = function () {
     return this.DefaultCap_1;
   };
-  protoOf(Companion_30).get_DefaultJoin_5ovl58_k$ = function () {
+  protoOf(Companion_30).get_DefaultJoin_4efcsy_k$ = function () {
     return this.DefaultJoin_1;
   };
   var Companion_instance_30;
@@ -7677,14 +7447,7 @@
   function Stroke(width, miter, cap, join, pathEffect) {
     Companion_getInstance_45();
     width = width === VOID ? 0.0 : width;
-    var tmp;
-    if (miter === VOID) {
-      Companion_getInstance_45();
-      tmp = 4.0;
-    } else {
-      tmp = miter;
-    }
-    miter = tmp;
+    miter = miter === VOID ? 4.0 : miter;
     cap = cap === VOID ? Companion_getInstance_45().DefaultCap_1 : cap;
     join = join === VOID ? Companion_getInstance_45().DefaultJoin_1 : join;
     pathEffect = pathEffect === VOID ? null : pathEffect;
@@ -7701,10 +7464,10 @@
   protoOf(Stroke).get_miter_iv8ijg_k$ = function () {
     return this.miter_1;
   };
-  protoOf(Stroke).get_cap_nlcndj_k$ = function () {
+  protoOf(Stroke).get_cap_3aolkp_k$ = function () {
     return this.cap_1;
   };
-  protoOf(Stroke).get_join_s7mxx9_k$ = function () {
+  protoOf(Stroke).get_join_i4bzz3_k$ = function () {
     return this.join_1;
   };
   protoOf(Stroke).get_pathEffect_d6tz6p_k$ = function () {
@@ -7747,60 +7510,60 @@
   function clipRect_0(_this__u8e3s4, left, top, right, bottom, clipOp, block) {
     left = left === VOID ? 0.0 : left;
     top = top === VOID ? 0.0 : top;
-    right = right === VOID ? _Size___get_width__impl__58y75t(_this__u8e3s4.get_size_x9ctfw_k$()) : right;
-    bottom = bottom === VOID ? _Size___get_height__impl__a04p02(_this__u8e3s4.get_size_x9ctfw_k$()) : bottom;
-    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_ow3v69_k$() : clipOp;
+    right = right === VOID ? _Size___get_width__impl__58y75t(_this__u8e3s4.get_size_cxx1ym_k$()) : right;
+    bottom = bottom === VOID ? _Size___get_height__impl__a04p02(_this__u8e3s4.get_size_cxx1ym_k$()) : bottom;
+    clipOp = clipOp === VOID ? Companion_getInstance_16().get_Intersect_gpxc6n_k$() : clipOp;
     // Inline function 'androidx.compose.ui.graphics.drawscope.withTransform' call
     // Inline function 'kotlin.with' call
-    var tmp0_with = _this__u8e3s4.get_drawContext_ffwztu_k$();
     // Inline function 'kotlin.contracts.contract' call
-    var previousSize = tmp0_with.get_size_x9ctfw_k$();
-    tmp0_with.get_canvas_bshgm9_k$().save_erlm4_k$();
+    var $this$with = _this__u8e3s4.get_drawContext_ffwztu_k$();
+    var previousSize = $this$with.get_size_cxx1ym_k$();
+    $this$with.get_canvas_bshgm9_k$().save_fbe7h_k$();
     // Inline function 'androidx.compose.ui.graphics.drawscope.clipRect.<anonymous>' call
-    tmp0_with.get_transform_px941v_k$().clipRect_si0ig1_k$(left, top, right, bottom, clipOp);
+    $this$with.get_transform_px941v_k$().clipRect_3spswv_k$(left, top, right, bottom, clipOp);
     block(_this__u8e3s4);
-    tmp0_with.get_canvas_bshgm9_k$().restore_a2id37_k$();
-    tmp0_with.set_size_xj1bzm_k$(previousSize);
+    $this$with.get_canvas_bshgm9_k$().restore_a1ykhu_k$();
+    $this$with.set_size_6a0e6q_k$(previousSize);
     return Unit_getInstance();
   }
   function withTransform(_this__u8e3s4, transformBlock, drawBlock) {
     // Inline function 'kotlin.with' call
-    var tmp0_with = _this__u8e3s4.get_drawContext_ffwztu_k$();
     // Inline function 'kotlin.contracts.contract' call
-    var previousSize = tmp0_with.get_size_x9ctfw_k$();
-    tmp0_with.get_canvas_bshgm9_k$().save_erlm4_k$();
-    transformBlock(tmp0_with.get_transform_px941v_k$());
+    var $this$with = _this__u8e3s4.get_drawContext_ffwztu_k$();
+    var previousSize = $this$with.get_size_cxx1ym_k$();
+    $this$with.get_canvas_bshgm9_k$().save_fbe7h_k$();
+    transformBlock($this$with.get_transform_px941v_k$());
     drawBlock(_this__u8e3s4);
-    tmp0_with.get_canvas_bshgm9_k$().restore_a2id37_k$();
-    tmp0_with.set_size_xj1bzm_k$(previousSize);
+    $this$with.get_canvas_bshgm9_k$().restore_a1ykhu_k$();
+    $this$with.set_size_6a0e6q_k$(previousSize);
     return Unit_getInstance();
+  }
+  function inset(_this__u8e3s4, left, top, right, bottom, block) {
+    _this__u8e3s4.get_drawContext_ffwztu_k$().get_transform_px941v_k$().inset_ja77zn_k$(left, top, right, bottom);
+    block(_this__u8e3s4);
+    _this__u8e3s4.get_drawContext_ffwztu_k$().get_transform_px941v_k$().inset_ja77zn_k$(-left, -top, -right, -bottom);
   }
   function translate(_this__u8e3s4, left, top, block) {
     left = left === VOID ? 0.0 : left;
     top = top === VOID ? 0.0 : top;
-    _this__u8e3s4.get_drawContext_ffwztu_k$().get_transform_px941v_k$().translate_62wf99_k$(left, top);
+    _this__u8e3s4.get_drawContext_ffwztu_k$().get_transform_px941v_k$().translate_7gghdu_k$(left, top);
     block(_this__u8e3s4);
-    _this__u8e3s4.get_drawContext_ffwztu_k$().get_transform_px941v_k$().translate_62wf99_k$(-left, -top);
+    _this__u8e3s4.get_drawContext_ffwztu_k$().get_transform_px941v_k$().translate_7gghdu_k$(-left, -top);
   }
   function scale(_this__u8e3s4, scaleX, scaleY, pivot, block) {
-    pivot = pivot === VOID ? _this__u8e3s4.get_center_568eeq_k$() : pivot;
+    pivot = pivot === VOID ? _this__u8e3s4.get_center_dcexec_k$() : pivot;
     // Inline function 'androidx.compose.ui.graphics.drawscope.withTransform' call
     // Inline function 'kotlin.with' call
-    var tmp0_with = _this__u8e3s4.get_drawContext_ffwztu_k$();
     // Inline function 'kotlin.contracts.contract' call
-    var previousSize = tmp0_with.get_size_x9ctfw_k$();
-    tmp0_with.get_canvas_bshgm9_k$().save_erlm4_k$();
+    var $this$with = _this__u8e3s4.get_drawContext_ffwztu_k$();
+    var previousSize = $this$with.get_size_cxx1ym_k$();
+    $this$with.get_canvas_bshgm9_k$().save_fbe7h_k$();
     // Inline function 'androidx.compose.ui.graphics.drawscope.scale.<anonymous>' call
-    tmp0_with.get_transform_px941v_k$().scale_qp5ya8_k$(scaleX, scaleY, pivot);
+    $this$with.get_transform_px941v_k$().scale_rbtyk0_k$(scaleX, scaleY, pivot);
     block(_this__u8e3s4);
-    tmp0_with.get_canvas_bshgm9_k$().restore_a2id37_k$();
-    tmp0_with.set_size_xj1bzm_k$(previousSize);
+    $this$with.get_canvas_bshgm9_k$().restore_a1ykhu_k$();
+    $this$with.set_size_6a0e6q_k$(previousSize);
     return Unit_getInstance();
-  }
-  function inset(_this__u8e3s4, left, top, right, bottom, block) {
-    _this__u8e3s4.get_drawContext_ffwztu_k$().get_transform_px941v_k$().inset_n0cgms_k$(left, top, right, bottom);
-    block(_this__u8e3s4);
-    _this__u8e3s4.get_drawContext_ffwztu_k$().get_transform_px941v_k$().inset_n0cgms_k$(-left, -top, -right, -bottom);
   }
   function DrawScopeMarker() {
   }
@@ -7820,76 +7583,76 @@
   }
   function EmptyCanvas() {
   }
-  protoOf(EmptyCanvas).save_erlm4_k$ = function () {
+  protoOf(EmptyCanvas).save_fbe7h_k$ = function () {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).restore_a2id37_k$ = function () {
+  protoOf(EmptyCanvas).restore_a1ykhu_k$ = function () {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).saveLayer_f9ux7q_k$ = function (bounds, paint) {
+  protoOf(EmptyCanvas).saveLayer_j9hvqf_k$ = function (bounds, paint) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).translate_62wf99_k$ = function (dx, dy) {
+  protoOf(EmptyCanvas).translate_7gghdu_k$ = function (dx, dy) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).scale_sphyvb_k$ = function (sx, sy) {
+  protoOf(EmptyCanvas).scale_ba85bu_k$ = function (sx, sy) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).rotate_ypq2w2_k$ = function (degrees) {
+  protoOf(EmptyCanvas).rotate_qe8u4z_k$ = function (degrees) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).skew_hcshkp_k$ = function (sx, sy) {
+  protoOf(EmptyCanvas).skew_kgli2i_k$ = function (sx, sy) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).concat_oxfhdd_k$ = function (matrix) {
+  protoOf(EmptyCanvas).concat_no6uof_k$ = function (matrix) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).clipRect_si0ig1_k$ = function (left, top, right, bottom, clipOp) {
+  protoOf(EmptyCanvas).clipRect_3spswv_k$ = function (left, top, right, bottom, clipOp) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).clipPath_kn87dc_k$ = function (path, clipOp) {
+  protoOf(EmptyCanvas).clipPath_tlqunt_k$ = function (path, clipOp) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).drawLine_uyv0nw_k$ = function (p1, p2, paint) {
+  protoOf(EmptyCanvas).drawLine_p9lnhi_k$ = function (p1, p2, paint) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).drawRect_iwqaze_k$ = function (left, top, right, bottom, paint) {
+  protoOf(EmptyCanvas).drawRect_njf28a_k$ = function (left, top, right, bottom, paint) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).drawRoundRect_8v0cs4_k$ = function (left, top, right, bottom, radiusX, radiusY, paint) {
+  protoOf(EmptyCanvas).drawRoundRect_s5vrm8_k$ = function (left, top, right, bottom, radiusX, radiusY, paint) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).drawOval_wmf8q4_k$ = function (left, top, right, bottom, paint) {
+  protoOf(EmptyCanvas).drawOval_laorgo_k$ = function (left, top, right, bottom, paint) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).drawCircle_8yzxtr_k$ = function (center, radius, paint) {
+  protoOf(EmptyCanvas).drawCircle_l6ouf0_k$ = function (center, radius, paint) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).drawArc_xj6sd2_k$ = function (left, top, right, bottom, startAngle, sweepAngle, useCenter, paint) {
+  protoOf(EmptyCanvas).drawArc_ud0hdz_k$ = function (left, top, right, bottom, startAngle, sweepAngle, useCenter, paint) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).drawPath_843lu1_k$ = function (path, paint) {
+  protoOf(EmptyCanvas).drawPath_2all12_k$ = function (path, paint) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).drawImage_wbfair_k$ = function (image, topLeftOffset, paint) {
+  protoOf(EmptyCanvas).drawImage_lx1b1t_k$ = function (image, topLeftOffset, paint) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).drawImageRect_pn8joi_k$ = function (image, srcOffset, srcSize, dstOffset, dstSize, paint) {
+  protoOf(EmptyCanvas).drawImageRect_5h5ih1_k$ = function (image, srcOffset, srcSize, dstOffset, dstSize, paint) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).drawPoints_7nk41w_k$ = function (pointMode, points, paint) {
+  protoOf(EmptyCanvas).drawPoints_buyvum_k$ = function (pointMode, points, paint) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).drawRawPoints_xnm1nu_k$ = function (pointMode, points, paint) {
+  protoOf(EmptyCanvas).drawRawPoints_jt1jmy_k$ = function (pointMode, points, paint) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).drawVertices_blo9xi_k$ = function (vertices, blendMode, paint) {
+  protoOf(EmptyCanvas).drawVertices_mnlupq_k$ = function (vertices, blendMode, paint) {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).enableZ_eyv21m_k$ = function () {
+  protoOf(EmptyCanvas).enableZ_eyb9g9_k$ = function () {
     throw UnsupportedOperationException_init_$Create$();
   };
-  protoOf(EmptyCanvas).disableZ_14frxd_k$ = function () {
+  protoOf(EmptyCanvas).disableZ_14zkiq_k$ = function () {
     throw UnsupportedOperationException_init_$Create$();
   };
   function _get_image__g3aecq($this) {
@@ -7929,41 +7692,40 @@
     return srcSize;
   }
   function BitmapPainter(image, srcOffset, srcSize) {
-    srcOffset = srcOffset === VOID ? Companion_getInstance_1().get_Zero_c6qc7y_k$() : srcOffset;
+    srcOffset = srcOffset === VOID ? Companion_getInstance_1().get_Zero_6hc3i8_k$() : srcOffset;
     srcSize = srcSize === VOID ? IntSize(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()) : srcSize;
     Painter.call(this);
     this.image_1 = image;
     this.srcOffset_1 = srcOffset;
     this.srcSize_1 = srcSize;
-    this.filterQuality_1 = Companion_getInstance_19().get_Low_lx4az0_k$();
+    this.filterQuality_1 = Companion_getInstance_19().get_Low_7s05n6_k$();
     this.size_1 = validateSize(this, this.srcOffset_1, this.srcSize_1);
     this.alpha_2 = 1.0;
     this.colorFilter_2 = null;
   }
-  protoOf(BitmapPainter).set_filterQuality_8e157j_k$ = function (_set____db54di) {
+  protoOf(BitmapPainter).set_filterQuality_eye4f7_k$ = function (_set____db54di) {
     this.filterQuality_1 = _set____db54di;
   };
-  protoOf(BitmapPainter).get_filterQuality_2xbue9_k$ = function () {
+  protoOf(BitmapPainter).get_filterQuality_wmgb0f_k$ = function () {
     return this.filterQuality_1;
   };
-  protoOf(BitmapPainter).onDraw_lvum79_k$ = function (_this__u8e3s4) {
+  protoOf(BitmapPainter).onDraw_yom3na_k$ = function (_this__u8e3s4) {
     // Inline function 'kotlin.math.roundToInt' call
-    var tmp0_roundToInt = _Size___get_width__impl__58y75t(_this__u8e3s4.get_size_x9ctfw_k$());
-    var tmp = roundToInt(tmp0_roundToInt);
-    var tmp$ret$1;
+    var this_0 = _Size___get_width__impl__58y75t(_this__u8e3s4.get_size_cxx1ym_k$());
+    var tmp = roundToInt(this_0);
     // Inline function 'kotlin.math.roundToInt' call
-    var tmp1_roundToInt = _Size___get_height__impl__a04p02(_this__u8e3s4.get_size_x9ctfw_k$());
-    tmp$ret$1 = roundToInt(tmp1_roundToInt);
-    _this__u8e3s4.drawImage$default_q3yuzr_k$(this.image_1, this.srcOffset_1, this.srcSize_1, VOID, IntSize(tmp, tmp$ret$1), this.alpha_2, VOID, this.colorFilter_2, VOID, this.filterQuality_1);
+    var this_1 = _Size___get_height__impl__a04p02(_this__u8e3s4.get_size_cxx1ym_k$());
+    var tmp$ret$1 = roundToInt(this_1);
+    _this__u8e3s4.drawImage$default_qql6c2_k$(this.image_1, this.srcOffset_1, this.srcSize_1, VOID, IntSize(tmp, tmp$ret$1), this.alpha_2, VOID, this.colorFilter_2, VOID, this.filterQuality_1);
   };
-  protoOf(BitmapPainter).get_intrinsicSize_x61on3_k$ = function () {
+  protoOf(BitmapPainter).get_intrinsicSize_culx5t_k$ = function () {
     return toSize_0(this.size_1);
   };
-  protoOf(BitmapPainter).applyAlpha_luh7xa_k$ = function (alpha) {
+  protoOf(BitmapPainter).applyAlpha_eeyl20_k$ = function (alpha) {
     this.alpha_2 = alpha;
     return true;
   };
-  protoOf(BitmapPainter).applyColorFilter_lr96qs_k$ = function (colorFilter) {
+  protoOf(BitmapPainter).applyColorFilter_uuk0e3_k$ = function (colorFilter) {
     this.colorFilter_2 = colorFilter;
     return true;
   };
@@ -8020,16 +7782,16 @@
   }
   function configureColorFilter($this, colorFilter) {
     if (!equals($this.colorFilter_1, colorFilter)) {
-      var consumedColorFilter = $this.applyColorFilter_lr96qs_k$(colorFilter);
+      var consumedColorFilter = $this.applyColorFilter_uuk0e3_k$(colorFilter);
       if (!consumedColorFilter) {
         if (colorFilter == null) {
           var tmp0_safe_receiver = $this.layerPaint_1;
           if (tmp0_safe_receiver != null) {
-            tmp0_safe_receiver.set_colorFilter_l1l4p0_k$(null);
+            tmp0_safe_receiver.set_colorFilter_dtpxr0_k$(null);
           }
           $this.useLayer_1 = false;
         } else {
-          obtainPaint($this).set_colorFilter_l1l4p0_k$(colorFilter);
+          obtainPaint($this).set_colorFilter_dtpxr0_k$(colorFilter);
           $this.useLayer_1 = true;
         }
       }
@@ -8044,16 +7806,16 @@
   }
   function configureAlpha($this, alpha) {
     if (!($this.alpha_1 === alpha)) {
-      var consumed = $this.applyAlpha_luh7xa_k$(alpha);
+      var consumed = $this.applyAlpha_eeyl20_k$(alpha);
       if (!consumed) {
         if (alpha === get_DefaultAlpha()) {
           var tmp0_safe_receiver = $this.layerPaint_1;
           if (tmp0_safe_receiver != null) {
-            tmp0_safe_receiver.set_alpha_k1tx50_k$(alpha);
+            tmp0_safe_receiver.set_alpha_tvzcqh_k$(alpha);
           }
           $this.useLayer_1 = false;
         } else {
-          obtainPaint($this).set_alpha_k1tx50_k$(alpha);
+          obtainPaint($this).set_alpha_tvzcqh_k$(alpha);
           $this.useLayer_1 = true;
         }
       }
@@ -8068,7 +7830,7 @@
   }
   function configureLayoutDirection($this, rtl) {
     if (!$this.layoutDirection_1.equals(rtl)) {
-      $this.applyLayoutDirection_nfptms_k$(rtl);
+      $this.applyLayoutDirection_6o3qed_k$(rtl);
       $this.layoutDirection_1 = rtl;
     }
   }
@@ -8077,7 +7839,7 @@
   }
   function Painter$drawLambda$lambda(this$0) {
     return function ($this$null) {
-      this$0.onDraw_lvum79_k$($this$null);
+      this$0.onDraw_yom3na_k$($this$null);
       return Unit_getInstance();
     };
   }
@@ -8090,55 +7852,73 @@
     var tmp = this;
     tmp.drawLambda_1 = Painter$drawLambda$lambda(this);
   }
-  protoOf(Painter).applyAlpha_luh7xa_k$ = function (alpha) {
+  protoOf(Painter).applyAlpha_eeyl20_k$ = function (alpha) {
     return false;
   };
-  protoOf(Painter).applyColorFilter_lr96qs_k$ = function (colorFilter) {
+  protoOf(Painter).applyColorFilter_uuk0e3_k$ = function (colorFilter) {
     return false;
   };
-  protoOf(Painter).applyLayoutDirection_nfptms_k$ = function (layoutDirection) {
+  protoOf(Painter).applyLayoutDirection_6o3qed_k$ = function (layoutDirection) {
     return false;
   };
-  protoOf(Painter).draw_hzw39q_k$ = function (_this__u8e3s4, size, alpha, colorFilter) {
+  protoOf(Painter).draw_zf0527_k$ = function (_this__u8e3s4, size, alpha, colorFilter) {
     configureAlpha(this, alpha);
     configureColorFilter(this, colorFilter);
     configureLayoutDirection(this, _this__u8e3s4.get_layoutDirection_7e37v0_k$());
     // Inline function 'androidx.compose.ui.graphics.drawscope.inset' call
-    var tmp0_inset = _Size___get_width__impl__58y75t(_this__u8e3s4.get_size_x9ctfw_k$()) - _Size___get_width__impl__58y75t(size);
-    var tmp1_inset = _Size___get_height__impl__a04p02(_this__u8e3s4.get_size_x9ctfw_k$()) - _Size___get_height__impl__a04p02(size);
-    _this__u8e3s4.get_drawContext_ffwztu_k$().get_transform_px941v_k$().inset_n0cgms_k$(0.0, 0.0, tmp0_inset, tmp1_inset);
+    var right = _Size___get_width__impl__58y75t(_this__u8e3s4.get_size_cxx1ym_k$()) - _Size___get_width__impl__58y75t(size);
+    var bottom = _Size___get_height__impl__a04p02(_this__u8e3s4.get_size_cxx1ym_k$()) - _Size___get_height__impl__a04p02(size);
+    _this__u8e3s4.get_drawContext_ffwztu_k$().get_transform_px941v_k$().inset_ja77zn_k$(0.0, 0.0, right, bottom);
     // Inline function 'androidx.compose.ui.graphics.painter.Painter.draw.<anonymous>' call
-    if ((alpha > 0.0 ? _Size___get_width__impl__58y75t(size) > 0 : false) ? _Size___get_height__impl__a04p02(size) > 0 : false) {
+    if ((alpha > 0.0 ? _Size___get_width__impl__58y75t(size) > 0.0 : false) ? _Size___get_height__impl__a04p02(size) > 0.0 : false) {
       if (this.useLayer_1) {
-        var layerRect = Rect_0(Companion_getInstance_0().get_Zero_sctq3f_k$(), Size(_Size___get_width__impl__58y75t(size), _Size___get_height__impl__a04p02(size)));
+        var layerRect = Rect_0(Companion_getInstance().get_Zero_k6n73t_k$(), Size(_Size___get_width__impl__58y75t(size), _Size___get_height__impl__a04p02(size)));
         // Inline function 'androidx.compose.ui.graphics.drawscope.drawIntoCanvas' call
-        var tmp0_anonymous = _this__u8e3s4.get_drawContext_ffwztu_k$().get_canvas_bshgm9_k$();
-        var tmp0_withSaveLayer = obtainPaint(this);
+        var this_0 = _this__u8e3s4.get_drawContext_ffwztu_k$().get_canvas_bshgm9_k$();
+        var paint = obtainPaint(this);
         var tmp;
         try {
-          tmp0_anonymous.saveLayer_f9ux7q_k$(layerRect, tmp0_withSaveLayer);
-          this.onDraw_lvum79_k$(_this__u8e3s4);
+          this_0.saveLayer_j9hvqf_k$(layerRect, paint);
+          this.onDraw_yom3na_k$(_this__u8e3s4);
           tmp = Unit_getInstance();
         }finally {
-          tmp0_anonymous.restore_a2id37_k$();
+          this_0.restore_a1ykhu_k$();
         }
       } else {
-        this.onDraw_lvum79_k$(_this__u8e3s4);
+        this.onDraw_yom3na_k$(_this__u8e3s4);
       }
     }
-    _this__u8e3s4.get_drawContext_ffwztu_k$().get_transform_px941v_k$().inset_n0cgms_k$(-0.0, -0.0, -tmp0_inset, -tmp1_inset);
+    _this__u8e3s4.get_drawContext_ffwztu_k$().get_transform_px941v_k$().inset_ja77zn_k$(-0.0, -0.0, -right, -bottom);
   };
-  protoOf(Painter).draw$default_ava93n_k$ = function (_this__u8e3s4, size, alpha, colorFilter, $super) {
+  protoOf(Painter).draw$default_7w00am_k$ = function (_this__u8e3s4, size, alpha, colorFilter, $super) {
     alpha = alpha === VOID ? get_DefaultAlpha() : alpha;
     colorFilter = colorFilter === VOID ? null : colorFilter;
     var tmp;
     if ($super === VOID) {
-      this.draw_hzw39q_k$(_this__u8e3s4, size, alpha, colorFilter);
+      this.draw_zf0527_k$(_this__u8e3s4, size, alpha, colorFilter);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.draw_hzw39q_k$.call(this, _this__u8e3s4, new Size_0(size), alpha, colorFilter);
+      tmp = $super.draw_zf0527_k$.call(this, _this__u8e3s4, new Size_0(size), alpha, colorFilter);
     }
     return tmp;
+  };
+  function FloatResult(value, isValid) {
+    value = value === VOID ? FloatCompanionObject_getInstance().get_NaN_18jnv2_k$() : value;
+    isValid = isValid === VOID ? false : isValid;
+    this.value_1 = value;
+    this.isValid_1 = isValid;
+  }
+  protoOf(FloatResult).set_value_bgphas_k$ = function (_set____db54di) {
+    this.value_1 = _set____db54di;
+  };
+  protoOf(FloatResult).get_value_j01efc_k$ = function () {
+    return this.value_1;
+  };
+  protoOf(FloatResult).set_isValid_4avd7k_k$ = function (_set____db54di) {
+    this.isValid_1 = _set____db54di;
+  };
+  protoOf(FloatResult).get_isValid_zh4f7b_k$ = function () {
+    return this.isValid_1;
   };
   function _get_FloatMinExponent__y7f6zq($this) {
     return $this.FloatMinExponent_1;
@@ -8171,7 +7951,7 @@
     // Inline function 'kotlin.ulongArrayOf' call
     tmp_0.Mantissa64__1 = _ULongArray___init__impl__twm1l3(longArrayOf([_ULong___init__impl__c78o9k(new Long(2118029704, -1513171909)), _ULong___init__impl__c78o9k(new Long(1573795306, -817723062)), _ULong___init__impl__c78o9k(new Long(2057363890, -2121689650)), _ULong___init__impl__c78o9k(new Long(424221215, -1578370238)), _ULong___init__impl__c78o9k(new Long(-1617207130, -899220974)), _ULong___init__impl__c78o9k(new Long(1199716560, -50284393)), _ULong___init__impl__c78o9k(new Long(-1934531710, -1642040482)), _ULong___init__impl__c78o9k(new Long(803060834, -978808778)), _ULong___init__impl__c78o9k(new Long(-1143657605, -149769149)), _ULong___init__impl__c78o9k(new Long(1432697645, -1704218454)), _ULong___init__impl__c78o9k(new Long(-356611592, -1056531244)), _ULong___init__impl__c78o9k(new Long(627977334, -246922230)), _ULong___init__impl__c78o9k(new Long(1466227658, -1764939130)), _ULong___init__impl__c78o9k(new Long(-314699076, -1132432089)), _ULong___init__impl__c78o9k(new Long(-393373845, -341798287)), _ULong___init__impl__c78o9k(new Long(827883171, -1824236665)), _ULong___init__impl__c78o9k(new Long(-38887860, -1206554008)), _ULong___init__impl__c78o9k(new Long(1025131999, -434450685)), _ULong___init__impl__c78o9k(new Long(103836587, -1882144414)), _ULong___init__impl__c78o9k(new Long(-2017687914, -1278938694)), _ULong___init__impl__c78o9k(new Long(699115580, -524931543)), _ULong___init__impl__c78o9k(new Long(-1173665499, -1938694951)), _ULong___init__impl__c78o9k(new Long(680401775, -1349626864)), _ULong___init__impl__c78o9k(new Long(850502218, -613291756)), _ULong___init__impl__c78o9k(new Long(-1615919762, -1993920084)), _ULong___init__impl__c78o9k(new Long(-946157878, -1418658281)), _ULong___init__impl__c78o9k(new Long(-1182697347, -699581027)), _ULong___init__impl__c78o9k(new Long(-1812927666, -2047850878)), _ULong___init__impl__c78o9k(new Long(955065889, -1486071773)), _ULong___init__impl__c78o9k(new Long(120090538, -783847892)), _ULong___init__impl__c78o9k(new Long(-2072427062, -2100517669)), _ULong___init__impl__c78o9k(new Long(1704433468, -1551905262)), _ULong___init__impl__c78o9k(new Long(-16941812, -866139754)), _ULong___init__impl__c78o9k(new Long(-1094919089, -8932868)), _ULong___init__impl__c78o9k(new Long(-147453519, -1616195779)), _ULong___init__impl__c78o9k(new Long(1963166749, -946502899)), _ULong___init__impl__c78o9k(new Long(-767267035, -109386800)), _ULong___init__impl__c78o9k(new Long(-2090154633, -1678979486)), _ULong___init__impl__c78o9k(new Long(608532181, -1024982533)), _ULong___init__impl__c78o9k(new Long(-313076598, -207486343)), _ULong___init__impl__c78o9k(new Long(878068950, -1740291700)), _ULong___init__impl__c78o9k(new Long(1097586188, -1101622801)), _ULong___init__impl__c78o9k(new Long(298240911, -303286677)), _ULong___init__impl__c78o9k(new Long(-350470343, -1800166910)), _ULong___init__impl__c78o9k(new Long(-1511829753, -1176466813)), _ULong___init__impl__c78o9k(new Long(-1889787191, -396841692)), _ULong___init__impl__c78o9k(new Long(-644246082, -1858638794)), _ULong___init__impl__c78o9k(new Long(-1879049427, -1249556668)), _ULong___init__impl__c78o9k(new Long(-1275069959, -488204011)), _ULong___init__impl__c78o9k(new Long(-1870660549, -1915740243)), _ULong___init__impl__c78o9k(new Long(-190842038, -1320933480)), _ULong___init__impl__c78o9k(new Long(835189277, -577425025)), _ULong___init__impl__c78o9k(new Long(2132606034, -1971503377)), _ULong___init__impl__c78o9k(new Long(1592015718, -1390637397)), _ULong___init__impl__c78o9k(new Long(916277824, -664554922)), _ULong___init__impl__c78o9k(new Long(-501068184, -2025959563)), _ULong___init__impl__c78o9k(new Long(1521148418, -1458707629)), _ULong___init__impl__c78o9k(new Long(827693699, -749642712)), _ULong___init__impl__c78o9k(new Long(517308561, -2079139431)), _ULong___init__impl__c78o9k(new Long(1720377526, -1525182465)), _ULong___init__impl__c78o9k(new Long(1076730083, -832736257)), _ULong___init__impl__c78o9k(new Long(-2011398258, -2131072897)), _ULong___init__impl__c78o9k(new Long(1780719474, -1590099297)), _ULong___init__impl__c78o9k(new Long(1152157518, -913882297)), _ULong___init__impl__c78o9k(new Long(366455074, -68611047)), _ULong___init__impl__c78o9k(new Long(-1381578315, -1653494641)), _ULong___init__impl__c78o9k(new Long(-1726972894, -993126477)), _ULong___init__impl__c78o9k(new Long(2136251179, -167666272)), _ULong___init__impl__c78o9k(new Long(1335156987, -1715404156)), _ULong___init__impl__c78o9k(new Long(1668946233, -1070513371)), _ULong___init__impl__c78o9k(new Long(-1135042680, -264399890)), _ULong___init__impl__c78o9k(new Long(901211061, -1775862667)), _ULong___init__impl__c78o9k(new Long(-2094711646, -1146086510)), _ULong___init__impl__c78o9k(new Long(602835915, -358866313)), _ULong___init__impl__c78o9k(new Long(1987385183, -1834904182)), _ULong___init__impl__c78o9k(new Long(336747830, -1219888403)), _ULong___init__impl__c78o9k(new Long(1494676612, -451118680)), _ULong___init__impl__c78o9k(new Long(934172882, -1892561911)), _ULong___init__impl__c78o9k(new Long(-2053509369, -1291960565)), _ULong___init__impl__c78o9k(new Long(1728080585, -541208882)), _ULong___init__impl__c78o9k(new Long(6308541, -1948868287)), _ULong___init__impl__c78o9k(new Long(1081627501, -1362343535)), _ULong___init__impl__c78o9k(new Long(-1869191096, -629187595)), _ULong___init__impl__c78o9k(new Long(2052981037, -2003854983)), _ULong___init__impl__c78o9k(new Long(-654999176, -1431076905)), _ULong___init__impl__c78o9k(new Long(-818748970, -715104307)), _ULong___init__impl__c78o9k(new Long(-1585459930, -2057552928)), _ULong___init__impl__c78o9k(new Long(-908083089, -1498199336)), _ULong___init__impl__c78o9k(new Long(-61362037, -799007346)), _ULong___init__impl__c78o9k(new Long(1572261463, -2109992327)), _ULong___init__impl__c78o9k(new Long(-1255898643, -1563748585)), _ULong___init__impl__c78o9k(new Long(-1569873304, -880943907)), _ULong___init__impl__c78o9k(new Long(185142018, -27438059)), _ULong___init__impl__c78o9k(new Long(652584673, -1627761523)), _ULong___init__impl__c78o9k(new Long(1889472666, -960960080)), _ULong___init__impl__c78o9k(new Long(-1933126464, -127458276)), _ULong___init__impl__c78o9k(new Long(-671333128, -1690274159)), _ULong___init__impl__c78o9k(new Long(1308317238, -1039100874)), _ULong___init__impl__c78o9k(new Long(-512087100, -225134269)), _ULong___init__impl__c78o9k(new Long(1827429210, -1751321654)), _ULong___init__impl__c78o9k(new Long(136802865, -1115410243)), _ULong___init__impl__c78o9k(new Long(1244745405, -320520980)), _ULong___init__impl__c78o9k(new Long(-1369517770, -1810938349)), _ULong___init__impl__c78o9k(new Long(-1711897212, -1189931112)), _ULong___init__impl__c78o9k(new Long(-1066129691, -413672066)), _ULong___init__impl__c78o9k(new Long(944281679, -1869157777)), _ULong___init__impl__c78o9k(new Long(106610275, -1262705397)), _ULong___init__impl__c78o9k(new Long(-940478981, -504639923)), _ULong___init__impl__c78o9k(new Long(-1661541187, -1926012688)), _ULong___init__impl__c78o9k(new Long(-1003184660, -1333774036)), _ULong___init__impl__c78o9k(new Long(-180239001, -593475721)), _ULong___init__impl__c78o9k(new Long(-112649376, -1981535062)), _ULong___init__impl__c78o9k(new Long(-1214553543, -1403177003)), _ULong___init__impl__c78o9k(new Long(629291719, -680229429)), _ULong___init__impl__c78o9k(new Long(-143563588, -2035756130)), _ULong___init__impl__c78o9k(new Long(-1253196309, -1470953338)), _ULong___init__impl__c78o9k(new Long(1654730086, -764949848)), _ULong___init__impl__c78o9k(new Long(1034206304, -2088706391)), _ULong___init__impl__c78o9k(new Long(-1928467592, -1537141165)), _ULong___init__impl__c78o9k(new Long(1884382806, -847684632)), _ULong___init__impl__c78o9k(new Long(1177739254, -2140415631)), _ULong___init__impl__c78o9k(new Long(-1749051405, -1601777715)), _ULong___init__impl__c78o9k(new Long(-38830608, -928480320)), _ULong___init__impl__c78o9k(new Long(1025203564, -86858575)), _ULong___init__impl__c78o9k(new Long(-969860509, -1664899346)), _ULong___init__impl__c78o9k(new Long(2008899836, -1007382358)), _ULong___init__impl__c78o9k(new Long(363641147, -185486123)), _ULong___init__impl__c78o9k(new Long(764146629, -1726541563)), _ULong___init__impl__c78o9k(new Long(2028925110, -1084435130)), _ULong___init__impl__c78o9k(new Long(388672740, -281802088)), _ULong___init__impl__c78o9k(new Long(242920462, -1786739041)), _ULong___init__impl__c78o9k(new Long(-770091246, -1159681978)), _ULong___init__impl__c78o9k(new Long(-2036355881, -375860648)), _ULong___init__impl__c78o9k(new Long(1411632134, -1845525641)), _ULong___init__impl__c78o9k(new Long(690798344, -1233165227)), _ULong___init__impl__c78o9k(new Long(1937239754, -467714710)), _ULong___init__impl__c78o9k(new Long(-2010450626, -1902934430)), _ULong___init__impl__c78o9k(new Long(708162189, -1304926213)), _ULong___init__impl__c78o9k(new Long(-188539087, -557415943)), _ULong___init__impl__c78o9k(new Long(955904894, -1958997700)), _ULong___init__impl__c78o9k(new Long(1194881118, -1375005301)), _ULong___init__impl__c78o9k(new Long(419859574, -645014802)), _ULong___init__impl__c78o9k(new Long(-811329591, -2013746988)), _ULong___init__impl__c78o9k(new Long(59579836, -1443441910)), _ULong___init__impl__c78o9k(new Long(-2073008853, -730560564)), _ULong___init__impl__c78o9k(new Long(-758759621, -2067213089)), _ULong___init__impl__c78o9k(new Long(-948449527, -1510274537)), _ULong___init__impl__c78o9k(new Long(-1185561908, -814101347)), _ULong___init__impl__c78o9k(new Long(-1814718017, -2119426078)), _ULong___init__impl__c78o9k(new Long(952827951, -1575540773)), _ULong___init__impl__c78o9k(new Long(117293115, -895684142)), _ULong___init__impl__c78o9k(new Long(-2000867254, -45863354)), _ULong___init__impl__c78o9k(new Long(360070702, -1639277332)), _ULong___init__impl__c78o9k(new Long(450088378, -975354841)), _ULong___init__impl__c78o9k(new Long(-511131352, -145451728)), _ULong___init__impl__c78o9k(new Long(-1930069831, -1701520066)), _ULong___init__impl__c78o9k(new Long(808638183, -1053158258)), _ULong___init__impl__c78o9k(new Long(-1136685919, -242705999)), _ULong___init__impl__c78o9k(new Long(363313125, -1762303985)), _ULong___init__impl__c78o9k(new Long(-619600418, -1129138158)), _ULong___init__impl__c78o9k(new Long(-1848242346, -337680873)), _ULong___init__impl__c78o9k(new Long(-1155151467, -1821663282)), _ULong___init__impl__c78o9k(new Long(1777286139, -1203337278)), _ULong___init__impl__c78o9k(new Long(74124026, -430429773)), _ULong___init__impl__c78o9k(new Long(-490543396, -1879631345)), _ULong___init__impl__c78o9k(new Long(-613179245, -1275797357)), _ULong___init__impl__c78o9k(new Long(-766474056, -521004872)), _ULong___init__impl__c78o9k(new Long(-2089659021, -1936240781)), _ULong___init__impl__c78o9k(new Long(1682893519, -1346559152)), _ULong___init__impl__c78o9k(new Long(2103616899, -609457116)), _ULong___init__impl__c78o9k(new Long(-832723086, -1991523434)), _ULong___init__impl__c78o9k(new Long(-2114645681, -1415662468)), _ULong___init__impl__c78o9k(new Long(-1569565278, -695836261)), _ULong___init__impl__c78o9k(new Long(1166505349, -2045510399)), _ULong___init__impl__c78o9k(new Long(-1763093785, -1483146175)), _ULong___init__impl__c78o9k(new Long(-56383584, -780190895)), _ULong___init__impl__c78o9k(new Long(1038502084, -2098232045)), _ULong___init__impl__c78o9k(new Long(224385781, -1549048232)), _ULong___init__impl__c78o9k(new Long(280482227, -862568466)), _ULong___init__impl__c78o9k(new Long(-1796880865, -4468759)), _ULong___init__impl__c78o9k(new Long(-49308717, -1613405711)), _ULong___init__impl__c78o9k(new Long(2085847752, -943015314)), _ULong___init__impl__c78o9k(new Long(459826043, -105027318)), _ULong___init__impl__c78o9k(new Long(1361133101, -1676254810)), _ULong___init__impl__c78o9k(new Long(-446067272, -1021576689)), _ULong___init__impl__c78o9k(new Long(-557584090, -203229037)), _ULong___init__impl__c78o9k(new Long(1798993591, -1737630884)), _ULong___init__impl__c78o9k(new Long(-2046225307, -1098296781)), _ULong___init__impl__c78o9k(new Long(1737185663, -299129152)), _ULong___init__impl__c78o9k(new Long(1085741039, -1797568456)), _ULong___init__impl__c78o9k(new Long(1357176299, -1173218746)), _ULong___init__impl__c78o9k(new Long(-451013274, -392781609)), _ULong___init__impl__c78o9k(new Long(-281883296, -1856101242)), _ULong___init__impl__c78o9k(new Long(-1426095944, -1246384728)), _ULong___init__impl__c78o9k(new Long(-708878106, -484239086)), _ULong___init__impl__c78o9k(new Long(-979919729, -1913262165)), _ULong___init__impl__c78o9k(new Long(-1224899661, -1317835882)), _ULong___init__impl__c78o9k(new Long(1690100896, -573553028)), _ULong___init__impl__c78o9k(new Long(-1091170588, -1969083379)), _ULong___init__impl__c78o9k(new Long(783520413, -1387612399)), _ULong___init__impl__c78o9k(new Long(2053142340, -660773675)), _ULong___init__impl__c78o9k(new Long(1820084875, -2023596283)), _ULong___init__impl__c78o9k(new Long(-946119379, -1455753530)), _ULong___init__impl__c78o9k(new Long(2038576249, -745950088)), _ULong___init__impl__c78o9k(new Long(1274110155, -2076831541)), _ULong___init__impl__c78o9k(new Long(518895870, -1522297602)), _ULong___init__impl__c78o9k(new Long(-1498863810, -829130179)), _ULong___init__impl__c78o9k(new Long(-2010531705, -2128819098)), _ULong___init__impl__c78o9k(new Long(708060840, -1587282048)), _ULong___init__impl__c78o9k(new Long(885076050, -910360736)), _ULong___init__impl__c78o9k(new Long(1106345063, -64209096)), _ULong___init__impl__c78o9k(new Long(691465664, -1650743421)), _ULong___init__impl__c78o9k(new Long(-209409743, -989687453)), _ULong___init__impl__c78o9k(new Long(-261762179, -163367492)), _ULong___init__impl__c78o9k(new Long(373269550, -1712717418)), _ULong___init__impl__c78o9k(new Long(-1680896711, -1067154949)), _ULong___init__impl__c78o9k(new Long(-2101120888, -260201862)), _ULong___init__impl__c78o9k(new Long(-1850071467, -1773238900)), _ULong___init__impl__c78o9k(new Long(-1238847510, -1142806801)), _ULong___init__impl__c78o9k(new Long(-1548559387, -354766677)), _ULong___init__impl__c78o9k(new Long(1179634031, -1832341909)), _ULong___init__impl__c78o9k(new Long(400800715, -1216685562)), _ULong___init__impl__c78o9k(new Long(-1646482755, -447115129)), _ULong___init__impl__c78o9k(new Long(-1029051722, -1890059692)), _ULong___init__impl__c78o9k(new Long(-212572828, -1288832791)), _ULong___init__impl__c78o9k(new Long(1881767613, -537299164)), _ULong___init__impl__c78o9k(new Long(-971378890, -1946424714)), _ULong___init__impl__c78o9k(new Long(2007001859, -1359289068)), _ULong___init__impl__c78o9k(new Long(-1786214972, -625369511)), _ULong___init__impl__c78o9k(new Long(-42642533, -2001468681)), _ULong___init__impl__c78o9k(new Long(-53303167, -1428094027)), _ULong___init__impl__c78o9k(new Long(2080854690, -711375709)), _ULong___init__impl__c78o9k(new Long(763663269, -2055222554)), _ULong___init__impl__c78o9k(new Long(-1192904562, -1495286369)), _ULong___init__impl__c78o9k(new Long(-1491130702, -795366137)), _ULong___init__impl__c78o9k(new Long(-931956689, -2107716572)), _ULong___init__impl__c78o9k(new Long(-91204037, -1560903891)), _ULong___init__impl__c78o9k(new Long(2033478602, -877388039)), _ULong___init__impl__c78o9k(new Long(-679377220, -22993225)), _ULong___init__impl__c78o9k(new Long(-424610762, -1624983502)), _ULong___init__impl__c78o9k(new Long(-1604505277, -957487553)), _ULong___init__impl__c78o9k(new Long(-2005631596, -123117617)), _ULong___init__impl__c78o9k(new Long(-1253519748, -1687561247)), _ULong___init__impl__c78o9k(new Long(580583963, -1035709734)), _ULong___init__impl__c78o9k(new Long(-1421753694, -220895344)), _ULong___init__impl__c78o9k(new Long(1795758501, -1748672326)), _ULong___init__impl__c78o9k(new Long(97214479, -1112098583)), _ULong___init__impl__c78o9k(new Long(1195259923, -316381405)), _ULong___init__impl__c78o9k(new Long(210166539, -1808351114)), _ULong___init__impl__c78o9k(new Long(-1884775474, -1186697069)), _ULong___init__impl__c78o9k(new Long(1938997954, -409629512)), _ULong___init__impl__c78o9k(new Long(1211873721, -1866631181)), _ULong___init__impl__c78o9k(new Long(441100328, -1259547152)), _ULong___init__impl__c78o9k(new Long(551375410, -500692116)), _ULong___init__impl__c78o9k(new Long(-1802874017, -1923545309)), _ULong___init__impl__c78o9k(new Long(2041374775, -1330689812)), _ULong___init__impl__c78o9k(new Long(-1743248828, -589620441)), _ULong___init__impl__c78o9k(new Long(-1089530517, -1979125512)), _ULong___init__impl__c78o9k(new Long(-288171323, -1400165066)), _ULong___init__impl__c78o9k(new Long(-1433955977, -676464508)), _ULong___init__impl__c78o9k(new Long(-359351574, -2033403054)), _ULong___init__impl__c78o9k(new Long(-1522931291, -1468011993)), _ULong___init__impl__c78o9k(new Long(-1903664114, -761273167)), _ULong___init__impl__c78o9k(new Long(-116048247, -2086408466)), _ULong___init__impl__c78o9k(new Long(-1218802133, -1534268758)), _ULong___init__impl__c78o9k(new Long(1697722806, -844094123)), _ULong___init__impl__c78o9k(new Long(1597947665, -2138171563)), _ULong___init__impl__c78o9k(new Long(-1223790890, -1598972630)), _ULong___init__impl__c78o9k(new Long(1691486859, -924973963)), _ULong___init__impl__c78o9k(new Long(-1106866898, -82475630)), _ULong___init__impl__c78o9k(new Long(-1228662723, -1662160005)), _ULong___init__impl__c78o9k(new Long(-1535828404, -1003958182)), _ULong___init__impl__c78o9k(new Long(1301439967, -181205903)), _ULong___init__impl__c78o9k(new Long(-797212757, -1723866426)), _ULong___init__impl__c78o9k(new Long(-2070257770, -1081091208)), _ULong___init__impl__c78o9k(new Long(-1514080388, -277622186)), _ULong___init__impl__c78o9k(new Long(664312493, -1784126602)), _ULong___init__impl__c78o9k(new Long(-1317093031, -1156416429)), _ULong___init__impl__c78o9k(new Long(-1646366289, -371778712)), _ULong___init__impl__c78o9k(new Long(1655375629, -1842974431)), _ULong___init__impl__c78o9k(new Long(-1152005935, -1229976215)), _ULong___init__impl__c78o9k(new Long(707476229, -463728444)), _ULong___init__impl__c78o9k(new Long(-1705311005, -1900443014)), _ULong___init__impl__c78o9k(new Long(1089586716, -1301811943)), _ULong___init__impl__c78o9k(new Long(-1859242077, -553523105)), _ULong___init__impl__c78o9k(new Long(-1162026298, -1956564677)), _ULong___init__impl__c78o9k(new Long(-1452532873, -1371964022)), _ULong___init__impl__c78o9k(new Long(1405559381, -641213203)), _ULong___init__impl__c78o9k(new Long(1415345525, -2011370988)), _ULong___init__impl__c78o9k(new Long(1769181906, -1440471911)), _ULong___init__impl__c78o9k(new Long(-1009748089, -726848065)), _ULong___init__impl__c78o9k(new Long(-631092556, -2064892777)), _ULong___init__impl__c78o9k(new Long(-788865695, -1507374147)), _ULong___init__impl__c78o9k(new Long(1161401530, -810475859)), _ULong___init__impl__c78o9k(new Long(1262746868, -2117160148)), _ULong___init__impl__c78o9k(new Long(1578433585, -1572708361)), _ULong___init__impl__c78o9k(new Long(899300158, -892143627)), _ULong___init__impl__c78o9k(new Long(-2097100275, -41437710)), _ULong___init__impl__c78o9k(new Long(-1847558584, -1636511305)), _ULong___init__impl__c78o9k(new Long(1985519066, -971897307)), _ULong___init__impl__c78o9k(new Long(-739326639, -141129810)), _ULong___init__impl__c78o9k(new Long(1148533586, -1698818867)), _ULong___init__impl__c78o9k(new Long(-1785558489, -1049781760)), _ULong___init__impl__c78o9k(new Long(-1158206287, -238485376)), _ULong___init__impl__c78o9k(new Long(1960475630, -1759666096)), _ULong___init__impl__c78o9k(new Long(-1844372758, -1125840796)), _ULong___init__impl__c78o9k(new Long(-1231724123, -333559171)), _ULong___init__impl__c78o9k(new Long(-1843569401, -1819087218)), _ULong___init__impl__c78o9k(new Long(916763721, -1200117198)), _ULong___init__impl__c78o9k(new Long(-1001528997, -426404674)), _ULong___init__impl__c78o9k(new Long(984657113, -1877115657)), _ULong___init__impl__c78o9k(new Long(157079567, -1272652747)), _ULong___init__impl__c78o9k(new Long(1270091283, -517074110)), _ULong___init__impl__c78o9k(new Long(1867548875, -1933784055)), _ULong___init__impl__c78o9k(new Long(-886789378, -1343488245)), _ULong___init__impl__c78o9k(new Long(-1108486722, -605618482)), _ULong___init__impl__c78o9k(new Long(917808535, -1989124287)), _ULong___init__impl__c78o9k(new Long(-2073964804, -1412663535)), _ULong___init__impl__c78o9k(new Long(-444972356, -692087595)), _ULong___init__impl__c78o9k(new Long(-1351849547, -2043167483)), _ULong___init__impl__c78o9k(new Long(457671715, -1480217529)), _ULong___init__impl__c78o9k(new Long(-501652181, -776530088)), _ULong___init__impl__c78o9k(new Long(-1924145349, -2095944041)), _ULong___init__impl__c78o9k(new Long(1889785610, -1546188227)), _ULong___init__impl__c78o9k(new Long(-858993460, -858993460)), _ULong___init__impl__c78o9k(new Long(0, -2147483648)), _ULong___init__impl__c78o9k(new Long(0, -1610612736)), _ULong___init__impl__c78o9k(new Long(0, -939524096)), _ULong___init__impl__c78o9k(new Long(0, -100663296)), _ULong___init__impl__c78o9k(new Long(0, -1673527296)), _ULong___init__impl__c78o9k(new Long(0, -1018167296)), _ULong___init__impl__c78o9k(new Long(0, -198967296)), _ULong___init__impl__c78o9k(new Long(0, -1734967296)), _ULong___init__impl__c78o9k(new Long(0, -1094967296)), _ULong___init__impl__c78o9k(new Long(0, -294967296)), _ULong___init__impl__c78o9k(new Long(0, -1794967296)), _ULong___init__impl__c78o9k(new Long(0, -1169967296)), _ULong___init__impl__c78o9k(new Long(0, -388717296)), _ULong___init__impl__c78o9k(new Long(0, -1853561046)), _ULong___init__impl__c78o9k(new Long(-2147483648, -1243209484)), _ULong___init__impl__c78o9k(new Long(-1610612736, -480270031)), _ULong___init__impl__c78o9k(new Long(67108864, -1910781505)), _ULong___init__impl__c78o9k(new Long(-989855744, -1314735058)), _ULong___init__impl__c78o9k(new Long(1983905792, -569676998)), _ULong___init__impl__c78o9k(new Long(-1981284352, -1966660860)), _ULong___init__impl__c78o9k(new Long(-1402863616, -1384584251)), _ULong___init__impl__c78o9k(new Long(393904128, -656988489)), _ULong___init__impl__c78o9k(new Long(1856802816, -2021230542)), _ULong___init__impl__c78o9k(new Long(173519872, -1452796353)), _ULong___init__impl__c78o9k(new Long(-856841984, -742253618)), _ULong___init__impl__c78o9k(new Long(1075086496, -2074521247)), _ULong___init__impl__c78o9k(new Long(-1877367352, -1519409735)), _ULong___init__impl__c78o9k(new Long(-199225542, -825520345)), _ULong___init__impl__c78o9k(new Long(-124515964, -2126562952)), _ULong___init__impl__c78o9k(new Long(918096869, -1584461865)), _ULong___init__impl__c78o9k(new Long(73879262, -906835507)), _ULong___init__impl__c78o9k(new Long(1166090902, -59802560)), _ULong___init__impl__c78o9k(new Long(728806813, -1647989336)), _ULong___init__impl__c78o9k(new Long(911008517, -986244846)), _ULong___init__impl__c78o9k(new Long(-1008723002, -159064234)), _ULong___init__impl__c78o9k(new Long(980160860, -1710027882)), _ULong___init__impl__c78o9k(new Long(-922282573, -1063793029)), _ULong___init__impl__c78o9k(new Long(-1152853216, -255999462)), _ULong___init__impl__c78o9k(new Long(-1257404172, -1770612400)), _ULong___init__impl__c78o9k(new Long(-498013391, -1139523676)), _ULong___init__impl__c78o9k(new Long(451225085, -350662770)), _ULong___init__impl__c78o9k(new Long(-791726146, -1829776968)), _ULong___init__impl__c78o9k(new Long(84084141, -1213479385)), _ULong___init__impl__c78o9k(new Long(-968636647, -443107408)), _ULong___init__impl__c78o9k(new Long(2078956655, -1887554866)), _ULong___init__impl__c78o9k(new Long(451212171, -1285701758)), _ULong___init__impl__c78o9k(new Long(-1583468434, -533385374)), _ULong___init__impl__c78o9k(new Long(-1526538683, -1943978595)), _ULong___init__impl__c78o9k(new Long(239310294, -1356231419)), _ULong___init__impl__c78o9k(new Long(1372879692, -621547450)), _ULong___init__impl__c78o9k(new Long(-215692017, -1999079893)), _ULong___init__impl__c78o9k(new Long(-269615021, -1425108042)), _ULong___init__impl__c78o9k(new Long(-1410760600, -707643228)), _ULong___init__impl__c78o9k(new Long(-344854463, -2052889754)), _ULong___init__impl__c78o9k(new Long(-1504809903, -1492370368)), _ULong___init__impl__c78o9k(new Long(-807270555, -791721136)), _ULong___init__impl__c78o9k(new Long(-2115156833, -2105438446)), _ULong___init__impl__c78o9k(new Long(577279431, -1558056233)), _ULong___init__impl__c78o9k(new Long(-352142535, -873828468)), _ULong___init__impl__c78o9k(new Long(633563656, -18543760)), _ULong___init__impl__c78o9k(new Long(395977285, -1622202586)), _ULong___init__impl__c78o9k(new Long(-1652512042, -954011409)), _ULong___init__impl__c78o9k(new Long(-2065640053, -118772437)), _ULong___init__impl__c78o9k(new Long(856458615, -1684845509)), _ULong___init__impl__c78o9k(new Long(-3168555, -1032315063)), _ULong___init__impl__c78o9k(new Long(2143522954, -216652004)), _ULong___init__impl__c78o9k(new Long(-807781802, -1746020239)), _ULong___init__impl__c78o9k(new Long(1137756396, -1108783474)), _ULong___init__impl__c78o9k(new Long(-725288153, -312237519)), _ULong___init__impl__c78o9k(new Long(620436728, -1805761185)), _ULong___init__impl__c78o9k(new Long(-298195914, -1183459658)), _ULong___init__impl__c78o9k(new Long(-1446486716, -405582748)), _ULong___init__impl__c78o9k(new Long(-367183286, -1864101954)), _ULong___init__impl__c78o9k(new Long(-1532720931, -1256385618)), _ULong___init__impl__c78o9k(new Long(1305324308, -496740198)), _ULong___init__impl__c78o9k(new Long(1889569516, -1921075360)), _ULong___init__impl__c78o9k(new Long(-1933005400, -1327602376)), _ULong___init__impl__c78o9k(new Long(-1342514926, -585761146)), _ULong___init__impl__c78o9k(new Long(771540907, -1976713452)), _ULong___init__impl__c78o9k(new Long(964426134, -1397149991)), _ULong___init__impl__c78o9k(new Long(-2015692805, -672695665)), _ULong___init__impl__c78o9k(new Long(-1259808003, -2031047527)), _ULong___init__impl__c78o9k(new Long(572723644, -1465067584)), _ULong___init__impl__c78o9k(new Long(715904555, -757592656)), _ULong___init__impl__c78o9k(new Long(447440347, -2084108146)), _ULong___init__impl__c78o9k(new Long(-1588183214, -1531393359)), _ULong___init__impl__c78o9k(new Long(162254630, -840499874)), _ULong___init__impl__c78o9k(new Long(-972332680, -2135925158)), _ULong___init__impl__c78o9k(new Long(2005809622, -1596164623)), _ULong___init__impl__c78o9k(new Long(-713963444, -921463955)), _ULong___init__impl__c78o9k(new Long(1255029343, -78088119)), _ULong___init__impl__c78o9k(new Long(-826219397, -1659417811)), _ULong___init__impl__c78o9k(new Long(1114709402, -1000530439)), _ULong___init__impl__c78o9k(new Long(-1827838720, -176921225)), _ULong___init__impl__c78o9k(new Long(-1142399200, -1721188502)), _ULong___init__impl__c78o9k(new Long(1793226472, -1077743803)), _ULong___init__impl__c78o9k(new Long(-979692382, -273437930)), _ULong___init__impl__c78o9k(new Long(998304997, -1781511442)), _ULong___init__impl__c78o9k(new Long(-899602401, -1153147479)), _ULong___init__impl__c78o9k(new Long(1022980646, -367692524)), _ULong___init__impl__c78o9k(new Long(-1508120744, -1840420564)), _ULong___init__impl__c78o9k(new Long(-811409106, -1226783881)), _ULong___init__impl__c78o9k(new Long(-1014261382, -459738027)), _ULong___init__impl__c78o9k(new Long(-1707655188, -1897949003)), _ULong___init__impl__c78o9k(new Long(12914663, -1298694429)), _ULong___init__impl__c78o9k(new Long(-1057598495, -549626213)), _ULong___init__impl__c78o9k(new Long(1486484588, -1954129119)), _ULong___init__impl__c78o9k(new Long(-1363119737, -1368919575)), _ULong___init__impl__c78o9k(new Long(443583977, -637407644)), _ULong___init__impl__c78o9k(new Long(-1870243662, -2008992514)), _ULong___init__impl__c78o9k(new Long(883420894, -1437498818)), _ULong___init__impl__c78o9k(new Long(-1043207530, -723131699)), _ULong___init__impl__c78o9k(new Long(-1725746530, -2062570048)), _ULong___init__impl__c78o9k(new Long(-1083441339, -1504470736)), _ULong___init__impl__c78o9k(new Long(-280559850, -806846596)), _ULong___init__impl__c78o9k(new Long(361521006, -2114891858)), _ULong___init__impl__c78o9k(new Long(-1695582391, -1569872999)), _ULong___init__impl__c78o9k(new Long(28005660, -888599424)), _ULong___init__impl__c78o9k(new Long(35007075, -37007456)), _ULong___init__impl__c78o9k(new Long(21879422, -1633742396)), _ULong___init__impl__c78o9k(new Long(27349277, -968436171)), _ULong___init__impl__c78o9k(new Long(1107928421, -136803390)), _ULong___init__impl__c78o9k(new Long(1766197087, -1696114855)), _ULong___init__impl__c78o9k(new Long(-1013479113, -1046401745)), _ULong___init__impl__c78o9k(new Long(-1266848892, -234260357)), _ULong___init__impl__c78o9k(new Long(1355703090, -1757025459)), _ULong___init__impl__c78o9k(new Long(-1526596609, -1122540000)), _ULong___init__impl__c78o9k(new Long(-834503937, -329433176)), _ULong___init__impl__c78o9k(new Long(-2132177697, -1816508471)), _ULong___init__impl__c78o9k(new Long(-517738473, -1196893765)), _ULong___init__impl__c78o9k(new Long(-647173091, -422375382)), _ULong___init__impl__c78o9k(new Long(-941354094, -1874597350)), _ULong___init__impl__c78o9k(new Long(2044532855, -1269504863)), _ULong___init__impl__c78o9k(new Long(-665559404, -513139255)), _ULong___init__impl__c78o9k(new Long(657767197, -1931324770)), _ULong___init__impl__c78o9k(new Long(-1325274652, -1340414139)), _ULong___init__impl__c78o9k(new Long(490890333, -601775849)), _ULong___init__impl__c78o9k(new Long(1917419194, -1986722642)), _ULong___init__impl__c78o9k(new Long(249290345, -1409661478)), _ULong___init__impl__c78o9k(new Long(-1835870717, -688335024)), _ULong___init__impl__c78o9k(new Long(1536935362, -2040822126)), _ULong___init__impl__c78o9k(new Long(-226314446, -1477285834)), _ULong___init__impl__c78o9k(new Long(-1356634881, -772865468)), _ULong___init__impl__c78o9k(new Long(-311025889, -2093653654)), _ULong___init__impl__c78o9k(new Long(-1462524185, -1543325243)), _ULong___init__impl__c78o9k(new Long(319328417, -855414729)), _ULong___init__impl__c78o9k(new Long(1810192996, -2145246942)), _ULong___init__impl__c78o9k(new Long(115257597, -1607816853)), _ULong___init__impl__c78o9k(new Long(-929669827, -936029243)), _ULong___init__impl__c78o9k(new Long(985396364, -96294729)), _ULong___init__impl__c78o9k(new Long(-2068481833, -1670796942)), _ULong___init__impl__c78o9k(new Long(635623181, -1014754353)), _ULong___init__impl__c78o9k(new Long(-279212847, -194701118)), _ULong___init__impl__c78o9k(new Long(-711378942, -1732300935)), _ULong___init__impl__c78o9k(new Long(1258259971, -1091634344)), _ULong___init__impl__c78o9k(new Long(1572824964, -290801106)), _ULong___init__impl__c78o9k(new Long(-90726222, -1792363428)), _ULong___init__impl__c78o9k(new Long(960334047, -1166712460)), _ULong___init__impl__c78o9k(new Long(1200417559, -384648751)), _ULong___init__impl__c78o9k(new Long(-860351762, -1851018206)), _ULong___init__impl__c78o9k(new Long(2145785770, -1240030933)), _ULong___init__impl__c78o9k(new Long(1608490388, -476296842)), _ULong___init__impl__c78o9k(new Long(-68435331, -1908298263)), _ULong___init__impl__c78o9k(new Long(2061939484, -1311631004)), _ULong___init__impl__c78o9k(new Long(-1717542941, -565796931)), _ULong___init__impl__c78o9k(new Long(-2147206162, -1964235818)), _ULong___init__impl__c78o9k(new Long(537217769, -1381552948)), _ULong___init__impl__c78o9k(new Long(671522212, -653199361)), _ULong___init__impl__c78o9k(new Long(2030314118, -2018862337)), _ULong___init__impl__c78o9k(new Long(1464150824, -1449836097)), _ULong___init__impl__c78o9k(new Long(756446706, -738553297)), _ULong___init__impl__c78o9k(new Long(2083391927, -2072208547)), _ULong___init__impl__c78o9k(new Long(-616985563, -1516518860)), _ULong___init__impl__c78o9k(new Long(302509870, -821906750)), _ULong___init__impl__c78o9k(new Long(1262810493, -2124304455)), _ULong___init__impl__c78o9k(new Long(-1642712356, -1581638745)), _ULong___init__impl__c78o9k(new Long(-2053390445, -903306607)), _ULong___init__impl__c78o9k(new Long(-419254408, -55391435)), _ULong___init__impl__c78o9k(new Long(-1335775829, -1645232383)), _ULong___init__impl__c78o9k(new Long(477763862, -982798654)), _ULong___init__impl__c78o9k(new Long(-1550278821, -154756494)), _ULong___init__impl__c78o9k(new Long(-1505795175, -1707335545)), _ULong___init__impl__c78o9k(new Long(-1882243969, -1060427607)), _ULong___init__impl__c78o9k(new Long(-205321313, -251792685)), _ULong___init__impl__c78o9k(new Long(2019157827, -1767983164)), _ULong___init__impl__c78o9k(new Long(-1771020012, -1136237131)), _ULong___init__impl__c78o9k(new Long(-66291367, -346554590)), _ULong___init__impl__c78o9k(new Long(-578303016, -1827209355)), _ULong___init__impl__c78o9k(new Long(1424604878, -1210269869)), _ULong___init__impl__c78o9k(new Long(707014273, -439095512)), _ULong___init__impl__c78o9k(new Long(441883920, -1885047431)), _ULong___init__impl__c78o9k(new Long(1626096725, -1282567465)), _ULong___init__impl__c78o9k(new Long(958879082, -529467507)), _ULong___init__impl__c78o9k(new Long(1136170338, -1941529928)), _ULong___init__impl__c78o9k(new Long(1420212923, -1353170586)), _ULong___init__impl__c78o9k(new Long(-372217494, -617721409)), _ULong___init__impl__c78o9k(new Long(-232635934, -1996688617)), _ULong___init__impl__c78o9k(new Long(-290794918, -1422118947)), _ULong___init__impl__c78o9k(new Long(1783990001, -703906859)), _ULong___init__impl__c78o9k(new Long(1651864662, -2050554523)), _ULong___init__impl__c78o9k(new Long(-1156394644, -1489451330)), _ULong___init__impl__c78o9k(new Long(1775732167, -788072338)), _ULong___init__impl__c78o9k(new Long(36090780, -2103157947)), _ULong___init__impl__c78o9k(new Long(1118855300, -1555205610)), _ULong___init__impl__c78o9k(new Long(-748914523, -870265189)), _ULong___init__impl__c78o9k(new Long(-936143154, -14089662)), _ULong___init__impl__c78o9k(new Long(-1121960383, -1619418775)), _ULong___init__impl__c78o9k(new Long(745033169, -950531644)), _ULong___init__impl__c78o9k(new Long(931291461, -114422731)), _ULong___init__impl__c78o9k(new Long(1118928075, -1682126943)), _ULong___init__impl__c78o9k(new Long(-1822565378, -1028916855)), _ULong___init__impl__c78o9k(new Long(-130723074, -212404245)), _ULong___init__impl__c78o9k(new Long(2065781726, -1743365389)), _ULong___init__impl__c78o9k(new Long(1508485334, -1105464912)), _ULong___init__impl__c78o9k(new Long(1885606668, -308089316)), _ULong___init__impl__c78o9k(new Long(-968979481, -1803168559)), _ULong___init__impl__c78o9k(new Long(936259297, -1180218874)), _ULong___init__impl__c78o9k(new Long(-977159527, -401531769)), _ULong___init__impl__c78o9k(new Long(-610724704, -1861570092)), _ULong___init__impl__c78o9k(new Long(310335944, -1253220790)), _ULong___init__impl__c78o9k(new Long(-1759563718, -492784164)), _ULong___init__impl__c78o9k(new Long(-562856412, -1918602839)), _ULong___init__impl__c78o9k(new Long(1443913133, -1324511724)), _ULong___init__impl__c78o9k(new Long(1804891416, -581897831)), _ULong___init__impl__c78o9k(new Long(-482555601, -1974298881)), _ULong___init__impl__c78o9k(new Long(-603194501, -1394131777)), _ULong___init__impl__c78o9k(new Long(-753993126, -668922897)), _ULong___init__impl__c78o9k(new Long(-471245704, -2028689547)), _ULong___init__impl__c78o9k(new Long(1558426518, -1462120109)), _ULong___init__impl__c78o9k(new Long(874291324, -753908312)), _ULong___init__impl__c78o9k(new Long(546432077, -2081805431)), _ULong___init__impl__c78o9k(new Long(1756781920, -1528514965)), _ULong___init__impl__c78o9k(new Long(1122235577, -836901882)), _ULong___init__impl__c78o9k(new Long(-372344589, -2133676413)), _ULong___init__impl__c78o9k(new Long(-465430736, -1593353692)), _ULong___init__impl__c78o9k(new Long(491953404, -917950290)), _ULong___init__impl__c78o9k(new Long(-1532541892, -73696039)), _ULong___init__impl__c78o9k(new Long(115903141, -1656672760)), _ULong___init__impl__c78o9k(new Long(144878926, -997099126)), _ULong___init__impl__c78o9k(new Long(-1966384990, -172632084)), _ULong___init__impl__c78o9k(new Long(-692119707, -1718507789)), _ULong___init__impl__c78o9k(new Long(-865149633, -1074392912)), _ULong___init__impl__c78o9k(new Long(-7695218, -269249316)), _ULong___init__impl__c78o9k(new Long(532061401, -1778893558)), _ULong___init__impl__c78o9k(new Long(-1482406897, -1149875124)), _ULong___init__impl__c78o9k(new Long(-779266797, -363602081)), _ULong___init__impl__c78o9k(new Long(-487041748, -1837864037)), _ULong___init__impl__c78o9k(new Long(-608802185, -1223588222)), _ULong___init__impl__c78o9k(new Long(-1834744555, -455743453)), _ULong___init__impl__c78o9k(new Long(1000768301, -1895452394)), _ULong___init__impl__c78o9k(new Long(-896523272, -1295573669)), _ULong___init__impl__c78o9k(new Long(-1120654090, -545725262)), _ULong___init__impl__c78o9k(new Long(-1237279718, -1951691025)), _ULong___init__impl__c78o9k(new Long(-1546599648, -1365871957)), _ULong___init__impl__c78o9k(new Long(-1933249560, -633598122)), _ULong___init__impl__c78o9k(new Long(402331761, -2006611562)), _ULong___init__impl__c78o9k(new Long(-1644568947, -1434522629)), _ULong___init__impl__c78o9k(new Long(-2055711183, -719411462)), _ULong___init__impl__c78o9k(new Long(-1821690402, -2060244900)), _ULong___init__impl__c78o9k(new Long(-1203371178, -1501564301)), _ULong___init__impl__c78o9k(new Long(-1504213972, -803213552)), _ULong___init__impl__c78o9k(new Long(1744220827, -2112621206)), _ULong___init__impl__c78o9k(new Long(32792386, -1567034683)), _ULong___init__impl__c78o9k(new Long(1114732307, -885051530)), _ULong___init__impl__c78o9k(new Long(-754068265, -32572589)), _ULong___init__impl__c78o9k(new Long(1676190982, -1630970604)), _ULong___init__impl__c78o9k(new Long(2095238728, -964971431)), _ULong___init__impl__c78o9k(new Long(-602177062, -132472465)), _ULong___init__impl__c78o9k(new Long(-376360664, -1693408027)), _ULong___init__impl__c78o9k(new Long(1677032818, -1043018209)), _ULong___init__impl__c78o9k(new Long(1022549199, -230030937)), _ULong___init__impl__c78o9k(new Long(-2045261311, -1754382072)), _ULong___init__impl__c78o9k(new Long(-1482834814, -1119235766)), _ULong___init__impl__c78o9k(new Long(1367681954, -325302883)), _ULong___init__impl__c78o9k(new Long(1391672133, -1813927038)), _ULong___init__impl__c78o9k(new Long(-407893481, -1193666974)), _ULong___init__impl__c78o9k(new Long(-1583608675, -418341893)), _ULong___init__impl__c78o9k(new Long(1157728226, -1872076419)), _ULong___init__impl__c78o9k(new Long(-1774065190, -1266353700)), _ULong___init__impl__c78o9k(new Long(-1143839663, -509200301)), _ULong___init__impl__c78o9k(new Long(1432583858, -1928862924)), _ULong___init__impl__c78o9k(new Long(1790729823, -1337336831)), _ULong___init__impl__c78o9k(new Long(-982813193, -597929215)), _ULong___init__impl__c78o9k(new Long(459483578, -1984318495)), _ULong___init__impl__c78o9k(new Long(1648096297, -1406656295)), _ULong___init__impl__c78o9k(new Long(-1161105101, -684578545)), _ULong___init__impl__c78o9k(new Long(-725690688, -2038474327)), _ULong___init__impl__c78o9k(new Long(1240370288, -1474351084)), _ULong___init__impl__c78o9k(new Long(1550462860, -769197031)), _ULong___init__impl__c78o9k(new Long(-641573449, -2091360881)), _ULong___init__impl__c78o9k(new Long(-801966811, -1540459277)), _ULong___init__impl__c78o9k(new Long(-1002458513, -851832272)), _ULong___init__impl__c78o9k(new Long(2057817989, -2143007906)), _ULong___init__impl__c78o9k(new Long(424788838, -1605018058)), _ULong___init__impl__c78o9k(new Long(-1616497600, -932530749)), _ULong___init__impl__c78o9k(new Long(-2020622000, -91921612)), _ULong___init__impl__c78o9k(new Long(-726017838, -1668063744)), _ULong___init__impl__c78o9k(new Long(166219527, -1011337855)), _ULong___init__impl__c78o9k(new Long(1281516232, -190430495)), _ULong___init__impl__c78o9k(new Long(-809665091, -1729631796)), _ULong___init__impl__c78o9k(new Long(61660460, -1088297920)), _ULong___init__impl__c78o9k(new Long(77075576, -286630576)), _ULong___init__impl__c78o9k(new Long(48172235, -1789756846)), _ULong___init__impl__c78o9k(new Long(-2087268355, -1163454234)), _ULong___init__impl__c78o9k(new Long(612140029, -380575968)), _ULong___init__impl__c78o9k(new Long(382587518, -1848472716)), _ULong___init__impl__c78o9k(new Long(478234397, -1236849071)), _ULong___init__impl__c78o9k(new Long(1671534821, -472319515)), _ULong___init__impl__c78o9k(new Long(1581580175, -1905812433))]));
   }
-  protoOf(Companion_31).nextFloat_vwre9r_k$ = function (s, start, end, result) {
+  protoOf(Companion_31).nextFloat_rgb4co_k$ = function (s, start, end, result) {
     result.value_1 = FloatCompanionObject_getInstance().get_NaN_18jnv2_k$();
     result.isValid_1 = false;
     if (start === end)
@@ -8186,10 +7966,10 @@
       c = charSequenceGet(s, index);
       var tmp;
       // Inline function 'androidx.compose.ui.graphics.vector.isDigit' call
-      var tmp0_get_isDigit_522t0m = c;
+      var this_0 = c;
       // Inline function 'kotlin.code' call
-      var tmp0_get_code_gknlva = numberToChar(Char__minus_impl_a2frrh(tmp0_get_isDigit_522t0m, _Char___init__impl__6a9atx(48)));
-      if (!(Char__toInt_impl_vasixd(tmp0_get_code_gknlva) < 10)) {
+      var this_1 = numberToChar(Char__minus_impl_a2frrh(this_0, _Char___init__impl__6a9atx(48)));
+      if (!(Char__toInt_impl_vasixd(this_1) < 10)) {
         tmp = !(c === _Char___init__impl__6a9atx(46));
       } else {
         tmp = false;
@@ -8203,28 +7983,30 @@
       var tmp_0;
       if (!(index === end)) {
         // Inline function 'androidx.compose.ui.graphics.vector.isDigit' call
-        var tmp1_get_isDigit_7e5t3 = c;
+        var this_2 = c;
         // Inline function 'kotlin.code' call
-        var tmp0_get_code_gknlva_0 = numberToChar(Char__minus_impl_a2frrh(tmp1_get_isDigit_7e5t3, _Char___init__impl__6a9atx(48)));
-        tmp_0 = Char__toInt_impl_vasixd(tmp0_get_code_gknlva_0) < 10;
+        var this_3 = numberToChar(Char__minus_impl_a2frrh(this_2, _Char___init__impl__6a9atx(48)));
+        tmp_0 = Char__toInt_impl_vasixd(this_3) < 10;
       } else {
         tmp_0 = false;
       }
       if (!tmp_0) {
         break $l$loop;
       }
-      var tmp_1 = (new Long(10, 0)).times_2zfqpc_k$(significand);
+      var tmp_1 = (new Long(10, 0)).times_nfzjiw_k$(significand);
       // Inline function 'kotlin.code' call
-      var tmp2_get_code_n2njg8 = c;
-      var tmp_2 = Char__toInt_impl_vasixd(tmp2_get_code_n2njg8);
+      var this_4 = c;
+      var tmp_2 = Char__toInt_impl_vasixd(this_4);
       // Inline function 'kotlin.code' call
-      significand = tmp_1.plus_u6jwas_k$(toLong(tmp_2 - 48 | 0));
+      var this_5 = _Char___init__impl__6a9atx(48);
+      var tmp$ret$5 = Char__toInt_impl_vasixd(this_5);
+      significand = tmp_1.plus_r93sks_k$(toLong(tmp_2 - tmp$ret$5 | 0));
       // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
       index = index + 1 | 0;
-      var tmp3_charAt = index;
+      var index_0 = index;
       var tmp_3;
-      if (tmp3_charAt < charSequenceLength(s)) {
-        tmp_3 = charSequenceGet(s, tmp3_charAt);
+      if (index_0 < charSequenceLength(s)) {
+        tmp_3 = charSequenceGet(s, index_0);
       } else {
         tmp_3 = _Char___init__impl__6a9atx(0);
       }
@@ -8240,49 +8022,45 @@
       exponentStartIndex = index;
       $l$loop_0: while ((end - index | 0) >= 4) {
         // Inline function 'androidx.compose.ui.graphics.vector.parseFourDigits' call
-        var tmp4_parseFourDigits = index;
-        var tmp$ret$7;
+        var offset = index;
         // Inline function 'kotlin.code' call
-        var tmp0_get_code_gknlva_1 = charSequenceGet(s, tmp4_parseFourDigits);
-        tmp$ret$7 = Char__toInt_impl_vasixd(tmp0_get_code_gknlva_1);
+        var this_6 = charSequenceGet(s, offset);
+        var tmp$ret$7 = Char__toInt_impl_vasixd(this_6);
         var tmp_4 = toLong(tmp$ret$7);
-        var tmp$ret$8;
         // Inline function 'kotlin.code' call
-        var tmp1_get_code_jtnknr = charSequenceGet(s, tmp4_parseFourDigits + 1 | 0);
-        tmp$ret$8 = Char__toInt_impl_vasixd(tmp1_get_code_jtnknr);
-        var tmp_5 = tmp_4.or_s401rn_k$(toLong(tmp$ret$8).shl_po5ip6_k$(16));
-        var tmp$ret$9;
+        var this_7 = charSequenceGet(s, offset + 1 | 0);
+        var tmp$ret$8 = Char__toInt_impl_vasixd(this_7);
+        var tmp_5 = tmp_4.or_v7fvkl_k$(toLong(tmp$ret$8).shl_bg8if3_k$(16));
         // Inline function 'kotlin.code' call
-        var tmp2_get_code_n2njg8_0 = charSequenceGet(s, tmp4_parseFourDigits + 2 | 0);
-        tmp$ret$9 = Char__toInt_impl_vasixd(tmp2_get_code_n2njg8_0);
-        var tmp_6 = tmp_5.or_s401rn_k$(toLong(tmp$ret$9).shl_po5ip6_k$(32));
-        var tmp$ret$10;
+        var this_8 = charSequenceGet(s, offset + 2 | 0);
+        var tmp$ret$9 = Char__toInt_impl_vasixd(this_8);
+        var tmp_6 = tmp_5.or_v7fvkl_k$(toLong(tmp$ret$9).shl_bg8if3_k$(32));
         // Inline function 'kotlin.code' call
-        var tmp3_get_code_qbni8p = charSequenceGet(s, tmp4_parseFourDigits + 3 | 0);
-        tmp$ret$10 = Char__toInt_impl_vasixd(tmp3_get_code_qbni8p);
-        var v = tmp_6.or_s401rn_k$(toLong(tmp$ret$10).shl_po5ip6_k$(48));
-        var base = v.minus_llf5ei_k$(new Long(3145776, 3145776));
-        var predicate = v.plus_u6jwas_k$(new Long(4587590, 4587590)).or_s401rn_k$(base);
+        var this_9 = charSequenceGet(s, offset + 3 | 0);
+        var tmp$ret$10 = Char__toInt_impl_vasixd(this_9);
+        var v = tmp_6.or_v7fvkl_k$(toLong(tmp$ret$10).shl_bg8if3_k$(48));
+        var base = v.minus_mfbszm_k$(new Long(3145776, 3145776));
+        var predicate = v.plus_r93sks_k$(new Long(4587590, 4587590)).or_v7fvkl_k$(base);
         var tmp_7;
-        var tmp$ret$11;
         // Inline function 'kotlin.ULong.toLong' call
-        tmp$ret$11 = _ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(-8323200, -8323200)));
-        if (!predicate.and_jhajnj_k$(tmp$ret$11).equals(new Long(0, 0))) {
+        var this_10 = _ULong___init__impl__c78o9k(new Long(-8323200, -8323200));
+        var tmp$ret$11 = _ULong___get_data__impl__fggpzb(this_10);
+        if (!predicate.and_4spn93_k$(tmp$ret$11).equals(new Long(0, 0))) {
           tmp_7 = -1;
         } else {
-          tmp_7 = base.times_2zfqpc_k$(new Long(655361, 65536100)).ushr_rr8rvr_k$(48).toInt_1tsl84_k$();
+          tmp_7 = base.times_nfzjiw_k$(new Long(655361, 65536100)).ushr_z7nmq8_k$(48).toInt_1tsl84_k$();
         }
         var digits = tmp_7;
         if (digits < 0)
           break $l$loop_0;
-        significand = (new Long(10000, 0)).times_2zfqpc_k$(significand).plus_u6jwas_k$(toLong(digits));
+        significand = (new Long(10000, 0)).times_nfzjiw_k$(significand).plus_r93sks_k$(toLong(digits));
         index = index + 4 | 0;
       }
       // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
-      var tmp5_charAt = index;
+      var index_1 = index;
       var tmp_8;
-      if (tmp5_charAt < charSequenceLength(s)) {
-        tmp_8 = charSequenceGet(s, tmp5_charAt);
+      if (index_1 < charSequenceLength(s)) {
+        tmp_8 = charSequenceGet(s, index_1);
       } else {
         tmp_8 = _Char___init__impl__6a9atx(0);
       }
@@ -8291,28 +8069,30 @@
         var tmp_9;
         if (!(index === end)) {
           // Inline function 'androidx.compose.ui.graphics.vector.isDigit' call
-          var tmp6_get_isDigit_o2128k = c;
+          var this_11 = c;
           // Inline function 'kotlin.code' call
-          var tmp0_get_code_gknlva_2 = numberToChar(Char__minus_impl_a2frrh(tmp6_get_isDigit_o2128k, _Char___init__impl__6a9atx(48)));
-          tmp_9 = Char__toInt_impl_vasixd(tmp0_get_code_gknlva_2) < 10;
+          var this_12 = numberToChar(Char__minus_impl_a2frrh(this_11, _Char___init__impl__6a9atx(48)));
+          tmp_9 = Char__toInt_impl_vasixd(this_12) < 10;
         } else {
           tmp_9 = false;
         }
         if (!tmp_9) {
           break $l$loop_1;
         }
-        var tmp_10 = (new Long(10, 0)).times_2zfqpc_k$(significand);
+        var tmp_10 = (new Long(10, 0)).times_nfzjiw_k$(significand);
         // Inline function 'kotlin.code' call
-        var tmp7_get_code_vpgokj = c;
-        var tmp_11 = Char__toInt_impl_vasixd(tmp7_get_code_vpgokj);
+        var this_13 = c;
+        var tmp_11 = Char__toInt_impl_vasixd(this_13);
         // Inline function 'kotlin.code' call
-        significand = tmp_10.plus_u6jwas_k$(toLong(tmp_11 - 48 | 0));
+        var this_14 = _Char___init__impl__6a9atx(48);
+        var tmp$ret$17 = Char__toInt_impl_vasixd(this_14);
+        significand = tmp_10.plus_r93sks_k$(toLong(tmp_11 - tmp$ret$17 | 0));
         // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
         index = index + 1 | 0;
-        var tmp8_charAt = index;
+        var index_2 = index;
         var tmp_12;
-        if (tmp8_charAt < charSequenceLength(s)) {
-          tmp_12 = charSequenceGet(s, tmp8_charAt);
+        if (index_2 < charSequenceLength(s)) {
+          tmp_12 = charSequenceGet(s, index_2);
         } else {
           tmp_12 = _Char___init__impl__6a9atx(0);
         }
@@ -8326,16 +8106,17 @@
       return index;
     var exponentNumber = 0;
     // Inline function 'kotlin.code' call
-    var tmp9_get_code_p7gqzl = c;
-    var tmp_13 = Char__toInt_impl_vasixd(tmp9_get_code_p7gqzl) | 32;
+    var this_15 = c;
+    var tmp_13 = Char__toInt_impl_vasixd(this_15) | 32;
     // Inline function 'kotlin.code' call
-    if (tmp_13 === 101) {
+    var this_16 = _Char___init__impl__6a9atx(101);
+    if (tmp_13 === Char__toInt_impl_vasixd(this_16)) {
       // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
       index = index + 1 | 0;
-      var tmp10_charAt = index;
+      var index_3 = index;
       var tmp_14;
-      if (tmp10_charAt < charSequenceLength(s)) {
-        tmp_14 = charSequenceGet(s, tmp10_charAt);
+      if (index_3 < charSequenceLength(s)) {
+        tmp_14 = charSequenceGet(s, index_3);
       } else {
         tmp_14 = _Char___init__impl__6a9atx(0);
       }
@@ -8349,10 +8130,10 @@
         var tmp_15;
         if (!(index === end)) {
           // Inline function 'androidx.compose.ui.graphics.vector.isDigit' call
-          var tmp11_get_isDigit_acg0t8 = c;
+          var this_17 = c;
           // Inline function 'kotlin.code' call
-          var tmp0_get_code_gknlva_3 = numberToChar(Char__minus_impl_a2frrh(tmp11_get_isDigit_acg0t8, _Char___init__impl__6a9atx(48)));
-          tmp_15 = Char__toInt_impl_vasixd(tmp0_get_code_gknlva_3) < 10;
+          var this_18 = numberToChar(Char__minus_impl_a2frrh(this_17, _Char___init__impl__6a9atx(48)));
+          tmp_15 = Char__toInt_impl_vasixd(this_18) < 10;
         } else {
           tmp_15 = false;
         }
@@ -8362,17 +8143,18 @@
         if (exponentNumber < 1024) {
           var tmp_16 = imul(10, exponentNumber);
           // Inline function 'kotlin.code' call
-          var tmp12_get_code_3qabkl = c;
-          var tmp_17 = Char__toInt_impl_vasixd(tmp12_get_code_3qabkl);
+          var this_19 = c;
+          var tmp_17 = Char__toInt_impl_vasixd(this_19);
           // Inline function 'kotlin.code' call
-          exponentNumber = tmp_16 + (tmp_17 - 48 | 0) | 0;
+          var this_20 = _Char___init__impl__6a9atx(48);
+          exponentNumber = tmp_16 + (tmp_17 - Char__toInt_impl_vasixd(this_20) | 0) | 0;
         }
         // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
         index = index + 1 | 0;
-        var tmp13_charAt = index;
+        var index_4 = index;
         var tmp_18;
-        if (tmp13_charAt < charSequenceLength(s)) {
-          tmp_18 = charSequenceGet(s, tmp13_charAt);
+        if (index_4 < charSequenceLength(s)) {
+          tmp_18 = charSequenceGet(s, index_4);
         } else {
           tmp_18 = _Char___init__impl__6a9atx(0);
         }
@@ -8392,10 +8174,10 @@
         }
         // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
         retryIndex = retryIndex + 1 | 0;
-        var tmp14_charAt = retryIndex;
+        var index_5 = retryIndex;
         var tmp_19;
-        if (tmp14_charAt < charSequenceLength(s)) {
-          tmp_19 = charSequenceGet(s, tmp14_charAt);
+        if (index_5 < charSequenceLength(s)) {
+          tmp_19 = charSequenceGet(s, index_5);
         } else {
           tmp_19 = _Char___init__impl__6a9atx(0);
         }
@@ -8411,27 +8193,30 @@
           if (!(retryIndex === significandEndIndex)) {
             // Inline function 'kotlin.ULong.compareTo' call
             // Inline function 'kotlin.toULong' call
-            var tmp15_toULong = significand;
-            var tmp16_compareTo = _ULong___init__impl__c78o9k(tmp15_toULong);
-            tmp_20 = ulongCompare(_ULong___get_data__impl__fggpzb(tmp16_compareTo), _ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(-1486618624, 232830643)))) < 0;
+            var this_21 = significand;
+            var this_22 = _ULong___init__impl__c78o9k(this_21);
+            var other = _ULong___init__impl__c78o9k(new Long(-1486618624, 232830643));
+            tmp_20 = ulongCompare(_ULong___get_data__impl__fggpzb(this_22), _ULong___get_data__impl__fggpzb(other)) < 0;
           } else {
             tmp_20 = false;
           }
           if (!tmp_20) {
             break $l$loop_3;
           }
-          var tmp_21 = (new Long(10, 0)).times_2zfqpc_k$(significand);
+          var tmp_21 = (new Long(10, 0)).times_nfzjiw_k$(significand);
           // Inline function 'kotlin.code' call
-          var tmp17_get_code_jza5iy = c;
-          var tmp_22 = Char__toInt_impl_vasixd(tmp17_get_code_jza5iy);
+          var this_23 = c;
+          var tmp_22 = Char__toInt_impl_vasixd(this_23);
           // Inline function 'kotlin.code' call
-          significand = tmp_21.plus_u6jwas_k$(toLong(tmp_22 - 48 | 0));
+          var this_24 = _Char___init__impl__6a9atx(48);
+          var tmp$ret$31 = Char__toInt_impl_vasixd(this_24);
+          significand = tmp_21.plus_r93sks_k$(toLong(tmp_22 - tmp$ret$31 | 0));
           // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
           retryIndex = retryIndex + 1 | 0;
-          var tmp18_charAt = retryIndex;
+          var index_6 = retryIndex;
           var tmp_23;
-          if (tmp18_charAt < charSequenceLength(s)) {
-            tmp_23 = charSequenceGet(s, tmp18_charAt);
+          if (index_6 < charSequenceLength(s)) {
+            tmp_23 = charSequenceGet(s, index_6);
           } else {
             tmp_23 = _Char___init__impl__6a9atx(0);
           }
@@ -8439,9 +8224,10 @@
         }
         // Inline function 'kotlin.ULong.compareTo' call
         // Inline function 'kotlin.toULong' call
-        var tmp19_toULong = significand;
-        var tmp20_compareTo = _ULong___init__impl__c78o9k(tmp19_toULong);
-        if (ulongCompare(_ULong___get_data__impl__fggpzb(tmp20_compareTo), _ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(-1486618624, 232830643)))) >= 0) {
+        var this_25 = significand;
+        var this_26 = _ULong___init__impl__c78o9k(this_25);
+        var other_0 = _ULong___init__impl__c78o9k(new Long(-1486618624, 232830643));
+        if (ulongCompare(_ULong___get_data__impl__fggpzb(this_26), _ULong___get_data__impl__fggpzb(other_0)) >= 0) {
           exponent = (significandEndIndex - retryIndex | 0) + exponentNumber | 0;
         } else {
           retryIndex = exponentStartIndex;
@@ -8451,27 +8237,30 @@
             if (!(retryIndex === exponentEndIndex)) {
               // Inline function 'kotlin.ULong.compareTo' call
               // Inline function 'kotlin.toULong' call
-              var tmp21_toULong = significand;
-              var tmp22_compareTo = _ULong___init__impl__c78o9k(tmp21_toULong);
-              tmp_24 = ulongCompare(_ULong___get_data__impl__fggpzb(tmp22_compareTo), _ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(-1486618624, 232830643)))) < 0;
+              var this_27 = significand;
+              var this_28 = _ULong___init__impl__c78o9k(this_27);
+              var other_1 = _ULong___init__impl__c78o9k(new Long(-1486618624, 232830643));
+              tmp_24 = ulongCompare(_ULong___get_data__impl__fggpzb(this_28), _ULong___get_data__impl__fggpzb(other_1)) < 0;
             } else {
               tmp_24 = false;
             }
             if (!tmp_24) {
               break $l$loop_4;
             }
-            var tmp_25 = (new Long(10, 0)).times_2zfqpc_k$(significand);
+            var tmp_25 = (new Long(10, 0)).times_nfzjiw_k$(significand);
             // Inline function 'kotlin.code' call
-            var tmp23_get_code_ybyv2j = c;
-            var tmp_26 = Char__toInt_impl_vasixd(tmp23_get_code_ybyv2j);
+            var this_29 = c;
+            var tmp_26 = Char__toInt_impl_vasixd(this_29);
             // Inline function 'kotlin.code' call
-            significand = tmp_25.plus_u6jwas_k$(toLong(tmp_26 - 48 | 0));
+            var this_30 = _Char___init__impl__6a9atx(48);
+            var tmp$ret$38 = Char__toInt_impl_vasixd(this_30);
+            significand = tmp_25.plus_r93sks_k$(toLong(tmp_26 - tmp$ret$38 | 0));
             // Inline function 'androidx.compose.ui.graphics.vector.charAt' call
             retryIndex = retryIndex + 1 | 0;
-            var tmp24_charAt = retryIndex;
+            var index_7 = retryIndex;
             var tmp_27;
-            if (tmp24_charAt < charSequenceLength(s)) {
-              tmp_27 = charSequenceGet(s, tmp24_charAt);
+            if (index_7 < charSequenceLength(s)) {
+              tmp_27 = charSequenceGet(s, index_7);
             } else {
               tmp_27 = _Char___init__impl__6a9atx(0);
             }
@@ -8482,20 +8271,15 @@
       }
     }
     var tmp_28;
-    var tmp_29;
-    if (exponent <= 10 ? -10 <= exponent : false) {
-      tmp_29 = !tooManyDigits;
-    } else {
-      tmp_29 = false;
-    }
-    if (tmp_29) {
+    if ((-10 <= exponent ? exponent <= 10 : false) ? !tooManyDigits : false) {
       // Inline function 'kotlin.ULong.compareTo' call
       // Inline function 'kotlin.toULong' call
-      var tmp25_toULong = significand;
-      var tmp26_compareTo = _ULong___init__impl__c78o9k(tmp25_toULong);
+      var this_31 = significand;
+      var this_32 = _ULong___init__impl__c78o9k(this_31);
       // Inline function 'kotlin.ULong.shl' call
-      var tmp27_compareTo = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(1, 0))).shl_po5ip6_k$(24));
-      tmp_28 = ulongCompare(_ULong___get_data__impl__fggpzb(tmp26_compareTo), _ULong___get_data__impl__fggpzb(tmp27_compareTo)) <= 0;
+      var this_33 = _ULong___init__impl__c78o9k(new Long(1, 0));
+      var other_2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_33).shl_bg8if3_k$(24));
+      tmp_28 = ulongCompare(_ULong___get_data__impl__fggpzb(this_32), _ULong___get_data__impl__fggpzb(other_2)) <= 0;
     } else {
       tmp_28 = false;
     }
@@ -8517,97 +8301,97 @@
     }
     if (!(-126 <= exponent ? exponent <= 127 : false)) {
       try {
-        var tmp_30 = result;
+        var tmp_29 = result;
         // Inline function 'kotlin.text.toFloat' call
         // Inline function 'kotlin.text.substring' call
-        var tmp28_substring = index;
+        var endIndex = index;
         // Inline function 'kotlin.js.asDynamic' call
-        var tmp29_toFloat = s.substring(start, tmp28_substring);
+        var this_34 = s.substring(start, endIndex);
         // Inline function 'kotlin.js.unsafeCast' call
         // Inline function 'kotlin.js.asDynamic' call
-        tmp_30.value_1 = toDouble(tmp29_toFloat);
+        tmp_29.value_1 = toDouble(this_34);
       }finally {
         result.isValid_1 = true;
       }
       return index;
     }
     // Inline function 'kotlin.ULong.toLong' call
-    var tmp30_toLong = ULongArray__get_impl_pr71q9(this.Mantissa64__1, exponent - -325 | 0);
-    var significandFactor = _ULong___get_data__impl__fggpzb(tmp30_toLong);
+    var this_35 = ULongArray__get_impl_pr71q9(this.Mantissa64__1, exponent - -325 | 0);
+    var significandFactor = _ULong___get_data__impl__fggpzb(this_35);
     var lz = countLeadingZeroBits(significand);
-    significand = significand.shl_po5ip6_k$(lz);
+    significand = significand.shl_bg8if3_k$(lz);
     // Inline function 'androidx.compose.ui.graphics.vector.fullMultiplicationHighBits' call
-    var tmp31_fullMultiplicationHighBits = significand;
-    var xLo = tmp31_fullMultiplicationHighBits.and_jhajnj_k$(new Long(-1, 0));
-    var xHi = tmp31_fullMultiplicationHighBits.ushr_rr8rvr_k$(32);
-    var yLo = significandFactor.and_jhajnj_k$(new Long(-1, 0));
-    var yHi = significandFactor.ushr_rr8rvr_k$(32);
-    var xTimesYHi = xHi.times_2zfqpc_k$(yHi);
-    var xTimesYMid = xLo.times_2zfqpc_k$(yHi);
-    var yTimesXMid = xHi.times_2zfqpc_k$(yLo);
-    var xTimesYLo = xLo.times_2zfqpc_k$(yLo);
-    var carry = yTimesXMid.plus_u6jwas_k$(xTimesYLo.ushr_rr8rvr_k$(32)).plus_u6jwas_k$(xTimesYMid.and_jhajnj_k$(new Long(-1, 0)));
-    var upper = xTimesYHi.plus_u6jwas_k$(carry.ushr_rr8rvr_k$(32)).plus_u6jwas_k$(xTimesYMid.ushr_rr8rvr_k$(32));
-    var upperBit = upper.ushr_rr8rvr_k$(63).toInt_1tsl84_k$();
-    var mantissa = upper.ushr_rr8rvr_k$(upperBit + 9 | 0);
+    var x = significand;
+    var xLo = x.and_4spn93_k$(new Long(-1, 0));
+    var xHi = x.ushr_z7nmq8_k$(32);
+    var yLo = significandFactor.and_4spn93_k$(new Long(-1, 0));
+    var yHi = significandFactor.ushr_z7nmq8_k$(32);
+    var xTimesYHi = xHi.times_nfzjiw_k$(yHi);
+    var xTimesYMid = xLo.times_nfzjiw_k$(yHi);
+    var yTimesXMid = xHi.times_nfzjiw_k$(yLo);
+    var xTimesYLo = xLo.times_nfzjiw_k$(yLo);
+    var carry = yTimesXMid.plus_r93sks_k$(xTimesYLo.ushr_z7nmq8_k$(32)).plus_r93sks_k$(xTimesYMid.and_4spn93_k$(new Long(-1, 0)));
+    var upper = xTimesYHi.plus_r93sks_k$(carry.ushr_z7nmq8_k$(32)).plus_r93sks_k$(xTimesYMid.ushr_z7nmq8_k$(32));
+    var upperBit = upper.ushr_z7nmq8_k$(63).toInt_1tsl84_k$();
+    var mantissa = upper.ushr_z7nmq8_k$(upperBit + 9 | 0);
     lz = lz + (1 ^ upperBit) | 0;
-    if (upper.and_jhajnj_k$(new Long(511, 0)).equals(new Long(511, 0)) ? true : upper.and_jhajnj_k$(new Long(511, 0)).equals(new Long(0, 0)) ? mantissa.and_jhajnj_k$(new Long(3, 0)).equals(new Long(1, 0)) : false) {
+    if (upper.and_4spn93_k$(new Long(511, 0)).equals(new Long(511, 0)) ? true : upper.and_4spn93_k$(new Long(511, 0)).equals(new Long(0, 0)) ? mantissa.and_4spn93_k$(new Long(3, 0)).equals(new Long(1, 0)) : false) {
+      try {
+        var tmp_30 = result;
+        // Inline function 'kotlin.text.toFloat' call
+        // Inline function 'kotlin.text.substring' call
+        var endIndex_0 = index;
+        // Inline function 'kotlin.js.asDynamic' call
+        var this_36 = s.substring(start, endIndex_0);
+        // Inline function 'kotlin.js.unsafeCast' call
+        // Inline function 'kotlin.js.asDynamic' call
+        tmp_30.value_1 = toDouble(this_36);
+      }finally {
+        result.isValid_1 = true;
+      }
+      return index;
+    }
+    // Inline function 'kotlin.Long.plus' call
+    mantissa = mantissa.plus_r93sks_k$(toLong(1));
+    mantissa = mantissa.ushr_z7nmq8_k$(1);
+    if (mantissa.compareTo_9jj042_k$(new Long(0, 2097152)) >= 0) {
+      mantissa = new Long(0, 1048576);
+      lz = lz - 1 | 0;
+    }
+    mantissa = mantissa.and_4spn93_k$(new Long(-1, -1048577));
+    // Inline function 'kotlin.Long.plus' call
+    // Inline function 'kotlin.Long.plus' call
+    // Inline function 'kotlin.Long.times' call
+    var this_37 = new Long(217706, 0);
+    var other_3 = exponent;
+    var adjustedExponent = this_37.times_nfzjiw_k$(toLong(other_3)).shr_9fl3wl_k$(16).plus_r93sks_k$(toLong(1024)).plus_r93sks_k$(toLong(63));
+    // Inline function 'kotlin.Long.minus' call
+    var other_4 = lz;
+    var realExponent = adjustedExponent.minus_mfbszm_k$(toLong(other_4));
+    if (realExponent.compareTo_9jj042_k$(new Long(1, 0)) < 0 ? true : realExponent.compareTo_9jj042_k$(new Long(2046, 0)) > 0) {
       try {
         var tmp_31 = result;
         // Inline function 'kotlin.text.toFloat' call
         // Inline function 'kotlin.text.substring' call
-        var tmp32_substring = index;
+        var endIndex_1 = index;
         // Inline function 'kotlin.js.asDynamic' call
-        var tmp33_toFloat = s.substring(start, tmp32_substring);
+        var this_38 = s.substring(start, endIndex_1);
         // Inline function 'kotlin.js.unsafeCast' call
         // Inline function 'kotlin.js.asDynamic' call
-        tmp_31.value_1 = toDouble(tmp33_toFloat);
+        tmp_31.value_1 = toDouble(this_38);
       }finally {
         result.isValid_1 = true;
       }
       return index;
     }
-    // Inline function 'kotlin.Long.plus' call
-    mantissa = mantissa.plus_u6jwas_k$(new Long(1, 0));
-    mantissa = mantissa.ushr_rr8rvr_k$(1);
-    if (mantissa.compareTo_n4fqi2_k$(new Long(0, 2097152)) >= 0) {
-      mantissa = new Long(0, 1048576);
-      lz = lz - 1 | 0;
-    }
-    mantissa = mantissa.and_jhajnj_k$(new Long(-1, -1048577));
-    // Inline function 'kotlin.Long.plus' call
-    // Inline function 'kotlin.Long.plus' call
-    // Inline function 'kotlin.Long.times' call
-    var tmp35_times = new Long(217706, 0);
-    var tmp36_times = exponent;
-    var adjustedExponent = tmp35_times.times_2zfqpc_k$(toLong(tmp36_times)).shr_wjue3g_k$(16).plus_u6jwas_k$(new Long(1024, 0)).plus_u6jwas_k$(new Long(63, 0));
-    // Inline function 'kotlin.Long.minus' call
-    var tmp39_minus = lz;
-    var realExponent = adjustedExponent.minus_llf5ei_k$(toLong(tmp39_minus));
-    if (realExponent.compareTo_n4fqi2_k$(new Long(1, 0)) < 0 ? true : realExponent.compareTo_n4fqi2_k$(new Long(2046, 0)) > 0) {
-      try {
-        var tmp_32 = result;
-        // Inline function 'kotlin.text.toFloat' call
-        // Inline function 'kotlin.text.substring' call
-        var tmp40_substring = index;
-        // Inline function 'kotlin.js.asDynamic' call
-        var tmp41_toFloat = s.substring(start, tmp40_substring);
-        // Inline function 'kotlin.js.unsafeCast' call
-        // Inline function 'kotlin.js.asDynamic' call
-        tmp_32.value_1 = toDouble(tmp41_toFloat);
-      }finally {
-        result.isValid_1 = true;
-      }
-      return index;
-    }
-    mantissa = mantissa.or_s401rn_k$(realExponent.shl_po5ip6_k$(52));
-    mantissa = mantissa.or_s401rn_k$(isNegative ? new Long(0, -2147483648) : new Long(0, 0));
+    mantissa = mantissa.or_v7fvkl_k$(realExponent.shl_bg8if3_k$(52));
+    mantissa = mantissa.or_v7fvkl_k$(isNegative ? new Long(0, -2147483648) : new Long(0, 0));
     result.isValid_1 = true;
-    var tmp_33 = result;
+    var tmp_32 = result;
     // Inline function 'kotlin.fromBits' call
     DoubleCompanionObject_getInstance();
-    var tmp43_fromBits = mantissa;
-    tmp_33.value_1 = doubleFromBits(tmp43_fromBits);
+    var bits = mantissa;
+    tmp_32.value_1 = doubleFromBits(bits);
     return index;
   };
   var Companion_instance_31;
@@ -8619,28 +8403,10 @@
   function FastFloatParser() {
     Companion_getInstance_46();
   }
-  function FloatResult(value, isValid) {
-    value = value === VOID ? FloatCompanionObject_getInstance().get_NaN_18jnv2_k$() : value;
-    isValid = isValid === VOID ? false : isValid;
-    this.value_1 = value;
-    this.isValid_1 = isValid;
-  }
-  protoOf(FloatResult).set_value_j3l5mx_k$ = function (_set____db54di) {
-    this.value_1 = _set____db54di;
-  };
-  protoOf(FloatResult).get_value_j01efc_k$ = function () {
-    return this.value_1;
-  };
-  protoOf(FloatResult).set_isValid_at1w3w_k$ = function (_set____db54di) {
-    this.isValid_1 = _set____db54di;
-  };
-  protoOf(FloatResult).get_isValid_zh4f7b_k$ = function () {
-    return this.isValid_1;
-  };
   function get_isDigit(_this__u8e3s4) {
     // Inline function 'kotlin.code' call
-    var tmp0_get_code_gknlva = numberToChar(Char__minus_impl_a2frrh(_this__u8e3s4, _Char___init__impl__6a9atx(48)));
-    return Char__toInt_impl_vasixd(tmp0_get_code_gknlva) < 10;
+    var this_0 = numberToChar(Char__minus_impl_a2frrh(_this__u8e3s4, _Char___init__impl__6a9atx(48)));
+    return Char__toInt_impl_vasixd(this_0) < 10;
   }
   function charAt(s, index) {
     var tmp;
@@ -8652,56 +8418,52 @@
     return tmp;
   }
   function parseFourDigits(str, offset) {
-    var tmp$ret$0;
     // Inline function 'kotlin.code' call
-    var tmp0_get_code_gknlva = charSequenceGet(str, offset);
-    tmp$ret$0 = Char__toInt_impl_vasixd(tmp0_get_code_gknlva);
+    var this_0 = charSequenceGet(str, offset);
+    var tmp$ret$0 = Char__toInt_impl_vasixd(this_0);
     var tmp = toLong(tmp$ret$0);
-    var tmp$ret$1;
     // Inline function 'kotlin.code' call
-    var tmp1_get_code_jtnknr = charSequenceGet(str, offset + 1 | 0);
-    tmp$ret$1 = Char__toInt_impl_vasixd(tmp1_get_code_jtnknr);
-    var tmp_0 = tmp.or_s401rn_k$(toLong(tmp$ret$1).shl_po5ip6_k$(16));
-    var tmp$ret$2;
+    var this_1 = charSequenceGet(str, offset + 1 | 0);
+    var tmp$ret$1 = Char__toInt_impl_vasixd(this_1);
+    var tmp_0 = tmp.or_v7fvkl_k$(toLong(tmp$ret$1).shl_bg8if3_k$(16));
     // Inline function 'kotlin.code' call
-    var tmp2_get_code_n2njg8 = charSequenceGet(str, offset + 2 | 0);
-    tmp$ret$2 = Char__toInt_impl_vasixd(tmp2_get_code_n2njg8);
-    var tmp_1 = tmp_0.or_s401rn_k$(toLong(tmp$ret$2).shl_po5ip6_k$(32));
-    var tmp$ret$3;
+    var this_2 = charSequenceGet(str, offset + 2 | 0);
+    var tmp$ret$2 = Char__toInt_impl_vasixd(this_2);
+    var tmp_1 = tmp_0.or_v7fvkl_k$(toLong(tmp$ret$2).shl_bg8if3_k$(32));
     // Inline function 'kotlin.code' call
-    var tmp3_get_code_qbni8p = charSequenceGet(str, offset + 3 | 0);
-    tmp$ret$3 = Char__toInt_impl_vasixd(tmp3_get_code_qbni8p);
-    var v = tmp_1.or_s401rn_k$(toLong(tmp$ret$3).shl_po5ip6_k$(48));
-    var base = v.minus_llf5ei_k$(new Long(3145776, 3145776));
-    var predicate = v.plus_u6jwas_k$(new Long(4587590, 4587590)).or_s401rn_k$(base);
+    var this_3 = charSequenceGet(str, offset + 3 | 0);
+    var tmp$ret$3 = Char__toInt_impl_vasixd(this_3);
+    var v = tmp_1.or_v7fvkl_k$(toLong(tmp$ret$3).shl_bg8if3_k$(48));
+    var base = v.minus_mfbszm_k$(new Long(3145776, 3145776));
+    var predicate = v.plus_r93sks_k$(new Long(4587590, 4587590)).or_v7fvkl_k$(base);
     var tmp_2;
-    var tmp$ret$4;
     // Inline function 'kotlin.ULong.toLong' call
-    tmp$ret$4 = _ULong___get_data__impl__fggpzb(_ULong___init__impl__c78o9k(new Long(-8323200, -8323200)));
-    if (!predicate.and_jhajnj_k$(tmp$ret$4).equals(new Long(0, 0))) {
+    var this_4 = _ULong___init__impl__c78o9k(new Long(-8323200, -8323200));
+    var tmp$ret$4 = _ULong___get_data__impl__fggpzb(this_4);
+    if (!predicate.and_4spn93_k$(tmp$ret$4).equals(new Long(0, 0))) {
       tmp_2 = -1;
     } else {
-      tmp_2 = base.times_2zfqpc_k$(new Long(655361, 65536100)).ushr_rr8rvr_k$(48).toInt_1tsl84_k$();
+      tmp_2 = base.times_nfzjiw_k$(new Long(655361, 65536100)).ushr_z7nmq8_k$(48).toInt_1tsl84_k$();
     }
     return tmp_2;
   }
   function fullMultiplicationHighBits(x, y) {
-    var xLo = x.and_jhajnj_k$(new Long(-1, 0));
-    var xHi = x.ushr_rr8rvr_k$(32);
-    var yLo = y.and_jhajnj_k$(new Long(-1, 0));
-    var yHi = y.ushr_rr8rvr_k$(32);
-    var xTimesYHi = xHi.times_2zfqpc_k$(yHi);
-    var xTimesYMid = xLo.times_2zfqpc_k$(yHi);
-    var yTimesXMid = xHi.times_2zfqpc_k$(yLo);
-    var xTimesYLo = xLo.times_2zfqpc_k$(yLo);
-    var carry = yTimesXMid.plus_u6jwas_k$(xTimesYLo.ushr_rr8rvr_k$(32)).plus_u6jwas_k$(xTimesYMid.and_jhajnj_k$(new Long(-1, 0)));
-    return xTimesYHi.plus_u6jwas_k$(carry.ushr_rr8rvr_k$(32)).plus_u6jwas_k$(xTimesYMid.ushr_rr8rvr_k$(32));
+    var xLo = x.and_4spn93_k$(new Long(-1, 0));
+    var xHi = x.ushr_z7nmq8_k$(32);
+    var yLo = y.and_4spn93_k$(new Long(-1, 0));
+    var yHi = y.ushr_z7nmq8_k$(32);
+    var xTimesYHi = xHi.times_nfzjiw_k$(yHi);
+    var xTimesYMid = xLo.times_nfzjiw_k$(yHi);
+    var yTimesXMid = xHi.times_nfzjiw_k$(yLo);
+    var xTimesYLo = xLo.times_nfzjiw_k$(yLo);
+    var carry = yTimesXMid.plus_r93sks_k$(xTimesYLo.ushr_z7nmq8_k$(32)).plus_r93sks_k$(xTimesYMid.and_4spn93_k$(new Long(-1, 0)));
+    return xTimesYHi.plus_r93sks_k$(carry.ushr_z7nmq8_k$(32)).plus_r93sks_k$(xTimesYMid.ushr_z7nmq8_k$(32));
   }
   function _get_nodes__dowtds($this) {
     return $this.nodes_1;
   }
   function addNode($this, node) {
-    $this.nodes_1.add_1j60pz_k$(node);
+    $this.nodes_1.add_utx5q5_k$(node);
     return $this;
   }
   function PathBuilder() {
@@ -8715,660 +8477,60 @@
   protoOf(PathBuilder).close_1keygo_k$ = function () {
     return addNode(this, Close_getInstance());
   };
-  protoOf(PathBuilder).moveTo_5934es_k$ = function (x, y) {
+  protoOf(PathBuilder).moveTo_n8tdjo_k$ = function (x, y) {
     return addNode(this, new MoveTo(x, y));
   };
-  protoOf(PathBuilder).moveToRelative_wrunko_k$ = function (dx, dy) {
+  protoOf(PathBuilder).moveToRelative_2s28m0_k$ = function (dx, dy) {
     return addNode(this, new RelativeMoveTo(dx, dy));
   };
-  protoOf(PathBuilder).lineTo_8bd4s1_k$ = function (x, y) {
+  protoOf(PathBuilder).lineTo_985bqp_k$ = function (x, y) {
     return addNode(this, new LineTo(x, y));
   };
-  protoOf(PathBuilder).lineToRelative_q6wnej_k$ = function (dx, dy) {
+  protoOf(PathBuilder).lineToRelative_h8lj2d_k$ = function (dx, dy) {
     return addNode(this, new RelativeLineTo(dx, dy));
   };
-  protoOf(PathBuilder).horizontalLineTo_16vzsr_k$ = function (x) {
+  protoOf(PathBuilder).horizontalLineTo_w9x139_k$ = function (x) {
     return addNode(this, new HorizontalTo(x));
   };
-  protoOf(PathBuilder).horizontalLineToRelative_3x1qwh_k$ = function (dx) {
+  protoOf(PathBuilder).horizontalLineToRelative_8skmzd_k$ = function (dx) {
     return addNode(this, new RelativeHorizontalTo(dx));
   };
-  protoOf(PathBuilder).verticalLineTo_6l74o9_k$ = function (y) {
+  protoOf(PathBuilder).verticalLineTo_1gpzkd_k$ = function (y) {
     return addNode(this, new VerticalTo(y));
   };
-  protoOf(PathBuilder).verticalLineToRelative_y89ou5_k$ = function (dy) {
+  protoOf(PathBuilder).verticalLineToRelative_io0vy1_k$ = function (dy) {
     return addNode(this, new RelativeVerticalTo(dy));
   };
-  protoOf(PathBuilder).curveTo_h5uh6_k$ = function (x1, y1, x2, y2, x3, y3) {
+  protoOf(PathBuilder).curveTo_y0llje_k$ = function (x1, y1, x2, y2, x3, y3) {
     return addNode(this, new CurveTo(x1, y1, x2, y2, x3, y3));
   };
-  protoOf(PathBuilder).curveToRelative_246fzq_k$ = function (dx1, dy1, dx2, dy2, dx3, dy3) {
+  protoOf(PathBuilder).curveToRelative_jg9hoq_k$ = function (dx1, dy1, dx2, dy2, dx3, dy3) {
     return addNode(this, new RelativeCurveTo(dx1, dy1, dx2, dy2, dx3, dy3));
   };
-  protoOf(PathBuilder).reflectiveCurveTo_t9fw6p_k$ = function (x1, y1, x2, y2) {
+  protoOf(PathBuilder).reflectiveCurveTo_z3m11r_k$ = function (x1, y1, x2, y2) {
     return addNode(this, new ReflectiveCurveTo(x1, y1, x2, y2));
   };
-  protoOf(PathBuilder).reflectiveCurveToRelative_88xs1n_k$ = function (dx1, dy1, dx2, dy2) {
+  protoOf(PathBuilder).reflectiveCurveToRelative_y66nqz_k$ = function (dx1, dy1, dx2, dy2) {
     return addNode(this, new RelativeReflectiveCurveTo(dx1, dy1, dx2, dy2));
   };
-  protoOf(PathBuilder).quadTo_qnlly6_k$ = function (x1, y1, x2, y2) {
+  protoOf(PathBuilder).quadTo_nivwo2_k$ = function (x1, y1, x2, y2) {
     return addNode(this, new QuadTo(x1, y1, x2, y2));
   };
-  protoOf(PathBuilder).quadToRelative_fyh7da_k$ = function (dx1, dy1, dx2, dy2) {
+  protoOf(PathBuilder).quadToRelative_qc17gu_k$ = function (dx1, dy1, dx2, dy2) {
     return addNode(this, new RelativeQuadTo(dx1, dy1, dx2, dy2));
   };
-  protoOf(PathBuilder).reflectiveQuadTo_iwwnlp_k$ = function (x1, y1) {
+  protoOf(PathBuilder).reflectiveQuadTo_qoxryb_k$ = function (x1, y1) {
     return addNode(this, new ReflectiveQuadTo(x1, y1));
   };
-  protoOf(PathBuilder).reflectiveQuadToRelative_cupod3_k$ = function (dx1, dy1) {
+  protoOf(PathBuilder).reflectiveQuadToRelative_vlfq3b_k$ = function (dx1, dy1) {
     return addNode(this, new RelativeReflectiveQuadTo(dx1, dy1));
   };
-  protoOf(PathBuilder).arcTo_pysgpt_k$ = function (horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, x1, y1) {
+  protoOf(PathBuilder).arcTo_e72hf9_k$ = function (horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, x1, y1) {
     return addNode(this, new ArcTo(horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, x1, y1));
   };
-  protoOf(PathBuilder).arcToRelative_ghjikr_k$ = function (a, b, theta, isMoreThanHalf, isPositiveArc, dx1, dy1) {
+  protoOf(PathBuilder).arcToRelative_r16z1b_k$ = function (a, b, theta, isMoreThanHalf, isPositiveArc, dx1, dy1) {
     return addNode(this, new RelativeArcTo(a, b, theta, isMoreThanHalf, isPositiveArc, dx1, dy1));
   };
-  function addPathNodes(_this__u8e3s4, nodes, args, count) {
-    if (_this__u8e3s4 === _Char___init__impl__6a9atx(122) ? true : _this__u8e3s4 === _Char___init__impl__6a9atx(90)) {
-      nodes.add_1j60pz_k$(Close_getInstance());
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(109)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end = count - 2 | 0;
-      var index = 0;
-      while (index <= end) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp1_anonymous = index;
-        var node = new RelativeMoveTo(args[tmp1_anonymous], args[tmp1_anonymous + 1 | 0]);
-        var tmp;
-        var tmp_0;
-        if (node instanceof MoveTo) {
-          tmp_0 = index > 0;
-        } else {
-          tmp_0 = false;
-        }
-        if (tmp_0) {
-          tmp = new LineTo(args[index], args[index + 1 | 0]);
-        } else {
-          var tmp_1;
-          if (node instanceof RelativeMoveTo) {
-            tmp_1 = index > 0;
-          } else {
-            tmp_1 = false;
-          }
-          if (tmp_1) {
-            tmp = new RelativeLineTo(args[index], args[index + 1 | 0]);
-          } else {
-            tmp = node;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp);
-        index = index + 2 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(77)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_0 = count - 2 | 0;
-      var index_0 = 0;
-      while (index_0 <= end_0) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp3_anonymous = index_0;
-        var node_0 = new MoveTo(args[tmp3_anonymous], args[tmp3_anonymous + 1 | 0]);
-        var tmp_2;
-        var tmp_3;
-        if (node_0 instanceof MoveTo) {
-          tmp_3 = index_0 > 0;
-        } else {
-          tmp_3 = false;
-        }
-        if (tmp_3) {
-          tmp_2 = new LineTo(args[index_0], args[index_0 + 1 | 0]);
-        } else {
-          var tmp_4;
-          if (node_0 instanceof RelativeMoveTo) {
-            tmp_4 = index_0 > 0;
-          } else {
-            tmp_4 = false;
-          }
-          if (tmp_4) {
-            tmp_2 = new RelativeLineTo(args[index_0], args[index_0 + 1 | 0]);
-          } else {
-            tmp_2 = node_0;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_2);
-        index_0 = index_0 + 2 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(108)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_1 = count - 2 | 0;
-      var index_1 = 0;
-      while (index_1 <= end_1) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp5_anonymous = index_1;
-        var node_1 = new RelativeLineTo(args[tmp5_anonymous], args[tmp5_anonymous + 1 | 0]);
-        var tmp_5;
-        var tmp_6;
-        if (node_1 instanceof MoveTo) {
-          tmp_6 = index_1 > 0;
-        } else {
-          tmp_6 = false;
-        }
-        if (tmp_6) {
-          tmp_5 = new LineTo(args[index_1], args[index_1 + 1 | 0]);
-        } else {
-          var tmp_7;
-          if (node_1 instanceof RelativeMoveTo) {
-            tmp_7 = index_1 > 0;
-          } else {
-            tmp_7 = false;
-          }
-          if (tmp_7) {
-            tmp_5 = new RelativeLineTo(args[index_1], args[index_1 + 1 | 0]);
-          } else {
-            tmp_5 = node_1;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_5);
-        index_1 = index_1 + 2 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(76)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_2 = count - 2 | 0;
-      var index_2 = 0;
-      while (index_2 <= end_2) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp7_anonymous = index_2;
-        var node_2 = new LineTo(args[tmp7_anonymous], args[tmp7_anonymous + 1 | 0]);
-        var tmp_8;
-        var tmp_9;
-        if (node_2 instanceof MoveTo) {
-          tmp_9 = index_2 > 0;
-        } else {
-          tmp_9 = false;
-        }
-        if (tmp_9) {
-          tmp_8 = new LineTo(args[index_2], args[index_2 + 1 | 0]);
-        } else {
-          var tmp_10;
-          if (node_2 instanceof RelativeMoveTo) {
-            tmp_10 = index_2 > 0;
-          } else {
-            tmp_10 = false;
-          }
-          if (tmp_10) {
-            tmp_8 = new RelativeLineTo(args[index_2], args[index_2 + 1 | 0]);
-          } else {
-            tmp_8 = node_2;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_8);
-        index_2 = index_2 + 2 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(104)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_3 = count - 1 | 0;
-      var index_3 = 0;
-      while (index_3 <= end_3) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp9_anonymous = index_3;
-        var node_3 = new RelativeHorizontalTo(args[tmp9_anonymous]);
-        var tmp_11;
-        var tmp_12;
-        if (node_3 instanceof MoveTo) {
-          tmp_12 = index_3 > 0;
-        } else {
-          tmp_12 = false;
-        }
-        if (tmp_12) {
-          tmp_11 = new LineTo(args[index_3], args[index_3 + 1 | 0]);
-        } else {
-          var tmp_13;
-          if (node_3 instanceof RelativeMoveTo) {
-            tmp_13 = index_3 > 0;
-          } else {
-            tmp_13 = false;
-          }
-          if (tmp_13) {
-            tmp_11 = new RelativeLineTo(args[index_3], args[index_3 + 1 | 0]);
-          } else {
-            tmp_11 = node_3;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_11);
-        index_3 = index_3 + 1 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(72)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_4 = count - 1 | 0;
-      var index_4 = 0;
-      while (index_4 <= end_4) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp11_anonymous = index_4;
-        var node_4 = new HorizontalTo(args[tmp11_anonymous]);
-        var tmp_14;
-        var tmp_15;
-        if (node_4 instanceof MoveTo) {
-          tmp_15 = index_4 > 0;
-        } else {
-          tmp_15 = false;
-        }
-        if (tmp_15) {
-          tmp_14 = new LineTo(args[index_4], args[index_4 + 1 | 0]);
-        } else {
-          var tmp_16;
-          if (node_4 instanceof RelativeMoveTo) {
-            tmp_16 = index_4 > 0;
-          } else {
-            tmp_16 = false;
-          }
-          if (tmp_16) {
-            tmp_14 = new RelativeLineTo(args[index_4], args[index_4 + 1 | 0]);
-          } else {
-            tmp_14 = node_4;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_14);
-        index_4 = index_4 + 1 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(118)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_5 = count - 1 | 0;
-      var index_5 = 0;
-      while (index_5 <= end_5) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp13_anonymous = index_5;
-        var node_5 = new RelativeVerticalTo(args[tmp13_anonymous]);
-        var tmp_17;
-        var tmp_18;
-        if (node_5 instanceof MoveTo) {
-          tmp_18 = index_5 > 0;
-        } else {
-          tmp_18 = false;
-        }
-        if (tmp_18) {
-          tmp_17 = new LineTo(args[index_5], args[index_5 + 1 | 0]);
-        } else {
-          var tmp_19;
-          if (node_5 instanceof RelativeMoveTo) {
-            tmp_19 = index_5 > 0;
-          } else {
-            tmp_19 = false;
-          }
-          if (tmp_19) {
-            tmp_17 = new RelativeLineTo(args[index_5], args[index_5 + 1 | 0]);
-          } else {
-            tmp_17 = node_5;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_17);
-        index_5 = index_5 + 1 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(86)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_6 = count - 1 | 0;
-      var index_6 = 0;
-      while (index_6 <= end_6) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp15_anonymous = index_6;
-        var node_6 = new VerticalTo(args[tmp15_anonymous]);
-        var tmp_20;
-        var tmp_21;
-        if (node_6 instanceof MoveTo) {
-          tmp_21 = index_6 > 0;
-        } else {
-          tmp_21 = false;
-        }
-        if (tmp_21) {
-          tmp_20 = new LineTo(args[index_6], args[index_6 + 1 | 0]);
-        } else {
-          var tmp_22;
-          if (node_6 instanceof RelativeMoveTo) {
-            tmp_22 = index_6 > 0;
-          } else {
-            tmp_22 = false;
-          }
-          if (tmp_22) {
-            tmp_20 = new RelativeLineTo(args[index_6], args[index_6 + 1 | 0]);
-          } else {
-            tmp_20 = node_6;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_20);
-        index_6 = index_6 + 1 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(99)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_7 = count - 6 | 0;
-      var index_7 = 0;
-      while (index_7 <= end_7) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp17_anonymous = index_7;
-        var node_7 = new RelativeCurveTo(args[tmp17_anonymous], args[tmp17_anonymous + 1 | 0], args[tmp17_anonymous + 2 | 0], args[tmp17_anonymous + 3 | 0], args[tmp17_anonymous + 4 | 0], args[tmp17_anonymous + 5 | 0]);
-        var tmp_23;
-        var tmp_24;
-        if (node_7 instanceof MoveTo) {
-          tmp_24 = index_7 > 0;
-        } else {
-          tmp_24 = false;
-        }
-        if (tmp_24) {
-          tmp_23 = new LineTo(args[index_7], args[index_7 + 1 | 0]);
-        } else {
-          var tmp_25;
-          if (node_7 instanceof RelativeMoveTo) {
-            tmp_25 = index_7 > 0;
-          } else {
-            tmp_25 = false;
-          }
-          if (tmp_25) {
-            tmp_23 = new RelativeLineTo(args[index_7], args[index_7 + 1 | 0]);
-          } else {
-            tmp_23 = node_7;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_23);
-        index_7 = index_7 + 6 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(67)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_8 = count - 6 | 0;
-      var index_8 = 0;
-      while (index_8 <= end_8) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp19_anonymous = index_8;
-        var node_8 = new CurveTo(args[tmp19_anonymous], args[tmp19_anonymous + 1 | 0], args[tmp19_anonymous + 2 | 0], args[tmp19_anonymous + 3 | 0], args[tmp19_anonymous + 4 | 0], args[tmp19_anonymous + 5 | 0]);
-        var tmp_26;
-        var tmp_27;
-        if (node_8 instanceof MoveTo) {
-          tmp_27 = index_8 > 0;
-        } else {
-          tmp_27 = false;
-        }
-        if (tmp_27) {
-          tmp_26 = new LineTo(args[index_8], args[index_8 + 1 | 0]);
-        } else {
-          var tmp_28;
-          if (node_8 instanceof RelativeMoveTo) {
-            tmp_28 = index_8 > 0;
-          } else {
-            tmp_28 = false;
-          }
-          if (tmp_28) {
-            tmp_26 = new RelativeLineTo(args[index_8], args[index_8 + 1 | 0]);
-          } else {
-            tmp_26 = node_8;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_26);
-        index_8 = index_8 + 6 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(115)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_9 = count - 4 | 0;
-      var index_9 = 0;
-      while (index_9 <= end_9) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp21_anonymous = index_9;
-        var node_9 = new RelativeReflectiveCurveTo(args[tmp21_anonymous], args[tmp21_anonymous + 1 | 0], args[tmp21_anonymous + 2 | 0], args[tmp21_anonymous + 3 | 0]);
-        var tmp_29;
-        var tmp_30;
-        if (node_9 instanceof MoveTo) {
-          tmp_30 = index_9 > 0;
-        } else {
-          tmp_30 = false;
-        }
-        if (tmp_30) {
-          tmp_29 = new LineTo(args[index_9], args[index_9 + 1 | 0]);
-        } else {
-          var tmp_31;
-          if (node_9 instanceof RelativeMoveTo) {
-            tmp_31 = index_9 > 0;
-          } else {
-            tmp_31 = false;
-          }
-          if (tmp_31) {
-            tmp_29 = new RelativeLineTo(args[index_9], args[index_9 + 1 | 0]);
-          } else {
-            tmp_29 = node_9;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_29);
-        index_9 = index_9 + 4 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(83)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_10 = count - 4 | 0;
-      var index_10 = 0;
-      while (index_10 <= end_10) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp23_anonymous = index_10;
-        var node_10 = new ReflectiveCurveTo(args[tmp23_anonymous], args[tmp23_anonymous + 1 | 0], args[tmp23_anonymous + 2 | 0], args[tmp23_anonymous + 3 | 0]);
-        var tmp_32;
-        var tmp_33;
-        if (node_10 instanceof MoveTo) {
-          tmp_33 = index_10 > 0;
-        } else {
-          tmp_33 = false;
-        }
-        if (tmp_33) {
-          tmp_32 = new LineTo(args[index_10], args[index_10 + 1 | 0]);
-        } else {
-          var tmp_34;
-          if (node_10 instanceof RelativeMoveTo) {
-            tmp_34 = index_10 > 0;
-          } else {
-            tmp_34 = false;
-          }
-          if (tmp_34) {
-            tmp_32 = new RelativeLineTo(args[index_10], args[index_10 + 1 | 0]);
-          } else {
-            tmp_32 = node_10;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_32);
-        index_10 = index_10 + 4 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(113)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_11 = count - 4 | 0;
-      var index_11 = 0;
-      while (index_11 <= end_11) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp25_anonymous = index_11;
-        var node_11 = new RelativeQuadTo(args[tmp25_anonymous], args[tmp25_anonymous + 1 | 0], args[tmp25_anonymous + 2 | 0], args[tmp25_anonymous + 3 | 0]);
-        var tmp_35;
-        var tmp_36;
-        if (node_11 instanceof MoveTo) {
-          tmp_36 = index_11 > 0;
-        } else {
-          tmp_36 = false;
-        }
-        if (tmp_36) {
-          tmp_35 = new LineTo(args[index_11], args[index_11 + 1 | 0]);
-        } else {
-          var tmp_37;
-          if (node_11 instanceof RelativeMoveTo) {
-            tmp_37 = index_11 > 0;
-          } else {
-            tmp_37 = false;
-          }
-          if (tmp_37) {
-            tmp_35 = new RelativeLineTo(args[index_11], args[index_11 + 1 | 0]);
-          } else {
-            tmp_35 = node_11;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_35);
-        index_11 = index_11 + 4 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(81)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_12 = count - 4 | 0;
-      var index_12 = 0;
-      while (index_12 <= end_12) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp27_anonymous = index_12;
-        var node_12 = new QuadTo(args[tmp27_anonymous], args[tmp27_anonymous + 1 | 0], args[tmp27_anonymous + 2 | 0], args[tmp27_anonymous + 3 | 0]);
-        var tmp_38;
-        var tmp_39;
-        if (node_12 instanceof MoveTo) {
-          tmp_39 = index_12 > 0;
-        } else {
-          tmp_39 = false;
-        }
-        if (tmp_39) {
-          tmp_38 = new LineTo(args[index_12], args[index_12 + 1 | 0]);
-        } else {
-          var tmp_40;
-          if (node_12 instanceof RelativeMoveTo) {
-            tmp_40 = index_12 > 0;
-          } else {
-            tmp_40 = false;
-          }
-          if (tmp_40) {
-            tmp_38 = new RelativeLineTo(args[index_12], args[index_12 + 1 | 0]);
-          } else {
-            tmp_38 = node_12;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_38);
-        index_12 = index_12 + 4 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(116)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_13 = count - 2 | 0;
-      var index_13 = 0;
-      while (index_13 <= end_13) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp29_anonymous = index_13;
-        var node_13 = new RelativeReflectiveQuadTo(args[tmp29_anonymous], args[tmp29_anonymous + 1 | 0]);
-        var tmp_41;
-        var tmp_42;
-        if (node_13 instanceof MoveTo) {
-          tmp_42 = index_13 > 0;
-        } else {
-          tmp_42 = false;
-        }
-        if (tmp_42) {
-          tmp_41 = new LineTo(args[index_13], args[index_13 + 1 | 0]);
-        } else {
-          var tmp_43;
-          if (node_13 instanceof RelativeMoveTo) {
-            tmp_43 = index_13 > 0;
-          } else {
-            tmp_43 = false;
-          }
-          if (tmp_43) {
-            tmp_41 = new RelativeLineTo(args[index_13], args[index_13 + 1 | 0]);
-          } else {
-            tmp_41 = node_13;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_41);
-        index_13 = index_13 + 2 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(84)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_14 = count - 2 | 0;
-      var index_14 = 0;
-      while (index_14 <= end_14) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp31_anonymous = index_14;
-        var node_14 = new ReflectiveQuadTo(args[tmp31_anonymous], args[tmp31_anonymous + 1 | 0]);
-        var tmp_44;
-        var tmp_45;
-        if (node_14 instanceof MoveTo) {
-          tmp_45 = index_14 > 0;
-        } else {
-          tmp_45 = false;
-        }
-        if (tmp_45) {
-          tmp_44 = new LineTo(args[index_14], args[index_14 + 1 | 0]);
-        } else {
-          var tmp_46;
-          if (node_14 instanceof RelativeMoveTo) {
-            tmp_46 = index_14 > 0;
-          } else {
-            tmp_46 = false;
-          }
-          if (tmp_46) {
-            tmp_44 = new RelativeLineTo(args[index_14], args[index_14 + 1 | 0]);
-          } else {
-            tmp_44 = node_14;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_44);
-        index_14 = index_14 + 2 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(97)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_15 = count - 7 | 0;
-      var index_15 = 0;
-      while (index_15 <= end_15) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp33_anonymous = index_15;
-        var node_15 = new RelativeArcTo(args[tmp33_anonymous], args[tmp33_anonymous + 1 | 0], args[tmp33_anonymous + 2 | 0], !(compareTo(args[tmp33_anonymous + 3 | 0], 0.0) === 0), !(compareTo(args[tmp33_anonymous + 4 | 0], 0.0) === 0), args[tmp33_anonymous + 5 | 0], args[tmp33_anonymous + 6 | 0]);
-        var tmp_47;
-        var tmp_48;
-        if (node_15 instanceof MoveTo) {
-          tmp_48 = index_15 > 0;
-        } else {
-          tmp_48 = false;
-        }
-        if (tmp_48) {
-          tmp_47 = new LineTo(args[index_15], args[index_15 + 1 | 0]);
-        } else {
-          var tmp_49;
-          if (node_15 instanceof RelativeMoveTo) {
-            tmp_49 = index_15 > 0;
-          } else {
-            tmp_49 = false;
-          }
-          if (tmp_49) {
-            tmp_47 = new RelativeLineTo(args[index_15], args[index_15 + 1 | 0]);
-          } else {
-            tmp_47 = node_15;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_47);
-        index_15 = index_15 + 7 | 0;
-      }
-    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(65)) {
-      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
-      var end_16 = count - 7 | 0;
-      var index_16 = 0;
-      while (index_16 <= end_16) {
-        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
-        var tmp35_anonymous = index_16;
-        var node_16 = new ArcTo(args[tmp35_anonymous], args[tmp35_anonymous + 1 | 0], args[tmp35_anonymous + 2 | 0], !(compareTo(args[tmp35_anonymous + 3 | 0], 0.0) === 0), !(compareTo(args[tmp35_anonymous + 4 | 0], 0.0) === 0), args[tmp35_anonymous + 5 | 0], args[tmp35_anonymous + 6 | 0]);
-        var tmp_50;
-        var tmp_51;
-        if (node_16 instanceof MoveTo) {
-          tmp_51 = index_16 > 0;
-        } else {
-          tmp_51 = false;
-        }
-        if (tmp_51) {
-          tmp_50 = new LineTo(args[index_16], args[index_16 + 1 | 0]);
-        } else {
-          var tmp_52;
-          if (node_16 instanceof RelativeMoveTo) {
-            tmp_52 = index_16 > 0;
-          } else {
-            tmp_52 = false;
-          }
-          if (tmp_52) {
-            tmp_50 = new RelativeLineTo(args[index_16], args[index_16 + 1 | 0]);
-          } else {
-            tmp_50 = node_16;
-          }
-        }
-        nodes.add_1j60pz_k$(tmp_50);
-        index_16 = index_16 + 7 | 0;
-      }
-    } else
-      throw IllegalArgumentException_init_$Create$('Unknown command for: ' + new Char(_this__u8e3s4));
-  }
   function Close() {
     Close_instance = this;
     PathNode.call(this);
@@ -9396,13 +8558,13 @@
   protoOf(RelativeMoveTo).component2_7eebsb_k$ = function () {
     return this.dy_1;
   };
-  protoOf(RelativeMoveTo).copy_138fzp_k$ = function (dx, dy) {
+  protoOf(RelativeMoveTo).copy_4tzoad_k$ = function (dx, dy) {
     return new RelativeMoveTo(dx, dy);
   };
-  protoOf(RelativeMoveTo).copy$default_y9dnr9_k$ = function (dx, dy, $super) {
+  protoOf(RelativeMoveTo).copy$default_8h4itw_k$ = function (dx, dy, $super) {
     dx = dx === VOID ? this.dx_1 : dx;
     dy = dy === VOID ? this.dy_1 : dy;
-    return $super === VOID ? this.copy_138fzp_k$(dx, dy) : $super.copy_138fzp_k$.call(this, dx, dy);
+    return $super === VOID ? this.copy_4tzoad_k$(dx, dy) : $super.copy_4tzoad_k$.call(this, dx, dy);
   };
   protoOf(RelativeMoveTo).toString = function () {
     return 'RelativeMoveTo(dx=' + this.dx_1 + ', dy=' + this.dy_1 + ')';
@@ -9441,13 +8603,13 @@
   protoOf(MoveTo).component2_7eebsb_k$ = function () {
     return this.y_1;
   };
-  protoOf(MoveTo).copy_138fzp_k$ = function (x, y) {
+  protoOf(MoveTo).copy_4tzoad_k$ = function (x, y) {
     return new MoveTo(x, y);
   };
-  protoOf(MoveTo).copy$default_evt90n_k$ = function (x, y, $super) {
+  protoOf(MoveTo).copy$default_4gel34_k$ = function (x, y, $super) {
     x = x === VOID ? this.x_1 : x;
     y = y === VOID ? this.y_1 : y;
-    return $super === VOID ? this.copy_138fzp_k$(x, y) : $super.copy_138fzp_k$.call(this, x, y);
+    return $super === VOID ? this.copy_4tzoad_k$(x, y) : $super.copy_4tzoad_k$.call(this, x, y);
   };
   protoOf(MoveTo).toString = function () {
     return 'MoveTo(x=' + this.x_1 + ', y=' + this.y_1 + ')';
@@ -9486,13 +8648,13 @@
   protoOf(RelativeLineTo).component2_7eebsb_k$ = function () {
     return this.dy_1;
   };
-  protoOf(RelativeLineTo).copy_138fzp_k$ = function (dx, dy) {
+  protoOf(RelativeLineTo).copy_4tzoad_k$ = function (dx, dy) {
     return new RelativeLineTo(dx, dy);
   };
-  protoOf(RelativeLineTo).copy$default_j4o0vs_k$ = function (dx, dy, $super) {
+  protoOf(RelativeLineTo).copy$default_usatdd_k$ = function (dx, dy, $super) {
     dx = dx === VOID ? this.dx_1 : dx;
     dy = dy === VOID ? this.dy_1 : dy;
-    return $super === VOID ? this.copy_138fzp_k$(dx, dy) : $super.copy_138fzp_k$.call(this, dx, dy);
+    return $super === VOID ? this.copy_4tzoad_k$(dx, dy) : $super.copy_4tzoad_k$.call(this, dx, dy);
   };
   protoOf(RelativeLineTo).toString = function () {
     return 'RelativeLineTo(dx=' + this.dx_1 + ', dy=' + this.dy_1 + ')';
@@ -9531,13 +8693,13 @@
   protoOf(LineTo).component2_7eebsb_k$ = function () {
     return this.y_1;
   };
-  protoOf(LineTo).copy_138fzp_k$ = function (x, y) {
+  protoOf(LineTo).copy_4tzoad_k$ = function (x, y) {
     return new LineTo(x, y);
   };
-  protoOf(LineTo).copy$default_2r94bg_k$ = function (x, y, $super) {
+  protoOf(LineTo).copy$default_qrkvml_k$ = function (x, y, $super) {
     x = x === VOID ? this.x_1 : x;
     y = y === VOID ? this.y_1 : y;
-    return $super === VOID ? this.copy_138fzp_k$(x, y) : $super.copy_138fzp_k$.call(this, x, y);
+    return $super === VOID ? this.copy_4tzoad_k$(x, y) : $super.copy_4tzoad_k$.call(this, x, y);
   };
   protoOf(LineTo).toString = function () {
     return 'LineTo(x=' + this.x_1 + ', y=' + this.y_1 + ')';
@@ -9569,12 +8731,12 @@
   protoOf(RelativeHorizontalTo).component1_7eebsc_k$ = function () {
     return this.dx_1;
   };
-  protoOf(RelativeHorizontalTo).copy_i912ft_k$ = function (dx) {
+  protoOf(RelativeHorizontalTo).copy_s06gv7_k$ = function (dx) {
     return new RelativeHorizontalTo(dx);
   };
-  protoOf(RelativeHorizontalTo).copy$default_rluqbb_k$ = function (dx, $super) {
+  protoOf(RelativeHorizontalTo).copy$default_v56tl4_k$ = function (dx, $super) {
     dx = dx === VOID ? this.dx_1 : dx;
-    return $super === VOID ? this.copy_i912ft_k$(dx) : $super.copy_i912ft_k$.call(this, dx);
+    return $super === VOID ? this.copy_s06gv7_k$(dx) : $super.copy_s06gv7_k$.call(this, dx);
   };
   protoOf(RelativeHorizontalTo).toString = function () {
     return 'RelativeHorizontalTo(dx=' + this.dx_1 + ')';
@@ -9602,12 +8764,12 @@
   protoOf(HorizontalTo).component1_7eebsc_k$ = function () {
     return this.x_1;
   };
-  protoOf(HorizontalTo).copy_i912ft_k$ = function (x) {
+  protoOf(HorizontalTo).copy_s06gv7_k$ = function (x) {
     return new HorizontalTo(x);
   };
-  protoOf(HorizontalTo).copy$default_jipkwz_k$ = function (x, $super) {
+  protoOf(HorizontalTo).copy$default_4an5cc_k$ = function (x, $super) {
     x = x === VOID ? this.x_1 : x;
-    return $super === VOID ? this.copy_i912ft_k$(x) : $super.copy_i912ft_k$.call(this, x);
+    return $super === VOID ? this.copy_s06gv7_k$(x) : $super.copy_s06gv7_k$.call(this, x);
   };
   protoOf(HorizontalTo).toString = function () {
     return 'HorizontalTo(x=' + this.x_1 + ')';
@@ -9635,12 +8797,12 @@
   protoOf(RelativeVerticalTo).component1_7eebsc_k$ = function () {
     return this.dy_1;
   };
-  protoOf(RelativeVerticalTo).copy_i912ft_k$ = function (dy) {
+  protoOf(RelativeVerticalTo).copy_s06gv7_k$ = function (dy) {
     return new RelativeVerticalTo(dy);
   };
-  protoOf(RelativeVerticalTo).copy$default_dopvc5_k$ = function (dy, $super) {
+  protoOf(RelativeVerticalTo).copy$default_cuo5ze_k$ = function (dy, $super) {
     dy = dy === VOID ? this.dy_1 : dy;
-    return $super === VOID ? this.copy_i912ft_k$(dy) : $super.copy_i912ft_k$.call(this, dy);
+    return $super === VOID ? this.copy_s06gv7_k$(dy) : $super.copy_s06gv7_k$.call(this, dy);
   };
   protoOf(RelativeVerticalTo).toString = function () {
     return 'RelativeVerticalTo(dy=' + this.dy_1 + ')';
@@ -9668,12 +8830,12 @@
   protoOf(VerticalTo).component1_7eebsc_k$ = function () {
     return this.y_1;
   };
-  protoOf(VerticalTo).copy_i912ft_k$ = function (y) {
+  protoOf(VerticalTo).copy_s06gv7_k$ = function (y) {
     return new VerticalTo(y);
   };
-  protoOf(VerticalTo).copy$default_yqro0h_k$ = function (y, $super) {
+  protoOf(VerticalTo).copy$default_6z7oi_k$ = function (y, $super) {
     y = y === VOID ? this.y_1 : y;
-    return $super === VOID ? this.copy_i912ft_k$(y) : $super.copy_i912ft_k$.call(this, y);
+    return $super === VOID ? this.copy_s06gv7_k$(y) : $super.copy_s06gv7_k$.call(this, y);
   };
   protoOf(VerticalTo).toString = function () {
     return 'VerticalTo(y=' + this.y_1 + ')';
@@ -9736,17 +8898,17 @@
   protoOf(RelativeCurveTo).component6_7eebs7_k$ = function () {
     return this.dy3__1;
   };
-  protoOf(RelativeCurveTo).copy_htf379_k$ = function (dx1, dy1, dx2, dy2, dx3, dy3) {
+  protoOf(RelativeCurveTo).copy_82jydn_k$ = function (dx1, dy1, dx2, dy2, dx3, dy3) {
     return new RelativeCurveTo(dx1, dy1, dx2, dy2, dx3, dy3);
   };
-  protoOf(RelativeCurveTo).copy$default_ia0div_k$ = function (dx1, dy1, dx2, dy2, dx3, dy3, $super) {
+  protoOf(RelativeCurveTo).copy$default_ql1ny2_k$ = function (dx1, dy1, dx2, dy2, dx3, dy3, $super) {
     dx1 = dx1 === VOID ? this.dx1__1 : dx1;
     dy1 = dy1 === VOID ? this.dy1__1 : dy1;
     dx2 = dx2 === VOID ? this.dx2__1 : dx2;
     dy2 = dy2 === VOID ? this.dy2__1 : dy2;
     dx3 = dx3 === VOID ? this.dx3__1 : dx3;
     dy3 = dy3 === VOID ? this.dy3__1 : dy3;
-    return $super === VOID ? this.copy_htf379_k$(dx1, dy1, dx2, dy2, dx3, dy3) : $super.copy_htf379_k$.call(this, dx1, dy1, dx2, dy2, dx3, dy3);
+    return $super === VOID ? this.copy_82jydn_k$(dx1, dy1, dx2, dy2, dx3, dy3) : $super.copy_82jydn_k$.call(this, dx1, dy1, dx2, dy2, dx3, dy3);
   };
   protoOf(RelativeCurveTo).toString = function () {
     return 'RelativeCurveTo(dx1=' + this.dx1__1 + ', dy1=' + this.dy1__1 + ', dx2=' + this.dx2__1 + ', dy2=' + this.dy2__1 + ', dx3=' + this.dx3__1 + ', dy3=' + this.dy3__1 + ')';
@@ -9825,17 +8987,17 @@
   protoOf(CurveTo).component6_7eebs7_k$ = function () {
     return this.y3__1;
   };
-  protoOf(CurveTo).copy_htf379_k$ = function (x1, y1, x2, y2, x3, y3) {
+  protoOf(CurveTo).copy_82jydn_k$ = function (x1, y1, x2, y2, x3, y3) {
     return new CurveTo(x1, y1, x2, y2, x3, y3);
   };
-  protoOf(CurveTo).copy$default_lxsig3_k$ = function (x1, y1, x2, y2, x3, y3, $super) {
+  protoOf(CurveTo).copy$default_uyb0tu_k$ = function (x1, y1, x2, y2, x3, y3, $super) {
     x1 = x1 === VOID ? this.x1__1 : x1;
     y1 = y1 === VOID ? this.y1__1 : y1;
     x2 = x2 === VOID ? this.x2__1 : x2;
     y2 = y2 === VOID ? this.y2__1 : y2;
     x3 = x3 === VOID ? this.x3__1 : x3;
     y3 = y3 === VOID ? this.y3__1 : y3;
-    return $super === VOID ? this.copy_htf379_k$(x1, y1, x2, y2, x3, y3) : $super.copy_htf379_k$.call(this, x1, y1, x2, y2, x3, y3);
+    return $super === VOID ? this.copy_82jydn_k$(x1, y1, x2, y2, x3, y3) : $super.copy_82jydn_k$.call(this, x1, y1, x2, y2, x3, y3);
   };
   protoOf(CurveTo).toString = function () {
     return 'CurveTo(x1=' + this.x1__1 + ', y1=' + this.y1__1 + ', x2=' + this.x2__1 + ', y2=' + this.y2__1 + ', x3=' + this.x3__1 + ', y3=' + this.y3__1 + ')';
@@ -9900,15 +9062,15 @@
   protoOf(RelativeReflectiveCurveTo).component4_7eebs9_k$ = function () {
     return this.dy2__1;
   };
-  protoOf(RelativeReflectiveCurveTo).copy_skjbed_k$ = function (dx1, dy1, dx2, dy2) {
+  protoOf(RelativeReflectiveCurveTo).copy_egrqb9_k$ = function (dx1, dy1, dx2, dy2) {
     return new RelativeReflectiveCurveTo(dx1, dy1, dx2, dy2);
   };
-  protoOf(RelativeReflectiveCurveTo).copy$default_nngnk6_k$ = function (dx1, dy1, dx2, dy2, $super) {
+  protoOf(RelativeReflectiveCurveTo).copy$default_kqsr53_k$ = function (dx1, dy1, dx2, dy2, $super) {
     dx1 = dx1 === VOID ? this.dx1__1 : dx1;
     dy1 = dy1 === VOID ? this.dy1__1 : dy1;
     dx2 = dx2 === VOID ? this.dx2__1 : dx2;
     dy2 = dy2 === VOID ? this.dy2__1 : dy2;
-    return $super === VOID ? this.copy_skjbed_k$(dx1, dy1, dx2, dy2) : $super.copy_skjbed_k$.call(this, dx1, dy1, dx2, dy2);
+    return $super === VOID ? this.copy_egrqb9_k$(dx1, dy1, dx2, dy2) : $super.copy_egrqb9_k$.call(this, dx1, dy1, dx2, dy2);
   };
   protoOf(RelativeReflectiveCurveTo).toString = function () {
     return 'RelativeReflectiveCurveTo(dx1=' + this.dx1__1 + ', dy1=' + this.dy1__1 + ', dx2=' + this.dx2__1 + ', dy2=' + this.dy2__1 + ')';
@@ -9967,15 +9129,15 @@
   protoOf(ReflectiveCurveTo).component4_7eebs9_k$ = function () {
     return this.y2__1;
   };
-  protoOf(ReflectiveCurveTo).copy_skjbed_k$ = function (x1, y1, x2, y2) {
+  protoOf(ReflectiveCurveTo).copy_egrqb9_k$ = function (x1, y1, x2, y2) {
     return new ReflectiveCurveTo(x1, y1, x2, y2);
   };
-  protoOf(ReflectiveCurveTo).copy$default_173zxi_k$ = function (x1, y1, x2, y2, $super) {
+  protoOf(ReflectiveCurveTo).copy$default_ulf9q3_k$ = function (x1, y1, x2, y2, $super) {
     x1 = x1 === VOID ? this.x1__1 : x1;
     y1 = y1 === VOID ? this.y1__1 : y1;
     x2 = x2 === VOID ? this.x2__1 : x2;
     y2 = y2 === VOID ? this.y2__1 : y2;
-    return $super === VOID ? this.copy_skjbed_k$(x1, y1, x2, y2) : $super.copy_skjbed_k$.call(this, x1, y1, x2, y2);
+    return $super === VOID ? this.copy_egrqb9_k$(x1, y1, x2, y2) : $super.copy_egrqb9_k$.call(this, x1, y1, x2, y2);
   };
   protoOf(ReflectiveCurveTo).toString = function () {
     return 'ReflectiveCurveTo(x1=' + this.x1__1 + ', y1=' + this.y1__1 + ', x2=' + this.x2__1 + ', y2=' + this.y2__1 + ')';
@@ -10034,15 +9196,15 @@
   protoOf(RelativeQuadTo).component4_7eebs9_k$ = function () {
     return this.dy2__1;
   };
-  protoOf(RelativeQuadTo).copy_skjbed_k$ = function (dx1, dy1, dx2, dy2) {
+  protoOf(RelativeQuadTo).copy_egrqb9_k$ = function (dx1, dy1, dx2, dy2) {
     return new RelativeQuadTo(dx1, dy1, dx2, dy2);
   };
-  protoOf(RelativeQuadTo).copy$default_m4orq1_k$ = function (dx1, dy1, dx2, dy2, $super) {
+  protoOf(RelativeQuadTo).copy$default_bfb1ao_k$ = function (dx1, dy1, dx2, dy2, $super) {
     dx1 = dx1 === VOID ? this.dx1__1 : dx1;
     dy1 = dy1 === VOID ? this.dy1__1 : dy1;
     dx2 = dx2 === VOID ? this.dx2__1 : dx2;
     dy2 = dy2 === VOID ? this.dy2__1 : dy2;
-    return $super === VOID ? this.copy_skjbed_k$(dx1, dy1, dx2, dy2) : $super.copy_skjbed_k$.call(this, dx1, dy1, dx2, dy2);
+    return $super === VOID ? this.copy_egrqb9_k$(dx1, dy1, dx2, dy2) : $super.copy_egrqb9_k$.call(this, dx1, dy1, dx2, dy2);
   };
   protoOf(RelativeQuadTo).toString = function () {
     return 'RelativeQuadTo(dx1=' + this.dx1__1 + ', dy1=' + this.dy1__1 + ', dx2=' + this.dx2__1 + ', dy2=' + this.dy2__1 + ')';
@@ -10101,15 +9263,15 @@
   protoOf(QuadTo).component4_7eebs9_k$ = function () {
     return this.y2__1;
   };
-  protoOf(QuadTo).copy_skjbed_k$ = function (x1, y1, x2, y2) {
+  protoOf(QuadTo).copy_egrqb9_k$ = function (x1, y1, x2, y2) {
     return new QuadTo(x1, y1, x2, y2);
   };
-  protoOf(QuadTo).copy$default_hx6igd_k$ = function (x1, y1, x2, y2, $super) {
+  protoOf(QuadTo).copy$default_oon1vg_k$ = function (x1, y1, x2, y2, $super) {
     x1 = x1 === VOID ? this.x1__1 : x1;
     y1 = y1 === VOID ? this.y1__1 : y1;
     x2 = x2 === VOID ? this.x2__1 : x2;
     y2 = y2 === VOID ? this.y2__1 : y2;
-    return $super === VOID ? this.copy_skjbed_k$(x1, y1, x2, y2) : $super.copy_skjbed_k$.call(this, x1, y1, x2, y2);
+    return $super === VOID ? this.copy_egrqb9_k$(x1, y1, x2, y2) : $super.copy_egrqb9_k$.call(this, x1, y1, x2, y2);
   };
   protoOf(QuadTo).toString = function () {
     return 'QuadTo(x1=' + this.x1__1 + ', y1=' + this.y1__1 + ', x2=' + this.x2__1 + ', y2=' + this.y2__1 + ')';
@@ -10154,13 +9316,13 @@
   protoOf(RelativeReflectiveQuadTo).component2_7eebsb_k$ = function () {
     return this.dy_1;
   };
-  protoOf(RelativeReflectiveQuadTo).copy_138fzp_k$ = function (dx, dy) {
+  protoOf(RelativeReflectiveQuadTo).copy_4tzoad_k$ = function (dx, dy) {
     return new RelativeReflectiveQuadTo(dx, dy);
   };
-  protoOf(RelativeReflectiveQuadTo).copy$default_7gpet2_k$ = function (dx, dy, $super) {
+  protoOf(RelativeReflectiveQuadTo).copy$default_9ulsub_k$ = function (dx, dy, $super) {
     dx = dx === VOID ? this.dx_1 : dx;
     dy = dy === VOID ? this.dy_1 : dy;
-    return $super === VOID ? this.copy_138fzp_k$(dx, dy) : $super.copy_138fzp_k$.call(this, dx, dy);
+    return $super === VOID ? this.copy_4tzoad_k$(dx, dy) : $super.copy_4tzoad_k$.call(this, dx, dy);
   };
   protoOf(RelativeReflectiveQuadTo).toString = function () {
     return 'RelativeReflectiveQuadTo(dx=' + this.dx_1 + ', dy=' + this.dy_1 + ')';
@@ -10199,13 +9361,13 @@
   protoOf(ReflectiveQuadTo).component2_7eebsb_k$ = function () {
     return this.y_1;
   };
-  protoOf(ReflectiveQuadTo).copy_138fzp_k$ = function (x, y) {
+  protoOf(ReflectiveQuadTo).copy_4tzoad_k$ = function (x, y) {
     return new ReflectiveQuadTo(x, y);
   };
-  protoOf(ReflectiveQuadTo).copy$default_jd90wa_k$ = function (x, y, $super) {
+  protoOf(ReflectiveQuadTo).copy$default_tjvfvz_k$ = function (x, y, $super) {
     x = x === VOID ? this.x_1 : x;
     y = y === VOID ? this.y_1 : y;
-    return $super === VOID ? this.copy_138fzp_k$(x, y) : $super.copy_138fzp_k$.call(this, x, y);
+    return $super === VOID ? this.copy_4tzoad_k$(x, y) : $super.copy_4tzoad_k$.call(this, x, y);
   };
   protoOf(ReflectiveQuadTo).toString = function () {
     return 'ReflectiveQuadTo(x=' + this.x_1 + ', y=' + this.y_1 + ')';
@@ -10279,10 +9441,10 @@
   protoOf(RelativeArcTo).component7_7eebs6_k$ = function () {
     return this.arcStartDy_1;
   };
-  protoOf(RelativeArcTo).copy_2l8civ_k$ = function (horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartDx, arcStartDy) {
+  protoOf(RelativeArcTo).copy_at02il_k$ = function (horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartDx, arcStartDy) {
     return new RelativeArcTo(horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartDx, arcStartDy);
   };
-  protoOf(RelativeArcTo).copy$default_49ndgt_k$ = function (horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartDx, arcStartDy, $super) {
+  protoOf(RelativeArcTo).copy$default_fw0bl0_k$ = function (horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartDx, arcStartDy, $super) {
     horizontalEllipseRadius = horizontalEllipseRadius === VOID ? this.horizontalEllipseRadius_1 : horizontalEllipseRadius;
     verticalEllipseRadius = verticalEllipseRadius === VOID ? this.verticalEllipseRadius_1 : verticalEllipseRadius;
     theta = theta === VOID ? this.theta_1 : theta;
@@ -10290,7 +9452,7 @@
     isPositiveArc = isPositiveArc === VOID ? this.isPositiveArc_1 : isPositiveArc;
     arcStartDx = arcStartDx === VOID ? this.arcStartDx_1 : arcStartDx;
     arcStartDy = arcStartDy === VOID ? this.arcStartDy_1 : arcStartDy;
-    return $super === VOID ? this.copy_2l8civ_k$(horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartDx, arcStartDy) : $super.copy_2l8civ_k$.call(this, horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartDx, arcStartDy);
+    return $super === VOID ? this.copy_at02il_k$(horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartDx, arcStartDy) : $super.copy_at02il_k$.call(this, horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartDx, arcStartDy);
   };
   protoOf(RelativeArcTo).toString = function () {
     return 'RelativeArcTo(horizontalEllipseRadius=' + this.horizontalEllipseRadius_1 + ', verticalEllipseRadius=' + this.verticalEllipseRadius_1 + ', theta=' + this.theta_1 + ', isMoreThanHalf=' + this.isMoreThanHalf_1 + ', isPositiveArc=' + this.isPositiveArc_1 + ', arcStartDx=' + this.arcStartDx_1 + ', arcStartDy=' + this.arcStartDy_1 + ')';
@@ -10299,8 +9461,8 @@
     var result = getNumberHashCode(this.horizontalEllipseRadius_1);
     result = imul(result, 31) + getNumberHashCode(this.verticalEllipseRadius_1) | 0;
     result = imul(result, 31) + getNumberHashCode(this.theta_1) | 0;
-    result = imul(result, 31) + (this.isMoreThanHalf_1 | 0) | 0;
-    result = imul(result, 31) + (this.isPositiveArc_1 | 0) | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.isMoreThanHalf_1) | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.isPositiveArc_1) | 0;
     result = imul(result, 31) + getNumberHashCode(this.arcStartDx_1) | 0;
     result = imul(result, 31) + getNumberHashCode(this.arcStartDy_1) | 0;
     return result;
@@ -10379,10 +9541,10 @@
   protoOf(ArcTo).component7_7eebs6_k$ = function () {
     return this.arcStartY_1;
   };
-  protoOf(ArcTo).copy_2l8civ_k$ = function (horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartX, arcStartY) {
+  protoOf(ArcTo).copy_at02il_k$ = function (horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartX, arcStartY) {
     return new ArcTo(horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartX, arcStartY);
   };
-  protoOf(ArcTo).copy$default_els6pt_k$ = function (horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartX, arcStartY, $super) {
+  protoOf(ArcTo).copy$default_r4lws8_k$ = function (horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartX, arcStartY, $super) {
     horizontalEllipseRadius = horizontalEllipseRadius === VOID ? this.horizontalEllipseRadius_1 : horizontalEllipseRadius;
     verticalEllipseRadius = verticalEllipseRadius === VOID ? this.verticalEllipseRadius_1 : verticalEllipseRadius;
     theta = theta === VOID ? this.theta_1 : theta;
@@ -10390,7 +9552,7 @@
     isPositiveArc = isPositiveArc === VOID ? this.isPositiveArc_1 : isPositiveArc;
     arcStartX = arcStartX === VOID ? this.arcStartX_1 : arcStartX;
     arcStartY = arcStartY === VOID ? this.arcStartY_1 : arcStartY;
-    return $super === VOID ? this.copy_2l8civ_k$(horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartX, arcStartY) : $super.copy_2l8civ_k$.call(this, horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartX, arcStartY);
+    return $super === VOID ? this.copy_at02il_k$(horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartX, arcStartY) : $super.copy_at02il_k$.call(this, horizontalEllipseRadius, verticalEllipseRadius, theta, isMoreThanHalf, isPositiveArc, arcStartX, arcStartY);
   };
   protoOf(ArcTo).toString = function () {
     return 'ArcTo(horizontalEllipseRadius=' + this.horizontalEllipseRadius_1 + ', verticalEllipseRadius=' + this.verticalEllipseRadius_1 + ', theta=' + this.theta_1 + ', isMoreThanHalf=' + this.isMoreThanHalf_1 + ', isPositiveArc=' + this.isPositiveArc_1 + ', arcStartX=' + this.arcStartX_1 + ', arcStartY=' + this.arcStartY_1 + ')';
@@ -10399,8 +9561,8 @@
     var result = getNumberHashCode(this.horizontalEllipseRadius_1);
     result = imul(result, 31) + getNumberHashCode(this.verticalEllipseRadius_1) | 0;
     result = imul(result, 31) + getNumberHashCode(this.theta_1) | 0;
-    result = imul(result, 31) + (this.isMoreThanHalf_1 | 0) | 0;
-    result = imul(result, 31) + (this.isPositiveArc_1 | 0) | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.isMoreThanHalf_1) | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.isPositiveArc_1) | 0;
     result = imul(result, 31) + getNumberHashCode(this.arcStartX_1) | 0;
     result = imul(result, 31) + getNumberHashCode(this.arcStartY_1) | 0;
     return result;
@@ -10439,6 +9601,606 @@
   protoOf(PathNode).get_isQuad_ew4yai_k$ = function () {
     return this.isQuad_1;
   };
+  function addPathNodes(_this__u8e3s4, nodes, args, count) {
+    if (_this__u8e3s4 === _Char___init__impl__6a9atx(122) ? true : _this__u8e3s4 === _Char___init__impl__6a9atx(90)) {
+      nodes.add_utx5q5_k$(Close_getInstance());
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(109)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end = count - 2 | 0;
+      var index = 0;
+      while (index <= end) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start = index;
+        var node = new RelativeMoveTo(args[start], args[start + 1 | 0]);
+        var tmp;
+        var tmp_0;
+        if (node instanceof MoveTo) {
+          tmp_0 = index > 0;
+        } else {
+          tmp_0 = false;
+        }
+        if (tmp_0) {
+          tmp = new LineTo(args[index], args[index + 1 | 0]);
+        } else {
+          var tmp_1;
+          if (node instanceof RelativeMoveTo) {
+            tmp_1 = index > 0;
+          } else {
+            tmp_1 = false;
+          }
+          if (tmp_1) {
+            tmp = new RelativeLineTo(args[index], args[index + 1 | 0]);
+          } else {
+            tmp = node;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp);
+        index = index + 2 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(77)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_0 = count - 2 | 0;
+      var index_0 = 0;
+      while (index_0 <= end_0) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_0 = index_0;
+        var node_0 = new MoveTo(args[start_0], args[start_0 + 1 | 0]);
+        var tmp_2;
+        var tmp_3;
+        if (node_0 instanceof MoveTo) {
+          tmp_3 = index_0 > 0;
+        } else {
+          tmp_3 = false;
+        }
+        if (tmp_3) {
+          tmp_2 = new LineTo(args[index_0], args[index_0 + 1 | 0]);
+        } else {
+          var tmp_4;
+          if (node_0 instanceof RelativeMoveTo) {
+            tmp_4 = index_0 > 0;
+          } else {
+            tmp_4 = false;
+          }
+          if (tmp_4) {
+            tmp_2 = new RelativeLineTo(args[index_0], args[index_0 + 1 | 0]);
+          } else {
+            tmp_2 = node_0;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_2);
+        index_0 = index_0 + 2 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(108)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_1 = count - 2 | 0;
+      var index_1 = 0;
+      while (index_1 <= end_1) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_1 = index_1;
+        var node_1 = new RelativeLineTo(args[start_1], args[start_1 + 1 | 0]);
+        var tmp_5;
+        var tmp_6;
+        if (node_1 instanceof MoveTo) {
+          tmp_6 = index_1 > 0;
+        } else {
+          tmp_6 = false;
+        }
+        if (tmp_6) {
+          tmp_5 = new LineTo(args[index_1], args[index_1 + 1 | 0]);
+        } else {
+          var tmp_7;
+          if (node_1 instanceof RelativeMoveTo) {
+            tmp_7 = index_1 > 0;
+          } else {
+            tmp_7 = false;
+          }
+          if (tmp_7) {
+            tmp_5 = new RelativeLineTo(args[index_1], args[index_1 + 1 | 0]);
+          } else {
+            tmp_5 = node_1;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_5);
+        index_1 = index_1 + 2 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(76)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_2 = count - 2 | 0;
+      var index_2 = 0;
+      while (index_2 <= end_2) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_2 = index_2;
+        var node_2 = new LineTo(args[start_2], args[start_2 + 1 | 0]);
+        var tmp_8;
+        var tmp_9;
+        if (node_2 instanceof MoveTo) {
+          tmp_9 = index_2 > 0;
+        } else {
+          tmp_9 = false;
+        }
+        if (tmp_9) {
+          tmp_8 = new LineTo(args[index_2], args[index_2 + 1 | 0]);
+        } else {
+          var tmp_10;
+          if (node_2 instanceof RelativeMoveTo) {
+            tmp_10 = index_2 > 0;
+          } else {
+            tmp_10 = false;
+          }
+          if (tmp_10) {
+            tmp_8 = new RelativeLineTo(args[index_2], args[index_2 + 1 | 0]);
+          } else {
+            tmp_8 = node_2;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_8);
+        index_2 = index_2 + 2 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(104)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_3 = count - 1 | 0;
+      var index_3 = 0;
+      while (index_3 <= end_3) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_3 = index_3;
+        var node_3 = new RelativeHorizontalTo(args[start_3]);
+        var tmp_11;
+        var tmp_12;
+        if (node_3 instanceof MoveTo) {
+          tmp_12 = index_3 > 0;
+        } else {
+          tmp_12 = false;
+        }
+        if (tmp_12) {
+          tmp_11 = new LineTo(args[index_3], args[index_3 + 1 | 0]);
+        } else {
+          var tmp_13;
+          if (node_3 instanceof RelativeMoveTo) {
+            tmp_13 = index_3 > 0;
+          } else {
+            tmp_13 = false;
+          }
+          if (tmp_13) {
+            tmp_11 = new RelativeLineTo(args[index_3], args[index_3 + 1 | 0]);
+          } else {
+            tmp_11 = node_3;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_11);
+        index_3 = index_3 + 1 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(72)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_4 = count - 1 | 0;
+      var index_4 = 0;
+      while (index_4 <= end_4) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_4 = index_4;
+        var node_4 = new HorizontalTo(args[start_4]);
+        var tmp_14;
+        var tmp_15;
+        if (node_4 instanceof MoveTo) {
+          tmp_15 = index_4 > 0;
+        } else {
+          tmp_15 = false;
+        }
+        if (tmp_15) {
+          tmp_14 = new LineTo(args[index_4], args[index_4 + 1 | 0]);
+        } else {
+          var tmp_16;
+          if (node_4 instanceof RelativeMoveTo) {
+            tmp_16 = index_4 > 0;
+          } else {
+            tmp_16 = false;
+          }
+          if (tmp_16) {
+            tmp_14 = new RelativeLineTo(args[index_4], args[index_4 + 1 | 0]);
+          } else {
+            tmp_14 = node_4;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_14);
+        index_4 = index_4 + 1 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(118)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_5 = count - 1 | 0;
+      var index_5 = 0;
+      while (index_5 <= end_5) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_5 = index_5;
+        var node_5 = new RelativeVerticalTo(args[start_5]);
+        var tmp_17;
+        var tmp_18;
+        if (node_5 instanceof MoveTo) {
+          tmp_18 = index_5 > 0;
+        } else {
+          tmp_18 = false;
+        }
+        if (tmp_18) {
+          tmp_17 = new LineTo(args[index_5], args[index_5 + 1 | 0]);
+        } else {
+          var tmp_19;
+          if (node_5 instanceof RelativeMoveTo) {
+            tmp_19 = index_5 > 0;
+          } else {
+            tmp_19 = false;
+          }
+          if (tmp_19) {
+            tmp_17 = new RelativeLineTo(args[index_5], args[index_5 + 1 | 0]);
+          } else {
+            tmp_17 = node_5;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_17);
+        index_5 = index_5 + 1 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(86)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_6 = count - 1 | 0;
+      var index_6 = 0;
+      while (index_6 <= end_6) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_6 = index_6;
+        var node_6 = new VerticalTo(args[start_6]);
+        var tmp_20;
+        var tmp_21;
+        if (node_6 instanceof MoveTo) {
+          tmp_21 = index_6 > 0;
+        } else {
+          tmp_21 = false;
+        }
+        if (tmp_21) {
+          tmp_20 = new LineTo(args[index_6], args[index_6 + 1 | 0]);
+        } else {
+          var tmp_22;
+          if (node_6 instanceof RelativeMoveTo) {
+            tmp_22 = index_6 > 0;
+          } else {
+            tmp_22 = false;
+          }
+          if (tmp_22) {
+            tmp_20 = new RelativeLineTo(args[index_6], args[index_6 + 1 | 0]);
+          } else {
+            tmp_20 = node_6;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_20);
+        index_6 = index_6 + 1 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(99)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_7 = count - 6 | 0;
+      var index_7 = 0;
+      while (index_7 <= end_7) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_7 = index_7;
+        var node_7 = new RelativeCurveTo(args[start_7], args[start_7 + 1 | 0], args[start_7 + 2 | 0], args[start_7 + 3 | 0], args[start_7 + 4 | 0], args[start_7 + 5 | 0]);
+        var tmp_23;
+        var tmp_24;
+        if (node_7 instanceof MoveTo) {
+          tmp_24 = index_7 > 0;
+        } else {
+          tmp_24 = false;
+        }
+        if (tmp_24) {
+          tmp_23 = new LineTo(args[index_7], args[index_7 + 1 | 0]);
+        } else {
+          var tmp_25;
+          if (node_7 instanceof RelativeMoveTo) {
+            tmp_25 = index_7 > 0;
+          } else {
+            tmp_25 = false;
+          }
+          if (tmp_25) {
+            tmp_23 = new RelativeLineTo(args[index_7], args[index_7 + 1 | 0]);
+          } else {
+            tmp_23 = node_7;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_23);
+        index_7 = index_7 + 6 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(67)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_8 = count - 6 | 0;
+      var index_8 = 0;
+      while (index_8 <= end_8) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_8 = index_8;
+        var node_8 = new CurveTo(args[start_8], args[start_8 + 1 | 0], args[start_8 + 2 | 0], args[start_8 + 3 | 0], args[start_8 + 4 | 0], args[start_8 + 5 | 0]);
+        var tmp_26;
+        var tmp_27;
+        if (node_8 instanceof MoveTo) {
+          tmp_27 = index_8 > 0;
+        } else {
+          tmp_27 = false;
+        }
+        if (tmp_27) {
+          tmp_26 = new LineTo(args[index_8], args[index_8 + 1 | 0]);
+        } else {
+          var tmp_28;
+          if (node_8 instanceof RelativeMoveTo) {
+            tmp_28 = index_8 > 0;
+          } else {
+            tmp_28 = false;
+          }
+          if (tmp_28) {
+            tmp_26 = new RelativeLineTo(args[index_8], args[index_8 + 1 | 0]);
+          } else {
+            tmp_26 = node_8;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_26);
+        index_8 = index_8 + 6 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(115)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_9 = count - 4 | 0;
+      var index_9 = 0;
+      while (index_9 <= end_9) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_9 = index_9;
+        var node_9 = new RelativeReflectiveCurveTo(args[start_9], args[start_9 + 1 | 0], args[start_9 + 2 | 0], args[start_9 + 3 | 0]);
+        var tmp_29;
+        var tmp_30;
+        if (node_9 instanceof MoveTo) {
+          tmp_30 = index_9 > 0;
+        } else {
+          tmp_30 = false;
+        }
+        if (tmp_30) {
+          tmp_29 = new LineTo(args[index_9], args[index_9 + 1 | 0]);
+        } else {
+          var tmp_31;
+          if (node_9 instanceof RelativeMoveTo) {
+            tmp_31 = index_9 > 0;
+          } else {
+            tmp_31 = false;
+          }
+          if (tmp_31) {
+            tmp_29 = new RelativeLineTo(args[index_9], args[index_9 + 1 | 0]);
+          } else {
+            tmp_29 = node_9;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_29);
+        index_9 = index_9 + 4 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(83)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_10 = count - 4 | 0;
+      var index_10 = 0;
+      while (index_10 <= end_10) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_10 = index_10;
+        var node_10 = new ReflectiveCurveTo(args[start_10], args[start_10 + 1 | 0], args[start_10 + 2 | 0], args[start_10 + 3 | 0]);
+        var tmp_32;
+        var tmp_33;
+        if (node_10 instanceof MoveTo) {
+          tmp_33 = index_10 > 0;
+        } else {
+          tmp_33 = false;
+        }
+        if (tmp_33) {
+          tmp_32 = new LineTo(args[index_10], args[index_10 + 1 | 0]);
+        } else {
+          var tmp_34;
+          if (node_10 instanceof RelativeMoveTo) {
+            tmp_34 = index_10 > 0;
+          } else {
+            tmp_34 = false;
+          }
+          if (tmp_34) {
+            tmp_32 = new RelativeLineTo(args[index_10], args[index_10 + 1 | 0]);
+          } else {
+            tmp_32 = node_10;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_32);
+        index_10 = index_10 + 4 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(113)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_11 = count - 4 | 0;
+      var index_11 = 0;
+      while (index_11 <= end_11) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_11 = index_11;
+        var node_11 = new RelativeQuadTo(args[start_11], args[start_11 + 1 | 0], args[start_11 + 2 | 0], args[start_11 + 3 | 0]);
+        var tmp_35;
+        var tmp_36;
+        if (node_11 instanceof MoveTo) {
+          tmp_36 = index_11 > 0;
+        } else {
+          tmp_36 = false;
+        }
+        if (tmp_36) {
+          tmp_35 = new LineTo(args[index_11], args[index_11 + 1 | 0]);
+        } else {
+          var tmp_37;
+          if (node_11 instanceof RelativeMoveTo) {
+            tmp_37 = index_11 > 0;
+          } else {
+            tmp_37 = false;
+          }
+          if (tmp_37) {
+            tmp_35 = new RelativeLineTo(args[index_11], args[index_11 + 1 | 0]);
+          } else {
+            tmp_35 = node_11;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_35);
+        index_11 = index_11 + 4 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(81)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_12 = count - 4 | 0;
+      var index_12 = 0;
+      while (index_12 <= end_12) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_12 = index_12;
+        var node_12 = new QuadTo(args[start_12], args[start_12 + 1 | 0], args[start_12 + 2 | 0], args[start_12 + 3 | 0]);
+        var tmp_38;
+        var tmp_39;
+        if (node_12 instanceof MoveTo) {
+          tmp_39 = index_12 > 0;
+        } else {
+          tmp_39 = false;
+        }
+        if (tmp_39) {
+          tmp_38 = new LineTo(args[index_12], args[index_12 + 1 | 0]);
+        } else {
+          var tmp_40;
+          if (node_12 instanceof RelativeMoveTo) {
+            tmp_40 = index_12 > 0;
+          } else {
+            tmp_40 = false;
+          }
+          if (tmp_40) {
+            tmp_38 = new RelativeLineTo(args[index_12], args[index_12 + 1 | 0]);
+          } else {
+            tmp_38 = node_12;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_38);
+        index_12 = index_12 + 4 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(116)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_13 = count - 2 | 0;
+      var index_13 = 0;
+      while (index_13 <= end_13) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_13 = index_13;
+        var node_13 = new RelativeReflectiveQuadTo(args[start_13], args[start_13 + 1 | 0]);
+        var tmp_41;
+        var tmp_42;
+        if (node_13 instanceof MoveTo) {
+          tmp_42 = index_13 > 0;
+        } else {
+          tmp_42 = false;
+        }
+        if (tmp_42) {
+          tmp_41 = new LineTo(args[index_13], args[index_13 + 1 | 0]);
+        } else {
+          var tmp_43;
+          if (node_13 instanceof RelativeMoveTo) {
+            tmp_43 = index_13 > 0;
+          } else {
+            tmp_43 = false;
+          }
+          if (tmp_43) {
+            tmp_41 = new RelativeLineTo(args[index_13], args[index_13 + 1 | 0]);
+          } else {
+            tmp_41 = node_13;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_41);
+        index_13 = index_13 + 2 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(84)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_14 = count - 2 | 0;
+      var index_14 = 0;
+      while (index_14 <= end_14) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_14 = index_14;
+        var node_14 = new ReflectiveQuadTo(args[start_14], args[start_14 + 1 | 0]);
+        var tmp_44;
+        var tmp_45;
+        if (node_14 instanceof MoveTo) {
+          tmp_45 = index_14 > 0;
+        } else {
+          tmp_45 = false;
+        }
+        if (tmp_45) {
+          tmp_44 = new LineTo(args[index_14], args[index_14 + 1 | 0]);
+        } else {
+          var tmp_46;
+          if (node_14 instanceof RelativeMoveTo) {
+            tmp_46 = index_14 > 0;
+          } else {
+            tmp_46 = false;
+          }
+          if (tmp_46) {
+            tmp_44 = new RelativeLineTo(args[index_14], args[index_14 + 1 | 0]);
+          } else {
+            tmp_44 = node_14;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_44);
+        index_14 = index_14 + 2 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(97)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_15 = count - 7 | 0;
+      var index_15 = 0;
+      while (index_15 <= end_15) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_15 = index_15;
+        var node_15 = new RelativeArcTo(args[start_15], args[start_15 + 1 | 0], args[start_15 + 2 | 0], !(compareTo(args[start_15 + 3 | 0], 0.0) === 0), !(compareTo(args[start_15 + 4 | 0], 0.0) === 0), args[start_15 + 5 | 0], args[start_15 + 6 | 0]);
+        var tmp_47;
+        var tmp_48;
+        if (node_15 instanceof MoveTo) {
+          tmp_48 = index_15 > 0;
+        } else {
+          tmp_48 = false;
+        }
+        if (tmp_48) {
+          tmp_47 = new LineTo(args[index_15], args[index_15 + 1 | 0]);
+        } else {
+          var tmp_49;
+          if (node_15 instanceof RelativeMoveTo) {
+            tmp_49 = index_15 > 0;
+          } else {
+            tmp_49 = false;
+          }
+          if (tmp_49) {
+            tmp_47 = new RelativeLineTo(args[index_15], args[index_15 + 1 | 0]);
+          } else {
+            tmp_47 = node_15;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_47);
+        index_15 = index_15 + 7 | 0;
+      }
+    } else if (_this__u8e3s4 === _Char___init__impl__6a9atx(65)) {
+      // Inline function 'androidx.compose.ui.graphics.vector.pathNodesFromArgs' call
+      var end_16 = count - 7 | 0;
+      var index_16 = 0;
+      while (index_16 <= end_16) {
+        // Inline function 'androidx.compose.ui.graphics.vector.addPathNodes.<anonymous>' call
+        var start_16 = index_16;
+        var node_16 = new ArcTo(args[start_16], args[start_16 + 1 | 0], args[start_16 + 2 | 0], !(compareTo(args[start_16 + 3 | 0], 0.0) === 0), !(compareTo(args[start_16 + 4 | 0], 0.0) === 0), args[start_16 + 5 | 0], args[start_16 + 6 | 0]);
+        var tmp_50;
+        var tmp_51;
+        if (node_16 instanceof MoveTo) {
+          tmp_51 = index_16 > 0;
+        } else {
+          tmp_51 = false;
+        }
+        if (tmp_51) {
+          tmp_50 = new LineTo(args[index_16], args[index_16 + 1 | 0]);
+        } else {
+          var tmp_52;
+          if (node_16 instanceof RelativeMoveTo) {
+            tmp_52 = index_16 > 0;
+          } else {
+            tmp_52 = false;
+          }
+          if (tmp_52) {
+            tmp_50 = new RelativeLineTo(args[index_16], args[index_16 + 1 | 0]);
+          } else {
+            tmp_50 = node_16;
+          }
+        }
+        nodes.add_utx5q5_k$(tmp_50);
+        index_16 = index_16 + 7 | 0;
+      }
+    } else
+      throw IllegalArgumentException_init_$Create$('Unknown command for: ' + toString_1(_this__u8e3s4));
+  }
   function get_RelativeCloseKey() {
     return RelativeCloseKey;
   }
@@ -10478,7 +10240,7 @@
           tmp = node;
         }
       }
-      nodes.add_1j60pz_k$(tmp);
+      nodes.add_utx5q5_k$(tmp);
       index = index + numArgs | 0;
     }
   }
@@ -10608,14 +10370,14 @@
       var src = $this.nodeData_1;
       $this.nodeData_1 = new Float32Array(imul(dataCount, 2));
       // Inline function 'kotlin.collections.copyInto' call
-      var tmp0_copyInto = $this.nodeData_1;
-      var tmp1_copyInto = src.length;
+      var destination = $this.nodeData_1;
+      var endIndex = src.length;
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
       var tmp = src;
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      arrayCopy(tmp, tmp0_copyInto, 0, 0, tmp1_copyInto);
+      arrayCopy(tmp, destination, 0, 0, endIndex);
     }
   }
   function addNodes($this, cmd, args, count) {
@@ -10628,11 +10390,11 @@
     this.floatResult_1 = new FloatResult();
     this.nodeData_1 = new Float32Array(64);
   }
-  protoOf(PathParser).clear_j9y8zo_k$ = function () {
-    this.nodes_1.clear_j9y8zo_k$();
+  protoOf(PathParser).clear_j9egeb_k$ = function () {
+    this.nodes_1.clear_j9egeb_k$();
   };
-  protoOf(PathParser).parsePathString_obiteg_k$ = function (pathData) {
-    this.nodes_1.clear_j9y8zo_k$();
+  protoOf(PathParser).parsePathString_nv3pov_k$ = function (pathData) {
+    this.nodes_1.clear_j9egeb_k$();
     var start = 0;
     var end = pathData.length;
     var dataCount = 0;
@@ -10654,11 +10416,15 @@
         var lowerChar = Char__toInt_impl_vasixd(c) | 32;
         var tmp;
         // Inline function 'kotlin.code' call
-        var tmp_0 = lowerChar - 97 | 0;
+        var this_0 = _Char___init__impl__6a9atx(97);
+        var tmp_0 = lowerChar - Char__toInt_impl_vasixd(this_0) | 0;
         // Inline function 'kotlin.code' call
-        if (imul(tmp_0, lowerChar - 122 | 0) <= 0) {
+        var this_1 = _Char___init__impl__6a9atx(122);
+        var tmp$ret$2 = Char__toInt_impl_vasixd(this_1);
+        if (imul(tmp_0, lowerChar - tmp$ret$2 | 0) <= 0) {
           // Inline function 'kotlin.code' call
-          tmp = !(lowerChar === 101);
+          var this_2 = _Char___init__impl__6a9atx(101);
+          tmp = !(lowerChar === Char__toInt_impl_vasixd(this_2));
         } else {
           tmp = false;
         }
@@ -10670,35 +10436,36 @@
        while (index < end);
       if (!(command === _Char___init__impl__6a9atx(0))) {
         // Inline function 'kotlin.code' call
-        var tmp1_get_code_jtnknr = command;
-        var tmp_1 = Char__toInt_impl_vasixd(tmp1_get_code_jtnknr) | 32;
+        var this_3 = command;
+        var tmp_1 = Char__toInt_impl_vasixd(this_3) | 32;
         // Inline function 'kotlin.code' call
-        if (!(tmp_1 === 122)) {
+        var this_4 = _Char___init__impl__6a9atx(122);
+        if (!(tmp_1 === Char__toInt_impl_vasixd(this_4))) {
           dataCount = 0;
           do {
             while (index < end ? Char__compareTo_impl_ypi4mb(charSequenceGet(pathData, index), _Char___init__impl__6a9atx(32)) <= 0 : false) {
               index = index + 1 | 0;
             }
-            index = Companion_getInstance_46().nextFloat_vwre9r_k$(pathData, index, end, this.floatResult_1);
+            index = Companion_getInstance_46().nextFloat_rgb4co_k$(pathData, index, end, this.floatResult_1);
             if (this.floatResult_1.get_isValid_zh4f7b_k$()) {
               var tmp_2 = this.nodeData_1;
               var tmp4 = dataCount;
               dataCount = tmp4 + 1 | 0;
               tmp_2[tmp4] = this.floatResult_1.get_value_j01efc_k$();
               // Inline function 'androidx.compose.ui.graphics.vector.PathParser.resizeNodeData' call
-              var tmp2_resizeNodeData = dataCount;
-              if (tmp2_resizeNodeData >= this.nodeData_1.length) {
+              var dataCount_0 = dataCount;
+              if (dataCount_0 >= this.nodeData_1.length) {
                 var src = this.nodeData_1;
-                this.nodeData_1 = new Float32Array(imul(tmp2_resizeNodeData, 2));
+                this.nodeData_1 = new Float32Array(imul(dataCount_0, 2));
                 // Inline function 'kotlin.collections.copyInto' call
-                var tmp0_copyInto = this.nodeData_1;
-                var tmp1_copyInto = src.length;
+                var destination = this.nodeData_1;
+                var endIndex = src.length;
                 // Inline function 'kotlin.js.unsafeCast' call
                 // Inline function 'kotlin.js.asDynamic' call
                 var tmp_3 = src;
                 // Inline function 'kotlin.js.unsafeCast' call
                 // Inline function 'kotlin.js.asDynamic' call
-                arrayCopy(tmp_3, tmp0_copyInto, 0, 0, tmp1_copyInto);
+                arrayCopy(tmp_3, destination, 0, 0, endIndex);
               }
             }
             while (index < end ? charSequenceGet(pathData, index) === _Char___init__impl__6a9atx(44) : false) {
@@ -10708,34 +10475,34 @@
            while (index < end ? this.floatResult_1.get_isValid_zh4f7b_k$() : false);
         }
         // Inline function 'androidx.compose.ui.graphics.vector.PathParser.addNodes' call
-        var tmp3_addNodes = command;
-        var tmp4_addNodes = this.nodeData_1;
-        var tmp5_addNodes = dataCount;
-        addPathNodes(tmp3_addNodes, this.nodes_1, tmp4_addNodes, tmp5_addNodes);
+        var cmd = command;
+        var args = this.nodeData_1;
+        var count = dataCount;
+        addPathNodes(cmd, this.nodes_1, args, count);
       }
     }
     return this;
   };
-  protoOf(PathParser).addPathNodes_kbkq3a_k$ = function (nodes) {
-    this.nodes_1.addAll_oxxjjk_k$(nodes);
+  protoOf(PathParser).addPathNodes_oefo12_k$ = function (nodes) {
+    this.nodes_1.addAll_4lagoh_k$(nodes);
     return this;
   };
   protoOf(PathParser).toNodes_jcvf9m_k$ = function () {
     return this.nodes_1;
   };
-  protoOf(PathParser).toPath_uv3z80_k$ = function (target) {
+  protoOf(PathParser).toPath_oorm4v_k$ = function (target) {
     return toPath(this.nodes_1, target);
   };
-  protoOf(PathParser).toPath$default_y4c96b_k$ = function (target, $super) {
+  protoOf(PathParser).toPath$default_alb1es_k$ = function (target, $super) {
     target = target === VOID ? Path_0() : target;
-    return $super === VOID ? this.toPath_uv3z80_k$(target) : $super.toPath_uv3z80_k$.call(this, target);
+    return $super === VOID ? this.toPath_oorm4v_k$(target) : $super.toPath_oorm4v_k$.call(this, target);
   };
   function toPath(_this__u8e3s4, target) {
     target = target === VOID ? Path_0() : target;
     _init_properties_PathParser_kt__xn6mis();
-    var fillType = target.get_fillType_qtoiy8_k$();
-    target.rewind_xapxey_k$();
-    target.set_fillType_288nii_k$(fillType);
+    var fillType = target.get_fillType_67mqlu_k$();
+    target.rewind_xb9q0b_k$();
+    target.set_fillType_6krlbe_k$(fillType);
     var currentX = 0.0;
     var currentY = 0.0;
     var ctrlX = 0.0;
@@ -10744,7 +10511,7 @@
     var segmentY = 0.0;
     var reflectiveCtrlX;
     var reflectiveCtrlY;
-    var previousNode = _this__u8e3s4.isEmpty_y1axqb_k$() ? Close_getInstance() : _this__u8e3s4.get_fkrdnv_k$(0);
+    var previousNode = _this__u8e3s4.isEmpty_y1axqb_k$() ? Close_getInstance() : _this__u8e3s4.get_c1px32_k$(0);
     // Inline function 'androidx.compose.ui.util.fastForEach' call
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
@@ -10753,65 +10520,65 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = _this__u8e3s4.get_fkrdnv_k$(index);
+        var item = _this__u8e3s4.get_c1px32_k$(index);
         // Inline function 'androidx.compose.ui.graphics.vector.toPath.<anonymous>' call
         if (item instanceof Close) {
           currentX = segmentX;
           currentY = segmentY;
           ctrlX = segmentX;
           ctrlY = segmentY;
-          target.close_ymq55z_k$();
-          target.moveTo_ga4oez_k$(currentX, currentY);
+          target.close_yn9xrc_k$();
+          target.moveTo_22horo_k$(currentX, currentY);
         } else {
           if (item instanceof RelativeMoveTo) {
             currentX = currentX + item.get_dx_knto0z_k$();
             currentY = currentY + item.get_dy_knto0y_k$();
-            target.relativeMoveTo_4j9kzr_k$(item.get_dx_knto0z_k$(), item.get_dy_knto0y_k$());
+            target.relativeMoveTo_vkwjm0_k$(item.get_dx_knto0z_k$(), item.get_dy_knto0y_k$());
             segmentX = currentX;
             segmentY = currentY;
           } else {
             if (item instanceof MoveTo) {
               currentX = item.get_x_1mhr67_k$();
               currentY = item.get_y_1mhr68_k$();
-              target.moveTo_ga4oez_k$(item.get_x_1mhr67_k$(), item.get_y_1mhr68_k$());
+              target.moveTo_22horo_k$(item.get_x_1mhr67_k$(), item.get_y_1mhr68_k$());
               segmentX = currentX;
               segmentY = currentY;
             } else {
               if (item instanceof RelativeLineTo) {
-                target.relativeLineTo_kipmp6_k$(item.get_dx_knto0z_k$(), item.get_dy_knto0y_k$());
+                target.relativeLineTo_9kq9uz_k$(item.get_dx_knto0z_k$(), item.get_dy_knto0y_k$());
                 currentX = currentX + item.get_dx_knto0z_k$();
                 currentY = currentY + item.get_dy_knto0y_k$();
               } else {
                 if (item instanceof LineTo) {
-                  target.lineTo_w9kq4e_k$(item.get_x_1mhr67_k$(), item.get_y_1mhr68_k$());
+                  target.lineTo_o2nyip_k$(item.get_x_1mhr67_k$(), item.get_y_1mhr68_k$());
                   currentX = item.get_x_1mhr67_k$();
                   currentY = item.get_y_1mhr68_k$();
                 } else {
                   if (item instanceof RelativeHorizontalTo) {
-                    target.relativeLineTo_kipmp6_k$(item.get_dx_knto0z_k$(), 0.0);
+                    target.relativeLineTo_9kq9uz_k$(item.get_dx_knto0z_k$(), 0.0);
                     currentX = currentX + item.get_dx_knto0z_k$();
                   } else {
                     if (item instanceof HorizontalTo) {
-                      target.lineTo_w9kq4e_k$(item.get_x_1mhr67_k$(), currentY);
+                      target.lineTo_o2nyip_k$(item.get_x_1mhr67_k$(), currentY);
                       currentX = item.get_x_1mhr67_k$();
                     } else {
                       if (item instanceof RelativeVerticalTo) {
-                        target.relativeLineTo_kipmp6_k$(0.0, item.get_dy_knto0y_k$());
+                        target.relativeLineTo_9kq9uz_k$(0.0, item.get_dy_knto0y_k$());
                         currentY = currentY + item.get_dy_knto0y_k$();
                       } else {
                         if (item instanceof VerticalTo) {
-                          target.lineTo_w9kq4e_k$(currentX, item.get_y_1mhr68_k$());
+                          target.lineTo_o2nyip_k$(currentX, item.get_y_1mhr68_k$());
                           currentY = item.get_y_1mhr68_k$();
                         } else {
                           if (item instanceof RelativeCurveTo) {
-                            target.relativeCubicTo_a0rn6w_k$(item.get_dx1_18j70s_k$(), item.get_dy1_18j6zx_k$(), item.get_dx2_18j70r_k$(), item.get_dy2_18j6zw_k$(), item.get_dx3_18j70q_k$(), item.get_dy3_18j6zv_k$());
+                            target.relativeCubicTo_myt97t_k$(item.get_dx1_18j70s_k$(), item.get_dy1_18j6zx_k$(), item.get_dx2_18j70r_k$(), item.get_dy2_18j6zw_k$(), item.get_dx3_18j70q_k$(), item.get_dy3_18j6zv_k$());
                             ctrlX = currentX + item.get_dx2_18j70r_k$();
                             ctrlY = currentY + item.get_dy2_18j6zw_k$();
                             currentX = currentX + item.get_dx3_18j70q_k$();
                             currentY = currentY + item.get_dy3_18j6zv_k$();
                           } else {
                             if (item instanceof CurveTo) {
-                              target.cubicTo_1m51n8_k$(item.get_x1_kntnlq_k$(), item.get_y1_kntnkv_k$(), item.get_x2_kntnlp_k$(), item.get_y2_kntnku_k$(), item.get_x3_kntnlo_k$(), item.get_y3_kntnkt_k$());
+                              target.cubicTo_8sju51_k$(item.get_x1_kntnlq_k$(), item.get_y1_kntnkv_k$(), item.get_x2_kntnlp_k$(), item.get_y2_kntnku_k$(), item.get_x3_kntnlo_k$(), item.get_y3_kntnkt_k$());
                               ctrlX = item.get_x2_kntnlp_k$();
                               ctrlY = item.get_y2_kntnku_k$();
                               currentX = item.get_x3_kntnlo_k$();
@@ -10825,7 +10592,7 @@
                                   reflectiveCtrlX = 0.0;
                                   reflectiveCtrlY = 0.0;
                                 }
-                                target.relativeCubicTo_a0rn6w_k$(reflectiveCtrlX, reflectiveCtrlY, item.get_dx1_18j70s_k$(), item.get_dy1_18j6zx_k$(), item.get_dx2_18j70r_k$(), item.get_dy2_18j6zw_k$());
+                                target.relativeCubicTo_myt97t_k$(reflectiveCtrlX, reflectiveCtrlY, item.get_dx1_18j70s_k$(), item.get_dy1_18j6zx_k$(), item.get_dx2_18j70r_k$(), item.get_dy2_18j6zw_k$());
                                 ctrlX = currentX + item.get_dx1_18j70s_k$();
                                 ctrlY = currentY + item.get_dy1_18j6zx_k$();
                                 currentX = currentX + item.get_dx2_18j70r_k$();
@@ -10839,21 +10606,21 @@
                                     reflectiveCtrlX = currentX;
                                     reflectiveCtrlY = currentY;
                                   }
-                                  target.cubicTo_1m51n8_k$(reflectiveCtrlX, reflectiveCtrlY, item.get_x1_kntnlq_k$(), item.get_y1_kntnkv_k$(), item.get_x2_kntnlp_k$(), item.get_y2_kntnku_k$());
+                                  target.cubicTo_8sju51_k$(reflectiveCtrlX, reflectiveCtrlY, item.get_x1_kntnlq_k$(), item.get_y1_kntnkv_k$(), item.get_x2_kntnlp_k$(), item.get_y2_kntnku_k$());
                                   ctrlX = item.get_x1_kntnlq_k$();
                                   ctrlY = item.get_y1_kntnkv_k$();
                                   currentX = item.get_x2_kntnlp_k$();
                                   currentY = item.get_y2_kntnku_k$();
                                 } else {
                                   if (item instanceof RelativeQuadTo) {
-                                    target.relativeQuadraticBezierTo_z1apmz_k$(item.get_dx1_18j70s_k$(), item.get_dy1_18j6zx_k$(), item.get_dx2_18j70r_k$(), item.get_dy2_18j6zw_k$());
+                                    target.relativeQuadraticBezierTo_fs15qi_k$(item.get_dx1_18j70s_k$(), item.get_dy1_18j6zx_k$(), item.get_dx2_18j70r_k$(), item.get_dy2_18j6zw_k$());
                                     ctrlX = currentX + item.get_dx1_18j70s_k$();
                                     ctrlY = currentY + item.get_dy1_18j6zx_k$();
                                     currentX = currentX + item.get_dx2_18j70r_k$();
                                     currentY = currentY + item.get_dy2_18j6zw_k$();
                                   } else {
                                     if (item instanceof QuadTo) {
-                                      target.quadraticBezierTo_t2qfc1_k$(item.get_x1_kntnlq_k$(), item.get_y1_kntnkv_k$(), item.get_x2_kntnlp_k$(), item.get_y2_kntnku_k$());
+                                      target.quadraticBezierTo_pas4ki_k$(item.get_x1_kntnlq_k$(), item.get_y1_kntnkv_k$(), item.get_x2_kntnlp_k$(), item.get_y2_kntnku_k$());
                                       ctrlX = item.get_x1_kntnlq_k$();
                                       ctrlY = item.get_y1_kntnkv_k$();
                                       currentX = item.get_x2_kntnlp_k$();
@@ -10867,7 +10634,7 @@
                                           reflectiveCtrlX = 0.0;
                                           reflectiveCtrlY = 0.0;
                                         }
-                                        target.relativeQuadraticBezierTo_z1apmz_k$(reflectiveCtrlX, reflectiveCtrlY, item.get_dx_knto0z_k$(), item.get_dy_knto0y_k$());
+                                        target.relativeQuadraticBezierTo_fs15qi_k$(reflectiveCtrlX, reflectiveCtrlY, item.get_dx_knto0z_k$(), item.get_dy_knto0y_k$());
                                         ctrlX = currentX + reflectiveCtrlX;
                                         ctrlY = currentY + reflectiveCtrlY;
                                         currentX = currentX + item.get_dx_knto0z_k$();
@@ -10881,7 +10648,7 @@
                                             reflectiveCtrlX = currentX;
                                             reflectiveCtrlY = currentY;
                                           }
-                                          target.quadraticBezierTo_t2qfc1_k$(reflectiveCtrlX, reflectiveCtrlY, item.get_x_1mhr67_k$(), item.get_y_1mhr68_k$());
+                                          target.quadraticBezierTo_pas4ki_k$(reflectiveCtrlX, reflectiveCtrlY, item.get_x_1mhr67_k$(), item.get_y_1mhr68_k$());
                                           ctrlX = reflectiveCtrlX;
                                           ctrlY = reflectiveCtrlY;
                                           currentX = item.get_x_1mhr67_k$();
@@ -10967,13 +10734,13 @@
       cy = ym - sdx;
     }
     // Inline function 'kotlin.math.atan2' call
-    var tmp0_atan2 = y0p - cy;
-    var tmp1_atan2 = x0p - cx;
-    var eta0 = Math.atan2(tmp0_atan2, tmp1_atan2);
+    var y = y0p - cy;
+    var x = x0p - cx;
+    var eta0 = Math.atan2(y, x);
     // Inline function 'kotlin.math.atan2' call
-    var tmp2_atan2 = y1p - cy;
-    var tmp3_atan2 = x1p - cx;
-    var eta1 = Math.atan2(tmp2_atan2, tmp3_atan2);
+    var y_0 = y1p - cy;
+    var x_0 = x1p - cx;
+    var eta1 = Math.atan2(y_0, x_0);
     var sweep = eta1 - eta0;
     if (!(isPositiveArc === sweep >= 0.0)) {
       if (sweep > 0.0) {
@@ -10997,12 +10764,11 @@
     _init_properties_PathParser_kt__xn6mis();
     var eta1x = e1x;
     var eta1y = e1y;
-    var tmp$ret$1;
     // Inline function 'kotlin.math.ceil' call
     // Inline function 'kotlin.math.abs' call
-    var tmp0_abs = sweep * 4 / get_PI();
-    var tmp1_ceil = Math.abs(tmp0_abs);
-    tmp$ret$1 = Math.ceil(tmp1_ceil);
+    var x = sweep * 4 / get_PI();
+    var x_0 = Math.abs(x);
+    var tmp$ret$1 = Math.ceil(x_0);
     var numSegments = numberToInt(tmp$ret$1);
     var eta1 = start;
     // Inline function 'kotlin.math.cos' call
@@ -11010,11 +10776,11 @@
     // Inline function 'kotlin.math.sin' call
     var sinTheta = Math.sin(theta);
     // Inline function 'kotlin.math.cos' call
-    var tmp2_cos = eta1;
-    var cosEta1 = Math.cos(tmp2_cos);
+    var x_1 = eta1;
+    var cosEta1 = Math.cos(x_1);
     // Inline function 'kotlin.math.sin' call
-    var tmp3_sin = eta1;
-    var sinEta1 = Math.sin(tmp3_sin);
+    var x_2 = eta1;
+    var sinEta1 = Math.sin(x_2);
     var ep1x = -a * cosTheta * sinEta1 - b * sinTheta * cosEta1;
     var ep1y = -a * sinTheta * sinEta1 + b * cosTheta * cosEta1;
     var anglePerSegment = sweep / numSegments;
@@ -11033,19 +10799,19 @@
         var ep2x = -a * cosTheta * sinEta2 - b * sinTheta * cosEta2;
         var ep2y = -a * sinTheta * sinEta2 + b * cosTheta * cosEta2;
         // Inline function 'kotlin.math.tan' call
-        var tmp4_tan = (eta2 - eta1) / 2;
-        var tanDiff2 = Math.tan(tmp4_tan);
+        var x_3 = (eta2 - eta1) / 2;
+        var tanDiff2 = Math.tan(x_3);
         // Inline function 'kotlin.math.sin' call
-        var tmp5_sin = eta2 - eta1;
-        var tmp = Math.sin(tmp5_sin);
+        var x_4 = eta2 - eta1;
+        var tmp = Math.sin(x_4);
         // Inline function 'kotlin.math.sqrt' call
-        var tmp6_sqrt = 4 + 3.0 * tanDiff2 * tanDiff2;
-        var alpha = tmp * (Math.sqrt(tmp6_sqrt) - 1) / 3;
+        var x_5 = 4 + 3.0 * tanDiff2 * tanDiff2;
+        var alpha = tmp * (Math.sqrt(x_5) - 1) / 3;
         var q1x = eta1x + alpha * ep1x;
         var q1y = eta1y + alpha * ep1y;
         var q2x = e2x - alpha * ep2x;
         var q2y = e2y - alpha * ep2y;
-        p.cubicTo_1m51n8_k$(q1x, q1y, q2x, q2y, e2x, e2y);
+        p.cubicTo_8sju51_k$(q1x, q1y, q2x, q2y, e2x, e2y);
         eta1 = eta2;
         eta1x = e2x;
         eta1y = e2y;
@@ -11093,25 +10859,25 @@
        while (inductionVariable < length);
   }
   function toSkia(_this__u8e3s4) {
-    return _this__u8e3s4 === Companion_getInstance_14().get_Clear_9hhqh4_k$() ? BlendMode_CLEAR_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Src_o7e167_k$() ? BlendMode_SRC_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Dst_o5v574_k$() ? BlendMode_DST_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_SrcOver_uyf80z_k$() ? BlendMode_SRC_OVER_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_DstOver_h25nrw_k$() ? BlendMode_DST_OVER_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_SrcIn_yyf2fo_k$() ? BlendMode_SRC_IN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_DstIn_7c3x3p_k$() ? BlendMode_DST_IN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_SrcOut_78cqo7_k$() ? BlendMode_SRC_OUT_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_DstOut_3e3t2e_k$() ? BlendMode_DST_OUT_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_SrcAtop_erwkkd_k$() ? BlendMode_SRC_ATOP_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_DstAtop_88mllw_k$() ? BlendMode_DST_ATOP_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Xor_7r0wg6_k$() ? BlendMode_XOR_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Plus_sl45pl_k$() ? BlendMode_PLUS_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Modulate_xd1sfq_k$() ? BlendMode_MODULATE_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Screen_76rbx3_k$() ? BlendMode_SCREEN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Overlay_2mxasb_k$() ? BlendMode_OVERLAY_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Darken_1ojojo_k$() ? BlendMode_DARKEN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Lighten_afcpbe_k$() ? BlendMode_LIGHTEN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_ColorDodge_gwt0pb_k$() ? BlendMode_COLOR_DODGE_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_ColorBurn_55chr1_k$() ? BlendMode_COLOR_BURN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Hardlight_ie4bsm_k$() ? BlendMode_HARD_LIGHT_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Softlight_3emetl_k$() ? BlendMode_SOFT_LIGHT_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Difference_k61r8m_k$() ? BlendMode_DIFFERENCE_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Exclusion_cabql5_k$() ? BlendMode_EXCLUSION_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Multiply_bawk0x_k$() ? BlendMode_MULTIPLY_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Hue_1rhqm5_k$() ? BlendMode_HUE_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Saturation_y5o6lt_k$() ? BlendMode_SATURATION_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Color_2ootbm_k$() ? BlendMode_COLOR_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Luminosity_99tf6q_k$() ? BlendMode_LUMINOSITY_getInstance() : BlendMode_SRC_OVER_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_14().get_Clear_ts5s9y_k$() ? BlendMode_CLEAR_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Src_3wpzdd_k$() ? BlendMode_SRC_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Dst_qkkuz6_k$() ? BlendMode_DST_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_SrcOver_anr685_k$() ? BlendMode_SRC_OVER_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_DstOver_xoacee_k$() ? BlendMode_DST_OVER_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_SrcIn_enr0mu_k$() ? BlendMode_SRC_IN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_DstIn_cyk4p5_k$() ? BlendMode_DST_IN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_SrcOut_d2bb4n_k$() ? BlendMode_SRC_OUT_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_DstOut_gwk8qg_k$() ? BlendMode_DST_OUT_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_SrcAtop_z2kmd7_k$() ? BlendMode_SRC_ATOP_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_DstAtop_c21g6y_k$() ? BlendMode_DST_ATOP_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Xor_cjn5co_k$() ? BlendMode_XOR_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Plus_m5bugp_k$() ? BlendMode_PLUS_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Modulate_d2dqmw_k$() ? BlendMode_MODULATE_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Screen_rhfdpx_k$() ? BlendMode_SCREEN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Overlay_hnqr0j_k$() ? BlendMode_OVERLAY_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Darken_lz7qci_k$() ? BlendMode_DARKEN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Lighten_9vbchg_k$() ? BlendMode_LIGHTEN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_ColorDodge_xtmzgz_k$() ? BlendMode_COLOR_DODGE_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_ColorBurn_f5bk1t_k$() ? BlendMode_COLOR_BURN_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Hardlight_1wjq08_k$() ? BlendMode_HARD_LIGHT_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Softlight_npagmf_k$() ? BlendMode_SOFT_LIGHT_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Difference_uke8xo_k$() ? BlendMode_DIFFERENCE_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Exclusion_80cb7p_k$() ? BlendMode_EXCLUSION_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Multiply_8zrhrx_k$() ? BlendMode_MULTIPLY_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Hue_m25sez_k$() ? BlendMode_HUE_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Saturation_gkrtkh_k$() ? BlendMode_SATURATION_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Color_mzcv4g_k$() ? BlendMode_COLOR_getInstance() : _this__u8e3s4 === Companion_getInstance_14().get_Luminosity_tkhgzk_k$() ? BlendMode_LUMINOSITY_getInstance() : BlendMode_SRC_OVER_getInstance();
   }
   function identityMatrix33() {
     return new Matrix33(new Float32Array([1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]));
   }
   function toSkiaRect(_this__u8e3s4) {
-    return Companion_getInstance_3().makeLTRB_ax757q_k$(_this__u8e3s4.get_left_woprgw_k$(), _this__u8e3s4.get_top_18ivbo_k$(), _this__u8e3s4.get_right_ixz7xv_k$(), _this__u8e3s4.get_bottom_bj8ras_k$());
+    return Companion_getInstance_3().makeLTRB_2wvuxm_k$(_this__u8e3s4.get_left_woprgw_k$(), _this__u8e3s4.get_top_18ivbo_k$(), _this__u8e3s4.get_right_ixz7xv_k$(), _this__u8e3s4.get_bottom_bj8ras_k$());
   }
   function toSkiaRRect(_this__u8e3s4) {
     var radii = new Float32Array(8);
-    radii[0] = _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_topLeftCornerRadius_nzteym_k$());
-    radii[1] = _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_topLeftCornerRadius_nzteym_k$());
-    radii[2] = _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_topRightCornerRadius_h21xrz_k$());
-    radii[3] = _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_topRightCornerRadius_h21xrz_k$());
-    radii[4] = _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_bottomRightCornerRadius_vv4dft_k$());
-    radii[5] = _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_bottomRightCornerRadius_vv4dft_k$());
-    radii[6] = _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_bottomLeftCornerRadius_na53na_k$());
-    radii[7] = _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_bottomLeftCornerRadius_na53na_k$());
-    return Companion_getInstance_4().makeComplexLTRB_r9qn2z_k$(_this__u8e3s4.get_left_woprgw_k$(), _this__u8e3s4.get_top_18ivbo_k$(), _this__u8e3s4.get_right_ixz7xv_k$(), _this__u8e3s4.get_bottom_bj8ras_k$(), radii);
+    radii[0] = _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_topLeftCornerRadius_91hulg_k$());
+    radii[1] = _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_topLeftCornerRadius_91hulg_k$());
+    radii[2] = _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_topRightCornerRadius_kxqun3_k$());
+    radii[3] = _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_topRightCornerRadius_kxqun3_k$());
+    radii[4] = _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_bottomRightCornerRadius_166w49_k$());
+    radii[5] = _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_bottomRightCornerRadius_166w49_k$());
+    radii[6] = _CornerRadius___get_x__impl__1594cn(_this__u8e3s4.get_bottomLeftCornerRadius_9r65ws_k$());
+    radii[7] = _CornerRadius___get_y__impl__tyvleu(_this__u8e3s4.get_bottomLeftCornerRadius_9r65ws_k$());
+    return Companion_getInstance_4().makeComplexLTRB_n5v03i_k$(_this__u8e3s4.get_left_woprgw_k$(), _this__u8e3s4.get_top_18ivbo_k$(), _this__u8e3s4.get_right_ixz7xv_k$(), _this__u8e3s4.get_bottom_bj8ras_k$(), radii);
   }
   function toComposeRect(_this__u8e3s4) {
     return new Rect(_this__u8e3s4.get_left_woprgw_k$(), _this__u8e3s4.get_top_18ivbo_k$(), _this__u8e3s4.get_right_ixz7xv_k$(), _this__u8e3s4.get_bottom_bj8ras_k$());
@@ -11130,22 +10896,22 @@
   }
   function _get_skia__ddpejf(_this__u8e3s4, $this) {
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = _this__u8e3s4 instanceof SkiaBackedPaint ? _this__u8e3s4 : THROW_CCE();
+    var this_0 = _this__u8e3s4 instanceof SkiaBackedPaint ? _this__u8e3s4 : THROW_CCE();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.SkiaBackedCanvas.<get-skia>.<anonymous>' call
-    tmp0_apply.set_alphaMultiplier_c87tvp_k$($this.alphaMultiplier_1);
-    return tmp0_apply.get_skia_woucvt_k$();
+    this_0.set_alphaMultiplier_u32e12_k$($this.alphaMultiplier_1);
+    return this_0.get_skia_woucvt_k$();
   }
   function drawImageRect($this, image, srcOffset, srcSize, dstOffset, dstSize, paint) {
     var bitmap = asSkiaBitmap(image);
     // Inline function 'org.jetbrains.skia.impl.use' call
-    var tmp0_use = Companion_getInstance_5().makeFromBitmap_yu8eml_k$(bitmap);
+    var this_0 = Companion_getInstance_5().makeFromBitmap_39nkt4_k$(bitmap);
     var tmp;
     try {
       // Inline function 'androidx.compose.ui.graphics.SkiaBackedCanvas.drawImageRect.<anonymous>' call
-      tmp = $this.skia_1.drawImageRect_cpr7cg_k$(tmp0_use, Companion_getInstance_3().makeXYWH_bits74_k$(_Offset___get_x__impl__xvi35n(srcOffset), _Offset___get_y__impl__8bzhra(srcOffset), _Size___get_width__impl__58y75t(srcSize), _Size___get_height__impl__a04p02(srcSize)), Companion_getInstance_3().makeXYWH_bits74_k$(_Offset___get_x__impl__xvi35n(dstOffset), _Offset___get_y__impl__8bzhra(dstOffset), _Size___get_width__impl__58y75t(dstSize), _Size___get_height__impl__a04p02(dstSize)), toSkia_2(paint.get_filterQuality_2xbue9_k$(), $this), _get_skia__ddpejf(paint, $this), true);
+      tmp = $this.skia_1.drawImageRect_6jbgn9_k$(this_0, Companion_getInstance_3().makeXYWH_irfy4g_k$(_Offset___get_x__impl__xvi35n(srcOffset), _Offset___get_y__impl__8bzhra(srcOffset), _Size___get_width__impl__58y75t(srcSize), _Size___get_height__impl__a04p02(srcSize)), Companion_getInstance_3().makeXYWH_irfy4g_k$(_Offset___get_x__impl__xvi35n(dstOffset), _Offset___get_y__impl__8bzhra(dstOffset), _Size___get_width__impl__58y75t(dstSize), _Size___get_height__impl__a04p02(dstSize)), toSkia_2(paint.get_filterQuality_wmgb0f_k$(), $this), _get_skia__ddpejf(paint, $this), true);
     }finally {
-      tmp0_use.close_ymq55z_k$();
+      this_0.close_yn9xrc_k$();
     }
   }
   function drawPoints($this, points, paint) {
@@ -11157,9 +10923,9 @@
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var item = points.get_fkrdnv_k$(index).packedValue_1;
+        var item = points.get_c1px32_k$(index).packedValue_1;
         // Inline function 'androidx.compose.ui.graphics.SkiaBackedCanvas.drawPoints.<anonymous>' call
-        $this.skia_1.drawPoint_1b3djp_k$(_Offset___get_x__impl__xvi35n(item), _Offset___get_y__impl__8bzhra(item), _get_skia__ddpejf(paint, $this));
+        $this.skia_1.drawPoint_hb1rjx_k$(_Offset___get_x__impl__xvi35n(item), _Offset___get_y__impl__8bzhra(item), _get_skia__ddpejf(paint, $this));
       }
        while (inductionVariable <= last);
   }
@@ -11173,9 +10939,9 @@
         do {
           var i = inductionVariable;
           inductionVariable = inductionVariable + step_0 | 0;
-          var p1 = points.get_fkrdnv_k$(i).packedValue_1;
-          var p2 = points.get_fkrdnv_k$(i + 1 | 0).packedValue_1;
-          $this.skia_1.drawLine_t27q09_k$(_Offset___get_x__impl__xvi35n(p1), _Offset___get_y__impl__8bzhra(p1), _Offset___get_x__impl__xvi35n(p2), _Offset___get_y__impl__8bzhra(p2), _get_skia__ddpejf(paint, $this));
+          var p1 = points.get_c1px32_k$(i).packedValue_1;
+          var p2 = points.get_c1px32_k$(i + 1 | 0).packedValue_1;
+          $this.skia_1.drawLine_m1kfbl_k$(_Offset___get_x__impl__xvi35n(p1), _Offset___get_y__impl__8bzhra(p1), _Offset___get_x__impl__xvi35n(p2), _Offset___get_y__impl__8bzhra(p2), _get_skia__ddpejf(paint, $this));
         }
          while (!(i === last));
     }
@@ -11192,7 +10958,7 @@
           inductionVariable = inductionVariable + step_0 | 0;
           var x = points[i];
           var y = points[i + 1 | 0];
-          $this.skia_1.drawPoint_1b3djp_k$(x, y, _get_skia__ddpejf(paint, $this));
+          $this.skia_1.drawPoint_hb1rjx_k$(x, y, _get_skia__ddpejf(paint, $this));
         }
          while (!(i === last));
     }
@@ -11211,52 +10977,51 @@
           var y1 = points[i + 1 | 0];
           var x2 = points[i + 2 | 0];
           var y2 = points[i + 3 | 0];
-          $this.skia_1.drawLine_t27q09_k$(x1, y1, x2, y2, _get_skia__ddpejf(paint, $this));
+          $this.skia_1.drawLine_m1kfbl_k$(x1, y1, x2, y2, _get_skia__ddpejf(paint, $this));
         }
          while (!(i === last));
     }
   }
   function toSkia_0(_this__u8e3s4, $this) {
-    return _this__u8e3s4 === Companion_getInstance_16().get_Difference_tu92bl_k$() ? ClipMode_DIFFERENCE_getInstance() : _this__u8e3s4 === Companion_getInstance_16().get_Intersect_ow3v69_k$() ? ClipMode_INTERSECT_getInstance() : ClipMode_INTERSECT_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_16().get_Difference_lo2jbz_k$() ? ClipMode_DIFFERENCE_getInstance() : _this__u8e3s4 === Companion_getInstance_16().get_Intersect_gpxc6n_k$() ? ClipMode_INTERSECT_getInstance() : ClipMode_INTERSECT_getInstance();
   }
   function toSkia_1(_this__u8e3s4, $this) {
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[0];
+    var tmp = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(0, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_0 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[4];
+    var tmp_0 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(1, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_1 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[8];
+    var tmp_1 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(2, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_2 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[12];
+    var tmp_2 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(3, 4) + 0 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_3 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[1];
+    var tmp_3 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(0, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_4 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[5];
+    var tmp_4 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(1, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_5 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[9];
+    var tmp_5 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(2, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_6 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[13];
+    var tmp_6 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(3, 4) + 1 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_7 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[2];
+    var tmp_7 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(0, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_8 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[6];
+    var tmp_8 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(1, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_9 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[10];
+    var tmp_9 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(2, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_10 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[14];
+    var tmp_10 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(3, 4) + 2 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_11 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[3];
+    var tmp_11 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(0, 4) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_12 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[7];
+    var tmp_12 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(1, 4) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    var tmp_13 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[11];
-    var tmp$ret$15;
+    var tmp_13 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(2, 4) + 3 | 0];
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    tmp$ret$15 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[15];
+    var tmp$ret$15 = _Matrix___get_values__impl__fblr7b(_this__u8e3s4)[imul(3, 4) + 3 | 0];
     return new Matrix44(new Float32Array([tmp, tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp_5, tmp_6, tmp_7, tmp_8, tmp_9, tmp_10, tmp_11, tmp_12, tmp_13, tmp$ret$15]));
   }
   function toSkia_2(_this__u8e3s4, $this) {
-    return _this__u8e3s4 === Companion_getInstance_19().get_Low_lx4az0_k$() ? new FilterMipmap(FilterMode_LINEAR_getInstance(), MipmapMode_NONE_getInstance()) : _this__u8e3s4 === Companion_getInstance_19().get_Medium_l95upr_k$() ? new FilterMipmap(FilterMode_LINEAR_getInstance(), MipmapMode_NEAREST_getInstance()) : _this__u8e3s4 === Companion_getInstance_19().get_High_utfc24_k$() ? new CubicResampler(1 / 3.0, 1 / 3.0) : new FilterMipmap(FilterMode_NEAREST_getInstance(), MipmapMode_NONE_getInstance());
+    return _this__u8e3s4 === Companion_getInstance_19().get_Low_7s05n6_k$() ? new FilterMipmap(FilterMode_LINEAR_getInstance(), MipmapMode_NONE_getInstance()) : _this__u8e3s4 === Companion_getInstance_19().get_Medium_8fylwf_k$() ? new FilterMipmap(FilterMode_LINEAR_getInstance(), MipmapMode_NEAREST_getInstance()) : _this__u8e3s4 === Companion_getInstance_19().get_High_14avfy_k$() ? new CubicResampler(0.3333333333333333, 0.3333333333333333) : new FilterMipmap(FilterMode_NEAREST_getInstance(), MipmapMode_NONE_getInstance());
   }
   function SkiaBackedCanvas(skia) {
     this.skia_1 = skia;
@@ -11265,103 +11030,103 @@
   protoOf(SkiaBackedCanvas).get_skia_woucvt_k$ = function () {
     return this.skia_1;
   };
-  protoOf(SkiaBackedCanvas).set_alphaMultiplier_c87tvp_k$ = function (_set____db54di) {
+  protoOf(SkiaBackedCanvas).set_alphaMultiplier_u32e12_k$ = function (_set____db54di) {
     this.alphaMultiplier_1 = _set____db54di;
   };
   protoOf(SkiaBackedCanvas).get_alphaMultiplier_wdu3ai_k$ = function () {
     return this.alphaMultiplier_1;
   };
-  protoOf(SkiaBackedCanvas).save_erlm4_k$ = function () {
+  protoOf(SkiaBackedCanvas).save_fbe7h_k$ = function () {
     this.skia_1.save_23ibh_k$();
   };
-  protoOf(SkiaBackedCanvas).restore_a2id37_k$ = function () {
+  protoOf(SkiaBackedCanvas).restore_a1ykhu_k$ = function () {
     this.skia_1.restore_i5fnny_k$();
   };
-  protoOf(SkiaBackedCanvas).saveLayer_f9ux7q_k$ = function (bounds, paint) {
-    this.skia_1.saveLayer_dsxx8u_k$(bounds.get_left_woprgw_k$(), bounds.get_top_18ivbo_k$(), bounds.get_right_ixz7xv_k$(), bounds.get_bottom_bj8ras_k$(), _get_skia__ddpejf(paint, this));
+  protoOf(SkiaBackedCanvas).saveLayer_j9hvqf_k$ = function (bounds, paint) {
+    this.skia_1.saveLayer_d6e1vc_k$(bounds.get_left_woprgw_k$(), bounds.get_top_18ivbo_k$(), bounds.get_right_ixz7xv_k$(), bounds.get_bottom_bj8ras_k$(), _get_skia__ddpejf(paint, this));
   };
-  protoOf(SkiaBackedCanvas).translate_62wf99_k$ = function (dx, dy) {
-    this.skia_1.translate_y4aglq_k$(dx, dy);
+  protoOf(SkiaBackedCanvas).translate_7gghdu_k$ = function (dx, dy) {
+    this.skia_1.translate_k2k08i_k$(dx, dy);
   };
-  protoOf(SkiaBackedCanvas).scale_sphyvb_k$ = function (sx, sy) {
-    this.skia_1.scale_6iftdi_k$(sx, sy);
+  protoOf(SkiaBackedCanvas).scale_ba85bu_k$ = function (sx, sy) {
+    this.skia_1.scale_ln7xze_k$(sx, sy);
   };
-  protoOf(SkiaBackedCanvas).rotate_ypq2w2_k$ = function (degrees) {
-    this.skia_1.rotate_aghjf1_k$(degrees);
+  protoOf(SkiaBackedCanvas).rotate_qe8u4z_k$ = function (degrees) {
+    this.skia_1.rotate_n08qpp_k$(degrees);
   };
-  protoOf(SkiaBackedCanvas).skew_hcshkp_k$ = function (sx, sy) {
-    this.skia_1.skew_r8bu0m_k$(sx, sy);
+  protoOf(SkiaBackedCanvas).skew_kgli2i_k$ = function (sx, sy) {
+    this.skia_1.skew_fkteh6_k$(sx, sy);
   };
-  protoOf(SkiaBackedCanvas).concat_oxfhdd_k$ = function (matrix) {
+  protoOf(SkiaBackedCanvas).concat_no6uof_k$ = function (matrix) {
     if (!isIdentity(matrix)) {
-      this.skia_1.concat_f2glzm_k$(toSkia_1(matrix, this));
+      this.skia_1.concat_1fc4xa_k$(toSkia_1(matrix, this));
     }
   };
-  protoOf(SkiaBackedCanvas).clipRect_si0ig1_k$ = function (left, top, right, bottom, clipOp) {
+  protoOf(SkiaBackedCanvas).clipRect_3spswv_k$ = function (left, top, right, bottom, clipOp) {
     var antiAlias = true;
-    this.skia_1.clipRect_9zlxw5_k$(Companion_getInstance_3().makeLTRB_ax757q_k$(left, top, right, bottom), toSkia_0(clipOp, this), antiAlias);
+    this.skia_1.clipRect_7110ke_k$(Companion_getInstance_3().makeLTRB_2wvuxm_k$(left, top, right, bottom), toSkia_0(clipOp, this), antiAlias);
   };
-  protoOf(SkiaBackedCanvas).clipPath_kn87dc_k$ = function (path, clipOp) {
+  protoOf(SkiaBackedCanvas).clipPath_tlqunt_k$ = function (path, clipOp) {
     var antiAlias = true;
-    this.skia_1.clipPath_yggl5f_k$(asSkiaPath(path), toSkia_0(clipOp, this), antiAlias);
+    this.skia_1.clipPath_agzsy6_k$(asSkiaPath(path), toSkia_0(clipOp, this), antiAlias);
   };
-  protoOf(SkiaBackedCanvas).drawLine_uyv0nw_k$ = function (p1, p2, paint) {
-    this.skia_1.drawLine_t27q09_k$(_Offset___get_x__impl__xvi35n(p1), _Offset___get_y__impl__8bzhra(p1), _Offset___get_x__impl__xvi35n(p2), _Offset___get_y__impl__8bzhra(p2), _get_skia__ddpejf(paint, this));
+  protoOf(SkiaBackedCanvas).drawLine_p9lnhi_k$ = function (p1, p2, paint) {
+    this.skia_1.drawLine_m1kfbl_k$(_Offset___get_x__impl__xvi35n(p1), _Offset___get_y__impl__8bzhra(p1), _Offset___get_x__impl__xvi35n(p2), _Offset___get_y__impl__8bzhra(p2), _get_skia__ddpejf(paint, this));
   };
-  protoOf(SkiaBackedCanvas).drawRect_iwqaze_k$ = function (left, top, right, bottom, paint) {
-    this.skia_1.drawRect_svy35k_k$(Companion_getInstance_3().makeLTRB_ax757q_k$(left, top, right, bottom), _get_skia__ddpejf(paint, this));
+  protoOf(SkiaBackedCanvas).drawRect_njf28a_k$ = function (left, top, right, bottom, paint) {
+    this.skia_1.drawRect_8t145u_k$(Companion_getInstance_3().makeLTRB_2wvuxm_k$(left, top, right, bottom), _get_skia__ddpejf(paint, this));
   };
-  protoOf(SkiaBackedCanvas).drawRoundRect_8v0cs4_k$ = function (left, top, right, bottom, radiusX, radiusY, paint) {
-    this.skia_1.drawRRect_i1m3a2_k$(Companion_getInstance_4().makeLTRB_o5673a_k$(left, top, right, bottom, radiusX, radiusY), _get_skia__ddpejf(paint, this));
+  protoOf(SkiaBackedCanvas).drawRoundRect_s5vrm8_k$ = function (left, top, right, bottom, radiusX, radiusY, paint) {
+    this.skia_1.drawRRect_6cei8q_k$(Companion_getInstance_4().makeLTRB_qlrzkq_k$(left, top, right, bottom, radiusX, radiusY), _get_skia__ddpejf(paint, this));
   };
-  protoOf(SkiaBackedCanvas).drawOval_wmf8q4_k$ = function (left, top, right, bottom, paint) {
-    this.skia_1.drawOval_k4zfhy_k$(Companion_getInstance_3().makeLTRB_ax757q_k$(left, top, right, bottom), _get_skia__ddpejf(paint, this));
+  protoOf(SkiaBackedCanvas).drawOval_laorgo_k$ = function (left, top, right, bottom, paint) {
+    this.skia_1.drawOval_8h54ws_k$(Companion_getInstance_3().makeLTRB_2wvuxm_k$(left, top, right, bottom), _get_skia__ddpejf(paint, this));
   };
-  protoOf(SkiaBackedCanvas).drawCircle_8yzxtr_k$ = function (center, radius, paint) {
-    this.skia_1.drawCircle_on0wlj_k$(_Offset___get_x__impl__xvi35n(center), _Offset___get_y__impl__8bzhra(center), radius, _get_skia__ddpejf(paint, this));
+  protoOf(SkiaBackedCanvas).drawCircle_l6ouf0_k$ = function (center, radius, paint) {
+    this.skia_1.drawCircle_129n4r_k$(_Offset___get_x__impl__xvi35n(center), _Offset___get_y__impl__8bzhra(center), radius, _get_skia__ddpejf(paint, this));
   };
-  protoOf(SkiaBackedCanvas).drawArc_xj6sd2_k$ = function (left, top, right, bottom, startAngle, sweepAngle, useCenter, paint) {
-    this.skia_1.drawArc_hhkfpn_k$(left, top, right, bottom, startAngle, sweepAngle, useCenter, _get_skia__ddpejf(paint, this));
+  protoOf(SkiaBackedCanvas).drawArc_ud0hdz_k$ = function (left, top, right, bottom, startAngle, sweepAngle, useCenter, paint) {
+    this.skia_1.drawArc_9h3ru6_k$(left, top, right, bottom, startAngle, sweepAngle, useCenter, _get_skia__ddpejf(paint, this));
   };
-  protoOf(SkiaBackedCanvas).drawPath_843lu1_k$ = function (path, paint) {
-    this.skia_1.drawPath_qvim9i_k$(asSkiaPath(path), _get_skia__ddpejf(paint, this));
+  protoOf(SkiaBackedCanvas).drawPath_2all12_k$ = function (path, paint) {
+    this.skia_1.drawPath_jdiwxq_k$(asSkiaPath(path), _get_skia__ddpejf(paint, this));
   };
-  protoOf(SkiaBackedCanvas).drawImage_wbfair_k$ = function (image, topLeftOffset, paint) {
+  protoOf(SkiaBackedCanvas).drawImage_lx1b1t_k$ = function (image, topLeftOffset, paint) {
     var size = Size(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$());
-    drawImageRect(this, image, Companion_getInstance_0().get_Zero_sctq3f_k$(), size, topLeftOffset, size, paint);
+    drawImageRect(this, image, Companion_getInstance().get_Zero_k6n73t_k$(), size, topLeftOffset, size, paint);
   };
-  protoOf(SkiaBackedCanvas).drawImageRect_pn8joi_k$ = function (image, srcOffset, srcSize, dstOffset, dstSize, paint) {
+  protoOf(SkiaBackedCanvas).drawImageRect_5h5ih1_k$ = function (image, srcOffset, srcSize, dstOffset, dstSize, paint) {
     drawImageRect(this, image, Offset_0(_IntOffset___get_x__impl__qiqr5o(srcOffset), _IntOffset___get_y__impl__2avpwj(srcOffset)), Size(_IntSize___get_width__impl__d9yl4o(srcSize), _IntSize___get_height__impl__prv63b(srcSize)), Offset_0(_IntOffset___get_x__impl__qiqr5o(dstOffset), _IntOffset___get_y__impl__2avpwj(dstOffset)), Size(_IntSize___get_width__impl__d9yl4o(dstSize), _IntSize___get_height__impl__prv63b(dstSize)), paint);
   };
-  protoOf(SkiaBackedCanvas).drawPoints_7nk41w_k$ = function (pointMode, points, paint) {
-    if (pointMode === Companion_getInstance_30().get_Lines_pf6qy3_k$()) {
+  protoOf(SkiaBackedCanvas).drawPoints_buyvum_k$ = function (pointMode, points, paint) {
+    if (pointMode === Companion_getInstance_30().get_Lines_54ip59_k$()) {
       drawLines(this, points, paint, 2);
-    } else if (pointMode === Companion_getInstance_30().get_Polygon_n5et2y_k$()) {
+    } else if (pointMode === Companion_getInstance_30().get_Polygon_rl173c_k$()) {
       drawLines(this, points, paint, 1);
-    } else if (pointMode === Companion_getInstance_30().get_Points_g9arr3_k$()) {
+    } else if (pointMode === Companion_getInstance_30().get_Points_yh58f7_k$()) {
       drawPoints(this, points, paint);
     }
   };
-  protoOf(SkiaBackedCanvas).enableZ_eyv21m_k$ = function () {
+  protoOf(SkiaBackedCanvas).enableZ_eyb9g9_k$ = function () {
     return Unit_getInstance();
   };
-  protoOf(SkiaBackedCanvas).disableZ_14frxd_k$ = function () {
+  protoOf(SkiaBackedCanvas).disableZ_14zkiq_k$ = function () {
     return Unit_getInstance();
   };
-  protoOf(SkiaBackedCanvas).drawRawPoints_xnm1nu_k$ = function (pointMode, points, paint) {
+  protoOf(SkiaBackedCanvas).drawRawPoints_jt1jmy_k$ = function (pointMode, points, paint) {
     if (!((points.length % 2 | 0) === 0)) {
       throw IllegalArgumentException_init_$Create$('points must have an even number of values');
     }
-    if (pointMode === Companion_getInstance_30().get_Lines_pf6qy3_k$()) {
+    if (pointMode === Companion_getInstance_30().get_Lines_54ip59_k$()) {
       drawRawLines(this, points, paint, 2);
-    } else if (pointMode === Companion_getInstance_30().get_Polygon_n5et2y_k$()) {
+    } else if (pointMode === Companion_getInstance_30().get_Polygon_rl173c_k$()) {
       drawRawLines(this, points, paint, 1);
-    } else if (pointMode === Companion_getInstance_30().get_Points_g9arr3_k$()) {
+    } else if (pointMode === Companion_getInstance_30().get_Points_yh58f7_k$()) {
       drawRawPoints(this, points, paint, 2);
     }
   };
-  protoOf(SkiaBackedCanvas).drawVertices_blo9xi_k$ = function (vertices, blendMode, paint) {
-    this.skia_1.drawVertices_5fhilh_k$(toSkiaVertexMode(vertices.get_vertexMode_afoau9_k$()), vertices.get_positions_ya7scf_k$(), vertices.get_colors_c05661_k$(), vertices.get_textureCoordinates_1i3vqh_k$(), vertices.get_indices_xelk8u_k$(), toSkia(blendMode), paint.asFrameworkPaint_huz48e_k$());
+  protoOf(SkiaBackedCanvas).drawVertices_mnlupq_k$ = function (vertices, blendMode, paint) {
+    this.skia_1.drawVertices_kbewma_k$(toSkiaVertexMode(vertices.get_vertexMode_kiz8sf_k$()), vertices.get_positions_ya7scf_k$(), vertices.get_colors_c05661_k$(), vertices.get_textureCoordinates_1i3vqh_k$(), vertices.get_indices_xelk8u_k$(), toSkia(blendMode), paint.asFrameworkPaint_huz48e_k$());
   };
   function ActualCanvas(image) {
     var skiaBitmap = asSkiaBitmap(image);
@@ -11387,7 +11152,7 @@
     return $this.mAlphaMultiplier_1;
   }
   function updateAlpha($this, alpha, multiplier) {
-    $this.skia_1.set_color_n2ch1y_k$(toArgb(Color__copy$default_impl_ectz3s(Color_3($this.skia_1.get_color_ipu8u2_k$()), alpha * multiplier)));
+    $this.skia_1.set_color_7ztbpe_k$(toArgb(Color__copy$default_impl_ectz3s(Color_3($this.skia_1.get_color_ipu8u2_k$()), alpha * multiplier)));
   }
   function updateAlpha$default($this, alpha, multiplier, $super) {
     alpha = alpha === VOID ? $this.get_alpha_iooth1_k$() : alpha;
@@ -11395,24 +11160,24 @@
     return updateAlpha($this, alpha, multiplier);
   }
   function toSkia_3(_this__u8e3s4, $this) {
-    return _this__u8e3s4 === Companion_getInstance_24().get_Fill_xeknbt_k$() ? PaintMode_FILL_getInstance() : _this__u8e3s4 === Companion_getInstance_24().get_Stroke_dv2xoc_k$() ? PaintMode_STROKE_getInstance() : PaintMode_FILL_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_24().get_Fill_7xey15_k$() ? PaintMode_FILL_getInstance() : _this__u8e3s4 === Companion_getInstance_24().get_Stroke_fu1ixu_k$() ? PaintMode_STROKE_getInstance() : PaintMode_FILL_getInstance();
   }
   function toSkia_4(_this__u8e3s4, $this) {
-    return _this__u8e3s4 === Companion_getInstance_32().get_Butt_vf89me_k$() ? PaintStrokeCap_BUTT_getInstance() : _this__u8e3s4 === Companion_getInstance_32().get_Round_x6oq4t_k$() ? PaintStrokeCap_ROUND_getInstance() : _this__u8e3s4 === Companion_getInstance_32().get_Square_xmkdw4_k$() ? PaintStrokeCap_SQUARE_getInstance() : PaintStrokeCap_BUTT_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_32().get_Butt_jb7qjw_k$() ? PaintStrokeCap_BUTT_getInstance() : _this__u8e3s4 === Companion_getInstance_32().get_Round_hjra1h_k$() ? PaintStrokeCap_ROUND_getInstance() : _this__u8e3s4 === Companion_getInstance_32().get_Square_dbwc3a_k$() ? PaintStrokeCap_SQUARE_getInstance() : PaintStrokeCap_BUTT_getInstance();
   }
   function toSkia_5(_this__u8e3s4, $this) {
-    return _this__u8e3s4 === Companion_getInstance_33().get_Miter_rcwd8a_k$() ? PaintStrokeJoin_MITER_getInstance() : _this__u8e3s4 === Companion_getInstance_33().get_Round_ybuhov_k$() ? PaintStrokeJoin_ROUND_getInstance() : _this__u8e3s4 === Companion_getInstance_33().get_Bevel_1szraz_k$() ? PaintStrokeJoin_BEVEL_getInstance() : PaintStrokeJoin_MITER_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_33().get_Miter_xkwqso_k$() ? PaintStrokeJoin_MITER_getInstance() : _this__u8e3s4 === Companion_getInstance_33().get_Round_o8jjqp_k$() ? PaintStrokeJoin_ROUND_getInstance() : _this__u8e3s4 === Companion_getInstance_33().get_Bevel_8ab6n7_k$() ? PaintStrokeJoin_BEVEL_getInstance() : PaintStrokeJoin_MITER_getInstance();
   }
   function SkiaBackedPaint(skia) {
     skia = skia === VOID ? Paint_init_$Create$() : skia;
     this.skia_1 = skia;
     this.mAlphaMultiplier_1 = 1.0;
-    this.blendMode_1 = Companion_getInstance_14().get_SrcOver_uyf80z_k$();
-    this.style_1 = Companion_getInstance_24().get_Fill_xeknbt_k$();
-    this.strokeCap_1 = Companion_getInstance_32().get_Butt_vf89me_k$();
-    this.strokeJoin_1 = Companion_getInstance_33().get_Round_ybuhov_k$();
+    this.blendMode_1 = Companion_getInstance_14().get_SrcOver_anr685_k$();
+    this.style_1 = Companion_getInstance_24().get_Fill_7xey15_k$();
+    this.strokeCap_1 = Companion_getInstance_32().get_Butt_jb7qjw_k$();
+    this.strokeJoin_1 = Companion_getInstance_33().get_Round_o8jjqp_k$();
     this.strokeMiterLimit_1 = 0.0;
-    this.filterQuality_1 = Companion_getInstance_19().get_Medium_l95upr_k$();
+    this.filterQuality_1 = Companion_getInstance_19().get_Medium_8fylwf_k$();
     this.shader_1 = null;
     this.colorFilter_1 = null;
     this.pathEffect_1 = null;
@@ -11423,7 +11188,7 @@
   protoOf(SkiaBackedPaint).asFrameworkPaint_huz48e_k$ = function () {
     return this.skia_1;
   };
-  protoOf(SkiaBackedPaint).set_alphaMultiplier_c87tvp_k$ = function (value) {
+  protoOf(SkiaBackedPaint).set_alphaMultiplier_u32e12_k$ = function (value) {
     var multiplier = coerceIn(value, 0.0, 1.0);
     updateAlpha$default(this, VOID, multiplier);
     this.mAlphaMultiplier_1 = multiplier;
@@ -11431,88 +11196,88 @@
   protoOf(SkiaBackedPaint).get_alphaMultiplier_wdu3ai_k$ = function () {
     return this.mAlphaMultiplier_1;
   };
-  protoOf(SkiaBackedPaint).set_alpha_k1tx50_k$ = function (value) {
+  protoOf(SkiaBackedPaint).set_alpha_tvzcqh_k$ = function (value) {
     updateAlpha$default(this, value);
   };
   protoOf(SkiaBackedPaint).get_alpha_iooth1_k$ = function () {
     return _Color___get_alpha__impl__wcfyv1(Color_3(this.skia_1.get_color_ipu8u2_k$()));
   };
-  protoOf(SkiaBackedPaint).set_isAntiAlias_1h4ndu_k$ = function (value) {
-    this.skia_1.set_isAntiAlias_1h4ndu_k$(value);
+  protoOf(SkiaBackedPaint).set_isAntiAlias_m6kooi_k$ = function (value) {
+    this.skia_1.set_isAntiAlias_m6kooi_k$(value);
   };
   protoOf(SkiaBackedPaint).get_isAntiAlias_255n51_k$ = function () {
     return this.skia_1.get_isAntiAlias_255n51_k$();
   };
-  protoOf(SkiaBackedPaint).set_color_b5evhd_k$ = function (color) {
-    this.skia_1.set_color_n2ch1y_k$(toArgb(color));
+  protoOf(SkiaBackedPaint).set_color_m2amxp_k$ = function (color) {
+    this.skia_1.set_color_7ztbpe_k$(toArgb(color));
   };
-  protoOf(SkiaBackedPaint).get_color_v34vrz_k$ = function () {
+  protoOf(SkiaBackedPaint).get_color_lnp1vl_k$ = function () {
     return Color_3(this.skia_1.get_color_ipu8u2_k$());
   };
-  protoOf(SkiaBackedPaint).set_blendMode_gchh35_k$ = function (value) {
-    this.skia_1.set_blendMode_2o4s1d_k$(toSkia(value));
+  protoOf(SkiaBackedPaint).set_blendMode_1e5m6b_k$ = function (value) {
+    this.skia_1.set_blendMode_s14yaj_k$(toSkia(value));
     this.blendMode_1 = value;
   };
-  protoOf(SkiaBackedPaint).get_blendMode_m8dzwh_k$ = function () {
+  protoOf(SkiaBackedPaint).get_blendMode_si209t_k$ = function () {
     return this.blendMode_1;
   };
-  protoOf(SkiaBackedPaint).set_style_yrvwzh_k$ = function (value) {
-    this.skia_1.set_mode_2kzbql_k$(toSkia_3(value, this));
+  protoOf(SkiaBackedPaint).set_style_t4zhmv_k$ = function (value) {
+    this.skia_1.set_mode_s75p6s_k$(toSkia_3(value, this));
     this.style_1 = value;
   };
-  protoOf(SkiaBackedPaint).get_style_cnsirn_k$ = function () {
+  protoOf(SkiaBackedPaint).get_style_h1bxuj_k$ = function () {
     return this.style_1;
   };
-  protoOf(SkiaBackedPaint).set_strokeWidth_3zju8k_k$ = function (value) {
-    this.skia_1.set_strokeWidth_3zju8k_k$(value);
+  protoOf(SkiaBackedPaint).set_strokeWidth_owqvpl_k$ = function (value) {
+    this.skia_1.set_strokeWidth_owqvpl_k$(value);
   };
   protoOf(SkiaBackedPaint).get_strokeWidth_pbded7_k$ = function () {
     return this.skia_1.get_strokeWidth_pbded7_k$();
   };
-  protoOf(SkiaBackedPaint).set_strokeCap_un0ni9_k$ = function (value) {
-    this.skia_1.set_strokeCap_awr7nf_k$(toSkia_4(value, this));
+  protoOf(SkiaBackedPaint).set_strokeCap_x8rhz1_k$ = function (value) {
+    this.skia_1.set_strokeCap_dv3f3n_k$(toSkia_4(value, this));
     this.strokeCap_1 = value;
   };
-  protoOf(SkiaBackedPaint).get_strokeCap_du2v9b_k$ = function () {
+  protoOf(SkiaBackedPaint).get_strokeCap_6gl6jj_k$ = function () {
     return this.strokeCap_1;
   };
-  protoOf(SkiaBackedPaint).set_strokeJoin_oa46bf_k$ = function (value) {
-    this.skia_1.set_strokeJoin_earh59_k$(toSkia_5(value, this));
+  protoOf(SkiaBackedPaint).set_strokeJoin_yrffuj_k$ = function (value) {
+    this.skia_1.set_strokeJoin_pswy8t_k$(toSkia_5(value, this));
     this.strokeJoin_1 = value;
   };
-  protoOf(SkiaBackedPaint).get_strokeJoin_t4v9w5_k$ = function () {
+  protoOf(SkiaBackedPaint).get_strokeJoin_j1kbxz_k$ = function () {
     return this.strokeJoin_1;
   };
-  protoOf(SkiaBackedPaint).set_strokeMiterLimit_jliqsy_k$ = function (value) {
-    this.skia_1.set_strokeMiter_9aj8vn_k$(value);
+  protoOf(SkiaBackedPaint).set_strokeMiterLimit_tej6nx_k$ = function (value) {
+    this.skia_1.set_strokeMiter_5ftsgo_k$(value);
     this.strokeMiterLimit_1 = value;
   };
   protoOf(SkiaBackedPaint).get_strokeMiterLimit_p3434n_k$ = function () {
     return this.strokeMiterLimit_1;
   };
-  protoOf(SkiaBackedPaint).set_filterQuality_8e157j_k$ = function (_set____db54di) {
+  protoOf(SkiaBackedPaint).set_filterQuality_eye4f7_k$ = function (_set____db54di) {
     this.filterQuality_1 = _set____db54di;
   };
-  protoOf(SkiaBackedPaint).get_filterQuality_2xbue9_k$ = function () {
+  protoOf(SkiaBackedPaint).get_filterQuality_wmgb0f_k$ = function () {
     return this.filterQuality_1;
   };
-  protoOf(SkiaBackedPaint).set_shader_bd5o0m_k$ = function (value) {
-    this.skia_1.set_shader_bd5o0m_k$(value);
+  protoOf(SkiaBackedPaint).set_shader_tgaw5e_k$ = function (value) {
+    this.skia_1.set_shader_tgaw5e_k$(value);
     this.shader_1 = value;
   };
   protoOf(SkiaBackedPaint).get_shader_jgtazy_k$ = function () {
     return this.shader_1;
   };
-  protoOf(SkiaBackedPaint).set_colorFilter_l1l4p0_k$ = function (value) {
-    this.skia_1.set_colorFilter_t69fte_k$(value == null ? null : asSkiaColorFilter(value));
+  protoOf(SkiaBackedPaint).set_colorFilter_dtpxr0_k$ = function (value) {
+    this.skia_1.set_colorFilter_9zyasg_k$(value == null ? null : asSkiaColorFilter(value));
     this.colorFilter_1 = value;
   };
   protoOf(SkiaBackedPaint).get_colorFilter_nt8pqq_k$ = function () {
     return this.colorFilter_1;
   };
-  protoOf(SkiaBackedPaint).set_pathEffect_eo4nwm_k$ = function (value) {
+  protoOf(SkiaBackedPaint).set_pathEffect_h6g9g6_k$ = function (value) {
     var tmp0_safe_receiver = (value == null ? true : value instanceof SkiaBackedPathEffect) ? value : THROW_CCE();
-    this.skia_1.set_pathEffect_5avi6g_k$(tmp0_safe_receiver == null ? null : asSkiaPathEffect(tmp0_safe_receiver));
+    this.skia_1.set_pathEffect_2qfjq4_k$(tmp0_safe_receiver == null ? null : asSkiaPathEffect(tmp0_safe_receiver));
     this.pathEffect_1 = value;
   };
   protoOf(SkiaBackedPaint).get_pathEffect_d6tz6p_k$ = function () {
@@ -11525,7 +11290,7 @@
     $this.internalPath_1 = _set____db54di;
   }
   function toSkiaOperation(_this__u8e3s4, $this) {
-    return _this__u8e3s4 === Companion_getInstance_29().get_Difference_61syb0_k$() ? PathOp_DIFFERENCE_getInstance() : _this__u8e3s4 === Companion_getInstance_29().get_Intersect_pr81lo_k$() ? PathOp_INTERSECT_getInstance() : _this__u8e3s4 === Companion_getInstance_29().get_Union_6aiks4_k$() ? PathOp_UNION_getInstance() : _this__u8e3s4 === Companion_getInstance_29().get_Xor_ja5law_k$() ? PathOp_XOR_getInstance() : _this__u8e3s4 === Companion_getInstance_29().get_ReverseDifference_yow8fw_k$() ? PathOp_REVERSE_DIFFERENCE_getInstance() : PathOp_XOR_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_29().get_Difference_nnbib6_k$() ? PathOp_DIFFERENCE_getInstance() : _this__u8e3s4 === Companion_getInstance_29().get_Intersect_3xwf0i_k$() ? PathOp_INTERSECT_getInstance() : _this__u8e3s4 === Companion_getInstance_29().get_Union_z1h0ku_k$() ? PathOp_UNION_getInstance() : _this__u8e3s4 === Companion_getInstance_29().get_Xor_aeyvba_k$() ? PathOp_XOR_getInstance() : _this__u8e3s4 === Companion_getInstance_29().get_ReverseDifference_4zrrtq_k$() ? PathOp_REVERSE_DIFFERENCE_getInstance() : PathOp_XOR_getInstance();
   }
   function SkiaBackedPath(internalPath) {
     internalPath = internalPath === VOID ? Path_init_$Create$() : internalPath;
@@ -11534,97 +11299,97 @@
   protoOf(SkiaBackedPath).get_internalPath_37vr9n_k$ = function () {
     return this.internalPath_1;
   };
-  protoOf(SkiaBackedPath).set_fillType_288nii_k$ = function (value) {
+  protoOf(SkiaBackedPath).set_fillType_6krlbe_k$ = function (value) {
     var tmp = this.internalPath_1;
     var tmp_0;
-    if (value === Companion_getInstance_28().get_EvenOdd_pai4nq_k$()) {
+    if (value === Companion_getInstance_28().get_EvenOdd_cpanrc_k$()) {
       tmp_0 = PathFillMode_EVEN_ODD_getInstance();
     } else {
       tmp_0 = PathFillMode_WINDING_getInstance();
     }
-    tmp.set_fillMode_dzxls6_k$(tmp_0);
+    tmp.set_fillMode_p4qpgv_k$(tmp_0);
   };
-  protoOf(SkiaBackedPath).get_fillType_qtoiy8_k$ = function () {
+  protoOf(SkiaBackedPath).get_fillType_67mqlu_k$ = function () {
     if (this.internalPath_1.get_fillMode_r5zfyn_k$().equals(PathFillMode_EVEN_ODD_getInstance())) {
-      return Companion_getInstance_28().get_EvenOdd_pai4nq_k$();
+      return Companion_getInstance_28().get_EvenOdd_cpanrc_k$();
     } else {
-      return Companion_getInstance_28().get_NonZero_j4d1fu_k$();
+      return Companion_getInstance_28().get_NonZero_dwy848_k$();
     }
   };
-  protoOf(SkiaBackedPath).moveTo_ga4oez_k$ = function (x, y) {
-    this.internalPath_1.moveTo_5934es_k$(x, y);
+  protoOf(SkiaBackedPath).moveTo_22horo_k$ = function (x, y) {
+    this.internalPath_1.moveTo_n8tdjo_k$(x, y);
   };
-  protoOf(SkiaBackedPath).relativeMoveTo_4j9kzr_k$ = function (dx, dy) {
-    this.internalPath_1.rMoveTo_44r2iq_k$(dx, dy);
+  protoOf(SkiaBackedPath).relativeMoveTo_vkwjm0_k$ = function (dx, dy) {
+    this.internalPath_1.rMoveTo_gj475u_k$(dx, dy);
   };
-  protoOf(SkiaBackedPath).lineTo_w9kq4e_k$ = function (x, y) {
-    this.internalPath_1.lineTo_8bd4s1_k$(x, y);
+  protoOf(SkiaBackedPath).lineTo_o2nyip_k$ = function (x, y) {
+    this.internalPath_1.lineTo_985bqp_k$(x, y);
   };
-  protoOf(SkiaBackedPath).relativeLineTo_kipmp6_k$ = function (dx, dy) {
-    this.internalPath_1.rLineTo_7712vz_k$(dx, dy);
+  protoOf(SkiaBackedPath).relativeLineTo_9kq9uz_k$ = function (dx, dy) {
+    this.internalPath_1.rLineTo_2ig5cv_k$(dx, dy);
   };
-  protoOf(SkiaBackedPath).quadraticBezierTo_t2qfc1_k$ = function (x1, y1, x2, y2) {
-    this.internalPath_1.quadTo_qnlly6_k$(x1, y1, x2, y2);
+  protoOf(SkiaBackedPath).quadraticBezierTo_pas4ki_k$ = function (x1, y1, x2, y2) {
+    this.internalPath_1.quadTo_nivwo2_k$(x1, y1, x2, y2);
   };
-  protoOf(SkiaBackedPath).relativeQuadraticBezierTo_z1apmz_k$ = function (dx1, dy1, dx2, dy2) {
-    this.internalPath_1.rQuadTo_vz8b04_k$(dx1, dy1, dx2, dy2);
+  protoOf(SkiaBackedPath).relativeQuadraticBezierTo_fs15qi_k$ = function (dx1, dy1, dx2, dy2) {
+    this.internalPath_1.rQuadTo_i9659w_k$(dx1, dy1, dx2, dy2);
   };
-  protoOf(SkiaBackedPath).cubicTo_1m51n8_k$ = function (x1, y1, x2, y2, x3, y3) {
-    this.internalPath_1.cubicTo_tf08o5_k$(x1, y1, x2, y2, x3, y3);
+  protoOf(SkiaBackedPath).cubicTo_8sju51_k$ = function (x1, y1, x2, y2, x3, y3) {
+    this.internalPath_1.cubicTo_g393vf_k$(x1, y1, x2, y2, x3, y3);
   };
-  protoOf(SkiaBackedPath).relativeCubicTo_a0rn6w_k$ = function (dx1, dy1, dx2, dy2, dx3, dy3) {
-    this.internalPath_1.rCubicTo_uljamr_k$(dx1, dy1, dx2, dy2, dx3, dy3);
+  protoOf(SkiaBackedPath).relativeCubicTo_myt97t_k$ = function (dx1, dy1, dx2, dy2, dx3, dy3) {
+    this.internalPath_1.rCubicTo_5i712l_k$(dx1, dy1, dx2, dy2, dx3, dy3);
   };
-  protoOf(SkiaBackedPath).arcTo_948klo_k$ = function (rect, startAngleDegrees, sweepAngleDegrees, forceMoveTo) {
-    this.internalPath_1.arcTo_ecvj8s_k$(toSkiaRect(rect), startAngleDegrees, sweepAngleDegrees, forceMoveTo);
+  protoOf(SkiaBackedPath).arcTo_glfct3_k$ = function (rect, startAngleDegrees, sweepAngleDegrees, forceMoveTo) {
+    this.internalPath_1.arcTo_lk9bpr_k$(toSkiaRect(rect), startAngleDegrees, sweepAngleDegrees, forceMoveTo);
   };
-  protoOf(SkiaBackedPath).addRect_xu2nic_k$ = function (rect) {
-    this.internalPath_1.addRect$default_4sb546_k$(toSkiaRect(rect), PathDirection_COUNTER_CLOCKWISE_getInstance());
+  protoOf(SkiaBackedPath).addRect_yfs97g_k$ = function (rect) {
+    this.internalPath_1.addRect$default_mv5gnm_k$(toSkiaRect(rect), PathDirection_COUNTER_CLOCKWISE_getInstance());
   };
-  protoOf(SkiaBackedPath).addOval_91jhpm_k$ = function (oval) {
-    this.internalPath_1.addOval$default_8xdsmk_k$(toSkiaRect(oval), PathDirection_COUNTER_CLOCKWISE_getInstance());
+  protoOf(SkiaBackedPath).addOval_wqqw8m_k$ = function (oval) {
+    this.internalPath_1.addOval$default_akalvk_k$(toSkiaRect(oval), PathDirection_COUNTER_CLOCKWISE_getInstance());
   };
-  protoOf(SkiaBackedPath).addArcRad_jcx1ob_k$ = function (oval, startAngleRadians, sweepAngleRadians) {
-    this.addArc_p7ur08_k$(oval, degrees(startAngleRadians), degrees(sweepAngleRadians));
+  protoOf(SkiaBackedPath).addArcRad_t0vpkr_k$ = function (oval, startAngleRadians, sweepAngleRadians) {
+    this.addArc_s89gx4_k$(oval, degrees(startAngleRadians), degrees(sweepAngleRadians));
   };
-  protoOf(SkiaBackedPath).addArc_p7ur08_k$ = function (oval, startAngleDegrees, sweepAngleDegrees) {
-    this.internalPath_1.addArc_vnodq_k$(toSkiaRect(oval), startAngleDegrees, sweepAngleDegrees);
+  protoOf(SkiaBackedPath).addArc_s89gx4_k$ = function (oval, startAngleDegrees, sweepAngleDegrees) {
+    this.internalPath_1.addArc_ab3w7m_k$(toSkiaRect(oval), startAngleDegrees, sweepAngleDegrees);
   };
-  protoOf(SkiaBackedPath).addRoundRect_kr3fpw_k$ = function (roundRect) {
-    this.internalPath_1.addRRect$default_w9fmui_k$(toSkiaRRect(roundRect), PathDirection_COUNTER_CLOCKWISE_getInstance());
+  protoOf(SkiaBackedPath).addRoundRect_w1epq0_k$ = function (roundRect) {
+    this.internalPath_1.addRRect$default_20pqkw_k$(toSkiaRRect(roundRect), PathDirection_COUNTER_CLOCKWISE_getInstance());
   };
-  protoOf(SkiaBackedPath).addPath_9947vg_k$ = function (path, offset) {
-    this.internalPath_1.addPath$default_lxy9z6_k$(asSkiaPath(path), _Offset___get_x__impl__xvi35n(offset), _Offset___get_y__impl__8bzhra(offset));
+  protoOf(SkiaBackedPath).addPath_mtr781_k$ = function (path, offset) {
+    this.internalPath_1.addPath$default_qvsmxp_k$(asSkiaPath(path), _Offset___get_x__impl__xvi35n(offset), _Offset___get_y__impl__8bzhra(offset));
   };
-  protoOf(SkiaBackedPath).close_ymq55z_k$ = function () {
+  protoOf(SkiaBackedPath).close_yn9xrc_k$ = function () {
     this.internalPath_1.closePath_7zbz5v_k$();
   };
-  protoOf(SkiaBackedPath).reset_5tn5dq_k$ = function () {
-    var fillType = this.get_fillType_qtoiy8_k$();
+  protoOf(SkiaBackedPath).reset_5u6xz3_k$ = function () {
+    var fillType = this.get_fillType_67mqlu_k$();
     this.internalPath_1.reset_1sjh3j_k$();
-    this.set_fillType_288nii_k$(fillType);
+    this.set_fillType_6krlbe_k$(fillType);
   };
-  protoOf(SkiaBackedPath).rewind_xapxey_k$ = function () {
+  protoOf(SkiaBackedPath).rewind_xb9q0b_k$ = function () {
     this.internalPath_1.rewind_fg9p39_k$();
   };
-  protoOf(SkiaBackedPath).translate_mdejcc_k$ = function (offset) {
-    this.internalPath_1.transform$default_2lgwdr_k$(Companion_getInstance_6().makeTranslate_bkaev4_k$(_Offset___get_x__impl__xvi35n(offset), _Offset___get_y__impl__8bzhra(offset)));
+  protoOf(SkiaBackedPath).translate_nzlwb0_k$ = function (offset) {
+    this.internalPath_1.transform$default_8dct7o_k$(Companion_getInstance_6().makeTranslate_9v7aio_k$(_Offset___get_x__impl__xvi35n(offset), _Offset___get_y__impl__8bzhra(offset)));
   };
-  protoOf(SkiaBackedPath).transform_v2nyvt_k$ = function (matrix) {
+  protoOf(SkiaBackedPath).transform_3go53t_k$ = function (matrix) {
     var tmp = this.internalPath_1;
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = Companion_getInstance_6().makeTranslate_bkaev4_k$(0.0, 0.0);
+    var this_0 = Companion_getInstance_6().makeTranslate_9v7aio_k$(0.0, 0.0);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.SkiaBackedPath.transform.<anonymous>' call
-    this.setFrom_makbgz_k$(tmp0_apply, matrix);
-    tmp.transform$default_2lgwdr_k$(tmp0_apply);
+    this.setFrom_dz3gqv_k$(this_0, matrix);
+    tmp.transform$default_8dct7o_k$(this_0);
   };
   protoOf(SkiaBackedPath).getBounds_568lnv_k$ = function () {
     var bounds = this.internalPath_1.get_bounds_bj99ku_k$();
     return new Rect(bounds.get_left_woprgw_k$(), bounds.get_top_18ivbo_k$(), bounds.get_right_ixz7xv_k$(), bounds.get_bottom_bj8ras_k$());
   };
-  protoOf(SkiaBackedPath).op_eh4rey_k$ = function (path1, path2, operation) {
-    var path = Companion_getInstance_7().makeCombining_738xp1_k$(asSkiaPath(path1), asSkiaPath(path2), toSkiaOperation(operation, this));
+  protoOf(SkiaBackedPath).op_fj0csx_k$ = function (path1, path2, operation) {
+    var path = Companion_getInstance_7().makeCombining_fcc5ry_k$(asSkiaPath(path1), asSkiaPath(path2), toSkiaOperation(operation, this));
     var tmp = this;
     tmp.internalPath_1 = path == null ? this.internalPath_1 : path;
     return !(path == null);
@@ -11635,7 +11400,7 @@
   protoOf(SkiaBackedPath).get_isEmpty_zauvru_k$ = function () {
     return this.internalPath_1.get_isEmpty_zauvru_k$();
   };
-  protoOf(SkiaBackedPath).setFrom_makbgz_k$ = function (_this__u8e3s4, matrix) {
+  protoOf(SkiaBackedPath).setFrom_dz3gqv_k$ = function (_this__u8e3s4, matrix) {
     // Inline function 'kotlin.require' call
     var tmp;
     var tmp_0;
@@ -11644,39 +11409,39 @@
     var tmp_3;
     var tmp_4;
     // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-    if (_Matrix___get_values__impl__fblr7b(matrix)[2] === 0.0) {
+    if (_Matrix___get_values__impl__fblr7b(matrix)[imul(0, 4) + 2 | 0] === 0.0) {
       // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-      tmp_4 = _Matrix___get_values__impl__fblr7b(matrix)[6] === 0.0;
+      tmp_4 = _Matrix___get_values__impl__fblr7b(matrix)[imul(1, 4) + 2 | 0] === 0.0;
     } else {
       tmp_4 = false;
     }
     if (tmp_4) {
       // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-      tmp_3 = _Matrix___get_values__impl__fblr7b(matrix)[10] === 1.0;
+      tmp_3 = _Matrix___get_values__impl__fblr7b(matrix)[imul(2, 4) + 2 | 0] === 1.0;
     } else {
       tmp_3 = false;
     }
     if (tmp_3) {
       // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-      tmp_2 = _Matrix___get_values__impl__fblr7b(matrix)[14] === 0.0;
+      tmp_2 = _Matrix___get_values__impl__fblr7b(matrix)[imul(3, 4) + 2 | 0] === 0.0;
     } else {
       tmp_2 = false;
     }
     if (tmp_2) {
       // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-      tmp_1 = _Matrix___get_values__impl__fblr7b(matrix)[8] === 0.0;
+      tmp_1 = _Matrix___get_values__impl__fblr7b(matrix)[imul(2, 4) + 0 | 0] === 0.0;
     } else {
       tmp_1 = false;
     }
     if (tmp_1) {
       // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-      tmp_0 = _Matrix___get_values__impl__fblr7b(matrix)[9] === 0.0;
+      tmp_0 = _Matrix___get_values__impl__fblr7b(matrix)[imul(2, 4) + 1 | 0] === 0.0;
     } else {
       tmp_0 = false;
     }
     if (tmp_0) {
       // Inline function 'androidx.compose.ui.graphics.Matrix.get' call
-      tmp = _Matrix___get_values__impl__fblr7b(matrix)[11] === 0.0;
+      tmp = _Matrix___get_values__impl__fblr7b(matrix)[imul(2, 4) + 3 | 0] === 0.0;
     } else {
       tmp = false;
     }
@@ -11745,19 +11510,19 @@
     return (_this__u8e3s4 instanceof SkiaBackedPathEffect ? _this__u8e3s4 : THROW_CCE()).nativePathEffect_1;
   }
   function actualCornerPathEffect(radius) {
-    return new SkiaBackedPathEffect(Companion_getInstance_8().makeCorner_nvvp4b_k$(radius));
+    return new SkiaBackedPathEffect(Companion_getInstance_8().makeCorner_cq39e3_k$(radius));
   }
   function actualDashPathEffect(intervals, phase) {
-    return new SkiaBackedPathEffect(Companion_getInstance_8().makeDash_l6ju8t_k$(intervals, phase));
+    return new SkiaBackedPathEffect(Companion_getInstance_8().makeDash_9suxds_k$(intervals, phase));
   }
   function actualChainPathEffect(outer, inner) {
-    return new SkiaBackedPathEffect(asSkiaPathEffect(outer).makeCompose_8fhb2g_k$(asSkiaPathEffect(inner)));
+    return new SkiaBackedPathEffect(asSkiaPathEffect(outer).makeCompose_dsdae3_k$(asSkiaPathEffect(inner)));
   }
   function actualStampedPathEffect(shape, advance, phase, style) {
-    return new SkiaBackedPathEffect(Companion_getInstance_8().makePath1D_ivleto_k$(asSkiaPath(shape), advance, phase, toSkiaStampedPathEffectStyle(style)));
+    return new SkiaBackedPathEffect(Companion_getInstance_8().makePath1D_ly4j3w_k$(asSkiaPath(shape), advance, phase, toSkiaStampedPathEffectStyle(style)));
   }
   function toSkiaStampedPathEffectStyle(_this__u8e3s4) {
-    return _this__u8e3s4 === Companion_getInstance_27().get_Morph_35mk00_k$() ? Style_MORPH_getInstance() : _this__u8e3s4 === Companion_getInstance_27().get_Rotate_t1fpff_k$() ? Style_ROTATE_getInstance() : _this__u8e3s4 === Companion_getInstance_27().get_Translate_oyad1i_k$() ? Style_TRANSLATE_getInstance() : Style_TRANSLATE_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_27().get_Morph_bm4leq_k$() ? Style_MORPH_getInstance() : _this__u8e3s4 === Companion_getInstance_27().get_Rotate_kkxo0p_k$() ? Style_ROTATE_getInstance() : _this__u8e3s4 === Companion_getInstance_27().get_Translate_xeseg8_k$() ? Style_TRANSLATE_getInstance() : Style_TRANSLATE_getInstance();
   }
   function PathMeasure_0() {
     return new SkiaBackedPathMeasure();
@@ -11769,32 +11534,32 @@
   protoOf(SkiaBackedPathMeasure).get_skia_woucvt_k$ = function () {
     return this.skia_1;
   };
-  protoOf(SkiaBackedPathMeasure).setPath_2lqht_k$ = function (path, forceClosed) {
-    this.skia_1.setPath_l64k9w_k$(path == null ? null : asSkiaPath(path), forceClosed);
+  protoOf(SkiaBackedPathMeasure).setPath_hen9zs_k$ = function (path, forceClosed) {
+    this.skia_1.setPath_aldcej_k$(path == null ? null : asSkiaPath(path), forceClosed);
   };
-  protoOf(SkiaBackedPathMeasure).getSegment_54x8z1_k$ = function (startDistance, stopDistance, destination, startWithMoveTo) {
-    return this.skia_1.getSegment_jdt43f_k$(startDistance, stopDistance, asSkiaPath(destination), startWithMoveTo);
+  protoOf(SkiaBackedPathMeasure).getSegment_x6ele9_k$ = function (startDistance, stopDistance, destination, startWithMoveTo) {
+    return this.skia_1.getSegment_ahsiby_k$(startDistance, stopDistance, asSkiaPath(destination), startWithMoveTo);
   };
   protoOf(SkiaBackedPathMeasure).get_length_g42xv3_k$ = function () {
     return this.skia_1.get_length_g42xv3_k$();
   };
-  protoOf(SkiaBackedPathMeasure).getPosition_t95ttv_k$ = function (distance) {
-    var result = this.skia_1.getPosition_jj2zsf_k$(distance);
+  protoOf(SkiaBackedPathMeasure).getPosition_yqkw9d_k$ = function (distance) {
+    var result = this.skia_1.getPosition_vh9xfr_k$(distance);
     var tmp;
     if (!(result == null)) {
       tmp = Offset_0(result.get_x_1mhr67_k$(), result.get_y_1mhr68_k$());
     } else {
-      tmp = Companion_getInstance_0().get_Unspecified_ooyrpa_k$();
+      tmp = Companion_getInstance().get_Unspecified_gis8po_k$();
     }
     return tmp;
   };
-  protoOf(SkiaBackedPathMeasure).getTangent_x8o6ab_k$ = function (distance) {
-    var result = this.skia_1.getTangent_qwbgld_k$(distance);
+  protoOf(SkiaBackedPathMeasure).getTangent_gy3br3_k$ = function (distance) {
+    var result = this.skia_1.getTangent_ccyi2f_k$(distance);
     var tmp;
     if (!(result == null)) {
       tmp = Offset_0(result.get_x_1mhr67_k$(), result.get_y_1mhr68_k$());
     } else {
-      tmp = Companion_getInstance_0().get_Unspecified_ooyrpa_k$();
+      tmp = Companion_getInstance().get_Unspecified_gis8po_k$();
     }
     return tmp;
   };
@@ -11812,11 +11577,11 @@
     var tmp;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.also' call
-      var tmp0_also = this.createImageFilter_sv02y1_k$();
+      var this_0 = this.createImageFilter_sv02y1_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.graphics.RenderEffect.asSkiaImageFilter.<anonymous>' call
-      this.internalImageFilter_1 = tmp0_also;
-      tmp = tmp0_also;
+      this.internalImageFilter_1 = this_0;
+      tmp = this_0;
     } else {
       tmp = tmp0_elvis_lhs;
     }
@@ -11829,20 +11594,20 @@
     return _this__u8e3s4.get_nativeColorFilter_tol2md_k$();
   }
   function actualTintColorFilter(color, blendMode) {
-    return new ColorFilter(Companion_getInstance_9().makeBlend_s8ia93_k$(toArgb(color), toSkia(blendMode)));
+    return new ColorFilter(Companion_getInstance_9().makeBlend_hxd0mv_k$(toArgb(color), toSkia(blendMode)));
   }
   function actualColorMatrixColorFilter(colorMatrix) {
     // Inline function 'kotlin.collections.copyOf' call
     // Inline function 'kotlin.js.asDynamic' call
     var remappedValues = _ColorMatrix___get_values__impl__bpwpry(colorMatrix).slice();
-    remappedValues[4] = remappedValues[4] * (1.0 / 255.0);
-    remappedValues[9] = remappedValues[9] * (1.0 / 255.0);
-    remappedValues[14] = remappedValues[14] * (1.0 / 255.0);
-    remappedValues[19] = remappedValues[19] * (1.0 / 255.0);
-    return new ColorFilter(Companion_getInstance_9().makeMatrix_rjjhx4_k$(new ColorMatrix(remappedValues.slice())));
+    remappedValues[4] = remappedValues[4] * 0.00392156862745098;
+    remappedValues[9] = remappedValues[9] * 0.00392156862745098;
+    remappedValues[14] = remappedValues[14] * 0.00392156862745098;
+    remappedValues[19] = remappedValues[19] * 0.00392156862745098;
+    return new ColorFilter(Companion_getInstance_9().makeMatrix_xfgxbq_k$(new ColorMatrix(remappedValues.slice())));
   }
   function actualLightingColorFilter(multiply, add) {
-    return new ColorFilter(Companion_getInstance_9().makeLighting_u1dhx6_k$(toArgb(multiply), toArgb(add)));
+    return new ColorFilter(Companion_getInstance_9().makeLighting_65ijqe_k$(toArgb(multiply), toArgb(add)));
   }
   function ActualImageBitmap(width, height, config, hasAlpha, colorSpace) {
     var colorType = toSkiaColorType(config);
@@ -11851,7 +11616,7 @@
     var colorInfo = new ColorInfo(colorType, alphaType, skiaColorSpace);
     var imageInfo = new ImageInfo(colorInfo, width, height);
     var bitmap = Bitmap_init_$Create$();
-    bitmap.allocPixels_jyyvpm_k$(imageInfo);
+    bitmap.allocPixels_elr7wo_k$(imageInfo);
     return new SkiaBackedImageBitmap(bitmap);
   }
   function asSkiaBitmap(_this__u8e3s4) {
@@ -11863,11 +11628,8 @@
     }
     return tmp;
   }
-  function toComposeImageBitmap(_this__u8e3s4) {
-    return new SkiaBackedImageBitmap(toBitmap(_this__u8e3s4));
-  }
   function toSkiaColorType(_this__u8e3s4) {
-    return _this__u8e3s4 === Companion_getInstance_22().get_Argb8888_tpu17z_k$() ? Companion_getInstance_10().get_N32_18jozg_k$() : _this__u8e3s4 === Companion_getInstance_22().get_Alpha8_zceb6n_k$() ? ColorType_ALPHA_8_getInstance() : _this__u8e3s4 === Companion_getInstance_22().get_Rgb565_i09itw_k$() ? ColorType_RGB_565_getInstance() : _this__u8e3s4 === Companion_getInstance_22().get_F16_f3achu_k$() ? ColorType_RGBA_F16_getInstance() : Companion_getInstance_10().get_N32_18jozg_k$();
+    return _this__u8e3s4 === Companion_getInstance_22().get_Argb8888_epitdf_k$() ? Companion_getInstance_10().get_N32_18jozg_k$() : _this__u8e3s4 === Companion_getInstance_22().get_Alpha8_8qn3sx_k$() ? ColorType_ALPHA_8_getInstance() : _this__u8e3s4 === Companion_getInstance_22().get_Rgb565_qf3bri_k$() ? ColorType_RGB_565_getInstance() : _this__u8e3s4 === Companion_getInstance_22().get_F16_tc2i3k_k$() ? ColorType_RGBA_F16_getInstance() : Companion_getInstance_10().get_N32_18jozg_k$();
   }
   function toSkiaColorSpace(_this__u8e3s4) {
     return _this__u8e3s4.equals(ColorSpaces_getInstance().get_Srgb_woa2g3_k$()) ? Companion_getInstance_11().get_sRGB_wottib_k$() : _this__u8e3s4.equals(ColorSpaces_getInstance().get_LinearSrgb_gaeay0_k$()) ? Companion_getInstance_11().get_sRGBLinear_5cyq1k_k$() : _this__u8e3s4.equals(ColorSpaces_getInstance().get_DisplayP3_pa2gtg_k$()) ? Companion_getInstance_11().get_displayP3_clxlks_k$() : Companion_getInstance_11().get_sRGB_wottib_k$();
@@ -11884,7 +11646,7 @@
   protoOf(SkiaBackedImageBitmap).get_colorSpace_yx2b0_k$ = function () {
     return this.colorSpace_1;
   };
-  protoOf(SkiaBackedImageBitmap).get_config_df1eav_k$ = function () {
+  protoOf(SkiaBackedImageBitmap).get_config_d6pt2v_k$ = function () {
     return this.config_1;
   };
   protoOf(SkiaBackedImageBitmap).get_hasAlpha_txpv0z_k$ = function () {
@@ -11896,10 +11658,10 @@
   protoOf(SkiaBackedImageBitmap).get_width_j0q4yl_k$ = function () {
     return this.bitmap_1.get_width_j0q4yl_k$();
   };
-  protoOf(SkiaBackedImageBitmap).prepareToDraw_sbmxaj_k$ = function () {
+  protoOf(SkiaBackedImageBitmap).prepareToDraw_sb34p6_k$ = function () {
     return Unit_getInstance();
   };
-  protoOf(SkiaBackedImageBitmap).readPixels_foa4om_k$ = function (buffer, startX, startY, width, height, bufferOffset, stride) {
+  protoOf(SkiaBackedImageBitmap).readPixels_vm93oo_k$ = function (buffer, startX, startY, width, height, bufferOffset, stride) {
     var lastScanline = bufferOffset + imul(height - 1 | 0, stride) | 0;
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
@@ -11958,22 +11720,25 @@
     var colorInfo = new ColorInfo(ColorType_BGRA_8888_getInstance(), ColorAlphaType_UNPREMUL_getInstance(), Companion_getInstance_11().get_sRGB_wottib_k$());
     var imageInfo = new ImageInfo(colorInfo, width, height);
     var bytesPerPixel = 4;
-    var bytes = ensureNotNull(this.bitmap_1.readPixels_bwiudk_k$(imageInfo, imul(stride, bytesPerPixel), startX, startY));
+    var bytes = ensureNotNull(this.bitmap_1.readPixels_chdhwh_k$(imageInfo, imul(stride, bytesPerPixel), startX, startY));
     putBytesInto(bytes, buffer, bufferOffset, bytes.length / bytesPerPixel | 0);
   };
-  function toBitmap(_this__u8e3s4) {
-    var bitmap = Bitmap_init_$Create$();
-    bitmap.allocPixels_jyyvpm_k$(Companion_getInstance_12().makeN32_mr767_k$(_this__u8e3s4.get_width_j0q4yl_k$(), _this__u8e3s4.get_height_e7t92o_k$(), ColorAlphaType_PREMUL_getInstance()));
-    var canvas = Canvas_init_$Create$(bitmap);
-    canvas.drawImage_w8dm7b_k$(_this__u8e3s4, 0.0, 0.0);
-    bitmap.setImmutable_j5sn28_k$();
-    return bitmap;
-  }
   function toComposeColorSpace(_this__u8e3s4) {
     return equals(_this__u8e3s4, Companion_getInstance_11().get_sRGB_wottib_k$()) ? ColorSpaces_getInstance().get_Srgb_woa2g3_k$() : equals(_this__u8e3s4, Companion_getInstance_11().get_sRGBLinear_5cyq1k_k$()) ? ColorSpaces_getInstance().get_LinearSrgb_gaeay0_k$() : equals(_this__u8e3s4, Companion_getInstance_11().get_displayP3_clxlks_k$()) ? ColorSpaces_getInstance().get_DisplayP3_pa2gtg_k$() : ColorSpaces_getInstance().get_Srgb_woa2g3_k$();
   }
   function toComposeConfig(_this__u8e3s4) {
-    return _this__u8e3s4.equals(Companion_getInstance_10().get_N32_18jozg_k$()) ? Companion_getInstance_22().get_Argb8888_tpu17z_k$() : _this__u8e3s4.equals(ColorType_ALPHA_8_getInstance()) ? Companion_getInstance_22().get_Alpha8_zceb6n_k$() : _this__u8e3s4.equals(ColorType_RGB_565_getInstance()) ? Companion_getInstance_22().get_Rgb565_i09itw_k$() : _this__u8e3s4.equals(ColorType_RGBA_F16_getInstance()) ? Companion_getInstance_22().get_F16_f3achu_k$() : Companion_getInstance_22().get_Argb8888_tpu17z_k$();
+    return _this__u8e3s4.equals(Companion_getInstance_10().get_N32_18jozg_k$()) ? Companion_getInstance_22().get_Argb8888_epitdf_k$() : _this__u8e3s4.equals(ColorType_ALPHA_8_getInstance()) ? Companion_getInstance_22().get_Alpha8_8qn3sx_k$() : _this__u8e3s4.equals(ColorType_RGB_565_getInstance()) ? Companion_getInstance_22().get_Rgb565_qf3bri_k$() : _this__u8e3s4.equals(ColorType_RGBA_F16_getInstance()) ? Companion_getInstance_22().get_F16_tc2i3k_k$() : Companion_getInstance_22().get_Argb8888_epitdf_k$();
+  }
+  function toComposeImageBitmap(_this__u8e3s4) {
+    return new SkiaBackedImageBitmap(toBitmap(_this__u8e3s4));
+  }
+  function toBitmap(_this__u8e3s4) {
+    var bitmap = Bitmap_init_$Create$();
+    bitmap.allocPixels_elr7wo_k$(Companion_getInstance_12().makeN32_3as8gh_k$(_this__u8e3s4.get_width_j0q4yl_k$(), _this__u8e3s4.get_height_e7t92o_k$(), ColorAlphaType_PREMUL_getInstance()));
+    var canvas = Canvas_init_$Create$(bitmap);
+    canvas.drawImage_snfjmj_k$(_this__u8e3s4, 0.0, 0.0);
+    bitmap.setImmutable_j5sn28_k$();
+    return bitmap;
   }
   function ActualLinearGradientShader(from, to, colors, colorStops, tileMode) {
     validateColorStops(colors, colorStops);
@@ -11983,7 +11748,7 @@
     var tmp_2 = _Offset___get_x__impl__xvi35n(to);
     var tmp_3 = _Offset___get_y__impl__8bzhra(to);
     var tmp_4 = toIntArray(colors);
-    return tmp.makeLinearGradient_p3pmrv_k$(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, colorStops == null ? null : toFloatArray(colorStops), new GradientStyle(toSkiaTileMode(tileMode), true, identityMatrix33()));
+    return tmp.makeLinearGradient_gatnrf_k$(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, colorStops == null ? null : toFloatArray(colorStops), new GradientStyle(toSkiaTileMode(tileMode), true, identityMatrix33()));
   }
   function ActualRadialGradientShader(center, radius, colors, colorStops, tileMode) {
     validateColorStops(colors, colorStops);
@@ -11991,7 +11756,7 @@
     var tmp_0 = _Offset___get_x__impl__xvi35n(center);
     var tmp_1 = _Offset___get_y__impl__8bzhra(center);
     var tmp_2 = toIntArray(colors);
-    return tmp.makeRadialGradient_gn4elj_k$(tmp_0, tmp_1, radius, tmp_2, colorStops == null ? null : toFloatArray(colorStops), new GradientStyle(toSkiaTileMode(tileMode), true, identityMatrix33()));
+    return tmp.makeRadialGradient_ai7hst_k$(tmp_0, tmp_1, radius, tmp_2, colorStops == null ? null : toFloatArray(colorStops), new GradientStyle(toSkiaTileMode(tileMode), true, identityMatrix33()));
   }
   function ActualSweepGradientShader(center, colors, colorStops) {
     validateColorStops(colors, colorStops);
@@ -11999,7 +11764,7 @@
     var tmp_0 = _Offset___get_x__impl__xvi35n(center);
     var tmp_1 = _Offset___get_y__impl__8bzhra(center);
     var tmp_2 = toIntArray(colors);
-    return tmp.makeSweepGradient_3ha3m6_k$(tmp_0, tmp_1, tmp_2, colorStops == null ? null : toFloatArray(colorStops));
+    return tmp.makeSweepGradient_hn03zg_k$(tmp_0, tmp_1, tmp_2, colorStops == null ? null : toFloatArray(colorStops));
   }
   function validateColorStops(colors, colorStops) {
     if (colorStops == null) {
@@ -12016,83 +11781,83 @@
     var tmp_1 = new Int32Array(tmp_0);
     while (tmp < tmp_0) {
       var tmp_2 = tmp;
-      tmp_1[tmp_2] = toArgb(_this__u8e3s4.get_fkrdnv_k$(tmp_2).value_1);
+      tmp_1[tmp_2] = toArgb(_this__u8e3s4.get_c1px32_k$(tmp_2).value_1);
       tmp = tmp + 1 | 0;
     }
     return tmp_1;
   }
   function toSkiaTileMode(_this__u8e3s4) {
-    return _this__u8e3s4 === Companion_getInstance_34().get_Clamp_q8g1jp_k$() ? FilterTileMode_CLAMP_getInstance() : _this__u8e3s4 === Companion_getInstance_34().get_Repeated_k0uuck_k$() ? FilterTileMode_REPEAT_getInstance() : _this__u8e3s4 === Companion_getInstance_34().get_Mirror_3kopi9_k$() ? FilterTileMode_MIRROR_getInstance() : _this__u8e3s4 === Companion_getInstance_34().get_Decal_z0hn4z_k$() ? FilterTileMode_DECAL_getInstance() : FilterTileMode_CLAMP_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_34().get_Clamp_ddetsd_k$() ? FilterTileMode_CLAMP_getInstance() : _this__u8e3s4 === Companion_getInstance_34().get_Repeated_jl00zi_k$() ? FilterTileMode_REPEAT_getInstance() : _this__u8e3s4 === Companion_getInstance_34().get_Mirror_rukh4t_k$() ? FilterTileMode_MIRROR_getInstance() : _this__u8e3s4 === Companion_getInstance_34().get_Decal_4ld873_k$() ? FilterTileMode_DECAL_getInstance() : FilterTileMode_CLAMP_getInstance();
   }
   function toSkiaVertexMode(_this__u8e3s4) {
-    return _this__u8e3s4 === Companion_getInstance_35().get_Triangles_3v3h75_k$() ? VertexMode_TRIANGLES_getInstance() : _this__u8e3s4 === Companion_getInstance_35().get_TriangleStrip_fj1wve_k$() ? VertexMode_TRIANGLE_STRIP_getInstance() : _this__u8e3s4 === Companion_getInstance_35().get_TriangleFan_hugsxb_k$() ? VertexMode_TRIANGLE_FAN_getInstance() : VertexMode_TRIANGLES_getInstance();
+    return _this__u8e3s4 === Companion_getInstance_35().get_Triangles_687gr1_k$() ? VertexMode_TRIANGLES_getInstance() : _this__u8e3s4 === Companion_getInstance_35().get_TriangleStrip_pmcutk_k$() ? VertexMode_TRIANGLE_STRIP_getInstance() : _this__u8e3s4 === Companion_getInstance_35().get_TriangleFan_rxrqvh_k$() ? VertexMode_TRIANGLE_FAN_getInstance() : VertexMode_TRIANGLES_getInstance();
   }
   //region block: post-declaration
-  protoOf(CanvasDrawScope).drawLine$default_o97yr2_k$ = drawLine$default;
-  protoOf(CanvasDrawScope).drawLine$default_sn3s09_k$ = drawLine$default_0;
-  protoOf(CanvasDrawScope).drawRect$default_8oolwl_k$ = drawRect$default;
-  protoOf(CanvasDrawScope).drawRect$default_agcbs4_k$ = drawRect$default_0;
-  protoOf(CanvasDrawScope).drawImage$default_px0mn0_k$ = drawImage$default;
-  protoOf(CanvasDrawScope).drawImage$default_rf1qqy_k$ = drawImage$default_0;
-  protoOf(CanvasDrawScope).drawImage$default_q3yuzr_k$ = drawImage$default_1;
-  protoOf(CanvasDrawScope).drawRoundRect$default_mlaxib_k$ = drawRoundRect$default;
-  protoOf(CanvasDrawScope).drawRoundRect$default_nnpnlg_k$ = drawRoundRect$default_0;
-  protoOf(CanvasDrawScope).drawCircle$default_8oa7a0_k$ = drawCircle$default;
-  protoOf(CanvasDrawScope).drawCircle$default_b2wyc1_k$ = drawCircle$default_0;
-  protoOf(CanvasDrawScope).drawOval$default_l3u8q5_k$ = drawOval$default;
-  protoOf(CanvasDrawScope).drawOval$default_us8vka_k$ = drawOval$default_0;
-  protoOf(CanvasDrawScope).drawArc$default_k2v7h5_k$ = drawArc$default;
-  protoOf(CanvasDrawScope).drawArc$default_15gi66_k$ = drawArc$default_0;
-  protoOf(CanvasDrawScope).drawPath$default_2kcp9b_k$ = drawPath$default;
-  protoOf(CanvasDrawScope).drawPath$default_oxe8h4_k$ = drawPath$default_0;
-  protoOf(CanvasDrawScope).drawPoints$default_w02yfl_k$ = drawPoints$default;
-  protoOf(CanvasDrawScope).drawPoints$default_o8qfp4_k$ = drawPoints$default_0;
-  protoOf(CanvasDrawScope).get_center_568eeq_k$ = get_center_0;
-  protoOf(CanvasDrawScope).get_size_x9ctfw_k$ = get_size;
-  protoOf(CanvasDrawScope).toPx_u0ojv5_k$ = toPx;
-  protoOf(CanvasDrawScope).toPx_x7oik4_k$ = toPx_0;
-  protoOf(CanvasDrawScope).roundToPx_hl1u8z_k$ = roundToPx;
-  protoOf(CanvasDrawScope).roundToPx_bdej4u_k$ = roundToPx_0;
-  protoOf(CanvasDrawScope).toSp_ul0xj8_k$ = toSp;
-  protoOf(CanvasDrawScope).toSp_8a8emd_k$ = toSp_0;
-  protoOf(CanvasDrawScope).toSp_j4kre0_k$ = toSp_1;
-  protoOf(CanvasDrawScope).toDp_amhzyl_k$ = toDp;
-  protoOf(CanvasDrawScope).toDp_2eugbd_k$ = toDp_0;
-  protoOf(CanvasDrawScope).toDp_2y47ho_k$ = toDp_1;
-  protoOf(CanvasDrawScope).toRect_l767f3_k$ = toRect_0;
-  protoOf(CanvasDrawScope).toSize_z60fpn_k$ = toSize;
-  protoOf(CanvasDrawScope).toDpSize_ncjzav_k$ = toDpSize;
-  protoOf(asDrawTransform$1).clipRect$default_37g4yl_k$ = clipRect$default_1;
-  protoOf(asDrawTransform$1).clipPath$default_3e6chc_k$ = clipPath$default_0;
-  protoOf(asDrawTransform$1).translate$default_t0ndyc_k$ = translate$default;
-  protoOf(asDrawTransform$1).rotate$default_74zkwv_k$ = rotate$default;
-  protoOf(asDrawTransform$1).scale$default_tdyvqo_k$ = scale$default_0;
-  protoOf(EmptyCanvas).scale$default_5csufh_k$ = scale$default;
-  protoOf(EmptyCanvas).clipRect$default_nsb3tl_k$ = clipRect$default_0;
-  protoOf(EmptyCanvas).clipPath$default_e4vwl2_k$ = clipPath$default;
-  protoOf(EmptyCanvas).drawImageRect$default_rboba7_k$ = drawImageRect$default;
-  protoOf(EmptyCanvas).skewRad_jnvexm_k$ = skewRad;
-  protoOf(EmptyCanvas).clipRect_5p7fgn_k$ = clipRect;
-  protoOf(EmptyCanvas).clipRect$default_7dppdt_k$ = clipRect$default;
-  protoOf(EmptyCanvas).drawRect_gsp0aa_k$ = drawRect;
-  protoOf(EmptyCanvas).drawOval_5ze9o_k$ = drawOval;
-  protoOf(EmptyCanvas).drawArc_wasmwu_k$ = drawArc;
-  protoOf(EmptyCanvas).drawArcRad_pebonr_k$ = drawArcRad;
-  protoOf(SkiaBackedCanvas).scale$default_5csufh_k$ = scale$default;
-  protoOf(SkiaBackedCanvas).clipRect$default_nsb3tl_k$ = clipRect$default_0;
-  protoOf(SkiaBackedCanvas).clipPath$default_e4vwl2_k$ = clipPath$default;
-  protoOf(SkiaBackedCanvas).drawImageRect$default_rboba7_k$ = drawImageRect$default;
-  protoOf(SkiaBackedCanvas).skewRad_jnvexm_k$ = skewRad;
-  protoOf(SkiaBackedCanvas).clipRect_5p7fgn_k$ = clipRect;
-  protoOf(SkiaBackedCanvas).clipRect$default_7dppdt_k$ = clipRect$default;
-  protoOf(SkiaBackedCanvas).drawRect_gsp0aa_k$ = drawRect;
-  protoOf(SkiaBackedCanvas).drawOval_5ze9o_k$ = drawOval;
-  protoOf(SkiaBackedCanvas).drawArc_wasmwu_k$ = drawArc;
-  protoOf(SkiaBackedCanvas).drawArcRad_pebonr_k$ = drawArcRad;
-  protoOf(SkiaBackedPath).addPath$default_tzs6nd_k$ = addPath$default;
-  protoOf(SkiaBackedPath).arcToRad_lid0rr_k$ = arcToRad;
-  protoOf(SkiaBackedPathMeasure).getSegment$default_7rzjsw_k$ = getSegment$default;
-  protoOf(SkiaBackedImageBitmap).readPixels$default_qmoziz_k$ = readPixels$default;
+  protoOf(CanvasDrawScope).drawLine$default_gyf64g_k$ = drawLine$default;
+  protoOf(CanvasDrawScope).drawLine$default_457gsp_k$ = drawLine$default_0;
+  protoOf(CanvasDrawScope).drawRect$default_rrw2w5_k$ = drawRect$default;
+  protoOf(CanvasDrawScope).drawRect$default_5x4e2k_k$ = drawRect$default_0;
+  protoOf(CanvasDrawScope).drawImage$default_grl3dt_k$ = drawImage$default;
+  protoOf(CanvasDrawScope).drawImage$default_8v3vnc_k$ = drawImage$default_0;
+  protoOf(CanvasDrawScope).drawImage$default_qql6c2_k$ = drawImage$default_1;
+  protoOf(CanvasDrawScope).drawRoundRect$default_mredpw_k$ = drawRoundRect$default;
+  protoOf(CanvasDrawScope).drawRoundRect$default_9g09cz_k$ = drawRoundRect$default_0;
+  protoOf(CanvasDrawScope).drawCircle$default_svji1h_k$ = drawCircle$default;
+  protoOf(CanvasDrawScope).drawCircle$default_wqrb84_k$ = drawCircle$default_0;
+  protoOf(CanvasDrawScope).drawOval$default_x9bh3n_k$ = drawOval$default;
+  protoOf(CanvasDrawScope).drawOval$default_bejsa2_k$ = drawOval$default_0;
+  protoOf(CanvasDrawScope).drawArc$default_sh8wha_k$ = drawArc$default;
+  protoOf(CanvasDrawScope).drawArc$default_m1szk9_k$ = drawArc$default_0;
+  protoOf(CanvasDrawScope).drawPath$default_16x1km_k$ = drawPath$default;
+  protoOf(CanvasDrawScope).drawPath$default_6abh83_k$ = drawPath$default_0;
+  protoOf(CanvasDrawScope).drawPoints$default_6sw95n_k$ = drawPoints$default;
+  protoOf(CanvasDrawScope).drawPoints$default_vvgacc_k$ = drawPoints$default_0;
+  protoOf(CanvasDrawScope).get_center_dcexec_k$ = get_center_0;
+  protoOf(CanvasDrawScope).get_size_cxx1ym_k$ = get_size;
+  protoOf(CanvasDrawScope).toPx_mycba2_k$ = toPx;
+  protoOf(CanvasDrawScope).toPx_plt68j_k$ = toPx_0;
+  protoOf(CanvasDrawScope).roundToPx_yb7vg8_k$ = roundToPx;
+  protoOf(CanvasDrawScope).roundToPx_cw9j9b_k$ = roundToPx_0;
+  protoOf(CanvasDrawScope).toSp_apeb1_k$ = toSp;
+  protoOf(CanvasDrawScope).toSp_97l7ws_k$ = toSp_0;
+  protoOf(CanvasDrawScope).toSp_fixg4_k$ = toSp_1;
+  protoOf(CanvasDrawScope).toDp_m8rr7q_k$ = toDp;
+  protoOf(CanvasDrawScope).toDp_fjakf4_k$ = toDp_0;
+  protoOf(CanvasDrawScope).toDp_hs0w0_k$ = toDp_1;
+  protoOf(CanvasDrawScope).toRect_ysncr2_k$ = toRect_0;
+  protoOf(CanvasDrawScope).toSize_7jb2uc_k$ = toSize;
+  protoOf(CanvasDrawScope).toDpSize_5hpeec_k$ = toDpSize;
+  protoOf(asDrawTransform$1).clipRect$default_tcjibt_k$ = clipRect$default_1;
+  protoOf(asDrawTransform$1).clipPath$default_9le209_k$ = clipPath$default_0;
+  protoOf(asDrawTransform$1).translate$default_k6kdkn_k$ = translate$default;
+  protoOf(asDrawTransform$1).rotate$default_gnv4f9_k$ = rotate$default;
+  protoOf(asDrawTransform$1).scale$default_4k3oto_k$ = scale$default_0;
+  protoOf(EmptyCanvas).scale$default_k3lttb_k$ = scale$default;
+  protoOf(EmptyCanvas).clipRect$default_rljm8s_k$ = clipRect$default_0;
+  protoOf(EmptyCanvas).clipPath$default_6w3exa_k$ = clipPath$default;
+  protoOf(EmptyCanvas).drawImageRect$default_yosr39_k$ = drawImageRect$default;
+  protoOf(EmptyCanvas).skewRad_dqdrvp_k$ = skewRad;
+  protoOf(EmptyCanvas).clipRect_oj1pv4_k$ = clipRect;
+  protoOf(EmptyCanvas).clipRect$default_a4bw85_k$ = clipRect$default;
+  protoOf(EmptyCanvas).drawRect_pdd91p_k$ = drawRect;
+  protoOf(EmptyCanvas).drawOval_tv5kqj_k$ = drawOval;
+  protoOf(EmptyCanvas).drawArc_j2ua6c_k$ = drawArc;
+  protoOf(EmptyCanvas).drawArcRad_lerje3_k$ = drawArcRad;
+  protoOf(SkiaBackedCanvas).scale$default_k3lttb_k$ = scale$default;
+  protoOf(SkiaBackedCanvas).clipRect$default_rljm8s_k$ = clipRect$default_0;
+  protoOf(SkiaBackedCanvas).clipPath$default_6w3exa_k$ = clipPath$default;
+  protoOf(SkiaBackedCanvas).drawImageRect$default_yosr39_k$ = drawImageRect$default;
+  protoOf(SkiaBackedCanvas).skewRad_dqdrvp_k$ = skewRad;
+  protoOf(SkiaBackedCanvas).clipRect_oj1pv4_k$ = clipRect;
+  protoOf(SkiaBackedCanvas).clipRect$default_a4bw85_k$ = clipRect$default;
+  protoOf(SkiaBackedCanvas).drawRect_pdd91p_k$ = drawRect;
+  protoOf(SkiaBackedCanvas).drawOval_tv5kqj_k$ = drawOval;
+  protoOf(SkiaBackedCanvas).drawArc_j2ua6c_k$ = drawArc;
+  protoOf(SkiaBackedCanvas).drawArcRad_lerje3_k$ = drawArcRad;
+  protoOf(SkiaBackedPath).addPath$default_lo4vd5_k$ = addPath$default;
+  protoOf(SkiaBackedPath).arcToRad_52k5ic_k$ = arcToRad;
+  protoOf(SkiaBackedPathMeasure).getSegment$default_v4mi73_k$ = getSegment$default;
+  protoOf(SkiaBackedImageBitmap).readPixels$default_31rwvw_k$ = readPixels$default;
   //endregion
   //region block: init
   RadiansToDegrees = 57.29578;

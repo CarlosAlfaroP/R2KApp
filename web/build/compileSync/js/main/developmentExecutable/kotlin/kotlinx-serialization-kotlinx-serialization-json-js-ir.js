@@ -1,47 +1,47 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin-kotlin-stdlib-js-ir.js', './kotlinx-serialization-kotlinx-serialization-core-js-ir.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js', './kotlinx-serialization-kotlinx-serialization-core-js-ir.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'), require('./kotlinx-serialization-kotlinx-serialization-core-js-ir.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./kotlinx-serialization-kotlinx-serialization-core-js-ir.js'));
   else {
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'kotlinx-serialization-kotlinx-serialization-json-js-ir'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'kotlinx-serialization-kotlinx-serialization-json-js-ir'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'kotlinx-serialization-kotlinx-serialization-json-js-ir'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'kotlinx-serialization-kotlinx-serialization-json-js-ir'.");
     }
     if (typeof this['kotlinx-serialization-kotlinx-serialization-core-js-ir'] === 'undefined') {
       throw new Error("Error loading module 'kotlinx-serialization-kotlinx-serialization-json-js-ir'. Its dependency 'kotlinx-serialization-kotlinx-serialization-core-js-ir' was not found. Please, check whether 'kotlinx-serialization-kotlinx-serialization-core-js-ir' is loaded prior to 'kotlinx-serialization-kotlinx-serialization-json-js-ir'.");
     }
-    root['kotlinx-serialization-kotlinx-serialization-json-js-ir'] = factory(typeof this['kotlinx-serialization-kotlinx-serialization-json-js-ir'] === 'undefined' ? {} : this['kotlinx-serialization-kotlinx-serialization-json-js-ir'], this['kotlin-kotlin-stdlib-js-ir'], this['kotlinx-serialization-kotlinx-serialization-core-js-ir']);
+    root['kotlinx-serialization-kotlinx-serialization-json-js-ir'] = factory(typeof this['kotlinx-serialization-kotlinx-serialization-json-js-ir'] === 'undefined' ? {} : this['kotlinx-serialization-kotlinx-serialization-json-js-ir'], this['kotlin-kotlin-stdlib'], this['kotlinx-serialization-kotlinx-serialization-core-js-ir']);
   }
 }(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core) {
   'use strict';
   //region block: imports
-  var StringCompanionObject_getInstance = kotlin_kotlin.$_$.o4;
+  var StringCompanionObject_getInstance = kotlin_kotlin.$_$.q4;
   var serializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.c;
   var InlinePrimitiveDescriptor = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.i;
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var classMeta = kotlin_kotlin.$_$.ec;
-  var VOID = kotlin_kotlin.$_$.bj;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
-  var THROW_CCE = kotlin_kotlin.$_$.lh;
-  var isObject = kotlin_kotlin.$_$.dd;
-  var Companion_getInstance = kotlin_kotlin.$_$.w4;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var classMeta = kotlin_kotlin.$_$.hc;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var VOID = kotlin_kotlin.$_$.e;
+  var THROW_CCE = kotlin_kotlin.$_$.qh;
+  var Companion_getInstance = kotlin_kotlin.$_$.y4;
   var serializer_0 = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.e;
-  var Companion_getInstance_0 = kotlin_kotlin.$_$.x4;
+  var Companion_getInstance_0 = kotlin_kotlin.$_$.z4;
   var serializer_1 = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.g;
-  var Companion_getInstance_1 = kotlin_kotlin.$_$.v4;
+  var Companion_getInstance_1 = kotlin_kotlin.$_$.x4;
   var serializer_2 = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.f;
-  var Companion_getInstance_2 = kotlin_kotlin.$_$.y4;
+  var Companion_getInstance_2 = kotlin_kotlin.$_$.a5;
   var serializer_3 = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.d;
-  var setOf = kotlin_kotlin.$_$.r9;
-  var numberToChar = kotlin_kotlin.$_$.ld;
-  var fillArrayVal = kotlin_kotlin.$_$.jc;
-  var Char = kotlin_kotlin.$_$.vg;
-  var toByte = kotlin_kotlin.$_$.td;
-  var HashMap_init_$Create$ = kotlin_kotlin.$_$.m;
+  var setOf = kotlin_kotlin.$_$.u9;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.q2;
+  var Char__toInt_impl_vasixd = kotlin_kotlin.$_$.v2;
+  var numberToChar = kotlin_kotlin.$_$.od;
+  var fillArrayVal = kotlin_kotlin.$_$.mc;
+  var toString = kotlin_kotlin.$_$.w2;
+  var HashMap_init_$Create$ = kotlin_kotlin.$_$.n;
   //endregion
   //region block: pre-declaration
-  setMetadataFor(Key, 'Key', classMeta);
-  setMetadataFor(DescriptorSchemaCache, 'DescriptorSchemaCache', classMeta);
+  setMetadataFor(Key, 'Key', classMeta, VOID, VOID, Key);
+  setMetadataFor(DescriptorSchemaCache, 'DescriptorSchemaCache', classMeta, VOID, VOID, DescriptorSchemaCache);
   //endregion
   function get_jsonUnquotedLiteralDescriptor() {
     _init_properties_JsonElement_kt__7cbdc2();
@@ -81,27 +81,27 @@
   function DescriptorSchemaCache() {
     this.map_1 = createMapForCache(16);
   }
-  protoOf(DescriptorSchemaCache).set_rrqmqe_k$ = function (descriptor, key, value) {
+  protoOf(DescriptorSchemaCache).set_y36rj3_k$ = function (descriptor, key, value) {
     // Inline function 'kotlin.collections.set' call
     // Inline function 'kotlin.collections.getOrPut' call
-    var tmp0_getOrPut = this.map_1;
-    var value_0 = tmp0_getOrPut.get_1mhr4y_k$(descriptor);
+    var this_0 = this.map_1;
+    var value_0 = this_0.get_wei43m_k$(descriptor);
     var tmp;
     if (value_0 == null) {
       // Inline function 'kotlinx.serialization.json.internal.DescriptorSchemaCache.set.<anonymous>' call
       var answer = createMapForCache(2);
-      tmp0_getOrPut.put_3mhbri_k$(descriptor, answer);
+      this_0.put_4fpzoq_k$(descriptor, answer);
       tmp = answer;
     } else {
       tmp = value_0;
     }
-    var tmp1_set = tmp;
-    var tmp2_set = key instanceof Key ? key : THROW_CCE();
-    var tmp3_set = isObject(value) ? value : THROW_CCE();
-    tmp1_set.put_3mhbri_k$(tmp2_set, tmp3_set);
+    var this_1 = tmp;
+    var key_0 = key instanceof Key ? key : THROW_CCE();
+    var value_1 = !(value == null) ? value : THROW_CCE();
+    this_1.put_4fpzoq_k$(key_0, value_1);
   };
-  protoOf(DescriptorSchemaCache).getOrPut_nie706_k$ = function (descriptor, key, defaultValue) {
-    var tmp0_safe_receiver = this.get_kuyzdy_k$(descriptor, key);
+  protoOf(DescriptorSchemaCache).getOrPut_g280x5_k$ = function (descriptor, key, defaultValue) {
+    var tmp0_safe_receiver = this.get_xn5txp_k$(descriptor, key);
     if (tmp0_safe_receiver == null)
       null;
     else {
@@ -110,19 +110,19 @@
       return tmp0_safe_receiver;
     }
     var value = defaultValue();
-    this.set_rrqmqe_k$(descriptor, key, value);
+    this.set_y36rj3_k$(descriptor, key, value);
     return value;
   };
-  protoOf(DescriptorSchemaCache).get_kuyzdy_k$ = function (descriptor, key) {
-    var tmp0_safe_receiver = this.map_1.get_1mhr4y_k$(descriptor);
+  protoOf(DescriptorSchemaCache).get_xn5txp_k$ = function (descriptor, key) {
+    var tmp0_safe_receiver = this.map_1.get_wei43m_k$(descriptor);
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
     } else {
-      tmp = tmp0_safe_receiver.get_1mhr4y_k$(key instanceof Key ? key : THROW_CCE());
+      tmp = tmp0_safe_receiver.get_wei43m_k$(key instanceof Key ? key : THROW_CCE());
     }
     var tmp_0 = tmp;
-    return isObject(tmp_0) ? tmp_0 : null;
+    return !(tmp_0 == null) ? tmp_0 : null;
   };
   function get_unsignedNumberDescriptors() {
     _init_properties_StreamingJsonEncoder_kt__pn1bsi();
@@ -152,11 +152,15 @@
     var tmp;
     if (d < 10) {
       // Inline function 'kotlin.code' call
-      tmp = numberToChar(d + 48 | 0);
+      var this_0 = _Char___init__impl__6a9atx(48);
+      var tmp$ret$0 = Char__toInt_impl_vasixd(this_0);
+      tmp = numberToChar(d + tmp$ret$0 | 0);
     } else {
       var tmp_0 = d - 10 | 0;
       // Inline function 'kotlin.code' call
-      tmp = numberToChar(tmp_0 + 97 | 0);
+      var this_1 = _Char___init__impl__6a9atx(97);
+      var tmp$ret$1 = Char__toInt_impl_vasixd(this_1);
+      tmp = numberToChar(tmp_0 + tmp$ret$1 | 0);
     }
     return tmp;
   }
@@ -166,7 +170,7 @@
       properties_initialized_StringOps_kt_wzaea7 = true;
       // Inline function 'kotlin.apply' call
       // Inline function 'kotlin.arrayOfNulls' call
-      var tmp0_apply = fillArrayVal(Array(93), null);
+      var this_0 = fillArrayVal(Array(93), null);
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'kotlinx.serialization.json.internal.ESCAPE_STRINGS.<anonymous>' call
       var inductionVariable = 0;
@@ -178,25 +182,31 @@
           var c2 = toHexChar(c >> 8);
           var c3 = toHexChar(c >> 4);
           var c4 = toHexChar(c);
-          tmp0_apply[c] = '\\u' + new Char(c1) + new Char(c2) + new Char(c3) + new Char(c4);
+          this_0[c] = '\\u' + toString(c1) + toString(c2) + toString(c3) + toString(c4);
         }
          while (inductionVariable <= 31);
       // Inline function 'kotlin.code' call
-      tmp0_apply[34] = '\\"';
+      var this_1 = _Char___init__impl__6a9atx(34);
+      this_0[Char__toInt_impl_vasixd(this_1)] = '\\"';
       // Inline function 'kotlin.code' call
-      tmp0_apply[92] = '\\\\';
+      var this_2 = _Char___init__impl__6a9atx(92);
+      this_0[Char__toInt_impl_vasixd(this_2)] = '\\\\';
       // Inline function 'kotlin.code' call
-      tmp0_apply[9] = '\\t';
+      var this_3 = _Char___init__impl__6a9atx(9);
+      this_0[Char__toInt_impl_vasixd(this_3)] = '\\t';
       // Inline function 'kotlin.code' call
-      tmp0_apply[8] = '\\b';
+      var this_4 = _Char___init__impl__6a9atx(8);
+      this_0[Char__toInt_impl_vasixd(this_4)] = '\\b';
       // Inline function 'kotlin.code' call
-      tmp0_apply[10] = '\\n';
+      var this_5 = _Char___init__impl__6a9atx(10);
+      this_0[Char__toInt_impl_vasixd(this_5)] = '\\n';
       // Inline function 'kotlin.code' call
-      tmp0_apply[13] = '\\r';
-      tmp0_apply[12] = '\\f';
-      ESCAPE_STRINGS = tmp0_apply;
+      var this_6 = _Char___init__impl__6a9atx(13);
+      this_0[Char__toInt_impl_vasixd(this_6)] = '\\r';
+      this_0[12] = '\\f';
+      ESCAPE_STRINGS = this_0;
       // Inline function 'kotlin.apply' call
-      var tmp0_apply_0 = new Int8Array(93);
+      var this_7 = new Int8Array(93);
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'kotlinx.serialization.json.internal.ESCAPE_MARKERS.<anonymous>' call
       var inductionVariable_0 = 0;
@@ -204,36 +214,29 @@
         do {
           var c_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
-          tmp0_apply_0[c_0] = 1;
+          this_7[c_0] = 1;
         }
          while (inductionVariable_0 <= 31);
       // Inline function 'kotlin.code' call
-      var tmp = 34;
+      var this_8 = _Char___init__impl__6a9atx(34);
+      this_7[Char__toInt_impl_vasixd(this_8)] = 34;
       // Inline function 'kotlin.code' call
-      tmp0_apply_0[tmp] = toByte(34);
+      var this_9 = _Char___init__impl__6a9atx(92);
+      this_7[Char__toInt_impl_vasixd(this_9)] = 92;
       // Inline function 'kotlin.code' call
-      var tmp_0 = 92;
+      var this_10 = _Char___init__impl__6a9atx(9);
+      this_7[Char__toInt_impl_vasixd(this_10)] = 116;
       // Inline function 'kotlin.code' call
-      tmp0_apply_0[tmp_0] = toByte(92);
+      var this_11 = _Char___init__impl__6a9atx(8);
+      this_7[Char__toInt_impl_vasixd(this_11)] = 98;
       // Inline function 'kotlin.code' call
-      var tmp_1 = 9;
+      var this_12 = _Char___init__impl__6a9atx(10);
+      this_7[Char__toInt_impl_vasixd(this_12)] = 110;
       // Inline function 'kotlin.code' call
-      tmp0_apply_0[tmp_1] = toByte(116);
-      // Inline function 'kotlin.code' call
-      var tmp_2 = 8;
-      // Inline function 'kotlin.code' call
-      tmp0_apply_0[tmp_2] = toByte(98);
-      // Inline function 'kotlin.code' call
-      var tmp_3 = 10;
-      // Inline function 'kotlin.code' call
-      tmp0_apply_0[tmp_3] = toByte(110);
-      // Inline function 'kotlin.code' call
-      var tmp_4 = 13;
-      // Inline function 'kotlin.code' call
-      tmp0_apply_0[tmp_4] = toByte(114);
-      // Inline function 'kotlin.code' call
-      tmp0_apply_0[12] = toByte(102);
-      ESCAPE_MARKERS = tmp0_apply_0;
+      var this_13 = _Char___init__impl__6a9atx(13);
+      this_7[Char__toInt_impl_vasixd(this_13)] = 114;
+      this_7[12] = 102;
+      ESCAPE_MARKERS = this_7;
     }
   }
   function createMapForCache(initialCapacity) {

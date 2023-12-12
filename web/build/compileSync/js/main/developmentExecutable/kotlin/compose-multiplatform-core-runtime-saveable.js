@@ -1,69 +1,68 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin-kotlin-stdlib-js-ir.js', './compose-multiplatform-core-runtime.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js', './compose-multiplatform-core-runtime.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'), require('./compose-multiplatform-core-runtime.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./compose-multiplatform-core-runtime.js'));
   else {
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'compose-multiplatform-core-runtime-saveable'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'compose-multiplatform-core-runtime-saveable'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-runtime-saveable'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'compose-multiplatform-core-runtime-saveable'.");
     }
     if (typeof this['compose-multiplatform-core-runtime'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-runtime-saveable'. Its dependency 'compose-multiplatform-core-runtime' was not found. Please, check whether 'compose-multiplatform-core-runtime' is loaded prior to 'compose-multiplatform-core-runtime-saveable'.");
     }
-    root['compose-multiplatform-core-runtime-saveable'] = factory(typeof this['compose-multiplatform-core-runtime-saveable'] === 'undefined' ? {} : this['compose-multiplatform-core-runtime-saveable'], this['kotlin-kotlin-stdlib-js-ir'], this['compose-multiplatform-core-runtime']);
+    root['compose-multiplatform-core-runtime-saveable'] = factory(typeof this['compose-multiplatform-core-runtime-saveable'] === 'undefined' ? {} : this['compose-multiplatform-core-runtime-saveable'], this['kotlin-kotlin-stdlib'], this['compose-multiplatform-core-runtime']);
   }
 }(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_compose_runtime_runtime) {
   'use strict';
   //region block: imports
-  var THROW_CCE = kotlin_kotlin.$_$.lh;
-  var toString = kotlin_kotlin.$_$.wd;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.v1;
-  var Unit_getInstance = kotlin_kotlin.$_$.z4;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.l;
-  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
-  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.v;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.a2;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o1;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
-  var charSequenceLength = kotlin_kotlin.$_$.cc;
+  var THROW_CCE = kotlin_kotlin.$_$.qh;
+  var toString = kotlin_kotlin.$_$.zd;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.w1;
+  var Unit_getInstance = kotlin_kotlin.$_$.b5;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.m;
+  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.l;
+  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.w;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.b2;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m1;
+  var charSequenceLength = kotlin_kotlin.$_$.fc;
   var $get_currentCompositeKeyHash$$composable_u3vbzj = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h;
-  var toString_0 = kotlin_kotlin.$_$.mg;
-  var isInterface = kotlin_kotlin.$_$.bd;
-  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c2;
-  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
-  var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q2;
-  var isObject = kotlin_kotlin.$_$.dd;
-  var rememberUpdatedState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y1;
-  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
-  var toString_1 = kotlin_kotlin.$_$.wi;
-  var referentialEqualityPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w1;
-  var structuralEqualityPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
-  var neverEqualPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v1;
+  var toString_0 = kotlin_kotlin.$_$.qg;
+  var isInterface = kotlin_kotlin.$_$.fd;
+  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a2;
+  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z1;
+  var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
+  var rememberUpdatedState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w1;
+  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
+  var toString_1 = kotlin_kotlin.$_$.cj;
+  var referentialEqualityPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u1;
+  var structuralEqualityPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
+  var neverEqualPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t1;
   var SnapshotMutableState = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e;
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var classMeta = kotlin_kotlin.$_$.ec;
-  var VOID = kotlin_kotlin.$_$.bj;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
-  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
-  var SnapshotMutationPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e1;
-  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u1;
-  var ensureNotNull = kotlin_kotlin.$_$.di;
-  var MutableState = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
-  var interfaceMeta = kotlin_kotlin.$_$.sc;
-  var toMutableMap = kotlin_kotlin.$_$.la;
-  var objectMeta = kotlin_kotlin.$_$.qd;
-  var Map = kotlin_kotlin.$_$.v5;
-  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i2;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var classMeta = kotlin_kotlin.$_$.hc;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var VOID = kotlin_kotlin.$_$.e;
+  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
+  var SnapshotMutationPolicy = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
+  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s1;
+  var ensureNotNull = kotlin_kotlin.$_$.ji;
+  var MutableState = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
+  var interfaceMeta = kotlin_kotlin.$_$.wc;
+  var toMutableMap = kotlin_kotlin.$_$.oa;
+  var objectMeta = kotlin_kotlin.$_$.td;
+  var Map = kotlin_kotlin.$_$.x5;
+  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
   var illegalDecoyCallException = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
-  var get_reuseKey = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z1;
-  var CompositionLocalProvider$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q;
-  var DisposableEffect$composable_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
-  var isBlank = kotlin_kotlin.$_$.uf;
-  var ArrayList_init_$Create$_1 = kotlin_kotlin.$_$.j;
-  var arrayListOf = kotlin_kotlin.$_$.h6;
-  var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
+  var get_reuseKey = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x1;
+  var CompositionLocalProvider$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o;
+  var DisposableEffect$composable_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
+  var isBlank = kotlin_kotlin.$_$.xf;
+  var ArrayList_init_$Create$_1 = kotlin_kotlin.$_$.k;
+  var arrayListOf = kotlin_kotlin.$_$.j6;
+  var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c2;
   //endregion
   //region block: pre-declaration
   setMetadataFor(SaverScope, 'SaverScope', interfaceMeta);
@@ -73,7 +72,7 @@
   setMetadataFor(RegistryHolder, 'RegistryHolder', classMeta);
   setMetadataFor(Companion, 'Companion', objectMeta);
   setMetadataFor(_no_name_provided__qut3iv_0, VOID, classMeta, VOID, [DisposableEffectResult]);
-  setMetadataFor(SaveableStateHolderImpl, 'SaveableStateHolderImpl', classMeta, VOID, [SaveableStateHolder]);
+  setMetadataFor(SaveableStateHolderImpl, 'SaveableStateHolderImpl', classMeta, VOID, [SaveableStateHolder], SaveableStateHolderImpl);
   setMetadataFor(Entry, 'Entry', interfaceMeta);
   setMetadataFor(SaveableStateRegistry, 'SaveableStateRegistry', interfaceMeta);
   setMetadataFor(SaveableStateRegistryImpl$registerProvider$3, VOID, classMeta, VOID, [Entry]);
@@ -95,18 +94,15 @@
         do {
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var item = list.get_fkrdnv_k$(index);
+          var item = list.get_c1px32_k$(index);
           if (!(item == null)) {
             // Inline function 'kotlin.require' call
-            var tmp0_require = $this$Saver.canBeSaved_nnajrq_k$(item);
             // Inline function 'kotlin.contracts.contract' call
             // Inline function 'kotlin.require' call
             // Inline function 'kotlin.contracts.contract' call
-            if (!tmp0_require) {
-              var tmp$ret$0;
+            if (!$this$Saver.canBeSaved_nnajrq_k$(item)) {
               // Inline function 'kotlin.require.<anonymous>' call
-              tmp$ret$0 = 'Failed requirement.';
-              var message = tmp$ret$0;
+              var message = 'Failed requirement.';
               throw IllegalArgumentException_init_$Create$(toString(message));
             }
           }
@@ -115,10 +111,8 @@
         tmp = Unit_getInstance();
       }
       var tmp_0;
-      var tmp$ret$1;
       // Inline function 'kotlin.collections.isNotEmpty' call
-      tmp$ret$1 = !list.isEmpty_y1axqb_k$();
-      if (tmp$ret$1) {
+      if (!list.isEmpty_y1axqb_k$()) {
         tmp_0 = ArrayList_init_$Create$(list);
       } else {
         tmp_0 = null;
@@ -132,54 +126,42 @@
   }
   function mapSaver$lambda($save) {
     return function ($this$listSaver, it) {
-      var tmp$ret$2;
       // Inline function 'kotlin.apply' call
-      var tmp$ret$0;
       // Inline function 'kotlin.collections.mutableListOf' call
-      tmp$ret$0 = ArrayList_init_$Create$_0();
-      var tmp0_apply = tmp$ret$0;
+      var this_0 = ArrayList_init_$Create$_0();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.saveable.mapSaver.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.collections.forEach' call
-      var tmp0_forEach = $save($this$listSaver, it);
-      var tmp$ret$1;
       // Inline function 'kotlin.collections.iterator' call
-      tmp$ret$1 = tmp0_forEach.get_entries_p20ztl_k$().iterator_jk1svi_k$();
-      var tmp0_iterator = tmp$ret$1;
+      var tmp0_iterator = $save($this$listSaver, it).get_entries_p20ztl_k$().iterator_jk1svi_k$();
       while (tmp0_iterator.hasNext_bitz1p_k$()) {
         var element = tmp0_iterator.next_20eer_k$();
         // Inline function 'androidx.compose.runtime.saveable.mapSaver.<anonymous>.<anonymous>.<anonymous>' call
-        tmp0_apply.add_1j60pz_k$(element.get_key_18j28a_k$());
-        tmp0_apply.add_1j60pz_k$(element.get_value_j01efc_k$());
+        this_0.add_utx5q5_k$(element.get_key_18j28a_k$());
+        this_0.add_utx5q5_k$(element.get_value_j01efc_k$());
       }
-      tmp$ret$2 = tmp0_apply;
-      return tmp$ret$2;
+      return this_0;
     };
   }
   function mapSaver$lambda_0($restore) {
     return function (list) {
-      var tmp$ret$0;
       // Inline function 'kotlin.collections.mutableMapOf' call
-      tmp$ret$0 = LinkedHashMap_init_$Create$();
-      var map = tmp$ret$0;
-      var tmp0_check = (list.get_size_woubt6_k$() % 2 | 0) === 0;
+      var map = LinkedHashMap_init_$Create$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'kotlin.contracts.contract' call
       var tmp;
-      if (!tmp0_check) {
-        var tmp$ret$1;
+      if (!((list.get_size_woubt6_k$() % 2 | 0) === 0)) {
         // Inline function 'kotlin.check.<anonymous>' call
-        tmp$ret$1 = 'Check failed.';
-        var message = tmp$ret$1;
+        var message = 'Check failed.';
         throw IllegalStateException_init_$Create$(toString(message));
       }
       var index = 0;
       while (index < list.get_size_woubt6_k$()) {
-        var tmp_0 = list.get_fkrdnv_k$(index);
+        var tmp_0 = list.get_c1px32_k$(index);
         var key = (!(tmp_0 == null) ? typeof tmp_0 === 'string' : false) ? tmp_0 : THROW_CCE();
-        var value = list.get_fkrdnv_k$(index + 1 | 0);
+        var value = list.get_c1px32_k$(index + 1 | 0);
         // Inline function 'kotlin.collections.set' call
-        map.put_3mhbri_k$(key, value);
+        map.put_4fpzoq_k$(key, value);
         index = index + 2 | 0;
       }
       return $restore(map);
@@ -189,28 +171,11 @@
     return MaxSupportedRadix;
   }
   var MaxSupportedRadix;
-  function rememberSaveable$composable(inputs, stateSaver, key, init, $composer, $changed, $default) {
-    var key_0 = key;
-    var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1040428287);
-    sourceInformation($composer_0, 'C(rememberSaveable$composable)P(1,3,2)141@6040L106:RememberSaveable.kt#r2ddri');
-    if (!(($default & 4) === 0))
-      key_0 = null;
-    if (isTraceInProgress()) {
-      traceEventStart(-1040428287, $changed, -1, 'androidx.compose.runtime.saveable.rememberSaveable$composable (RememberSaveable.kt:136)');
-    }
-    var tmp0 = rememberSaveable$composable_0(inputs.slice(), mutableStateSaver(stateSaver), key_0, init, $composer_0, 896 & $changed | 7168 & $changed, 0);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    $composer_0.endReplaceableGroup_er37p7_k$();
-    return tmp0;
-  }
-  function rememberSaveable$composable_0(inputs, saver, key, init, $composer, $changed, $default) {
+  function rememberSaveable$composable(inputs, saver, key, init, $composer, $changed, $default) {
     var saver_0 = {_v: saver};
     var key_0 = key;
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1490773347);
+    $composer_0.startReplaceableGroup_ip860b_k$(-1490773347);
     sourceInformation($composer_0, 'C(rememberSaveable$composable)P(1,3,2)80@3500L7,82@3597L244,95@4209L27,96@4262L27,98@4299L441:RememberSaveable.kt#r2ddri');
     if (!(($default & 2) === 0)) {
       saver_0._v = autoSaver();
@@ -220,53 +185,53 @@
     if (isTraceInProgress()) {
       traceEventStart(-1490773347, $changed, -1, 'androidx.compose.runtime.saveable.rememberSaveable$composable (RememberSaveable.kt:65)');
     }
-    $composer_0.startReplaceableGroup_rp6air_k$(1790924732);
+    $composer_0.startReplaceableGroup_ip860b_k$(1790924732);
     sourceInformation($composer_0, '75@3334L23');
     var tmp;
     // Inline function 'kotlin.text.isNullOrEmpty' call
-    var tmp0_isNullOrEmpty = key_0;
+    var this_0 = key_0;
     // Inline function 'kotlin.contracts.contract' call
-    if (!(tmp0_isNullOrEmpty == null ? true : charSequenceLength(tmp0_isNullOrEmpty) === 0)) {
+    if (!(this_0 == null ? true : charSequenceLength(this_0) === 0)) {
       tmp = key_0;
     } else {
       tmp = toString_0($get_currentCompositeKeyHash$$composable_u3vbzj($composer_0, 0), MaxSupportedRadix);
     }
     var tmp1_group = tmp;
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     var finalKey = tmp1_group;
     var tmp_0 = saver_0._v;
     if (!(!(tmp_0 == null) ? isInterface(tmp_0, Saver) : false))
       THROW_CCE();
     // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-    var tmp1_$get_current$$composable_gn3xww = get_LocalSaveableStateRegistry();
+    var this_1 = get_LocalSaveableStateRegistry();
     var $composer_1 = $composer_0;
     sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-    var tmp0 = $composer_1.consume_11nid3_k$(tmp1_$get_current$$composable_gn3xww);
+    var tmp0 = $composer_1.consume_ebzcrh_k$(this_1);
     sourceInformationMarkerEnd($composer_1);
     var registry = tmp0;
     // Inline function 'androidx.compose.runtime.remember$composable' call
-    var tmp3_remember$composable = inputs.slice();
+    var keys = inputs.slice();
     var $composer_2 = $composer_0;
-    $composer_2.startReplaceableGroup_rp6air_k$(-1603429786);
+    $composer_2.startReplaceableGroup_ip860b_k$(-1603429786);
     sourceInformation($composer_2, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
     var invalid = false;
     var inductionVariable = 0;
-    var last = tmp3_remember$composable.length;
+    var last = keys.length;
     while (inductionVariable < last) {
-      var key_1 = tmp3_remember$composable[inductionVariable];
+      var key_1 = keys[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       invalid = !!(invalid | $composer_2.changed_ga7h3f_k$(key_1));
     }
     // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache = invalid;
+    var invalid_0 = invalid;
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_2.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_2.rememberedValue_4dg93v_k$();
     var tmp_1;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance().get_Empty_i9b85g_k$()) {
+    if (invalid_0 ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.runtime.saveable.rememberSaveable$composable.<anonymous>' call
-      var tmp1_safe_receiver = registry == null ? null : registry.consumeRestored_kptfch_k$(finalKey);
+      var tmp1_safe_receiver = registry == null ? null : registry.consumeRestored_yfjzaw_k$(finalKey);
       var tmp_2;
       if (tmp1_safe_receiver == null) {
         tmp_2 = null;
@@ -274,18 +239,18 @@
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.saveable.rememberSaveable$composable.<anonymous>.<anonymous>' call
-        tmp_2 = saver_0._v.restore_uzeo8_k$(tmp1_safe_receiver);
+        tmp_2 = saver_0._v.restore_fyjq85_k$(tmp1_safe_receiver);
       }
       var restored = tmp_2;
       var value = restored == null ? init() : restored;
-      $composer_2.updateRememberedValue_l1colo_k$(value);
+      $composer_2.updateRememberedValue_l1wh71_k$(value);
       tmp_1 = value;
     } else {
-      tmp_1 = tmp0_let;
+      tmp_1 = it;
     }
     var tmp_3 = tmp_1;
-    var tmp0_0 = (tmp_3 == null ? true : isObject(tmp_3)) ? tmp_3 : THROW_CCE();
-    $composer_2.endReplaceableGroup_er37p7_k$();
+    var tmp0_0 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
+    $composer_2.endReplaceableGroup_ern0ak_k$();
     var value_0 = tmp0_0;
     if (!(registry == null)) {
       var saverState = rememberUpdatedState$composable(saver_0._v, $composer_0, 0);
@@ -295,16 +260,25 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return value_0;
   }
-  function mutableStateSaver(inner) {
-    // Inline function 'kotlin.with' call
-    var tmp0_with = isInterface(inner, Saver) ? inner : THROW_CCE();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.saveable.mutableStateSaver.<anonymous>' call
-    var tmp = mutableStateSaver$lambda(tmp0_with);
-    return Saver_0(tmp, mutableStateSaver$lambda_0(tmp0_with));
+  function rememberSaveable$composable_0(inputs, stateSaver, key, init, $composer, $changed, $default) {
+    var key_0 = key;
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_ip860b_k$(-1040428287);
+    sourceInformation($composer_0, 'C(rememberSaveable$composable)P(1,3,2)141@6040L106:RememberSaveable.kt#r2ddri');
+    if (!(($default & 4) === 0))
+      key_0 = null;
+    if (isTraceInProgress()) {
+      traceEventStart(-1040428287, $changed, -1, 'androidx.compose.runtime.saveable.rememberSaveable$composable (RememberSaveable.kt:136)');
+    }
+    var tmp0 = rememberSaveable$composable(inputs.slice(), mutableStateSaver(stateSaver), key_0, init, $composer_0, 896 & $changed | 7168 & $changed, 0);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+    return tmp0;
   }
   function requireCanBeSaved(_this__u8e3s4, value) {
     if (!(value == null) ? !_this__u8e3s4.canBeSaved_nnajrq_k$(value) : false) {
@@ -323,6 +297,14 @@
       throw IllegalArgumentException_init_$Create$(tmp);
     }
   }
+  function mutableStateSaver(inner) {
+    // Inline function 'kotlin.with' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.saveable.mutableStateSaver.<anonymous>' call
+    var $this$with = isInterface(inner, Saver) ? inner : THROW_CCE();
+    var tmp = mutableStateSaver$lambda($this$with);
+    return Saver_0(tmp, mutableStateSaver$lambda_0($this$with));
+  }
   function sam$androidx_compose_runtime_saveable_SaverScope$0(function_0) {
     this.function_1 = function_0;
   }
@@ -336,65 +318,55 @@
   }
   function rememberSaveable$composable$lambda$lambda($saverState, $valueState, $registry) {
     return function () {
-      var tmp$ret$1;
       // Inline function 'kotlin.with' call
-      var tmp0_with = $saverState.get_value_j01efc_k$();
       // Inline function 'kotlin.contracts.contract' call
-      var tmp$ret$0;
       // Inline function 'androidx.compose.runtime.saveable.rememberSaveable$composable.<anonymous>.<anonymous>.<anonymous>' call
+      var $this$with = $saverState.get_value_j01efc_k$();
       var tmp = rememberSaveable$composable$lambda$lambda$lambda($registry);
-      tmp$ret$0 = tmp0_with.save_ef702r_k$(new sam$androidx_compose_runtime_saveable_SaverScope$0(tmp), $valueState.get_value_j01efc_k$());
-      tmp$ret$1 = tmp$ret$0;
-      return tmp$ret$1;
+      return $this$with.save_khi2yu_k$(new sam$androidx_compose_runtime_saveable_SaverScope$0(tmp), $valueState.get_value_j01efc_k$());
     };
   }
   function _no_name_provided__qut3iv($entry) {
     this.$entry_1 = $entry;
   }
-  protoOf(_no_name_provided__qut3iv).dispose_3n44we_k$ = function () {
+  protoOf(_no_name_provided__qut3iv).dispose_3nnxhr_k$ = function () {
     // Inline function 'androidx.compose.runtime.saveable.rememberSaveable$composable.<anonymous>.<anonymous>' call
-    this.$entry_1.unregister_ibszrp_k$();
+    this.$entry_1.unregister_ib976c_k$();
   };
   function rememberSaveable$composable$lambda($registry, $finalKey, $saverState, $valueState) {
     return function ($this$DisposableEffect) {
       var valueProvider = rememberSaveable$composable$lambda$lambda($saverState, $valueState, $registry);
       requireCanBeSaved($registry, valueProvider());
-      var entry = $registry.registerProvider_h94pml_k$($finalKey, valueProvider);
-      var tmp$ret$0;
+      var entry = $registry.registerProvider_22k33k_k$($finalKey, valueProvider);
       // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      tmp$ret$0 = new _no_name_provided__qut3iv(entry);
-      return tmp$ret$0;
+      return new _no_name_provided__qut3iv(entry);
     };
   }
-  function mutableStateSaver$lambda($tmp0_with) {
+  function mutableStateSaver$lambda($$this$with) {
     return function ($this$Saver, state) {
       // Inline function 'kotlin.contracts.contract' call
       var tmp;
       if (!isInterface(state, SnapshotMutableState)) {
-        var tmp$ret$0;
         // Inline function 'androidx.compose.runtime.saveable.mutableStateSaver.<anonymous>.<anonymous>.<anonymous>' call
-        tmp$ret$0 = 'If you use a custom MutableState implementation you have to write a custom Saver and pass it as a saver param to rememberSaveable()';
-        var message = tmp$ret$0;
+        var message = 'If you use a custom MutableState implementation you have to write a custom Saver and pass it as a saver param to rememberSaveable()';
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
-      var tmp_0 = $tmp0_with.save_ef702r_k$($this$Saver, state.get_value_j01efc_k$());
+      var tmp_0 = $$this$with.save_khi2yu_k$($this$Saver, state.get_value_j01efc_k$());
       var tmp_1 = state.get_policy_i5q4hn_k$();
       return mutableStateOf(tmp_0, isInterface(tmp_1, SnapshotMutationPolicy) ? tmp_1 : THROW_CCE());
     };
   }
-  function mutableStateSaver$lambda_0($tmp0_with) {
+  function mutableStateSaver$lambda_0($$this$with) {
     return function (it) {
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'kotlin.contracts.contract' call
       var tmp;
       if (!isInterface(it, SnapshotMutableState)) {
-        var tmp$ret$0;
         // Inline function 'kotlin.require.<anonymous>' call
-        tmp$ret$0 = 'Failed requirement.';
-        var message = tmp$ret$0;
+        var message = 'Failed requirement.';
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
-      var tmp_0 = !(it.get_value_j01efc_k$() == null) ? $tmp0_with.restore_uzeo8_k$(ensureNotNull(it.get_value_j01efc_k$())) : null;
+      var tmp_0 = !(it.get_value_j01efc_k$() == null) ? $$this$with.restore_fyjq85_k$(ensureNotNull(it.get_value_j01efc_k$())) : null;
       var tmp_1 = it.get_policy_i5q4hn_k$();
       var tmp_2 = mutableStateOf(tmp_0, isInterface(tmp_1, SnapshotMutationPolicy) ? tmp_1 : THROW_CCE());
       return isInterface(tmp_2, MutableState) ? tmp_2 : THROW_CCE();
@@ -404,7 +376,7 @@
   }
   function rememberSaveableStateHolder$composable($composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1658217662);
+    $composer_0.startReplaceableGroup_ip860b_k$(-1658217662);
     sourceInformation($composer_0, 'C(rememberSaveableStateHolder$composable)*61@2439L41,59@2369L111,64@2554L7:SaveableStateHolder.kt#r2ddri');
     if (isTraceInProgress()) {
       traceEventStart(-1658217662, $changed, -1, 'androidx.compose.runtime.saveable.rememberSaveableStateHolder$composable (SaveableStateHolder.kt:58)');
@@ -413,41 +385,41 @@
     var tmp = Companion_getInstance_0().Saver_1;
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(547886695);
+    $composer_1.startReplaceableGroup_ip860b_k$(547886695);
     sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_1.rememberedValue_4dg93v_k$();
     var tmp_0;
-    if (false ? true : tmp0_let === Companion_getInstance().get_Empty_i9b85g_k$()) {
+    if (false ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.runtime.saveable.rememberSaveableStateHolder$composable.<anonymous>' call
       var value = rememberSaveableStateHolder$composable$lambda;
-      $composer_1.updateRememberedValue_l1colo_k$(value);
+      $composer_1.updateRememberedValue_l1wh71_k$(value);
       tmp_0 = value;
     } else {
-      tmp_0 = tmp0_let;
+      tmp_0 = it;
     }
     var tmp_1 = tmp_0;
-    var tmp0 = (tmp_1 == null ? true : isObject(tmp_1)) ? tmp_1 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
-    var tmp1_apply = rememberSaveable$composable_0([], tmp, null, tmp0, $composer_0, 8, 4);
+    var tmp0 = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
+    $composer_1.endReplaceableGroup_ern0ak_k$();
+    var this_0 = rememberSaveable$composable([], tmp, null, tmp0, $composer_0, 8, 4);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.saveable.rememberSaveableStateHolder$composable.<anonymous>' call
-    var tmp_2 = tmp1_apply;
+    var tmp_2 = this_0;
     // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-    var tmp0_$get_current$$composable_h5ksy7 = get_LocalSaveableStateRegistry();
+    var this_1 = get_LocalSaveableStateRegistry();
     var $composer_2 = $composer_0;
     sourceInformationMarkerStart($composer_2, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-    var tmp0_0 = $composer_2.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+    var tmp0_0 = $composer_2.consume_ebzcrh_k$(this_1);
     sourceInformationMarkerEnd($composer_2);
     tmp_2.parentSaveableStateRegistry_1 = tmp0_0;
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
-    return tmp1_apply;
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+    return this_0;
   }
   function SaveableStateHolderImpl$RegistryHolder$registry$lambda(this$0) {
     return function (it) {
@@ -475,7 +447,7 @@
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var element = tmp0_iterator.next_20eer_k$();
       // Inline function 'androidx.compose.runtime.saveable.SaveableStateHolderImpl.saveAll.<anonymous>' call
-      element.saveTo_j93loz_k$(map);
+      element.saveTo_mv4zhb_k$(map);
     }
     // Inline function 'kotlin.collections.ifEmpty' call
     var tmp;
@@ -492,13 +464,13 @@
     this.key_1 = key;
     this.shouldSave_1 = true;
     var tmp = this;
-    var tmp_0 = this.$this_1.savedStates_1.get_1mhr4y_k$(this.key_1);
+    var tmp_0 = this.$this_1.savedStates_1.get_wei43m_k$(this.key_1);
     tmp.registry_1 = SaveableStateRegistry_0(tmp_0, SaveableStateHolderImpl$RegistryHolder$registry$lambda(this.$this_1));
   }
   protoOf(RegistryHolder).get_key_18j28a_k$ = function () {
     return this.key_1;
   };
-  protoOf(RegistryHolder).set_shouldSave_ihm4ck_k$ = function (_set____db54di) {
+  protoOf(RegistryHolder).set_shouldSave_68lx7c_k$ = function (_set____db54di) {
     this.shouldSave_1 = _set____db54di;
   };
   protoOf(RegistryHolder).get_shouldSave_p014mf_k$ = function () {
@@ -507,17 +479,17 @@
   protoOf(RegistryHolder).get_registry_rt8npi_k$ = function () {
     return this.registry_1;
   };
-  protoOf(RegistryHolder).saveTo_j93loz_k$ = function (map) {
+  protoOf(RegistryHolder).saveTo_mv4zhb_k$ = function (map) {
     if (this.shouldSave_1) {
       var savedData = this.registry_1.performSave_ohn24i_k$();
       if (savedData.isEmpty_y1axqb_k$()) {
         // Inline function 'kotlin.collections.minusAssign' call
-        var tmp0_minusAssign = this.key_1;
-        map.remove_8hbkc0_k$(tmp0_minusAssign);
+        var key = this.key_1;
+        map.remove_gppy8k_k$(key);
       } else {
         // Inline function 'kotlin.collections.set' call
-        var tmp1_set = this.key_1;
-        map.put_3mhbri_k$(tmp1_set, savedData);
+        var key_0 = this.key_1;
+        map.put_4fpzoq_k$(key_0, savedData);
       }
     }
   };
@@ -541,45 +513,41 @@
     this.this$0__1 = this$0;
     this.$key_1 = $key;
   }
-  protoOf(_no_name_provided__qut3iv_0).dispose_3n44we_k$ = function () {
+  protoOf(_no_name_provided__qut3iv_0).dispose_3nnxhr_k$ = function () {
     // Inline function 'androidx.compose.runtime.saveable.SaveableStateHolderImpl.SaveableStateProvider$composable.<anonymous>.<anonymous>.<anonymous>' call
-    this.$registryHolder_1.saveTo_j93loz_k$(this.this$0__1.savedStates_1);
+    this.$registryHolder_1.saveTo_mv4zhb_k$(this.this$0__1.savedStates_1);
     // Inline function 'kotlin.collections.minusAssign' call
-    this.this$0__1.registryHolders_1.remove_8hbkc0_k$(this.$key_1);
+    var this_0 = this.this$0__1.registryHolders_1;
+    var key = this.$key_1;
+    this_0.remove_gppy8k_k$(key);
   };
   function SaveableStateHolderImpl$SaveableStateProvider$composable$lambda(this$0, $key, $registryHolder) {
     return function ($this$DisposableEffect) {
-      var tmp$ret$1;
       // Inline function 'kotlin.collections.contains' call
-      var tmp0_contains = this$0.registryHolders_1;
-      var tmp$ret$0;
+      var this_0 = this$0.registryHolders_1;
       // Inline function 'kotlin.collections.containsKey' call
-      tmp$ret$0 = (isInterface(tmp0_contains, Map) ? tmp0_contains : THROW_CCE()).containsKey_wgk31w_k$($key);
-      tmp$ret$1 = tmp$ret$0;
-      var tmp1_require = !tmp$ret$1;
+      var key = $key;
       // Inline function 'kotlin.contracts.contract' call
       var tmp;
-      if (!tmp1_require) {
-        var tmp$ret$2;
+      if (!!(isInterface(this_0, Map) ? this_0 : THROW_CCE()).containsKey_aw81wo_k$(key)) {
         // Inline function 'androidx.compose.runtime.saveable.SaveableStateHolderImpl.SaveableStateProvider$composable.<anonymous>.<anonymous>.<anonymous>' call
-        tmp$ret$2 = 'Key ' + toString($key) + ' was used multiple times ';
-        var message = tmp$ret$2;
+        var message = 'Key ' + toString($key) + ' was used multiple times ';
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
-      var tmp0_this = this$0;
-      var tmp2_minusAssign = tmp0_this.savedStates_1;
-      tmp2_minusAssign.remove_8hbkc0_k$($key);
-      var tmp3_set = this$0.registryHolders_1;
-      tmp3_set.put_3mhbri_k$($key, $registryHolder);
-      var tmp$ret$3;
+      var this_1 = this$0.savedStates_1;
+      var key_0 = $key;
+      this_1.remove_gppy8k_k$(key_0);
+      var this_2 = this$0.registryHolders_1;
+      var key_1 = $key;
+      var value = $registryHolder;
+      this_2.put_4fpzoq_k$(key_1, value);
       // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      tmp$ret$3 = new _no_name_provided__qut3iv_0($registryHolder, this$0, $key);
-      return tmp$ret$3;
+      return new _no_name_provided__qut3iv_0($registryHolder, this$0, $key);
     };
   }
   function SaveableStateHolderImpl$SaveableStateProvider$composable$lambda_0($tmp0_rcvr, $key, $content, $$changed) {
     return function ($composer, $force) {
-      $tmp0_rcvr.SaveableStateProvider$composable_n5yi3h_k$($key, $content, $composer, updateChangedFlags($$changed | 1));
+      $tmp0_rcvr.SaveableStateProvider$composable_pz6ujh_k$($key, $content, $composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
@@ -599,27 +567,27 @@
     tmp_0.registryHolders_1 = LinkedHashMap_init_$Create$();
     this.parentSaveableStateRegistry_1 = null;
   }
-  protoOf(SaveableStateHolderImpl).set_parentSaveableStateRegistry_ghb2py_k$ = function (_set____db54di) {
+  protoOf(SaveableStateHolderImpl).set_parentSaveableStateRegistry_rshrfm_k$ = function (_set____db54di) {
     this.parentSaveableStateRegistry_1 = _set____db54di;
   };
   protoOf(SaveableStateHolderImpl).get_parentSaveableStateRegistry_5mprdw_k$ = function () {
     return this.parentSaveableStateRegistry_1;
   };
-  protoOf(SaveableStateHolderImpl).SaveableStateProvider_2masgx_k$ = function (key, content) {
+  protoOf(SaveableStateHolderImpl).SaveableStateProvider_wc4gxn_k$ = function (key, content) {
     illegalDecoyCallException('SaveableStateProvider');
   };
-  protoOf(SaveableStateHolderImpl).removeState_5vvsww_k$ = function (key) {
-    var registryHolder = this.registryHolders_1.get_1mhr4y_k$(key);
+  protoOf(SaveableStateHolderImpl).removeState_5wfli9_k$ = function (key) {
+    var registryHolder = this.registryHolders_1.get_wei43m_k$(key);
     if (!(registryHolder == null)) {
       registryHolder.shouldSave_1 = false;
     } else {
       // Inline function 'kotlin.collections.minusAssign' call
-      this.savedStates_1.remove_8hbkc0_k$(key);
+      this.savedStates_1.remove_gppy8k_k$(key);
     }
   };
-  protoOf(SaveableStateHolderImpl).SaveableStateProvider$composable_n5yi3h_k$ = function (key, content, $composer, $changed) {
+  protoOf(SaveableStateHolderImpl).SaveableStateProvider$composable_pz6ujh_k$ = function (key, content, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(1898146948);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1898146948);
     sourceInformation($composer_0, 'C(SaveableStateProvider$composable)P(1)75@2967L923:SaveableStateHolder.kt#r2ddri');
     var $dirty = $changed;
     if (isTraceInProgress()) {
@@ -627,23 +595,23 @@
     }
     // Inline function 'androidx.compose.runtime.ReusableContent$composable' call
     var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(1346827672);
+    $composer_1.startReplaceableGroup_ip860b_k$(1346827672);
     sourceInformation($composer_1, 'CC(ReusableContent$composable)P(1)145@5313L9:Composables.kt#9igjgp');
-    $composer_1.startReusableGroup_2z9l41_k$(get_reuseKey(), key);
+    $composer_1.startReusableGroup_1qdhl_k$(get_reuseKey(), key);
     // Inline function 'androidx.compose.runtime.saveable.SaveableStateHolderImpl.SaveableStateProvider$composable.<anonymous>' call
     var $composer_2 = $composer_1;
     sourceInformationMarkerStart($composer_2, -65727059, 'C76@3023L321,83@3357L150,87@3520L360:SaveableStateHolder.kt#r2ddri');
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_3 = $composer_2;
-    $composer_3.startReplaceableGroup_rp6air_k$(547886695);
+    $composer_3.startReplaceableGroup_ip860b_k$(547886695);
     sourceInformation($composer_3, 'CC(remember$composable):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_3.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_3.rememberedValue_4dg93v_k$();
     var tmp;
-    if (false ? true : tmp0_let === Companion_getInstance().get_Empty_i9b85g_k$()) {
+    if (false ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.runtime.saveable.SaveableStateHolderImpl.SaveableStateProvider$composable.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.require' call
       var tmp0_safe_receiver = this.parentSaveableStateRegistry_1;
@@ -655,20 +623,20 @@
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
       var value = new RegistryHolder(this, key);
-      $composer_3.updateRememberedValue_l1colo_k$(value);
+      $composer_3.updateRememberedValue_l1wh71_k$(value);
       tmp = value;
     } else {
-      tmp = tmp0_let;
+      tmp = it;
     }
     var tmp_0 = tmp;
-    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-    $composer_3.endReplaceableGroup_er37p7_k$();
+    var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_3.endReplaceableGroup_ern0ak_k$();
     var registryHolder = tmp0;
-    CompositionLocalProvider$composable([get_LocalSaveableStateRegistry().provides_3e53yf_k$(registryHolder.registry_1)], content, $composer_2, 112 & $dirty);
+    CompositionLocalProvider$composable([get_LocalSaveableStateRegistry().provides_3agxel_k$(registryHolder.registry_1)], content, $composer_2, 112 & $dirty);
     DisposableEffect$composable_0(Unit_getInstance(), SaveableStateHolderImpl$SaveableStateProvider$composable$lambda(this, key, registryHolder), $composer_2, 6);
     sourceInformationMarkerEnd($composer_2);
-    $composer_1.endReusableGroup_jxruvs_k$();
-    $composer_1.endReplaceableGroup_er37p7_k$();
+    $composer_1.endReusableGroup_jx82af_k$();
+    $composer_1.endReplaceableGroup_ern0ak_k$();
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -676,7 +644,7 @@
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(SaveableStateHolderImpl$SaveableStateProvider$composable$lambda_0(this, key, content, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(SaveableStateHolderImpl$SaveableStateProvider$composable$lambda_0(this, key, content, $changed));
     }
   };
   function rememberSaveableStateHolder$composable$lambda() {
@@ -709,12 +677,12 @@
     this.$key_1 = $key;
     this.$valueProvider_1 = $valueProvider;
   }
-  protoOf(SaveableStateRegistryImpl$registerProvider$3).unregister_ibszrp_k$ = function () {
-    var list = this.this$0__1.valueProviders_1.remove_8hbkc0_k$(this.$key_1);
+  protoOf(SaveableStateRegistryImpl$registerProvider$3).unregister_ib976c_k$ = function () {
+    var list = this.this$0__1.valueProviders_1.remove_gppy8k_k$(this.$key_1);
     if (list == null)
       null;
     else
-      list.remove_8hbkc6_k$(this.$valueProvider_1);
+      list.remove_cedx0m_k$(this.$valueProvider_1);
     var tmp;
     if (!(list == null)) {
       // Inline function 'kotlin.collections.isNotEmpty' call
@@ -724,7 +692,9 @@
     }
     if (tmp) {
       // Inline function 'kotlin.collections.set' call
-      this.this$0__1.valueProviders_1.put_3mhbri_k$(this.$key_1, list);
+      var this_0 = this.this$0__1.valueProviders_1;
+      var key = this.$key_1;
+      this_0.put_4fpzoq_k$(key, list);
     }
   };
   function SaveableStateRegistryImpl(restored, canBeSaved) {
@@ -746,8 +716,8 @@
   protoOf(SaveableStateRegistryImpl).canBeSaved_nnajrq_k$ = function (value) {
     return this.canBeSaved_1(value);
   };
-  protoOf(SaveableStateRegistryImpl).consumeRestored_kptfch_k$ = function (key) {
-    var list = this.restored_1.remove_8hbkc0_k$(key);
+  protoOf(SaveableStateRegistryImpl).consumeRestored_yfjzaw_k$ = function (key) {
+    var list = this.restored_1.remove_gppy8k_k$(key);
     var tmp;
     var tmp_0;
     if (!(list == null)) {
@@ -759,17 +729,17 @@
     if (tmp_0) {
       if (list.get_size_woubt6_k$() > 1) {
         // Inline function 'kotlin.collections.set' call
-        var tmp0_set = this.restored_1;
-        var tmp1_set = list.subList_d153ha_k$(1, list.get_size_woubt6_k$());
-        tmp0_set.put_3mhbri_k$(key, tmp1_set);
+        var this_0 = this.restored_1;
+        var value = list.subList_xle3r2_k$(1, list.get_size_woubt6_k$());
+        this_0.put_4fpzoq_k$(key, value);
       }
-      tmp = list.get_fkrdnv_k$(0);
+      tmp = list.get_c1px32_k$(0);
     } else {
       tmp = null;
     }
     return tmp;
   };
-  protoOf(SaveableStateRegistryImpl).registerProvider_h94pml_k$ = function (key, valueProvider) {
+  protoOf(SaveableStateRegistryImpl).registerProvider_22k33k_k$ = function (key, valueProvider) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.text.isNotBlank' call
     // Inline function 'kotlin.contracts.contract' call
@@ -779,19 +749,19 @@
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     // Inline function 'kotlin.collections.getOrPut' call
-    var tmp1_getOrPut = this.valueProviders_1;
-    var value = tmp1_getOrPut.get_1mhr4y_k$(key);
+    var this_0 = this.valueProviders_1;
+    var value = this_0.get_wei43m_k$(key);
     var tmp;
     if (value == null) {
       // Inline function 'androidx.compose.runtime.saveable.SaveableStateRegistryImpl.registerProvider.<anonymous>' call
       // Inline function 'kotlin.collections.mutableListOf' call
       var answer = ArrayList_init_$Create$_0();
-      tmp1_getOrPut.put_3mhbri_k$(key, answer);
+      this_0.put_4fpzoq_k$(key, answer);
       tmp = answer;
     } else {
       tmp = value;
     }
-    tmp.add_1j60pz_k$(valueProvider);
+    tmp.add_utx5q5_k$(valueProvider);
     return new SaveableStateRegistryImpl$registerProvider$3(this, key, valueProvider);
   };
   protoOf(SaveableStateRegistryImpl).performSave_ohn24i_k$ = function () {
@@ -807,7 +777,7 @@
       // Inline function 'kotlin.collections.component2' call
       var list = element.get_value_j01efc_k$();
       if (list.get_size_woubt6_k$() === 1) {
-        var value = list.get_fkrdnv_k$(0)();
+        var value = list.get_c1px32_k$(0)();
         if (!(value == null)) {
           // Inline function 'kotlin.check' call
           // Inline function 'kotlin.contracts.contract' call
@@ -819,40 +789,40 @@
             throw IllegalStateException_init_$Create$(toString(message));
           }
           // Inline function 'kotlin.collections.set' call
-          var tmp1_set = arrayListOf([value]);
-          map.put_3mhbri_k$(key, tmp1_set);
+          var value_0 = arrayListOf([value]);
+          map.put_4fpzoq_k$(key, value_0);
         }
       } else {
         // Inline function 'kotlin.collections.set' call
         // Inline function 'kotlin.collections.List' call
-        var tmp2_List = list.get_size_woubt6_k$();
         // Inline function 'kotlin.collections.MutableList' call
-        var list_0 = ArrayList_init_$Create$_1(tmp2_List);
+        var size = list.get_size_woubt6_k$();
+        var list_0 = ArrayList_init_$Create$_1(size);
         // Inline function 'kotlin.repeat' call
         // Inline function 'kotlin.contracts.contract' call
         var inductionVariable = 0;
-        if (inductionVariable < tmp2_List)
+        if (inductionVariable < size)
           do {
             var index = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
             // Inline function 'kotlin.collections.MutableList.<anonymous>' call
             // Inline function 'androidx.compose.runtime.saveable.SaveableStateRegistryImpl.performSave.<anonymous>.<anonymous>' call
-            var value_0 = list.get_fkrdnv_k$(index)();
-            if (!(value_0 == null)) {
+            var value_1 = list.get_c1px32_k$(index)();
+            if (!(value_1 == null)) {
               // Inline function 'kotlin.check' call
               // Inline function 'kotlin.contracts.contract' call
               // Inline function 'kotlin.check' call
               // Inline function 'kotlin.contracts.contract' call
-              if (!this.canBeSaved_nnajrq_k$(value_0)) {
+              if (!this.canBeSaved_nnajrq_k$(value_1)) {
                 // Inline function 'kotlin.check.<anonymous>' call
                 var message_0 = 'Check failed.';
                 throw IllegalStateException_init_$Create$(toString(message_0));
               }
             }
-            list_0.add_1j60pz_k$(value_0);
+            list_0.add_utx5q5_k$(value_1);
           }
-           while (inductionVariable < tmp2_List);
-        map.put_3mhbri_k$(key, list_0);
+           while (inductionVariable < size);
+        map.put_4fpzoq_k$(key, list_0);
       }
     }
     return map;
@@ -898,10 +868,10 @@
     this.$save_1 = $save;
     this.$restore_1 = $restore;
   }
-  protoOf(Saver$1).save_ef702r_k$ = function (_this__u8e3s4, value) {
+  protoOf(Saver$1).save_khi2yu_k$ = function (_this__u8e3s4, value) {
     return this.$save_1(_this__u8e3s4, value);
   };
-  protoOf(Saver$1).restore_uzeo8_k$ = function (value) {
+  protoOf(Saver$1).restore_fyjq85_k$ = function (value) {
     return this.$restore_1(value);
   };
   var properties_initialized_Saver_kt_ch40dh;
@@ -925,8 +895,8 @@
   _.$_$.f = Saver_0;
   _.$_$.g = listSaver;
   _.$_$.h = mapSaver;
-  _.$_$.i = rememberSaveable$composable_0;
-  _.$_$.j = rememberSaveable$composable;
+  _.$_$.i = rememberSaveable$composable;
+  _.$_$.j = rememberSaveable$composable_0;
   _.$_$.k = rememberSaveableStateHolder$composable;
   //endregion
   return _;

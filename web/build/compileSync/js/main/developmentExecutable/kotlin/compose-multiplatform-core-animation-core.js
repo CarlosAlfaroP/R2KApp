@@ -1,11 +1,11 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin-kotlin-stdlib-js-ir.js', './compose-multiplatform-core-runtime.js', './compose-multiplatform-core-ui-unit.js', './kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js', './compose-multiplatform-core-ui-geometry.js', './compose-multiplatform-core-ui.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js', './compose-multiplatform-core-runtime.js', './compose-multiplatform-core-ui-unit.js', './kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js', './compose-multiplatform-core-ui-geometry.js', './compose-multiplatform-core-ui.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'), require('./compose-multiplatform-core-runtime.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./compose-multiplatform-core-ui.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./compose-multiplatform-core-runtime.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./compose-multiplatform-core-ui.js'));
   else {
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'compose-multiplatform-core-animation-core'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'compose-multiplatform-core-animation-core'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-animation-core'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'compose-multiplatform-core-animation-core'.");
     }
     if (typeof this['compose-multiplatform-core-runtime'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-animation-core'. Its dependency 'compose-multiplatform-core-runtime' was not found. Please, check whether 'compose-multiplatform-core-runtime' is loaded prior to 'compose-multiplatform-core-animation-core'.");
@@ -22,108 +22,108 @@
     if (typeof this['compose-multiplatform-core-ui'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-animation-core'. Its dependency 'compose-multiplatform-core-ui' was not found. Please, check whether 'compose-multiplatform-core-ui' is loaded prior to 'compose-multiplatform-core-animation-core'.");
     }
-    root['compose-multiplatform-core-animation-core'] = factory(typeof this['compose-multiplatform-core-animation-core'] === 'undefined' ? {} : this['compose-multiplatform-core-animation-core'], this['kotlin-kotlin-stdlib-js-ir'], this['compose-multiplatform-core-runtime'], this['compose-multiplatform-core-ui-unit'], this['kotlinx.coroutines-kotlinx-coroutines-core-js-ir'], this['compose-multiplatform-core-ui-geometry'], this['compose-multiplatform-core-ui']);
+    root['compose-multiplatform-core-animation-core'] = factory(typeof this['compose-multiplatform-core-animation-core'] === 'undefined' ? {} : this['compose-multiplatform-core-animation-core'], this['kotlin-kotlin-stdlib'], this['compose-multiplatform-core-runtime'], this['compose-multiplatform-core-ui-unit'], this['kotlinx.coroutines-kotlinx-coroutines-core-js-ir'], this['compose-multiplatform-core-ui-geometry'], this['compose-multiplatform-core-ui']);
   }
 }(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_org_jetbrains_compose_ui_ui_unit, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core, kotlin_org_jetbrains_compose_ui_ui_geometry, kotlin_org_jetbrains_compose_ui_ui) {
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var Unit_getInstance = kotlin_kotlin.$_$.z4;
-  var equals = kotlin_kotlin.$_$.ic;
-  var VOID = kotlin_kotlin.$_$.bj;
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var objectCreate = kotlin_kotlin.$_$.pd;
-  var coerceIn = kotlin_kotlin.$_$.pe;
-  var CoroutineImpl = kotlin_kotlin.$_$.lb;
-  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.va;
-  var CancellationException = kotlin_kotlin.$_$.ua;
-  var classMeta = kotlin_kotlin.$_$.ec;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
-  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u1;
-  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.l4;
-  var toString = kotlin_kotlin.$_$.wd;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.a2;
-  var KMutableProperty1 = kotlin_kotlin.$_$.ye;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.oc;
-  var SuspendFunction0 = kotlin_kotlin.$_$.mb;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o1;
-  var Dp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u;
+  var Unit_getInstance = kotlin_kotlin.$_$.b5;
+  var equals = kotlin_kotlin.$_$.lc;
+  var VOID = kotlin_kotlin.$_$.e;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var objectCreate = kotlin_kotlin.$_$.sd;
+  var coerceIn = kotlin_kotlin.$_$.se;
+  var CoroutineImpl = kotlin_kotlin.$_$.ob;
+  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.ya;
+  var CancellationException = kotlin_kotlin.$_$.xa;
+  var classMeta = kotlin_kotlin.$_$.hc;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s1;
+  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.n4;
+  var toString = kotlin_kotlin.$_$.zd;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.b2;
+  var KMutableProperty1 = kotlin_kotlin.$_$.bf;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.sc;
+  var SuspendFunction0 = kotlin_kotlin.$_$.pb;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m1;
   var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.p3;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
-  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q2;
-  var THROW_CCE = kotlin_kotlin.$_$.lh;
-  var isObject = kotlin_kotlin.$_$.dd;
-  var rememberUpdatedState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y1;
-  var Factory_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.t;
-  var Channel = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.a1;
-  var SideEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
-  var LaunchedEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
-  var KProperty0 = kotlin_kotlin.$_$.ze;
-  var THROW_ISE = kotlin_kotlin.$_$.mh;
-  var getLocalDelegateReference = kotlin_kotlin.$_$.lc;
-  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.b2;
-  var isInterface = kotlin_kotlin.$_$.bd;
-  var ChannelResult__getOrNull_impl_f5e07h = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.r;
-  var launch = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.q2;
+  var Dp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
+  var Companion_getInstance_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
+  var THROW_CCE = kotlin_kotlin.$_$.qh;
+  var rememberUpdatedState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w1;
+  var Factory_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.u;
+  var Channel = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.b1;
+  var SideEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
+  var LaunchedEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
+  var KProperty0 = kotlin_kotlin.$_$.cf;
+  var THROW_ISE = kotlin_kotlin.$_$.sh;
+  var getLocalDelegateReference = kotlin_kotlin.$_$.pc;
+  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.c2;
+  var isInterface = kotlin_kotlin.$_$.fd;
+  var ChannelResult__getOrNull_impl_f5e07h = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.s;
+  var launch = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.r2;
   var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.u1;
   var Size = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.l;
   var Companion_getInstance_2 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.s1;
   var Offset = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.e;
   var Companion_getInstance_3 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.t1;
-  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.m4;
+  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.o4;
   var Companion_getInstance_4 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s3;
   var IntOffset = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w;
   var Companion_getInstance_5 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u3;
   var IntSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.y;
-  var SuspendFunction1 = kotlin_kotlin.$_$.nb;
-  var Long = kotlin_kotlin.$_$.eh;
-  var isNaN_0 = kotlin_kotlin.$_$.hi;
-  var interfaceMeta = kotlin_kotlin.$_$.sc;
-  var Enum = kotlin_kotlin.$_$.zg;
-  var hashCode = kotlin_kotlin.$_$.qc;
-  var getNumberHashCode = kotlin_kotlin.$_$.mc;
-  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.v;
-  var roundToInt = kotlin_kotlin.$_$.ce;
-  var to = kotlin_kotlin.$_$.xi;
-  var mapCapacity = kotlin_kotlin.$_$.b9;
-  var LinkedHashMap_init_$Create$_0 = kotlin_kotlin.$_$.u;
-  var toLong = kotlin_kotlin.$_$.ud;
-  var abs = kotlin_kotlin.$_$.yd;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.li;
-  var objectMeta = kotlin_kotlin.$_$.qd;
-  var State = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f1;
-  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.si;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.v1;
-  var get_PI = kotlin_kotlin.$_$.xd;
-  var coerceIn_0 = kotlin_kotlin.$_$.re;
-  var numberToLong = kotlin_kotlin.$_$.od;
-  var withFrameNanos = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j2;
+  var SuspendFunction1 = kotlin_kotlin.$_$.qb;
+  var Long = kotlin_kotlin.$_$.jh;
+  var isNaN_0 = kotlin_kotlin.$_$.ni;
+  var interfaceMeta = kotlin_kotlin.$_$.wc;
+  var THROW_IAE = kotlin_kotlin.$_$.rh;
+  var Enum = kotlin_kotlin.$_$.eh;
+  var hashCode = kotlin_kotlin.$_$.uc;
+  var getNumberHashCode = kotlin_kotlin.$_$.qc;
+  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.w;
+  var roundToInt = kotlin_kotlin.$_$.fe;
+  var to = kotlin_kotlin.$_$.dj;
+  var mapCapacity = kotlin_kotlin.$_$.d9;
+  var LinkedHashMap_init_$Create$_0 = kotlin_kotlin.$_$.v;
+  var toLong = kotlin_kotlin.$_$.xd;
+  var abs = kotlin_kotlin.$_$.be;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.ri;
+  var objectMeta = kotlin_kotlin.$_$.td;
+  var State = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d1;
+  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.yi;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.w1;
+  var get_PI = kotlin_kotlin.$_$.ae;
+  var coerceIn_0 = kotlin_kotlin.$_$.ue;
+  var numberToLong = kotlin_kotlin.$_$.rd;
+  var withFrameNanos = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
   var Key_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.l9;
-  var Annotation = kotlin_kotlin.$_$.tg;
-  var CancellationException_init_$Create$ = kotlin_kotlin.$_$.c1;
-  var Key_getInstance_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.y;
-  var ensureNotNull = kotlin_kotlin.$_$.di;
-  var AtomicReference = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n;
-  var Mutex = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.v1;
-  var coroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.k;
-  var captureStack = kotlin_kotlin.$_$.yb;
-  var isFinite = kotlin_kotlin.$_$.ei;
-  var isNaN_1 = kotlin_kotlin.$_$.ii;
-  var DoubleCompanionObject_getInstance = kotlin_kotlin.$_$.k4;
-  var floatFromBits = kotlin_kotlin.$_$.kc;
-  var toBits = kotlin_kotlin.$_$.ti;
+  var Annotation = kotlin_kotlin.$_$.yg;
+  var CancellationException_init_$Create$ = kotlin_kotlin.$_$.d1;
+  var Key_getInstance_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.z;
+  var ensureNotNull = kotlin_kotlin.$_$.ji;
+  var AtomicReference = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l;
+  var Mutex = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.w1;
+  var coroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.l;
+  var captureStack = kotlin_kotlin.$_$.bc;
+  var isFinite = kotlin_kotlin.$_$.ki;
+  var isNaN_1 = kotlin_kotlin.$_$.oi;
+  var DoubleCompanionObject_getInstance = kotlin_kotlin.$_$.m4;
+  var floatFromBits = kotlin_kotlin.$_$.nc;
+  var toBits = kotlin_kotlin.$_$.zi;
   var Key_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui.$_$.p9;
-  var mutableLongStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r1;
-  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i2;
-  var mutableStateListOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s1;
-  var derivedStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l1;
+  var mutableLongStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.p1;
+  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
+  var mutableStateListOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q1;
+  var derivedStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j1;
   var illegalDecoyCallException = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
-  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
-  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
-  var KProperty1 = kotlin_kotlin.$_$.af;
-  var numberToInt = kotlin_kotlin.$_$.nd;
+  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
+  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
+  var KProperty1 = kotlin_kotlin.$_$.df;
+  var numberToInt = kotlin_kotlin.$_$.qd;
   var _Dp___get_value__impl__geb1vb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.l2;
   var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i2;
   var _DpOffset___get_x__impl__uauqb5 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.m2;
@@ -143,25 +143,25 @@
   var _IntSize___get_height__impl__prv63b = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w2;
   var IntSize_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.x;
   var Rect = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.h;
-  var until = kotlin_kotlin.$_$.ve;
-  var Companion_getInstance_6 = kotlin_kotlin.$_$.t4;
-  var getValue = kotlin_kotlin.$_$.e8;
-  var collectionSizeOrDefault = kotlin_kotlin.$_$.p6;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
+  var until = kotlin_kotlin.$_$.ye;
+  var Companion_getInstance_6 = kotlin_kotlin.$_$.v4;
+  var getValue = kotlin_kotlin.$_$.g8;
+  var collectionSizeOrDefault = kotlin_kotlin.$_$.r6;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.k;
   var Companion_getInstance_7 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.q3;
-  var mapOf = kotlin_kotlin.$_$.d9;
-  var CancellationException_init_$Init$ = kotlin_kotlin.$_$.b1;
+  var mapOf = kotlin_kotlin.$_$.f9;
+  var CancellationException_init_$Init$ = kotlin_kotlin.$_$.c1;
   //endregion
   //region block: pre-declaration
-  setMetadataFor(Animatable$runAnimation$slambda, 'Animatable$runAnimation$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [0]);
-  setMetadataFor(Animatable$snapTo$slambda, 'Animatable$snapTo$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [0]);
-  setMetadataFor(Animatable$stop$slambda, 'Animatable$stop$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [0]);
-  setMetadataFor(Animatable, 'Animatable', classMeta, VOID, VOID, VOID, VOID, [4, 3, 1, 0]);
+  setMetadataFor(Animatable$runAnimation$slambda, 'Animatable$runAnimation$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [0]);
+  setMetadataFor(Animatable$snapTo$slambda, 'Animatable$snapTo$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [0]);
+  setMetadataFor(Animatable$stop$slambda, 'Animatable$stop$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [0]);
+  setMetadataFor(Animatable, 'Animatable', classMeta, VOID, VOID, VOID, VOID, VOID, [4, 3, 1, 0]);
   setMetadataFor(AnimationResult, 'AnimationResult', classMeta);
-  setMetadataFor(animateValueAsState$composable$slambda$slambda, 'animateValueAsState$composable$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(animateValueAsState$composable$slambda, 'animateValueAsState$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(animateValueAsState$composable$slambda$slambda, 'animateValueAsState$composable$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(animateValueAsState$composable$slambda, 'animateValueAsState$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   function isFinishedFromNanos(playTimeNanos) {
-    return playTimeNanos.compareTo_n4fqi2_k$(this.get_durationNanos_ub5cy_k$()) >= 0;
+    return playTimeNanos.compareTo_9jj042_k$(this.get_durationNanos_ub5cy_k$()) >= 0;
   }
   setMetadataFor(Animation, 'Animation', interfaceMeta);
   setMetadataFor(TargetBasedAnimation, 'TargetBasedAnimation', classMeta, VOID, [Animation]);
@@ -169,20 +169,20 @@
   setMetadataFor(AnimationEndReason, 'AnimationEndReason', classMeta, Enum);
   setMetadataFor(AnimationSpec, 'AnimationSpec', interfaceMeta);
   setMetadataFor(FiniteAnimationSpec, 'FiniteAnimationSpec', interfaceMeta, VOID, [AnimationSpec]);
-  setMetadataFor(SpringSpec, 'SpringSpec', classMeta, VOID, [FiniteAnimationSpec]);
+  setMetadataFor(SpringSpec, 'SpringSpec', classMeta, VOID, [FiniteAnimationSpec], SpringSpec);
   setMetadataFor(InfiniteRepeatableSpec, 'InfiniteRepeatableSpec', classMeta, VOID, [AnimationSpec]);
-  setMetadataFor(KeyframesSpecConfig, 'KeyframesSpecConfig', classMeta);
+  setMetadataFor(KeyframesSpecConfig, 'KeyframesSpecConfig', classMeta, VOID, VOID, KeyframesSpecConfig);
   setMetadataFor(KeyframeEntity, 'KeyframeEntity', classMeta);
   setMetadataFor(DurationBasedAnimationSpec, 'DurationBasedAnimationSpec', interfaceMeta, VOID, [FiniteAnimationSpec]);
   setMetadataFor(KeyframesSpec, 'KeyframesSpec', classMeta, VOID, [DurationBasedAnimationSpec]);
-  setMetadataFor(TweenSpec, 'TweenSpec', classMeta, VOID, [DurationBasedAnimationSpec]);
+  setMetadataFor(TweenSpec, 'TweenSpec', classMeta, VOID, [DurationBasedAnimationSpec], TweenSpec);
   setMetadataFor(RepeatMode, 'RepeatMode', classMeta, Enum);
   setMetadataFor(StartOffset, 'StartOffset', classMeta);
   setMetadataFor(AnimationConstants, 'AnimationConstants', objectMeta);
   setMetadataFor(Companion, 'Companion', objectMeta);
   setMetadataFor(StartOffsetType, 'StartOffsetType', classMeta);
+  setMetadataFor(AnimationState, 'AnimationState', classMeta, VOID, [State]);
   setMetadataFor(AnimationScope, 'AnimationScope', classMeta);
-  setMetadataFor(AnimationState_0, 'AnimationState', classMeta, VOID, [State]);
   setMetadataFor(AnimationVector, 'AnimationVector', classMeta);
   setMetadataFor(AnimationVector1D, 'AnimationVector1D', classMeta, AnimationVector);
   setMetadataFor(AnimationVector2D, 'AnimationVector2D', classMeta, AnimationVector);
@@ -203,32 +203,32 @@
   setMetadataFor(sam$androidx_compose_animation_core_Easing$0_4, 'sam$androidx_compose_animation_core_Easing$0', classMeta, VOID, [Easing]);
   setMetadataFor(sam$androidx_compose_animation_core_Easing$0_5, 'sam$androidx_compose_animation_core_Easing$0', classMeta, VOID, [Easing]);
   function getEndVelocity(initialValue, targetValue, initialVelocity) {
-    return this.getVelocityFromNanos_da2xk2_k$(this.getDurationNanos_ct8k6x_k$(initialValue, targetValue, initialVelocity), initialValue, targetValue, initialVelocity);
+    return this.getVelocityFromNanos_d1b1ck_k$(this.getDurationNanos_taoclf_k$(initialValue, targetValue, initialVelocity), initialValue, targetValue, initialVelocity);
   }
   function vectorize(converter) {
     return VectorizedFloatAnimationSpec_init_$Create$(this);
   }
   function vectorize_0(converter) {
-    return this.vectorize_pi7y89_k$(converter);
+    return this.vectorize_7dxvko_k$(converter);
   }
   setMetadataFor(FloatAnimationSpec, 'FloatAnimationSpec', interfaceMeta, VOID, [AnimationSpec]);
-  setMetadataFor(FloatSpringSpec, 'FloatSpringSpec', classMeta, VOID, [FloatAnimationSpec]);
-  setMetadataFor(FloatTweenSpec, 'FloatTweenSpec', classMeta, VOID, [FloatAnimationSpec]);
+  setMetadataFor(FloatSpringSpec, 'FloatSpringSpec', classMeta, VOID, [FloatAnimationSpec], FloatSpringSpec);
+  setMetadataFor(FloatTweenSpec, 'FloatTweenSpec', classMeta, VOID, [FloatAnimationSpec], FloatTweenSpec);
   setMetadataFor(FloatDecayAnimationSpec, 'FloatDecayAnimationSpec', interfaceMeta);
-  setMetadataFor(withInfiniteAnimationFrameNanos$slambda, 'withInfiniteAnimationFrameNanos$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [0]);
+  setMetadataFor(withInfiniteAnimationFrameNanos$slambda, 'withInfiniteAnimationFrameNanos$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [0]);
   setMetadataFor($withInfiniteAnimationFrameNanosCOROUTINE$0, '$withInfiniteAnimationFrameNanosCOROUTINE$0', classMeta, CoroutineImpl);
   setMetadataFor(InternalAnimationApi, 'InternalAnimationApi', classMeta, VOID, [Annotation]);
   setMetadataFor(Mutator, 'Mutator', classMeta);
-  setMetadataFor(MutatorMutex$mutate$slambda, 'MutatorMutex$mutate$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(MutatorMutex$mutateWith$slambda, 'MutatorMutex$mutateWith$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(MutatorMutex, 'MutatorMutex', classMeta, VOID, VOID, VOID, VOID, [2, 3]);
+  setMetadataFor(MutatorMutex$mutate$slambda, 'MutatorMutex$mutate$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(MutatorMutex$mutateWith$slambda, 'MutatorMutex$mutateWith$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(MutatorMutex, 'MutatorMutex', classMeta, VOID, VOID, MutatorMutex, VOID, VOID, [2, 3]);
   setMetadataFor(MutatePriority, 'MutatePriority', classMeta, Enum);
   setMetadataFor(PlatformOptimizedCancellationException, 'PlatformOptimizedCancellationException', classMeta, CancellationException);
-  setMetadataFor(MutationInterruptedException, 'MutationInterruptedException', classMeta, PlatformOptimizedCancellationException);
+  setMetadataFor(MutationInterruptedException, 'MutationInterruptedException', classMeta, PlatformOptimizedCancellationException, VOID, MutationInterruptedException);
   setMetadataFor(SpringSimulation, 'SpringSimulation', classMeta);
   setMetadataFor(Motion, 'Motion', classMeta);
-  setMetadataFor($animateCOROUTINE$0, '$animateCOROUTINE$0', classMeta, CoroutineImpl);
-  setMetadataFor($callWithFrameNanosCOROUTINE$1, '$callWithFrameNanosCOROUTINE$1', classMeta, CoroutineImpl);
+  setMetadataFor($animateCOROUTINE$1, '$animateCOROUTINE$1', classMeta, CoroutineImpl);
+  setMetadataFor($callWithFrameNanosCOROUTINE$2, '$callWithFrameNanosCOROUTINE$2', classMeta, CoroutineImpl);
   setMetadataFor(DeferredAnimationData, 'DeferredAnimationData', classMeta, VOID, [State]);
   setMetadataFor(TransitionAnimationState, 'TransitionAnimationState', classMeta, VOID, [State]);
   function isTransitioningTo(_this__u8e3s4, targetState) {
@@ -237,7 +237,7 @@
   setMetadataFor(Segment, 'Segment', interfaceMeta);
   setMetadataFor(SegmentImpl, 'SegmentImpl', classMeta, VOID, [Segment]);
   setMetadataFor(DeferredAnimation, 'DeferredAnimation', classMeta);
-  setMetadataFor(Transition$animateTo$composable$slambda, 'Transition$animateTo$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(Transition$animateTo$composable$slambda, 'Transition$animateTo$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(Transition, 'Transition', classMeta);
   setMetadataFor(MutableTransitionState, 'MutableTransitionState', classMeta);
   setMetadataFor(_no_name_provided__qut3iv, VOID, classMeta, VOID, [DisposableEffectResult]);
@@ -246,24 +246,24 @@
   setMetadataFor(TwoWayConverterImpl, 'TwoWayConverterImpl', classMeta, VOID, [TwoWayConverter]);
   setMetadataFor(Spring, 'Spring', objectMeta);
   function getEndVelocity_0(initialValue, targetValue, initialVelocity) {
-    return this.getVelocityFromNanos_2nsq5r_k$(this.getDurationNanos_62az16_k$(initialValue, targetValue, initialVelocity), initialValue, targetValue, initialVelocity);
+    return this.getVelocityFromNanos_wafrjo_k$(this.getDurationNanos_c9o343_k$(initialValue, targetValue, initialVelocity), initialValue, targetValue, initialVelocity);
   }
   setMetadataFor(VectorizedAnimationSpec, 'VectorizedAnimationSpec', interfaceMeta);
   function get_isInfinite() {
     return false;
   }
   setMetadataFor(VectorizedFiniteAnimationSpec, 'VectorizedFiniteAnimationSpec', interfaceMeta, VOID, [VectorizedAnimationSpec]);
-  setMetadataFor(VectorizedSpringSpec, 'VectorizedSpringSpec', classMeta, VOID, [VectorizedFiniteAnimationSpec]);
+  setMetadataFor(VectorizedSpringSpec, 'VectorizedSpringSpec', classMeta, VOID, [VectorizedFiniteAnimationSpec], VectorizedSpringSpec_init_$Create$);
   setMetadataFor(Animations, 'Animations', interfaceMeta);
   setMetadataFor(VectorizedFloatAnimationSpec$1, VOID, classMeta, VOID, [Animations]);
   setMetadataFor(VectorizedFloatAnimationSpec, 'VectorizedFloatAnimationSpec', classMeta, VOID, [VectorizedFiniteAnimationSpec]);
   setMetadataFor(VectorizedInfiniteRepeatableSpec, 'VectorizedInfiniteRepeatableSpec', classMeta, VOID, [VectorizedAnimationSpec]);
   function getDurationNanos(initialValue, targetValue, initialVelocity) {
-    return numberToLong(this.get_delayMillis_d968n4_k$() + this.get_durationMillis_pqx05f_k$() | 0).times_2zfqpc_k$(get_MillisToNanos());
+    return numberToLong(this.get_delayMillis_d968n4_k$() + this.get_durationMillis_pqx05f_k$() | 0).times_nfzjiw_k$(get_MillisToNanos());
   }
   setMetadataFor(VectorizedDurationBasedAnimationSpec, 'VectorizedDurationBasedAnimationSpec', interfaceMeta, VOID, [VectorizedFiniteAnimationSpec]);
   setMetadataFor(VectorizedKeyframesSpec, 'VectorizedKeyframesSpec', classMeta, VOID, [VectorizedDurationBasedAnimationSpec]);
-  setMetadataFor(VectorizedTweenSpec, 'VectorizedTweenSpec', classMeta, VOID, [VectorizedDurationBasedAnimationSpec]);
+  setMetadataFor(VectorizedTweenSpec, 'VectorizedTweenSpec', classMeta, VOID, [VectorizedDurationBasedAnimationSpec], VectorizedTweenSpec);
   setMetadataFor(createSpringAnimations$1, VOID, classMeta, VOID, [Animations]);
   setMetadataFor(createSpringAnimations$2, VOID, classMeta, VOID, [Animations]);
   setMetadataFor(NoOp, 'NoOp', classMeta, VOID, [Annotation]);
@@ -274,14 +274,14 @@
       var clamped = clampToBounds(this$0, $this$animate.get_value_j01efc_k$());
       var tmp;
       if (!equals(clamped, $this$animate.get_value_j01efc_k$())) {
-        this$0.internalState_1.set_value_rnwamw_k$(clamped);
-        $endState.set_value_rnwamw_k$(clamped);
+        this$0.internalState_1.set_value_v1vabv_k$(clamped);
+        $endState.set_value_v1vabv_k$(clamped);
         var tmp0_safe_receiver = $block;
         if (tmp0_safe_receiver == null)
           null;
         else
           tmp0_safe_receiver(this$0);
-        $this$animate.cancelAnimation_ickco7_k$();
+        $this$animate.cancelAnimation_ic0k2u_k$();
         $clampingNeeded._v = true;
         tmp = Unit_getInstance();
       } else {
@@ -307,12 +307,16 @@
     return Animatable_init_$Init$(initialValue, typeConverter, visibilityThreshold, objectCreate(protoOf(Animatable)));
   }
   function _set_isRunning__kpbg34($this, _set____db54di) {
+    var this_0 = $this.isRunning$delegate_1;
     isRunning$factory();
-    return $this.isRunning$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   }
   function _set_targetValue__aqsk0r($this, _set____db54di) {
+    var this_0 = $this.targetValue$delegate_1;
     targetValue$factory();
-    return $this.targetValue$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   }
   function _set_lowerBound__uvrjui($this, _set____db54di) {
     $this.lowerBound_1 = _set____db54di;
@@ -349,14 +353,14 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        newVector.set_8gccym_k$(i, value);
+        newVector.set_4eugj6_k$(i, value);
       }
        while (inductionVariable < last);
     return newVector;
   }
   function runAnimation($this, animation, initialVelocity, block, $completion) {
     var startTime = $this.internalState_1.get_lastFrameTimeNanos_3aprno_k$();
-    return $this.mutatorMutex_1.mutate$default_uwumqp_k$(VOID, Animatable$runAnimation$slambda_0($this, initialVelocity, animation, startTime, block, null), $completion);
+    return $this.mutatorMutex_1.mutate$default_f05kjn_k$(VOID, Animatable$runAnimation$slambda_0($this, initialVelocity, animation, startTime, block, null), $completion);
   }
   function clampToBounds($this, value) {
     if (equals($this.lowerBoundVector_1, $this.negativeInfinityBounds_1) ? equals($this.upperBoundVector_1, $this.positiveInfinityBounds_1) : false) {
@@ -370,9 +374,9 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        if (valueVector.get_fkrdnv_k$(i) < $this.lowerBoundVector_1.get_fkrdnv_k$(i) ? true : valueVector.get_fkrdnv_k$(i) > $this.upperBoundVector_1.get_fkrdnv_k$(i)) {
+        if (valueVector.get_c1px32_k$(i) < $this.lowerBoundVector_1.get_c1px32_k$(i) ? true : valueVector.get_c1px32_k$(i) > $this.upperBoundVector_1.get_c1px32_k$(i)) {
           clamped = true;
-          valueVector.set_8gccym_k$(i, coerceIn(valueVector.get_fkrdnv_k$(i), $this.lowerBoundVector_1.get_fkrdnv_k$(i), $this.upperBoundVector_1.get_fkrdnv_k$(i)));
+          valueVector.set_4eugj6_k$(i, coerceIn(valueVector.get_c1px32_k$(i), $this.lowerBoundVector_1.get_c1px32_k$(i), $this.upperBoundVector_1.get_c1px32_k$(i)));
         }
       }
        while (inductionVariable < last);
@@ -384,11 +388,11 @@
   }
   function endAnimation($this) {
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = $this.internalState_1;
+    var this_0 = $this.internalState_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.animation.core.Animatable.endAnimation.<anonymous>' call
-    tmp0_apply.get_velocityVector_v3jmo9_k$().reset_5tn5dq_k$();
-    tmp0_apply.set_lastFrameTimeNanos_c9sxzl_k$(AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$());
+    this_0.get_velocityVector_v3jmo9_k$().reset_5u6xz3_k$();
+    this_0.set_lastFrameTimeNanos_hfjxwm_k$(AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$());
     _set_isRunning__kpbg34($this, false);
   }
   function get_$stableprop() {
@@ -402,14 +406,14 @@
     this.$block_1 = $block;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(Animatable$runAnimation$slambda).invoke_yp4dq1_k$ = function ($completion) {
-    var tmp = this.create_lvr374_k$($completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(Animatable$runAnimation$slambda).invoke_eiavl2_k$ = function ($completion) {
+    var tmp = this.create_d196fn_k$($completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(Animatable$runAnimation$slambda).invoke_34if6s_k$ = function ($completion) {
-    return this.invoke_yp4dq1_k$($completion);
+  protoOf(Animatable$runAnimation$slambda).invoke_ib42db_k$ = function ($completion) {
+    return this.invoke_eiavl2_k$($completion);
   };
   protoOf(Animatable$runAnimation$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -418,15 +422,15 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(3);
-            this.set_exceptionState_s9sevl_k$(2);
-            this.this$0__1.internalState_1.set_velocityVector_mao3b1_k$(this.this$0__1.typeConverter_1.get_convertToVector_s594l4_k$()(this.$initialVelocity_1));
+            this.set_exceptionState_fex74n_k$(3);
+            this.set_exceptionState_fex74n_k$(2);
+            this.this$0__1.internalState_1.set_velocityVector_rbhc11_k$(this.this$0__1.typeConverter_1.get_convertToVector_s594l4_k$()(this.$initialVelocity_1));
             _set_targetValue__aqsk0r(this.this$0__1, this.$animation_1.get_targetValue_kq6mfd_k$());
             _set_isRunning__kpbg34(this.this$0__1, true);
-            this.endState1__1 = copy_0(this.this$0__1.internalState_1, VOID, VOID, VOID, AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$());
+            this.endState1__1 = copy(this.this$0__1.internalState_1, VOID, VOID, VOID, AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$());
             this.clampingNeeded2__1 = {_v: false};
-            this.set_state_a96kl8_k$(1);
-            suspendResult = animate_0(this.endState1__1, this.$animation_1, this.$startTime_1, Animatable$runAnimation$slambda$lambda(this.this$0__1, this.endState1__1, this.$block_1, this.clampingNeeded2__1), this);
+            this.set_state_rjd8d0_k$(1);
+            suspendResult = animate(this.endState1__1, this.$animation_1, this.$startTime_1, Animatable$runAnimation$slambda$lambda(this.this$0__1, this.endState1__1, this.$block_1, this.clampingNeeded2__1), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -436,11 +440,11 @@
             var endReason = this.clampingNeeded2__1._v ? AnimationEndReason_BoundReached_getInstance() : AnimationEndReason_Finished_getInstance();
             endAnimation(this.this$0__1);
             this.TRY_RESULT0__1 = new AnimationResult(this.endState1__1, endReason);
-            this.set_exceptionState_s9sevl_k$(3);
-            this.set_state_a96kl8_k$(4);
+            this.set_exceptionState_fex74n_k$(3);
+            this.set_state_rjd8d0_k$(4);
             continue $sm;
           case 2:
-            this.set_exceptionState_s9sevl_k$(3);
+            this.set_exceptionState_fex74n_k$(3);
             var tmp_0 = this.get_exception_x0n6w6_k$();
             if (tmp_0 instanceof CancellationException) {
               var e = this.get_exception_x0n6w6_k$();
@@ -454,7 +458,7 @@
           case 3:
             throw this.get_exception_x0n6w6_k$();
           case 4:
-            this.set_exceptionState_s9sevl_k$(3);
+            this.set_exceptionState_fex74n_k$(3);
             return this.TRY_RESULT0__1;
         }
       } catch ($p) {
@@ -462,19 +466,19 @@
         if (this.get_exceptionState_wflpxn_k$() === 3) {
           throw e_0;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e_0);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e_0);
         }
       }
      while (true);
   };
-  protoOf(Animatable$runAnimation$slambda).create_lvr374_k$ = function (completion) {
+  protoOf(Animatable$runAnimation$slambda).create_d196fn_k$ = function (completion) {
     return new Animatable$runAnimation$slambda(this.this$0__1, this.$initialVelocity_1, this.$animation_1, this.$startTime_1, this.$block_1, completion);
   };
   function Animatable$runAnimation$slambda_0(this$0, $initialVelocity, $animation, $startTime, $block, resultContinuation) {
     var i = new Animatable$runAnimation$slambda(this$0, $initialVelocity, $animation, $startTime, $block, resultContinuation);
     var l = function ($completion) {
-      return i.invoke_yp4dq1_k$($completion);
+      return i.invoke_eiavl2_k$($completion);
     };
     l.$arity = 0;
     return l;
@@ -484,14 +488,14 @@
     this.$targetValue_1 = $targetValue;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(Animatable$snapTo$slambda).invoke_pbb09x_k$ = function ($completion) {
-    var tmp = this.create_lvr374_k$($completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(Animatable$snapTo$slambda).invoke_h7udsx_k$ = function ($completion) {
+    var tmp = this.create_d196fn_k$($completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(Animatable$snapTo$slambda).invoke_34if6s_k$ = function ($completion) {
-    return this.invoke_pbb09x_k$($completion);
+  protoOf(Animatable$snapTo$slambda).invoke_ib42db_k$ = function ($completion) {
+    return this.invoke_h7udsx_k$($completion);
   };
   protoOf(Animatable$snapTo$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -499,10 +503,10 @@
       try {
         var tmp = this.get_state_iypx7s_k$();
         if (tmp === 0) {
-          this.set_exceptionState_s9sevl_k$(1);
+          this.set_exceptionState_fex74n_k$(1);
           endAnimation(this.this$0__1);
           var clampedValue = clampToBounds(this.this$0__1, this.$targetValue_1);
-          this.this$0__1.internalState_1.set_value_rnwamw_k$(clampedValue);
+          this.this$0__1.internalState_1.set_value_v1vabv_k$(clampedValue);
           _set_targetValue__aqsk0r(this.this$0__1, clampedValue);
           return Unit_getInstance();
         } else if (tmp === 1) {
@@ -514,13 +518,13 @@
       }
      while (true);
   };
-  protoOf(Animatable$snapTo$slambda).create_lvr374_k$ = function (completion) {
+  protoOf(Animatable$snapTo$slambda).create_d196fn_k$ = function (completion) {
     return new Animatable$snapTo$slambda(this.this$0__1, this.$targetValue_1, completion);
   };
   function Animatable$snapTo$slambda_0(this$0, $targetValue, resultContinuation) {
     var i = new Animatable$snapTo$slambda(this$0, $targetValue, resultContinuation);
     var l = function ($completion) {
-      return i.invoke_pbb09x_k$($completion);
+      return i.invoke_h7udsx_k$($completion);
     };
     l.$arity = 0;
     return l;
@@ -529,14 +533,14 @@
     this.this$0__1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(Animatable$stop$slambda).invoke_pbb09x_k$ = function ($completion) {
-    var tmp = this.create_lvr374_k$($completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(Animatable$stop$slambda).invoke_h7udsx_k$ = function ($completion) {
+    var tmp = this.create_d196fn_k$($completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(Animatable$stop$slambda).invoke_34if6s_k$ = function ($completion) {
-    return this.invoke_pbb09x_k$($completion);
+  protoOf(Animatable$stop$slambda).invoke_ib42db_k$ = function ($completion) {
+    return this.invoke_h7udsx_k$($completion);
   };
   protoOf(Animatable$stop$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -544,7 +548,7 @@
       try {
         var tmp = this.get_state_iypx7s_k$();
         if (tmp === 0) {
-          this.set_exceptionState_s9sevl_k$(1);
+          this.set_exceptionState_fex74n_k$(1);
           endAnimation(this.this$0__1);
           return Unit_getInstance();
         } else if (tmp === 1) {
@@ -556,13 +560,13 @@
       }
      while (true);
   };
-  protoOf(Animatable$stop$slambda).create_lvr374_k$ = function (completion) {
+  protoOf(Animatable$stop$slambda).create_d196fn_k$ = function (completion) {
     return new Animatable$stop$slambda(this.this$0__1, completion);
   };
   function Animatable$stop$slambda_0(this$0, resultContinuation) {
     var i = new Animatable$stop$slambda(this$0, resultContinuation);
     var l = function ($completion) {
-      return i.invoke_pbb09x_k$($completion);
+      return i.invoke_h7udsx_k$($completion);
     };
     l.$arity = 0;
     return l;
@@ -573,7 +577,7 @@
     this.typeConverter_1 = typeConverter;
     this.visibilityThreshold_1 = visibilityThreshold;
     this.label_1 = label;
-    this.internalState_1 = new AnimationState_0(this.typeConverter_1, initialValue);
+    this.internalState_1 = new AnimationState(this.typeConverter_1, initialValue);
     this.isRunning$delegate_1 = mutableStateOf(false);
     this.targetValue$delegate_1 = mutableStateOf(initialValue);
     this.lowerBound_1 = null;
@@ -606,13 +610,15 @@
   };
   protoOf(Animatable).get_isRunning_okmtn0_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.isRunning$delegate_1;
     isRunning$factory_0();
-    return this.isRunning$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   protoOf(Animatable).get_targetValue_kq6mfd_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.targetValue$delegate_1;
     targetValue$factory_0();
-    return this.targetValue$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   protoOf(Animatable).get_lowerBound_br3ay_k$ = function () {
     return this.lowerBound_1;
@@ -623,7 +629,7 @@
   protoOf(Animatable).get_defaultSpringSpec_18kgf4_k$ = function () {
     return this.defaultSpringSpec_1;
   };
-  protoOf(Animatable).updateBounds_rt2r4d_k$ = function (lowerBound, upperBound) {
+  protoOf(Animatable).updateBounds_u6omq_k$ = function (lowerBound, upperBound) {
     var tmp;
     if (lowerBound == null) {
       tmp = null;
@@ -654,7 +660,7 @@
         inductionVariable = inductionVariable + 1 | 0;
         // Inline function 'kotlin.check' call
         // Inline function 'kotlin.contracts.contract' call
-        if (!(lowerBoundVector.get_fkrdnv_k$(i) <= upperBoundVector.get_fkrdnv_k$(i))) {
+        if (!(lowerBoundVector.get_c1px32_k$(i) <= upperBoundVector.get_c1px32_k$(i))) {
           // Inline function 'androidx.compose.animation.core.Animatable.updateBounds.<anonymous>' call
           var message = 'Lower bound must be no greater than upper bound on *all* dimensions. The ' + ('provided lower bound: ' + lowerBoundVector + ' is greater than upper bound ') + ('' + upperBoundVector + ' on index ' + i);
           throw IllegalStateException_init_$Create$(toString(message));
@@ -668,50 +674,50 @@
     if (!this.get_isRunning_okmtn0_k$()) {
       var clampedValue = clampToBounds(this, this.get_value_j01efc_k$());
       if (!equals(clampedValue, this.get_value_j01efc_k$())) {
-        this.internalState_1.set_value_rnwamw_k$(clampedValue);
+        this.internalState_1.set_value_v1vabv_k$(clampedValue);
       }
     }
   };
-  protoOf(Animatable).updateBounds$default_oy9y2g_k$ = function (lowerBound, upperBound, $super) {
+  protoOf(Animatable).updateBounds$default_zfm6qs_k$ = function (lowerBound, upperBound, $super) {
     lowerBound = lowerBound === VOID ? this.lowerBound_1 : lowerBound;
     upperBound = upperBound === VOID ? this.upperBound_1 : upperBound;
     var tmp;
     if ($super === VOID) {
-      this.updateBounds_rt2r4d_k$(lowerBound, upperBound);
+      this.updateBounds_u6omq_k$(lowerBound, upperBound);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.updateBounds_rt2r4d_k$.call(this, lowerBound, upperBound);
+      tmp = $super.updateBounds_u6omq_k$.call(this, lowerBound, upperBound);
     }
     return tmp;
   };
-  protoOf(Animatable).animateTo_h218fu_k$ = function (targetValue, animationSpec, initialVelocity, block, $completion) {
+  protoOf(Animatable).animateTo_z368sf_k$ = function (targetValue, animationSpec, initialVelocity, block, $completion) {
     var tmp0_initialValue = this.get_value_j01efc_k$();
     var tmp1_typeConverter = this.typeConverter_1;
     var anim = TargetBasedAnimation_0(animationSpec, tmp1_typeConverter, tmp0_initialValue, targetValue, initialVelocity);
     return runAnimation(this, anim, initialVelocity, block, $completion);
   };
-  protoOf(Animatable).animateTo$default_vnltb6_k$ = function (targetValue, animationSpec, initialVelocity, block, $completion, $super) {
+  protoOf(Animatable).animateTo$default_71hueo_k$ = function (targetValue, animationSpec, initialVelocity, block, $completion, $super) {
     animationSpec = animationSpec === VOID ? this.defaultSpringSpec_1 : animationSpec;
     initialVelocity = initialVelocity === VOID ? this.get_velocity_3hqvmu_k$() : initialVelocity;
     block = block === VOID ? null : block;
-    return $super === VOID ? this.animateTo_h218fu_k$(targetValue, animationSpec, initialVelocity, block, $completion) : $super.animateTo_h218fu_k$.call(this, targetValue, animationSpec, initialVelocity, block, $completion);
+    return $super === VOID ? this.animateTo_z368sf_k$(targetValue, animationSpec, initialVelocity, block, $completion) : $super.animateTo_z368sf_k$.call(this, targetValue, animationSpec, initialVelocity, block, $completion);
   };
-  protoOf(Animatable).animateDecay_6mun9g_k$ = function (initialVelocity, animationSpec, block, $completion) {
+  protoOf(Animatable).animateDecay_ic37kv_k$ = function (initialVelocity, animationSpec, block, $completion) {
     var tmp0_initialValue = this.get_value_j01efc_k$();
     var tmp1_initialVelocityVector = this.typeConverter_1.get_convertToVector_s594l4_k$()(initialVelocity);
     var tmp2_typeConverter = this.typeConverter_1;
     var anim = DecayAnimation_init_$Create$(animationSpec, tmp2_typeConverter, tmp0_initialValue, tmp1_initialVelocityVector);
     return runAnimation(this, anim, initialVelocity, block, $completion);
   };
-  protoOf(Animatable).animateDecay$default_rprl40_k$ = function (initialVelocity, animationSpec, block, $completion, $super) {
+  protoOf(Animatable).animateDecay$default_sr5ljs_k$ = function (initialVelocity, animationSpec, block, $completion, $super) {
     block = block === VOID ? null : block;
-    return $super === VOID ? this.animateDecay_6mun9g_k$(initialVelocity, animationSpec, block, $completion) : $super.animateDecay_6mun9g_k$.call(this, initialVelocity, animationSpec, block, $completion);
+    return $super === VOID ? this.animateDecay_ic37kv_k$(initialVelocity, animationSpec, block, $completion) : $super.animateDecay_ic37kv_k$.call(this, initialVelocity, animationSpec, block, $completion);
   };
-  protoOf(Animatable).snapTo_fkfduh_k$ = function (targetValue, $completion) {
-    return this.mutatorMutex_1.mutate$default_uwumqp_k$(VOID, Animatable$snapTo$slambda_0(this, targetValue, null), $completion);
+  protoOf(Animatable).snapTo_o5pd1b_k$ = function (targetValue, $completion) {
+    return this.mutatorMutex_1.mutate$default_f05kjn_k$(VOID, Animatable$snapTo$slambda_0(this, targetValue, null), $completion);
   };
-  protoOf(Animatable).stop_srpkcx_k$ = function ($completion) {
-    return this.mutatorMutex_1.mutate$default_uwumqp_k$(VOID, Animatable$stop$slambda_0(this, null), $completion);
+  protoOf(Animatable).stop_7piii3_k$ = function ($completion) {
+    return this.mutatorMutex_1.mutate$default_f05kjn_k$(VOID, Animatable$stop$slambda_0(this, null), $completion);
   };
   protoOf(Animatable).asState_c4y001_k$ = function () {
     return this.internalState_1;
@@ -811,7 +817,7 @@
     var label_0 = label;
     var finishedListener_0 = finishedListener;
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-686158507);
+    $composer_0.startReplaceableGroup_ip860b_k$(-686158507);
     sourceInformation($composer_0, 'C(animateDpAsState$composable)P(3:c#ui.unit.Dp!1,2)114@5081L165:AnimateAsState.kt#pdpnli');
     if (!(($default & 2) === 0))
       animationSpec_0 = get_dpDefaultSpring();
@@ -822,14 +828,13 @@
     if (isTraceInProgress()) {
       traceEventStart(-686158507, $changed, -1, 'androidx.compose.animation.core.animateDpAsState$composable (AnimateAsState.kt:108)');
     }
-    var tmp = new Dp(targetValue);
-    var tmp_0 = get_VectorConverter_6(Companion_getInstance());
-    var tmp_1 = animationSpec_0;
-    var tmp0 = animateValueAsState$composable(tmp, tmp_0, tmp_1, null, label_0, finishedListener_0, $composer_0, 14 & $changed | 896 & $changed << 3 | 57344 & $changed << 6 | 458752 & $changed << 6, 8);
+    var tmp = get_VectorConverter_6(Companion_getInstance());
+    var tmp_0 = animationSpec_0;
+    var tmp0 = animateValueAsState$composable(new Dp(targetValue), tmp, tmp_0, null, label_0, finishedListener_0, $composer_0, 14 & $changed | 896 & $changed << 3 | 57344 & $changed << 6 | 458752 & $changed << 6, 8);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function animateValueAsState$composable(targetValue, typeConverter, animationSpec, visibilityThreshold, label, finishedListener, $composer, $changed, $default) {
@@ -839,30 +844,30 @@
     var label_0 = {_v: label};
     var finishedListener_0 = finishedListener;
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1860487620);
+    $composer_0.startReplaceableGroup_ip860b_k$(-1860487620);
     sourceInformation($composer_0, 'C(animateValueAsState$composable)P(3,4!1,5,2)393@18031L21,399@18213L44,400@18279L79,401@18379L38,402@18456L339,413@18814L42,414@18861L55,417@18921L721:AnimateAsState.kt#pdpnli');
     if (!(($default & 4) === 0)) {
       // Inline function 'androidx.compose.runtime.remember$composable' call
       var $composer_1 = $composer_0;
-      $composer_1.startReplaceableGroup_rp6air_k$(547886695);
+      $composer_1.startReplaceableGroup_ip860b_k$(547886695);
       sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
-      var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = $composer_1.rememberedValue_4dg93v_k$();
       var tmp;
-      if (false ? true : tmp0_let === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
+      if (false ? true : it === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.animation.core.animateValueAsState$composable.<anonymous>' call
         var value = spring();
-        $composer_1.updateRememberedValue_l1colo_k$(value);
+        $composer_1.updateRememberedValue_l1wh71_k$(value);
         tmp = value;
       } else {
-        tmp = tmp0_let;
+        tmp = it;
       }
       var tmp_0 = tmp;
-      var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-      $composer_1.endReplaceableGroup_er37p7_k$();
+      var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+      $composer_1.endReplaceableGroup_ern0ak_k$();
       animationSpec_0 = tmp0;
     }
     if (!(($default & 8) === 0)) {
@@ -878,95 +883,94 @@
     }
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_2 = $composer_0;
-    $composer_2.startReplaceableGroup_rp6air_k$(547886695);
+    $composer_2.startReplaceableGroup_ip860b_k$(547886695);
     sourceInformation($composer_2, 'CC(remember$composable):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
     // Inline function 'kotlin.let' call
-    var tmp0_let_0 = $composer_2.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it_0 = $composer_2.rememberedValue_4dg93v_k$();
     var tmp_1;
-    if (false ? true : tmp0_let_0 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
+    if (false ? true : it_0 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.animation.core.animateValueAsState$composable.<anonymous>' call
       var value_0 = mutableStateOf(null);
-      $composer_2.updateRememberedValue_l1colo_k$(value_0);
+      $composer_2.updateRememberedValue_l1wh71_k$(value_0);
       tmp_1 = value_0;
     } else {
-      tmp_1 = tmp0_let_0;
+      tmp_1 = it_0;
     }
     var tmp_2 = tmp_1;
-    var tmp0_0 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
-    $composer_2.endReplaceableGroup_er37p7_k$();
+    var tmp0_0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
+    $composer_2.endReplaceableGroup_ern0ak_k$();
     var toolingOverride = tmp0_0;
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_3 = $composer_0;
-    $composer_3.startReplaceableGroup_rp6air_k$(547886695);
+    $composer_3.startReplaceableGroup_ip860b_k$(547886695);
     sourceInformation($composer_3, 'CC(remember$composable):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
     // Inline function 'kotlin.let' call
-    var tmp0_let_1 = $composer_3.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it_1 = $composer_3.rememberedValue_4dg93v_k$();
     var tmp_3;
-    if (false ? true : tmp0_let_1 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
+    if (false ? true : it_1 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.animation.core.animateValueAsState$composable.<anonymous>' call
       var value_1 = new Animatable(targetValue, typeConverter, visibilityThreshold_0._v, label_0._v);
-      $composer_3.updateRememberedValue_l1colo_k$(value_1);
+      $composer_3.updateRememberedValue_l1wh71_k$(value_1);
       tmp_3 = value_1;
     } else {
-      tmp_3 = tmp0_let_1;
+      tmp_3 = it_1;
     }
     var tmp_4 = tmp_3;
-    var tmp0_1 = (tmp_4 == null ? true : isObject(tmp_4)) ? tmp_4 : THROW_CCE();
-    $composer_3.endReplaceableGroup_er37p7_k$();
+    var tmp0_1 = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
+    $composer_3.endReplaceableGroup_ern0ak_k$();
     var animatable = tmp0_1;
     var listener$delegate = rememberUpdatedState$composable(finishedListener_0, $composer_0, 14 & $changed >> 15);
-    var tmp$ret$16;
     // Inline function 'kotlin.run' call
-    var tmp3_run = animationSpec_0;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.animation.core.animateValueAsState$composable.<anonymous>' call
+    var $this$run = animationSpec_0;
     var tmp_5;
     var tmp_6;
     var tmp_7;
     if (!(visibilityThreshold_0._v == null)) {
-      tmp_7 = tmp3_run instanceof SpringSpec;
+      tmp_7 = $this$run instanceof SpringSpec;
     } else {
       tmp_7 = false;
     }
     if (tmp_7) {
-      tmp_6 = !equals(tmp3_run.get_visibilityThreshold_qtbbow_k$(), visibilityThreshold_0._v);
+      tmp_6 = !equals($this$run.get_visibilityThreshold_qtbbow_k$(), visibilityThreshold_0._v);
     } else {
       tmp_6 = false;
     }
     if (tmp_6) {
-      tmp_5 = spring(tmp3_run.get_dampingRatio_syjss2_k$(), tmp3_run.get_stiffness_dt2sgm_k$(), visibilityThreshold_0._v);
+      tmp_5 = spring($this$run.get_dampingRatio_syjss2_k$(), $this$run.get_stiffness_dt2sgm_k$(), visibilityThreshold_0._v);
     } else {
-      tmp_5 = tmp3_run;
+      tmp_5 = $this$run;
     }
-    tmp$ret$16 = tmp_5;
+    var tmp$ret$16 = tmp_5;
     var animSpec$delegate = rememberUpdatedState$composable(tmp$ret$16, $composer_0, 0);
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_4 = $composer_0;
-    $composer_4.startReplaceableGroup_rp6air_k$(547886695);
+    $composer_4.startReplaceableGroup_ip860b_k$(547886695);
     sourceInformation($composer_4, 'CC(remember$composable):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
     // Inline function 'kotlin.let' call
-    var tmp0_let_2 = $composer_4.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it_2 = $composer_4.rememberedValue_4dg93v_k$();
     var tmp_8;
-    if (false ? true : tmp0_let_2 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
+    if (false ? true : it_2 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.animation.core.animateValueAsState$composable.<anonymous>' call
       var value_2 = Channel(Factory_getInstance().get_CONFLATED_tox14f_k$());
-      $composer_4.updateRememberedValue_l1colo_k$(value_2);
+      $composer_4.updateRememberedValue_l1wh71_k$(value_2);
       tmp_8 = value_2;
     } else {
-      tmp_8 = tmp0_let_2;
+      tmp_8 = it_2;
     }
     var tmp_9 = tmp_8;
-    var tmp0_2 = (tmp_9 == null ? true : isObject(tmp_9)) ? tmp_9 : THROW_CCE();
-    $composer_4.endReplaceableGroup_er37p7_k$();
+    var tmp0_2 = (tmp_9 == null ? true : !(tmp_9 == null)) ? tmp_9 : THROW_CCE();
+    $composer_4.endReplaceableGroup_ern0ak_k$();
     var channel = tmp0_2;
     SideEffect$composable(animateValueAsState$composable$lambda_1(channel, targetValue), $composer_0, 0);
     LaunchedEffect$composable(channel, animateValueAsState$composable$slambda_0(channel, animatable, animSpec$delegate, listener$delegate, null), $composer_0, 0);
@@ -975,7 +979,7 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0_3;
   }
   function animateFloatAsState$composable(targetValue, animationSpec, visibilityThreshold, label, finishedListener, $composer, $changed, $default) {
@@ -985,7 +989,7 @@
     var label_0 = label;
     var finishedListener_0 = finishedListener;
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-298361457);
+    $composer_0.startReplaceableGroup_ip860b_k$(-298361457);
     sourceInformation($composer_0, 'C(animateFloatAsState$composable)P(3!1,4,2)75@3368L173:AnimateAsState.kt#pdpnli');
     if (!(($default & 2) === 0))
       animationSpec_0 = get_defaultAnimation();
@@ -999,45 +1003,45 @@
     if (isTraceInProgress()) {
       traceEventStart(-298361457, $changed, -1, 'androidx.compose.animation.core.animateFloatAsState$composable (AnimateAsState.kt:62)');
     }
-    $composer_0.startReplaceableGroup_rp6air_k$(-143091539);
+    $composer_0.startReplaceableGroup_ip860b_k$(-143091539);
     sourceInformation($composer_0, '71@3220L83');
     var tmp;
     if (animationSpec_0 === get_defaultAnimation()) {
       // Inline function 'androidx.compose.runtime.remember$composable' call
-      var tmp0_remember$composable = visibilityThreshold_0._v;
+      var key1 = visibilityThreshold_0._v;
       var $composer_1 = $composer_0;
-      $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+      $composer_1.startReplaceableGroup_ip860b_k$(-838505973);
       sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var tmp1_cache = $composer_1.changed_ga7h3f_k$(tmp0_remember$composable);
+      var invalid = $composer_1.changed_ga7h3f_k$(key1);
       // Inline function 'kotlin.let' call
-      var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = $composer_1.rememberedValue_4dg93v_k$();
       var tmp_0;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
+      if (invalid ? true : it === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.animation.core.animateFloatAsState$composable.<anonymous>' call
         var value = spring(VOID, VOID, visibilityThreshold_0._v);
-        $composer_1.updateRememberedValue_l1colo_k$(value);
+        $composer_1.updateRememberedValue_l1wh71_k$(value);
         tmp_0 = value;
       } else {
-        tmp_0 = tmp0_let;
+        tmp_0 = it;
       }
       var tmp_1 = tmp_0;
-      var tmp0 = (tmp_1 == null ? true : isObject(tmp_1)) ? tmp_1 : THROW_CCE();
-      $composer_1.endReplaceableGroup_er37p7_k$();
+      var tmp0 = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
+      $composer_1.endReplaceableGroup_ern0ak_k$();
       tmp = tmp0;
     } else {
       tmp = animationSpec_0;
     }
     var tmp1_group = tmp;
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     var resolvedAnimSpec = tmp1_group;
     var tmp0_0 = animateValueAsState$composable(targetValue, get_VectorConverter_2(FloatCompanionObject_getInstance()), resolvedAnimSpec, visibilityThreshold_0._v, label_0, finishedListener_0, $composer_0, 14 & $changed | 7168 & $changed << 3 | 57344 & $changed << 3 | 458752 & $changed << 3, 0);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0_0;
   }
   function animateValueAsState$composable$lambda($listener$delegate) {
@@ -1058,7 +1062,7 @@
   }
   function animateValueAsState$composable$lambda_1($channel, $targetValue) {
     return function () {
-      $channel.trySend_3hclq4_k$($targetValue);
+      $channel.trySend_62dpg8_k$($targetValue);
       return Unit_getInstance();
     };
   }
@@ -1069,14 +1073,14 @@
     this.$listener$delegate_1 = $listener$delegate;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(animateValueAsState$composable$slambda$slambda).invoke_d6gbsu_k$ = function ($this$launch, $completion) {
-    var tmp = this.create_b6qu53_k$($this$launch, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(animateValueAsState$composable$slambda$slambda).invoke_d9fzmj_k$ = function ($this$launch, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$launch, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(animateValueAsState$composable$slambda$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(animateValueAsState$composable$slambda$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(animateValueAsState$composable$slambda$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -1085,16 +1089,16 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(3);
+            this.set_exceptionState_fex74n_k$(3);
             if (!equals(this.$newTarget_1, this.$animatable_1.get_targetValue_kq6mfd_k$())) {
-              this.set_state_a96kl8_k$(1);
-              suspendResult = this.$animatable_1.animateTo$default_vnltb6_k$(this.$newTarget_1, animateValueAsState$composable$lambda_0(this.$animSpec$delegate_1), VOID, VOID, this);
+              this.set_state_rjd8d0_k$(1);
+              suspendResult = this.$animatable_1.animateTo$default_71hueo_k$(this.$newTarget_1, animateValueAsState$composable$lambda_0(this.$animSpec$delegate_1), VOID, VOID, this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
               continue $sm;
             } else {
-              this.set_state_a96kl8_k$(2);
+              this.set_state_rjd8d0_k$(2);
               continue $sm;
             }
 
@@ -1104,7 +1108,7 @@
               null;
             else
               tmp0_safe_receiver(this.$animatable_1.get_value_j01efc_k$());
-            this.set_state_a96kl8_k$(2);
+            this.set_state_rjd8d0_k$(2);
             continue $sm;
           case 2:
             return Unit_getInstance();
@@ -1116,24 +1120,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 3) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(animateValueAsState$composable$slambda$slambda).create_b6qu53_k$ = function ($this$launch, completion) {
+  protoOf(animateValueAsState$composable$slambda$slambda).create_rcuf4x_k$ = function ($this$launch, completion) {
     var i = new animateValueAsState$composable$slambda$slambda(this.$newTarget_1, this.$animatable_1, this.$animSpec$delegate_1, this.$listener$delegate_1, completion);
     i.$this$launch_1 = $this$launch;
     return i;
   };
-  protoOf(animateValueAsState$composable$slambda$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(animateValueAsState$composable$slambda$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function animateValueAsState$composable$slambda$slambda_0($newTarget, $animatable, $animSpec$delegate, $listener$delegate, resultContinuation) {
     var i = new animateValueAsState$composable$slambda$slambda($newTarget, $animatable, $animSpec$delegate, $listener$delegate, resultContinuation);
     var l = function ($this$launch, $completion) {
-      return i.invoke_d6gbsu_k$($this$launch, $completion);
+      return i.invoke_d9fzmj_k$($this$launch, $completion);
     };
     l.$arity = 1;
     return l;
@@ -1145,14 +1149,14 @@
     this.$listener$delegate_1 = $listener$delegate;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(animateValueAsState$composable$slambda).invoke_d6gbsu_k$ = function ($this$LaunchedEffect, $completion) {
-    var tmp = this.create_b6qu53_k$($this$LaunchedEffect, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(animateValueAsState$composable$slambda).invoke_d9fzmj_k$ = function ($this$LaunchedEffect, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$LaunchedEffect, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(animateValueAsState$composable$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(animateValueAsState$composable$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(animateValueAsState$composable$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -1161,13 +1165,13 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(4);
+            this.set_exceptionState_fex74n_k$(4);
             this.tmp0_iterator0__1 = this.$channel_1.iterator_jk1svi_k$();
-            this.set_state_a96kl8_k$(1);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 1:
-            this.set_state_a96kl8_k$(2);
-            suspendResult = this.tmp0_iterator0__1.hasNext_4tgia2_k$(this);
+            this.set_state_rjd8d0_k$(2);
+            suspendResult = this.tmp0_iterator0__1.hasNext_nhy1w3_k$(this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -1175,15 +1179,15 @@
             continue $sm;
           case 2:
             if (!suspendResult) {
-              this.set_state_a96kl8_k$(3);
+              this.set_state_rjd8d0_k$(3);
               continue $sm;
             }
 
             var target = this.tmp0_iterator0__1.next_20eer_k$();
-            var tmp1_elvis_lhs = ChannelResult__getOrNull_impl_f5e07h(this.$channel_1.tryReceive_5r5v2p_k$());
+            var tmp1_elvis_lhs = ChannelResult__getOrNull_impl_f5e07h(this.$channel_1.tryReceive_y3ovg2_k$());
             var newTarget = tmp1_elvis_lhs == null ? target : tmp1_elvis_lhs;
             launch(this.$this$LaunchedEffect_1, VOID, VOID, animateValueAsState$composable$slambda$slambda_0(newTarget, this.$animatable_1, this.$animSpec$delegate_1, this.$listener$delegate_1, null));
-            this.set_state_a96kl8_k$(1);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 3:
             return Unit_getInstance();
@@ -1195,24 +1199,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 4) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(animateValueAsState$composable$slambda).create_b6qu53_k$ = function ($this$LaunchedEffect, completion) {
+  protoOf(animateValueAsState$composable$slambda).create_rcuf4x_k$ = function ($this$LaunchedEffect, completion) {
     var i = new animateValueAsState$composable$slambda(this.$channel_1, this.$animatable_1, this.$animSpec$delegate_1, this.$listener$delegate_1, completion);
     i.$this$LaunchedEffect_1 = $this$LaunchedEffect;
     return i;
   };
-  protoOf(animateValueAsState$composable$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(animateValueAsState$composable$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function animateValueAsState$composable$slambda_0($channel, $animatable, $animSpec$delegate, $listener$delegate, resultContinuation) {
     var i = new animateValueAsState$composable$slambda($channel, $animatable, $animSpec$delegate, $listener$delegate, resultContinuation);
     var l = function ($this$LaunchedEffect, $completion) {
-      return i.invoke_d6gbsu_k$($this$LaunchedEffect, $completion);
+      return i.invoke_d9fzmj_k$($this$LaunchedEffect, $completion);
     };
     l.$arity = 1;
     return l;
@@ -1237,7 +1241,7 @@
   var MillisToNanos;
   function TargetBasedAnimation_init_$Init$(animationSpec, typeConverter, initialValue, targetValue, initialVelocityVector, $this) {
     initialVelocityVector = initialVelocityVector === VOID ? null : initialVelocityVector;
-    TargetBasedAnimation.call($this, animationSpec.vectorize_jmegcy_k$(typeConverter), typeConverter, initialValue, targetValue, initialVelocityVector);
+    TargetBasedAnimation.call($this, animationSpec.vectorize_pto10n_k$(typeConverter), typeConverter, initialValue, targetValue, initialVelocityVector);
     return $this;
   }
   function TargetBasedAnimation_init_$Create$(animationSpec, typeConverter, initialValue, targetValue, initialVelocityVector) {
@@ -1269,8 +1273,8 @@
     var tmp = this;
     var tmp1_elvis_lhs = initialVelocityVector == null ? null : copy_1(initialVelocityVector);
     tmp.initialVelocityVector_1 = tmp1_elvis_lhs == null ? newInstance(this.typeConverter_1.get_convertToVector_s594l4_k$()(this.initialValue_1)) : tmp1_elvis_lhs;
-    this.durationNanos_1 = this.animationSpec_1.getDurationNanos_62az16_k$(this.initialValueVector_1, this.targetValueVector_1, this.initialVelocityVector_1);
-    this.endVelocity_1 = this.animationSpec_1.getEndVelocity_2fbr89_k$(this.initialValueVector_1, this.targetValueVector_1, this.initialVelocityVector_1);
+    this.durationNanos_1 = this.animationSpec_1.getDurationNanos_c9o343_k$(this.initialValueVector_1, this.targetValueVector_1, this.initialVelocityVector_1);
+    this.endVelocity_1 = this.animationSpec_1.getEndVelocity_j9v6ly_k$(this.initialValueVector_1, this.targetValueVector_1, this.initialVelocityVector_1);
     this.$stable_1 = 0;
   }
   protoOf(TargetBasedAnimation).get_animationSpec_wdk2t2_k$ = function () {
@@ -1288,29 +1292,29 @@
   protoOf(TargetBasedAnimation).get_isInfinite_uffwnt_k$ = function () {
     return this.animationSpec_1.get_isInfinite_uffwnt_k$();
   };
-  protoOf(TargetBasedAnimation).getValueFromNanos_iwi8kk_k$ = function (playTimeNanos) {
+  protoOf(TargetBasedAnimation).getValueFromNanos_i31vd8_k$ = function (playTimeNanos) {
     var tmp;
-    if (!this.isFinishedFromNanos_uhkxvh_k$(playTimeNanos)) {
+    if (!this.isFinishedFromNanos_c31w39_k$(playTimeNanos)) {
       // Inline function 'kotlin.let' call
-      var tmp0_let = this.animationSpec_1.getValueFromNanos_274kdl_k$(playTimeNanos, this.initialValueVector_1, this.targetValueVector_1, this.initialVelocityVector_1);
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.animation.core.TargetBasedAnimation.getValueFromNanos.<anonymous>' call
+      var it = this.animationSpec_1.getValueFromNanos_xg3j38_k$(playTimeNanos, this.initialValueVector_1, this.targetValueVector_1, this.initialVelocityVector_1);
       var inductionVariable = 0;
-      var last = tmp0_let.get_size_woubt6_k$();
+      var last = it.get_size_woubt6_k$();
       if (inductionVariable < last)
         do {
           var i = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'kotlin.check' call
           // Inline function 'kotlin.contracts.contract' call
-          if (!!isNaN_0(tmp0_let.get_fkrdnv_k$(i))) {
+          if (!!isNaN_0(it.get_c1px32_k$(i))) {
             // Inline function 'androidx.compose.animation.core.TargetBasedAnimation.getValueFromNanos.<anonymous>.<anonymous>' call
-            var message = 'AnimationVector cannot contain a NaN. ' + tmp0_let + '. Animation: ' + this + ',' + (' playTimeNanos: ' + toString(playTimeNanos));
+            var message = 'AnimationVector cannot contain a NaN. ' + it + '. Animation: ' + this + ',' + (' playTimeNanos: ' + playTimeNanos.toString());
             throw IllegalStateException_init_$Create$(toString(message));
           }
         }
          while (inductionVariable < last);
-      tmp = this.typeConverter_1.get_convertFromVector_kmewon_k$()(tmp0_let);
+      tmp = this.typeConverter_1.get_convertFromVector_kmewon_k$()(it);
     } else {
       tmp = this.targetValue_1;
     }
@@ -1319,17 +1323,17 @@
   protoOf(TargetBasedAnimation).get_durationNanos_ub5cy_k$ = function () {
     return this.durationNanos_1;
   };
-  protoOf(TargetBasedAnimation).getVelocityVectorFromNanos_n1b66h_k$ = function (playTimeNanos) {
+  protoOf(TargetBasedAnimation).getVelocityVectorFromNanos_jouakx_k$ = function (playTimeNanos) {
     var tmp;
-    if (!this.isFinishedFromNanos_uhkxvh_k$(playTimeNanos)) {
-      tmp = this.animationSpec_1.getVelocityFromNanos_2nsq5r_k$(playTimeNanos, this.initialValueVector_1, this.targetValueVector_1, this.initialVelocityVector_1);
+    if (!this.isFinishedFromNanos_c31w39_k$(playTimeNanos)) {
+      tmp = this.animationSpec_1.getVelocityFromNanos_wafrjo_k$(playTimeNanos, this.initialValueVector_1, this.targetValueVector_1, this.initialVelocityVector_1);
     } else {
       tmp = this.endVelocity_1;
     }
     return tmp;
   };
   protoOf(TargetBasedAnimation).toString = function () {
-    return 'TargetBasedAnimation: ' + this.initialValue_1 + ' -> ' + this.targetValue_1 + ',' + ('initial velocity: ' + this.initialVelocityVector_1 + ', duration: ' + toString(get_durationMillis(this)) + ' ms,') + ('animationSpec: ' + this.animationSpec_1);
+    return 'TargetBasedAnimation: ' + this.initialValue_1 + ' -> ' + this.targetValue_1 + ',' + ('initial velocity: ' + this.initialVelocityVector_1 + ', duration: ' + get_durationMillis(this).toString() + ' ms,') + ('animationSpec: ' + this.animationSpec_1);
   };
   function TargetBasedAnimation_0(animationSpec, typeConverter, initialValue, targetValue, initialVelocity) {
     return TargetBasedAnimation_init_$Create$(animationSpec, typeConverter, initialValue, targetValue, typeConverter.get_convertToVector_s594l4_k$()(initialVelocity));
@@ -1344,14 +1348,14 @@
     return $this.endVelocity_1;
   }
   function DecayAnimation_init_$Init$(animationSpec, typeConverter, initialValue, initialVelocityVector, $this) {
-    DecayAnimation.call($this, animationSpec.vectorize_jmegcy_k$(typeConverter), typeConverter, initialValue, initialVelocityVector);
+    DecayAnimation.call($this, animationSpec.vectorize_pto10n_k$(typeConverter), typeConverter, initialValue, initialVelocityVector);
     return $this;
   }
   function DecayAnimation_init_$Create$(animationSpec, typeConverter, initialValue, initialVelocityVector) {
     return DecayAnimation_init_$Init$(animationSpec, typeConverter, initialValue, initialVelocityVector, objectCreate(protoOf(DecayAnimation)));
   }
   function DecayAnimation_init_$Init$_0(animationSpec, typeConverter, initialValue, initialVelocity, $this) {
-    DecayAnimation.call($this, animationSpec.vectorize_jmegcy_k$(typeConverter), typeConverter, initialValue, typeConverter.get_convertToVector_s594l4_k$()(initialVelocity));
+    DecayAnimation.call($this, animationSpec.vectorize_pto10n_k$(typeConverter), typeConverter, initialValue, typeConverter.get_convertToVector_s594l4_k$()(initialVelocity));
     return $this;
   }
   function DecayAnimation_init_$Create$_0(animationSpec, typeConverter, initialValue, initialVelocity) {
@@ -1366,17 +1370,17 @@
     this.initialValue_1 = initialValue;
     this.initialValueVector_1 = this.typeConverter_1.get_convertToVector_s594l4_k$()(this.initialValue_1);
     this.initialVelocityVector_1 = copy_1(initialVelocityVector);
-    this.targetValue_1 = this.typeConverter_1.get_convertFromVector_kmewon_k$()(this.animationSpec_1.getTargetValue_ftaxp4_k$(this.initialValueVector_1, initialVelocityVector));
+    this.targetValue_1 = this.typeConverter_1.get_convertFromVector_kmewon_k$()(this.animationSpec_1.getTargetValue_rut47u_k$(this.initialValueVector_1, initialVelocityVector));
     this.isInfinite_1 = false;
-    this.durationNanos_1 = this.animationSpec_1.getDurationNanos_m6hrcz_k$(this.initialValueVector_1, initialVelocityVector);
-    this.endVelocity_1 = copy_1(this.animationSpec_1.getVelocityFromNanos_hyp13a_k$(this.durationNanos_1, this.initialValueVector_1, initialVelocityVector));
+    this.durationNanos_1 = this.animationSpec_1.getDurationNanos_roqu2j_k$(this.initialValueVector_1, initialVelocityVector);
+    this.endVelocity_1 = copy_1(this.animationSpec_1.getVelocityFromNanos_2v7bwc_k$(this.durationNanos_1, this.initialValueVector_1, initialVelocityVector));
     var inductionVariable = 0;
     var last = this.endVelocity_1.get_size_woubt6_k$();
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        this.endVelocity_1.set_8gccym_k$(i, coerceIn(this.endVelocity_1.get_fkrdnv_k$(i), -this.animationSpec_1.get_absVelocityThreshold_wsgqo5_k$(), this.animationSpec_1.get_absVelocityThreshold_wsgqo5_k$()));
+        this.endVelocity_1.set_4eugj6_k$(i, coerceIn(this.endVelocity_1.get_c1px32_k$(i), -this.animationSpec_1.get_absVelocityThreshold_wsgqo5_k$(), this.animationSpec_1.get_absVelocityThreshold_wsgqo5_k$()));
       }
        while (inductionVariable < last);
     this.$stable_1 = 0;
@@ -1399,16 +1403,16 @@
   protoOf(DecayAnimation).get_isInfinite_uffwnt_k$ = function () {
     return this.isInfinite_1;
   };
-  protoOf(DecayAnimation).getValueFromNanos_iwi8kk_k$ = function (playTimeNanos) {
-    if (!this.isFinishedFromNanos_uhkxvh_k$(playTimeNanos)) {
-      return this.typeConverter_1.get_convertFromVector_kmewon_k$()(this.animationSpec_1.getValueFromNanos_g1htci_k$(playTimeNanos, this.initialValueVector_1, this.initialVelocityVector_1));
+  protoOf(DecayAnimation).getValueFromNanos_i31vd8_k$ = function (playTimeNanos) {
+    if (!this.isFinishedFromNanos_c31w39_k$(playTimeNanos)) {
+      return this.typeConverter_1.get_convertFromVector_kmewon_k$()(this.animationSpec_1.getValueFromNanos_huzcys_k$(playTimeNanos, this.initialValueVector_1, this.initialVelocityVector_1));
     } else {
       return this.targetValue_1;
     }
   };
-  protoOf(DecayAnimation).getVelocityVectorFromNanos_n1b66h_k$ = function (playTimeNanos) {
-    if (!this.isFinishedFromNanos_uhkxvh_k$(playTimeNanos)) {
-      return this.animationSpec_1.getVelocityFromNanos_hyp13a_k$(playTimeNanos, this.initialValueVector_1, this.initialVelocityVector_1);
+  protoOf(DecayAnimation).getVelocityVectorFromNanos_jouakx_k$ = function (playTimeNanos) {
+    if (!this.isFinishedFromNanos_c31w39_k$(playTimeNanos)) {
+      return this.animationSpec_1.getVelocityFromNanos_2v7bwc_k$(playTimeNanos, this.initialValueVector_1, this.initialVelocityVector_1);
     } else {
       return this.endVelocity_1;
     }
@@ -1416,7 +1420,7 @@
   function Animation() {
   }
   function get_durationMillis(_this__u8e3s4) {
-    return _this__u8e3s4.get_durationNanos_ub5cy_k$().div_9s1fi3_k$(new Long(1000000, 0));
+    return _this__u8e3s4.get_durationNanos_ub5cy_k$().div_jun7gj_k$(new Long(1000000, 0));
   }
   var AnimationEndReason_BoundReached_instance;
   var AnimationEndReason_Finished_instance;
@@ -1431,7 +1435,7 @@
         return AnimationEndReason_Finished_getInstance();
       default:
         AnimationEndReason_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -1475,7 +1479,7 @@
   protoOf(SpringSpec).get_visibilityThreshold_qtbbow_k$ = function () {
     return this.visibilityThreshold_1;
   };
-  protoOf(SpringSpec).vectorize_jmegcy_k$ = function (converter) {
+  protoOf(SpringSpec).vectorize_pto10n_k$ = function (converter) {
     return VectorizedSpringSpec_init_$Create$(this.dampingRatio_1, this.stiffness_1, convert(converter, this.visibilityThreshold_1));
   };
   protoOf(SpringSpec).equals = function (other) {
@@ -1488,11 +1492,10 @@
     return tmp;
   };
   protoOf(SpringSpec).hashCode = function () {
-    var tmp$ret$0;
     // Inline function 'kotlin.hashCode' call
     var tmp0_safe_receiver = this.visibilityThreshold_1;
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : hashCode(tmp0_safe_receiver);
-    tmp$ret$0 = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
+    var tmp$ret$0 = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
     return imul(imul(tmp$ret$0, 31) + getNumberHashCode(this.dampingRatio_1) | 0, 31) + getNumberHashCode(this.stiffness_1) | 0;
   };
   function spring(dampingRatio, stiffness, visibilityThreshold) {
@@ -1537,11 +1540,11 @@
   protoOf(InfiniteRepeatableSpec).get_repeatMode_zzqu1_k$ = function () {
     return this.repeatMode_1;
   };
-  protoOf(InfiniteRepeatableSpec).get_initialStartOffset_qichmx_k$ = function () {
+  protoOf(InfiniteRepeatableSpec).get_initialStartOffset_ofn0ob_k$ = function () {
     return this.initialStartOffset_1;
   };
-  protoOf(InfiniteRepeatableSpec).vectorize_jmegcy_k$ = function (converter) {
-    return new VectorizedInfiniteRepeatableSpec(this.animation_1.vectorize_jmegcy_k$(converter), this.repeatMode_1, this.initialStartOffset_1);
+  protoOf(InfiniteRepeatableSpec).vectorize_pto10n_k$ = function (converter) {
+    return new VectorizedInfiniteRepeatableSpec(this.animation_1.vectorize_pto10n_k$(converter), this.repeatMode_1, this.initialStartOffset_1);
   };
   protoOf(InfiniteRepeatableSpec).equals = function (other) {
     var tmp;
@@ -1567,22 +1570,20 @@
     return 8;
   }
   function KeyframesSpecConfig() {
-    var tmp = this;
-    AnimationConstants_getInstance();
-    tmp.durationMillis_1 = 300;
+    this.durationMillis_1 = 300;
     this.delayMillis_1 = 0;
-    var tmp_0 = this;
+    var tmp = this;
     // Inline function 'kotlin.collections.mutableMapOf' call
-    tmp_0.keyframes_1 = LinkedHashMap_init_$Create$();
+    tmp.keyframes_1 = LinkedHashMap_init_$Create$();
     this.$stable_1 = 8;
   }
-  protoOf(KeyframesSpecConfig).set_durationMillis_cr89wn_k$ = function (_set____db54di) {
+  protoOf(KeyframesSpecConfig).set_durationMillis_11l8vl_k$ = function (_set____db54di) {
     this.durationMillis_1 = _set____db54di;
   };
   protoOf(KeyframesSpecConfig).get_durationMillis_pqx05f_k$ = function () {
     return this.durationMillis_1;
   };
-  protoOf(KeyframesSpecConfig).set_delayMillis_ej80f0_k$ = function (_set____db54di) {
+  protoOf(KeyframesSpecConfig).set_delayMillis_uhofus_k$ = function (_set____db54di) {
     this.delayMillis_1 = _set____db54di;
   };
   protoOf(KeyframesSpecConfig).get_delayMillis_d968n4_k$ = function () {
@@ -1591,23 +1592,22 @@
   protoOf(KeyframesSpecConfig).get_keyframes_fes9no_k$ = function () {
     return this.keyframes_1;
   };
-  protoOf(KeyframesSpecConfig).at_xtu82d_k$ = function (_this__u8e3s4, timeStamp) {
+  protoOf(KeyframesSpecConfig).at_1dnb16_k$ = function (_this__u8e3s4, timeStamp) {
     // Inline function 'kotlin.also' call
-    var tmp0_also = new KeyframeEntity(_this__u8e3s4);
+    var this_0 = new KeyframeEntity(_this__u8e3s4);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.animation.core.KeyframesSpecConfig.at.<anonymous>' call
     // Inline function 'kotlin.collections.set' call
-    this.keyframes_1.put_3mhbri_k$(timeStamp, tmp0_also);
-    return tmp0_also;
+    this.keyframes_1.put_4fpzoq_k$(timeStamp, this_0);
+    return this_0;
   };
-  protoOf(KeyframesSpecConfig).atFraction_jabxl6_k$ = function (_this__u8e3s4, fraction) {
-    var tmp$ret$0;
+  protoOf(KeyframesSpecConfig).atFraction_i4lk4_k$ = function (_this__u8e3s4, fraction) {
     // Inline function 'kotlin.math.roundToInt' call
-    var tmp0_roundToInt = this.durationMillis_1 * fraction;
-    tmp$ret$0 = roundToInt(tmp0_roundToInt);
-    return this.at_xtu82d_k$(_this__u8e3s4, tmp$ret$0);
+    var this_0 = this.durationMillis_1 * fraction;
+    var tmp$ret$0 = roundToInt(this_0);
+    return this.at_1dnb16_k$(_this__u8e3s4, tmp$ret$0);
   };
-  protoOf(KeyframesSpecConfig).with_2m2fr_k$ = function (_this__u8e3s4, easing) {
+  protoOf(KeyframesSpecConfig).with_qgmf00_k$ = function (_this__u8e3s4, easing) {
     _this__u8e3s4.easing_1 = easing;
   };
   protoOf(KeyframesSpecConfig).equals = function (other) {
@@ -1643,13 +1643,13 @@
   protoOf(KeyframeEntity).get_value_j01efc_k$ = function () {
     return this.value_1;
   };
-  protoOf(KeyframeEntity).set_easing_6vawkr_k$ = function (_set____db54di) {
+  protoOf(KeyframeEntity).set_easing_poaykx_k$ = function (_set____db54di) {
     this.easing_1 = _set____db54di;
   };
   protoOf(KeyframeEntity).get_easing_cqnn04_k$ = function () {
     return this.easing_1;
   };
-  protoOf(KeyframeEntity).toPair_8bk601_k$ = function (convertToVector) {
+  protoOf(KeyframeEntity).toPair_c13ujh_k$ = function (convertToVector) {
     return to(convertToVector(this.value_1), this.easing_1);
   };
   protoOf(KeyframeEntity).equals = function (other) {
@@ -1668,11 +1668,10 @@
     return tmp;
   };
   protoOf(KeyframeEntity).hashCode = function () {
-    var tmp$ret$0;
     // Inline function 'kotlin.hashCode' call
     var tmp0_safe_receiver = this.value_1;
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : hashCode(tmp0_safe_receiver);
-    tmp$ret$0 = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
+    var tmp$ret$0 = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
     return imul(tmp$ret$0, 31) + hashCode(this.easing_1) | 0;
   };
   function get_$stableprop_7() {
@@ -1697,43 +1696,35 @@
   protoOf(KeyframesSpec).hashCode = function () {
     return this.config_1.hashCode();
   };
-  protoOf(KeyframesSpec).vectorize_jmegcy_k$ = function (converter) {
+  protoOf(KeyframesSpec).vectorize_pto10n_k$ = function (converter) {
     // Inline function 'kotlin.collections.mapValues' call
-    var tmp0_mapValues = this.config_1.keyframes_1;
+    var this_0 = this.config_1.keyframes_1;
     // Inline function 'kotlin.collections.mapValuesTo' call
-    var tmp0_mapValuesTo = LinkedHashMap_init_$Create$_0(mapCapacity(tmp0_mapValues.get_size_woubt6_k$()));
+    var destination = LinkedHashMap_init_$Create$_0(mapCapacity(this_0.get_size_woubt6_k$()));
     // Inline function 'kotlin.collections.associateByTo' call
-    var tmp0_iterator = tmp0_mapValues.get_entries_p20ztl_k$().iterator_jk1svi_k$();
+    var tmp0_iterator = this_0.get_entries_p20ztl_k$().iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var element = tmp0_iterator.next_20eer_k$();
       // Inline function 'kotlin.collections.mapValuesTo.<anonymous>' call
       var tmp = element.get_key_18j28a_k$();
-      var tmp$ret$1;
       // Inline function 'androidx.compose.animation.core.KeyframesSpec.vectorize.<anonymous>' call
-      tmp$ret$1 = element.get_value_j01efc_k$().toPair_8bk601_k$(converter.get_convertToVector_s594l4_k$());
-      tmp0_mapValuesTo.put_3mhbri_k$(tmp, tmp$ret$1);
+      var tmp$ret$1 = element.get_value_j01efc_k$().toPair_c13ujh_k$(converter.get_convertToVector_s594l4_k$());
+      destination.put_4fpzoq_k$(tmp, tmp$ret$1);
     }
-    return new VectorizedKeyframesSpec(tmp0_mapValuesTo, this.config_1.durationMillis_1, this.config_1.delayMillis_1);
+    return new VectorizedKeyframesSpec(destination, this.config_1.durationMillis_1, this.config_1.delayMillis_1);
   };
   function keyframes(init) {
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = new KeyframesSpecConfig();
+    var this_0 = new KeyframesSpecConfig();
     // Inline function 'kotlin.contracts.contract' call
-    init(tmp0_apply);
-    return new KeyframesSpec(tmp0_apply);
+    init(this_0);
+    return new KeyframesSpec(this_0);
   }
   function get_$stableprop_8() {
     return 0;
   }
   function TweenSpec(durationMillis, delay, easing) {
-    var tmp;
-    if (durationMillis === VOID) {
-      AnimationConstants_getInstance();
-      tmp = 300;
-    } else {
-      tmp = durationMillis;
-    }
-    durationMillis = tmp;
+    durationMillis = durationMillis === VOID ? 300 : durationMillis;
     delay = delay === VOID ? 0 : delay;
     easing = easing === VOID ? get_FastOutSlowInEasing() : easing;
     this.durationMillis_1 = durationMillis;
@@ -1750,7 +1741,7 @@
   protoOf(TweenSpec).get_easing_cqnn04_k$ = function () {
     return this.easing_1;
   };
-  protoOf(TweenSpec).vectorize_jmegcy_k$ = function (converter) {
+  protoOf(TweenSpec).vectorize_pto10n_k$ = function (converter) {
     return new VectorizedTweenSpec(this.durationMillis_1, this.delay_1, this.easing_1);
   };
   protoOf(TweenSpec).equals = function (other) {
@@ -1766,14 +1757,7 @@
     return imul(imul(this.durationMillis_1, 31) + hashCode(this.easing_1) | 0, 31) + this.delay_1 | 0;
   };
   function tween(durationMillis, delayMillis, easing) {
-    var tmp;
-    if (durationMillis === VOID) {
-      AnimationConstants_getInstance();
-      tmp = 300;
-    } else {
-      tmp = durationMillis;
-    }
-    durationMillis = tmp;
+    durationMillis = durationMillis === VOID ? 300 : durationMillis;
     delayMillis = delayMillis === VOID ? 0 : delayMillis;
     easing = easing === VOID ? get_FastOutSlowInEasing() : easing;
     return new TweenSpec(durationMillis, delayMillis, easing);
@@ -1793,7 +1777,7 @@
         return RepeatMode_Reverse_getInstance();
       default:
         RepeatMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -1823,7 +1807,7 @@
   }
   function _StartOffset___get_offsetType__impl__92sljs($this) {
     var tmp;
-    switch (_StartOffset___get_value__impl__8sikig($this).compareTo_n4fqi2_k$(new Long(0, 0)) > 0) {
+    switch (_StartOffset___get_value__impl__8sikig($this).compareTo_9jj042_k$(new Long(0, 0)) > 0) {
       case true:
         tmp = Companion_getInstance_8().FastForward_1;
         break;
@@ -1837,7 +1821,7 @@
     return tmp;
   }
   function StartOffset__toString_impl_2xosto($this) {
-    return 'StartOffset(value=' + toString($this) + ')';
+    return 'StartOffset(value=' + $this.toString() + ')';
   }
   function StartOffset__hashCode_impl_ith3z7($this) {
     return $this.hashCode();
@@ -1894,10 +1878,10 @@
     this.Delay_1 = _StartOffsetType___init__impl__g1ur7a(-1);
     this.FastForward_1 = _StartOffsetType___init__impl__g1ur7a(1);
   }
-  protoOf(Companion).get_Delay_a11btv_k$ = function () {
+  protoOf(Companion).get_Delay_4dknp7_k$ = function () {
     return this.Delay_1;
   };
-  protoOf(Companion).get_FastForward_who9pl_k$ = function () {
+  protoOf(Companion).get_FastForward_i32a6j_k$ = function () {
     return this.FastForward_1;
   };
   var Companion_instance;
@@ -1940,10 +1924,81 @@
     RepeatMode_initEntries();
     return RepeatMode_Reverse_instance;
   }
+  function get_$stableprop_10() {
+    return 0;
+  }
+  function AnimationState(typeConverter, initialValue, initialVelocityVector, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
+    initialVelocityVector = initialVelocityVector === VOID ? null : initialVelocityVector;
+    lastFrameTimeNanos = lastFrameTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : lastFrameTimeNanos;
+    finishedTimeNanos = finishedTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : finishedTimeNanos;
+    isRunning = isRunning === VOID ? false : isRunning;
+    this.typeConverter_1 = typeConverter;
+    this.value$delegate_1 = mutableStateOf(initialValue);
+    var tmp = this;
+    var tmp1_elvis_lhs = initialVelocityVector == null ? null : copy_1(initialVelocityVector);
+    tmp.velocityVector_1 = tmp1_elvis_lhs == null ? createZeroVectorFrom(this.typeConverter_1, initialValue) : tmp1_elvis_lhs;
+    this.lastFrameTimeNanos_1 = lastFrameTimeNanos;
+    this.finishedTimeNanos_1 = finishedTimeNanos;
+    this.isRunning_1 = isRunning;
+    this.$stable_1 = 0;
+  }
+  protoOf(AnimationState).get_typeConverter_seyvfn_k$ = function () {
+    return this.typeConverter_1;
+  };
+  protoOf(AnimationState).set_value_v1vabv_k$ = function (_set____db54di) {
+    var this_0 = this.value$delegate_1;
+    value$factory();
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
+  };
+  protoOf(AnimationState).get_value_j01efc_k$ = function () {
+    // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.value$delegate_1;
+    value$factory_0();
+    return this_0.get_value_j01efc_k$();
+  };
+  protoOf(AnimationState).set_velocityVector_rbhc11_k$ = function (_set____db54di) {
+    this.velocityVector_1 = _set____db54di;
+  };
+  protoOf(AnimationState).get_velocityVector_v3jmo9_k$ = function () {
+    return this.velocityVector_1;
+  };
+  protoOf(AnimationState).set_lastFrameTimeNanos_hfjxwm_k$ = function (_set____db54di) {
+    this.lastFrameTimeNanos_1 = _set____db54di;
+  };
+  protoOf(AnimationState).get_lastFrameTimeNanos_3aprno_k$ = function () {
+    return this.lastFrameTimeNanos_1;
+  };
+  protoOf(AnimationState).set_finishedTimeNanos_8cpdkr_k$ = function (_set____db54di) {
+    this.finishedTimeNanos_1 = _set____db54di;
+  };
+  protoOf(AnimationState).get_finishedTimeNanos_t5ryif_k$ = function () {
+    return this.finishedTimeNanos_1;
+  };
+  protoOf(AnimationState).set_isRunning_m21k59_k$ = function (_set____db54di) {
+    this.isRunning_1 = _set____db54di;
+  };
+  protoOf(AnimationState).get_isRunning_okmtn0_k$ = function () {
+    return this.isRunning_1;
+  };
+  protoOf(AnimationState).get_velocity_3hqvmu_k$ = function () {
+    return this.typeConverter_1.get_convertFromVector_kmewon_k$()(this.velocityVector_1);
+  };
+  protoOf(AnimationState).toString = function () {
+    return 'AnimationState(' + ('value=' + this.get_value_j01efc_k$() + ', ') + ('velocity=' + this.get_velocity_3hqvmu_k$() + ', ') + ('isRunning=' + this.isRunning_1 + ', ') + ('lastFrameTimeNanos=' + this.lastFrameTimeNanos_1.toString() + ', ') + ('finishedTimeNanos=' + this.finishedTimeNanos_1.toString()) + ')';
+  };
+  function copy(_this__u8e3s4, value, velocityVector, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
+    value = value === VOID ? _this__u8e3s4.get_value_j01efc_k$() : value;
+    velocityVector = velocityVector === VOID ? copy_1(_this__u8e3s4.velocityVector_1) : velocityVector;
+    lastFrameTimeNanos = lastFrameTimeNanos === VOID ? _this__u8e3s4.lastFrameTimeNanos_1 : lastFrameTimeNanos;
+    finishedTimeNanos = finishedTimeNanos === VOID ? _this__u8e3s4.finishedTimeNanos_1 : finishedTimeNanos;
+    isRunning = isRunning === VOID ? _this__u8e3s4.isRunning_1 : isRunning;
+    return new AnimationState(_this__u8e3s4.typeConverter_1, value, velocityVector, lastFrameTimeNanos, finishedTimeNanos, isRunning);
+  }
   function _get_onCancel__fbp26m($this) {
     return $this.onCancel_1;
   }
-  function get_$stableprop_10() {
+  function get_$stableprop_11() {
     return 8;
   }
   function AnimationScope(initialValue, typeConverter, initialVelocityVector, lastFrameTimeNanos, targetValue, startTimeNanos, isRunning, onCancel) {
@@ -1967,178 +2022,116 @@
   protoOf(AnimationScope).get_startTimeNanos_ru5em1_k$ = function () {
     return this.startTimeNanos_1;
   };
-  protoOf(AnimationScope).set_value_rnwamw_k$ = function (_set____db54di) {
-    value$factory();
-    return this.value$delegate_1.set_value_rnwamw_k$(_set____db54di);
+  protoOf(AnimationScope).set_value_v1vabv_k$ = function (_set____db54di) {
+    var this_0 = this.value$delegate_1;
+    value$factory_1();
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   };
   protoOf(AnimationScope).get_value_j01efc_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
-    value$factory_0();
-    return this.value$delegate_1.get_value_j01efc_k$();
+    var this_0 = this.value$delegate_1;
+    value$factory_2();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(AnimationScope).set_velocityVector_mao3b1_k$ = function (_set____db54di) {
+  protoOf(AnimationScope).set_velocityVector_rbhc11_k$ = function (_set____db54di) {
     this.velocityVector_1 = _set____db54di;
   };
   protoOf(AnimationScope).get_velocityVector_v3jmo9_k$ = function () {
     return this.velocityVector_1;
   };
-  protoOf(AnimationScope).set_lastFrameTimeNanos_c9sxzl_k$ = function (_set____db54di) {
+  protoOf(AnimationScope).set_lastFrameTimeNanos_hfjxwm_k$ = function (_set____db54di) {
     this.lastFrameTimeNanos_1 = _set____db54di;
   };
   protoOf(AnimationScope).get_lastFrameTimeNanos_3aprno_k$ = function () {
     return this.lastFrameTimeNanos_1;
   };
-  protoOf(AnimationScope).set_finishedTimeNanos_iw0ihw_k$ = function (_set____db54di) {
+  protoOf(AnimationScope).set_finishedTimeNanos_8cpdkr_k$ = function (_set____db54di) {
     this.finishedTimeNanos_1 = _set____db54di;
   };
   protoOf(AnimationScope).get_finishedTimeNanos_t5ryif_k$ = function () {
     return this.finishedTimeNanos_1;
   };
-  protoOf(AnimationScope).set_isRunning_tw1q35_k$ = function (_set____db54di) {
+  protoOf(AnimationScope).set_isRunning_m21k59_k$ = function (_set____db54di) {
+    var this_0 = this.isRunning$delegate_1;
     isRunning$factory_1();
-    return this.isRunning$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   };
   protoOf(AnimationScope).get_isRunning_okmtn0_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.isRunning$delegate_1;
     isRunning$factory_2();
-    return this.isRunning$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   protoOf(AnimationScope).get_velocity_3hqvmu_k$ = function () {
     return this.typeConverter_1.get_convertFromVector_kmewon_k$()(this.velocityVector_1);
   };
-  protoOf(AnimationScope).cancelAnimation_ickco7_k$ = function () {
-    this.set_isRunning_tw1q35_k$(false);
+  protoOf(AnimationScope).cancelAnimation_ic0k2u_k$ = function () {
+    this.set_isRunning_m21k59_k$(false);
     this.onCancel_1();
   };
   protoOf(AnimationScope).toAnimationState_sex3co_k$ = function () {
-    return new AnimationState_0(this.typeConverter_1, this.get_value_j01efc_k$(), this.velocityVector_1, this.lastFrameTimeNanos_1, this.finishedTimeNanos_1, this.get_isRunning_okmtn0_k$());
+    return new AnimationState(this.typeConverter_1, this.get_value_j01efc_k$(), this.velocityVector_1, this.lastFrameTimeNanos_1, this.finishedTimeNanos_1, this.get_isRunning_okmtn0_k$());
   };
   function createZeroVectorFrom(_this__u8e3s4, value) {
     return newInstance(_this__u8e3s4.get_convertToVector_s594l4_k$()(value));
   }
-  function copy(_this__u8e3s4, value, velocity, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
+  function AnimationState_0(initialValue, initialVelocity, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
+    initialVelocity = initialVelocity === VOID ? 0.0 : initialVelocity;
+    lastFrameTimeNanos = lastFrameTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : lastFrameTimeNanos;
+    finishedTimeNanos = finishedTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : finishedTimeNanos;
+    isRunning = isRunning === VOID ? false : isRunning;
+    return new AnimationState(get_VectorConverter_2(FloatCompanionObject_getInstance()), initialValue, AnimationVector_0(initialVelocity), lastFrameTimeNanos, finishedTimeNanos, isRunning);
+  }
+  function copy_0(_this__u8e3s4, value, velocity, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
     value = value === VOID ? _this__u8e3s4.get_value_j01efc_k$() : value;
     velocity = velocity === VOID ? _this__u8e3s4.velocityVector_1.get_value_j01efc_k$() : velocity;
     lastFrameTimeNanos = lastFrameTimeNanos === VOID ? _this__u8e3s4.lastFrameTimeNanos_1 : lastFrameTimeNanos;
     finishedTimeNanos = finishedTimeNanos === VOID ? _this__u8e3s4.finishedTimeNanos_1 : finishedTimeNanos;
     isRunning = isRunning === VOID ? _this__u8e3s4.isRunning_1 : isRunning;
-    return new AnimationState_0(_this__u8e3s4.typeConverter_1, value, AnimationVector_0(velocity), lastFrameTimeNanos, finishedTimeNanos, isRunning);
+    return new AnimationState(_this__u8e3s4.typeConverter_1, value, AnimationVector_0(velocity), lastFrameTimeNanos, finishedTimeNanos, isRunning);
   }
-  function copy_0(_this__u8e3s4, value, velocityVector, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
-    value = value === VOID ? _this__u8e3s4.get_value_j01efc_k$() : value;
-    velocityVector = velocityVector === VOID ? copy_1(_this__u8e3s4.velocityVector_1) : velocityVector;
-    lastFrameTimeNanos = lastFrameTimeNanos === VOID ? _this__u8e3s4.lastFrameTimeNanos_1 : lastFrameTimeNanos;
-    finishedTimeNanos = finishedTimeNanos === VOID ? _this__u8e3s4.finishedTimeNanos_1 : finishedTimeNanos;
-    isRunning = isRunning === VOID ? _this__u8e3s4.isRunning_1 : isRunning;
-    return new AnimationState_0(_this__u8e3s4.typeConverter_1, value, velocityVector, lastFrameTimeNanos, finishedTimeNanos, isRunning);
-  }
-  function AnimationState(initialValue, initialVelocity, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
-    initialVelocity = initialVelocity === VOID ? 0.0 : initialVelocity;
-    lastFrameTimeNanos = lastFrameTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : lastFrameTimeNanos;
-    finishedTimeNanos = finishedTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : finishedTimeNanos;
-    isRunning = isRunning === VOID ? false : isRunning;
-    return new AnimationState_0(get_VectorConverter_2(FloatCompanionObject_getInstance()), initialValue, AnimationVector_0(initialVelocity), lastFrameTimeNanos, finishedTimeNanos, isRunning);
-  }
-  function get_$stableprop_11() {
-    return 0;
-  }
-  function AnimationState_0(typeConverter, initialValue, initialVelocityVector, lastFrameTimeNanos, finishedTimeNanos, isRunning) {
-    initialVelocityVector = initialVelocityVector === VOID ? null : initialVelocityVector;
-    lastFrameTimeNanos = lastFrameTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : lastFrameTimeNanos;
-    finishedTimeNanos = finishedTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : finishedTimeNanos;
-    isRunning = isRunning === VOID ? false : isRunning;
-    this.typeConverter_1 = typeConverter;
-    this.value$delegate_1 = mutableStateOf(initialValue);
-    var tmp = this;
-    var tmp1_elvis_lhs = initialVelocityVector == null ? null : copy_1(initialVelocityVector);
-    tmp.velocityVector_1 = tmp1_elvis_lhs == null ? createZeroVectorFrom(this.typeConverter_1, initialValue) : tmp1_elvis_lhs;
-    this.lastFrameTimeNanos_1 = lastFrameTimeNanos;
-    this.finishedTimeNanos_1 = finishedTimeNanos;
-    this.isRunning_1 = isRunning;
-    this.$stable_1 = 0;
-  }
-  protoOf(AnimationState_0).get_typeConverter_seyvfn_k$ = function () {
-    return this.typeConverter_1;
-  };
-  protoOf(AnimationState_0).set_value_rnwamw_k$ = function (_set____db54di) {
-    value$factory_1();
-    return this.value$delegate_1.set_value_rnwamw_k$(_set____db54di);
-  };
-  protoOf(AnimationState_0).get_value_j01efc_k$ = function () {
-    // Inline function 'androidx.compose.runtime.getValue' call
-    value$factory_2();
-    return this.value$delegate_1.get_value_j01efc_k$();
-  };
-  protoOf(AnimationState_0).set_velocityVector_mao3b1_k$ = function (_set____db54di) {
-    this.velocityVector_1 = _set____db54di;
-  };
-  protoOf(AnimationState_0).get_velocityVector_v3jmo9_k$ = function () {
-    return this.velocityVector_1;
-  };
-  protoOf(AnimationState_0).set_lastFrameTimeNanos_c9sxzl_k$ = function (_set____db54di) {
-    this.lastFrameTimeNanos_1 = _set____db54di;
-  };
-  protoOf(AnimationState_0).get_lastFrameTimeNanos_3aprno_k$ = function () {
-    return this.lastFrameTimeNanos_1;
-  };
-  protoOf(AnimationState_0).set_finishedTimeNanos_iw0ihw_k$ = function (_set____db54di) {
-    this.finishedTimeNanos_1 = _set____db54di;
-  };
-  protoOf(AnimationState_0).get_finishedTimeNanos_t5ryif_k$ = function () {
-    return this.finishedTimeNanos_1;
-  };
-  protoOf(AnimationState_0).set_isRunning_tw1q35_k$ = function (_set____db54di) {
-    this.isRunning_1 = _set____db54di;
-  };
-  protoOf(AnimationState_0).get_isRunning_okmtn0_k$ = function () {
-    return this.isRunning_1;
-  };
-  protoOf(AnimationState_0).get_velocity_3hqvmu_k$ = function () {
-    return this.typeConverter_1.get_convertFromVector_kmewon_k$()(this.velocityVector_1);
-  };
-  protoOf(AnimationState_0).toString = function () {
-    return 'AnimationState(' + ('value=' + this.get_value_j01efc_k$() + ', ') + ('velocity=' + this.get_velocity_3hqvmu_k$() + ', ') + ('isRunning=' + this.isRunning_1 + ', ') + ('lastFrameTimeNanos=' + toString(this.lastFrameTimeNanos_1) + ', ') + ('finishedTimeNanos=' + toString(this.finishedTimeNanos_1)) + ')';
-  };
   function value$factory() {
     return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
       return receiver.get_value_j01efc_k$();
     }, function (receiver, value) {
-      return receiver.set_value_rnwamw_k$(value);
+      return receiver.set_value_v1vabv_k$(value);
     });
   }
   function value$factory_0() {
     return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
       return receiver.get_value_j01efc_k$();
     }, function (receiver, value) {
-      return receiver.set_value_rnwamw_k$(value);
-    });
-  }
-  function isRunning$factory_1() {
-    return getPropertyCallableRef('isRunning', 1, KMutableProperty1, function (receiver) {
-      return receiver.get_isRunning_okmtn0_k$();
-    }, function (receiver, value) {
-      return receiver.set_isRunning_tw1q35_k$(value);
-    });
-  }
-  function isRunning$factory_2() {
-    return getPropertyCallableRef('isRunning', 1, KMutableProperty1, function (receiver) {
-      return receiver.get_isRunning_okmtn0_k$();
-    }, function (receiver, value) {
-      return receiver.set_isRunning_tw1q35_k$(value);
+      return receiver.set_value_v1vabv_k$(value);
     });
   }
   function value$factory_1() {
     return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
       return receiver.get_value_j01efc_k$();
     }, function (receiver, value) {
-      return receiver.set_value_rnwamw_k$(value);
+      return receiver.set_value_v1vabv_k$(value);
     });
   }
   function value$factory_2() {
     return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
       return receiver.get_value_j01efc_k$();
     }, function (receiver, value) {
-      return receiver.set_value_rnwamw_k$(value);
+      return receiver.set_value_v1vabv_k$(value);
+    });
+  }
+  function isRunning$factory_1() {
+    return getPropertyCallableRef('isRunning', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_isRunning_okmtn0_k$();
+    }, function (receiver, value) {
+      return receiver.set_isRunning_m21k59_k$(value);
+    });
+  }
+  function isRunning$factory_2() {
+    return getPropertyCallableRef('isRunning', 1, KMutableProperty1, function (receiver) {
+      return receiver.get_isRunning_okmtn0_k$();
+    }, function (receiver, value) {
+      return receiver.set_isRunning_m21k59_k$(value);
     });
   }
   function get_$stableprop_12() {
@@ -2156,26 +2149,26 @@
     this.size_1 = 1;
     this.$stable_2 = 8;
   }
-  protoOf(AnimationVector1D).set_value_j3l5mx_k$ = function (_set____db54di) {
+  protoOf(AnimationVector1D).set_value_bgphas_k$ = function (_set____db54di) {
     this.value_1 = _set____db54di;
   };
   protoOf(AnimationVector1D).get_value_j01efc_k$ = function () {
     return this.value_1;
   };
-  protoOf(AnimationVector1D).reset_5tn5dq_k$ = function () {
+  protoOf(AnimationVector1D).reset_5u6xz3_k$ = function () {
     this.value_1 = 0.0;
   };
   protoOf(AnimationVector1D).newVector_8o1gcd_k$ = function () {
     return new AnimationVector1D(0.0);
   };
-  protoOf(AnimationVector1D).get_fkrdnv_k$ = function (index) {
+  protoOf(AnimationVector1D).get_c1px32_k$ = function (index) {
     if (index === 0) {
       return this.value_1;
     } else {
       return 0.0;
     }
   };
-  protoOf(AnimationVector1D).set_8gccym_k$ = function (index, value) {
+  protoOf(AnimationVector1D).set_4eugj6_k$ = function (index, value) {
     if (index === 0) {
       this.value_1 = value;
     }
@@ -2208,26 +2201,26 @@
     this.size_1 = 2;
     this.$stable_2 = 8;
   }
-  protoOf(AnimationVector2D).set_v1_x1j3fp_k$ = function (_set____db54di) {
+  protoOf(AnimationVector2D).set_v1_fqnkfk_k$ = function (_set____db54di) {
     this.v1__1 = _set____db54di;
   };
   protoOf(AnimationVector2D).get_v1_kntnng_k$ = function () {
     return this.v1__1;
   };
-  protoOf(AnimationVector2D).set_v2_x89n0k_k$ = function (_set____db54di) {
+  protoOf(AnimationVector2D).set_v2_y2tbpr_k$ = function (_set____db54di) {
     this.v2__1 = _set____db54di;
   };
   protoOf(AnimationVector2D).get_v2_kntnnf_k$ = function () {
     return this.v2__1;
   };
-  protoOf(AnimationVector2D).reset_5tn5dq_k$ = function () {
+  protoOf(AnimationVector2D).reset_5u6xz3_k$ = function () {
     this.v1__1 = 0.0;
     this.v2__1 = 0.0;
   };
   protoOf(AnimationVector2D).newVector_8o1gcd_k$ = function () {
     return new AnimationVector2D(0.0, 0.0);
   };
-  protoOf(AnimationVector2D).get_fkrdnv_k$ = function (index) {
+  protoOf(AnimationVector2D).get_c1px32_k$ = function (index) {
     switch (index) {
       case 0:
         return this.v1__1;
@@ -2237,7 +2230,7 @@
         return 0.0;
     }
   };
-  protoOf(AnimationVector2D).set_8gccym_k$ = function (index, value) {
+  protoOf(AnimationVector2D).set_4eugj6_k$ = function (index, value) {
     if (index === 0)
       this.v1__1 = value;
     else if (index === 1)
@@ -2279,31 +2272,31 @@
     this.size_1 = 4;
     this.$stable_2 = 8;
   }
-  protoOf(AnimationVector4D).set_v1_x1j3fp_k$ = function (_set____db54di) {
+  protoOf(AnimationVector4D).set_v1_fqnkfk_k$ = function (_set____db54di) {
     this.v1__1 = _set____db54di;
   };
   protoOf(AnimationVector4D).get_v1_kntnng_k$ = function () {
     return this.v1__1;
   };
-  protoOf(AnimationVector4D).set_v2_x89n0k_k$ = function (_set____db54di) {
+  protoOf(AnimationVector4D).set_v2_y2tbpr_k$ = function (_set____db54di) {
     this.v2__1 = _set____db54di;
   };
   protoOf(AnimationVector4D).get_v2_kntnnf_k$ = function () {
     return this.v2__1;
   };
-  protoOf(AnimationVector4D).set_v3_xf06lf_k$ = function (_set____db54di) {
+  protoOf(AnimationVector4D).set_v3_im4yz6_k$ = function (_set____db54di) {
     this.v3__1 = _set____db54di;
   };
   protoOf(AnimationVector4D).get_v3_kntnne_k$ = function () {
     return this.v3__1;
   };
-  protoOf(AnimationVector4D).set_v4_xlqq6a_k$ = function (_set____db54di) {
+  protoOf(AnimationVector4D).set_v4_9z7oz_k$ = function (_set____db54di) {
     this.v4__1 = _set____db54di;
   };
   protoOf(AnimationVector4D).get_v4_kntnnd_k$ = function () {
     return this.v4__1;
   };
-  protoOf(AnimationVector4D).reset_5tn5dq_k$ = function () {
+  protoOf(AnimationVector4D).reset_5u6xz3_k$ = function () {
     this.v1__1 = 0.0;
     this.v2__1 = 0.0;
     this.v3__1 = 0.0;
@@ -2312,7 +2305,7 @@
   protoOf(AnimationVector4D).newVector_8o1gcd_k$ = function () {
     return new AnimationVector4D(0.0, 0.0, 0.0, 0.0);
   };
-  protoOf(AnimationVector4D).get_fkrdnv_k$ = function (index) {
+  protoOf(AnimationVector4D).get_c1px32_k$ = function (index) {
     switch (index) {
       case 0:
         return this.v1__1;
@@ -2326,7 +2319,7 @@
         return 0.0;
     }
   };
-  protoOf(AnimationVector4D).set_8gccym_k$ = function (index, value) {
+  protoOf(AnimationVector4D).set_4eugj6_k$ = function (index, value) {
     switch (index) {
       case 0:
         this.v1__1 = value;
@@ -2393,25 +2386,25 @@
     this.size_1 = 3;
     this.$stable_2 = 8;
   }
-  protoOf(AnimationVector3D).set_v1_x1j3fp_k$ = function (_set____db54di) {
+  protoOf(AnimationVector3D).set_v1_fqnkfk_k$ = function (_set____db54di) {
     this.v1__1 = _set____db54di;
   };
   protoOf(AnimationVector3D).get_v1_kntnng_k$ = function () {
     return this.v1__1;
   };
-  protoOf(AnimationVector3D).set_v2_x89n0k_k$ = function (_set____db54di) {
+  protoOf(AnimationVector3D).set_v2_y2tbpr_k$ = function (_set____db54di) {
     this.v2__1 = _set____db54di;
   };
   protoOf(AnimationVector3D).get_v2_kntnnf_k$ = function () {
     return this.v2__1;
   };
-  protoOf(AnimationVector3D).set_v3_xf06lf_k$ = function (_set____db54di) {
+  protoOf(AnimationVector3D).set_v3_im4yz6_k$ = function (_set____db54di) {
     this.v3__1 = _set____db54di;
   };
   protoOf(AnimationVector3D).get_v3_kntnne_k$ = function () {
     return this.v3__1;
   };
-  protoOf(AnimationVector3D).reset_5tn5dq_k$ = function () {
+  protoOf(AnimationVector3D).reset_5u6xz3_k$ = function () {
     this.v1__1 = 0.0;
     this.v2__1 = 0.0;
     this.v3__1 = 0.0;
@@ -2419,7 +2412,7 @@
   protoOf(AnimationVector3D).newVector_8o1gcd_k$ = function () {
     return new AnimationVector3D(0.0, 0.0, 0.0);
   };
-  protoOf(AnimationVector3D).get_fkrdnv_k$ = function (index) {
+  protoOf(AnimationVector3D).get_c1px32_k$ = function (index) {
     switch (index) {
       case 0:
         return this.v1__1;
@@ -2431,7 +2424,7 @@
         return 0.0;
     }
   };
-  protoOf(AnimationVector3D).set_8gccym_k$ = function (index, value) {
+  protoOf(AnimationVector3D).set_4eugj6_k$ = function (index, value) {
     switch (index) {
       case 0:
         this.v1__1 = value;
@@ -2482,7 +2475,7 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        newVector.set_8gccym_k$(i, _this__u8e3s4.get_fkrdnv_k$(i));
+        newVector.set_4eugj6_k$(i, _this__u8e3s4.get_c1px32_k$(i));
       }
        while (inductionVariable < last);
     return newVector;
@@ -2494,7 +2487,7 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        _this__u8e3s4.set_8gccym_k$(i, source.get_fkrdnv_k$(i));
+        _this__u8e3s4.set_4eugj6_k$(i, source.get_c1px32_k$(i));
       }
        while (inductionVariable < last);
   }
@@ -2529,22 +2522,22 @@
   protoOf(ComplexDouble).get_imaginary_5xnno0_k$ = function () {
     return this._imaginary_1;
   };
-  protoOf(ComplexDouble).plus_kiyahl_k$ = function (other) {
+  protoOf(ComplexDouble).plus_pjpmi4_k$ = function (other) {
     this._real_1 = this._real_1 + other;
     return this;
   };
-  protoOf(ComplexDouble).plus_nuauig_k$ = function (other) {
+  protoOf(ComplexDouble).plus_xwp0rb_k$ = function (other) {
     this._real_1 = this._real_1 + other.get_real_wotl9j_k$();
     this._imaginary_1 = this._imaginary_1 + other.get_imaginary_5xnno0_k$();
     return this;
   };
-  protoOf(ComplexDouble).minus_80anzj_k$ = function (other) {
+  protoOf(ComplexDouble).minus_ur3tau_k$ = function (other) {
     // Inline function 'androidx.compose.animation.core.ComplexDouble.plus' call
-    var tmp0_plus = -other;
-    this._real_1 = this._real_1 + tmp0_plus;
+    var other_0 = -other;
+    this._real_1 = this._real_1 + other_0;
     return this;
   };
-  protoOf(ComplexDouble).minus_yakhfy_k$ = function (other) {
+  protoOf(ComplexDouble).minus_t2x165_k$ = function (other) {
     // Inline function 'androidx.compose.animation.core.ComplexDouble.plus' call
     // Inline function 'androidx.compose.animation.core.ComplexDouble.unaryMinus' call
     other._real_1 = other._real_1 * -1;
@@ -2553,12 +2546,12 @@
     this._imaginary_1 = this._imaginary_1 + other.get_imaginary_5xnno0_k$();
     return this;
   };
-  protoOf(ComplexDouble).times_myh3yd_k$ = function (other) {
+  protoOf(ComplexDouble).times_qz1dds_k$ = function (other) {
     this._real_1 = this._real_1 * other;
     this._imaginary_1 = this._imaginary_1 * other;
     return this;
   };
-  protoOf(ComplexDouble).times_jx7hb0_k$ = function (other) {
+  protoOf(ComplexDouble).times_u3krpf_k$ = function (other) {
     this._real_1 = this.get_real_wotl9j_k$() * other.get_real_wotl9j_k$() - this.get_imaginary_5xnno0_k$() * other.get_imaginary_5xnno0_k$();
     this._imaginary_1 = this.get_real_wotl9j_k$() * other.get_imaginary_5xnno0_k$() + other.get_real_wotl9j_k$() * this.get_imaginary_5xnno0_k$();
     return this;
@@ -2568,18 +2561,18 @@
     this._imaginary_1 = this._imaginary_1 * -1;
     return this;
   };
-  protoOf(ComplexDouble).div_hn31ow_k$ = function (other) {
+  protoOf(ComplexDouble).div_k6dnjf_k$ = function (other) {
     this._real_1 = this._real_1 / other;
     this._imaginary_1 = this._imaginary_1 / other;
     return this;
   };
-  protoOf(ComplexDouble).copy_fws33n_k$ = function (_real, _imaginary) {
+  protoOf(ComplexDouble).copy_6r5gqz_k$ = function (_real, _imaginary) {
     return new ComplexDouble(_real, _imaginary);
   };
-  protoOf(ComplexDouble).copy$default_fqoucx_k$ = function (_real, _imaginary, $super) {
+  protoOf(ComplexDouble).copy$default_xk22l4_k$ = function (_real, _imaginary, $super) {
     _real = _real === VOID ? this._real_1 : _real;
     _imaginary = _imaginary === VOID ? this._imaginary_1 : _imaginary;
-    return $super === VOID ? this.copy_fws33n_k$(_real, _imaginary) : $super.copy_fws33n_k$.call(this, _real, _imaginary);
+    return $super === VOID ? this.copy_6r5gqz_k$(_real, _imaginary) : $super.copy_6r5gqz_k$.call(this, _real, _imaginary);
   };
   protoOf(ComplexDouble).toString = function () {
     return 'ComplexDouble(_real=' + this._real_1 + ', _imaginary=' + this._imaginary_1 + ')';
@@ -2609,16 +2602,14 @@
   function complexSqrt(num) {
     var tmp;
     if (num < 0.0) {
-      var tmp$ret$1;
       // Inline function 'kotlin.math.sqrt' call
       // Inline function 'kotlin.math.abs' call
-      var tmp0_sqrt = Math.abs(num);
-      tmp$ret$1 = Math.sqrt(tmp0_sqrt);
+      var x = Math.abs(num);
+      var tmp$ret$1 = Math.sqrt(x);
       tmp = new ComplexDouble(0.0, tmp$ret$1);
     } else {
-      var tmp$ret$2;
       // Inline function 'kotlin.math.sqrt' call
-      tmp$ret$2 = Math.sqrt(num);
+      var tmp$ret$2 = Math.sqrt(num);
       tmp = new ComplexDouble(tmp$ret$2, 0.0);
     }
     return tmp;
@@ -2643,7 +2634,7 @@
   function DecayAnimationSpecImpl(floatDecaySpec) {
     this.floatDecaySpec_1 = floatDecaySpec;
   }
-  protoOf(DecayAnimationSpecImpl).vectorize_jmegcy_k$ = function (typeConverter) {
+  protoOf(DecayAnimationSpecImpl).vectorize_pto10n_k$ = function (typeConverter) {
     return new VectorizedFloatDecaySpec(this.floatDecaySpec_1);
   };
   function _set_valueVector__dppd9t($this, _set____db54di) {
@@ -2689,7 +2680,7 @@
   protoOf(VectorizedFloatDecaySpec).get_absVelocityThreshold_wsgqo5_k$ = function () {
     return this.absVelocityThreshold_1;
   };
-  protoOf(VectorizedFloatDecaySpec).getValueFromNanos_g1htci_k$ = function (playTimeNanos, initialValue, initialVelocity) {
+  protoOf(VectorizedFloatDecaySpec).getValueFromNanos_huzcys_k$ = function (playTimeNanos, initialValue, initialVelocity) {
     if (!!(this.valueVector_1 == null)) {
       this.valueVector_1 = newInstance(initialValue);
     }
@@ -2699,12 +2690,12 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        _get_valueVector__r10idf(this).set_8gccym_k$(i, this.floatDecaySpec_1.getValueFromNanos_tm63l0_k$(playTimeNanos, initialValue.get_fkrdnv_k$(i), initialVelocity.get_fkrdnv_k$(i)));
+        _get_valueVector__r10idf(this).set_4eugj6_k$(i, this.floatDecaySpec_1.getValueFromNanos_vizg24_k$(playTimeNanos, initialValue.get_c1px32_k$(i), initialVelocity.get_c1px32_k$(i)));
       }
        while (inductionVariable < last);
     return _get_valueVector__r10idf(this);
   };
-  protoOf(VectorizedFloatDecaySpec).getDurationNanos_m6hrcz_k$ = function (initialValue, initialVelocity) {
+  protoOf(VectorizedFloatDecaySpec).getDurationNanos_roqu2j_k$ = function (initialValue, initialVelocity) {
     var maxDuration = new Long(0, 0);
     if (!!(this.velocityVector_1 == null)) {
       this.velocityVector_1 = newInstance(initialValue);
@@ -2716,14 +2707,14 @@
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
         // Inline function 'kotlin.comparisons.maxOf' call
-        var tmp0_maxOf = maxDuration;
-        var tmp1_maxOf = this.floatDecaySpec_1.getDurationNanos_kuw0r9_k$(initialValue.get_fkrdnv_k$(i), initialVelocity.get_fkrdnv_k$(i));
-        maxDuration = tmp0_maxOf.compareTo_n4fqi2_k$(tmp1_maxOf) >= 0 ? tmp0_maxOf : tmp1_maxOf;
+        var a = maxDuration;
+        var b = this.floatDecaySpec_1.getDurationNanos_dl2v11_k$(initialValue.get_c1px32_k$(i), initialVelocity.get_c1px32_k$(i));
+        maxDuration = a.compareTo_9jj042_k$(b) >= 0 ? a : b;
       }
        while (inductionVariable < last);
     return maxDuration;
   };
-  protoOf(VectorizedFloatDecaySpec).getVelocityFromNanos_hyp13a_k$ = function (playTimeNanos, initialValue, initialVelocity) {
+  protoOf(VectorizedFloatDecaySpec).getVelocityFromNanos_2v7bwc_k$ = function (playTimeNanos, initialValue, initialVelocity) {
     if (!!(this.velocityVector_1 == null)) {
       this.velocityVector_1 = newInstance(initialValue);
     }
@@ -2733,12 +2724,12 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        _get_velocityVector__dvxlkl(this).set_8gccym_k$(i, this.floatDecaySpec_1.getVelocityFromNanos_1qiryk_k$(playTimeNanos, initialValue.get_fkrdnv_k$(i), initialVelocity.get_fkrdnv_k$(i)));
+        _get_velocityVector__dvxlkl(this).set_4eugj6_k$(i, this.floatDecaySpec_1.getVelocityFromNanos_eyb6gk_k$(playTimeNanos, initialValue.get_c1px32_k$(i), initialVelocity.get_c1px32_k$(i)));
       }
        while (inductionVariable < last);
     return _get_velocityVector__dvxlkl(this);
   };
-  protoOf(VectorizedFloatDecaySpec).getTargetValue_ftaxp4_k$ = function (initialValue, initialVelocity) {
+  protoOf(VectorizedFloatDecaySpec).getTargetValue_rut47u_k$ = function (initialValue, initialVelocity) {
     if (!!(this.targetVector_1 == null)) {
       this.targetVector_1 = newInstance(initialValue);
     }
@@ -2748,7 +2739,7 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        _get_targetVector__vn6c89(this).set_8gccym_k$(i, this.floatDecaySpec_1.getTargetValue_xs6ane_k$(initialValue.get_fkrdnv_k$(i), initialVelocity.get_fkrdnv_k$(i)));
+        _get_targetVector__vn6c89(this).set_4eugj6_k$(i, this.floatDecaySpec_1.getTargetValue_k8zsye_k$(initialValue.get_c1px32_k$(i), initialVelocity.get_c1px32_k$(i)));
       }
        while (inductionVariable < last);
     return _get_targetVector__vn6c89(this);
@@ -2807,7 +2798,7 @@
     }
     this.$stable_1 = 0;
   }
-  protoOf(CubicBezierEasing).transform_mzom4i_k$ = function (fraction) {
+  protoOf(CubicBezierEasing).transform_twmo38_k$ = function (fraction) {
     if (fraction > 0.0 ? fraction < 1.0 : false) {
       var start = 0.0;
       var end = 1.0;
@@ -2815,8 +2806,8 @@
         var midpoint = (start + end) / 2;
         var estimate = evaluateCubic(this, this.a_1, this.c_1, midpoint);
         // Inline function 'kotlin.math.absoluteValue' call
-        var tmp0_get_absoluteValue_aog79f = fraction - estimate;
-        if (Math.abs(tmp0_get_absoluteValue_aog79f) < 0.001)
+        var this_0 = fraction - estimate;
+        if (Math.abs(this_0) < 0.001)
           return evaluateCubic(this, this.b_1, this.d_1, midpoint);
         if (estimate < fraction)
           start = midpoint;
@@ -2864,7 +2855,7 @@
   function sam$androidx_compose_animation_core_Easing$0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_animation_core_Easing$0).transform_mzom4i_k$ = function (fraction) {
+  protoOf(sam$androidx_compose_animation_core_Easing$0).transform_twmo38_k$ = function (fraction) {
     return this.function_1(fraction);
   };
   function LinearEasing$lambda(fraction) {
@@ -3055,37 +3046,37 @@
   function sam$androidx_compose_animation_core_Easing$0_0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_animation_core_Easing$0_0).transform_mzom4i_k$ = function (fraction) {
+  protoOf(sam$androidx_compose_animation_core_Easing$0_0).transform_twmo38_k$ = function (fraction) {
     return this.function_1(fraction);
   };
   function sam$androidx_compose_animation_core_Easing$0_1(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_animation_core_Easing$0_1).transform_mzom4i_k$ = function (fraction) {
+  protoOf(sam$androidx_compose_animation_core_Easing$0_1).transform_twmo38_k$ = function (fraction) {
     return this.function_1(fraction);
   };
   function sam$androidx_compose_animation_core_Easing$0_2(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_animation_core_Easing$0_2).transform_mzom4i_k$ = function (fraction) {
+  protoOf(sam$androidx_compose_animation_core_Easing$0_2).transform_twmo38_k$ = function (fraction) {
     return this.function_1(fraction);
   };
   function sam$androidx_compose_animation_core_Easing$0_3(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_animation_core_Easing$0_3).transform_mzom4i_k$ = function (fraction) {
+  protoOf(sam$androidx_compose_animation_core_Easing$0_3).transform_twmo38_k$ = function (fraction) {
     return this.function_1(fraction);
   };
   function sam$androidx_compose_animation_core_Easing$0_4(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_animation_core_Easing$0_4).transform_mzom4i_k$ = function (fraction) {
+  protoOf(sam$androidx_compose_animation_core_Easing$0_4).transform_twmo38_k$ = function (fraction) {
     return this.function_1(fraction);
   };
   function sam$androidx_compose_animation_core_Easing$0_5(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$androidx_compose_animation_core_Easing$0_5).transform_mzom4i_k$ = function (fraction) {
+  protoOf(sam$androidx_compose_animation_core_Easing$0_5).transform_twmo38_k$ = function (fraction) {
     return this.function_1(fraction);
   };
   function EaseInElastic$lambda(fraction) {
@@ -3102,12 +3093,12 @@
       default:
         // Inline function 'kotlin.math.pow' call
 
-        var tmp0_pow = 10.0 * fraction - 10.0;
-        var tmp_0 = -Math.pow(2.0, tmp0_pow);
+        var x = 10.0 * fraction - 10.0;
+        var tmp_0 = -Math.pow(2.0, x);
         // Inline function 'kotlin.math.sin' call
 
-        var tmp1_sin = (fraction * 10.0 - 10.75) * c4;
-        tmp = tmp_0 * Math.sin(tmp1_sin);
+        var x_0 = (fraction * 10.0 - 10.75) * c4;
+        tmp = tmp_0 * Math.sin(x_0);
         break;
     }
     return tmp;
@@ -3126,12 +3117,12 @@
       default:
         // Inline function 'kotlin.math.pow' call
 
-        var tmp0_pow = -10.0 * fraction;
-        var tmp_0 = Math.pow(2.0, tmp0_pow);
+        var x = -10.0 * fraction;
+        var tmp_0 = Math.pow(2.0, x);
         // Inline function 'kotlin.math.sin' call
 
-        var tmp1_sin = (fraction * 10.0 - 0.75) * c4;
-        tmp = tmp_0 * Math.sin(tmp1_sin) + 1.0;
+        var x_0 = (fraction * 10.0 - 0.75) * c4;
+        tmp = tmp_0 * Math.sin(x_0) + 1.0;
         break;
     }
     return tmp;
@@ -3146,18 +3137,18 @@
       tmp = 1.0;
     } else if (0.0 <= fraction ? fraction <= 0.5 : false) {
       // Inline function 'kotlin.math.pow' call
-      var tmp0_pow = 20.0 * fraction - 10.0;
-      var tmp_0 = Math.pow(2.0, tmp0_pow);
+      var x = 20.0 * fraction - 10.0;
+      var tmp_0 = Math.pow(2.0, x);
       // Inline function 'kotlin.math.sin' call
-      var tmp1_sin = (20.0 * fraction - 11.125) * c5;
-      tmp = -(tmp_0 * Math.sin(tmp1_sin)) / 2.0;
+      var x_0 = (20.0 * fraction - 11.125) * c5;
+      tmp = -(tmp_0 * Math.sin(x_0)) / 2.0;
     } else {
       // Inline function 'kotlin.math.pow' call
-      var tmp2_pow = -20.0 * fraction + 10.0;
-      var tmp_1 = Math.pow(2.0, tmp2_pow);
+      var x_1 = -20.0 * fraction + 10.0;
+      var tmp_1 = Math.pow(2.0, x_1);
       // Inline function 'kotlin.math.sin' call
-      var tmp3_sin = (fraction * 20.0 - 11.125) * c5;
-      tmp = tmp_1 * Math.sin(tmp3_sin) / 2.0 + 1.0;
+      var x_2 = (fraction * 20.0 - 11.125) * c5;
+      tmp = tmp_1 * Math.sin(x_2) / 2.0 + 1.0;
     }
     return tmp;
   }
@@ -3183,15 +3174,15 @@
   }
   function EaseInBounce$lambda(fraction) {
     _init_properties_EasingFunctions_kt__whrude();
-    return 1 - get_EaseOutBounce().transform_mzom4i_k$(1.0 - fraction);
+    return 1 - get_EaseOutBounce().transform_twmo38_k$(1.0 - fraction);
   }
   function EaseInOutBounce$lambda(fraction) {
     _init_properties_EasingFunctions_kt__whrude();
     var tmp;
     if (fraction < 0.5) {
-      tmp = (1 - get_EaseOutBounce().transform_mzom4i_k$(1.0 - 2.0 * fraction)) / 2.0;
+      tmp = (1 - get_EaseOutBounce().transform_twmo38_k$(1.0 - 2.0 * fraction)) / 2.0;
     } else {
-      tmp = (1 + get_EaseOutBounce().transform_mzom4i_k$(2.0 * fraction - 1.0)) / 2.0;
+      tmp = (1 + get_EaseOutBounce().transform_twmo38_k$(2.0 * fraction - 1.0)) / 2.0;
     }
     return tmp;
   }
@@ -3261,12 +3252,12 @@
     this.visibilityThreshold_1 = visibilityThreshold;
     var tmp = this;
     // Inline function 'kotlin.also' call
-    var tmp0_also = new SpringSimulation(1.0);
+    var this_0 = new SpringSimulation(1.0);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.animation.core.FloatSpringSpec.spring.<anonymous>' call
-    tmp0_also.set_dampingRatio_agau0n_k$(this.dampingRatio_1);
-    tmp0_also.set_stiffness_ca51vp_k$(this.stiffness_1);
-    tmp.spring_1 = tmp0_also;
+    this_0.set_dampingRatio_1d4jya_k$(this.dampingRatio_1);
+    this_0.set_stiffness_89bnwm_k$(this.stiffness_1);
+    tmp.spring_1 = this_0;
     this.$stable_1 = 8;
   }
   protoOf(FloatSpringSpec).get_dampingRatio_syjss2_k$ = function () {
@@ -3275,39 +3266,38 @@
   protoOf(FloatSpringSpec).get_stiffness_dt2sgm_k$ = function () {
     return this.stiffness_1;
   };
-  protoOf(FloatSpringSpec).getValueFromNanos_laqly_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
-    var playTimeMillis = playTimeNanos.div_9s1fi3_k$(get_MillisToNanos());
-    this.spring_1.set_finalPosition_8y7idh_k$(targetValue);
-    var value = _Motion___get_value__impl__e0x31d(this.spring_1.updateValues_23ym3r_k$(initialValue, initialVelocity, playTimeMillis));
+  protoOf(FloatSpringSpec).getValueFromNanos_rdghrw_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+    var playTimeMillis = playTimeNanos.div_jun7gj_k$(get_MillisToNanos());
+    this.spring_1.set_finalPosition_7mu6km_k$(targetValue);
+    var value = _Motion___get_value__impl__e0x31d(this.spring_1.updateValues_1oxjyh_k$(initialValue, initialVelocity, playTimeMillis));
     return value;
   };
-  protoOf(FloatSpringSpec).getVelocityFromNanos_da2xk2_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
-    var playTimeMillis = playTimeNanos.div_9s1fi3_k$(get_MillisToNanos());
-    this.spring_1.set_finalPosition_8y7idh_k$(targetValue);
-    var velocity = _Motion___get_velocity__impl__h2mglt(this.spring_1.updateValues_23ym3r_k$(initialValue, initialVelocity, playTimeMillis));
+  protoOf(FloatSpringSpec).getVelocityFromNanos_d1b1ck_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+    var playTimeMillis = playTimeNanos.div_jun7gj_k$(get_MillisToNanos());
+    this.spring_1.set_finalPosition_7mu6km_k$(targetValue);
+    var velocity = _Motion___get_velocity__impl__h2mglt(this.spring_1.updateValues_1oxjyh_k$(initialValue, initialVelocity, playTimeMillis));
     return velocity;
   };
-  protoOf(FloatSpringSpec).getEndVelocity_1g11o_k$ = function (initialValue, targetValue, initialVelocity) {
+  protoOf(FloatSpringSpec).getEndVelocity_jstvkm_k$ = function (initialValue, targetValue, initialVelocity) {
     return 0.0;
   };
-  protoOf(FloatSpringSpec).getDurationNanos_ct8k6x_k$ = function (initialValue, targetValue, initialVelocity) {
+  protoOf(FloatSpringSpec).getDurationNanos_taoclf_k$ = function (initialValue, targetValue, initialVelocity) {
     var tmp0_stiffness = this.spring_1.get_stiffness_dt2sgm_k$();
     var tmp1_dampingRatio = this.spring_1.get_dampingRatio_syjss2_k$();
     var tmp2_initialDisplacement = (initialValue - targetValue) / this.visibilityThreshold_1;
     var tmp3_initialVelocity = initialVelocity / this.visibilityThreshold_1;
-    return estimateAnimationDurationMillis(tmp0_stiffness, tmp1_dampingRatio, tmp3_initialVelocity, tmp2_initialDisplacement, 1.0).times_2zfqpc_k$(get_MillisToNanos());
+    return estimateAnimationDurationMillis(tmp0_stiffness, tmp1_dampingRatio, tmp3_initialVelocity, tmp2_initialDisplacement, 1.0).times_nfzjiw_k$(get_MillisToNanos());
   };
-  protoOf(FloatSpringSpec).vectorize_jmegcy_k$ = function (converter) {
-    return this.vectorize_pi7y89_k$(converter);
+  protoOf(FloatSpringSpec).vectorize_pto10n_k$ = function (converter) {
+    return this.vectorize_7dxvko_k$(converter);
   };
   function _get_easing__5ar9kw($this) {
     return $this.easing_1;
   }
   function clampPlayTime($this, playTime) {
-    var tmp$ret$0;
     // Inline function 'kotlin.Long.minus' call
-    var tmp0_minus = $this.delay_1;
-    tmp$ret$0 = playTime.minus_llf5ei_k$(toLong(tmp0_minus));
+    var other = $this.delay_1;
+    var tmp$ret$0 = playTime.minus_mfbszm_k$(toLong(other));
     return coerceIn_0(tmp$ret$0, new Long(0, 0), toLong($this.duration_1));
   }
   function get_$stableprop_19() {
@@ -3328,58 +3318,57 @@
   protoOf(FloatTweenSpec).get_delay_iq7n8a_k$ = function () {
     return this.delay_1;
   };
-  protoOf(FloatTweenSpec).getValueFromNanos_laqly_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
-    var playTimeMillis = playTimeNanos.div_9s1fi3_k$(get_MillisToNanos());
+  protoOf(FloatTweenSpec).getValueFromNanos_rdghrw_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+    var playTimeMillis = playTimeNanos.div_jun7gj_k$(get_MillisToNanos());
     var clampedPlayTime = clampPlayTime(this, playTimeMillis);
     var tmp;
     if (this.duration_1 === 0) {
       tmp = 1.0;
     } else {
       // Inline function 'kotlin.Long.div' call
-      var tmp0_div = this.duration_1;
-      tmp = clampedPlayTime.toFloat_jhbgwv_k$() / tmp0_div;
+      var other = this.duration_1;
+      tmp = clampedPlayTime.toFloat_jhbgwv_k$() / other;
     }
     var rawFraction = tmp;
-    var fraction = this.easing_1.transform_mzom4i_k$(coerceIn(rawFraction, 0.0, 1.0));
+    var fraction = this.easing_1.transform_twmo38_k$(coerceIn(rawFraction, 0.0, 1.0));
     return lerp(initialValue, targetValue, fraction);
   };
-  protoOf(FloatTweenSpec).getDurationNanos_ct8k6x_k$ = function (initialValue, targetValue, initialVelocity) {
-    return numberToLong(this.delay_1 + this.duration_1 | 0).times_2zfqpc_k$(get_MillisToNanos());
+  protoOf(FloatTweenSpec).getDurationNanos_taoclf_k$ = function (initialValue, targetValue, initialVelocity) {
+    return numberToLong(this.delay_1 + this.duration_1 | 0).times_nfzjiw_k$(get_MillisToNanos());
   };
-  protoOf(FloatTweenSpec).getVelocityFromNanos_da2xk2_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
-    var playTimeMillis = playTimeNanos.div_9s1fi3_k$(get_MillisToNanos());
+  protoOf(FloatTweenSpec).getVelocityFromNanos_d1b1ck_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+    var playTimeMillis = playTimeNanos.div_jun7gj_k$(get_MillisToNanos());
     var clampedPlayTime = clampPlayTime(this, playTimeMillis);
-    if (clampedPlayTime.compareTo_n4fqi2_k$(new Long(0, 0)) < 0) {
+    if (clampedPlayTime.compareTo_9jj042_k$(new Long(0, 0)) < 0) {
       return 0.0;
     } else if (clampedPlayTime.equals(new Long(0, 0))) {
       return initialVelocity;
     }
-    var tmp$ret$0;
     // Inline function 'kotlin.Long.minus' call
-    tmp$ret$0 = clampedPlayTime.minus_llf5ei_k$(new Long(1, 0));
-    var startNum = this.getValueFromNanos_laqly_k$(tmp$ret$0.times_2zfqpc_k$(get_MillisToNanos()), initialValue, targetValue, initialVelocity);
-    var endNum = this.getValueFromNanos_laqly_k$(clampedPlayTime.times_2zfqpc_k$(get_MillisToNanos()), initialValue, targetValue, initialVelocity);
+    var tmp$ret$0 = clampedPlayTime.minus_mfbszm_k$(toLong(1));
+    var startNum = this.getValueFromNanos_rdghrw_k$(tmp$ret$0.times_nfzjiw_k$(get_MillisToNanos()), initialValue, targetValue, initialVelocity);
+    var endNum = this.getValueFromNanos_rdghrw_k$(clampedPlayTime.times_nfzjiw_k$(get_MillisToNanos()), initialValue, targetValue, initialVelocity);
     return (endNum - startNum) * 1000.0;
   };
-  protoOf(FloatTweenSpec).vectorize_jmegcy_k$ = function (converter) {
-    return this.vectorize_pi7y89_k$(converter);
+  protoOf(FloatTweenSpec).vectorize_pto10n_k$ = function (converter) {
+    return this.vectorize_7dxvko_k$(converter);
   };
   function FloatDecayAnimationSpec() {
   }
   function withInfiniteAnimationFrameNanos(onFrame, $completion) {
     var tmp = new $withInfiniteAnimationFrameNanosCOROUTINE$0(onFrame, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   }
   function withInfiniteAnimationFrameNanos$slambda($onFrame, resultContinuation) {
     this.$onFrame_1 = $onFrame;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(withInfiniteAnimationFrameNanos$slambda).invoke_34if6s_k$ = function ($completion) {
-    var tmp = this.create_lvr374_k$($completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(withInfiniteAnimationFrameNanos$slambda).invoke_ib42db_k$ = function ($completion) {
+    var tmp = this.create_d196fn_k$($completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
   protoOf(withInfiniteAnimationFrameNanos$slambda).doResume_5yljmg_k$ = function () {
@@ -3389,8 +3378,8 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
             suspendResult = withFrameNanos(this.$onFrame_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
@@ -3407,19 +3396,19 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(withInfiniteAnimationFrameNanos$slambda).create_lvr374_k$ = function (completion) {
+  protoOf(withInfiniteAnimationFrameNanos$slambda).create_d196fn_k$ = function (completion) {
     return new withInfiniteAnimationFrameNanos$slambda(this.$onFrame_1, completion);
   };
   function withInfiniteAnimationFrameNanos$slambda_0($onFrame, resultContinuation) {
     var i = new withInfiniteAnimationFrameNanos$slambda($onFrame, resultContinuation);
     var l = function ($completion) {
-      return i.invoke_34if6s_k$($completion);
+      return i.invoke_ib42db_k$($completion);
     };
     l.$arity = 0;
     return l;
@@ -3435,19 +3424,19 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(4);
+            this.set_exceptionState_fex74n_k$(4);
             var tmp_0 = this;
-            tmp_0.policy0__1 = this.get_context_h02k06_k$().get_j1ktw6_k$(Key_getInstance());
+            tmp_0.policy0__1 = this.get_context_h02k06_k$().get_y2st91_k$(Key_getInstance());
             if (this.policy0__1 == null) {
-              this.set_state_a96kl8_k$(2);
+              this.set_state_rjd8d0_k$(2);
               suspendResult = withFrameNanos(this.onFrame_1, this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
               continue $sm;
             } else {
-              this.set_state_a96kl8_k$(1);
-              suspendResult = this.policy0__1.onInfiniteOperation_dhk18j_k$(withInfiniteAnimationFrameNanos$slambda_0(this.onFrame_1, null), this);
+              this.set_state_rjd8d0_k$(1);
+              suspendResult = this.policy0__1.onInfiniteOperation_7vo0x_k$(withInfiniteAnimationFrameNanos$slambda_0(this.onFrame_1, null), this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
@@ -3456,11 +3445,11 @@
 
           case 1:
             this.WHEN_RESULT1__1 = suspendResult;
-            this.set_state_a96kl8_k$(3);
+            this.set_state_rjd8d0_k$(3);
             continue $sm;
           case 2:
             this.WHEN_RESULT1__1 = suspendResult;
-            this.set_state_a96kl8_k$(3);
+            this.set_state_rjd8d0_k$(3);
             continue $sm;
           case 3:
             return this.WHEN_RESULT1__1;
@@ -3472,8 +3461,8 @@
         if (this.get_exceptionState_wflpxn_k$() === 4) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
@@ -3502,11 +3491,11 @@
   protoOf(Mutator).get_job_18j2r0_k$ = function () {
     return this.job_1;
   };
-  protoOf(Mutator).canInterrupt_99yyky_k$ = function (other) {
-    return this.priority_1.compareTo_6thzay_k$(other.priority_1) >= 0;
+  protoOf(Mutator).canInterrupt_jjffs4_k$ = function (other) {
+    return this.priority_1.compareTo_30rs7w_k$(other.priority_1) >= 0;
   };
-  protoOf(Mutator).cancel_2kogtl_k$ = function () {
-    return this.job_1.cancel_4b7aim_k$(new MutationInterruptedException());
+  protoOf(Mutator).cancel_2l89ey_k$ = function () {
+    return this.job_1.cancel_hkmm2i_k$(new MutationInterruptedException());
   };
   function _get_currentMutator__y8yhby($this) {
     return $this.currentMutator_1;
@@ -3517,12 +3506,12 @@
   function tryMutateOrCancel($this, mutator) {
     $l$loop: while (true) {
       var oldMutator = $this.currentMutator_1.get_26vq_k$();
-      if (oldMutator == null ? true : mutator.canInterrupt_99yyky_k$(oldMutator)) {
-        if ($this.currentMutator_1.compareAndSet_fjyh1e_k$(oldMutator, mutator)) {
+      if (oldMutator == null ? true : mutator.canInterrupt_jjffs4_k$(oldMutator)) {
+        if ($this.currentMutator_1.compareAndSet_10iwom_k$(oldMutator, mutator)) {
           if (oldMutator == null)
             null;
           else {
-            oldMutator.cancel_2kogtl_k$();
+            oldMutator.cancel_2l89ey_k$();
           }
           break $l$loop;
         }
@@ -3536,14 +3525,14 @@
     this.$block_1 = $block;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(MutatorMutex$mutate$slambda).invoke_uet3jx_k$ = function ($this$coroutineScope, $completion) {
-    var tmp = this.create_b6qu53_k$($this$coroutineScope, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(MutatorMutex$mutate$slambda).invoke_nd4u9n_k$ = function ($this$coroutineScope, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$coroutineScope, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(MutatorMutex$mutate$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_uet3jx_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(MutatorMutex$mutate$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_nd4u9n_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(MutatorMutex$mutate$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -3552,34 +3541,36 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(13);
-            this.mutator0__1 = new Mutator(this.$priority_1, ensureNotNull(this.$this$coroutineScope_1.get_coroutineContext_115oqo_k$().get_j1ktw6_k$(Key_getInstance_0())));
+            this.set_exceptionState_fex74n_k$(13);
+            this.mutator0__1 = new Mutator(this.$priority_1, ensureNotNull(this.$this$coroutineScope_1.get_coroutineContext_115oqo_k$().get_y2st91_k$(Key_getInstance_0())));
             tryMutateOrCancel(this.this$0__1, this.mutator0__1);
-            this.set_state_a96kl8_k$(1);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 1:
             var tmp_0 = this;
-            tmp_0.tmp0_withLock2__1 = this.this$0__1.mutex_1;
-            this.set_state_a96kl8_k$(2);
-            suspendResult = this.tmp0_withLock2__1.lock_25dizd_k$(null, this);
+            tmp_0.this2__1 = this.this$0__1.mutex_1;
+            var tmp_1 = this;
+            tmp_1.owner3__1 = null;
+            this.set_state_rjd8d0_k$(2);
+            suspendResult = this.this2__1.lock_ugrcvf_k$(this.owner3__1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 2:
-            this.set_state_a96kl8_k$(3);
+            this.set_state_rjd8d0_k$(3);
             continue $sm;
           case 3:
-            this.set_state_a96kl8_k$(4);
+            this.set_state_rjd8d0_k$(4);
             continue $sm;
           case 4:
-            this.set_exceptionState_s9sevl_k$(12);
-            this.set_state_a96kl8_k$(5);
+            this.set_exceptionState_fex74n_k$(12);
+            this.set_state_rjd8d0_k$(5);
             continue $sm;
           case 5:
-            this.set_exceptionState_s9sevl_k$(11);
-            this.set_state_a96kl8_k$(6);
+            this.set_exceptionState_fex74n_k$(11);
+            this.set_state_rjd8d0_k$(6);
             suspendResult = this.$block_1(this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
@@ -3587,43 +3578,46 @@
 
             continue $sm;
           case 6:
-            this.tmp$ret$05__1 = suspendResult;
-            this.set_state_a96kl8_k$(7);
+            this.tmp$ret$06__1 = suspendResult;
+            this.set_state_rjd8d0_k$(7);
             continue $sm;
           case 7:
-            var tmp_1 = this.tmp$ret$05__1;
-            this.this$0__1.currentMutator_1.compareAndSet_fjyh1e_k$(this.mutator0__1, null);
-            this.tmp$ret$24__1 = tmp_1;
-            this.set_exceptionState_s9sevl_k$(13);
-            this.set_state_a96kl8_k$(8);
-            var tmp_2 = this;
+            var tmp_2 = this.tmp$ret$06__1;
+            this.set_exceptionState_fex74n_k$(12);
+            this.this$0__1.currentMutator_1.compareAndSet_10iwom_k$(this.mutator0__1, null);
+            this.tmp$ret$25__1 = tmp_2;
+            this.set_exceptionState_fex74n_k$(13);
+            this.set_state_rjd8d0_k$(8);
+            var tmp_3 = this;
             continue $sm;
           case 8:
-            var tmp_3 = this.tmp$ret$24__1;
-            this.tmp0_withLock2__1.unlock_uksyr8_k$(null);
-            this.tmp$ret$61__1 = tmp_3;
-            this.set_state_a96kl8_k$(10);
+            var tmp_4 = this.tmp$ret$25__1;
+            this.set_exceptionState_fex74n_k$(13);
+            this.this2__1.unlock_ulcrcl_k$(this.owner3__1);
+            this.tmp$ret$61__1 = tmp_4;
+            this.set_state_rjd8d0_k$(10);
             continue $sm;
           case 9:
-            this.tmp0_withLock2__1.unlock_uksyr8_k$(null);
+            this.set_exceptionState_fex74n_k$(13);
+            this.this2__1.unlock_ulcrcl_k$(this.owner3__1);
             if (false) {
-              this.set_state_a96kl8_k$(1);
+              this.set_state_rjd8d0_k$(1);
               continue $sm;
             }
 
-            this.set_state_a96kl8_k$(10);
+            this.set_state_rjd8d0_k$(10);
             continue $sm;
           case 10:
             return this.tmp$ret$61__1;
           case 11:
-            this.set_exceptionState_s9sevl_k$(12);
+            this.set_exceptionState_fex74n_k$(12);
             var t = this.get_exception_x0n6w6_k$();
-            this.this$0__1.currentMutator_1.compareAndSet_fjyh1e_k$(this.mutator0__1, null);
+            this.this$0__1.currentMutator_1.compareAndSet_10iwom_k$(this.mutator0__1, null);
             throw t;
           case 12:
-            this.set_exceptionState_s9sevl_k$(13);
+            this.set_exceptionState_fex74n_k$(13);
             var t_0 = this.get_exception_x0n6w6_k$();
-            this.tmp0_withLock2__1.unlock_uksyr8_k$(null);
+            this.this2__1.unlock_ulcrcl_k$(this.owner3__1);
             throw t_0;
           case 13:
             throw this.get_exception_x0n6w6_k$();
@@ -3633,24 +3627,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 13) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(MutatorMutex$mutate$slambda).create_b6qu53_k$ = function ($this$coroutineScope, completion) {
+  protoOf(MutatorMutex$mutate$slambda).create_rcuf4x_k$ = function ($this$coroutineScope, completion) {
     var i = new MutatorMutex$mutate$slambda(this.$priority_1, this.this$0__1, this.$block_1, completion);
     i.$this$coroutineScope_1 = $this$coroutineScope;
     return i;
   };
-  protoOf(MutatorMutex$mutate$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(MutatorMutex$mutate$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function MutatorMutex$mutate$slambda_0($priority, this$0, $block, resultContinuation) {
     var i = new MutatorMutex$mutate$slambda($priority, this$0, $block, resultContinuation);
     var l = function ($this$coroutineScope, $completion) {
-      return i.invoke_uet3jx_k$($this$coroutineScope, $completion);
+      return i.invoke_nd4u9n_k$($this$coroutineScope, $completion);
     };
     l.$arity = 1;
     return l;
@@ -3662,14 +3656,14 @@
     this.$receiver_1 = $receiver;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(MutatorMutex$mutateWith$slambda).invoke_uet3jx_k$ = function ($this$coroutineScope, $completion) {
-    var tmp = this.create_b6qu53_k$($this$coroutineScope, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(MutatorMutex$mutateWith$slambda).invoke_nd4u9n_k$ = function ($this$coroutineScope, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$coroutineScope, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(MutatorMutex$mutateWith$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_uet3jx_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(MutatorMutex$mutateWith$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_nd4u9n_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(MutatorMutex$mutateWith$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -3678,34 +3672,36 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(13);
-            this.mutator0__1 = new Mutator(this.$priority_1, ensureNotNull(this.$this$coroutineScope_1.get_coroutineContext_115oqo_k$().get_j1ktw6_k$(Key_getInstance_0())));
+            this.set_exceptionState_fex74n_k$(13);
+            this.mutator0__1 = new Mutator(this.$priority_1, ensureNotNull(this.$this$coroutineScope_1.get_coroutineContext_115oqo_k$().get_y2st91_k$(Key_getInstance_0())));
             tryMutateOrCancel(this.this$0__1, this.mutator0__1);
-            this.set_state_a96kl8_k$(1);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 1:
             var tmp_0 = this;
-            tmp_0.tmp0_withLock2__1 = this.this$0__1.mutex_1;
-            this.set_state_a96kl8_k$(2);
-            suspendResult = this.tmp0_withLock2__1.lock_25dizd_k$(null, this);
+            tmp_0.this2__1 = this.this$0__1.mutex_1;
+            var tmp_1 = this;
+            tmp_1.owner3__1 = null;
+            this.set_state_rjd8d0_k$(2);
+            suspendResult = this.this2__1.lock_ugrcvf_k$(this.owner3__1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 2:
-            this.set_state_a96kl8_k$(3);
+            this.set_state_rjd8d0_k$(3);
             continue $sm;
           case 3:
-            this.set_state_a96kl8_k$(4);
+            this.set_state_rjd8d0_k$(4);
             continue $sm;
           case 4:
-            this.set_exceptionState_s9sevl_k$(12);
-            this.set_state_a96kl8_k$(5);
+            this.set_exceptionState_fex74n_k$(12);
+            this.set_state_rjd8d0_k$(5);
             continue $sm;
           case 5:
-            this.set_exceptionState_s9sevl_k$(11);
-            this.set_state_a96kl8_k$(6);
+            this.set_exceptionState_fex74n_k$(11);
+            this.set_state_rjd8d0_k$(6);
             suspendResult = this.$block_1(this.$receiver_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
@@ -3713,43 +3709,46 @@
 
             continue $sm;
           case 6:
-            this.tmp$ret$05__1 = suspendResult;
-            this.set_state_a96kl8_k$(7);
+            this.tmp$ret$06__1 = suspendResult;
+            this.set_state_rjd8d0_k$(7);
             continue $sm;
           case 7:
-            var tmp_1 = this.tmp$ret$05__1;
-            this.this$0__1.currentMutator_1.compareAndSet_fjyh1e_k$(this.mutator0__1, null);
-            this.tmp$ret$24__1 = tmp_1;
-            this.set_exceptionState_s9sevl_k$(13);
-            this.set_state_a96kl8_k$(8);
-            var tmp_2 = this;
+            var tmp_2 = this.tmp$ret$06__1;
+            this.set_exceptionState_fex74n_k$(12);
+            this.this$0__1.currentMutator_1.compareAndSet_10iwom_k$(this.mutator0__1, null);
+            this.tmp$ret$25__1 = tmp_2;
+            this.set_exceptionState_fex74n_k$(13);
+            this.set_state_rjd8d0_k$(8);
+            var tmp_3 = this;
             continue $sm;
           case 8:
-            var tmp_3 = this.tmp$ret$24__1;
-            this.tmp0_withLock2__1.unlock_uksyr8_k$(null);
-            this.tmp$ret$61__1 = tmp_3;
-            this.set_state_a96kl8_k$(10);
+            var tmp_4 = this.tmp$ret$25__1;
+            this.set_exceptionState_fex74n_k$(13);
+            this.this2__1.unlock_ulcrcl_k$(this.owner3__1);
+            this.tmp$ret$61__1 = tmp_4;
+            this.set_state_rjd8d0_k$(10);
             continue $sm;
           case 9:
-            this.tmp0_withLock2__1.unlock_uksyr8_k$(null);
+            this.set_exceptionState_fex74n_k$(13);
+            this.this2__1.unlock_ulcrcl_k$(this.owner3__1);
             if (false) {
-              this.set_state_a96kl8_k$(1);
+              this.set_state_rjd8d0_k$(1);
               continue $sm;
             }
 
-            this.set_state_a96kl8_k$(10);
+            this.set_state_rjd8d0_k$(10);
             continue $sm;
           case 10:
             return this.tmp$ret$61__1;
           case 11:
-            this.set_exceptionState_s9sevl_k$(12);
+            this.set_exceptionState_fex74n_k$(12);
             var t = this.get_exception_x0n6w6_k$();
-            this.this$0__1.currentMutator_1.compareAndSet_fjyh1e_k$(this.mutator0__1, null);
+            this.this$0__1.currentMutator_1.compareAndSet_10iwom_k$(this.mutator0__1, null);
             throw t;
           case 12:
-            this.set_exceptionState_s9sevl_k$(13);
+            this.set_exceptionState_fex74n_k$(13);
             var t_0 = this.get_exception_x0n6w6_k$();
-            this.tmp0_withLock2__1.unlock_uksyr8_k$(null);
+            this.this2__1.unlock_ulcrcl_k$(this.owner3__1);
             throw t_0;
           case 13:
             throw this.get_exception_x0n6w6_k$();
@@ -3759,24 +3758,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 13) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(MutatorMutex$mutateWith$slambda).create_b6qu53_k$ = function ($this$coroutineScope, completion) {
+  protoOf(MutatorMutex$mutateWith$slambda).create_rcuf4x_k$ = function ($this$coroutineScope, completion) {
     var i = new MutatorMutex$mutateWith$slambda(this.$priority_1, this.this$0__1, this.$block_1, this.$receiver_1, completion);
     i.$this$coroutineScope_1 = $this$coroutineScope;
     return i;
   };
-  protoOf(MutatorMutex$mutateWith$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(MutatorMutex$mutateWith$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function MutatorMutex$mutateWith$slambda_0($priority, this$0, $block, $receiver, resultContinuation) {
     var i = new MutatorMutex$mutateWith$slambda($priority, this$0, $block, $receiver, resultContinuation);
     var l = function ($this$coroutineScope, $completion) {
-      return i.invoke_uet3jx_k$($this$coroutineScope, $completion);
+      return i.invoke_nd4u9n_k$($this$coroutineScope, $completion);
     };
     l.$arity = 1;
     return l;
@@ -3785,19 +3784,19 @@
     this.currentMutator_1 = new AtomicReference(null);
     this.mutex_1 = Mutex();
   }
-  protoOf(MutatorMutex).mutate_c65fug_k$ = function (priority, block, $completion) {
+  protoOf(MutatorMutex).mutate_fsxm7f_k$ = function (priority, block, $completion) {
     return coroutineScope(MutatorMutex$mutate$slambda_0(priority, this, block, null), $completion);
   };
-  protoOf(MutatorMutex).mutate$default_uwumqp_k$ = function (priority, block, $completion, $super) {
+  protoOf(MutatorMutex).mutate$default_f05kjn_k$ = function (priority, block, $completion, $super) {
     priority = priority === VOID ? MutatePriority_Default_getInstance() : priority;
-    return $super === VOID ? this.mutate_c65fug_k$(priority, block, $completion) : $super.mutate_c65fug_k$.call(this, priority, block, $completion);
+    return $super === VOID ? this.mutate_fsxm7f_k$(priority, block, $completion) : $super.mutate_fsxm7f_k$.call(this, priority, block, $completion);
   };
-  protoOf(MutatorMutex).mutateWith_4ztcip_k$ = function (receiver, priority, block, $completion) {
+  protoOf(MutatorMutex).mutateWith_1xzeue_k$ = function (receiver, priority, block, $completion) {
     return coroutineScope(MutatorMutex$mutateWith$slambda_0(priority, this, block, receiver, null), $completion);
   };
-  protoOf(MutatorMutex).mutateWith$default_ogrive_k$ = function (receiver, priority, block, $completion, $super) {
+  protoOf(MutatorMutex).mutateWith$default_i0v6ui_k$ = function (receiver, priority, block, $completion, $super) {
     priority = priority === VOID ? MutatePriority_Default_getInstance() : priority;
-    return $super === VOID ? this.mutateWith_4ztcip_k$(receiver, priority, block, $completion) : $super.mutateWith_4ztcip_k$.call(this, receiver, priority, block, $completion);
+    return $super === VOID ? this.mutateWith_1xzeue_k$(receiver, priority, block, $completion) : $super.mutateWith_1xzeue_k$.call(this, receiver, priority, block, $completion);
   };
   var MutatePriority_Default_instance;
   var MutatePriority_UserInput_instance;
@@ -3815,7 +3814,7 @@
         return MutatePriority_PreventUserInput_getInstance();
       default:
         MutatePriority_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -3857,26 +3856,26 @@
     var partialRoot = dampingCoefficient * dampingCoefficient - 4.0 * stiffness;
     // Inline function 'androidx.compose.animation.core.ComplexDouble.times' call
     // Inline function 'androidx.compose.animation.core.plus' call
-    var tmp0_plus = -dampingCoefficient;
-    var tmp1_plus = complexSqrt(partialRoot);
+    var this_0 = -dampingCoefficient;
     // Inline function 'androidx.compose.animation.core.ComplexDouble.plus' call
-    _set__real__ba78tk(tmp1_plus, _get__real__kqx7nw(tmp1_plus) + tmp0_plus);
-    _set__real__ba78tk(tmp1_plus, _get__real__kqx7nw(tmp1_plus) * 0.5);
-    _set__imaginary__jvragz(tmp1_plus, _get__imaginary__yxzvm7(tmp1_plus) * 0.5);
-    var firstRoot = tmp1_plus;
+    var this_1 = complexSqrt(partialRoot);
+    _set__real__ba78tk(this_1, _get__real__kqx7nw(this_1) + this_0);
+    _set__real__ba78tk(this_1, _get__real__kqx7nw(this_1) * 0.5);
+    _set__imaginary__jvragz(this_1, _get__imaginary__yxzvm7(this_1) * 0.5);
+    var firstRoot = this_1;
     // Inline function 'androidx.compose.animation.core.ComplexDouble.times' call
     // Inline function 'androidx.compose.animation.core.minus' call
-    var tmp3_minus = -dampingCoefficient;
-    var tmp4_minus = complexSqrt(partialRoot);
+    var this_2 = -dampingCoefficient;
     // Inline function 'androidx.compose.animation.core.plus' call
     // Inline function 'androidx.compose.animation.core.ComplexDouble.unaryMinus' call
-    _set__real__ba78tk(tmp4_minus, _get__real__kqx7nw(tmp4_minus) * -1);
-    _set__imaginary__jvragz(tmp4_minus, _get__imaginary__yxzvm7(tmp4_minus) * -1);
+    var this_3 = complexSqrt(partialRoot);
+    _set__real__ba78tk(this_3, _get__real__kqx7nw(this_3) * -1);
+    _set__imaginary__jvragz(this_3, _get__imaginary__yxzvm7(this_3) * -1);
     // Inline function 'androidx.compose.animation.core.ComplexDouble.plus' call
-    _set__real__ba78tk(tmp4_minus, _get__real__kqx7nw(tmp4_minus) + tmp3_minus);
-    _set__real__ba78tk(tmp4_minus, _get__real__kqx7nw(tmp4_minus) * 0.5);
-    _set__imaginary__jvragz(tmp4_minus, _get__imaginary__yxzvm7(tmp4_minus) * 0.5);
-    var secondRoot = tmp4_minus;
+    _set__real__ba78tk(this_3, _get__real__kqx7nw(this_3) + this_2);
+    _set__real__ba78tk(this_3, _get__real__kqx7nw(this_3) * 0.5);
+    _set__imaginary__jvragz(this_3, _get__imaginary__yxzvm7(this_3) * 0.5);
+    var secondRoot = this_3;
     return estimateDurationInternal(firstRoot, secondRoot, dampingRatio, initialVelocity, initialDisplacement, delta);
   }
   function estimateDurationInternal(firstRoot, secondRoot, dampingRatio, initialVelocity, initialPosition, delta) {
@@ -3895,14 +3894,14 @@
     var c1 = p0 - c2;
     // Inline function 'kotlin.math.ln' call
     // Inline function 'kotlin.math.abs' call
-    var tmp0_abs = delta / c1;
-    var tmp1_ln = Math.abs(tmp0_abs);
-    var t1 = Math.log(tmp1_ln) / r1;
+    var x = delta / c1;
+    var x_0 = Math.abs(x);
+    var t1 = Math.log(x_0) / r1;
     // Inline function 'kotlin.math.ln' call
     // Inline function 'kotlin.math.abs' call
-    var tmp2_abs = delta / c2;
-    var tmp3_ln = Math.abs(tmp2_abs);
-    var t2 = Math.log(tmp3_ln) / r2;
+    var x_1 = delta / c2;
+    var x_2 = Math.abs(x_1);
+    var t2 = Math.log(x_2) / r2;
     var tmp;
     // Inline function 'androidx.compose.animation.core.isNotFinite' call
     if (!isFinite(t1)) {
@@ -3918,8 +3917,8 @@
     }
     var tCurr = tmp;
     // Inline function 'kotlin.math.ln' call
-    var tmp4_ln = c1 * r1 / (-c2 * r2);
-    var tInflection = Math.log(tmp4_ln) / (r2 - r1);
+    var x_3 = c1 * r1 / (-c2 * r2);
+    var tInflection = Math.log(x_3) / (r2 - r1);
     var tmp_0;
     if (isNaN_1(tInflection) ? true : tInflection <= 0.0) {
       tmp_0 = -delta;
@@ -3930,21 +3929,21 @@
       tmp_0 = -delta;
     } else {
       // Inline function 'kotlin.math.ln' call
-      var tmp5_ln = -(c2 * r2 * r2) / (c1 * r1 * r1);
-      tCurr = Math.log(tmp5_ln) / (r1 - r2);
+      var x_4 = -(c2 * r2 * r2) / (c1 * r1 * r1);
+      tCurr = Math.log(x_4) / (r1 - r2);
       tmp_0 = delta;
     }
     var signedDelta = tmp_0;
     // Inline function 'kotlin.math.abs' call
     var tmp_1 = c1 * r1;
     // Inline function 'kotlin.math.exp' call
-    var tmp6_exp = r1 * tCurr;
-    var tmp_2 = tmp_1 * Math.exp(tmp6_exp);
+    var x_5 = r1 * tCurr;
+    var tmp_2 = tmp_1 * Math.exp(x_5);
     var tmp_3 = c2 * r2;
     // Inline function 'kotlin.math.exp' call
-    var tmp7_exp = r2 * tCurr;
-    var tmp8_abs = tmp_2 + tmp_3 * Math.exp(tmp7_exp);
-    if (Math.abs(tmp8_abs) < 1.0E-4) {
+    var x_6 = r2 * tCurr;
+    var x_7 = tmp_2 + tmp_3 * Math.exp(x_6);
+    if (Math.abs(x_7) < 1.0E-4) {
       return tCurr;
     }
     var tDelta = DoubleCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$();
@@ -3953,26 +3952,26 @@
       iterations = iterations + 1 | 0;
       var tLast = tCurr;
       // Inline function 'androidx.compose.animation.core.iterateNewtonsMethod' call
-      var tmp9_iterateNewtonsMethod = tCurr;
+      var x_8 = tCurr;
       // Inline function 'androidx.compose.animation.core.estimateOverDamped.<anonymous>' call
       // Inline function 'kotlin.math.exp' call
-      var tmp0_exp = r1 * tmp9_iterateNewtonsMethod;
-      var tmp_4 = c1 * Math.exp(tmp0_exp);
+      var x_9 = r1 * x_8;
+      var tmp_4 = c1 * Math.exp(x_9);
       // Inline function 'kotlin.math.exp' call
-      var tmp1_exp = r2 * tmp9_iterateNewtonsMethod;
-      var tmp_5 = tmp_4 + c2 * Math.exp(tmp1_exp) + signedDelta;
+      var x_10 = r2 * x_8;
+      var tmp_5 = tmp_4 + c2 * Math.exp(x_10) + signedDelta;
       // Inline function 'androidx.compose.animation.core.estimateOverDamped.<anonymous>' call
       var tmp_6 = c1 * r1;
       // Inline function 'kotlin.math.exp' call
-      var tmp0_exp_0 = r1 * tmp9_iterateNewtonsMethod;
-      var tmp_7 = tmp_6 * Math.exp(tmp0_exp_0);
+      var x_11 = r1 * x_8;
+      var tmp_7 = tmp_6 * Math.exp(x_11);
       var tmp_8 = c2 * r2;
       // Inline function 'kotlin.math.exp' call
-      var tmp1_exp_0 = r2 * tmp9_iterateNewtonsMethod;
-      tCurr = tmp9_iterateNewtonsMethod - tmp_5 / (tmp_7 + tmp_8 * Math.exp(tmp1_exp_0));
+      var x_12 = r2 * x_8;
+      tCurr = x_8 - tmp_5 / (tmp_7 + tmp_8 * Math.exp(x_12));
       // Inline function 'kotlin.math.abs' call
-      var tmp10_abs = tLast - tCurr;
-      tDelta = Math.abs(tmp10_abs);
+      var x_13 = tLast - tCurr;
+      tDelta = Math.abs(x_13);
     }
     return tCurr;
   }
@@ -3981,11 +3980,11 @@
     var c1 = p0;
     var c2 = (v0 - r * c1) / firstRoot.get_imaginary_5xnno0_k$();
     // Inline function 'kotlin.math.sqrt' call
-    var tmp0_sqrt = c1 * c1 + c2 * c2;
-    var c = Math.sqrt(tmp0_sqrt);
+    var x = c1 * c1 + c2 * c2;
+    var c = Math.sqrt(x);
     // Inline function 'kotlin.math.ln' call
-    var tmp1_ln = delta / c;
-    return Math.log(tmp1_ln) / r;
+    var x_0 = delta / c;
+    return Math.log(x_0) / r;
   }
   function estimateCriticallyDamped(firstRoot, p0, v0, delta) {
     var r = firstRoot.get_real_wotl9j_k$();
@@ -3993,17 +3992,17 @@
     var c2 = v0 - r * c1;
     // Inline function 'kotlin.math.ln' call
     // Inline function 'kotlin.math.abs' call
-    var tmp0_abs = delta / c1;
-    var tmp1_ln = Math.abs(tmp0_abs);
-    var t1 = Math.log(tmp1_ln) / r;
+    var x = delta / c1;
+    var x_0 = Math.abs(x);
+    var t1 = Math.log(x_0) / r;
     // Inline function 'kotlin.run' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.animation.core.estimateCriticallyDamped.<anonymous>' call
     // Inline function 'kotlin.math.ln' call
     // Inline function 'kotlin.math.abs' call
-    var tmp0_abs_0 = delta / c2;
-    var tmp1_ln_0 = Math.abs(tmp0_abs_0);
-    var guess = Math.log(tmp1_ln_0);
+    var x_1 = delta / c2;
+    var x_2 = Math.abs(x_1);
+    var guess = Math.log(x_2);
     var t = guess;
     var inductionVariable = 0;
     if (inductionVariable <= 5)
@@ -4012,9 +4011,9 @@
         inductionVariable = inductionVariable + 1 | 0;
         // Inline function 'kotlin.math.ln' call
         // Inline function 'kotlin.math.abs' call
-        var tmp2_abs = t / r;
-        var tmp3_ln = Math.abs(tmp2_abs);
-        t = guess - Math.log(tmp3_ln);
+        var x_3 = t / r;
+        var x_4 = Math.abs(x_3);
+        t = guess - Math.log(x_4);
       }
        while (inductionVariable <= 5);
     var t2 = t / r;
@@ -4034,12 +4033,12 @@
     var tCurr = tmp;
     var tInflection = -(r * c1 + c2) / (r * c2);
     // Inline function 'kotlin.math.exp' call
-    var tmp2_exp = r * tInflection;
-    var tmp_0 = c1 * Math.exp(tmp2_exp);
+    var x_5 = r * tInflection;
+    var tmp_0 = c1 * Math.exp(x_5);
     var tmp_1 = c2 * tInflection;
     // Inline function 'kotlin.math.exp' call
-    var tmp3_exp = r * tInflection;
-    var xInflection = tmp_0 + tmp_1 * Math.exp(tmp3_exp);
+    var x_6 = r * tInflection;
+    var xInflection = tmp_0 + tmp_1 * Math.exp(x_6);
     var tmp_2;
     if (isNaN_1(tInflection) ? true : tInflection <= 0.0) {
       tmp_2 = -delta;
@@ -4060,20 +4059,20 @@
       iterations = iterations + 1 | 0;
       var tLast = tCurr;
       // Inline function 'androidx.compose.animation.core.iterateNewtonsMethod' call
-      var tmp4_iterateNewtonsMethod = tCurr;
+      var x_7 = tCurr;
       // Inline function 'androidx.compose.animation.core.estimateCriticallyDamped.<anonymous>' call
-      var tmp_3 = c1 + c2 * tmp4_iterateNewtonsMethod;
+      var tmp_3 = c1 + c2 * x_7;
       // Inline function 'kotlin.math.exp' call
-      var tmp0_exp = r * tmp4_iterateNewtonsMethod;
-      var tmp_4 = tmp_3 * Math.exp(tmp0_exp) + signedDelta;
+      var x_8 = r * x_7;
+      var tmp_4 = tmp_3 * Math.exp(x_8) + signedDelta;
       // Inline function 'androidx.compose.animation.core.estimateCriticallyDamped.<anonymous>' call
-      var tmp_5 = c2 * (r * tmp4_iterateNewtonsMethod + 1) + c1 * r;
+      var tmp_5 = c2 * (r * x_7 + 1) + c1 * r;
       // Inline function 'kotlin.math.exp' call
-      var tmp0_exp_0 = r * tmp4_iterateNewtonsMethod;
-      tCurr = tmp4_iterateNewtonsMethod - tmp_4 / (tmp_5 * Math.exp(tmp0_exp_0));
+      var x_9 = r * x_7;
+      tCurr = x_7 - tmp_4 / (tmp_5 * Math.exp(x_9));
       // Inline function 'kotlin.math.abs' call
-      var tmp5_abs = tLast - tCurr;
-      tDelta = Math.abs(tmp5_abs);
+      var x_10 = tLast - tCurr;
+      tDelta = Math.abs(x_10);
     }
     return tCurr;
   }
@@ -4085,11 +4084,11 @@
   }
   function estimateOverDamped$xInflection(c1, r1, tInflection, c2, r2) {
     // Inline function 'kotlin.math.exp' call
-    var tmp0_exp = r1 * tInflection;
-    var tmp = c1 * Math.exp(tmp0_exp);
+    var x = r1 * tInflection;
+    var tmp = c1 * Math.exp(x);
     // Inline function 'kotlin.math.exp' call
-    var tmp1_exp = r2 * tInflection;
-    return tmp + c2 * Math.exp(tmp1_exp);
+    var x_0 = r2 * tInflection;
+    return tmp + c2 * Math.exp(x_0);
   }
   function get_UNSET() {
     return UNSET;
@@ -4133,25 +4132,25 @@
       throw IllegalStateException_init_$Create$('Error: Final position of the spring must be set before the animation starts');
     }
     var dampingRatioSquared = $this.dampingRatio_1 * $this.dampingRatio_1;
-    if ($this.dampingRatio_1 > 1) {
+    if ($this.dampingRatio_1 > 1.0) {
       var tmp = $this;
       var tmp_0 = -$this.dampingRatio_1 * $this.naturalFreq_1;
       var tmp_1 = $this.naturalFreq_1;
       // Inline function 'kotlin.math.sqrt' call
-      var tmp0_sqrt = dampingRatioSquared - 1;
-      tmp.gammaPlus_1 = tmp_0 + tmp_1 * Math.sqrt(tmp0_sqrt);
+      var x = dampingRatioSquared - 1;
+      tmp.gammaPlus_1 = tmp_0 + tmp_1 * Math.sqrt(x);
       var tmp_2 = $this;
       var tmp_3 = -$this.dampingRatio_1 * $this.naturalFreq_1;
       var tmp_4 = $this.naturalFreq_1;
       // Inline function 'kotlin.math.sqrt' call
-      var tmp1_sqrt = dampingRatioSquared - 1;
-      tmp_2.gammaMinus_1 = tmp_3 - tmp_4 * Math.sqrt(tmp1_sqrt);
-    } else if ($this.dampingRatio_1 >= 0 ? $this.dampingRatio_1 < 1 : false) {
+      var x_0 = dampingRatioSquared - 1;
+      tmp_2.gammaMinus_1 = tmp_3 - tmp_4 * Math.sqrt(x_0);
+    } else if ($this.dampingRatio_1 >= 0.0 ? $this.dampingRatio_1 < 1.0 : false) {
       var tmp_5 = $this;
       var tmp_6 = $this.naturalFreq_1;
       // Inline function 'kotlin.math.sqrt' call
-      var tmp2_sqrt = 1 - dampingRatioSquared;
-      tmp_5.dampedFreq_1 = tmp_6 * Math.sqrt(tmp2_sqrt);
+      var x_1 = 1 - dampingRatioSquared;
+      tmp_5.dampedFreq_1 = tmp_6 * Math.sqrt(x_1);
     }
     $this.initialized_1 = true;
   }
@@ -4159,22 +4158,22 @@
     this.finalPosition_1 = finalPosition;
     var tmp = this;
     // Inline function 'kotlin.math.sqrt' call
-    var tmp0_sqrt = Spring_getInstance().get_StiffnessVeryLow_1smo6g_k$();
-    tmp.naturalFreq_1 = Math.sqrt(tmp0_sqrt);
+    var x = Spring_getInstance().get_StiffnessVeryLow_1smo6g_k$();
+    tmp.naturalFreq_1 = Math.sqrt(x);
     this.initialized_1 = false;
     this.gammaPlus_1 = 0.0;
     this.gammaMinus_1 = 0.0;
     this.dampedFreq_1 = 0.0;
     this.dampingRatio_1 = Spring_getInstance().get_DampingRatioNoBouncy_45ga5r_k$();
   }
-  protoOf(SpringSimulation).set_finalPosition_8y7idh_k$ = function (_set____db54di) {
+  protoOf(SpringSimulation).set_finalPosition_7mu6km_k$ = function (_set____db54di) {
     this.finalPosition_1 = _set____db54di;
   };
   protoOf(SpringSimulation).get_finalPosition_vxiffa_k$ = function () {
     return this.finalPosition_1;
   };
-  protoOf(SpringSimulation).set_stiffness_ca51vp_k$ = function (value) {
-    if (this.get_stiffness_dt2sgm_k$() <= 0) {
+  protoOf(SpringSimulation).set_stiffness_89bnwm_k$ = function (value) {
+    if (this.get_stiffness_dt2sgm_k$() <= 0.0) {
       throw IllegalArgumentException_init_$Create$('Spring stiffness constant must be positive.');
     }
     var tmp = this;
@@ -4185,8 +4184,8 @@
   protoOf(SpringSimulation).get_stiffness_dt2sgm_k$ = function () {
     return this.naturalFreq_1 * this.naturalFreq_1;
   };
-  protoOf(SpringSimulation).set_dampingRatio_agau0n_k$ = function (value) {
-    if (value < 0) {
+  protoOf(SpringSimulation).set_dampingRatio_1d4jya_k$ = function (value) {
+    if (value < 0.0) {
       throw IllegalArgumentException_init_$Create$('Damping ratio must be non-negative');
     }
     this.dampingRatio_1 = value;
@@ -4195,74 +4194,74 @@
   protoOf(SpringSimulation).get_dampingRatio_syjss2_k$ = function () {
     return this.dampingRatio_1;
   };
-  protoOf(SpringSimulation).getAcceleration_ut5r62_k$ = function (lastDisplacement, lastVelocity) {
+  protoOf(SpringSimulation).getAcceleration_ie4kmu_k$ = function (lastDisplacement, lastVelocity) {
     var adjustedDisplacement = lastDisplacement - this.finalPosition_1;
     var k = this.naturalFreq_1 * this.naturalFreq_1;
     var c = 2.0 * this.naturalFreq_1 * this.dampingRatio_1;
     return -k * adjustedDisplacement - c * lastVelocity;
   };
-  protoOf(SpringSimulation).updateValues_23ym3r_k$ = function (lastDisplacement, lastVelocity, timeElapsed) {
+  protoOf(SpringSimulation).updateValues_1oxjyh_k$ = function (lastDisplacement, lastVelocity, timeElapsed) {
     init(this);
     var adjustedDisplacement = lastDisplacement - this.finalPosition_1;
     // Inline function 'kotlin.Long.div' call
     var deltaT = timeElapsed.toDouble_ygsx0s_k$() / 1000.0;
     var displacement;
     var currentVelocity;
-    if (this.dampingRatio_1 > 1) {
+    if (this.dampingRatio_1 > 1.0) {
       var coeffA = adjustedDisplacement - (this.gammaMinus_1 * adjustedDisplacement - lastVelocity) / (this.gammaMinus_1 - this.gammaPlus_1);
       var coeffB = (this.gammaMinus_1 * adjustedDisplacement - lastVelocity) / (this.gammaMinus_1 - this.gammaPlus_1);
       // Inline function 'kotlin.math.exp' call
-      var tmp0_exp = this.gammaMinus_1 * deltaT;
-      var tmp = coeffA * Math.exp(tmp0_exp);
+      var x = this.gammaMinus_1 * deltaT;
+      var tmp = coeffA * Math.exp(x);
       // Inline function 'kotlin.math.exp' call
-      var tmp1_exp = this.gammaPlus_1 * deltaT;
-      displacement = tmp + coeffB * Math.exp(tmp1_exp);
+      var x_0 = this.gammaPlus_1 * deltaT;
+      displacement = tmp + coeffB * Math.exp(x_0);
       var tmp_0 = coeffA * this.gammaMinus_1;
       // Inline function 'kotlin.math.exp' call
-      var tmp2_exp = this.gammaMinus_1 * deltaT;
-      var tmp_1 = tmp_0 * Math.exp(tmp2_exp);
+      var x_1 = this.gammaMinus_1 * deltaT;
+      var tmp_1 = tmp_0 * Math.exp(x_1);
       var tmp_2 = coeffB * this.gammaPlus_1;
       // Inline function 'kotlin.math.exp' call
-      var tmp3_exp = this.gammaPlus_1 * deltaT;
-      currentVelocity = tmp_1 + tmp_2 * Math.exp(tmp3_exp);
+      var x_2 = this.gammaPlus_1 * deltaT;
+      currentVelocity = tmp_1 + tmp_2 * Math.exp(x_2);
     } else if (this.dampingRatio_1 === 1.0) {
       var coeffA_0 = adjustedDisplacement;
       var coeffB_0 = lastVelocity + this.naturalFreq_1 * adjustedDisplacement;
       var tmp_3 = coeffA_0 + coeffB_0 * deltaT;
       // Inline function 'kotlin.math.exp' call
-      var tmp4_exp = -this.naturalFreq_1 * deltaT;
-      displacement = tmp_3 * Math.exp(tmp4_exp);
+      var x_3 = -this.naturalFreq_1 * deltaT;
+      displacement = tmp_3 * Math.exp(x_3);
       var tmp_4 = coeffA_0 + coeffB_0 * deltaT;
       // Inline function 'kotlin.math.exp' call
-      var tmp5_exp = -this.naturalFreq_1 * deltaT;
-      var tmp_5 = tmp_4 * Math.exp(tmp5_exp) * -this.naturalFreq_1;
+      var x_4 = -this.naturalFreq_1 * deltaT;
+      var tmp_5 = tmp_4 * Math.exp(x_4) * -this.naturalFreq_1;
       // Inline function 'kotlin.math.exp' call
-      var tmp6_exp = -this.naturalFreq_1 * deltaT;
-      currentVelocity = tmp_5 + coeffB_0 * Math.exp(tmp6_exp);
+      var x_5 = -this.naturalFreq_1 * deltaT;
+      currentVelocity = tmp_5 + coeffB_0 * Math.exp(x_5);
     } else {
       var cosCoeff = adjustedDisplacement;
       var sinCoeff = 1 / this.dampedFreq_1 * (this.dampingRatio_1 * this.naturalFreq_1 * adjustedDisplacement + lastVelocity);
       // Inline function 'kotlin.math.exp' call
-      var tmp7_exp = -this.dampingRatio_1 * this.naturalFreq_1 * deltaT;
-      var tmp_6 = Math.exp(tmp7_exp);
+      var x_6 = -this.dampingRatio_1 * this.naturalFreq_1 * deltaT;
+      var tmp_6 = Math.exp(x_6);
       // Inline function 'kotlin.math.cos' call
-      var tmp8_cos = this.dampedFreq_1 * deltaT;
-      var tmp_7 = cosCoeff * Math.cos(tmp8_cos);
+      var x_7 = this.dampedFreq_1 * deltaT;
+      var tmp_7 = cosCoeff * Math.cos(x_7);
       // Inline function 'kotlin.math.sin' call
-      var tmp9_sin = this.dampedFreq_1 * deltaT;
-      displacement = tmp_6 * (tmp_7 + sinCoeff * Math.sin(tmp9_sin));
+      var x_8 = this.dampedFreq_1 * deltaT;
+      displacement = tmp_6 * (tmp_7 + sinCoeff * Math.sin(x_8));
       var tmp_8 = displacement * -this.naturalFreq_1 * this.dampingRatio_1;
       // Inline function 'kotlin.math.exp' call
-      var tmp10_exp = -this.dampingRatio_1 * this.naturalFreq_1 * deltaT;
-      var tmp_9 = Math.exp(tmp10_exp);
+      var x_9 = -this.dampingRatio_1 * this.naturalFreq_1 * deltaT;
+      var tmp_9 = Math.exp(x_9);
       var tmp_10 = -this.dampedFreq_1 * cosCoeff;
       // Inline function 'kotlin.math.sin' call
-      var tmp11_sin = this.dampedFreq_1 * deltaT;
-      var tmp_11 = tmp_10 * Math.sin(tmp11_sin);
+      var x_10 = this.dampedFreq_1 * deltaT;
+      var tmp_11 = tmp_10 * Math.sin(x_10);
       var tmp_12 = this.dampedFreq_1 * sinCoeff;
       // Inline function 'kotlin.math.cos' call
-      var tmp12_cos = this.dampedFreq_1 * deltaT;
-      currentVelocity = tmp_8 + tmp_9 * (tmp_11 + tmp_12 * Math.cos(tmp12_cos));
+      var x_11 = this.dampedFreq_1 * deltaT;
+      currentVelocity = tmp_8 + tmp_9 * (tmp_11 + tmp_12 * Math.cos(x_11));
     }
     var newValue = displacement + this.finalPosition_1;
     var newVelocity = currentVelocity;
@@ -4276,19 +4275,19 @@
   }
   function _Motion___get_value__impl__e0x31d($this) {
     // Inline function 'androidx.compose.ui.util.unpackFloat1' call
-    var tmp0_unpackFloat1 = _Motion___get_packedValue__impl__qymh4n($this);
+    var value = _Motion___get_packedValue__impl__qymh4n($this);
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp1_fromBits = tmp0_unpackFloat1.shr_wjue3g_k$(32).toInt_1tsl84_k$();
-    return floatFromBits(tmp1_fromBits);
+    var bits = value.shr_9fl3wl_k$(32).toInt_1tsl84_k$();
+    return floatFromBits(bits);
   }
   function _Motion___get_velocity__impl__h2mglt($this) {
     // Inline function 'androidx.compose.ui.util.unpackFloat2' call
-    var tmp0_unpackFloat2 = _Motion___get_packedValue__impl__qymh4n($this);
+    var value = _Motion___get_packedValue__impl__qymh4n($this);
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp1_fromBits = tmp0_unpackFloat2.and_jhajnj_k$(new Long(-1, 0)).toInt_1tsl84_k$();
-    return floatFromBits(tmp1_fromBits);
+    var bits = value.and_4spn93_k$(new Long(-1, 0)).toInt_1tsl84_k$();
+    return floatFromBits(bits);
   }
   function Motion__copy_impl_s0k26a($this, value, velocity) {
     return Motion_0(value, velocity);
@@ -4300,14 +4299,13 @@
     if ($super === VOID) {
       tmp = Motion__copy_impl_s0k26a($this, value, velocity);
     } else {
-      var tmp_0 = new Motion($this);
-      var tmp_1 = $super;
-      tmp = (tmp_1 == null ? null : new Motion(tmp_1)).copy_11hpj_k$.call(tmp_0, value, velocity).packedValue_1;
+      var tmp_0 = $super;
+      tmp = (tmp_0 == null ? null : new Motion(tmp_0)).copy_quaz9h_k$.call(new Motion($this), value, velocity).packedValue_1;
     }
     return tmp;
   }
   function Motion__toString_impl_wnrfdh($this) {
-    return 'Motion(packedValue=' + toString($this) + ')';
+    return 'Motion(packedValue=' + $this.toString() + ')';
   }
   function Motion__hashCode_impl_gm6pss($this) {
     return $this.hashCode();
@@ -4333,34 +4331,13 @@
     return Motion__equals_impl_ngoxh4(this.packedValue_1, other);
   };
   function Motion_0(value, velocity) {
-    var tmp$ret$0;
     // Inline function 'androidx.compose.ui.util.packFloats' call
     var v1 = toLong(toBits(value));
     var v2 = toLong(toBits(velocity));
-    tmp$ret$0 = v1.shl_po5ip6_k$(32).or_s401rn_k$(v2.and_jhajnj_k$(new Long(-1, 0)));
+    var tmp$ret$0 = v1.shl_bg8if3_k$(32).or_v7fvkl_k$(v2.and_4spn93_k$(new Long(-1, 0)));
     return _Motion___init__impl__vk56rv(tmp$ret$0);
   }
-  function animateDecay(_this__u8e3s4, animationSpec, sequentialAnimation, block, $completion) {
-    sequentialAnimation = sequentialAnimation === VOID ? false : sequentialAnimation;
-    var tmp;
-    if (block === VOID) {
-      tmp = animateDecay$lambda;
-    } else {
-      tmp = block;
-    }
-    block = tmp;
-    var tmp0_initialValue = _this__u8e3s4.get_value_j01efc_k$();
-    var tmp1_initialVelocityVector = _this__u8e3s4.get_velocityVector_v3jmo9_k$();
-    var tmp2_typeConverter = _this__u8e3s4.get_typeConverter_seyvfn_k$();
-    var anim = DecayAnimation_init_$Create$(animationSpec, tmp2_typeConverter, tmp0_initialValue, tmp1_initialVelocityVector);
-    return animate_0(_this__u8e3s4, anim, sequentialAnimation ? _this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$() : AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$(), block, $completion);
-  }
-  function animate(initialValue, targetValue, initialVelocity, animationSpec, block, $completion) {
-    initialVelocity = initialVelocity === VOID ? 0.0 : initialVelocity;
-    animationSpec = animationSpec === VOID ? spring() : animationSpec;
-    return animate_1(get_VectorConverter_2(FloatCompanionObject_getInstance()), initialValue, targetValue, initialVelocity, animationSpec, block, $completion);
-  }
-  function animate_0(_this__u8e3s4, animation, startTimeNanos, block, $completion) {
+  function animate(_this__u8e3s4, animation, startTimeNanos, block, $completion) {
     startTimeNanos = startTimeNanos === VOID ? AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$() : startTimeNanos;
     var tmp;
     if (block === VOID) {
@@ -4369,13 +4346,20 @@
       tmp = block;
     }
     block = tmp;
-    var tmp_0 = new $animateCOROUTINE$0(_this__u8e3s4, animation, startTimeNanos, block, $completion);
-    tmp_0.set_result_ximc09_k$(Unit_getInstance());
-    tmp_0.set_exception_pwgeox_k$(null);
+    var tmp_0 = new $animateCOROUTINE$1(_this__u8e3s4, animation, startTimeNanos, block, $completion);
+    tmp_0.set_result_xj64lm_k$(Unit_getInstance());
+    tmp_0.set_exception_px07aa_k$(null);
     return tmp_0.doResume_5yljmg_k$();
   }
+  function updateState(_this__u8e3s4, state) {
+    state.set_value_v1vabv_k$(_this__u8e3s4.get_value_j01efc_k$());
+    copyFrom(state.get_velocityVector_v3jmo9_k$(), _this__u8e3s4.get_velocityVector_v3jmo9_k$());
+    state.set_finishedTimeNanos_8cpdkr_k$(_this__u8e3s4.get_finishedTimeNanos_t5ryif_k$());
+    state.set_lastFrameTimeNanos_hfjxwm_k$(_this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$());
+    state.set_isRunning_m21k59_k$(_this__u8e3s4.get_isRunning_okmtn0_k$());
+  }
   function get_durationScale(_this__u8e3s4) {
-    var tmp0_safe_receiver = _this__u8e3s4.get_j1ktw6_k$(Key_getInstance_1());
+    var tmp0_safe_receiver = _this__u8e3s4.get_y2st91_k$(Key_getInstance_1());
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_scaleFactor_64aucw_k$();
     var scale = tmp1_elvis_lhs == null ? 1.0 : tmp1_elvis_lhs;
     // Inline function 'kotlin.check' call
@@ -4388,6 +4372,36 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
     return scale;
+  }
+  function callWithFrameNanos(_this__u8e3s4, onFrame, $completion) {
+    var tmp = new $callWithFrameNanosCOROUTINE$2(_this__u8e3s4, onFrame, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
+    return tmp.doResume_5yljmg_k$();
+  }
+  function doAnimationFrameWithScale(_this__u8e3s4, frameTimeNanos, durationScale, anim, state, block) {
+    var tmp;
+    if (durationScale === 0.0) {
+      tmp = anim.get_durationNanos_ub5cy_k$();
+    } else {
+      // Inline function 'kotlin.Long.div' call
+      var tmp$ret$0 = frameTimeNanos.minus_mfbszm_k$(_this__u8e3s4.get_startTimeNanos_ru5em1_k$()).toFloat_jhbgwv_k$() / durationScale;
+      tmp = numberToLong(tmp$ret$0);
+    }
+    var playTimeNanos = tmp;
+    doAnimationFrame(_this__u8e3s4, frameTimeNanos, playTimeNanos, anim, state, block);
+  }
+  function doAnimationFrame(_this__u8e3s4, frameTimeNanos, playTimeNanos, anim, state, block) {
+    _this__u8e3s4.set_lastFrameTimeNanos_hfjxwm_k$(frameTimeNanos);
+    _this__u8e3s4.set_value_v1vabv_k$(anim.getValueFromNanos_i31vd8_k$(playTimeNanos));
+    _this__u8e3s4.set_velocityVector_rbhc11_k$(anim.getVelocityVectorFromNanos_jouakx_k$(playTimeNanos));
+    var isLastFrame = anim.isFinishedFromNanos_c31w39_k$(playTimeNanos);
+    if (isLastFrame) {
+      _this__u8e3s4.set_finishedTimeNanos_8cpdkr_k$(_this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$());
+      _this__u8e3s4.set_isRunning_m21k59_k$(false);
+    }
+    updateState(_this__u8e3s4, state);
+    block(_this__u8e3s4);
   }
   function animateTo(_this__u8e3s4, targetValue, animationSpec, sequentialAnimation, block, $completion) {
     animationSpec = animationSpec === VOID ? spring() : animationSpec;
@@ -4403,14 +4417,27 @@
     var tmp1_typeConverter = _this__u8e3s4.get_typeConverter_seyvfn_k$();
     var tmp2_initialVelocityVector = _this__u8e3s4.get_velocityVector_v3jmo9_k$();
     var anim = TargetBasedAnimation_init_$Create$(animationSpec, tmp1_typeConverter, tmp0_initialValue, targetValue, tmp2_initialVelocityVector);
-    return animate_0(_this__u8e3s4, anim, sequentialAnimation ? _this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$() : AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$(), block, $completion);
+    return animate(_this__u8e3s4, anim, sequentialAnimation ? _this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$() : AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$(), block, $completion);
   }
-  function updateState(_this__u8e3s4, state) {
-    state.set_value_rnwamw_k$(_this__u8e3s4.get_value_j01efc_k$());
-    copyFrom(state.get_velocityVector_v3jmo9_k$(), _this__u8e3s4.get_velocityVector_v3jmo9_k$());
-    state.set_finishedTimeNanos_iw0ihw_k$(_this__u8e3s4.get_finishedTimeNanos_t5ryif_k$());
-    state.set_lastFrameTimeNanos_c9sxzl_k$(_this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$());
-    state.set_isRunning_tw1q35_k$(_this__u8e3s4.get_isRunning_okmtn0_k$());
+  function animateDecay(_this__u8e3s4, animationSpec, sequentialAnimation, block, $completion) {
+    sequentialAnimation = sequentialAnimation === VOID ? false : sequentialAnimation;
+    var tmp;
+    if (block === VOID) {
+      tmp = animateDecay$lambda;
+    } else {
+      tmp = block;
+    }
+    block = tmp;
+    var tmp0_initialValue = _this__u8e3s4.get_value_j01efc_k$();
+    var tmp1_initialVelocityVector = _this__u8e3s4.get_velocityVector_v3jmo9_k$();
+    var tmp2_typeConverter = _this__u8e3s4.get_typeConverter_seyvfn_k$();
+    var anim = DecayAnimation_init_$Create$(animationSpec, tmp2_typeConverter, tmp0_initialValue, tmp1_initialVelocityVector);
+    return animate(_this__u8e3s4, anim, sequentialAnimation ? _this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$() : AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$(), block, $completion);
+  }
+  function animate_0(initialValue, targetValue, initialVelocity, animationSpec, block, $completion) {
+    initialVelocity = initialVelocity === VOID ? 0.0 : initialVelocity;
+    animationSpec = animationSpec === VOID ? spring() : animationSpec;
+    return animate_1(get_VectorConverter_2(FloatCompanionObject_getInstance()), initialValue, targetValue, initialVelocity, animationSpec, block, $completion);
   }
   function animate_1(typeConverter, initialValue, targetValue, initialVelocity, animationSpec, block, $completion) {
     initialVelocity = initialVelocity === VOID ? null : initialVelocity;
@@ -4427,70 +4454,34 @@
     var tmp1_elvis_lhs = tmp;
     var initialVelocityVector = tmp1_elvis_lhs == null ? newInstance(typeConverter.get_convertToVector_s594l4_k$()(initialValue)) : tmp1_elvis_lhs;
     var anim = TargetBasedAnimation_init_$Create$(animationSpec, typeConverter, initialValue, targetValue, initialVelocityVector);
-    var tmp_0 = new AnimationState_0(typeConverter, initialValue, initialVelocityVector);
-    return animate_0(tmp_0, anim, VOID, animate$lambda_3(block, typeConverter), $completion);
-  }
-  function callWithFrameNanos(_this__u8e3s4, onFrame, $completion) {
-    var tmp = new $callWithFrameNanosCOROUTINE$1(_this__u8e3s4, onFrame, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function doAnimationFrameWithScale(_this__u8e3s4, frameTimeNanos, durationScale, anim, state, block) {
-    var tmp;
-    if (durationScale === 0.0) {
-      tmp = anim.get_durationNanos_ub5cy_k$();
-    } else {
-      var tmp$ret$0;
-      // Inline function 'kotlin.Long.div' call
-      tmp$ret$0 = frameTimeNanos.minus_llf5ei_k$(_this__u8e3s4.get_startTimeNanos_ru5em1_k$()).toFloat_jhbgwv_k$() / durationScale;
-      tmp = numberToLong(tmp$ret$0);
-    }
-    var playTimeNanos = tmp;
-    doAnimationFrame(_this__u8e3s4, frameTimeNanos, playTimeNanos, anim, state, block);
-  }
-  function doAnimationFrame(_this__u8e3s4, frameTimeNanos, playTimeNanos, anim, state, block) {
-    _this__u8e3s4.set_lastFrameTimeNanos_c9sxzl_k$(frameTimeNanos);
-    _this__u8e3s4.set_value_rnwamw_k$(anim.getValueFromNanos_iwi8kk_k$(playTimeNanos));
-    _this__u8e3s4.set_velocityVector_mao3b1_k$(anim.getVelocityVectorFromNanos_n1b66h_k$(playTimeNanos));
-    var isLastFrame = anim.isFinishedFromNanos_uhkxvh_k$(playTimeNanos);
-    if (isLastFrame) {
-      _this__u8e3s4.set_finishedTimeNanos_iw0ihw_k$(_this__u8e3s4.get_lastFrameTimeNanos_3aprno_k$());
-      _this__u8e3s4.set_isRunning_tw1q35_k$(false);
-    }
-    updateState(_this__u8e3s4, state);
-    block(_this__u8e3s4);
-  }
-  function animateDecay$lambda($this$null) {
-    return Unit_getInstance();
+    var tmp_0 = new AnimationState(typeConverter, initialValue, initialVelocityVector);
+    return animate(tmp_0, anim, VOID, animate$lambda_3(block, typeConverter), $completion);
   }
   function animate$lambda($this$null) {
     return Unit_getInstance();
   }
   function animate$lambda$lambda($this_animate) {
     return function () {
-      $this_animate.set_isRunning_tw1q35_k$(false);
+      $this_animate.set_isRunning_m21k59_k$(false);
       return Unit_getInstance();
     };
   }
   function animate$lambda_0($lateInitScope, $initialValue, $animation, $initialVelocityVector, $durationScale, $this_animate, $block) {
     return function (it) {
-      var tmp$ret$0;
       // Inline function 'kotlin.apply' call
       var tmp = $animation.get_typeConverter_seyvfn_k$();
       var tmp_0 = $animation.get_targetValue_kq6mfd_k$();
-      var tmp0_apply = new AnimationScope($initialValue, tmp, $initialVelocityVector, it, tmp_0, it, true, animate$lambda$lambda($this_animate));
+      var this_0 = new AnimationScope($initialValue, tmp, $initialVelocityVector, it, tmp_0, it, true, animate$lambda$lambda($this_animate));
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.animation.core.animate.<anonymous>.<anonymous>' call
-      doAnimationFrameWithScale(tmp0_apply, it, $durationScale, $animation, $this_animate, $block);
-      tmp$ret$0 = tmp0_apply;
-      $lateInitScope._v = tmp$ret$0;
+      doAnimationFrameWithScale(this_0, it, $durationScale, $animation, $this_animate, $block);
+      $lateInitScope._v = this_0;
       return Unit_getInstance();
     };
   }
   function animate$lambda_1($this_animate) {
     return function () {
-      $this_animate.set_isRunning_tw1q35_k$(false);
+      $this_animate.set_isRunning_m21k59_k$(false);
       return Unit_getInstance();
     };
   }
@@ -4500,7 +4491,18 @@
       return Unit_getInstance();
     };
   }
+  function callWithFrameNanos$lambda($onFrame) {
+    return function (it) {
+      // Inline function 'kotlin.Long.div' call
+      var other = get_AnimationDebugDurationScale();
+      var tmp$ret$0 = it.div_jun7gj_k$(toLong(other));
+      return $onFrame(tmp$ret$0);
+    };
+  }
   function animateTo$lambda($this$null) {
+    return Unit_getInstance();
+  }
+  function animateDecay$lambda($this$null) {
     return Unit_getInstance();
   }
   function animate$lambda_3($block, $typeConverter) {
@@ -4509,38 +4511,29 @@
       return Unit_getInstance();
     };
   }
-  function callWithFrameNanos$lambda($onFrame) {
-    return function (it) {
-      var tmp$ret$0;
-      // Inline function 'kotlin.Long.div' call
-      var tmp0_div = get_AnimationDebugDurationScale();
-      tmp$ret$0 = it.div_9s1fi3_k$(toLong(tmp0_div));
-      return $onFrame(tmp$ret$0);
-    };
-  }
-  function $animateCOROUTINE$0(_this__u8e3s4, animation, startTimeNanos, block, resultContinuation) {
+  function $animateCOROUTINE$1(_this__u8e3s4, animation, startTimeNanos, block, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.animation_1 = animation;
     this.startTimeNanos_1 = startTimeNanos;
     this.block_1 = block;
   }
-  protoOf($animateCOROUTINE$0).doResume_5yljmg_k$ = function () {
+  protoOf($animateCOROUTINE$1).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(7);
-            this.initialValue0__1 = this.animation_1.getValueFromNanos_iwi8kk_k$(new Long(0, 0));
-            this.initialVelocityVector1__1 = this.animation_1.getVelocityVectorFromNanos_n1b66h_k$(new Long(0, 0));
+            this.set_exceptionState_fex74n_k$(7);
+            this.initialValue0__1 = this.animation_1.getValueFromNanos_i31vd8_k$(new Long(0, 0));
+            this.initialVelocityVector1__1 = this.animation_1.getVelocityVectorFromNanos_jouakx_k$(new Long(0, 0));
             this.lateInitScope2__1 = {_v: null};
-            this.set_exceptionState_s9sevl_k$(6);
+            this.set_exceptionState_fex74n_k$(6);
             if (this.startTimeNanos_1.equals(AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$())) {
               var tmp_0 = this;
               tmp_0.durationScale3__1 = get_durationScale(this.get_context_h02k06_k$());
-              this.set_state_a96kl8_k$(1);
+              this.set_state_rjd8d0_k$(1);
               suspendResult = callWithFrameNanos(this.animation_1, animate$lambda_0(this.lateInitScope2__1, this.initialValue0__1, this.animation_1, this.initialVelocityVector1__1, this.durationScale3__1, this._this__u8e3s4__1, this.block_1), this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
@@ -4549,28 +4542,28 @@
             } else {
               var tmp_1 = this.animation_1.get_typeConverter_seyvfn_k$();
               var tmp_2 = this.animation_1.get_targetValue_kq6mfd_k$();
-              var tmp0_apply = new AnimationScope(this.initialValue0__1, tmp_1, this.initialVelocityVector1__1, this.startTimeNanos_1, tmp_2, this.startTimeNanos_1, true, animate$lambda_1(this._this__u8e3s4__1));
-              doAnimationFrameWithScale(tmp0_apply, this.startTimeNanos_1, get_durationScale(this.get_context_h02k06_k$()), this.animation_1, this._this__u8e3s4__1, this.block_1);
-              this.lateInitScope2__1._v = tmp0_apply;
-              this.set_state_a96kl8_k$(2);
+              var this_0 = new AnimationScope(this.initialValue0__1, tmp_1, this.initialVelocityVector1__1, this.startTimeNanos_1, tmp_2, this.startTimeNanos_1, true, animate$lambda_1(this._this__u8e3s4__1));
+              doAnimationFrameWithScale(this_0, this.startTimeNanos_1, get_durationScale(this.get_context_h02k06_k$()), this.animation_1, this._this__u8e3s4__1, this.block_1);
+              this.lateInitScope2__1._v = this_0;
+              this.set_state_rjd8d0_k$(2);
               continue $sm;
             }
 
           case 1:
-            this.set_state_a96kl8_k$(2);
+            this.set_state_rjd8d0_k$(2);
             continue $sm;
           case 2:
-            this.set_state_a96kl8_k$(3);
+            this.set_state_rjd8d0_k$(3);
             continue $sm;
           case 3:
             if (!ensureNotNull(this.lateInitScope2__1._v).get_isRunning_okmtn0_k$()) {
-              this.set_state_a96kl8_k$(5);
+              this.set_state_rjd8d0_k$(5);
               continue $sm;
             }
 
             var tmp_3 = this;
             tmp_3.durationScale4__1 = get_durationScale(this.get_context_h02k06_k$());
-            this.set_state_a96kl8_k$(4);
+            this.set_state_rjd8d0_k$(4);
             suspendResult = callWithFrameNanos(this.animation_1, animate$lambda_2(this.lateInitScope2__1, this.durationScale4__1, this.animation_1, this._this__u8e3s4__1, this.block_1), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
@@ -4578,24 +4571,24 @@
 
             continue $sm;
           case 4:
-            this.set_state_a96kl8_k$(3);
+            this.set_state_rjd8d0_k$(3);
             continue $sm;
           case 5:
-            this.set_exceptionState_s9sevl_k$(7);
-            this.set_state_a96kl8_k$(8);
+            this.set_exceptionState_fex74n_k$(7);
+            this.set_state_rjd8d0_k$(8);
             continue $sm;
           case 6:
-            this.set_exceptionState_s9sevl_k$(7);
+            this.set_exceptionState_fex74n_k$(7);
             var tmp_4 = this.get_exception_x0n6w6_k$();
             if (tmp_4 instanceof CancellationException) {
               var e = this.get_exception_x0n6w6_k$();
               var tmp0_safe_receiver = this.lateInitScope2__1._v;
               if (tmp0_safe_receiver != null) {
-                tmp0_safe_receiver.set_isRunning_tw1q35_k$(false);
+                tmp0_safe_receiver.set_isRunning_m21k59_k$(false);
               }
               var tmp1_safe_receiver = this.lateInitScope2__1._v;
               if (equals(tmp1_safe_receiver == null ? null : tmp1_safe_receiver.get_lastFrameTimeNanos_3aprno_k$(), this._this__u8e3s4__1.get_lastFrameTimeNanos_3aprno_k$())) {
-                this._this__u8e3s4__1.set_isRunning_tw1q35_k$(false);
+                this._this__u8e3s4__1.set_isRunning_m21k59_k$(false);
               }
               throw e;
             } else {
@@ -4605,7 +4598,7 @@
           case 7:
             throw this.get_exception_x0n6w6_k$();
           case 8:
-            this.set_exceptionState_s9sevl_k$(7);
+            this.set_exceptionState_fex74n_k$(7);
             return Unit_getInstance();
         }
       } catch ($p) {
@@ -4613,34 +4606,34 @@
         if (this.get_exceptionState_wflpxn_k$() === 7) {
           throw e_0;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e_0);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e_0);
         }
       }
      while (true);
   };
-  function $callWithFrameNanosCOROUTINE$1(_this__u8e3s4, onFrame, resultContinuation) {
+  function $callWithFrameNanosCOROUTINE$2(_this__u8e3s4, onFrame, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.onFrame_1 = onFrame;
   }
-  protoOf($callWithFrameNanosCOROUTINE$1).doResume_5yljmg_k$ = function () {
+  protoOf($callWithFrameNanosCOROUTINE$2).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(4);
+            this.set_exceptionState_fex74n_k$(4);
             if (this._this__u8e3s4__1.get_isInfinite_uffwnt_k$()) {
-              this.set_state_a96kl8_k$(2);
+              this.set_state_rjd8d0_k$(2);
               suspendResult = withInfiniteAnimationFrameNanos(this.onFrame_1, this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
               continue $sm;
             } else {
-              this.set_state_a96kl8_k$(1);
+              this.set_state_rjd8d0_k$(1);
               suspendResult = withFrameNanos(callWithFrameNanos$lambda(this.onFrame_1), this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
@@ -4650,11 +4643,11 @@
 
           case 1:
             this.WHEN_RESULT0__1 = suspendResult;
-            this.set_state_a96kl8_k$(3);
+            this.set_state_rjd8d0_k$(3);
             continue $sm;
           case 2:
             this.WHEN_RESULT0__1 = suspendResult;
-            this.set_state_a96kl8_k$(3);
+            this.set_state_rjd8d0_k$(3);
             continue $sm;
           case 3:
             return this.WHEN_RESULT0__1;
@@ -4666,46 +4659,59 @@
         if (this.get_exceptionState_wflpxn_k$() === 4) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
   function _set_targetValue__aqsk0r_0($this, _set____db54di) {
+    var this_0 = $this.targetValue$delegate_1;
     targetValue$factory_1();
-    return $this.targetValue$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   }
   function _get_targetValue__jjlmb5($this) {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = $this.targetValue$delegate_1;
     targetValue$factory_2();
-    return $this.targetValue$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   }
   function _set_animationSpec__7qdru($this, _set____db54di) {
+    var this_0 = $this.animationSpec$delegate_1;
     animationSpec$factory();
-    return $this.animationSpec$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   }
   function _set_animation__pan2kh($this, _set____db54di) {
+    var this_0 = $this.animation$delegate_1;
     animation$factory();
-    return $this.animation$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   }
   function _set_offsetTimeNanos__i9wy86($this, _set____db54di) {
+    var this_0 = $this.offsetTimeNanos$delegate_1;
     offsetTimeNanos$factory();
-    return $this.offsetTimeNanos$delegate_1.set_longValue_dddl2n_k$(_set____db54di);
+    this_0.set_longValue_3qxaje_k$(_set____db54di);
+    return Unit_getInstance();
   }
   function _get_offsetTimeNanos__sdn5qq($this) {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = $this.offsetTimeNanos$delegate_1;
     offsetTimeNanos$factory_0();
-    return $this.offsetTimeNanos$delegate_1.get_longValue_ahin58_k$();
+    return this_0.get_longValue_ahin58_k$();
   }
   function _set_needsReset__wyw9nf($this, _set____db54di) {
+    var this_0 = $this.needsReset$delegate_1;
     needsReset$factory();
-    return $this.needsReset$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   }
   function _get_needsReset__mzz76h($this) {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = $this.needsReset$delegate_1;
     needsReset$factory_0();
-    return $this.needsReset$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   }
   function _set_velocityVector__vm30d3_0($this, _set____db54di) {
     $this.velocityVector_1 = _set____db54di;
@@ -4748,40 +4754,38 @@
   protoOf(DeferredAnimationData).get_animation_r0gd0b_k$ = function () {
     return this.animation_1;
   };
-  protoOf(DeferredAnimationData).set_transitionSpec_qk274z_k$ = function (_set____db54di) {
+  protoOf(DeferredAnimationData).set_transitionSpec_6vdwmp_k$ = function (_set____db54di) {
     this.transitionSpec_1 = _set____db54di;
   };
   protoOf(DeferredAnimationData).get_transitionSpec_80wxl_k$ = function () {
     return this.transitionSpec_1;
   };
-  protoOf(DeferredAnimationData).set_targetValueByState_a3yc56_k$ = function (_set____db54di) {
+  protoOf(DeferredAnimationData).set_targetValueByState_13c911_k$ = function (_set____db54di) {
     this.targetValueByState_1 = _set____db54di;
   };
   protoOf(DeferredAnimationData).get_targetValueByState_4t5sar_k$ = function () {
     return this.targetValueByState_1;
   };
-  protoOf(DeferredAnimationData).updateAnimationStates_8v9ljd_k$ = function (segment) {
+  protoOf(DeferredAnimationData).updateAnimationStates_83ofna_k$ = function (segment) {
     var targetValue = this.targetValueByState_1(segment.get_targetState_kri3mx_k$());
     if (this.$this_1.$this_1.get_isSeeking_vjb393_k$()) {
       var initialValue = this.targetValueByState_1(segment.get_initialState_2eu9l6_k$());
-      this.animation_1.updateInitialAndTargetValue_9aufa_k$(initialValue, targetValue, this.transitionSpec_1(segment));
+      this.animation_1.updateInitialAndTargetValue_ephtkk_k$(initialValue, targetValue, this.transitionSpec_1(segment));
     } else {
-      this.animation_1.updateTargetValue_v2xwf0_k$(targetValue, this.transitionSpec_1(segment));
+      this.animation_1.updateTargetValue_yzbefi_k$(targetValue, this.transitionSpec_1(segment));
     }
   };
   protoOf(DeferredAnimationData).get_value_j01efc_k$ = function () {
-    this.updateAnimationStates_8v9ljd_k$(this.$this_1.$this_1.get_segment_xwnoei_k$());
+    this.updateAnimationStates_83ofna_k$(this.$this_1.$this_1.get_segment_xwnoei_k$());
     return this.animation_1.get_value_j01efc_k$();
   };
   function Transition$animateTo$composable$slambda$lambda(this$0, $durationScale) {
     return function (it) {
       var tmp;
       if (!this$0.get_isSeeking_vjb393_k$()) {
-        var tmp$ret$0;
         // Inline function 'kotlin.Long.div' call
-        var tmp0_div = 1;
-        tmp$ret$0 = it.div_9s1fi3_k$(toLong(tmp0_div));
-        this$0.onFrame_1dtgpn_k$(tmp$ret$0, $durationScale);
+        var tmp$ret$0 = it.div_jun7gj_k$(toLong(1));
+        this$0.onFrame_juoego_k$(tmp$ret$0, $durationScale);
         tmp = Unit_getInstance();
       }
       return Unit_getInstance();
@@ -4798,17 +4802,22 @@
     return Transition_init_$Init$(initialState, label, objectCreate(protoOf(Transition)));
   }
   function _set_segment__77iylu($this, _set____db54di) {
+    var this_0 = $this.segment$delegate_1;
     segment$factory();
-    return $this.segment$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   }
   function _set_startTimeNanos__1jy4fb($this, _set____db54di) {
+    var this_0 = $this.startTimeNanos$delegate_1;
     startTimeNanos$factory();
-    return $this.startTimeNanos$delegate_1.set_longValue_dddl2n_k$(_set____db54di);
+    this_0.set_longValue_3qxaje_k$(_set____db54di);
+    return Unit_getInstance();
   }
   function _get_startTimeNanos__r31kgr($this) {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = $this.startTimeNanos$delegate_1;
     startTimeNanos$factory_0();
-    return $this.startTimeNanos$delegate_1.get_longValue_ahin58_k$();
+    return this_0.get_longValue_ahin58_k$();
   }
   function _get__animations__z05tbx($this) {
     return $this._animations_1;
@@ -4817,7 +4826,7 @@
     return $this._transitions_1;
   }
   function onChildAnimationUpdated($this) {
-    $this.set_updateChildrenNeeded_kde0f_k$(true);
+    $this.set_updateChildrenNeeded_rw42ud_k$(true);
     if ($this.get_isSeeking_vjb393_k$()) {
       var maxDurationNanos = new Long(0, 0);
       // Inline function 'kotlin.collections.forEach' call
@@ -4826,12 +4835,12 @@
         var element = tmp0_iterator.next_20eer_k$();
         // Inline function 'androidx.compose.animation.core.Transition.onChildAnimationUpdated.<anonymous>' call
         // Inline function 'kotlin.math.max' call
-        var tmp0_max = maxDurationNanos;
-        var tmp1_max = element.get_durationNanos_ub5cy_k$();
-        maxDurationNanos = tmp0_max.compareTo_n4fqi2_k$(tmp1_max) >= 0 ? tmp0_max : tmp1_max;
-        element.seekTo_5llhw_k$($this.lastSeekedTimeNanos_1);
+        var a = maxDurationNanos;
+        var b = element.get_durationNanos_ub5cy_k$();
+        maxDurationNanos = a.compareTo_9jj042_k$(b) >= 0 ? a : b;
+        element.seekTo_a83qmt_k$($this.lastSeekedTimeNanos_1);
       }
-      $this.set_updateChildrenNeeded_kde0f_k$(false);
+      $this.set_updateChildrenNeeded_rw42ud_k$(false);
     }
   }
   function TransitionAnimationState($outer, initialValue, initialVelocityVector, typeConverter, label) {
@@ -4846,7 +4855,7 @@
     this.needsReset$delegate_1 = mutableStateOf(false);
     this.value$delegate_1 = mutableStateOf(initialValue);
     this.velocityVector_1 = initialVelocityVector;
-    var tmp0_safe_receiver = get_visibilityThresholdMap().get_1mhr4y_k$(this.typeConverter_1);
+    var tmp0_safe_receiver = get_visibilityThresholdMap().get_wei43m_k$(this.typeConverter_1);
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -4861,7 +4870,7 @@
         do {
           var id = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          vector.set_8gccym_k$(id, tmp0_safe_receiver);
+          vector.set_4eugj6_k$(id, tmp0_safe_receiver);
         }
          while (inductionVariable < last);
       tmp = this.typeConverter_1.get_convertFromVector_kmewon_k$()(vector);
@@ -4877,45 +4886,53 @@
   };
   protoOf(TransitionAnimationState).get_animationSpec_wdk2t2_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.animationSpec$delegate_1;
     animationSpec$factory_0();
-    return this.animationSpec$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   protoOf(TransitionAnimationState).get_animation_r0gd0b_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.animation$delegate_1;
     animation$factory_0();
-    return this.animation$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(TransitionAnimationState).set_isFinished_l6qivk_k$ = function (_set____db54di) {
+  protoOf(TransitionAnimationState).set_isFinished_ptfqd8_k$ = function (_set____db54di) {
+    var this_0 = this.isFinished$delegate_1;
     isFinished$factory();
-    return this.isFinished$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   };
   protoOf(TransitionAnimationState).get_isFinished_qlhjyd_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.isFinished$delegate_1;
     isFinished$factory_0();
-    return this.isFinished$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(TransitionAnimationState).set_value_rnwamw_k$ = function (_set____db54di) {
+  protoOf(TransitionAnimationState).set_value_v1vabv_k$ = function (_set____db54di) {
+    var this_0 = this.value$delegate_1;
     value$factory_3();
-    return this.value$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   };
   protoOf(TransitionAnimationState).get_value_j01efc_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.value$delegate_1;
     value$factory_4();
-    return this.value$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   protoOf(TransitionAnimationState).get_durationNanos_ub5cy_k$ = function () {
     return this.get_animation_r0gd0b_k$().get_durationNanos_ub5cy_k$();
   };
-  protoOf(TransitionAnimationState).onPlayTimeChanged_10zdtt_k$ = function (playTimeNanos, durationScale) {
+  protoOf(TransitionAnimationState).onPlayTimeChanged_r5gupa_k$ = function (playTimeNanos, durationScale) {
     var tmp;
     if (durationScale > 0.0) {
       // Inline function 'kotlin.Long.div' call
-      var scaledTime = playTimeNanos.minus_llf5ei_k$(_get_offsetTimeNanos__sdn5qq(this)).toFloat_jhbgwv_k$() / durationScale;
+      var scaledTime = playTimeNanos.minus_mfbszm_k$(_get_offsetTimeNanos__sdn5qq(this)).toFloat_jhbgwv_k$() / durationScale;
       // Inline function 'kotlin.check' call
       // Inline function 'kotlin.contracts.contract' call
       if (!!isNaN_0(scaledTime)) {
         // Inline function 'androidx.compose.animation.core.TransitionAnimationState.onPlayTimeChanged.<anonymous>' call
-        var message = 'Duration scale adjusted time is NaN. Duration scale: ' + durationScale + ',' + ('playTimeNanos: ' + toString(playTimeNanos) + ', offsetTimeNanos: ' + toString(_get_offsetTimeNanos__sdn5qq(this)));
+        var message = 'Duration scale adjusted time is NaN. Duration scale: ' + durationScale + ',' + ('playTimeNanos: ' + playTimeNanos.toString() + ', offsetTimeNanos: ' + _get_offsetTimeNanos__sdn5qq(this).toString());
         throw IllegalStateException_init_$Create$(toString(message));
       }
       tmp = numberToLong(scaledTime);
@@ -4923,31 +4940,31 @@
       tmp = this.get_animation_r0gd0b_k$().get_durationNanos_ub5cy_k$();
     }
     var playTime = tmp;
-    this.set_value_rnwamw_k$(this.get_animation_r0gd0b_k$().getValueFromNanos_iwi8kk_k$(playTime));
-    this.velocityVector_1 = this.get_animation_r0gd0b_k$().getVelocityVectorFromNanos_n1b66h_k$(playTime);
-    if (this.get_animation_r0gd0b_k$().isFinishedFromNanos_uhkxvh_k$(playTime)) {
-      this.set_isFinished_l6qivk_k$(true);
+    this.set_value_v1vabv_k$(this.get_animation_r0gd0b_k$().getValueFromNanos_i31vd8_k$(playTime));
+    this.velocityVector_1 = this.get_animation_r0gd0b_k$().getVelocityVectorFromNanos_jouakx_k$(playTime);
+    if (this.get_animation_r0gd0b_k$().isFinishedFromNanos_c31w39_k$(playTime)) {
+      this.set_isFinished_ptfqd8_k$(true);
       _set_offsetTimeNanos__i9wy86(this, new Long(0, 0));
     }
   };
-  protoOf(TransitionAnimationState).seekTo_5llhw_k$ = function (playTimeNanos) {
-    this.set_value_rnwamw_k$(this.get_animation_r0gd0b_k$().getValueFromNanos_iwi8kk_k$(playTimeNanos));
-    this.velocityVector_1 = this.get_animation_r0gd0b_k$().getVelocityVectorFromNanos_n1b66h_k$(playTimeNanos);
+  protoOf(TransitionAnimationState).seekTo_a83qmt_k$ = function (playTimeNanos) {
+    this.set_value_v1vabv_k$(this.get_animation_r0gd0b_k$().getValueFromNanos_i31vd8_k$(playTimeNanos));
+    this.velocityVector_1 = this.get_animation_r0gd0b_k$().getVelocityVectorFromNanos_jouakx_k$(playTimeNanos);
   };
-  protoOf(TransitionAnimationState).resetAnimation_pckuxw_k$ = function () {
+  protoOf(TransitionAnimationState).resetAnimation_pd4nj9_k$ = function () {
     _set_needsReset__wyw9nf(this, true);
   };
-  protoOf(TransitionAnimationState).updateTargetValue_v2xwf0_k$ = function (targetValue, animationSpec) {
+  protoOf(TransitionAnimationState).updateTargetValue_yzbefi_k$ = function (targetValue, animationSpec) {
     if (!equals(_get_targetValue__jjlmb5(this), targetValue) ? true : _get_needsReset__mzz76h(this)) {
       _set_targetValue__aqsk0r_0(this, targetValue);
       _set_animationSpec__7qdru(this, animationSpec);
       updateAnimation$default(this, VOID, !this.get_isFinished_qlhjyd_k$());
-      this.set_isFinished_l6qivk_k$(false);
+      this.set_isFinished_ptfqd8_k$(false);
       _set_offsetTimeNanos__i9wy86(this, this.$this_1.get_playTimeNanos_50m2yz_k$());
       _set_needsReset__wyw9nf(this, false);
     }
   };
-  protoOf(TransitionAnimationState).updateInitialAndTargetValue_9aufa_k$ = function (initialValue, targetValue, animationSpec) {
+  protoOf(TransitionAnimationState).updateInitialAndTargetValue_ephtkk_k$ = function (initialValue, targetValue, animationSpec) {
     _set_targetValue__aqsk0r_0(this, targetValue);
     _set_animationSpec__7qdru(this, animationSpec);
     if (equals(this.get_animation_r0gd0b_k$().get_initialValue_2disdm_k$(), initialValue) ? equals(this.get_animation_r0gd0b_k$().get_targetValue_kq6mfd_k$(), targetValue) : false) {
@@ -4981,11 +4998,10 @@
     return tmp;
   };
   protoOf(SegmentImpl).hashCode = function () {
-    var tmp$ret$0;
     // Inline function 'kotlin.hashCode' call
     var tmp0_safe_receiver = this.initialState_1;
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : hashCode(tmp0_safe_receiver);
-    tmp$ret$0 = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
+    var tmp$ret$0 = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
     var tmp = imul(tmp$ret$0, 31);
     // Inline function 'kotlin.hashCode' call
     var tmp0_safe_receiver_0 = this.targetState_1;
@@ -5006,26 +5022,29 @@
   protoOf(DeferredAnimation).get_label_iuj8p7_k$ = function () {
     return this.label_1;
   };
-  protoOf(DeferredAnimation).set_data_1uxdza_k$ = function (_set____db54di) {
+  protoOf(DeferredAnimation).set_data_vrvhdm_k$ = function (_set____db54di) {
+    var this_0 = this.data$delegate_1;
     data$factory();
-    return this.data$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   };
   protoOf(DeferredAnimation).get_data_wokkxf_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.data$delegate_1;
     data$factory_0();
-    return this.data$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(DeferredAnimation).animate_577fcm_k$ = function (transitionSpec, targetValueByState) {
+  protoOf(DeferredAnimation).animate_lt3uhv_k$ = function (transitionSpec, targetValueByState) {
     var tmp0_elvis_lhs = this.get_data_wokkxf_k$();
     var tmp;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.apply' call
-      var tmp0_apply = new DeferredAnimationData(this, new TransitionAnimationState(this.$this_1, targetValueByState(this.$this_1.get_currentState_snihnl_k$()), createZeroVectorFrom(this.typeConverter_1, targetValueByState(this.$this_1.get_currentState_snihnl_k$())), this.typeConverter_1, this.label_1), transitionSpec, targetValueByState);
+      var this_0 = new DeferredAnimationData(this, new TransitionAnimationState(this.$this_1, targetValueByState(this.$this_1.get_currentState_snihnl_k$()), createZeroVectorFrom(this.typeConverter_1, targetValueByState(this.$this_1.get_currentState_snihnl_k$())), this.typeConverter_1, this.label_1), transitionSpec, targetValueByState);
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.animation.core.DeferredAnimation.animate.<anonymous>' call
-      this.set_data_1uxdza_k$(tmp0_apply);
-      this.$this_1.addAnimation_w7wt87_k$(tmp0_apply.animation_1);
-      tmp = tmp0_apply;
+      this.set_data_vrvhdm_k$(this_0);
+      this.$this_1.addAnimation_smuflz_k$(this_0.animation_1);
+      tmp = this_0;
     } else {
       tmp = tmp0_elvis_lhs;
     }
@@ -5035,10 +5054,10 @@
     // Inline function 'androidx.compose.animation.core.DeferredAnimation.animate.<anonymous>' call
     animData.targetValueByState_1 = targetValueByState;
     animData.transitionSpec_1 = transitionSpec;
-    animData.updateAnimationStates_8v9ljd_k$(this.$this_1.get_segment_xwnoei_k$());
+    animData.updateAnimationStates_83ofna_k$(this.$this_1.get_segment_xwnoei_k$());
     return animData;
   };
-  protoOf(DeferredAnimation).setupSeeking_5hxrrw_k$ = function () {
+  protoOf(DeferredAnimation).setupSeeking_5ihkd9_k$ = function () {
     var tmp0_safe_receiver = this.get_data_wokkxf_k$();
     if (tmp0_safe_receiver == null)
       null;
@@ -5046,7 +5065,7 @@
       // Inline function 'kotlin.apply' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.animation.core.DeferredAnimation.setupSeeking.<anonymous>' call
-      tmp0_safe_receiver.animation_1.updateInitialAndTargetValue_9aufa_k$(tmp0_safe_receiver.targetValueByState_1(this.$this_1.get_segment_xwnoei_k$().get_initialState_2eu9l6_k$()), tmp0_safe_receiver.targetValueByState_1(this.$this_1.get_segment_xwnoei_k$().get_targetState_kri3mx_k$()), tmp0_safe_receiver.transitionSpec_1(this.$this_1.get_segment_xwnoei_k$()));
+      tmp0_safe_receiver.animation_1.updateInitialAndTargetValue_ephtkk_k$(tmp0_safe_receiver.targetValueByState_1(this.$this_1.get_segment_xwnoei_k$().get_initialState_2eu9l6_k$()), tmp0_safe_receiver.targetValueByState_1(this.$this_1.get_segment_xwnoei_k$().get_targetState_kri3mx_k$()), tmp0_safe_receiver.transitionSpec_1(this.$this_1.get_segment_xwnoei_k$()));
     }
   };
   function get_$stableprop_20() {
@@ -5055,36 +5074,30 @@
   function Transition$totalDurationNanos$delegate$lambda(this$0) {
     return function () {
       var maxDurationNanos = new Long(0, 0);
-      var tmp0_forEach = this$0._animations_1;
-      var tmp0_iterator = tmp0_forEach.iterator_jk1svi_k$();
+      var tmp0_iterator = this$0._animations_1.iterator_jk1svi_k$();
       while (tmp0_iterator.hasNext_bitz1p_k$()) {
         var element = tmp0_iterator.next_20eer_k$();
         // Inline function 'androidx.compose.animation.core.Transition.totalDurationNanos$delegate.<anonymous>.<anonymous>' call
-        var tmp$ret$0;
         // Inline function 'kotlin.math.max' call
-        var tmp0_max = maxDurationNanos;
-        var tmp1_max = element.get_durationNanos_ub5cy_k$();
-        tmp$ret$0 = tmp0_max.compareTo_n4fqi2_k$(tmp1_max) >= 0 ? tmp0_max : tmp1_max;
-        maxDurationNanos = tmp$ret$0;
+        var a = maxDurationNanos;
+        var b = element.get_durationNanos_ub5cy_k$();
+        maxDurationNanos = a.compareTo_9jj042_k$(b) >= 0 ? a : b;
       }
-      var tmp1_forEach = this$0._transitions_1;
-      var tmp0_iterator_0 = tmp1_forEach.iterator_jk1svi_k$();
+      var tmp0_iterator_0 = this$0._transitions_1.iterator_jk1svi_k$();
       while (tmp0_iterator_0.hasNext_bitz1p_k$()) {
         var element_0 = tmp0_iterator_0.next_20eer_k$();
         // Inline function 'androidx.compose.animation.core.Transition.totalDurationNanos$delegate.<anonymous>.<anonymous>' call
-        var tmp$ret$1;
         // Inline function 'kotlin.math.max' call
-        var tmp0_max_0 = maxDurationNanos;
-        var tmp1_max_0 = element_0.get_totalDurationNanos_cuj0z4_k$();
-        tmp$ret$1 = tmp0_max_0.compareTo_n4fqi2_k$(tmp1_max_0) >= 0 ? tmp0_max_0 : tmp1_max_0;
-        maxDurationNanos = tmp$ret$1;
+        var a_0 = maxDurationNanos;
+        var b_0 = element_0.get_totalDurationNanos_cuj0z4_k$();
+        maxDurationNanos = a_0.compareTo_9jj042_k$(b_0) >= 0 ? a_0 : b_0;
       }
       return maxDurationNanos;
     };
   }
   function Transition$updateTarget$composable$lambda($tmp0_rcvr, $targetState, $$changed) {
     return function ($composer, $force) {
-      $tmp0_rcvr.updateTarget$composable_g8p3zo_k$($targetState, $composer, updateChangedFlags($$changed | 1));
+      $tmp0_rcvr.updateTarget$composable_matduq_k$($targetState, $composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
@@ -5092,14 +5105,14 @@
     this.this$0__1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(Transition$animateTo$composable$slambda).invoke_d6gbsu_k$ = function ($this$LaunchedEffect, $completion) {
-    var tmp = this.create_b6qu53_k$($this$LaunchedEffect, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(Transition$animateTo$composable$slambda).invoke_d9fzmj_k$ = function ($this$LaunchedEffect, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$LaunchedEffect, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(Transition$animateTo$composable$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(Transition$animateTo$composable$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(Transition$animateTo$composable$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -5108,17 +5121,17 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(3);
-            this.set_state_a96kl8_k$(1);
+            this.set_exceptionState_fex74n_k$(3);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 1:
-            if (false) {
-              this.set_state_a96kl8_k$(4);
+            if (!true) {
+              this.set_state_rjd8d0_k$(4);
               continue $sm;
             }
 
             this.durationScale0__1 = get_durationScale(this.$this$LaunchedEffect_1.get_coroutineContext_115oqo_k$());
-            this.set_state_a96kl8_k$(2);
+            this.set_state_rjd8d0_k$(2);
             suspendResult = withFrameNanos(Transition$animateTo$composable$slambda$lambda(this.this$0__1, this.durationScale0__1), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
@@ -5126,7 +5139,7 @@
 
             continue $sm;
           case 2:
-            this.set_state_a96kl8_k$(1);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 3:
             throw this.get_exception_x0n6w6_k$();
@@ -5138,31 +5151,31 @@
         if (this.get_exceptionState_wflpxn_k$() === 3) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(Transition$animateTo$composable$slambda).create_b6qu53_k$ = function ($this$LaunchedEffect, completion) {
+  protoOf(Transition$animateTo$composable$slambda).create_rcuf4x_k$ = function ($this$LaunchedEffect, completion) {
     var i = new Transition$animateTo$composable$slambda(this.this$0__1, completion);
     i.$this$LaunchedEffect_1 = $this$LaunchedEffect;
     return i;
   };
-  protoOf(Transition$animateTo$composable$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(Transition$animateTo$composable$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function Transition$animateTo$composable$slambda_0(this$0, resultContinuation) {
     var i = new Transition$animateTo$composable$slambda(this$0, resultContinuation);
     var l = function ($this$LaunchedEffect, $completion) {
-      return i.invoke_d6gbsu_k$($this$LaunchedEffect, $completion);
+      return i.invoke_d9fzmj_k$($this$LaunchedEffect, $completion);
     };
     l.$arity = 1;
     return l;
   }
   function Transition$animateTo$composable$lambda($tmp0_rcvr, $targetState, $$changed) {
     return function ($composer, $force) {
-      $tmp0_rcvr.animateTo$composable_p1cxn2_k$($targetState, $composer, updateChangedFlags($$changed | 1));
+      $tmp0_rcvr.animateTo$composable_ejnk4c_k$($targetState, $composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
@@ -5186,46 +5199,56 @@
   protoOf(Transition).get_label_iuj8p7_k$ = function () {
     return this.label_1;
   };
-  protoOf(Transition).set_currentState_fwr97s_k$ = function (value) {
-    this.transitionState_1.set_currentState_fwr97s_k$(value);
+  protoOf(Transition).set_currentState_90n70r_k$ = function (value) {
+    this.transitionState_1.set_currentState_90n70r_k$(value);
   };
   protoOf(Transition).get_currentState_snihnl_k$ = function () {
     return this.transitionState_1.get_currentState_snihnl_k$();
   };
-  protoOf(Transition).set_targetState_9v8wrq_k$ = function (_set____db54di) {
+  protoOf(Transition).set_targetState_1ag6bn_k$ = function (_set____db54di) {
+    var this_0 = this.targetState$delegate_1;
     targetState$factory();
-    return this.targetState$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   };
   protoOf(Transition).get_targetState_kri3mx_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.targetState$delegate_1;
     targetState$factory_0();
-    return this.targetState$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   protoOf(Transition).get_segment_xwnoei_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.segment$delegate_1;
     segment$factory_0();
-    return this.segment$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   protoOf(Transition).get_isRunning_okmtn0_k$ = function () {
     return !_get_startTimeNanos__r31kgr(this).equals(AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$());
   };
-  protoOf(Transition).set_playTimeNanos_xc4lgm_k$ = function (_set____db54di) {
+  protoOf(Transition).set_playTimeNanos_8390lf_k$ = function (_set____db54di) {
+    var this_0 = this.playTimeNanos$delegate_1;
     playTimeNanos$factory();
-    return this.playTimeNanos$delegate_1.set_longValue_dddl2n_k$(_set____db54di);
+    this_0.set_longValue_3qxaje_k$(_set____db54di);
+    return Unit_getInstance();
   };
   protoOf(Transition).get_playTimeNanos_50m2yz_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.playTimeNanos$delegate_1;
     playTimeNanos$factory_0();
-    return this.playTimeNanos$delegate_1.get_longValue_ahin58_k$();
+    return this_0.get_longValue_ahin58_k$();
   };
-  protoOf(Transition).set_updateChildrenNeeded_kde0f_k$ = function (_set____db54di) {
+  protoOf(Transition).set_updateChildrenNeeded_rw42ud_k$ = function (_set____db54di) {
+    var this_0 = this.updateChildrenNeeded$delegate_1;
     updateChildrenNeeded$factory();
-    return this.updateChildrenNeeded$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   };
   protoOf(Transition).get_updateChildrenNeeded_bsutx6_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.updateChildrenNeeded$delegate_1;
     updateChildrenNeeded$factory_0();
-    return this.updateChildrenNeeded$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   protoOf(Transition).get_transitions_hojw6j_k$ = function () {
     return this._transitions_1;
@@ -5233,16 +5256,19 @@
   protoOf(Transition).get_animations_ez9gco_k$ = function () {
     return this._animations_1;
   };
-  protoOf(Transition).set_isSeeking_jx5uti_k$ = function (_set____db54di) {
+  protoOf(Transition).set_isSeeking_enascu_k$ = function (_set____db54di) {
+    var this_0 = this.isSeeking$delegate_1;
     isSeeking$factory();
-    return this.isSeeking$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   };
   protoOf(Transition).get_isSeeking_vjb393_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.isSeeking$delegate_1;
     isSeeking$factory_0();
-    return this.isSeeking$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(Transition).set_lastSeekedTimeNanos_7ej7oh_k$ = function (_set____db54di) {
+  protoOf(Transition).set_lastSeekedTimeNanos_2k2xwq_k$ = function (_set____db54di) {
     this.lastSeekedTimeNanos_1 = _set____db54di;
   };
   protoOf(Transition).get_lastSeekedTimeNanos_ycnk8s_k$ = function () {
@@ -5250,15 +5276,16 @@
   };
   protoOf(Transition).get_totalDurationNanos_cuj0z4_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.totalDurationNanos$delegate_1;
     totalDurationNanos$factory();
-    return this.totalDurationNanos$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(Transition).onFrame_1dtgpn_k$ = function (frameTimeNanos, durationScale) {
+  protoOf(Transition).onFrame_juoego_k$ = function (frameTimeNanos, durationScale) {
     if (_get_startTimeNanos__r31kgr(this).equals(AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$())) {
-      this.onTransitionStart_ur3khz_k$(frameTimeNanos);
+      this.onTransitionStart_f1mn9s_k$(frameTimeNanos);
     }
-    this.set_updateChildrenNeeded_kde0f_k$(false);
-    this.set_playTimeNanos_xc4lgm_k$(frameTimeNanos.minus_llf5ei_k$(_get_startTimeNanos__r31kgr(this)));
+    this.set_updateChildrenNeeded_rw42ud_k$(false);
+    this.set_playTimeNanos_8390lf_k$(frameTimeNanos.minus_mfbszm_k$(_get_startTimeNanos__r31kgr(this)));
     var allFinished = true;
     // Inline function 'kotlin.collections.forEach' call
     var tmp0_iterator = this._animations_1.iterator_jk1svi_k$();
@@ -5266,7 +5293,7 @@
       var element = tmp0_iterator.next_20eer_k$();
       // Inline function 'androidx.compose.animation.core.Transition.onFrame.<anonymous>' call
       if (!element.get_isFinished_qlhjyd_k$()) {
-        element.onPlayTimeChanged_10zdtt_k$(this.get_playTimeNanos_50m2yz_k$(), durationScale);
+        element.onPlayTimeChanged_r5gupa_k$(this.get_playTimeNanos_50m2yz_k$(), durationScale);
       }
       if (!element.get_isFinished_qlhjyd_k$()) {
         allFinished = false;
@@ -5278,33 +5305,33 @@
       var element_0 = tmp0_iterator_0.next_20eer_k$();
       // Inline function 'androidx.compose.animation.core.Transition.onFrame.<anonymous>' call
       if (!equals(element_0.get_targetState_kri3mx_k$(), element_0.get_currentState_snihnl_k$())) {
-        element_0.onFrame_1dtgpn_k$(this.get_playTimeNanos_50m2yz_k$(), durationScale);
+        element_0.onFrame_juoego_k$(this.get_playTimeNanos_50m2yz_k$(), durationScale);
       }
       if (!equals(element_0.get_targetState_kri3mx_k$(), element_0.get_currentState_snihnl_k$())) {
         allFinished = false;
       }
     }
     if (allFinished) {
-      this.onTransitionEnd_dl3p06_k$();
+      this.onTransitionEnd_dlnhlj_k$();
     }
   };
-  protoOf(Transition).onTransitionStart_ur3khz_k$ = function (frameTimeNanos) {
+  protoOf(Transition).onTransitionStart_f1mn9s_k$ = function (frameTimeNanos) {
     _set_startTimeNanos__1jy4fb(this, frameTimeNanos);
-    this.transitionState_1.set_isRunning_tw1q35_k$(true);
+    this.transitionState_1.set_isRunning_m21k59_k$(true);
   };
-  protoOf(Transition).onTransitionEnd_dl3p06_k$ = function () {
+  protoOf(Transition).onTransitionEnd_dlnhlj_k$ = function () {
     _set_startTimeNanos__1jy4fb(this, AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$());
-    this.set_currentState_fwr97s_k$(this.get_targetState_kri3mx_k$());
-    this.set_playTimeNanos_xc4lgm_k$(new Long(0, 0));
-    this.transitionState_1.set_isRunning_tw1q35_k$(false);
+    this.set_currentState_90n70r_k$(this.get_targetState_kri3mx_k$());
+    this.set_playTimeNanos_8390lf_k$(new Long(0, 0));
+    this.transitionState_1.set_isRunning_m21k59_k$(false);
   };
-  protoOf(Transition).setPlaytimeAfterInitialAndTargetStateEstablished_wjg0zp_k$ = function (initialState, targetState, playTimeNanos) {
+  protoOf(Transition).setPlaytimeAfterInitialAndTargetStateEstablished_5eb7ay_k$ = function (initialState, targetState, playTimeNanos) {
     _set_startTimeNanos__1jy4fb(this, AnimationConstants_getInstance().get_UnspecifiedTime_gpclet_k$());
-    this.transitionState_1.set_isRunning_tw1q35_k$(false);
+    this.transitionState_1.set_isRunning_m21k59_k$(false);
     if ((!this.get_isSeeking_vjb393_k$() ? true : !equals(this.get_currentState_snihnl_k$(), initialState)) ? true : !equals(this.get_targetState_kri3mx_k$(), targetState)) {
-      this.set_currentState_fwr97s_k$(initialState);
-      this.set_targetState_9v8wrq_k$(targetState);
-      this.set_isSeeking_jx5uti_k$(true);
+      this.set_currentState_90n70r_k$(initialState);
+      this.set_targetState_1ag6bn_k$(targetState);
+      this.set_isSeeking_enascu_k$(true);
       _set_segment__77iylu(this, new SegmentImpl(initialState, targetState));
     }
     // Inline function 'kotlin.collections.forEach' call
@@ -5313,11 +5340,11 @@
       var element = tmp0_iterator.next_20eer_k$();
       // Inline function 'androidx.compose.animation.core.Transition.setPlaytimeAfterInitialAndTargetStateEstablished.<anonymous>' call
       // Inline function 'kotlin.let' call
-      var tmp0_let = element instanceof Transition ? element : THROW_CCE();
       // Inline function 'kotlin.contracts.contract' call
+      var it = element instanceof Transition ? element : THROW_CCE();
       var tmp;
-      if (tmp0_let.get_isSeeking_vjb393_k$()) {
-        tmp0_let.setPlaytimeAfterInitialAndTargetStateEstablished_wjg0zp_k$(tmp0_let.get_currentState_snihnl_k$(), tmp0_let.get_targetState_kri3mx_k$(), playTimeNanos);
+      if (it.get_isSeeking_vjb393_k$()) {
+        it.setPlaytimeAfterInitialAndTargetStateEstablished_5eb7ay_k$(it.get_currentState_snihnl_k$(), it.get_targetState_kri3mx_k$(), playTimeNanos);
         tmp = Unit_getInstance();
       }
     }
@@ -5326,29 +5353,29 @@
     while (tmp0_iterator_0.hasNext_bitz1p_k$()) {
       var element_0 = tmp0_iterator_0.next_20eer_k$();
       // Inline function 'androidx.compose.animation.core.Transition.setPlaytimeAfterInitialAndTargetStateEstablished.<anonymous>' call
-      element_0.seekTo_5llhw_k$(playTimeNanos);
+      element_0.seekTo_a83qmt_k$(playTimeNanos);
     }
     this.lastSeekedTimeNanos_1 = playTimeNanos;
   };
-  protoOf(Transition).addTransition_oedyge_k$ = function (transition) {
-    return this._transitions_1.add_1j60qe_k$(transition);
+  protoOf(Transition).addTransition_e8lpbn_k$ = function (transition) {
+    return this._transitions_1.add_wl2rvy_k$(transition);
   };
-  protoOf(Transition).removeTransition_w68vpt_k$ = function (transition) {
-    return this._transitions_1.remove_8hbkbr_k$(transition);
+  protoOf(Transition).removeTransition_odo028_k$ = function (transition) {
+    return this._transitions_1.remove_an8aut_k$(transition);
   };
-  protoOf(Transition).addAnimation_w7wt87_k$ = function (animation) {
-    return this._animations_1.add_1j60qe_k$(animation);
+  protoOf(Transition).addAnimation_smuflz_k$ = function (animation) {
+    return this._animations_1.add_wl2rvy_k$(animation);
   };
-  protoOf(Transition).removeAnimation_ugzgad_k$ = function (animation) {
-    this._animations_1.remove_8hbkbr_k$(animation);
+  protoOf(Transition).removeAnimation_tcsn90_k$ = function (animation) {
+    this._animations_1.remove_an8aut_k$(animation);
   };
-  protoOf(Transition).updateTarget_ejaqwt_k$ = function (targetState) {
+  protoOf(Transition).updateTarget_pvc3vq_k$ = function (targetState) {
     illegalDecoyCallException('updateTarget');
   };
-  protoOf(Transition).animateTo_4b9bgh_k$ = function (targetState) {
+  protoOf(Transition).animateTo_8pqj4s_k$ = function (targetState) {
     illegalDecoyCallException('animateTo');
   };
-  protoOf(Transition).removeAnimation_jz6bgo_k$ = function (deferredAnimation) {
+  protoOf(Transition).removeAnimation_oui60b_k$ = function (deferredAnimation) {
     var tmp0_safe_receiver = deferredAnimation.get_data_wokkxf_k$();
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.animation_1;
     if (tmp1_safe_receiver == null)
@@ -5356,12 +5383,12 @@
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
-      this.removeAnimation_ugzgad_k$(tmp1_safe_receiver);
+      this.removeAnimation_tcsn90_k$(tmp1_safe_receiver);
     }
   };
-  protoOf(Transition).updateTarget$composable_g8p3zo_k$ = function (targetState, $composer, $changed) {
+  protoOf(Transition).updateTarget$composable_matduq_k$ = function (targetState, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(1657853547);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1657853547);
     sourceInformation($composer_0, 'C(updateTarget$composable):Transition.kt#pdpnli');
     var $dirty = $changed;
     if (($changed & 14) === 0)
@@ -5375,17 +5402,17 @@
       if (!this.get_isSeeking_vjb393_k$()) {
         if (!equals(this.get_targetState_kri3mx_k$(), targetState)) {
           _set_segment__77iylu(this, new SegmentImpl(this.get_targetState_kri3mx_k$(), targetState));
-          this.set_currentState_fwr97s_k$(this.get_targetState_kri3mx_k$());
-          this.set_targetState_9v8wrq_k$(targetState);
+          this.set_currentState_90n70r_k$(this.get_targetState_kri3mx_k$());
+          this.set_targetState_1ag6bn_k$(targetState);
           if (!this.get_isRunning_okmtn0_k$()) {
-            this.set_updateChildrenNeeded_kde0f_k$(true);
+            this.set_updateChildrenNeeded_rw42ud_k$(true);
           }
           // Inline function 'kotlin.collections.forEach' call
           var tmp0_iterator = this._animations_1.iterator_jk1svi_k$();
           while (tmp0_iterator.hasNext_bitz1p_k$()) {
             var element = tmp0_iterator.next_20eer_k$();
             // Inline function 'androidx.compose.animation.core.Transition.updateTarget$composable.<anonymous>' call
-            element.resetAnimation_pckuxw_k$();
+            element.resetAnimation_pd4nj9_k$();
           }
         }
       }
@@ -5393,18 +5420,18 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(Transition$updateTarget$composable$lambda(this, targetState, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(Transition$updateTarget$composable$lambda(this, targetState, $changed));
     }
   };
-  protoOf(Transition).animateTo$composable_p1cxn2_k$ = function (targetState, $composer, $changed) {
+  protoOf(Transition).animateTo$composable_ejnk4c_k$ = function (targetState, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(254343587);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(254343587);
     sourceInformation($composer_0, 'C(animateTo$composable)427@16681L25,431@16951L655,431@16930L676:Transition.kt#pdpnli');
     var $dirty = $changed;
     if (($changed & 14) === 0)
@@ -5416,30 +5443,30 @@
         traceEventStart(254343587, $dirty, -1, 'androidx.compose.animation.core.Transition.animateTo$composable (Transition.kt:425)');
       }
       if (!this.get_isSeeking_vjb393_k$()) {
-        this.updateTarget$composable_g8p3zo_k$(targetState, $composer_0, 14 & $dirty | 112 & $dirty);
+        this.updateTarget$composable_matduq_k$(targetState, $composer_0, 14 & $dirty | 112 & $dirty);
         if ((!equals(targetState, this.get_currentState_snihnl_k$()) ? true : this.get_isRunning_okmtn0_k$()) ? true : this.get_updateChildrenNeeded_bsutx6_k$()) {
           // Inline function 'androidx.compose.runtime.remember$composable' call
           var $composer_1 = $composer_0;
-          $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+          $composer_1.startReplaceableGroup_ip860b_k$(-838505973);
           sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
           // Inline function 'androidx.compose.runtime.cache' call
-          var tmp1_cache = $composer_1.changed_ga7h3f_k$(this);
+          var invalid = $composer_1.changed_ga7h3f_k$(this);
           // Inline function 'kotlin.let' call
-          var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+          var it = $composer_1.rememberedValue_4dg93v_k$();
           var tmp;
-          if (tmp1_cache ? true : tmp0_let === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
+          if (invalid ? true : it === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
             // Inline function 'androidx.compose.animation.core.Transition.animateTo$composable.<anonymous>' call
             var value = Transition$animateTo$composable$slambda_0(this, null);
-            $composer_1.updateRememberedValue_l1colo_k$(value);
+            $composer_1.updateRememberedValue_l1wh71_k$(value);
             tmp = value;
           } else {
-            tmp = tmp0_let;
+            tmp = it;
           }
           var tmp_0 = tmp;
-          var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-          $composer_1.endReplaceableGroup_er37p7_k$();
+          var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+          $composer_1.endReplaceableGroup_ern0ak_k$();
           LaunchedEffect$composable(this, tmp0, $composer_0, 14 & $dirty >> 3);
         }
       }
@@ -5447,19 +5474,19 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(Transition$animateTo$composable$lambda(this, targetState, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(Transition$animateTo$composable$lambda(this, targetState, $changed));
     }
   };
   function updateTransition$composable(targetState, label, $composer, $changed, $default) {
     var label_0 = {_v: label};
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1999981197);
+    $composer_0.startReplaceableGroup_ip860b_k$(-1999981197);
     sourceInformation($composer_0, 'C(updateTransition$composable)P(1)71@2945L51,72@3012L22,73@3068L195,73@3039L224:Transition.kt#pdpnli');
     if (!(($default & 2) === 0)) {
       label_0._v = null;
@@ -5469,61 +5496,61 @@
     }
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(547886695);
+    $composer_1.startReplaceableGroup_ip860b_k$(547886695);
     sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_1.rememberedValue_4dg93v_k$();
     var tmp;
-    if (false ? true : tmp0_let === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
+    if (false ? true : it === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.animation.core.updateTransition$composable.<anonymous>' call
       var value = Transition_init_$Create$(targetState, label_0._v);
-      $composer_1.updateRememberedValue_l1colo_k$(value);
+      $composer_1.updateRememberedValue_l1wh71_k$(value);
       tmp = value;
     } else {
-      tmp = tmp0_let;
+      tmp = it;
     }
     var tmp_0 = tmp;
-    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
+    var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_1.endReplaceableGroup_ern0ak_k$();
     var transition = tmp0;
-    transition.animateTo$composable_p1cxn2_k$(targetState, $composer_0, 8 & $changed | 14 & $changed);
+    transition.animateTo$composable_ejnk4c_k$(targetState, $composer_0, 8 & $changed | 14 & $changed);
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_2 = $composer_0;
-    $composer_2.startReplaceableGroup_rp6air_k$(-838505973);
+    $composer_2.startReplaceableGroup_ip860b_k$(-838505973);
     sourceInformation($composer_2, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache = $composer_2.changed_ga7h3f_k$(transition);
+    var invalid = $composer_2.changed_ga7h3f_k$(transition);
     // Inline function 'kotlin.let' call
-    var tmp0_let_0 = $composer_2.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it_0 = $composer_2.rememberedValue_4dg93v_k$();
     var tmp_1;
-    if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
+    if (invalid ? true : it_0 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.animation.core.updateTransition$composable.<anonymous>' call
       var value_0 = updateTransition$composable$lambda(transition);
-      $composer_2.updateRememberedValue_l1colo_k$(value_0);
+      $composer_2.updateRememberedValue_l1wh71_k$(value_0);
       tmp_1 = value_0;
     } else {
-      tmp_1 = tmp0_let_0;
+      tmp_1 = it_0;
     }
     var tmp_2 = tmp_1;
-    var tmp0_0 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
-    $composer_2.endReplaceableGroup_er37p7_k$();
+    var tmp0_0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
+    $composer_2.endReplaceableGroup_ern0ak_k$();
     DisposableEffect$composable(transition, tmp0_0, $composer_0, 0);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return transition;
   }
   function animateFloat$composable(_this__u8e3s4, transitionSpec, label, targetValueByState, $composer, $changed, $default) {
     var transitionSpec_0 = transitionSpec;
     var label_0 = label;
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(1610198356);
+    $composer_0.startReplaceableGroup_ip860b_k$(1610198356);
     sourceInformation($composer_0, 'CC(animateFloat$composable)P(2)939@37552L78:Transition.kt#pdpnli');
     if (!(($default & 1) === 0)) {
       transitionSpec_0 = animateFloat$composable$lambda;
@@ -5531,24 +5558,24 @@
     if (!(($default & 2) === 0))
       label_0 = 'FloatAnimation';
     // Inline function 'androidx.compose.animation.core.animateValue$composable' call
-    var tmp0_animateValue$composable = get_VectorConverter_2(FloatCompanionObject_getInstance());
-    var tmp4_animateValue$composable = 14 & $changed | 896 & $changed << 3 | 7168 & $changed << 3 | 57344 & $changed << 3;
+    var typeConverter = get_VectorConverter_2(FloatCompanionObject_getInstance());
+    var $changed_0 = 14 & $changed | 896 & $changed << 3 | 7168 & $changed << 3 | 57344 & $changed << 3;
     var transitionSpec_1 = transitionSpec_0;
     var label_1 = label_0;
     var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(-1940744337);
+    $composer_1.startReplaceableGroup_ip860b_k$(-1940744337);
     sourceInformation($composer_1, 'CC(animateValue$composable)P(3,2)857@34142L32,858@34197L31,859@34253L23,861@34289L89:Transition.kt#pdpnli');
-    if (!(0 === 0)) {
+    if (!((0 & 2) === 0)) {
       transitionSpec_1 = animateFloat$composable$lambda_0;
     }
-    if (!(0 === 0))
+    if (!((0 & 4) === 0))
       label_1 = 'ValueAnimation';
-    var initialValue = targetValueByState(_this__u8e3s4.get_currentState_snihnl_k$(), $composer_1, 112 & tmp4_animateValue$composable >> 9);
-    var targetValue = targetValueByState(_this__u8e3s4.get_targetState_kri3mx_k$(), $composer_1, 112 & tmp4_animateValue$composable >> 9);
-    var animationSpec = transitionSpec_1(_this__u8e3s4.get_segment_xwnoei_k$(), $composer_1, 112 & tmp4_animateValue$composable >> 3);
-    var tmp0 = createTransitionAnimation$composable(_this__u8e3s4, initialValue, targetValue, animationSpec, tmp0_animateValue$composable, label_1, $composer_1, 14 & tmp4_animateValue$composable | 57344 & tmp4_animateValue$composable << 9 | 458752 & tmp4_animateValue$composable << 6);
-    $composer_1.endReplaceableGroup_er37p7_k$();
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    var initialValue = targetValueByState(_this__u8e3s4.get_currentState_snihnl_k$(), $composer_1, 112 & $changed_0 >> 9);
+    var targetValue = targetValueByState(_this__u8e3s4.get_targetState_kri3mx_k$(), $composer_1, 112 & $changed_0 >> 9);
+    var animationSpec = transitionSpec_1(_this__u8e3s4.get_segment_xwnoei_k$(), $composer_1, 112 & $changed_0 >> 3);
+    var tmp0 = createTransitionAnimation$composable(_this__u8e3s4, initialValue, targetValue, animationSpec, typeConverter, label_1, $composer_1, 14 & $changed_0 | 57344 & $changed_0 << 9 | 458752 & $changed_0 << 6);
+    $composer_1.endReplaceableGroup_ern0ak_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function get_$stableprop_21() {
@@ -5560,35 +5587,44 @@
     this.isRunning$delegate_1 = mutableStateOf(false);
     this.$stable_1 = 0;
   }
-  protoOf(MutableTransitionState).set_currentState_fwr97s_k$ = function (_set____db54di) {
+  protoOf(MutableTransitionState).set_currentState_90n70r_k$ = function (_set____db54di) {
+    var this_0 = this.currentState$delegate_1;
     currentState$factory();
-    return this.currentState$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   };
   protoOf(MutableTransitionState).get_currentState_snihnl_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.currentState$delegate_1;
     currentState$factory_0();
-    return this.currentState$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(MutableTransitionState).set_targetState_9v8wrq_k$ = function (_set____db54di) {
+  protoOf(MutableTransitionState).set_targetState_1ag6bn_k$ = function (_set____db54di) {
+    var this_0 = this.targetState$delegate_1;
     targetState$factory_1();
-    return this.targetState$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   };
   protoOf(MutableTransitionState).get_targetState_kri3mx_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.targetState$delegate_1;
     targetState$factory_2();
-    return this.targetState$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   protoOf(MutableTransitionState).get_isIdle_evzi1z_k$ = function () {
     return equals(this.get_currentState_snihnl_k$(), this.get_targetState_kri3mx_k$()) ? !this.get_isRunning_okmtn0_k$() : false;
   };
-  protoOf(MutableTransitionState).set_isRunning_tw1q35_k$ = function (_set____db54di) {
+  protoOf(MutableTransitionState).set_isRunning_m21k59_k$ = function (_set____db54di) {
+    var this_0 = this.isRunning$delegate_1;
     isRunning$factory_3();
-    return this.isRunning$delegate_1.set_value_rnwamw_k$(_set____db54di);
+    this_0.set_value_v1vabv_k$(_set____db54di);
+    return Unit_getInstance();
   };
   protoOf(MutableTransitionState).get_isRunning_okmtn0_k$ = function () {
     // Inline function 'androidx.compose.runtime.getValue' call
+    var this_0 = this.isRunning$delegate_1;
     isRunning$factory_4();
-    return this.isRunning$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
   function get_AnimationDebugDurationScale() {
     return AnimationDebugDurationScale;
@@ -5598,7 +5634,7 @@
     var transitionSpec_0 = transitionSpec;
     var label_0 = label;
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1940744337);
+    $composer_0.startReplaceableGroup_ip860b_k$(-1940744337);
     sourceInformation($composer_0, 'CC(animateValue$composable)P(3,2)857@34142L32,858@34197L31,859@34253L23,861@34289L89:Transition.kt#pdpnli');
     if (!(($default & 2) === 0)) {
       transitionSpec_0 = animateValue$composable$lambda;
@@ -5609,91 +5645,89 @@
     var targetValue = targetValueByState(_this__u8e3s4.get_targetState_kri3mx_k$(), $composer_0, 112 & $changed >> 9);
     var animationSpec = transitionSpec_0(_this__u8e3s4.get_segment_xwnoei_k$(), $composer_0, 112 & $changed >> 3);
     var tmp0 = createTransitionAnimation$composable(_this__u8e3s4, initialValue, targetValue, animationSpec, typeConverter, label_0, $composer_0, 14 & $changed | 57344 & $changed << 9 | 458752 & $changed << 6);
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function createTransitionAnimation$composable(_this__u8e3s4, initialValue, targetValue, animationSpec, typeConverter, label, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(1918946450);
+    $composer_0.startReplaceableGroup_ip860b_k$(1918946450);
     sourceInformation($composer_0, 'C(createTransitionAnimation$composable)P(1,3!1,4)873@34678L499,896@35561L128,896@35523L166:Transition.kt#pdpnli');
     if (isTraceInProgress()) {
       traceEventStart(1918946450, $changed, -1, 'androidx.compose.animation.core.createTransitionAnimation$composable (Transition.kt:866)');
     }
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+    $composer_1.startReplaceableGroup_ip860b_k$(-838505973);
     sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache = $composer_1.changed_ga7h3f_k$(_this__u8e3s4);
+    var invalid = $composer_1.changed_ga7h3f_k$(_this__u8e3s4);
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_1.rememberedValue_4dg93v_k$();
     var tmp;
-    if (tmp1_cache ? true : tmp0_let === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
+    if (invalid ? true : it === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.animation.core.createTransitionAnimation$composable.<anonymous>' call
       var value = new TransitionAnimationState(_this__u8e3s4, initialValue, createZeroVectorFrom(typeConverter, targetValue), typeConverter, label);
-      $composer_1.updateRememberedValue_l1colo_k$(value);
+      $composer_1.updateRememberedValue_l1wh71_k$(value);
       tmp = value;
     } else {
-      tmp = tmp0_let;
+      tmp = it;
     }
     var tmp_0 = tmp;
-    var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
+    var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_1.endReplaceableGroup_ern0ak_k$();
     var transitionAnimation = tmp0;
     if (_this__u8e3s4.get_isSeeking_vjb393_k$()) {
-      transitionAnimation.updateInitialAndTargetValue_9aufa_k$(initialValue, targetValue, animationSpec);
+      transitionAnimation.updateInitialAndTargetValue_ephtkk_k$(initialValue, targetValue, animationSpec);
     } else {
-      transitionAnimation.updateTargetValue_v2xwf0_k$(targetValue, animationSpec);
+      transitionAnimation.updateTargetValue_yzbefi_k$(targetValue, animationSpec);
     }
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_2 = $composer_0;
-    $composer_2.startReplaceableGroup_rp6air_k$(-1124426577);
+    $composer_2.startReplaceableGroup_ip860b_k$(-1124426577);
     sourceInformation($composer_2, 'CC(remember$composable)P(1,2):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var tmp1_cache_0 = !!($composer_2.changed_ga7h3f_k$(_this__u8e3s4) | $composer_2.changed_ga7h3f_k$(transitionAnimation));
+    var invalid_0 = !!($composer_2.changed_ga7h3f_k$(_this__u8e3s4) | $composer_2.changed_ga7h3f_k$(transitionAnimation));
     // Inline function 'kotlin.let' call
-    var tmp0_let_0 = $composer_2.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it_0 = $composer_2.rememberedValue_4dg93v_k$();
     var tmp_1;
-    if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
+    if (invalid_0 ? true : it_0 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
       // Inline function 'androidx.compose.animation.core.createTransitionAnimation$composable.<anonymous>' call
       var value_0 = createTransitionAnimation$composable$lambda(_this__u8e3s4, transitionAnimation);
-      $composer_2.updateRememberedValue_l1colo_k$(value_0);
+      $composer_2.updateRememberedValue_l1wh71_k$(value_0);
       tmp_1 = value_0;
     } else {
-      tmp_1 = tmp0_let_0;
+      tmp_1 = it_0;
     }
     var tmp_2 = tmp_1;
-    var tmp0_0 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
-    $composer_2.endReplaceableGroup_er37p7_k$();
+    var tmp0_0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
+    $composer_2.endReplaceableGroup_ern0ak_k$();
     DisposableEffect$composable(transitionAnimation, tmp0_0, $composer_0, 0);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return transitionAnimation;
   }
   function _no_name_provided__qut3iv($transition) {
     this.$transition_1 = $transition;
   }
-  protoOf(_no_name_provided__qut3iv).dispose_3n44we_k$ = function () {
+  protoOf(_no_name_provided__qut3iv).dispose_3nnxhr_k$ = function () {
     // Inline function 'androidx.compose.animation.core.updateTransition$composable.<anonymous>.<anonymous>.<anonymous>' call
-    this.$transition_1.onTransitionEnd_dl3p06_k$();
+    this.$transition_1.onTransitionEnd_dlnhlj_k$();
   };
   function updateTransition$composable$lambda($transition) {
     return function ($this$DisposableEffect) {
-      var tmp$ret$0;
       // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      tmp$ret$0 = new _no_name_provided__qut3iv($transition);
-      return tmp$ret$0;
+      return new _no_name_provided__qut3iv($transition);
     };
   }
   function animateFloat$composable$lambda($this$null, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-522164544);
+    $composer_0.startReplaceableGroup_ip860b_k$(-522164544);
     if (isTraceInProgress()) {
       traceEventStart(-522164544, $changed, -1, 'androidx.compose.animation.core.animateFloat$composable.<anonymous> (Transition.kt:935)');
     }
@@ -5701,12 +5735,12 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function animateFloat$composable$lambda_0($this$null, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-895531546);
+    $composer_0.startReplaceableGroup_ip860b_k$(-895531546);
     if (isTraceInProgress()) {
       traceEventStart(-895531546, $changed, -1, 'androidx.compose.animation.core.animateValue$composable.<anonymous> (Transition.kt:852)');
     }
@@ -5714,12 +5748,12 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function animateValue$composable$lambda($this$null, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-895531546);
+    $composer_0.startReplaceableGroup_ip860b_k$(-895531546);
     if (isTraceInProgress()) {
       traceEventStart(-895531546, $changed, -1, 'androidx.compose.animation.core.animateValue$composable.<anonymous> (Transition.kt:852)');
     }
@@ -5727,38 +5761,36 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   }
   function _no_name_provided__qut3iv_0($this_createTransitionAnimation$composable, $transitionAnimation) {
     this.$this_createTransitionAnimation$composable_1 = $this_createTransitionAnimation$composable;
     this.$transitionAnimation_1 = $transitionAnimation;
   }
-  protoOf(_no_name_provided__qut3iv_0).dispose_3n44we_k$ = function () {
+  protoOf(_no_name_provided__qut3iv_0).dispose_3nnxhr_k$ = function () {
     // Inline function 'androidx.compose.animation.core.createTransitionAnimation$composable.<anonymous>.<anonymous>.<anonymous>' call
-    this.$this_createTransitionAnimation$composable_1.removeAnimation_ugzgad_k$(this.$transitionAnimation_1);
+    this.$this_createTransitionAnimation$composable_1.removeAnimation_tcsn90_k$(this.$transitionAnimation_1);
   };
   function createTransitionAnimation$composable$lambda($this_createTransitionAnimation$composable, $transitionAnimation) {
     return function ($this$DisposableEffect) {
-      $this_createTransitionAnimation$composable.addAnimation_w7wt87_k$($transitionAnimation);
-      var tmp$ret$0;
+      $this_createTransitionAnimation$composable.addAnimation_smuflz_k$($transitionAnimation);
       // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      tmp$ret$0 = new _no_name_provided__qut3iv_0($this_createTransitionAnimation$composable, $transitionAnimation);
-      return tmp$ret$0;
+      return new _no_name_provided__qut3iv_0($this_createTransitionAnimation$composable, $transitionAnimation);
     };
   }
   function targetState$factory() {
     return getPropertyCallableRef('targetState', 1, KMutableProperty1, function (receiver) {
       return receiver.get_targetState_kri3mx_k$();
     }, function (receiver, value) {
-      return receiver.set_targetState_9v8wrq_k$(value);
+      return receiver.set_targetState_1ag6bn_k$(value);
     });
   }
   function targetState$factory_0() {
     return getPropertyCallableRef('targetState', 1, KMutableProperty1, function (receiver) {
       return receiver.get_targetState_kri3mx_k$();
     }, function (receiver, value) {
-      return receiver.set_targetState_9v8wrq_k$(value);
+      return receiver.set_targetState_1ag6bn_k$(value);
     });
   }
   function segment$factory() {
@@ -5779,14 +5811,14 @@
     return getPropertyCallableRef('playTimeNanos', 1, KMutableProperty1, function (receiver) {
       return receiver.get_playTimeNanos_50m2yz_k$();
     }, function (receiver, value) {
-      return receiver.set_playTimeNanos_xc4lgm_k$(value);
+      return receiver.set_playTimeNanos_8390lf_k$(value);
     });
   }
   function playTimeNanos$factory_0() {
     return getPropertyCallableRef('playTimeNanos', 1, KMutableProperty1, function (receiver) {
       return receiver.get_playTimeNanos_50m2yz_k$();
     }, function (receiver, value) {
-      return receiver.set_playTimeNanos_xc4lgm_k$(value);
+      return receiver.set_playTimeNanos_8390lf_k$(value);
     });
   }
   function startTimeNanos$factory() {
@@ -5807,28 +5839,28 @@
     return getPropertyCallableRef('updateChildrenNeeded', 1, KMutableProperty1, function (receiver) {
       return receiver.get_updateChildrenNeeded_bsutx6_k$();
     }, function (receiver, value) {
-      return receiver.set_updateChildrenNeeded_kde0f_k$(value);
+      return receiver.set_updateChildrenNeeded_rw42ud_k$(value);
     });
   }
   function updateChildrenNeeded$factory_0() {
     return getPropertyCallableRef('updateChildrenNeeded', 1, KMutableProperty1, function (receiver) {
       return receiver.get_updateChildrenNeeded_bsutx6_k$();
     }, function (receiver, value) {
-      return receiver.set_updateChildrenNeeded_kde0f_k$(value);
+      return receiver.set_updateChildrenNeeded_rw42ud_k$(value);
     });
   }
   function isSeeking$factory() {
     return getPropertyCallableRef('isSeeking', 1, KMutableProperty1, function (receiver) {
       return receiver.get_isSeeking_vjb393_k$();
     }, function (receiver, value) {
-      return receiver.set_isSeeking_jx5uti_k$(value);
+      return receiver.set_isSeeking_enascu_k$(value);
     });
   }
   function isSeeking$factory_0() {
     return getPropertyCallableRef('isSeeking', 1, KMutableProperty1, function (receiver) {
       return receiver.get_isSeeking_vjb393_k$();
     }, function (receiver, value) {
-      return receiver.set_isSeeking_jx5uti_k$(value);
+      return receiver.set_isSeeking_enascu_k$(value);
     });
   }
   function totalDurationNanos$factory() {
@@ -5882,14 +5914,14 @@
     return getPropertyCallableRef('isFinished', 1, KMutableProperty1, function (receiver) {
       return receiver.get_isFinished_qlhjyd_k$();
     }, function (receiver, value) {
-      return receiver.set_isFinished_l6qivk_k$(value);
+      return receiver.set_isFinished_ptfqd8_k$(value);
     });
   }
   function isFinished$factory_0() {
     return getPropertyCallableRef('isFinished', 1, KMutableProperty1, function (receiver) {
       return receiver.get_isFinished_qlhjyd_k$();
     }, function (receiver, value) {
-      return receiver.set_isFinished_l6qivk_k$(value);
+      return receiver.set_isFinished_ptfqd8_k$(value);
     });
   }
   function offsetTimeNanos$factory() {
@@ -5924,70 +5956,70 @@
     return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
       return receiver.get_value_j01efc_k$();
     }, function (receiver, value) {
-      return receiver.set_value_rnwamw_k$(value);
+      return receiver.set_value_v1vabv_k$(value);
     });
   }
   function value$factory_4() {
     return getPropertyCallableRef('value', 1, KMutableProperty1, function (receiver) {
       return receiver.get_value_j01efc_k$();
     }, function (receiver, value) {
-      return receiver.set_value_rnwamw_k$(value);
+      return receiver.set_value_v1vabv_k$(value);
     });
   }
   function data$factory() {
     return getPropertyCallableRef('data', 1, KMutableProperty1, function (receiver) {
       return receiver.get_data_wokkxf_k$();
     }, function (receiver, value) {
-      return receiver.set_data_1uxdza_k$(value);
+      return receiver.set_data_vrvhdm_k$(value);
     });
   }
   function data$factory_0() {
     return getPropertyCallableRef('data', 1, KMutableProperty1, function (receiver) {
       return receiver.get_data_wokkxf_k$();
     }, function (receiver, value) {
-      return receiver.set_data_1uxdza_k$(value);
+      return receiver.set_data_vrvhdm_k$(value);
     });
   }
   function currentState$factory() {
     return getPropertyCallableRef('currentState', 1, KMutableProperty1, function (receiver) {
       return receiver.get_currentState_snihnl_k$();
     }, function (receiver, value) {
-      return receiver.set_currentState_fwr97s_k$(value);
+      return receiver.set_currentState_90n70r_k$(value);
     });
   }
   function currentState$factory_0() {
     return getPropertyCallableRef('currentState', 1, KMutableProperty1, function (receiver) {
       return receiver.get_currentState_snihnl_k$();
     }, function (receiver, value) {
-      return receiver.set_currentState_fwr97s_k$(value);
+      return receiver.set_currentState_90n70r_k$(value);
     });
   }
   function targetState$factory_1() {
     return getPropertyCallableRef('targetState', 1, KMutableProperty1, function (receiver) {
       return receiver.get_targetState_kri3mx_k$();
     }, function (receiver, value) {
-      return receiver.set_targetState_9v8wrq_k$(value);
+      return receiver.set_targetState_1ag6bn_k$(value);
     });
   }
   function targetState$factory_2() {
     return getPropertyCallableRef('targetState', 1, KMutableProperty1, function (receiver) {
       return receiver.get_targetState_kri3mx_k$();
     }, function (receiver, value) {
-      return receiver.set_targetState_9v8wrq_k$(value);
+      return receiver.set_targetState_1ag6bn_k$(value);
     });
   }
   function isRunning$factory_3() {
     return getPropertyCallableRef('isRunning', 1, KMutableProperty1, function (receiver) {
       return receiver.get_isRunning_okmtn0_k$();
     }, function (receiver, value) {
-      return receiver.set_isRunning_tw1q35_k$(value);
+      return receiver.set_isRunning_m21k59_k$(value);
     });
   }
   function isRunning$factory_4() {
     return getPropertyCallableRef('isRunning', 1, KMutableProperty1, function (receiver) {
       return receiver.get_isRunning_okmtn0_k$();
     }, function (receiver, value) {
-      return receiver.set_isRunning_tw1q35_k$(value);
+      return receiver.set_isRunning_m21k59_k$(value);
     });
   }
   function get_FloatToVector() {
@@ -6122,12 +6154,11 @@
   function DpOffsetToVector$lambda_0(it) {
     _init_properties_VectorConverters_kt__g28mmu();
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp0_get_dp_bnsrxl = it.get_v1_kntnng_k$();
-    var tmp = _Dp___init__impl__ms3zkb(tmp0_get_dp_bnsrxl);
-    var tmp$ret$1;
+    var this_0 = it.get_v1_kntnng_k$();
+    var tmp = _Dp___init__impl__ms3zkb(this_0);
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp1_get_dp_ujoszc = it.get_v2_kntnnf_k$();
-    tmp$ret$1 = _Dp___init__impl__ms3zkb(tmp1_get_dp_ujoszc);
+    var this_1 = it.get_v2_kntnnf_k$();
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(this_1);
     return new DpOffset_0(DpOffset(tmp, tmp$ret$1));
   }
   function SizeToVector$lambda(it) {
@@ -6153,12 +6184,11 @@
   function IntOffsetToVector$lambda_0(it) {
     _init_properties_VectorConverters_kt__g28mmu();
     // Inline function 'kotlin.math.roundToInt' call
-    var tmp0_roundToInt = it.get_v1_kntnng_k$();
-    var tmp = roundToInt(tmp0_roundToInt);
-    var tmp$ret$1;
+    var this_0 = it.get_v1_kntnng_k$();
+    var tmp = roundToInt(this_0);
     // Inline function 'kotlin.math.roundToInt' call
-    var tmp1_roundToInt = it.get_v2_kntnnf_k$();
-    tmp$ret$1 = roundToInt(tmp1_roundToInt);
+    var this_1 = it.get_v2_kntnnf_k$();
+    var tmp$ret$1 = roundToInt(this_1);
     return new IntOffset(IntOffset_0(tmp, tmp$ret$1));
   }
   function IntSizeToVector$lambda(it) {
@@ -6168,12 +6198,11 @@
   function IntSizeToVector$lambda_0(it) {
     _init_properties_VectorConverters_kt__g28mmu();
     // Inline function 'kotlin.math.roundToInt' call
-    var tmp0_roundToInt = it.get_v1_kntnng_k$();
-    var tmp = roundToInt(tmp0_roundToInt);
-    var tmp$ret$1;
+    var this_0 = it.get_v1_kntnng_k$();
+    var tmp = roundToInt(this_0);
     // Inline function 'kotlin.math.roundToInt' call
-    var tmp1_roundToInt = it.get_v2_kntnnf_k$();
-    tmp$ret$1 = roundToInt(tmp1_roundToInt);
+    var this_1 = it.get_v2_kntnnf_k$();
+    var tmp$ret$1 = roundToInt(this_1);
     return new IntSize(IntSize_0(tmp, tmp$ret$1));
   }
   function RectToVector$lambda(it) {
@@ -6262,22 +6291,8 @@
     return Spring_instance;
   }
   function VectorizedSpringSpec_init_$Init$(dampingRatio, stiffness, visibilityThreshold, $this) {
-    var tmp;
-    if (dampingRatio === VOID) {
-      Spring_getInstance();
-      tmp = 1.0;
-    } else {
-      tmp = dampingRatio;
-    }
-    dampingRatio = tmp;
-    var tmp_0;
-    if (stiffness === VOID) {
-      Spring_getInstance();
-      tmp_0 = 1500.0;
-    } else {
-      tmp_0 = stiffness;
-    }
-    stiffness = tmp_0;
+    dampingRatio = dampingRatio === VOID ? 1.0 : dampingRatio;
+    stiffness = stiffness === VOID ? 1500.0 : stiffness;
     visibilityThreshold = visibilityThreshold === VOID ? null : visibilityThreshold;
     VectorizedSpringSpec.call($this, dampingRatio, stiffness, createSpringAnimations(visibilityThreshold, dampingRatio, stiffness));
     return $this;
@@ -6303,17 +6318,17 @@
   protoOf(VectorizedSpringSpec).get_isInfinite_uffwnt_k$ = function () {
     return this.$$delegate_0__1.get_isInfinite_uffwnt_k$();
   };
-  protoOf(VectorizedSpringSpec).getDurationNanos_62az16_k$ = function (initialValue, targetValue, initialVelocity) {
-    return this.$$delegate_0__1.getDurationNanos_62az16_k$(initialValue, targetValue, initialVelocity);
+  protoOf(VectorizedSpringSpec).getDurationNanos_c9o343_k$ = function (initialValue, targetValue, initialVelocity) {
+    return this.$$delegate_0__1.getDurationNanos_c9o343_k$(initialValue, targetValue, initialVelocity);
   };
-  protoOf(VectorizedSpringSpec).getEndVelocity_2fbr89_k$ = function (initialValue, targetValue, initialVelocity) {
-    return this.$$delegate_0__1.getEndVelocity_2fbr89_k$(initialValue, targetValue, initialVelocity);
+  protoOf(VectorizedSpringSpec).getEndVelocity_j9v6ly_k$ = function (initialValue, targetValue, initialVelocity) {
+    return this.$$delegate_0__1.getEndVelocity_j9v6ly_k$(initialValue, targetValue, initialVelocity);
   };
-  protoOf(VectorizedSpringSpec).getValueFromNanos_274kdl_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
-    return this.$$delegate_0__1.getValueFromNanos_274kdl_k$(playTimeNanos, initialValue, targetValue, initialVelocity);
+  protoOf(VectorizedSpringSpec).getValueFromNanos_xg3j38_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+    return this.$$delegate_0__1.getValueFromNanos_xg3j38_k$(playTimeNanos, initialValue, targetValue, initialVelocity);
   };
-  protoOf(VectorizedSpringSpec).getVelocityFromNanos_2nsq5r_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
-    return this.$$delegate_0__1.getVelocityFromNanos_2nsq5r_k$(playTimeNanos, initialValue, targetValue, initialVelocity);
+  protoOf(VectorizedSpringSpec).getVelocityFromNanos_wafrjo_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+    return this.$$delegate_0__1.getVelocityFromNanos_wafrjo_k$(playTimeNanos, initialValue, targetValue, initialVelocity);
   };
   function VectorizedFiniteAnimationSpec() {
   }
@@ -6370,14 +6385,14 @@
   function VectorizedFloatAnimationSpec$1($anim) {
     this.$anim_1 = $anim;
   }
-  protoOf(VectorizedFloatAnimationSpec$1).get_fkrdnv_k$ = function (index) {
+  protoOf(VectorizedFloatAnimationSpec$1).get_c1px32_k$ = function (index) {
     return this.$anim_1;
   };
   function VectorizedFloatAnimationSpec(anims) {
     this.anims_1 = anims;
     this.$stable_1 = 8;
   }
-  protoOf(VectorizedFloatAnimationSpec).getValueFromNanos_274kdl_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+  protoOf(VectorizedFloatAnimationSpec).getValueFromNanos_xg3j38_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
     if (!!(this.valueVector_1 == null)) {
       this.valueVector_1 = newInstance(initialValue);
     }
@@ -6387,12 +6402,12 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        _get_valueVector__r10idf_0(this).set_8gccym_k$(i, this.anims_1.get_fkrdnv_k$(i).getValueFromNanos_laqly_k$(playTimeNanos, initialValue.get_fkrdnv_k$(i), targetValue.get_fkrdnv_k$(i), initialVelocity.get_fkrdnv_k$(i)));
+        _get_valueVector__r10idf_0(this).set_4eugj6_k$(i, this.anims_1.get_c1px32_k$(i).getValueFromNanos_rdghrw_k$(playTimeNanos, initialValue.get_c1px32_k$(i), targetValue.get_c1px32_k$(i), initialVelocity.get_c1px32_k$(i)));
       }
        while (inductionVariable < last);
     return _get_valueVector__r10idf_0(this);
   };
-  protoOf(VectorizedFloatAnimationSpec).getVelocityFromNanos_2nsq5r_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+  protoOf(VectorizedFloatAnimationSpec).getVelocityFromNanos_wafrjo_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
     if (!!(this.velocityVector_1 == null)) {
       this.velocityVector_1 = newInstance(initialVelocity);
     }
@@ -6402,12 +6417,12 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        _get_velocityVector__dvxlkl_1(this).set_8gccym_k$(i, this.anims_1.get_fkrdnv_k$(i).getVelocityFromNanos_da2xk2_k$(playTimeNanos, initialValue.get_fkrdnv_k$(i), targetValue.get_fkrdnv_k$(i), initialVelocity.get_fkrdnv_k$(i)));
+        _get_velocityVector__dvxlkl_1(this).set_4eugj6_k$(i, this.anims_1.get_c1px32_k$(i).getVelocityFromNanos_d1b1ck_k$(playTimeNanos, initialValue.get_c1px32_k$(i), targetValue.get_c1px32_k$(i), initialVelocity.get_c1px32_k$(i)));
       }
        while (inductionVariable < last);
     return _get_velocityVector__dvxlkl_1(this);
   };
-  protoOf(VectorizedFloatAnimationSpec).getEndVelocity_2fbr89_k$ = function (initialValue, targetValue, initialVelocity) {
+  protoOf(VectorizedFloatAnimationSpec).getEndVelocity_j9v6ly_k$ = function (initialValue, targetValue, initialVelocity) {
     if (!!(this.endVelocityVector_1 == null)) {
       this.endVelocityVector_1 = newInstance(initialVelocity);
     }
@@ -6417,28 +6432,23 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        _get_endVelocityVector__l8kbka(this).set_8gccym_k$(i, this.anims_1.get_fkrdnv_k$(i).getEndVelocity_1g11o_k$(initialValue.get_fkrdnv_k$(i), targetValue.get_fkrdnv_k$(i), initialVelocity.get_fkrdnv_k$(i)));
+        _get_endVelocityVector__l8kbka(this).set_4eugj6_k$(i, this.anims_1.get_c1px32_k$(i).getEndVelocity_jstvkm_k$(initialValue.get_c1px32_k$(i), targetValue.get_c1px32_k$(i), initialVelocity.get_c1px32_k$(i)));
       }
        while (inductionVariable < last);
     return _get_endVelocityVector__l8kbka(this);
   };
-  protoOf(VectorizedFloatAnimationSpec).getDurationNanos_62az16_k$ = function (initialValue, targetValue, initialVelocity) {
+  protoOf(VectorizedFloatAnimationSpec).getDurationNanos_c9o343_k$ = function (initialValue, targetValue, initialVelocity) {
     var maxDuration = new Long(0, 0);
     // Inline function 'kotlin.collections.forEach' call
-    var tmp0_forEach = until(0, initialValue.get_size_woubt6_k$());
-    var inductionVariable = tmp0_forEach.get_first_irdx8n_k$();
-    var last = tmp0_forEach.get_last_wopotb_k$();
-    if (inductionVariable <= last)
-      do {
-        var element = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        // Inline function 'androidx.compose.animation.core.VectorizedFloatAnimationSpec.getDurationNanos.<anonymous>' call
-        // Inline function 'kotlin.comparisons.maxOf' call
-        var tmp0_maxOf = maxDuration;
-        var tmp1_maxOf = this.anims_1.get_fkrdnv_k$(element).getDurationNanos_ct8k6x_k$(initialValue.get_fkrdnv_k$(element), targetValue.get_fkrdnv_k$(element), initialVelocity.get_fkrdnv_k$(element));
-        maxDuration = tmp0_maxOf.compareTo_n4fqi2_k$(tmp1_maxOf) >= 0 ? tmp0_maxOf : tmp1_maxOf;
-      }
-       while (!(element === last));
+    var tmp0_iterator = until(0, initialValue.get_size_woubt6_k$()).iterator_jk1svi_k$();
+    while (tmp0_iterator.hasNext_bitz1p_k$()) {
+      var element = tmp0_iterator.next_20eer_k$();
+      // Inline function 'androidx.compose.animation.core.VectorizedFloatAnimationSpec.getDurationNanos.<anonymous>' call
+      // Inline function 'kotlin.comparisons.maxOf' call
+      var a = maxDuration;
+      var b = this.anims_1.get_c1px32_k$(element).getDurationNanos_taoclf_k$(initialValue.get_c1px32_k$(element), targetValue.get_c1px32_k$(element), initialVelocity.get_c1px32_k$(element));
+      maxDuration = a.compareTo_9jj042_k$(b) >= 0 ? a : b;
+    }
     return maxDuration;
   };
   function createSpringAnimations(visibilityThreshold, dampingRatio, stiffness) {
@@ -6466,30 +6476,30 @@
     return $this.initialOffsetNanos_1;
   }
   function repetitionPlayTimeNanos($this, playTimeNanos) {
-    if (playTimeNanos.plus_u6jwas_k$($this.initialOffsetNanos_1).compareTo_n4fqi2_k$(new Long(0, 0)) <= 0) {
+    if (playTimeNanos.plus_r93sks_k$($this.initialOffsetNanos_1).compareTo_9jj042_k$(new Long(0, 0)) <= 0) {
       return new Long(0, 0);
     } else {
-      var postOffsetPlayTimeNanos = playTimeNanos.plus_u6jwas_k$($this.initialOffsetNanos_1);
-      var repeatsCount = postOffsetPlayTimeNanos.div_9s1fi3_k$($this.durationNanos_1);
+      var postOffsetPlayTimeNanos = playTimeNanos.plus_r93sks_k$($this.initialOffsetNanos_1);
+      var repeatsCount = postOffsetPlayTimeNanos.div_jun7gj_k$($this.durationNanos_1);
       var tmp;
       if ($this.repeatMode_1.equals(RepeatMode_Restart_getInstance())) {
         tmp = true;
       } else {
         // Inline function 'kotlin.Long.rem' call
-        tmp = repeatsCount.rem_9rbcjo_k$(new Long(2, 0)).equals(new Long(0, 0));
+        tmp = repeatsCount.rem_bsnl9o_k$(toLong(2)).equals(new Long(0, 0));
       }
       if (tmp) {
-        return postOffsetPlayTimeNanos.minus_llf5ei_k$(repeatsCount.times_2zfqpc_k$($this.durationNanos_1));
+        return postOffsetPlayTimeNanos.minus_mfbszm_k$(repeatsCount.times_nfzjiw_k$($this.durationNanos_1));
       } else {
         // Inline function 'kotlin.Long.plus' call
-        return repeatsCount.plus_u6jwas_k$(new Long(1, 0)).times_2zfqpc_k$($this.durationNanos_1).minus_llf5ei_k$(postOffsetPlayTimeNanos);
+        return repeatsCount.plus_r93sks_k$(toLong(1)).times_nfzjiw_k$($this.durationNanos_1).minus_mfbszm_k$(postOffsetPlayTimeNanos);
       }
     }
   }
   function repetitionStartVelocity($this, playTimeNanos, start, startVelocity, end) {
     var tmp;
-    if (playTimeNanos.plus_u6jwas_k$($this.initialOffsetNanos_1).compareTo_n4fqi2_k$($this.durationNanos_1) > 0) {
-      tmp = $this.getVelocityFromNanos_2nsq5r_k$($this.durationNanos_1.minus_llf5ei_k$($this.initialOffsetNanos_1), start, startVelocity, end);
+    if (playTimeNanos.plus_r93sks_k$($this.initialOffsetNanos_1).compareTo_9jj042_k$($this.durationNanos_1) > 0) {
+      tmp = $this.getVelocityFromNanos_wafrjo_k$($this.durationNanos_1.minus_mfbszm_k$($this.initialOffsetNanos_1), start, startVelocity, end);
     } else {
       tmp = startVelocity;
     }
@@ -6503,8 +6513,8 @@
     initialStartOffset = initialStartOffset === VOID ? _StartOffset___init__impl__615djw_0(0) : initialStartOffset;
     this.animation_1 = animation;
     this.repeatMode_1 = repeatMode;
-    this.durationNanos_1 = numberToLong(this.animation_1.get_delayMillis_d968n4_k$() + this.animation_1.get_durationMillis_pqx05f_k$() | 0).times_2zfqpc_k$(get_MillisToNanos());
-    this.initialOffsetNanos_1 = _StartOffset___get_value__impl__8sikig(initialStartOffset).times_2zfqpc_k$(get_MillisToNanos());
+    this.durationNanos_1 = numberToLong(this.animation_1.get_delayMillis_d968n4_k$() + this.animation_1.get_durationMillis_pqx05f_k$() | 0).times_nfzjiw_k$(get_MillisToNanos());
+    this.initialOffsetNanos_1 = _StartOffset___get_value__impl__8sikig(initialStartOffset).times_nfzjiw_k$(get_MillisToNanos());
     this.$stable_1 = 8;
   }
   protoOf(VectorizedInfiniteRepeatableSpec).get_isInfinite_uffwnt_k$ = function () {
@@ -6513,13 +6523,13 @@
   protoOf(VectorizedInfiniteRepeatableSpec).get_durationNanos_ub5cy_k$ = function () {
     return this.durationNanos_1;
   };
-  protoOf(VectorizedInfiniteRepeatableSpec).getValueFromNanos_274kdl_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
-    return this.animation_1.getValueFromNanos_274kdl_k$(repetitionPlayTimeNanos(this, playTimeNanos), initialValue, targetValue, repetitionStartVelocity(this, playTimeNanos, initialValue, initialVelocity, targetValue));
+  protoOf(VectorizedInfiniteRepeatableSpec).getValueFromNanos_xg3j38_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+    return this.animation_1.getValueFromNanos_xg3j38_k$(repetitionPlayTimeNanos(this, playTimeNanos), initialValue, targetValue, repetitionStartVelocity(this, playTimeNanos, initialValue, initialVelocity, targetValue));
   };
-  protoOf(VectorizedInfiniteRepeatableSpec).getVelocityFromNanos_2nsq5r_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
-    return this.animation_1.getVelocityFromNanos_2nsq5r_k$(repetitionPlayTimeNanos(this, playTimeNanos), initialValue, targetValue, repetitionStartVelocity(this, playTimeNanos, initialValue, initialVelocity, targetValue));
+  protoOf(VectorizedInfiniteRepeatableSpec).getVelocityFromNanos_wafrjo_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+    return this.animation_1.getVelocityFromNanos_wafrjo_k$(repetitionPlayTimeNanos(this, playTimeNanos), initialValue, targetValue, repetitionStartVelocity(this, playTimeNanos, initialValue, initialVelocity, targetValue));
   };
-  protoOf(VectorizedInfiniteRepeatableSpec).getDurationNanos_62az16_k$ = function (initialValue, targetValue, initialVelocity) {
+  protoOf(VectorizedInfiniteRepeatableSpec).getDurationNanos_c9o343_k$ = function (initialValue, targetValue, initialVelocity) {
     return Companion_getInstance_6().get_MAX_VALUE_54a9lf_k$();
   };
   function VectorizedDurationBasedAnimationSpec() {
@@ -6571,10 +6581,10 @@
   protoOf(VectorizedKeyframesSpec).get_delayMillis_d968n4_k$ = function () {
     return this.delayMillis_1;
   };
-  protoOf(VectorizedKeyframesSpec).getValueFromNanos_274kdl_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
-    var playTimeMillis = playTimeNanos.div_9s1fi3_k$(get_MillisToNanos());
+  protoOf(VectorizedKeyframesSpec).getValueFromNanos_xg3j38_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+    var playTimeMillis = playTimeNanos.div_jun7gj_k$(get_MillisToNanos());
     var clampedPlayTime = clampPlayTime_0(this, playTimeMillis).toInt_1tsl84_k$();
-    if (this.keyframes_1.containsKey_wgk31w_k$(clampedPlayTime)) {
+    if (this.keyframes_1.containsKey_aw81wo_k$(clampedPlayTime)) {
       return getValue(this.keyframes_1, clampedPlayTime).get_first_irdx8n_k$();
     }
     if (clampedPlayTime >= this.durationMillis_1) {
@@ -6603,7 +6613,7 @@
         endVal = value.get_first_irdx8n_k$();
       }
     }
-    var fraction = easing.transform_mzom4i_k$((clampedPlayTime - startTime | 0) / (endTime - startTime | 0));
+    var fraction = easing.transform_twmo38_k$((clampedPlayTime - startTime | 0) / (endTime - startTime | 0));
     init_0(this, initialValue);
     var inductionVariable = 0;
     var last = startVal.get_size_woubt6_k$();
@@ -6611,20 +6621,19 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        _get_valueVector__r10idf_1(this).set_8gccym_k$(i, lerp(startVal.get_fkrdnv_k$(i), endVal.get_fkrdnv_k$(i), fraction));
+        _get_valueVector__r10idf_1(this).set_4eugj6_k$(i, lerp(startVal.get_c1px32_k$(i), endVal.get_c1px32_k$(i), fraction));
       }
        while (inductionVariable < last);
     return _get_valueVector__r10idf_1(this);
   };
-  protoOf(VectorizedKeyframesSpec).getVelocityFromNanos_2nsq5r_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
-    var playTimeMillis = playTimeNanos.div_9s1fi3_k$(get_MillisToNanos());
+  protoOf(VectorizedKeyframesSpec).getVelocityFromNanos_wafrjo_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+    var playTimeMillis = playTimeNanos.div_jun7gj_k$(get_MillisToNanos());
     var clampedPlayTime = clampPlayTime_0(this, playTimeMillis);
-    if (clampedPlayTime.compareTo_n4fqi2_k$(new Long(0, 0)) <= 0) {
+    if (clampedPlayTime.compareTo_9jj042_k$(new Long(0, 0)) <= 0) {
       return initialVelocity;
     }
-    var tmp$ret$0;
     // Inline function 'kotlin.Long.minus' call
-    tmp$ret$0 = clampedPlayTime.minus_llf5ei_k$(new Long(1, 0));
+    var tmp$ret$0 = clampedPlayTime.minus_mfbszm_k$(toLong(1));
     var startNum = getValueFromMillis(this, tmp$ret$0, initialValue, targetValue, initialVelocity);
     var endNum = getValueFromMillis(this, clampedPlayTime, initialValue, targetValue, initialVelocity);
     init_0(this, initialValue);
@@ -6634,7 +6643,7 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        _get_velocityVector__dvxlkl_2(this).set_8gccym_k$(i, (startNum.get_fkrdnv_k$(i) - endNum.get_fkrdnv_k$(i)) * 1000.0);
+        _get_velocityVector__dvxlkl_2(this).set_4eugj6_k$(i, (startNum.get_c1px32_k$(i) - endNum.get_c1px32_k$(i)) * 1000.0);
       }
        while (inductionVariable < last);
     return _get_velocityVector__dvxlkl_2(this);
@@ -6664,21 +6673,20 @@
   protoOf(VectorizedTweenSpec).get_easing_cqnn04_k$ = function () {
     return this.easing_1;
   };
-  protoOf(VectorizedTweenSpec).getValueFromNanos_274kdl_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
-    return this.anim_1.getValueFromNanos_274kdl_k$(playTimeNanos, initialValue, targetValue, initialVelocity);
+  protoOf(VectorizedTweenSpec).getValueFromNanos_xg3j38_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+    return this.anim_1.getValueFromNanos_xg3j38_k$(playTimeNanos, initialValue, targetValue, initialVelocity);
   };
-  protoOf(VectorizedTweenSpec).getVelocityFromNanos_2nsq5r_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
-    return this.anim_1.getVelocityFromNanos_2nsq5r_k$(playTimeNanos, initialValue, targetValue, initialVelocity);
+  protoOf(VectorizedTweenSpec).getVelocityFromNanos_wafrjo_k$ = function (playTimeNanos, initialValue, targetValue, initialVelocity) {
+    return this.anim_1.getVelocityFromNanos_wafrjo_k$(playTimeNanos, initialValue, targetValue, initialVelocity);
   };
   function clampPlayTime_0(_this__u8e3s4, playTime) {
-    var tmp$ret$0;
     // Inline function 'kotlin.Long.minus' call
-    var tmp0_minus = _this__u8e3s4.get_delayMillis_d968n4_k$();
-    tmp$ret$0 = playTime.minus_llf5ei_k$(toLong(tmp0_minus));
+    var other = _this__u8e3s4.get_delayMillis_d968n4_k$();
+    var tmp$ret$0 = playTime.minus_mfbszm_k$(toLong(other));
     return coerceIn_0(tmp$ret$0, new Long(0, 0), toLong(_this__u8e3s4.get_durationMillis_pqx05f_k$()));
   }
   function getValueFromMillis(_this__u8e3s4, playTimeMillis, start, end, startVelocity) {
-    return _this__u8e3s4.getValueFromNanos_274kdl_k$(playTimeMillis.times_2zfqpc_k$(get_MillisToNanos()), start, end, startVelocity);
+    return _this__u8e3s4.getValueFromNanos_xg3j38_k$(playTimeMillis.times_nfzjiw_k$(get_MillisToNanos()), start, end, startVelocity);
   }
   function _get_anims__juyc8h_0($this) {
     return $this.anims_1;
@@ -6686,25 +6694,20 @@
   function createSpringAnimations$1($visibilityThreshold, $dampingRatio, $stiffness) {
     var tmp = this;
     // Inline function 'kotlin.collections.map' call
-    var tmp0_map = until(0, $visibilityThreshold.get_size_woubt6_k$());
+    var this_0 = until(0, $visibilityThreshold.get_size_woubt6_k$());
     // Inline function 'kotlin.collections.mapTo' call
-    var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp0_map, 10));
-    var inductionVariable = tmp0_map.get_first_irdx8n_k$();
-    var last = tmp0_map.get_last_wopotb_k$();
-    if (inductionVariable <= last)
-      do {
-        var item = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        var tmp$ret$0;
-        // Inline function 'androidx.compose.animation.core.<no name provided>.anims.<anonymous>' call
-        tmp$ret$0 = new FloatSpringSpec($dampingRatio, $stiffness, $visibilityThreshold.get_fkrdnv_k$(item));
-        tmp0_mapTo.add_1j60pz_k$(tmp$ret$0);
-      }
-       while (!(item === last));
-    tmp.anims_1 = tmp0_mapTo;
+    var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+    var tmp0_iterator = this_0.iterator_jk1svi_k$();
+    while (tmp0_iterator.hasNext_bitz1p_k$()) {
+      var item = tmp0_iterator.next_20eer_k$();
+      // Inline function 'androidx.compose.animation.core.<no name provided>.anims.<anonymous>' call
+      var tmp$ret$0 = new FloatSpringSpec($dampingRatio, $stiffness, $visibilityThreshold.get_c1px32_k$(item));
+      destination.add_utx5q5_k$(tmp$ret$0);
+    }
+    tmp.anims_1 = destination;
   }
-  protoOf(createSpringAnimations$1).get_fkrdnv_k$ = function (index) {
-    return this.anims_1.get_fkrdnv_k$(index);
+  protoOf(createSpringAnimations$1).get_c1px32_k$ = function (index) {
+    return this.anims_1.get_c1px32_k$(index);
   };
   function _get_anim__d3v13u_0($this) {
     return $this.anim_1;
@@ -6712,7 +6715,7 @@
   function createSpringAnimations$2($dampingRatio, $stiffness) {
     this.anim_1 = new FloatSpringSpec($dampingRatio, $stiffness);
   }
-  protoOf(createSpringAnimations$2).get_fkrdnv_k$ = function (index) {
+  protoOf(createSpringAnimations$2).get_c1px32_k$ = function (index) {
     return this.anim_1;
   };
   function VectorizedDecayAnimationSpec() {
@@ -6792,20 +6795,20 @@
     captureStack(this, PlatformOptimizedCancellationException);
   }
   //region block: post-declaration
-  protoOf(TargetBasedAnimation).isFinishedFromNanos_uhkxvh_k$ = isFinishedFromNanos;
-  protoOf(DecayAnimation).isFinishedFromNanos_uhkxvh_k$ = isFinishedFromNanos;
-  protoOf(FloatSpringSpec).vectorize_pi7y89_k$ = vectorize;
-  protoOf(FloatTweenSpec).getEndVelocity_1g11o_k$ = getEndVelocity;
-  protoOf(FloatTweenSpec).vectorize_pi7y89_k$ = vectorize;
-  protoOf(SegmentImpl).isTransitioningTo_ierua4_k$ = isTransitioningTo;
+  protoOf(TargetBasedAnimation).isFinishedFromNanos_c31w39_k$ = isFinishedFromNanos;
+  protoOf(DecayAnimation).isFinishedFromNanos_c31w39_k$ = isFinishedFromNanos;
+  protoOf(FloatSpringSpec).vectorize_7dxvko_k$ = vectorize;
+  protoOf(FloatTweenSpec).getEndVelocity_jstvkm_k$ = getEndVelocity;
+  protoOf(FloatTweenSpec).vectorize_7dxvko_k$ = vectorize;
+  protoOf(SegmentImpl).isTransitioningTo_mjamuk_k$ = isTransitioningTo;
   protoOf(VectorizedFloatAnimationSpec).get_isInfinite_uffwnt_k$ = get_isInfinite;
-  protoOf(VectorizedInfiniteRepeatableSpec).getEndVelocity_2fbr89_k$ = getEndVelocity_0;
-  protoOf(VectorizedKeyframesSpec).getDurationNanos_62az16_k$ = getDurationNanos;
+  protoOf(VectorizedInfiniteRepeatableSpec).getEndVelocity_j9v6ly_k$ = getEndVelocity_0;
+  protoOf(VectorizedKeyframesSpec).getDurationNanos_c9o343_k$ = getDurationNanos;
   protoOf(VectorizedKeyframesSpec).get_isInfinite_uffwnt_k$ = get_isInfinite;
-  protoOf(VectorizedKeyframesSpec).getEndVelocity_2fbr89_k$ = getEndVelocity_0;
-  protoOf(VectorizedTweenSpec).getDurationNanos_62az16_k$ = getDurationNanos;
+  protoOf(VectorizedKeyframesSpec).getEndVelocity_j9v6ly_k$ = getEndVelocity_0;
+  protoOf(VectorizedTweenSpec).getDurationNanos_c9o343_k$ = getDurationNanos;
   protoOf(VectorizedTweenSpec).get_isInfinite_uffwnt_k$ = get_isInfinite;
-  protoOf(VectorizedTweenSpec).getEndVelocity_2fbr89_k$ = getEndVelocity_0;
+  protoOf(VectorizedTweenSpec).getEndVelocity_j9v6ly_k$ = getEndVelocity_0;
   //endregion
   //region block: init
   MillisToNanos = new Long(1000000, 0);
@@ -6819,7 +6822,7 @@
   _.$_$ = _.$_$ || {};
   _.$_$.a = Animatable_0;
   _.$_$.b = Animatable;
-  _.$_$.c = AnimationState;
+  _.$_$.c = AnimationState_0;
   _.$_$.d = AnimationVector1D;
   _.$_$.e = AnimationVector2D;
   _.$_$.f = AnimationVector3D;
@@ -6840,7 +6843,7 @@
   _.$_$.u = animateDpAsState$composable;
   _.$_$.v = animateFloatAsState$composable;
   _.$_$.w = animateValueAsState$composable;
-  _.$_$.x = copy;
+  _.$_$.x = copy_0;
   _.$_$.y = createTransitionAnimation$composable;
   _.$_$.z = generateDecayAnimationSpec;
   _.$_$.a1 = infiniteRepeatable;
@@ -6850,7 +6853,7 @@
   _.$_$.e1 = updateTransition$composable;
   _.$_$.f1 = animateDecay;
   _.$_$.g1 = animateTo;
-  _.$_$.h1 = animate;
+  _.$_$.h1 = animate_0;
   _.$_$.i1 = AnimationConstants_getInstance;
   _.$_$.j1 = Spring_getInstance;
   //endregion

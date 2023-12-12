@@ -1,40 +1,40 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin-kotlin-stdlib-js-ir.js', './compose-multiplatform-core-ui-util.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js', './compose-multiplatform-core-ui-util.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'), require('./compose-multiplatform-core-ui-util.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./compose-multiplatform-core-ui-util.js'));
   else {
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'compose-multiplatform-core-ui-geometry'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'compose-multiplatform-core-ui-geometry'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-ui-geometry'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'compose-multiplatform-core-ui-geometry'.");
     }
     if (typeof this['compose-multiplatform-core-ui-util'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-ui-geometry'. Its dependency 'compose-multiplatform-core-ui-util' was not found. Please, check whether 'compose-multiplatform-core-ui-util' is loaded prior to 'compose-multiplatform-core-ui-geometry'.");
     }
-    root['compose-multiplatform-core-ui-geometry'] = factory(typeof this['compose-multiplatform-core-ui-geometry'] === 'undefined' ? {} : this['compose-multiplatform-core-ui-geometry'], this['kotlin-kotlin-stdlib-js-ir'], this['compose-multiplatform-core-ui-util']);
+    root['compose-multiplatform-core-ui-geometry'] = factory(typeof this['compose-multiplatform-core-ui-geometry'] === 'undefined' ? {} : this['compose-multiplatform-core-ui-geometry'], this['kotlin-kotlin-stdlib'], this['compose-multiplatform-core-ui-util']);
   }
 }(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_compose_ui_ui_util) {
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.l4;
-  var floatFromBits = kotlin_kotlin.$_$.kc;
-  var Long = kotlin_kotlin.$_$.eh;
-  var VOID = kotlin_kotlin.$_$.bj;
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var objectMeta = kotlin_kotlin.$_$.qd;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
-  var THROW_CCE = kotlin_kotlin.$_$.lh;
-  var classMeta = kotlin_kotlin.$_$.ec;
-  var toBits = kotlin_kotlin.$_$.ti;
-  var toLong = kotlin_kotlin.$_$.ud;
-  var numberToInt = kotlin_kotlin.$_$.nd;
-  var toString = kotlin_kotlin.$_$.wd;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.a2;
-  var isNaN_0 = kotlin_kotlin.$_$.hi;
-  var isFinite = kotlin_kotlin.$_$.fi;
+  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.n4;
+  var floatFromBits = kotlin_kotlin.$_$.nc;
+  var Long = kotlin_kotlin.$_$.jh;
+  var VOID = kotlin_kotlin.$_$.e;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var objectMeta = kotlin_kotlin.$_$.td;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var THROW_CCE = kotlin_kotlin.$_$.qh;
+  var classMeta = kotlin_kotlin.$_$.hc;
+  var toBits = kotlin_kotlin.$_$.zi;
+  var toLong = kotlin_kotlin.$_$.xd;
+  var numberToInt = kotlin_kotlin.$_$.qd;
+  var toString = kotlin_kotlin.$_$.zd;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.b2;
+  var isNaN_0 = kotlin_kotlin.$_$.ni;
+  var isFinite = kotlin_kotlin.$_$.li;
   var lerp = kotlin_org_jetbrains_compose_ui_ui_util.$_$.a;
-  var getNumberHashCode = kotlin_kotlin.$_$.mc;
-  var equals = kotlin_kotlin.$_$.ic;
+  var getNumberHashCode = kotlin_kotlin.$_$.qc;
+  var equals = kotlin_kotlin.$_$.lc;
   //endregion
   //region block: pre-declaration
   setMetadataFor(Companion, 'Companion', objectMeta);
@@ -57,19 +57,19 @@
   }
   function _CornerRadius___get_x__impl__1594cn($this) {
     // Inline function 'androidx.compose.ui.util.unpackFloat1' call
-    var tmp0_unpackFloat1 = _CornerRadius___get_packedValue__impl__okv4jq($this);
+    var value = _CornerRadius___get_packedValue__impl__okv4jq($this);
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp1_fromBits = tmp0_unpackFloat1.shr_wjue3g_k$(32).toInt_1tsl84_k$();
-    return floatFromBits(tmp1_fromBits);
+    var bits = value.shr_9fl3wl_k$(32).toInt_1tsl84_k$();
+    return floatFromBits(bits);
   }
   function _CornerRadius___get_y__impl__tyvleu($this) {
     // Inline function 'androidx.compose.ui.util.unpackFloat2' call
-    var tmp0_unpackFloat2 = _CornerRadius___get_packedValue__impl__okv4jq($this);
+    var value = _CornerRadius___get_packedValue__impl__okv4jq($this);
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp1_fromBits = tmp0_unpackFloat2.and_jhajnj_k$(new Long(-1, 0)).toInt_1tsl84_k$();
-    return floatFromBits(tmp1_fromBits);
+    var bits = value.and_4spn93_k$(new Long(-1, 0)).toInt_1tsl84_k$();
+    return floatFromBits(bits);
   }
   function CornerRadius__component1_impl_6k47wy($this) {
     return _CornerRadius___get_x__impl__1594cn($this);
@@ -87,9 +87,8 @@
     if ($super === VOID) {
       tmp = CornerRadius__copy_impl_mqhhap($this, x, y);
     } else {
-      var tmp_0 = new CornerRadius($this);
-      var tmp_1 = $super;
-      tmp = (tmp_1 == null ? null : new CornerRadius(tmp_1)).copy_qymoql_k$.call(tmp_0, x, y).packedValue_1;
+      var tmp_0 = $super;
+      tmp = (tmp_0 == null ? null : new CornerRadius(tmp_0)).copy_6knqu7_k$.call(new CornerRadius($this), x, y).packedValue_1;
     }
     return tmp;
   }
@@ -97,7 +96,7 @@
     Companion_instance = this;
     this.Zero_1 = CornerRadius_0(0.0);
   }
-  protoOf(Companion).get_Zero_5wbciv_k$ = function () {
+  protoOf(Companion).get_Zero_r4zx17_k$ = function () {
     return this.Zero_1;
   };
   var Companion_instance;
@@ -156,11 +155,10 @@
   };
   function CornerRadius_0(x, y) {
     y = y === VOID ? x : y;
-    var tmp$ret$0;
     // Inline function 'androidx.compose.ui.util.packFloats' call
     var v1 = toLong(toBits(x));
     var v2 = toLong(toBits(y));
-    tmp$ret$0 = v1.shl_po5ip6_k$(32).or_s401rn_k$(v2.and_jhajnj_k$(new Long(-1, 0)));
+    var tmp$ret$0 = v1.shl_bg8if3_k$(32).or_v7fvkl_k$(v2.and_4spn93_k$(new Long(-1, 0)));
     return _CornerRadius___init__impl__ojmabe(tmp$ret$0);
   }
   function toStringAsFixed(_this__u8e3s4, digits) {
@@ -196,25 +194,25 @@
     this.bottom_1 = bottom;
     this.$stable_1 = 8;
   }
-  protoOf(MutableRect).set_left_i6srx5_k$ = function (_set____db54di) {
+  protoOf(MutableRect).set_left_bnynok_k$ = function (_set____db54di) {
     this.left_1 = _set____db54di;
   };
   protoOf(MutableRect).get_left_woprgw_k$ = function () {
     return this.left_1;
   };
-  protoOf(MutableRect).set_top_62laxx_k$ = function (_set____db54di) {
+  protoOf(MutableRect).set_top_q4a9n4_k$ = function (_set____db54di) {
     this.top_1 = _set____db54di;
   };
   protoOf(MutableRect).get_top_18ivbo_k$ = function () {
     return this.top_1;
   };
-  protoOf(MutableRect).set_right_uydszm_k$ = function (_set____db54di) {
+  protoOf(MutableRect).set_right_ihmog9_k$ = function (_set____db54di) {
     this.right_1 = _set____db54di;
   };
   protoOf(MutableRect).get_right_ixz7xv_k$ = function () {
     return this.right_1;
   };
-  protoOf(MutableRect).set_bottom_y9ard7_k$ = function (_set____db54di) {
+  protoOf(MutableRect).set_bottom_hrdqf4_k$ = function (_set____db54di) {
     this.bottom_1 = _set____db54di;
   };
   protoOf(MutableRect).get_bottom_bj8ras_k$ = function () {
@@ -226,39 +224,38 @@
   protoOf(MutableRect).get_height_e7t92o_k$ = function () {
     return this.bottom_1 - this.top_1;
   };
-  protoOf(MutableRect).get_size_x9ctfw_k$ = function () {
+  protoOf(MutableRect).get_size_cxx1ym_k$ = function () {
     // Inline function 'androidx.compose.ui.geometry.MutableRect.width' call
     var tmp = this.right_1 - this.left_1;
-    var tmp$ret$1;
     // Inline function 'androidx.compose.ui.geometry.MutableRect.height' call
-    tmp$ret$1 = this.bottom_1 - this.top_1;
+    var tmp$ret$1 = this.bottom_1 - this.top_1;
     return Size_0(tmp, tmp$ret$1);
   };
   protoOf(MutableRect).get_isEmpty_zauvru_k$ = function () {
     return this.left_1 >= this.right_1 ? true : this.top_1 >= this.bottom_1;
   };
-  protoOf(MutableRect).intersect_50a7g2_k$ = function (left, top, right, bottom) {
+  protoOf(MutableRect).intersect_ye2nrj_k$ = function (left, top, right, bottom) {
     var tmp = this;
     // Inline function 'kotlin.math.max' call
-    var tmp0_max = this.left_1;
-    tmp.left_1 = Math.max(left, tmp0_max);
+    var b = this.left_1;
+    tmp.left_1 = Math.max(left, b);
     var tmp_0 = this;
     // Inline function 'kotlin.math.max' call
-    var tmp1_max = this.top_1;
-    tmp_0.top_1 = Math.max(top, tmp1_max);
+    var b_0 = this.top_1;
+    tmp_0.top_1 = Math.max(top, b_0);
     var tmp_1 = this;
     // Inline function 'kotlin.math.min' call
-    var tmp2_min = this.right_1;
-    tmp_1.right_1 = Math.min(right, tmp2_min);
+    var b_1 = this.right_1;
+    tmp_1.right_1 = Math.min(right, b_1);
     var tmp_2 = this;
     // Inline function 'kotlin.math.min' call
-    var tmp3_min = this.bottom_1;
-    tmp_2.bottom_1 = Math.min(bottom, tmp3_min);
+    var b_2 = this.bottom_1;
+    tmp_2.bottom_1 = Math.min(bottom, b_2);
   };
-  protoOf(MutableRect).contains_ggguyy_k$ = function (offset) {
+  protoOf(MutableRect).contains_obi4ph_k$ = function (offset) {
     return ((_Offset___get_x__impl__xvi35n(offset) >= this.left_1 ? _Offset___get_x__impl__xvi35n(offset) < this.right_1 : false) ? _Offset___get_y__impl__8bzhra(offset) >= this.top_1 : false) ? _Offset___get_y__impl__8bzhra(offset) < this.bottom_1 : false;
   };
-  protoOf(MutableRect).set_3mqxe9_k$ = function (left, top, right, bottom) {
+  protoOf(MutableRect).set_7tauzy_k$ = function (left, top, right, bottom) {
     this.left_1 = left;
     this.top_1 = top;
     this.right_1 = right;
@@ -285,11 +282,11 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
     // Inline function 'androidx.compose.ui.util.unpackFloat1' call
-    var tmp1_unpackFloat1 = _Offset___get_packedValue__impl__xh2k8q($this);
+    var value = _Offset___get_packedValue__impl__xh2k8q($this);
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp1_fromBits = tmp1_unpackFloat1.shr_wjue3g_k$(32).toInt_1tsl84_k$();
-    return floatFromBits(tmp1_fromBits);
+    var bits = value.shr_9fl3wl_k$(32).toInt_1tsl84_k$();
+    return floatFromBits(bits);
   }
   function _Offset___get_y__impl__8bzhra($this) {
     // Inline function 'kotlin.check' call
@@ -300,11 +297,11 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
     // Inline function 'androidx.compose.ui.util.unpackFloat2' call
-    var tmp1_unpackFloat2 = _Offset___get_packedValue__impl__xh2k8q($this);
+    var value = _Offset___get_packedValue__impl__xh2k8q($this);
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp1_fromBits = tmp1_unpackFloat2.and_jhajnj_k$(new Long(-1, 0)).toInt_1tsl84_k$();
-    return floatFromBits(tmp1_fromBits);
+    var bits = value.and_4spn93_k$(new Long(-1, 0)).toInt_1tsl84_k$();
+    return floatFromBits(bits);
   }
   function Offset__component1_impl_qn5q2($this) {
     return _Offset___get_x__impl__xvi35n($this);
@@ -322,9 +319,8 @@
     if ($super === VOID) {
       tmp = Offset__copy_impl_9gtypn($this, x, y);
     } else {
-      var tmp_0 = new Offset($this);
-      var tmp_1 = $super;
-      tmp = (tmp_1 == null ? null : new Offset(tmp_1)).copy_wh0c5l_k$.call(tmp_0, x, y).packedValue_1;
+      var tmp_0 = $super;
+      tmp = (tmp_0 == null ? null : new Offset(tmp_0)).copy_e8mbcb_k$.call(new Offset($this), x, y).packedValue_1;
     }
     return tmp;
   }
@@ -334,13 +330,13 @@
     this.Infinite_1 = Offset_0(FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$(), FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$());
     this.Unspecified_1 = Offset_0(FloatCompanionObject_getInstance().get_NaN_18jnv2_k$(), FloatCompanionObject_getInstance().get_NaN_18jnv2_k$());
   }
-  protoOf(Companion_0).get_Zero_sctq3f_k$ = function () {
+  protoOf(Companion_0).get_Zero_k6n73t_k$ = function () {
     return this.Zero_1;
   };
-  protoOf(Companion_0).get_Infinite_oe4l7z_k$ = function () {
+  protoOf(Companion_0).get_Infinite_g7y28d_k$ = function () {
     return this.Infinite_1;
   };
-  protoOf(Companion_0).get_Unspecified_ooyrpa_k$ = function () {
+  protoOf(Companion_0).get_Unspecified_gis8po_k$ = function () {
     return this.Unspecified_1;
   };
   var Companion_instance_0;
@@ -361,8 +357,8 @@
   }
   function Offset__getDistance_impl_pclvxn($this) {
     // Inline function 'kotlin.math.sqrt' call
-    var tmp0_sqrt = _Offset___get_x__impl__xvi35n($this) * _Offset___get_x__impl__xvi35n($this) + _Offset___get_y__impl__8bzhra($this) * _Offset___get_y__impl__8bzhra($this);
-    return Math.sqrt(tmp0_sqrt);
+    var x = _Offset___get_x__impl__xvi35n($this) * _Offset___get_x__impl__xvi35n($this) + _Offset___get_y__impl__8bzhra($this) * _Offset___get_y__impl__8bzhra($this);
+    return Math.sqrt(x);
   }
   function Offset__getDistanceSquared_impl_97mhi6($this) {
     return _Offset___get_x__impl__xvi35n($this) * _Offset___get_x__impl__xvi35n($this) + _Offset___get_y__impl__8bzhra($this) * _Offset___get_y__impl__8bzhra($this);
@@ -419,11 +415,10 @@
     return Offset__equals_impl_exf2yj(this.packedValue_1, other);
   };
   function Offset_0(x, y) {
-    var tmp$ret$0;
     // Inline function 'androidx.compose.ui.util.packFloats' call
     var v1 = toLong(toBits(x));
     var v2 = toLong(toBits(y));
-    tmp$ret$0 = v1.shl_po5ip6_k$(32).or_s401rn_k$(v2.and_jhajnj_k$(new Long(-1, 0)));
+    var tmp$ret$0 = v1.shl_bg8if3_k$(32).or_v7fvkl_k$(v2.and_4spn93_k$(new Long(-1, 0)));
     return _Offset___init__impl__c168vi(tmp$ret$0);
   }
   function get_isFinite(_this__u8e3s4) {
@@ -480,7 +475,7 @@
   protoOf(Rect).get_height_e7t92o_k$ = function () {
     return this.bottom_1 - this.top_1;
   };
-  protoOf(Rect).get_size_x9ctfw_k$ = function () {
+  protoOf(Rect).get_size_cxx1ym_k$ = function () {
     return Size_0(this.get_width_j0q4yl_k$(), this.get_height_e7t92o_k$());
   };
   protoOf(Rect).get_isInfinite_uffwnt_k$ = function () {
@@ -492,39 +487,38 @@
   protoOf(Rect).get_isEmpty_zauvru_k$ = function () {
     return this.left_1 >= this.right_1 ? true : this.top_1 >= this.bottom_1;
   };
-  protoOf(Rect).translate_bllf6j_k$ = function (offset) {
+  protoOf(Rect).translate_e972jg_k$ = function (offset) {
     return new Rect(this.left_1 + _Offset___get_x__impl__xvi35n(offset), this.top_1 + _Offset___get_y__impl__8bzhra(offset), this.right_1 + _Offset___get_x__impl__xvi35n(offset), this.bottom_1 + _Offset___get_y__impl__8bzhra(offset));
   };
-  protoOf(Rect).translate_y4aglq_k$ = function (translateX, translateY) {
+  protoOf(Rect).translate_k2k08i_k$ = function (translateX, translateY) {
     return new Rect(this.left_1 + translateX, this.top_1 + translateY, this.right_1 + translateX, this.bottom_1 + translateY);
   };
-  protoOf(Rect).inflate_f59jyf_k$ = function (delta) {
+  protoOf(Rect).inflate_rvluy7_k$ = function (delta) {
     return new Rect(this.left_1 - delta, this.top_1 - delta, this.right_1 + delta, this.bottom_1 + delta);
   };
-  protoOf(Rect).deflate_wl1pyb_k$ = function (delta) {
-    return this.inflate_f59jyf_k$(-delta);
+  protoOf(Rect).deflate_e6rdlf_k$ = function (delta) {
+    return this.inflate_rvluy7_k$(-delta);
   };
-  protoOf(Rect).intersect_f9p2yv_k$ = function (other) {
+  protoOf(Rect).intersect_aqxwu2_k$ = function (other) {
     // Inline function 'kotlin.math.max' call
-    var tmp0_max = this.left_1;
-    var tmp1_max = other.left_1;
-    var tmp = Math.max(tmp0_max, tmp1_max);
+    var a = this.left_1;
+    var b = other.left_1;
+    var tmp = Math.max(a, b);
     // Inline function 'kotlin.math.max' call
-    var tmp2_max = this.top_1;
-    var tmp3_max = other.top_1;
-    var tmp_0 = Math.max(tmp2_max, tmp3_max);
+    var a_0 = this.top_1;
+    var b_0 = other.top_1;
+    var tmp_0 = Math.max(a_0, b_0);
     // Inline function 'kotlin.math.min' call
-    var tmp4_min = this.right_1;
-    var tmp5_min = other.right_1;
-    var tmp_1 = Math.min(tmp4_min, tmp5_min);
-    var tmp$ret$3;
+    var a_1 = this.right_1;
+    var b_1 = other.right_1;
+    var tmp_1 = Math.min(a_1, b_1);
     // Inline function 'kotlin.math.min' call
-    var tmp6_min = this.bottom_1;
-    var tmp7_min = other.bottom_1;
-    tmp$ret$3 = Math.min(tmp6_min, tmp7_min);
+    var a_2 = this.bottom_1;
+    var b_2 = other.bottom_1;
+    var tmp$ret$3 = Math.min(a_2, b_2);
     return new Rect(tmp, tmp_0, tmp_1, tmp$ret$3);
   };
-  protoOf(Rect).overlaps_b0bhu4_k$ = function (other) {
+  protoOf(Rect).overlaps_l18ztf_k$ = function (other) {
     if (this.right_1 <= other.left_1 ? true : other.right_1 <= this.left_1)
       return false;
     if (this.bottom_1 <= other.top_1 ? true : other.bottom_1 <= this.top_1)
@@ -534,51 +528,51 @@
   protoOf(Rect).get_minDimension_t9b43n_k$ = function () {
     // Inline function 'kotlin.math.min' call
     // Inline function 'kotlin.math.absoluteValue' call
-    var tmp0_get_absoluteValue_aog79f = this.get_width_j0q4yl_k$();
-    var tmp2_min = Math.abs(tmp0_get_absoluteValue_aog79f);
+    var this_0 = this.get_width_j0q4yl_k$();
+    var a = Math.abs(this_0);
     // Inline function 'kotlin.math.absoluteValue' call
-    var tmp1_get_absoluteValue_on85xe = this.get_height_e7t92o_k$();
-    var tmp3_min = Math.abs(tmp1_get_absoluteValue_on85xe);
-    return Math.min(tmp2_min, tmp3_min);
+    var this_1 = this.get_height_e7t92o_k$();
+    var b = Math.abs(this_1);
+    return Math.min(a, b);
   };
   protoOf(Rect).get_maxDimension_xxccdn_k$ = function () {
     // Inline function 'kotlin.math.max' call
     // Inline function 'kotlin.math.absoluteValue' call
-    var tmp0_get_absoluteValue_aog79f = this.get_width_j0q4yl_k$();
-    var tmp2_max = Math.abs(tmp0_get_absoluteValue_aog79f);
+    var this_0 = this.get_width_j0q4yl_k$();
+    var a = Math.abs(this_0);
     // Inline function 'kotlin.math.absoluteValue' call
-    var tmp1_get_absoluteValue_on85xe = this.get_height_e7t92o_k$();
-    var tmp3_max = Math.abs(tmp1_get_absoluteValue_on85xe);
-    return Math.max(tmp2_max, tmp3_max);
+    var this_1 = this.get_height_e7t92o_k$();
+    var b = Math.abs(this_1);
+    return Math.max(a, b);
   };
-  protoOf(Rect).get_topLeft_qjp8dj_k$ = function () {
+  protoOf(Rect).get_topLeft_ypvrd5_k$ = function () {
     return Offset_0(this.left_1, this.top_1);
   };
-  protoOf(Rect).get_topCenter_zfsoad_k$ = function () {
+  protoOf(Rect).get_topCenter_rf4up5_k$ = function () {
     return Offset_0(this.left_1 + this.get_width_j0q4yl_k$() / 2.0, this.top_1);
   };
-  protoOf(Rect).get_topRight_xe1k4k_k$ = function () {
+  protoOf(Rect).get_topRight_tgvyuy_k$ = function () {
     return Offset_0(this.right_1, this.top_1);
   };
-  protoOf(Rect).get_centerLeft_htlaef_k$ = function () {
+  protoOf(Rect).get_centerLeft_9neret_k$ = function () {
     return Offset_0(this.left_1, this.top_1 + this.get_height_e7t92o_k$() / 2.0);
   };
-  protoOf(Rect).get_center_568eeq_k$ = function () {
+  protoOf(Rect).get_center_dcexec_k$ = function () {
     return Offset_0(this.left_1 + this.get_width_j0q4yl_k$() / 2.0, this.top_1 + this.get_height_e7t92o_k$() / 2.0);
   };
-  protoOf(Rect).get_centerRight_7j4fle_k$ = function () {
+  protoOf(Rect).get_centerRight_fpayl0_k$ = function () {
     return Offset_0(this.right_1, this.top_1 + this.get_height_e7t92o_k$() / 2.0);
   };
-  protoOf(Rect).get_bottomLeft_q0jlkf_k$ = function () {
+  protoOf(Rect).get_bottomLeft_y6q4k1_k$ = function () {
     return Offset_0(this.left_1, this.bottom_1);
   };
-  protoOf(Rect).get_bottomCenter_la770d_k$ = function () {
+  protoOf(Rect).get_bottomCenter_tgdpzz_k$ = function () {
     return Offset_0(this.left_1 + this.get_width_j0q4yl_k$() / 2.0, this.bottom_1);
   };
-  protoOf(Rect).get_bottomRight_gw6x24_k$ = function () {
+  protoOf(Rect).get_bottomRight_p2dg1q_k$ = function () {
     return Offset_0(this.right_1, this.bottom_1);
   };
-  protoOf(Rect).contains_ggguyy_k$ = function (offset) {
+  protoOf(Rect).contains_obi4ph_k$ = function (offset) {
     return ((_Offset___get_x__impl__xvi35n(offset) >= this.left_1 ? _Offset___get_x__impl__xvi35n(offset) < this.right_1 : false) ? _Offset___get_y__impl__8bzhra(offset) >= this.top_1 : false) ? _Offset___get_y__impl__8bzhra(offset) < this.bottom_1 : false;
   };
   protoOf(Rect).toString = function () {
@@ -596,15 +590,15 @@
   protoOf(Rect).component4_7eebs9_k$ = function () {
     return this.bottom_1;
   };
-  protoOf(Rect).copy_skjbed_k$ = function (left, top, right, bottom) {
+  protoOf(Rect).copy_egrqb9_k$ = function (left, top, right, bottom) {
     return new Rect(left, top, right, bottom);
   };
-  protoOf(Rect).copy$default_8axww1_k$ = function (left, top, right, bottom, $super) {
+  protoOf(Rect).copy$default_g2jcm4_k$ = function (left, top, right, bottom, $super) {
     left = left === VOID ? this.left_1 : left;
     top = top === VOID ? this.top_1 : top;
     right = right === VOID ? this.right_1 : right;
     bottom = bottom === VOID ? this.bottom_1 : bottom;
-    return $super === VOID ? this.copy_skjbed_k$(left, top, right, bottom) : $super.copy_skjbed_k$.call(this, left, top, right, bottom);
+    return $super === VOID ? this.copy_egrqb9_k$(left, top, right, bottom) : $super.copy_egrqb9_k$.call(this, left, top, right, bottom);
   };
   protoOf(Rect).hashCode = function () {
     var result = getNumberHashCode(this.left_1);
@@ -654,11 +648,11 @@
       scale = minRadius($this, scale, _CornerRadius___get_x__impl__1594cn($this.topLeftCornerRadius_1), _CornerRadius___get_x__impl__1594cn($this.topRightCornerRadius_1), $this.get_width_j0q4yl_k$());
       scale = minRadius($this, scale, _CornerRadius___get_y__impl__tyvleu($this.topRightCornerRadius_1), _CornerRadius___get_y__impl__tyvleu($this.bottomRightCornerRadius_1), $this.get_height_e7t92o_k$());
       scale = minRadius($this, scale, _CornerRadius___get_x__impl__1594cn($this.bottomRightCornerRadius_1), _CornerRadius___get_x__impl__1594cn($this.bottomLeftCornerRadius_1), $this.get_width_j0q4yl_k$());
-      var tmp0_also = new RoundRect($this.left_1 * scale, $this.top_1 * scale, $this.right_1 * scale, $this.bottom_1 * scale, CornerRadius_0(_CornerRadius___get_x__impl__1594cn($this.topLeftCornerRadius_1) * scale, _CornerRadius___get_y__impl__tyvleu($this.topLeftCornerRadius_1) * scale), CornerRadius_0(_CornerRadius___get_x__impl__1594cn($this.topRightCornerRadius_1) * scale, _CornerRadius___get_y__impl__tyvleu($this.topRightCornerRadius_1) * scale), CornerRadius_0(_CornerRadius___get_x__impl__1594cn($this.bottomRightCornerRadius_1) * scale, _CornerRadius___get_y__impl__tyvleu($this.bottomRightCornerRadius_1) * scale), CornerRadius_0(_CornerRadius___get_x__impl__1594cn($this.bottomLeftCornerRadius_1) * scale, _CornerRadius___get_y__impl__tyvleu($this.bottomLeftCornerRadius_1) * scale));
+      var this_0 = new RoundRect($this.left_1 * scale, $this.top_1 * scale, $this.right_1 * scale, $this.bottom_1 * scale, CornerRadius_0(_CornerRadius___get_x__impl__1594cn($this.topLeftCornerRadius_1) * scale, _CornerRadius___get_y__impl__tyvleu($this.topLeftCornerRadius_1) * scale), CornerRadius_0(_CornerRadius___get_x__impl__1594cn($this.topRightCornerRadius_1) * scale, _CornerRadius___get_y__impl__tyvleu($this.topRightCornerRadius_1) * scale), CornerRadius_0(_CornerRadius___get_x__impl__1594cn($this.bottomRightCornerRadius_1) * scale, _CornerRadius___get_y__impl__tyvleu($this.bottomRightCornerRadius_1) * scale), CornerRadius_0(_CornerRadius___get_x__impl__1594cn($this.bottomLeftCornerRadius_1) * scale, _CornerRadius___get_y__impl__tyvleu($this.bottomLeftCornerRadius_1) * scale));
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.ui.geometry.RoundRect.scaledRadiiRect.<anonymous>' call
-      $this._scaledRadiiRect_1 = tmp0_also;
-      tmp = tmp0_also;
+      $this._scaledRadiiRect_1 = this_0;
+      tmp = this_0;
     } else {
       tmp = tmp0_elvis_lhs;
     }
@@ -669,8 +663,8 @@
     var tmp;
     if (sum > limit ? !(sum === 0.0) : false) {
       // Inline function 'kotlin.math.min' call
-      var tmp0_min = limit / sum;
-      tmp = Math.min(min, tmp0_min);
+      var b = limit / sum;
+      tmp = Math.min(min, b);
     } else {
       tmp = min;
     }
@@ -678,7 +672,7 @@
   }
   function Companion_2() {
     Companion_instance_2 = this;
-    this.Zero_1 = RoundRect_1(0.0, 0.0, 0.0, 0.0, Companion_getInstance().get_Zero_5wbciv_k$());
+    this.Zero_1 = RoundRect_1(0.0, 0.0, 0.0, 0.0, Companion_getInstance().get_Zero_r4zx17_k$());
   }
   protoOf(Companion_2).get_Zero_woe9zl_k$ = function () {
     return this.Zero_1;
@@ -694,10 +688,10 @@
   }
   function RoundRect(left, top, right, bottom, topLeftCornerRadius, topRightCornerRadius, bottomRightCornerRadius, bottomLeftCornerRadius) {
     Companion_getInstance_2();
-    topLeftCornerRadius = topLeftCornerRadius === VOID ? Companion_getInstance().get_Zero_5wbciv_k$() : topLeftCornerRadius;
-    topRightCornerRadius = topRightCornerRadius === VOID ? Companion_getInstance().get_Zero_5wbciv_k$() : topRightCornerRadius;
-    bottomRightCornerRadius = bottomRightCornerRadius === VOID ? Companion_getInstance().get_Zero_5wbciv_k$() : bottomRightCornerRadius;
-    bottomLeftCornerRadius = bottomLeftCornerRadius === VOID ? Companion_getInstance().get_Zero_5wbciv_k$() : bottomLeftCornerRadius;
+    topLeftCornerRadius = topLeftCornerRadius === VOID ? Companion_getInstance().get_Zero_r4zx17_k$() : topLeftCornerRadius;
+    topRightCornerRadius = topRightCornerRadius === VOID ? Companion_getInstance().get_Zero_r4zx17_k$() : topRightCornerRadius;
+    bottomRightCornerRadius = bottomRightCornerRadius === VOID ? Companion_getInstance().get_Zero_r4zx17_k$() : bottomRightCornerRadius;
+    bottomLeftCornerRadius = bottomLeftCornerRadius === VOID ? Companion_getInstance().get_Zero_r4zx17_k$() : bottomLeftCornerRadius;
     this.left_1 = left;
     this.top_1 = top;
     this.right_1 = right;
@@ -721,16 +715,16 @@
   protoOf(RoundRect).get_bottom_bj8ras_k$ = function () {
     return this.bottom_1;
   };
-  protoOf(RoundRect).get_topLeftCornerRadius_nzteym_k$ = function () {
+  protoOf(RoundRect).get_topLeftCornerRadius_91hulg_k$ = function () {
     return this.topLeftCornerRadius_1;
   };
-  protoOf(RoundRect).get_topRightCornerRadius_h21xrz_k$ = function () {
+  protoOf(RoundRect).get_topRightCornerRadius_kxqun3_k$ = function () {
     return this.topRightCornerRadius_1;
   };
-  protoOf(RoundRect).get_bottomRightCornerRadius_vv4dft_k$ = function () {
+  protoOf(RoundRect).get_bottomRightCornerRadius_166w49_k$ = function () {
     return this.bottomRightCornerRadius_1;
   };
-  protoOf(RoundRect).get_bottomLeftCornerRadius_na53na_k$ = function () {
+  protoOf(RoundRect).get_bottomLeftCornerRadius_9r65ws_k$ = function () {
     return this.bottomLeftCornerRadius_1;
   };
   protoOf(RoundRect).get_width_j0q4yl_k$ = function () {
@@ -739,7 +733,7 @@
   protoOf(RoundRect).get_height_e7t92o_k$ = function () {
     return this.bottom_1 - this.top_1;
   };
-  protoOf(RoundRect).contains_ggguyy_k$ = function (point) {
+  protoOf(RoundRect).contains_obi4ph_k$ = function (point) {
     if (((_Offset___get_x__impl__xvi35n(point) < this.left_1 ? true : _Offset___get_x__impl__xvi35n(point) >= this.right_1) ? true : _Offset___get_y__impl__8bzhra(point) < this.top_1) ? true : _Offset___get_y__impl__8bzhra(point) >= this.bottom_1) {
       return false;
     }
@@ -801,22 +795,22 @@
   protoOf(RoundRect).component4_7eebs9_k$ = function () {
     return this.bottom_1;
   };
-  protoOf(RoundRect).component5_hvouow_k$ = function () {
+  protoOf(RoundRect).component5_k43xq6_k$ = function () {
     return this.topLeftCornerRadius_1;
   };
-  protoOf(RoundRect).component6_kjz4nz_k$ = function () {
+  protoOf(RoundRect).component6_chc4w3_k$ = function () {
     return this.topRightCornerRadius_1;
   };
-  protoOf(RoundRect).component7_c1gxya_k$ = function () {
+  protoOf(RoundRect).component7_pybugs_k$ = function () {
     return this.bottomRightCornerRadius_1;
   };
-  protoOf(RoundRect).component8_qe71el_k$ = function () {
+  protoOf(RoundRect).component8_6n485h_k$ = function () {
     return this.bottomLeftCornerRadius_1;
   };
-  protoOf(RoundRect).copy_qy0ogv_k$ = function (left, top, right, bottom, topLeftCornerRadius, topRightCornerRadius, bottomRightCornerRadius, bottomLeftCornerRadius) {
+  protoOf(RoundRect).copy_6k8ad_k$ = function (left, top, right, bottom, topLeftCornerRadius, topRightCornerRadius, bottomRightCornerRadius, bottomLeftCornerRadius) {
     return new RoundRect(left, top, right, bottom, topLeftCornerRadius, topRightCornerRadius, bottomRightCornerRadius, bottomLeftCornerRadius);
   };
-  protoOf(RoundRect).copy$default_lvciiv_k$ = function (left, top, right, bottom, topLeftCornerRadius, topRightCornerRadius, bottomRightCornerRadius, bottomLeftCornerRadius, $super) {
+  protoOf(RoundRect).copy$default_s3wa9q_k$ = function (left, top, right, bottom, topLeftCornerRadius, topRightCornerRadius, bottomRightCornerRadius, bottomLeftCornerRadius, $super) {
     left = left === VOID ? this.left_1 : left;
     top = top === VOID ? this.top_1 : top;
     right = right === VOID ? this.right_1 : right;
@@ -825,7 +819,7 @@
     topRightCornerRadius = topRightCornerRadius === VOID ? this.topRightCornerRadius_1 : topRightCornerRadius;
     bottomRightCornerRadius = bottomRightCornerRadius === VOID ? this.bottomRightCornerRadius_1 : bottomRightCornerRadius;
     bottomLeftCornerRadius = bottomLeftCornerRadius === VOID ? this.bottomLeftCornerRadius_1 : bottomLeftCornerRadius;
-    return $super === VOID ? this.copy_qy0ogv_k$(left, top, right, bottom, topLeftCornerRadius, topRightCornerRadius, bottomRightCornerRadius, bottomLeftCornerRadius) : $super.copy_qy0ogv_k$.call(this, left, top, right, bottom, new CornerRadius(topLeftCornerRadius), new CornerRadius(topRightCornerRadius), new CornerRadius(bottomRightCornerRadius), new CornerRadius(bottomLeftCornerRadius));
+    return $super === VOID ? this.copy_6k8ad_k$(left, top, right, bottom, topLeftCornerRadius, topRightCornerRadius, bottomRightCornerRadius, bottomLeftCornerRadius) : $super.copy_6k8ad_k$.call(this, left, top, right, bottom, new CornerRadius(topLeftCornerRadius), new CornerRadius(topRightCornerRadius), new CornerRadius(bottomRightCornerRadius), new CornerRadius(bottomLeftCornerRadius));
   };
   protoOf(RoundRect).hashCode = function () {
     var result = getNumberHashCode(this.left_1);
@@ -866,10 +860,10 @@
     return new Rect(_this__u8e3s4.left_1, _this__u8e3s4.top_1, _this__u8e3s4.right_1, _this__u8e3s4.bottom_1);
   }
   function RoundRect_0(rect, topLeft, topRight, bottomRight, bottomLeft) {
-    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_5wbciv_k$() : topLeft;
-    topRight = topRight === VOID ? Companion_getInstance().get_Zero_5wbciv_k$() : topRight;
-    bottomRight = bottomRight === VOID ? Companion_getInstance().get_Zero_5wbciv_k$() : bottomRight;
-    bottomLeft = bottomLeft === VOID ? Companion_getInstance().get_Zero_5wbciv_k$() : bottomLeft;
+    topLeft = topLeft === VOID ? Companion_getInstance().get_Zero_r4zx17_k$() : topLeft;
+    topRight = topRight === VOID ? Companion_getInstance().get_Zero_r4zx17_k$() : topRight;
+    bottomRight = bottomRight === VOID ? Companion_getInstance().get_Zero_r4zx17_k$() : bottomRight;
+    bottomLeft = bottomLeft === VOID ? Companion_getInstance().get_Zero_r4zx17_k$() : bottomLeft;
     return new RoundRect(rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), topLeft, topRight, bottomRight, bottomLeft);
   }
   function RoundRect_1(left, top, right, bottom, cornerRadius) {
@@ -897,11 +891,11 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
     // Inline function 'androidx.compose.ui.util.unpackFloat1' call
-    var tmp1_unpackFloat1 = _Size___get_packedValue__impl__7rlt1o($this);
+    var value = _Size___get_packedValue__impl__7rlt1o($this);
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp1_fromBits = tmp1_unpackFloat1.shr_wjue3g_k$(32).toInt_1tsl84_k$();
-    return floatFromBits(tmp1_fromBits);
+    var bits = value.shr_9fl3wl_k$(32).toInt_1tsl84_k$();
+    return floatFromBits(bits);
   }
   function _Size___get_height__impl__a04p02($this) {
     // Inline function 'kotlin.check' call
@@ -912,11 +906,11 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
     // Inline function 'androidx.compose.ui.util.unpackFloat2' call
-    var tmp1_unpackFloat2 = _Size___get_packedValue__impl__7rlt1o($this);
+    var value = _Size___get_packedValue__impl__7rlt1o($this);
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp1_fromBits = tmp1_unpackFloat2.and_jhajnj_k$(new Long(-1, 0)).toInt_1tsl84_k$();
-    return floatFromBits(tmp1_fromBits);
+    var bits = value.and_4spn93_k$(new Long(-1, 0)).toInt_1tsl84_k$();
+    return floatFromBits(bits);
   }
   function Size__component1_impl_9kmfl4($this) {
     return _Size___get_width__impl__58y75t($this);
@@ -934,9 +928,8 @@
     if ($super === VOID) {
       tmp = Size__copy_impl_jrw2sp($this, width, height);
     } else {
-      var tmp_0 = new Size($this);
-      var tmp_1 = $super;
-      tmp = (tmp_1 == null ? null : new Size(tmp_1)).copy_c30i9j_k$.call(tmp_0, width, height).packedValue_1;
+      var tmp_0 = $super;
+      tmp = (tmp_0 == null ? null : new Size(tmp_0)).copy_ldlpax_k$.call(new Size($this), width, height).packedValue_1;
     }
     return tmp;
   }
@@ -945,10 +938,10 @@
     this.Zero_1 = Size_0(0.0, 0.0);
     this.Unspecified_1 = Size_0(FloatCompanionObject_getInstance().get_NaN_18jnv2_k$(), FloatCompanionObject_getInstance().get_NaN_18jnv2_k$());
   }
-  protoOf(Companion_3).get_Zero_mv7bl9_k$ = function () {
+  protoOf(Companion_3).get_Zero_rugywl_k$ = function () {
     return this.Zero_1;
   };
-  protoOf(Companion_3).get_Unspecified_o59ai8_k$ = function () {
+  protoOf(Companion_3).get_Unspecified_3ttj0y_k$ = function () {
     return this.Unspecified_1;
   };
   var Companion_instance_3;
@@ -969,22 +962,22 @@
   function _Size___get_minDimension__impl__4iso0r($this) {
     // Inline function 'kotlin.math.min' call
     // Inline function 'kotlin.math.absoluteValue' call
-    var tmp0_get_absoluteValue_aog79f = _Size___get_width__impl__58y75t($this);
-    var tmp2_min = Math.abs(tmp0_get_absoluteValue_aog79f);
+    var this_0 = _Size___get_width__impl__58y75t($this);
+    var a = Math.abs(this_0);
     // Inline function 'kotlin.math.absoluteValue' call
-    var tmp1_get_absoluteValue_on85xe = _Size___get_height__impl__a04p02($this);
-    var tmp3_min = Math.abs(tmp1_get_absoluteValue_on85xe);
-    return Math.min(tmp2_min, tmp3_min);
+    var this_1 = _Size___get_height__impl__a04p02($this);
+    var b = Math.abs(this_1);
+    return Math.min(a, b);
   }
   function _Size___get_maxDimension__impl__3y1xu1($this) {
     // Inline function 'kotlin.math.max' call
     // Inline function 'kotlin.math.absoluteValue' call
-    var tmp0_get_absoluteValue_aog79f = _Size___get_width__impl__58y75t($this);
-    var tmp2_max = Math.abs(tmp0_get_absoluteValue_aog79f);
+    var this_0 = _Size___get_width__impl__58y75t($this);
+    var a = Math.abs(this_0);
     // Inline function 'kotlin.math.absoluteValue' call
-    var tmp1_get_absoluteValue_on85xe = _Size___get_height__impl__a04p02($this);
-    var tmp3_max = Math.abs(tmp1_get_absoluteValue_on85xe);
-    return Math.max(tmp2_max, tmp3_max);
+    var this_1 = _Size___get_height__impl__a04p02($this);
+    var b = Math.abs(this_1);
+    return Math.max(a, b);
   }
   function Size__toString_impl_o87ni8($this) {
     var tmp;
@@ -1021,17 +1014,16 @@
     return Size__equals_impl_gzcc1f(this.packedValue_1, other);
   };
   function toRect_0(_this__u8e3s4) {
-    return Rect_0(Companion_getInstance_0().get_Zero_sctq3f_k$(), _this__u8e3s4);
+    return Rect_0(Companion_getInstance_0().get_Zero_k6n73t_k$(), _this__u8e3s4);
   }
   function get_isSpecified_0(_this__u8e3s4) {
     return !_Size___get_packedValue__impl__7rlt1o(_this__u8e3s4).equals(_Size___get_packedValue__impl__7rlt1o(Companion_getInstance_3().Unspecified_1));
   }
   function Size_0(width, height) {
-    var tmp$ret$0;
     // Inline function 'androidx.compose.ui.util.packFloats' call
     var v1 = toLong(toBits(width));
     var v2 = toLong(toBits(height));
-    tmp$ret$0 = v1.shl_po5ip6_k$(32).or_s401rn_k$(v2.and_jhajnj_k$(new Long(-1, 0)));
+    var tmp$ret$0 = v1.shl_bg8if3_k$(32).or_v7fvkl_k$(v2.and_4spn93_k$(new Long(-1, 0)));
     return _Size___init__impl__aywn0g(tmp$ret$0);
   }
   function get_center(_this__u8e3s4) {

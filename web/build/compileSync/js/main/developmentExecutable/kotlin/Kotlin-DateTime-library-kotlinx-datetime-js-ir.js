@@ -1,57 +1,57 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', '@js-joda/core', './kotlin-kotlin-stdlib-js-ir.js', './kotlinx-serialization-kotlinx-serialization-core-js-ir.js'], factory);
+    define(['exports', '@js-joda/core', './kotlin-kotlin-stdlib.js', './kotlinx-serialization-kotlinx-serialization-core-js-ir.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('@js-joda/core'), require('./kotlin-kotlin-stdlib-js-ir.js'), require('./kotlinx-serialization-kotlinx-serialization-core-js-ir.js'));
+    factory(module.exports, require('@js-joda/core'), require('./kotlin-kotlin-stdlib.js'), require('./kotlinx-serialization-kotlinx-serialization-core-js-ir.js'));
   else {
     if (typeof this['@js-joda/core'] === 'undefined') {
       throw new Error("Error loading module 'Kotlin-DateTime-library-kotlinx-datetime-js-ir'. Its dependency '@js-joda/core' was not found. Please, check whether '@js-joda/core' is loaded prior to 'Kotlin-DateTime-library-kotlinx-datetime-js-ir'.");
     }
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'Kotlin-DateTime-library-kotlinx-datetime-js-ir'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'Kotlin-DateTime-library-kotlinx-datetime-js-ir'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'Kotlin-DateTime-library-kotlinx-datetime-js-ir'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'Kotlin-DateTime-library-kotlinx-datetime-js-ir'.");
     }
     if (typeof this['kotlinx-serialization-kotlinx-serialization-core-js-ir'] === 'undefined') {
       throw new Error("Error loading module 'Kotlin-DateTime-library-kotlinx-datetime-js-ir'. Its dependency 'kotlinx-serialization-kotlinx-serialization-core-js-ir' was not found. Please, check whether 'kotlinx-serialization-kotlinx-serialization-core-js-ir' is loaded prior to 'Kotlin-DateTime-library-kotlinx-datetime-js-ir'.");
     }
-    root['Kotlin-DateTime-library-kotlinx-datetime-js-ir'] = factory(typeof this['Kotlin-DateTime-library-kotlinx-datetime-js-ir'] === 'undefined' ? {} : this['Kotlin-DateTime-library-kotlinx-datetime-js-ir'], this['@js-joda/core'], this['kotlin-kotlin-stdlib-js-ir'], this['kotlinx-serialization-kotlinx-serialization-core-js-ir']);
+    root['Kotlin-DateTime-library-kotlinx-datetime-js-ir'] = factory(typeof this['Kotlin-DateTime-library-kotlinx-datetime-js-ir'] === 'undefined' ? {} : this['Kotlin-DateTime-library-kotlinx-datetime-js-ir'], this['@js-joda/core'], this['kotlin-kotlin-stdlib'], this['kotlinx-serialization-kotlinx-serialization-core-js-ir']);
   }
 }(this, function (_, $module$_js_joda_core_gcv2k, kotlin_kotlin, kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core) {
   'use strict';
   //region block: imports
   var LocalTime = $module$_js_joda_core_gcv2k.LocalTime;
-  var asList = kotlin_kotlin.$_$.i6;
-  var IllegalArgumentException_init_$Init$ = kotlin_kotlin.$_$.s1;
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var objectCreate = kotlin_kotlin.$_$.pd;
-  var captureStack = kotlin_kotlin.$_$.yb;
-  var IllegalArgumentException_init_$Init$_0 = kotlin_kotlin.$_$.u1;
-  var IllegalArgumentException_init_$Init$_1 = kotlin_kotlin.$_$.q1;
-  var IllegalArgumentException_init_$Init$_2 = kotlin_kotlin.$_$.w1;
-  var IllegalArgumentException = kotlin_kotlin.$_$.ch;
-  var classMeta = kotlin_kotlin.$_$.ec;
-  var VOID = kotlin_kotlin.$_$.bj;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
+  var asList = kotlin_kotlin.$_$.k6;
+  var IllegalArgumentException_init_$Init$ = kotlin_kotlin.$_$.t1;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var objectCreate = kotlin_kotlin.$_$.sd;
+  var captureStack = kotlin_kotlin.$_$.bc;
+  var IllegalArgumentException_init_$Init$_0 = kotlin_kotlin.$_$.v1;
+  var IllegalArgumentException_init_$Init$_1 = kotlin_kotlin.$_$.r1;
+  var IllegalArgumentException_init_$Init$_2 = kotlin_kotlin.$_$.x1;
+  var IllegalArgumentException = kotlin_kotlin.$_$.hh;
+  var classMeta = kotlin_kotlin.$_$.hc;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var VOID = kotlin_kotlin.$_$.e;
   var STRING_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.b;
   var PrimitiveSerialDescriptor = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.h;
-  var THROW_CCE = kotlin_kotlin.$_$.lh;
+  var THROW_CCE = kotlin_kotlin.$_$.qh;
   var KSerializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.k;
-  var objectMeta = kotlin_kotlin.$_$.qd;
-  var THROW_ISE = kotlin_kotlin.$_$.mh;
-  var Unit_getInstance = kotlin_kotlin.$_$.z4;
-  var Enum = kotlin_kotlin.$_$.zg;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.r1;
-  var numberToInt = kotlin_kotlin.$_$.nd;
-  var numberToDouble = kotlin_kotlin.$_$.md;
-  var numberToLong = kotlin_kotlin.$_$.od;
-  var equals = kotlin_kotlin.$_$.ic;
-  var Comparable = kotlin_kotlin.$_$.xg;
+  var objectMeta = kotlin_kotlin.$_$.td;
+  var THROW_IAE = kotlin_kotlin.$_$.rh;
+  var Unit_getInstance = kotlin_kotlin.$_$.b5;
+  var Enum = kotlin_kotlin.$_$.eh;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.s1;
+  var numberToInt = kotlin_kotlin.$_$.qd;
+  var numberToDouble = kotlin_kotlin.$_$.pd;
+  var numberToLong = kotlin_kotlin.$_$.rd;
+  var equals = kotlin_kotlin.$_$.lc;
+  var Comparable = kotlin_kotlin.$_$.ch;
   //endregion
   //region block: pre-declaration
-  setMetadataFor(DateTimeFormatException, 'DateTimeFormatException', classMeta, IllegalArgumentException);
+  setMetadataFor(DateTimeFormatException, 'DateTimeFormatException', classMeta, IllegalArgumentException, VOID, DateTimeFormatException_init_$Create$);
   setMetadataFor(LocalTimeIso8601Serializer, 'LocalTimeIso8601Serializer', objectMeta, VOID, [KSerializer]);
   setMetadataFor(DayOfWeek, 'DayOfWeek', classMeta, Enum);
   setMetadataFor(Companion, 'Companion', objectMeta);
-  setMetadataFor(LocalTime_0, 'LocalTime', classMeta, VOID, [Comparable], VOID, {0: LocalTimeIso8601Serializer_getInstance});
+  setMetadataFor(LocalTime_0, 'LocalTime', classMeta, VOID, [Comparable], VOID, VOID, {0: LocalTimeIso8601Serializer_getInstance});
   setMetadataFor(Month, 'Month', classMeta, Enum);
   //endregion
   function get_allDaysOfWeek() {
@@ -132,14 +132,14 @@
   protoOf(LocalTimeIso8601Serializer).get_descriptor_wjt6a0_k$ = function () {
     return this.descriptor_1;
   };
-  protoOf(LocalTimeIso8601Serializer).deserialize_2t41fm_k$ = function (decoder) {
-    return Companion_getInstance().parse_4mmrzm_k$(decoder.decodeString_x3hxsx_k$());
+  protoOf(LocalTimeIso8601Serializer).deserialize_sy6x50_k$ = function (decoder) {
+    return Companion_getInstance().parse_pc1q8p_k$(decoder.decodeString_x3hxsx_k$());
   };
-  protoOf(LocalTimeIso8601Serializer).serialize_yltg6j_k$ = function (encoder, value) {
-    encoder.encodeString_90sumj_k$(value.toString());
+  protoOf(LocalTimeIso8601Serializer).serialize_401kjc_k$ = function (encoder, value) {
+    encoder.encodeString_424b5v_k$(value.toString());
   };
-  protoOf(LocalTimeIso8601Serializer).serialize_32qylj_k$ = function (encoder, value) {
-    return this.serialize_yltg6j_k$(encoder, value instanceof LocalTime_0 ? value : THROW_CCE());
+  protoOf(LocalTimeIso8601Serializer).serialize_5ase3y_k$ = function (encoder, value) {
+    return this.serialize_401kjc_k$(encoder, value instanceof LocalTime_0 ? value : THROW_CCE());
   };
   var LocalTimeIso8601Serializer_instance;
   function LocalTimeIso8601Serializer_getInstance() {
@@ -175,7 +175,7 @@
         return DayOfWeek_SUNDAY_getInstance();
       default:
         DayOfWeek_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -259,13 +259,13 @@
     this.MIN_1 = new LocalTime_0(LocalTime.MIN);
     this.MAX_1 = new LocalTime_0(LocalTime.MAX);
   }
-  protoOf(Companion).parse_4mmrzm_k$ = function (isoString) {
+  protoOf(Companion).parse_pc1q8p_k$ = function (isoString) {
     var tmp;
     try {
       // Inline function 'kotlin.let' call
-      var tmp0_let = LocalTime.parse(isoString);
+      var this_0 = LocalTime.parse(isoString);
       // Inline function 'kotlin.contracts.contract' call
-      tmp = new LocalTime_0(tmp0_let);
+      tmp = new LocalTime_0(this_0);
     } catch ($p) {
       var tmp_0;
       if ($p instanceof Error) {
@@ -279,13 +279,13 @@
     }
     return tmp;
   };
-  protoOf(Companion).fromSecondOfDay_3y3ipy_k$ = function (secondOfDay) {
+  protoOf(Companion).fromSecondOfDay_ahegcx_k$ = function (secondOfDay) {
     var tmp;
     try {
       // Inline function 'kotlin.let' call
-      var tmp0_let = LocalTime.ofSecondOfDay(secondOfDay, 0);
+      var this_0 = LocalTime.ofSecondOfDay(secondOfDay, 0);
       // Inline function 'kotlin.contracts.contract' call
-      tmp = new LocalTime_0(tmp0_let);
+      tmp = new LocalTime_0(this_0);
     } catch ($p) {
       var tmp_0;
       if ($p instanceof Error) {
@@ -297,13 +297,13 @@
     }
     return tmp;
   };
-  protoOf(Companion).fromMillisecondOfDay_7twkp9_k$ = function (millisecondOfDay) {
+  protoOf(Companion).fromMillisecondOfDay_pjhtva_k$ = function (millisecondOfDay) {
     var tmp;
     try {
       // Inline function 'kotlin.let' call
-      var tmp0_let = LocalTime.ofNanoOfDay(millisecondOfDay * 1000000.0);
+      var this_0 = LocalTime.ofNanoOfDay(millisecondOfDay * 1000000.0);
       // Inline function 'kotlin.contracts.contract' call
-      tmp = new LocalTime_0(tmp0_let);
+      tmp = new LocalTime_0(this_0);
     } catch ($p) {
       var tmp_0;
       if ($p instanceof Error) {
@@ -315,13 +315,13 @@
     }
     return tmp;
   };
-  protoOf(Companion).fromNanosecondOfDay_tc0fz7_k$ = function (nanosecondOfDay) {
+  protoOf(Companion).fromNanosecondOfDay_iksazp_k$ = function (nanosecondOfDay) {
     var tmp;
     try {
       // Inline function 'kotlin.let' call
-      var tmp0_let = LocalTime.ofNanoOfDay(nanosecondOfDay.toDouble_ygsx0s_k$());
+      var this_0 = LocalTime.ofNanoOfDay(nanosecondOfDay.toDouble_ygsx0s_k$());
       // Inline function 'kotlin.contracts.contract' call
-      tmp = new LocalTime_0(tmp0_let);
+      tmp = new LocalTime_0(this_0);
     } catch ($p) {
       var tmp_0;
       if ($p instanceof Error) {
@@ -397,11 +397,11 @@
   protoOf(LocalTime_0).toString = function () {
     return this.value_1.toString();
   };
-  protoOf(LocalTime_0).compareTo_2p2wpn_k$ = function (other) {
+  protoOf(LocalTime_0).compareTo_ax7xad_k$ = function (other) {
     return numberToInt(this.value_1.compareTo(other.value_1));
   };
-  protoOf(LocalTime_0).compareTo_6thzaj_k$ = function (other) {
-    return this.compareTo_2p2wpn_k$(other instanceof LocalTime_0 ? other : THROW_CCE());
+  protoOf(LocalTime_0).compareTo_hpufkf_k$ = function (other) {
+    return this.compareTo_ax7xad_k$(other instanceof LocalTime_0 ? other : THROW_CCE());
   };
   var Month_JANUARY_instance;
   var Month_FEBRUARY_instance;
@@ -446,7 +446,7 @@
         return Month_DECEMBER_getInstance();
       default:
         Month_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }

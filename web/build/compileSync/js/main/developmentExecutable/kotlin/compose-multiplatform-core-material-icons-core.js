@@ -1,11 +1,11 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin-kotlin-stdlib-js-ir.js', './compose-multiplatform-core-ui-unit.js', './compose-multiplatform-core-ui.js', './compose-multiplatform-core-ui-graphics.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js', './compose-multiplatform-core-ui-unit.js', './compose-multiplatform-core-ui.js', './compose-multiplatform-core-ui-graphics.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./compose-multiplatform-core-ui.js'), require('./compose-multiplatform-core-ui-graphics.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./compose-multiplatform-core-ui.js'), require('./compose-multiplatform-core-ui-graphics.js'));
   else {
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'compose-multiplatform-core-material-icons-core'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'compose-multiplatform-core-material-icons-core'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'compose-multiplatform-core-material-icons-core'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'compose-multiplatform-core-material-icons-core'.");
     }
     if (typeof this['compose-multiplatform-core-ui-unit'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-material-icons-core'. Its dependency 'compose-multiplatform-core-ui-unit' was not found. Please, check whether 'compose-multiplatform-core-ui-unit' is loaded prior to 'compose-multiplatform-core-material-icons-core'.");
@@ -16,17 +16,17 @@
     if (typeof this['compose-multiplatform-core-ui-graphics'] === 'undefined') {
       throw new Error("Error loading module 'compose-multiplatform-core-material-icons-core'. Its dependency 'compose-multiplatform-core-ui-graphics' was not found. Please, check whether 'compose-multiplatform-core-ui-graphics' is loaded prior to 'compose-multiplatform-core-material-icons-core'.");
     }
-    root['compose-multiplatform-core-material-icons-core'] = factory(typeof this['compose-multiplatform-core-material-icons-core'] === 'undefined' ? {} : this['compose-multiplatform-core-material-icons-core'], this['kotlin-kotlin-stdlib-js-ir'], this['compose-multiplatform-core-ui-unit'], this['compose-multiplatform-core-ui'], this['compose-multiplatform-core-ui-graphics']);
+    root['compose-multiplatform-core-material-icons-core'] = factory(typeof this['compose-multiplatform-core-material-icons-core'] === 'undefined' ? {} : this['compose-multiplatform-core-material-icons-core'], this['kotlin-kotlin-stdlib'], this['compose-multiplatform-core-ui-unit'], this['compose-multiplatform-core-ui'], this['compose-multiplatform-core-ui-graphics']);
   }
 }(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_compose_ui_ui_unit, kotlin_org_jetbrains_compose_ui_ui, kotlin_org_jetbrains_compose_ui_ui_graphics) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var objectMeta = kotlin_kotlin.$_$.qd;
-  var VOID = kotlin_kotlin.$_$.bj;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var objectMeta = kotlin_kotlin.$_$.td;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
   var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i2;
   var Builder = kotlin_org_jetbrains_compose_ui_ui.$_$.c1;
+  var VOID = kotlin_kotlin.$_$.e;
   var get_DefaultFillType = kotlin_org_jetbrains_compose_ui_ui.$_$.s;
   var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.a4;
   var SolidColor = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g1;
@@ -34,7 +34,7 @@
   var Companion_getInstance_1 = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i4;
   var get_DefaultPathName = kotlin_org_jetbrains_compose_ui_ui.$_$.t;
   var PathBuilder = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.g;
-  var ensureNotNull = kotlin_kotlin.$_$.di;
+  var ensureNotNull = kotlin_kotlin.$_$.ji;
   //endregion
   //region block: pre-declaration
   setMetadataFor(Filled, 'Filled', objectMeta);
@@ -129,9 +129,8 @@
   function materialIcon(name, block) {
     // Inline function 'androidx.compose.ui.unit.dp' call
     var tmp = _Dp___init__impl__ms3zkb(24.0);
-    var tmp$ret$1;
     // Inline function 'androidx.compose.ui.unit.dp' call
-    tmp$ret$1 = _Dp___init__impl__ms3zkb(24.0);
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(24.0);
     return block(new Builder(name, tmp, tmp$ret$1, 24.0, 24.0)).build_1k0s4u_k$();
   }
   function materialPath(_this__u8e3s4, fillAlpha, strokeAlpha, pathFillType, pathBuilder) {
@@ -139,19 +138,18 @@
     strokeAlpha = strokeAlpha === VOID ? 1.0 : strokeAlpha;
     pathFillType = pathFillType === VOID ? get_DefaultFillType() : pathFillType;
     // Inline function 'androidx.compose.ui.graphics.vector.path' call
-    var tmp0_path = new SolidColor(Companion_getInstance().get_Black_wh3yn9_k$());
-    var tmp1_path = Companion_getInstance_0().get_Butt_vf89me_k$();
-    var tmp2_path = Companion_getInstance_1().get_Bevel_1szraz_k$();
-    var tmp3_path = get_DefaultPathName();
-    var tmp$ret$2;
+    var fill = new SolidColor(Companion_getInstance().get_Black_t4k9fh_k$());
+    var strokeLineCap = Companion_getInstance_0().get_Butt_jb7qjw_k$();
+    var strokeLineJoin = Companion_getInstance_1().get_Bevel_8ab6n7_k$();
+    var name = get_DefaultPathName();
     // Inline function 'androidx.compose.ui.graphics.vector.PathData' call
     // Inline function 'kotlin.with' call
-    var tmp0_with = new PathBuilder();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
-    pathBuilder(tmp0_with);
-    tmp$ret$2 = tmp0_with.getNodes_wff5kr_k$();
-    return _this__u8e3s4.addPath$default_3xl5r5_k$(tmp$ret$2, pathFillType, tmp3_path, tmp0_path, fillAlpha, null, strokeAlpha, 1.0, tmp1_path, tmp2_path, 1.0);
+    var $this$with = new PathBuilder();
+    pathBuilder($this$with);
+    var tmp$ret$2 = $this$with.getNodes_wff5kr_k$();
+    return _this__u8e3s4.addPath$default_98yxvz_k$(tmp$ret$2, pathFillType, name, fill, fillAlpha, null, strokeAlpha, 1.0, strokeLineCap, strokeLineJoin, 1.0);
   }
   function get_MaterialIconDimension() {
     return MaterialIconDimension;
@@ -330,43 +328,42 @@
       return ensureNotNull(_home);
     }
     // Inline function 'androidx.compose.material.icons.materialIcon' call
+    var name = 'Filled.Home';
     // Inline function 'androidx.compose.material.icons.filled.<get-Home>.<anonymous>' call
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp0_get_dp_bnsrxl = get_MaterialIconDimension();
-    var tmp = _Dp___init__impl__ms3zkb(tmp0_get_dp_bnsrxl);
-    var tmp$ret$1;
+    var this_0 = get_MaterialIconDimension();
+    var tmp = _Dp___init__impl__ms3zkb(this_0);
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp1_get_dp_ujoszc = get_MaterialIconDimension();
-    tmp$ret$1 = _Dp___init__impl__ms3zkb(tmp1_get_dp_ujoszc);
-    var tmp0_anonymous = new Builder('Filled.Home', tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var this_1 = get_MaterialIconDimension();
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(this_1);
     // Inline function 'androidx.compose.material.icons.materialPath' call
-    var tmp0_materialPath = get_DefaultFillType();
+    var this_2 = new Builder(name, tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var pathFillType = get_DefaultFillType();
     // Inline function 'androidx.compose.ui.graphics.vector.path' call
-    var tmp0_path = new SolidColor(Companion_getInstance().get_Black_wh3yn9_k$());
-    var tmp1_path = Companion_getInstance_0().get_Butt_vf89me_k$();
-    var tmp2_path = Companion_getInstance_1().get_Bevel_1szraz_k$();
-    var tmp3_path = get_DefaultPathName();
-    var tmp$ret$4;
+    var fill = new SolidColor(Companion_getInstance().get_Black_t4k9fh_k$());
+    var strokeLineCap = Companion_getInstance_0().get_Butt_jb7qjw_k$();
+    var strokeLineJoin = Companion_getInstance_1().get_Bevel_8ab6n7_k$();
+    var name_0 = get_DefaultPathName();
     // Inline function 'androidx.compose.ui.graphics.vector.PathData' call
     // Inline function 'kotlin.with' call
-    var tmp0_with = new PathBuilder();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
+    var $this$with = new PathBuilder();
     // Inline function 'androidx.compose.material.icons.filled.<get-Home>.<anonymous>.<anonymous>' call
-    tmp0_with.moveTo_5934es_k$(10.0, 20.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(-6.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(4.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(6.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(5.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(-8.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(3.0);
-    tmp0_with.lineTo_8bd4s1_k$(12.0, 3.0);
-    tmp0_with.lineTo_8bd4s1_k$(2.0, 12.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(3.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(8.0);
-    tmp0_with.close_1keygo_k$();
-    tmp$ret$4 = tmp0_with.getNodes_wff5kr_k$();
-    _home = tmp0_anonymous.addPath$default_3xl5r5_k$(tmp$ret$4, tmp0_materialPath, tmp3_path, tmp0_path, 1.0, null, 1.0, 1.0, tmp1_path, tmp2_path, 1.0).build_1k0s4u_k$();
+    $this$with.moveTo_n8tdjo_k$(10.0, 20.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(-6.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(4.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(6.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(5.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(-8.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(3.0);
+    $this$with.lineTo_985bqp_k$(12.0, 3.0);
+    $this$with.lineTo_985bqp_k$(2.0, 12.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(3.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(8.0);
+    $this$with.close_1keygo_k$();
+    var tmp$ret$4 = $this$with.getNodes_wff5kr_k$();
+    _home = this_2.addPath$default_98yxvz_k$(tmp$ret$4, pathFillType, name_0, fill, 1.0, null, 1.0, 1.0, strokeLineCap, strokeLineJoin, 1.0).build_1k0s4u_k$();
     return ensureNotNull(_home);
   }
   function set__info(_set____db54di) {
@@ -444,49 +441,48 @@
       return ensureNotNull(_menu);
     }
     // Inline function 'androidx.compose.material.icons.materialIcon' call
+    var name = 'Filled.Menu';
     // Inline function 'androidx.compose.material.icons.filled.<get-Menu>.<anonymous>' call
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp0_get_dp_bnsrxl = get_MaterialIconDimension();
-    var tmp = _Dp___init__impl__ms3zkb(tmp0_get_dp_bnsrxl);
-    var tmp$ret$1;
+    var this_0 = get_MaterialIconDimension();
+    var tmp = _Dp___init__impl__ms3zkb(this_0);
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp1_get_dp_ujoszc = get_MaterialIconDimension();
-    tmp$ret$1 = _Dp___init__impl__ms3zkb(tmp1_get_dp_ujoszc);
-    var tmp0_anonymous = new Builder('Filled.Menu', tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var this_1 = get_MaterialIconDimension();
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(this_1);
     // Inline function 'androidx.compose.material.icons.materialPath' call
-    var tmp0_materialPath = get_DefaultFillType();
+    var this_2 = new Builder(name, tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var pathFillType = get_DefaultFillType();
     // Inline function 'androidx.compose.ui.graphics.vector.path' call
-    var tmp0_path = new SolidColor(Companion_getInstance().get_Black_wh3yn9_k$());
-    var tmp1_path = Companion_getInstance_0().get_Butt_vf89me_k$();
-    var tmp2_path = Companion_getInstance_1().get_Bevel_1szraz_k$();
-    var tmp3_path = get_DefaultPathName();
-    var tmp$ret$4;
+    var fill = new SolidColor(Companion_getInstance().get_Black_t4k9fh_k$());
+    var strokeLineCap = Companion_getInstance_0().get_Butt_jb7qjw_k$();
+    var strokeLineJoin = Companion_getInstance_1().get_Bevel_8ab6n7_k$();
+    var name_0 = get_DefaultPathName();
     // Inline function 'androidx.compose.ui.graphics.vector.PathData' call
     // Inline function 'kotlin.with' call
-    var tmp0_with = new PathBuilder();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
+    var $this$with = new PathBuilder();
     // Inline function 'androidx.compose.material.icons.filled.<get-Menu>.<anonymous>.<anonymous>' call
-    tmp0_with.moveTo_5934es_k$(3.0, 18.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(18.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(-2.0);
-    tmp0_with.lineTo_8bd4s1_k$(3.0, 16.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(2.0);
-    tmp0_with.close_1keygo_k$();
-    tmp0_with.moveTo_5934es_k$(3.0, 13.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(18.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(-2.0);
-    tmp0_with.lineTo_8bd4s1_k$(3.0, 11.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(2.0);
-    tmp0_with.close_1keygo_k$();
-    tmp0_with.moveTo_5934es_k$(3.0, 6.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(2.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(18.0);
-    tmp0_with.lineTo_8bd4s1_k$(21.0, 6.0);
-    tmp0_with.lineTo_8bd4s1_k$(3.0, 6.0);
-    tmp0_with.close_1keygo_k$();
-    tmp$ret$4 = tmp0_with.getNodes_wff5kr_k$();
-    _menu = tmp0_anonymous.addPath$default_3xl5r5_k$(tmp$ret$4, tmp0_materialPath, tmp3_path, tmp0_path, 1.0, null, 1.0, 1.0, tmp1_path, tmp2_path, 1.0).build_1k0s4u_k$();
+    $this$with.moveTo_n8tdjo_k$(3.0, 18.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(18.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(-2.0);
+    $this$with.lineTo_985bqp_k$(3.0, 16.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(2.0);
+    $this$with.close_1keygo_k$();
+    $this$with.moveTo_n8tdjo_k$(3.0, 13.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(18.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(-2.0);
+    $this$with.lineTo_985bqp_k$(3.0, 11.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(2.0);
+    $this$with.close_1keygo_k$();
+    $this$with.moveTo_n8tdjo_k$(3.0, 6.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(2.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(18.0);
+    $this$with.lineTo_985bqp_k$(21.0, 6.0);
+    $this$with.lineTo_985bqp_k$(3.0, 6.0);
+    $this$with.close_1keygo_k$();
+    var tmp$ret$4 = $this$with.getNodes_wff5kr_k$();
+    _menu = this_2.addPath$default_98yxvz_k$(tmp$ret$4, pathFillType, name_0, fill, 1.0, null, 1.0, 1.0, strokeLineCap, strokeLineJoin, 1.0).build_1k0s4u_k$();
     return ensureNotNull(_menu);
   }
   function set__moreVert(_set____db54di) {
@@ -515,44 +511,43 @@
       return ensureNotNull(_person);
     }
     // Inline function 'androidx.compose.material.icons.materialIcon' call
+    var name = 'Filled.Person';
     // Inline function 'androidx.compose.material.icons.filled.<get-Person>.<anonymous>' call
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp0_get_dp_bnsrxl = get_MaterialIconDimension();
-    var tmp = _Dp___init__impl__ms3zkb(tmp0_get_dp_bnsrxl);
-    var tmp$ret$1;
+    var this_0 = get_MaterialIconDimension();
+    var tmp = _Dp___init__impl__ms3zkb(this_0);
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp1_get_dp_ujoszc = get_MaterialIconDimension();
-    tmp$ret$1 = _Dp___init__impl__ms3zkb(tmp1_get_dp_ujoszc);
-    var tmp0_anonymous = new Builder('Filled.Person', tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var this_1 = get_MaterialIconDimension();
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(this_1);
     // Inline function 'androidx.compose.material.icons.materialPath' call
-    var tmp0_materialPath = get_DefaultFillType();
+    var this_2 = new Builder(name, tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var pathFillType = get_DefaultFillType();
     // Inline function 'androidx.compose.ui.graphics.vector.path' call
-    var tmp0_path = new SolidColor(Companion_getInstance().get_Black_wh3yn9_k$());
-    var tmp1_path = Companion_getInstance_0().get_Butt_vf89me_k$();
-    var tmp2_path = Companion_getInstance_1().get_Bevel_1szraz_k$();
-    var tmp3_path = get_DefaultPathName();
-    var tmp$ret$4;
+    var fill = new SolidColor(Companion_getInstance().get_Black_t4k9fh_k$());
+    var strokeLineCap = Companion_getInstance_0().get_Butt_jb7qjw_k$();
+    var strokeLineJoin = Companion_getInstance_1().get_Bevel_8ab6n7_k$();
+    var name_0 = get_DefaultPathName();
     // Inline function 'androidx.compose.ui.graphics.vector.PathData' call
     // Inline function 'kotlin.with' call
-    var tmp0_with = new PathBuilder();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
+    var $this$with = new PathBuilder();
     // Inline function 'androidx.compose.material.icons.filled.<get-Person>.<anonymous>.<anonymous>' call
-    tmp0_with.moveTo_5934es_k$(12.0, 12.0);
-    tmp0_with.curveToRelative_246fzq_k$(2.21, 0.0, 4.0, -1.79, 4.0, -4.0);
-    tmp0_with.reflectiveCurveToRelative_88xs1n_k$(-1.79, -4.0, -4.0, -4.0);
-    tmp0_with.reflectiveCurveToRelative_88xs1n_k$(-4.0, 1.79, -4.0, 4.0);
-    tmp0_with.reflectiveCurveToRelative_88xs1n_k$(1.79, 4.0, 4.0, 4.0);
-    tmp0_with.close_1keygo_k$();
-    tmp0_with.moveTo_5934es_k$(12.0, 14.0);
-    tmp0_with.curveToRelative_246fzq_k$(-2.67, 0.0, -8.0, 1.34, -8.0, 4.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(2.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(16.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(-2.0);
-    tmp0_with.curveToRelative_246fzq_k$(0.0, -2.66, -5.33, -4.0, -8.0, -4.0);
-    tmp0_with.close_1keygo_k$();
-    tmp$ret$4 = tmp0_with.getNodes_wff5kr_k$();
-    _person = tmp0_anonymous.addPath$default_3xl5r5_k$(tmp$ret$4, tmp0_materialPath, tmp3_path, tmp0_path, 1.0, null, 1.0, 1.0, tmp1_path, tmp2_path, 1.0).build_1k0s4u_k$();
+    $this$with.moveTo_n8tdjo_k$(12.0, 12.0);
+    $this$with.curveToRelative_jg9hoq_k$(2.21, 0.0, 4.0, -1.79, 4.0, -4.0);
+    $this$with.reflectiveCurveToRelative_y66nqz_k$(-1.79, -4.0, -4.0, -4.0);
+    $this$with.reflectiveCurveToRelative_y66nqz_k$(-4.0, 1.79, -4.0, 4.0);
+    $this$with.reflectiveCurveToRelative_y66nqz_k$(1.79, 4.0, 4.0, 4.0);
+    $this$with.close_1keygo_k$();
+    $this$with.moveTo_n8tdjo_k$(12.0, 14.0);
+    $this$with.curveToRelative_jg9hoq_k$(-2.67, 0.0, -8.0, 1.34, -8.0, 4.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(2.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(16.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(-2.0);
+    $this$with.curveToRelative_jg9hoq_k$(0.0, -2.66, -5.33, -4.0, -8.0, -4.0);
+    $this$with.close_1keygo_k$();
+    var tmp$ret$4 = $this$with.getNodes_wff5kr_k$();
+    _person = this_2.addPath$default_98yxvz_k$(tmp$ret$4, pathFillType, name_0, fill, 1.0, null, 1.0, 1.0, strokeLineCap, strokeLineJoin, 1.0).build_1k0s4u_k$();
     return ensureNotNull(_person);
   }
   function set__phone(_set____db54di) {
@@ -812,54 +807,53 @@
       return ensureNotNull(_home_0);
     }
     // Inline function 'androidx.compose.material.icons.materialIcon' call
+    var name = 'Outlined.Home';
     // Inline function 'androidx.compose.material.icons.outlined.<get-Home>.<anonymous>' call
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp0_get_dp_bnsrxl = get_MaterialIconDimension();
-    var tmp = _Dp___init__impl__ms3zkb(tmp0_get_dp_bnsrxl);
-    var tmp$ret$1;
+    var this_0 = get_MaterialIconDimension();
+    var tmp = _Dp___init__impl__ms3zkb(this_0);
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp1_get_dp_ujoszc = get_MaterialIconDimension();
-    tmp$ret$1 = _Dp___init__impl__ms3zkb(tmp1_get_dp_ujoszc);
-    var tmp0_anonymous = new Builder('Outlined.Home', tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var this_1 = get_MaterialIconDimension();
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(this_1);
     // Inline function 'androidx.compose.material.icons.materialPath' call
-    var tmp0_materialPath = get_DefaultFillType();
+    var this_2 = new Builder(name, tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var pathFillType = get_DefaultFillType();
     // Inline function 'androidx.compose.ui.graphics.vector.path' call
-    var tmp0_path = new SolidColor(Companion_getInstance().get_Black_wh3yn9_k$());
-    var tmp1_path = Companion_getInstance_0().get_Butt_vf89me_k$();
-    var tmp2_path = Companion_getInstance_1().get_Bevel_1szraz_k$();
-    var tmp3_path = get_DefaultPathName();
-    var tmp$ret$4;
+    var fill = new SolidColor(Companion_getInstance().get_Black_t4k9fh_k$());
+    var strokeLineCap = Companion_getInstance_0().get_Butt_jb7qjw_k$();
+    var strokeLineJoin = Companion_getInstance_1().get_Bevel_8ab6n7_k$();
+    var name_0 = get_DefaultPathName();
     // Inline function 'androidx.compose.ui.graphics.vector.PathData' call
     // Inline function 'kotlin.with' call
-    var tmp0_with = new PathBuilder();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
+    var $this$with = new PathBuilder();
     // Inline function 'androidx.compose.material.icons.outlined.<get-Home>.<anonymous>.<anonymous>' call
-    tmp0_with.moveTo_5934es_k$(12.0, 5.69);
-    tmp0_with.lineToRelative_q6wnej_k$(5.0, 4.5);
-    tmp0_with.verticalLineTo_6l74o9_k$(18.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(-2.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(-6.0);
-    tmp0_with.horizontalLineTo_16vzsr_k$(9.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(6.0);
-    tmp0_with.horizontalLineTo_16vzsr_k$(7.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(-7.81);
-    tmp0_with.lineToRelative_q6wnej_k$(5.0, -4.5);
-    tmp0_with.moveTo_5934es_k$(12.0, 3.0);
-    tmp0_with.lineTo_8bd4s1_k$(2.0, 12.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(3.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(8.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(6.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(-6.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(2.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(6.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(6.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(-8.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(3.0);
-    tmp0_with.lineTo_8bd4s1_k$(12.0, 3.0);
-    tmp0_with.close_1keygo_k$();
-    tmp$ret$4 = tmp0_with.getNodes_wff5kr_k$();
-    _home_0 = tmp0_anonymous.addPath$default_3xl5r5_k$(tmp$ret$4, tmp0_materialPath, tmp3_path, tmp0_path, 1.0, null, 1.0, 1.0, tmp1_path, tmp2_path, 1.0).build_1k0s4u_k$();
+    $this$with.moveTo_n8tdjo_k$(12.0, 5.69);
+    $this$with.lineToRelative_h8lj2d_k$(5.0, 4.5);
+    $this$with.verticalLineTo_1gpzkd_k$(18.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(-2.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(-6.0);
+    $this$with.horizontalLineTo_w9x139_k$(9.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(6.0);
+    $this$with.horizontalLineTo_w9x139_k$(7.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(-7.81);
+    $this$with.lineToRelative_h8lj2d_k$(5.0, -4.5);
+    $this$with.moveTo_n8tdjo_k$(12.0, 3.0);
+    $this$with.lineTo_985bqp_k$(2.0, 12.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(3.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(8.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(6.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(-6.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(2.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(6.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(6.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(-8.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(3.0);
+    $this$with.lineTo_985bqp_k$(12.0, 3.0);
+    $this$with.close_1keygo_k$();
+    var tmp$ret$4 = $this$with.getNodes_wff5kr_k$();
+    _home_0 = this_2.addPath$default_98yxvz_k$(tmp$ret$4, pathFillType, name_0, fill, 1.0, null, 1.0, 1.0, strokeLineCap, strokeLineJoin, 1.0).build_1k0s4u_k$();
     return ensureNotNull(_home_0);
   }
   function set__info_0(_set____db54di) {
@@ -937,49 +931,48 @@
       return ensureNotNull(_menu_0);
     }
     // Inline function 'androidx.compose.material.icons.materialIcon' call
+    var name = 'Outlined.Menu';
     // Inline function 'androidx.compose.material.icons.outlined.<get-Menu>.<anonymous>' call
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp0_get_dp_bnsrxl = get_MaterialIconDimension();
-    var tmp = _Dp___init__impl__ms3zkb(tmp0_get_dp_bnsrxl);
-    var tmp$ret$1;
+    var this_0 = get_MaterialIconDimension();
+    var tmp = _Dp___init__impl__ms3zkb(this_0);
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp1_get_dp_ujoszc = get_MaterialIconDimension();
-    tmp$ret$1 = _Dp___init__impl__ms3zkb(tmp1_get_dp_ujoszc);
-    var tmp0_anonymous = new Builder('Outlined.Menu', tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var this_1 = get_MaterialIconDimension();
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(this_1);
     // Inline function 'androidx.compose.material.icons.materialPath' call
-    var tmp0_materialPath = get_DefaultFillType();
+    var this_2 = new Builder(name, tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var pathFillType = get_DefaultFillType();
     // Inline function 'androidx.compose.ui.graphics.vector.path' call
-    var tmp0_path = new SolidColor(Companion_getInstance().get_Black_wh3yn9_k$());
-    var tmp1_path = Companion_getInstance_0().get_Butt_vf89me_k$();
-    var tmp2_path = Companion_getInstance_1().get_Bevel_1szraz_k$();
-    var tmp3_path = get_DefaultPathName();
-    var tmp$ret$4;
+    var fill = new SolidColor(Companion_getInstance().get_Black_t4k9fh_k$());
+    var strokeLineCap = Companion_getInstance_0().get_Butt_jb7qjw_k$();
+    var strokeLineJoin = Companion_getInstance_1().get_Bevel_8ab6n7_k$();
+    var name_0 = get_DefaultPathName();
     // Inline function 'androidx.compose.ui.graphics.vector.PathData' call
     // Inline function 'kotlin.with' call
-    var tmp0_with = new PathBuilder();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
+    var $this$with = new PathBuilder();
     // Inline function 'androidx.compose.material.icons.outlined.<get-Menu>.<anonymous>.<anonymous>' call
-    tmp0_with.moveTo_5934es_k$(3.0, 18.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(18.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(-2.0);
-    tmp0_with.lineTo_8bd4s1_k$(3.0, 16.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(2.0);
-    tmp0_with.close_1keygo_k$();
-    tmp0_with.moveTo_5934es_k$(3.0, 13.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(18.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(-2.0);
-    tmp0_with.lineTo_8bd4s1_k$(3.0, 11.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(2.0);
-    tmp0_with.close_1keygo_k$();
-    tmp0_with.moveTo_5934es_k$(3.0, 6.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(2.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(18.0);
-    tmp0_with.lineTo_8bd4s1_k$(21.0, 6.0);
-    tmp0_with.lineTo_8bd4s1_k$(3.0, 6.0);
-    tmp0_with.close_1keygo_k$();
-    tmp$ret$4 = tmp0_with.getNodes_wff5kr_k$();
-    _menu_0 = tmp0_anonymous.addPath$default_3xl5r5_k$(tmp$ret$4, tmp0_materialPath, tmp3_path, tmp0_path, 1.0, null, 1.0, 1.0, tmp1_path, tmp2_path, 1.0).build_1k0s4u_k$();
+    $this$with.moveTo_n8tdjo_k$(3.0, 18.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(18.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(-2.0);
+    $this$with.lineTo_985bqp_k$(3.0, 16.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(2.0);
+    $this$with.close_1keygo_k$();
+    $this$with.moveTo_n8tdjo_k$(3.0, 13.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(18.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(-2.0);
+    $this$with.lineTo_985bqp_k$(3.0, 11.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(2.0);
+    $this$with.close_1keygo_k$();
+    $this$with.moveTo_n8tdjo_k$(3.0, 6.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(2.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(18.0);
+    $this$with.lineTo_985bqp_k$(21.0, 6.0);
+    $this$with.lineTo_985bqp_k$(3.0, 6.0);
+    $this$with.close_1keygo_k$();
+    var tmp$ret$4 = $this$with.getNodes_wff5kr_k$();
+    _menu_0 = this_2.addPath$default_98yxvz_k$(tmp$ret$4, pathFillType, name_0, fill, 1.0, null, 1.0, 1.0, strokeLineCap, strokeLineJoin, 1.0).build_1k0s4u_k$();
     return ensureNotNull(_menu_0);
   }
   function set__moreVert_0(_set____db54di) {
@@ -1008,53 +1001,52 @@
       return ensureNotNull(_person_0);
     }
     // Inline function 'androidx.compose.material.icons.materialIcon' call
+    var name = 'Outlined.Person';
     // Inline function 'androidx.compose.material.icons.outlined.<get-Person>.<anonymous>' call
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp0_get_dp_bnsrxl = get_MaterialIconDimension();
-    var tmp = _Dp___init__impl__ms3zkb(tmp0_get_dp_bnsrxl);
-    var tmp$ret$1;
+    var this_0 = get_MaterialIconDimension();
+    var tmp = _Dp___init__impl__ms3zkb(this_0);
     // Inline function 'androidx.compose.ui.unit.dp' call
-    var tmp1_get_dp_ujoszc = get_MaterialIconDimension();
-    tmp$ret$1 = _Dp___init__impl__ms3zkb(tmp1_get_dp_ujoszc);
-    var tmp0_anonymous = new Builder('Outlined.Person', tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var this_1 = get_MaterialIconDimension();
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(this_1);
     // Inline function 'androidx.compose.material.icons.materialPath' call
-    var tmp0_materialPath = get_DefaultFillType();
+    var this_2 = new Builder(name, tmp, tmp$ret$1, get_MaterialIconDimension(), get_MaterialIconDimension());
+    var pathFillType = get_DefaultFillType();
     // Inline function 'androidx.compose.ui.graphics.vector.path' call
-    var tmp0_path = new SolidColor(Companion_getInstance().get_Black_wh3yn9_k$());
-    var tmp1_path = Companion_getInstance_0().get_Butt_vf89me_k$();
-    var tmp2_path = Companion_getInstance_1().get_Bevel_1szraz_k$();
-    var tmp3_path = get_DefaultPathName();
-    var tmp$ret$4;
+    var fill = new SolidColor(Companion_getInstance().get_Black_t4k9fh_k$());
+    var strokeLineCap = Companion_getInstance_0().get_Butt_jb7qjw_k$();
+    var strokeLineJoin = Companion_getInstance_1().get_Bevel_8ab6n7_k$();
+    var name_0 = get_DefaultPathName();
     // Inline function 'androidx.compose.ui.graphics.vector.PathData' call
     // Inline function 'kotlin.with' call
-    var tmp0_with = new PathBuilder();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.ui.graphics.vector.PathData.<anonymous>' call
+    var $this$with = new PathBuilder();
     // Inline function 'androidx.compose.material.icons.outlined.<get-Person>.<anonymous>.<anonymous>' call
-    tmp0_with.moveTo_5934es_k$(12.0, 6.0);
-    tmp0_with.curveToRelative_246fzq_k$(1.1, 0.0, 2.0, 0.9, 2.0, 2.0);
-    tmp0_with.reflectiveCurveToRelative_88xs1n_k$(-0.9, 2.0, -2.0, 2.0);
-    tmp0_with.reflectiveCurveToRelative_88xs1n_k$(-2.0, -0.9, -2.0, -2.0);
-    tmp0_with.reflectiveCurveToRelative_88xs1n_k$(0.9, -2.0, 2.0, -2.0);
-    tmp0_with.moveToRelative_wrunko_k$(0.0, 10.0);
-    tmp0_with.curveToRelative_246fzq_k$(2.7, 0.0, 5.8, 1.29, 6.0, 2.0);
-    tmp0_with.lineTo_8bd4s1_k$(6.0, 18.0);
-    tmp0_with.curveToRelative_246fzq_k$(0.23, -0.72, 3.31, -2.0, 6.0, -2.0);
-    tmp0_with.moveToRelative_wrunko_k$(0.0, -12.0);
-    tmp0_with.curveTo_h5uh6_k$(9.79, 4.0, 8.0, 5.79, 8.0, 8.0);
-    tmp0_with.reflectiveCurveToRelative_88xs1n_k$(1.79, 4.0, 4.0, 4.0);
-    tmp0_with.reflectiveCurveToRelative_88xs1n_k$(4.0, -1.79, 4.0, -4.0);
-    tmp0_with.reflectiveCurveToRelative_88xs1n_k$(-1.79, -4.0, -4.0, -4.0);
-    tmp0_with.close_1keygo_k$();
-    tmp0_with.moveTo_5934es_k$(12.0, 14.0);
-    tmp0_with.curveToRelative_246fzq_k$(-2.67, 0.0, -8.0, 1.34, -8.0, 4.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(2.0);
-    tmp0_with.horizontalLineToRelative_3x1qwh_k$(16.0);
-    tmp0_with.verticalLineToRelative_y89ou5_k$(-2.0);
-    tmp0_with.curveToRelative_246fzq_k$(0.0, -2.66, -5.33, -4.0, -8.0, -4.0);
-    tmp0_with.close_1keygo_k$();
-    tmp$ret$4 = tmp0_with.getNodes_wff5kr_k$();
-    _person_0 = tmp0_anonymous.addPath$default_3xl5r5_k$(tmp$ret$4, tmp0_materialPath, tmp3_path, tmp0_path, 1.0, null, 1.0, 1.0, tmp1_path, tmp2_path, 1.0).build_1k0s4u_k$();
+    $this$with.moveTo_n8tdjo_k$(12.0, 6.0);
+    $this$with.curveToRelative_jg9hoq_k$(1.1, 0.0, 2.0, 0.9, 2.0, 2.0);
+    $this$with.reflectiveCurveToRelative_y66nqz_k$(-0.9, 2.0, -2.0, 2.0);
+    $this$with.reflectiveCurveToRelative_y66nqz_k$(-2.0, -0.9, -2.0, -2.0);
+    $this$with.reflectiveCurveToRelative_y66nqz_k$(0.9, -2.0, 2.0, -2.0);
+    $this$with.moveToRelative_2s28m0_k$(0.0, 10.0);
+    $this$with.curveToRelative_jg9hoq_k$(2.7, 0.0, 5.8, 1.29, 6.0, 2.0);
+    $this$with.lineTo_985bqp_k$(6.0, 18.0);
+    $this$with.curveToRelative_jg9hoq_k$(0.23, -0.72, 3.31, -2.0, 6.0, -2.0);
+    $this$with.moveToRelative_2s28m0_k$(0.0, -12.0);
+    $this$with.curveTo_y0llje_k$(9.79, 4.0, 8.0, 5.79, 8.0, 8.0);
+    $this$with.reflectiveCurveToRelative_y66nqz_k$(1.79, 4.0, 4.0, 4.0);
+    $this$with.reflectiveCurveToRelative_y66nqz_k$(4.0, -1.79, 4.0, -4.0);
+    $this$with.reflectiveCurveToRelative_y66nqz_k$(-1.79, -4.0, -4.0, -4.0);
+    $this$with.close_1keygo_k$();
+    $this$with.moveTo_n8tdjo_k$(12.0, 14.0);
+    $this$with.curveToRelative_jg9hoq_k$(-2.67, 0.0, -8.0, 1.34, -8.0, 4.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(2.0);
+    $this$with.horizontalLineToRelative_8skmzd_k$(16.0);
+    $this$with.verticalLineToRelative_io0vy1_k$(-2.0);
+    $this$with.curveToRelative_jg9hoq_k$(0.0, -2.66, -5.33, -4.0, -8.0, -4.0);
+    $this$with.close_1keygo_k$();
+    var tmp$ret$4 = $this$with.getNodes_wff5kr_k$();
+    _person_0 = this_2.addPath$default_98yxvz_k$(tmp$ret$4, pathFillType, name_0, fill, 1.0, null, 1.0, 1.0, strokeLineCap, strokeLineJoin, 1.0).build_1k0s4u_k$();
     return ensureNotNull(_person_0);
   }
   function set__phone_0(_set____db54di) {

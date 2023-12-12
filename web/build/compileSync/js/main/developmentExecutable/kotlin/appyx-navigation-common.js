@@ -1,11 +1,11 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin-kotlin-stdlib-js-ir.js', './kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js', './appyx-interactions-common.js', './compose-multiplatform-core-runtime-saveable.js', './compose-multiplatform-core-ui-unit.js', './compose-multiplatform-core-runtime.js', './compose-multiplatform-core-ui.js', './compose-multiplatform-core-foundation-layout.js', './compose-multiplatform-core-ui-geometry.js', './appyx-utils-customisation.js', './appyx-utils-multiplatform.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js', './kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js', './appyx-interactions-common.js', './compose-multiplatform-core-runtime-saveable.js', './compose-multiplatform-core-ui-unit.js', './compose-multiplatform-core-runtime.js', './compose-multiplatform-core-ui.js', './compose-multiplatform-core-foundation-layout.js', './compose-multiplatform-core-ui-geometry.js', './appyx-utils-customisation.js', './appyx-utils-multiplatform.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'), require('./kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js'), require('./appyx-interactions-common.js'), require('./compose-multiplatform-core-runtime-saveable.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./compose-multiplatform-core-runtime.js'), require('./compose-multiplatform-core-ui.js'), require('./compose-multiplatform-core-foundation-layout.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./appyx-utils-customisation.js'), require('./appyx-utils-multiplatform.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./kotlinx.coroutines-kotlinx-coroutines-core-js-ir.js'), require('./appyx-interactions-common.js'), require('./compose-multiplatform-core-runtime-saveable.js'), require('./compose-multiplatform-core-ui-unit.js'), require('./compose-multiplatform-core-runtime.js'), require('./compose-multiplatform-core-ui.js'), require('./compose-multiplatform-core-foundation-layout.js'), require('./compose-multiplatform-core-ui-geometry.js'), require('./appyx-utils-customisation.js'), require('./appyx-utils-multiplatform.js'));
   else {
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'appyx-navigation-common'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'appyx-navigation-common'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'appyx-navigation-common'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'appyx-navigation-common'.");
     }
     if (typeof this['kotlinx.coroutines-kotlinx-coroutines-core-js-ir'] === 'undefined') {
       throw new Error("Error loading module 'appyx-navigation-common'. Its dependency 'kotlinx.coroutines-kotlinx-coroutines-core-js-ir' was not found. Please, check whether 'kotlinx.coroutines-kotlinx-coroutines-core-js-ir' is loaded prior to 'appyx-navigation-common'.");
@@ -37,113 +37,113 @@
     if (typeof this['appyx-utils-multiplatform'] === 'undefined') {
       throw new Error("Error loading module 'appyx-navigation-common'. Its dependency 'appyx-utils-multiplatform' was not found. Please, check whether 'appyx-utils-multiplatform' is loaded prior to 'appyx-navigation-common'.");
     }
-    root['appyx-navigation-common'] = factory(typeof this['appyx-navigation-common'] === 'undefined' ? {} : this['appyx-navigation-common'], this['kotlin-kotlin-stdlib-js-ir'], this['kotlinx.coroutines-kotlinx-coroutines-core-js-ir'], this['appyx-interactions-common'], this['compose-multiplatform-core-runtime-saveable'], this['compose-multiplatform-core-ui-unit'], this['compose-multiplatform-core-runtime'], this['compose-multiplatform-core-ui'], this['compose-multiplatform-core-foundation-layout'], this['compose-multiplatform-core-ui-geometry'], this['appyx-utils-customisation'], this['appyx-utils-multiplatform']);
+    root['appyx-navigation-common'] = factory(typeof this['appyx-navigation-common'] === 'undefined' ? {} : this['appyx-navigation-common'], this['kotlin-kotlin-stdlib'], this['kotlinx.coroutines-kotlinx-coroutines-core-js-ir'], this['appyx-interactions-common'], this['compose-multiplatform-core-runtime-saveable'], this['compose-multiplatform-core-ui-unit'], this['compose-multiplatform-core-runtime'], this['compose-multiplatform-core-ui'], this['compose-multiplatform-core-foundation-layout'], this['compose-multiplatform-core-ui-geometry'], this['appyx-utils-customisation'], this['appyx-utils-multiplatform']);
   }
 }(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core, kotlin_appyx_appyx_interactions_appyx_interactions, kotlin_org_jetbrains_compose_runtime_runtime_saveable, kotlin_org_jetbrains_compose_ui_ui_unit, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_org_jetbrains_compose_ui_ui, kotlin_org_jetbrains_compose_foundation_foundation_layout, kotlin_org_jetbrains_compose_ui_ui_geometry, kotlin_appyx_utils_customisations, kotlin_appyx_utils_multiplatform) {
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var objectMeta = kotlin_kotlin.$_$.qd;
-  var VOID = kotlin_kotlin.$_$.bj;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.a2;
-  var classMeta = kotlin_kotlin.$_$.ec;
-  var scan = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.r1;
-  var CoroutineImpl = kotlin_kotlin.$_$.lb;
-  var Unit_getInstance = kotlin_kotlin.$_$.z4;
-  var THROW_CCE = kotlin_kotlin.$_$.lh;
-  var isObject = kotlin_kotlin.$_$.dd;
-  var FlowCollector = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.d1;
-  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.va;
-  var Flow = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.e1;
-  var SuspendFunction2 = kotlin_kotlin.$_$.ob;
-  var SuspendFunction1 = kotlin_kotlin.$_$.nb;
-  var interfaceMeta = kotlin_kotlin.$_$.sc;
-  var cast = kotlin_kotlin.$_$.cf;
-  var safeCast = kotlin_kotlin.$_$.df;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.k;
-  var equals = kotlin_kotlin.$_$.ic;
-  var checkIndexOverflow = kotlin_kotlin.$_$.n6;
-  var emptySet = kotlin_kotlin.$_$.p7;
-  var Map = kotlin_kotlin.$_$.v5;
-  var isInterface = kotlin_kotlin.$_$.bd;
-  var HashSet_init_$Create$ = kotlin_kotlin.$_$.r;
-  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.si;
-  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.b2;
-  var minus = kotlin_kotlin.$_$.f9;
-  var emptyMap = kotlin_kotlin.$_$.o7;
-  var MutableStateFlow = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.g1;
-  var launch = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.q2;
-  var THROW_ISE = kotlin_kotlin.$_$.mh;
-  var enumEntries = kotlin_kotlin.$_$.tb;
-  var Enum = kotlin_kotlin.$_$.zg;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var objectMeta = kotlin_kotlin.$_$.td;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var VOID = kotlin_kotlin.$_$.e;
+  var toString = kotlin_kotlin.$_$.zd;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.b2;
+  var classMeta = kotlin_kotlin.$_$.hc;
+  var scan = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.s1;
+  var CoroutineImpl = kotlin_kotlin.$_$.ob;
+  var Unit_getInstance = kotlin_kotlin.$_$.b5;
+  var THROW_CCE = kotlin_kotlin.$_$.qh;
+  var FlowCollector = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.e1;
+  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.ya;
+  var Flow = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.f1;
+  var SuspendFunction2 = kotlin_kotlin.$_$.rb;
+  var SuspendFunction1 = kotlin_kotlin.$_$.qb;
+  var interfaceMeta = kotlin_kotlin.$_$.wc;
+  var cast = kotlin_kotlin.$_$.ff;
+  var safeCast = kotlin_kotlin.$_$.gf;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.l;
+  var equals = kotlin_kotlin.$_$.lc;
+  var checkIndexOverflow = kotlin_kotlin.$_$.p6;
+  var emptySet = kotlin_kotlin.$_$.r7;
+  var Map = kotlin_kotlin.$_$.x5;
+  var isInterface = kotlin_kotlin.$_$.fd;
+  var HashSet_init_$Create$ = kotlin_kotlin.$_$.s;
+  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.yi;
+  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.c2;
+  var minus = kotlin_kotlin.$_$.h9;
+  var emptyMap = kotlin_kotlin.$_$.q7;
+  var MutableStateFlow = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.h1;
+  var launch = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.r2;
+  var THROW_IAE = kotlin_kotlin.$_$.rh;
+  var enumEntries = kotlin_kotlin.$_$.wb;
+  var Enum = kotlin_kotlin.$_$.eh;
   var getKClassFromExpression = kotlin_kotlin.$_$.b;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.li;
-  var HashSet_init_$Create$_0 = kotlin_kotlin.$_$.s;
-  var Elements = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.e;
-  var plus = kotlin_kotlin.$_$.i9;
-  var intersect = kotlin_kotlin.$_$.l8;
-  var toMutableMap = kotlin_kotlin.$_$.la;
-  var toString = kotlin_kotlin.$_$.wd;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.v1;
-  var mapCapacity = kotlin_kotlin.$_$.b9;
-  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.u;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.ri;
+  var HashSet_init_$Create$_0 = kotlin_kotlin.$_$.t;
+  var Elements = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.d;
+  var plus = kotlin_kotlin.$_$.k9;
+  var intersect = kotlin_kotlin.$_$.n8;
+  var toMutableMap = kotlin_kotlin.$_$.oa;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.w1;
+  var mapCapacity = kotlin_kotlin.$_$.d9;
+  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.v;
   var SaverScope = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.e;
-  var throwKotlinNothingValueException = kotlin_kotlin.$_$.ri;
-  var asStateFlow = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.h1;
-  var to = kotlin_kotlin.$_$.xi;
-  var plus_0 = kotlin_kotlin.$_$.j9;
+  var throwKotlinNothingValueException = kotlin_kotlin.$_$.xi;
+  var asStateFlow = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.i1;
+  var to = kotlin_kotlin.$_$.dj;
+  var plus_0 = kotlin_kotlin.$_$.l9;
   var Dp = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d2;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
   var _Dp___get_value__impl__geb1vb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.l2;
   var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui.$_$.o9;
-  var Companion_getInstance_0 = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.u1;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h2;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o1;
+  var Companion_getInstance_0 = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.p1;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f2;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m1;
   var get_LocalDensity = kotlin_org_jetbrains_compose_ui_ui.$_$.x5;
-  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c2;
-  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b2;
+  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a2;
+  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z1;
   var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.i2;
-  var roundToInt = kotlin_kotlin.$_$.ce;
-  var createCompositionCoroutineScope = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j1;
-  var CompositionScopedCoroutineScopeCanceller = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
-  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q2;
+  var roundToInt = kotlin_kotlin.$_$.fe;
+  var createCompositionCoroutineScope = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h1;
+  var CompositionScopedCoroutineScopeCanceller = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q;
+  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
   var Companion_getInstance_2 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u3;
   var IntSize = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.y;
-  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u1;
+  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s1;
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c;
-  var SideEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
+  var SideEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
   var fillMaxSize = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.l;
   var clipToBounds = kotlin_org_jetbrains_compose_ui_ui.$_$.d;
   var onPlaced = kotlin_org_jetbrains_compose_ui_ui.$_$.e4;
-  var onPointerEvent = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.h;
+  var onPointerEvent = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.g;
   var Companion_getInstance_3 = kotlin_org_jetbrains_compose_ui_ui.$_$.n9;
   var rememberBoxMeasurePolicy$composable = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.u;
   var $get_currentCompositeKeyHash$$composable_u3vbzj = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h;
   var Companion_getInstance_4 = kotlin_org_jetbrains_compose_ui_ui.$_$.k9;
   var materializerOf = kotlin_org_jetbrains_compose_ui_ui.$_$.c4;
-  var invalidApplier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n1;
-  var Applier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m;
-  var _Updater___init__impl__rbfxm8 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m2;
-  var Updater__set_impl_v7kwss = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o2;
-  var _Updater___get_composer__impl__9ty7av = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n2;
-  var _SkippableUpdater___init__impl__4ft0t9 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k2;
-  var SkippableUpdater = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d1;
+  var invalidApplier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l1;
+  var Applier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k;
+  var _Updater___init__impl__rbfxm8 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k2;
+  var Updater__set_impl_v7kwss = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m2;
+  var _Updater___get_composer__impl__9ty7av = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l2;
+  var _SkippableUpdater___init__impl__4ft0t9 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i2;
+  var SkippableUpdater = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b1;
   var BoxScopeInstance_getInstance = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.g1;
-  var get_LocalBoxScope = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.f1;
-  var CompositionLocalProvider$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
-  var List = kotlin_kotlin.$_$.t5;
+  var get_LocalBoxScope = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.e1;
+  var CompositionLocalProvider$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e2;
+  var List = kotlin_kotlin.$_$.v5;
   var Offset__unaryMinus_impl_ssu2iv = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.h1;
-  var KProperty0 = kotlin_kotlin.$_$.ze;
-  var getLocalDelegateReference = kotlin_kotlin.$_$.lc;
-  var KMutableProperty0 = kotlin_kotlin.$_$.xe;
+  var KProperty0 = kotlin_kotlin.$_$.cf;
+  var THROW_ISE = kotlin_kotlin.$_$.sh;
+  var getLocalDelegateReference = kotlin_kotlin.$_$.pc;
+  var KMutableProperty0 = kotlin_kotlin.$_$.af;
   var Offset = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.e;
-  var removedElements = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.g;
+  var removedElements = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.f;
   var IntOffset = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.w;
   var PointerInputScope = kotlin_org_jetbrains_compose_ui_ui.$_$.e2;
-  var detectDragGesturesOrCancellation = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.p1;
+  var detectDragGesturesOrCancellation = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.m1;
   var _IntOffset___get_x__impl__qiqr5o = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.t2;
   var _IntOffset___get_y__impl__2avpwj = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.u2;
   var IntOffset_0 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.v;
@@ -157,79 +157,79 @@
   var _Offset___get_y__impl__8bzhra = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.j1;
   var offset = kotlin_org_jetbrains_compose_foundation_foundation_layout.$_$.p;
   var pointerInput = kotlin_org_jetbrains_compose_ui_ui.$_$.o2;
-  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i2;
+  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g2;
   var illegalDecoyCallException = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
   var rememberSaveableStateHolder$composable = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.k;
-  var LaunchedEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
-  var collectAsState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h1;
+  var LaunchedEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
+  var collectAsState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f1;
   var Companion_getInstance_5 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.t1;
   var Companion_getInstance_6 = kotlin_org_jetbrains_compose_ui_ui_geometry.$_$.s1;
-  var get_LocalMotionProperties = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.g1;
-  var PositionAlignment = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.w;
+  var get_LocalMotionProperties = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.f1;
+  var PositionAlignment = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.v;
   var get_LocalLayoutDirection = kotlin_org_jetbrains_compose_ui_ui.$_$.c6;
   var Companion_getInstance_7 = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.s3;
-  var EmptyCoroutineContext_getInstance = kotlin_kotlin.$_$.h4;
+  var EmptyCoroutineContext_getInstance = kotlin_kotlin.$_$.j4;
   var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
-  var UiContext = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.m;
-  var TransitionBounds = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.l;
+  var UiContext = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.l;
+  var TransitionBounds = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.k;
   var Companion_getInstance_8 = kotlin_org_jetbrains_compose_ui_ui.$_$.e9;
   var NodeCustomisationDirectoryImpl = kotlin_appyx_utils_customisations.$_$.a;
   var mapSaver = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.h;
   var rememberSaveable$composable = kotlin_org_jetbrains_compose_runtime_runtime_saveable.$_$.j;
-  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
-  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
+  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
+  var DisposableEffect$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
   var Dp__compareTo_impl_tlg3dl = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.j2;
   var Dp__hashCode_impl_sxkrra = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.k2;
-  var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i1;
-  var Triple = kotlin_kotlin.$_$.nh;
-  var minOf = kotlin_kotlin.$_$.sa;
-  var combine = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.j1;
-  var onCompletion = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.p1;
-  var SuspendFunction3 = kotlin_kotlin.$_$.pb;
-  var ProducerScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.b1;
+  var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
+  var Triple = kotlin_kotlin.$_$.th;
+  var minOf = kotlin_kotlin.$_$.va;
+  var combine = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.k1;
+  var onCompletion = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.q1;
+  var SuspendFunction3 = kotlin_kotlin.$_$.sb;
+  var ProducerScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.c1;
   var awaitClose = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.c;
-  var callbackFlow = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.i1;
+  var callbackFlow = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.j1;
   var AppyxLogger_getInstance = kotlin_appyx_utils_multiplatform.$_$.b;
-  var hashCode = kotlin_kotlin.$_$.qc;
-  var compareTo = kotlin_kotlin.$_$.fc;
-  var Comparator = kotlin_kotlin.$_$.yg;
-  var compareValues = kotlin_kotlin.$_$.pa;
-  var sortedWith = kotlin_kotlin.$_$.x9;
-  var lazy = kotlin_kotlin.$_$.ki;
-  var KProperty1 = kotlin_kotlin.$_$.af;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.oc;
-  var UUID_getInstance = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.w1;
-  var emptyList = kotlin_kotlin.$_$.n7;
-  var objectCreate = kotlin_kotlin.$_$.pd;
-  var Collection = kotlin_kotlin.$_$.j5;
-  var Plugin = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.i;
-  var listOfNotNull = kotlin_kotlin.$_$.y8;
-  var plus_1 = kotlin_kotlin.$_$.k9;
+  var hashCode = kotlin_kotlin.$_$.uc;
+  var compareTo = kotlin_kotlin.$_$.ic;
+  var Comparator = kotlin_kotlin.$_$.dh;
+  var compareValues = kotlin_kotlin.$_$.sa;
+  var sortedWith = kotlin_kotlin.$_$.aa;
+  var lazy = kotlin_kotlin.$_$.qi;
+  var KProperty1 = kotlin_kotlin.$_$.df;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.sc;
+  var UUID_getInstance = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.r1;
+  var emptyList = kotlin_kotlin.$_$.p7;
+  var objectCreate = kotlin_kotlin.$_$.sd;
+  var Collection = kotlin_kotlin.$_$.l5;
+  var Plugin = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.h;
+  var listOfNotNull = kotlin_kotlin.$_$.a9;
+  var plus_1 = kotlin_kotlin.$_$.m9;
   var BuildFlags_getInstance = kotlin_appyx_utils_multiplatform.$_$.c;
-  var MutableSavedStateMapImpl = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.k;
-  var SavesInstanceState = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.j;
-  var Long = kotlin_kotlin.$_$.eh;
-  var collectAsState$composable_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
-  var plus_2 = kotlin_kotlin.$_$.l9;
-  var AppyxComponentSetup$composable = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.t;
-  var HashMap_init_$Create$ = kotlin_kotlin.$_$.n;
-  var Unit = kotlin_kotlin.$_$.wh;
-  var AtomicReference = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n;
-  var minus_0 = kotlin_kotlin.$_$.e9;
-  var ArrayDeque_init_$Create$ = kotlin_kotlin.$_$.i;
-  var rememberUpdatedState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y1;
-  var MainScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.g2;
-  var cancel = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.l2;
-  var get_isActive = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.o2;
+  var MutableSavedStateMapImpl = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.j;
+  var SavesInstanceState = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.i;
+  var Long = kotlin_kotlin.$_$.jh;
+  var collectAsState$composable_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e1;
+  var plus_2 = kotlin_kotlin.$_$.n9;
+  var AppyxComponentSetup$composable = kotlin_appyx_appyx_interactions_appyx_interactions.$_$.s;
+  var HashMap_init_$Create$ = kotlin_kotlin.$_$.o;
+  var Unit = kotlin_kotlin.$_$.ci;
+  var AtomicReference = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l;
+  var minus_0 = kotlin_kotlin.$_$.g9;
+  var ArrayDeque_init_$Create$ = kotlin_kotlin.$_$.j;
+  var rememberUpdatedState$composable = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w1;
+  var MainScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.h2;
+  var cancel = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.m2;
+  var get_isActive = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.p2;
   //endregion
   //region block: pre-declaration
   setMetadataFor(Appyx, 'Appyx', objectMeta);
-  setMetadataFor(CompareValues, 'CompareValues', classMeta);
-  setMetadataFor(withPrevious$slambda, 'withPrevious$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [2]);
-  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, [1]);
-  setMetadataFor(withPrevious$o$collect$slambda, 'withPrevious$o$collect$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(CompareValues, 'CompareValues', classMeta, VOID, VOID, CompareValues);
+  setMetadataFor(withPrevious$slambda, 'withPrevious$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [2]);
+  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
+  setMetadataFor(withPrevious$o$collect$slambda, 'withPrevious$o$collect$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor($collectCOROUTINE$0, '$collectCOROUTINE$0', classMeta, CoroutineImpl);
-  setMetadataFor(_no_name_provided__qut3iv, VOID, classMeta, VOID, [Flow], VOID, VOID, [1]);
+  setMetadataFor(_no_name_provided__qut3iv, VOID, classMeta, VOID, [Flow], VOID, VOID, VOID, [1]);
   function init(node) {
   }
   setMetadataFor(NodeReadyObserver, 'NodeReadyObserver', interfaceMeta, VOID, [Plugin]);
@@ -238,12 +238,12 @@
   setMetadataFor(ChildAwareCallbackInfo, 'ChildAwareCallbackInfo', classMeta);
   setMetadataFor(Single, 'Single', classMeta, ChildAwareCallbackInfo);
   setMetadataFor(Double, 'Double', classMeta, ChildAwareCallbackInfo);
-  setMetadataFor(ChildAwareImpl$observeChanges$o$collect$slambda, 'ChildAwareImpl$observeChanges$o$collect$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(ChildAwareImpl$observeChanges$o$collect$slambda, 'ChildAwareImpl$observeChanges$o$collect$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor($collectCOROUTINE$1, '$collectCOROUTINE$1', classMeta, CoroutineImpl);
-  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0_0, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, [1]);
-  setMetadataFor(ChildAwareImpl$init$slambda, 'ChildAwareImpl$init$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(_no_name_provided__qut3iv_0, VOID, classMeta, VOID, [Flow], VOID, VOID, [1]);
-  setMetadataFor(ChildAwareImpl$observeChanges$slambda, 'ChildAwareImpl$observeChanges$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0_0, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
+  setMetadataFor(ChildAwareImpl$init$slambda, 'ChildAwareImpl$init$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(_no_name_provided__qut3iv_0, VOID, classMeta, VOID, [Flow], VOID, VOID, VOID, [1]);
+  setMetadataFor(ChildAwareImpl$observeChanges$slambda, 'ChildAwareImpl$observeChanges$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(PlatformLifecycleObserver, 'PlatformLifecycleObserver', interfaceMeta);
   function onCreate() {
   }
@@ -259,21 +259,21 @@
   }
   setMetadataFor(DefaultPlatformLifecycleObserver, 'DefaultPlatformLifecycleObserver', interfaceMeta, VOID, [PlatformLifecycleObserver]);
   setMetadataFor(ChildAwareImpl$removeWhenDestroyed$1, VOID, classMeta, VOID, [DefaultPlatformLifecycleObserver]);
-  setMetadataFor(ChildAwareImpl, 'ChildAwareImpl', classMeta, VOID, [ChildAware], VOID, VOID, [0]);
+  setMetadataFor(ChildAwareImpl, 'ChildAwareImpl', classMeta, VOID, [ChildAware], ChildAwareImpl, VOID, VOID, [0]);
   setMetadataFor(ChildEntry, 'ChildEntry', classMeta);
   setMetadataFor(Initialized, 'Initialized', classMeta, ChildEntry);
   setMetadataFor(Suspended, 'Suspended', classMeta, ChildEntry);
   setMetadataFor(KeepMode, 'KeepMode', classMeta, Enum);
-  setMetadataFor(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda, 'ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda, 'ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(Companion, 'Companion', objectMeta);
-  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0_1, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, [1]);
+  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0_1, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
   setMetadataFor(sam$androidx_compose_runtime_saveable_SaverScope$0, 'sam$androidx_compose_runtime_saveable_SaverScope$0', classMeta, VOID, [SaverScope]);
-  setMetadataFor(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda, 'ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda, 'ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(ChildNodeCreationManager, 'ChildNodeCreationManager', classMeta);
-  setMetadataFor(ChildrenTransitionScope$children$composable$slambda$slambda, 'ChildrenTransitionScope$children$composable$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0_2, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, [1]);
-  setMetadataFor(ChildrenTransitionScope$children$composable$slambda, 'ChildrenTransitionScope$children$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(ChildrenTransitionScope$children$composable$lambda$slambda, 'ChildrenTransitionScope$children$composable$lambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(ChildrenTransitionScope$children$composable$slambda$slambda, 'ChildrenTransitionScope$children$composable$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0_2, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
+  setMetadataFor(ChildrenTransitionScope$children$composable$slambda, 'ChildrenTransitionScope$children$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(ChildrenTransitionScope$children$composable$lambda$slambda, 'ChildrenTransitionScope$children$composable$lambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(ChildrenTransitionScope, 'ChildrenTransitionScope', classMeta);
   setMetadataFor(ChildRenderer, 'ChildRenderer', interfaceMeta);
   setMetadataFor(ChildRendererImpl, 'ChildRendererImpl', classMeta, VOID, [ChildRenderer]);
@@ -287,18 +287,18 @@
   setMetadataFor(UpNavigationHandler, 'UpNavigationHandler', interfaceMeta);
   setMetadataFor(IntegrationPoint, 'IntegrationPoint', classMeta, VOID, [UpNavigationHandler]);
   setMetadataFor(Companion_0, 'Companion', objectMeta);
-  setMetadataFor(IntegrationPointStub, 'IntegrationPointStub', classMeta, IntegrationPoint);
-  setMetadataFor(ChildNodeLifecycleManager$launch$slambda$_init_$ref_3xtfdl, 'ChildNodeLifecycleManager$launch$slambda$<init>$ref', classMeta, VOID, VOID, VOID, VOID, [3]);
-  setMetadataFor(ChildNodeLifecycleManager$launch$slambda$slambda, 'ChildNodeLifecycleManager$launch$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [2]);
-  setMetadataFor(ChildNodeLifecycleManager$launch$slambda$slambda_1, 'ChildNodeLifecycleManager$launch$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0_3, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, [1]);
-  setMetadataFor(ChildNodeLifecycleManager$launch$slambda, 'ChildNodeLifecycleManager$launch$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1, 3]);
+  setMetadataFor(IntegrationPointStub, 'IntegrationPointStub', classMeta, IntegrationPoint, VOID, IntegrationPointStub);
+  setMetadataFor(ChildNodeLifecycleManager$launch$slambda$_init_$ref_3xtfdl, 'ChildNodeLifecycleManager$launch$slambda$<init>$ref', classMeta, VOID, VOID, VOID, VOID, VOID, [3]);
+  setMetadataFor(ChildNodeLifecycleManager$launch$slambda$slambda, 'ChildNodeLifecycleManager$launch$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [2]);
+  setMetadataFor(ChildNodeLifecycleManager$launch$slambda$slambda_1, 'ChildNodeLifecycleManager$launch$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0_3, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
+  setMetadataFor(ChildNodeLifecycleManager$launch$slambda, 'ChildNodeLifecycleManager$launch$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1, 3]);
   setMetadataFor(ChildNodeLifecycleManager, 'ChildNodeLifecycleManager', classMeta);
   setMetadataFor(CommonLifecycleOwner, 'CommonLifecycleOwner', interfaceMeta);
   setMetadataFor(State, 'State', classMeta, Enum);
   setMetadataFor(Event, 'Event', classMeta, Enum);
   setMetadataFor(sam$com_bumble_appyx_navigation_lifecycle_PlatformLifecycleEventObserver$0_0, 'sam$com_bumble_appyx_navigation_lifecycle_PlatformLifecycleEventObserver$0', classMeta, VOID, [PlatformLifecycleEventObserver]);
-  setMetadataFor(Lifecycle$asFlow$slambda, 'Lifecycle$asFlow$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(Lifecycle$asFlow$slambda, 'Lifecycle$asFlow$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   function asFlow() {
     return callbackFlow(Lifecycle$asFlow$slambda_0(this, null));
   }
@@ -325,7 +325,7 @@
   }
   function View$composable(modifier, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(3274146);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(3274146);
     sourceInformation($composer_0, 'C(View$composable)');
     var $dirty = $changed;
     if (($changed & 14) === 0)
@@ -336,42 +336,38 @@
       if (isTraceInProgress()) {
         traceEventStart(3274146, $dirty, -1, 'com.bumble.appyx.navigation.node.ParentNodeView.View$composable (ParentNodeView.kt:15)');
       }
-      var tmp$ret$0;
       // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-      var tmp0_$get_current$$composable_h5ksy7 = get_LocalNode();
-      var tmp1_$get_current$$composable_gn3xww = $composer_0;
-      var $composer_1 = tmp1_$get_current$$composable_gn3xww;
+      var this_0 = get_LocalNode();
+      var $composer_1 = $composer_0;
       sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-      var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+      var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
       sourceInformationMarkerEnd($composer_1);
-      tmp$ret$0 = tmp0;
-      var tmp = tmp$ret$0;
+      var tmp = tmp0;
       var tmp0_elvis_lhs = tmp instanceof ParentNode ? tmp : null;
       var tmp_0;
       if (tmp0_elvis_lhs == null) {
-        var tmp2_error = '' + getKClassFromExpression(this) + ' is not provided to the appropriate ParentNode';
-        throw IllegalStateException_init_$Create$(toString(tmp2_error));
+        var message = '' + getKClassFromExpression(this) + ' is not provided to the appropriate ParentNode';
+        throw IllegalStateException_init_$Create$(toString(message));
       } else {
         tmp_0 = tmp0_elvis_lhs;
       }
       var node = tmp_0;
-      this.NodeView$composable_ssh72e_k$(node, modifier, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
+      this.NodeView$composable_jxrwe6_k$(node, modifier, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
-    var tmp0_rcvr = this;
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(ParentNodeView$View$composable$lambda(tmp0_rcvr, modifier, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(ParentNodeView$View$composable$lambda(this, modifier, $changed));
     }
   }
   setMetadataFor(ParentNodeView, 'ParentNodeView', interfaceMeta, VOID, [NodeView]);
-  setMetadataFor(EmptyParentNodeView, 'EmptyParentNodeView', classMeta, VOID, [ParentNodeView]);
+  setMetadataFor(EmptyParentNodeView, 'EmptyParentNodeView', classMeta, VOID, [ParentNodeView], EmptyParentNodeView);
   setMetadataFor(Node$1, VOID, classMeta, VOID, [DefaultPlatformLifecycleObserver]);
   setMetadataFor(Companion_3, 'Companion', objectMeta);
   setMetadataFor(ParentNode, 'ParentNode', classMeta, Node, [Node, Resolver]);
@@ -391,28 +387,28 @@
       tmp = disposer;
     }
     disposer = tmp;
-    return $super === VOID ? this.get_5e3whn_k$(storeId, key, disposer, factory) : $super.get_5e3whn_k$.call(this, storeId, key, disposer, factory);
+    return $super === VOID ? this.get_oljy7i_k$(storeId, key, disposer, factory) : $super.get_oljy7i_k$.call(this, storeId, key, disposer, factory);
   }
   setMetadataFor(RetainedInstanceStore, 'RetainedInstanceStore', interfaceMeta);
   setMetadataFor(Companion_4, 'Companion', objectMeta, VOID, [RetainedInstanceStore]);
   setMetadataFor(ValueHolder, 'ValueHolder', classMeta);
-  setMetadataFor(RetainedInstanceStoreImpl, 'RetainedInstanceStoreImpl', classMeta, VOID, [RetainedInstanceStore]);
-  setMetadataFor(MainIntegrationPoint, 'MainIntegrationPoint', classMeta, IntegrationPoint);
+  setMetadataFor(RetainedInstanceStoreImpl, 'RetainedInstanceStoreImpl', classMeta, VOID, [RetainedInstanceStore], RetainedInstanceStoreImpl);
+  setMetadataFor(MainIntegrationPoint, 'MainIntegrationPoint', classMeta, IntegrationPoint, VOID, MainIntegrationPoint);
   setMetadataFor(OnBackPressedDispatcherOwner, 'OnBackPressedDispatcherOwner', interfaceMeta);
   setMetadataFor(WebNodeHost$composable$onBackPressedDispatcherOwner$1$1, VOID, classMeta, VOID, [OnBackPressedDispatcherOwner]);
-  setMetadataFor(WebNodeHost$composable$slambda$slambda$slambda, 'WebNodeHost$composable$slambda$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0_4, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, [1]);
-  setMetadataFor(WebNodeHost$composable$slambda$slambda, 'WebNodeHost$composable$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
-  setMetadataFor(WebNodeHost$composable$slambda, 'WebNodeHost$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, [1]);
+  setMetadataFor(WebNodeHost$composable$slambda$slambda$slambda, 'WebNodeHost$composable$slambda$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0_4, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
+  setMetadataFor(WebNodeHost$composable$slambda$slambda, 'WebNodeHost$composable$slambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
+  setMetadataFor(WebNodeHost$composable$slambda, 'WebNodeHost$composable$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(OnBackPressedCallback, 'OnBackPressedCallback', classMeta);
   setMetadataFor(Cancellable, 'Cancellable', interfaceMeta);
   setMetadataFor(OnBackPressedCancellable, 'OnBackPressedCancellable', classMeta, VOID, [Cancellable]);
-  setMetadataFor(OnBackPressedDispatcher, 'OnBackPressedDispatcher', classMeta);
+  setMetadataFor(OnBackPressedDispatcher, 'OnBackPressedDispatcher', classMeta, VOID, VOID, OnBackPressedDispatcher);
   setMetadataFor(LocalOnBackPressedDispatcherOwner$1$1, VOID, classMeta, VOID, [OnBackPressedDispatcherOwner]);
   setMetadataFor(PlatformBackHandler$composable$backCallback$1$1, VOID, classMeta, OnBackPressedCallback);
   setMetadataFor(_no_name_provided__qut3iv_3, VOID, classMeta, VOID, [DisposableEffectResult]);
   setMetadataFor(Companion_5, 'Companion', objectMeta);
-  setMetadataFor(PlatformLifecycleRegistry, 'PlatformLifecycleRegistry', classMeta, VOID, [Lifecycle]);
+  setMetadataFor(PlatformLifecycleRegistry, 'PlatformLifecycleRegistry', classMeta, VOID, [Lifecycle], PlatformLifecycleRegistry);
   //endregion
   function get_$stableprop() {
     return 8;
@@ -423,19 +419,19 @@
     this.defaultChildKeepMode_1 = KeepMode_KEEP_getInstance();
     this.$stable_1 = 8;
   }
-  protoOf(Appyx).set_exceptionHandler_nj5ft6_k$ = function (_set____db54di) {
+  protoOf(Appyx).set_exceptionHandler_e6pz81_k$ = function (_set____db54di) {
     this.exceptionHandler_1 = _set____db54di;
   };
   protoOf(Appyx).get_exceptionHandler_sscres_k$ = function () {
     return this.exceptionHandler_1;
   };
-  protoOf(Appyx).set_defaultChildKeepMode_5lob45_k$ = function (_set____db54di) {
+  protoOf(Appyx).set_defaultChildKeepMode_7lgti4_k$ = function (_set____db54di) {
     this.defaultChildKeepMode_1 = _set____db54di;
   };
   protoOf(Appyx).get_defaultChildKeepMode_i4s390_k$ = function () {
     return this.defaultChildKeepMode_1;
   };
-  protoOf(Appyx).reportException_9dumbv_k$ = function (exception) {
+  protoOf(Appyx).reportException_u9h6da_k$ = function (exception) {
     var handler = this.exceptionHandler_1;
     if (!(handler == null)) {
       handler(exception);
@@ -465,7 +461,8 @@
     var tmp0_elvis_lhs = this.currentNullable_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
-      throw IllegalStateException_init_$Create$('Should not be invoked');
+      var message = 'Should not be invoked';
+      throw IllegalStateException_init_$Create$(toString(message));
     } else {
       tmp = tmp0_elvis_lhs;
     }
@@ -474,7 +471,7 @@
   protoOf(CompareValues).get_isInitialized_44jfmn_k$ = function () {
     return !(this.currentNullable_1 == null);
   };
-  protoOf(CompareValues).combine_tvecoc_k$ = function (new_0) {
+  protoOf(CompareValues).combine_oqdlrk_k$ = function (new_0) {
     return new CompareValues(this.currentNullable_1, new_0);
   };
   protoOf(CompareValues).component1_7eebsc_k$ = function () {
@@ -486,23 +483,23 @@
   function withPrevious(_this__u8e3s4) {
     // Inline function 'kotlinx.coroutines.flow.filter' call
     var tmp = new CompareValues();
-    var tmp0_filter = scan(_this__u8e3s4, tmp, withPrevious$slambda_0(null));
     // Inline function 'kotlinx.coroutines.flow.unsafeTransform' call
+    var this_0 = scan(_this__u8e3s4, tmp, withPrevious$slambda_0(null));
     // Inline function 'kotlinx.coroutines.flow.internal.unsafeFlow' call
-    return new _no_name_provided__qut3iv(tmp0_filter);
+    return new _no_name_provided__qut3iv(this_0);
   }
   function withPrevious$slambda(resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(withPrevious$slambda).invoke_usp5f0_k$ = function (previous, current, $completion) {
-    var tmp = this.create_al2gzt_k$(previous, current, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(withPrevious$slambda).invoke_jf4t82_k$ = function (previous, current, $completion) {
+    var tmp = this.create_hwu1j_k$(previous, current, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(withPrevious$slambda).invoke_f2mof9_k$ = function (p1, p2, $completion) {
+  protoOf(withPrevious$slambda).invoke_4tzzq6_k$ = function (p1, p2, $completion) {
     var tmp = p1 instanceof CompareValues ? p1 : THROW_CCE();
-    return this.invoke_usp5f0_k$(tmp, (p2 == null ? true : isObject(p2)) ? p2 : THROW_CCE(), $completion);
+    return this.invoke_jf4t82_k$(tmp, (p2 == null ? true : !(p2 == null)) ? p2 : THROW_CCE(), $completion);
   };
   protoOf(withPrevious$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -510,8 +507,8 @@
       try {
         var tmp = this.get_state_iypx7s_k$();
         if (tmp === 0) {
-          this.set_exceptionState_s9sevl_k$(1);
-          return this.previous_1.combine_tvecoc_k$(this.current_1);
+          this.set_exceptionState_fex74n_k$(1);
+          return this.previous_1.combine_oqdlrk_k$(this.current_1);
         } else if (tmp === 1) {
           throw this.get_exception_x0n6w6_k$();
         }
@@ -521,7 +518,7 @@
       }
      while (true);
   };
-  protoOf(withPrevious$slambda).create_al2gzt_k$ = function (previous, current, completion) {
+  protoOf(withPrevious$slambda).create_hwu1j_k$ = function (previous, current, completion) {
     var i = new withPrevious$slambda(completion);
     i.previous_1 = previous;
     i.current_1 = current;
@@ -530,7 +527,7 @@
   function withPrevious$slambda_0(resultContinuation) {
     var i = new withPrevious$slambda(resultContinuation);
     var l = function (previous, current, $completion) {
-      return i.invoke_usp5f0_k$(previous, current, $completion);
+      return i.invoke_jf4t82_k$(previous, current, $completion);
     };
     l.$arity = 2;
     return l;
@@ -538,21 +535,21 @@
   function sam$kotlinx_coroutines_flow_FlowCollector$0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0).emit_1fbrsb_k$ = function (value, $completion) {
+  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0).emit_t92u1f_k$ = function (value, $completion) {
     return this.function_1(value, $completion);
   };
-  function withPrevious$o$collect$slambda($collector, resultContinuation) {
-    this.$collector_1 = $collector;
+  function withPrevious$o$collect$slambda($$this$unsafeFlow, resultContinuation) {
+    this.$$this$unsafeFlow_1 = $$this$unsafeFlow;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(withPrevious$o$collect$slambda).invoke_vsvjwf_k$ = function (value, $completion) {
-    var tmp = this.create_u6kivy_k$(value, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(withPrevious$o$collect$slambda).invoke_pfni12_k$ = function (value, $completion) {
+    var tmp = this.create_c7grnq_k$(value, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(withPrevious$o$collect$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_vsvjwf_k$(p1 instanceof CompareValues ? p1 : THROW_CCE(), $completion);
+  protoOf(withPrevious$o$collect$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_pfni12_k$(p1 instanceof CompareValues ? p1 : THROW_CCE(), $completion);
   };
   protoOf(withPrevious$o$collect$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -561,33 +558,37 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(5);
-            this.set_state_a96kl8_k$(1);
+            this.set_exceptionState_fex74n_k$(5);
+            this.set_state_rjd8d0_k$(1);
             continue $sm;
           case 1:
-            if (this.value_1.get_isInitialized_44jfmn_k$()) {
-              this.set_state_a96kl8_k$(3);
-              suspendResult = this.$collector_1.emit_1fbrsb_k$(this.value_1, this);
+            var tmp_0 = this;
+            tmp_0.$this$unsafeTransform1__1 = this.$$this$unsafeFlow_1;
+            var tmp_1 = this;
+            tmp_1.value2__1 = this.value_1;
+            if (this.value2__1.get_isInitialized_44jfmn_k$()) {
+              this.set_state_rjd8d0_k$(3);
+              suspendResult = this.$this$unsafeTransform1__1.emit_t92u1f_k$(this.value2__1, this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
               continue $sm;
             } else {
-              this.set_state_a96kl8_k$(2);
+              this.set_state_rjd8d0_k$(2);
               continue $sm;
             }
 
           case 2:
             if (false) {
-              this.set_state_a96kl8_k$(1);
+              this.set_state_rjd8d0_k$(1);
               continue $sm;
             }
 
-            this.set_state_a96kl8_k$(4);
+            this.set_state_rjd8d0_k$(4);
             continue $sm;
           case 3:
             this.tmp$ret$00__1 = suspendResult;
-            this.set_state_a96kl8_k$(4);
+            this.set_state_rjd8d0_k$(4);
             continue $sm;
           case 4:
             return Unit_getInstance();
@@ -599,24 +600,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 5) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(withPrevious$o$collect$slambda).create_u6kivy_k$ = function (value, completion) {
-    var i = new withPrevious$o$collect$slambda(this.$collector_1, completion);
+  protoOf(withPrevious$o$collect$slambda).create_c7grnq_k$ = function (value, completion) {
+    var i = new withPrevious$o$collect$slambda(this.$$this$unsafeFlow_1, completion);
     i.value_1 = value;
     return i;
   };
-  protoOf(withPrevious$o$collect$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_u6kivy_k$(value instanceof CompareValues ? value : THROW_CCE(), completion);
+  protoOf(withPrevious$o$collect$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_c7grnq_k$(value instanceof CompareValues ? value : THROW_CCE(), completion);
   };
-  function withPrevious$o$collect$slambda_0($collector, resultContinuation) {
-    var i = new withPrevious$o$collect$slambda($collector, resultContinuation);
+  function withPrevious$o$collect$slambda_0($$this$unsafeFlow, resultContinuation) {
+    var i = new withPrevious$o$collect$slambda($$this$unsafeFlow, resultContinuation);
     var l = function (value, $completion) {
-      return i.invoke_vsvjwf_k$(value, $completion);
+      return i.invoke_pfni12_k$(value, $completion);
     };
     l.$arity = 1;
     return l;
@@ -633,10 +634,12 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
-            var tmp_0 = withPrevious$o$collect$slambda_0(this.collector_1, null);
-            suspendResult = this._this__u8e3s4__1.$tmp0_filter_1.collect_llpwvh_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0(tmp_0), this);
+            this.set_exceptionState_fex74n_k$(2);
+            var tmp_0 = this;
+            tmp_0.$this$unsafeFlow0__1 = this.collector_1;
+            this.set_state_rjd8d0_k$(1);
+            var tmp_1 = withPrevious$o$collect$slambda_0(this.$this$unsafeFlow0__1, null);
+            suspendResult = this._this__u8e3s4__1.$this_1.collect_aksokr_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0(tmp_1), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -652,23 +655,23 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  function _no_name_provided__qut3iv($tmp0_filter) {
-    this.$tmp0_filter_1 = $tmp0_filter;
+  function _no_name_provided__qut3iv($this) {
+    this.$this_1 = $this;
   }
-  protoOf(_no_name_provided__qut3iv).collect_3svhti_k$ = function (collector, $completion) {
+  protoOf(_no_name_provided__qut3iv).collect_875tu8_k$ = function (collector, $completion) {
     var tmp = new $collectCOROUTINE$0(this, collector, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(_no_name_provided__qut3iv).collect_llpwvh_k$ = function (collector, $completion) {
-    return this.collect_3svhti_k$(collector, $completion);
+  protoOf(_no_name_provided__qut3iv).collect_aksokr_k$ = function (collector, $completion) {
+    return this.collect_875tu8_k$(collector, $completion);
   };
   function ChildAware() {
   }
@@ -719,7 +722,7 @@
     this.parentLifecycle_1 = parentLifecycle;
     this.$stable_1 = 0;
   }
-  protoOf(Single).onNewNodeAppeared_fecqf_k$ = function (newNode) {
+  protoOf(Single).onNewNodeAppeared_trjsqq_k$ = function (newNode) {
     if (get_isDestroyed(this.parentLifecycle_1))
       return Unit_getInstance();
     var castedNode = safeCast(this.child_1, newNode);
@@ -728,13 +731,13 @@
       this.callback_1(lifecycle, castedNode);
     }
   };
-  protoOf(Single).onRegistered_vg08qn_k$ = function (activeNodes) {
+  protoOf(Single).onRegistered_1szs7o_k$ = function (activeNodes) {
     // Inline function 'kotlin.collections.forEach' call
     var tmp0_iterator = activeNodes.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var element = tmp0_iterator.next_20eer_k$();
       // Inline function 'com.bumble.appyx.navigation.children.Single.onRegistered.<anonymous>' call
-      this.onNewNodeAppeared_fecqf_k$(element);
+      this.onNewNodeAppeared_trjsqq_k$(element);
     }
   };
   function Double(child1, child2, callback, parentLifecycle) {
@@ -745,7 +748,7 @@
     this.parentLifecycle_1 = parentLifecycle;
     this.$stable_1 = 0;
   }
-  protoOf(Double).onNewNodeAppeared_josshh_k$ = function (activeNodes, newNode, ignoreNodes) {
+  protoOf(Double).onNewNodeAppeared_dw7cpo_k$ = function (activeNodes, newNode, ignoreNodes) {
     var tmp0_elvis_lhs = getOther(this, newNode);
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -757,23 +760,23 @@
     // Inline function 'kotlin.collections.forEach' call
     // Inline function 'kotlin.collections.filter' call
     // Inline function 'kotlin.collections.filterTo' call
-    var tmp0_filterTo = ArrayList_init_$Create$();
+    var destination = ArrayList_init_$Create$();
     var tmp0_iterator = activeNodes.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var element = tmp0_iterator.next_20eer_k$();
       // Inline function 'com.bumble.appyx.navigation.children.Double.onNewNodeAppeared.<anonymous>' call
-      if ((second.isInstance_6tn68w_k$(element) ? !equals(element, newNode) : false) ? !ignoreNodes.contains_2ehdt1_k$(element) : false) {
-        tmp0_filterTo.add_1j60pz_k$(element);
+      if ((second.isInstance_6tn68w_k$(element) ? !equals(element, newNode) : false) ? !ignoreNodes.contains_aljjnj_k$(element) : false) {
+        destination.add_utx5q5_k$(element);
       }
     }
-    var tmp0_iterator_0 = tmp0_filterTo.iterator_jk1svi_k$();
+    var tmp0_iterator_0 = destination.iterator_jk1svi_k$();
     while (tmp0_iterator_0.hasNext_bitz1p_k$()) {
       var element_0 = tmp0_iterator_0.next_20eer_k$();
       // Inline function 'com.bumble.appyx.navigation.children.Double.onNewNodeAppeared.<anonymous>' call
       notify(this, newNode, element_0);
     }
   };
-  protoOf(Double).onRegistered_vg08qn_k$ = function (activeNodes) {
+  protoOf(Double).onRegistered_1szs7o_k$ = function (activeNodes) {
     // Inline function 'kotlin.collections.forEachIndexed' call
     var index = 0;
     var tmp0_iterator = activeNodes.iterator_jk1svi_k$();
@@ -782,24 +785,24 @@
       // Inline function 'com.bumble.appyx.navigation.children.Double.onRegistered.<anonymous>' call
       var tmp1 = index;
       index = tmp1 + 1 | 0;
-      var tmp0_anonymous = checkIndexOverflow(tmp1);
-      this.onNewNodeAppeared_josshh_k$(activeNodes.subList_d153ha_k$(tmp0_anonymous + 1 | 0, activeNodes.get_size_woubt6_k$()), item, emptySet());
+      var index_0 = checkIndexOverflow(tmp1);
+      this.onNewNodeAppeared_dw7cpo_k$(activeNodes.subList_xle3r2_k$(index_0 + 1 | 0, activeNodes.get_size_woubt6_k$()), item, emptySet());
     }
   };
   function ChildAwareCallbackInfo() {
   }
-  function ChildAwareImpl$observeChanges$o$collect$slambda($collector, resultContinuation) {
-    this.$collector_1 = $collector;
+  function ChildAwareImpl$observeChanges$o$collect$slambda($$this$unsafeFlow, resultContinuation) {
+    this.$$this$unsafeFlow_1 = $$this$unsafeFlow;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(ChildAwareImpl$observeChanges$o$collect$slambda).invoke_z91a2t_k$ = function (value, $completion) {
-    var tmp = this.create_cevzoi_k$(value, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(ChildAwareImpl$observeChanges$o$collect$slambda).invoke_p6du0u_k$ = function (value, $completion) {
+    var tmp = this.create_t3oc6u_k$(value, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(ChildAwareImpl$observeChanges$o$collect$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_z91a2t_k$((!(p1 == null) ? isInterface(p1, Map) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(ChildAwareImpl$observeChanges$o$collect$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_p6du0u_k$((!(p1 == null) ? isInterface(p1, Map) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(ChildAwareImpl$observeChanges$o$collect$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -808,22 +811,26 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
-            var tmp0_mapNotNullTo = this.value_1.get_values_ksazhn_k$();
-            var tmp1_mapNotNullTo = HashSet_init_$Create$();
-            var tmp0_iterator = tmp0_mapNotNullTo.iterator_jk1svi_k$();
+            this.set_exceptionState_fex74n_k$(2);
+            var tmp_0 = this;
+            tmp_0.$this$unsafeTransform0__1 = this.$$this$unsafeFlow_1;
+            var tmp_1 = this;
+            tmp_1.value1__1 = this.value_1;
+            this.set_state_rjd8d0_k$(1);
+            var this_0 = this.value1__1.get_values_ksazhn_k$();
+            var destination = HashSet_init_$Create$();
+            var tmp0_iterator = this_0.iterator_jk1svi_k$();
             while (tmp0_iterator.hasNext_bitz1p_k$()) {
               var element = tmp0_iterator.next_20eer_k$();
               var tmp0_safe_receiver = get_nodeOrNull(element);
               if (tmp0_safe_receiver == null)
                 null;
               else {
-                tmp1_mapNotNullTo.add_1j60pz_k$(tmp0_safe_receiver);
+                destination.add_utx5q5_k$(tmp0_safe_receiver);
               }
             }
 
-            suspendResult = this.$collector_1.emit_1fbrsb_k$(tmp1_mapNotNullTo, this);
+            suspendResult = this.$this$unsafeTransform0__1.emit_t92u1f_k$(destination, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -839,24 +846,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(ChildAwareImpl$observeChanges$o$collect$slambda).create_cevzoi_k$ = function (value, completion) {
-    var i = new ChildAwareImpl$observeChanges$o$collect$slambda(this.$collector_1, completion);
+  protoOf(ChildAwareImpl$observeChanges$o$collect$slambda).create_t3oc6u_k$ = function (value, completion) {
+    var i = new ChildAwareImpl$observeChanges$o$collect$slambda(this.$$this$unsafeFlow_1, completion);
     i.value_1 = value;
     return i;
   };
-  protoOf(ChildAwareImpl$observeChanges$o$collect$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_cevzoi_k$((!(value == null) ? isInterface(value, Map) : false) ? value : THROW_CCE(), completion);
+  protoOf(ChildAwareImpl$observeChanges$o$collect$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_t3oc6u_k$((!(value == null) ? isInterface(value, Map) : false) ? value : THROW_CCE(), completion);
   };
-  function ChildAwareImpl$observeChanges$o$collect$slambda_0($collector, resultContinuation) {
-    var i = new ChildAwareImpl$observeChanges$o$collect$slambda($collector, resultContinuation);
+  function ChildAwareImpl$observeChanges$o$collect$slambda_0($$this$unsafeFlow, resultContinuation) {
+    var i = new ChildAwareImpl$observeChanges$o$collect$slambda($$this$unsafeFlow, resultContinuation);
     var l = function (value, $completion) {
-      return i.invoke_z91a2t_k$(value, $completion);
+      return i.invoke_p6du0u_k$(value, $completion);
     };
     l.$arity = 1;
     return l;
@@ -873,10 +880,12 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
-            var tmp_0 = ChildAwareImpl$observeChanges$o$collect$slambda_0(this.collector_1, null);
-            suspendResult = this._this__u8e3s4__1.$tmp0_map_1.collect_llpwvh_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0_0(tmp_0), this);
+            this.set_exceptionState_fex74n_k$(2);
+            var tmp_0 = this;
+            tmp_0.$this$unsafeFlow0__1 = this.collector_1;
+            this.set_state_rjd8d0_k$(1);
+            var tmp_1 = ChildAwareImpl$observeChanges$o$collect$slambda_0(this.$this$unsafeFlow0__1, null);
+            suspendResult = this._this__u8e3s4__1.$this_1.collect_aksokr_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0_0(tmp_1), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -892,8 +901,8 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
@@ -938,42 +947,41 @@
     $this.node_1 = _set____db54di;
   }
   function observeChanges($this, $completion) {
-    var tmp$ret$2;
     // Inline function 'kotlinx.coroutines.flow.map' call
-    var tmp0_map = _get_children__my42wc($this);
     // Inline function 'kotlinx.coroutines.flow.unsafeTransform' call
+    var this_0 = _get_children__my42wc($this);
     // Inline function 'kotlinx.coroutines.flow.internal.unsafeFlow' call
-    tmp$ret$2 = new _no_name_provided__qut3iv_0(tmp0_map);
+    var tmp$ret$2 = new _no_name_provided__qut3iv_0(this_0);
     var tmp = withPrevious(tmp$ret$2);
     var tmp_0 = ChildAwareImpl$observeChanges$slambda_0($this, null);
-    return tmp.collect_llpwvh_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0_0(tmp_0), $completion);
+    return tmp.collect_aksokr_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0_0(tmp_0), $completion);
   }
   function notifyWhenRegistered($this, callback) {
-    callback.onRegistered_vg08qn_k$(getCreatedNodes($this, _get_children__my42wc($this).get_value_j01efc_k$()));
+    callback.onRegistered_1szs7o_k$(getCreatedNodes($this, _get_children__my42wc($this).get_value_j01efc_k$()));
   }
   function notifyWhenChanged($this, child, nodes, ignore) {
     var tmp0_iterator = $this.callbacks_1.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var callback = tmp0_iterator.next_20eer_k$();
       if (callback instanceof Double) {
-        callback.onNewNodeAppeared_josshh_k$(nodes, child, ignore);
+        callback.onNewNodeAppeared_dw7cpo_k$(nodes, child, ignore);
       } else {
         if (callback instanceof Single) {
-          callback.onNewNodeAppeared_fecqf_k$(child);
+          callback.onNewNodeAppeared_trjsqq_k$(child);
         }
       }
     }
   }
   function removeWhenDestroyed(_this__u8e3s4, $this, info) {
-    _this__u8e3s4.addObserver_ch8ntw_k$(new ChildAwareImpl$removeWhenDestroyed$1($this, info));
+    _this__u8e3s4.addObserver_tygfj3_k$(new ChildAwareImpl$removeWhenDestroyed$1($this, info));
   }
   function getCreatedNodes($this, childEntryMap) {
     // Inline function 'kotlin.collections.mapNotNull' call
-    var tmp0_mapNotNull = childEntryMap.get_values_ksazhn_k$();
     // Inline function 'kotlin.collections.mapNotNullTo' call
-    var tmp0_mapNotNullTo = ArrayList_init_$Create$();
+    var this_0 = childEntryMap.get_values_ksazhn_k$();
+    var destination = ArrayList_init_$Create$();
     // Inline function 'kotlin.collections.forEach' call
-    var tmp0_iterator = tmp0_mapNotNull.iterator_jk1svi_k$();
+    var tmp0_iterator = this_0.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var element = tmp0_iterator.next_20eer_k$();
       // Inline function 'kotlin.collections.mapNotNullTo.<anonymous>' call
@@ -984,10 +992,10 @@
       else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
-        tmp0_mapNotNullTo.add_1j60pz_k$(tmp0_safe_receiver);
+        destination.add_utx5q5_k$(tmp0_safe_receiver);
       }
     }
-    return tmp0_mapNotNullTo;
+    return destination;
   }
   function get_$stableprop_2() {
     return 8;
@@ -995,21 +1003,21 @@
   function sam$kotlinx_coroutines_flow_FlowCollector$0_0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0_0).emit_1fbrsb_k$ = function (value, $completion) {
+  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0_0).emit_t92u1f_k$ = function (value, $completion) {
     return this.function_1(value, $completion);
   };
   function ChildAwareImpl$init$slambda(this$0, resultContinuation) {
     this.this$0__1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(ChildAwareImpl$init$slambda).invoke_d6gbsu_k$ = function ($this$launch, $completion) {
-    var tmp = this.create_b6qu53_k$($this$launch, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(ChildAwareImpl$init$slambda).invoke_d9fzmj_k$ = function ($this$launch, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$launch, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(ChildAwareImpl$init$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(ChildAwareImpl$init$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(ChildAwareImpl$init$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -1018,8 +1026,8 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
             suspendResult = observeChanges(this.this$0__1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
@@ -1036,52 +1044,52 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(ChildAwareImpl$init$slambda).create_b6qu53_k$ = function ($this$launch, completion) {
+  protoOf(ChildAwareImpl$init$slambda).create_rcuf4x_k$ = function ($this$launch, completion) {
     var i = new ChildAwareImpl$init$slambda(this.this$0__1, completion);
     i.$this$launch_1 = $this$launch;
     return i;
   };
-  protoOf(ChildAwareImpl$init$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(ChildAwareImpl$init$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function ChildAwareImpl$init$slambda_0(this$0, resultContinuation) {
     var i = new ChildAwareImpl$init$slambda(this$0, resultContinuation);
     var l = function ($this$launch, $completion) {
-      return i.invoke_d6gbsu_k$($this$launch, $completion);
+      return i.invoke_d9fzmj_k$($this$launch, $completion);
     };
     l.$arity = 1;
     return l;
   }
-  function _no_name_provided__qut3iv_0($tmp0_map) {
-    this.$tmp0_map_1 = $tmp0_map;
+  function _no_name_provided__qut3iv_0($this) {
+    this.$this_1 = $this;
   }
-  protoOf(_no_name_provided__qut3iv_0).collect_m5owll_k$ = function (collector, $completion) {
+  protoOf(_no_name_provided__qut3iv_0).collect_bhjs0u_k$ = function (collector, $completion) {
     var tmp = new $collectCOROUTINE$1(this, collector, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(_no_name_provided__qut3iv_0).collect_llpwvh_k$ = function (collector, $completion) {
-    return this.collect_m5owll_k$(collector, $completion);
+  protoOf(_no_name_provided__qut3iv_0).collect_aksokr_k$ = function (collector, $completion) {
+    return this.collect_bhjs0u_k$(collector, $completion);
   };
   function ChildAwareImpl$observeChanges$slambda(this$0, resultContinuation) {
     this.this$0__1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(ChildAwareImpl$observeChanges$slambda).invoke_a3l2h5_k$ = function (_name_for_destructuring_parameter_0__wldtmu, $completion) {
-    var tmp = this.create_m340fg_k$(_name_for_destructuring_parameter_0__wldtmu, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(ChildAwareImpl$observeChanges$slambda).invoke_876sy7_k$ = function (_name_for_destructuring_parameter_0__wldtmu, $completion) {
+    var tmp = this.create_t18kzn_k$(_name_for_destructuring_parameter_0__wldtmu, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(ChildAwareImpl$observeChanges$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_a3l2h5_k$(p1 instanceof CompareValues ? p1 : THROW_CCE(), $completion);
+  protoOf(ChildAwareImpl$observeChanges$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_876sy7_k$(p1 instanceof CompareValues ? p1 : THROW_CCE(), $completion);
   };
   protoOf(ChildAwareImpl$observeChanges$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -1089,7 +1097,7 @@
       try {
         var tmp = this.get_state_iypx7s_k$();
         if (tmp === 0) {
-          this.set_exceptionState_s9sevl_k$(1);
+          this.set_exceptionState_fex74n_k$(1);
           var previous = this._name_for_destructuring_parameter_0__wldtmu_1.component1_7eebsc_k$();
           var current = this._name_for_destructuring_parameter_0__wldtmu_1.component2_7eebsb_k$();
           var newNodes = minus(current, previous == null ? emptySet() : previous);
@@ -1098,7 +1106,7 @@
           while (tmp0_iterator.hasNext_bitz1p_k$()) {
             var element = tmp0_iterator.next_20eer_k$();
             notifyWhenChanged(this.this$0__1, element, current, visitedSet);
-            visitedSet.add_1j60pz_k$(element);
+            visitedSet.add_utx5q5_k$(element);
           }
           return Unit_getInstance();
         } else if (tmp === 1) {
@@ -1110,18 +1118,18 @@
       }
      while (true);
   };
-  protoOf(ChildAwareImpl$observeChanges$slambda).create_m340fg_k$ = function (_name_for_destructuring_parameter_0__wldtmu, completion) {
+  protoOf(ChildAwareImpl$observeChanges$slambda).create_t18kzn_k$ = function (_name_for_destructuring_parameter_0__wldtmu, completion) {
     var i = new ChildAwareImpl$observeChanges$slambda(this.this$0__1, completion);
     i._name_for_destructuring_parameter_0__wldtmu_1 = _name_for_destructuring_parameter_0__wldtmu;
     return i;
   };
-  protoOf(ChildAwareImpl$observeChanges$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_m340fg_k$(value instanceof CompareValues ? value : THROW_CCE(), completion);
+  protoOf(ChildAwareImpl$observeChanges$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_t18kzn_k$(value instanceof CompareValues ? value : THROW_CCE(), completion);
   };
   function ChildAwareImpl$observeChanges$slambda_0(this$0, resultContinuation) {
     var i = new ChildAwareImpl$observeChanges$slambda(this$0, resultContinuation);
     var l = function (_name_for_destructuring_parameter_0__wldtmu, $completion) {
-      return i.invoke_a3l2h5_k$(_name_for_destructuring_parameter_0__wldtmu, $completion);
+      return i.invoke_876sy7_k$(_name_for_destructuring_parameter_0__wldtmu, $completion);
     };
     l.$arity = 1;
     return l;
@@ -1130,8 +1138,8 @@
     this.this$0__1 = this$0;
     this.$info_1 = $info;
   }
-  protoOf(ChildAwareImpl$removeWhenDestroyed$1).onDestroy_x0zuba_k$ = function () {
-    this.this$0__1.callbacks_1.remove_8hbkc6_k$(this.$info_1);
+  protoOf(ChildAwareImpl$removeWhenDestroyed$1).onDestroy_x0g1px_k$ = function () {
+    this.this$0__1.callbacks_1.remove_cedx0m_k$(this.$info_1);
   };
   function ChildAwareImpl() {
     this.callbacks_1 = ArrayList_init_$Create$();
@@ -1145,7 +1153,7 @@
       throwUninitializedPropertyAccessException('node');
     }
   };
-  protoOf(ChildAwareImpl).init_6xmvzm_k$ = function (node) {
+  protoOf(ChildAwareImpl).init_tlb8we_k$ = function (node) {
     this.node_1 = node;
     this.lifecycle_1 = node.get_lifecycle_3iiym9_k$();
     this.coroutineScope_1 = _get_lifecycle__yk9dcp(this).get_coroutineScope_5k7h45_k$();
@@ -1157,21 +1165,21 @@
       this.children_1 = MutableStateFlow(emptyMap());
     }
   };
-  protoOf(ChildAwareImpl).whenChildAttached_homwl1_k$ = function (child, callback) {
+  protoOf(ChildAwareImpl).whenChildAttached_6ohtce_k$ = function (child, callback) {
     if (get_isDestroyed(_get_lifecycle__yk9dcp(this)))
       return Unit_getInstance();
     var info = new Single(child, callback, _get_lifecycle__yk9dcp(this));
     // Inline function 'kotlin.collections.plusAssign' call
-    this.callbacks_1.add_1j60pz_k$(info);
+    this.callbacks_1.add_utx5q5_k$(info);
     notifyWhenRegistered(this, info);
     removeWhenDestroyed(_get_lifecycle__yk9dcp(this), this, info);
   };
-  protoOf(ChildAwareImpl).whenChildrenAttached_jtt3b8_k$ = function (child1, child2, callback) {
+  protoOf(ChildAwareImpl).whenChildrenAttached_hfszwp_k$ = function (child1, child2, callback) {
     if (get_isDestroyed(_get_lifecycle__yk9dcp(this)))
       return Unit_getInstance();
     var info = new Double(child1, child2, callback, _get_lifecycle__yk9dcp(this));
     // Inline function 'kotlin.collections.plusAssign' call
-    this.callbacks_1.add_1j60pz_k$(info);
+    this.callbacks_1.add_utx5q5_k$(info);
     notifyWhenRegistered(this, info);
     removeWhenDestroyed(_get_lifecycle__yk9dcp(this), this, info);
   };
@@ -1194,7 +1202,7 @@
         return KeepMode_SUSPEND_getInstance();
       default:
         KeepMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -1284,7 +1292,7 @@
   }
   function mapNotNullToSet(_this__u8e3s4, $this, mapper) {
     // Inline function 'kotlin.collections.mapNotNullTo' call
-    var tmp0_mapNotNullTo = HashSet_init_$Create$_0(_this__u8e3s4.get_size_woubt6_k$(), 1.0);
+    var destination = HashSet_init_$Create$_0(_this__u8e3s4.get_size_woubt6_k$(), 1.0);
     // Inline function 'kotlin.collections.forEach' call
     var tmp0_iterator = _this__u8e3s4.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
@@ -1296,23 +1304,23 @@
       else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
-        tmp0_mapNotNullTo.add_1j60pz_k$(tmp0_safe_receiver);
+        destination.add_utx5q5_k$(tmp0_safe_receiver);
       }
     }
-    return tmp0_mapNotNullTo;
+    return destination;
   }
   function ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda(this$0, resultContinuation) {
     this.this$0__1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda).invoke_eykgfz_k$ = function (state, $completion) {
-    var tmp = this.create_xhvbvi_k$(state, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda).invoke_lf2dsd_k$ = function (state, $completion) {
+    var tmp = this.create_j97hpr_k$(state, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_eykgfz_k$(p1 instanceof Elements ? p1 : THROW_CCE(), $completion);
+  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_lf2dsd_k$(p1 instanceof Elements ? p1 : THROW_CCE(), $completion);
   };
   protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -1320,7 +1328,7 @@
       try {
         var tmp = this.get_state_iypx7s_k$();
         if (tmp === 0) {
-          this.set_exceptionState_s9sevl_k$(1);
+          this.set_exceptionState_fex74n_k$(1);
           var appyxComponentKeepKeys;
           var appyxComponentSuspendKeys;
           var appyxComponentKeys;
@@ -1350,18 +1358,18 @@
       }
      while (true);
   };
-  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda).create_xhvbvi_k$ = function (state, completion) {
+  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda).create_j97hpr_k$ = function (state, completion) {
     var i = new ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda(this.this$0__1, completion);
     i.state_2 = state;
     return i;
   };
-  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_xhvbvi_k$(value instanceof Elements ? value : THROW_CCE(), completion);
+  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_j97hpr_k$(value instanceof Elements ? value : THROW_CCE(), completion);
   };
   function ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda_0(this$0, resultContinuation) {
     var i = new ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda(this$0, resultContinuation);
     var l = function (state, $completion) {
-      return i.invoke_eykgfz_k$(state, $completion);
+      return i.invoke_lf2dsd_k$(state, $completion);
     };
     l.$arity = 1;
     return l;
@@ -1399,9 +1407,9 @@
   function updateChildren($this, appyxComponentElements, appyxComponentKeepElements, appyxComponentSuspendElements) {
     $l$block_2: {
       // Inline function 'kotlinx.coroutines.flow.update' call
-      var tmp0_update = $this._children_1;
+      var this_0 = $this._children_1;
       while (true) {
-        var prevValue = tmp0_update.get_value_j01efc_k$();
+        var prevValue = this_0.get_value_j01efc_k$();
         var tmp$ret$0;
         $l$block: {
           // Inline function 'com.bumble.appyx.navigation.children.ChildNodeCreationManager.updateChildren.<anonymous>' call
@@ -1428,17 +1436,17 @@
           while (tmp0_iterator.hasNext_bitz1p_k$()) {
             var element = tmp0_iterator.next_20eer_k$();
             // Inline function 'com.bumble.appyx.navigation.children.ChildNodeCreationManager.updateChildren.<anonymous>.<anonymous>' call
-            var shouldSuspend = $this.keepMode_1.equals(KeepMode_SUSPEND_getInstance()) ? appyxComponentSuspendElements.contains_2ehdt1_k$(element) : false;
+            var shouldSuspend = $this.keepMode_1.equals(KeepMode_SUSPEND_getInstance()) ? appyxComponentSuspendElements.contains_aljjnj_k$(element) : false;
             // Inline function 'kotlin.collections.set' call
-            var tmp0_set = childEntry($this, element, null, shouldSuspend);
-            mutableMap.put_3mhbri_k$(element, tmp0_set);
+            var value = childEntry($this, element, null, shouldSuspend);
+            mutableMap.put_4fpzoq_k$(element, value);
           }
           // Inline function 'kotlin.collections.forEach' call
           var tmp0_iterator_0 = removedElements.iterator_jk1svi_k$();
           while (tmp0_iterator_0.hasNext_bitz1p_k$()) {
             var element_0 = tmp0_iterator_0.next_20eer_k$();
             // Inline function 'com.bumble.appyx.navigation.children.ChildNodeCreationManager.updateChildren.<anonymous>.<anonymous>' call
-            mutableMap.remove_8hbkc0_k$(element_0);
+            mutableMap.remove_gppy8k_k$(element_0);
           }
           // Inline function 'kotlin.collections.forEach' call
           var tmp0_iterator_1 = keepElements.iterator_jk1svi_k$();
@@ -1446,26 +1454,25 @@
             var element_1 = tmp0_iterator_1.next_20eer_k$();
             // Inline function 'com.bumble.appyx.navigation.children.ChildNodeCreationManager.updateChildren.<anonymous>.<anonymous>' call
             // Inline function 'kotlin.collections.set' call
-            var tmp$ret$3;
             // Inline function 'kotlin.requireNotNull' call
-            var tmp0_requireNotNull = mutableMap.get_1mhr4y_k$(element_1);
+            var value_0 = mutableMap.get_wei43m_k$(element_1);
             // Inline function 'kotlin.contracts.contract' call
             var tmp$ret$2;
             $l$block_0: {
               // Inline function 'kotlin.requireNotNull' call
               // Inline function 'kotlin.contracts.contract' call
-              if (tmp0_requireNotNull == null) {
+              if (value_0 == null) {
                 // Inline function 'kotlin.requireNotNull.<anonymous>' call
                 var message = 'Required value was null.';
                 throw IllegalArgumentException_init_$Create$(toString(message));
               } else {
-                tmp$ret$2 = tmp0_requireNotNull;
+                tmp$ret$2 = value_0;
                 break $l$block_0;
               }
             }
-            tmp$ret$3 = tmp$ret$2;
-            var tmp1_set = initialize(tmp$ret$3, $this);
-            mutableMap.put_3mhbri_k$(element_1, tmp1_set);
+            var tmp$ret$3 = tmp$ret$2;
+            var value_1 = initialize(tmp$ret$3, $this);
+            mutableMap.put_4fpzoq_k$(element_1, value_1);
           }
           // Inline function 'kotlin.collections.forEach' call
           var tmp0_iterator_2 = suspendElements.iterator_jk1svi_k$();
@@ -1473,77 +1480,68 @@
             var element_2 = tmp0_iterator_2.next_20eer_k$();
             // Inline function 'com.bumble.appyx.navigation.children.ChildNodeCreationManager.updateChildren.<anonymous>.<anonymous>' call
             // Inline function 'kotlin.collections.set' call
-            var tmp$ret$6;
             // Inline function 'kotlin.requireNotNull' call
-            var tmp0_requireNotNull_0 = mutableMap.get_1mhr4y_k$(element_2);
+            var value_2 = mutableMap.get_wei43m_k$(element_2);
             // Inline function 'kotlin.contracts.contract' call
             var tmp$ret$5;
             $l$block_1: {
               // Inline function 'kotlin.requireNotNull' call
               // Inline function 'kotlin.contracts.contract' call
-              if (tmp0_requireNotNull_0 == null) {
+              if (value_2 == null) {
                 // Inline function 'kotlin.requireNotNull.<anonymous>' call
                 var message_0 = 'Required value was null.';
                 throw IllegalArgumentException_init_$Create$(toString(message_0));
               } else {
-                tmp$ret$5 = tmp0_requireNotNull_0;
+                tmp$ret$5 = value_2;
                 break $l$block_1;
               }
             }
-            tmp$ret$6 = tmp$ret$5;
-            var tmp1_set_0 = suspend(tmp$ret$6, $this);
-            mutableMap.put_3mhbri_k$(element_2, tmp1_set_0);
+            var tmp$ret$6 = tmp$ret$5;
+            var value_3 = suspend(tmp$ret$6, $this);
+            mutableMap.put_4fpzoq_k$(element_2, value_3);
           }
           tmp$ret$0 = mutableMap;
         }
         var nextValue = tmp$ret$0;
-        if (tmp0_update.compareAndSet_fjyiiu_k$(prevValue, nextValue)) {
+        if (this_0.compareAndSet_l3595a_k$(prevValue, nextValue)) {
           break $l$block_2;
         }
       }
     }
   }
   function restoreChildren(_this__u8e3s4, $this) {
-    var tmp;
-    if (_this__u8e3s4 == null) {
-      tmp = null;
-    } else {
-      Companion_getInstance_9();
-      tmp = _this__u8e3s4.get_1mhr4y_k$('ChildrenState');
-    }
-    var tmp_0 = tmp;
-    var tmp1_safe_receiver = (!(tmp_0 == null) ? isInterface(tmp_0, Map) : false) ? tmp_0 : null;
-    var tmp_1;
+    var tmp = _this__u8e3s4 == null ? null : _this__u8e3s4.get_wei43m_k$('ChildrenState');
+    var tmp1_safe_receiver = (!(tmp == null) ? isInterface(tmp, Map) : false) ? tmp : null;
+    var tmp_0;
     if (tmp1_safe_receiver == null) {
-      tmp_1 = null;
+      tmp_0 = null;
     } else {
       // Inline function 'kotlin.collections.mapValues' call
       // Inline function 'kotlin.collections.mapValuesTo' call
-      var tmp0_mapValuesTo = LinkedHashMap_init_$Create$(mapCapacity(tmp1_safe_receiver.get_size_woubt6_k$()));
+      var destination = LinkedHashMap_init_$Create$(mapCapacity(tmp1_safe_receiver.get_size_woubt6_k$()));
       // Inline function 'kotlin.collections.associateByTo' call
       var tmp0_iterator = tmp1_safe_receiver.get_entries_p20ztl_k$().iterator_jk1svi_k$();
       while (tmp0_iterator.hasNext_bitz1p_k$()) {
         var element = tmp0_iterator.next_20eer_k$();
         // Inline function 'kotlin.collections.mapValuesTo.<anonymous>' call
-        var tmp_2 = element.get_key_18j28a_k$();
-        var tmp$ret$1;
+        var tmp_1 = element.get_key_18j28a_k$();
         // Inline function 'com.bumble.appyx.navigation.children.ChildNodeCreationManager.restoreChildren.<anonymous>' call
-        tmp$ret$1 = childEntry($this, element.get_key_18j28a_k$(), element.get_value_j01efc_k$(), true);
-        tmp0_mapValuesTo.put_3mhbri_k$(tmp_2, tmp$ret$1);
+        var tmp$ret$1 = childEntry($this, element.get_key_18j28a_k$(), element.get_value_j01efc_k$(), true);
+        destination.put_4fpzoq_k$(tmp_1, tmp$ret$1);
       }
-      tmp_1 = tmp0_mapValuesTo;
+      tmp_0 = destination;
     }
-    return tmp_1;
+    return tmp_0;
   }
   function childBuildContext($this, savedState) {
-    return new BuildContext(new Child(_get_parentNode__eo2cht($this)), savedState, $this.customisations_1.getSubDirectoryOrSelf_vtw4p5_k$(getKClassFromExpression(_get_parentNode__eo2cht($this))));
+    return new BuildContext(new Child(_get_parentNode__eo2cht($this)), savedState, $this.customisations_1.getSubDirectoryOrSelf_ngo65l_k$(getKClassFromExpression(_get_parentNode__eo2cht($this))));
   }
   function childEntry($this, key, savedState, suspended) {
     var tmp;
     if (suspended) {
       tmp = new Suspended(key, savedState);
     } else {
-      tmp = new Initialized(key, build(_get_parentNode__eo2cht($this).resolve_rgjbzh_k$(key.get_interactionTarget_ay5ie_k$(), childBuildContext($this, savedState))));
+      tmp = new Initialized(key, build(_get_parentNode__eo2cht($this).resolve_qtmp0t_k$(key.get_interactionTarget_ay5ie_k$(), childBuildContext($this, savedState))));
     }
     return tmp;
   }
@@ -1553,7 +1551,7 @@
       tmp = _this__u8e3s4;
     } else {
       if (_this__u8e3s4 instanceof Suspended) {
-        tmp = new Initialized(_this__u8e3s4.get_key_18j28a_k$(), build(_get_parentNode__eo2cht($this).resolve_rgjbzh_k$(_this__u8e3s4.get_key_18j28a_k$().get_interactionTarget_ay5ie_k$(), childBuildContext($this, _this__u8e3s4.get_savedState_52fa37_k$()))));
+        tmp = new Initialized(_this__u8e3s4.get_key_18j28a_k$(), build(_get_parentNode__eo2cht($this).resolve_qtmp0t_k$(_this__u8e3s4.get_key_18j28a_k$().get_interactionTarget_ay5ie_k$(), childBuildContext($this, _this__u8e3s4.get_savedState_52fa37_k$()))));
       } else {
         noWhenBranchMatchedException();
       }
@@ -1569,7 +1567,7 @@
         var tmp_0 = _this__u8e3s4.get_key_18j28a_k$();
         var tmp_1 = _this__u8e3s4.get_node_wor8sr_k$();
         var tmp_2 = ChildNodeCreationManager$suspend$lambda;
-        tmp = new Suspended(tmp_0, tmp_1.saveInstanceState_8yjxr3_k$(new sam$androidx_compose_runtime_saveable_SaverScope$0(tmp_2)));
+        tmp = new Suspended(tmp_0, tmp_1.saveInstanceState_2ofm6y_k$(new sam$androidx_compose_runtime_saveable_SaverScope$0(tmp_2)));
       } else {
         noWhenBranchMatchedException();
       }
@@ -1592,7 +1590,7 @@
   function sam$kotlinx_coroutines_flow_FlowCollector$0_1(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0_1).emit_1fbrsb_k$ = function (value, $completion) {
+  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0_1).emit_t92u1f_k$ = function (value, $completion) {
     return this.function_1(value, $completion);
   };
   function sam$androidx_compose_runtime_saveable_SaverScope$0(function_0) {
@@ -1606,14 +1604,14 @@
     this.this$0__1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda).invoke_d6gbsu_k$ = function ($this$launch, $completion) {
-    var tmp = this.create_b6qu53_k$($this$launch, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda).invoke_d9fzmj_k$ = function ($this$launch, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$launch, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -1622,11 +1620,11 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
             var tmp_0 = this.$parentNode_1.get_appyxComponent_er08wq_k$().get_elements_vxwh8g_k$();
             var tmp_1 = ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda$slambda_0(this.this$0__1, null);
-            suspendResult = tmp_0.collect_4rdebi_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0_1(tmp_1), this);
+            suspendResult = tmp_0.collect_ve9kyv_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0_1(tmp_1), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -1643,37 +1641,37 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda).create_b6qu53_k$ = function ($this$launch, completion) {
+  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda).create_rcuf4x_k$ = function ($this$launch, completion) {
     var i = new ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda(this.$parentNode_1, this.this$0__1, completion);
     i.$this$launch_1 = $this$launch;
     return i;
   };
-  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda_0($parentNode, this$0, resultContinuation) {
     var i = new ChildNodeCreationManager$syncAppyxComponentWithChildren$slambda($parentNode, this$0, resultContinuation);
     var l = function ($this$launch, $completion) {
-      return i.invoke_d6gbsu_k$($this$launch, $completion);
+      return i.invoke_d9fzmj_k$($this$launch, $completion);
     };
     l.$arity = 1;
     return l;
   }
   function ChildNodeCreationManager$updateChildren$lambda(entry) {
     // Inline function 'kotlin.takeIf' call
-    var tmp0_takeIf = entry.get_key_18j28a_k$();
+    var this_0 = entry.get_key_18j28a_k$();
     // Inline function 'kotlin.contracts.contract' call
     var tmp;
     // Inline function 'com.bumble.appyx.navigation.children.ChildNodeCreationManager.updateChildren.<anonymous>.<anonymous>.<anonymous>' call
     var tmp_0 = entry.get_value_j01efc_k$();
     if (tmp_0 instanceof Initialized) {
-      tmp = tmp0_takeIf;
+      tmp = this_0;
     } else {
       tmp = null;
     }
@@ -1681,13 +1679,13 @@
   }
   function ChildNodeCreationManager$updateChildren$lambda_0(entry) {
     // Inline function 'kotlin.takeIf' call
-    var tmp0_takeIf = entry.get_key_18j28a_k$();
+    var this_0 = entry.get_key_18j28a_k$();
     // Inline function 'kotlin.contracts.contract' call
     var tmp;
     // Inline function 'com.bumble.appyx.navigation.children.ChildNodeCreationManager.updateChildren.<anonymous>.<anonymous>.<anonymous>' call
     var tmp_0 = entry.get_value_j01efc_k$();
     if (tmp_0 instanceof Suspended) {
-      tmp = tmp0_takeIf;
+      tmp = this_0;
     } else {
       tmp = null;
     }
@@ -1707,7 +1705,7 @@
   protoOf(ChildNodeCreationManager).get_children_4cwbp4_k$ = function () {
     return this.children_1;
   };
-  protoOf(ChildNodeCreationManager).launch_53dbba_k$ = function (parentNode) {
+  protoOf(ChildNodeCreationManager).launch_tix3i7_k$ = function (parentNode) {
     this.parentNode_1 = parentNode;
     var tmp0_safe_receiver = restoreChildren(this.savedStateMap_1, this);
     if (tmp0_safe_receiver == null)
@@ -1718,12 +1716,12 @@
       // Inline function 'com.bumble.appyx.navigation.children.ChildNodeCreationManager.launch.<anonymous>' call
       $l$block: {
         // Inline function 'kotlinx.coroutines.flow.update' call
-        var tmp0_update = this._children_1;
+        var this_0 = this._children_1;
         while (true) {
-          var prevValue = tmp0_update.get_value_j01efc_k$();
+          var prevValue = this_0.get_value_j01efc_k$();
           // Inline function 'com.bumble.appyx.navigation.children.ChildNodeCreationManager.launch.<anonymous>.<anonymous>' call
           var nextValue = tmp0_safe_receiver;
-          if (tmp0_update.compareAndSet_fjyiiu_k$(prevValue, nextValue)) {
+          if (this_0.compareAndSet_l3595a_k$(prevValue, nextValue)) {
             break $l$block;
           }
         }
@@ -1732,13 +1730,13 @@
     }
     syncAppyxComponentWithChildren(this, parentNode);
   };
-  protoOf(ChildNodeCreationManager).childOrCreate_ienlyf_k$ = function (element) {
+  protoOf(ChildNodeCreationManager).childOrCreate_mlg821_k$ = function (element) {
     var value = this._children_1.get_value_j01efc_k$();
-    var tmp0_elvis_lhs = value.get_1mhr4y_k$(element);
+    var tmp0_elvis_lhs = value.get_wei43m_k$(element);
     var tmp;
     if (tmp0_elvis_lhs == null) {
-      var tmp0_error = 'Rendering and children management is out of sync: requested ' + element + ' but have only ' + value.get_keys_wop4xp_k$();
-      throw IllegalStateException_init_$Create$(toString(tmp0_error));
+      var message = 'Rendering and children management is out of sync: requested ' + element + ' but have only ' + value.get_keys_wop4xp_k$();
+      throw IllegalStateException_init_$Create$(toString(message));
     } else {
       tmp = tmp0_elvis_lhs;
     }
@@ -1751,15 +1749,15 @@
         var tmp$ret$1;
         $l$block: {
           // Inline function 'kotlinx.coroutines.flow.updateAndGet' call
-          var tmp1_updateAndGet = this._children_1;
+          var this_0 = this._children_1;
           while (true) {
-            var prevValue = tmp1_updateAndGet.get_value_j01efc_k$();
+            var prevValue = this_0.get_value_j01efc_k$();
             // Inline function 'com.bumble.appyx.navigation.children.ChildNodeCreationManager.childOrCreate.<anonymous>' call
-            var tmp0_elvis_lhs_0 = prevValue.get_1mhr4y_k$(element);
+            var tmp0_elvis_lhs_0 = prevValue.get_wei43m_k$(element);
             var tmp_1;
             if (tmp0_elvis_lhs_0 == null) {
-              var tmp0_error_0 = 'Requested child ' + element + ' disappeared';
-              throw IllegalStateException_init_$Create$(toString(tmp0_error_0));
+              var message_0 = 'Requested child ' + element + ' disappeared';
+              throw IllegalStateException_init_$Create$(toString(message_0));
             } else {
               tmp_1 = tmp0_elvis_lhs_0;
             }
@@ -1775,13 +1773,13 @@
               }
             }
             var nextValue = tmp_2;
-            if (tmp1_updateAndGet.compareAndSet_fjyiiu_k$(prevValue, nextValue)) {
+            if (this_0.compareAndSet_l3595a_k$(prevValue, nextValue)) {
               tmp$ret$1 = nextValue;
               break $l$block;
             }
           }
         }
-        var tmp_3 = tmp$ret$1.get_1mhr4y_k$(element);
+        var tmp_3 = tmp$ret$1.get_wei43m_k$(element);
         tmp_0 = tmp_3 instanceof Initialized ? tmp_3 : THROW_CCE();
       } else {
         noWhenBranchMatchedException();
@@ -1789,26 +1787,25 @@
     }
     return tmp_0;
   };
-  protoOf(ChildNodeCreationManager).saveChildrenState_ku378i_k$ = function (writer) {
+  protoOf(ChildNodeCreationManager).saveChildrenState_ngx0z1_k$ = function (writer) {
     var children = this._children_1.get_value_j01efc_k$();
     // Inline function 'kotlin.collections.isNotEmpty' call
     if (!children.isEmpty_y1axqb_k$()) {
       // Inline function 'kotlin.collections.mapValues' call
       // Inline function 'kotlin.collections.mapValuesTo' call
-      var tmp0_mapValuesTo = LinkedHashMap_init_$Create$(mapCapacity(children.get_size_woubt6_k$()));
+      var destination = LinkedHashMap_init_$Create$(mapCapacity(children.get_size_woubt6_k$()));
       // Inline function 'kotlin.collections.associateByTo' call
       var tmp0_iterator = children.get_entries_p20ztl_k$().iterator_jk1svi_k$();
       while (tmp0_iterator.hasNext_bitz1p_k$()) {
         var element = tmp0_iterator.next_20eer_k$();
         // Inline function 'kotlin.collections.mapValuesTo.<anonymous>' call
         var tmp = element.get_key_18j28a_k$();
-        var tmp$ret$3;
         // Inline function 'com.bumble.appyx.navigation.children.ChildNodeCreationManager.saveChildrenState.<anonymous>' call
         // Inline function 'kotlin.collections.component2' call
         var entry = element.get_value_j01efc_k$();
         var tmp_0;
         if (entry instanceof Initialized) {
-          tmp_0 = entry.get_node_wor8sr_k$().saveInstanceState_8yjxr3_k$(writer.get_saverScope_borf48_k$());
+          tmp_0 = entry.get_node_wor8sr_k$().saveInstanceState_2ofm6y_k$(writer.get_saverScope_borf48_k$());
         } else {
           if (entry instanceof Suspended) {
             tmp_0 = entry.get_savedState_52fa37_k$();
@@ -1816,16 +1813,15 @@
             noWhenBranchMatchedException();
           }
         }
-        tmp$ret$3 = tmp_0;
-        tmp0_mapValuesTo.put_3mhbri_k$(tmp, tmp$ret$3);
+        var tmp$ret$3 = tmp_0;
+        destination.put_4fpzoq_k$(tmp, tmp$ret$3);
       }
-      var childrenState = tmp0_mapValuesTo;
+      var childrenState = destination;
       // Inline function 'kotlin.collections.isNotEmpty' call
       if (!childrenState.isEmpty_y1axqb_k$()) {
         // Inline function 'kotlin.collections.set' call
-        Companion_getInstance_9();
-        var tmp0_set = 'ChildrenState';
-        writer.put_3mhbri_k$(tmp0_set, childrenState);
+        var key = 'ChildrenState';
+        writer.put_4fpzoq_k$(key, childrenState);
       }
     }
   };
@@ -1842,7 +1838,7 @@
     var gestureExtraTouchArea_0 = {_v: new Dp(gestureExtraTouchArea)};
     var block_0 = {_v: block};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(1826756814);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1826756814);
     sourceInformation($composer_0, 'C(AppyxComponent$composable)P(!1,5,2,4,3:c#ui.unit.Dp)');
     var $dirty = $changed;
     if (!(($default & -2147483648) === 0))
@@ -1860,19 +1856,19 @@
     if (!(($default & 4) === 0))
       $dirty = $dirty | 3072;
     else if (($changed & 7168) === 0)
-      $dirty = $dirty | ($composer_0.changed_i0nym2_k$(clipToBounds_1._v) ? 2048 : 1024);
+      $dirty = $dirty | ($composer_0.changed_jpyyrz_k$(clipToBounds_1._v) ? 2048 : 1024);
     if (($changed & 57344) === 0)
       $dirty = $dirty | ((($default & 8) === 0 ? $composer_0.changed_ga7h3f_k$(gestureValidator_0._v) : false) ? 16384 : 8192);
     if (!(($default & 16) === 0))
       $dirty = $dirty | 196608;
     else if (($changed & 458752) === 0)
-      $dirty = $dirty | ($composer_0.changed_7hxtmu_k$(_Dp___get_value__impl__geb1vb(gestureExtraTouchArea_0._v.value_1)) ? 131072 : 65536);
+      $dirty = $dirty | ($composer_0.changed_i8bvic_k$(_Dp___get_value__impl__geb1vb(gestureExtraTouchArea_0._v.value_1)) ? 131072 : 65536);
     if (!(($default & 32) === 0))
       $dirty = $dirty | 1572864;
     else if (($changed & 3670016) === 0)
       $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(block_0._v) ? 1048576 : 524288);
     if (!(($dirty & 2995931) === 599186) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      $composer_0.startDefaults_g7jseb_k$();
+      $composer_0.startDefaults_g83kzo_k$();
       if (($changed & 1) === 0 ? true : $composer_0.get_defaultsInvalid_y88fc4_k$()) {
         if (!(($default & 2) === 0)) {
           modifier_0._v = Companion_getInstance();
@@ -1891,105 +1887,103 @@
           block_0._v = null;
         }
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         if (!(($default & 8) === 0))
           $dirty = $dirty & -57345;
       }
-      $composer_0.endDefaults_b0883g_k$();
+      $composer_0.endDefaults_b0s0ot_k$();
       if (isTraceInProgress()) {
         traceEventStart(1826756814, $dirty, -1, 'com.bumble.appyx.navigation.composable.AppyxComponent$composable (AppyxComponent.kt:59)');
       }
       // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-      var tmp0_$get_current$$composable_h5ksy7 = get_LocalDensity();
+      var this_0 = get_LocalDensity();
       var $composer_1 = $composer_0;
       sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-      var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+      var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
       sourceInformationMarkerEnd($composer_1);
       var density = tmp0;
       // Inline function 'kotlin.math.roundToInt' call
-      var tmp$ret$2;
       // Inline function 'androidx.compose.ui.unit.Dp.times' call
       // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-      var tmp2_$get_current$$composable_g4n2vl = get_LocalScreenSize();
+      var this_1 = get_LocalScreenSize();
       var $composer_2 = $composer_0;
       sourceInformationMarkerStart($composer_2, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-      var tmp0_0 = $composer_2.consume_11nid3_k$(tmp2_$get_current$$composable_g4n2vl);
+      var tmp0_0 = $composer_2.consume_ebzcrh_k$(this_1);
       sourceInformationMarkerEnd($composer_2);
-      var tmp4_times = tmp0_0.get_widthDp_98cklg_k$();
-      var tmp5_times = density.get_density_qy0267_k$();
-      tmp$ret$2 = _Dp___init__impl__ms3zkb(_Dp___get_value__impl__geb1vb(tmp4_times) * tmp5_times);
-      var tmp6_roundToInt = _Dp___get_value__impl__geb1vb(tmp$ret$2);
-      var screenWidthPx = roundToInt(tmp6_roundToInt);
+      var this_2 = tmp0_0.get_widthDp_5mnst6_k$();
+      var other = density.get_density_qy0267_k$();
+      var tmp$ret$2 = _Dp___init__impl__ms3zkb(_Dp___get_value__impl__geb1vb(this_2) * other);
+      var this_3 = _Dp___get_value__impl__geb1vb(tmp$ret$2);
+      var screenWidthPx = roundToInt(this_3);
       // Inline function 'kotlin.math.roundToInt' call
-      var tmp$ret$5;
       // Inline function 'androidx.compose.ui.unit.Dp.times' call
       // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-      var tmp7_$get_current$$composable_dkarp2 = get_LocalScreenSize();
+      var this_4 = get_LocalScreenSize();
       var $composer_3 = $composer_0;
       sourceInformationMarkerStart($composer_3, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-      var tmp0_1 = $composer_3.consume_11nid3_k$(tmp7_$get_current$$composable_dkarp2);
+      var tmp0_1 = $composer_3.consume_ebzcrh_k$(this_4);
       sourceInformationMarkerEnd($composer_3);
-      var tmp9_times = tmp0_1.get_heightDp_dtmrdj_k$();
-      var tmp10_times = density.get_density_qy0267_k$();
-      tmp$ret$5 = _Dp___init__impl__ms3zkb(_Dp___get_value__impl__geb1vb(tmp9_times) * tmp10_times);
-      var tmp11_roundToInt = _Dp___get_value__impl__geb1vb(tmp$ret$5);
-      var screenHeightPx = roundToInt(tmp11_roundToInt);
+      var this_5 = tmp0_1.get_heightDp_11dm13_k$();
+      var other_0 = density.get_density_qy0267_k$();
+      var tmp$ret$5 = _Dp___init__impl__ms3zkb(_Dp___get_value__impl__geb1vb(this_5) * other_0);
+      var this_6 = _Dp___get_value__impl__geb1vb(tmp$ret$5);
+      var screenHeightPx = roundToInt(this_6);
       // Inline function 'androidx.compose.runtime.rememberCoroutineScope$composable' call
-      var tmp13_rememberCoroutineScope$composable = $composer_0;
+      var $composer_4 = $composer_0;
       var getContext = {_v: null};
-      var $composer_4 = tmp13_rememberCoroutineScope$composable;
-      $composer_4.startReplaceableGroup_rp6air_k$(102870005);
-      sourceInformation($composer_4, 'CC(rememberCoroutineScope$composable)481@20228L144:Effects.kt#9igjgp');
-      if (!(1 === 0)) {
+      var $composer_5 = $composer_4;
+      $composer_5.startReplaceableGroup_ip860b_k$(102870005);
+      sourceInformation($composer_5, 'CC(rememberCoroutineScope$composable)481@20228L144:Effects.kt#9igjgp');
+      if (!((1 & 1) === 0)) {
         getContext._v = AppyxComponent$composable$lambda_1;
       }
-      var composer = $composer_4;
+      var composer = $composer_5;
       // Inline function 'androidx.compose.runtime.remember$composable' call
-      var $composer_5 = $composer_4;
-      $composer_5.startReplaceableGroup_rp6air_k$(547886695);
-      sourceInformation($composer_5, 'CC(remember$composable):Composables.kt#9igjgp');
-      // Inline function 'androidx.compose.runtime.cache' call
-      // Inline function 'kotlin.let' call
-      var tmp0_let = $composer_5.rememberedValue_4dg93v_k$();
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var tmp;
-      if (false ? true : tmp0_let === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
-        // Inline function 'androidx.compose.runtime.rememberCoroutineScope$composable.<anonymous>' call
-        var value = new CompositionScopedCoroutineScopeCanceller(createCompositionCoroutineScope(getContext._v(), composer));
-        $composer_5.updateRememberedValue_l1colo_k$(value);
-        tmp = value;
-      } else {
-        tmp = tmp0_let;
-      }
-      var tmp_0 = tmp;
-      var tmp0_2 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-      $composer_5.endReplaceableGroup_er37p7_k$();
-      var wrapper = tmp0_2;
-      var tmp0_3 = wrapper.get_coroutineScope_5k7h45_k$();
-      $composer_4.endReplaceableGroup_er37p7_k$();
-      var coroutineScope = tmp0_3;
-      // Inline function 'androidx.compose.runtime.remember$composable' call
-      var $composer_6 = $composer_0;
-      $composer_6.startReplaceableGroup_rp6air_k$(547886695);
+      var $composer_6 = $composer_5;
+      $composer_6.startReplaceableGroup_ip860b_k$(547886695);
       sourceInformation($composer_6, 'CC(remember$composable):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
-      var tmp0_let_0 = $composer_6.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = $composer_6.rememberedValue_4dg93v_k$();
+      var tmp;
+      if (false ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+        // Inline function 'androidx.compose.runtime.rememberCoroutineScope$composable.<anonymous>' call
+        var value = new CompositionScopedCoroutineScopeCanceller(createCompositionCoroutineScope(getContext._v(), composer));
+        $composer_6.updateRememberedValue_l1wh71_k$(value);
+        tmp = value;
+      } else {
+        tmp = it;
+      }
+      var tmp_0 = tmp;
+      var tmp0_2 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+      $composer_6.endReplaceableGroup_ern0ak_k$();
+      var wrapper = tmp0_2;
+      var tmp0_3 = wrapper.get_coroutineScope_5k7h45_k$();
+      $composer_5.endReplaceableGroup_ern0ak_k$();
+      var coroutineScope = tmp0_3;
+      // Inline function 'androidx.compose.runtime.remember$composable' call
+      var $composer_7 = $composer_0;
+      $composer_7.startReplaceableGroup_ip860b_k$(547886695);
+      sourceInformation($composer_7, 'CC(remember$composable):Composables.kt#9igjgp');
+      // Inline function 'androidx.compose.runtime.cache' call
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it_0 = $composer_7.rememberedValue_4dg93v_k$();
       var tmp_1;
-      if (false ? true : tmp0_let_0 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (false ? true : it_0 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.composable.AppyxComponent$composable.<anonymous>' call
-        var value_0 = mutableStateOf(new IntSize(Companion_getInstance_2().get_Zero_4ip44w_k$()));
-        $composer_6.updateRememberedValue_l1colo_k$(value_0);
+        var value_0 = mutableStateOf(new IntSize(Companion_getInstance_2().get_Zero_9we0a6_k$()));
+        $composer_7.updateRememberedValue_l1wh71_k$(value_0);
         tmp_1 = value_0;
       } else {
-        tmp_1 = tmp0_let_0;
+        tmp_1 = it_0;
       }
       var tmp_2 = tmp_1;
-      var tmp0_4 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
-      $composer_6.endReplaceableGroup_er37p7_k$();
+      var tmp0_4 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
+      $composer_7.endReplaceableGroup_ern0ak_k$();
       var containerSize$delegate = tmp0_4;
       var tmp0_elvis_lhs = block_0._v;
       var tmp_3;
@@ -2000,27 +1994,27 @@
         var tmp_4 = $composer_0;
         var dispatchReceiver = composableLambda(tmp_4, -521103310, true, AppyxComponent$composable$lambda_2(_this__u8e3s4, $dirty));
         // Inline function 'androidx.compose.runtime.remember$composable' call
-        var $composer_7 = $composer_0;
-        $composer_7.startReplaceableGroup_rp6air_k$(-838505973);
-        sourceInformation($composer_7, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+        var $composer_8 = $composer_0;
+        $composer_8.startReplaceableGroup_ip860b_k$(-838505973);
+        sourceInformation($composer_8, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
         // Inline function 'androidx.compose.runtime.cache' call
-        var tmp1_cache = $composer_7.changed_ga7h3f_k$(dispatchReceiver);
+        var invalid = $composer_8.changed_ga7h3f_k$(dispatchReceiver);
         // Inline function 'kotlin.let' call
-        var tmp0_let_1 = $composer_7.rememberedValue_4dg93v_k$();
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var it_1 = $composer_8.rememberedValue_4dg93v_k$();
         var tmp_5;
-        if (tmp1_cache ? true : tmp0_let_1 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+        if (invalid ? true : it_1 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
           // Inline function 'com.bumble.appyx.navigation.composable.AppyxComponent$composable.<anonymous>.<anonymous>' call
           var value_1 = ComposableLambda$invoke$ref_1(dispatchReceiver);
-          $composer_7.updateRememberedValue_l1colo_k$(value_1);
+          $composer_8.updateRememberedValue_l1wh71_k$(value_1);
           tmp_5 = value_1;
         } else {
-          tmp_5 = tmp0_let_1;
+          tmp_5 = it_1;
         }
         var tmp_6 = tmp_5;
-        var tmp0_5 = (tmp_6 == null ? true : isObject(tmp_6)) ? tmp_6 : THROW_CCE();
-        $composer_7.endReplaceableGroup_er37p7_k$();
+        var tmp0_5 = (tmp_6 == null ? true : !(tmp_6 == null)) ? tmp_6 : THROW_CCE();
+        $composer_8.endReplaceableGroup_ern0ak_k$();
         tmp_3 = tmp0_5;
       } else {
         tmp_3 = tmp0_elvis_lhs;
@@ -2028,180 +2022,182 @@
       var childrenBlock = tmp_3;
       SideEffect$composable(AppyxComponent$composable$lambda_3(appyxComponent, coroutineScope, clipToBounds_1), $composer_0, 0);
       // Inline function 'androidx.compose.foundation.layout.Box$composable' call
-      var tmp_7 = fillMaxSize(modifier_0._v).then_5qw5wu_k$(clipToBounds_1._v ? clipToBounds(Companion_getInstance()) : Companion_getInstance());
+      var tmp_7 = fillMaxSize(modifier_0._v).then_g5qrxq_k$(clipToBounds_1._v ? clipToBounds(Companion_getInstance()) : Companion_getInstance());
       // Inline function 'androidx.compose.runtime.remember$composable' call
-      var $composer_8 = $composer_0;
-      $composer_8.startReplaceableGroup_rp6air_k$(-1603429786);
-      sourceInformation($composer_8, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
-      var invalid = false;
-      var indexedObject = [containerSize$delegate, appyxComponent, density, screenWidthPx, screenHeightPx];
+      var keys = [containerSize$delegate, appyxComponent, density, screenWidthPx, screenHeightPx];
+      var $composer_9 = $composer_0;
+      $composer_9.startReplaceableGroup_ip860b_k$(-1603429786);
+      sourceInformation($composer_9, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+      var invalid_0 = false;
       var inductionVariable = 0;
-      var last = indexedObject.length;
+      var last = keys.length;
       while (inductionVariable < last) {
-        var key = indexedObject[inductionVariable];
+        var key = keys[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
-        invalid = !!(invalid | $composer_8.changed_ga7h3f_k$(key));
+        invalid_0 = !!(invalid_0 | $composer_9.changed_ga7h3f_k$(key));
       }
       // Inline function 'androidx.compose.runtime.cache' call
-      var tmp1_cache_0 = invalid;
+      var invalid_1 = invalid_0;
       // Inline function 'kotlin.let' call
-      var tmp0_let_2 = $composer_8.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it_2 = $composer_9.rememberedValue_4dg93v_k$();
       var tmp_8;
-      if (tmp1_cache_0 ? true : tmp0_let_2 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (invalid_1 ? true : it_2 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.composable.AppyxComponent$composable.<anonymous>' call
         var value_2 = AppyxComponent$composable$lambda_4(appyxComponent, density, screenWidthPx, screenHeightPx, containerSize$delegate);
-        $composer_8.updateRememberedValue_l1colo_k$(value_2);
+        $composer_9.updateRememberedValue_l1wh71_k$(value_2);
         tmp_8 = value_2;
       } else {
-        tmp_8 = tmp0_let_2;
+        tmp_8 = it_2;
       }
       var tmp_9 = tmp_8;
-      var tmp0_6 = (tmp_9 == null ? true : isObject(tmp_9)) ? tmp_9 : THROW_CCE();
-      $composer_8.endReplaceableGroup_er37p7_k$();
+      var tmp0_6 = (tmp_9 == null ? true : !(tmp_9 == null)) ? tmp_9 : THROW_CCE();
+      $composer_9.endReplaceableGroup_ern0ak_k$();
       var tmp_10 = onPlaced(tmp_7, tmp0_6);
       // Inline function 'androidx.compose.runtime.remember$composable' call
-      var $composer_9 = $composer_0;
-      $composer_9.startReplaceableGroup_rp6air_k$(-838505973);
-      sourceInformation($composer_9, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+      var $composer_10 = $composer_0;
+      $composer_10.startReplaceableGroup_ip860b_k$(-838505973);
+      sourceInformation($composer_10, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var tmp1_cache_1 = $composer_9.changed_ga7h3f_k$(appyxComponent);
+      var invalid_2 = $composer_10.changed_ga7h3f_k$(appyxComponent);
       // Inline function 'kotlin.let' call
-      var tmp0_let_3 = $composer_9.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it_3 = $composer_10.rememberedValue_4dg93v_k$();
       var tmp_11;
-      if (tmp1_cache_1 ? true : tmp0_let_3 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (invalid_2 ? true : it_3 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.composable.AppyxComponent$composable.<anonymous>' call
         var value_3 = AppyxComponent$composable$lambda_5(appyxComponent);
-        $composer_9.updateRememberedValue_l1colo_k$(value_3);
+        $composer_10.updateRememberedValue_l1wh71_k$(value_3);
         tmp_11 = value_3;
       } else {
-        tmp_11 = tmp0_let_3;
+        tmp_11 = it_3;
       }
       var tmp_12 = tmp_11;
-      var tmp0_7 = (tmp_12 == null ? true : isObject(tmp_12)) ? tmp_12 : THROW_CCE();
-      $composer_9.endReplaceableGroup_er37p7_k$();
+      var tmp0_7 = (tmp_12 == null ? true : !(tmp_12 == null)) ? tmp_12 : THROW_CCE();
+      $composer_10.endReplaceableGroup_ern0ak_k$();
       var modifier_1 = onPointerEvent(tmp_10, tmp0_7);
       var contentAlignment = null;
       var propagateMinConstraints = false;
-      var $composer_10 = $composer_0;
-      $composer_10.startReplaceableGroup_rp6air_k$(1330882304);
-      sourceInformation($composer_10, 'CC(Box$composable)P(2,1,3)69@3214L67,70@3286L130:Box.kt#2w3rfo');
-      if (!(0 === 0))
+      var $composer_11 = $composer_0;
+      $composer_11.startReplaceableGroup_ip860b_k$(1330882304);
+      sourceInformation($composer_11, 'CC(Box$composable)P(2,1,3)69@3214L67,70@3286L130:Box.kt#2w3rfo');
+      if (!((6 & 1) === 0))
         modifier_1 = Companion_getInstance();
-      if (!(2 === 0))
+      if (!((6 & 2) === 0))
         contentAlignment = Companion_getInstance_3().get_TopStart_o4x792_k$();
-      if (!(4 === 0))
+      if (!((6 & 4) === 0))
         propagateMinConstraints = false;
-      var measurePolicy = rememberBoxMeasurePolicy$composable(contentAlignment, propagateMinConstraints, $composer_10, 0);
+      var measurePolicy = rememberBoxMeasurePolicy$composable(contentAlignment, propagateMinConstraints, $composer_11, 14 & 0 >> 3 | 112 & 0 >> 3);
       // Inline function 'androidx.compose.ui.layout.Layout$composable' call
       var modifier_2 = modifier_1;
-      var $composer_11 = $composer_10;
-      $composer_11.startReplaceableGroup_rp6air_k$(1725976829);
-      sourceInformation($composer_11, 'CC(Layout$composable)P(!1,2)78@3158L23,80@3248L420:Layout.kt#80mrfh');
-      if (!(0 === 0))
-        modifier_2 = Companion_getInstance();
-      var compositeKeyHash = $get_currentCompositeKeyHash$$composable_u3vbzj($composer_11, 0);
-      var localMap = $composer_11.get_currentCompositionLocalMap_fmcf79_k$();
-      // Inline function 'androidx.compose.runtime.ReusableComposeNode$composable' call
-      var tmp0_ReusableComposeNode$composable = Companion_getInstance_4().get_Constructor_f7ieep_k$();
-      var tmp1_ReusableComposeNode$composable = materializerOf(modifier_2);
-      var tmp3_ReusableComposeNode$composable = 6 | 7168 & 0 << 9;
+      var $changed_0 = 112 & 0 << 3;
+      var modifier_3 = modifier_2;
       var $composer_12 = $composer_11;
-      var tmp_13 = $composer_12.get_applier_bupu8u_k$();
+      $composer_12.startReplaceableGroup_ip860b_k$(1725976829);
+      sourceInformation($composer_12, 'CC(Layout$composable)P(!1,2)78@3158L23,80@3248L420:Layout.kt#80mrfh');
+      if (!((0 & 2) === 0))
+        modifier_3 = Companion_getInstance();
+      var compositeKeyHash = $get_currentCompositeKeyHash$$composable_u3vbzj($composer_12, 0);
+      var localMap = $composer_12.get_currentCompositionLocalMap_fmcf79_k$();
+      // Inline function 'androidx.compose.runtime.ReusableComposeNode$composable' call
+      var factory = Companion_getInstance_4().get_Constructor_f7ieep_k$();
+      var skippableUpdate = materializerOf(modifier_3);
+      var $changed_1 = 6 | 7168 & $changed_0 << 9;
+      var $composer_13 = $composer_12;
+      var tmp_13 = $composer_13.get_applier_bupu8u_k$();
       if (!isInterface(tmp_13, Applier)) {
         invalidApplier();
       }
-      $composer_12.startReusableNode_jk07k2_k$();
-      if ($composer_12.get_inserting_25mlsw_k$()) {
-        $composer_12.createNode_p4ouwd_k$(tmp0_ReusableComposeNode$composable);
+      $composer_13.startReusableNode_jjgeyp_k$();
+      if ($composer_13.get_inserting_25mlsw_k$()) {
+        $composer_13.createNode_ahrd54_k$(factory);
       } else {
-        $composer_12.useNode_inlzo8_k$();
+        $composer_13.useNode_io5s9l_k$();
       }
       // Inline function 'androidx.compose.ui.layout.Layout$composable.<anonymous>' call
-      var tmp4_anonymous = _Updater___init__impl__rbfxm8($composer_12);
-      Updater__set_impl_v7kwss(tmp4_anonymous, measurePolicy, Companion_getInstance_4().get_SetMeasurePolicy_on6ujt_k$());
-      Updater__set_impl_v7kwss(tmp4_anonymous, localMap, Companion_getInstance_4().get_SetResolvedCompositionLocals_rc2u9t_k$());
+      var $this$ReusableComposeNode = _Updater___init__impl__rbfxm8($composer_13);
+      Updater__set_impl_v7kwss($this$ReusableComposeNode, measurePolicy, Companion_getInstance_4().get_SetMeasurePolicy_on6ujt_k$());
+      Updater__set_impl_v7kwss($this$ReusableComposeNode, localMap, Companion_getInstance_4().get_SetResolvedCompositionLocals_rc2u9t_k$());
       // Inline function 'androidx.compose.runtime.Updater.set' call
-      var tmp0_set = Companion_getInstance_4().get_SetCompositeKeyHash_n8lgg1_k$();
+      var block_1 = Companion_getInstance_4().get_SetCompositeKeyHash_n8lgg1_k$();
       // Inline function 'kotlin.with' call
-      var tmp0_with = _Updater___get_composer__impl__9ty7av(tmp4_anonymous);
       // Inline function 'kotlin.contracts.contract' call
+      var $this$with = _Updater___get_composer__impl__9ty7av($this$ReusableComposeNode);
       var tmp_14;
-      if (tmp0_with.get_inserting_25mlsw_k$() ? true : !equals(tmp0_with.rememberedValue_4dg93v_k$(), compositeKeyHash)) {
-        tmp0_with.updateRememberedValue_l1colo_k$(compositeKeyHash);
-        _Updater___get_composer__impl__9ty7av(tmp4_anonymous).apply_ar56ei_k$(compositeKeyHash, tmp0_set);
+      if ($this$with.get_inserting_25mlsw_k$() ? true : !equals($this$with.rememberedValue_4dg93v_k$(), compositeKeyHash)) {
+        $this$with.updateRememberedValue_l1wh71_k$(compositeKeyHash);
+        _Updater___get_composer__impl__9ty7av($this$ReusableComposeNode).apply_pk82p8_k$(compositeKeyHash, block_1);
         tmp_14 = Unit_getInstance();
       }
-      tmp1_ReusableComposeNode$composable(new SkippableUpdater(_SkippableUpdater___init__impl__4ft0t9($composer_12)), $composer_12, 112 & tmp3_ReusableComposeNode$composable >> 3);
-      $composer_12.startReplaceableGroup_rp6air_k$(2058660585);
+      skippableUpdate(new SkippableUpdater(_SkippableUpdater___init__impl__4ft0t9($composer_13)), $composer_13, 112 & $changed_1 >> 3);
+      $composer_13.startReplaceableGroup_ip860b_k$(2058660585);
       // Inline function 'androidx.compose.foundation.layout.Box$composable.<anonymous>' call
-      var $composer_13 = $composer_12;
-      sourceInformationMarkerStart($composer_13, -1851536925, 'C71@3331L9:Box.kt#2w3rfo');
-      // Inline function 'com.bumble.appyx.navigation.composable.AppyxComponent$composable.<anonymous>' call
-      var tmp22_anonymous = BoxScopeInstance_getInstance();
       var $composer_14 = $composer_13;
-      var tmp_15 = [get_LocalBoxScope().provides_3e53yf_k$(tmp22_anonymous)];
+      sourceInformationMarkerStart($composer_14, -1851536925, 'C71@3331L9:Box.kt#2w3rfo');
+      // Inline function 'com.bumble.appyx.navigation.composable.AppyxComponent$composable.<anonymous>' call
+      var $this$Box = BoxScopeInstance_getInstance();
+      var $composer_15 = $composer_14;
+      var tmp_15 = [get_LocalBoxScope().provides_3agxel_k$($this$Box)];
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.bumble.appyx.navigation.composable.AppyxComponent$composable.<anonymous>.<anonymous>' call
-      var tmp_16 = $composer_14;
+      var tmp_16 = $composer_15;
       var dispatchReceiver_0 = composableLambda(tmp_16, -2097015828, true, AppyxComponent$composable$lambda_6(childrenBlock, appyxComponent, gestureExtraTouchArea_0, gestureValidator_0, containerSize$delegate));
       // Inline function 'androidx.compose.runtime.remember$composable' call
-      var $composer_15 = $composer_14;
-      $composer_15.startReplaceableGroup_rp6air_k$(-838505973);
-      sourceInformation($composer_15, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+      var $composer_16 = $composer_15;
+      $composer_16.startReplaceableGroup_ip860b_k$(-838505973);
+      sourceInformation($composer_16, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var tmp1_cache_2 = $composer_15.changed_ga7h3f_k$(dispatchReceiver_0);
+      var invalid_3 = $composer_16.changed_ga7h3f_k$(dispatchReceiver_0);
       // Inline function 'kotlin.let' call
-      var tmp0_let_4 = $composer_15.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it_4 = $composer_16.rememberedValue_4dg93v_k$();
       var tmp_17;
-      if (tmp1_cache_2 ? true : tmp0_let_4 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (invalid_3 ? true : it_4 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.composable.AppyxComponent$composable.<anonymous>.<anonymous>.<anonymous>' call
         var value_4 = ComposableLambda$invoke$ref_2(dispatchReceiver_0);
-        $composer_15.updateRememberedValue_l1colo_k$(value_4);
+        $composer_16.updateRememberedValue_l1wh71_k$(value_4);
         tmp_17 = value_4;
       } else {
-        tmp_17 = tmp0_let_4;
+        tmp_17 = it_4;
       }
       var tmp_18 = tmp_17;
-      var tmp0_8 = (tmp_18 == null ? true : isObject(tmp_18)) ? tmp_18 : THROW_CCE();
-      $composer_15.endReplaceableGroup_er37p7_k$();
-      CompositionLocalProvider$composable(tmp_15, tmp0_8, $composer_14, 48);
-      sourceInformationMarkerEnd($composer_13);
-      $composer_12.endReplaceableGroup_er37p7_k$();
-      $composer_12.endNode_3mkr10_k$();
-      $composer_11.endReplaceableGroup_er37p7_k$();
-      $composer_10.endReplaceableGroup_er37p7_k$();
+      var tmp0_8 = (tmp_18 == null ? true : !(tmp_18 == null)) ? tmp_18 : THROW_CCE();
+      $composer_16.endReplaceableGroup_ern0ak_k$();
+      CompositionLocalProvider$composable(tmp_15, tmp0_8, $composer_15, 48);
+      sourceInformationMarkerEnd($composer_14);
+      $composer_13.endReplaceableGroup_ern0ak_k$();
+      $composer_13.endNode_3m0yfn_k$();
+      $composer_12.endReplaceableGroup_ern0ak_k$();
+      $composer_11.endReplaceableGroup_ern0ak_k$();
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp0_safe_receiver === null)
       null;
     else {
-      tmp0_safe_receiver.updateScope_xhrf9y_k$(AppyxComponent$composable$lambda_7(_this__u8e3s4, appyxComponent, modifier_0, clipToBounds_1, gestureValidator_0, gestureExtraTouchArea_0, block_0, $changed, $default));
+      tmp0_safe_receiver.updateScope_t8jcf_k$(AppyxComponent$composable$lambda_7(_this__u8e3s4, appyxComponent, modifier_0, clipToBounds_1, gestureValidator_0, gestureExtraTouchArea_0, block_0, $changed, $default));
     }
   }
   function ChildrenTransitionScope$children$composable$slambda$slambda($saveableStateHolder, resultContinuation) {
     this.$saveableStateHolder_1 = $saveableStateHolder;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(ChildrenTransitionScope$children$composable$slambda$slambda).invoke_dfk2m9_k$ = function (deletedKeys, $completion) {
-    var tmp = this.create_ggjkiq_k$(deletedKeys, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(ChildrenTransitionScope$children$composable$slambda$slambda).invoke_6lyw4z_k$ = function (deletedKeys, $completion) {
+    var tmp = this.create_2ne4d5_k$(deletedKeys, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(ChildrenTransitionScope$children$composable$slambda$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_dfk2m9_k$((!(p1 == null) ? isInterface(p1, List) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(ChildrenTransitionScope$children$composable$slambda$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_6lyw4z_k$((!(p1 == null) ? isInterface(p1, List) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(ChildrenTransitionScope$children$composable$slambda$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -2209,11 +2205,11 @@
       try {
         var tmp = this.get_state_iypx7s_k$();
         if (tmp === 0) {
-          this.set_exceptionState_s9sevl_k$(1);
+          this.set_exceptionState_fex74n_k$(1);
           var tmp0_iterator = this.deletedKeys_1.iterator_jk1svi_k$();
           while (tmp0_iterator.hasNext_bitz1p_k$()) {
             var element = tmp0_iterator.next_20eer_k$();
-            this.$saveableStateHolder_1.removeState_5vvsww_k$(element);
+            this.$saveableStateHolder_1.removeState_5wfli9_k$(element);
           }
           return Unit_getInstance();
         } else if (tmp === 1) {
@@ -2225,43 +2221,43 @@
       }
      while (true);
   };
-  protoOf(ChildrenTransitionScope$children$composable$slambda$slambda).create_ggjkiq_k$ = function (deletedKeys, completion) {
+  protoOf(ChildrenTransitionScope$children$composable$slambda$slambda).create_2ne4d5_k$ = function (deletedKeys, completion) {
     var i = new ChildrenTransitionScope$children$composable$slambda$slambda(this.$saveableStateHolder_1, completion);
     i.deletedKeys_1 = deletedKeys;
     return i;
   };
-  protoOf(ChildrenTransitionScope$children$composable$slambda$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_ggjkiq_k$((!(value == null) ? isInterface(value, List) : false) ? value : THROW_CCE(), completion);
+  protoOf(ChildrenTransitionScope$children$composable$slambda$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_2ne4d5_k$((!(value == null) ? isInterface(value, List) : false) ? value : THROW_CCE(), completion);
   };
   function ChildrenTransitionScope$children$composable$slambda$slambda_0($saveableStateHolder, resultContinuation) {
     var i = new ChildrenTransitionScope$children$composable$slambda$slambda($saveableStateHolder, resultContinuation);
     var l = function (deletedKeys, $completion) {
-      return i.invoke_dfk2m9_k$(deletedKeys, $completion);
+      return i.invoke_6lyw4z_k$(deletedKeys, $completion);
     };
     l.$arity = 1;
     return l;
   }
   function ChildrenTransitionScope$children$composable$lambda$slambda$lambda($appyxComponent) {
     return function (position) {
-      $appyxComponent.onStartDrag_50u6al_k$(position.packedValue_1);
+      $appyxComponent.onStartDrag_qsgty5_k$(position.packedValue_1);
       return Unit_getInstance();
     };
   }
   function ChildrenTransitionScope$children$composable$lambda$slambda$lambda_0($appyxComponent) {
     return function () {
-      $appyxComponent.onDragEnd_curv87_k$();
+      $appyxComponent.onDragEnd_cvbntk_k$();
       return Unit_getInstance();
     };
   }
   function ChildrenTransitionScope$children$composable$lambda$slambda$lambda_1(this$0, $transformedBoundingBox$delegate, $offsetCenter$delegate, $appyxComponent, $density) {
     return function (change, dragAmount) {
       var tmp;
-      if (this$0.gestureValidator_1.isGestureValid_cl3szg_k$(change.get_position_kw508q_k$(), children$composable$_anonymous_$lambda$0_ylrj98($transformedBoundingBox$delegate).translate_bllf6j_k$(Offset__unaryMinus_impl_ssu2iv(children$composable$_anonymous_$lambda$4_ylrj9c($offsetCenter$delegate))))) {
-        change.consume_spbz2t_k$();
-        $appyxComponent.onDrag_v1qkpx_k$(dragAmount.packedValue_1, $density);
+      if (this$0.gestureValidator_1.isGestureValid_ow9x0_k$(change.get_position_cpyh94_k$(), children$composable$_anonymous_$lambda$0_ylrj98($transformedBoundingBox$delegate).translate_e972jg_k$(Offset__unaryMinus_impl_ssu2iv(children$composable$_anonymous_$lambda$4_ylrj9c($offsetCenter$delegate))))) {
+        change.consume_sos6hg_k$();
+        $appyxComponent.onDrag_wbo8ju_k$(dragAmount.packedValue_1, $density);
         tmp = true;
       } else {
-        $appyxComponent.onDragEnd_curv87_k$();
+        $appyxComponent.onDragEnd_cvbntk_k$();
         tmp = false;
       }
       return tmp;
@@ -2285,7 +2281,7 @@
   function sam$kotlinx_coroutines_flow_FlowCollector$0_2(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0_2).emit_1fbrsb_k$ = function (value, $completion) {
+  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0_2).emit_t92u1f_k$ = function (value, $completion) {
     return this.function_1(value, $completion);
   };
   function children$composable$lambda($uiModels$delegate) {
@@ -2306,7 +2302,8 @@
     getLocalDelegateReference('transformedBoundingBox', KMutableProperty0, true, function () {
       return THROW_ISE();
     });
-    return $transformedBoundingBox$delegate.set_value_rnwamw_k$(value);
+    $transformedBoundingBox$delegate.set_value_v1vabv_k$(value);
+    return Unit_getInstance();
   }
   function children$composable$_anonymous_$lambda$2_ylrj9a($elementSize$delegate) {
     // Inline function 'androidx.compose.runtime.getValue' call
@@ -2319,7 +2316,9 @@
     getLocalDelegateReference('elementSize', KMutableProperty0, true, function () {
       return THROW_ISE();
     });
-    return $elementSize$delegate.set_value_rnwamw_k$(new IntSize(value));
+    var value_0 = new IntSize(value);
+    $elementSize$delegate.set_value_v1vabv_k$(value_0);
+    return Unit_getInstance();
   }
   function children$composable$_anonymous_$lambda$4_ylrj9c($offsetCenter$delegate) {
     // Inline function 'androidx.compose.runtime.getValue' call
@@ -2332,7 +2331,9 @@
     getLocalDelegateReference('offsetCenter', KMutableProperty0, true, function () {
       return THROW_ISE();
     });
-    return $offsetCenter$delegate.set_value_rnwamw_k$(new Offset(value));
+    var value_0 = new Offset(value);
+    $offsetCenter$delegate.set_value_v1vabv_k$(value_0);
+    return Unit_getInstance();
   }
   function children$composable$_anonymous_$lambda$6_ylrj9e($isVisible$delegate) {
     // Inline function 'androidx.compose.runtime.getValue' call
@@ -2353,14 +2354,14 @@
     this.$saveableStateHolder_1 = $saveableStateHolder;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(ChildrenTransitionScope$children$composable$slambda).invoke_d6gbsu_k$ = function ($this$LaunchedEffect, $completion) {
-    var tmp = this.create_b6qu53_k$($this$LaunchedEffect, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(ChildrenTransitionScope$children$composable$slambda).invoke_d9fzmj_k$ = function ($this$LaunchedEffect, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$LaunchedEffect, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(ChildrenTransitionScope$children$composable$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(ChildrenTransitionScope$children$composable$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(ChildrenTransitionScope$children$composable$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -2369,11 +2370,11 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
             var tmp_0 = removedElements(this.this$0__1.appyxComponent_1);
             var tmp_1 = ChildrenTransitionScope$children$composable$slambda$slambda_0(this.$saveableStateHolder_1, null);
-            suspendResult = tmp_0.collect_llpwvh_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0_2(tmp_1), this);
+            suspendResult = tmp_0.collect_aksokr_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0_2(tmp_1), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -2389,24 +2390,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(ChildrenTransitionScope$children$composable$slambda).create_b6qu53_k$ = function ($this$LaunchedEffect, completion) {
+  protoOf(ChildrenTransitionScope$children$composable$slambda).create_rcuf4x_k$ = function ($this$LaunchedEffect, completion) {
     var i = new ChildrenTransitionScope$children$composable$slambda(this.this$0__1, this.$saveableStateHolder_1, completion);
     i.$this$LaunchedEffect_1 = $this$LaunchedEffect;
     return i;
   };
-  protoOf(ChildrenTransitionScope$children$composable$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(ChildrenTransitionScope$children$composable$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function ChildrenTransitionScope$children$composable$slambda_0(this$0, $saveableStateHolder, resultContinuation) {
     var i = new ChildrenTransitionScope$children$composable$slambda(this$0, $saveableStateHolder, resultContinuation);
     var l = function ($this$LaunchedEffect, $completion) {
-      return i.invoke_d6gbsu_k$($this$LaunchedEffect, $completion);
+      return i.invoke_d9fzmj_k$($this$LaunchedEffect, $completion);
     };
     l.$arity = 1;
     return l;
@@ -2424,14 +2425,14 @@
     this.$density_1 = $density;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(ChildrenTransitionScope$children$composable$lambda$slambda).invoke_dycxzz_k$ = function ($this$pointerInput, $completion) {
-    var tmp = this.create_9k90ga_k$($this$pointerInput, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(ChildrenTransitionScope$children$composable$lambda$slambda).invoke_tvejsf_k$ = function ($this$pointerInput, $completion) {
+    var tmp = this.create_8wvixh_k$($this$pointerInput, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(ChildrenTransitionScope$children$composable$lambda$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_dycxzz_k$((!(p1 == null) ? isInterface(p1, PointerInputScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(ChildrenTransitionScope$children$composable$lambda$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_tvejsf_k$((!(p1 == null) ? isInterface(p1, PointerInputScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(ChildrenTransitionScope$children$composable$lambda$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -2440,8 +2441,8 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
             var tmp_0 = ChildrenTransitionScope$children$composable$lambda$slambda$lambda(this.$appyxComponent_1);
             var tmp_1 = ChildrenTransitionScope$children$composable$lambda$slambda$lambda_0(this.$appyxComponent_1);
             suspendResult = detectDragGesturesOrCancellation(this.$this$pointerInput_1, tmp_0, tmp_1, ChildrenTransitionScope$children$composable$lambda$slambda$lambda_1(this.this$0__1, this.$transformedBoundingBox$delegate_1, this.$offsetCenter$delegate_1, this.$appyxComponent_1, this.$density_1), this);
@@ -2460,46 +2461,46 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(ChildrenTransitionScope$children$composable$lambda$slambda).create_9k90ga_k$ = function ($this$pointerInput, completion) {
+  protoOf(ChildrenTransitionScope$children$composable$lambda$slambda).create_8wvixh_k$ = function ($this$pointerInput, completion) {
     var i = new ChildrenTransitionScope$children$composable$lambda$slambda(this.$appyxComponent_1, this.this$0__1, this.$transformedBoundingBox$delegate_1, this.$offsetCenter$delegate_1, this.$density_1, completion);
     i.$this$pointerInput_1 = $this$pointerInput;
     return i;
   };
-  protoOf(ChildrenTransitionScope$children$composable$lambda$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_9k90ga_k$((!(value == null) ? isInterface(value, PointerInputScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(ChildrenTransitionScope$children$composable$lambda$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_8wvixh_k$((!(value == null) ? isInterface(value, PointerInputScope) : false) ? value : THROW_CCE(), completion);
   };
   function ChildrenTransitionScope$children$composable$lambda$slambda_0($appyxComponent, this$0, $transformedBoundingBox$delegate, $offsetCenter$delegate, $density, resultContinuation) {
     var i = new ChildrenTransitionScope$children$composable$lambda$slambda($appyxComponent, this$0, $transformedBoundingBox$delegate, $offsetCenter$delegate, $density, resultContinuation);
     var l = function ($this$pointerInput, $completion) {
-      return i.invoke_dycxzz_k$($this$pointerInput, $completion);
+      return i.invoke_tvejsf_k$($this$pointerInput, $completion);
     };
     l.$arity = 1;
     return l;
   }
   function ChildrenTransitionScope$children$composable$lambda$lambda_0($elementOffset) {
     return function ($this$offset) {
-      var tmp$ret$0;
       // Inline function 'androidx.compose.ui.unit.IntOffset.unaryMinus' call
-      tmp$ret$0 = IntOffset_0(-_IntOffset___get_x__impl__qiqr5o($elementOffset) | 0, -_IntOffset___get_y__impl__2avpwj($elementOffset) | 0);
+      var this_0 = $elementOffset;
+      var tmp$ret$0 = IntOffset_0(-_IntOffset___get_x__impl__qiqr5o(this_0) | 0, -_IntOffset___get_y__impl__2avpwj(this_0) | 0);
       return new IntOffset(tmp$ret$0);
     };
   }
   function ChildrenTransitionScope$children$composable$lambda$lambda_1($elementSize$delegate, $transformedBoundingBox$delegate, $gestureExtraTouchAreaPx, $offsetCenter$delegate) {
     return function (it) {
-      children$composable$_anonymous_$lambda$3_ylrj9b($elementSize$delegate, it.get_size_yscczt_k$());
-      var localCenter = Offset__div_impl_eaxtg1(Offset_0(_IntSize___get_width__impl__d9yl4o(it.get_size_yscczt_k$()), _IntSize___get_height__impl__prv63b(it.get_size_yscczt_k$())), 2.0);
-      children$composable$_anonymous_$lambda$1_ylrj99($transformedBoundingBox$delegate, boundsInParent(it).inflate_f59jyf_k$($gestureExtraTouchAreaPx));
-      children$composable$_anonymous_$lambda$5_ylrj9d($offsetCenter$delegate, Offset__minus_impl_hoj2c0(children$composable$_anonymous_$lambda$0_ylrj98($transformedBoundingBox$delegate).get_center_568eeq_k$(), localCenter));
+      children$composable$_anonymous_$lambda$3_ylrj9b($elementSize$delegate, it.get_size_kd98kr_k$());
+      var localCenter = Offset__div_impl_eaxtg1(Offset_0(_IntSize___get_width__impl__d9yl4o(it.get_size_kd98kr_k$()), _IntSize___get_height__impl__prv63b(it.get_size_kd98kr_k$())), 2.0);
+      children$composable$_anonymous_$lambda$1_ylrj99($transformedBoundingBox$delegate, boundsInParent(it).inflate_rvluy7_k$($gestureExtraTouchAreaPx));
+      children$composable$_anonymous_$lambda$5_ylrj9d($offsetCenter$delegate, Offset__minus_impl_hoj2c0(children$composable$_anonymous_$lambda$0_ylrj98($transformedBoundingBox$delegate).get_center_dcexec_k$(), localCenter));
       return Unit_getInstance();
     };
   }
-  function ChildrenTransitionScope$children$composable$lambda($offsetCenter$delegate, this$0, $elementSize$delegate, $$dirty, $this_children$composable, $element, $appyxComponent, $transformedBoundingBox$delegate, $density, $gestureExtraTouchAreaPx, $saveableStateHolder, $block) {
+  function ChildrenTransitionScope$children$composable$lambda($offsetCenter$delegate, this$0, $elementSize$delegate, $$dirty, $this_children$composable, $elementUiModel, $appyxComponent, $transformedBoundingBox$delegate, $density, $gestureExtraTouchAreaPx, $saveableStateHolder, $block) {
     return function ($composer, $changed) {
       var $composer_0 = $composer;
       var tmp;
@@ -2507,184 +2508,131 @@
         if (isTraceInProgress()) {
           traceEventStart(1075062131, $changed, -1, 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.children$composable.<anonymous>.<anonymous>.<anonymous> (AppyxComponent.kt:156)');
         }
-        var tmp$ret$3;
         // Inline function 'androidx.compose.ui.unit.IntOffset.minus' call
-        var tmp$ret$2;
         // Inline function 'androidx.compose.ui.unit.round' call
-        var tmp0_round = children$composable$_anonymous_$lambda$4_ylrj9c($offsetCenter$delegate);
-        var tmp$ret$0;
+        var this_0 = children$composable$_anonymous_$lambda$4_ylrj9c($offsetCenter$delegate);
         // Inline function 'kotlin.math.roundToInt' call
-        var tmp0_roundToInt = _Offset___get_x__impl__xvi35n(tmp0_round);
-        tmp$ret$0 = roundToInt(tmp0_roundToInt);
-        var tmp_0 = tmp$ret$0;
-        var tmp$ret$1;
+        var this_1 = _Offset___get_x__impl__xvi35n(this_0);
+        var tmp_0 = roundToInt(this_1);
         // Inline function 'kotlin.math.roundToInt' call
-        var tmp1_roundToInt = _Offset___get_y__impl__8bzhra(tmp0_round);
-        tmp$ret$1 = roundToInt(tmp1_roundToInt);
-        tmp$ret$2 = IntOffset_0(tmp_0, tmp$ret$1);
-        var tmp1_minus = tmp$ret$2;
-        var tmp2_minus = this$0.elementOffset$composable_havfpl_k$(children$composable$_anonymous_$lambda$2_ylrj9a($elementSize$delegate), this$0.containerSize_1, $composer_0, 896 & $$dirty);
-        tmp$ret$3 = IntOffset_0(_IntOffset___get_x__impl__qiqr5o(tmp1_minus) - _IntOffset___get_x__impl__qiqr5o(tmp2_minus) | 0, _IntOffset___get_y__impl__2avpwj(tmp1_minus) - _IntOffset___get_y__impl__2avpwj(tmp2_minus) | 0);
-        var elementOffset = tmp$ret$3;
+        var this_2 = _Offset___get_y__impl__8bzhra(this_0);
+        var tmp$ret$1 = roundToInt(this_2);
+        var this_3 = IntOffset_0(tmp_0, tmp$ret$1);
+        var other = this$0.elementOffset$composable_qajnzs_k$(children$composable$_anonymous_$lambda$2_ylrj9a($elementSize$delegate), this$0.containerSize_1, $composer_0, 896 & $$dirty);
+        var elementOffset = IntOffset_0(_IntOffset___get_x__impl__qiqr5o(this_3) - _IntOffset___get_x__impl__qiqr5o(other) | 0, _IntOffset___get_y__impl__2avpwj(this_3) - _IntOffset___get_y__impl__2avpwj(other) | 0);
         var tmp_1 = Companion_getInstance();
-        var tmp$ret$8;
         // Inline function 'androidx.compose.runtime.remember$composable' call
-        var tmp3_remember$composable = $composer_0;
-        var $composer_1 = tmp3_remember$composable;
-        $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+        var key1 = new IntOffset(elementOffset);
+        var $composer_1 = $composer_0;
+        $composer_1.startReplaceableGroup_ip860b_k$(-838505973);
         sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
-        var tmp$ret$7;
         // Inline function 'androidx.compose.runtime.cache' call
-        var tmp0_cache = $composer_1;
-        var tmp1_cache = $composer_1.changed_ga7h3f_k$(new IntOffset(elementOffset));
-        var tmp$ret$6;
+        var invalid = $composer_1.changed_ga7h3f_k$(key1);
         // Inline function 'kotlin.let' call
-        var tmp0_let = tmp0_cache.rememberedValue_4dg93v_k$();
         // Inline function 'kotlin.contracts.contract' call
-        var tmp$ret$5;
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var it = $composer_1.rememberedValue_4dg93v_k$();
         var tmp_2;
-        if (tmp1_cache ? true : tmp0_let === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
-          var tmp$ret$4;
+        if (invalid ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
           // Inline function 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.children$composable.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-          tmp$ret$4 = ChildrenTransitionScope$children$composable$lambda$lambda(elementOffset);
-          var value = tmp$ret$4;
-          tmp0_cache.updateRememberedValue_l1colo_k$(value);
+          var value = ChildrenTransitionScope$children$composable$lambda$lambda(elementOffset);
+          $composer_1.updateRememberedValue_l1wh71_k$(value);
           tmp_2 = value;
         } else {
-          tmp_2 = tmp0_let;
+          tmp_2 = it;
         }
-        tmp$ret$5 = tmp_2;
-        tmp$ret$6 = tmp$ret$5;
-        var tmp_3 = tmp$ret$6;
-        tmp$ret$7 = (tmp_3 == null ? true : isObject(tmp_3)) ? tmp_3 : THROW_CCE();
-        var tmp0 = tmp$ret$7;
-        $composer_1.endReplaceableGroup_er37p7_k$();
-        tmp$ret$8 = tmp0;
-        var tmp_4 = offset(tmp_1, tmp$ret$8);
-        var tmp$ret$13;
+        var tmp_3 = tmp_2;
+        var tmp0 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
+        $composer_1.endReplaceableGroup_ern0ak_k$();
+        var tmp_4 = offset(tmp_1, tmp0);
         // Inline function 'androidx.compose.runtime.remember$composable' call
-        var tmp4_remember$composable = $composer_0;
-        var $composer_2 = tmp4_remember$composable;
-        $composer_2.startReplaceableGroup_rp6air_k$(-1603429786);
+        var keys = [$appyxComponent, this$0, $transformedBoundingBox$delegate, $offsetCenter$delegate, $density];
+        var $composer_2 = $composer_0;
+        $composer_2.startReplaceableGroup_ip860b_k$(-1603429786);
         sourceInformation($composer_2, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
-        var invalid = false;
-        var indexedObject = [$appyxComponent, this$0, $transformedBoundingBox$delegate, $offsetCenter$delegate, $density];
+        var invalid_0 = false;
         var inductionVariable = 0;
-        var last = indexedObject.length;
+        var last = keys.length;
         while (inductionVariable < last) {
-          var key = indexedObject[inductionVariable];
+          var key = keys[inductionVariable];
           inductionVariable = inductionVariable + 1 | 0;
-          invalid = !!(invalid | $composer_2.changed_ga7h3f_k$(key));
+          invalid_0 = !!(invalid_0 | $composer_2.changed_ga7h3f_k$(key));
         }
-        var tmp$ret$12;
         // Inline function 'androidx.compose.runtime.cache' call
-        var tmp0_cache_0 = $composer_2;
-        var tmp1_cache_0 = invalid;
-        var tmp$ret$11;
+        var invalid_1 = invalid_0;
         // Inline function 'kotlin.let' call
-        var tmp0_let_0 = tmp0_cache_0.rememberedValue_4dg93v_k$();
         // Inline function 'kotlin.contracts.contract' call
-        var tmp$ret$10;
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var it_0 = $composer_2.rememberedValue_4dg93v_k$();
         var tmp_5;
-        if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
-          var tmp$ret$9;
+        if (invalid_1 ? true : it_0 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
           // Inline function 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.children$composable.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-          tmp$ret$9 = ChildrenTransitionScope$children$composable$lambda$slambda_0($appyxComponent, this$0, $transformedBoundingBox$delegate, $offsetCenter$delegate, $density, null);
-          var value_0 = tmp$ret$9;
-          tmp0_cache_0.updateRememberedValue_l1colo_k$(value_0);
+          var value_0 = ChildrenTransitionScope$children$composable$lambda$slambda_0($appyxComponent, this$0, $transformedBoundingBox$delegate, $offsetCenter$delegate, $density, null);
+          $composer_2.updateRememberedValue_l1wh71_k$(value_0);
           tmp_5 = value_0;
         } else {
-          tmp_5 = tmp0_let_0;
+          tmp_5 = it_0;
         }
-        tmp$ret$10 = tmp_5;
-        tmp$ret$11 = tmp$ret$10;
-        var tmp_6 = tmp$ret$11;
-        tmp$ret$12 = (tmp_6 == null ? true : isObject(tmp_6)) ? tmp_6 : THROW_CCE();
-        var tmp0_0 = tmp$ret$12;
-        $composer_2.endReplaceableGroup_er37p7_k$();
-        tmp$ret$13 = tmp0_0;
-        var tmp_7 = pointerInput(tmp_4, $appyxComponent, tmp$ret$13);
-        var tmp$ret$18;
+        var tmp_6 = tmp_5;
+        var tmp0_0 = (tmp_6 == null ? true : !(tmp_6 == null)) ? tmp_6 : THROW_CCE();
+        $composer_2.endReplaceableGroup_ern0ak_k$();
+        var tmp_7 = pointerInput(tmp_4, $appyxComponent, tmp0_0);
         // Inline function 'androidx.compose.runtime.remember$composable' call
-        var tmp5_remember$composable = $composer_0;
-        var $composer_3 = tmp5_remember$composable;
-        $composer_3.startReplaceableGroup_rp6air_k$(-838505973);
+        var key1_0 = new IntOffset(elementOffset);
+        var $composer_3 = $composer_0;
+        $composer_3.startReplaceableGroup_ip860b_k$(-838505973);
         sourceInformation($composer_3, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
-        var tmp$ret$17;
         // Inline function 'androidx.compose.runtime.cache' call
-        var tmp0_cache_1 = $composer_3;
-        var tmp1_cache_1 = $composer_3.changed_ga7h3f_k$(new IntOffset(elementOffset));
-        var tmp$ret$16;
+        var invalid_2 = $composer_3.changed_ga7h3f_k$(key1_0);
         // Inline function 'kotlin.let' call
-        var tmp0_let_1 = tmp0_cache_1.rememberedValue_4dg93v_k$();
         // Inline function 'kotlin.contracts.contract' call
-        var tmp$ret$15;
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var it_1 = $composer_3.rememberedValue_4dg93v_k$();
         var tmp_8;
-        if (tmp1_cache_1 ? true : tmp0_let_1 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
-          var tmp$ret$14;
+        if (invalid_2 ? true : it_1 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
           // Inline function 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.children$composable.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-          tmp$ret$14 = ChildrenTransitionScope$children$composable$lambda$lambda_0(elementOffset);
-          var value_1 = tmp$ret$14;
-          tmp0_cache_1.updateRememberedValue_l1colo_k$(value_1);
+          var value_1 = ChildrenTransitionScope$children$composable$lambda$lambda_0(elementOffset);
+          $composer_3.updateRememberedValue_l1wh71_k$(value_1);
           tmp_8 = value_1;
         } else {
-          tmp_8 = tmp0_let_1;
+          tmp_8 = it_1;
         }
-        tmp$ret$15 = tmp_8;
-        tmp$ret$16 = tmp$ret$15;
-        var tmp_9 = tmp$ret$16;
-        tmp$ret$17 = (tmp_9 == null ? true : isObject(tmp_9)) ? tmp_9 : THROW_CCE();
-        var tmp0_1 = tmp$ret$17;
-        $composer_3.endReplaceableGroup_er37p7_k$();
-        tmp$ret$18 = tmp0_1;
-        var tmp_10 = offset(tmp_7, tmp$ret$18).then_5qw5wu_k$($element.get_modifier_t1pq5c_k$());
-        var tmp$ret$23;
+        var tmp_9 = tmp_8;
+        var tmp0_1 = (tmp_9 == null ? true : !(tmp_9 == null)) ? tmp_9 : THROW_CCE();
+        $composer_3.endReplaceableGroup_ern0ak_k$();
+        var tmp_10 = offset(tmp_7, tmp0_1).then_g5qrxq_k$($elementUiModel.get_modifier_t1pq5c_k$());
         // Inline function 'androidx.compose.runtime.remember$composable' call
-        var tmp6_remember$composable = $composer_0;
-        var $composer_4 = tmp6_remember$composable;
-        $composer_4.startReplaceableGroup_rp6air_k$(-1603429786);
+        var keys_0 = [$elementSize$delegate, $transformedBoundingBox$delegate, $gestureExtraTouchAreaPx, $offsetCenter$delegate];
+        var $composer_4 = $composer_0;
+        $composer_4.startReplaceableGroup_ip860b_k$(-1603429786);
         sourceInformation($composer_4, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
-        var invalid_0 = false;
-        var indexedObject_0 = [$elementSize$delegate, $transformedBoundingBox$delegate, $gestureExtraTouchAreaPx, $offsetCenter$delegate];
+        var invalid_3 = false;
         var inductionVariable_0 = 0;
-        var last_0 = indexedObject_0.length;
+        var last_0 = keys_0.length;
         while (inductionVariable_0 < last_0) {
-          var key_0 = indexedObject_0[inductionVariable_0];
+          var key_0 = keys_0[inductionVariable_0];
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
-          invalid_0 = !!(invalid_0 | $composer_4.changed_ga7h3f_k$(key_0));
+          invalid_3 = !!(invalid_3 | $composer_4.changed_ga7h3f_k$(key_0));
         }
-        var tmp$ret$22;
         // Inline function 'androidx.compose.runtime.cache' call
-        var tmp0_cache_2 = $composer_4;
-        var tmp1_cache_2 = invalid_0;
-        var tmp$ret$21;
+        var invalid_4 = invalid_3;
         // Inline function 'kotlin.let' call
-        var tmp0_let_2 = tmp0_cache_2.rememberedValue_4dg93v_k$();
         // Inline function 'kotlin.contracts.contract' call
-        var tmp$ret$20;
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var it_2 = $composer_4.rememberedValue_4dg93v_k$();
         var tmp_11;
-        if (tmp1_cache_2 ? true : tmp0_let_2 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
-          var tmp$ret$19;
+        if (invalid_4 ? true : it_2 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
           // Inline function 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.children$composable.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-          tmp$ret$19 = ChildrenTransitionScope$children$composable$lambda$lambda_1($elementSize$delegate, $transformedBoundingBox$delegate, $gestureExtraTouchAreaPx, $offsetCenter$delegate);
-          var value_2 = tmp$ret$19;
-          tmp0_cache_2.updateRememberedValue_l1colo_k$(value_2);
+          var value_2 = ChildrenTransitionScope$children$composable$lambda$lambda_1($elementSize$delegate, $transformedBoundingBox$delegate, $gestureExtraTouchAreaPx, $offsetCenter$delegate);
+          $composer_4.updateRememberedValue_l1wh71_k$(value_2);
           tmp_11 = value_2;
         } else {
-          tmp_11 = tmp0_let_2;
+          tmp_11 = it_2;
         }
-        tmp$ret$20 = tmp_11;
-        tmp$ret$21 = tmp$ret$20;
-        var tmp_12 = tmp$ret$21;
-        tmp$ret$22 = (tmp_12 == null ? true : isObject(tmp_12)) ? tmp_12 : THROW_CCE();
-        var tmp0_2 = tmp$ret$22;
-        $composer_4.endReplaceableGroup_er37p7_k$();
-        tmp$ret$23 = tmp0_2;
-        Child$composable($this_children$composable, $element.copy$composable$default_uk62at_k$(VOID, VOID, VOID, VOID, onPlaced(tmp_10, tmp$ret$23)), $saveableStateHolder, $block, $composer_0, 14 & $$dirty | 7168 & $$dirty << 6);
+        var tmp_12 = tmp_11;
+        var tmp0_2 = (tmp_12 == null ? true : !(tmp_12 == null)) ? tmp_12 : THROW_CCE();
+        $composer_4.endReplaceableGroup_ern0ak_k$();
+        Child$composable($this_children$composable, $elementUiModel.copy$composable$default_q0t5da_k$(VOID, VOID, VOID, VOID, onPlaced(tmp_10, tmp0_2)), $saveableStateHolder, $block, $composer_0, 14 & $$dirty | 7168 & $$dirty << 6);
         var tmp_13;
         if (isTraceInProgress()) {
           traceEventEnd();
@@ -2692,7 +2640,7 @@
         }
         tmp = tmp_13;
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         tmp = Unit_getInstance();
       }
       return Unit_getInstance();
@@ -2700,12 +2648,12 @@
   }
   function ComposableLambda$invoke$ref($boundThis) {
     return function (p0, p1) {
-      return $boundThis.invoke_6harzl_k$(p0, p1);
+      return $boundThis.invoke_z8di7s_k$(p0, p1);
     };
   }
   function ChildrenTransitionScope$children$composable$lambda_0($tmp0_rcvr, $this_children$composable, $block, $$changed) {
     return function ($composer, $force) {
-      $tmp0_rcvr.children$composable_dhg18c_k$($this_children$composable, $block, $composer, updateChangedFlags($$changed | 1));
+      $tmp0_rcvr.children$composable_wnmrre_k$($this_children$composable, $block, $composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
@@ -2716,15 +2664,15 @@
     this.gestureValidator_1 = gestureValidator;
     this.$stable_1 = 0;
   }
-  protoOf(ChildrenTransitionScope).children_pj4jd4_k$ = function (_this__u8e3s4, block) {
+  protoOf(ChildrenTransitionScope).children_s65y8w_k$ = function (_this__u8e3s4, block) {
     illegalDecoyCallException('children');
   };
-  protoOf(ChildrenTransitionScope).elementOffset_lcncu4_k$ = function (elementSize, containerSize) {
+  protoOf(ChildrenTransitionScope).elementOffset_rxb8q4_k$ = function (elementSize, containerSize) {
     illegalDecoyCallException('elementOffset');
   };
-  protoOf(ChildrenTransitionScope).children$composable_dhg18c_k$ = function (_this__u8e3s4, block, $composer, $changed) {
+  protoOf(ChildrenTransitionScope).children$composable_wnmrre_k$ = function (_this__u8e3s4, block, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-975494963);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-975494963);
     sourceInformation($composer_0, 'C(children$composable)');
     var $dirty = $changed;
     if (($changed & 14) === 0)
@@ -2740,16 +2688,16 @@
       var saveableStateHolder = rememberSaveableStateHolder$composable($composer_0, 0);
       LaunchedEffect$composable(this.appyxComponent_1, ChildrenTransitionScope$children$composable$slambda_0(this, saveableStateHolder, null), $composer_0, 0);
       // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-      var tmp0_$get_current$$composable_h5ksy7 = get_LocalDensity();
+      var this_0 = get_LocalDensity();
       var $composer_1 = $composer_0;
       sourceInformationMarkerStart($composer_1, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-      var tmp0 = $composer_1.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+      var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
       sourceInformationMarkerEnd($composer_1);
       var density = tmp0;
       // Inline function 'kotlin.with' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.children$composable.<anonymous>' call
-      var gestureExtraTouchAreaPx = density.toPx_u0ojv5_k$(this.gestureExtraTouchArea_1);
+      var gestureExtraTouchAreaPx = density.toPx_mycba2_k$(this.gestureExtraTouchArea_1);
       var tmp = this.appyxComponent_1.get_uiModels_ipbt2f_k$();
       var uiModels$delegate = collectAsState$composable(tmp, null, $composer_0, 0, 1);
       var appyxComponent = this.appyxComponent_1;
@@ -2759,81 +2707,81 @@
         var element = tmp0_iterator.next_20eer_k$();
         // Inline function 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.children$composable.<anonymous>' call
         var id = element.get_element_q8gf71_k$().get_id_kntnx8_k$();
-        $composer_0.startMovableGroup_rpq74u_k$(1799222812, id);
+        $composer_0.startMovableGroup_clfloq_k$(1799222812, id);
         // Inline function 'androidx.compose.runtime.remember$composable' call
         var $composer_2 = $composer_0;
-        $composer_2.startReplaceableGroup_rp6air_k$(-838505973);
+        $composer_2.startReplaceableGroup_ip860b_k$(-838505973);
         sourceInformation($composer_2, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
         // Inline function 'androidx.compose.runtime.cache' call
-        var tmp1_cache = $composer_2.changed_ga7h3f_k$(id);
+        var invalid = $composer_2.changed_ga7h3f_k$(id);
         // Inline function 'kotlin.let' call
-        var tmp0_let = $composer_2.rememberedValue_4dg93v_k$();
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var it = $composer_2.rememberedValue_4dg93v_k$();
         var tmp_0;
-        if (tmp1_cache ? true : tmp0_let === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+        if (invalid ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
           // Inline function 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.children$composable.<anonymous>.<anonymous>' call
           var value = mutableStateOf(Companion_getInstance_5().get_Zero_woe9zl_k$());
-          $composer_2.updateRememberedValue_l1colo_k$(value);
+          $composer_2.updateRememberedValue_l1wh71_k$(value);
           tmp_0 = value;
         } else {
-          tmp_0 = tmp0_let;
+          tmp_0 = it;
         }
         var tmp_1 = tmp_0;
-        var tmp0_0 = (tmp_1 == null ? true : isObject(tmp_1)) ? tmp_1 : THROW_CCE();
-        $composer_2.endReplaceableGroup_er37p7_k$();
+        var tmp0_0 = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
+        $composer_2.endReplaceableGroup_ern0ak_k$();
         var transformedBoundingBox$delegate = tmp0_0;
         // Inline function 'androidx.compose.runtime.remember$composable' call
         var $composer_3 = $composer_0;
-        $composer_3.startReplaceableGroup_rp6air_k$(-838505973);
+        $composer_3.startReplaceableGroup_ip860b_k$(-838505973);
         sourceInformation($composer_3, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
         // Inline function 'androidx.compose.runtime.cache' call
-        var tmp1_cache_0 = $composer_3.changed_ga7h3f_k$(id);
+        var invalid_0 = $composer_3.changed_ga7h3f_k$(id);
         // Inline function 'kotlin.let' call
-        var tmp0_let_0 = $composer_3.rememberedValue_4dg93v_k$();
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var it_0 = $composer_3.rememberedValue_4dg93v_k$();
         var tmp_2;
-        if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+        if (invalid_0 ? true : it_0 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
           // Inline function 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.children$composable.<anonymous>.<anonymous>' call
-          var value_0 = mutableStateOf(new IntSize(Companion_getInstance_2().get_Zero_4ip44w_k$()));
-          $composer_3.updateRememberedValue_l1colo_k$(value_0);
+          var value_0 = mutableStateOf(new IntSize(Companion_getInstance_2().get_Zero_9we0a6_k$()));
+          $composer_3.updateRememberedValue_l1wh71_k$(value_0);
           tmp_2 = value_0;
         } else {
-          tmp_2 = tmp0_let_0;
+          tmp_2 = it_0;
         }
         var tmp_3 = tmp_2;
-        var tmp0_1 = (tmp_3 == null ? true : isObject(tmp_3)) ? tmp_3 : THROW_CCE();
-        $composer_3.endReplaceableGroup_er37p7_k$();
+        var tmp0_1 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
+        $composer_3.endReplaceableGroup_ern0ak_k$();
         var elementSize$delegate = tmp0_1;
         // Inline function 'androidx.compose.runtime.remember$composable' call
         var $composer_4 = $composer_0;
-        $composer_4.startReplaceableGroup_rp6air_k$(-838505973);
+        $composer_4.startReplaceableGroup_ip860b_k$(-838505973);
         sourceInformation($composer_4, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
         // Inline function 'androidx.compose.runtime.cache' call
-        var tmp1_cache_1 = $composer_4.changed_ga7h3f_k$(id);
+        var invalid_1 = $composer_4.changed_ga7h3f_k$(id);
         // Inline function 'kotlin.let' call
-        var tmp0_let_1 = $composer_4.rememberedValue_4dg93v_k$();
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var it_1 = $composer_4.rememberedValue_4dg93v_k$();
         var tmp_4;
-        if (tmp1_cache_1 ? true : tmp0_let_1 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+        if (invalid_1 ? true : it_1 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
           // Inline function 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.children$composable.<anonymous>.<anonymous>' call
-          var value_1 = mutableStateOf(new Offset(Companion_getInstance_6().get_Zero_sctq3f_k$()));
-          $composer_4.updateRememberedValue_l1colo_k$(value_1);
+          var value_1 = mutableStateOf(new Offset(Companion_getInstance_6().get_Zero_k6n73t_k$()));
+          $composer_4.updateRememberedValue_l1wh71_k$(value_1);
           tmp_4 = value_1;
         } else {
-          tmp_4 = tmp0_let_1;
+          tmp_4 = it_1;
         }
         var tmp_5 = tmp_4;
-        var tmp0_2 = (tmp_5 == null ? true : isObject(tmp_5)) ? tmp_5 : THROW_CCE();
-        $composer_4.endReplaceableGroup_er37p7_k$();
+        var tmp0_2 = (tmp_5 == null ? true : !(tmp_5 == null)) ? tmp_5 : THROW_CCE();
+        $composer_4.endReplaceableGroup_ern0ak_k$();
         var offsetCenter$delegate = tmp0_2;
         var tmp_6 = element.get_visibleState_frxjc_k$();
         var isVisible$delegate = collectAsState$composable(tmp_6, null, $composer_0, 0, 1);
         element.get_persistentContainer_b48fy7_k$()($composer_0, 0);
         if (children$composable$_anonymous_$lambda$6_ylrj9e(isVisible$delegate)) {
-          var tmp_7 = [get_LocalMotionProperties().provides_3e53yf_k$(element.get_motionProperties_5siqmq_k$())];
+          var tmp_7 = [get_LocalMotionProperties().provides_3agxel_k$(element.get_motionProperties_5siqmq_k$())];
           // Inline function 'kotlin.run' call
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.children$composable.<anonymous>.<anonymous>' call
@@ -2841,46 +2789,46 @@
           var dispatchReceiver = composableLambda(tmp_8, 1075062131, true, ChildrenTransitionScope$children$composable$lambda(offsetCenter$delegate, this, elementSize$delegate, $dirty, _this__u8e3s4, element, appyxComponent, transformedBoundingBox$delegate, density, gestureExtraTouchAreaPx, saveableStateHolder, block));
           // Inline function 'androidx.compose.runtime.remember$composable' call
           var $composer_5 = $composer_0;
-          $composer_5.startReplaceableGroup_rp6air_k$(-838505973);
+          $composer_5.startReplaceableGroup_ip860b_k$(-838505973);
           sourceInformation($composer_5, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
           // Inline function 'androidx.compose.runtime.cache' call
-          var tmp1_cache_2 = $composer_5.changed_ga7h3f_k$(dispatchReceiver);
+          var invalid_2 = $composer_5.changed_ga7h3f_k$(dispatchReceiver);
           // Inline function 'kotlin.let' call
-          var tmp0_let_2 = $composer_5.rememberedValue_4dg93v_k$();
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+          var it_2 = $composer_5.rememberedValue_4dg93v_k$();
           var tmp_9;
-          if (tmp1_cache_2 ? true : tmp0_let_2 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+          if (invalid_2 ? true : it_2 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
             // Inline function 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.children$composable.<anonymous>.<anonymous>.<anonymous>' call
             var value_2 = ComposableLambda$invoke$ref(dispatchReceiver);
-            $composer_5.updateRememberedValue_l1colo_k$(value_2);
+            $composer_5.updateRememberedValue_l1wh71_k$(value_2);
             tmp_9 = value_2;
           } else {
-            tmp_9 = tmp0_let_2;
+            tmp_9 = it_2;
           }
           var tmp_10 = tmp_9;
-          var tmp0_3 = (tmp_10 == null ? true : isObject(tmp_10)) ? tmp_10 : THROW_CCE();
-          $composer_5.endReplaceableGroup_er37p7_k$();
+          var tmp0_3 = (tmp_10 == null ? true : !(tmp_10 == null)) ? tmp_10 : THROW_CCE();
+          $composer_5.endReplaceableGroup_ern0ak_k$();
           CompositionLocalProvider$composable(tmp_7, tmp0_3, $composer_0, 48);
         }
-        $composer_0.endMovableGroup_kciorf_k$();
+        $composer_0.endMovableGroup_kd2hcs_k$();
       }
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(ChildrenTransitionScope$children$composable$lambda_0(this, _this__u8e3s4, block, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(ChildrenTransitionScope$children$composable$lambda_0(this, _this__u8e3s4, block, $changed));
     }
   };
-  protoOf(ChildrenTransitionScope).elementOffset$composable_havfpl_k$ = function (elementSize, containerSize, $composer, $changed) {
+  protoOf(ChildrenTransitionScope).elementOffset$composable_qajnzs_k$ = function (elementSize, containerSize, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(-1080399616);
+    $composer_0.startReplaceableGroup_ip860b_k$(-1080399616);
     sourceInformation($composer_0, 'C(elementOffset$composable)P(1:c#ui.unit.IntSize,0:c#ui.unit.IntSize)');
     if (isTraceInProgress()) {
       traceEventStart(-1080399616, $changed, -1, 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.elementOffset$composable (AppyxComponent.kt:214)');
@@ -2889,13 +2837,13 @@
     $l$block_0: {
       // Inline function 'com.bumble.appyx.interactions.core.ui.property.motionPropertyRenderValue$composable' call
       var $composer_1 = $composer_0;
-      $composer_1.startReplaceableGroup_rp6air_k$(-805353807);
+      $composer_1.startReplaceableGroup_ip860b_k$(-805353807);
       sourceInformation($composer_1, 'CC(motionPropertyRenderValue$composable)');
       // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-      var tmp0_$get_current$$composable_h5ksy7 = get_LocalMotionProperties();
+      var this_0 = get_LocalMotionProperties();
       var $composer_2 = $composer_1;
       sourceInformationMarkerStart($composer_2, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-      var tmp0 = $composer_2.consume_11nid3_k$(tmp0_$get_current$$composable_h5ksy7);
+      var tmp0 = $composer_2.consume_ebzcrh_k$(this_0);
       sourceInformationMarkerEnd($composer_2);
       var motionProperties = tmp0;
       var tmp;
@@ -2924,7 +2872,7 @@
       var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.get_renderValueFlow_lphgg_k$();
       var tmp_1;
       if (tmp2_elvis_lhs == null) {
-        $composer_1.endReplaceableGroup_er37p7_k$();
+        $composer_1.endReplaceableGroup_ern0ak_k$();
         tmp$ret$4 = null;
         break $l$block_0;
       } else {
@@ -2933,15 +2881,15 @@
       var renderValueFlow = tmp_1;
       var result$delegate = collectAsState$composable(renderValueFlow, null, $composer_1, 0, 1);
       var tmp0_0 = elementOffset$composable$lambda(result$delegate);
-      $composer_1.endReplaceableGroup_er37p7_k$();
+      $composer_1.endReplaceableGroup_ern0ak_k$();
       tmp$ret$4 = tmp0_0;
     }
     var positionAlignment = tmp$ret$4;
     // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-    var tmp1_$get_current$$composable_gn3xww = get_LocalLayoutDirection();
+    var this_1 = get_LocalLayoutDirection();
     var $composer_3 = $composer_0;
     sourceInformationMarkerStart($composer_3, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-    var tmp0_1 = $composer_3.consume_11nid3_k$(tmp1_$get_current$$composable_gn3xww);
+    var tmp0_1 = $composer_3.consume_ebzcrh_k$(this_1);
     sourceInformationMarkerEnd($composer_3);
     var layoutDirection = tmp0_1;
     var tmp_2;
@@ -2951,13 +2899,13 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.bumble.appyx.navigation.composable.ChildrenTransitionScope.elementOffset$composable.<anonymous>' call
-      tmp_2 = positionAlignment.align_f85h4l_k$(elementSize, containerSize, layoutDirection);
+      tmp_2 = positionAlignment.align_mb8mzc_k$(elementSize, containerSize, layoutDirection);
     }
     var tmp1_elvis_lhs = tmp_2;
     var tmp_3;
     var tmp_4 = tmp1_elvis_lhs;
     if ((tmp_4 == null ? null : new IntOffset(tmp_4)) == null) {
-      tmp_3 = Companion_getInstance_7().get_Zero_c6qc7y_k$();
+      tmp_3 = Companion_getInstance_7().get_Zero_6hc3i8_k$();
     } else {
       tmp_3 = tmp1_elvis_lhs;
     }
@@ -2965,7 +2913,7 @@
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return alignmentOffset;
   };
   function AppyxComponent$composable$lambda($containerSize$delegate) {
@@ -2981,7 +2929,9 @@
     getLocalDelegateReference('containerSize', KMutableProperty0, true, function () {
       return THROW_ISE();
     });
-    return $containerSize$delegate.set_value_rnwamw_k$(new IntSize(value));
+    var value_0 = new IntSize(value);
+    $containerSize$delegate.set_value_v1vabv_k$(value_0);
+    return Unit_getInstance();
   }
   function AppyxComponent$composable$lambda_1() {
     _init_properties_AppyxComponent_kt__paqjst();
@@ -2989,7 +2939,7 @@
   }
   function ComposableLambda$invoke$ref_0($boundThis) {
     return function (p0, p1, p2, p3) {
-      return $boundThis.invoke_locru7_k$(p0, p1, p2, p3);
+      return $boundThis.invoke_gk4tfu_k$(p0, p1, p2, p3);
     };
   }
   function AppyxComponent$composable$lambda$lambda(child, $anonymous$parameter$1$, $composer, $changed) {
@@ -3002,12 +2952,12 @@
       if (isTraceInProgress()) {
         traceEventStart(-597091924, $dirty, -1, 'com.bumble.appyx.navigation.composable.AppyxComponent$composable.<anonymous>.<anonymous> (AppyxComponent.kt:67)');
       }
-      child.invoke$composable_vq47s2_k$($composer_0, 14 & $dirty);
+      child.invoke$composable_wmrn74_k$($composer_0, 14 & $dirty);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     return Unit_getInstance();
   }
@@ -3025,7 +2975,7 @@
         if (isTraceInProgress()) {
           traceEventStart(-521103310, $dirty, -1, 'com.bumble.appyx.navigation.composable.AppyxComponent$composable.<anonymous> (AppyxComponent.kt:66)');
         }
-        $this$null.children$composable_dhg18c_k$($this_AppyxComponent$composable, ComposableLambda$invoke$ref_0(composableLambdaInstance(-597091924, false, AppyxComponent$composable$lambda$lambda)), $composer_0, 14 & $$dirty | 896 & $dirty << 6);
+        $this$null.children$composable_wnmrre_k$($this_AppyxComponent$composable, ComposableLambda$invoke$ref_0(composableLambdaInstance(-597091924, false, AppyxComponent$composable$lambda$lambda)), $composer_0, 14 & $$dirty | 896 & $dirty << 6);
         var tmp_1;
         if (isTraceInProgress()) {
           traceEventEnd();
@@ -3033,7 +2983,7 @@
         }
         tmp_0 = tmp_1;
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         tmp_0 = Unit_getInstance();
       }
       return Unit_getInstance();
@@ -3041,27 +2991,27 @@
   }
   function ComposableLambda$invoke$ref_1($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.invoke_5qf8pc_k$(p0, p1, p2);
+      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
   }
   function AppyxComponent$composable$lambda_3($appyxComponent, $coroutineScope, $clipToBounds) {
     return function () {
-      $appyxComponent.updateContext_i1gwt4_k$(new UiContext($coroutineScope, $clipToBounds._v));
+      $appyxComponent.updateContext_7090ud_k$(new UiContext($coroutineScope, $clipToBounds._v));
       return Unit_getInstance();
     };
   }
   function AppyxComponent$composable$lambda_4($appyxComponent, $density, $screenWidthPx, $screenHeightPx, $containerSize$delegate) {
     return function (it) {
-      AppyxComponent$composable$lambda_0($containerSize$delegate, it.get_size_yscczt_k$());
-      $appyxComponent.updateBounds_8j3per_k$(new TransitionBounds($density, _IntSize___get_width__impl__d9yl4o(it.get_size_yscczt_k$()), _IntSize___get_height__impl__prv63b(it.get_size_yscczt_k$()), $screenWidthPx, $screenHeightPx));
+      AppyxComponent$composable$lambda_0($containerSize$delegate, it.get_size_kd98kr_k$());
+      $appyxComponent.updateBounds_l2zr9a_k$(new TransitionBounds($density, _IntSize___get_width__impl__d9yl4o(it.get_size_kd98kr_k$()), _IntSize___get_height__impl__prv63b(it.get_size_kd98kr_k$()), $screenWidthPx, $screenHeightPx));
       return Unit_getInstance();
     };
   }
   function AppyxComponent$composable$lambda_5($appyxComponent) {
     return function (it) {
       var tmp;
-      if (it.get_type_tjo6xw_k$() === Companion_getInstance_8().get_Release_6p7pzd_k$()) {
-        $appyxComponent.onRelease_f2b7s9_k$();
+      if (it.get_type_sn5ie3_k$() === Companion_getInstance_8().get_Release_jji2mi_k$()) {
+        $appyxComponent.onRelease_f1rf6w_k$();
         tmp = Unit_getInstance();
       }
       return Unit_getInstance();
@@ -3083,7 +3033,7 @@
         }
         tmp = tmp_0;
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         tmp = Unit_getInstance();
       }
       return Unit_getInstance();
@@ -3091,7 +3041,7 @@
   }
   function ComposableLambda$invoke$ref_2($boundThis) {
     return function (p0, p1) {
-      return $boundThis.invoke_6harzl_k$(p0, p1);
+      return $boundThis.invoke_z8di7s_k$(p0, p1);
     };
   }
   function AppyxComponent$composable$lambda_7($this_AppyxComponent$composable, $appyxComponent, $modifier, $clipToBounds, $gestureValidator, $gestureExtraTouchArea, $block, $$changed, $$default) {
@@ -3110,7 +3060,7 @@
   }
   function Child$composable(_this__u8e3s4, elementUiModel, saveableStateHolder, decorator, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(1455551485);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1455551485);
     sourceInformation($composer_0, 'C(Child$composable)P(1,2)');
     var $dirty = $changed;
     if (($changed & 14) === 0)
@@ -3127,28 +3077,28 @@
       }
       var navElement = elementUiModel.get_element_q8gf71_k$();
       // Inline function 'androidx.compose.runtime.remember$composable' call
-      var tmp0_remember$composable = navElement.get_id_kntnx8_k$();
+      var key1 = navElement.get_id_kntnx8_k$();
       var $composer_1 = $composer_0;
-      $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+      $composer_1.startReplaceableGroup_ip860b_k$(-838505973);
       sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var tmp1_cache = $composer_1.changed_ga7h3f_k$(tmp0_remember$composable);
+      var invalid = $composer_1.changed_ga7h3f_k$(key1);
       // Inline function 'kotlin.let' call
-      var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = $composer_1.rememberedValue_4dg93v_k$();
       var tmp;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (invalid ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.composable.Child$composable.<anonymous>' call
-        var value = _this__u8e3s4.childOrCreate_ienlyf_k$(navElement);
-        $composer_1.updateRememberedValue_l1colo_k$(value);
+        var value = _this__u8e3s4.childOrCreate_mlg821_k$(navElement);
+        $composer_1.updateRememberedValue_l1wh71_k$(value);
         tmp = value;
       } else {
-        tmp = tmp0_let;
+        tmp = it;
       }
       var tmp_0 = tmp;
-      var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-      $composer_1.endReplaceableGroup_er37p7_k$();
+      var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+      $composer_1.endReplaceableGroup_ern0ak_k$();
       var childEntry = tmp0;
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
@@ -3157,38 +3107,38 @@
       var dispatchReceiver = composableLambda(tmp_1, 1786452345, true, Child$composable$lambda(decorator, childEntry, elementUiModel, $dirty));
       // Inline function 'androidx.compose.runtime.remember$composable' call
       var $composer_2 = $composer_0;
-      $composer_2.startReplaceableGroup_rp6air_k$(-838505973);
+      $composer_2.startReplaceableGroup_ip860b_k$(-838505973);
       sourceInformation($composer_2, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var tmp1_cache_0 = $composer_2.changed_ga7h3f_k$(dispatchReceiver);
+      var invalid_0 = $composer_2.changed_ga7h3f_k$(dispatchReceiver);
       // Inline function 'kotlin.let' call
-      var tmp0_let_0 = $composer_2.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it_0 = $composer_2.rememberedValue_4dg93v_k$();
       var tmp_2;
-      if (tmp1_cache_0 ? true : tmp0_let_0 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (invalid_0 ? true : it_0 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.composable.Child$composable.<anonymous>.<anonymous>' call
         var value_0 = ComposableLambda$invoke$ref_5(dispatchReceiver);
-        $composer_2.updateRememberedValue_l1colo_k$(value_0);
+        $composer_2.updateRememberedValue_l1wh71_k$(value_0);
         tmp_2 = value_0;
       } else {
-        tmp_2 = tmp0_let_0;
+        tmp_2 = it_0;
       }
       var tmp_3 = tmp_2;
-      var tmp0_0 = (tmp_3 == null ? true : isObject(tmp_3)) ? tmp_3 : THROW_CCE();
-      $composer_2.endReplaceableGroup_er37p7_k$();
-      saveableStateHolder.SaveableStateProvider$composable_n5yi3h_k$(navElement, tmp0_0, $composer_0, 48 | 896 & $dirty);
+      var tmp0_0 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
+      $composer_2.endReplaceableGroup_ern0ak_k$();
+      saveableStateHolder.SaveableStateProvider$composable_pz6ujh_k$(navElement, tmp0_0, $composer_0, 48 | 896 & $dirty);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp0_safe_receiver === null)
       null;
     else {
-      tmp0_safe_receiver.updateScope_xhrf9y_k$(Child$composable$lambda_0(_this__u8e3s4, elementUiModel, saveableStateHolder, decorator, $changed));
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Child$composable$lambda_0(_this__u8e3s4, elementUiModel, saveableStateHolder, decorator, $changed));
     }
   }
   function _get_node__db0vwp($this) {
@@ -3205,7 +3155,7 @@
         if (isTraceInProgress()) {
           traceEventStart(1023464157, $changed, -1, 'com.bumble.appyx.navigation.composable.ChildRendererImpl.invoke$composable.<anonymous>.<anonymous> (Child.kt:44)');
         }
-        this$0.node_1.Compose$composable_g1xpaf_k$($modifier, $composer_0, 14 & $$dirty, 0);
+        this$0.node_1.Compose$composable_o87cjm_k$($modifier, $composer_0, 14 & $$dirty, 0);
         var tmp_0;
         if (isTraceInProgress()) {
           traceEventEnd();
@@ -3213,7 +3163,7 @@
         }
         tmp = tmp_0;
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         tmp = Unit_getInstance();
       }
       return Unit_getInstance();
@@ -3221,12 +3171,12 @@
   }
   function ComposableLambda$invoke$ref_3($boundThis) {
     return function (p0, p1) {
-      return $boundThis.invoke_6harzl_k$(p0, p1);
+      return $boundThis.invoke_z8di7s_k$(p0, p1);
     };
   }
   function ChildRendererImpl$invoke$composable$lambda_0($tmp0_rcvr, $modifier, $$changed) {
     return function ($composer, $force) {
-      $tmp0_rcvr.invoke$composable_hdq5lr_k$($modifier, $composer, updateChangedFlags($$changed | 1));
+      $tmp0_rcvr.invoke$composable_84wnaz_k$($modifier, $composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
@@ -3238,7 +3188,7 @@
         if (isTraceInProgress()) {
           traceEventStart(-608276698, $changed, -1, 'com.bumble.appyx.navigation.composable.ChildRendererImpl.invoke$composable.<anonymous>.<anonymous> (Child.kt:56)');
         }
-        this$0.node_1.Compose$composable_g1xpaf_k$(Companion_getInstance(), $composer_0, 6, 0);
+        this$0.node_1.Compose$composable_o87cjm_k$(Companion_getInstance(), $composer_0, 6, 0);
         var tmp_0;
         if (isTraceInProgress()) {
           traceEventEnd();
@@ -3246,7 +3196,7 @@
         }
         tmp = tmp_0;
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         tmp = Unit_getInstance();
       }
       return Unit_getInstance();
@@ -3254,12 +3204,12 @@
   }
   function ComposableLambda$invoke$ref_4($boundThis) {
     return function (p0, p1) {
-      return $boundThis.invoke_6harzl_k$(p0, p1);
+      return $boundThis.invoke_z8di7s_k$(p0, p1);
     };
   }
   function ChildRendererImpl$invoke$composable$lambda_2($tmp0_rcvr, $$changed) {
     return function ($composer, $force) {
-      $tmp0_rcvr.invoke$composable_vq47s2_k$($composer, updateChangedFlags($$changed | 1));
+      $tmp0_rcvr.invoke$composable_wmrn74_k$($composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
@@ -3267,15 +3217,15 @@
     this.node_1 = node;
     this.elementUiModel_1 = elementUiModel;
   }
-  protoOf(ChildRendererImpl).invoke_imz6ii_k$ = function (modifier) {
+  protoOf(ChildRendererImpl).invoke_6655yb_k$ = function (modifier) {
     illegalDecoyCallException('invoke');
   };
-  protoOf(ChildRendererImpl).invoke_7ro3zb_k$ = function () {
+  protoOf(ChildRendererImpl).invoke_7s7wko_k$ = function () {
     illegalDecoyCallException('invoke');
   };
-  protoOf(ChildRendererImpl).invoke$composable_hdq5lr_k$ = function (modifier, $composer, $changed) {
+  protoOf(ChildRendererImpl).invoke$composable_84wnaz_k$ = function (modifier, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(719156668);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(719156668);
     sourceInformation($composer_0, 'C(invoke$composable)');
     var $dirty = $changed;
     if (($changed & 14) === 0)
@@ -3291,63 +3241,65 @@
       var contentAlignment = null;
       var propagateMinConstraints = false;
       var $composer_1 = $composer_0;
-      $composer_1.startReplaceableGroup_rp6air_k$(1330882304);
+      $composer_1.startReplaceableGroup_ip860b_k$(1330882304);
       sourceInformation($composer_1, 'CC(Box$composable)P(2,1,3)69@3214L67,70@3286L130:Box.kt#2w3rfo');
-      if (!(0 === 0))
+      if (!((6 & 1) === 0))
         modifier_0 = Companion_getInstance();
-      if (!(2 === 0))
+      if (!((6 & 2) === 0))
         contentAlignment = Companion_getInstance_3().get_TopStart_o4x792_k$();
-      if (!(4 === 0))
+      if (!((6 & 4) === 0))
         propagateMinConstraints = false;
-      var measurePolicy = rememberBoxMeasurePolicy$composable(contentAlignment, propagateMinConstraints, $composer_1, 0);
+      var measurePolicy = rememberBoxMeasurePolicy$composable(contentAlignment, propagateMinConstraints, $composer_1, 14 & 0 >> 3 | 112 & 0 >> 3);
       // Inline function 'androidx.compose.ui.layout.Layout$composable' call
       var modifier_1 = modifier_0;
+      var $changed_0 = 112 & 0 << 3;
+      var modifier_2 = modifier_1;
       var $composer_2 = $composer_1;
-      $composer_2.startReplaceableGroup_rp6air_k$(1725976829);
+      $composer_2.startReplaceableGroup_ip860b_k$(1725976829);
       sourceInformation($composer_2, 'CC(Layout$composable)P(!1,2)78@3158L23,80@3248L420:Layout.kt#80mrfh');
-      if (!(0 === 0))
-        modifier_1 = Companion_getInstance();
+      if (!((0 & 2) === 0))
+        modifier_2 = Companion_getInstance();
       var compositeKeyHash = $get_currentCompositeKeyHash$$composable_u3vbzj($composer_2, 0);
       var localMap = $composer_2.get_currentCompositionLocalMap_fmcf79_k$();
       // Inline function 'androidx.compose.runtime.ReusableComposeNode$composable' call
-      var tmp0_ReusableComposeNode$composable = Companion_getInstance_4().get_Constructor_f7ieep_k$();
-      var tmp1_ReusableComposeNode$composable = materializerOf(modifier_1);
-      var tmp3_ReusableComposeNode$composable = 6 | 7168 & 0 << 9;
+      var factory = Companion_getInstance_4().get_Constructor_f7ieep_k$();
+      var skippableUpdate = materializerOf(modifier_2);
+      var $changed_1 = 6 | 7168 & $changed_0 << 9;
       var $composer_3 = $composer_2;
       var tmp = $composer_3.get_applier_bupu8u_k$();
       if (!isInterface(tmp, Applier)) {
         invalidApplier();
       }
-      $composer_3.startReusableNode_jk07k2_k$();
+      $composer_3.startReusableNode_jjgeyp_k$();
       if ($composer_3.get_inserting_25mlsw_k$()) {
-        $composer_3.createNode_p4ouwd_k$(tmp0_ReusableComposeNode$composable);
+        $composer_3.createNode_ahrd54_k$(factory);
       } else {
-        $composer_3.useNode_inlzo8_k$();
+        $composer_3.useNode_io5s9l_k$();
       }
       // Inline function 'androidx.compose.ui.layout.Layout$composable.<anonymous>' call
-      var tmp4_anonymous = _Updater___init__impl__rbfxm8($composer_3);
-      Updater__set_impl_v7kwss(tmp4_anonymous, measurePolicy, Companion_getInstance_4().get_SetMeasurePolicy_on6ujt_k$());
-      Updater__set_impl_v7kwss(tmp4_anonymous, localMap, Companion_getInstance_4().get_SetResolvedCompositionLocals_rc2u9t_k$());
+      var $this$ReusableComposeNode = _Updater___init__impl__rbfxm8($composer_3);
+      Updater__set_impl_v7kwss($this$ReusableComposeNode, measurePolicy, Companion_getInstance_4().get_SetMeasurePolicy_on6ujt_k$());
+      Updater__set_impl_v7kwss($this$ReusableComposeNode, localMap, Companion_getInstance_4().get_SetResolvedCompositionLocals_rc2u9t_k$());
       // Inline function 'androidx.compose.runtime.Updater.set' call
-      var tmp0_set = Companion_getInstance_4().get_SetCompositeKeyHash_n8lgg1_k$();
+      var block = Companion_getInstance_4().get_SetCompositeKeyHash_n8lgg1_k$();
       // Inline function 'kotlin.with' call
-      var tmp0_with = _Updater___get_composer__impl__9ty7av(tmp4_anonymous);
       // Inline function 'kotlin.contracts.contract' call
+      var $this$with = _Updater___get_composer__impl__9ty7av($this$ReusableComposeNode);
       var tmp_0;
-      if (tmp0_with.get_inserting_25mlsw_k$() ? true : !equals(tmp0_with.rememberedValue_4dg93v_k$(), compositeKeyHash)) {
-        tmp0_with.updateRememberedValue_l1colo_k$(compositeKeyHash);
-        _Updater___get_composer__impl__9ty7av(tmp4_anonymous).apply_ar56ei_k$(compositeKeyHash, tmp0_set);
+      if ($this$with.get_inserting_25mlsw_k$() ? true : !equals($this$with.rememberedValue_4dg93v_k$(), compositeKeyHash)) {
+        $this$with.updateRememberedValue_l1wh71_k$(compositeKeyHash);
+        _Updater___get_composer__impl__9ty7av($this$ReusableComposeNode).apply_pk82p8_k$(compositeKeyHash, block);
         tmp_0 = Unit_getInstance();
       }
-      tmp1_ReusableComposeNode$composable(new SkippableUpdater(_SkippableUpdater___init__impl__4ft0t9($composer_3)), $composer_3, 112 & tmp3_ReusableComposeNode$composable >> 3);
-      $composer_3.startReplaceableGroup_rp6air_k$(2058660585);
+      skippableUpdate(new SkippableUpdater(_SkippableUpdater___init__impl__4ft0t9($composer_3)), $composer_3, 112 & $changed_1 >> 3);
+      $composer_3.startReplaceableGroup_ip860b_k$(2058660585);
       // Inline function 'androidx.compose.foundation.layout.Box$composable.<anonymous>' call
       var $composer_4 = $composer_3;
       sourceInformationMarkerStart($composer_4, -1851536925, 'C71@3331L9:Box.kt#2w3rfo');
       // Inline function 'com.bumble.appyx.navigation.composable.ChildRendererImpl.invoke$composable.<anonymous>' call
       BoxScopeInstance_getInstance();
       var $composer_5 = $composer_4;
-      var tmp_1 = [get_LocalMotionProperties().provides_3e53yf_k$(this.elementUiModel_1.get_motionProperties_5siqmq_k$())];
+      var tmp_1 = [get_LocalMotionProperties().provides_3agxel_k$(this.elementUiModel_1.get_motionProperties_5siqmq_k$())];
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.bumble.appyx.navigation.composable.ChildRendererImpl.invoke$composable.<anonymous>.<anonymous>' call
@@ -3355,48 +3307,48 @@
       var dispatchReceiver = composableLambda(tmp_2, 1023464157, true, ChildRendererImpl$invoke$composable$lambda(this, modifier, $dirty));
       // Inline function 'androidx.compose.runtime.remember$composable' call
       var $composer_6 = $composer_5;
-      $composer_6.startReplaceableGroup_rp6air_k$(-838505973);
+      $composer_6.startReplaceableGroup_ip860b_k$(-838505973);
       sourceInformation($composer_6, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var tmp1_cache = $composer_6.changed_ga7h3f_k$(dispatchReceiver);
+      var invalid = $composer_6.changed_ga7h3f_k$(dispatchReceiver);
       // Inline function 'kotlin.let' call
-      var tmp0_let = $composer_6.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = $composer_6.rememberedValue_4dg93v_k$();
       var tmp_3;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (invalid ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.composable.ChildRendererImpl.invoke$composable.<anonymous>.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_3(dispatchReceiver);
-        $composer_6.updateRememberedValue_l1colo_k$(value);
+        $composer_6.updateRememberedValue_l1wh71_k$(value);
         tmp_3 = value;
       } else {
-        tmp_3 = tmp0_let;
+        tmp_3 = it;
       }
       var tmp_4 = tmp_3;
-      var tmp0 = (tmp_4 == null ? true : isObject(tmp_4)) ? tmp_4 : THROW_CCE();
-      $composer_6.endReplaceableGroup_er37p7_k$();
+      var tmp0 = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
+      $composer_6.endReplaceableGroup_ern0ak_k$();
       CompositionLocalProvider$composable(tmp_1, tmp0, $composer_5, 48);
       sourceInformationMarkerEnd($composer_4);
-      $composer_3.endReplaceableGroup_er37p7_k$();
-      $composer_3.endNode_3mkr10_k$();
-      $composer_2.endReplaceableGroup_er37p7_k$();
-      $composer_1.endReplaceableGroup_er37p7_k$();
+      $composer_3.endReplaceableGroup_ern0ak_k$();
+      $composer_3.endNode_3m0yfn_k$();
+      $composer_2.endReplaceableGroup_ern0ak_k$();
+      $composer_1.endReplaceableGroup_ern0ak_k$();
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(ChildRendererImpl$invoke$composable$lambda_0(this, modifier, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(ChildRendererImpl$invoke$composable$lambda_0(this, modifier, $changed));
     }
   };
-  protoOf(ChildRendererImpl).invoke$composable_vq47s2_k$ = function ($composer, $changed) {
+  protoOf(ChildRendererImpl).invoke$composable_wmrn74_k$ = function ($composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-1605605476);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1605605476);
     sourceInformation($composer_0, 'C(invoke$composable)');
     var $dirty = $changed;
     if (($changed & 14) === 0)
@@ -3410,63 +3362,65 @@
       var contentAlignment = null;
       var propagateMinConstraints = false;
       var $composer_1 = $composer_0;
-      $composer_1.startReplaceableGroup_rp6air_k$(1330882304);
+      $composer_1.startReplaceableGroup_ip860b_k$(1330882304);
       sourceInformation($composer_1, 'CC(Box$composable)P(2,1,3)69@3214L67,70@3286L130:Box.kt#2w3rfo');
-      if (!(0 === 0))
+      if (!((6 & 1) === 0))
         modifier = Companion_getInstance();
-      if (!(2 === 0))
+      if (!((6 & 2) === 0))
         contentAlignment = Companion_getInstance_3().get_TopStart_o4x792_k$();
-      if (!(4 === 0))
+      if (!((6 & 4) === 0))
         propagateMinConstraints = false;
-      var measurePolicy = rememberBoxMeasurePolicy$composable(contentAlignment, propagateMinConstraints, $composer_1, 0);
+      var measurePolicy = rememberBoxMeasurePolicy$composable(contentAlignment, propagateMinConstraints, $composer_1, 14 & 0 >> 3 | 112 & 0 >> 3);
       // Inline function 'androidx.compose.ui.layout.Layout$composable' call
       var modifier_0 = modifier;
+      var $changed_0 = 112 & 0 << 3;
+      var modifier_1 = modifier_0;
       var $composer_2 = $composer_1;
-      $composer_2.startReplaceableGroup_rp6air_k$(1725976829);
+      $composer_2.startReplaceableGroup_ip860b_k$(1725976829);
       sourceInformation($composer_2, 'CC(Layout$composable)P(!1,2)78@3158L23,80@3248L420:Layout.kt#80mrfh');
-      if (!(0 === 0))
-        modifier_0 = Companion_getInstance();
+      if (!((0 & 2) === 0))
+        modifier_1 = Companion_getInstance();
       var compositeKeyHash = $get_currentCompositeKeyHash$$composable_u3vbzj($composer_2, 0);
       var localMap = $composer_2.get_currentCompositionLocalMap_fmcf79_k$();
       // Inline function 'androidx.compose.runtime.ReusableComposeNode$composable' call
-      var tmp0_ReusableComposeNode$composable = Companion_getInstance_4().get_Constructor_f7ieep_k$();
-      var tmp1_ReusableComposeNode$composable = materializerOf(modifier_0);
-      var tmp3_ReusableComposeNode$composable = 6 | 7168 & 0 << 9;
+      var factory = Companion_getInstance_4().get_Constructor_f7ieep_k$();
+      var skippableUpdate = materializerOf(modifier_1);
+      var $changed_1 = 6 | 7168 & $changed_0 << 9;
       var $composer_3 = $composer_2;
       var tmp = $composer_3.get_applier_bupu8u_k$();
       if (!isInterface(tmp, Applier)) {
         invalidApplier();
       }
-      $composer_3.startReusableNode_jk07k2_k$();
+      $composer_3.startReusableNode_jjgeyp_k$();
       if ($composer_3.get_inserting_25mlsw_k$()) {
-        $composer_3.createNode_p4ouwd_k$(tmp0_ReusableComposeNode$composable);
+        $composer_3.createNode_ahrd54_k$(factory);
       } else {
-        $composer_3.useNode_inlzo8_k$();
+        $composer_3.useNode_io5s9l_k$();
       }
       // Inline function 'androidx.compose.ui.layout.Layout$composable.<anonymous>' call
-      var tmp4_anonymous = _Updater___init__impl__rbfxm8($composer_3);
-      Updater__set_impl_v7kwss(tmp4_anonymous, measurePolicy, Companion_getInstance_4().get_SetMeasurePolicy_on6ujt_k$());
-      Updater__set_impl_v7kwss(tmp4_anonymous, localMap, Companion_getInstance_4().get_SetResolvedCompositionLocals_rc2u9t_k$());
+      var $this$ReusableComposeNode = _Updater___init__impl__rbfxm8($composer_3);
+      Updater__set_impl_v7kwss($this$ReusableComposeNode, measurePolicy, Companion_getInstance_4().get_SetMeasurePolicy_on6ujt_k$());
+      Updater__set_impl_v7kwss($this$ReusableComposeNode, localMap, Companion_getInstance_4().get_SetResolvedCompositionLocals_rc2u9t_k$());
       // Inline function 'androidx.compose.runtime.Updater.set' call
-      var tmp0_set = Companion_getInstance_4().get_SetCompositeKeyHash_n8lgg1_k$();
+      var block = Companion_getInstance_4().get_SetCompositeKeyHash_n8lgg1_k$();
       // Inline function 'kotlin.with' call
-      var tmp0_with = _Updater___get_composer__impl__9ty7av(tmp4_anonymous);
       // Inline function 'kotlin.contracts.contract' call
+      var $this$with = _Updater___get_composer__impl__9ty7av($this$ReusableComposeNode);
       var tmp_0;
-      if (tmp0_with.get_inserting_25mlsw_k$() ? true : !equals(tmp0_with.rememberedValue_4dg93v_k$(), compositeKeyHash)) {
-        tmp0_with.updateRememberedValue_l1colo_k$(compositeKeyHash);
-        _Updater___get_composer__impl__9ty7av(tmp4_anonymous).apply_ar56ei_k$(compositeKeyHash, tmp0_set);
+      if ($this$with.get_inserting_25mlsw_k$() ? true : !equals($this$with.rememberedValue_4dg93v_k$(), compositeKeyHash)) {
+        $this$with.updateRememberedValue_l1wh71_k$(compositeKeyHash);
+        _Updater___get_composer__impl__9ty7av($this$ReusableComposeNode).apply_pk82p8_k$(compositeKeyHash, block);
         tmp_0 = Unit_getInstance();
       }
-      tmp1_ReusableComposeNode$composable(new SkippableUpdater(_SkippableUpdater___init__impl__4ft0t9($composer_3)), $composer_3, 112 & tmp3_ReusableComposeNode$composable >> 3);
-      $composer_3.startReplaceableGroup_rp6air_k$(2058660585);
+      skippableUpdate(new SkippableUpdater(_SkippableUpdater___init__impl__4ft0t9($composer_3)), $composer_3, 112 & $changed_1 >> 3);
+      $composer_3.startReplaceableGroup_ip860b_k$(2058660585);
       // Inline function 'androidx.compose.foundation.layout.Box$composable.<anonymous>' call
       var $composer_4 = $composer_3;
       sourceInformationMarkerStart($composer_4, -1851536925, 'C71@3331L9:Box.kt#2w3rfo');
       // Inline function 'com.bumble.appyx.navigation.composable.ChildRendererImpl.invoke$composable.<anonymous>' call
       BoxScopeInstance_getInstance();
       var $composer_5 = $composer_4;
-      var tmp_1 = [get_LocalMotionProperties().provides_3e53yf_k$(this.elementUiModel_1.get_motionProperties_5siqmq_k$())];
+      var tmp_1 = [get_LocalMotionProperties().provides_3agxel_k$(this.elementUiModel_1.get_motionProperties_5siqmq_k$())];
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.bumble.appyx.navigation.composable.ChildRendererImpl.invoke$composable.<anonymous>.<anonymous>' call
@@ -3474,43 +3428,43 @@
       var dispatchReceiver = composableLambda(tmp_2, -608276698, true, ChildRendererImpl$invoke$composable$lambda_1(this));
       // Inline function 'androidx.compose.runtime.remember$composable' call
       var $composer_6 = $composer_5;
-      $composer_6.startReplaceableGroup_rp6air_k$(-838505973);
+      $composer_6.startReplaceableGroup_ip860b_k$(-838505973);
       sourceInformation($composer_6, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var tmp1_cache = $composer_6.changed_ga7h3f_k$(dispatchReceiver);
+      var invalid = $composer_6.changed_ga7h3f_k$(dispatchReceiver);
       // Inline function 'kotlin.let' call
-      var tmp0_let = $composer_6.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = $composer_6.rememberedValue_4dg93v_k$();
       var tmp_3;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (invalid ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.composable.ChildRendererImpl.invoke$composable.<anonymous>.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_4(dispatchReceiver);
-        $composer_6.updateRememberedValue_l1colo_k$(value);
+        $composer_6.updateRememberedValue_l1wh71_k$(value);
         tmp_3 = value;
       } else {
-        tmp_3 = tmp0_let;
+        tmp_3 = it;
       }
       var tmp_4 = tmp_3;
-      var tmp0 = (tmp_4 == null ? true : isObject(tmp_4)) ? tmp_4 : THROW_CCE();
-      $composer_6.endReplaceableGroup_er37p7_k$();
+      var tmp0 = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
+      $composer_6.endReplaceableGroup_ern0ak_k$();
       CompositionLocalProvider$composable(tmp_1, tmp0, $composer_5, 48);
       sourceInformationMarkerEnd($composer_4);
-      $composer_3.endReplaceableGroup_er37p7_k$();
-      $composer_3.endNode_3mkr10_k$();
-      $composer_2.endReplaceableGroup_er37p7_k$();
-      $composer_1.endReplaceableGroup_er37p7_k$();
+      $composer_3.endReplaceableGroup_ern0ak_k$();
+      $composer_3.endNode_3m0yfn_k$();
+      $composer_2.endReplaceableGroup_ern0ak_k$();
+      $composer_1.endReplaceableGroup_ern0ak_k$();
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(ChildRendererImpl$invoke$composable$lambda_2(this, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(ChildRendererImpl$invoke$composable$lambda_2(this, $changed));
     }
   };
   function Child$composable$lambda($decorator, $childEntry, $elementUiModel, $$dirty) {
@@ -3529,7 +3483,7 @@
         }
         tmp = tmp_0;
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         tmp = Unit_getInstance();
       }
       return Unit_getInstance();
@@ -3537,7 +3491,7 @@
   }
   function ComposableLambda$invoke$ref_5($boundThis) {
     return function (p0, p1) {
-      return $boundThis.invoke_6harzl_k$(p0, p1);
+      return $boundThis.invoke_z8di7s_k$(p0, p1);
     };
   }
   function Child$composable$lambda_0($this_Child$composable, $elementUiModel, $saveableStateHolder, $decorator, $$changed) {
@@ -3554,7 +3508,7 @@
     var modifier_0 = {_v: modifier};
     var customisations_0 = {_v: customisations};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(1970060349);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1970060349);
     sourceInformation($composer_0, 'C(NodeHost$composable)P(3,2,5,4)');
     var $dirty = $changed;
     if (!(($default & 1) === 0))
@@ -3580,7 +3534,7 @@
     else if (($changed & 458752) === 0)
       $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(factory) ? 131072 : 65536);
     if (!(($dirty & 374491) === 74898) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      $composer_0.startDefaults_g7jseb_k$();
+      $composer_0.startDefaults_g83kzo_k$();
       if (($changed & 1) === 0 ? true : $composer_0.get_defaultsInvalid_y88fc4_k$()) {
         if (!(($default & 8) === 0)) {
           modifier_0._v = Companion_getInstance();
@@ -3588,38 +3542,38 @@
         if (!(($default & 16) === 0)) {
           // Inline function 'androidx.compose.runtime.remember$composable' call
           var $composer_1 = $composer_0;
-          $composer_1.startReplaceableGroup_rp6air_k$(547886695);
+          $composer_1.startReplaceableGroup_ip860b_k$(547886695);
           sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
           // Inline function 'androidx.compose.runtime.cache' call
           // Inline function 'kotlin.let' call
-          var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+          var it = $composer_1.rememberedValue_4dg93v_k$();
           var tmp;
-          if (false ? true : tmp0_let === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+          if (false ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
             // Inline function 'com.bumble.appyx.navigation.integration.NodeHost$composable.<anonymous>' call
             var value = new NodeCustomisationDirectoryImpl();
-            $composer_1.updateRememberedValue_l1colo_k$(value);
+            $composer_1.updateRememberedValue_l1wh71_k$(value);
             tmp = value;
           } else {
-            tmp = tmp0_let;
+            tmp = it;
           }
           var tmp_0 = tmp;
-          var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-          $composer_1.endReplaceableGroup_er37p7_k$();
+          var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+          $composer_1.endReplaceableGroup_ern0ak_k$();
           customisations_0._v = tmp0;
           $dirty = $dirty & -57345;
         }
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         if (!(($default & 16) === 0))
           $dirty = $dirty & -57345;
       }
-      $composer_0.endDefaults_b0883g_k$();
+      $composer_0.endDefaults_b0s0ot_k$();
       if (isTraceInProgress()) {
         traceEventStart(1970060349, $dirty, -1, 'com.bumble.appyx.navigation.integration.NodeHost$composable (NodeHost.kt:36)');
       }
-      var tmp_1 = [get_LocalScreenSize().provides_3e53yf_k$(screenSize)];
+      var tmp_1 = [get_LocalScreenSize().provides_3agxel_k$(screenSize)];
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.bumble.appyx.navigation.integration.NodeHost$composable.<anonymous>' call
@@ -3627,43 +3581,43 @@
       var dispatchReceiver = composableLambda(tmp_2, -755439189, true, NodeHost$composable$lambda(factory, customisations_0, integrationPoint, $dirty, modifier_0, lifecycle));
       // Inline function 'androidx.compose.runtime.remember$composable' call
       var $composer_2 = $composer_0;
-      $composer_2.startReplaceableGroup_rp6air_k$(-838505973);
+      $composer_2.startReplaceableGroup_ip860b_k$(-838505973);
       sourceInformation($composer_2, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var tmp1_cache = $composer_2.changed_ga7h3f_k$(dispatchReceiver);
+      var invalid = $composer_2.changed_ga7h3f_k$(dispatchReceiver);
       // Inline function 'kotlin.let' call
-      var tmp0_let_0 = $composer_2.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it_0 = $composer_2.rememberedValue_4dg93v_k$();
       var tmp_3;
-      if (tmp1_cache ? true : tmp0_let_0 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (invalid ? true : it_0 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.integration.NodeHost$composable.<anonymous>.<anonymous>' call
         var value_0 = ComposableLambda$invoke$ref_6(dispatchReceiver);
-        $composer_2.updateRememberedValue_l1colo_k$(value_0);
+        $composer_2.updateRememberedValue_l1wh71_k$(value_0);
         tmp_3 = value_0;
       } else {
-        tmp_3 = tmp0_let_0;
+        tmp_3 = it_0;
       }
       var tmp_4 = tmp_3;
-      var tmp0_0 = (tmp_4 == null ? true : isObject(tmp_4)) ? tmp_4 : THROW_CCE();
-      $composer_2.endReplaceableGroup_er37p7_k$();
+      var tmp0_0 = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
+      $composer_2.endReplaceableGroup_ern0ak_k$();
       CompositionLocalProvider$composable(tmp_1, tmp0_0, $composer_0, 48);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp0_safe_receiver === null)
       null;
     else {
-      tmp0_safe_receiver.updateScope_xhrf9y_k$(NodeHost$composable$lambda_0(lifecycle, integrationPoint, screenSize, modifier_0, customisations_0, factory, $changed, $default));
+      tmp0_safe_receiver.updateScope_t8jcf_k$(NodeHost$composable$lambda_0(lifecycle, integrationPoint, screenSize, modifier_0, customisations_0, factory, $changed, $default));
     }
   }
   function rememberNode$composable(factory, customisations, integrationPoint, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_rp6air_k$(1436725836);
+    $composer_0.startReplaceableGroup_ip860b_k$(1436725836);
     if (isTraceInProgress()) {
       traceEventStart(1436725836, $changed, -1, 'com.bumble.appyx.navigation.integration.rememberNode$composable (NodeHost.kt:59)');
     }
@@ -3673,32 +3627,32 @@
     var tmp = [].slice();
     // Inline function 'androidx.compose.runtime.remember$composable' call
     var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_rp6air_k$(547886695);
+    $composer_1.startReplaceableGroup_ip860b_k$(547886695);
     sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
     // Inline function 'kotlin.let' call
-    var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_1.rememberedValue_4dg93v_k$();
     var tmp_0;
-    if (false ? true : tmp0_let === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+    if (false ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
       // Inline function 'com.bumble.appyx.navigation.integration.rememberNode$composable.<anonymous>' call
       var value = rememberNode$composable$lambda;
-      $composer_1.updateRememberedValue_l1colo_k$(value);
+      $composer_1.updateRememberedValue_l1wh71_k$(value);
       tmp_0 = value;
     } else {
-      tmp_0 = tmp0_let;
+      tmp_0 = it;
     }
     var tmp_1 = tmp_0;
-    var tmp0 = (tmp_1 == null ? true : isObject(tmp_1)) ? tmp_1 : THROW_CCE();
-    $composer_1.endReplaceableGroup_er37p7_k$();
+    var tmp0 = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
+    $composer_1.endReplaceableGroup_ern0ak_k$();
     var tmp_2 = tmp0;
     var tmp_3 = mapSaver(tmp_2, rememberNode$composable$lambda_0(factory, customisations, integrationPoint));
     var tmp0_0 = rememberSaveable$composable(tmp, tmp_3, null, rememberNode$composable$lambda_1(factory, customisations, integrationPoint), $composer_0, 0, 4);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.endReplaceableGroup_er37p7_k$();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0_0;
   }
   function NodeHost$composable$_anonymous_$_anonymous_$lambda$0_ugwk3m($node$delegate) {
@@ -3710,36 +3664,34 @@
   }
   function rememberNode$composable$createNode($factory, $customisations, $integrationPoint, savedStateMap) {
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = $factory.create_6swt8h_k$(Companion_getInstance_12().root_ovvf1a_k$(savedStateMap, $customisations));
+    var this_0 = $factory.create_g34fwj_k$(Companion_getInstance_12().root_q6hasv_k$(savedStateMap, $customisations));
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'com.bumble.appyx.navigation.integration.rememberNode$composable.createNode.<anonymous>' call
-    tmp0_apply.set_integrationPoint_je01kl_k$($integrationPoint);
-    return build(tmp0_apply);
+    this_0.set_integrationPoint_qzhai5_k$($integrationPoint);
+    return build(this_0);
   }
   function sam$com_bumble_appyx_navigation_lifecycle_PlatformLifecycleEventObserver$0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$com_bumble_appyx_navigation_lifecycle_PlatformLifecycleEventObserver$0).onStateChanged_9vyt26_k$ = function (newState, event) {
+  protoOf(sam$com_bumble_appyx_navigation_lifecycle_PlatformLifecycleEventObserver$0).onStateChanged_yk8xts_k$ = function (newState, event) {
     return this.function_1(newState, event);
   };
   function _no_name_provided__qut3iv_1($node$delegate) {
     this.$node$delegate_1 = $node$delegate;
   }
-  protoOf(_no_name_provided__qut3iv_1).dispose_3n44we_k$ = function () {
+  protoOf(_no_name_provided__qut3iv_1).dispose_3nnxhr_k$ = function () {
     // Inline function 'com.bumble.appyx.navigation.integration.NodeHost$composable.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-    NodeHost$composable$_anonymous_$_anonymous_$lambda$0_ugwk3m(this.$node$delegate_1).updateLifecycleState_xc7s69_k$(State_DESTROYED_getInstance());
+    NodeHost$composable$_anonymous_$_anonymous_$lambda$0_ugwk3m(this.$node$delegate_1).updateLifecycleState_fld7ue_k$(State_DESTROYED_getInstance());
   };
   function NodeHost$composable$lambda$lambda($node$delegate) {
     return function ($this$DisposableEffect) {
-      var tmp$ret$0;
       // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      tmp$ret$0 = new _no_name_provided__qut3iv_1($node$delegate);
-      return tmp$ret$0;
+      return new _no_name_provided__qut3iv_1($node$delegate);
     };
   }
   function NodeHost$composable$lambda$lambda$lambda($node$delegate) {
     return function (newState, _anonymous_parameter_1__qggqgd) {
-      NodeHost$composable$_anonymous_$_anonymous_$lambda$0_ugwk3m($node$delegate).updateLifecycleState_xc7s69_k$(newState);
+      NodeHost$composable$_anonymous_$_anonymous_$lambda$0_ugwk3m($node$delegate).updateLifecycleState_fld7ue_k$(newState);
       return Unit_getInstance();
     };
   }
@@ -3747,20 +3699,18 @@
     this.$lifecycle_1 = $lifecycle;
     this.$observer_1 = $observer;
   }
-  protoOf(_no_name_provided__qut3iv_2).dispose_3n44we_k$ = function () {
+  protoOf(_no_name_provided__qut3iv_2).dispose_3nnxhr_k$ = function () {
     // Inline function 'com.bumble.appyx.navigation.integration.NodeHost$composable.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-    this.$lifecycle_1.removeObserver_qy34vt_k$(this.$observer_1);
+    this.$lifecycle_1.removeObserver_2ex2qs_k$(this.$observer_1);
   };
   function NodeHost$composable$lambda$lambda_0($node$delegate, $lifecycle) {
     return function ($this$DisposableEffect) {
-      NodeHost$composable$_anonymous_$_anonymous_$lambda$0_ugwk3m($node$delegate).updateLifecycleState_xc7s69_k$($lifecycle.get_currentState_snihnl_k$());
+      NodeHost$composable$_anonymous_$_anonymous_$lambda$0_ugwk3m($node$delegate).updateLifecycleState_fld7ue_k$($lifecycle.get_currentState_snihnl_k$());
       var tmp = NodeHost$composable$lambda$lambda$lambda($node$delegate);
       var observer = new sam$com_bumble_appyx_navigation_lifecycle_PlatformLifecycleEventObserver$0(tmp);
-      $lifecycle.addObserver_ch8ntw_k$(observer);
-      var tmp$ret$0;
+      $lifecycle.addObserver_tygfj3_k$(observer);
       // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      tmp$ret$0 = new _no_name_provided__qut3iv_2($lifecycle, observer);
-      return tmp$ret$0;
+      return new _no_name_provided__qut3iv_2($lifecycle, observer);
     };
   }
   function NodeHost$composable$lambda($factory, $customisations, $integrationPoint, $$dirty, $modifier, $lifecycle) {
@@ -3773,42 +3723,30 @@
         }
         var node$delegate = rememberNode$composable($factory, $customisations._v, $integrationPoint, $composer_0, 14 & $$dirty >> 15 | 112 & $$dirty >> 9 | 896 & $$dirty << 3);
         var tmp_0 = NodeHost$composable$_anonymous_$_anonymous_$lambda$0_ugwk3m(node$delegate);
-        var tmp$ret$4;
         // Inline function 'androidx.compose.runtime.remember$composable' call
-        var tmp0_remember$composable = $composer_0;
-        var $composer_1 = tmp0_remember$composable;
-        $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+        var $composer_1 = $composer_0;
+        $composer_1.startReplaceableGroup_ip860b_k$(-838505973);
         sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
-        var tmp$ret$3;
         // Inline function 'androidx.compose.runtime.cache' call
-        var tmp0_cache = $composer_1;
-        var tmp1_cache = $composer_1.changed_ga7h3f_k$(node$delegate);
-        var tmp$ret$2;
+        var invalid = $composer_1.changed_ga7h3f_k$(node$delegate);
         // Inline function 'kotlin.let' call
-        var tmp0_let = tmp0_cache.rememberedValue_4dg93v_k$();
         // Inline function 'kotlin.contracts.contract' call
-        var tmp$ret$1;
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+        var it = $composer_1.rememberedValue_4dg93v_k$();
         var tmp_1;
-        if (tmp1_cache ? true : tmp0_let === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
-          var tmp$ret$0;
+        if (invalid ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
           // Inline function 'com.bumble.appyx.navigation.integration.NodeHost$composable.<anonymous>.<anonymous>.<anonymous>' call
-          tmp$ret$0 = NodeHost$composable$lambda$lambda(node$delegate);
-          var value = tmp$ret$0;
-          tmp0_cache.updateRememberedValue_l1colo_k$(value);
+          var value = NodeHost$composable$lambda$lambda(node$delegate);
+          $composer_1.updateRememberedValue_l1wh71_k$(value);
           tmp_1 = value;
         } else {
-          tmp_1 = tmp0_let;
+          tmp_1 = it;
         }
-        tmp$ret$1 = tmp_1;
-        tmp$ret$2 = tmp$ret$1;
-        var tmp_2 = tmp$ret$2;
-        tmp$ret$3 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
-        var tmp0 = tmp$ret$3;
-        $composer_1.endReplaceableGroup_er37p7_k$();
-        tmp$ret$4 = tmp0;
-        DisposableEffect$composable(tmp_0, tmp$ret$4, $composer_0, 0);
-        NodeHost$composable$_anonymous_$_anonymous_$lambda$0_ugwk3m(node$delegate).Compose$composable_g1xpaf_k$($modifier._v, $composer_0, 14 & $$dirty >> 9, 0);
+        var tmp_2 = tmp_1;
+        var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
+        $composer_1.endReplaceableGroup_ern0ak_k$();
+        DisposableEffect$composable(tmp_0, tmp0, $composer_0, 0);
+        NodeHost$composable$_anonymous_$_anonymous_$lambda$0_ugwk3m(node$delegate).Compose$composable_o87cjm_k$($modifier._v, $composer_0, 14 & $$dirty >> 9, 0);
         DisposableEffect$composable($lifecycle, NodeHost$composable$lambda$lambda_0(node$delegate, $lifecycle), $composer_0, 14 & $$dirty);
         var tmp_3;
         if (isTraceInProgress()) {
@@ -3817,7 +3755,7 @@
         }
         tmp = tmp_3;
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         tmp = Unit_getInstance();
       }
       return Unit_getInstance();
@@ -3825,7 +3763,7 @@
   }
   function ComposableLambda$invoke$ref_6($boundThis) {
     return function (p0, p1) {
-      return $boundThis.invoke_6harzl_k$(p0, p1);
+      return $boundThis.invoke_z8di7s_k$(p0, p1);
     };
   }
   function NodeHost$composable$lambda_0($lifecycle, $integrationPoint, $screenSize, $modifier, $customisations, $factory, $$changed, $$default) {
@@ -3835,7 +3773,7 @@
     };
   }
   function rememberNode$composable$lambda($this$mapSaver, node) {
-    return node.saveInstanceState_8yjxr3_k$($this$mapSaver);
+    return node.saveInstanceState_2ofm6y_k$($this$mapSaver);
   }
   function rememberNode$composable$lambda_0($factory, $customisations, $integrationPoint) {
     return function (state) {
@@ -3868,7 +3806,7 @@
         return WindowSizeClass_EXPANDED_getInstance();
       default:
         WindowSizeClass_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -3910,15 +3848,13 @@
     this.heightDp_1 = heightDp;
     var tmp = this;
     var tmp_0;
-    var tmp$ret$0;
     // Inline function 'androidx.compose.ui.unit.dp' call
-    tmp$ret$0 = _Dp___init__impl__ms3zkb(600);
+    var tmp$ret$0 = _Dp___init__impl__ms3zkb(600);
     if (Dp__compareTo_impl_tlg3dl(this.widthDp_1, tmp$ret$0) < 0) {
       tmp_0 = WindowSizeClass_COMPACT_getInstance();
     } else {
-      var tmp$ret$1;
       // Inline function 'androidx.compose.ui.unit.dp' call
-      tmp$ret$1 = _Dp___init__impl__ms3zkb(840);
+      var tmp$ret$1 = _Dp___init__impl__ms3zkb(840);
       if (Dp__compareTo_impl_tlg3dl(this.widthDp_1, tmp$ret$1) < 0) {
         tmp_0 = WindowSizeClass_MEDIUM_getInstance();
       } else {
@@ -3928,28 +3864,28 @@
     tmp.windowSizeClass_1 = tmp_0;
     this.$stable_1 = 0;
   }
-  protoOf(ScreenSize).get_widthDp_98cklg_k$ = function () {
+  protoOf(ScreenSize).get_widthDp_5mnst6_k$ = function () {
     return this.widthDp_1;
   };
-  protoOf(ScreenSize).get_heightDp_dtmrdj_k$ = function () {
+  protoOf(ScreenSize).get_heightDp_11dm13_k$ = function () {
     return this.heightDp_1;
   };
   protoOf(ScreenSize).get_windowSizeClass_aq7666_k$ = function () {
     return this.windowSizeClass_1;
   };
-  protoOf(ScreenSize).component1_z2a8sv_k$ = function () {
+  protoOf(ScreenSize).component1_k79ve9_k$ = function () {
     return this.widthDp_1;
   };
-  protoOf(ScreenSize).component2_11tj3k_k$ = function () {
+  protoOf(ScreenSize).component2_fwtwi6_k$ = function () {
     return this.heightDp_1;
   };
-  protoOf(ScreenSize).copy_6vlr75_k$ = function (widthDp, heightDp) {
+  protoOf(ScreenSize).copy_3r5t1x_k$ = function (widthDp, heightDp) {
     return new ScreenSize(widthDp, heightDp);
   };
-  protoOf(ScreenSize).copy$default_ux1z8f_k$ = function (widthDp, heightDp, $super) {
+  protoOf(ScreenSize).copy$default_gd8m1h_k$ = function (widthDp, heightDp, $super) {
     widthDp = widthDp === VOID ? this.widthDp_1 : widthDp;
     heightDp = heightDp === VOID ? this.heightDp_1 : heightDp;
-    return $super === VOID ? this.copy_6vlr75_k$(widthDp, heightDp) : $super.copy_6vlr75_k$.call(this, new Dp(widthDp), new Dp(heightDp));
+    return $super === VOID ? this.copy_3r5t1x_k$(widthDp, heightDp) : $super.copy_3r5t1x_k$.call(this, new Dp(widthDp), new Dp(heightDp));
   };
   protoOf(ScreenSize).toString = function () {
     return 'ScreenSize(widthDp=' + new Dp(this.widthDp_1) + ', heightDp=' + new Dp(this.heightDp_1) + ')';
@@ -3975,9 +3911,8 @@
     _init_properties_ScreenSize_kt__gyzrhp();
     // Inline function 'androidx.compose.ui.unit.dp' call
     var tmp = _Dp___init__impl__ms3zkb(0);
-    var tmp$ret$1;
     // Inline function 'androidx.compose.ui.unit.dp' call
-    tmp$ret$1 = _Dp___init__impl__ms3zkb(0);
+    var tmp$ret$1 = _Dp___init__impl__ms3zkb(0);
     return new ScreenSize(tmp, tmp$ret$1);
   }
   var properties_initialized_ScreenSize_kt_xrizip;
@@ -4017,35 +3952,33 @@
   protoOf(IntegrationPointStub).get_isChangingConfigurations_y5jk2r_k$ = function () {
     return false;
   };
-  protoOf(IntegrationPointStub).handleUpNavigation_he8kje_k$ = function () {
+  protoOf(IntegrationPointStub).handleUpNavigation_hdory1_k$ = function () {
     // Inline function 'kotlin.error' call
-    Companion_getInstance_10();
-    var tmp0_error = "You're accessing an IntegrationPointStub. This means you're using a Node without ever integrating it to a proper IntegrationPoint. This is fine during tests with limited scope, but it looks like the code that leads here requires interfacing with a valid implementation. You may be attempting to access the IntegrationPoint before it is attached to the Node.";
-    throw IllegalStateException_init_$Create$(toString(tmp0_error));
+    var message = "You're accessing an IntegrationPointStub. This means you're using a Node without ever integrating it to a proper IntegrationPoint. This is fine during tests with limited scope, but it looks like the code that leads here requires interfacing with a valid implementation. You may be attempting to access the IntegrationPoint before it is attached to the Node.";
+    throw IllegalStateException_init_$Create$(toString(message));
   };
-  protoOf(IntegrationPointStub).onRootFinished_leuu1u_k$ = function () {
+  protoOf(IntegrationPointStub).onRootFinished_lfemn7_k$ = function () {
     // Inline function 'kotlin.error' call
-    Companion_getInstance_10();
-    var tmp0_error = "You're accessing an IntegrationPointStub. This means you're using a Node without ever integrating it to a proper IntegrationPoint. This is fine during tests with limited scope, but it looks like the code that leads here requires interfacing with a valid implementation. You may be attempting to access the IntegrationPoint before it is attached to the Node.";
-    throw IllegalStateException_init_$Create$(toString(tmp0_error));
+    var message = "You're accessing an IntegrationPointStub. This means you're using a Node without ever integrating it to a proper IntegrationPoint. This is fine during tests with limited scope, but it looks like the code that leads here requires interfacing with a valid implementation. You may be attempting to access the IntegrationPoint before it is attached to the Node.";
+    throw IllegalStateException_init_$Create$(toString(message));
   };
   function invoke$lambda(p0, p1, p2, $completion) {
     return new Triple(p0, p1, p2);
   }
   function ChildNodeLifecycleManager$launch$slambda$_init_$ref_3xtfdl() {
   }
-  protoOf(ChildNodeLifecycleManager$launch$slambda$_init_$ref_3xtfdl).invoke_kn8amk_k$ = function (p0, p1, p2, $completion) {
+  protoOf(ChildNodeLifecycleManager$launch$slambda$_init_$ref_3xtfdl).invoke_mnfh7f_k$ = function (p0, p1, p2, $completion) {
     return invoke$lambda(p0, p1, p2, $completion);
   };
-  protoOf(ChildNodeLifecycleManager$launch$slambda$_init_$ref_3xtfdl).invoke_l0wd0r_k$ = function (p1, p2, p3, $completion) {
+  protoOf(ChildNodeLifecycleManager$launch$slambda$_init_$ref_3xtfdl).invoke_ihdh7y_k$ = function (p1, p2, p3, $completion) {
     var tmp = p1 instanceof State ? p1 : THROW_CCE();
     var tmp_0 = p2 instanceof Elements ? p2 : THROW_CCE();
-    return this.invoke_kn8amk_k$(tmp, tmp_0, p3 instanceof CompareValues ? p3 : THROW_CCE(), $completion);
+    return this.invoke_mnfh7f_k$(tmp, tmp_0, p3 instanceof CompareValues ? p3 : THROW_CCE(), $completion);
   };
   function ChildNodeLifecycleManager$launch$slambda$_init_$ref_3xtfdl_0() {
     var i = new ChildNodeLifecycleManager$launch$slambda$_init_$ref_3xtfdl();
     var l = function (p0, p1, p2, $completion) {
-      return i.invoke_kn8amk_k$(p0, p1, p2, $completion);
+      return i.invoke_mnfh7f_k$(p0, p1, p2, $completion);
     };
     l.$arity = 3;
     return l;
@@ -4054,15 +3987,15 @@
     this.this$0__1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda).invoke_csnqqn_k$ = function ($this$onCompletion, it, $completion) {
-    var tmp = this.create_tg1dfo_k$($this$onCompletion, it, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda).invoke_ivktnz_k$ = function ($this$onCompletion, it, $completion) {
+    var tmp = this.create_y4m5jx_k$($this$onCompletion, it, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda).invoke_f2mof9_k$ = function (p1, p2, $completion) {
+  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda).invoke_4tzzq6_k$ = function (p1, p2, $completion) {
     var tmp = (!(p1 == null) ? isInterface(p1, FlowCollector) : false) ? p1 : THROW_CCE();
-    return this.invoke_csnqqn_k$(tmp, (p2 == null ? true : p2 instanceof Error) ? p2 : THROW_CCE(), $completion);
+    return this.invoke_ivktnz_k$(tmp, (p2 == null ? true : p2 instanceof Error) ? p2 : THROW_CCE(), $completion);
   };
   protoOf(ChildNodeLifecycleManager$launch$slambda$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -4070,7 +4003,7 @@
       try {
         var tmp = this.get_state_iypx7s_k$();
         if (tmp === 0) {
-          this.set_exceptionState_s9sevl_k$(1);
+          this.set_exceptionState_fex74n_k$(1);
           var tmp0_iterator = this.this$0__1.children_1.get_value_j01efc_k$().get_values_ksazhn_k$().iterator_jk1svi_k$();
           while (tmp0_iterator.hasNext_bitz1p_k$()) {
             var element = tmp0_iterator.next_20eer_k$();
@@ -4086,7 +4019,7 @@
       }
      while (true);
   };
-  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda).create_tg1dfo_k$ = function ($this$onCompletion, it, completion) {
+  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda).create_y4m5jx_k$ = function ($this$onCompletion, it, completion) {
     var i = new ChildNodeLifecycleManager$launch$slambda$slambda(this.this$0__1, completion);
     i.$this$onCompletion_1 = $this$onCompletion;
     i.it_1 = it;
@@ -4095,7 +4028,7 @@
   function ChildNodeLifecycleManager$launch$slambda$slambda_0(this$0, resultContinuation) {
     var i = new ChildNodeLifecycleManager$launch$slambda$slambda(this$0, resultContinuation);
     var l = function ($this$onCompletion, it, $completion) {
-      return i.invoke_csnqqn_k$($this$onCompletion, it, $completion);
+      return i.invoke_ivktnz_k$($this$onCompletion, it, $completion);
     };
     l.$arity = 2;
     return l;
@@ -4104,14 +4037,14 @@
     this.this$0__1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda_1).invoke_phiz0b_k$ = function (_name_for_destructuring_parameter_0__wldtmu, $completion) {
-    var tmp = this.create_nkv9hs_k$(_name_for_destructuring_parameter_0__wldtmu, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda_1).invoke_ufbr4w_k$ = function (_name_for_destructuring_parameter_0__wldtmu, $completion) {
+    var tmp = this.create_xbnre4_k$(_name_for_destructuring_parameter_0__wldtmu, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda_1).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_phiz0b_k$(p1 instanceof Triple ? p1 : THROW_CCE(), $completion);
+  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda_1).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_ufbr4w_k$(p1 instanceof Triple ? p1 : THROW_CCE(), $completion);
   };
   protoOf(ChildNodeLifecycleManager$launch$slambda$slambda_1).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -4119,7 +4052,7 @@
       try {
         var tmp = this.get_state_iypx7s_k$();
         if (tmp === 0) {
-          this.set_exceptionState_s9sevl_k$(1);
+          this.set_exceptionState_fex74n_k$(1);
           var parentLifecycleState = this._name_for_destructuring_parameter_0__wldtmu_1.component1_7eebsc_k$();
           var screenState = this._name_for_destructuring_parameter_0__wldtmu_1.component2_7eebsb_k$();
           var children = this._name_for_destructuring_parameter_0__wldtmu_1.component3_7eebsa_k$();
@@ -4127,7 +4060,7 @@
           while (tmp0_iterator.hasNext_bitz1p_k$()) {
             var element = tmp0_iterator.next_20eer_k$();
             var childState = minOf(parentLifecycleState, State_RESUMED_getInstance());
-            var tmp0_safe_receiver = children.get_current_jwi6j4_k$().get_1mhr4y_k$(element);
+            var tmp0_safe_receiver = children.get_current_jwi6j4_k$().get_wei43m_k$(element);
             if (tmp0_safe_receiver == null)
               null;
             else {
@@ -4139,7 +4072,7 @@
             var element_0 = tmp0_iterator_0.next_20eer_k$();
             if (this.this$0__1.keepMode_1.equals(KeepMode_KEEP_getInstance())) {
               var childState_0 = minOf(parentLifecycleState, State_CREATED_getInstance());
-              var tmp0_safe_receiver_0 = children.get_current_jwi6j4_k$().get_1mhr4y_k$(element_0);
+              var tmp0_safe_receiver_0 = children.get_current_jwi6j4_k$().get_wei43m_k$(element_0);
               if (tmp0_safe_receiver_0 == null)
                 null;
               else {
@@ -4147,7 +4080,7 @@
               }
             } else {
               var tmp1_safe_receiver = children.get_previous_i5svy8_k$();
-              var tmp2_safe_receiver = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.get_1mhr4y_k$(element_0);
+              var tmp2_safe_receiver = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.get_wei43m_k$(element_0);
               if (tmp2_safe_receiver == null)
                 null;
               else {
@@ -4160,7 +4093,7 @@
             var tmp0_iterator_1 = removedKeys.iterator_jk1svi_k$();
             while (tmp0_iterator_1.hasNext_bitz1p_k$()) {
               var element_1 = tmp0_iterator_1.next_20eer_k$();
-              var removedChild = children.get_previous_i5svy8_k$().get_1mhr4y_k$(element_1);
+              var removedChild = children.get_previous_i5svy8_k$().get_wei43m_k$(element_1);
               if (removedChild == null)
                 null;
               else {
@@ -4178,18 +4111,18 @@
       }
      while (true);
   };
-  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda_1).create_nkv9hs_k$ = function (_name_for_destructuring_parameter_0__wldtmu, completion) {
+  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda_1).create_xbnre4_k$ = function (_name_for_destructuring_parameter_0__wldtmu, completion) {
     var i = new ChildNodeLifecycleManager$launch$slambda$slambda_1(this.this$0__1, completion);
     i._name_for_destructuring_parameter_0__wldtmu_1 = _name_for_destructuring_parameter_0__wldtmu;
     return i;
   };
-  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda_1).create_xubfvz_k$ = function (value, completion) {
-    return this.create_nkv9hs_k$(value instanceof Triple ? value : THROW_CCE(), completion);
+  protoOf(ChildNodeLifecycleManager$launch$slambda$slambda_1).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_xbnre4_k$(value instanceof Triple ? value : THROW_CCE(), completion);
   };
   function ChildNodeLifecycleManager$launch$slambda$slambda_2(this$0, resultContinuation) {
     var i = new ChildNodeLifecycleManager$launch$slambda$slambda_1(this$0, resultContinuation);
     var l = function (_name_for_destructuring_parameter_0__wldtmu, $completion) {
-      return i.invoke_phiz0b_k$(_name_for_destructuring_parameter_0__wldtmu, $completion);
+      return i.invoke_ufbr4w_k$(_name_for_destructuring_parameter_0__wldtmu, $completion);
     };
     l.$arity = 1;
     return l;
@@ -4214,27 +4147,27 @@
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.updateLifecycleState_xc7s69_k$(state);
+      tmp0_safe_receiver.updateLifecycleState_fld7ue_k$(state);
     }
   }
   function sam$kotlinx_coroutines_flow_FlowCollector$0_3(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0_3).emit_1fbrsb_k$ = function (value, $completion) {
+  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0_3).emit_t92u1f_k$ = function (value, $completion) {
     return this.function_1(value, $completion);
   };
   function ChildNodeLifecycleManager$launch$slambda(this$0, resultContinuation) {
     this.this$0__1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(ChildNodeLifecycleManager$launch$slambda).invoke_d6gbsu_k$ = function ($this$launch, $completion) {
-    var tmp = this.create_b6qu53_k$($this$launch, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(ChildNodeLifecycleManager$launch$slambda).invoke_d9fzmj_k$ = function ($this$launch, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$launch, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(ChildNodeLifecycleManager$launch$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(ChildNodeLifecycleManager$launch$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(ChildNodeLifecycleManager$launch$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -4243,14 +4176,14 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
             var tmp_0 = this.this$0__1.appyxComponent_1.get_elements_vxwh8g_k$();
             var tmp_1 = withPrevious(this.this$0__1.children_1);
             var tmp_2 = combine(this.this$0__1.lifecycleState_1, tmp_0, tmp_1, ChildNodeLifecycleManager$launch$slambda$_init_$ref_3xtfdl_0());
             var tmp_3 = onCompletion(tmp_2, ChildNodeLifecycleManager$launch$slambda$slambda_0(this.this$0__1, null));
             var tmp_4 = ChildNodeLifecycleManager$launch$slambda$slambda_2(this.this$0__1, null);
-            suspendResult = tmp_3.collect_llpwvh_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0_3(tmp_4), this);
+            suspendResult = tmp_3.collect_aksokr_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0_3(tmp_4), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -4266,24 +4199,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(ChildNodeLifecycleManager$launch$slambda).create_b6qu53_k$ = function ($this$launch, completion) {
+  protoOf(ChildNodeLifecycleManager$launch$slambda).create_rcuf4x_k$ = function ($this$launch, completion) {
     var i = new ChildNodeLifecycleManager$launch$slambda(this.this$0__1, completion);
     i.$this$launch_1 = $this$launch;
     return i;
   };
-  protoOf(ChildNodeLifecycleManager$launch$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(ChildNodeLifecycleManager$launch$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function ChildNodeLifecycleManager$launch$slambda_0(this$0, resultContinuation) {
     var i = new ChildNodeLifecycleManager$launch$slambda(this$0, resultContinuation);
     var l = function ($this$launch, $completion) {
-      return i.invoke_d6gbsu_k$($this$launch, $completion);
+      return i.invoke_d9fzmj_k$($this$launch, $completion);
     };
     l.$arity = 1;
     return l;
@@ -4295,10 +4228,10 @@
     this.coroutineScope_1 = coroutineScope;
     this.lifecycleState_1 = MutableStateFlow(State_INITIALIZED_getInstance());
   }
-  protoOf(ChildNodeLifecycleManager).propagateLifecycleToChildren_yhl4bw_k$ = function (state) {
-    this.lifecycleState_1.set_value_rnwamw_k$(state);
+  protoOf(ChildNodeLifecycleManager).propagateLifecycleToChildren_qpc6bv_k$ = function (state) {
+    this.lifecycleState_1.set_value_v1vabv_k$(state);
   };
-  protoOf(ChildNodeLifecycleManager).launch_9yx17m_k$ = function () {
+  protoOf(ChildNodeLifecycleManager).launch_9zgtsz_k$ = function () {
     launch(this.coroutineScope_1, VOID, VOID, ChildNodeLifecycleManager$launch$slambda_0(this, null));
   };
   function DefaultPlatformLifecycleObserver() {
@@ -4331,7 +4264,7 @@
         return State_DESTROYED_getInstance();
       default:
         State_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -4380,7 +4313,7 @@
         return Event_ON_ANY_getInstance();
       default:
         Event_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -4405,13 +4338,13 @@
   var $ENTRIES_2;
   function Lifecycle$asFlow$slambda$lambda($this_callbackFlow) {
     return function (state, _anonymous_parameter_1__qggqgd) {
-      $this_callbackFlow.trySend_3hclq4_k$(state);
+      $this_callbackFlow.trySend_62dpg8_k$(state);
       return Unit_getInstance();
     };
   }
   function Lifecycle$asFlow$slambda$lambda_0(this$0, $observer) {
     return function () {
-      this$0.removeObserver_qy34vt_k$($observer);
+      this$0.removeObserver_2ex2qs_k$($observer);
       return Unit_getInstance();
     };
   }
@@ -4424,21 +4357,21 @@
   function sam$com_bumble_appyx_navigation_lifecycle_PlatformLifecycleEventObserver$0_0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$com_bumble_appyx_navigation_lifecycle_PlatformLifecycleEventObserver$0_0).onStateChanged_9vyt26_k$ = function (newState, event) {
+  protoOf(sam$com_bumble_appyx_navigation_lifecycle_PlatformLifecycleEventObserver$0_0).onStateChanged_yk8xts_k$ = function (newState, event) {
     return this.function_1(newState, event);
   };
   function Lifecycle$asFlow$slambda(this$0, resultContinuation) {
     this.this$0__1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(Lifecycle$asFlow$slambda).invoke_qna05v_k$ = function ($this$callbackFlow, $completion) {
-    var tmp = this.create_6vyak0_k$($this$callbackFlow, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(Lifecycle$asFlow$slambda).invoke_wvr2r4_k$ = function ($this$callbackFlow, $completion) {
+    var tmp = this.create_ijqc70_k$($this$callbackFlow, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(Lifecycle$asFlow$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_qna05v_k$((!(p1 == null) ? isInterface(p1, ProducerScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(Lifecycle$asFlow$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_wvr2r4_k$((!(p1 == null) ? isInterface(p1, ProducerScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(Lifecycle$asFlow$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -4447,13 +4380,13 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
+            this.set_exceptionState_fex74n_k$(2);
             var tmp_0 = this;
             var tmp_1 = Lifecycle$asFlow$slambda$lambda(this.$this$callbackFlow_1);
             tmp_0.observer0__1 = new sam$com_bumble_appyx_navigation_lifecycle_PlatformLifecycleEventObserver$0_0(tmp_1);
-            this.$this$callbackFlow_1.trySend_3hclq4_k$(this.this$0__1.get_currentState_snihnl_k$());
-            this.this$0__1.addObserver_ch8ntw_k$(this.observer0__1);
-            this.set_state_a96kl8_k$(1);
+            this.$this$callbackFlow_1.trySend_62dpg8_k$(this.this$0__1.get_currentState_snihnl_k$());
+            this.this$0__1.addObserver_tygfj3_k$(this.observer0__1);
+            this.set_state_rjd8d0_k$(1);
             suspendResult = awaitClose(this.$this$callbackFlow_1, Lifecycle$asFlow$slambda$lambda_0(this.this$0__1, this.observer0__1), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
@@ -4470,24 +4403,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(Lifecycle$asFlow$slambda).create_6vyak0_k$ = function ($this$callbackFlow, completion) {
+  protoOf(Lifecycle$asFlow$slambda).create_ijqc70_k$ = function ($this$callbackFlow, completion) {
     var i = new Lifecycle$asFlow$slambda(this.this$0__1, completion);
     i.$this$callbackFlow_1 = $this$callbackFlow;
     return i;
   };
-  protoOf(Lifecycle$asFlow$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_6vyak0_k$((!(value == null) ? isInterface(value, ProducerScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(Lifecycle$asFlow$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_ijqc70_k$((!(value == null) ? isInterface(value, ProducerScope) : false) ? value : THROW_CCE(), completion);
   };
   function Lifecycle$asFlow$slambda_0(this$0, resultContinuation) {
     var i = new Lifecycle$asFlow$slambda(this$0, resultContinuation);
     var l = function ($this$callbackFlow, $completion) {
-      return i.invoke_qna05v_k$($this$callbackFlow, $completion);
+      return i.invoke_wvr2r4_k$($this$callbackFlow, $completion);
     };
     l.$arity = 1;
     return l;
@@ -4562,35 +4495,23 @@
     Companion_getInstance_11();
     this.node_1 = node;
   }
-  protoOf(LifecycleLogger).onCreate_ghfmom_k$ = function () {
-    var tmp = AppyxLogger_getInstance();
-    Companion_getInstance_11();
-    tmp.d_3t63e7_k$('Lifecycle', '' + getKClassFromExpression(this.node_1).get_simpleName_r6f8py_k$() + '@' + hashCode(this.node_1) + ' onCreate');
+  protoOf(LifecycleLogger).onCreate_ggvu39_k$ = function () {
+    AppyxLogger_getInstance().d_86dvmc_k$('Lifecycle', '' + getKClassFromExpression(this.node_1).get_simpleName_r6f8py_k$() + '@' + hashCode(this.node_1) + ' onCreate');
   };
-  protoOf(LifecycleLogger).onStart_qth026_k$ = function () {
-    var tmp = AppyxLogger_getInstance();
-    Companion_getInstance_11();
-    tmp.d_3t63e7_k$('Lifecycle', '' + getKClassFromExpression(this.node_1).get_simpleName_r6f8py_k$() + '@' + hashCode(this.node_1) + ' onStart');
+  protoOf(LifecycleLogger).onStart_qsx7gt_k$ = function () {
+    AppyxLogger_getInstance().d_86dvmc_k$('Lifecycle', '' + getKClassFromExpression(this.node_1).get_simpleName_r6f8py_k$() + '@' + hashCode(this.node_1) + ' onStart');
   };
-  protoOf(LifecycleLogger).onResume_qb8fiz_k$ = function () {
-    var tmp = AppyxLogger_getInstance();
-    Companion_getInstance_11();
-    tmp.d_3t63e7_k$('Lifecycle', '' + getKClassFromExpression(this.node_1).get_simpleName_r6f8py_k$() + '@' + hashCode(this.node_1) + ' onResume');
+  protoOf(LifecycleLogger).onResume_qbs84c_k$ = function () {
+    AppyxLogger_getInstance().d_86dvmc_k$('Lifecycle', '' + getKClassFromExpression(this.node_1).get_simpleName_r6f8py_k$() + '@' + hashCode(this.node_1) + ' onResume');
   };
-  protoOf(LifecycleLogger).onPause_rvjkli_k$ = function () {
-    var tmp = AppyxLogger_getInstance();
-    Companion_getInstance_11();
-    tmp.d_3t63e7_k$('Lifecycle', '' + getKClassFromExpression(this.node_1).get_simpleName_r6f8py_k$() + '@' + hashCode(this.node_1) + ' onPause');
+  protoOf(LifecycleLogger).onPause_rw3d6v_k$ = function () {
+    AppyxLogger_getInstance().d_86dvmc_k$('Lifecycle', '' + getKClassFromExpression(this.node_1).get_simpleName_r6f8py_k$() + '@' + hashCode(this.node_1) + ' onPause');
   };
-  protoOf(LifecycleLogger).onStop_aip7ow_k$ = function () {
-    var tmp = AppyxLogger_getInstance();
-    Companion_getInstance_11();
-    tmp.d_3t63e7_k$('Lifecycle', '' + getKClassFromExpression(this.node_1).get_simpleName_r6f8py_k$() + '@' + hashCode(this.node_1) + ' onStop');
+  protoOf(LifecycleLogger).onStop_aj90a9_k$ = function () {
+    AppyxLogger_getInstance().d_86dvmc_k$('Lifecycle', '' + getKClassFromExpression(this.node_1).get_simpleName_r6f8py_k$() + '@' + hashCode(this.node_1) + ' onStop');
   };
-  protoOf(LifecycleLogger).onDestroy_x0zuba_k$ = function () {
-    var tmp = AppyxLogger_getInstance();
-    Companion_getInstance_11();
-    tmp.d_3t63e7_k$('Lifecycle', '' + getKClassFromExpression(this.node_1).get_simpleName_r6f8py_k$() + '@' + hashCode(this.node_1) + ' onDestroy');
+  protoOf(LifecycleLogger).onDestroy_x0g1px_k$ = function () {
+    AppyxLogger_getInstance().d_86dvmc_k$('Lifecycle', '' + getKClassFromExpression(this.node_1).get_simpleName_r6f8py_k$() + '@' + hashCode(this.node_1) + ' onDestroy');
   };
   function get_LocalCommonLifecycleOwner() {
     _init_properties_LocalCommonLifecycleOwner_kt__tls7jn();
@@ -4665,62 +4586,60 @@
       // Inline function 'kotlin.also' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.bumble.appyx.navigation.lifecycle.MinimumCombinedLifecycle.update.<anonymous>' call
-      $this.registry_1.setCurrentState_8fydcb_k$(tmp1_safe_receiver.get_currentState_snihnl_k$());
+      $this.registry_1.setCurrentState_1o77n8_k$(tmp1_safe_receiver.get_currentState_snihnl_k$());
     }
   }
   function sam$kotlin_Comparator$0(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$kotlin_Comparator$0).compare_6tbigh_k$ = function (a, b) {
+  protoOf(sam$kotlin_Comparator$0).compare_bczr_k$ = function (a, b) {
     return this.function_1(a, b);
   };
   protoOf(sam$kotlin_Comparator$0).compare = function (a, b) {
-    return this.compare_6tbigh_k$(a, b);
+    return this.compare_bczr_k$(a, b);
   };
   function MinimumCombinedLifecycle$lambda(a, b) {
     // Inline function 'kotlin.comparisons.compareValuesBy' call
     // Inline function 'com.bumble.appyx.navigation.lifecycle.MinimumCombinedLifecycle.<anonymous>' call
     var tmp = a.get_currentState_snihnl_k$();
-    var tmp$ret$1;
     // Inline function 'com.bumble.appyx.navigation.lifecycle.MinimumCombinedLifecycle.<anonymous>' call
-    tmp$ret$1 = b.get_currentState_snihnl_k$();
+    var tmp$ret$1 = b.get_currentState_snihnl_k$();
     return compareValues(tmp, tmp$ret$1);
   }
   function MinimumCombinedLifecycle$manage$1(this$0) {
     this.this$0__1 = this$0;
   }
-  protoOf(MinimumCombinedLifecycle$manage$1).onCreate_ghfmom_k$ = function () {
+  protoOf(MinimumCombinedLifecycle$manage$1).onCreate_ggvu39_k$ = function () {
     update(this.this$0__1);
   };
-  protoOf(MinimumCombinedLifecycle$manage$1).onStart_qth026_k$ = function () {
+  protoOf(MinimumCombinedLifecycle$manage$1).onStart_qsx7gt_k$ = function () {
     update(this.this$0__1);
   };
-  protoOf(MinimumCombinedLifecycle$manage$1).onResume_qb8fiz_k$ = function () {
+  protoOf(MinimumCombinedLifecycle$manage$1).onResume_qbs84c_k$ = function () {
     update(this.this$0__1);
   };
-  protoOf(MinimumCombinedLifecycle$manage$1).onPause_rvjkli_k$ = function () {
+  protoOf(MinimumCombinedLifecycle$manage$1).onPause_rw3d6v_k$ = function () {
     update(this.this$0__1);
   };
-  protoOf(MinimumCombinedLifecycle$manage$1).onStop_aip7ow_k$ = function () {
+  protoOf(MinimumCombinedLifecycle$manage$1).onStop_aj90a9_k$ = function () {
     update(this.this$0__1);
   };
-  protoOf(MinimumCombinedLifecycle$manage$1).onDestroy_x0zuba_k$ = function () {
+  protoOf(MinimumCombinedLifecycle$manage$1).onDestroy_x0g1px_k$ = function () {
     update(this.this$0__1);
   };
   function MinimumCombinedLifecycle(lifecycles) {
-    this.registry_1 = Companion_getInstance_15().create_4z1tll_k$(this);
+    this.registry_1 = Companion_getInstance_15().create_fvzx45_k$(this);
     this.lifecycles_1 = ArrayList_init_$Create$();
     // Inline function 'kotlin.collections.forEach' call
     // Inline function 'kotlin.collections.sortedBy' call
-    var tmp$ret$0;
     // Inline function 'kotlin.comparisons.compareBy' call
     var tmp = MinimumCombinedLifecycle$lambda;
-    tmp$ret$0 = new sam$kotlin_Comparator$0(tmp);
+    var tmp$ret$0 = new sam$kotlin_Comparator$0(tmp);
     var tmp0_iterator = sortedWith(lifecycles, tmp$ret$0).iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var element = tmp0_iterator.next_20eer_k$();
       // Inline function 'com.bumble.appyx.navigation.lifecycle.MinimumCombinedLifecycle.<anonymous>' call
-      this.manage_1jr4up_k$(element);
+      this.manage_x1y8uk_k$(element);
     }
     this.lifecycle_1 = this.registry_1;
     this.lifecycleScope_1 = this.registry_1.get_coroutineScope_5k7h45_k$();
@@ -4731,10 +4650,10 @@
   protoOf(MinimumCombinedLifecycle).get_lifecycleScope_8rp53n_k$ = function () {
     return this.lifecycleScope_1;
   };
-  protoOf(MinimumCombinedLifecycle).manage_1jr4up_k$ = function (lifecycle) {
+  protoOf(MinimumCombinedLifecycle).manage_x1y8uk_k$ = function (lifecycle) {
     // Inline function 'kotlin.collections.plusAssign' call
-    this.lifecycles_1.add_1j60pz_k$(lifecycle);
-    lifecycle.addObserver_ch8ntw_k$(new MinimumCombinedLifecycle$manage$1(this));
+    this.lifecycles_1.add_utx5q5_k$(lifecycle);
+    lifecycle.addObserver_tygfj3_k$(new MinimumCombinedLifecycle$manage$1(this));
     update(this);
   };
   function NodeLifecycle() {
@@ -4748,7 +4667,7 @@
     };
   }
   function NodeLifecycleImpl(lifecycleOwner) {
-    this.lifecycleRegistry_1 = Companion_getInstance_15().create_4z1tll_k$(lifecycleOwner);
+    this.lifecycleRegistry_1 = Companion_getInstance_15().create_fvzx45_k$(lifecycleOwner);
     this.lifecycle_1 = this.lifecycleRegistry_1;
     var tmp = this;
     tmp.lifecycleScope$delegate_1 = lazy(NodeLifecycleImpl$lifecycleScope$delegate$lambda(this));
@@ -4758,11 +4677,12 @@
   };
   protoOf(NodeLifecycleImpl).get_lifecycleScope_8rp53n_k$ = function () {
     // Inline function 'kotlin.getValue' call
+    var this_0 = this.lifecycleScope$delegate_1;
     lifecycleScope$factory();
-    return this.lifecycleScope$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(NodeLifecycleImpl).updateLifecycleState_xc7s69_k$ = function (state) {
-    this.lifecycleRegistry_1.setCurrentState_8fydcb_k$(state);
+  protoOf(NodeLifecycleImpl).updateLifecycleState_fld7ue_k$ = function (state) {
+    this.lifecycleRegistry_1.setCurrentState_1o77n8_k$(state);
   };
   function lifecycleScope$factory() {
     return getPropertyCallableRef('lifecycleScope', 1, KProperty1, function (receiver) {
@@ -4800,12 +4720,12 @@
   protoOf(Child).component1_7eebsc_k$ = function () {
     return this.anchor_1;
   };
-  protoOf(Child).copy_vewypa_k$ = function (anchor) {
+  protoOf(Child).copy_ui6sa_k$ = function (anchor) {
     return new Child(anchor);
   };
-  protoOf(Child).copy$default_g5d583_k$ = function (anchor, $super) {
+  protoOf(Child).copy$default_hviag4_k$ = function (anchor, $super) {
     anchor = anchor === VOID ? this.anchor_1 : anchor;
-    return $super === VOID ? this.copy_vewypa_k$(anchor) : $super.copy_vewypa_k$.call(this, anchor);
+    return $super === VOID ? this.copy_ui6sa_k$(anchor) : $super.copy_ui6sa_k$.call(this, anchor);
   };
   protoOf(Child).toString = function () {
     return 'Child(anchor=' + this.anchor_1 + ')';
@@ -4836,12 +4756,12 @@
     Companion_instance_2 = this;
     this.IDENTIFIER_KEY_1 = 'build.context.identifier';
   }
-  protoOf(Companion_2).root_ovvf1a_k$ = function (savedStateMap, customisations) {
+  protoOf(Companion_2).root_q6hasv_k$ = function (savedStateMap, customisations) {
     return new BuildContext(Root_getInstance(), savedStateMap, customisations);
   };
-  protoOf(Companion_2).root$default_wv8ej_k$ = function (savedStateMap, customisations, $super) {
+  protoOf(Companion_2).root$default_h46s6f_k$ = function (savedStateMap, customisations, $super) {
     customisations = customisations === VOID ? new NodeCustomisationDirectoryImpl() : customisations;
-    return $super === VOID ? this.root_ovvf1a_k$(savedStateMap, customisations) : $super.root_ovvf1a_k$.call(this, savedStateMap, customisations);
+    return $super === VOID ? this.root_q6hasv_k$(savedStateMap, customisations) : $super.root_q6hasv_k$.call(this, savedStateMap, customisations);
   };
   var Companion_instance_2;
   function Companion_getInstance_12() {
@@ -4858,12 +4778,12 @@
       if (this$0.savedStateMap_1 == null) {
         tmp = UUID_getInstance().randomUUID_1wutxa_k$();
       } else {
-        Companion_getInstance_12();
-        var tmp_0 = this$0.savedStateMap_1.get_1mhr4y_k$('build.context.identifier');
+        var tmp_0 = this$0.savedStateMap_1.get_wei43m_k$('build.context.identifier');
         var tmp0_elvis_lhs = (tmp_0 == null ? true : typeof tmp_0 === 'string') ? tmp_0 : THROW_CCE();
         var tmp_1;
         if (tmp0_elvis_lhs == null) {
-          throw IllegalStateException_init_$Create$('onSaveInstanceState() was not called');
+          var message = 'onSaveInstanceState() was not called';
+          throw IllegalStateException_init_$Create$(toString(message));
         } else {
           tmp_1 = tmp0_elvis_lhs;
         }
@@ -4892,18 +4812,18 @@
   };
   protoOf(BuildContext).get_identifier_o3acky_k$ = function () {
     // Inline function 'kotlin.getValue' call
+    var this_0 = this.identifier$delegate_1;
     identifier$factory();
-    return this.identifier$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(BuildContext).getOrDefault_5trpuj_k$ = function (defaultCustomisation) {
-    return this.customisations_1.getRecursivelyOrDefault_1mcspa_k$(defaultCustomisation);
+  protoOf(BuildContext).getOrDefault_59boav_k$ = function (defaultCustomisation) {
+    return this.customisations_1.getRecursivelyOrDefault_ussi2u_k$(defaultCustomisation);
   };
-  protoOf(BuildContext).onSaveInstanceState_royvtj_k$ = function (state) {
+  protoOf(BuildContext).onSaveInstanceState_i995q6_k$ = function (state) {
     // Inline function 'kotlin.collections.set' call
-    Companion_getInstance_12();
-    var tmp0_set = 'build.context.identifier';
-    var tmp1_set = this.get_identifier_o3acky_k$();
-    state.put_3mhbri_k$(tmp0_set, tmp1_set);
+    var key = 'build.context.identifier';
+    var value = this.get_identifier_o3acky_k$();
+    state.put_4fpzoq_k$(key, value);
   };
   protoOf(BuildContext).component1_7eebsc_k$ = function () {
     return this.ancestryInfo_1;
@@ -4914,14 +4834,14 @@
   protoOf(BuildContext).component3_7eebsa_k$ = function () {
     return this.customisations_1;
   };
-  protoOf(BuildContext).copy_w3cejg_k$ = function (ancestryInfo, savedStateMap, customisations) {
+  protoOf(BuildContext).copy_ty2ui5_k$ = function (ancestryInfo, savedStateMap, customisations) {
     return new BuildContext(ancestryInfo, savedStateMap, customisations);
   };
-  protoOf(BuildContext).copy$default_2p91xo_k$ = function (ancestryInfo, savedStateMap, customisations, $super) {
+  protoOf(BuildContext).copy$default_b7ymfz_k$ = function (ancestryInfo, savedStateMap, customisations, $super) {
     ancestryInfo = ancestryInfo === VOID ? this.ancestryInfo_1 : ancestryInfo;
     savedStateMap = savedStateMap === VOID ? this.savedStateMap_1 : savedStateMap;
     customisations = customisations === VOID ? this.customisations_1 : customisations;
-    return $super === VOID ? this.copy_w3cejg_k$(ancestryInfo, savedStateMap, customisations) : $super.copy_w3cejg_k$.call(this, ancestryInfo, savedStateMap, customisations);
+    return $super === VOID ? this.copy_ty2ui5_k$(ancestryInfo, savedStateMap, customisations) : $super.copy_ty2ui5_k$.call(this, ancestryInfo, savedStateMap, customisations);
   };
   protoOf(BuildContext).toString = function () {
     return 'BuildContext(ancestryInfo=' + this.ancestryInfo_1 + ', savedStateMap=' + this.savedStateMap_1 + ', customisations=' + this.customisations_1 + ')';
@@ -4966,14 +4886,14 @@
   }
   function ComposableNode$View$composable$lambda($tmp0_rcvr, $modifier, $$changed) {
     return function ($composer, $force) {
-      $tmp0_rcvr.View$composable_e844gk_k$($modifier, $composer, updateChangedFlags($$changed | 1));
+      $tmp0_rcvr.View$composable_s9p16w_k$($modifier, $composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
   function ComposableNode(buildContext, composable) {
     illegalDecoyCallException('<init>');
   }
-  protoOf(ComposableNode).View_d643kp_k$ = function (modifier) {
+  protoOf(ComposableNode).View_d8pxwq_k$ = function (modifier) {
     illegalDecoyCallException('View');
   };
   function ComposableNode(buildContext, composable) {
@@ -4981,9 +4901,9 @@
     this.composable_1 = composable;
     this.$stable_2 = 0;
   }
-  protoOf(ComposableNode).View$composable_e844gk_k$ = function (modifier, $composer, $changed) {
+  protoOf(ComposableNode).View$composable_s9p16w_k$ = function (modifier, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(1593206340);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1593206340);
     sourceInformation($composer_0, 'C(View$composable)');
     var $dirty = $changed;
     if (($changed & 14) === 0)
@@ -4999,13 +4919,13 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(ComposableNode$View$composable$lambda(this, modifier, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(ComposableNode$View$composable$lambda(this, modifier, $changed));
     }
   };
   function get_$stableprop_15() {
@@ -5013,7 +4933,7 @@
   }
   function EmptyNodeView$View$composable$lambda($tmp0_rcvr, $modifier, $$changed) {
     return function ($composer, $force) {
-      $tmp0_rcvr.View$composable_e844gk_k$($modifier, $composer, updateChangedFlags($$changed | 1));
+      $tmp0_rcvr.View$composable_s9p16w_k$($modifier, $composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
@@ -5021,12 +4941,12 @@
     EmptyNodeView_instance = this;
     this.$stable_1 = 0;
   }
-  protoOf(EmptyNodeView).View_d643kp_k$ = function (modifier) {
+  protoOf(EmptyNodeView).View_d8pxwq_k$ = function (modifier) {
     illegalDecoyCallException('View');
   };
-  protoOf(EmptyNodeView).View$composable_e844gk_k$ = function (modifier, $composer, $changed) {
+  protoOf(EmptyNodeView).View$composable_s9p16w_k$ = function (modifier, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-1379266785);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1379266785);
     sourceInformation($composer_0, 'C(View$composable)');
     if (!(($changed & 1) === 0) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
@@ -5036,13 +4956,13 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(EmptyNodeView$View$composable$lambda(this, modifier, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(EmptyNodeView$View$composable$lambda(this, modifier, $changed));
     }
   };
   var EmptyNodeView_instance;
@@ -5056,19 +4976,19 @@
   }
   function EmptyParentNodeView$NodeView$composable$lambda($tmp0_rcvr, $this_NodeView$composable, $modifier, $$changed) {
     return function ($composer, $force) {
-      $tmp0_rcvr.NodeView$composable_ssh72e_k$($this_NodeView$composable, $modifier, $composer, updateChangedFlags($$changed | 1));
+      $tmp0_rcvr.NodeView$composable_jxrwe6_k$($this_NodeView$composable, $modifier, $composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
   function EmptyParentNodeView() {
     this.$stable_1 = 0;
   }
-  protoOf(EmptyParentNodeView).NodeView_l9xxvb_k$ = function (_this__u8e3s4, modifier) {
+  protoOf(EmptyParentNodeView).NodeView_90onig_k$ = function (_this__u8e3s4, modifier) {
     illegalDecoyCallException('NodeView');
   };
-  protoOf(EmptyParentNodeView).NodeView$composable_ssh72e_k$ = function (_this__u8e3s4, modifier, $composer, $changed) {
+  protoOf(EmptyParentNodeView).NodeView$composable_jxrwe6_k$ = function (_this__u8e3s4, modifier, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-1587885035);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1587885035);
     sourceInformation($composer_0, 'C(NodeView$composable)');
     if (!(($changed & 1) === 0) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
@@ -5078,13 +4998,13 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(EmptyParentNodeView$NodeView$composable$lambda(this, _this__u8e3s4, modifier, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(EmptyParentNodeView$NodeView$composable$lambda(this, _this__u8e3s4, modifier, $changed));
     }
   };
   function get_LocalNode() {
@@ -5133,19 +5053,19 @@
       // Inline function 'kotlin.collections.any' call
       // Inline function 'com.bumble.appyx.navigation.plugin.plugins' call
       // Inline function 'kotlin.collections.filterIsInstance' call
-      var tmp0_filterIsInstance = $this.plugins_1;
       // Inline function 'kotlin.collections.filterIsInstanceTo' call
-      var tmp0_filterIsInstanceTo = ArrayList_init_$Create$();
-      var tmp0_iterator = tmp0_filterIsInstance.iterator_jk1svi_k$();
+      var this_0 = $this.plugins_1;
+      var destination = ArrayList_init_$Create$();
+      var tmp0_iterator = this_0.iterator_jk1svi_k$();
       while (tmp0_iterator.hasNext_bitz1p_k$()) {
         var element = tmp0_iterator.next_20eer_k$();
         if (!(element == null) ? isInterface(element, UpNavigationHandler_0) : false) {
-          tmp0_filterIsInstanceTo.add_1j60pz_k$(element);
+          destination.add_utx5q5_k$(element);
         }
       }
       var tmp;
-      if (isInterface(tmp0_filterIsInstanceTo, Collection)) {
-        tmp = tmp0_filterIsInstanceTo.isEmpty_y1axqb_k$();
+      if (isInterface(destination, Collection)) {
+        tmp = destination.isEmpty_y1axqb_k$();
       } else {
         tmp = false;
       }
@@ -5153,7 +5073,7 @@
         tmp$ret$3 = false;
         break $l$block_0;
       }
-      var tmp0_iterator_0 = tmp0_filterIsInstanceTo.iterator_jk1svi_k$();
+      var tmp0_iterator_0 = destination.iterator_jk1svi_k$();
       while (tmp0_iterator_0.hasNext_bitz1p_k$()) {
         var element_0 = tmp0_iterator_0.next_20eer_k$();
         // Inline function 'com.bumble.appyx.navigation.node.Node.handleUpNavigationByPlugins.<anonymous>' call
@@ -5177,16 +5097,16 @@
   function Node$1(this$0) {
     this.this$0__1 = this$0;
   }
-  protoOf(Node$1).onCreate_ghfmom_k$ = function () {
+  protoOf(Node$1).onCreate_ggvu39_k$ = function () {
     if (!this.this$0__1.wasBuilt_1) {
       // Inline function 'kotlin.error' call
-      var tmp0_error = 'onBuilt was not invoked for ' + this;
-      throw IllegalStateException_init_$Create$(toString(tmp0_error));
+      var message = 'onBuilt was not invoked for ' + this;
+      throw IllegalStateException_init_$Create$(toString(message));
     }
   };
   function Node$View$composable$lambda($tmp0_rcvr, $modifier, $$changed) {
     return function ($composer, $force) {
-      $tmp0_rcvr.View$composable_e844gk_k$($modifier, $composer, updateChangedFlags($$changed | 1));
+      $tmp0_rcvr.View$composable_s9p16w_k$($modifier, $composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
@@ -5198,8 +5118,8 @@
         if (isTraceInProgress()) {
           traceEventStart(-549106967, $changed, -1, 'com.bumble.appyx.navigation.node.Node.Compose$composable.<anonymous> (Node.kt:118)');
         }
-        this$0.DerivedSetup$composable_6g13ru_k$($composer_0, 14 & $$dirty >> 3);
-        this$0.View$composable_e844gk_k$($modifier._v, $composer_0, 14 & $$dirty | 112 & $$dirty);
+        this$0.DerivedSetup$composable_3td2co_k$($composer_0, 14 & $$dirty >> 3);
+        this$0.View$composable_s9p16w_k$($modifier._v, $composer_0, 14 & $$dirty | 112 & $$dirty);
         var tmp_0;
         if (isTraceInProgress()) {
           traceEventEnd();
@@ -5207,7 +5127,7 @@
         }
         tmp = tmp_0;
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         tmp = Unit_getInstance();
       }
       return Unit_getInstance();
@@ -5215,18 +5135,18 @@
   }
   function ComposableLambda$invoke$ref_7($boundThis) {
     return function (p0, p1) {
-      return $boundThis.invoke_6harzl_k$(p0, p1);
+      return $boundThis.invoke_z8di7s_k$(p0, p1);
     };
   }
   function Node$Compose$composable$lambda_0($tmp0_rcvr, $modifier, $$changed, $$default) {
     return function ($composer, $force) {
-      $tmp0_rcvr.Compose$composable_g1xpaf_k$($modifier._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      $tmp0_rcvr.Compose$composable_o87cjm_k$($modifier._v, $composer, updateChangedFlags($$changed | 1), $$default);
       return Unit_getInstance();
     };
   }
   function Node$DerivedSetup$composable$lambda($tmp0_rcvr, $$changed) {
     return function ($composer, $force) {
-      $tmp0_rcvr.DerivedSetup$composable_6g13ru_k$($composer, updateChangedFlags($$changed | 1));
+      $tmp0_rcvr.DerivedSetup$composable_3td2co_k$($composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
@@ -5259,16 +5179,16 @@
     tmp_2.lifecycleScope$delegate_1 = lazy(Node$lifecycleScope$delegate$lambda(this));
     this.integrationPoint_1 = new IntegrationPointStub();
     if (BuildFlags_getInstance().get_DEBUG_i80x6y_k$()) {
-      this.get_lifecycle_3iiym9_k$().addObserver_ch8ntw_k$(new LifecycleLogger(this));
+      this.get_lifecycle_3iiym9_k$().addObserver_tygfj3_k$(new LifecycleLogger(this));
     }
     var tmp_3 = this.get_lifecycle_3iiym9_k$();
-    tmp_3.addObserver_ch8ntw_k$(new Node$1(this));
+    tmp_3.addObserver_tygfj3_k$(new Node$1(this));
     this.$stable_1 = 0;
   }
   protoOf(Node).get_view_wow8a6_k$ = function () {
     return this.view_1;
   };
-  protoOf(Node).View_d643kp_k$ = function (modifier) {
+  protoOf(Node).View_d8pxwq_k$ = function (modifier) {
     illegalDecoyCallException('View');
   };
   protoOf(Node).get_id_kntnx8_k$ = function () {
@@ -5291,10 +5211,11 @@
   };
   protoOf(Node).get_lifecycleScope_8rp53n_k$ = function () {
     // Inline function 'kotlin.getValue' call
+    var this_0 = this.lifecycleScope$delegate_1;
     lifecycleScope$factory_0();
-    return this.lifecycleScope$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(Node).set_integrationPoint_je01kl_k$ = function (value) {
+  protoOf(Node).set_integrationPoint_qzhai5_k$ = function (value) {
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
     if (!this.isRoot_1) {
@@ -5313,7 +5234,8 @@
       var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_integrationPoint_pd8bmt_k$();
       var tmp_0;
       if (tmp1_elvis_lhs == null) {
-        throw IllegalStateException_init_$Create$('Non-root Node should have a parent');
+        var message = 'Non-root Node should have a parent';
+        throw IllegalStateException_init_$Create$(toString(message));
       } else {
         tmp_0 = tmp1_elvis_lhs;
       }
@@ -5321,7 +5243,7 @@
     }
     return tmp;
   };
-  protoOf(Node).onBuilt_yrckfm_k$ = function () {
+  protoOf(Node).onBuilt_yqsru9_k$ = function () {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!!this.wasBuilt_1) {
@@ -5330,125 +5252,125 @@
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     this.wasBuilt_1 = true;
-    this.updateLifecycleState_xc7s69_k$(State_CREATED_getInstance());
+    this.updateLifecycleState_fld7ue_k$(State_CREATED_getInstance());
     // Inline function 'kotlin.collections.forEach' call
     // Inline function 'com.bumble.appyx.navigation.plugin.plugins' call
     // Inline function 'kotlin.collections.filterIsInstance' call
-    var tmp0_filterIsInstance = this.plugins_1;
     // Inline function 'kotlin.collections.filterIsInstanceTo' call
-    var tmp0_filterIsInstanceTo = ArrayList_init_$Create$();
-    var tmp0_iterator = tmp0_filterIsInstance.iterator_jk1svi_k$();
+    var this_0 = this.plugins_1;
+    var destination = ArrayList_init_$Create$();
+    var tmp0_iterator = this_0.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var element = tmp0_iterator.next_20eer_k$();
       if (!(element == null) ? isInterface(element, NodeReadyObserver) : false) {
-        tmp0_filterIsInstanceTo.add_1j60pz_k$(element);
+        destination.add_utx5q5_k$(element);
       }
     }
-    var tmp0_iterator_0 = tmp0_filterIsInstanceTo.iterator_jk1svi_k$();
+    var tmp0_iterator_0 = destination.iterator_jk1svi_k$();
     while (tmp0_iterator_0.hasNext_bitz1p_k$()) {
       var element_0 = tmp0_iterator_0.next_20eer_k$();
       // Inline function 'com.bumble.appyx.navigation.node.Node.onBuilt.<anonymous>' call
-      element_0.init_6xmvzm_k$(this);
+      element_0.init_tlb8we_k$(this);
     }
     // Inline function 'kotlin.collections.forEach' call
     // Inline function 'com.bumble.appyx.navigation.plugin.plugins' call
     // Inline function 'kotlin.collections.filterIsInstance' call
-    var tmp0_filterIsInstance_0 = this.plugins_1;
     // Inline function 'kotlin.collections.filterIsInstanceTo' call
-    var tmp0_filterIsInstanceTo_0 = ArrayList_init_$Create$();
-    var tmp0_iterator_1 = tmp0_filterIsInstance_0.iterator_jk1svi_k$();
+    var this_1 = this.plugins_1;
+    var destination_0 = ArrayList_init_$Create$();
+    var tmp0_iterator_1 = this_1.iterator_jk1svi_k$();
     while (tmp0_iterator_1.hasNext_bitz1p_k$()) {
       var element_1 = tmp0_iterator_1.next_20eer_k$();
       if (!(element_1 == null) ? isInterface(element_1, NodeLifecycleAware) : false) {
-        tmp0_filterIsInstanceTo_0.add_1j60pz_k$(element_1);
+        destination_0.add_utx5q5_k$(element_1);
       }
     }
-    var tmp0_iterator_2 = tmp0_filterIsInstanceTo_0.iterator_jk1svi_k$();
+    var tmp0_iterator_2 = destination_0.iterator_jk1svi_k$();
     while (tmp0_iterator_2.hasNext_bitz1p_k$()) {
       var element_2 = tmp0_iterator_2.next_20eer_k$();
       // Inline function 'com.bumble.appyx.navigation.node.Node.onBuilt.<anonymous>' call
-      element_2.onCreate_ndnn5n_k$(this.get_lifecycle_3iiym9_k$());
+      element_2.onCreate_5so5lu_k$(this.get_lifecycle_3iiym9_k$());
     }
   };
-  protoOf(Node).Compose_42w13g_k$ = function (modifier) {
+  protoOf(Node).Compose_nokxux_k$ = function (modifier) {
     illegalDecoyCallException('Compose');
   };
-  protoOf(Node).DerivedSetup_11tnf5_k$ = function () {
+  protoOf(Node).DerivedSetup_119uts_k$ = function () {
     illegalDecoyCallException('DerivedSetup');
   };
-  protoOf(Node).updateLifecycleState_xc7s69_k$ = function (state) {
+  protoOf(Node).updateLifecycleState_fld7ue_k$ = function (state) {
     if (this.get_lifecycle_3iiym9_k$().get_currentState_snihnl_k$().equals(state))
       return Unit_getInstance();
     if (this.get_lifecycle_3iiym9_k$().get_currentState_snihnl_k$().equals(State_DESTROYED_getInstance()) ? !state.equals(State_DESTROYED_getInstance()) : false) {
-      Appyx_getInstance().reportException_9dumbv_k$(IllegalStateException_init_$Create$('Trying to change lifecycle state of already destroyed node ' + getKClassFromExpression(this)));
+      Appyx_getInstance().reportException_u9h6da_k$(IllegalStateException_init_$Create$('Trying to change lifecycle state of already destroyed node ' + getKClassFromExpression(this)));
       return Unit_getInstance();
     }
-    this.nodeLifecycle_1.updateLifecycleState_xc7s69_k$(state);
+    this.nodeLifecycle_1.updateLifecycleState_fld7ue_k$(state);
     if (state.equals(State_DESTROYED_getInstance())) {
       if (!this.get_integrationPoint_pd8bmt_k$().get_isChangingConfigurations_y5jk2r_k$()) {
-        this.retainedInstanceStore_1.clearStore_wkfjsy_k$(this.get_id_kntnx8_k$());
+        this.retainedInstanceStore_1.clearStore_b3n2xi_k$(this.get_id_kntnx8_k$());
       }
       // Inline function 'kotlin.collections.forEach' call
       // Inline function 'com.bumble.appyx.navigation.plugin.plugins' call
       // Inline function 'kotlin.collections.filterIsInstance' call
-      var tmp0_filterIsInstance = this.plugins_1;
       // Inline function 'kotlin.collections.filterIsInstanceTo' call
-      var tmp0_filterIsInstanceTo = ArrayList_init_$Create$();
-      var tmp0_iterator = tmp0_filterIsInstance.iterator_jk1svi_k$();
+      var this_0 = this.plugins_1;
+      var destination = ArrayList_init_$Create$();
+      var tmp0_iterator = this_0.iterator_jk1svi_k$();
       while (tmp0_iterator.hasNext_bitz1p_k$()) {
         var element = tmp0_iterator.next_20eer_k$();
         if (!(element == null) ? isInterface(element, Destroyable) : false) {
-          tmp0_filterIsInstanceTo.add_1j60pz_k$(element);
+          destination.add_utx5q5_k$(element);
         }
       }
-      var tmp0_iterator_0 = tmp0_filterIsInstanceTo.iterator_jk1svi_k$();
+      var tmp0_iterator_0 = destination.iterator_jk1svi_k$();
       while (tmp0_iterator_0.hasNext_bitz1p_k$()) {
         var element_0 = tmp0_iterator_0.next_20eer_k$();
         // Inline function 'com.bumble.appyx.navigation.node.Node.updateLifecycleState.<anonymous>' call
-        element_0.destroy_euxju1_k$();
+        element_0.destroy_evhcfe_k$();
       }
     }
   };
-  protoOf(Node).saveInstanceState_8yjxr3_k$ = function (scope) {
+  protoOf(Node).saveInstanceState_2ofm6y_k$ = function (scope) {
     var writer = new MutableSavedStateMapImpl(VOID, scope);
-    this.onSaveInstanceState_royvtj_k$(writer);
+    this.onSaveInstanceState_i995q6_k$(writer);
     // Inline function 'kotlin.collections.forEach' call
     // Inline function 'kotlin.collections.filterIsInstance' call
-    var tmp0_filterIsInstance = this.plugins_1;
     // Inline function 'kotlin.collections.filterIsInstanceTo' call
-    var tmp0_filterIsInstanceTo = ArrayList_init_$Create$();
-    var tmp0_iterator = tmp0_filterIsInstance.iterator_jk1svi_k$();
+    var this_0 = this.plugins_1;
+    var destination = ArrayList_init_$Create$();
+    var tmp0_iterator = this_0.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var element = tmp0_iterator.next_20eer_k$();
       if (!(element == null) ? isInterface(element, SavesInstanceState) : false) {
-        tmp0_filterIsInstanceTo.add_1j60pz_k$(element);
+        destination.add_utx5q5_k$(element);
       }
     }
-    var tmp0_iterator_0 = tmp0_filterIsInstanceTo.iterator_jk1svi_k$();
+    var tmp0_iterator_0 = destination.iterator_jk1svi_k$();
     while (tmp0_iterator_0.hasNext_bitz1p_k$()) {
       var element_0 = tmp0_iterator_0.next_20eer_k$();
       // Inline function 'com.bumble.appyx.navigation.node.Node.saveInstanceState.<anonymous>' call
-      element_0.saveInstanceState_ymawco_k$(writer);
+      element_0.saveInstanceState_lsffb1_k$(writer);
     }
     return writer.get_savedState_52fa37_k$();
   };
-  protoOf(Node).onSaveInstanceState_royvtj_k$ = function (state) {
-    this.buildContext_1.onSaveInstanceState_royvtj_k$(state);
+  protoOf(Node).onSaveInstanceState_i995q6_k$ = function (state) {
+    this.buildContext_1.onSaveInstanceState_i995q6_k$(state);
   };
-  protoOf(Node).finish_mgihxe_k$ = function () {
+  protoOf(Node).finish_mh2air_k$ = function () {
     var tmp0_safe_receiver = this.parent_1;
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
     } else {
-      tmp0_safe_receiver.onChildFinished_uzn1gh_k$(this);
+      tmp0_safe_receiver.onChildFinished_jdka7a_k$(this);
       tmp = Unit_getInstance();
     }
     if (tmp == null) {
-      this.get_integrationPoint_pd8bmt_k$().onRootFinished_leuu1u_k$();
+      this.get_integrationPoint_pd8bmt_k$().onRootFinished_lfemn7_k$();
     }
   };
-  protoOf(Node).navigateUp_qz66w5_k$ = function () {
+  protoOf(Node).navigateUp_qymeas_k$ = function () {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(!(this.parent_1 == null) ? true : this.isRoot_1)) {
@@ -5458,7 +5380,7 @@
     }
     var tmp0_safe_receiver = this.parent_1;
     if (!((tmp0_safe_receiver == null ? null : tmp0_safe_receiver.performUpNavigation_18a4gg_k$()) === true)) {
-      this.get_integrationPoint_pd8bmt_k$().handleUpNavigation_he8kje_k$();
+      this.get_integrationPoint_pd8bmt_k$().handleUpNavigation_hdory1_k$();
     }
   };
   protoOf(Node).performUpNavigation_18a4gg_k$ = function () {
@@ -5472,9 +5394,9 @@
     }
     return tmp;
   };
-  protoOf(Node).View$composable_e844gk_k$ = function (modifier, $composer, $changed) {
+  protoOf(Node).View$composable_s9p16w_k$ = function (modifier, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(603141841);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(603141841);
     sourceInformation($composer_0, 'C(View$composable)');
     var $dirty = $changed;
     if (($changed & 14) === 0)
@@ -5485,24 +5407,24 @@
       if (isTraceInProgress()) {
         traceEventStart(603141841, $dirty, -1, 'com.bumble.appyx.navigation.node.Node.View$composable (Node.kt:-1)');
       }
-      this.view_1.View$composable_e844gk_k$(modifier, $composer_0, 14 & $dirty);
+      this.view_1.View$composable_s9p16w_k$(modifier, $composer_0, 14 & $dirty);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(Node$View$composable$lambda(this, modifier, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(Node$View$composable$lambda(this, modifier, $changed));
     }
   };
-  protoOf(Node).Compose$composable_g1xpaf_k$ = function (modifier, $composer, $changed, $default) {
+  protoOf(Node).Compose$composable_o87cjm_k$ = function (modifier, $composer, $changed, $default) {
     var modifier_0 = {_v: modifier};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(964168029);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(964168029);
     sourceInformation($composer_0, 'C(Compose$composable)');
     var $dirty = $changed;
     if (!(($default & 1) === 0))
@@ -5520,7 +5442,7 @@
       if (isTraceInProgress()) {
         traceEventStart(964168029, $dirty, -1, 'com.bumble.appyx.navigation.node.Node.Compose$composable (Node.kt:113)');
       }
-      var tmp = [get_LocalNode().provides_3e53yf_k$(this), get_LocalCommonLifecycleOwner().provides_3e53yf_k$(this)];
+      var tmp = [get_LocalNode().provides_3agxel_k$(this), get_LocalCommonLifecycleOwner().provides_3agxel_k$(this)];
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.bumble.appyx.navigation.node.Node.Compose$composable.<anonymous>' call
@@ -5528,43 +5450,43 @@
       var dispatchReceiver = composableLambda(tmp_0, -549106967, true, Node$Compose$composable$lambda(this, $dirty, modifier_0));
       // Inline function 'androidx.compose.runtime.remember$composable' call
       var $composer_1 = $composer_0;
-      $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+      $composer_1.startReplaceableGroup_ip860b_k$(-838505973);
       sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var tmp1_cache = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
+      var invalid = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
       // Inline function 'kotlin.let' call
-      var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = $composer_1.rememberedValue_4dg93v_k$();
       var tmp_1;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (invalid ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.node.Node.Compose$composable.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_7(dispatchReceiver);
-        $composer_1.updateRememberedValue_l1colo_k$(value);
+        $composer_1.updateRememberedValue_l1wh71_k$(value);
         tmp_1 = value;
       } else {
-        tmp_1 = tmp0_let;
+        tmp_1 = it;
       }
       var tmp_2 = tmp_1;
-      var tmp0 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
-      $composer_1.endReplaceableGroup_er37p7_k$();
+      var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
+      $composer_1.endReplaceableGroup_ern0ak_k$();
       CompositionLocalProvider$composable(tmp, tmp0, $composer_0, 48);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(Node$Compose$composable$lambda_0(this, modifier_0, $changed, $default));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(Node$Compose$composable$lambda_0(this, modifier_0, $changed, $default));
     }
   };
-  protoOf(Node).DerivedSetup$composable_6g13ru_k$ = function ($composer, $changed) {
+  protoOf(Node).DerivedSetup$composable_3td2co_k$ = function ($composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-527311252);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-527311252);
     sourceInformation($composer_0, 'C(DerivedSetup$composable)');
     if (!(($changed & 1) === 0) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
@@ -5574,13 +5496,13 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(Node$DerivedSetup$composable$lambda(this, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(Node$DerivedSetup$composable$lambda(this, $changed));
     }
   };
   function lifecycleScope$factory_0() {
@@ -5592,7 +5514,7 @@
     // Inline function 'kotlin.also' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'com.bumble.appyx.navigation.node.build.<anonymous>' call
-    _this__u8e3s4.onBuilt_yrckfm_k$();
+    _this__u8e3s4.onBuilt_yqsru9_k$();
     return _this__u8e3s4;
   }
   function NodeView() {
@@ -5627,7 +5549,7 @@
   }
   function BackHandler$composable($this, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-1916264799);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1916264799);
     var $dirty = $changed;
     if (($changed & 14) === 0)
       $dirty = $dirty | ($composer_0.changed_ga7h3f_k$($this) ? 4 : 2);
@@ -5640,43 +5562,43 @@
       var tmp_0 = canHandleBack.get_value_j01efc_k$();
       // Inline function 'androidx.compose.runtime.remember$composable' call
       var $composer_1 = $composer_0;
-      $composer_1.startReplaceableGroup_rp6air_k$(-838505973);
+      $composer_1.startReplaceableGroup_ip860b_k$(-838505973);
       sourceInformation($composer_1, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var tmp1_cache = $composer_1.changed_ga7h3f_k$($this);
+      var invalid = $composer_1.changed_ga7h3f_k$($this);
       // Inline function 'kotlin.let' call
-      var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = $composer_1.rememberedValue_4dg93v_k$();
       var tmp_1;
-      if (tmp1_cache ? true : tmp0_let === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (invalid ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.node.ParentNode.BackHandler$composable.<anonymous>' call
         var value = ParentNode$BackHandler$composable$lambda($this);
-        $composer_1.updateRememberedValue_l1colo_k$(value);
+        $composer_1.updateRememberedValue_l1wh71_k$(value);
         tmp_1 = value;
       } else {
-        tmp_1 = tmp0_let;
+        tmp_1 = it;
       }
       var tmp_2 = tmp_1;
-      var tmp0 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
-      $composer_1.endReplaceableGroup_er37p7_k$();
+      var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
+      $composer_1.endReplaceableGroup_ern0ak_k$();
       PlatformBackHandler$composable(tmp_0, tmp0, $composer_0, 0);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(ParentNode$BackHandler$composable$lambda_0($this, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(ParentNode$BackHandler$composable$lambda_0($this, $changed));
     }
   }
   function ParentNode$DerivedSetup$composable$lambda($tmp0_rcvr, $$changed) {
     return function ($composer, $force) {
-      $tmp0_rcvr.DerivedSetup$composable_6g13ru_k$($composer, updateChangedFlags($$changed | 1));
+      $tmp0_rcvr.DerivedSetup$composable_3td2co_k$($composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
@@ -5719,42 +5641,42 @@
   protoOf(ParentNode).get_children_4cwbp4_k$ = function () {
     return this.childNodeCreationManager_1.get_children_4cwbp4_k$();
   };
-  protoOf(ParentNode).onBuilt_yrckfm_k$ = function () {
-    protoOf(Node).onBuilt_yrckfm_k$.call(this);
-    this.childNodeCreationManager_1.launch_53dbba_k$(this);
-    this.childNodeLifecycleManager_1.launch_9yx17m_k$();
+  protoOf(ParentNode).onBuilt_yqsru9_k$ = function () {
+    protoOf(Node).onBuilt_yqsru9_k$.call(this);
+    this.childNodeCreationManager_1.launch_tix3i7_k$(this);
+    this.childNodeLifecycleManager_1.launch_9zgtsz_k$();
   };
-  protoOf(ParentNode).childOrCreate_ienlyf_k$ = function (element) {
-    return this.childNodeCreationManager_1.childOrCreate_ienlyf_k$(element);
+  protoOf(ParentNode).childOrCreate_mlg821_k$ = function (element) {
+    return this.childNodeCreationManager_1.childOrCreate_mlg821_k$(element);
   };
-  protoOf(ParentNode).updateLifecycleState_xc7s69_k$ = function (state) {
-    protoOf(Node).updateLifecycleState_xc7s69_k$.call(this, state);
-    this.childNodeLifecycleManager_1.propagateLifecycleToChildren_yhl4bw_k$(state);
+  protoOf(ParentNode).updateLifecycleState_fld7ue_k$ = function (state) {
+    protoOf(Node).updateLifecycleState_fld7ue_k$.call(this, state);
+    this.childNodeLifecycleManager_1.propagateLifecycleToChildren_qpc6bv_k$(state);
     if (state.equals(State_DESTROYED_getInstance())) {
-      this.appyxComponent_1.destroy_euxju1_k$();
+      this.appyxComponent_1.destroy_evhcfe_k$();
     }
   };
-  protoOf(ParentNode).DerivedSetup_11tnf5_k$ = function () {
+  protoOf(ParentNode).DerivedSetup_119uts_k$ = function () {
     illegalDecoyCallException('DerivedSetup');
   };
   protoOf(ParentNode).performUpNavigation_18a4gg_k$ = function () {
     return this.appyxComponent_1.handleBackPress_wbgl2k_k$() ? true : protoOf(Node).performUpNavigation_18a4gg_k$.call(this);
   };
-  protoOf(ParentNode).onChildFinished_uzn1gh_k$ = function (child) {
+  protoOf(ParentNode).onChildFinished_jdka7a_k$ = function (child) {
   };
-  protoOf(ParentNode).onSaveInstanceState_royvtj_k$ = function (state) {
-    protoOf(Node).onSaveInstanceState_royvtj_k$.call(this, state);
-    this.childNodeCreationManager_1.saveChildrenState_ku378i_k$(state);
+  protoOf(ParentNode).onSaveInstanceState_i995q6_k$ = function (state) {
+    protoOf(Node).onSaveInstanceState_i995q6_k$.call(this, state);
+    this.childNodeCreationManager_1.saveChildrenState_ngx0z1_k$(state);
   };
-  protoOf(ParentNode).whenChildAttached_homwl1_k$ = function (child, callback) {
-    this.childAware_1.whenChildAttached_homwl1_k$(child, callback);
+  protoOf(ParentNode).whenChildAttached_6ohtce_k$ = function (child, callback) {
+    this.childAware_1.whenChildAttached_6ohtce_k$(child, callback);
   };
-  protoOf(ParentNode).whenChildrenAttached_jtt3b8_k$ = function (child1, child2, callback) {
-    this.childAware_1.whenChildrenAttached_jtt3b8_k$(child1, child2, callback);
+  protoOf(ParentNode).whenChildrenAttached_hfszwp_k$ = function (child1, child2, callback) {
+    this.childAware_1.whenChildrenAttached_hfszwp_k$(child1, child2, callback);
   };
-  protoOf(ParentNode).DerivedSetup$composable_6g13ru_k$ = function ($composer, $changed) {
+  protoOf(ParentNode).DerivedSetup$composable_3td2co_k$ = function ($composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-1644974750);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1644974750);
     sourceInformation($composer_0, 'C(DerivedSetup$composable)');
     var $dirty = $changed;
     if (($changed & 14) === 0)
@@ -5769,18 +5691,18 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp1_safe_receiver === null)
       null;
     else {
-      tmp1_safe_receiver.updateScope_xhrf9y_k$(ParentNode$DerivedSetup$composable$lambda(this, $changed));
+      tmp1_safe_receiver.updateScope_t8jcf_k$(ParentNode$DerivedSetup$composable$lambda(this, $changed));
     }
   };
   function ParentNodeView$View$composable$lambda($tmp0_rcvr, $modifier, $$changed) {
     return function ($composer, $force) {
-      $tmp0_rcvr.View$composable_e844gk_k$($modifier, $composer, updateChangedFlags($$changed | 1));
+      $tmp0_rcvr.View$composable_s9p16w_k$($modifier, $composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
@@ -5800,17 +5722,17 @@
     Companion_instance_4 = this;
     this.$$delegate_0__1 = new RetainedInstanceStoreImpl();
   }
-  protoOf(Companion_4).clearStore_wkfjsy_k$ = function (storeId) {
-    this.$$delegate_0__1.clearStore_wkfjsy_k$(storeId);
+  protoOf(Companion_4).clearStore_b3n2xi_k$ = function (storeId) {
+    this.$$delegate_0__1.clearStore_b3n2xi_k$(storeId);
   };
-  protoOf(Companion_4).get_5e3whn_k$ = function (storeId, key, disposer, factory) {
-    return this.$$delegate_0__1.get_5e3whn_k$(storeId, key, disposer, factory);
+  protoOf(Companion_4).get_oljy7i_k$ = function (storeId, key, disposer, factory) {
+    return this.$$delegate_0__1.get_oljy7i_k$(storeId, key, disposer, factory);
   };
   protoOf(Companion_4).isRetained_vbrpg0_k$ = function (value) {
     return this.$$delegate_0__1.isRetained_vbrpg0_k$(value);
   };
-  protoOf(Companion_4).isRetainedByStoreId_nvlf0o_k$ = function (storeId, value) {
-    return this.$$delegate_0__1.isRetainedByStoreId_nvlf0o_k$(storeId, value);
+  protoOf(Companion_4).isRetainedByStoreId_2ya5xh_k$ = function (storeId, value) {
+    return this.$$delegate_0__1.isRetainedByStoreId_2ya5xh_k$(storeId, value);
   };
   var Companion_instance_4;
   function Companion_getInstance_14() {
@@ -5833,10 +5755,10 @@
     var tmp$ret$0;
     $l$block_0: {
       // Inline function 'kotlin.collections.any' call
-      var tmp0_any = _this__u8e3s4.get_values_ksazhn_k$();
+      var this_0 = _this__u8e3s4.get_values_ksazhn_k$();
       var tmp;
-      if (isInterface(tmp0_any, Collection)) {
-        tmp = tmp0_any.isEmpty_y1axqb_k$();
+      if (isInterface(this_0, Collection)) {
+        tmp = this_0.isEmpty_y1axqb_k$();
       } else {
         tmp = false;
       }
@@ -5844,7 +5766,7 @@
         tmp$ret$0 = false;
         break $l$block_0;
       }
-      var tmp0_iterator = tmp0_any.iterator_jk1svi_k$();
+      var tmp0_iterator = this_0.iterator_jk1svi_k$();
       while (tmp0_iterator.hasNext_bitz1p_k$()) {
         var element = tmp0_iterator.next_20eer_k$();
         // Inline function 'com.bumble.appyx.navigation.store.RetainedInstanceStoreImpl.hasValue.<anonymous>' call
@@ -5864,42 +5786,42 @@
   protoOf(ValueHolder).get_value_j01efc_k$ = function () {
     return this.value_1;
   };
-  protoOf(ValueHolder).dispose_3n44we_k$ = function () {
+  protoOf(ValueHolder).dispose_3nnxhr_k$ = function () {
     this.disposer_1(this.value_1);
   };
   function RetainedInstanceStoreImpl() {
     this.map_1 = HashMap_init_$Create$();
   }
-  protoOf(RetainedInstanceStoreImpl).get_5e3whn_k$ = function (storeId, key, disposer, factory) {
+  protoOf(RetainedInstanceStoreImpl).get_oljy7i_k$ = function (storeId, key, disposer, factory) {
     // Inline function 'kotlin.collections.getOrPut' call
     // Inline function 'kotlin.collections.getOrPut' call
-    var tmp0_getOrPut = this.map_1;
-    var value = tmp0_getOrPut.get_1mhr4y_k$(storeId);
+    var this_0 = this.map_1;
+    var value = this_0.get_wei43m_k$(storeId);
     var tmp;
     if (value == null) {
       // Inline function 'com.bumble.appyx.navigation.store.RetainedInstanceStoreImpl.get.<anonymous>' call
       var answer = HashMap_init_$Create$();
-      tmp0_getOrPut.put_3mhbri_k$(storeId, answer);
+      this_0.put_4fpzoq_k$(storeId, answer);
       tmp = answer;
     } else {
       tmp = value;
     }
-    var tmp1_getOrPut = tmp;
-    var value_0 = tmp1_getOrPut.get_1mhr4y_k$(key);
+    var this_1 = tmp;
+    var value_0 = this_1.get_wei43m_k$(key);
     var tmp_0;
     if (value_0 == null) {
       // Inline function 'com.bumble.appyx.navigation.store.RetainedInstanceStoreImpl.get.<anonymous>' call
       var answer_0 = new ValueHolder(factory(), disposer);
-      tmp1_getOrPut.put_3mhbri_k$(key, answer_0);
+      this_1.put_4fpzoq_k$(key, answer_0);
       tmp_0 = answer_0;
     } else {
       tmp_0 = value_0;
     }
     var tmp_1 = tmp_0.value_1;
-    return isObject(tmp_1) ? tmp_1 : THROW_CCE();
+    return !(tmp_1 == null) ? tmp_1 : THROW_CCE();
   };
-  protoOf(RetainedInstanceStoreImpl).isRetainedByStoreId_nvlf0o_k$ = function (storeId, value) {
-    var tmp0_safe_receiver = this.map_1.get_1mhr4y_k$(storeId);
+  protoOf(RetainedInstanceStoreImpl).isRetainedByStoreId_2ya5xh_k$ = function (storeId, value) {
+    var tmp0_safe_receiver = this.map_1.get_wei43m_k$(storeId);
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : hasValue(tmp0_safe_receiver, this, value);
     return tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
   };
@@ -5907,10 +5829,10 @@
     var tmp$ret$0;
     $l$block_0: {
       // Inline function 'kotlin.collections.any' call
-      var tmp0_any = this.map_1.get_values_ksazhn_k$();
+      var this_0 = this.map_1.get_values_ksazhn_k$();
       var tmp;
-      if (isInterface(tmp0_any, Collection)) {
-        tmp = tmp0_any.isEmpty_y1axqb_k$();
+      if (isInterface(this_0, Collection)) {
+        tmp = this_0.isEmpty_y1axqb_k$();
       } else {
         tmp = false;
       }
@@ -5918,7 +5840,7 @@
         tmp$ret$0 = false;
         break $l$block_0;
       }
-      var tmp0_iterator = tmp0_any.iterator_jk1svi_k$();
+      var tmp0_iterator = this_0.iterator_jk1svi_k$();
       while (tmp0_iterator.hasNext_bitz1p_k$()) {
         var element = tmp0_iterator.next_20eer_k$();
         // Inline function 'com.bumble.appyx.navigation.store.RetainedInstanceStoreImpl.isRetained.<anonymous>' call
@@ -5931,8 +5853,8 @@
     }
     return tmp$ret$0;
   };
-  protoOf(RetainedInstanceStoreImpl).clearStore_wkfjsy_k$ = function (storeId) {
-    var tmp0_safe_receiver = this.map_1.remove_8hbkc0_k$(storeId);
+  protoOf(RetainedInstanceStoreImpl).clearStore_b3n2xi_k$ = function (storeId) {
+    var tmp0_safe_receiver = this.map_1.remove_gppy8k_k$(storeId);
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_values_ksazhn_k$();
     if (tmp1_safe_receiver == null)
       null;
@@ -5942,7 +5864,7 @@
       while (tmp0_iterator.hasNext_bitz1p_k$()) {
         var element = tmp0_iterator.next_20eer_k$();
         // Inline function 'com.bumble.appyx.navigation.store.RetainedInstanceStoreImpl.clearStore.<anonymous>' call
-        element.dispose_3n44we_k$();
+        element.dispose_3nnxhr_k$();
       }
     }
   };
@@ -5956,16 +5878,16 @@
   protoOf(MainIntegrationPoint).get_isChangingConfigurations_y5jk2r_k$ = function () {
     return false;
   };
-  protoOf(MainIntegrationPoint).onRootFinished_leuu1u_k$ = function () {
+  protoOf(MainIntegrationPoint).onRootFinished_lfemn7_k$ = function () {
   };
-  protoOf(MainIntegrationPoint).handleUpNavigation_he8kje_k$ = function () {
+  protoOf(MainIntegrationPoint).handleUpNavigation_hdory1_k$ = function () {
   };
   function WebNodeHost$composable(screenSize, onBackPressedEvents, modifier, integrationPoint, customisations, factory, $composer, $changed, $default) {
     var modifier_0 = {_v: modifier};
     var integrationPoint_0 = {_v: integrationPoint};
     var customisations_0 = {_v: customisations};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-1022922749);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1022922749);
     sourceInformation($composer_0, 'C(WebNodeHost$composable)P(5,4,3,2)');
     var $dirty = $changed;
     if (!(($default & 1) === 0))
@@ -5989,7 +5911,7 @@
     else if (($changed & 458752) === 0)
       $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(factory) ? 131072 : 65536);
     if (!(($dirty & 374491) === 74898) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      $composer_0.startDefaults_g7jseb_k$();
+      $composer_0.startDefaults_g83kzo_k$();
       if (($changed & 1) === 0 ? true : $composer_0.get_defaultsInvalid_y88fc4_k$()) {
         if (!(($default & 4) === 0)) {
           modifier_0._v = Companion_getInstance();
@@ -5997,189 +5919,189 @@
         if (!(($default & 8) === 0)) {
           // Inline function 'androidx.compose.runtime.remember$composable' call
           var $composer_1 = $composer_0;
-          $composer_1.startReplaceableGroup_rp6air_k$(547886695);
+          $composer_1.startReplaceableGroup_ip860b_k$(547886695);
           sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
           // Inline function 'androidx.compose.runtime.cache' call
           // Inline function 'kotlin.let' call
-          var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+          var it = $composer_1.rememberedValue_4dg93v_k$();
           var tmp;
-          if (false ? true : tmp0_let === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+          if (false ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
             // Inline function 'com.bumble.appyx.navigation.integration.WebNodeHost$composable.<anonymous>' call
             var value = new MainIntegrationPoint();
-            $composer_1.updateRememberedValue_l1colo_k$(value);
+            $composer_1.updateRememberedValue_l1wh71_k$(value);
             tmp = value;
           } else {
-            tmp = tmp0_let;
+            tmp = it;
           }
           var tmp_0 = tmp;
-          var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-          $composer_1.endReplaceableGroup_er37p7_k$();
+          var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+          $composer_1.endReplaceableGroup_ern0ak_k$();
           integrationPoint_0._v = tmp0;
           $dirty = $dirty & -7169;
         }
         if (!(($default & 16) === 0)) {
           // Inline function 'androidx.compose.runtime.remember$composable' call
           var $composer_2 = $composer_0;
-          $composer_2.startReplaceableGroup_rp6air_k$(547886695);
+          $composer_2.startReplaceableGroup_ip860b_k$(547886695);
           sourceInformation($composer_2, 'CC(remember$composable):Composables.kt#9igjgp');
           // Inline function 'androidx.compose.runtime.cache' call
           // Inline function 'kotlin.let' call
-          var tmp0_let_0 = $composer_2.rememberedValue_4dg93v_k$();
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+          var it_0 = $composer_2.rememberedValue_4dg93v_k$();
           var tmp_1;
-          if (false ? true : tmp0_let_0 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+          if (false ? true : it_0 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
             // Inline function 'com.bumble.appyx.navigation.integration.WebNodeHost$composable.<anonymous>' call
             var value_0 = new NodeCustomisationDirectoryImpl();
-            $composer_2.updateRememberedValue_l1colo_k$(value_0);
+            $composer_2.updateRememberedValue_l1wh71_k$(value_0);
             tmp_1 = value_0;
           } else {
-            tmp_1 = tmp0_let_0;
+            tmp_1 = it_0;
           }
           var tmp_2 = tmp_1;
-          var tmp0_0 = (tmp_2 == null ? true : isObject(tmp_2)) ? tmp_2 : THROW_CCE();
-          $composer_2.endReplaceableGroup_er37p7_k$();
+          var tmp0_0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
+          $composer_2.endReplaceableGroup_ern0ak_k$();
           customisations_0._v = tmp0_0;
           $dirty = $dirty & -57345;
         }
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         if (!(($default & 8) === 0))
           $dirty = $dirty & -7169;
         if (!(($default & 16) === 0))
           $dirty = $dirty & -57345;
       }
-      $composer_0.endDefaults_b0883g_k$();
+      $composer_0.endDefaults_b0s0ot_k$();
       if (isTraceInProgress()) {
         traceEventStart(-1022922749, $dirty, -1, 'com.bumble.appyx.navigation.integration.WebNodeHost$composable (WebNodeHost.kt:35)');
       }
       // Inline function 'androidx.compose.runtime.remember$composable' call
       var $composer_3 = $composer_0;
-      $composer_3.startReplaceableGroup_rp6air_k$(547886695);
+      $composer_3.startReplaceableGroup_ip860b_k$(547886695);
       sourceInformation($composer_3, 'CC(remember$composable):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
-      var tmp0_let_1 = $composer_3.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it_1 = $composer_3.rememberedValue_4dg93v_k$();
       var tmp_3;
-      if (false ? true : tmp0_let_1 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (false ? true : it_1 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.integration.WebNodeHost$composable.<anonymous>' call
         var value_1 = new PlatformLifecycleRegistry();
-        $composer_3.updateRememberedValue_l1colo_k$(value_1);
+        $composer_3.updateRememberedValue_l1wh71_k$(value_1);
         tmp_3 = value_1;
       } else {
-        tmp_3 = tmp0_let_1;
+        tmp_3 = it_1;
       }
       var tmp_4 = tmp_3;
-      var tmp0_1 = (tmp_4 == null ? true : isObject(tmp_4)) ? tmp_4 : THROW_CCE();
-      $composer_3.endReplaceableGroup_er37p7_k$();
+      var tmp0_1 = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
+      $composer_3.endReplaceableGroup_ern0ak_k$();
       var platformLifecycleRegistry = tmp0_1;
       // Inline function 'androidx.compose.runtime.remember$composable' call
       var $composer_4 = $composer_0;
-      $composer_4.startReplaceableGroup_rp6air_k$(547886695);
+      $composer_4.startReplaceableGroup_ip860b_k$(547886695);
       sourceInformation($composer_4, 'CC(remember$composable):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
-      var tmp0_let_2 = $composer_4.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it_2 = $composer_4.rememberedValue_4dg93v_k$();
       var tmp_5;
-      if (false ? true : tmp0_let_2 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (false ? true : it_2 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.integration.WebNodeHost$composable.<anonymous>' call
         var value_2 = new WebNodeHost$composable$onBackPressedDispatcherOwner$1$1(integrationPoint_0);
-        $composer_4.updateRememberedValue_l1colo_k$(value_2);
+        $composer_4.updateRememberedValue_l1wh71_k$(value_2);
         tmp_5 = value_2;
       } else {
-        tmp_5 = tmp0_let_2;
+        tmp_5 = it_2;
       }
       var tmp_6 = tmp_5;
-      var tmp0_2 = (tmp_6 == null ? true : isObject(tmp_6)) ? tmp_6 : THROW_CCE();
-      $composer_4.endReplaceableGroup_er37p7_k$();
+      var tmp0_2 = (tmp_6 == null ? true : !(tmp_6 == null)) ? tmp_6 : THROW_CCE();
+      $composer_4.endReplaceableGroup_ern0ak_k$();
       var onBackPressedDispatcherOwner = tmp0_2;
       // Inline function 'androidx.compose.runtime.rememberCoroutineScope$composable' call
-      var tmp5_rememberCoroutineScope$composable = $composer_0;
+      var $composer_5 = $composer_0;
       var getContext = {_v: null};
-      var $composer_5 = tmp5_rememberCoroutineScope$composable;
-      $composer_5.startReplaceableGroup_rp6air_k$(102870005);
-      sourceInformation($composer_5, 'CC(rememberCoroutineScope$composable)481@20228L144:Effects.kt#9igjgp');
-      if (!(1 === 0)) {
+      var $composer_6 = $composer_5;
+      $composer_6.startReplaceableGroup_ip860b_k$(102870005);
+      sourceInformation($composer_6, 'CC(rememberCoroutineScope$composable)481@20228L144:Effects.kt#9igjgp');
+      if (!((1 & 1) === 0)) {
         getContext._v = WebNodeHost$composable$lambda;
       }
-      var composer = $composer_5;
+      var composer = $composer_6;
       // Inline function 'androidx.compose.runtime.remember$composable' call
-      var $composer_6 = $composer_5;
-      $composer_6.startReplaceableGroup_rp6air_k$(547886695);
-      sourceInformation($composer_6, 'CC(remember$composable):Composables.kt#9igjgp');
+      var $composer_7 = $composer_6;
+      $composer_7.startReplaceableGroup_ip860b_k$(547886695);
+      sourceInformation($composer_7, 'CC(remember$composable):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
-      var tmp0_let_3 = $composer_6.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it_3 = $composer_7.rememberedValue_4dg93v_k$();
       var tmp_7;
-      if (false ? true : tmp0_let_3 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (false ? true : it_3 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'androidx.compose.runtime.rememberCoroutineScope$composable.<anonymous>' call
         var value_3 = new CompositionScopedCoroutineScopeCanceller(createCompositionCoroutineScope(getContext._v(), composer));
-        $composer_6.updateRememberedValue_l1colo_k$(value_3);
+        $composer_7.updateRememberedValue_l1wh71_k$(value_3);
         tmp_7 = value_3;
       } else {
-        tmp_7 = tmp0_let_3;
+        tmp_7 = it_3;
       }
       var tmp_8 = tmp_7;
-      var tmp0_3 = (tmp_8 == null ? true : isObject(tmp_8)) ? tmp_8 : THROW_CCE();
-      $composer_6.endReplaceableGroup_er37p7_k$();
+      var tmp0_3 = (tmp_8 == null ? true : !(tmp_8 == null)) ? tmp_8 : THROW_CCE();
+      $composer_7.endReplaceableGroup_ern0ak_k$();
       var wrapper = tmp0_3;
       var tmp0_4 = wrapper.get_coroutineScope_5k7h45_k$();
-      $composer_5.endReplaceableGroup_er37p7_k$();
+      $composer_6.endReplaceableGroup_ern0ak_k$();
       var scope = tmp0_4;
       LaunchedEffect$composable(onBackPressedEvents, WebNodeHost$composable$slambda_0(scope, onBackPressedEvents, onBackPressedDispatcherOwner, null), $composer_0, 14 & $dirty >> 3);
-      var tmp_9 = [get_LocalOnBackPressedDispatcherOwner().provides_3e53yf_k$(onBackPressedDispatcherOwner)];
+      var tmp_9 = [get_LocalOnBackPressedDispatcherOwner().provides_3agxel_k$(onBackPressedDispatcherOwner)];
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.bumble.appyx.navigation.integration.WebNodeHost$composable.<anonymous>' call
       var tmp_10 = $composer_0;
       var dispatchReceiver = composableLambda(tmp_10, -5078979, true, WebNodeHost$composable$lambda_0(platformLifecycleRegistry, integrationPoint_0, screenSize, modifier_0, customisations_0, factory, $dirty));
       // Inline function 'androidx.compose.runtime.remember$composable' call
-      var $composer_7 = $composer_0;
-      $composer_7.startReplaceableGroup_rp6air_k$(-838505973);
-      sourceInformation($composer_7, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
+      var $composer_8 = $composer_0;
+      $composer_8.startReplaceableGroup_ip860b_k$(-838505973);
+      sourceInformation($composer_8, 'CC(remember$composable)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var tmp1_cache = $composer_7.changed_ga7h3f_k$(dispatchReceiver);
+      var invalid = $composer_8.changed_ga7h3f_k$(dispatchReceiver);
       // Inline function 'kotlin.let' call
-      var tmp0_let_4 = $composer_7.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it_4 = $composer_8.rememberedValue_4dg93v_k$();
       var tmp_11;
-      if (tmp1_cache ? true : tmp0_let_4 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (invalid ? true : it_4 === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.integration.WebNodeHost$composable.<anonymous>.<anonymous>' call
         var value_4 = ComposableLambda$invoke$ref_8(dispatchReceiver);
-        $composer_7.updateRememberedValue_l1colo_k$(value_4);
+        $composer_8.updateRememberedValue_l1wh71_k$(value_4);
         tmp_11 = value_4;
       } else {
-        tmp_11 = tmp0_let_4;
+        tmp_11 = it_4;
       }
       var tmp_12 = tmp_11;
-      var tmp0_5 = (tmp_12 == null ? true : isObject(tmp_12)) ? tmp_12 : THROW_CCE();
-      $composer_7.endReplaceableGroup_er37p7_k$();
+      var tmp0_5 = (tmp_12 == null ? true : !(tmp_12 == null)) ? tmp_12 : THROW_CCE();
+      $composer_8.endReplaceableGroup_ern0ak_k$();
       CompositionLocalProvider$composable(tmp_9, tmp0_5, $composer_0, 48);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp0_safe_receiver === null)
       null;
     else {
-      tmp0_safe_receiver.updateScope_xhrf9y_k$(WebNodeHost$composable$lambda_1(screenSize, onBackPressedEvents, modifier_0, integrationPoint_0, customisations_0, factory, $changed, $default));
+      tmp0_safe_receiver.updateScope_t8jcf_k$(WebNodeHost$composable$lambda_1(screenSize, onBackPressedEvents, modifier_0, integrationPoint_0, customisations_0, factory, $changed, $default));
     }
   }
   function WebNodeHost$composable$o$onBackPressedDispatcher$lambda($$integrationPoint) {
     return function () {
-      $$integrationPoint._v.handleUpNavigation_he8kje_k$();
+      $$integrationPoint._v.handleUpNavigation_hdory1_k$();
       return Unit_getInstance();
     };
   }
@@ -6197,14 +6119,14 @@
     this.$onBackPressedDispatcherOwner_1 = $onBackPressedDispatcherOwner;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(WebNodeHost$composable$slambda$slambda$slambda).invoke_p2pull_k$ = function (it, $completion) {
-    var tmp = this.create_axmm2q_k$(it, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(WebNodeHost$composable$slambda$slambda$slambda).invoke_buf84h_k$ = function (it, $completion) {
+    var tmp = this.create_owyqcb_k$(it, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(WebNodeHost$composable$slambda$slambda$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_p2pull_k$(p1 instanceof Unit ? p1 : THROW_CCE(), $completion);
+  protoOf(WebNodeHost$composable$slambda$slambda$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_buf84h_k$(p1 instanceof Unit ? p1 : THROW_CCE(), $completion);
   };
   protoOf(WebNodeHost$composable$slambda$slambda$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -6212,8 +6134,8 @@
       try {
         var tmp = this.get_state_iypx7s_k$();
         if (tmp === 0) {
-          this.set_exceptionState_s9sevl_k$(1);
-          this.$onBackPressedDispatcherOwner_1.get_onBackPressedDispatcher_1978li_k$().onBackPressed_xq0ia3_k$();
+          this.set_exceptionState_fex74n_k$(1);
+          this.$onBackPressedDispatcherOwner_1.get_onBackPressedDispatcher_1978li_k$().onBackPressed_xqkavg_k$();
           return Unit_getInstance();
         } else if (tmp === 1) {
           throw this.get_exception_x0n6w6_k$();
@@ -6224,18 +6146,18 @@
       }
      while (true);
   };
-  protoOf(WebNodeHost$composable$slambda$slambda$slambda).create_axmm2q_k$ = function (it, completion) {
+  protoOf(WebNodeHost$composable$slambda$slambda$slambda).create_owyqcb_k$ = function (it, completion) {
     var i = new WebNodeHost$composable$slambda$slambda$slambda(this.$onBackPressedDispatcherOwner_1, completion);
     i.it_1 = it;
     return i;
   };
-  protoOf(WebNodeHost$composable$slambda$slambda$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_axmm2q_k$(value instanceof Unit ? value : THROW_CCE(), completion);
+  protoOf(WebNodeHost$composable$slambda$slambda$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_owyqcb_k$(value instanceof Unit ? value : THROW_CCE(), completion);
   };
   function WebNodeHost$composable$slambda$slambda$slambda_0($onBackPressedDispatcherOwner, resultContinuation) {
     var i = new WebNodeHost$composable$slambda$slambda$slambda($onBackPressedDispatcherOwner, resultContinuation);
     var l = function (it, $completion) {
-      return i.invoke_p2pull_k$(it, $completion);
+      return i.invoke_buf84h_k$(it, $completion);
     };
     l.$arity = 1;
     return l;
@@ -6243,7 +6165,7 @@
   function sam$kotlinx_coroutines_flow_FlowCollector$0_4(function_0) {
     this.function_1 = function_0;
   }
-  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0_4).emit_1fbrsb_k$ = function (value, $completion) {
+  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0_4).emit_t92u1f_k$ = function (value, $completion) {
     return this.function_1(value, $completion);
   };
   function WebNodeHost$composable$slambda$slambda($onBackPressedEvents, $onBackPressedDispatcherOwner, resultContinuation) {
@@ -6251,14 +6173,14 @@
     this.$onBackPressedDispatcherOwner_1 = $onBackPressedDispatcherOwner;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(WebNodeHost$composable$slambda$slambda).invoke_d6gbsu_k$ = function ($this$launch, $completion) {
-    var tmp = this.create_b6qu53_k$($this$launch, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(WebNodeHost$composable$slambda$slambda).invoke_d9fzmj_k$ = function ($this$launch, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$launch, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(WebNodeHost$composable$slambda$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(WebNodeHost$composable$slambda$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(WebNodeHost$composable$slambda$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -6267,10 +6189,10 @@
         var tmp = this.get_state_iypx7s_k$();
         switch (tmp) {
           case 0:
-            this.set_exceptionState_s9sevl_k$(2);
-            this.set_state_a96kl8_k$(1);
+            this.set_exceptionState_fex74n_k$(2);
+            this.set_state_rjd8d0_k$(1);
             var tmp_0 = WebNodeHost$composable$slambda$slambda$slambda_0(this.$onBackPressedDispatcherOwner_1, null);
-            suspendResult = this.$onBackPressedEvents_1.collect_llpwvh_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0_4(tmp_0), this);
+            suspendResult = this.$onBackPressedEvents_1.collect_aksokr_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0_4(tmp_0), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -6286,24 +6208,24 @@
         if (this.get_exceptionState_wflpxn_k$() === 2) {
           throw e;
         } else {
-          this.set_state_a96kl8_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_pwgeox_k$(e);
+          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
+          this.set_exception_px07aa_k$(e);
         }
       }
      while (true);
   };
-  protoOf(WebNodeHost$composable$slambda$slambda).create_b6qu53_k$ = function ($this$launch, completion) {
+  protoOf(WebNodeHost$composable$slambda$slambda).create_rcuf4x_k$ = function ($this$launch, completion) {
     var i = new WebNodeHost$composable$slambda$slambda(this.$onBackPressedEvents_1, this.$onBackPressedDispatcherOwner_1, completion);
     i.$this$launch_1 = $this$launch;
     return i;
   };
-  protoOf(WebNodeHost$composable$slambda$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(WebNodeHost$composable$slambda$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function WebNodeHost$composable$slambda$slambda_0($onBackPressedEvents, $onBackPressedDispatcherOwner, resultContinuation) {
     var i = new WebNodeHost$composable$slambda$slambda($onBackPressedEvents, $onBackPressedDispatcherOwner, resultContinuation);
     var l = function ($this$launch, $completion) {
-      return i.invoke_d6gbsu_k$($this$launch, $completion);
+      return i.invoke_d9fzmj_k$($this$launch, $completion);
     };
     l.$arity = 1;
     return l;
@@ -6314,14 +6236,14 @@
     this.$onBackPressedDispatcherOwner_1 = $onBackPressedDispatcherOwner;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(WebNodeHost$composable$slambda).invoke_d6gbsu_k$ = function ($this$LaunchedEffect, $completion) {
-    var tmp = this.create_b6qu53_k$($this$LaunchedEffect, $completion);
-    tmp.set_result_ximc09_k$(Unit_getInstance());
-    tmp.set_exception_pwgeox_k$(null);
+  protoOf(WebNodeHost$composable$slambda).invoke_d9fzmj_k$ = function ($this$LaunchedEffect, $completion) {
+    var tmp = this.create_rcuf4x_k$($this$LaunchedEffect, $completion);
+    tmp.set_result_xj64lm_k$(Unit_getInstance());
+    tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  protoOf(WebNodeHost$composable$slambda).invoke_5zdxxo_k$ = function (p1, $completion) {
-    return this.invoke_d6gbsu_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(WebNodeHost$composable$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(WebNodeHost$composable$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -6329,7 +6251,7 @@
       try {
         var tmp = this.get_state_iypx7s_k$();
         if (tmp === 0) {
-          this.set_exceptionState_s9sevl_k$(1);
+          this.set_exceptionState_fex74n_k$(1);
           launch(this.$scope_1, VOID, VOID, WebNodeHost$composable$slambda$slambda_0(this.$onBackPressedEvents_1, this.$onBackPressedDispatcherOwner_1, null));
           return Unit_getInstance();
         } else if (tmp === 1) {
@@ -6341,18 +6263,18 @@
       }
      while (true);
   };
-  protoOf(WebNodeHost$composable$slambda).create_b6qu53_k$ = function ($this$LaunchedEffect, completion) {
+  protoOf(WebNodeHost$composable$slambda).create_rcuf4x_k$ = function ($this$LaunchedEffect, completion) {
     var i = new WebNodeHost$composable$slambda(this.$scope_1, this.$onBackPressedEvents_1, this.$onBackPressedDispatcherOwner_1, completion);
     i.$this$LaunchedEffect_1 = $this$LaunchedEffect;
     return i;
   };
-  protoOf(WebNodeHost$composable$slambda).create_xubfvz_k$ = function (value, completion) {
-    return this.create_b6qu53_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+  protoOf(WebNodeHost$composable$slambda).create_wyq9v6_k$ = function (value, completion) {
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function WebNodeHost$composable$slambda_0($scope, $onBackPressedEvents, $onBackPressedDispatcherOwner, resultContinuation) {
     var i = new WebNodeHost$composable$slambda($scope, $onBackPressedEvents, $onBackPressedDispatcherOwner, resultContinuation);
     var l = function ($this$LaunchedEffect, $completion) {
-      return i.invoke_d6gbsu_k$($this$LaunchedEffect, $completion);
+      return i.invoke_d9fzmj_k$($this$LaunchedEffect, $completion);
     };
     l.$arity = 1;
     return l;
@@ -6373,7 +6295,7 @@
         }
         tmp = tmp_0;
       } else {
-        $composer_0.skipToGroupEnd_lhns3f_k$();
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
         tmp = Unit_getInstance();
       }
       return Unit_getInstance();
@@ -6381,7 +6303,7 @@
   }
   function ComposableLambda$invoke$ref_8($boundThis) {
     return function (p0, p1) {
-      return $boundThis.invoke_6harzl_k$(p0, p1);
+      return $boundThis.invoke_z8di7s_k$(p0, p1);
     };
   }
   function WebNodeHost$composable$lambda_1($screenSize, $onBackPressedEvents, $modifier, $integrationPoint, $customisations, $factory, $$changed, $$default) {
@@ -6401,24 +6323,24 @@
     this.cancellablesReference_1 = new AtomicReference(emptyList());
     this.$stable_1 = 8;
   }
-  protoOf(OnBackPressedCallback).set_isEnabled_65t46p_k$ = function (_set____db54di) {
+  protoOf(OnBackPressedCallback).set_isEnabled_abraij_k$ = function (_set____db54di) {
     this.isEnabled_1 = _set____db54di;
   };
   protoOf(OnBackPressedCallback).get_isEnabled_roz1ma_k$ = function () {
     return this.isEnabled_1;
   };
-  protoOf(OnBackPressedCallback).remove_le47v1_k$ = function () {
+  protoOf(OnBackPressedCallback).remove_ldkf9o_k$ = function () {
     var tmp0_iterator = this.cancellablesReference_1.get_26vq_k$().iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var cancellable = tmp0_iterator.next_20eer_k$();
-      cancellable.cancel_2kogtl_k$();
+      cancellable.cancel_2l89ey_k$();
     }
   };
-  protoOf(OnBackPressedCallback).addCancellable_yxv5k0_k$ = function (cancellable) {
-    this.cancellablesReference_1.set_8wdrq0_k$(plus_2(this.cancellablesReference_1.get_26vq_k$(), cancellable));
+  protoOf(OnBackPressedCallback).addCancellable_njigdf_k$ = function (cancellable) {
+    this.cancellablesReference_1.set_inogor_k$(plus_2(this.cancellablesReference_1.get_26vq_k$(), cancellable));
   };
-  protoOf(OnBackPressedCallback).removeCancellable_y7fyil_k$ = function (cancellable) {
-    this.cancellablesReference_1.set_8wdrq0_k$(minus_0(this.cancellablesReference_1.get_26vq_k$(), cancellable));
+  protoOf(OnBackPressedCallback).removeCancellable_xq5ycg_k$ = function (cancellable) {
+    this.cancellablesReference_1.set_inogor_k$(minus_0(this.cancellablesReference_1.get_26vq_k$(), cancellable));
   };
   function Cancellable() {
   }
@@ -6432,9 +6354,9 @@
     this.$this_1 = $outer;
     this.onBackPressedCallback_1 = onBackPressedCallback;
   }
-  protoOf(OnBackPressedCancellable).cancel_2kogtl_k$ = function () {
-    this.$this_1.onBackPressedCallbacks_1.remove_8hbkc6_k$(this.onBackPressedCallback_1);
-    this.onBackPressedCallback_1.removeCancellable_y7fyil_k$(this);
+  protoOf(OnBackPressedCancellable).cancel_2l89ey_k$ = function () {
+    this.$this_1.onBackPressedCallbacks_1.remove_cedx0m_k$(this.onBackPressedCallback_1);
+    this.onBackPressedCallback_1.removeCancellable_xq5ycg_k$(this);
   };
   function get_$stableprop_21() {
     return 0;
@@ -6448,25 +6370,25 @@
   protoOf(OnBackPressedDispatcher).get_onBackPressedCallbacks_ol45ej_k$ = function () {
     return this.onBackPressedCallbacks_1;
   };
-  protoOf(OnBackPressedDispatcher).addCancellableCallback_8mr4wv_k$ = function (onBackPressedCallback) {
-    this.onBackPressedCallbacks_1.add_1j60pz_k$(onBackPressedCallback);
+  protoOf(OnBackPressedDispatcher).addCancellableCallback_p6rwg3_k$ = function (onBackPressedCallback) {
+    this.onBackPressedCallbacks_1.add_utx5q5_k$(onBackPressedCallback);
     var cancellable = new OnBackPressedCancellable(this, onBackPressedCallback);
-    onBackPressedCallback.addCancellable_yxv5k0_k$(cancellable);
+    onBackPressedCallback.addCancellable_njigdf_k$(cancellable);
     return cancellable;
   };
-  protoOf(OnBackPressedDispatcher).onBackPressed_xq0ia3_k$ = function () {
+  protoOf(OnBackPressedDispatcher).onBackPressed_xqkavg_k$ = function () {
     // Inline function 'androidx.compose.ui.util.fastForEachReversed' call
-    var tmp0_fastForEachReversed = this.onBackPressedCallbacks_1;
+    var this_0 = this.onBackPressedCallbacks_1;
     // Inline function 'kotlin.contracts.contract' call
-    var inductionVariable = tmp0_fastForEachReversed.get_size_woubt6_k$() - 1 | 0;
+    var inductionVariable = this_0.get_size_woubt6_k$() - 1 | 0;
     if (0 <= inductionVariable)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + -1 | 0;
-        var item = tmp0_fastForEachReversed.get_fkrdnv_k$(index);
+        var item = this_0.get_c1px32_k$(index);
         // Inline function 'com.bumble.appyx.navigation.platform.OnBackPressedDispatcher.onBackPressed.<anonymous>' call
         if (item.get_isEnabled_roz1ma_k$()) {
-          item.handleOnBackPressed_rlpdq5_k$();
+          item.handleOnBackPressed_rl5l4s_k$();
           return Unit_getInstance();
         }
       }
@@ -6485,11 +6407,11 @@
   function PlatformBackHandler$composable(enabled, onBack, $composer, $changed) {
     _init_properties_PlatformBackHandler_kt__6ss43m();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_147kpb_k$(-784315342);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-784315342);
     sourceInformation($composer_0, 'C(PlatformBackHandler$composable)');
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changed_i0nym2_k$(enabled) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.changed_jpyyrz_k$(enabled) ? 4 : 2);
     if (($changed & 112) === 0)
       $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(onBack) ? 32 : 16);
     if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
@@ -6499,35 +6421,35 @@
       var currentOnBack$delegate = rememberUpdatedState$composable(onBack, $composer_0, 14 & $dirty >> 3);
       // Inline function 'androidx.compose.runtime.remember$composable' call
       var $composer_1 = $composer_0;
-      $composer_1.startReplaceableGroup_rp6air_k$(547886695);
+      $composer_1.startReplaceableGroup_ip860b_k$(547886695);
       sourceInformation($composer_1, 'CC(remember$composable):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
-      var tmp0_let = $composer_1.rememberedValue_4dg93v_k$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = $composer_1.rememberedValue_4dg93v_k$();
       var tmp;
-      if (false ? true : tmp0_let === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      if (false ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
         // Inline function 'com.bumble.appyx.navigation.platform.PlatformBackHandler$composable.<anonymous>' call
         var value = new PlatformBackHandler$composable$backCallback$1$1(currentOnBack$delegate, enabled);
-        $composer_1.updateRememberedValue_l1colo_k$(value);
+        $composer_1.updateRememberedValue_l1wh71_k$(value);
         tmp = value;
       } else {
-        tmp = tmp0_let;
+        tmp = it;
       }
       var tmp_0 = tmp;
-      var tmp0 = (tmp_0 == null ? true : isObject(tmp_0)) ? tmp_0 : THROW_CCE();
-      $composer_1.endReplaceableGroup_er37p7_k$();
+      var tmp0 = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+      $composer_1.endReplaceableGroup_ern0ak_k$();
       var backCallback = tmp0;
       SideEffect$composable(PlatformBackHandler$composable$lambda_0(backCallback, enabled), $composer_0, 0);
       var tmp$ret$7;
       $l$block: {
         // Inline function 'kotlin.checkNotNull' call
         // Inline function 'androidx.compose.runtime.CompositionLocal.$get-current$$composable' call
-        var tmp1_$get_current$$composable_gn3xww = get_LocalOnBackPressedDispatcherOwner();
+        var this_0 = get_LocalOnBackPressedDispatcherOwner();
         var $composer_2 = $composer_0;
         sourceInformationMarkerStart($composer_2, 858843746, 'CC($get-current$$composable):CompositionLocal.kt#9igjgp');
-        var tmp0_0 = $composer_2.consume_11nid3_k$(tmp1_$get_current$$composable_gn3xww);
+        var tmp0_0 = $composer_2.consume_ebzcrh_k$(this_0);
         sourceInformationMarkerEnd($composer_2);
         // Inline function 'kotlin.contracts.contract' call
         if (tmp0_0 == null) {
@@ -6545,13 +6467,13 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.skipToGroupEnd_lhns3f_k$();
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
     }
     var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
     if (tmp0_safe_receiver === null)
       null;
     else {
-      tmp0_safe_receiver.updateScope_xhrf9y_k$(PlatformBackHandler$composable$lambda_2(enabled, onBack, $changed));
+      tmp0_safe_receiver.updateScope_t8jcf_k$(PlatformBackHandler$composable$lambda_2(enabled, onBack, $changed));
     }
   }
   function OnBackPressedDispatcherOwner() {
@@ -6577,29 +6499,27 @@
     this.$currentOnBack$delegate_1 = $currentOnBack$delegate;
     OnBackPressedCallback.call(this, $enabled);
   }
-  protoOf(PlatformBackHandler$composable$backCallback$1$1).handleOnBackPressed_rlpdq5_k$ = function () {
+  protoOf(PlatformBackHandler$composable$backCallback$1$1).handleOnBackPressed_rl5l4s_k$ = function () {
     PlatformBackHandler$composable$lambda(this.$currentOnBack$delegate_1)();
   };
   function PlatformBackHandler$composable$lambda_0($backCallback, $enabled) {
     return function () {
-      $backCallback.set_isEnabled_65t46p_k$($enabled);
+      $backCallback.set_isEnabled_abraij_k$($enabled);
       return Unit_getInstance();
     };
   }
   function _no_name_provided__qut3iv_3($cancellable) {
     this.$cancellable_1 = $cancellable;
   }
-  protoOf(_no_name_provided__qut3iv_3).dispose_3n44we_k$ = function () {
+  protoOf(_no_name_provided__qut3iv_3).dispose_3nnxhr_k$ = function () {
     // Inline function 'com.bumble.appyx.navigation.platform.PlatformBackHandler$composable.<anonymous>.<anonymous>' call
-    this.$cancellable_1.cancel_2kogtl_k$();
+    this.$cancellable_1.cancel_2l89ey_k$();
   };
   function PlatformBackHandler$composable$lambda_1($backDispatcher, $backCallback) {
     return function ($this$DisposableEffect) {
-      var cancellable = $backDispatcher.addCancellableCallback_8mr4wv_k$($backCallback);
-      var tmp$ret$0;
+      var cancellable = $backDispatcher.addCancellableCallback_p6rwg3_k$($backCallback);
       // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      tmp$ret$0 = new _no_name_provided__qut3iv_3(cancellable);
-      return tmp$ret$0;
+      return new _no_name_provided__qut3iv_3(cancellable);
     };
   }
   function PlatformBackHandler$composable$lambda_2($enabled, $onBack, $$changed) {
@@ -6630,7 +6550,7 @@
   function Companion_5() {
     Companion_instance_5 = this;
   }
-  protoOf(Companion_5).create_4z1tll_k$ = function (owner) {
+  protoOf(Companion_5).create_fvzx45_k$ = function (owner) {
     return new PlatformLifecycleRegistry();
   };
   var Companion_instance_5;
@@ -6654,7 +6574,7 @@
     tmp.coroutineScope$delegate_1 = lazy(PlatformLifecycleRegistry$coroutineScope$delegate$lambda);
     this.$stable_1 = 8;
   }
-  protoOf(PlatformLifecycleRegistry).set_currentState_yrkgjq_k$ = function (value) {
+  protoOf(PlatformLifecycleRegistry).set_currentState_eewor3_k$ = function (value) {
     switch (value.get_ordinal_ip24qg_k$()) {
       case 0:
         break;
@@ -6665,7 +6585,7 @@
         while (tmp0_iterator.hasNext_bitz1p_k$()) {
           var element = tmp0_iterator.next_20eer_k$();
           // Inline function 'com.bumble.appyx.navigation.platform.PlatformLifecycleRegistry.<set-currentState>.<anonymous>' call
-          element.onCreate_ghfmom_k$();
+          element.onCreate_ggvu39_k$();
         }
 
         // Inline function 'kotlin.collections.forEach' call
@@ -6674,7 +6594,7 @@
         while (tmp0_iterator_0.hasNext_bitz1p_k$()) {
           var element_0 = tmp0_iterator_0.next_20eer_k$();
           // Inline function 'com.bumble.appyx.navigation.platform.PlatformLifecycleRegistry.<set-currentState>.<anonymous>' call
-          element_0.onStateChanged_9vyt26_k$(value, Event_ON_CREATE_getInstance());
+          element_0.onStateChanged_yk8xts_k$(value, Event_ON_CREATE_getInstance());
         }
 
         break;
@@ -6685,7 +6605,7 @@
         while (tmp0_iterator_1.hasNext_bitz1p_k$()) {
           var element_1 = tmp0_iterator_1.next_20eer_k$();
           // Inline function 'com.bumble.appyx.navigation.platform.PlatformLifecycleRegistry.<set-currentState>.<anonymous>' call
-          element_1.onStart_qth026_k$();
+          element_1.onStart_qsx7gt_k$();
         }
 
         // Inline function 'kotlin.collections.forEach' call
@@ -6694,7 +6614,7 @@
         while (tmp0_iterator_2.hasNext_bitz1p_k$()) {
           var element_2 = tmp0_iterator_2.next_20eer_k$();
           // Inline function 'com.bumble.appyx.navigation.platform.PlatformLifecycleRegistry.<set-currentState>.<anonymous>' call
-          element_2.onStateChanged_9vyt26_k$(value, Event_ON_START_getInstance());
+          element_2.onStateChanged_yk8xts_k$(value, Event_ON_START_getInstance());
         }
 
         break;
@@ -6705,7 +6625,7 @@
         while (tmp0_iterator_3.hasNext_bitz1p_k$()) {
           var element_3 = tmp0_iterator_3.next_20eer_k$();
           // Inline function 'com.bumble.appyx.navigation.platform.PlatformLifecycleRegistry.<set-currentState>.<anonymous>' call
-          element_3.onResume_qb8fiz_k$();
+          element_3.onResume_qbs84c_k$();
         }
 
         // Inline function 'kotlin.collections.forEach' call
@@ -6714,7 +6634,7 @@
         while (tmp0_iterator_4.hasNext_bitz1p_k$()) {
           var element_4 = tmp0_iterator_4.next_20eer_k$();
           // Inline function 'com.bumble.appyx.navigation.platform.PlatformLifecycleRegistry.<set-currentState>.<anonymous>' call
-          element_4.onStateChanged_9vyt26_k$(value, Event_ON_RESUME_getInstance());
+          element_4.onStateChanged_yk8xts_k$(value, Event_ON_RESUME_getInstance());
         }
 
         break;
@@ -6725,7 +6645,7 @@
         while (tmp0_iterator_5.hasNext_bitz1p_k$()) {
           var element_5 = tmp0_iterator_5.next_20eer_k$();
           // Inline function 'com.bumble.appyx.navigation.platform.PlatformLifecycleRegistry.<set-currentState>.<anonymous>' call
-          element_5.onDestroy_x0zuba_k$();
+          element_5.onDestroy_x0g1px_k$();
         }
 
         // Inline function 'kotlin.collections.forEach' call
@@ -6734,7 +6654,7 @@
         while (tmp0_iterator_6.hasNext_bitz1p_k$()) {
           var element_6 = tmp0_iterator_6.next_20eer_k$();
           // Inline function 'com.bumble.appyx.navigation.platform.PlatformLifecycleRegistry.<set-currentState>.<anonymous>' call
-          element_6.onStateChanged_9vyt26_k$(value, Event_ON_DESTROY_getInstance());
+          element_6.onStateChanged_yk8xts_k$(value, Event_ON_DESTROY_getInstance());
         }
 
         if (get_isActive(this.get_coroutineScope_5k7h45_k$())) {
@@ -6750,29 +6670,30 @@
   };
   protoOf(PlatformLifecycleRegistry).get_coroutineScope_5k7h45_k$ = function () {
     // Inline function 'kotlin.getValue' call
+    var this_0 = this.coroutineScope$delegate_1;
     coroutineScope$factory();
-    return this.coroutineScope$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   };
-  protoOf(PlatformLifecycleRegistry).addObserver_ch8ntw_k$ = function (observer) {
+  protoOf(PlatformLifecycleRegistry).addObserver_tygfj3_k$ = function (observer) {
     if (isInterface(observer, DefaultPlatformLifecycleObserver)) {
-      this.managedDefaultLifecycleObservers_1.add_1j60pz_k$(observer);
+      this.managedDefaultLifecycleObservers_1.add_utx5q5_k$(observer);
     } else {
       if (isInterface(observer, PlatformLifecycleEventObserver)) {
-        this.managedLifecycleEventObservers_1.add_1j60pz_k$(observer);
+        this.managedLifecycleEventObservers_1.add_utx5q5_k$(observer);
       }
     }
   };
-  protoOf(PlatformLifecycleRegistry).removeObserver_qy34vt_k$ = function (observer) {
+  protoOf(PlatformLifecycleRegistry).removeObserver_2ex2qs_k$ = function (observer) {
     if (isInterface(observer, DefaultPlatformLifecycleObserver)) {
-      this.managedDefaultLifecycleObservers_1.remove_8hbkc6_k$(observer);
+      this.managedDefaultLifecycleObservers_1.remove_cedx0m_k$(observer);
     } else {
       if (isInterface(observer, PlatformLifecycleEventObserver)) {
-        this.managedLifecycleEventObservers_1.remove_8hbkc6_k$(observer);
+        this.managedLifecycleEventObservers_1.remove_cedx0m_k$(observer);
       }
     }
   };
-  protoOf(PlatformLifecycleRegistry).setCurrentState_8fydcb_k$ = function (state) {
-    this.set_currentState_yrkgjq_k$(state);
+  protoOf(PlatformLifecycleRegistry).setCurrentState_1o77n8_k$ = function (state) {
+    this.set_currentState_eewor3_k$(state);
   };
   function coroutineScope$factory() {
     return getPropertyCallableRef('coroutineScope', 1, KProperty1, function (receiver) {
@@ -6780,20 +6701,20 @@
     }, null);
   }
   //region block: post-declaration
-  protoOf(ChildAwareImpl$removeWhenDestroyed$1).onCreate_ghfmom_k$ = onCreate;
-  protoOf(ChildAwareImpl$removeWhenDestroyed$1).onStart_qth026_k$ = onStart;
-  protoOf(ChildAwareImpl$removeWhenDestroyed$1).onResume_qb8fiz_k$ = onResume;
-  protoOf(ChildAwareImpl$removeWhenDestroyed$1).onPause_rvjkli_k$ = onPause;
-  protoOf(ChildAwareImpl$removeWhenDestroyed$1).onStop_aip7ow_k$ = onStop;
-  protoOf(EmptyParentNodeView).View_d643kp_k$ = View;
-  protoOf(EmptyParentNodeView).View$composable_e844gk_k$ = View$composable;
-  protoOf(Node$1).onStart_qth026_k$ = onStart;
-  protoOf(Node$1).onResume_qb8fiz_k$ = onResume;
-  protoOf(Node$1).onPause_rvjkli_k$ = onPause;
-  protoOf(Node$1).onStop_aip7ow_k$ = onStop;
-  protoOf(Node$1).onDestroy_x0zuba_k$ = onDestroy;
-  protoOf(Companion_4).get$default_ikli56_k$ = get$default;
-  protoOf(RetainedInstanceStoreImpl).get$default_ikli56_k$ = get$default;
+  protoOf(ChildAwareImpl$removeWhenDestroyed$1).onCreate_ggvu39_k$ = onCreate;
+  protoOf(ChildAwareImpl$removeWhenDestroyed$1).onStart_qsx7gt_k$ = onStart;
+  protoOf(ChildAwareImpl$removeWhenDestroyed$1).onResume_qbs84c_k$ = onResume;
+  protoOf(ChildAwareImpl$removeWhenDestroyed$1).onPause_rw3d6v_k$ = onPause;
+  protoOf(ChildAwareImpl$removeWhenDestroyed$1).onStop_aj90a9_k$ = onStop;
+  protoOf(EmptyParentNodeView).View_d8pxwq_k$ = View;
+  protoOf(EmptyParentNodeView).View$composable_s9p16w_k$ = View$composable;
+  protoOf(Node$1).onStart_qsx7gt_k$ = onStart;
+  protoOf(Node$1).onResume_qbs84c_k$ = onResume;
+  protoOf(Node$1).onPause_rw3d6v_k$ = onPause;
+  protoOf(Node$1).onStop_aj90a9_k$ = onStop;
+  protoOf(Node$1).onDestroy_x0g1px_k$ = onDestroy;
+  protoOf(Companion_4).get$default_112jpf_k$ = get$default;
+  protoOf(RetainedInstanceStoreImpl).get$default_112jpf_k$ = get$default;
   protoOf(PlatformLifecycleRegistry).asFlow_nb7dkw_k$ = asFlow;
   //endregion
   //region block: exports

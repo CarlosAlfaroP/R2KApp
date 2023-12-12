@@ -1,137 +1,137 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin-kotlin-stdlib-js-ir.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin-kotlin-stdlib-js-ir.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'));
   else {
-    if (typeof this['kotlin-kotlin-stdlib-js-ir'] === 'undefined') {
-      throw new Error("Error loading module 'skiko-kjs'. Its dependency 'kotlin-kotlin-stdlib-js-ir' was not found. Please, check whether 'kotlin-kotlin-stdlib-js-ir' is loaded prior to 'skiko-kjs'.");
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'skiko-kjs'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'skiko-kjs'.");
     }
-    root['skiko-kjs'] = factory(typeof this['skiko-kjs'] === 'undefined' ? {} : this['skiko-kjs'], this['kotlin-kotlin-stdlib-js-ir']);
+    root['skiko-kjs'] = factory(typeof this['skiko-kjs'] === 'undefined' ? {} : this['skiko-kjs'], this['kotlin-kotlin-stdlib']);
   }
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var protoOf = kotlin_kotlin.$_$.rd;
-  var objectMeta = kotlin_kotlin.$_$.qd;
-  var VOID = kotlin_kotlin.$_$.bj;
-  var setMetadataFor = kotlin_kotlin.$_$.sd;
-  var classMeta = kotlin_kotlin.$_$.ec;
-  var RuntimeException_init_$Create$ = kotlin_kotlin.$_$.h2;
-  var objectCreate = kotlin_kotlin.$_$.pd;
-  var Unit_getInstance = kotlin_kotlin.$_$.z4;
-  var ensureNotNull = kotlin_kotlin.$_$.di;
-  var toString = kotlin_kotlin.$_$.wd;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.a2;
-  var THROW_ISE = kotlin_kotlin.$_$.mh;
-  var Enum = kotlin_kotlin.$_$.zg;
-  var charSequenceGet = kotlin_kotlin.$_$.bc;
-  var Char__toInt_impl_vasixd = kotlin_kotlin.$_$.t2;
-  var toShort = kotlin_kotlin.$_$.vd;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.v1;
-  var numberToInt = kotlin_kotlin.$_$.nd;
-  var round = kotlin_kotlin.$_$.ee;
-  var compareTo = kotlin_kotlin.$_$.fc;
-  var toBits = kotlin_kotlin.$_$.ti;
-  var equals = kotlin_kotlin.$_$.ic;
-  var hashCode = kotlin_kotlin.$_$.qc;
-  var contentEquals = kotlin_kotlin.$_$.v6;
-  var contentHashCode = kotlin_kotlin.$_$.y6;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.li;
-  var numberToLong = kotlin_kotlin.$_$.od;
-  var toLong = kotlin_kotlin.$_$.ud;
-  var Long = kotlin_kotlin.$_$.eh;
-  var _ULong___init__impl__c78o9k = kotlin_kotlin.$_$.p3;
-  var _ULong___get_data__impl__fggpzb = kotlin_kotlin.$_$.q3;
-  var until = kotlin_kotlin.$_$.ve;
-  var collectionSizeOrDefault = kotlin_kotlin.$_$.p6;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
-  var copyToArray = kotlin_kotlin.$_$.l7;
-  var getStringHashCode = kotlin_kotlin.$_$.pc;
-  var THROW_CCE = kotlin_kotlin.$_$.lh;
-  var isCharSequence = kotlin_kotlin.$_$.xc;
-  var trim = kotlin_kotlin.$_$.qg;
-  var split = kotlin_kotlin.$_$.eg;
-  var getOrNull = kotlin_kotlin.$_$.d8;
-  var toIntOrNull = kotlin_kotlin.$_$.jg;
-  var _UInt___init__impl__l7qpdl = kotlin_kotlin.$_$.h3;
-  var fillArrayVal = kotlin_kotlin.$_$.jc;
-  var toInt = kotlin_kotlin.$_$.kg;
-  var toUInt = kotlin_kotlin.$_$.ng;
-  var splitToSequence = kotlin_kotlin.$_$.dg;
-  var mapNotNull = kotlin_kotlin.$_$.if;
-  var toList = kotlin_kotlin.$_$.mf;
-  var arrayIterator = kotlin_kotlin.$_$.wb;
-  var _UInt___get_data__impl__f0vqqw = kotlin_kotlin.$_$.i3;
-  var uintCompare = kotlin_kotlin.$_$.yi;
-  var Companion_getInstance = kotlin_kotlin.$_$.w4;
-  var UInt = kotlin_kotlin.$_$.rh;
-  var isNaN_0 = kotlin_kotlin.$_$.hi;
-  var toDouble = kotlin_kotlin.$_$.ig;
-  var interfaceMeta = kotlin_kotlin.$_$.sc;
-  var numberToChar = kotlin_kotlin.$_$.ld;
-  var charArrayOf = kotlin_kotlin.$_$.zb;
-  var concatToString = kotlin_kotlin.$_$.pf;
-  var IllegalArgumentException_init_$Create$_0 = kotlin_kotlin.$_$.t1;
-  var decodeToString = kotlin_kotlin.$_$.rf;
-  var toByte = kotlin_kotlin.$_$.td;
-  var get_PI = kotlin_kotlin.$_$.xd;
-  var isFloatArray = kotlin_kotlin.$_$.zc;
-  var isByteArray = kotlin_kotlin.$_$.vc;
-  var Error_init_$Create$ = kotlin_kotlin.$_$.l1;
-  var Iterable = kotlin_kotlin.$_$.o5;
-  var contentHashCode_0 = kotlin_kotlin.$_$.x6;
-  var NoSuchElementException_init_$Create$ = kotlin_kotlin.$_$.d2;
-  var NotImplementedError = kotlin_kotlin.$_$.gh;
-  var MutableIterator = kotlin_kotlin.$_$.x5;
-  var last = kotlin_kotlin.$_$.w8;
-  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.l4;
-  var floatFromBits = kotlin_kotlin.$_$.kc;
-  var copyOfRange = kotlin_kotlin.$_$.a7;
-  var joinToString = kotlin_kotlin.$_$.m8;
-  var toList_0 = kotlin_kotlin.$_$.ga;
-  var chunked = kotlin_kotlin.$_$.o6;
-  var contentEquals_0 = kotlin_kotlin.$_$.w6;
-  var contentHashCode_1 = kotlin_kotlin.$_$.z6;
-  var Iterator = kotlin_kotlin.$_$.p5;
-  var firstOrNull = kotlin_kotlin.$_$.v7;
-  var asList = kotlin_kotlin.$_$.i6;
-  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
-  var toRawBits = kotlin_kotlin.$_$.vi;
-  var listOf = kotlin_kotlin.$_$.a9;
-  var addAll = kotlin_kotlin.$_$.f6;
-  var toIntArray = kotlin_kotlin.$_$.da;
-  var toList_1 = kotlin_kotlin.$_$.fa;
-  var toBits_0 = kotlin_kotlin.$_$.ui;
-  var toString_0 = kotlin_kotlin.$_$.wi;
-  var DoubleCompanionObject_getInstance = kotlin_kotlin.$_$.k4;
-  var doubleFromBits = kotlin_kotlin.$_$.hc;
-  var getNumberHashCode = kotlin_kotlin.$_$.mc;
-  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.l2;
-  var isArray = kotlin_kotlin.$_$.tc;
-  var contentDeepEquals = kotlin_kotlin.$_$.r6;
-  var contentDeepHashCode = kotlin_kotlin.$_$.s6;
-  var contentDeepToString = kotlin_kotlin.$_$.t6;
-  var listOf_0 = kotlin_kotlin.$_$.z8;
-  var RuntimeException = kotlin_kotlin.$_$.kh;
-  var RuntimeException_init_$Init$ = kotlin_kotlin.$_$.i2;
-  var captureStack = kotlin_kotlin.$_$.yb;
-  var Regex_init_$Create$ = kotlin_kotlin.$_$.g1;
-  var lazy = kotlin_kotlin.$_$.ki;
-  var charSequenceLength = kotlin_kotlin.$_$.cc;
-  var KProperty0 = kotlin_kotlin.$_$.ze;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.oc;
-  var KProperty1 = kotlin_kotlin.$_$.af;
+  var protoOf = kotlin_kotlin.$_$.ud;
+  var objectMeta = kotlin_kotlin.$_$.td;
+  var setMetadataFor = kotlin_kotlin.$_$.vd;
+  var classMeta = kotlin_kotlin.$_$.hc;
+  var RuntimeException_init_$Create$ = kotlin_kotlin.$_$.j2;
+  var objectCreate = kotlin_kotlin.$_$.sd;
+  var Unit_getInstance = kotlin_kotlin.$_$.b5;
+  var ensureNotNull = kotlin_kotlin.$_$.ji;
+  var VOID = kotlin_kotlin.$_$.e;
+  var toString = kotlin_kotlin.$_$.zd;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.b2;
+  var THROW_IAE = kotlin_kotlin.$_$.rh;
+  var Enum = kotlin_kotlin.$_$.eh;
+  var charSequenceGet = kotlin_kotlin.$_$.ec;
+  var Char__toInt_impl_vasixd = kotlin_kotlin.$_$.v2;
+  var toShort = kotlin_kotlin.$_$.yd;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.w1;
+  var numberToInt = kotlin_kotlin.$_$.qd;
+  var round = kotlin_kotlin.$_$.he;
+  var compareTo = kotlin_kotlin.$_$.ic;
+  var toBits = kotlin_kotlin.$_$.zi;
+  var equals = kotlin_kotlin.$_$.lc;
+  var hashCode = kotlin_kotlin.$_$.uc;
+  var contentEquals = kotlin_kotlin.$_$.x6;
+  var contentHashCode = kotlin_kotlin.$_$.a7;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.ri;
+  var numberToLong = kotlin_kotlin.$_$.rd;
+  var toLong = kotlin_kotlin.$_$.xd;
+  var Long = kotlin_kotlin.$_$.jh;
+  var _ULong___init__impl__c78o9k = kotlin_kotlin.$_$.r3;
+  var _ULong___get_data__impl__fggpzb = kotlin_kotlin.$_$.s3;
+  var until = kotlin_kotlin.$_$.ye;
+  var collectionSizeOrDefault = kotlin_kotlin.$_$.r6;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.k;
+  var copyToArray = kotlin_kotlin.$_$.n7;
+  var getStringHashCode = kotlin_kotlin.$_$.tc;
+  var THROW_CCE = kotlin_kotlin.$_$.qh;
+  var isCharSequence = kotlin_kotlin.$_$.bd;
+  var trim = kotlin_kotlin.$_$.ug;
+  var split = kotlin_kotlin.$_$.ig;
+  var getOrNull = kotlin_kotlin.$_$.f8;
+  var toIntOrNull = kotlin_kotlin.$_$.ng;
+  var _UInt___init__impl__l7qpdl = kotlin_kotlin.$_$.j3;
+  var fillArrayVal = kotlin_kotlin.$_$.mc;
+  var toInt = kotlin_kotlin.$_$.og;
+  var toUInt = kotlin_kotlin.$_$.rg;
+  var splitToSequence = kotlin_kotlin.$_$.hg;
+  var mapNotNull = kotlin_kotlin.$_$.lf;
+  var toList = kotlin_kotlin.$_$.pf;
+  var _UInt___get_data__impl__f0vqqw = kotlin_kotlin.$_$.k3;
+  var uintCompare = kotlin_kotlin.$_$.ej;
+  var Companion_getInstance = kotlin_kotlin.$_$.y4;
+  var UInt = kotlin_kotlin.$_$.xh;
+  var isNaN_0 = kotlin_kotlin.$_$.ni;
+  var toDouble = kotlin_kotlin.$_$.mg;
+  var interfaceMeta = kotlin_kotlin.$_$.wc;
+  var numberToChar = kotlin_kotlin.$_$.od;
+  var charArrayOf = kotlin_kotlin.$_$.cc;
+  var concatToString = kotlin_kotlin.$_$.sf;
+  var IllegalArgumentException_init_$Create$_0 = kotlin_kotlin.$_$.u1;
+  var decodeToString = kotlin_kotlin.$_$.uf;
+  var toByte = kotlin_kotlin.$_$.wd;
+  var get_PI = kotlin_kotlin.$_$.ae;
+  var isFloatArray = kotlin_kotlin.$_$.dd;
+  var isByteArray = kotlin_kotlin.$_$.zc;
+  var Error_init_$Create$ = kotlin_kotlin.$_$.m1;
+  var Iterable = kotlin_kotlin.$_$.q5;
+  var contentHashCode_0 = kotlin_kotlin.$_$.z6;
+  var NoSuchElementException_init_$Create$ = kotlin_kotlin.$_$.e2;
+  var NotImplementedError = kotlin_kotlin.$_$.lh;
+  var MutableIterator = kotlin_kotlin.$_$.z5;
+  var last = kotlin_kotlin.$_$.y8;
+  var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.n4;
+  var floatFromBits = kotlin_kotlin.$_$.nc;
+  var copyOfRange = kotlin_kotlin.$_$.c7;
+  var joinToString = kotlin_kotlin.$_$.o8;
+  var toList_0 = kotlin_kotlin.$_$.ja;
+  var chunked = kotlin_kotlin.$_$.q6;
+  var contentEquals_0 = kotlin_kotlin.$_$.y6;
+  var contentHashCode_1 = kotlin_kotlin.$_$.b7;
+  var Iterator = kotlin_kotlin.$_$.r5;
+  var firstOrNull = kotlin_kotlin.$_$.x7;
+  var asList = kotlin_kotlin.$_$.k6;
+  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.l;
+  var toRawBits = kotlin_kotlin.$_$.bj;
+  var listOf = kotlin_kotlin.$_$.c9;
+  var addAll = kotlin_kotlin.$_$.h6;
+  var toIntArray = kotlin_kotlin.$_$.ga;
+  var toList_1 = kotlin_kotlin.$_$.ia;
+  var getBooleanHashCode = kotlin_kotlin.$_$.oc;
+  var toBits_0 = kotlin_kotlin.$_$.aj;
+  var toString_0 = kotlin_kotlin.$_$.cj;
+  var DoubleCompanionObject_getInstance = kotlin_kotlin.$_$.m4;
+  var doubleFromBits = kotlin_kotlin.$_$.kc;
+  var getNumberHashCode = kotlin_kotlin.$_$.qc;
+  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.n2;
+  var isArray = kotlin_kotlin.$_$.xc;
+  var contentDeepEquals = kotlin_kotlin.$_$.t6;
+  var contentDeepHashCode = kotlin_kotlin.$_$.u6;
+  var contentDeepToString = kotlin_kotlin.$_$.v6;
+  var listOf_0 = kotlin_kotlin.$_$.b9;
+  var RuntimeException = kotlin_kotlin.$_$.ph;
+  var RuntimeException_init_$Init$ = kotlin_kotlin.$_$.k2;
+  var captureStack = kotlin_kotlin.$_$.bc;
+  var Regex_init_$Create$ = kotlin_kotlin.$_$.h1;
+  var lazy = kotlin_kotlin.$_$.qi;
+  var charSequenceLength = kotlin_kotlin.$_$.fc;
+  var KProperty0 = kotlin_kotlin.$_$.cf;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.sc;
+  var KProperty1 = kotlin_kotlin.$_$.df;
   var getKClassFromExpression = kotlin_kotlin.$_$.b;
-  var toIntArray_0 = kotlin_kotlin.$_$.ea;
-  var arrayCopy = kotlin_kotlin.$_$.g6;
-  var plus = kotlin_kotlin.$_$.mi;
-  var toString_1 = kotlin_kotlin.$_$.mg;
-  var setOf = kotlin_kotlin.$_$.r9;
-  var contains = kotlin_kotlin.$_$.qf;
-  var Exception_init_$Create$ = kotlin_kotlin.$_$.p1;
-  var defineProp = kotlin_kotlin.$_$.gc;
+  var toIntArray_0 = kotlin_kotlin.$_$.ha;
+  var arrayCopy = kotlin_kotlin.$_$.i6;
+  var plus = kotlin_kotlin.$_$.si;
+  var toString_1 = kotlin_kotlin.$_$.qg;
+  var setOf = kotlin_kotlin.$_$.u9;
+  var contains = kotlin_kotlin.$_$.tf;
+  var Exception_init_$Create$ = kotlin_kotlin.$_$.q1;
+  var defineProp = kotlin_kotlin.$_$.jc;
   //endregion
   //region block: pre-declaration
   setMetadataFor(Companion, 'Companion', objectMeta);
@@ -172,7 +172,7 @@
     return this.get_imageInfo_60i77k_k$().get_colorInfo_tre0vs_k$().get_isOpaque_xnqi0k_k$();
   }
   setMetadataFor(IHasImageInfo, 'IHasImageInfo', interfaceMeta);
-  setMetadataFor(Bitmap, 'Bitmap', classMeta, Managed, [Managed, IHasImageInfo]);
+  setMetadataFor(Bitmap, 'Bitmap', classMeta, Managed, [Managed, IHasImageInfo], Bitmap_init_$Create$);
   setMetadataFor(BlendMode, 'BlendMode', classMeta, Enum);
   setMetadataFor(Companion_1, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_1, '_FinalizerHolder', objectMeta);
@@ -215,7 +215,7 @@
   setMetadataFor(FilterTileMode, 'FilterTileMode', classMeta, Enum);
   setMetadataFor(Companion_11, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_6, '_FinalizerHolder', objectMeta);
-  setMetadataFor(Font, 'Font', classMeta, Managed);
+  setMetadataFor(Font, 'Font', classMeta, Managed, VOID, Font_init_$Create$_1);
   setMetadataFor(FontEdging, 'FontEdging', classMeta, Enum);
   setMetadataFor(FontFamilyName, 'FontFamilyName', classMeta);
   setMetadataFor(Companion_12, 'Companion', objectMeta);
@@ -271,13 +271,13 @@
   setMetadataFor(MipmapMode, 'MipmapMode', classMeta, Enum);
   setMetadataFor(Companion_34, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_8, '_FinalizerHolder', objectMeta);
-  setMetadataFor(Paint, 'Paint', classMeta, Managed);
+  setMetadataFor(Paint, 'Paint', classMeta, Managed, VOID, Paint_init_$Create$_0);
   setMetadataFor(PaintMode, 'PaintMode', classMeta, Enum);
   setMetadataFor(PaintStrokeCap, 'PaintStrokeCap', classMeta, Enum);
   setMetadataFor(PaintStrokeJoin, 'PaintStrokeJoin', classMeta, Enum);
   setMetadataFor(Companion_35, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_9, '_FinalizerHolder', objectMeta);
-  setMetadataFor(Path, 'Path', classMeta, Managed, [Managed, Iterable]);
+  setMetadataFor(Path, 'Path', classMeta, Managed, [Managed, Iterable], Path_init_$Create$);
   setMetadataFor(PathDirection, 'PathDirection', classMeta, Enum);
   setMetadataFor(Companion_36, 'Companion', objectMeta);
   setMetadataFor(Style, 'Style', classMeta, Enum);
@@ -286,9 +286,9 @@
   setMetadataFor(PathFillMode, 'PathFillMode', classMeta, Enum);
   setMetadataFor(Companion_37, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_10, '_FinalizerHolder', objectMeta);
-  setMetadataFor(PathMeasure, 'PathMeasure', classMeta, Managed);
+  setMetadataFor(PathMeasure, 'PathMeasure', classMeta, Managed, VOID, PathMeasure_init_$Create$);
   setMetadataFor(PathOp, 'PathOp', classMeta, Enum);
-  setMetadataFor(PathSegment, 'PathSegment', classMeta);
+  setMetadataFor(PathSegment, 'PathSegment', classMeta, VOID, VOID, PathSegment);
   setMetadataFor(Companion_38, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_11, '_FinalizerHolder', objectMeta);
   setMetadataFor(PathSegmentIterator, 'PathSegmentIterator', classMeta, Managed, [Managed, MutableIterator]);
@@ -297,13 +297,13 @@
   setMetadataFor(Picture, 'Picture', classMeta, RefCnt);
   setMetadataFor(Companion_40, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_12, '_FinalizerHolder', objectMeta);
-  setMetadataFor(PictureRecorder, 'PictureRecorder', classMeta, Managed);
+  setMetadataFor(PictureRecorder, 'PictureRecorder', classMeta, Managed, VOID, PictureRecorder_init_$Create$);
   setMetadataFor(PixelGeometry, 'PixelGeometry', classMeta, Enum);
   setMetadataFor(Companion_41, 'Companion', objectMeta);
   setMetadataFor(PixelRef, 'PixelRef', classMeta, RefCnt);
   setMetadataFor(_FinalizerHolder_13, '_FinalizerHolder', objectMeta);
   setMetadataFor(Companion_42, 'Companion', objectMeta);
-  setMetadataFor(Pixmap, 'Pixmap', classMeta, Managed);
+  setMetadataFor(Pixmap, 'Pixmap', classMeta, Managed, VOID, Pixmap_init_$Create$);
   setMetadataFor(Companion_43, 'Companion', objectMeta);
   setMetadataFor(Point, 'Point', classMeta);
   setMetadataFor(Point3, 'Point3', classMeta);
@@ -317,7 +317,7 @@
   setMetadataFor(Companion_48, 'Companion', objectMeta);
   setMetadataFor(Op, 'Op', classMeta, Enum);
   setMetadataFor(_FinalizerHolder_14, '_FinalizerHolder', objectMeta);
-  setMetadataFor(Region, 'Region', classMeta, Managed);
+  setMetadataFor(Region, 'Region', classMeta, Managed, VOID, Region);
   setMetadataFor(Companion_49, 'Companion', objectMeta);
   setMetadataFor(RuntimeEffect, 'RuntimeEffect', classMeta, RefCnt);
   setMetadataFor(Companion_50, 'Companion', objectMeta);
@@ -332,7 +332,7 @@
   setMetadataFor(Surface, 'Surface', classMeta, RefCnt);
   setMetadataFor(SurfaceColorFormat, 'SurfaceColorFormat', classMeta, Enum);
   setMetadataFor(SurfaceOrigin, 'SurfaceOrigin', classMeta, Enum);
-  setMetadataFor(SurfaceProps, 'SurfaceProps', classMeta);
+  setMetadataFor(SurfaceProps, 'SurfaceProps', classMeta, VOID, VOID, SurfaceProps);
   setMetadataFor(Run, 'Run', classMeta);
   setMetadataFor(FinalizerHolder, 'FinalizerHolder', objectMeta);
   setMetadataFor(Companion_54, 'Companion', objectMeta);
@@ -358,7 +358,7 @@
   setMetadataFor(DecorationStyle, 'DecorationStyle', classMeta);
   setMetadataFor(Direction, 'Direction', classMeta, Enum);
   setMetadataFor(Companion_59, 'Companion', objectMeta);
-  setMetadataFor(FontCollection, 'FontCollection', classMeta, RefCnt);
+  setMetadataFor(FontCollection, 'FontCollection', classMeta, RefCnt, VOID, FontCollection_init_$Create$);
   setMetadataFor(FontRastrSettings, 'FontRastrSettings', classMeta);
   setMetadataFor(HeightMode, 'HeightMode', classMeta, Enum);
   setMetadataFor(Companion_60, 'Companion', objectMeta, VOID, [ArrayInteropDecoder]);
@@ -373,7 +373,7 @@
   setMetadataFor(ParagraphCache, 'ParagraphCache', classMeta, Native);
   setMetadataFor(Companion_64, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_21, '_FinalizerHolder', objectMeta);
-  setMetadataFor(ParagraphStyle, 'ParagraphStyle', classMeta, Managed);
+  setMetadataFor(ParagraphStyle, 'ParagraphStyle', classMeta, Managed, VOID, ParagraphStyle);
   setMetadataFor(PlaceholderAlignment, 'PlaceholderAlignment', classMeta, Enum);
   setMetadataFor(PlaceholderStyle, 'PlaceholderStyle', classMeta);
   setMetadataFor(PositionWithAffinity, 'PositionWithAffinity', classMeta);
@@ -383,16 +383,16 @@
   setMetadataFor(Shadow, 'Shadow', classMeta);
   setMetadataFor(Companion_66, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_22, '_FinalizerHolder', objectMeta);
-  setMetadataFor(StrutStyle, 'StrutStyle', classMeta, Managed);
+  setMetadataFor(StrutStyle, 'StrutStyle', classMeta, Managed, VOID, StrutStyle_init_$Create$);
   setMetadataFor(Companion_67, 'Companion', objectMeta, VOID, [ArrayInteropDecoder]);
   setMetadataFor(TextBox, 'TextBox', classMeta);
-  setMetadataFor(TextIndent, 'TextIndent', classMeta);
+  setMetadataFor(TextIndent, 'TextIndent', classMeta, VOID, VOID, TextIndent);
   setMetadataFor(Companion_68, 'Companion', objectMeta);
   setMetadataFor(_FinalizerHolder_23, '_FinalizerHolder', objectMeta);
-  setMetadataFor(TextStyle, 'TextStyle', classMeta, Managed);
+  setMetadataFor(TextStyle, 'TextStyle', classMeta, Managed, VOID, TextStyle_init_$Create$);
   setMetadataFor(TextStyleAttribute, 'TextStyleAttribute', classMeta, Enum);
   setMetadataFor(Companion_69, 'Companion', objectMeta);
-  setMetadataFor(TypefaceFontProvider, 'TypefaceFontProvider', classMeta, FontMgr);
+  setMetadataFor(TypefaceFontProvider, 'TypefaceFontProvider', classMeta, FontMgr, VOID, TypefaceFontProvider);
   setMetadataFor(BidiRun, 'BidiRun', classMeta);
   setMetadataFor(Companion_70, 'Companion', objectMeta);
   setMetadataFor(ManagedRunIterator, 'ManagedRunIterator', classMeta, Managed, [Managed, MutableIterator]);
@@ -432,9 +432,9 @@
   setMetadataFor(GraphicsApi, 'GraphicsApi', classMeta, Enum);
   setMetadataFor(OS, 'OS', classMeta, Enum);
   setMetadataFor(Arch, 'Arch', classMeta, Enum);
-  setMetadataFor(ClipboardManager, 'ClipboardManager', classMeta);
-  setMetadataFor(URIManager, 'URIManager', classMeta);
-  setMetadataFor(RenderException, 'RenderException', classMeta, RuntimeException);
+  setMetadataFor(ClipboardManager, 'ClipboardManager', classMeta, VOID, VOID, ClipboardManager);
+  setMetadataFor(URIManager, 'URIManager', classMeta, VOID, VOID, URIManager);
+  setMetadataFor(RenderException, 'RenderException', classMeta, RuntimeException, VOID, RenderException);
   function onKeyboardEvent(event) {
     return Unit_getInstance();
   }
@@ -455,9 +455,9 @@
   setMetadataFor(Pattern, 'Pattern', classMeta);
   setMetadataFor(Matcher, 'Matcher', classMeta);
   setMetadataFor(Companion_78, 'Companion', objectMeta);
-  setMetadataFor(Library, 'Library', classMeta);
+  setMetadataFor(Library, 'Library', classMeta, VOID, VOID, Library);
   setMetadataFor(FinalizationThunk, 'FinalizationThunk', classMeta);
-  setMetadataFor(InteropScope, 'InteropScope', classMeta);
+  setMetadataFor(InteropScope, 'InteropScope', classMeta, VOID, VOID, InteropScope);
   setMetadataFor(Companion_79, 'Companion', objectMeta);
   setMetadataFor(NativePointerArray, 'NativePointerArray', classMeta);
   setMetadataFor(CallbackData, 'CallbackData', classMeta);
@@ -466,7 +466,7 @@
   setMetadataFor(Stats, 'Stats', objectMeta);
   setMetadataFor(CanvasRenderer, 'CanvasRenderer', classMeta);
   setMetadataFor(SkiaLayer$attachTo$1, VOID, classMeta, CanvasRenderer);
-  setMetadataFor(SkiaLayer, 'SkiaLayer', classMeta);
+  setMetadataFor(SkiaLayer, 'SkiaLayer', classMeta, VOID, VOID, SkiaLayer);
   setMetadataFor(SkikoInput, 'SkikoInput', interfaceMeta);
   setMetadataFor(Empty, 'Empty', objectMeta, VOID, [SkikoInput]);
   setMetadataFor(Companion_81, 'Companion', objectMeta);
@@ -488,18 +488,18 @@
   //endregion
   function Companion() {
     Companion_instance = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion).makeGL_xor92r_k$ = function (width, height, sampleCnt, stencilBits, fbId, fbFormat) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion).makeGL_j2f0k3_k$ = function (width, height, sampleCnt, stencilBits, fbId, fbFormat) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new BackendRenderTarget(org_jetbrains_skia_BackendRenderTarget__1nMakeGL(width, height, sampleCnt, stencilBits, fbId, fbFormat));
   };
-  protoOf(Companion).makeMetal_rmh3pk_k$ = function (width, height, texturePtr) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion).makeMetal_u1of9b_k$ = function (width, height, texturePtr) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new BackendRenderTarget(BackendRenderTarget_nMakeMetal(width, height, texturePtr));
   };
-  protoOf(Companion).makeDirect3D_xif3ns_k$ = function (width, height, texturePtr, format, sampleCnt, levelCnt) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion).makeDirect3D_h8yrs8_k$ = function (width, height, texturePtr, format, sampleCnt, levelCnt) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new BackendRenderTarget(BackendRenderTarget_MakeDirect3D(width, height, texturePtr, format, sampleCnt, levelCnt));
   };
   var Companion_instance;
@@ -527,28 +527,28 @@
   }
   function Companion_0() {
     Companion_instance_0 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_0).makeFromImage_b5hj39_k$ = function (image) {
+  protoOf(Companion_0).makeFromImage_pzsw1d_k$ = function (image) {
     var bitmap = Bitmap_init_$Create$();
-    bitmap.allocPixels_jyyvpm_k$(image.get_imageInfo_60i77k_k$());
+    bitmap.allocPixels_elr7wo_k$(image.get_imageInfo_60i77k_k$());
     var tmp;
-    if (image.readPixels_147ch_k$(bitmap)) {
+    if (image.readPixels_s2nedo_k$(bitmap)) {
       tmp = bitmap;
     } else {
-      bitmap.close_ymq55z_k$();
+      bitmap.close_yn9xrc_k$();
       throw RuntimeException_init_$Create$('Failed to readPixels from ' + image);
     }
     return tmp;
   };
-  protoOf(Companion_0).makeFromImage_vk40gi_k$ = function (image, context) {
+  protoOf(Companion_0).makeFromImage_5n1dl9_k$ = function (image, context) {
     var bitmap = Bitmap_init_$Create$();
-    bitmap.allocPixels_jyyvpm_k$(image.get_imageInfo_60i77k_k$());
+    bitmap.allocPixels_elr7wo_k$(image.get_imageInfo_60i77k_k$());
     var tmp;
-    if (image.readPixels_o34vte_k$(context, bitmap)) {
+    if (image.readPixels_voss88_k$(context, bitmap)) {
       tmp = bitmap;
     } else {
-      bitmap.close_ymq55z_k$();
+      bitmap.close_yn9xrc_k$();
       throw RuntimeException_init_$Create$('Failed to readPixels from ' + image);
     }
     return tmp;
@@ -561,7 +561,7 @@
   }
   function Bitmap_init_$Init$($this) {
     Bitmap.call($this, org_jetbrains_skia_Bitmap__1nMake());
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return $this;
   }
   function Bitmap_init_$Create$() {
@@ -593,7 +593,7 @@
     Managed.call(this, ptr, _FinalizerHolder_getInstance_0().PTR_1);
     this._imageInfo_1 = null;
   }
-  protoOf(Bitmap).set__imageInfo_w4j58p_k$ = function (_set____db54di) {
+  protoOf(Bitmap).set__imageInfo_okaray_k$ = function (_set____db54di) {
     this._imageInfo_1 = _set____db54di;
   };
   protoOf(Bitmap).get__imageInfo_bpddpv_k$ = function () {
@@ -602,15 +602,15 @@
   protoOf(Bitmap).makeClone_kiegb3_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Bitmap(org_jetbrains_skia_Bitmap__1nMakeClone(this.get__ptr_wohp4o_k$()));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Bitmap).swap_9smrwy_k$ = function (other) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Bitmap).swap_8j5pfw_k$ = function (other) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Bitmap__1nSwap(this.get__ptr_wohp4o_k$(), getPtr(other));
       this._imageInfo_1 = null;
@@ -626,7 +626,7 @@
         var tmp_0 = this;
         var tmp_1 = Companion_getInstance_29();
         var tmp_2 = this.get__ptr_wohp4o_k$();
-        tmp_0._imageInfo_1 = tmp_1.createUsing_l3ixsh_k$(tmp_2, _nGetImageInfo$ref());
+        tmp_0._imageInfo_1 = tmp_1.createUsing_vjf7w1_k$(tmp_2, _nGetImageInfo$ref());
       }
       tmp = ensureNotNull(this._imageInfo_1);
     }finally {
@@ -637,7 +637,7 @@
   protoOf(Bitmap).get_rowBytesAsPixels_1cm8m1_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nGetRowBytesAsPixels(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -647,7 +647,7 @@
   protoOf(Bitmap).get_isNull_ew31lm_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nIsNull(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -660,17 +660,17 @@
   protoOf(Bitmap).get_rowBytes_viqv7q_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nGetRowBytes(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Bitmap).setAlphaType_z95b0o_k$ = function (alphaType) {
+  protoOf(Bitmap).setAlphaType_hcnbo8_k$ = function (alphaType) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       this._imageInfo_1 = null;
       tmp = org_jetbrains_skia_Bitmap__1nSetAlphaType(this.get__ptr_wohp4o_k$(), alphaType.get_ordinal_ip24qg_k$());
     }finally {
@@ -681,7 +681,7 @@
   protoOf(Bitmap).computeByteSize_txd6dc_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nComputeByteSize(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -691,7 +691,7 @@
   protoOf(Bitmap).get_isImmutable_b8i701_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nIsImmutable(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -699,12 +699,12 @@
     return tmp;
   };
   protoOf(Bitmap).setImmutable_j5sn28_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Bitmap__1nSetImmutable(this.get__ptr_wohp4o_k$());
     return this;
   };
   protoOf(Bitmap).reset_1sjh3j_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     this._imageInfo_1 = null;
     org_jetbrains_skia_Bitmap__1nReset(this.get__ptr_wohp4o_k$());
     return this;
@@ -712,7 +712,7 @@
   protoOf(Bitmap).computeIsOpaque_fs8hxa_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nComputeIsOpaque(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -720,21 +720,21 @@
     return tmp;
   };
   protoOf(Bitmap).get_bounds_bj99ku_k$ = function () {
-    return Companion_getInstance_25().makeXYWH_rbonnk_k$(0, 0, this.get_width_j0q4yl_k$(), this.get_height_e7t92o_k$());
+    return Companion_getInstance_25().makeXYWH_reycg0_k$(0, 0, this.get_width_j0q4yl_k$(), this.get_height_e7t92o_k$());
   };
   protoOf(Bitmap).get_subset_jnzktn_k$ = function () {
     var origin = this.get_pixelRefOrigin_qkct38_k$();
-    return Companion_getInstance_25().makeXYWH_rbonnk_k$(origin.get_x_1mhr67_k$(), origin.get_y_1mhr68_k$(), this.get_width_j0q4yl_k$(), this.get_height_e7t92o_k$());
+    return Companion_getInstance_25().makeXYWH_reycg0_k$(origin.get_x_1mhr67_k$(), origin.get_y_1mhr68_k$(), this.get_width_j0q4yl_k$(), this.get_height_e7t92o_k$());
   };
-  protoOf(Bitmap).setImageInfo_dxto91_k$ = function (imageInfo) {
+  protoOf(Bitmap).setImageInfo_bd3p2b_k$ = function (imageInfo) {
     this._imageInfo_1 = null;
-    return this.setImageInfo_p8e1ic_k$(imageInfo, 0);
+    return this.setImageInfo_7n2nj9_k$(imageInfo, 0);
   };
-  protoOf(Bitmap).setImageInfo_p8e1ic_k$ = function (imageInfo, rowBytes) {
+  protoOf(Bitmap).setImageInfo_7n2nj9_k$ = function (imageInfo, rowBytes) {
     var tmp;
     try {
       this._imageInfo_1 = null;
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nSetImageInfo(this.get__ptr_wohp4o_k$(), imageInfo.get_width_j0q4yl_k$(), imageInfo.get_height_e7t92o_k$(), imageInfo.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$(), imageInfo.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$(), getPtr(imageInfo.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$()), rowBytes);
     }finally {
       reachabilityBarrier(this);
@@ -742,11 +742,11 @@
     }
     return tmp;
   };
-  protoOf(Bitmap).allocPixelsFlags_d6fbsd_k$ = function (imageInfo, zeroPixels) {
+  protoOf(Bitmap).allocPixelsFlags_y9yedy_k$ = function (imageInfo, zeroPixels) {
     var tmp;
     try {
       this._imageInfo_1 = null;
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nAllocPixelsFlags(this.get__ptr_wohp4o_k$(), imageInfo.get_width_j0q4yl_k$(), imageInfo.get_height_e7t92o_k$(), imageInfo.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$(), imageInfo.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$(), getPtr(imageInfo.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$()), zeroPixels ? 1 : 0);
     }finally {
       reachabilityBarrier(this);
@@ -754,11 +754,11 @@
     }
     return tmp;
   };
-  protoOf(Bitmap).allocPixels_sh1kcp_k$ = function (info, rowBytes) {
+  protoOf(Bitmap).allocPixels_aj8ahs_k$ = function (info, rowBytes) {
     var tmp;
     try {
       this._imageInfo_1 = null;
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nAllocPixelsRowBytes(this.get__ptr_wohp4o_k$(), info.get_width_j0q4yl_k$(), info.get_height_e7t92o_k$(), info.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$(), info.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$(), getPtr(info.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$()), rowBytes);
     }finally {
       reachabilityBarrier(this);
@@ -766,24 +766,24 @@
     }
     return tmp;
   };
-  protoOf(Bitmap).allocPixels_jyyvpm_k$ = function (imageInfo) {
-    return this.allocPixels_sh1kcp_k$(imageInfo, imageInfo.get_minRowBytes_yg2hc6_k$());
+  protoOf(Bitmap).allocPixels_elr7wo_k$ = function (imageInfo) {
+    return this.allocPixels_aj8ahs_k$(imageInfo, imageInfo.get_minRowBytes_yg2hc6_k$());
   };
-  protoOf(Bitmap).allocN32Pixels_hksaln_k$ = function (width, height, opaque) {
-    return this.allocPixels_jyyvpm_k$(Companion_getInstance_29().makeN32_mr767_k$(width, height, opaque ? ColorAlphaType_OPAQUE_getInstance() : ColorAlphaType_PREMUL_getInstance()));
+  protoOf(Bitmap).allocN32Pixels_tcbl40_k$ = function (width, height, opaque) {
+    return this.allocPixels_elr7wo_k$(Companion_getInstance_29().makeN32_3as8gh_k$(width, height, opaque ? ColorAlphaType_OPAQUE_getInstance() : ColorAlphaType_PREMUL_getInstance()));
   };
-  protoOf(Bitmap).allocN32Pixels$default_cy5qoc_k$ = function (width, height, opaque, $super) {
+  protoOf(Bitmap).allocN32Pixels$default_jdhd5q_k$ = function (width, height, opaque, $super) {
     opaque = opaque === VOID ? false : opaque;
-    return $super === VOID ? this.allocN32Pixels_hksaln_k$(width, height, opaque) : $super.allocN32Pixels_hksaln_k$.call(this, width, height, opaque);
+    return $super === VOID ? this.allocN32Pixels_tcbl40_k$(width, height, opaque) : $super.allocN32Pixels_tcbl40_k$.call(this, width, height, opaque);
   };
-  protoOf(Bitmap).installPixels_3xoanw_k$ = function (pixels) {
-    return this.installPixels_i7m1j5_k$(this.get_imageInfo_60i77k_k$(), pixels, this.get_rowBytes_viqv7q_k$());
+  protoOf(Bitmap).installPixels_9qz20x_k$ = function (pixels) {
+    return this.installPixels_ms9aj5_k$(this.get_imageInfo_60i77k_k$(), pixels, this.get_rowBytes_viqv7q_k$());
   };
-  protoOf(Bitmap).installPixels_i7m1j5_k$ = function (info, pixels, rowBytes) {
+  protoOf(Bitmap).installPixels_ms9aj5_k$ = function (info, pixels, rowBytes) {
     var tmp;
     try {
       this._imageInfo_1 = null;
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -791,14 +791,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Bitmap.installPixels.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = this.get__ptr_wohp4o_k$();
           var tmp_1 = info.get_width_j0q4yl_k$();
           var tmp_2 = info.get_height_e7t92o_k$();
           var tmp_3 = info.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$();
           var tmp_4 = info.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$();
           var tmp_5 = getPtr(info.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$());
-          var tmp_6 = tmp0_anonymous.toInterop_k4qgbi_k$(pixels);
+          var tmp_6 = $this$interopScope.toInterop_h7cpet_k$(pixels);
           var tmp1_elvis_lhs = pixels == null ? null : pixels.length;
           tmp$ret$1 = org_jetbrains_skia_Bitmap__1nInstallPixels(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp_5, tmp_6, rowBytes, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs);
           break $l$block;
@@ -806,7 +806,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -821,7 +821,7 @@
     var tmp;
     try {
       this._imageInfo_1 = null;
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nAllocPixels(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -831,7 +831,7 @@
   protoOf(Bitmap).get_pixelRef_y63zm2_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var res = org_jetbrains_skia_Bitmap__1nGetPixelRef(this.get__ptr_wohp4o_k$());
       tmp = res === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new PixelRef(res);
     }finally {
@@ -842,7 +842,7 @@
   protoOf(Bitmap).get_pixelRefOrigin_qkct38_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var resX = org_jetbrains_skia_Bitmap__1nGetPixelRefOriginX(this.get__ptr_wohp4o_k$());
       var resY = org_jetbrains_skia_Bitmap__1nGetPixelRefOriginY(this.get__ptr_wohp4o_k$());
       tmp = new IPoint(resX, resY);
@@ -851,11 +851,11 @@
     }
     return tmp;
   };
-  protoOf(Bitmap).setPixelRef_b0rrkq_k$ = function (pixelRef, dx, dy) {
+  protoOf(Bitmap).setPixelRef_g95y7b_k$ = function (pixelRef, dx, dy) {
     var tmp;
     try {
       this._imageInfo_1 = null;
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Bitmap__1nSetPixelRef(this.get__ptr_wohp4o_k$(), getPtr(pixelRef), dx, dy);
       tmp = this;
     }finally {
@@ -867,7 +867,7 @@
   protoOf(Bitmap).get_isReadyToDraw_mka2fl_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nIsReadyToDraw(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -877,7 +877,7 @@
   protoOf(Bitmap).get_generationId_x1e17g_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nGetGenerationId(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -887,7 +887,7 @@
   protoOf(Bitmap).notifyPixelsChanged_97ppqa_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Bitmap__1nNotifyPixelsChanged(this.get__ptr_wohp4o_k$());
       tmp = this;
     }finally {
@@ -895,10 +895,10 @@
     }
     return tmp;
   };
-  protoOf(Bitmap).erase_xl32at_k$ = function (color) {
+  protoOf(Bitmap).erase_n4yeia_k$ = function (color) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Bitmap__1nEraseColor(this.get__ptr_wohp4o_k$(), color);
       tmp = this;
     }finally {
@@ -906,10 +906,10 @@
     }
     return tmp;
   };
-  protoOf(Bitmap).erase_knq7hn_k$ = function (color, area) {
+  protoOf(Bitmap).erase_g6n8ws_k$ = function (color, area) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Bitmap__1nErase(this.get__ptr_wohp4o_k$(), color, area.get_left_woprgw_k$(), area.get_top_18ivbo_k$(), area.get_right_ixz7xv_k$(), area.get_bottom_bj8ras_k$());
       tmp = this;
     }finally {
@@ -917,30 +917,30 @@
     }
     return tmp;
   };
-  protoOf(Bitmap).getColor_shsq7n_k$ = function (x, y) {
+  protoOf(Bitmap).getColor_m56hoz_k$ = function (x, y) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nGetColor(this.get__ptr_wohp4o_k$(), x, y);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Bitmap).getAlphaf_maaizi_k$ = function (x, y) {
+  protoOf(Bitmap).getAlphaf_8jn64i_k$ = function (x, y) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nGetAlphaf(this.get__ptr_wohp4o_k$(), x, y);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Bitmap).extractSubset_tsg3sv_k$ = function (dst, subset) {
+  protoOf(Bitmap).extractSubset_gmj6g2_k$ = function (dst, subset) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Bitmap__1nExtractSubset(this.get__ptr_wohp4o_k$(), getPtr(dst), subset.get_left_woprgw_k$(), subset.get_top_18ivbo_k$(), subset.get_right_ixz7xv_k$(), subset.get_bottom_bj8ras_k$());
     }finally {
       reachabilityBarrier(this);
@@ -948,10 +948,10 @@
     }
     return tmp;
   };
-  protoOf(Bitmap).readPixels_bwiudk_k$ = function (dstInfo, dstRowBytes, srcX, srcY) {
-    var size = this.getReadPixelsArraySize_ljo9t7_k$(dstInfo, dstRowBytes, srcY);
+  protoOf(Bitmap).readPixels_chdhwh_k$ = function (dstInfo, dstRowBytes, srcX, srcY) {
+    var size = this.getReadPixelsArraySize_xvqwuv_k$(dstInfo, dstRowBytes, srcY);
     var bitmapPixels = new Int8Array(size);
-    var successfulRead = this.readPixels_rljck5_k$(bitmapPixels, dstInfo, dstRowBytes, srcX, srcY);
+    var successfulRead = this.readPixels_bipkn3_k$(bitmapPixels, dstInfo, dstRowBytes, srcX, srcY);
     // Inline function 'kotlin.takeIf' call
     // Inline function 'kotlin.contracts.contract' call
     var tmp;
@@ -963,39 +963,39 @@
     }
     return tmp;
   };
-  protoOf(Bitmap).readPixels$default_jci3ae_k$ = function (dstInfo, dstRowBytes, srcX, srcY, $super) {
+  protoOf(Bitmap).readPixels$default_m2yep0_k$ = function (dstInfo, dstRowBytes, srcX, srcY, $super) {
     dstInfo = dstInfo === VOID ? this.get_imageInfo_60i77k_k$() : dstInfo;
     dstRowBytes = dstRowBytes === VOID ? this.get_rowBytes_viqv7q_k$() : dstRowBytes;
     srcX = srcX === VOID ? 0 : srcX;
     srcY = srcY === VOID ? 0 : srcY;
-    return $super === VOID ? this.readPixels_bwiudk_k$(dstInfo, dstRowBytes, srcX, srcY) : $super.readPixels_bwiudk_k$.call(this, dstInfo, dstRowBytes, srcX, srcY);
+    return $super === VOID ? this.readPixels_chdhwh_k$(dstInfo, dstRowBytes, srcX, srcY) : $super.readPixels_chdhwh_k$.call(this, dstInfo, dstRowBytes, srcX, srcY);
   };
-  protoOf(Bitmap).readPixels_rljck5_k$ = function (byteArray, dstInfo, dstRowBytes, srcX, srcY) {
+  protoOf(Bitmap).readPixels_bipkn3_k$ = function (byteArray, dstInfo, dstRowBytes, srcX, srcY) {
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(byteArray.length === this.getReadPixelsArraySize_ljo9t7_k$(dstInfo, dstRowBytes, srcY))) {
+    if (!(byteArray.length === this.getReadPixelsArraySize_xvqwuv_k$(dstInfo, dstRowBytes, srcY))) {
       // Inline function 'org.jetbrains.skia.Bitmap.readPixels.<anonymous>' call
       var message = 'byteArray is not properly allocated. Use readPixelsArraySize';
       throw IllegalStateException_init_$Create$(toString(message));
     }
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var byteArrayHandle = tmp1_anonymous.toInteropForResult_w0sqdc_k$(byteArray);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var byteArrayHandle = $this$interopScope.toInteropForResult_toi1ab_k$(byteArray);
         var successfulRead = org_jetbrains_skia_Bitmap__1nReadPixels(this.get__ptr_wohp4o_k$(), dstInfo.get_width_j0q4yl_k$(), dstInfo.get_height_e7t92o_k$(), dstInfo.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$(), dstInfo.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$(), getPtr(dstInfo.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$()), dstRowBytes, srcX, srcY, byteArrayHandle);
         if (successfulRead) {
-          tmp1_anonymous.fromInterop_mlzk42_k$(byteArrayHandle, byteArray);
+          $this$interopScope.fromInterop_40e3wn_k$(byteArrayHandle, byteArray);
         }
         return successfulRead;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }finally {
@@ -1003,49 +1003,48 @@
       reachabilityBarrier(dstInfo.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$());
     }
   };
-  protoOf(Bitmap).readPixels$default_5koa4j_k$ = function (byteArray, dstInfo, dstRowBytes, srcX, srcY, $super) {
+  protoOf(Bitmap).readPixels$default_vpg9oc_k$ = function (byteArray, dstInfo, dstRowBytes, srcX, srcY, $super) {
     dstInfo = dstInfo === VOID ? this.get_imageInfo_60i77k_k$() : dstInfo;
     dstRowBytes = dstRowBytes === VOID ? this.get_rowBytes_viqv7q_k$() : dstRowBytes;
     srcX = srcX === VOID ? 0 : srcX;
     srcY = srcY === VOID ? 0 : srcY;
-    return $super === VOID ? this.readPixels_rljck5_k$(byteArray, dstInfo, dstRowBytes, srcX, srcY) : $super.readPixels_rljck5_k$.call(this, byteArray, dstInfo, dstRowBytes, srcX, srcY);
+    return $super === VOID ? this.readPixels_bipkn3_k$(byteArray, dstInfo, dstRowBytes, srcX, srcY) : $super.readPixels_bipkn3_k$.call(this, byteArray, dstInfo, dstRowBytes, srcX, srcY);
   };
-  protoOf(Bitmap).getReadPixelsArraySize_ljo9t7_k$ = function (dstInfo, dstRowBytes, srcY) {
-    var tmp$ret$0;
+  protoOf(Bitmap).getReadPixelsArraySize_xvqwuv_k$ = function (dstInfo, dstRowBytes, srcY) {
     // Inline function 'kotlin.math.min' call
-    var tmp0_min = dstInfo.get_height_e7t92o_k$();
-    var tmp1_min = this.get_height_e7t92o_k$() - srcY | 0;
-    tmp$ret$0 = Math.min(tmp0_min, tmp1_min);
+    var a = dstInfo.get_height_e7t92o_k$();
+    var b = this.get_height_e7t92o_k$() - srcY | 0;
+    var tmp$ret$0 = Math.min(a, b);
     return imul(tmp$ret$0, dstRowBytes);
   };
-  protoOf(Bitmap).getReadPixelsArraySize$default_ok9vwa_k$ = function (dstInfo, dstRowBytes, srcY, $super) {
+  protoOf(Bitmap).getReadPixelsArraySize$default_h6hkov_k$ = function (dstInfo, dstRowBytes, srcY, $super) {
     dstInfo = dstInfo === VOID ? this.get_imageInfo_60i77k_k$() : dstInfo;
     dstRowBytes = dstRowBytes === VOID ? this.get_rowBytes_viqv7q_k$() : dstRowBytes;
     srcY = srcY === VOID ? 0 : srcY;
-    return $super === VOID ? this.getReadPixelsArraySize_ljo9t7_k$(dstInfo, dstRowBytes, srcY) : $super.getReadPixelsArraySize_ljo9t7_k$.call(this, dstInfo, dstRowBytes, srcY);
+    return $super === VOID ? this.getReadPixelsArraySize_xvqwuv_k$(dstInfo, dstRowBytes, srcY) : $super.getReadPixelsArraySize_xvqwuv_k$.call(this, dstInfo, dstRowBytes, srcY);
   };
-  protoOf(Bitmap).extractAlpha_5zovrd_k$ = function (dst) {
-    return !(this.extractAlpha_7ezf6v_k$(dst, null) == null);
+  protoOf(Bitmap).extractAlpha_o3db6a_k$ = function (dst) {
+    return !(this.extractAlpha_jj6zjq_k$(dst, null) == null);
   };
-  protoOf(Bitmap).extractAlpha_7ezf6v_k$ = function (dst, paint) {
+  protoOf(Bitmap).extractAlpha_jj6zjq_k$ = function (dst, paint) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.withNullableResult' call
-        var tmp0_withNullableResult = new Int32Array(2);
+        var result = new Int32Array(2);
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withNullableResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
           var tmp_0;
           // Inline function 'org.jetbrains.skia.Bitmap.extractAlpha.<anonymous>' call
           if (org_jetbrains_skia_Bitmap__1nExtractAlpha(this.get__ptr_wohp4o_k$(), getPtr(dst), getPtr(paint), handle)) {
-            tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withNullableResult);
-            tmp_0 = tmp0_withNullableResult;
+            $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
+            tmp_0 = result;
           } else {
             tmp_0 = null;
           }
@@ -1055,7 +1054,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -1079,7 +1078,7 @@
   protoOf(Bitmap).peekPixels_1l1uy0_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var res = org_jetbrains_skia_Bitmap__1nPeekPixels(this.get__ptr_wohp4o_k$());
       var tmp_0;
       if (res === Companion_getInstance_81().get_NullPointer_8qbg7n_k$()) {
@@ -1093,16 +1092,16 @@
     }
     return tmp;
   };
-  protoOf(Bitmap).makeShader_xyzlfy_k$ = function (localMatrix) {
-    return this.makeShader_jncbet_k$(FilterTileMode_CLAMP_getInstance(), FilterTileMode_CLAMP_getInstance(), Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), localMatrix);
+  protoOf(Bitmap).makeShader_q54znw_k$ = function (localMatrix) {
+    return this.makeShader_7nwpzf_k$(FilterTileMode_CLAMP_getInstance(), FilterTileMode_CLAMP_getInstance(), Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), localMatrix);
   };
-  protoOf(Bitmap).makeShader_f3k5oi_k$ = function (tmx, tmy, localMatrix) {
-    return this.makeShader_jncbet_k$(tmx, tmy, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), localMatrix);
+  protoOf(Bitmap).makeShader_lzo5mc_k$ = function (tmx, tmy, localMatrix) {
+    return this.makeShader_7nwpzf_k$(tmx, tmy, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), localMatrix);
   };
-  protoOf(Bitmap).makeShader_jncbet_k$ = function (tmx, tmy, sampling, localMatrix) {
+  protoOf(Bitmap).makeShader_7nwpzf_k$ = function (tmx, tmy, sampling, localMatrix) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -1110,19 +1109,19 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Bitmap.makeShader.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = this.get__ptr_wohp4o_k$();
           var tmp_1 = tmx.get_ordinal_ip24qg_k$();
           var tmp_2 = tmy.get_ordinal_ip24qg_k$();
           var tmp_3 = sampling._packedInt1_kbgj89_k$();
           var tmp_4 = sampling._packedInt2_kbgj8a_k$();
-          tmp$ret$1 = org_jetbrains_skia_Bitmap__1nMakeShader(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp0_anonymous.toInterop_sfommq_k$(localMatrix == null ? null : localMatrix.get_mat_18j0uh_k$()));
+          tmp$ret$1 = org_jetbrains_skia_Bitmap__1nMakeShader(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, $this$interopScope.toInterop_uum1m9_k$(localMatrix == null ? null : localMatrix.get_mat_18j0uh_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -1132,12 +1131,12 @@
     }
     return tmp;
   };
-  protoOf(Bitmap).makeShader$default_lqkq31_k$ = function (tmx, tmy, sampling, localMatrix, $super) {
+  protoOf(Bitmap).makeShader$default_iqsr28_k$ = function (tmx, tmy, sampling, localMatrix, $super) {
     tmx = tmx === VOID ? FilterTileMode_CLAMP_getInstance() : tmx;
     tmy = tmy === VOID ? FilterTileMode_CLAMP_getInstance() : tmy;
     sampling = sampling === VOID ? Companion_getInstance_52().get_DEFAULT_wccqmg_k$() : sampling;
     localMatrix = localMatrix === VOID ? null : localMatrix;
-    return $super === VOID ? this.makeShader_jncbet_k$(tmx, tmy, sampling, localMatrix) : $super.makeShader_jncbet_k$.call(this, tmx, tmy, sampling, localMatrix);
+    return $super === VOID ? this.makeShader_7nwpzf_k$(tmx, tmy, sampling, localMatrix) : $super.makeShader_7nwpzf_k$.call(this, tmx, tmy, sampling, localMatrix);
   };
   var BlendMode_CLEAR_instance;
   var BlendMode_SRC_instance;
@@ -1233,7 +1232,7 @@
         return BlendMode_LUMINOSITY_getInstance();
       default:
         BlendMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -1393,22 +1392,22 @@
   }
   function BreakIterator$Companion$makeCharacterInstance$lambda($locale) {
     return function ($this$withErrorGuard, it) {
-      return org_jetbrains_skia_BreakIterator__1nMake(0, $this$withErrorGuard.toInterop_tozece_k$($locale), it);
+      return org_jetbrains_skia_BreakIterator__1nMake(0, $this$withErrorGuard.toInterop_ok8jph_k$($locale), it);
     };
   }
   function BreakIterator$Companion$makeWordInstance$lambda($locale) {
     return function ($this$withErrorGuard, it) {
-      return org_jetbrains_skia_BreakIterator__1nMake(1, $this$withErrorGuard.toInterop_tozece_k$($locale), it);
+      return org_jetbrains_skia_BreakIterator__1nMake(1, $this$withErrorGuard.toInterop_ok8jph_k$($locale), it);
     };
   }
   function BreakIterator$Companion$makeLineInstance$lambda($locale) {
     return function ($this$withErrorGuard, it) {
-      return org_jetbrains_skia_BreakIterator__1nMake(2, $this$withErrorGuard.toInterop_tozece_k$($locale), it);
+      return org_jetbrains_skia_BreakIterator__1nMake(2, $this$withErrorGuard.toInterop_ok8jph_k$($locale), it);
     };
   }
   function BreakIterator$Companion$makeSentenceInstance$lambda($locale) {
     return function ($this$withErrorGuard, it) {
-      return org_jetbrains_skia_BreakIterator__1nMake(3, $this$withErrorGuard.toInterop_tozece_k$($locale), it);
+      return org_jetbrains_skia_BreakIterator__1nMake(3, $this$withErrorGuard.toInterop_ok8jph_k$($locale), it);
     };
   }
   function Companion_1() {
@@ -1424,7 +1423,7 @@
     this.WORD_KANA_LIMIT_1 = 400;
     this.WORD_IDEO_1 = 400;
     this.WORD_IDEO_LIMIT_1 = 500;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   protoOf(Companion_1).get_DONE_wnzr2j_k$ = function () {
     return this.DONE_1;
@@ -1459,37 +1458,37 @@
   protoOf(Companion_1).get_WORD_IDEO_LIMIT_yt9twz_k$ = function () {
     return this.WORD_IDEO_LIMIT_1;
   };
-  protoOf(Companion_1).makeCharacterInstance_fofikw_k$ = function (locale) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_1).makeCharacterInstance_eow6v_k$ = function (locale) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new BreakIterator(withErrorGuard('Failed to create character iterator', BreakIterator$Companion$makeCharacterInstance$lambda(locale)));
   };
-  protoOf(Companion_1).makeCharacterInstance$default_lxnpdw_k$ = function (locale, $super) {
+  protoOf(Companion_1).makeCharacterInstance$default_7rwuey_k$ = function (locale, $super) {
     locale = locale === VOID ? null : locale;
-    return $super === VOID ? this.makeCharacterInstance_fofikw_k$(locale) : $super.makeCharacterInstance_fofikw_k$.call(this, locale);
+    return $super === VOID ? this.makeCharacterInstance_eow6v_k$(locale) : $super.makeCharacterInstance_eow6v_k$.call(this, locale);
   };
-  protoOf(Companion_1).makeWordInstance_brge0j_k$ = function (locale) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_1).makeWordInstance_1hgiiu_k$ = function (locale) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new BreakIterator(withErrorGuard('Failed to create word iterator', BreakIterator$Companion$makeWordInstance$lambda(locale)));
   };
-  protoOf(Companion_1).makeWordInstance$default_yanak9_k$ = function (locale, $super) {
+  protoOf(Companion_1).makeWordInstance$default_s8tmev_k$ = function (locale, $super) {
     locale = locale === VOID ? null : locale;
-    return $super === VOID ? this.makeWordInstance_brge0j_k$(locale) : $super.makeWordInstance_brge0j_k$.call(this, locale);
+    return $super === VOID ? this.makeWordInstance_1hgiiu_k$(locale) : $super.makeWordInstance_1hgiiu_k$.call(this, locale);
   };
-  protoOf(Companion_1).makeLineInstance_ty3qd3_k$ = function (locale) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_1).makeLineInstance_52ky1c_k$ = function (locale) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new BreakIterator(withErrorGuard('Failed to create line iterator', BreakIterator$Companion$makeLineInstance$lambda(locale)));
   };
-  protoOf(Companion_1).makeLineInstance$default_5az1yb_k$ = function (locale, $super) {
+  protoOf(Companion_1).makeLineInstance$default_73prof_k$ = function (locale, $super) {
     locale = locale === VOID ? null : locale;
-    return $super === VOID ? this.makeLineInstance_ty3qd3_k$(locale) : $super.makeLineInstance_ty3qd3_k$.call(this, locale);
+    return $super === VOID ? this.makeLineInstance_52ky1c_k$(locale) : $super.makeLineInstance_52ky1c_k$.call(this, locale);
   };
-  protoOf(Companion_1).makeSentenceInstance_kse6pm_k$ = function (locale) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_1).makeSentenceInstance_6yc78f_k$ = function (locale) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new BreakIterator(withErrorGuard('Failed to create sentence iterator', BreakIterator$Companion$makeSentenceInstance$lambda(locale)));
   };
-  protoOf(Companion_1).makeSentenceInstance$default_4s3se_k$ = function (locale, $super) {
+  protoOf(Companion_1).makeSentenceInstance$default_kbmahc_k$ = function (locale, $super) {
     locale = locale === VOID ? null : locale;
-    return $super === VOID ? this.makeSentenceInstance_kse6pm_k$(locale) : $super.makeSentenceInstance_kse6pm_k$.call(this, locale);
+    return $super === VOID ? this.makeSentenceInstance_6yc78f_k$(locale) : $super.makeSentenceInstance_6yc78f_k$.call(this, locale);
   };
   var Companion_instance_1;
   function Companion_getInstance_2() {
@@ -1518,35 +1517,27 @@
   function BreakIterator$setText$lambda(this$0, $text) {
     return function ($this$withErrorGuard, it) {
       var tmp = this$0.get__ptr_wohp4o_k$();
-      var tmp0_safe_receiver = $text;
       var tmp_0;
-      if (tmp0_safe_receiver == null) {
+      if ($text == null) {
         tmp_0 = null;
       } else {
-        var tmp$ret$3;
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
-        var tmp$ret$2;
         // Inline function 'org.jetbrains.skia.BreakIterator.setText.<anonymous>.<anonymous>' call
         var tmp_1 = 0;
         var tmp_2 = $text.length;
         var tmp_3 = new Int16Array(tmp_2);
         while (tmp_1 < tmp_2) {
           var tmp_4 = tmp_1;
-          var tmp$ret$1;
-          var tmp$ret$0;
           // Inline function 'kotlin.code' call
-          var tmp0_get_code_gknlva = charSequenceGet($text, tmp_4);
-          tmp$ret$0 = Char__toInt_impl_vasixd(tmp0_get_code_gknlva);
-          tmp$ret$1 = toShort(tmp$ret$0);
-          tmp_3[tmp_4] = tmp$ret$1;
+          var this_0 = charSequenceGet($text, tmp_4);
+          var tmp$ret$0 = Char__toInt_impl_vasixd(this_0);
+          tmp_3[tmp_4] = toShort(tmp$ret$0);
           tmp_1 = tmp_1 + 1 | 0;
         }
-        tmp$ret$2 = tmp_3;
-        tmp$ret$3 = tmp$ret$2;
-        tmp_0 = tmp$ret$3;
+        tmp_0 = tmp_3;
       }
-      var tmp_5 = $this$withErrorGuard.toInterop_30wotu_k$(tmp_0);
+      var tmp_5 = $this$withErrorGuard.toInterop_jg6tf3_k$(tmp_0);
       var tmp1_safe_receiver = $text;
       var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.length;
       return org_jetbrains_skia_BreakIterator__1nSetText(tmp, tmp_5, tmp2_elvis_lhs == null ? 0 : tmp2_elvis_lhs, it);
@@ -1557,29 +1548,29 @@
     Managed.call(this, ptr, _FinalizerHolder_getInstance_1().PTR_1);
     this._text_1 = null;
   }
-  protoOf(BreakIterator).set__text_fxv2tt_k$ = function (_set____db54di) {
+  protoOf(BreakIterator).set__text_ah76yy_k$ = function (_set____db54di) {
     this._text_1 = _set____db54di;
   };
   protoOf(BreakIterator).get__text_inq4f7_k$ = function () {
     return this._text_1;
   };
-  protoOf(BreakIterator).close_ymq55z_k$ = function () {
-    protoOf(Managed).close_ymq55z_k$.call(this);
+  protoOf(BreakIterator).close_yn9xrc_k$ = function () {
+    protoOf(Managed).close_yn9xrc_k$.call(this);
     var tmp0_safe_receiver = this._text_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.close_ymq55z_k$();
+      tmp0_safe_receiver.close_yn9xrc_k$();
     }
   };
   protoOf(BreakIterator).clone_1keycd_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new BreakIterator(withErrorGuard('Failed to clone', BreakIterator$clone$lambda(this)));
   };
   protoOf(BreakIterator).current_imy8hl_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_BreakIterator__1nCurrent(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -1589,45 +1580,23 @@
   protoOf(BreakIterator).next_20eer_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_BreakIterator__1nNext(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(BreakIterator).next_gj7t1u_k$ = function (index) {
+  protoOf(BreakIterator).next_letk3f_k$ = function (index) {
     var n = index;
     var result = 0;
     if (n > 0) {
-      $l$loop: while (true) {
-        var tmp;
-        if (n > 0) {
-          var tmp_0 = result;
-          Companion_getInstance_2();
-          tmp = !(tmp_0 === -1);
-        } else {
-          tmp = false;
-        }
-        if (!tmp) {
-          break $l$loop;
-        }
+      while (n > 0 ? !(result === -1) : false) {
         result = this.next_20eer_k$();
         n = n - 1 | 0;
       }
     } else if (n < 0) {
-      $l$loop_0: while (true) {
-        var tmp_1;
-        if (n < 0) {
-          var tmp_2 = result;
-          Companion_getInstance_2();
-          tmp_1 = !(tmp_2 === -1);
-        } else {
-          tmp_1 = false;
-        }
-        if (!tmp_1) {
-          break $l$loop_0;
-        }
+      while (n < 0 ? !(result === -1) : false) {
         result = this.previous_l2dfd5_k$();
         n = n + 1 | 0;
       }
@@ -1639,7 +1608,7 @@
   protoOf(BreakIterator).previous_l2dfd5_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_BreakIterator__1nPrevious(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -1649,7 +1618,7 @@
   protoOf(BreakIterator).first_1m0hio_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_BreakIterator__1nFirst(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -1659,37 +1628,37 @@
   protoOf(BreakIterator).last_1z1cm_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_BreakIterator__1nLast(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(BreakIterator).preceding_i4vixu_k$ = function (offset) {
+  protoOf(BreakIterator).preceding_v1dyyd_k$ = function (offset) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_BreakIterator__1nPreceding(this.get__ptr_wohp4o_k$(), offset);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(BreakIterator).following_1lapf4_k$ = function (offset) {
+  protoOf(BreakIterator).following_j6g4t5_k$ = function (offset) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_BreakIterator__1nFollowing(this.get__ptr_wohp4o_k$(), offset);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(BreakIterator).isBoundary_vpodtf_k$ = function (offset) {
+  protoOf(BreakIterator).isBoundary_y2pb4s_k$ = function (offset) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_BreakIterator__1nIsBoundary(this.get__ptr_wohp4o_k$(), offset);
     }finally {
       reachabilityBarrier(this);
@@ -1699,7 +1668,7 @@
   protoOf(BreakIterator).get_ruleStatus_wxndk9_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_BreakIterator__1nGetRuleStatus(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -1709,44 +1678,44 @@
   protoOf(BreakIterator).get_ruleStatuses_tj7hxh_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var arrayLen = org_jetbrains_skia_BreakIterator__1nGetRuleStatusesLen(this.get__ptr_wohp4o_k$());
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Int32Array(arrayLen);
+      var result = new Int32Array(arrayLen);
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
           // Inline function 'org.jetbrains.skia.BreakIterator.<get-ruleStatuses>.<anonymous>' call
           org_jetbrains_skia_BreakIterator__1nGetRuleStatuses(this.get__ptr_wohp4o_k$(), handle, arrayLen);
-          tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = tmp0_withResult;
+      tmp = result;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(BreakIterator).setText_nscvi8_k$ = function (text) {
+  protoOf(BreakIterator).setText_1jlejc_k$ = function (text) {
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp0_safe_receiver = this._text_1;
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.close_ymq55z_k$();
+        tmp0_safe_receiver.close_yn9xrc_k$();
       }
       var tmp = this;
       tmp._text_1 = new U16String(withErrorGuard('Failed to setText', BreakIterator$setText$lambda(this, text)));
@@ -1763,10 +1732,10 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.withErrorGuard.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInterop_o3s7q3_k$(errorCode);
-        var res = block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_26ac9l_k$(handle, errorCode);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInterop_i7skn2_k$(errorCode);
+        var res = block($this$interopScope, handle);
+        $this$interopScope.fromInterop_1rw4p0_k$(handle, errorCode);
         if (errorCode[0] > 0) {
           throw RuntimeException_init_$Create$(message + '; operation failed with status ' + errorCode);
         }
@@ -1778,7 +1747,7 @@
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -1786,7 +1755,7 @@
   }
   function Companion_2() {
     Companion_instance_2 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_2;
   function Companion_getInstance_3() {
@@ -1797,7 +1766,7 @@
   function Canvas_init_$Init$(bitmap, surfaceProps, $this) {
     surfaceProps = surfaceProps === VOID ? new SurfaceProps() : surfaceProps;
     Canvas.call($this, org_jetbrains_skia_Canvas__1nMakeFromBitmap(bitmap.get__ptr_wohp4o_k$(), surfaceProps._getFlags_xsuxps_k$(), surfaceProps.get_pixelGeometry_ohm51t_k$().get_ordinal_ip24qg_k$()), true, bitmap);
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     reachabilityBarrier(bitmap);
     return $this;
   }
@@ -1831,8 +1800,8 @@
   protoOf(Canvas).get__owner_a45oe5_k$ = function () {
     return this._owner_1;
   };
-  protoOf(Canvas).drawPoint_1b3djp_k$ = function (x, y, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawPoint_hb1rjx_k$ = function (x, y, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nDrawPoint(this.get__ptr_wohp4o_k$(), x, y, getPtr(paint));
     }finally {
@@ -1841,25 +1810,25 @@
     }
     return this;
   };
-  protoOf(Canvas).drawPoints_rzginl_k$ = function (coords, paint) {
-    return this.drawPoints_d6t4i9_k$(ensureNotNull(Companion_getInstance_44().flattenArray_cu5v13_k$(coords)), paint);
+  protoOf(Canvas).drawPoints_knogax_k$ = function (coords, paint) {
+    return this.drawPoints_bqd294_k$(ensureNotNull(Companion_getInstance_44().flattenArray_n7c6vn_k$(coords)), paint);
   };
-  protoOf(Canvas).drawPoints_d6t4i9_k$ = function (coords, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawPoints_bqd294_k$ = function (coords, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_Canvas__1nDrawPoints(this.get__ptr_wohp4o_k$(), 0, coords.length, tmp0_anonymous.toInterop_sfommq_k$(coords), getPtr(paint));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_Canvas__1nDrawPoints(this.get__ptr_wohp4o_k$(), 0, coords.length, $this$interopScope.toInterop_uum1m9_k$(coords), getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -1869,25 +1838,25 @@
     }
     return this;
   };
-  protoOf(Canvas).drawLines_1zsza5_k$ = function (coords, paint) {
-    return this.drawLines_cfkvhh_k$(ensureNotNull(Companion_getInstance_44().flattenArray_cu5v13_k$(coords)), paint);
+  protoOf(Canvas).drawLines_jo5ja5_k$ = function (coords, paint) {
+    return this.drawLines_jcpik_k$(ensureNotNull(Companion_getInstance_44().flattenArray_n7c6vn_k$(coords)), paint);
   };
-  protoOf(Canvas).drawLines_cfkvhh_k$ = function (coords, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawLines_jcpik_k$ = function (coords, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_Canvas__1nDrawPoints(this.get__ptr_wohp4o_k$(), 1, coords.length, tmp0_anonymous.toInterop_sfommq_k$(coords), getPtr(paint));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_Canvas__1nDrawPoints(this.get__ptr_wohp4o_k$(), 1, coords.length, $this$interopScope.toInterop_uum1m9_k$(coords), getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -1897,25 +1866,25 @@
     }
     return this;
   };
-  protoOf(Canvas).drawPolygon_az019e_k$ = function (coords, paint) {
-    return this.drawPolygon_rr930g_k$(ensureNotNull(Companion_getInstance_44().flattenArray_cu5v13_k$(coords)), paint);
+  protoOf(Canvas).drawPolygon_w651jc_k$ = function (coords, paint) {
+    return this.drawPolygon_v5jsgp_k$(ensureNotNull(Companion_getInstance_44().flattenArray_n7c6vn_k$(coords)), paint);
   };
-  protoOf(Canvas).drawPolygon_rr930g_k$ = function (coords, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawPolygon_v5jsgp_k$ = function (coords, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_Canvas__1nDrawPoints(this.get__ptr_wohp4o_k$(), 2, coords.length, tmp0_anonymous.toInterop_sfommq_k$(coords), getPtr(paint));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_Canvas__1nDrawPoints(this.get__ptr_wohp4o_k$(), 2, coords.length, $this$interopScope.toInterop_uum1m9_k$(coords), getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -1925,8 +1894,8 @@
     }
     return this;
   };
-  protoOf(Canvas).drawLine_t27q09_k$ = function (x0, y0, x1, y1, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawLine_m1kfbl_k$ = function (x0, y0, x1, y1, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nDrawLine(this.get__ptr_wohp4o_k$(), x0, y0, x1, y1, getPtr(paint));
     }finally {
@@ -1935,8 +1904,8 @@
     }
     return this;
   };
-  protoOf(Canvas).drawArc_hhkfpn_k$ = function (left, top, right, bottom, startAngle, sweepAngle, includeCenter, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawArc_9h3ru6_k$ = function (left, top, right, bottom, startAngle, sweepAngle, includeCenter, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nDrawArc(this.get__ptr_wohp4o_k$(), left, top, right, bottom, startAngle, sweepAngle, includeCenter, getPtr(paint));
     }finally {
@@ -1945,8 +1914,8 @@
     }
     return this;
   };
-  protoOf(Canvas).drawRect_svy35k_k$ = function (r, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawRect_8t145u_k$ = function (r, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nDrawRect(this.get__ptr_wohp4o_k$(), r.get_left_woprgw_k$(), r.get_top_18ivbo_k$(), r.get_right_ixz7xv_k$(), r.get_bottom_bj8ras_k$(), getPtr(paint));
     }finally {
@@ -1955,8 +1924,8 @@
     }
     return this;
   };
-  protoOf(Canvas).drawOval_k4zfhy_k$ = function (r, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawOval_8h54ws_k$ = function (r, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nDrawOval(this.get__ptr_wohp4o_k$(), r.get_left_woprgw_k$(), r.get_top_18ivbo_k$(), r.get_right_ixz7xv_k$(), r.get_bottom_bj8ras_k$(), getPtr(paint));
     }finally {
@@ -1965,8 +1934,8 @@
     }
     return this;
   };
-  protoOf(Canvas).drawCircle_on0wlj_k$ = function (x, y, radius, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawCircle_129n4r_k$ = function (x, y, radius, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nDrawOval(this.get__ptr_wohp4o_k$(), x - radius, y - radius, x + radius, y + radius, getPtr(paint));
     }finally {
@@ -1975,22 +1944,22 @@
     }
     return this;
   };
-  protoOf(Canvas).drawRRect_i1m3a2_k$ = function (r, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawRRect_6cei8q_k$ = function (r, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_Canvas__1nDrawRRect(this.get__ptr_wohp4o_k$(), r.get_left_woprgw_k$(), r.get_top_18ivbo_k$(), r.get_right_ixz7xv_k$(), r.get_bottom_bj8ras_k$(), tmp0_anonymous.toInterop_sfommq_k$(r.get_radii_ixu1u4_k$()), r.get_radii_ixu1u4_k$().length, getPtr(paint));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_Canvas__1nDrawRRect(this.get__ptr_wohp4o_k$(), r.get_left_woprgw_k$(), r.get_top_18ivbo_k$(), r.get_right_ixz7xv_k$(), r.get_bottom_bj8ras_k$(), $this$interopScope.toInterop_uum1m9_k$(r.get_radii_ixu1u4_k$()), r.get_radii_ixu1u4_k$().length, getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -2000,22 +1969,22 @@
     }
     return this;
   };
-  protoOf(Canvas).drawDRRect_3yvjhx_k$ = function (outer, inner, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawDRRect_oer2a5_k$ = function (outer, inner, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_Canvas__1nDrawDRRect(this.get__ptr_wohp4o_k$(), outer.get_left_woprgw_k$(), outer.get_top_18ivbo_k$(), outer.get_right_ixz7xv_k$(), outer.get_bottom_bj8ras_k$(), tmp0_anonymous.toInterop_sfommq_k$(outer.get_radii_ixu1u4_k$()), outer.get_radii_ixu1u4_k$().length, inner.get_left_woprgw_k$(), inner.get_top_18ivbo_k$(), inner.get_right_ixz7xv_k$(), inner.get_bottom_bj8ras_k$(), tmp0_anonymous.toInterop_sfommq_k$(inner.get_radii_ixu1u4_k$()), inner.get_radii_ixu1u4_k$().length, getPtr(paint));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_Canvas__1nDrawDRRect(this.get__ptr_wohp4o_k$(), outer.get_left_woprgw_k$(), outer.get_top_18ivbo_k$(), outer.get_right_ixz7xv_k$(), outer.get_bottom_bj8ras_k$(), $this$interopScope.toInterop_uum1m9_k$(outer.get_radii_ixu1u4_k$()), outer.get_radii_ixu1u4_k$().length, inner.get_left_woprgw_k$(), inner.get_top_18ivbo_k$(), inner.get_right_ixz7xv_k$(), inner.get_bottom_bj8ras_k$(), $this$interopScope.toInterop_uum1m9_k$(inner.get_radii_ixu1u4_k$()), inner.get_radii_ixu1u4_k$().length, getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -2025,56 +1994,56 @@
     }
     return this;
   };
-  protoOf(Canvas).drawRectShadow_wmszk4_k$ = function (r, dx, dy, blur, color) {
-    return this.drawRectShadow_5g5naw_k$(r, dx, dy, blur, 0.0, color);
+  protoOf(Canvas).drawRectShadow_8tfpvp_k$ = function (r, dx, dy, blur, color) {
+    return this.drawRectShadow_59b9wj_k$(r, dx, dy, blur, 0.0, color);
   };
-  protoOf(Canvas).drawRectShadow_5g5naw_k$ = function (r, dx, dy, blur, spread, color) {
-    var insides = r.inflate_f59jyf_k$(-1.0);
+  protoOf(Canvas).drawRectShadow_59b9wj_k$ = function (r, dx, dy, blur, spread, color) {
+    var insides = r.inflate_rvluy7_k$(-1.0);
     if (!insides.get_isEmpty_zauvru_k$()) {
       this.save_23ibh_k$();
       if (insides instanceof RRect) {
-        this.clipRRect_479uzh_k$(insides, ClipMode_DIFFERENCE_getInstance());
+        this.clipRRect_gsebjx_k$(insides, ClipMode_DIFFERENCE_getInstance());
       } else {
-        this.clipRect_sf7jnf_k$(insides, ClipMode_DIFFERENCE_getInstance());
+        this.clipRect_xw3sir_k$(insides, ClipMode_DIFFERENCE_getInstance());
       }
-      this.drawRectShadowNoclip_k8v255_k$(r, dx, dy, blur, spread, color);
+      this.drawRectShadowNoclip_qnhpfy_k$(r, dx, dy, blur, spread, color);
       this.restore_i5fnny_k$();
     } else {
-      this.drawRectShadowNoclip_k8v255_k$(r, dx, dy, blur, spread, color);
+      this.drawRectShadowNoclip_qnhpfy_k$(r, dx, dy, blur, spread, color);
     }
     return this;
   };
-  protoOf(Canvas).drawRectShadowNoclip_k8v255_k$ = function (r, dx, dy, blur, spread, color) {
-    var outline = r.inflate_f59jyf_k$(spread);
+  protoOf(Canvas).drawRectShadowNoclip_qnhpfy_k$ = function (r, dx, dy, blur, spread, color) {
+    var outline = r.inflate_rvluy7_k$(spread);
     // Inline function 'org.jetbrains.skia.impl.use' call
-    var tmp0_use = Companion_getInstance_28().makeDropShadowOnly$default_qaiyh1_k$(dx, dy, blur / 2.0, blur / 2.0, color);
+    var this_0 = Companion_getInstance_28().makeDropShadowOnly$default_9p8jr8_k$(dx, dy, blur / 2.0, blur / 2.0, color);
     var tmp;
     try {
       // Inline function 'org.jetbrains.skia.Canvas.drawRectShadowNoclip.<anonymous>' call
       // Inline function 'org.jetbrains.skia.impl.use' call
-      var tmp0_use_0 = Paint_init_$Create$_0();
+      var this_1 = Paint_init_$Create$_0();
       var tmp_0;
       try {
         // Inline function 'org.jetbrains.skia.Canvas.drawRectShadowNoclip.<anonymous>.<anonymous>' call
-        tmp0_use_0.set_imageFilter_mjpajy_k$(tmp0_use);
+        this_1.set_imageFilter_3887og_k$(this_0);
         var tmp_1;
         if (outline instanceof RRect) {
-          tmp_1 = this.drawRRect_i1m3a2_k$(outline, tmp0_use_0);
+          tmp_1 = this.drawRRect_6cei8q_k$(outline, this_1);
         } else {
-          tmp_1 = this.drawRect_svy35k_k$(outline, tmp0_use_0);
+          tmp_1 = this.drawRect_8t145u_k$(outline, this_1);
         }
         tmp_0 = tmp_1;
       }finally {
-        tmp0_use_0.close_ymq55z_k$();
+        this_1.close_yn9xrc_k$();
       }
       tmp = tmp_0;
     }finally {
-      tmp0_use.close_ymq55z_k$();
+      this_0.close_yn9xrc_k$();
     }
     return this;
   };
-  protoOf(Canvas).drawPath_qvim9i_k$ = function (path, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawPath_jdiwxq_k$ = function (path, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nDrawPath(this.get__ptr_wohp4o_k$(), getPtr(path), getPtr(paint));
     }finally {
@@ -2084,29 +2053,29 @@
     }
     return this;
   };
-  protoOf(Canvas).drawImage_w8dm7b_k$ = function (image, left, top) {
-    return this.drawImageRect_cpr7cg_k$(image, Companion_getInstance_47().makeWH_b3ckap_k$(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()), Companion_getInstance_47().makeXYWH_bits74_k$(left, top, image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()), Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), null, true);
+  protoOf(Canvas).drawImage_snfjmj_k$ = function (image, left, top) {
+    return this.drawImageRect_6jbgn9_k$(image, Companion_getInstance_47().makeWH_nov667_k$(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()), Companion_getInstance_47().makeXYWH_irfy4g_k$(left, top, image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()), Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), null, true);
   };
-  protoOf(Canvas).drawImage_39gumd_k$ = function (image, left, top, paint) {
-    return this.drawImageRect_cpr7cg_k$(image, Companion_getInstance_47().makeWH_b3ckap_k$(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()), Companion_getInstance_47().makeXYWH_bits74_k$(left, top, image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()), Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), paint, true);
+  protoOf(Canvas).drawImage_k1gvwf_k$ = function (image, left, top, paint) {
+    return this.drawImageRect_6jbgn9_k$(image, Companion_getInstance_47().makeWH_nov667_k$(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()), Companion_getInstance_47().makeXYWH_irfy4g_k$(left, top, image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()), Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), paint, true);
   };
-  protoOf(Canvas).drawImageRect_aqzq6c_k$ = function (image, dst) {
-    return this.drawImageRect_cpr7cg_k$(image, Companion_getInstance_47().makeWH_b3ckap_k$(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()), dst, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), null, true);
+  protoOf(Canvas).drawImageRect_o76hpo_k$ = function (image, dst) {
+    return this.drawImageRect_6jbgn9_k$(image, Companion_getInstance_47().makeWH_nov667_k$(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()), dst, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), null, true);
   };
-  protoOf(Canvas).drawImageRect_bkn3he_k$ = function (image, dst, paint) {
-    return this.drawImageRect_cpr7cg_k$(image, Companion_getInstance_47().makeWH_b3ckap_k$(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()), dst, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), paint, true);
+  protoOf(Canvas).drawImageRect_hv5sj4_k$ = function (image, dst, paint) {
+    return this.drawImageRect_6jbgn9_k$(image, Companion_getInstance_47().makeWH_nov667_k$(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$()), dst, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), paint, true);
   };
-  protoOf(Canvas).drawImageRect_va0ycl_k$ = function (image, src, dst) {
-    return this.drawImageRect_cpr7cg_k$(image, src, dst, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), null, true);
+  protoOf(Canvas).drawImageRect_8bb4mv_k$ = function (image, src, dst) {
+    return this.drawImageRect_6jbgn9_k$(image, src, dst, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), null, true);
   };
-  protoOf(Canvas).drawImageRect_2kp41v_k$ = function (image, src, dst, paint) {
-    return this.drawImageRect_cpr7cg_k$(image, src, dst, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), paint, true);
+  protoOf(Canvas).drawImageRect_xyjs0r_k$ = function (image, src, dst, paint) {
+    return this.drawImageRect_6jbgn9_k$(image, src, dst, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), paint, true);
   };
-  protoOf(Canvas).drawImageRect_h8k1k9_k$ = function (image, src, dst, paint, strict) {
-    return this.drawImageRect_cpr7cg_k$(image, src, dst, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), paint, strict);
+  protoOf(Canvas).drawImageRect_ungz8q_k$ = function (image, src, dst, paint, strict) {
+    return this.drawImageRect_6jbgn9_k$(image, src, dst, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), paint, strict);
   };
-  protoOf(Canvas).drawImageRect_cpr7cg_k$ = function (image, src, dst, samplingMode, paint, strict) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawImageRect_6jbgn9_k$ = function (image, src, dst, samplingMode, paint, strict) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nDrawImageRect(this.get__ptr_wohp4o_k$(), getPtr(image), src.get_left_woprgw_k$(), src.get_top_18ivbo_k$(), src.get_right_ixz7xv_k$(), src.get_bottom_bj8ras_k$(), dst.get_left_woprgw_k$(), dst.get_top_18ivbo_k$(), dst.get_right_ixz7xv_k$(), dst.get_bottom_bj8ras_k$(), samplingMode._packedInt1_kbgj89_k$(), samplingMode._packedInt2_kbgj8a_k$(), getPtr(paint), strict);
     }finally {
@@ -2116,8 +2085,8 @@
     }
     return this;
   };
-  protoOf(Canvas).drawImageNine_rhhjce_k$ = function (image, center, dst, filterMode, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawImageNine_8gvvj2_k$ = function (image, center, dst, filterMode, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nDrawImageNine(this.get__ptr_wohp4o_k$(), getPtr(image), center.get_left_woprgw_k$(), center.get_top_18ivbo_k$(), center.get_right_ixz7xv_k$(), center.get_bottom_bj8ras_k$(), dst.get_left_woprgw_k$(), dst.get_top_18ivbo_k$(), dst.get_right_ixz7xv_k$(), dst.get_bottom_bj8ras_k$(), filterMode.get_ordinal_ip24qg_k$(), getPtr(paint));
     }finally {
@@ -2127,8 +2096,8 @@
     }
     return this;
   };
-  protoOf(Canvas).drawRegion_nqet0o_k$ = function (r, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawRegion_v3j7ju_k$ = function (r, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nDrawRegion(this.get__ptr_wohp4o_k$(), getPtr(r), getPtr(paint));
     }finally {
@@ -2138,22 +2107,22 @@
     }
     return this;
   };
-  protoOf(Canvas).drawString_nx2xni_k$ = function (s, x, y, font, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawString_dzlp03_k$ = function (s, x, y, font, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_Canvas__1nDrawString(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(s), x, y, getPtr(font), getPtr(paint));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_Canvas__1nDrawString(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(s), x, y, getPtr(font), getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -2164,8 +2133,8 @@
     }
     return this;
   };
-  protoOf(Canvas).drawTextBlob_29ns30_k$ = function (blob, x, y, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawTextBlob_uqz4fy_k$ = function (blob, x, y, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nDrawTextBlob(this.get__ptr_wohp4o_k$(), getPtr(blob), x, y, getPtr(paint));
     }finally {
@@ -2175,7 +2144,7 @@
     }
     return this;
   };
-  protoOf(Canvas).drawTextLine_37sz5q_k$ = function (line, x, y, paint) {
+  protoOf(Canvas).drawTextLine_bgx3og_k$ = function (line, x, y, paint) {
     var tmp0_safe_receiver = line.get_textBlob_mmbepf_k$();
     if (tmp0_safe_receiver == null)
       null;
@@ -2187,31 +2156,31 @@
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'org.jetbrains.skia.Canvas.drawTextLine.<anonymous>.<anonymous>' call
-        tmp = this.drawTextBlob_29ns30_k$(tmp0_safe_receiver, x, y, paint);
+        tmp = this.drawTextBlob_uqz4fy_k$(tmp0_safe_receiver, x, y, paint);
       }finally {
-        tmp0_safe_receiver.close_ymq55z_k$();
+        tmp0_safe_receiver.close_yn9xrc_k$();
       }
     }
     return this;
   };
-  protoOf(Canvas).drawPicture_74g9w8_k$ = function (picture, matrix, paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawPicture_c2sqzv_k$ = function (picture, matrix, paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp = this.get__ptr_wohp4o_k$();
           var tmp_0 = getPtr(picture);
-          org_jetbrains_skia_Canvas__1nDrawPicture(tmp, tmp_0, tmp0_anonymous.toInterop_sfommq_k$(matrix == null ? null : matrix.get_mat_18j0uh_k$()), getPtr(paint));
+          org_jetbrains_skia_Canvas__1nDrawPicture(tmp, tmp_0, $this$interopScope.toInterop_uum1m9_k$(matrix == null ? null : matrix.get_mat_18j0uh_k$()), getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -2222,12 +2191,12 @@
     }
     return this;
   };
-  protoOf(Canvas).drawPicture$default_jpfrtd_k$ = function (picture, matrix, paint, $super) {
+  protoOf(Canvas).drawPicture$default_6adani_k$ = function (picture, matrix, paint, $super) {
     matrix = matrix === VOID ? null : matrix;
     paint = paint === VOID ? null : paint;
-    return $super === VOID ? this.drawPicture_74g9w8_k$(picture, matrix, paint) : $super.drawPicture_74g9w8_k$.call(this, picture, matrix, paint);
+    return $super === VOID ? this.drawPicture_c2sqzv_k$(picture, matrix, paint) : $super.drawPicture_c2sqzv_k$.call(this, picture, matrix, paint);
   };
-  protoOf(Canvas).drawTriangles_rzs9nd_k$ = function (positions, colors, texCoords, indices, blendMode, paint) {
+  protoOf(Canvas).drawTriangles_st42ww_k$ = function (positions, colors, texCoords, indices, blendMode, paint) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!((positions.length % 3 | 0) === 0)) {
@@ -2249,27 +2218,27 @@
       var message_1 = 'Expected texCoords.length == positions.length, got: ' + ensureNotNull(texCoords).length + ' != ' + positions.length;
       throw IllegalArgumentException_init_$Create$(toString(message_1));
     }
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp3_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp = this.get__ptr_wohp4o_k$();
           var tmp_0 = positions.length;
-          var tmp_1 = tmp3_anonymous.toInterop_sfommq_k$(Companion_getInstance_44().flattenArray_cu5v13_k$(positions));
-          var tmp_2 = tmp3_anonymous.toInterop_o3s7q3_k$(colors);
-          var tmp_3 = tmp3_anonymous.toInterop_sfommq_k$(Companion_getInstance_44().flattenArray_cu5v13_k$(texCoords));
+          var tmp_1 = $this$interopScope.toInterop_uum1m9_k$(Companion_getInstance_44().flattenArray_n7c6vn_k$(positions));
+          var tmp_2 = $this$interopScope.toInterop_i7skn2_k$(colors);
+          var tmp_3 = $this$interopScope.toInterop_uum1m9_k$(Companion_getInstance_44().flattenArray_n7c6vn_k$(texCoords));
           var tmp1_elvis_lhs = indices == null ? null : indices.length;
-          org_jetbrains_skia_Canvas__1nDrawVertices(tmp, 0, tmp_0, tmp_1, tmp_2, tmp_3, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, tmp3_anonymous.toInterop_30wotu_k$(indices), blendMode.get_ordinal_ip24qg_k$(), getPtr(paint));
+          org_jetbrains_skia_Canvas__1nDrawVertices(tmp, 0, tmp_0, tmp_1, tmp_2, tmp_3, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, $this$interopScope.toInterop_jg6tf3_k$(indices), blendMode.get_ordinal_ip24qg_k$(), getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -2279,13 +2248,13 @@
     }
     return this;
   };
-  protoOf(Canvas).drawTriangles$default_kwi4bp_k$ = function (positions, colors, texCoords, indices, blendMode, paint, $super) {
+  protoOf(Canvas).drawTriangles$default_86asga_k$ = function (positions, colors, texCoords, indices, blendMode, paint, $super) {
     colors = colors === VOID ? null : colors;
     texCoords = texCoords === VOID ? null : texCoords;
     indices = indices === VOID ? null : indices;
-    return $super === VOID ? this.drawTriangles_rzs9nd_k$(positions, colors, texCoords, indices, blendMode, paint) : $super.drawTriangles_rzs9nd_k$.call(this, positions, colors, texCoords, indices, blendMode, paint);
+    return $super === VOID ? this.drawTriangles_st42ww_k$(positions, colors, texCoords, indices, blendMode, paint) : $super.drawTriangles_st42ww_k$.call(this, positions, colors, texCoords, indices, blendMode, paint);
   };
-  protoOf(Canvas).drawTriangleStrip_sc5qo2_k$ = function (positions, colors, texCoords, indices, blendMode, paint) {
+  protoOf(Canvas).drawTriangleStrip_kvcgkl_k$ = function (positions, colors, texCoords, indices, blendMode, paint) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(colors == null ? true : colors.length === positions.length)) {
@@ -2300,27 +2269,27 @@
       var message_0 = 'Expected texCoords.length == positions.length, got: ' + ensureNotNull(texCoords).length + ' != ' + positions.length;
       throw IllegalArgumentException_init_$Create$(toString(message_0));
     }
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp2_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp = this.get__ptr_wohp4o_k$();
           var tmp_0 = positions.length;
-          var tmp_1 = tmp2_anonymous.toInterop_sfommq_k$(Companion_getInstance_44().flattenArray_cu5v13_k$(positions));
-          var tmp_2 = tmp2_anonymous.toInterop_o3s7q3_k$(colors);
-          var tmp_3 = tmp2_anonymous.toInterop_sfommq_k$(Companion_getInstance_44().flattenArray_cu5v13_k$(texCoords));
+          var tmp_1 = $this$interopScope.toInterop_uum1m9_k$(Companion_getInstance_44().flattenArray_n7c6vn_k$(positions));
+          var tmp_2 = $this$interopScope.toInterop_i7skn2_k$(colors);
+          var tmp_3 = $this$interopScope.toInterop_uum1m9_k$(Companion_getInstance_44().flattenArray_n7c6vn_k$(texCoords));
           var tmp1_elvis_lhs = indices == null ? null : indices.length;
-          org_jetbrains_skia_Canvas__1nDrawVertices(tmp, 1, tmp_0, tmp_1, tmp_2, tmp_3, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, tmp2_anonymous.toInterop_30wotu_k$(indices), blendMode.get_ordinal_ip24qg_k$(), getPtr(paint));
+          org_jetbrains_skia_Canvas__1nDrawVertices(tmp, 1, tmp_0, tmp_1, tmp_2, tmp_3, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, $this$interopScope.toInterop_jg6tf3_k$(indices), blendMode.get_ordinal_ip24qg_k$(), getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -2330,13 +2299,13 @@
     }
     return this;
   };
-  protoOf(Canvas).drawTriangleStrip$default_bo9ebk_k$ = function (positions, colors, texCoords, indices, blendMode, paint, $super) {
+  protoOf(Canvas).drawTriangleStrip$default_8yvtox_k$ = function (positions, colors, texCoords, indices, blendMode, paint, $super) {
     colors = colors === VOID ? null : colors;
     texCoords = texCoords === VOID ? null : texCoords;
     indices = indices === VOID ? null : indices;
-    return $super === VOID ? this.drawTriangleStrip_sc5qo2_k$(positions, colors, texCoords, indices, blendMode, paint) : $super.drawTriangleStrip_sc5qo2_k$.call(this, positions, colors, texCoords, indices, blendMode, paint);
+    return $super === VOID ? this.drawTriangleStrip_kvcgkl_k$(positions, colors, texCoords, indices, blendMode, paint) : $super.drawTriangleStrip_kvcgkl_k$.call(this, positions, colors, texCoords, indices, blendMode, paint);
   };
-  protoOf(Canvas).drawTriangleFan_vq6vrt_k$ = function (positions, colors, texCoords, indices, blendMode, paint) {
+  protoOf(Canvas).drawTriangleFan_1f1tc0_k$ = function (positions, colors, texCoords, indices, blendMode, paint) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(colors == null ? true : colors.length === positions.length)) {
@@ -2351,27 +2320,27 @@
       var message_0 = 'Expected texCoords.length == positions.length, got: ' + ensureNotNull(texCoords).length + ' != ' + positions.length;
       throw IllegalArgumentException_init_$Create$(toString(message_0));
     }
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp2_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp = this.get__ptr_wohp4o_k$();
           var tmp_0 = positions.length;
-          var tmp_1 = tmp2_anonymous.toInterop_sfommq_k$(Companion_getInstance_44().flattenArray_cu5v13_k$(positions));
-          var tmp_2 = tmp2_anonymous.toInterop_o3s7q3_k$(colors);
-          var tmp_3 = tmp2_anonymous.toInterop_sfommq_k$(Companion_getInstance_44().flattenArray_cu5v13_k$(texCoords));
+          var tmp_1 = $this$interopScope.toInterop_uum1m9_k$(Companion_getInstance_44().flattenArray_n7c6vn_k$(positions));
+          var tmp_2 = $this$interopScope.toInterop_i7skn2_k$(colors);
+          var tmp_3 = $this$interopScope.toInterop_uum1m9_k$(Companion_getInstance_44().flattenArray_n7c6vn_k$(texCoords));
           var tmp1_elvis_lhs = indices == null ? null : indices.length;
-          org_jetbrains_skia_Canvas__1nDrawVertices(tmp, 2, tmp_0, tmp_1, tmp_2, tmp_3, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, tmp2_anonymous.toInterop_30wotu_k$(indices), blendMode.get_ordinal_ip24qg_k$(), getPtr(paint));
+          org_jetbrains_skia_Canvas__1nDrawVertices(tmp, 2, tmp_0, tmp_1, tmp_2, tmp_3, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, $this$interopScope.toInterop_jg6tf3_k$(indices), blendMode.get_ordinal_ip24qg_k$(), getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -2381,13 +2350,13 @@
     }
     return this;
   };
-  protoOf(Canvas).drawTriangleFan$default_e2bx97_k$ = function (positions, colors, texCoords, indices, blendMode, paint, $super) {
+  protoOf(Canvas).drawTriangleFan$default_smbjli_k$ = function (positions, colors, texCoords, indices, blendMode, paint, $super) {
     colors = colors === VOID ? null : colors;
     texCoords = texCoords === VOID ? null : texCoords;
     indices = indices === VOID ? null : indices;
-    return $super === VOID ? this.drawTriangleFan_vq6vrt_k$(positions, colors, texCoords, indices, blendMode, paint) : $super.drawTriangleFan_vq6vrt_k$.call(this, positions, colors, texCoords, indices, blendMode, paint);
+    return $super === VOID ? this.drawTriangleFan_1f1tc0_k$(positions, colors, texCoords, indices, blendMode, paint) : $super.drawTriangleFan_1f1tc0_k$.call(this, positions, colors, texCoords, indices, blendMode, paint);
   };
-  protoOf(Canvas).drawVertices_5fhilh_k$ = function (vertexMode, positions, colors, texCoords, indices, blendMode, paint) {
+  protoOf(Canvas).drawVertices_kbewma_k$ = function (vertexMode, positions, colors, texCoords, indices, blendMode, paint) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!((positions.length % 2 | 0) === 0)) {
@@ -2410,27 +2379,27 @@
       var message_1 = 'Expected texCoords.length == positions.length, got: ' + ensureNotNull(texCoords).length + ' != ' + positions.length;
       throw IllegalArgumentException_init_$Create$(toString(message_1));
     }
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp3_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp = this.get__ptr_wohp4o_k$();
           var tmp_0 = vertexMode.get_ordinal_ip24qg_k$();
-          var tmp_1 = tmp3_anonymous.toInterop_sfommq_k$(positions);
-          var tmp_2 = tmp3_anonymous.toInterop_o3s7q3_k$(colors);
-          var tmp_3 = tmp3_anonymous.toInterop_sfommq_k$(texCoords);
+          var tmp_1 = $this$interopScope.toInterop_uum1m9_k$(positions);
+          var tmp_2 = $this$interopScope.toInterop_i7skn2_k$(colors);
+          var tmp_3 = $this$interopScope.toInterop_uum1m9_k$(texCoords);
           var tmp1_elvis_lhs = indices == null ? null : indices.length;
-          org_jetbrains_skia_Canvas__1nDrawVertices(tmp, tmp_0, points, tmp_1, tmp_2, tmp_3, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, tmp3_anonymous.toInterop_30wotu_k$(indices), blendMode.get_ordinal_ip24qg_k$(), getPtr(paint));
+          org_jetbrains_skia_Canvas__1nDrawVertices(tmp, tmp_0, points, tmp_1, tmp_2, tmp_3, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, $this$interopScope.toInterop_jg6tf3_k$(indices), blendMode.get_ordinal_ip24qg_k$(), getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -2440,13 +2409,13 @@
     }
     return this;
   };
-  protoOf(Canvas).drawVertices$default_rllpnb_k$ = function (vertexMode, positions, colors, texCoords, indices, blendMode, paint, $super) {
+  protoOf(Canvas).drawVertices$default_dgfhui_k$ = function (vertexMode, positions, colors, texCoords, indices, blendMode, paint, $super) {
     colors = colors === VOID ? null : colors;
     texCoords = texCoords === VOID ? null : texCoords;
     indices = indices === VOID ? null : indices;
-    return $super === VOID ? this.drawVertices_5fhilh_k$(vertexMode, positions, colors, texCoords, indices, blendMode, paint) : $super.drawVertices_5fhilh_k$.call(this, vertexMode, positions, colors, texCoords, indices, blendMode, paint);
+    return $super === VOID ? this.drawVertices_kbewma_k$(vertexMode, positions, colors, texCoords, indices, blendMode, paint) : $super.drawVertices_kbewma_k$.call(this, vertexMode, positions, colors, texCoords, indices, blendMode, paint);
   };
-  protoOf(Canvas).drawPatch_dnj63d_k$ = function (cubics, colors, texCoords, blendMode, paint) {
+  protoOf(Canvas).drawPatch_fqm0ir_k$ = function (cubics, colors, texCoords, blendMode, paint) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(cubics.length === 12)) {
@@ -2468,21 +2437,21 @@
       var message_1 = 'Expected texCoords.length == 4, got: ' + ensureNotNull(texCoords).length;
       throw IllegalArgumentException_init_$Create$(toString(message_1));
     }
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp3_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_Canvas__1nDrawPatch(this.get__ptr_wohp4o_k$(), tmp3_anonymous.toInterop_sfommq_k$(Companion_getInstance_44().flattenArray_cu5v13_k$(cubics)), tmp3_anonymous.toInterop_o3s7q3_k$(colors), tmp3_anonymous.toInterop_sfommq_k$(Companion_getInstance_44().flattenArray_cu5v13_k$(texCoords)), blendMode.get_ordinal_ip24qg_k$(), getPtr(paint));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_Canvas__1nDrawPatch(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_uum1m9_k$(Companion_getInstance_44().flattenArray_n7c6vn_k$(cubics)), $this$interopScope.toInterop_i7skn2_k$(colors), $this$interopScope.toInterop_uum1m9_k$(Companion_getInstance_44().flattenArray_n7c6vn_k$(texCoords)), blendMode.get_ordinal_ip24qg_k$(), getPtr(paint));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -2492,34 +2461,34 @@
     }
     return this;
   };
-  protoOf(Canvas).drawPatch$default_6s2jhv_k$ = function (cubics, colors, texCoords, blendMode, paint, $super) {
+  protoOf(Canvas).drawPatch$default_7t62tj_k$ = function (cubics, colors, texCoords, blendMode, paint, $super) {
     texCoords = texCoords === VOID ? null : texCoords;
-    return $super === VOID ? this.drawPatch_dnj63d_k$(cubics, colors, texCoords, blendMode, paint) : $super.drawPatch_dnj63d_k$.call(this, cubics, colors, texCoords, blendMode, paint);
+    return $super === VOID ? this.drawPatch_fqm0ir_k$(cubics, colors, texCoords, blendMode, paint) : $super.drawPatch_fqm0ir_k$.call(this, cubics, colors, texCoords, blendMode, paint);
   };
-  protoOf(Canvas).drawDrawable_h8qtwd_k$ = function (drawable) {
-    return this.drawDrawable_sfjzdo_k$(drawable, null);
+  protoOf(Canvas).drawDrawable_kf1bfn_k$ = function (drawable) {
+    return this.drawDrawable_qsidwc_k$(drawable, null);
   };
-  protoOf(Canvas).drawDrawable_qxemcj_k$ = function (drawable, x, y) {
-    return this.drawDrawable_sfjzdo_k$(drawable, Companion_getInstance_33().makeTranslate_bkaev4_k$(x, y));
+  protoOf(Canvas).drawDrawable_n6n3kz_k$ = function (drawable, x, y) {
+    return this.drawDrawable_qsidwc_k$(drawable, Companion_getInstance_33().makeTranslate_9v7aio_k$(x, y));
   };
-  protoOf(Canvas).drawDrawable_sfjzdo_k$ = function (drawable, matrix) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawDrawable_qsidwc_k$ = function (drawable, matrix) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp = this.get__ptr_wohp4o_k$();
           var tmp_0 = getPtr(drawable);
-          org_jetbrains_skia_Canvas__1nDrawDrawable(tmp, tmp_0, tmp0_anonymous.toInterop_sfommq_k$(matrix == null ? null : matrix.get_mat_18j0uh_k$()));
+          org_jetbrains_skia_Canvas__1nDrawDrawable(tmp, tmp_0, $this$interopScope.toInterop_uum1m9_k$(matrix == null ? null : matrix.get_mat_18j0uh_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -2529,8 +2498,8 @@
     }
     return this;
   };
-  protoOf(Canvas).clear_dlzalo_k$ = function (color) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).clear_yx1ndh_k$ = function (color) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nClear(this.get__ptr_wohp4o_k$(), color);
     }finally {
@@ -2538,8 +2507,8 @@
     }
     return this;
   };
-  protoOf(Canvas).drawPaint_rpu8s9_k$ = function (paint) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).drawPaint_qi18b5_k$ = function (paint) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nDrawPaint(this.get__ptr_wohp4o_k$(), getPtr(paint));
     }finally {
@@ -2548,37 +2517,37 @@
     }
     return this;
   };
-  protoOf(Canvas).setMatrix_we3l9d_k$ = function (matrix) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).setMatrix_1bkdp9_k$ = function (matrix) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_Canvas__1nSetMatrix(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_sfommq_k$(matrix.get_mat_18j0uh_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_Canvas__1nSetMatrix(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_uum1m9_k$(matrix.get_mat_18j0uh_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
   protoOf(Canvas).resetMatrix_fwo0sw_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Canvas__1nResetMatrix(this.get__ptr_wohp4o_k$());
     return this;
   };
   protoOf(Canvas).get_localToDevice_9bi2hf_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_34();
-      tmp = tmp_0.fromInteropPointer_26ocmq_k$(Canvas$_get_localToDevice_$lambda_ciw2zi(this));
+      tmp = tmp_0.fromInteropPointer_2qty6v_k$(Canvas$_get_localToDevice_$lambda_ciw2zi(this));
     }finally {
       reachabilityBarrier(this);
     }
@@ -2587,51 +2556,51 @@
   protoOf(Canvas).get_localToDeviceAsMatrix33_wcivmu_k$ = function () {
     return this.get_localToDevice_9bi2hf_k$().asMatrix33_i0r31v_k$();
   };
-  protoOf(Canvas).clipRect_9zlxw5_k$ = function (r, mode, antiAlias) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).clipRect_7110ke_k$ = function (r, mode, antiAlias) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Canvas__1nClipRect(this.get__ptr_wohp4o_k$(), r.get_left_woprgw_k$(), r.get_top_18ivbo_k$(), r.get_right_ixz7xv_k$(), r.get_bottom_bj8ras_k$(), mode.get_ordinal_ip24qg_k$(), antiAlias);
     return this;
   };
-  protoOf(Canvas).clipRect_sf7jnf_k$ = function (r, mode) {
-    return this.clipRect_9zlxw5_k$(r, mode, false);
+  protoOf(Canvas).clipRect_xw3sir_k$ = function (r, mode) {
+    return this.clipRect_7110ke_k$(r, mode, false);
   };
-  protoOf(Canvas).clipRect_3o4ko5_k$ = function (r, antiAlias) {
-    return this.clipRect_9zlxw5_k$(r, ClipMode_INTERSECT_getInstance(), antiAlias);
+  protoOf(Canvas).clipRect_yw21l6_k$ = function (r, antiAlias) {
+    return this.clipRect_7110ke_k$(r, ClipMode_INTERSECT_getInstance(), antiAlias);
   };
-  protoOf(Canvas).clipRect_14pfrf_k$ = function (r) {
-    return this.clipRect_9zlxw5_k$(r, ClipMode_INTERSECT_getInstance(), false);
+  protoOf(Canvas).clipRect_cm7pjj_k$ = function (r) {
+    return this.clipRect_7110ke_k$(r, ClipMode_INTERSECT_getInstance(), false);
   };
-  protoOf(Canvas).clipRRect_2etxbr_k$ = function (r, mode, antiAlias) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).clipRRect_mzt24i_k$ = function (r, mode, antiAlias) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_Canvas__1nClipRRect(this.get__ptr_wohp4o_k$(), r.get_left_woprgw_k$(), r.get_top_18ivbo_k$(), r.get_right_ixz7xv_k$(), r.get_bottom_bj8ras_k$(), tmp0_anonymous.toInterop_sfommq_k$(r.get_radii_ixu1u4_k$()), r.get_radii_ixu1u4_k$().length, mode.get_ordinal_ip24qg_k$(), antiAlias);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_Canvas__1nClipRRect(this.get__ptr_wohp4o_k$(), r.get_left_woprgw_k$(), r.get_top_18ivbo_k$(), r.get_right_ixz7xv_k$(), r.get_bottom_bj8ras_k$(), $this$interopScope.toInterop_uum1m9_k$(r.get_radii_ixu1u4_k$()), r.get_radii_ixu1u4_k$().length, mode.get_ordinal_ip24qg_k$(), antiAlias);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(Canvas).clipRRect_479uzh_k$ = function (r, mode) {
-    return this.clipRRect_2etxbr_k$(r, mode, false);
+  protoOf(Canvas).clipRRect_gsebjx_k$ = function (r, mode) {
+    return this.clipRRect_mzt24i_k$(r, mode, false);
   };
-  protoOf(Canvas).clipRRect_60xcft_k$ = function (r, antiAlias) {
-    return this.clipRRect_2etxbr_k$(r, ClipMode_INTERSECT_getInstance(), antiAlias);
+  protoOf(Canvas).clipRRect_40mtee_k$ = function (r, antiAlias) {
+    return this.clipRRect_mzt24i_k$(r, ClipMode_INTERSECT_getInstance(), antiAlias);
   };
-  protoOf(Canvas).clipRRect_x1bv2r_k$ = function (r) {
-    return this.clipRRect_2etxbr_k$(r, ClipMode_INTERSECT_getInstance(), false);
+  protoOf(Canvas).clipRRect_nysylr_k$ = function (r) {
+    return this.clipRRect_mzt24i_k$(r, ClipMode_INTERSECT_getInstance(), false);
   };
-  protoOf(Canvas).clipPath_yggl5f_k$ = function (p, mode, antiAlias) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).clipPath_agzsy6_k$ = function (p, mode, antiAlias) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nClipPath(this.get__ptr_wohp4o_k$(), getPtr(p), mode.get_ordinal_ip24qg_k$(), antiAlias);
     }finally {
@@ -2640,17 +2609,17 @@
     }
     return this;
   };
-  protoOf(Canvas).clipPath_fxbjcp_k$ = function (p, mode) {
-    return this.clipPath_yggl5f_k$(p, mode, false);
+  protoOf(Canvas).clipPath_dsbah5_k$ = function (p, mode) {
+    return this.clipPath_agzsy6_k$(p, mode, false);
   };
-  protoOf(Canvas).clipPath_z6kj6l_k$ = function (p, antiAlias) {
-    return this.clipPath_yggl5f_k$(p, ClipMode_INTERSECT_getInstance(), antiAlias);
+  protoOf(Canvas).clipPath_ofjwqe_k$ = function (p, antiAlias) {
+    return this.clipPath_agzsy6_k$(p, ClipMode_INTERSECT_getInstance(), antiAlias);
   };
-  protoOf(Canvas).clipPath_9hi4qf_k$ = function (p) {
-    return this.clipPath_yggl5f_k$(p, ClipMode_INTERSECT_getInstance(), false);
+  protoOf(Canvas).clipPath_y4b4hn_k$ = function (p) {
+    return this.clipPath_agzsy6_k$(p, ClipMode_INTERSECT_getInstance(), false);
   };
-  protoOf(Canvas).clipRegion_g0rd7p_k$ = function (r, mode) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).clipRegion_ixpj9z_k$ = function (r, mode) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_Canvas__1nClipRegion(this.get__ptr_wohp4o_k$(), getPtr(r), mode.get_ordinal_ip24qg_k$());
     }finally {
@@ -2659,153 +2628,153 @@
     }
     return this;
   };
-  protoOf(Canvas).clipRegion_358njf_k$ = function (r) {
-    return this.clipRegion_g0rd7p_k$(r, ClipMode_INTERSECT_getInstance());
+  protoOf(Canvas).clipRegion_cifa3f_k$ = function (r) {
+    return this.clipRegion_ixpj9z_k$(r, ClipMode_INTERSECT_getInstance());
   };
-  protoOf(Canvas).translate_y4aglq_k$ = function (dx, dy) {
+  protoOf(Canvas).translate_k2k08i_k$ = function (dx, dy) {
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        Stats_getInstance().onNativeCall_s1vbwj_k$();
+        Stats_getInstance().onNativeCall_s2f4hw_k$();
         org_jetbrains_skia_Canvas__1nTranslate(this.get__ptr_wohp4o_k$(), dx, dy);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(Canvas).scale_6iftdi_k$ = function (sx, sy) {
+  protoOf(Canvas).scale_ln7xze_k$ = function (sx, sy) {
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        Stats_getInstance().onNativeCall_s1vbwj_k$();
+        Stats_getInstance().onNativeCall_s2f4hw_k$();
         org_jetbrains_skia_Canvas__1nScale(this.get__ptr_wohp4o_k$(), sx, sy);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(Canvas).rotate_aghjf1_k$ = function (deg) {
+  protoOf(Canvas).rotate_n08qpp_k$ = function (deg) {
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        Stats_getInstance().onNativeCall_s1vbwj_k$();
+        Stats_getInstance().onNativeCall_s2f4hw_k$();
         org_jetbrains_skia_Canvas__1nRotate(this.get__ptr_wohp4o_k$(), deg, 0.0, 0.0);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(Canvas).rotate_adzdkj_k$ = function (deg, x, y) {
+  protoOf(Canvas).rotate_bev7nh_k$ = function (deg, x, y) {
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        Stats_getInstance().onNativeCall_s1vbwj_k$();
+        Stats_getInstance().onNativeCall_s2f4hw_k$();
         org_jetbrains_skia_Canvas__1nRotate(this.get__ptr_wohp4o_k$(), deg, x, y);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(Canvas).skew_r8bu0m_k$ = function (sx, sy) {
+  protoOf(Canvas).skew_fkteh6_k$ = function (sx, sy) {
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        Stats_getInstance().onNativeCall_s1vbwj_k$();
+        Stats_getInstance().onNativeCall_s2f4hw_k$();
         org_jetbrains_skia_Canvas__1nSkew(this.get__ptr_wohp4o_k$(), sx, sy);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(Canvas).concat_f2glyq_k$ = function (matrix) {
+  protoOf(Canvas).concat_1ahtf6_k$ = function (matrix) {
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        Stats_getInstance().onNativeCall_s1vbwj_k$();
-        org_jetbrains_skia_Canvas__1nConcat(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_sfommq_k$(matrix.get_mat_18j0uh_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        Stats_getInstance().onNativeCall_s2f4hw_k$();
+        org_jetbrains_skia_Canvas__1nConcat(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_uum1m9_k$(matrix.get_mat_18j0uh_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(Canvas).concat_f2glzm_k$ = function (matrix) {
+  protoOf(Canvas).concat_1fc4xa_k$ = function (matrix) {
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        Stats_getInstance().onNativeCall_s1vbwj_k$();
-        org_jetbrains_skia_Canvas__1nConcat44(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_sfommq_k$(matrix.get_mat_18j0uh_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        Stats_getInstance().onNativeCall_s2f4hw_k$();
+        org_jetbrains_skia_Canvas__1nConcat44(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_uum1m9_k$(matrix.get_mat_18j0uh_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(Canvas).readPixels_ing92n_k$ = function (bitmap, srcX, srcY) {
+  protoOf(Canvas).readPixels_yiqj5g_k$ = function (bitmap, srcX, srcY) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Canvas__1nReadPixels(this.get__ptr_wohp4o_k$(), getPtr(bitmap), srcX, srcY);
     }finally {
       reachabilityBarrier(this);
@@ -2813,10 +2782,10 @@
     }
     return tmp;
   };
-  protoOf(Canvas).writePixels_9bkzuw_k$ = function (bitmap, x, y) {
+  protoOf(Canvas).writePixels_ddrjz1_k$ = function (bitmap, x, y) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Canvas__1nWritePixels(this.get__ptr_wohp4o_k$(), getPtr(bitmap), x, y);
     }finally {
       reachabilityBarrier(this);
@@ -2827,17 +2796,17 @@
   protoOf(Canvas).save_23ibh_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Canvas__1nSave(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Canvas).saveLayer_dsxx8u_k$ = function (left, top, right, bottom, paint) {
+  protoOf(Canvas).saveLayer_d6e1vc_k$ = function (left, top, right, bottom, paint) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Canvas__1nSaveLayerRect(this.get__ptr_wohp4o_k$(), left, top, right, bottom, getPtr(paint));
     }finally {
       reachabilityBarrier(this);
@@ -2845,10 +2814,10 @@
     }
     return tmp;
   };
-  protoOf(Canvas).saveLayer_4r6io8_k$ = function (bounds, paint) {
+  protoOf(Canvas).saveLayer_hn0vb8_k$ = function (bounds, paint) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = bounds == null ? org_jetbrains_skia_Canvas__1nSaveLayer(this.get__ptr_wohp4o_k$(), getPtr(paint)) : org_jetbrains_skia_Canvas__1nSaveLayerRect(this.get__ptr_wohp4o_k$(), bounds.get_left_woprgw_k$(), bounds.get_top_18ivbo_k$(), bounds.get_right_ixz7xv_k$(), bounds.get_bottom_bj8ras_k$(), getPtr(paint));
     }finally {
       reachabilityBarrier(this);
@@ -2859,7 +2828,7 @@
   protoOf(Canvas).get_saveCount_b4oand_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Canvas__1nGetSaveCount(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -2867,12 +2836,12 @@
     return tmp;
   };
   protoOf(Canvas).restore_i5fnny_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Canvas__1nRestore(this.get__ptr_wohp4o_k$());
     return this;
   };
-  protoOf(Canvas).restoreToCount_he34x1_k$ = function (saveCount) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Canvas).restoreToCount_ilxoky_k$ = function (saveCount) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Canvas__1nRestoreToCount(this.get__ptr_wohp4o_k$(), saveCount);
     return this;
   };
@@ -2889,7 +2858,7 @@
         return ClipMode_INTERSECT_getInstance();
       default:
         ClipMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -2924,13 +2893,13 @@
     this.CYAN_1 = -16711681;
     this.MAGENTA_1 = -65281;
   }
-  protoOf(Color).makeLerp_w6szjd_k$ = function (c1, c2, weight) {
-    var r = numberToInt(this.getR_v510l7_k$(c1) * weight + this.getR_v510l7_k$(c2) * (1 - weight));
-    var g = numberToInt(this.getG_gepfw0_k$(c1) * weight + this.getG_gepfw0_k$(c2) * (1 - weight));
-    var b = numberToInt(this.getB_5qfzkl_k$(c1) * weight + this.getB_5qfzkl_k$(c2) * (1 - weight));
-    return this.makeRGB_te8am_k$(r, g, b);
+  protoOf(Color).makeLerp_sohc43_k$ = function (c1, c2, weight) {
+    var r = numberToInt(this.getR_z1w658_k$(c1) * weight + this.getR_z1w658_k$(c2) * (1 - weight));
+    var g = numberToInt(this.getG_vcp9jb_k$(c1) * weight + this.getG_vcp9jb_k$(c2) * (1 - weight));
+    var b = numberToInt(this.getB_to5rfw_k$(c1) * weight + this.getB_to5rfw_k$(c2) * (1 - weight));
+    return this.makeRGB_pgulvr_k$(r, g, b);
   };
-  protoOf(Color).makeARGB_cms92_k$ = function (a, r, g, b) {
+  protoOf(Color).makeARGB_v8nmpm_k$ = function (a, r, g, b) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(0 <= a ? a <= 255 : false)) {
@@ -2961,22 +2930,22 @@
     }
     return (a & 255) << 24 | (r & 255) << 16 | (g & 255) << 8 | b & 255;
   };
-  protoOf(Color).makeRGB_te8am_k$ = function (r, g, b) {
-    return this.makeARGB_cms92_k$(255, r, g, b);
+  protoOf(Color).makeRGB_pgulvr_k$ = function (r, g, b) {
+    return this.makeARGB_v8nmpm_k$(255, r, g, b);
   };
-  protoOf(Color).getA_3llapi_k$ = function (color) {
+  protoOf(Color).getA_tc1v0t_k$ = function (color) {
     return color >> 24 & 255;
   };
-  protoOf(Color).getR_v510l7_k$ = function (color) {
+  protoOf(Color).getR_z1w658_k$ = function (color) {
     return color >> 16 & 255;
   };
-  protoOf(Color).getG_gepfw0_k$ = function (color) {
+  protoOf(Color).getG_vcp9jb_k$ = function (color) {
     return color >> 8 & 255;
   };
-  protoOf(Color).getB_5qfzkl_k$ = function (color) {
+  protoOf(Color).getB_to5rfw_k$ = function (color) {
     return color & 255;
   };
-  protoOf(Color).withA_w79z1h_k$ = function (color, a) {
+  protoOf(Color).withA_tv8b97_k$ = function (color, a) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(0 <= a ? a <= 255 : false)) {
@@ -2986,7 +2955,7 @@
     }
     return (a & 255) << 24 | color & 16777215;
   };
-  protoOf(Color).withR_xmze7g_k$ = function (color, r) {
+  protoOf(Color).withR_bdshfw_k$ = function (color, r) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(0 <= r ? r <= 255 : false)) {
@@ -2996,7 +2965,7 @@
     }
     return (r & 255) << 16 | color & -16711681;
   };
-  protoOf(Color).withG_ka7pi9_k$ = function (color, g) {
+  protoOf(Color).withG_j5y935_k$ = function (color, g) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(0 <= g ? g <= 255 : false)) {
@@ -3006,7 +2975,7 @@
     }
     return (g & 255) << 8 | color & -65281;
   };
-  protoOf(Color).withB_bm6cmc_k$ = function (color, b) {
+  protoOf(Color).withB_g8tykc_k$ = function (color, b) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(0 <= b ? b <= 255 : false)) {
@@ -3066,7 +3035,7 @@
   function Companion_3() {
     Companion_instance_3 = this;
   }
-  protoOf(Companion_3).flattenArray_9fsag1_k$ = function (colors) {
+  protoOf(Companion_3).flattenArray_qrwamz_k$ = function (colors) {
     var arr = new Float32Array(imul(colors.length, 4));
     var inductionVariable = 0;
     var last = colors.length - 1 | 0;
@@ -3109,32 +3078,28 @@
     return this.a_1;
   };
   protoOf(Color4f).toColor_jiwzmg_k$ = function () {
-    var tmp$ret$0;
     // Inline function 'kotlin.math.round' call
-    var tmp0_round = this.a_1 * 255.0;
-    tmp$ret$0 = round(tmp0_round);
+    var x = this.a_1 * 255.0;
+    var tmp$ret$0 = round(x);
     var tmp = numberToInt(tmp$ret$0) << 24;
-    var tmp$ret$1;
     // Inline function 'kotlin.math.round' call
-    var tmp1_round = this.r_1 * 255.0;
-    tmp$ret$1 = round(tmp1_round);
+    var x_0 = this.r_1 * 255.0;
+    var tmp$ret$1 = round(x_0);
     var tmp_0 = tmp | numberToInt(tmp$ret$1) << 16;
-    var tmp$ret$2;
     // Inline function 'kotlin.math.round' call
-    var tmp2_round = this.g_1 * 255.0;
-    tmp$ret$2 = round(tmp2_round);
+    var x_1 = this.g_1 * 255.0;
+    var tmp$ret$2 = round(x_1);
     var tmp_1 = tmp_0 | numberToInt(tmp$ret$2) << 8;
-    var tmp$ret$3;
     // Inline function 'kotlin.math.round' call
-    var tmp3_round = this.b_1 * 255.0;
-    tmp$ret$3 = round(tmp3_round);
+    var x_2 = this.b_1 * 255.0;
+    var tmp$ret$3 = round(x_2);
     return tmp_1 | numberToInt(tmp$ret$3);
   };
   protoOf(Color4f).flatten_cvohks_k$ = function () {
     // Inline function 'kotlin.floatArrayOf' call
     return new Float32Array([this.r_1, this.g_1, this.b_1, this.a_1]);
   };
-  protoOf(Color4f).makeLerp_k0hjaz_k$ = function (other, weight) {
+  protoOf(Color4f).makeLerp_quxkn_k$ = function (other, weight) {
     return new Color4f(this.r_1 + (other.r_1 - this.r_1) * weight, this.g_1 + (other.g_1 - this.g_1) * weight, this.b_1 + (other.b_1 - this.b_1) * weight, this.a_1 + (other.a_1 - this.a_1) * weight);
   };
   protoOf(Color4f).equals = function (other) {
@@ -3162,16 +3127,16 @@
   protoOf(Color4f).toString = function () {
     return 'Color4f(_r=' + this.r_1 + ', _g=' + this.g_1 + ', _b=' + this.b_1 + ', _a=' + this.a_1 + ')';
   };
-  protoOf(Color4f).withR_klemse_k$ = function (_r) {
+  protoOf(Color4f).withR_3kp7w_k$ = function (_r) {
     return this.r_1 === _r ? this : new Color4f(_r, this.g_1, this.b_1, this.a_1);
   };
-  protoOf(Color4f).withG_cfy31_k$ = function (_g) {
+  protoOf(Color4f).withG_i9b4o9_k$ = function (_g) {
     return this.g_1 === _g ? this : new Color4f(this.r_1, _g, this.b_1, this.a_1);
   };
-  protoOf(Color4f).withB_svoq8e_k$ = function (_b) {
+  protoOf(Color4f).withB_qlplj8_k$ = function (_b) {
     return this.b_1 === _b ? this : new Color4f(this.r_1, this.g_1, _b, this.a_1);
   };
-  protoOf(Color4f).withA_kioup9_k$ = function (_a) {
+  protoOf(Color4f).withA_s9shpf_k$ = function (_a) {
     return this.a_1 === _a ? this : new Color4f(this.r_1, this.g_1, this.b_1, _a);
   };
   var ColorAlphaType_UNKNOWN_instance;
@@ -3193,7 +3158,7 @@
         return ColorAlphaType_UNPREMUL_getInstance();
       default:
         ColorAlphaType_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -3245,7 +3210,7 @@
         return ColorChannel_A_getInstance();
       default:
         ColorChannel_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -3280,14 +3245,14 @@
   }
   function Companion_4() {
     Companion_instance_4 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
     this.sRGBToLinearGamma_1 = ColorFilter_init_$Create$_0(org_jetbrains_skia_ColorFilter__1nGetSRGBToLinearGamma(), false);
     this.luma_1 = ColorFilter_init_$Create$_0(org_jetbrains_skia_ColorFilter__1nGetLuma(), false);
   }
-  protoOf(Companion_4).makeComposed_be7j36_k$ = function (outer, inner) {
+  protoOf(Companion_4).makeComposed_k72nog_k$ = function (outer, inner) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = ColorFilter_init_$Create$(org_jetbrains_skia_ColorFilter__1nMakeComposed(getPtr(outer), getPtr(inner)));
     }finally {
       reachabilityBarrier(outer);
@@ -3295,12 +3260,12 @@
     }
     return tmp;
   };
-  protoOf(Companion_4).makeBlend_s8ia93_k$ = function (color, mode) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_4).makeBlend_hxd0mv_k$ = function (color, mode) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return ColorFilter_init_$Create$(org_jetbrains_skia_ColorFilter__1nMakeBlend(color, mode.get_ordinal_ip24qg_k$()));
   };
-  protoOf(Companion_4).makeMatrix_rjjhx4_k$ = function (matrix) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_4).makeMatrix_xfgxbq_k$ = function (matrix) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$1;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -3308,21 +3273,21 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeMatrix.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = org_jetbrains_skia_ColorFilter__1nMakeMatrix(tmp0_anonymous.toInterop_sfommq_k$(matrix.get_mat_18j0uh_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = org_jetbrains_skia_ColorFilter__1nMakeMatrix($this$interopScope.toInterop_uum1m9_k$(matrix.get_mat_18j0uh_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return ColorFilter_init_$Create$(tmp$ret$1);
   };
-  protoOf(Companion_4).makeHSLAMatrix_ksnm88_k$ = function (matrix) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_4).makeHSLAMatrix_cx1wc6_k$ = function (matrix) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$1;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -3330,20 +3295,20 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeHSLAMatrix.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = org_jetbrains_skia_ColorFilter__1nMakeHSLAMatrix(tmp0_anonymous.toInterop_sfommq_k$(matrix.get_mat_18j0uh_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = org_jetbrains_skia_ColorFilter__1nMakeHSLAMatrix($this$interopScope.toInterop_uum1m9_k$(matrix.get_mat_18j0uh_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return ColorFilter_init_$Create$(tmp$ret$1);
   };
-  protoOf(Companion_4).makeLerp_grivzt_k$ = function (dst, src, t) {
+  protoOf(Companion_4).makeLerp_hrccz_k$ = function (dst, src, t) {
     var tmp;
     try {
       tmp = ColorFilter_init_$Create$(org_jetbrains_skia_ColorFilter__1nMakeLerp(t, getPtr(dst), getPtr(src)));
@@ -3353,13 +3318,13 @@
     }
     return tmp;
   };
-  protoOf(Companion_4).makeLighting_u1dhx6_k$ = function (colorMul, colorAdd) {
+  protoOf(Companion_4).makeLighting_65ijqe_k$ = function (colorMul, colorAdd) {
     return ColorFilter_init_$Create$(org_jetbrains_skia_ColorFilter__1nMakeLighting(colorMul, colorAdd));
   };
-  protoOf(Companion_4).makeHighContrast_msbvct_k$ = function (grayscale, mode, contrast) {
+  protoOf(Companion_4).makeHighContrast_mndawv_k$ = function (grayscale, mode, contrast) {
     return ColorFilter_init_$Create$(org_jetbrains_skia_ColorFilter__1nMakeHighContrast(grayscale, mode.get_ordinal_ip24qg_k$(), contrast));
   };
-  protoOf(Companion_4).makeTable_x03f0d_k$ = function (table) {
+  protoOf(Companion_4).makeTable_1muyzk_k$ = function (table) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(table.length === 256)) {
@@ -3374,20 +3339,20 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeTable.<anonymous>' call
-        var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$2 = org_jetbrains_skia_ColorFilter__1nMakeTable(tmp1_anonymous.toInterop_k4qgbi_k$(table));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$2 = org_jetbrains_skia_ColorFilter__1nMakeTable($this$interopScope.toInterop_h7cpet_k$(table));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return ColorFilter_init_$Create$(tmp$ret$2);
   };
-  protoOf(Companion_4).makeTableARGB_studz8_k$ = function (a, r, g, b) {
+  protoOf(Companion_4).makeTableARGB_ytpat0_k$ = function (a, r, g, b) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(a == null ? true : a.length === 256)) {
@@ -3420,17 +3385,17 @@
     try {
       var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
       _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-      var tmp4_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-      return ColorFilter_init_$Create$(org_jetbrains_skia_ColorFilter__1nMakeTableARGB(tmp4_anonymous.toInterop_k4qgbi_k$(a), tmp4_anonymous.toInterop_k4qgbi_k$(r), tmp4_anonymous.toInterop_k4qgbi_k$(g), tmp4_anonymous.toInterop_k4qgbi_k$(b)));
+      var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+      return ColorFilter_init_$Create$(org_jetbrains_skia_ColorFilter__1nMakeTableARGB($this$interopScope.toInterop_h7cpet_k$(a), $this$interopScope.toInterop_h7cpet_k$(r), $this$interopScope.toInterop_h7cpet_k$(g), $this$interopScope.toInterop_h7cpet_k$(b)));
     }finally {
       var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
       _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
       if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-        _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+        _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
       }
     }
   };
-  protoOf(Companion_4).makeOverdraw_eze872_k$ = function (colors) {
+  protoOf(Companion_4).makeOverdraw_ami52z_k$ = function (colors) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(colors.length === 6)) {
@@ -3537,13 +3502,13 @@
   protoOf(ColorInfo).toString = function () {
     return 'ColorInfo(_colorType=' + this.colorType_1 + ', _alphaType=' + this.alphaType_1 + ', _colorSpace=' + this.colorSpace_1 + ')';
   };
-  protoOf(ColorInfo).withColorType_jlsb9z_k$ = function (_colorType) {
+  protoOf(ColorInfo).withColorType_9ad897_k$ = function (_colorType) {
     return this.colorType_1.equals(_colorType) ? this : new ColorInfo(_colorType, this.alphaType_1, this.colorSpace_1);
   };
-  protoOf(ColorInfo).withAlphaType_feb9i4_k$ = function (_alphaType) {
+  protoOf(ColorInfo).withAlphaType_z42bb8_k$ = function (_alphaType) {
     return this.alphaType_1.equals(_alphaType) ? this : new ColorInfo(this.colorType_1, _alphaType, this.colorSpace_1);
   };
-  protoOf(ColorInfo).withColorSpace_d1kmie_k$ = function (_colorSpace) {
+  protoOf(ColorInfo).withColorSpace_yuen1e_k$ = function (_colorSpace) {
     return this.colorSpace_1 === _colorSpace ? this : new ColorInfo(this.colorType_1, this.alphaType_1, _colorSpace);
   };
   function ColorMatrix(mat) {
@@ -3577,7 +3542,7 @@
   };
   function Companion_6() {
     Companion_instance_6 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
     this.sRGB_1 = ColorSpace_init_$Create$_0(org_jetbrains_skia_ColorSpace__1nMakeSRGB(), false);
     this.sRGBLinear_1 = ColorSpace_init_$Create$_0(org_jetbrains_skia_ColorSpace__1nMakeSRGBLinear(), false);
     this.displayP3__1 = ColorSpace_init_$Create$_0(org_jetbrains_skia_ColorSpace__1nMakeDisplayP3(), false);
@@ -3626,35 +3591,35 @@
       new _FinalizerHolder_3();
     return _FinalizerHolder_instance_3;
   }
-  protoOf(ColorSpace).convert_qu2od0_k$ = function (toColor, color) {
+  protoOf(ColorSpace).convert_fohj0i_k$ = function (toColor, color) {
     var to = toColor;
     var tmp0_elvis_lhs = to;
     to = tmp0_elvis_lhs == null ? Companion_getInstance_7().sRGB_1 : tmp0_elvis_lhs;
     var tmp;
     try {
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Float32Array(4);
+      var result = new Float32Array(4);
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.ColorSpace.convert.<anonymous>' call
           org_jetbrains_skia_ColorSpace__nConvert(this.get__ptr_wohp4o_k$(), getPtr(to), color.get_r_1mhr61_k$(), color.get_g_1mhr5q_k$(), color.get_b_1mhr5l_k$(), color.get_a_1mhr5k_k$(), handle);
-          tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = Color4f_init_$Create$(tmp0_withResult);
+      tmp = Color4f_init_$Create$(result);
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(to);
@@ -3664,7 +3629,7 @@
   protoOf(ColorSpace).get_isGammaCloseToSRGB_62yjev_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_ColorSpace__1nIsGammaCloseToSRGB(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -3674,7 +3639,7 @@
   protoOf(ColorSpace).get_isGammaLinear_3z7ugp_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_ColorSpace__1nIsGammaLinear(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -3684,7 +3649,7 @@
   protoOf(ColorSpace).get_isSRGB_ew5hnx_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_ColorSpace__1nIsSRGB(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -3719,7 +3684,7 @@
     Companion_instance_7 = this;
     this.N32__1 = ColorType_BGRA_8888_getInstance();
   }
-  protoOf(Companion_7).set_N32_18f5a9_k$ = function (_set____db54di) {
+  protoOf(Companion_7).set_N32_g7wi18_k$ = function (_set____db54di) {
     this.N32__1 = _set____db54di;
   };
   protoOf(Companion_7).get_N32_18jozg_k$ = function () {
@@ -3781,7 +3746,7 @@
         return ColorType_R16G16B16A16_UNORM_getInstance();
       default:
         ColorType_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -3960,7 +3925,7 @@
     }
     return tmp;
   };
-  protoOf(ColorType).validateAlphaType_dqg0yc_k$ = function (alphaType) {
+  protoOf(ColorType).validateAlphaType_ki0fp0_k$ = function (alphaType) {
     var tmp;
     switch (this.get_ordinal_ip24qg_k$()) {
       case 0:
@@ -3998,19 +3963,19 @@
     }
     return tmp;
   };
-  protoOf(ColorType).computeOffset_633suk_k$ = function (x, y, rowBytes) {
+  protoOf(ColorType).computeOffset_i6ij98_k$ = function (x, y, rowBytes) {
     var tmp;
     if (this.equals(ColorType_UNKNOWN_getInstance())) {
       tmp = new Long(0, 0);
     } else {
       // Inline function 'kotlin.Long.plus' call
-      var tmp0_plus = numberToLong(y).times_2zfqpc_k$(rowBytes);
-      var tmp1_plus = x << this.get_shiftPerPixel_3lby8u_k$();
-      tmp = tmp0_plus.plus_u6jwas_k$(toLong(tmp1_plus));
+      var this_0 = numberToLong(y).times_nfzjiw_k$(rowBytes);
+      var other = x << this.get_shiftPerPixel_3lby8u_k$();
+      tmp = this_0.plus_r93sks_k$(toLong(other));
     }
     return tmp;
   };
-  protoOf(ColorType).getR_t3l0qa_k$ = function (color) {
+  protoOf(ColorType).getR_kri3fg_k$ = function (color) {
     var tmp;
     if (this.get_ordinal_ip24qg_k$() === 11) {
       tmp = (color & 255) / 255.0;
@@ -4019,7 +3984,7 @@
     }
     return tmp;
   };
-  protoOf(ColorType).getR_l2bj1q_k$ = function (color) {
+  protoOf(ColorType).getR_15nq9w_k$ = function (color) {
     var tmp;
     switch (this.get_ordinal_ip24qg_k$()) {
       case 2:
@@ -4033,7 +3998,7 @@
     }
     return tmp;
   };
-  protoOf(ColorType).getR_v510l7_k$ = function (color) {
+  protoOf(ColorType).getR_z1w658_k$ = function (color) {
     var tmp;
     switch (this.get_ordinal_ip24qg_k$()) {
       case 4:
@@ -4062,7 +4027,7 @@
     }
     return tmp;
   };
-  protoOf(ColorType).getG_bg021z_k$ = function (color) {
+  protoOf(ColorType).getG_gtsd53_k$ = function (color) {
     var tmp;
     if (this.get_ordinal_ip24qg_k$() === 11) {
       tmp = (color & 255) / 255.0;
@@ -4071,7 +4036,7 @@
     }
     return tmp;
   };
-  protoOf(ColorType).getG_4gy6b_k$ = function (color) {
+  protoOf(ColorType).getG_jijk61_k$ = function (color) {
     var tmp;
     switch (this.get_ordinal_ip24qg_k$()) {
       case 2:
@@ -4085,7 +4050,7 @@
     }
     return tmp;
   };
-  protoOf(ColorType).getG_gepfw0_k$ = function (color) {
+  protoOf(ColorType).getG_vcp9jb_k$ = function (color) {
     var tmp;
     switch (this.get_ordinal_ip24qg_k$()) {
       case 4:
@@ -4114,7 +4079,7 @@
     }
     return tmp;
   };
-  protoOf(ColorType).getB_zborvi_k$ = function (color) {
+  protoOf(ColorType).getB_yerld8_k$ = function (color) {
     var tmp;
     if (this.get_ordinal_ip24qg_k$() === 11) {
       tmp = (color & 255) / 255.0;
@@ -4123,7 +4088,7 @@
     }
     return tmp;
   };
-  protoOf(ColorType).getB_tclmhq_k$ = function (color) {
+  protoOf(ColorType).getB_ruy110_k$ = function (color) {
     var tmp;
     switch (this.get_ordinal_ip24qg_k$()) {
       case 2:
@@ -4137,7 +4102,7 @@
     }
     return tmp;
   };
-  protoOf(ColorType).getB_5qfzkl_k$ = function (color) {
+  protoOf(ColorType).getB_to5rfw_k$ = function (color) {
     var tmp;
     switch (this.get_ordinal_ip24qg_k$()) {
       case 4:
@@ -4166,7 +4131,7 @@
     }
     return tmp;
   };
-  protoOf(ColorType).getA_uh04nz_k$ = function (color) {
+  protoOf(ColorType).getA_4owldf_k$ = function (color) {
     var tmp;
     if (this.get_ordinal_ip24qg_k$() === 1) {
       tmp = (color & 255) / 255.0;
@@ -4175,7 +4140,7 @@
     }
     return tmp;
   };
-  protoOf(ColorType).getA_kzlqyl_k$ = function (color) {
+  protoOf(ColorType).getA_tj0x77_k$ = function (color) {
     var tmp;
     if (this.get_ordinal_ip24qg_k$() === 3) {
       tmp = (color >> 12 & 15) / 15.0;
@@ -4184,7 +4149,7 @@
     }
     return tmp;
   };
-  protoOf(ColorType).getA_3llapi_k$ = function (color) {
+  protoOf(ColorType).getA_tc1v0t_k$ = function (color) {
     var tmp;
     switch (this.get_ordinal_ip24qg_k$()) {
       case 4:
@@ -4304,7 +4269,7 @@
         return ContentChangeMode_RETAIN_getInstance();
       default:
         ContentChangeMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -4339,20 +4304,19 @@
   };
   protoOf(CubicResampler)._pack_1ia1a0_k$ = function () {
     var tmp = new Long(0, -2147483648);
-    var tmp$ret$4;
     // Inline function 'kotlin.ULong.toLong' call
     // Inline function 'kotlin.ULong.or' call
     // Inline function 'kotlin.ULong.shl' call
     // Inline function 'kotlin.toULong' call
-    var tmp0_toULong = toBits(this.b_1);
-    var tmp1_shl = _ULong___init__impl__c78o9k(toLong(tmp0_toULong));
-    var tmp3_or = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp1_shl).shl_po5ip6_k$(32));
+    var this_0 = toBits(this.b_1);
+    var this_1 = _ULong___init__impl__c78o9k(toLong(this_0));
+    var this_2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_1).shl_bg8if3_k$(32));
     // Inline function 'kotlin.toULong' call
-    var tmp2_toULong = toBits(this.c_1);
-    var tmp4_or = _ULong___init__impl__c78o9k(toLong(tmp2_toULong));
-    var tmp5_toLong = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(tmp3_or).or_s401rn_k$(_ULong___get_data__impl__fggpzb(tmp4_or)));
-    tmp$ret$4 = _ULong___get_data__impl__fggpzb(tmp5_toLong);
-    return tmp.or_s401rn_k$(tmp$ret$4);
+    var this_3 = toBits(this.c_1);
+    var other = _ULong___init__impl__c78o9k(toLong(this_3));
+    var this_4 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_2).or_v7fvkl_k$(_ULong___get_data__impl__fggpzb(other)));
+    var tmp$ret$4 = _ULong___get_data__impl__fggpzb(this_4);
+    return tmp.or_v7fvkl_k$(tmp$ret$4);
   };
   protoOf(CubicResampler)._packedInt1_kbgj89_k$ = function () {
     return toBits(this.b_1) | -2147483648;
@@ -4387,10 +4351,10 @@
   }
   function Companion_8() {
     Companion_instance_8 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_8).makeFromBytes_qnf3m8_k$ = function (bytes, offset, length) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_8).makeFromBytes_p6mier_k$ = function (bytes, offset, length) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$1;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -4398,26 +4362,26 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeFromBytes.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = org_jetbrains_skia_Data__1nMakeFromBytes(tmp0_anonymous.toInterop_k4qgbi_k$(bytes), offset, length);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = org_jetbrains_skia_Data__1nMakeFromBytes($this$interopScope.toInterop_h7cpet_k$(bytes), offset, length);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return new Data(tmp$ret$1);
   };
-  protoOf(Companion_8).makeFromBytes$default_b8cybj_k$ = function (bytes, offset, length, $super) {
+  protoOf(Companion_8).makeFromBytes$default_1ffal6_k$ = function (bytes, offset, length, $super) {
     offset = offset === VOID ? 0 : offset;
     length = length === VOID ? bytes.length : length;
-    return $super === VOID ? this.makeFromBytes_qnf3m8_k$(bytes, offset, length) : $super.makeFromBytes_qnf3m8_k$.call(this, bytes, offset, length);
+    return $super === VOID ? this.makeFromBytes_p6mier_k$(bytes, offset, length) : $super.makeFromBytes_p6mier_k$.call(this, bytes, offset, length);
   };
-  protoOf(Companion_8).makeWithoutCopy_41qo03_k$ = function (memoryAddr, length, underlyingMemoryOwner) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_8).makeWithoutCopy_pf98no_k$ = function (memoryAddr, length, underlyingMemoryOwner) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     // Inline function 'kotlin.also' call
     var tmp$ret$1;
     $l$block: {
@@ -4433,22 +4397,22 @@
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    var tmp1_also = new Data(tmp$ret$1);
+    var this_0 = new Data(tmp$ret$1);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'org.jetbrains.skia.Companion.makeWithoutCopy.<anonymous>' call
-    tmp1_also.underlyingMemoryOwner_1 = underlyingMemoryOwner;
-    return tmp1_also;
+    this_0.underlyingMemoryOwner_1 = underlyingMemoryOwner;
+    return this_0;
   };
   protoOf(Companion_8).makeEmpty_kjipdr_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new Data(org_jetbrains_skia_Data__1nMakeEmpty());
   };
-  protoOf(Companion_8).makeUninitialized_g1kjo4_k$ = function (length) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_8).makeUninitialized_88nlnv_k$ = function (length) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new Data(org_jetbrains_skia_Data__1nMakeUninitialized(length));
   };
   var Companion_instance_8;
@@ -4478,7 +4442,7 @@
   protoOf(Data).get_size_woubt6_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Data__1nSize(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -4486,12 +4450,12 @@
     return tmp;
   };
   protoOf(Data).get_bytes_ipgzsy_k$ = function () {
-    return this.getBytes_1p4fv9_k$(0, this.get_size_woubt6_k$());
+    return this.getBytes_bisuet_k$(0, this.get_size_woubt6_k$());
   };
-  protoOf(Data).getBytes_1p4fv9_k$ = function (offset, length) {
+  protoOf(Data).getBytes_bisuet_k$ = function (offset, length) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'kotlin.check' call
       // Inline function 'kotlin.contracts.contract' call
       if (!(org_jetbrains_skia_Data__1nSize(this.get__ptr_wohp4o_k$()) >= (offset + length | 0))) {
@@ -4500,28 +4464,28 @@
         throw IllegalStateException_init_$Create$(toString(message));
       }
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp1_withResult = new Int8Array(length);
+      var result = new Int8Array(length);
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_w0sqdc_k$(tmp1_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_toi1ab_k$(result);
           // Inline function 'org.jetbrains.skia.Data.getBytes.<anonymous>' call
           org_jetbrains_skia_Data__1nBytes(this.get__ptr_wohp4o_k$(), offset, length, handle);
-          tmp0_anonymous.fromInterop_mlzk42_k$(handle, tmp1_withResult);
+          $this$interopScope.fromInterop_40e3wn_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = tmp1_withResult;
+      tmp = result;
     }finally {
       reachabilityBarrier(this);
     }
@@ -4536,12 +4500,12 @@
       tmp = tmp0_elvis_lhs;
     }
     var otherData = tmp;
-    return this.nativeEquals_jj5rbn_k$(otherData);
+    return this.nativeEquals_mxr6i0_k$(otherData);
   };
-  protoOf(Data).nativeEquals_jj5rbn_k$ = function (other) {
+  protoOf(Data).nativeEquals_mxr6i0_k$ = function (other) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Data__1nEquals(this.get__ptr_wohp4o_k$(), getPtr(other));
     }finally {
       reachabilityBarrier(this);
@@ -4549,10 +4513,10 @@
     }
     return tmp;
   };
-  protoOf(Data).makeSubset_57b3e8_k$ = function (offset, length) {
+  protoOf(Data).makeSubset_v4hf3k_k$ = function (offset, length) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Data(org_jetbrains_skia_Data__1nMakeSubset(this.get__ptr_wohp4o_k$(), offset, length));
     }finally {
       reachabilityBarrier(this);
@@ -4562,7 +4526,7 @@
   protoOf(Data).makeCopy_ntk77_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Data(org_jetbrains_skia_Data__1nMakeSubset(this.get__ptr_wohp4o_k$(), 0, this.get_size_woubt6_k$()));
     }finally {
       reachabilityBarrier(this);
@@ -4572,7 +4536,7 @@
   protoOf(Data).writableData_rh05g6_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Data__1nWritableData(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -4581,18 +4545,18 @@
   };
   function Companion_9() {
     Companion_instance_9 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   protoOf(Companion_9).makeGL_hvwr71_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new DirectContext(org_jetbrains_skia_DirectContext__1nMakeGL());
   };
-  protoOf(Companion_9).makeMetal_8l0861_k$ = function (devicePtr, queuePtr) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_9).makeMetal_yro54p_k$ = function (devicePtr, queuePtr) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new DirectContext(org_jetbrains_skia_DirectContext__1nMakeMetal(devicePtr, queuePtr));
   };
-  protoOf(Companion_9).makeDirect3D_ez20l5_k$ = function (adapterPtr, devicePtr, queuePtr) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_9).makeDirect3D_wlh1w0_k$ = function (adapterPtr, devicePtr, queuePtr) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new DirectContext(org_jetbrains_skia_DirectContext__1nMakeDirect3D(adapterPtr, devicePtr, queuePtr));
   };
   var Companion_instance_9;
@@ -4606,22 +4570,22 @@
     RefCnt_init_$Init$(ptr, this);
   }
   protoOf(DirectContext).flush_1m2gp0_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_DirectContext__1nFlush(this.get__ptr_wohp4o_k$());
     return this;
   };
   protoOf(DirectContext).resetAll_5sls8e_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_DirectContext__1nReset(this.get__ptr_wohp4o_k$(), -1);
     return this;
   };
   protoOf(DirectContext).resetGLAll_s40v3n_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_DirectContext__1nReset(this.get__ptr_wohp4o_k$(), 65535);
     return this;
   };
-  protoOf(DirectContext).resetGL_50vhdj_k$ = function (states) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(DirectContext).resetGL_em21g5_k$ = function (states) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var flags = 0;
     var inductionVariable = 0;
     var last = states.length;
@@ -4633,13 +4597,13 @@
     org_jetbrains_skia_DirectContext__1nReset(this.get__ptr_wohp4o_k$(), flags);
     return this;
   };
-  protoOf(DirectContext).submit_klfy6p_k$ = function (syncCpu) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(DirectContext).submit_oowb43_k$ = function (syncCpu) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_DirectContext__1nSubmit(this.get__ptr_wohp4o_k$(), syncCpu);
   };
-  protoOf(DirectContext).abandon_istwpo_k$ = function () {
+  protoOf(DirectContext).abandon_isa44b_k$ = function () {
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_DirectContext__1nAbandon(this.get__ptr_wohp4o_k$(), 0);
     }finally {
       reachabilityBarrier(this);
@@ -4647,7 +4611,7 @@
   };
   function Companion_10() {
     Companion_instance_10 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_10;
   function Companion_getInstance_11() {
@@ -4665,7 +4629,7 @@
     return $this.boundsLock_1;
   }
   function _onDraw($this, canvasPtr) {
-    $this.onDraw_fu3je2_k$(new Canvas(canvasPtr, false, $this));
+    $this.onDraw_nrst1d_k$(new Canvas(canvasPtr, false, $this));
   }
   function _FinalizerHolder_5() {
     _FinalizerHolder_instance_5 = this;
@@ -4693,31 +4657,31 @@
     this.boundsLock_1 = Unit_getInstance();
     doInit(this, this.get__ptr_wohp4o_k$());
   }
-  protoOf(Drawable).draw_8h10vu_k$ = function (canvas) {
-    return this.draw_rmujz9_k$(canvas, null);
+  protoOf(Drawable).draw_vxas0i_k$ = function (canvas) {
+    return this.draw_cn4o5t_k$(canvas, null);
   };
-  protoOf(Drawable).draw_ao7p8m_k$ = function (canvas, x, y) {
-    return this.draw_rmujz9_k$(canvas, Companion_getInstance_33().makeTranslate_bkaev4_k$(x, y));
+  protoOf(Drawable).draw_bzq5gu_k$ = function (canvas, x, y) {
+    return this.draw_cn4o5t_k$(canvas, Companion_getInstance_33().makeTranslate_9v7aio_k$(x, y));
   };
-  protoOf(Drawable).draw_rmujz9_k$ = function (canvas, matrix) {
+  protoOf(Drawable).draw_cn4o5t_k$ = function (canvas, matrix) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = this.get__ptr_wohp4o_k$();
           var tmp_1 = getPtr(canvas);
-          org_jetbrains_skia_Drawable__1nDraw(tmp_0, tmp_1, tmp0_anonymous.toInterop_sfommq_k$(matrix == null ? null : matrix.get_mat_18j0uh_k$()));
+          org_jetbrains_skia_Drawable__1nDraw(tmp_0, tmp_1, $this$interopScope.toInterop_uum1m9_k$(matrix == null ? null : matrix.get_mat_18j0uh_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -4731,7 +4695,7 @@
   protoOf(Drawable).makePictureSnapshot_rflcrw_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Picture(org_jetbrains_skia_Drawable__1nMakePictureSnapshot(this.get__ptr_wohp4o_k$()));
     }finally {
       reachabilityBarrier(this);
@@ -4741,7 +4705,7 @@
   protoOf(Drawable).get_generationId_x1e17g_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Drawable__1nGetGenerationId(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -4750,18 +4714,16 @@
   };
   protoOf(Drawable).get_bounds_bj99ku_k$ = function () {
     // Inline function 'org.jetbrains.skiko.maybeSynchronized' call
-    this.boundsLock_1;
     if (this._bounds_1 == null) {
       var tmp = this;
       var tmp_0 = Companion_getInstance_47();
-      tmp._bounds_1 = tmp_0.fromInteropPointer_26ocmq_k$(Drawable$_get_bounds_$lambda_m5b169(this));
+      tmp._bounds_1 = tmp_0.fromInteropPointer_2qty6v_k$(Drawable$_get_bounds_$lambda_m5b169(this));
     }
     return ensureNotNull(this._bounds_1);
   };
   protoOf(Drawable).notifyDrawingChanged_e2je01_k$ = function () {
     // Inline function 'org.jetbrains.skiko.maybeSynchronized' call
-    this.boundsLock_1;
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Drawable__1nNotifyDrawingChanged(this.get__ptr_wohp4o_k$());
     this._bounds_1 = null;
     return this;
@@ -4809,7 +4771,7 @@
         return EncodedImageFormat_HEIF_getInstance();
       default:
         EncodedImageFormat_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -4901,7 +4863,7 @@
         return FilterBlurMode_INNER_getInstance();
       default:
         FilterBlurMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -4946,7 +4908,7 @@
     return this.mipmapMode_1;
   };
   protoOf(FilterMipmap)._pack_1ia1a0_k$ = function () {
-    return toLong(this.filterMode_1.get_ordinal_ip24qg_k$()).shl_po5ip6_k$(32).or_s401rn_k$(toLong(this.mipmapMode_1.get_ordinal_ip24qg_k$()));
+    return toLong(this.filterMode_1.get_ordinal_ip24qg_k$()).shl_bg8if3_k$(32).or_v7fvkl_k$(toLong(this.mipmapMode_1.get_ordinal_ip24qg_k$()));
   };
   protoOf(FilterMipmap)._packedInt1_kbgj89_k$ = function () {
     return this.filterMode_1.get_ordinal_ip24qg_k$();
@@ -4986,7 +4948,7 @@
         return FilterMode_LINEAR_getInstance();
       default:
         FilterMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -5028,7 +4990,7 @@
         return FilterTileMode_DECAL_getInstance();
       default:
         FilterTileMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -5063,10 +5025,10 @@
   }
   function Companion_11() {
     Companion_instance_11 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_11).makeClone_lsflv2_k$ = function (ptr) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_11).makeClone_j6bnh3_k$ = function (ptr) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return Font_init_$Create$(org_jetbrains_skia_Font__1nMakeClone(ptr));
   };
   var Companion_instance_11;
@@ -5093,7 +5055,7 @@
   }
   function Font_init_$Init$_1($this) {
     Font_init_$Init$(org_jetbrains_skia_Font__1nMakeDefault(), $this);
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return $this;
   }
   function Font_init_$Create$_1() {
@@ -5101,7 +5063,7 @@
   }
   function Font_init_$Init$_2(typeface, $this) {
     Font_init_$Init$(org_jetbrains_skia_Font__1nMakeTypeface(getPtr(typeface)), $this);
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     reachabilityBarrier(typeface);
     return $this;
   }
@@ -5110,7 +5072,7 @@
   }
   function Font_init_$Init$_3(typeface, size, $this) {
     Font_init_$Init$(org_jetbrains_skia_Font__1nMakeTypefaceSize(getPtr(typeface), size), $this);
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     reachabilityBarrier(typeface);
     return $this;
   }
@@ -5119,7 +5081,7 @@
   }
   function Font_init_$Init$_4(typeface, size, scaleX, skewX, $this) {
     Font_init_$Init$(org_jetbrains_skia_Font__1nMakeTypefaceSizeScaleSkew(getPtr(typeface), size, scaleX, skewX), $this);
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     reachabilityBarrier(typeface);
     return $this;
   }
@@ -5142,7 +5104,7 @@
   function Font$measureText$lambda(this$0, $s, $p) {
     return function ($this$fromInteropPointer, it) {
       var tmp = this$0.get__ptr_wohp4o_k$();
-      var tmp_0 = $this$fromInteropPointer.toInterop_tozece_k$($s);
+      var tmp_0 = $this$fromInteropPointer.toInterop_ok8jph_k$($s);
       var tmp0_safe_receiver = $s;
       var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.length;
       org_jetbrains_skia_Font__1nMeasureText(tmp, tmp_0, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, getPtr($p), it);
@@ -5151,7 +5113,7 @@
   }
   function Font$getBounds$lambda(this$0, $glyphs, $p) {
     return function ($this$fromInteropPointer, it) {
-      org_jetbrains_skia_Font__1nGetBounds(this$0.get__ptr_wohp4o_k$(), $this$fromInteropPointer.toInterop_30wotu_k$($glyphs), $glyphs.length, getPtr($p), it);
+      org_jetbrains_skia_Font__1nGetBounds(this$0.get__ptr_wohp4o_k$(), $this$fromInteropPointer.toInterop_jg6tf3_k$($glyphs), $glyphs.length, getPtr($p), it);
       return Unit_getInstance();
     };
   }
@@ -5161,7 +5123,7 @@
       return Unit_getInstance();
     };
   }
-  protoOf(Font).nativeEquals_jj5rbn_k$ = function (other) {
+  protoOf(Font).nativeEquals_mxr6i0_k$ = function (other) {
     var tmp;
     try {
       tmp = org_jetbrains_skia_Font__1nEquals(this.get__ptr_wohp4o_k$(), getPtr(other));
@@ -5171,10 +5133,10 @@
     }
     return tmp;
   };
-  protoOf(Font).set_isAutoHintingForced_ne92yz_k$ = function (value) {
+  protoOf(Font).set_isAutoHintingForced_hyvih5_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Font__1nSetAutoHintingForced(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -5185,7 +5147,7 @@
   protoOf(Font).get_isAutoHintingForced_s768tq_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Font__1nIsAutoHintingForced(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -5195,25 +5157,25 @@
   protoOf(Font).areBitmapsEmbedded_own12e_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Font__1nAreBitmapsEmbedded(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Font).setBitmapsEmbedded_234n8j_k$ = function (value) {
+  protoOf(Font).setBitmapsEmbedded_de1a2x_k$ = function (value) {
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Font__1nSetBitmapsEmbedded(this.get__ptr_wohp4o_k$(), value);
     }finally {
       reachabilityBarrier(this);
     }
   };
-  protoOf(Font).set_isSubpixel_r8l60s_k$ = function (value) {
+  protoOf(Font).set_isSubpixel_axpii0_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Font__1nSetSubpixel(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -5224,7 +5186,7 @@
   protoOf(Font).get_isSubpixel_3llq1l_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Font__1nIsSubpixel(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -5234,17 +5196,17 @@
   protoOf(Font).areMetricsLinear_726pf0_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Font__1nAreMetricsLinear(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Font).set_isEmboldened_bg3qoj_k$ = function (value) {
+  protoOf(Font).set_isEmboldened_a014h3_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Font__1nSetEmboldened(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -5255,17 +5217,17 @@
   protoOf(Font).get_isEmboldened_xvg5yw_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Font__1nIsEmboldened(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Font).set_isBaselineSnapped_h8l1bk_k$ = function (value) {
+  protoOf(Font).set_isBaselineSnapped_2s5gd8_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Font__1nSetBaselineSnapped(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -5276,17 +5238,17 @@
   protoOf(Font).get_isBaselineSnapped_weeo8j_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Font__1nIsBaselineSnapped(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Font).set_edging_ibxea4_k$ = function (value) {
+  protoOf(Font).set_edging_tomfr5_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Font__1nSetEdging(this.get__ptr_wohp4o_k$(), value.get_ordinal_ip24qg_k$());
       tmp = Unit_getInstance();
     }finally {
@@ -5297,17 +5259,17 @@
   protoOf(Font).get_edging_cs3cxv_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = values_9()[org_jetbrains_skia_Font__1nGetEdging(this.get__ptr_wohp4o_k$())];
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Font).set_hinting_5hdfz4_k$ = function (value) {
+  protoOf(Font).set_hinting_edtsy_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Font__1nSetHinting(this.get__ptr_wohp4o_k$(), value.get_ordinal_ip24qg_k$());
       tmp = Unit_getInstance();
     }finally {
@@ -5318,20 +5280,20 @@
   protoOf(Font).get_hinting_gio9hu_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = values_10()[org_jetbrains_skia_Font__1nGetHinting(this.get__ptr_wohp4o_k$())];
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Font).makeWithSize_19bnxj_k$ = function (size) {
+  protoOf(Font).makeWithSize_car883_k$ = function (size) {
     return Font_init_$Create$_4(this.get_typeface_s1tqao_k$(), size, this.get_scaleX_je2hxz_k$(), this.get_skewX_iyk9d1_k$());
   };
   protoOf(Font).get_typeface_s1tqao_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Font__1nGetTypeface(this.get__ptr_wohp4o_k$());
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new Typeface(ptr);
     }finally {
@@ -5342,17 +5304,17 @@
   protoOf(Font).get_typefaceOrDefault_alvtlu_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Typeface(org_jetbrains_skia_Font__1nGetTypefaceOrDefault(this.get__ptr_wohp4o_k$()));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Font).set_size_trjlwf_k$ = function (value) {
+  protoOf(Font).set_size_469jh2_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Font__1nSetSize(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -5363,17 +5325,17 @@
   protoOf(Font).get_size_woubt6_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Font__1nGetSize(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Font).set_scaleX_10jlbm_k$ = function (value) {
+  protoOf(Font).set_scaleX_ykjjzx_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Font__1nSetScaleX(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -5384,17 +5346,17 @@
   protoOf(Font).get_scaleX_je2hxz_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Font__1nGetScaleX(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Font).set_skewX_8zevqs_k$ = function (value) {
+  protoOf(Font).set_skewX_dqtgmh_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Font__1nSetSkewX(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -5405,17 +5367,17 @@
   protoOf(Font).get_skewX_iyk9d1_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Font__1nGetSkewX(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Font).setTypeface_opvtde_k$ = function (typeface) {
+  protoOf(Font).setTypeface_25b4vv_k$ = function (typeface) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Font__1nSetTypeface(this.get__ptr_wohp4o_k$(), getPtr(typeface));
       tmp = this;
     }finally {
@@ -5424,41 +5386,41 @@
     }
     return tmp;
   };
-  protoOf(Font).getStringGlyphs_io1x5f_k$ = function (s) {
-    return this.getUTF32Glyphs_ffduj4_k$(intCodePoints(s));
+  protoOf(Font).getStringGlyphs_iwygok_k$ = function (s) {
+    return this.getUTF32Glyphs_wjpetp_k$(intCodePoints(s));
   };
-  protoOf(Font).getUTF32Glyphs_ffduj4_k$ = function (uni) {
+  protoOf(Font).getUTF32Glyphs_wjpetp_k$ = function (uni) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0;
       if (uni == null) {
         // Inline function 'kotlin.shortArrayOf' call
         tmp_0 = new Int16Array([]);
       } else {
         // Inline function 'org.jetbrains.skia.impl.withResult' call
-        var tmp0_withResult = new Int16Array(uni.length);
+        var result = new Int16Array(uni.length);
         $l$block: {
           // Inline function 'org.jetbrains.skia.impl.interopScope' call
           try {
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-            var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-            var handle = tmp0_anonymous.toInteropForResult_jyz6vk_k$(tmp0_withResult);
+            var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var handle = $this$interopScope.toInteropForResult_c5u4tv_k$(result);
             // Inline function 'org.jetbrains.skia.Font.getUTF32Glyphs.<anonymous>' call
-            org_jetbrains_skia_Font__1nGetUTF32Glyphs(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_o3s7q3_k$(uni), uni.length, handle);
-            tmp0_anonymous.fromInterop_fargm_k$(handle, tmp0_withResult);
+            org_jetbrains_skia_Font__1nGetUTF32Glyphs(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_i7skn2_k$(uni), uni.length, handle);
+            $this$interopScope.fromInterop_awvpm7_k$(handle, result);
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
-        tmp_0 = tmp0_withResult;
+        tmp_0 = result;
       }
       tmp = tmp_0;
     }finally {
@@ -5466,20 +5428,20 @@
     }
     return tmp;
   };
-  protoOf(Font).getUTF32Glyph_tkgzd1_k$ = function (unichar) {
+  protoOf(Font).getUTF32Glyph_sauiec_k$ = function (unichar) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Font__1nGetUTF32Glyph(this.get__ptr_wohp4o_k$(), unichar);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Font).getStringGlyphsCount_tgw6gx_k$ = function (s) {
+  protoOf(Font).getStringGlyphsCount_66p1qe_k$ = function (s) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -5487,9 +5449,9 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Font.getStringGlyphsCount.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = this.get__ptr_wohp4o_k$();
-          var tmp_1 = tmp0_anonymous.toInterop_tozece_k$(s);
+          var tmp_1 = $this$interopScope.toInterop_ok8jph_k$(s);
           var tmp1_elvis_lhs = s == null ? null : s.length;
           tmp$ret$1 = org_jetbrains_skia_Font__1nGetStringGlyphsCount(tmp_0, tmp_1, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs);
           break $l$block;
@@ -5497,7 +5459,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -5507,30 +5469,30 @@
     }
     return tmp;
   };
-  protoOf(Font).measureText_4mvuib_k$ = function (s, p) {
+  protoOf(Font).measureText_g7rprs_k$ = function (s, p) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_47();
-      tmp = tmp_0.fromInteropPointer_26ocmq_k$(Font$measureText$lambda(this, s, p));
+      tmp = tmp_0.fromInteropPointer_2qty6v_k$(Font$measureText$lambda(this, s, p));
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(p);
     }
     return tmp;
   };
-  protoOf(Font).measureText$default_p2lvre_k$ = function (s, p, $super) {
+  protoOf(Font).measureText$default_uvn9lt_k$ = function (s, p, $super) {
     p = p === VOID ? null : p;
-    return $super === VOID ? this.measureText_4mvuib_k$(s, p) : $super.measureText_4mvuib_k$.call(this, s, p);
+    return $super === VOID ? this.measureText_g7rprs_k$(s, p) : $super.measureText_g7rprs_k$.call(this, s, p);
   };
-  protoOf(Font).measureTextWidth_4ljnbv_k$ = function (s) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
-    return this.measureTextWidth_ubz5dp_k$(s, null);
+  protoOf(Font).measureTextWidth_xa0hck_k$ = function (s) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
+    return this.measureTextWidth_xgtvy0_k$(s, null);
   };
-  protoOf(Font).measureTextWidth_ubz5dp_k$ = function (s, p) {
+  protoOf(Font).measureTextWidth_xgtvy0_k$ = function (s, p) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -5538,9 +5500,9 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Font.measureTextWidth.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = this.get__ptr_wohp4o_k$();
-          var tmp_1 = tmp0_anonymous.toInterop_tozece_k$(s);
+          var tmp_1 = $this$interopScope.toInterop_ok8jph_k$(s);
           var tmp1_elvis_lhs = s == null ? null : s.length;
           tmp$ret$1 = org_jetbrains_skia_Font__1nMeasureTextWidth(tmp_0, tmp_1, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, getPtr(p));
           break $l$block;
@@ -5548,7 +5510,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -5559,38 +5521,38 @@
     }
     return tmp;
   };
-  protoOf(Font).getWidths_m4xvn5_k$ = function (glyphs) {
+  protoOf(Font).getWidths_twpd9u_k$ = function (glyphs) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0;
       if (glyphs == null) {
         // Inline function 'kotlin.floatArrayOf' call
         return new Float32Array([]);
       } else {
         // Inline function 'org.jetbrains.skia.impl.withResult' call
-        var tmp0_withResult = new Float32Array(glyphs.length);
+        var result = new Float32Array(glyphs.length);
         $l$block: {
           // Inline function 'org.jetbrains.skia.impl.interopScope' call
           try {
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-            var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-            var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
+            var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
             // Inline function 'org.jetbrains.skia.Font.getWidths.<anonymous>' call
-            org_jetbrains_skia_Font__1nGetWidths(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_30wotu_k$(glyphs), glyphs.length, handle);
-            tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+            org_jetbrains_skia_Font__1nGetWidths(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_jg6tf3_k$(glyphs), glyphs.length, handle);
+            $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
-        tmp_0 = tmp0_withResult;
+        tmp_0 = result;
       }
       tmp = tmp_0;
     }finally {
@@ -5598,13 +5560,13 @@
     }
     return tmp;
   };
-  protoOf(Font).getBounds_3fkyc7_k$ = function (glyphs) {
-    return this.getBounds_68uhvr_k$(glyphs, null);
+  protoOf(Font).getBounds_jp1woq_k$ = function (glyphs) {
+    return this.getBounds_fnkdr6_k$(glyphs, null);
   };
-  protoOf(Font).getBounds_68uhvr_k$ = function (glyphs, p) {
+  protoOf(Font).getBounds_fnkdr6_k$ = function (glyphs, p) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0;
       if (glyphs == null) {
         // Inline function 'kotlin.emptyArray' call
@@ -5612,7 +5574,7 @@
       } else {
         var tmp_1 = Companion_getInstance_47();
         var tmp_2 = imul(glyphs.length, 4);
-        tmp_0 = tmp_1.fromInteropPointer_ofa1ol_k$(tmp_2, Font$getBounds$lambda(this, glyphs, p));
+        tmp_0 = tmp_1.fromInteropPointer_n7oap9_k$(tmp_2, Font$getBounds$lambda(this, glyphs, p));
       }
       tmp = tmp_0;
     }finally {
@@ -5621,59 +5583,54 @@
     }
     return tmp;
   };
-  protoOf(Font).getPositions_w9l0u8_k$ = function (glyphs) {
-    return this.getPositions_7gflyr_k$(glyphs, new Point(0.0, 0.0));
+  protoOf(Font).getPositions_wq5khp_k$ = function (glyphs) {
+    return this.getPositions_8ee2ia_k$(glyphs, new Point(0.0, 0.0));
   };
-  protoOf(Font).getPositions_7gflyr_k$ = function (glyphs, offset) {
+  protoOf(Font).getPositions_8ee2ia_k$ = function (glyphs, offset) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0;
       if (glyphs == null) {
         // Inline function 'kotlin.emptyArray' call
         tmp_0 = [];
       } else {
         // Inline function 'org.jetbrains.skia.impl.withResult' call
-        var tmp0_withResult = new Float32Array(imul(glyphs.length, 2));
+        var result = new Float32Array(imul(glyphs.length, 2));
         $l$block: {
           // Inline function 'org.jetbrains.skia.impl.interopScope' call
           try {
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-            var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-            var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
+            var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
             // Inline function 'org.jetbrains.skia.Font.getPositions.<anonymous>' call
-            org_jetbrains_skia_Font__1nGetPositions(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_30wotu_k$(glyphs), glyphs.length, offset.get_x_1mhr67_k$(), offset.get_y_1mhr68_k$(), handle);
-            tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+            org_jetbrains_skia_Font__1nGetPositions(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_jg6tf3_k$(glyphs), glyphs.length, offset.get_x_1mhr67_k$(), offset.get_y_1mhr68_k$(), handle);
+            $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
-        var positionsData = tmp0_withResult;
+        var positionsData = result;
         // Inline function 'kotlin.collections.toTypedArray' call
         // Inline function 'kotlin.collections.map' call
-        var tmp1_map = until(0, glyphs.length);
+        var this_0 = until(0, glyphs.length);
         // Inline function 'kotlin.collections.mapTo' call
-        var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp1_map, 10));
-        var inductionVariable = tmp1_map.get_first_irdx8n_k$();
-        var last = tmp1_map.get_last_wopotb_k$();
-        if (inductionVariable <= last)
-          do {
-            var item = inductionVariable;
-            inductionVariable = inductionVariable + 1 | 0;
-            var tmp$ret$4;
-            // Inline function 'org.jetbrains.skia.Font.getPositions.<anonymous>' call
-            tmp$ret$4 = new Point(positionsData[imul(2, item)], positionsData[imul(2, item) + 1 | 0]);
-            tmp0_mapTo.add_1j60pz_k$(tmp$ret$4);
-          }
-           while (!(item === last));
-        tmp_0 = copyToArray(tmp0_mapTo);
+        var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+        var tmp0_iterator = this_0.iterator_jk1svi_k$();
+        while (tmp0_iterator.hasNext_bitz1p_k$()) {
+          var item = tmp0_iterator.next_20eer_k$();
+          // Inline function 'org.jetbrains.skia.Font.getPositions.<anonymous>' call
+          var tmp$ret$4 = new Point(positionsData[imul(2, item)], positionsData[imul(2, item) + 1 | 0]);
+          destination.add_utx5q5_k$(tmp$ret$4);
+        }
+        tmp_0 = copyToArray(destination);
       }
       tmp = tmp_0;
     }finally {
@@ -5681,41 +5638,41 @@
     }
     return tmp;
   };
-  protoOf(Font).getXPositions_lgaexg_k$ = function (glyphs) {
-    return this.getXPositions_y91fge_k$(glyphs, 0.0);
+  protoOf(Font).getXPositions_upq2on_k$ = function (glyphs) {
+    return this.getXPositions_db979d_k$(glyphs, 0.0);
   };
-  protoOf(Font).getXPositions_y91fge_k$ = function (glyphs, offset) {
+  protoOf(Font).getXPositions_db979d_k$ = function (glyphs, offset) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0;
       if (glyphs == null) {
         // Inline function 'kotlin.floatArrayOf' call
         tmp_0 = new Float32Array([]);
       } else {
         // Inline function 'org.jetbrains.skia.impl.withResult' call
-        var tmp0_withResult = new Float32Array(glyphs.length);
+        var result = new Float32Array(glyphs.length);
         $l$block: {
           // Inline function 'org.jetbrains.skia.impl.interopScope' call
           try {
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-            var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-            var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
+            var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
             // Inline function 'org.jetbrains.skia.Font.getXPositions.<anonymous>' call
-            org_jetbrains_skia_Font__1nGetXPositions(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_30wotu_k$(glyphs), offset, glyphs.length, handle);
-            tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+            org_jetbrains_skia_Font__1nGetXPositions(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_jg6tf3_k$(glyphs), offset, glyphs.length, handle);
+            $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
-        tmp_0 = tmp0_withResult;
+        tmp_0 = result;
       }
       tmp = tmp_0;
     }finally {
@@ -5723,10 +5680,10 @@
     }
     return tmp;
   };
-  protoOf(Font).getPath_hqvkx9_k$ = function (glyph) {
+  protoOf(Font).getPath_2islj7_k$ = function (glyph) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Font__1nGetPath(this.get__ptr_wohp4o_k$(), glyph);
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new Path(ptr);
     }finally {
@@ -5734,10 +5691,10 @@
     }
     return tmp;
   };
-  protoOf(Font).getPaths_i4gscc_k$ = function (glyphs) {
+  protoOf(Font).getPaths_uud9bt_k$ = function (glyphs) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.arrayDecoderScope' call
       var arrayDecoder = null;
       var tmp_0;
@@ -5750,9 +5707,9 @@
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.Font.getPaths.<anonymous>.<anonymous>' call
-            var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
             var tmp_1 = this.get__ptr_wohp4o_k$();
-            var tmp_2 = tmp0_anonymous.toInterop_30wotu_k$(glyphs);
+            var tmp_2 = $this$interopScope.toInterop_jg6tf3_k$(glyphs);
             var tmp1_elvis_lhs = glyphs == null ? null : glyphs.length;
             tmp$ret$1 = org_jetbrains_skia_Font__1nGetPaths(tmp_1, tmp_2, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs);
             break $l$block;
@@ -5760,37 +5717,32 @@
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
         arrayDecoder = new ArrayDecoder(tmp$ret$1, org_jetbrains_skia_Path__1nGetFinalizer());
         // Inline function 'org.jetbrains.skia.Font.getPaths.<anonymous>' call
-        var tmp0_anonymous_0 = arrayDecoder;
+        var arrayDecoder_0 = arrayDecoder;
         // Inline function 'kotlin.collections.toTypedArray' call
         // Inline function 'kotlin.collections.map' call
-        var tmp0_map = until(0, tmp0_anonymous_0.get_size_woubt6_k$());
+        var this_0 = until(0, arrayDecoder_0.get_size_woubt6_k$());
         // Inline function 'kotlin.collections.mapTo' call
-        var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp0_map, 10));
-        var inductionVariable = tmp0_map.get_first_irdx8n_k$();
-        var last = tmp0_map.get_last_wopotb_k$();
-        if (inductionVariable <= last)
-          do {
-            var item = inductionVariable;
-            inductionVariable = inductionVariable + 1 | 0;
-            var tmp$ret$3;
-            // Inline function 'org.jetbrains.skia.Font.getPaths.<anonymous>.<anonymous>' call
-            tmp$ret$3 = new Path(tmp0_anonymous_0.release_ywerve_k$(item));
-            tmp0_mapTo.add_1j60pz_k$(tmp$ret$3);
-          }
-           while (!(item === last));
-        tmp_0 = copyToArray(tmp0_mapTo);
+        var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+        var tmp0_iterator = this_0.iterator_jk1svi_k$();
+        while (tmp0_iterator.hasNext_bitz1p_k$()) {
+          var item = tmp0_iterator.next_20eer_k$();
+          // Inline function 'org.jetbrains.skia.Font.getPaths.<anonymous>.<anonymous>' call
+          var tmp$ret$3 = new Path(arrayDecoder_0.release_fo34vl_k$(item));
+          destination.add_utx5q5_k$(tmp$ret$3);
+        }
+        tmp_0 = copyToArray(destination);
       }finally {
         var tmp0_safe_receiver = arrayDecoder;
         if (tmp0_safe_receiver == null)
           null;
         else {
-          tmp0_safe_receiver.dispose_3n44we_k$();
+          tmp0_safe_receiver.dispose_3nnxhr_k$();
         }
       }
       tmp = tmp_0;
@@ -5802,7 +5754,7 @@
   protoOf(Font).get_metrics_h2mme2_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_14();
       tmp = fromInteropPointer(tmp_0, Font$_get_metrics_$lambda_bxy7iq(this));
     }finally {
@@ -5813,7 +5765,7 @@
   protoOf(Font).get_spacing_w0flpi_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Font__1nGetSpacing(this.get__ptr_wohp4o_k$(), Companion_getInstance_81().get_NullPointer_8qbg7n_k$());
     }finally {
       reachabilityBarrier(this);
@@ -5839,7 +5791,7 @@
         return FontEdging_SUBPIXEL_ANTI_ALIAS_getInstance();
       default:
         FontEdging_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -5912,11 +5864,10 @@
     return $this.valueIx_1;
   }
   function FontFeature$Companion$parseW3$lambda(it) {
-    var tmp$ret$0;
     // Inline function 'kotlin.text.trim' call
-    tmp$ret$0 = toString(trim(isCharSequence(it) ? it : THROW_CCE()));
+    var tmp$ret$0 = toString(trim(isCharSequence(it) ? it : THROW_CCE()));
     var parts = split(tmp$ret$0, [' ']);
-    var name = parts.get_fkrdnv_k$(0);
+    var name = parts.get_c1px32_k$(0);
     var value = getOrNull(parts, 1);
     var tmp;
     switch (value) {
@@ -5936,41 +5887,28 @@
     return name.length === 4 ? FontFeature_init_$Create$_0(name, value_0) : null;
   }
   function FontFeature_init_$Init$(feature, value, start, end, $this) {
-    FontFeature.call($this, Companion_getInstance_21().fromString_2a1yvu_k$(feature), value, start, end);
+    FontFeature.call($this, Companion_getInstance_21().fromString_g5hge7_k$(feature), value, start, end);
     return $this;
   }
   function FontFeature_init_$Create$(feature, value, start, end) {
     return FontFeature_init_$Init$(feature, value, start, end, objectCreate(protoOf(FontFeature)));
   }
   function FontFeature_init_$Init$_0(feature, value, $this) {
-    var tmp = Companion_getInstance_21().fromString_2a1yvu_k$(feature);
-    Companion_getInstance_13();
-    var tmp_0 = _UInt___init__impl__l7qpdl(0);
-    Companion_getInstance_13();
-    FontFeature.call($this, tmp, value, tmp_0, _UInt___init__impl__l7qpdl(-1));
+    FontFeature.call($this, Companion_getInstance_21().fromString_g5hge7_k$(feature), value, _UInt___init__impl__l7qpdl(0), _UInt___init__impl__l7qpdl(-1));
     return $this;
   }
   function FontFeature_init_$Create$_0(feature, value) {
     return FontFeature_init_$Init$_0(feature, value, objectCreate(protoOf(FontFeature)));
   }
   function FontFeature_init_$Init$_1(feature, value, $this) {
-    var tmp = Companion_getInstance_21().fromString_2a1yvu_k$(feature);
-    var tmp_0 = value ? 1 : 0;
-    Companion_getInstance_13();
-    var tmp_1 = _UInt___init__impl__l7qpdl(0);
-    Companion_getInstance_13();
-    FontFeature.call($this, tmp, tmp_0, tmp_1, _UInt___init__impl__l7qpdl(-1));
+    FontFeature.call($this, Companion_getInstance_21().fromString_g5hge7_k$(feature), value ? 1 : 0, _UInt___init__impl__l7qpdl(0), _UInt___init__impl__l7qpdl(-1));
     return $this;
   }
   function FontFeature_init_$Create$_1(feature, value) {
     return FontFeature_init_$Init$_1(feature, value, objectCreate(protoOf(FontFeature)));
   }
   function FontFeature_init_$Init$_2(feature, $this) {
-    var tmp = Companion_getInstance_21().fromString_2a1yvu_k$(feature);
-    Companion_getInstance_13();
-    var tmp_0 = _UInt___init__impl__l7qpdl(0);
-    Companion_getInstance_13();
-    FontFeature.call($this, tmp, 1, tmp_0, _UInt___init__impl__l7qpdl(-1));
+    FontFeature.call($this, Companion_getInstance_21().fromString_g5hge7_k$(feature), 1, _UInt___init__impl__l7qpdl(0), _UInt___init__impl__l7qpdl(-1));
     return $this;
   }
   function FontFeature_init_$Create$_2(feature) {
@@ -5991,10 +5929,10 @@
     this.endIx_1 = 4;
     this.valueIx_1 = 5;
   }
-  protoOf(Companion_12).get_GLOBAL_START_sj2ez8_k$ = function () {
+  protoOf(Companion_12).get_GLOBAL_START_sjm7kl_k$ = function () {
     return this.GLOBAL_START_1;
   };
-  protoOf(Companion_12).get_GLOBAL_END_dg0rg3_k$ = function () {
+  protoOf(Companion_12).get_GLOBAL_END_dfgyuq_k$ = function () {
     return this.GLOBAL_END_1;
   };
   protoOf(Companion_12).get_EMPTY_i8q41w_k$ = function () {
@@ -6006,8 +5944,8 @@
   protoOf(Companion_12).get__featurePattern_h3499s_k$ = function () {
     return this._featurePattern_1;
   };
-  protoOf(Companion_12).parseOne_7xiaj2_k$ = function (s) {
-    var m = this._featurePattern_1.matcher_ndh313_k$(s);
+  protoOf(Companion_12).parseOne_zbf36v_k$ = function (s) {
+    var m = this._featurePattern_1.matcher_mwr1qt_k$(s);
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!m.matches_dwml9v_k$()) {
@@ -6015,36 +5953,35 @@
       var message = 'Can\u2019t parse FontFeature: ' + s;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    var value = !(m.group_bopy3i_k$(5) == null) ? toInt(ensureNotNull(m.group_bopy3i_k$(5))) : m.group_bopy3i_k$(1) == null ? 1 : '-' === m.group_bopy3i_k$(1) ? 0 : 1;
-    var start = m.group_bopy3i_k$(3) == null ? _UInt___init__impl__l7qpdl(0) : toUInt(ensureNotNull(m.group_bopy3i_k$(3)));
-    var end = m.group_bopy3i_k$(4) == null ? _UInt___init__impl__l7qpdl(-1) : toUInt(ensureNotNull(m.group_bopy3i_k$(4)));
-    return FontFeature_init_$Create$(ensureNotNull(m.group_bopy3i_k$(2)), value, start, end);
+    var value = !(m.group_u7j3zt_k$(5) == null) ? toInt(ensureNotNull(m.group_u7j3zt_k$(5))) : m.group_u7j3zt_k$(1) == null ? 1 : '-' === m.group_u7j3zt_k$(1) ? 0 : 1;
+    var start = m.group_u7j3zt_k$(3) == null ? _UInt___init__impl__l7qpdl(0) : toUInt(ensureNotNull(m.group_u7j3zt_k$(3)));
+    var end = m.group_u7j3zt_k$(4) == null ? _UInt___init__impl__l7qpdl(-1) : toUInt(ensureNotNull(m.group_u7j3zt_k$(4)));
+    return FontFeature_init_$Create$(ensureNotNull(m.group_u7j3zt_k$(2)), value, start, end);
   };
-  protoOf(Companion_12).parse_4mmrzm_k$ = function (str) {
+  protoOf(Companion_12).parse_pc1q8p_k$ = function (str) {
     // Inline function 'kotlin.collections.toTypedArray' call
     // Inline function 'kotlin.collections.map' call
-    var tmp0_map = this._splitPattern_1.split_9mawzl_k$(str);
+    var this_0 = this._splitPattern_1.split_w9zaf1_k$(str);
     // Inline function 'kotlin.collections.mapTo' call
-    var tmp0_mapTo = ArrayList_init_$Create$(tmp0_map.length);
+    var destination = ArrayList_init_$Create$(this_0.length);
     var inductionVariable = 0;
-    var last = tmp0_map.length;
+    var last = this_0.length;
     while (inductionVariable < last) {
-      var item = tmp0_map[inductionVariable];
+      var item = this_0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      var tmp$ret$0;
       // Inline function 'org.jetbrains.skia.Companion.parse.<anonymous>' call
-      tmp$ret$0 = Companion_getInstance_13().parseOne_7xiaj2_k$(item);
-      tmp0_mapTo.add_1j60pz_k$(tmp$ret$0);
+      var tmp$ret$0 = Companion_getInstance_13().parseOne_zbf36v_k$(item);
+      destination.add_utx5q5_k$(tmp$ret$0);
     }
-    return copyToArray(tmp0_mapTo);
+    return copyToArray(destination);
   };
-  protoOf(Companion_12).parseW3_w7ggfi_k$ = function (str) {
+  protoOf(Companion_12).parseW3_f4iaol_k$ = function (str) {
     // Inline function 'kotlin.collections.toTypedArray' call
     var tmp = splitToSequence(str, [',']);
-    var tmp0_toTypedArray = toList(mapNotNull(tmp, FontFeature$Companion$parseW3$lambda));
-    return copyToArray(tmp0_toTypedArray);
+    var this_0 = toList(mapNotNull(tmp, FontFeature$Companion$parseW3$lambda));
+    return copyToArray(this_0);
   };
-  protoOf(Companion_12).arrayOfFontFeaturesToInterop_ryvw2p_k$ = function (_this__u8e3s4, fontFeatures) {
+  protoOf(Companion_12).arrayOfFontFeaturesToInterop_2tlmgk_k$ = function (_this__u8e3s4, fontFeatures) {
     var tmp1_elvis_lhs = fontFeatures == null ? null : fontFeatures.length;
     var ints = new Int32Array(imul(4, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs));
     if (fontFeatures == null)
@@ -6052,9 +5989,11 @@
     else {
       // Inline function 'kotlin.collections.forEachIndexed' call
       var index = 0;
-      var tmp0_iterator = arrayIterator(fontFeatures);
-      while (tmp0_iterator.hasNext_bitz1p_k$()) {
-        var item = tmp0_iterator.next_20eer_k$();
+      var inductionVariable = 0;
+      var last = fontFeatures.length;
+      while (inductionVariable < last) {
+        var item = fontFeatures[inductionVariable];
+        inductionVariable = inductionVariable + 1 | 0;
         // Inline function 'org.jetbrains.skia.Companion.arrayOfFontFeaturesToInterop.<anonymous>' call
         var tmp1 = index;
         index = tmp1 + 1 | 0;
@@ -6063,17 +6002,17 @@
         ints[j + 1 | 0] = item.value_1;
         var tmp = j + 2 | 0;
         // Inline function 'kotlin.UInt.toInt' call
-        var tmp0_toInt = item.start_1;
-        ints[tmp] = _UInt___get_data__impl__f0vqqw(tmp0_toInt);
+        var this_0 = item.start_1;
+        ints[tmp] = _UInt___get_data__impl__f0vqqw(this_0);
         var tmp_0 = j + 3 | 0;
         // Inline function 'kotlin.UInt.toInt' call
-        var tmp1_toInt = item.end_1;
-        ints[tmp_0] = _UInt___get_data__impl__f0vqqw(tmp1_toInt);
+        var this_1 = item.end_1;
+        ints[tmp_0] = _UInt___get_data__impl__f0vqqw(this_1);
       }
     }
-    return _this__u8e3s4.toInterop_o3s7q3_k$(ints);
+    return _this__u8e3s4.toInterop_i7skn2_k$(ints);
   };
-  protoOf(Companion_12).fromInteropEncodedBy2Ints_s3a2ik_k$ = function (fontFeatures) {
+  protoOf(Companion_12).fromInteropEncodedBy2Ints_rkgp1j_k$ = function (fontFeatures) {
     var featuresCount = fontFeatures.length / 2 | 0;
     var tmp = 0;
     // Inline function 'kotlin.arrayOfNulls' call
@@ -6081,12 +6020,7 @@
     while (tmp < featuresCount) {
       var tmp_1 = tmp;
       var j = imul(tmp_1, 2);
-      var tmp_2 = fontFeatures[j];
-      var tmp_3 = fontFeatures[j + 1 | 0];
-      Companion_getInstance_13();
-      var tmp_4 = _UInt___init__impl__l7qpdl(0);
-      Companion_getInstance_13();
-      tmp_0[tmp_1] = new FontFeature(tmp_2, tmp_3, tmp_4, _UInt___init__impl__l7qpdl(-1));
+      tmp_0[tmp_1] = new FontFeature(fontFeatures[j], fontFeatures[j + 1 | 0], _UInt___init__impl__l7qpdl(0), _UInt___init__impl__l7qpdl(-1));
       tmp = tmp + 1 | 0;
     }
     return tmp_0;
@@ -6110,33 +6044,35 @@
   protoOf(FontFeature).get_value_j01efc_k$ = function () {
     return this.value_1;
   };
-  protoOf(FontFeature).get_start_qjckny_k$ = function () {
+  protoOf(FontFeature).get_start_qjwd9b_k$ = function () {
     return this.start_1;
   };
-  protoOf(FontFeature).get_end_l64b13_k$ = function () {
+  protoOf(FontFeature).get_end_l6o3mg_k$ = function () {
     return this.end_1;
   };
   protoOf(FontFeature).get_tag_18ivnz_k$ = function () {
-    return Companion_getInstance_21().toString_flfcob_k$(this._tag_1);
+    return Companion_getInstance_21().toString_w4mr8s_k$(this._tag_1);
   };
   protoOf(FontFeature).toString = function () {
     var range = '';
     var tmp;
     // Inline function 'kotlin.UInt.compareTo' call
-    var tmp0_compareTo = this.start_1;
-    if (uintCompare(_UInt___get_data__impl__f0vqqw(tmp0_compareTo), _UInt___get_data__impl__f0vqqw(_UInt___init__impl__l7qpdl(0))) > 0) {
+    var this_0 = this.start_1;
+    var other = _UInt___init__impl__l7qpdl(0);
+    if (uintCompare(_UInt___get_data__impl__f0vqqw(this_0), _UInt___get_data__impl__f0vqqw(other)) > 0) {
       tmp = true;
     } else {
       // Inline function 'kotlin.UInt.compareTo' call
-      var tmp1_compareTo = this.end_1;
-      var tmp2_compareTo = Companion_getInstance().get_MAX_VALUE_blthzm_k$();
-      tmp = uintCompare(_UInt___get_data__impl__f0vqqw(tmp1_compareTo), _UInt___get_data__impl__f0vqqw(tmp2_compareTo)) < 0;
+      var this_1 = this.end_1;
+      var other_0 = Companion_getInstance().get_MAX_VALUE_bmdakz_k$();
+      tmp = uintCompare(_UInt___get_data__impl__f0vqqw(this_1), _UInt___get_data__impl__f0vqqw(other_0)) < 0;
     }
     if (tmp) {
       var tmp_0;
       // Inline function 'kotlin.UInt.compareTo' call
-      var tmp3_compareTo = this.start_1;
-      if (uintCompare(_UInt___get_data__impl__f0vqqw(tmp3_compareTo), _UInt___get_data__impl__f0vqqw(_UInt___init__impl__l7qpdl(0))) > 0) {
+      var this_2 = this.start_1;
+      var other_1 = _UInt___init__impl__l7qpdl(0);
+      if (uintCompare(_UInt___get_data__impl__f0vqqw(this_2), _UInt___get_data__impl__f0vqqw(other_1)) > 0) {
         tmp_0 = new UInt(this.start_1);
       } else {
         tmp_0 = '';
@@ -6144,9 +6080,9 @@
       var tmp_1 = '[' + tmp_0 + ':';
       var tmp_2;
       // Inline function 'kotlin.UInt.compareTo' call
-      var tmp4_compareTo = this.end_1;
-      var tmp5_compareTo = Companion_getInstance().get_MAX_VALUE_blthzm_k$();
-      if (uintCompare(_UInt___get_data__impl__f0vqqw(tmp4_compareTo), _UInt___get_data__impl__f0vqqw(tmp5_compareTo)) < 0) {
+      var this_3 = this.end_1;
+      var other_2 = Companion_getInstance().get_MAX_VALUE_bmdakz_k$();
+      if (uintCompare(_UInt___get_data__impl__f0vqqw(this_3), _UInt___get_data__impl__f0vqqw(other_2)) < 0) {
         tmp_2 = new UInt(this.end_1);
       } else {
         tmp_2 = '';
@@ -6185,35 +6121,34 @@
     // Inline function 'kotlin.UInt.toInt' call
     // Inline function 'kotlin.UInt.xor' call
     // Inline function 'kotlin.UInt.shr' call
-    var tmp0_shr = this.start_1;
-    var tmp1_xor = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(tmp0_shr) >>> 16 | 0);
-    var tmp2_xor = this.start_1;
-    var tmp3_toInt = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(tmp1_xor) ^ _UInt___get_data__impl__f0vqqw(tmp2_xor));
-    result = tmp + _UInt___get_data__impl__f0vqqw(tmp3_toInt) | 0;
+    var this_0 = this.start_1;
+    var this_1 = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(this_0) >>> 16 | 0);
+    var other = this.start_1;
+    var this_2 = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(this_1) ^ _UInt___get_data__impl__f0vqqw(other));
+    result = tmp + _UInt___get_data__impl__f0vqqw(this_2) | 0;
     var tmp_0 = imul(result, PRIME);
     // Inline function 'kotlin.UInt.toInt' call
     // Inline function 'kotlin.UInt.xor' call
     // Inline function 'kotlin.UInt.shr' call
-    var tmp4_shr = this.end_1;
-    var tmp5_xor = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(tmp4_shr) >>> 16 | 0);
-    var tmp6_xor = this.end_1;
-    var tmp7_toInt = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(tmp5_xor) ^ _UInt___get_data__impl__f0vqqw(tmp6_xor));
-    result = tmp_0 + _UInt___get_data__impl__f0vqqw(tmp7_toInt) | 0;
+    var this_3 = this.end_1;
+    var this_4 = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(this_3) >>> 16 | 0);
+    var other_0 = this.end_1;
+    var this_5 = _UInt___init__impl__l7qpdl(_UInt___get_data__impl__f0vqqw(this_4) ^ _UInt___get_data__impl__f0vqqw(other_0));
+    result = tmp_0 + _UInt___get_data__impl__f0vqqw(this_5) | 0;
     return result;
   };
   protoOf(FontFeature).toInteropIntArray_qnb5ak_k$ = function () {
     // Inline function 'kotlin.intArrayOf' call
     // Inline function 'kotlin.UInt.toInt' call
-    var tmp0_toInt = this.start_1;
-    var tmp = _UInt___get_data__impl__f0vqqw(tmp0_toInt);
-    var tmp$ret$1;
+    var this_0 = this.start_1;
+    var tmp = _UInt___get_data__impl__f0vqqw(this_0);
     // Inline function 'kotlin.UInt.toInt' call
-    var tmp1_toInt = this.end_1;
-    tmp$ret$1 = _UInt___get_data__impl__f0vqqw(tmp1_toInt);
+    var this_1 = this.end_1;
+    var tmp$ret$1 = _UInt___get_data__impl__f0vqqw(this_1);
     return new Int32Array([this._tag_1, this.value_1, tmp, tmp$ret$1]);
   };
-  protoOf(FontFeature).toInterop_qvtd2w_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4.toInterop_o3s7q3_k$(this.toInteropIntArray_qnb5ak_k$());
+  protoOf(FontFeature).toInterop_cyi1hz_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4.toInterop_i7skn2_k$(this.toInteropIntArray_qnb5ak_k$());
   };
   var FontHinting_NONE_instance;
   var FontHinting_SLIGHT_instance;
@@ -6234,7 +6169,7 @@
         return FontHinting_FULL_getInstance();
       default:
         FontHinting_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -6418,27 +6353,27 @@
   };
   function fromInteropPointer(_this__u8e3s4, block) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Float32Array(15);
+    var result = new Float32Array(15);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    return fromRawData(_this__u8e3s4, tmp0_withResult);
+    return fromRawData(_this__u8e3s4, result);
   }
   function fromRawData(_this__u8e3s4, rawData) {
     var tmp = rawData[0];
@@ -6453,18 +6388,17 @@
     var tmp_8 = rawData[9];
     var tmp_9 = rawData[10];
     // Inline function 'org.jetbrains.skia.asNumberOrNull' call
-    var tmp0_asNumberOrNull = rawData[11];
-    var tmp_10 = isNaN_0(tmp0_asNumberOrNull) ? null : tmp0_asNumberOrNull;
+    var this_0 = rawData[11];
+    var tmp_10 = isNaN_0(this_0) ? null : this_0;
     // Inline function 'org.jetbrains.skia.asNumberOrNull' call
-    var tmp1_asNumberOrNull = rawData[12];
-    var tmp_11 = isNaN_0(tmp1_asNumberOrNull) ? null : tmp1_asNumberOrNull;
+    var this_1 = rawData[12];
+    var tmp_11 = isNaN_0(this_1) ? null : this_1;
     // Inline function 'org.jetbrains.skia.asNumberOrNull' call
-    var tmp2_asNumberOrNull = rawData[13];
-    var tmp_12 = isNaN_0(tmp2_asNumberOrNull) ? null : tmp2_asNumberOrNull;
-    var tmp$ret$3;
+    var this_2 = rawData[13];
+    var tmp_12 = isNaN_0(this_2) ? null : this_2;
     // Inline function 'org.jetbrains.skia.asNumberOrNull' call
-    var tmp3_asNumberOrNull = rawData[14];
-    tmp$ret$3 = isNaN_0(tmp3_asNumberOrNull) ? null : tmp3_asNumberOrNull;
+    var this_3 = rawData[14];
+    var tmp$ret$3 = isNaN_0(this_3) ? null : this_3;
     return new FontMetrics(tmp, tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp_5, tmp_6, tmp_7, tmp_8, tmp_9, tmp_10, tmp_11, tmp_12, tmp$ret$3);
   }
   function asNumberOrNull(_this__u8e3s4) {
@@ -6472,7 +6406,7 @@
   }
   function Companion_14() {
     Companion_instance_14 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
     this.default_1 = FontMgr_init_$Create$_0(org_jetbrains_skia_FontMgr__1nDefault(), false);
   }
   protoOf(Companion_14).get_default_qtagd4_k$ = function () {
@@ -6503,29 +6437,28 @@
   protoOf(FontMgr).get_familiesCount_njbimc_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_FontMgr__1nGetFamiliesCount(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(FontMgr).getFamilyName_1jw1es_k$ = function (index) {
+  protoOf(FontMgr).getFamilyName_q0narx_k$ = function (index) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withStringResult' call
       // Inline function 'org.jetbrains.skia.impl.use' call
-      var tmp$ret$0;
       // Inline function 'org.jetbrains.skia.FontMgr.getFamilyName.<anonymous>' call
-      tmp$ret$0 = org_jetbrains_skia_FontMgr__1nGetFamilyName(this.get__ptr_wohp4o_k$(), index);
-      var tmp0_use = new ManagedString(tmp$ret$0);
+      var tmp$ret$0 = org_jetbrains_skia_FontMgr__1nGetFamilyName(this.get__ptr_wohp4o_k$(), index);
+      var this_0 = new ManagedString(tmp$ret$0);
       var tmp_0;
       try {
         // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
-        tmp_0 = tmp0_use.toString();
+        tmp_0 = this_0.toString();
       }finally {
-        tmp0_use.close_ymq55z_k$();
+        this_0.close_yn9xrc_k$();
       }
       tmp = tmp_0;
     }finally {
@@ -6533,10 +6466,10 @@
     }
     return tmp;
   };
-  protoOf(FontMgr).makeStyleSet_jqea3m_k$ = function (index) {
+  protoOf(FontMgr).makeStyleSet_r1ved5_k$ = function (index) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_FontMgr__1nMakeStyleSet(this.get__ptr_wohp4o_k$(), index);
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new FontStyleSet(ptr);
     }finally {
@@ -6544,10 +6477,10 @@
     }
     return tmp;
   };
-  protoOf(FontMgr).matchFamily_vo5j1z_k$ = function (familyName) {
+  protoOf(FontMgr).matchFamily_ntx01u_k$ = function (familyName) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -6555,14 +6488,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.FontMgr.matchFamily.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$1 = new FontStyleSet(org_jetbrains_skia_FontMgr__1nMatchFamily(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(familyName)));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$1 = new FontStyleSet(org_jetbrains_skia_FontMgr__1nMatchFamily(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(familyName)));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -6572,10 +6505,10 @@
     }
     return tmp;
   };
-  protoOf(FontMgr).matchFamilyStyle_16t171_k$ = function (familyName, style) {
+  protoOf(FontMgr).matchFamilyStyle_p90cxu_k$ = function (familyName, style) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -6583,14 +6516,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.FontMgr.matchFamilyStyle.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$1 = org_jetbrains_skia_FontMgr__1nMatchFamilyStyle(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(familyName), style.get__value_a7m5q3_k$());
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$1 = org_jetbrains_skia_FontMgr__1nMatchFamilyStyle(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(familyName), style.get__value_a7m5q3_k$());
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -6601,22 +6534,22 @@
     }
     return tmp;
   };
-  protoOf(FontMgr).matchFamiliesStyle_sp1y65_k$ = function (families, style) {
+  protoOf(FontMgr).matchFamiliesStyle_mrciqq_k$ = function (families, style) {
     var inductionVariable = 0;
     var last = families.length;
     while (inductionVariable < last) {
       var family = families[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      var typeface = this.matchFamilyStyle_16t171_k$(family, style);
+      var typeface = this.matchFamilyStyle_p90cxu_k$(family, style);
       if (!(typeface == null))
         return typeface;
     }
     return null;
   };
-  protoOf(FontMgr).matchFamilyStyleCharacter_atvwzl_k$ = function (familyName, style, bcp47, character) {
+  protoOf(FontMgr).matchFamilyStyleCharacter_o2spm_k$ = function (familyName, style, bcp47, character) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -6624,9 +6557,9 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.FontMgr.matchFamilyStyleCharacter.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = this.get__ptr_wohp4o_k$();
-          var tmp_1 = tmp0_anonymous.toInterop_tozece_k$(familyName);
+          var tmp_1 = $this$interopScope.toInterop_ok8jph_k$(familyName);
           var tmp_2 = style.get__value_a7m5q3_k$();
           var tmp_3;
           if (bcp47 == null) {
@@ -6635,7 +6568,7 @@
           } else {
             tmp_3 = bcp47;
           }
-          var tmp_4 = tmp0_anonymous.toInterop_59fj22_k$(tmp_3);
+          var tmp_4 = $this$interopScope.toInterop_2ejn5p_k$(tmp_3);
           var tmp2_elvis_lhs = bcp47 == null ? null : bcp47.length;
           tmp$ret$2 = org_jetbrains_skia_FontMgr__1nMatchFamilyStyleCharacter(tmp_0, tmp_1, tmp_2, tmp_4, tmp2_elvis_lhs == null ? 0 : tmp2_elvis_lhs, character);
           break $l$block;
@@ -6643,7 +6576,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -6654,22 +6587,22 @@
     }
     return tmp;
   };
-  protoOf(FontMgr).matchFamiliesStyleCharacter_lwvcsv_k$ = function (families, style, bcp47, character) {
+  protoOf(FontMgr).matchFamiliesStyleCharacter_3qtzpm_k$ = function (families, style, bcp47, character) {
     var inductionVariable = 0;
     var last = families.length;
     while (inductionVariable < last) {
       var family = families[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      var typeface = this.matchFamilyStyleCharacter_atvwzl_k$(family, style, bcp47, character);
+      var typeface = this.matchFamilyStyleCharacter_o2spm_k$(family, style, bcp47, character);
       if (!(typeface == null))
         return typeface;
     }
     return null;
   };
-  protoOf(FontMgr).makeFromData_fg5pl7_k$ = function (data, ttcIndex) {
+  protoOf(FontMgr).makeFromData_auylbu_k$ = function (data, ttcIndex) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_FontMgr__1nMakeFromData(this.get__ptr_wohp4o_k$(), getPtr(data), ttcIndex);
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new Typeface(ptr);
     }finally {
@@ -6678,9 +6611,9 @@
     }
     return tmp;
   };
-  protoOf(FontMgr).makeFromData$default_5485au_k$ = function (data, ttcIndex, $super) {
+  protoOf(FontMgr).makeFromData$default_m5xxm4_k$ = function (data, ttcIndex, $super) {
     ttcIndex = ttcIndex === VOID ? 0 : ttcIndex;
-    return $super === VOID ? this.makeFromData_fg5pl7_k$(data, ttcIndex) : $super.makeFromData_fg5pl7_k$.call(this, data, ttcIndex);
+    return $super === VOID ? this.makeFromData_auylbu_k$(data, ttcIndex) : $super.makeFromData_auylbu_k$.call(this, data, ttcIndex);
   };
   function FontMgr() {
     Companion_getInstance_15();
@@ -6701,7 +6634,7 @@
         return FontSlant_OBLIQUE_getInstance();
       default:
         FontSlant_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -6776,19 +6709,19 @@
   protoOf(FontStyle).get_weight_lbhkzl_k$ = function () {
     return this._value_1 & 65535;
   };
-  protoOf(FontStyle).withWeight_dafbdv_k$ = function (weight) {
+  protoOf(FontStyle).withWeight_ue6mre_k$ = function (weight) {
     return FontStyle_init_$Create$(weight, this.get_width_j0q4yl_k$(), this.get_slant_iykt6t_k$());
   };
   protoOf(FontStyle).get_width_j0q4yl_k$ = function () {
     return this._value_1 >> 16 & 255;
   };
-  protoOf(FontStyle).withWidth_uly2e7_k$ = function (width) {
+  protoOf(FontStyle).withWidth_f15y6g_k$ = function (width) {
     return FontStyle_init_$Create$(this.get_weight_lbhkzl_k$(), width, this.get_slant_iykt6t_k$());
   };
   protoOf(FontStyle).get_slant_iykt6t_k$ = function () {
     return values_11()[this._value_1 >> 24 & 255];
   };
-  protoOf(FontStyle).withSlant_karybe_k$ = function (slant) {
+  protoOf(FontStyle).withSlant_xjtyhw_k$ = function (slant) {
     return FontStyle_init_$Create$(this.get_weight_lbhkzl_k$(), this.get_width_j0q4yl_k$(), slant);
   };
   protoOf(FontStyle).toString = function () {
@@ -6812,10 +6745,10 @@
   }
   function Companion_16() {
     Companion_instance_16 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   protoOf(Companion_16).makeEmpty_kjipdr_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new FontStyleSet(org_jetbrains_skia_FontStyleSet__1nMakeEmpty());
   };
   var Companion_instance_16;
@@ -6831,39 +6764,38 @@
   protoOf(FontStyleSet).count_1kgzrj_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_FontStyleSet__1nCount(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(FontStyleSet).getStyle_8ymdi2_k$ = function (index) {
+  protoOf(FontStyleSet).getStyle_dffpbx_k$ = function (index) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = FontStyle_init_$Create$_0(org_jetbrains_skia_FontStyleSet__1nGetStyle(this.get__ptr_wohp4o_k$(), index));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(FontStyleSet).getStyleName_bqywbf_k$ = function (index) {
+  protoOf(FontStyleSet).getStyleName_kztdhq_k$ = function (index) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withStringResult' call
       // Inline function 'org.jetbrains.skia.impl.use' call
-      var tmp$ret$0;
       // Inline function 'org.jetbrains.skia.FontStyleSet.getStyleName.<anonymous>' call
-      tmp$ret$0 = org_jetbrains_skia_FontStyleSet__1nGetStyleName(this.get__ptr_wohp4o_k$(), index);
-      var tmp0_use = new ManagedString(tmp$ret$0);
+      var tmp$ret$0 = org_jetbrains_skia_FontStyleSet__1nGetStyleName(this.get__ptr_wohp4o_k$(), index);
+      var this_0 = new ManagedString(tmp$ret$0);
       var tmp_0;
       try {
         // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
-        tmp_0 = tmp0_use.toString();
+        tmp_0 = this_0.toString();
       }finally {
-        tmp0_use.close_ymq55z_k$();
+        this_0.close_yn9xrc_k$();
       }
       tmp = tmp_0;
     }finally {
@@ -6871,10 +6803,10 @@
     }
     return tmp;
   };
-  protoOf(FontStyleSet).getTypeface_aazw0k_k$ = function (index) {
+  protoOf(FontStyleSet).getTypeface_trtvaj_k$ = function (index) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_FontStyleSet__1nGetTypeface(this.get__ptr_wohp4o_k$(), index);
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new Typeface(ptr);
     }finally {
@@ -6882,10 +6814,10 @@
     }
     return tmp;
   };
-  protoOf(FontStyleSet).matchStyle_93xcih_k$ = function (style) {
+  protoOf(FontStyleSet).matchStyle_glwss7_k$ = function (style) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_FontStyleSet__1nMatchStyle(this.get__ptr_wohp4o_k$(), style.get__value_a7m5q3_k$());
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new Typeface(ptr);
     }finally {
@@ -6900,7 +6832,7 @@
     return $this.valueIx_1;
   }
   function FontVariation_init_$Init$(feature, value, $this) {
-    FontVariation.call($this, Companion_getInstance_21().fromString_2a1yvu_k$(feature), value);
+    FontVariation.call($this, Companion_getInstance_21().fromString_g5hge7_k$(feature), value);
     return $this;
   }
   function FontVariation_init_$Create$(feature, value) {
@@ -6925,8 +6857,8 @@
   protoOf(Companion_17).get__variationPattern_o2yczx_k$ = function () {
     return this._variationPattern_1;
   };
-  protoOf(Companion_17).parseOne_7xiaj2_k$ = function (s) {
-    var m = this._variationPattern_1.matcher_ndh313_k$(s);
+  protoOf(Companion_17).parseOne_zbf36v_k$ = function (s) {
+    var m = this._variationPattern_1.matcher_mwr1qt_k$(s);
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!m.matches_dwml9v_k$()) {
@@ -6935,30 +6867,29 @@
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     // Inline function 'kotlin.text.toFloat' call
-    var tmp1_toFloat = ensureNotNull(m.group_bopy3i_k$(2));
+    var this_0 = ensureNotNull(m.group_u7j3zt_k$(2));
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    var value = toDouble(tmp1_toFloat);
-    var tag = ensureNotNull(m.group_bopy3i_k$(1));
+    var value = toDouble(this_0);
+    var tag = ensureNotNull(m.group_u7j3zt_k$(1));
     return FontVariation_init_$Create$(tag, value);
   };
-  protoOf(Companion_17).parse_4mmrzm_k$ = function (str) {
+  protoOf(Companion_17).parse_pc1q8p_k$ = function (str) {
     // Inline function 'kotlin.collections.toTypedArray' call
     // Inline function 'kotlin.collections.map' call
-    var tmp0_map = this._splitPattern_1.split_9mawzl_k$(str);
+    var this_0 = this._splitPattern_1.split_w9zaf1_k$(str);
     // Inline function 'kotlin.collections.mapTo' call
-    var tmp0_mapTo = ArrayList_init_$Create$(tmp0_map.length);
+    var destination = ArrayList_init_$Create$(this_0.length);
     var inductionVariable = 0;
-    var last = tmp0_map.length;
+    var last = this_0.length;
     while (inductionVariable < last) {
-      var item = tmp0_map[inductionVariable];
+      var item = this_0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      var tmp$ret$0;
       // Inline function 'org.jetbrains.skia.Companion.parse.<anonymous>' call
-      tmp$ret$0 = Companion_getInstance_18().parseOne_7xiaj2_k$(item);
-      tmp0_mapTo.add_1j60pz_k$(tmp$ret$0);
+      var tmp$ret$0 = Companion_getInstance_18().parseOne_zbf36v_k$(item);
+      destination.add_utx5q5_k$(tmp$ret$0);
     }
-    return copyToArray(tmp0_mapTo);
+    return copyToArray(destination);
   };
   var Companion_instance_17;
   function Companion_getInstance_18() {
@@ -6978,7 +6909,7 @@
     return this.value_1;
   };
   protoOf(FontVariation).get_tag_18ivnz_k$ = function () {
-    return Companion_getInstance_21().toString_flfcob_k$(this._tag_1);
+    return Companion_getInstance_21().toString_w4mr8s_k$(this._tag_1);
   };
   protoOf(FontVariation).toString = function () {
     return this.get_tag_18ivnz_k$() + '=' + this.value_1;
@@ -7000,14 +6931,14 @@
     return result;
   };
   function FontVariationAxis_init_$Init$(tag, min, def, max, hidden, $this) {
-    FontVariationAxis.call($this, Companion_getInstance_21().fromString_2a1yvu_k$(tag), min, def, max, hidden);
+    FontVariationAxis.call($this, Companion_getInstance_21().fromString_g5hge7_k$(tag), min, def, max, hidden);
     return $this;
   }
   function FontVariationAxis_init_$Create$(tag, min, def, max, hidden) {
     return FontVariationAxis_init_$Init$(tag, min, def, max, hidden, objectCreate(protoOf(FontVariationAxis)));
   }
   function FontVariationAxis_init_$Init$_0(tag, min, def, max, $this) {
-    FontVariationAxis.call($this, Companion_getInstance_21().fromString_2a1yvu_k$(tag), min, def, max, false);
+    FontVariationAxis.call($this, Companion_getInstance_21().fromString_g5hge7_k$(tag), min, def, max, false);
     return $this;
   }
   function FontVariationAxis_init_$Create$_0(tag, min, def, max) {
@@ -7036,7 +6967,7 @@
     return this.isHidden_1;
   };
   protoOf(FontVariationAxis).get_tag_18ivnz_k$ = function () {
-    return Companion_getInstance_21().toString_flfcob_k$(this._tag_1);
+    return Companion_getInstance_21().toString_w4mr8s_k$(this._tag_1);
   };
   protoOf(FontVariationAxis).equals = function (other) {
     if (other === this)
@@ -7171,7 +7102,7 @@
   function Companion_20() {
     Companion_instance_20 = this;
   }
-  protoOf(Companion_20).fromString_2a1yvu_k$ = function (name) {
+  protoOf(Companion_20).fromString_g5hge7_k$ = function (name) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(name.length === 4)) {
@@ -7180,22 +7111,21 @@
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     // Inline function 'kotlin.code' call
-    var tmp1_get_code_jtnknr = charSequenceGet(name, 0);
-    var tmp = (Char__toInt_impl_vasixd(tmp1_get_code_jtnknr) & 255) << 24;
+    var this_0 = charSequenceGet(name, 0);
+    var tmp = (Char__toInt_impl_vasixd(this_0) & 255) << 24;
     // Inline function 'kotlin.code' call
-    var tmp2_get_code_n2njg8 = charSequenceGet(name, 1);
-    var tmp_0 = tmp | (Char__toInt_impl_vasixd(tmp2_get_code_n2njg8) & 255) << 16;
+    var this_1 = charSequenceGet(name, 1);
+    var tmp_0 = tmp | (Char__toInt_impl_vasixd(this_1) & 255) << 16;
     // Inline function 'kotlin.code' call
-    var tmp3_get_code_qbni8p = charSequenceGet(name, 2);
-    var tmp_1 = tmp_0 | (Char__toInt_impl_vasixd(tmp3_get_code_qbni8p) & 255) << 8;
+    var this_2 = charSequenceGet(name, 2);
+    var tmp_1 = tmp_0 | (Char__toInt_impl_vasixd(this_2) & 255) << 8;
     // Inline function 'kotlin.code' call
-    var tmp4_get_code_tknh16 = charSequenceGet(name, 3);
-    return tmp_1 | Char__toInt_impl_vasixd(tmp4_get_code_tknh16) & 255;
+    var this_3 = charSequenceGet(name, 3);
+    return tmp_1 | Char__toInt_impl_vasixd(this_3) & 255;
   };
-  protoOf(Companion_20).toString_flfcob_k$ = function (tag) {
-    var tmp$ret$0;
+  protoOf(Companion_20).toString_w4mr8s_k$ = function (tag) {
     // Inline function 'kotlin.charArrayOf' call
-    tmp$ret$0 = charArrayOf([numberToChar(tag >> 24 & 255), numberToChar(tag >> 16 & 255), numberToChar(tag >> 8 & 255), numberToChar(tag & 255)]);
+    var tmp$ret$0 = charArrayOf([numberToChar(tag >> 24 & 255), numberToChar(tag >> 16 & 255), numberToChar(tag >> 8 & 255), numberToChar(tag & 255)]);
     return concatToString(tmp$ret$0);
   };
   var Companion_instance_20;
@@ -7249,7 +7179,7 @@
         return GLBackendState_PATH_RENDERING_getInstance();
       default:
         GLBackendState_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -7334,7 +7264,7 @@
   protoOf(Companion_21).get__INTERPOLATE_PREMUL_6lamxh_k$ = function () {
     return this._INTERPOLATE_PREMUL_1;
   };
-  protoOf(Companion_21).set_DEFAULT_iwbktr_k$ = function (_set____db54di) {
+  protoOf(Companion_21).set_DEFAULT_5c1etq_k$ = function (_set____db54di) {
     this.DEFAULT_1 = _set____db54di;
   };
   protoOf(Companion_21).get_DEFAULT_wccqmg_k$ = function () {
@@ -7393,13 +7323,13 @@
   protoOf(GradientStyle).toString = function () {
     return 'GradientStyle(_tileMode=' + this.tileMode_1 + ', _premul=' + this.isPremul_1 + ', _localMatrix=' + this.localMatrix_1 + ')';
   };
-  protoOf(GradientStyle).withTileMode_s8i7s3_k$ = function (_tileMode) {
+  protoOf(GradientStyle).withTileMode_nuq78v_k$ = function (_tileMode) {
     return this.tileMode_1.equals(_tileMode) ? this : new GradientStyle(_tileMode, this.isPremul_1, this.localMatrix_1);
   };
-  protoOf(GradientStyle).withPremul_xd4vcj_k$ = function (_premul) {
+  protoOf(GradientStyle).withPremul_616y1q_k$ = function (_premul) {
     return this.isPremul_1 === _premul ? this : new GradientStyle(this.tileMode_1, _premul, this.localMatrix_1);
   };
-  protoOf(GradientStyle).withLocalMatrix_fgq6bg_k$ = function (_localMatrix) {
+  protoOf(GradientStyle).withLocalMatrix_vhyxcw_k$ = function (_localMatrix) {
     return this.localMatrix_1 === _localMatrix ? this : new GradientStyle(this.tileMode_1, this.isPremul_1, _localMatrix);
   };
   function IHasImageInfo() {
@@ -7428,11 +7358,11 @@
   protoOf(IPoint).get_y_1mhr68_k$ = function () {
     return this.y_1;
   };
-  protoOf(IPoint).offset_vpwf5f_k$ = function (dx, dy) {
+  protoOf(IPoint).offset_wlt177_k$ = function (dx, dy) {
     return new IPoint(this.x_1 + dx | 0, this.y_1 + dy | 0);
   };
-  protoOf(IPoint).offset_xysk53_k$ = function (vec) {
-    return this.offset_vpwf5f_k$(vec.x_1, vec.y_1);
+  protoOf(IPoint).offset_v4gwwd_k$ = function (vec) {
+    return this.offset_wlt177_k$(vec.x_1, vec.y_1);
   };
   protoOf(IPoint).get_isEmpty_zauvru_k$ = function () {
     return this.x_1 <= 0 ? true : this.y_1 <= 0;
@@ -7497,33 +7427,33 @@
   };
   function fromInteropPointer_0(_this__u8e3s4, block) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Int32Array(2);
+    var result = new Int32Array(2);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    var result = tmp0_withResult;
-    return new IRange(result[0], result[1]);
+    var result_0 = result;
+    return new IRange(result_0[0], result_0[1]);
   }
   function Companion_24() {
     Companion_instance_24 = this;
   }
-  protoOf(Companion_24).makeLTRB_pya2qu_k$ = function (l, t, r, b) {
+  protoOf(Companion_24).makeLTRB_nm9ew6_k$ = function (l, t, r, b) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(l <= r)) {
@@ -7540,7 +7470,7 @@
     }
     return new IRect(l, t, r, b);
   };
-  protoOf(Companion_24).makeXYWH_rbonnk_k$ = function (l, t, w, h) {
+  protoOf(Companion_24).makeXYWH_reycg0_k$ = function (l, t, w, h) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(w >= 0)) {
@@ -7563,7 +7493,7 @@
     }
     return tmp;
   };
-  protoOf(Companion_24).makeWH_jy8ash_k$ = function (w, h) {
+  protoOf(Companion_24).makeWH_utwirj_k$ = function (w, h) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(w >= 0)) {
@@ -7617,37 +7547,36 @@
   protoOf(IRect).get_height_e7t92o_k$ = function () {
     return this.bottom_1 - this.top_1 | 0;
   };
-  protoOf(IRect).intersect_h6uob5_k$ = function (other) {
+  protoOf(IRect).intersect_htlya9_k$ = function (other) {
     var tmp;
     if (((this.right_1 <= other.left_1 ? true : other.right_1 <= this.left_1) ? true : this.bottom_1 <= other.top_1) ? true : other.bottom_1 <= this.top_1) {
       tmp = null;
     } else {
       // Inline function 'kotlin.comparisons.maxOf' call
-      var tmp0_maxOf = this.left_1;
-      var tmp1_maxOf = other.left_1;
-      var tmp_0 = Math.max(tmp0_maxOf, tmp1_maxOf);
+      var a = this.left_1;
+      var b = other.left_1;
+      var tmp_0 = Math.max(a, b);
       // Inline function 'kotlin.comparisons.maxOf' call
-      var tmp2_maxOf = this.top_1;
-      var tmp3_maxOf = other.top_1;
-      var tmp_1 = Math.max(tmp2_maxOf, tmp3_maxOf);
+      var a_0 = this.top_1;
+      var b_0 = other.top_1;
+      var tmp_1 = Math.max(a_0, b_0);
       // Inline function 'kotlin.comparisons.minOf' call
-      var tmp4_minOf = this.right_1;
-      var tmp5_minOf = other.right_1;
-      var tmp_2 = Math.min(tmp4_minOf, tmp5_minOf);
-      var tmp$ret$3;
+      var a_1 = this.right_1;
+      var b_1 = other.right_1;
+      var tmp_2 = Math.min(a_1, b_1);
       // Inline function 'kotlin.comparisons.minOf' call
-      var tmp6_minOf = this.bottom_1;
-      var tmp7_minOf = other.bottom_1;
-      tmp$ret$3 = Math.min(tmp6_minOf, tmp7_minOf);
+      var a_2 = this.bottom_1;
+      var b_2 = other.bottom_1;
+      var tmp$ret$3 = Math.min(a_2, b_2);
       tmp = new IRect(tmp_0, tmp_1, tmp_2, tmp$ret$3);
     }
     return tmp;
   };
-  protoOf(IRect).offset_vpwf5f_k$ = function (dx, dy) {
+  protoOf(IRect).offset_wlt177_k$ = function (dx, dy) {
     return new IRect(this.left_1 + dx | 0, this.top_1 + dy | 0, this.right_1 + dx | 0, this.bottom_1 + dy | 0);
   };
-  protoOf(IRect).offset_xysk53_k$ = function (vec) {
-    return this.offset_vpwf5f_k$(vec.get_x_1mhr67_k$(), vec.get_y_1mhr68_k$());
+  protoOf(IRect).offset_v4gwwd_k$ = function (vec) {
+    return this.offset_wlt177_k$(vec.get_x_1mhr67_k$(), vec.get_y_1mhr68_k$());
   };
   protoOf(IRect).toRect_edc83l_k$ = function () {
     return new Rect(this.left_1, this.top_1, this.right_1, this.bottom_1);
@@ -7684,7 +7613,7 @@
   function Companion_25() {
     Companion_instance_25 = this;
   }
-  protoOf(Companion_25).make_yxyc6q_k$ = function (w, h) {
+  protoOf(Companion_25).make_50txf2_k$ = function (w, h) {
     return new ISize(w, h);
   };
   protoOf(Companion_25).makeEmpty_kjipdr_k$ = function () {
@@ -7737,12 +7666,12 @@
   };
   function Companion_26() {
     Companion_instance_26 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_26).makeRaster_zaj6bj_k$ = function (imageInfo, bytes, rowBytes) {
+  protoOf(Companion_26).makeRaster_g46ckp_k$ = function (imageInfo, bytes, rowBytes) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -7750,14 +7679,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeRaster.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$1 = org_jetbrains_skia_Image__1nMakeRaster(imageInfo.get_width_j0q4yl_k$(), imageInfo.get_height_e7t92o_k$(), imageInfo.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$(), imageInfo.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$(), getPtr(imageInfo.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$()), tmp0_anonymous.toInterop_k4qgbi_k$(bytes), rowBytes);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$1 = org_jetbrains_skia_Image__1nMakeRaster(imageInfo.get_width_j0q4yl_k$(), imageInfo.get_height_e7t92o_k$(), imageInfo.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$(), imageInfo.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$(), getPtr(imageInfo.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$()), $this$interopScope.toInterop_h7cpet_k$(bytes), rowBytes);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -7770,10 +7699,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_26).makeRaster_kn9kmx_k$ = function (imageInfo, data, rowBytes) {
+  protoOf(Companion_26).makeRaster_shdisq_k$ = function (imageInfo, data, rowBytes) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Image__1nMakeRasterData(imageInfo.get_width_j0q4yl_k$(), imageInfo.get_height_e7t92o_k$(), imageInfo.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$(), imageInfo.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$(), getPtr(imageInfo.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$()), getPtr(data), rowBytes);
       if (ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$())
         throw RuntimeException_init_$Create$('Failed to makeRaster ' + imageInfo + ' ' + data + ' ' + rowBytes);
@@ -7784,10 +7713,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_26).makeFromBitmap_yu8eml_k$ = function (bitmap) {
+  protoOf(Companion_26).makeFromBitmap_39nkt4_k$ = function (bitmap) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Image__1nMakeFromBitmap(getPtr(bitmap));
       if (ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$())
         throw RuntimeException_init_$Create$('Failed to Image::makeFromBitmap ' + bitmap);
@@ -7797,10 +7726,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_26).makeFromPixmap_4ciea7_k$ = function (pixmap) {
+  protoOf(Companion_26).makeFromPixmap_rva8tn_k$ = function (pixmap) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Image__1nMakeFromPixmap(getPtr(pixmap));
       if (ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$())
         throw RuntimeException_init_$Create$('Failed to Image::makeFromRaster ' + pixmap);
@@ -7810,8 +7739,8 @@
     }
     return tmp;
   };
-  protoOf(Companion_26).makeFromEncoded_eatg37_k$ = function (bytes) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_26).makeFromEncoded_99p5hy_k$ = function (bytes) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$1;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -7819,14 +7748,14 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeFromEncoded.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = org_jetbrains_skia_Image__1nMakeFromEncoded(tmp0_anonymous.toInterop_k4qgbi_k$(bytes), bytes.length);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = org_jetbrains_skia_Image__1nMakeFromEncoded($this$interopScope.toInterop_h7cpet_k$(bytes), bytes.length);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -7861,7 +7790,7 @@
         var tmp_0 = this$0;
         var tmp_1 = Companion_getInstance_29();
         var tmp_2 = this$0.get__ptr_wohp4o_k$();
-        tmp_0._imageInfo_1 = tmp_1.createUsing_l3ixsh_k$(tmp_2, Image_nGetImageInfo$ref());
+        tmp_0._imageInfo_1 = tmp_1.createUsing_vjf7w1_k$(tmp_2, Image_nGetImageInfo$ref());
         tmp = Unit_getInstance();
       }
       return Unit_getInstance();
@@ -7872,7 +7801,7 @@
     RefCnt_init_$Init$(ptr, this);
     this._imageInfo_1 = null;
   }
-  protoOf(Image).set__imageInfo_w4j58p_k$ = function (_set____db54di) {
+  protoOf(Image).set__imageInfo_okaray_k$ = function (_set____db54di) {
     this._imageInfo_1 = _set____db54di;
   };
   protoOf(Image).get__imageInfo_bpddpv_k$ = function () {
@@ -7890,10 +7819,10 @@
     }
     return tmp;
   };
-  protoOf(Image).encodeToData_d34vzv_k$ = function (format, quality) {
+  protoOf(Image).encodeToData_hd42n1_k$ = function (format, quality) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Image__1nEncodeToData(this.get__ptr_wohp4o_k$(), format.get_ordinal_ip24qg_k$(), quality);
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new Data(ptr);
     }finally {
@@ -7901,21 +7830,21 @@
     }
     return tmp;
   };
-  protoOf(Image).encodeToData$default_m1mm1x_k$ = function (format, quality, $super) {
+  protoOf(Image).encodeToData$default_mjv0rj_k$ = function (format, quality, $super) {
     format = format === VOID ? EncodedImageFormat_PNG_getInstance() : format;
     quality = quality === VOID ? 100 : quality;
-    return $super === VOID ? this.encodeToData_d34vzv_k$(format, quality) : $super.encodeToData_d34vzv_k$.call(this, format, quality);
+    return $super === VOID ? this.encodeToData_hd42n1_k$(format, quality) : $super.encodeToData_hd42n1_k$.call(this, format, quality);
   };
-  protoOf(Image).makeShader_xyzlfy_k$ = function (localMatrix) {
-    return this.makeShader_jncbet_k$(FilterTileMode_CLAMP_getInstance(), FilterTileMode_CLAMP_getInstance(), Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), localMatrix);
+  protoOf(Image).makeShader_q54znw_k$ = function (localMatrix) {
+    return this.makeShader_7nwpzf_k$(FilterTileMode_CLAMP_getInstance(), FilterTileMode_CLAMP_getInstance(), Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), localMatrix);
   };
-  protoOf(Image).makeShader_f3k5oi_k$ = function (tmx, tmy, localMatrix) {
-    return this.makeShader_jncbet_k$(tmx, tmy, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), localMatrix);
+  protoOf(Image).makeShader_lzo5mc_k$ = function (tmx, tmy, localMatrix) {
+    return this.makeShader_7nwpzf_k$(tmx, tmy, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), localMatrix);
   };
-  protoOf(Image).makeShader_jncbet_k$ = function (tmx, tmy, sampling, localMatrix) {
+  protoOf(Image).makeShader_7nwpzf_k$ = function (tmx, tmy, sampling, localMatrix) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -7923,19 +7852,19 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Image.makeShader.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = this.get__ptr_wohp4o_k$();
           var tmp_1 = tmx.get_ordinal_ip24qg_k$();
           var tmp_2 = tmy.get_ordinal_ip24qg_k$();
           var tmp_3 = sampling._packedInt1_kbgj89_k$();
           var tmp_4 = sampling._packedInt2_kbgj8a_k$();
-          tmp$ret$1 = org_jetbrains_skia_Image__1nMakeShader(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp0_anonymous.toInterop_sfommq_k$(localMatrix == null ? null : localMatrix.get_mat_18j0uh_k$()));
+          tmp$ret$1 = org_jetbrains_skia_Image__1nMakeShader(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, $this$interopScope.toInterop_uum1m9_k$(localMatrix == null ? null : localMatrix.get_mat_18j0uh_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -7945,24 +7874,24 @@
     }
     return tmp;
   };
-  protoOf(Image).makeShader$default_htcdjb_k$ = function (tmx, tmy, sampling, localMatrix, $super) {
+  protoOf(Image).makeShader$default_cg3yhf_k$ = function (tmx, tmy, sampling, localMatrix, $super) {
     tmx = tmx === VOID ? FilterTileMode_CLAMP_getInstance() : tmx;
     tmy = tmy === VOID ? FilterTileMode_CLAMP_getInstance() : tmy;
     sampling = sampling === VOID ? Companion_getInstance_52().get_DEFAULT_wccqmg_k$() : sampling;
     localMatrix = localMatrix === VOID ? null : localMatrix;
-    return $super === VOID ? this.makeShader_jncbet_k$(tmx, tmy, sampling, localMatrix) : $super.makeShader_jncbet_k$.call(this, tmx, tmy, sampling, localMatrix);
+    return $super === VOID ? this.makeShader_7nwpzf_k$(tmx, tmy, sampling, localMatrix) : $super.makeShader_7nwpzf_k$.call(this, tmx, tmy, sampling, localMatrix);
   };
   protoOf(Image).peekPixels_1l1uy0_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'kotlin.takeIf' call
-      var tmp0_takeIf = org_jetbrains_skia_Image__1nPeekPixels(this.get__ptr_wohp4o_k$());
+      var this_0 = org_jetbrains_skia_Image__1nPeekPixels(this.get__ptr_wohp4o_k$());
       // Inline function 'kotlin.contracts.contract' call
       var tmp_0;
       // Inline function 'org.jetbrains.skia.Image.peekPixels.<anonymous>' call
-      if (!(tmp0_takeIf === Companion_getInstance_81().get_NullPointer_8qbg7n_k$())) {
-        tmp_0 = tmp0_takeIf;
+      if (!(this_0 === Companion_getInstance_81().get_NullPointer_8qbg7n_k$())) {
+        tmp_0 = this_0;
       } else {
         tmp_0 = null;
       }
@@ -7982,10 +7911,10 @@
     }
     return tmp;
   };
-  protoOf(Image).peekPixels_cvlbx_k$ = function (pixmap) {
+  protoOf(Image).peekPixels_m2dzob_k$ = function (pixmap) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Image__1nPeekPixelsToPixmap(this.get__ptr_wohp4o_k$(), getPtr(pixmap));
     }finally {
       reachabilityBarrier(this);
@@ -7993,19 +7922,19 @@
     }
     return tmp;
   };
-  protoOf(Image).readPixels_147ch_k$ = function (dst) {
-    return this.readPixels_nwriph_k$(null, dst, 0, 0, false);
+  protoOf(Image).readPixels_s2nedo_k$ = function (dst) {
+    return this.readPixels_7t7jxw_k$(null, dst, 0, 0, false);
   };
-  protoOf(Image).readPixels_ing92n_k$ = function (dst, srcX, srcY) {
-    return this.readPixels_nwriph_k$(null, dst, srcX, srcY, false);
+  protoOf(Image).readPixels_yiqj5g_k$ = function (dst, srcX, srcY) {
+    return this.readPixels_7t7jxw_k$(null, dst, srcX, srcY, false);
   };
-  protoOf(Image).readPixels_o34vte_k$ = function (context, dst) {
-    return this.readPixels_nwriph_k$(context, dst, 0, 0, false);
+  protoOf(Image).readPixels_voss88_k$ = function (context, dst) {
+    return this.readPixels_7t7jxw_k$(context, dst, 0, 0, false);
   };
-  protoOf(Image).readPixels_quwxe6_k$ = function (context, dst, srcX, srcY) {
-    return this.readPixels_nwriph_k$(context, dst, srcX, srcY, false);
+  protoOf(Image).readPixels_8b4grs_k$ = function (context, dst, srcX, srcY) {
+    return this.readPixels_7t7jxw_k$(context, dst, srcX, srcY, false);
   };
-  protoOf(Image).readPixels_nwriph_k$ = function (context, dst, srcX, srcY, cache) {
+  protoOf(Image).readPixels_7t7jxw_k$ = function (context, dst, srcX, srcY, cache) {
     var tmp;
     try {
       tmp = org_jetbrains_skia_Image__1nReadPixelsBitmap(this.get__ptr_wohp4o_k$(), getPtr(context), getPtr(dst), srcX, srcY, cache);
@@ -8016,7 +7945,7 @@
     }
     return tmp;
   };
-  protoOf(Image).readPixels_kax343_k$ = function (dst, srcX, srcY, cache) {
+  protoOf(Image).readPixels_ulcszi_k$ = function (dst, srcX, srcY, cache) {
     var tmp;
     try {
       tmp = org_jetbrains_skia_Image__1nReadPixelsPixmap(this.get__ptr_wohp4o_k$(), getPtr(dst), srcX, srcY, cache);
@@ -8026,7 +7955,7 @@
     }
     return tmp;
   };
-  protoOf(Image).scalePixels_k7ji3i_k$ = function (dst, samplingMode, cache) {
+  protoOf(Image).scalePixels_6swj8h_k$ = function (dst, samplingMode, cache) {
     var tmp;
     try {
       tmp = org_jetbrains_skia_Image__1nScalePixels(this.get__ptr_wohp4o_k$(), getPtr(dst), samplingMode._packedInt1_kbgj89_k$(), samplingMode._packedInt2_kbgj8a_k$(), cache);
@@ -8038,12 +7967,12 @@
   };
   function Companion_27() {
     Companion_instance_27 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_27).makeAlphaThreshold_fm94b9_k$ = function (r, innerMin, outerMax, input, crop) {
+  protoOf(Companion_27).makeAlphaThreshold_88v5py_k$ = function (r, innerMin, outerMax, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8051,16 +7980,16 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeAlphaThreshold.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(r);
           var tmp_1 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeAlphaThreshold(tmp_0, innerMin, outerMax, tmp_1, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeAlphaThreshold(tmp_0, innerMin, outerMax, tmp_1, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8071,10 +8000,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeArithmetic_eqdsjh_k$ = function (k1, k2, k3, k4, enforcePMColor, bg, fg, crop) {
+  protoOf(Companion_27).makeArithmetic_czgrwo_k$ = function (k1, k2, k3, k4, enforcePMColor, bg, fg, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8082,16 +8011,16 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeArithmetic.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(bg);
           var tmp_1 = getPtr(fg);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeArithmetic(k1, k2, k3, k4, enforcePMColor, tmp_0, tmp_1, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeArithmetic(k1, k2, k3, k4, enforcePMColor, tmp_0, tmp_1, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8102,10 +8031,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeBlend_u1el7v_k$ = function (blendMode, bg, fg, crop) {
+  protoOf(Companion_27).makeBlend_w4abuc_k$ = function (blendMode, bg, fg, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8113,17 +8042,17 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeBlend.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = blendMode.get_ordinal_ip24qg_k$();
           var tmp_1 = getPtr(bg);
           var tmp_2 = getPtr(fg);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeBlend(tmp_0, tmp_1, tmp_2, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeBlend(tmp_0, tmp_1, tmp_2, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8134,10 +8063,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeBlur_3mengz_k$ = function (sigmaX, sigmaY, mode, input, crop) {
+  protoOf(Companion_27).makeBlur_dz1nmo_k$ = function (sigmaX, sigmaY, mode, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8145,16 +8074,16 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeBlur.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = mode.get_ordinal_ip24qg_k$();
           var tmp_1 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeBlur(sigmaX, sigmaY, tmp_0, tmp_1, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeBlur(sigmaX, sigmaY, tmp_0, tmp_1, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8164,15 +8093,15 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeBlur$default_fknlxe_k$ = function (sigmaX, sigmaY, mode, input, crop, $super) {
+  protoOf(Companion_27).makeBlur$default_wsud0e_k$ = function (sigmaX, sigmaY, mode, input, crop, $super) {
     input = input === VOID ? null : input;
     crop = crop === VOID ? null : crop;
-    return $super === VOID ? this.makeBlur_3mengz_k$(sigmaX, sigmaY, mode, input, crop) : $super.makeBlur_3mengz_k$.call(this, sigmaX, sigmaY, mode, input, crop);
+    return $super === VOID ? this.makeBlur_dz1nmo_k$(sigmaX, sigmaY, mode, input, crop) : $super.makeBlur_dz1nmo_k$.call(this, sigmaX, sigmaY, mode, input, crop);
   };
-  protoOf(Companion_27).makeColorFilter_oot0py_k$ = function (f, input, crop) {
+  protoOf(Companion_27).makeColorFilter_wptvsg_k$ = function (f, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8180,16 +8109,16 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeColorFilter.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(f);
           var tmp_1 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeColorFilter(tmp_0, tmp_1, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeColorFilter(tmp_0, tmp_1, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8200,10 +8129,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeCompose_yyinti_k$ = function (outer, inner) {
+  protoOf(Companion_27).makeCompose_dtsxz0_k$ = function (outer, inner) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeCompose(getPtr(outer), getPtr(inner)));
     }finally {
       reachabilityBarrier(outer);
@@ -8211,10 +8140,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeDisplacementMap_yxup0i_k$ = function (x, y, scale, displacement, color, crop) {
+  protoOf(Companion_27).makeDisplacementMap_at7fx0_k$ = function (x, y, scale, displacement, color, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8222,18 +8151,18 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeDisplacementMap.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = x.get_ordinal_ip24qg_k$();
           var tmp_1 = y.get_ordinal_ip24qg_k$();
           var tmp_2 = getPtr(displacement);
           var tmp_3 = getPtr(color);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeDisplacementMap(tmp_0, tmp_1, scale, tmp_2, tmp_3, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeDisplacementMap(tmp_0, tmp_1, scale, tmp_2, tmp_3, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8244,10 +8173,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeDropShadow_dnto78_k$ = function (dx, dy, sigmaX, sigmaY, color, input, crop) {
+  protoOf(Companion_27).makeDropShadow_bhsrna_k$ = function (dx, dy, sigmaX, sigmaY, color, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8255,15 +8184,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeDropShadow.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeDropShadow(dx, dy, sigmaX, sigmaY, color, tmp_0, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeDropShadow(dx, dy, sigmaX, sigmaY, color, tmp_0, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8273,15 +8202,15 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeDropShadow$default_p2bpdb_k$ = function (dx, dy, sigmaX, sigmaY, color, input, crop, $super) {
+  protoOf(Companion_27).makeDropShadow$default_nbpi2g_k$ = function (dx, dy, sigmaX, sigmaY, color, input, crop, $super) {
     input = input === VOID ? null : input;
     crop = crop === VOID ? null : crop;
-    return $super === VOID ? this.makeDropShadow_dnto78_k$(dx, dy, sigmaX, sigmaY, color, input, crop) : $super.makeDropShadow_dnto78_k$.call(this, dx, dy, sigmaX, sigmaY, color, input, crop);
+    return $super === VOID ? this.makeDropShadow_bhsrna_k$(dx, dy, sigmaX, sigmaY, color, input, crop) : $super.makeDropShadow_bhsrna_k$.call(this, dx, dy, sigmaX, sigmaY, color, input, crop);
   };
-  protoOf(Companion_27).makeDropShadowOnly_kub4pc_k$ = function (dx, dy, sigmaX, sigmaY, color, input, crop) {
+  protoOf(Companion_27).makeDropShadowOnly_hiw9by_k$ = function (dx, dy, sigmaX, sigmaY, color, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8289,15 +8218,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeDropShadowOnly.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeDropShadowOnly(dx, dy, sigmaX, sigmaY, color, tmp_0, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeDropShadowOnly(dx, dy, sigmaX, sigmaY, color, tmp_0, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8307,29 +8236,29 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeDropShadowOnly$default_qaiyh1_k$ = function (dx, dy, sigmaX, sigmaY, color, input, crop, $super) {
+  protoOf(Companion_27).makeDropShadowOnly$default_9p8jr8_k$ = function (dx, dy, sigmaX, sigmaY, color, input, crop, $super) {
     input = input === VOID ? null : input;
     crop = crop === VOID ? null : crop;
-    return $super === VOID ? this.makeDropShadowOnly_kub4pc_k$(dx, dy, sigmaX, sigmaY, color, input, crop) : $super.makeDropShadowOnly_kub4pc_k$.call(this, dx, dy, sigmaX, sigmaY, color, input, crop);
+    return $super === VOID ? this.makeDropShadowOnly_hiw9by_k$(dx, dy, sigmaX, sigmaY, color, input, crop) : $super.makeDropShadowOnly_hiw9by_k$.call(this, dx, dy, sigmaX, sigmaY, color, input, crop);
   };
-  protoOf(Companion_27).makeImage_2c11rj_k$ = function (image) {
-    var r = Companion_getInstance_47().makeWH_b3ckap_k$(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$());
-    return this.makeImage_jee8qf_k$(image, r, r, Companion_getInstance_52().get_DEFAULT_wccqmg_k$());
+  protoOf(Companion_27).makeImage_j0jomz_k$ = function (image) {
+    var r = Companion_getInstance_47().makeWH_nov667_k$(image.get_width_j0q4yl_k$(), image.get_height_e7t92o_k$());
+    return this.makeImage_1vx7mr_k$(image, r, r, Companion_getInstance_52().get_DEFAULT_wccqmg_k$());
   };
-  protoOf(Companion_27).makeImage_jee8qf_k$ = function (image, src, dst, mode) {
+  protoOf(Companion_27).makeImage_1vx7mr_k$ = function (image, src, dst, mode) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeImage(getPtr(image), src.get_left_woprgw_k$(), src.get_top_18ivbo_k$(), src.get_right_ixz7xv_k$(), src.get_bottom_bj8ras_k$(), dst.get_left_woprgw_k$(), dst.get_top_18ivbo_k$(), dst.get_right_ixz7xv_k$(), dst.get_bottom_bj8ras_k$(), mode._packedInt1_kbgj89_k$(), mode._packedInt2_kbgj8a_k$()));
     }finally {
       reachabilityBarrier(image);
     }
     return tmp;
   };
-  protoOf(Companion_27).makeMagnifier_h58oq3_k$ = function (r, inset, input, crop) {
+  protoOf(Companion_27).makeMagnifier_zy6yc_k$ = function (r, inset, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8337,19 +8266,19 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeMagnifier.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = r.get_left_woprgw_k$();
           var tmp_1 = r.get_top_18ivbo_k$();
           var tmp_2 = r.get_right_ixz7xv_k$();
           var tmp_3 = r.get_bottom_bj8ras_k$();
           var tmp_4 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeMagnifier(tmp_0, tmp_1, tmp_2, tmp_3, inset, tmp_4, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeMagnifier(tmp_0, tmp_1, tmp_2, tmp_3, inset, tmp_4, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8359,10 +8288,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeMatrixConvolution_vyxkxt_k$ = function (kernelW, kernelH, kernel, gain, bias, offsetX, offsetY, tileMode, convolveAlpha, input, crop) {
+  protoOf(Companion_27).makeMatrixConvolution_6t90e2_k$ = function (kernelW, kernelH, kernel, gain, bias, offsetX, offsetY, tileMode, convolveAlpha, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8370,17 +8299,17 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeMatrixConvolution.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var tmp_0 = tmp0_anonymous.toInterop_sfommq_k$(kernel);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var tmp_0 = $this$interopScope.toInterop_uum1m9_k$(kernel);
           var tmp_1 = tileMode.get_ordinal_ip24qg_k$();
           var tmp_2 = getPtr(input);
-          tmp$ret$1 = org_jetbrains_skia_ImageFilter__1nMakeMatrixConvolution(kernelW, kernelH, tmp_0, gain, bias, offsetX, offsetY, tmp_1, convolveAlpha, tmp_2, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$()));
+          tmp$ret$1 = org_jetbrains_skia_ImageFilter__1nMakeMatrixConvolution(kernelW, kernelH, tmp_0, gain, bias, offsetX, offsetY, tmp_1, convolveAlpha, tmp_2, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8390,10 +8319,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeMatrixTransform_5b6sj9_k$ = function (matrix, mode, input) {
+  protoOf(Companion_27).makeMatrixTransform_8i9riq_k$ = function (matrix, mode, input) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8401,14 +8330,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeMatrixTransform.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$1 = org_jetbrains_skia_ImageFilter__1nMakeMatrixTransform(tmp0_anonymous.toInterop_sfommq_k$(matrix.get_mat_18j0uh_k$()), mode._packedInt1_kbgj89_k$(), mode._packedInt2_kbgj8a_k$(), getPtr(input));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$1 = org_jetbrains_skia_ImageFilter__1nMakeMatrixTransform($this$interopScope.toInterop_uum1m9_k$(matrix.get_mat_18j0uh_k$()), mode._packedInt1_kbgj89_k$(), mode._packedInt2_kbgj8a_k$(), getPtr(input));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8418,17 +8347,17 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeMerge_4ftb34_k$ = function (filters, crop) {
+  protoOf(Companion_27).makeMerge_cad2v8_k$ = function (filters, crop) {
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeMerge.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
         var tmp;
         try {
-          Stats_getInstance().onNativeCall_s1vbwj_k$();
+          Stats_getInstance().onNativeCall_s2f4hw_k$();
           var filterPtrs = new NativePointerArray(filters.length);
           var inductionVariable = 0;
           var last = filters.length - 1 | 0;
@@ -8436,12 +8365,12 @@
             do {
               var i = inductionVariable;
               inductionVariable = inductionVariable + 1 | 0;
-              filterPtrs.set_10zwtt_k$(i, getPtr(filters[i]));
+              filterPtrs.set_g707pu_k$(i, getPtr(filters[i]));
             }
              while (inductionVariable <= last);
-          var tmp_0 = tmp0_anonymous.toInterop_se1a9v_k$(filterPtrs);
+          var tmp_0 = $this$interopScope.toInterop_1ghudk_k$(filterPtrs);
           var tmp_1 = filters.length;
-          tmp = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeMerge(tmp_0, tmp_1, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeMerge(tmp_0, tmp_1, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
         }finally {
           reachabilityBarrier(filters);
         }
@@ -8450,16 +8379,16 @@
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return tmp;
   };
-  protoOf(Companion_27).makeOffset_8qoczr_k$ = function (dx, dy, input, crop) {
+  protoOf(Companion_27).makeOffset_lafoeo_k$ = function (dx, dy, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8467,15 +8396,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeOffset.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeOffset(dx, dy, tmp_0, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeOffset(dx, dy, tmp_0, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8485,10 +8414,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeShader_nw2hcc_k$ = function (shader, dither, crop) {
+  protoOf(Companion_27).makeShader_pffvva_k$ = function (shader, dither, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8496,15 +8425,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeShader.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(shader);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeShader(tmp_0, dither, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeShader(tmp_0, dither, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8514,14 +8443,14 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeShader$default_8vunpy_k$ = function (shader, dither, crop, $super) {
+  protoOf(Companion_27).makeShader$default_e9k1bv_k$ = function (shader, dither, crop, $super) {
     dither = dither === VOID ? false : dither;
-    return $super === VOID ? this.makeShader_nw2hcc_k$(shader, dither, crop) : $super.makeShader_nw2hcc_k$.call(this, shader, dither, crop);
+    return $super === VOID ? this.makeShader_pffvva_k$(shader, dither, crop) : $super.makeShader_pffvva_k$.call(this, shader, dither, crop);
   };
-  protoOf(Companion_27).makeRuntimeShader_m7nbjm_k$ = function (runtimeShaderBuilder, shaderName, input) {
+  protoOf(Companion_27).makeRuntimeShader_nl4lek_k$ = function (runtimeShaderBuilder, shaderName, input) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8529,14 +8458,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeRuntimeShader.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeRuntimeShader(getPtr(runtimeShaderBuilder), tmp0_anonymous.toInterop_tozece_k$(shaderName), getPtr(input)));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeRuntimeShader(getPtr(runtimeShaderBuilder), $this$interopScope.toInterop_ok8jph_k$(shaderName), getPtr(input)));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8547,10 +8476,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeRuntimeShader_3108jm_k$ = function (runtimeShaderBuilder, shaderNames, inputs) {
+  protoOf(Companion_27).makeRuntimeShader_izv2rr_k$ = function (runtimeShaderBuilder, shaderNames, inputs) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'kotlin.require' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'kotlin.require' call
@@ -8567,7 +8496,7 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeRuntimeShader.<anonymous>' call
-          var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var inputPtrs = new NativePointerArray(inputs.length);
           var inductionVariable = 0;
           var last = inputs.length - 1 | 0;
@@ -8575,16 +8504,16 @@
             do {
               var i = inductionVariable;
               inductionVariable = inductionVariable + 1 | 0;
-              inputPtrs.set_10zwtt_k$(i, getPtr(inputs[i]));
+              inputPtrs.set_g707pu_k$(i, getPtr(inputs[i]));
             }
              while (inductionVariable <= last);
-          tmp$ret$2 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeRuntimeShaderFromArray(getPtr(runtimeShaderBuilder), tmp1_anonymous.toInterop_59fj22_k$(shaderNames), tmp1_anonymous.toInterop_se1a9v_k$(inputPtrs), inputPtrs.get_size_woubt6_k$()));
+          tmp$ret$2 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeRuntimeShaderFromArray(getPtr(runtimeShaderBuilder), $this$interopScope.toInterop_2ejn5p_k$(shaderNames), $this$interopScope.toInterop_1ghudk_k$(inputPtrs), inputPtrs.get_size_woubt6_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8595,20 +8524,20 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeTile_7y8z89_k$ = function (src, dst, input) {
+  protoOf(Companion_27).makeTile_17mmom_k$ = function (src, dst, input) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeTile(src.get_left_woprgw_k$(), src.get_top_18ivbo_k$(), src.get_right_ixz7xv_k$(), src.get_bottom_bj8ras_k$(), dst.get_left_woprgw_k$(), dst.get_top_18ivbo_k$(), dst.get_right_ixz7xv_k$(), dst.get_bottom_bj8ras_k$(), getPtr(input)));
     }finally {
       reachabilityBarrier(input);
     }
     return tmp;
   };
-  protoOf(Companion_27).makeDilate_2wlqoh_k$ = function (rx, ry, input, crop) {
+  protoOf(Companion_27).makeDilate_nzvgoo_k$ = function (rx, ry, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8616,15 +8545,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeDilate.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeDilate(rx, ry, tmp_0, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeDilate(rx, ry, tmp_0, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8634,10 +8563,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeErode_x684rx_k$ = function (rx, ry, input, crop) {
+  protoOf(Companion_27).makeErode_pd42p0_k$ = function (rx, ry, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8645,15 +8574,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeErode.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeErode(rx, ry, tmp_0, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeErode(rx, ry, tmp_0, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8663,10 +8592,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeDistantLitDiffuse_brxtvt_k$ = function (x, y, z, lightColor, surfaceScale, kd, input, crop) {
+  protoOf(Companion_27).makeDistantLitDiffuse_1eic4z_k$ = function (x, y, z, lightColor, surfaceScale, kd, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8674,15 +8603,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeDistantLitDiffuse.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeDistantLitDiffuse(x, y, z, lightColor, surfaceScale, kd, tmp_0, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeDistantLitDiffuse(x, y, z, lightColor, surfaceScale, kd, tmp_0, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8692,10 +8621,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makePointLitDiffuse_lznpwo_k$ = function (x, y, z, lightColor, surfaceScale, kd, input, crop) {
+  protoOf(Companion_27).makePointLitDiffuse_f3fppg_k$ = function (x, y, z, lightColor, surfaceScale, kd, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8703,15 +8632,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makePointLitDiffuse.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakePointLitDiffuse(x, y, z, lightColor, surfaceScale, kd, tmp_0, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakePointLitDiffuse(x, y, z, lightColor, surfaceScale, kd, tmp_0, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8721,10 +8650,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeSpotLitDiffuse_r10m2m_k$ = function (x0, y0, z0, x1, y1, z1, falloffExponent, cutoffAngle, lightColor, surfaceScale, kd, input, crop) {
+  protoOf(Companion_27).makeSpotLitDiffuse_abj8ms_k$ = function (x0, y0, z0, x1, y1, z1, falloffExponent, cutoffAngle, lightColor, surfaceScale, kd, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8732,15 +8661,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeSpotLitDiffuse.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeSpotLitDiffuse(x0, y0, z0, x1, y1, z1, falloffExponent, cutoffAngle, lightColor, surfaceScale, kd, tmp_0, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeSpotLitDiffuse(x0, y0, z0, x1, y1, z1, falloffExponent, cutoffAngle, lightColor, surfaceScale, kd, tmp_0, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8750,10 +8679,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeDistantLitSpecular_vk3sx8_k$ = function (x, y, z, lightColor, surfaceScale, ks, shininess, input, crop) {
+  protoOf(Companion_27).makeDistantLitSpecular_jgkl1c_k$ = function (x, y, z, lightColor, surfaceScale, ks, shininess, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8761,15 +8690,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeDistantLitSpecular.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeDistantLitSpecular(x, y, z, lightColor, surfaceScale, ks, shininess, tmp_0, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeDistantLitSpecular(x, y, z, lightColor, surfaceScale, ks, shininess, tmp_0, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8779,10 +8708,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makePointLitSpecular_2z1e2j_k$ = function (x, y, z, lightColor, surfaceScale, ks, shininess, input, crop) {
+  protoOf(Companion_27).makePointLitSpecular_uyc169_k$ = function (x, y, z, lightColor, surfaceScale, ks, shininess, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8790,15 +8719,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makePointLitSpecular.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakePointLitSpecular(x, y, z, lightColor, surfaceScale, ks, shininess, tmp_0, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakePointLitSpecular(x, y, z, lightColor, surfaceScale, ks, shininess, tmp_0, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8808,10 +8737,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_27).makeSpotLitSpecular_4vybgx_k$ = function (x0, y0, z0, x1, y1, z1, falloffExponent, cutoffAngle, lightColor, surfaceScale, ks, shininess, input, crop) {
+  protoOf(Companion_27).makeSpotLitSpecular_v3swnb_k$ = function (x0, y0, z0, x1, y1, z1, falloffExponent, cutoffAngle, lightColor, surfaceScale, ks, shininess, input, crop) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -8819,15 +8748,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeSpotLitSpecular.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(input);
-          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeSpotLitSpecular(x0, y0, z0, x1, y1, z1, falloffExponent, cutoffAngle, lightColor, surfaceScale, ks, shininess, tmp_0, tmp0_anonymous.toInterop_o3s7q3_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
+          tmp$ret$1 = new ImageFilter(org_jetbrains_skia_ImageFilter__1nMakeSpotLitSpecular(x0, y0, z0, x1, y1, z1, falloffExponent, cutoffAngle, lightColor, surfaceScale, ks, shininess, tmp_0, $this$interopScope.toInterop_i7skn2_k$(crop == null ? null : crop.serializeToIntArray_wv960r_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -8875,78 +8804,78 @@
   protoOf(Companion_28).get_DEFAULT_wccqmg_k$ = function () {
     return this.DEFAULT_1;
   };
-  protoOf(Companion_28).makeN32_mr767_k$ = function (width, height, alphaType) {
+  protoOf(Companion_28).makeN32_3as8gh_k$ = function (width, height, alphaType) {
     return new ImageInfo(new ColorInfo(Companion_getInstance_8().get_N32_18jozg_k$(), alphaType, null), width, height);
   };
-  protoOf(Companion_28).makeN32_aexzqq_k$ = function (width, height, alphaType, colorSpace) {
+  protoOf(Companion_28).makeN32_aso3w8_k$ = function (width, height, alphaType, colorSpace) {
     return new ImageInfo(new ColorInfo(Companion_getInstance_8().get_N32_18jozg_k$(), alphaType, colorSpace), width, height);
   };
-  protoOf(Companion_28).makeS32_mjt5me_k$ = function (width, height, alphaType) {
+  protoOf(Companion_28).makeS32_t68uyy_k$ = function (width, height, alphaType) {
     return new ImageInfo(new ColorInfo(Companion_getInstance_8().get_N32_18jozg_k$(), alphaType, Companion_getInstance_7().get_sRGB_wottib_k$()), width, height);
   };
-  protoOf(Companion_28).makeN32Premul_arvyf4_k$ = function (width, height) {
+  protoOf(Companion_28).makeN32Premul_iqgvhc_k$ = function (width, height) {
     return new ImageInfo(new ColorInfo(Companion_getInstance_8().get_N32_18jozg_k$(), ColorAlphaType_PREMUL_getInstance(), null), width, height);
   };
-  protoOf(Companion_28).makeN32Premul_i9voyp_k$ = function (width, height, colorSpace) {
+  protoOf(Companion_28).makeN32Premul_hz2ms9_k$ = function (width, height, colorSpace) {
     return new ImageInfo(new ColorInfo(Companion_getInstance_8().get_N32_18jozg_k$(), ColorAlphaType_PREMUL_getInstance(), colorSpace), width, height);
   };
-  protoOf(Companion_28).makeA8_u7e4o5_k$ = function (width, height) {
+  protoOf(Companion_28).makeA8_kz383p_k$ = function (width, height) {
     return new ImageInfo(new ColorInfo(ColorType_ALPHA_8_getInstance(), ColorAlphaType_PREMUL_getInstance(), null), width, height);
   };
-  protoOf(Companion_28).makeUnknown_z716as_k$ = function (width, height) {
+  protoOf(Companion_28).makeUnknown_2sadg_k$ = function (width, height) {
     return new ImageInfo(new ColorInfo(ColorType_UNKNOWN_getInstance(), ColorAlphaType_UNKNOWN_getInstance(), null), width, height);
   };
-  protoOf(Companion_28).createUsing_l3ixsh_k$ = function (_ptr, _nGetImageInfo) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_28).createUsing_vjf7w1_k$ = function (_ptr, _nGetImageInfo) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var colorSpacePtr = null;
     // Inline function 'kotlin.let' call
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Int32Array(4);
+    var result = new Int32Array(4);
     $l$block_0: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
         // Inline function 'org.jetbrains.skia.Companion.createUsing.<anonymous>' call
         // Inline function 'org.jetbrains.skia.impl.withResult' call
-        var tmp0_withResult_0 = new NativePointerArray(1);
+        var result_0 = new NativePointerArray(1);
         $l$block: {
           // Inline function 'org.jetbrains.skia.impl.interopScope' call
           try {
             var tmp0_0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0_0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-            var tmp0_anonymous_0 = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-            var handle_0 = tmp0_anonymous_0.toInteropForResult_7cceht_k$(tmp0_withResult_0);
+            var $this$interopScope_0 = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var handle_0 = $this$interopScope_0.toInteropForResult_nw6uau_k$(result_0);
             // Inline function 'org.jetbrains.skia.Companion.createUsing.<anonymous>.<anonymous>' call
             _nGetImageInfo(_ptr, handle, handle_0);
-            tmp0_anonymous_0.fromInterop_pg4kur_k$(handle_0, tmp0_withResult_0);
+            $this$interopScope_0.fromInterop_phusho_k$(handle_0, result_0);
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
-        colorSpacePtr = tmp0_withResult_0.get_fkrdnv_k$(0);
-        tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+        colorSpacePtr = result_0.get_c1px32_k$(0);
+        $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
         break $l$block_0;
       }finally {
         var tmp1_0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1_0 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'org.jetbrains.skia.Companion.createUsing.<anonymous>' call
-    return ImageInfo_init_$Create$_1(tmp0_withResult[0], tmp0_withResult[1], tmp0_withResult[2], tmp0_withResult[3], ensureNotNull(colorSpacePtr));
+    return ImageInfo_init_$Create$_1(result[0], result[1], result[2], result[3], ensureNotNull(colorSpacePtr));
   };
   var Companion_instance_28;
   function Companion_getInstance_29() {
@@ -8975,20 +8904,20 @@
   protoOf(ImageInfo).get_colorType_tr6rn0_k$ = function () {
     return this.colorInfo_1.get_colorType_tr6rn0_k$();
   };
-  protoOf(ImageInfo).withColorType_jlsb9z_k$ = function (colorType) {
-    return this.withColorInfo_n4r8nr_k$(this.colorInfo_1.withColorType_jlsb9z_k$(colorType));
+  protoOf(ImageInfo).withColorType_9ad897_k$ = function (colorType) {
+    return this.withColorInfo_64ok8p_k$(this.colorInfo_1.withColorType_9ad897_k$(colorType));
   };
   protoOf(ImageInfo).get_colorAlphaType_aqfov2_k$ = function () {
     return this.colorInfo_1.get_alphaType_1awv75_k$();
   };
-  protoOf(ImageInfo).withColorAlphaType_nsea8d_k$ = function (alphaType) {
-    return this.withColorInfo_n4r8nr_k$(this.colorInfo_1.withAlphaType_feb9i4_k$(alphaType));
+  protoOf(ImageInfo).withColorAlphaType_dgzrpp_k$ = function (alphaType) {
+    return this.withColorInfo_64ok8p_k$(this.colorInfo_1.withAlphaType_z42bb8_k$(alphaType));
   };
   protoOf(ImageInfo).get_colorSpace_yx2b0_k$ = function () {
     return this.colorInfo_1.get_colorSpace_yx2b0_k$();
   };
-  protoOf(ImageInfo).withColorSpace_bvl27d_k$ = function (colorSpace) {
-    return this.withColorInfo_n4r8nr_k$(this.colorInfo_1.withColorSpace_d1kmie_k$(colorSpace));
+  protoOf(ImageInfo).withColorSpace_4yspap_k$ = function (colorSpace) {
+    return this.withColorInfo_64ok8p_k$(this.colorInfo_1.withColorSpace_yuen1e_k$(colorSpace));
   };
   protoOf(ImageInfo).get_isEmpty_zauvru_k$ = function () {
     return this.width_1 <= 0 ? true : this.height_1 <= 0;
@@ -8997,12 +8926,12 @@
     return this.colorInfo_1.get_isOpaque_xnqi0k_k$();
   };
   protoOf(ImageInfo).get_bounds_bj99ku_k$ = function () {
-    return Companion_getInstance_25().makeXYWH_rbonnk_k$(0, 0, this.width_1, this.height_1);
+    return Companion_getInstance_25().makeXYWH_reycg0_k$(0, 0, this.width_1, this.height_1);
   };
   protoOf(ImageInfo).get_isGammaCloseToSRGB_62yjev_k$ = function () {
     return this.colorInfo_1.get_isGammaCloseToSRGB_62yjev_k$();
   };
-  protoOf(ImageInfo).withWidthHeight_vp9lvr_k$ = function (width, height) {
+  protoOf(ImageInfo).withWidthHeight_jcby3d_k$ = function (width, height) {
     return new ImageInfo(this.colorInfo_1, width, height);
   };
   protoOf(ImageInfo).get_bytesPerPixel_yisyiz_k$ = function () {
@@ -9011,20 +8940,20 @@
   protoOf(ImageInfo).get_shiftPerPixel_3lby8u_k$ = function () {
     return this.colorInfo_1.get_shiftPerPixel_3lby8u_k$();
   };
-  protoOf(ImageInfo).isRowBytesValid_fkzf1n_k$ = function (rowBytes) {
-    if (rowBytes.compareTo_n4fqi2_k$(toLong(this.get_minRowBytes_yg2hc6_k$())) < 0)
+  protoOf(ImageInfo).isRowBytesValid_aa8iwj_k$ = function (rowBytes) {
+    if (rowBytes.compareTo_9jj042_k$(toLong(this.get_minRowBytes_yg2hc6_k$())) < 0)
       return false;
     var shift = this.get_shiftPerPixel_3lby8u_k$();
-    return rowBytes.shr_wjue3g_k$(shift).shl_po5ip6_k$(shift).equals(rowBytes);
+    return rowBytes.shr_9fl3wl_k$(shift).shl_bg8if3_k$(shift).equals(rowBytes);
   };
-  protoOf(ImageInfo).computeOffset_633suk_k$ = function (x, y, rowBytes) {
-    return this.colorInfo_1.get_colorType_tr6rn0_k$().computeOffset_633suk_k$(x, y, rowBytes);
+  protoOf(ImageInfo).computeOffset_i6ij98_k$ = function (x, y, rowBytes) {
+    return this.colorInfo_1.get_colorType_tr6rn0_k$().computeOffset_i6ij98_k$(x, y, rowBytes);
   };
-  protoOf(ImageInfo).computeByteSize_5djj41_k$ = function (rowBytes) {
+  protoOf(ImageInfo).computeByteSize_5twt7c_k$ = function (rowBytes) {
     return 0 === this.height_1 ? 0 : imul(this.height_1 - 1 | 0, rowBytes) + imul(this.width_1, this.get_bytesPerPixel_yisyiz_k$()) | 0;
   };
   protoOf(ImageInfo).computeMinByteSize_33guu4_k$ = function () {
-    return this.computeByteSize_5djj41_k$(this.get_minRowBytes_yg2hc6_k$());
+    return this.computeByteSize_5twt7c_k$(this.get_minRowBytes_yg2hc6_k$());
   };
   protoOf(ImageInfo).equals = function (other) {
     if (other === this)
@@ -9048,13 +8977,13 @@
   protoOf(ImageInfo).toString = function () {
     return 'ImageInfo(_colorInfo=' + this.colorInfo_1 + ', _width=' + this.width_1 + ', _height=' + this.height_1 + ')';
   };
-  protoOf(ImageInfo).withColorInfo_n4r8nr_k$ = function (_colorInfo) {
+  protoOf(ImageInfo).withColorInfo_64ok8p_k$ = function (_colorInfo) {
     return this.colorInfo_1 === _colorInfo ? this : new ImageInfo(_colorInfo, this.width_1, this.height_1);
   };
-  protoOf(ImageInfo).withWidth_uly2e7_k$ = function (_width) {
+  protoOf(ImageInfo).withWidth_f15y6g_k$ = function (_width) {
     return this.width_1 === _width ? this : new ImageInfo(this.colorInfo_1, _width, this.height_1);
   };
-  protoOf(ImageInfo).withHeight_wq3ql0_k$ = function (_height) {
+  protoOf(ImageInfo).withHeight_zc2dhx_k$ = function (_height) {
     return this.height_1 === _height ? this : new ImageInfo(this.colorInfo_1, this.width_1, _height);
   };
   var InversionMode_NO_instance;
@@ -9073,7 +9002,7 @@
         return InversionMode_LIGHTNESS_getInstance();
       default:
         InversionMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -9103,7 +9032,7 @@
   }
   function Companion_29() {
     Companion_instance_29 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_29;
   function Companion_getInstance_30() {
@@ -9119,19 +9048,19 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.ManagedString.<init>.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = org_jetbrains_skia_ManagedString__1nMake(tmp0_anonymous.toInterop_tozece_k$(s));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = org_jetbrains_skia_ManagedString__1nMake($this$interopScope.toInterop_ok8jph_k$(s));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     ManagedString.call($this, tmp$ret$1);
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return $this;
   }
   function ManagedString_init_$Create$(s) {
@@ -9158,109 +9087,109 @@
   protoOf(ManagedString).toString = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var size = org_jetbrains_skia_ManagedString__nStringSize(this.get__ptr_wohp4o_k$());
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Int8Array(size);
+      var result = new Int8Array(size);
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_w0sqdc_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_toi1ab_k$(result);
           // Inline function 'org.jetbrains.skia.ManagedString.toString.<anonymous>' call
           org_jetbrains_skia_ManagedString__nStringData(this.get__ptr_wohp4o_k$(), handle, size);
-          tmp0_anonymous.fromInterop_mlzk42_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_40e3wn_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = decodeToString(tmp0_withResult);
+      tmp = decodeToString(result);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ManagedString).insert_9mtcpl_k$ = function (offset, s) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(ManagedString).insert_zhjdk5_k$ = function (offset, s) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_ManagedString__1nInsert(this.get__ptr_wohp4o_k$(), offset, tmp0_anonymous.toInterop_tozece_k$(s));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_ManagedString__1nInsert(this.get__ptr_wohp4o_k$(), offset, $this$interopScope.toInterop_ok8jph_k$(s));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(ManagedString).append_zar6u1_k$ = function (s) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(ManagedString).append_bgzq5c_k$ = function (s) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_ManagedString__1nAppend(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(s));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_ManagedString__1nAppend(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(s));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(ManagedString).remove_bdr9xf_k$ = function (from) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(ManagedString).remove_cqondg_k$ = function (from) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_ManagedString__1nRemoveSuffix(this.get__ptr_wohp4o_k$(), from);
     return this;
   };
-  protoOf(ManagedString).remove_tn5xb8_k$ = function (from, length) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(ManagedString).remove_i3tv9g_k$ = function (from, length) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_ManagedString__1nRemove(this.get__ptr_wohp4o_k$(), from, length);
     return this;
   };
   function Companion_30() {
     Companion_instance_30 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_30).makeBlur_fdw874_k$ = function (mode, sigma, respectCTM) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_30).makeBlur_sh0rnw_k$ = function (mode, sigma, respectCTM) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new MaskFilter(org_jetbrains_skia_MaskFilter__1nMakeBlur(mode.get_ordinal_ip24qg_k$(), sigma, respectCTM));
   };
-  protoOf(Companion_30).makeBlur$default_7um3zm_k$ = function (mode, sigma, respectCTM, $super) {
+  protoOf(Companion_30).makeBlur$default_wa8lhq_k$ = function (mode, sigma, respectCTM, $super) {
     respectCTM = respectCTM === VOID ? true : respectCTM;
-    return $super === VOID ? this.makeBlur_fdw874_k$(mode, sigma, respectCTM) : $super.makeBlur_fdw874_k$.call(this, mode, sigma, respectCTM);
+    return $super === VOID ? this.makeBlur_sh0rnw_k$(mode, sigma, respectCTM) : $super.makeBlur_sh0rnw_k$.call(this, mode, sigma, respectCTM);
   };
-  protoOf(Companion_30).makeShader_wzcwty_k$ = function (s) {
+  protoOf(Companion_30).makeShader_6gs3kt_k$ = function (s) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new MaskFilter(org_jetbrains_skia_MaskFilter__1nMakeShader(getPtr(s)));
     }finally {
       reachabilityBarrier(s);
     }
     return tmp;
   };
-  protoOf(Companion_30).makeTable_x03f0d_k$ = function (table) {
+  protoOf(Companion_30).makeTable_1muyzk_k$ = function (table) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(table.length === 256)) {
@@ -9268,7 +9197,7 @@
       var message = 'Expected 256 elements, got ' + table.length;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$2;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -9276,25 +9205,25 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeTable.<anonymous>' call
-        var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$2 = org_jetbrains_skia_MaskFilter__1nMakeTable(tmp1_anonymous.toInterop_k4qgbi_k$(table));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$2 = org_jetbrains_skia_MaskFilter__1nMakeTable($this$interopScope.toInterop_h7cpet_k$(table));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return new MaskFilter(tmp$ret$2);
   };
-  protoOf(Companion_30).makeGamma_bf7bxx_k$ = function (gamma) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_30).makeGamma_v2akxt_k$ = function (gamma) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new MaskFilter(org_jetbrains_skia_MaskFilter__1nMakeGamma(gamma));
   };
-  protoOf(Companion_30).makeClip_m4jiny_k$ = function (min, max) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_30).makeClip_yknmqm_k$ = function (min, max) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new MaskFilter(org_jetbrains_skia_MaskFilter__1nMakeClip(toByte(min), toByte(max)));
   };
   var Companion_instance_30;
@@ -9314,30 +9243,30 @@
   protoOf(Companion_31).get_IDENTITY_l3t6d5_k$ = function () {
     return this.IDENTITY_1;
   };
-  protoOf(Companion_31).fromInteropPointer_26ocmq_k$ = function (block) {
+  protoOf(Companion_31).fromInteropPointer_2qty6v_k$ = function (block) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Float32Array(4);
+    var result = new Float32Array(4);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    var result = tmp0_withResult;
-    return new Matrix22(result.slice());
+    var result_0 = result;
+    return new Matrix22(result_0.slice());
   };
   var Companion_instance_31;
   function Companion_getInstance_32() {
@@ -9377,21 +9306,21 @@
   };
   function Companion_32() {
     Companion_instance_32 = this;
-    this.IDENTITY_1 = this.makeTranslate_bkaev4_k$(0.0, 0.0);
+    this.IDENTITY_1 = this.makeTranslate_9v7aio_k$(0.0, 0.0);
   }
   protoOf(Companion_32).get_IDENTITY_l3t6d5_k$ = function () {
     return this.IDENTITY_1;
   };
-  protoOf(Companion_32).makeTranslate_bkaev4_k$ = function (dx, dy) {
+  protoOf(Companion_32).makeTranslate_9v7aio_k$ = function (dx, dy) {
     return new Matrix33(new Float32Array([1.0, 0.0, dx, 0.0, 1.0, dy, 0.0, 0.0, 1.0]));
   };
-  protoOf(Companion_32).makeScale_rpucum_k$ = function (s) {
-    return this.makeScale_u95e84_k$(s, s);
+  protoOf(Companion_32).makeScale_drksuc_k$ = function (s) {
+    return this.makeScale_4fbq4c_k$(s, s);
   };
-  protoOf(Companion_32).makeScale_u95e84_k$ = function (sx, sy) {
+  protoOf(Companion_32).makeScale_4fbq4c_k$ = function (sx, sy) {
     return new Matrix33(new Float32Array([sx, 0.0, 0.0, 0.0, sy, 0.0, 0.0, 0.0, 1.0]));
   };
-  protoOf(Companion_32).makeRotate_pesbdx_k$ = function (deg) {
+  protoOf(Companion_32).makeRotate_qd0e7j_k$ = function (deg) {
     var rad = toRadians(deg);
     // Inline function 'kotlin.math.sin' call
     var sin = Math.sin(rad);
@@ -9399,19 +9328,19 @@
     var cos = Math.cos(rad);
     var tolerance = 2.44140625E-4;
     // Inline function 'kotlin.math.abs' call
-    var tmp0_abs = sin;
-    if (Math.abs(tmp0_abs) <= tolerance)
+    var x = sin;
+    if (Math.abs(x) <= tolerance)
       sin = 0.0;
     // Inline function 'kotlin.math.abs' call
-    var tmp1_abs = cos;
-    if (Math.abs(tmp1_abs) <= tolerance)
+    var x_0 = cos;
+    if (Math.abs(x_0) <= tolerance)
       cos = 0.0;
     return new Matrix33(new Float32Array([cos, -sin, 0.0, sin, cos, 0.0, 0.0, 0.0, 1.0]));
   };
-  protoOf(Companion_32).makeRotate_gms1w2_k$ = function (deg, pivot) {
-    return this.makeRotate_eq21nf_k$(deg, pivot.get_x_1mhr67_k$(), pivot.get_y_1mhr68_k$());
+  protoOf(Companion_32).makeRotate_1vecke_k$ = function (deg, pivot) {
+    return this.makeRotate_clww29_k$(deg, pivot.get_x_1mhr67_k$(), pivot.get_y_1mhr68_k$());
   };
-  protoOf(Companion_32).makeRotate_eq21nf_k$ = function (deg, pivotx, pivoty) {
+  protoOf(Companion_32).makeRotate_clww29_k$ = function (deg, pivotx, pivoty) {
     var rad = toRadians(deg);
     // Inline function 'kotlin.math.sin' call
     var sin = Math.sin(rad);
@@ -9419,16 +9348,16 @@
     var cos = Math.cos(rad);
     var tolerance = 2.44140625E-4;
     // Inline function 'kotlin.math.abs' call
-    var tmp0_abs = sin;
-    if (Math.abs(tmp0_abs) <= tolerance)
+    var x = sin;
+    if (Math.abs(x) <= tolerance)
       sin = 0.0;
     // Inline function 'kotlin.math.abs' call
-    var tmp1_abs = cos;
-    if (Math.abs(tmp1_abs) <= tolerance)
+    var x_0 = cos;
+    if (Math.abs(x_0) <= tolerance)
       cos = 0.0;
     return new Matrix33(new Float32Array([cos, -sin, pivotx - pivotx * cos + pivoty * sin, sin, cos, pivoty - pivoty * cos - pivotx * sin, 0.0, 0.0, 1.0]));
   };
-  protoOf(Companion_32).makeSkew_taacpk_k$ = function (sx, sy) {
+  protoOf(Companion_32).makeSkew_a6jizs_k$ = function (sx, sy) {
     return new Matrix33(new Float32Array([1.0, sx, 0.0, sy, 1.0, 0.0, 0.0, 0.0, 1.0]));
   };
   var Companion_instance_32;
@@ -9451,10 +9380,10 @@
   protoOf(Matrix33).get_mat_18j0uh_k$ = function () {
     return this.mat_1;
   };
-  protoOf(Matrix33).makePreScale_fb1rzp_k$ = function (sx, sy) {
+  protoOf(Matrix33).makePreScale_mnit9x_k$ = function (sx, sy) {
     return new Matrix33(new Float32Array([this.mat_1[0] * sx, this.mat_1[1] * sy, this.mat_1[2], this.mat_1[3] * sx, this.mat_1[4] * sy, this.mat_1[5], this.mat_1[6] * sx, this.mat_1[7] * sy, this.mat_1[8]]));
   };
-  protoOf(Matrix33).makeConcat_qwi9fk_k$ = function (other) {
+  protoOf(Matrix33).makeConcat_ntjlss_k$ = function (other) {
     return new Matrix33(new Float32Array([this.mat_1[0] * other.mat_1[0] + this.mat_1[1] * other.mat_1[3] + this.mat_1[2] * other.mat_1[6], this.mat_1[0] * other.mat_1[1] + this.mat_1[1] * other.mat_1[4] + this.mat_1[2] * other.mat_1[7], this.mat_1[0] * other.mat_1[2] + this.mat_1[1] * other.mat_1[5] + this.mat_1[2] * other.mat_1[8], this.mat_1[3] * other.mat_1[0] + this.mat_1[4] * other.mat_1[3] + this.mat_1[5] * other.mat_1[6], this.mat_1[3] * other.mat_1[1] + this.mat_1[4] * other.mat_1[4] + this.mat_1[5] * other.mat_1[7], this.mat_1[3] * other.mat_1[2] + this.mat_1[4] * other.mat_1[5] + this.mat_1[5] * other.mat_1[8], this.mat_1[6] * other.mat_1[0] + this.mat_1[7] * other.mat_1[3] + this.mat_1[8] * other.mat_1[6], this.mat_1[6] * other.mat_1[1] + this.mat_1[7] * other.mat_1[4] + this.mat_1[8] * other.mat_1[7], this.mat_1[6] * other.mat_1[2] + this.mat_1[7] * other.mat_1[5] + this.mat_1[8] * other.mat_1[8]]));
   };
   protoOf(Matrix33).asMatrix44_i0r32r_k$ = function () {
@@ -9486,30 +9415,30 @@
   protoOf(Companion_33).get_IDENTITY_l3t6d5_k$ = function () {
     return this.IDENTITY_1;
   };
-  protoOf(Companion_33).fromInteropPointer_26ocmq_k$ = function (block) {
+  protoOf(Companion_33).fromInteropPointer_2qty6v_k$ = function (block) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Float32Array(16);
+    var result = new Float32Array(16);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    var result = tmp0_withResult;
-    return new Matrix44(result.slice());
+    var result_0 = result;
+    return new Matrix44(result_0.slice());
   };
   var Companion_instance_33;
   function Companion_getInstance_34() {
@@ -9566,7 +9495,7 @@
         return MipmapMode_LINEAR_getInstance();
       default:
         MipmapMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -9596,7 +9525,7 @@
   }
   function Companion_34() {
     Companion_instance_34 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_34;
   function Companion_getInstance_35() {
@@ -9628,7 +9557,7 @@
   function Paint_init_$Init$_0($this) {
     Managed.call($this, org_jetbrains_skia_Paint__1nMake(), _FinalizerHolder_getInstance_8().PTR_1);
     Paint.call($this);
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return $this;
   }
   function Paint_init_$Create$_0() {
@@ -9637,14 +9566,14 @@
   protoOf(Paint).makeClone_kiegb3_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = Paint_init_$Create$(org_jetbrains_skia_Paint__1nMakeClone(this.get__ptr_wohp4o_k$()), true);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).nativeEquals_jj5rbn_k$ = function (other) {
+  protoOf(Paint).nativeEquals_mxr6i0_k$ = function (other) {
     var tmp;
     try {
       tmp = org_jetbrains_skia_Paint__1nEquals(this.get__ptr_wohp4o_k$(), getPtr(other));
@@ -9655,14 +9584,14 @@
     return tmp;
   };
   protoOf(Paint).reset_1sjh3j_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Paint__1nReset(this.get__ptr_wohp4o_k$());
     return this;
   };
-  protoOf(Paint).set_isAntiAlias_1h4ndu_k$ = function (value) {
+  protoOf(Paint).set_isAntiAlias_m6kooi_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetAntiAlias(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -9673,17 +9602,17 @@
   protoOf(Paint).get_isAntiAlias_255n51_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Paint__1nIsAntiAlias(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).set_isDither_p7e49o_k$ = function (value) {
+  protoOf(Paint).set_isDither_gotak8_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetDither(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -9694,17 +9623,17 @@
   protoOf(Paint).get_isDither_scq189_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Paint__1nIsDither(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).set_mode_2kzbql_k$ = function (value) {
+  protoOf(Paint).set_mode_s75p6s_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetMode(this.get__ptr_wohp4o_k$(), value.get_ordinal_ip24qg_k$());
       tmp = Unit_getInstance();
     }finally {
@@ -9715,21 +9644,21 @@
   protoOf(Paint).get_mode_woqlt8_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = values_15()[org_jetbrains_skia_Paint__1nGetMode(this.get__ptr_wohp4o_k$())];
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).setStroke_vh630g_k$ = function (value) {
-    this.set_mode_2kzbql_k$(value ? PaintMode_STROKE_getInstance() : PaintMode_FILL_getInstance());
+  protoOf(Paint).setStroke_ox9nbp_k$ = function (value) {
+    this.set_mode_s75p6s_k$(value ? PaintMode_STROKE_getInstance() : PaintMode_FILL_getInstance());
     return this;
   };
-  protoOf(Paint).set_color_n2ch1y_k$ = function (value) {
+  protoOf(Paint).set_color_7ztbpe_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetColor(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -9740,52 +9669,52 @@
   protoOf(Paint).get_color_ipu8u2_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Paint__1nGetColor(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).set_color4f_c58ypb_k$ = function (value) {
-    this.setColor4f_csw3wm_k$(value, null);
+  protoOf(Paint).set_color4f_gk5qia_k$ = function (value) {
+    this.setColor4f_qx9bsm_k$(value, null);
   };
   protoOf(Paint).get_color4f_gyvzvw_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Float32Array(4);
+      var result = new Float32Array(4);
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.Paint.<get-color4f>.<anonymous>' call
           org_jetbrains_skia_Paint__1nGetColor4f(this.get__ptr_wohp4o_k$(), handle);
-          tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = Color4f_init_$Create$(tmp0_withResult);
+      tmp = Color4f_init_$Create$(result);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).setColor4f_csw3wm_k$ = function (color, colorSpace) {
+  protoOf(Paint).setColor4f_qx9bsm_k$ = function (color, colorSpace) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetColor4f(this.get__ptr_wohp4o_k$(), color.get_r_1mhr61_k$(), color.get_g_1mhr5q_k$(), color.get_b_1mhr5l_k$(), color.get_a_1mhr5k_k$(), getPtr(colorSpace));
       tmp = this;
     }finally {
@@ -9797,29 +9726,28 @@
   protoOf(Paint).get_alphaf_b0gxxt_k$ = function () {
     return this.get_color4f_gyvzvw_k$().get_a_1mhr5k_k$();
   };
-  protoOf(Paint).set_alpha_i5977z_k$ = function (value) {
-    this.setAlphaf_nygo7w_k$(value / 255.0);
+  protoOf(Paint).set_alpha_lxtbmv_k$ = function (value) {
+    this.setAlphaf_y68m0e_k$(value / 255.0);
   };
   protoOf(Paint).get_alpha_iooth1_k$ = function () {
-    var tmp$ret$0;
     // Inline function 'kotlin.math.round' call
-    var tmp0_round = this.get_alphaf_b0gxxt_k$() * 255.0;
-    tmp$ret$0 = round(tmp0_round);
+    var x = this.get_alphaf_b0gxxt_k$() * 255.0;
+    var tmp$ret$0 = round(x);
     return numberToInt(tmp$ret$0);
   };
-  protoOf(Paint).setAlphaf_nygo7w_k$ = function (a) {
-    this.setColor4f_csw3wm_k$(this.get_color4f_gyvzvw_k$().withA_kioup9_k$(a), null);
+  protoOf(Paint).setAlphaf_y68m0e_k$ = function (a) {
+    this.setColor4f_qx9bsm_k$(this.get_color4f_gyvzvw_k$().withA_s9shpf_k$(a), null);
     return this;
   };
-  protoOf(Paint).setARGB_x6veoi_k$ = function (a, r, g, b) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Paint).setARGB_4ujff6_k$ = function (a, r, g, b) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Paint__1nSetColor4f(this.get__ptr_wohp4o_k$(), r / 255.0, g / 255.0, b / 255.0, a / 255.0, Companion_getInstance_81().get_NullPointer_8qbg7n_k$());
     return this;
   };
-  protoOf(Paint).set_strokeWidth_3zju8k_k$ = function (value) {
+  protoOf(Paint).set_strokeWidth_owqvpl_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetStrokeWidth(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -9830,17 +9758,17 @@
   protoOf(Paint).get_strokeWidth_pbded7_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Paint__1nGetStrokeWidth(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).set_strokeMiter_9aj8vn_k$ = function (value) {
+  protoOf(Paint).set_strokeMiter_5ftsgo_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetStrokeMiter(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -9851,17 +9779,17 @@
   protoOf(Paint).get_strokeMiter_pgv0sc_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Paint__1nGetStrokeMiter(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).set_strokeCap_awr7nf_k$ = function (value) {
+  protoOf(Paint).set_strokeCap_dv3f3n_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetStrokeCap(this.get__ptr_wohp4o_k$(), value.get_ordinal_ip24qg_k$());
       tmp = Unit_getInstance();
     }finally {
@@ -9872,17 +9800,17 @@
   protoOf(Paint).get_strokeCap_86eci9_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = values_16()[org_jetbrains_skia_Paint__1nGetStrokeCap(this.get__ptr_wohp4o_k$())];
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).set_strokeJoin_earh59_k$ = function (value) {
+  protoOf(Paint).set_strokeJoin_pswy8t_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetStrokeJoin(this.get__ptr_wohp4o_k$(), value.get_ordinal_ip24qg_k$());
       tmp = Unit_getInstance();
     }finally {
@@ -9893,17 +9821,17 @@
   protoOf(Paint).get_strokeJoin_ulyoz9_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = values_17()[org_jetbrains_skia_Paint__1nGetStrokeJoin(this.get__ptr_wohp4o_k$())];
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paint).set_shader_bd5o0m_k$ = function (value) {
+  protoOf(Paint).set_shader_tgaw5e_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetShader(this.get__ptr_wohp4o_k$(), getPtr(value));
       tmp = Unit_getInstance();
     }finally {
@@ -9915,7 +9843,7 @@
   protoOf(Paint).get_shader_jgtazy_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var shaderPtr = org_jetbrains_skia_Paint__1nGetShader(this.get__ptr_wohp4o_k$());
       tmp = shaderPtr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new Shader(shaderPtr);
     }finally {
@@ -9923,10 +9851,10 @@
     }
     return tmp;
   };
-  protoOf(Paint).set_colorFilter_t69fte_k$ = function (value) {
+  protoOf(Paint).set_colorFilter_9zyasg_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetColorFilter(this.get__ptr_wohp4o_k$(), getPtr(value));
       tmp = Unit_getInstance();
     }finally {
@@ -9938,7 +9866,7 @@
   protoOf(Paint).get_colorFilter_nt8pqq_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var colorFilterPtr = org_jetbrains_skia_Paint__1nGetColorFilter(this.get__ptr_wohp4o_k$());
       tmp = colorFilterPtr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : ColorFilter_init_$Create$(colorFilterPtr);
     }finally {
@@ -9946,10 +9874,10 @@
     }
     return tmp;
   };
-  protoOf(Paint).set_blendMode_2o4s1d_k$ = function (value) {
+  protoOf(Paint).set_blendMode_s14yaj_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetBlendMode(this.get__ptr_wohp4o_k$(), value.get_ordinal_ip24qg_k$());
       tmp = Unit_getInstance();
     }finally {
@@ -9960,7 +9888,7 @@
   protoOf(Paint).get_blendMode_nbql0r_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = values()[org_jetbrains_skia_Paint__1nGetBlendMode(this.get__ptr_wohp4o_k$())];
     }finally {
       reachabilityBarrier(this);
@@ -9970,10 +9898,10 @@
   protoOf(Paint).get_isSrcOver_xdt2zf_k$ = function () {
     return this.get_blendMode_nbql0r_k$().equals(BlendMode_SRC_OVER_getInstance());
   };
-  protoOf(Paint).set_pathEffect_5avi6g_k$ = function (value) {
+  protoOf(Paint).set_pathEffect_2qfjq4_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetPathEffect(this.get__ptr_wohp4o_k$(), getPtr(value));
       tmp = Unit_getInstance();
     }finally {
@@ -9985,7 +9913,7 @@
   protoOf(Paint).get_pathEffect_d6tz6p_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var pathEffectPtr = org_jetbrains_skia_Paint__1nGetPathEffect(this.get__ptr_wohp4o_k$());
       tmp = pathEffectPtr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new PathEffect(pathEffectPtr);
     }finally {
@@ -9993,10 +9921,10 @@
     }
     return tmp;
   };
-  protoOf(Paint).set_maskFilter_jhxqtw_k$ = function (value) {
+  protoOf(Paint).set_maskFilter_qativ4_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetMaskFilter(this.get__ptr_wohp4o_k$(), getPtr(value));
       tmp = Unit_getInstance();
     }finally {
@@ -10008,7 +9936,7 @@
   protoOf(Paint).get_maskFilter_cajg25_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var maskFilterPtr = org_jetbrains_skia_Paint__1nGetMaskFilter(this.get__ptr_wohp4o_k$());
       tmp = maskFilterPtr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new MaskFilter(maskFilterPtr);
     }finally {
@@ -10016,10 +9944,10 @@
     }
     return tmp;
   };
-  protoOf(Paint).set_imageFilter_mjpajy_k$ = function (value) {
+  protoOf(Paint).set_imageFilter_3887og_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Paint__1nSetImageFilter(this.get__ptr_wohp4o_k$(), getPtr(value));
       tmp = Unit_getInstance();
     }finally {
@@ -10031,7 +9959,7 @@
   protoOf(Paint).get_imageFilter_rhhupi_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var imageFilterPtr = org_jetbrains_skia_Paint__1nGetImageFilter(this.get__ptr_wohp4o_k$());
       tmp = imageFilterPtr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new ImageFilter(imageFilterPtr);
     }finally {
@@ -10042,7 +9970,7 @@
   protoOf(Paint).hasNothingToDraw_cw7i8i_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Paint__1nHasNothingToDraw(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -10068,7 +9996,7 @@
         return PaintMode_STROKE_AND_FILL_getInstance();
       default:
         PaintMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -10112,7 +10040,7 @@
         return PaintStrokeCap_SQUARE_getInstance();
       default:
         PaintStrokeCap_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -10156,7 +10084,7 @@
         return PaintStrokeJoin_BEVEL_getInstance();
       default:
         PaintStrokeJoin_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -10186,10 +10114,10 @@
   }
   function Companion_35() {
     Companion_instance_35 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_35).makeFromSVGString_cp8c70_k$ = function (svg) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_35).makeFromSVGString_dedb4t_k$ = function (svg) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$1;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -10197,14 +10125,14 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeFromSVGString.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = org_jetbrains_skia_Path__1nMakeFromSVGString(tmp0_anonymous.toInterop_tozece_k$(svg));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = org_jetbrains_skia_Path__1nMakeFromSVGString($this$interopScope.toInterop_ok8jph_k$(svg));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -10215,45 +10143,45 @@
       return new Path(result);
     }
   };
-  protoOf(Companion_35).isLineDegenerate_yih85i_k$ = function (p1, p2, exact) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_35).isLineDegenerate_oqcde5_k$ = function (p1, p2, exact) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return org_jetbrains_skia_Path__1nIsLineDegenerate(p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), p2.get_x_1mhr67_k$(), p2.get_y_1mhr68_k$(), exact);
   };
-  protoOf(Companion_35).isQuadDegenerate_1wvkb6_k$ = function (p1, p2, p3, exact) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_35).isQuadDegenerate_opa301_k$ = function (p1, p2, p3, exact) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return org_jetbrains_skia_Path__1nIsQuadDegenerate(p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), p2.get_x_1mhr67_k$(), p2.get_y_1mhr68_k$(), p3.get_x_1mhr67_k$(), p3.get_y_1mhr68_k$(), exact);
   };
-  protoOf(Companion_35).isCubicDegenerate_x8drvo_k$ = function (p1, p2, p3, p4, exact) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_35).isCubicDegenerate_12rx2l_k$ = function (p1, p2, p3, p4, exact) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return org_jetbrains_skia_Path__1nIsCubicDegenerate(p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), p2.get_x_1mhr67_k$(), p2.get_y_1mhr68_k$(), p3.get_x_1mhr67_k$(), p3.get_y_1mhr68_k$(), p4.get_x_1mhr67_k$(), p4.get_y_1mhr68_k$(), exact);
   };
-  protoOf(Companion_35).convertConicToQuads_vds2v2_k$ = function (p0, p1, p2, w, pow2) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_35).convertConicToQuads_55y1w5_k$ = function (p0, p1, p2, w, pow2) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var maxResultPointCount = 1 + imul(2, 1 << pow2) | 0;
     var pointCount = 0;
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Float32Array(imul(maxResultPointCount, 2));
+    var result = new Float32Array(imul(maxResultPointCount, 2));
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
         // Inline function 'org.jetbrains.skia.Companion.convertConicToQuads.<anonymous>' call
         pointCount = org_jetbrains_skia_Path__1nConvertConicToQuads(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), p2.get_x_1mhr67_k$(), p2.get_y_1mhr68_k$(), w, pow2, handle);
-        tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+        $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    var coords = tmp0_withResult;
+    var coords = result;
     var tmp = 0;
     var tmp_0 = pointCount;
     // Inline function 'kotlin.arrayOfNulls' call
@@ -10265,10 +10193,10 @@
     }
     return tmp_1;
   };
-  protoOf(Companion_35).makeCombining_738xp1_k$ = function (one, two, op) {
+  protoOf(Companion_35).makeCombining_fcc5ry_k$ = function (one, two, op) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Path__1nMakeCombining(getPtr(one), getPtr(two), op.get_ordinal_ip24qg_k$());
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new Path(ptr);
     }finally {
@@ -10277,8 +10205,8 @@
     }
     return tmp;
   };
-  protoOf(Companion_35).makeFromBytes_q7uycw_k$ = function (data) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_35).makeFromBytes_a9u38z_k$ = function (data) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$1;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -10286,14 +10214,14 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeFromBytes.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = org_jetbrains_skia_Path__1nMakeFromBytes(tmp0_anonymous.toInterop_k4qgbi_k$(data), data.length);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = org_jetbrains_skia_Path__1nMakeFromBytes($this$interopScope.toInterop_h7cpet_k$(data), data.length);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -10325,7 +10253,7 @@
   }
   function Path_init_$Init$($this) {
     Path.call($this, org_jetbrains_skia_Path__1nMake());
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return $this;
   }
   function Path_init_$Create$() {
@@ -10379,7 +10307,7 @@
     Companion_getInstance_36();
     Managed.call(this, ptr, _FinalizerHolder_getInstance_9().PTR_1);
   }
-  protoOf(Path).nativeEquals_jj5rbn_k$ = function (other) {
+  protoOf(Path).nativeEquals_mxr6i0_k$ = function (other) {
     var tmp;
     try {
       tmp = org_jetbrains_skia_Path__1nEquals(this.get__ptr_wohp4o_k$(), getPtr(other));
@@ -10389,10 +10317,10 @@
     }
     return tmp;
   };
-  protoOf(Path).isInterpolatable_xn1pij_k$ = function (compare) {
+  protoOf(Path).isInterpolatable_rol6yt_k$ = function (compare) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Path__1nIsInterpolatable(this.get__ptr_wohp4o_k$(), getPtr(compare));
     }finally {
       reachabilityBarrier(this);
@@ -10400,10 +10328,10 @@
     }
     return tmp;
   };
-  protoOf(Path).makeLerp_gydmtm_k$ = function (ending, weight) {
+  protoOf(Path).makeLerp_vn6bk_k$ = function (ending, weight) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Path__1nMakeLerp(this.get__ptr_wohp4o_k$(), getPtr(ending), weight);
       // Inline function 'kotlin.require' call
       // Inline function 'kotlin.contracts.contract' call
@@ -10419,10 +10347,10 @@
     }
     return tmp;
   };
-  protoOf(Path).set_fillMode_dzxls6_k$ = function (value) {
+  protoOf(Path).set_fillMode_p4qpgv_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Path__1nSetFillMode(this.get__ptr_wohp4o_k$(), value.get_ordinal_ip24qg_k$());
       tmp = Unit_getInstance();
     }finally {
@@ -10433,7 +10361,7 @@
   protoOf(Path).get_fillMode_r5zfyn_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = values_21()[org_jetbrains_skia_Path__1nGetFillMode(this.get__ptr_wohp4o_k$())];
     }finally {
       reachabilityBarrier(this);
@@ -10443,7 +10371,7 @@
   protoOf(Path).get_isConvex_ryvmuy_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Path__1nIsConvex(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -10453,9 +10381,9 @@
   protoOf(Path).get_isOval_ew3p2d_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_47();
-      tmp = tmp_0.fromInteropPointerNullable_oyojp1_k$(Path$_get_isOval_$lambda_8zqc3n(this));
+      tmp = tmp_0.fromInteropPointerNullable_rzwb3l_k$(Path$_get_isOval_$lambda_8zqc3n(this));
     }finally {
       reachabilityBarrier(this);
     }
@@ -10464,28 +10392,28 @@
   protoOf(Path).get_isRRect_zhiq9v_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_45();
-      tmp = tmp_0.fromInteropPointerNullable_oyojp1_k$(Path$_get_isRRect_$lambda_wbfc2j(this));
+      tmp = tmp_0.fromInteropPointerNullable_rzwb3l_k$(Path$_get_isRRect_$lambda_wbfc2j(this));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
   protoOf(Path).reset_1sjh3j_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nReset(this.get__ptr_wohp4o_k$());
     return this;
   };
   protoOf(Path).rewind_fg9p39_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nRewind(this.get__ptr_wohp4o_k$());
     return this;
   };
   protoOf(Path).get_isEmpty_zauvru_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Path__1nIsEmpty(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -10495,7 +10423,7 @@
   protoOf(Path).get_isLastContourClosed_snojnn_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Path__1nIsLastContourClosed(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -10505,17 +10433,17 @@
   protoOf(Path).get_isFinite_taph6q_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = !!org_jetbrains_skia_Path__1nIsFinite(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Path).set_isVolatile_26ms7u_k$ = function (value) {
+  protoOf(Path).set_isVolatile_k3bwia_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Path__1nSetVolatile(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -10526,24 +10454,24 @@
   protoOf(Path).get_isVolatile_6ihgtr_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Path__1nIsVolatile(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Path).setVolatile_ey8144_k$ = function (isVolatile) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).setVolatile_o5vpvd_k$ = function (isVolatile) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nSetVolatile(this.get__ptr_wohp4o_k$(), isVolatile);
     return this;
   };
   protoOf(Path).get_asLine_b3ojm7_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_47();
-      var rectBuffer = tmp_0.fromInteropPointerNullable_oyojp1_k$(Path$_get_asLine_$lambda_ygdjx5(this));
+      var rectBuffer = tmp_0.fromInteropPointerNullable_rzwb3l_k$(Path$_get_asLine_$lambda_ygdjx5(this));
       var tmp_1;
       if (rectBuffer == null) {
         tmp_1 = null;
@@ -10565,19 +10493,19 @@
   protoOf(Path).get_pointsCount_wj83gj_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Path__1nGetPointsCount(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Path).getPoint_n8a4gp_k$ = function (index) {
+  protoOf(Path).getPoint_os8i7y_k$ = function (index) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_44();
-      tmp = tmp_0.fromInteropPointer_26ocmq_k$(Path$getPoint$lambda(this, index));
+      tmp = tmp_0.fromInteropPointer_2qty6v_k$(Path$getPoint$lambda(this, index));
     }finally {
       reachabilityBarrier(this);
     }
@@ -10585,12 +10513,12 @@
   };
   protoOf(Path).get_points_i5obn0_k$ = function () {
     // Inline function 'kotlin.arrayOfNulls' call
-    var tmp0_arrayOfNulls = this.get_pointsCount_wj83gj_k$();
-    var res = fillArrayVal(Array(tmp0_arrayOfNulls), null);
-    this.getPoints_g74bk1_k$(res, res.length);
+    var size = this.get_pointsCount_wj83gj_k$();
+    var res = fillArrayVal(Array(size), null);
+    this.getPoints_io3lw8_k$(res, res.length);
     return res;
   };
-  protoOf(Path).getPoints_g74bk1_k$ = function (points, max) {
+  protoOf(Path).getPoints_io3lw8_k$ = function (points, max) {
     var tmp;
     try {
       // Inline function 'kotlin.require' call
@@ -10602,7 +10530,7 @@
         var message = 'Failed requirement.';
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0;
       if (points == null) {
         var tmp$ret$2;
@@ -10612,15 +10540,15 @@
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.Path.getPoints.<anonymous>' call
-            var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
             var tmp_1 = this.get__ptr_wohp4o_k$();
-            tmp$ret$2 = org_jetbrains_skia_Path__1nGetPoints(tmp_1, tmp1_anonymous.toInterop_sfommq_k$((null == null ? true : isFloatArray(null)) ? null : THROW_CCE()), max);
+            tmp$ret$2 = org_jetbrains_skia_Path__1nGetPoints(tmp_1, $this$interopScope.toInterop_uum1m9_k$((null == null ? true : isFloatArray(null)) ? null : THROW_CCE()), max);
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
@@ -10628,32 +10556,32 @@
       } else {
         var result = 0;
         // Inline function 'org.jetbrains.skia.impl.withResult' call
-        var tmp2_withResult = new Float32Array(imul(max, 2));
+        var result_0 = new Float32Array(imul(max, 2));
         $l$block_0: {
           // Inline function 'org.jetbrains.skia.impl.interopScope' call
           try {
             var tmp0_0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0_0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-            var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-            var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp2_withResult);
+            var $this$interopScope_0 = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var handle = $this$interopScope_0.toInteropForResult_8kh23x_k$(result_0);
             // Inline function 'org.jetbrains.skia.Path.getPoints.<anonymous>' call
             result = org_jetbrains_skia_Path__1nGetPoints(this.get__ptr_wohp4o_k$(), handle, max);
-            tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp2_withResult);
+            $this$interopScope_0.fromInterop_s0mjrj_k$(handle, result_0);
             break $l$block_0;
           }finally {
             var tmp1_0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1_0 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
-        var coords = tmp2_withResult;
+        var coords = result_0;
         var inductionVariable = 0;
         // Inline function 'kotlin.math.min' call
-        var tmp3_min = result;
-        var last = Math.min(max, tmp3_min);
+        var b = result;
+        var last = Math.min(max, b);
         if (inductionVariable < last)
           do {
             var i = inductionVariable;
@@ -10672,7 +10600,7 @@
   protoOf(Path).get_verbsCount_7ejlqc_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Path__1nCountVerbs(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -10681,12 +10609,12 @@
   };
   protoOf(Path).get_verbs_j042dn_k$ = function () {
     // Inline function 'kotlin.arrayOfNulls' call
-    var tmp0_arrayOfNulls = this.get_verbsCount_7ejlqc_k$();
-    var res = fillArrayVal(Array(tmp0_arrayOfNulls), null);
-    this.getVerbs_sj4ac4_k$(res, res.length);
+    var size = this.get_verbsCount_7ejlqc_k$();
+    var res = fillArrayVal(Array(size), null);
+    this.getVerbs_s8vk47_k$(res, res.length);
     return res;
   };
-  protoOf(Path).getVerbs_sj4ac4_k$ = function (verbs, max) {
+  protoOf(Path).getVerbs_s8vk47_k$ = function (verbs, max) {
     var tmp;
     try {
       // Inline function 'kotlin.require' call
@@ -10698,7 +10626,7 @@
         var message = 'Failed requirement.';
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var out = verbs == null ? null : new Int8Array(max);
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -10706,10 +10634,10 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Path.getVerbs.<anonymous>' call
-          var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var ptr = tmp1_anonymous.toInterop_k4qgbi_k$(out);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var ptr = $this$interopScope.toInterop_h7cpet_k$(out);
           // Inline function 'kotlin.also' call
-          var tmp0_also = org_jetbrains_skia_Path__1nGetVerbs(this.get__ptr_wohp4o_k$(), ptr, max);
+          var this_0 = org_jetbrains_skia_Path__1nGetVerbs(this.get__ptr_wohp4o_k$(), ptr, max);
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'org.jetbrains.skia.Path.getVerbs.<anonymous>.<anonymous>' call
           if (out == null)
@@ -10717,18 +10645,18 @@
           else {
             // Inline function 'kotlin.let' call
             // Inline function 'kotlin.contracts.contract' call
-            tmp1_anonymous.fromInterop_mlzk42_k$(ptr, out);
+            $this$interopScope.fromInterop_40e3wn_k$(ptr, out);
           }
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      var count = tmp0_also;
+      var count = this_0;
       if (!(verbs == null)) {
         var inductionVariable = 0;
         // Inline function 'kotlin.comparisons.minOf' call
@@ -10750,17 +10678,17 @@
   protoOf(Path).get_approximateBytesUsed_bonctf_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Path__1nApproximateBytesUsed(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Path).swap_l0a5be_k$ = function (other) {
+  protoOf(Path).swap_ho9d16_k$ = function (other) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Path__1nSwap(this.get__ptr_wohp4o_k$(), getPtr(other));
       tmp = this;
     }finally {
@@ -10772,212 +10700,212 @@
   protoOf(Path).get_bounds_bj99ku_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_47();
-      tmp = tmp_0.fromInteropPointer_26ocmq_k$(Path$_get_bounds_$lambda_qr8ora(this));
+      tmp = tmp_0.fromInteropPointer_2qty6v_k$(Path$_get_bounds_$lambda_qr8ora(this));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
   protoOf(Path).updateBoundsCache_zdvfic_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nUpdateBoundsCache(this.get__ptr_wohp4o_k$());
     return this;
   };
   protoOf(Path).computeTightBounds_22bfek_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_47();
-      tmp = tmp_0.fromInteropPointer_26ocmq_k$(Path$computeTightBounds$lambda(this));
+      tmp = tmp_0.fromInteropPointer_2qty6v_k$(Path$computeTightBounds$lambda(this));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Path).conservativelyContainsRect_5wr3fm_k$ = function (rect) {
+  protoOf(Path).conservativelyContainsRect_6vi4je_k$ = function (rect) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Path__1nConservativelyContainsRect(this.get__ptr_wohp4o_k$(), rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Path).incReserve_81c08z_k$ = function (extraPtCount) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).incReserve_2hleoq_k$ = function (extraPtCount) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nIncReserve(this.get__ptr_wohp4o_k$(), extraPtCount);
     return this;
   };
-  protoOf(Path).moveTo_5934es_k$ = function (x, y) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).moveTo_n8tdjo_k$ = function (x, y) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nMoveTo(this.get__ptr_wohp4o_k$(), x, y);
     return this;
   };
-  protoOf(Path).moveTo_8vkypz_k$ = function (p) {
-    return this.moveTo_5934es_k$(p.get_x_1mhr67_k$(), p.get_y_1mhr68_k$());
+  protoOf(Path).moveTo_bsapet_k$ = function (p) {
+    return this.moveTo_n8tdjo_k$(p.get_x_1mhr67_k$(), p.get_y_1mhr68_k$());
   };
-  protoOf(Path).rMoveTo_44r2iq_k$ = function (dx, dy) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).rMoveTo_gj475u_k$ = function (dx, dy) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nRMoveTo(this.get__ptr_wohp4o_k$(), dx, dy);
     return this;
   };
-  protoOf(Path).lineTo_8bd4s1_k$ = function (x, y) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).lineTo_985bqp_k$ = function (x, y) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nLineTo(this.get__ptr_wohp4o_k$(), x, y);
     return this;
   };
-  protoOf(Path).lineTo_iptpa4_k$ = function (p) {
-    return this.lineTo_8bd4s1_k$(p.get_x_1mhr67_k$(), p.get_y_1mhr68_k$());
+  protoOf(Path).lineTo_f50dhe_k$ = function (p) {
+    return this.lineTo_985bqp_k$(p.get_x_1mhr67_k$(), p.get_y_1mhr68_k$());
   };
-  protoOf(Path).rLineTo_7712vz_k$ = function (dx, dy) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).rLineTo_2ig5cv_k$ = function (dx, dy) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nRLineTo(this.get__ptr_wohp4o_k$(), dx, dy);
     return this;
   };
-  protoOf(Path).quadTo_qnlly6_k$ = function (x1, y1, x2, y2) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).quadTo_nivwo2_k$ = function (x1, y1, x2, y2) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nQuadTo(this.get__ptr_wohp4o_k$(), x1, y1, x2, y2);
     return this;
   };
-  protoOf(Path).quadTo_g3vrpe_k$ = function (p1, p2) {
-    return this.quadTo_qnlly6_k$(p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), p2.get_x_1mhr67_k$(), p2.get_y_1mhr68_k$());
+  protoOf(Path).quadTo_gvfif4_k$ = function (p1, p2) {
+    return this.quadTo_nivwo2_k$(p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), p2.get_x_1mhr67_k$(), p2.get_y_1mhr68_k$());
   };
-  protoOf(Path).rQuadTo_vz8b04_k$ = function (dx1, dy1, dx2, dy2) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).rQuadTo_i9659w_k$ = function (dx1, dy1, dx2, dy2) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nRQuadTo(this.get__ptr_wohp4o_k$(), dx1, dy1, dx2, dy2);
     return this;
   };
-  protoOf(Path).conicTo_x07c0n_k$ = function (x1, y1, x2, y2, w) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).conicTo_xp2za7_k$ = function (x1, y1, x2, y2, w) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nConicTo(this.get__ptr_wohp4o_k$(), x1, y1, x2, y2, w);
     return this;
   };
-  protoOf(Path).conicTo_kv0mx5_k$ = function (p1, p2, w) {
-    return this.conicTo_x07c0n_k$(p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), p2.get_x_1mhr67_k$(), p2.get_y_1mhr68_k$(), w);
+  protoOf(Path).conicTo_gdmp4z_k$ = function (p1, p2, w) {
+    return this.conicTo_xp2za7_k$(p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), p2.get_x_1mhr67_k$(), p2.get_y_1mhr68_k$(), w);
   };
-  protoOf(Path).rConicTo_d2ay1j_k$ = function (dx1, dy1, dx2, dy2, w) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).rConicTo_u135rn_k$ = function (dx1, dy1, dx2, dy2, w) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nRConicTo(this.get__ptr_wohp4o_k$(), dx1, dy1, dx2, dy2, w);
     return this;
   };
-  protoOf(Path).cubicTo_tf08o5_k$ = function (x1, y1, x2, y2, x3, y3) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).cubicTo_g393vf_k$ = function (x1, y1, x2, y2, x3, y3) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nCubicTo(this.get__ptr_wohp4o_k$(), x1, y1, x2, y2, x3, y3);
     return this;
   };
-  protoOf(Path).cubicTo_t9fjw2_k$ = function (p1, p2, p3) {
-    return this.cubicTo_tf08o5_k$(p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), p2.get_x_1mhr67_k$(), p2.get_y_1mhr68_k$(), p3.get_x_1mhr67_k$(), p3.get_y_1mhr68_k$());
+  protoOf(Path).cubicTo_w120du_k$ = function (p1, p2, p3) {
+    return this.cubicTo_g393vf_k$(p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), p2.get_x_1mhr67_k$(), p2.get_y_1mhr68_k$(), p3.get_x_1mhr67_k$(), p3.get_y_1mhr68_k$());
   };
-  protoOf(Path).rCubicTo_uljamr_k$ = function (dx1, dy1, dx2, dy2, dx3, dy3) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).rCubicTo_5i712l_k$ = function (dx1, dy1, dx2, dy2, dx3, dy3) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nRCubicTo(this.get__ptr_wohp4o_k$(), dx1, dy1, dx2, dy2, dx3, dy3);
     return this;
   };
-  protoOf(Path).arcTo_ecvj8s_k$ = function (oval, startAngle, sweepAngle, forceMoveTo) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).arcTo_lk9bpr_k$ = function (oval, startAngle, sweepAngle, forceMoveTo) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nArcTo(this.get__ptr_wohp4o_k$(), oval.get_left_woprgw_k$(), oval.get_top_18ivbo_k$(), oval.get_right_ixz7xv_k$(), oval.get_bottom_bj8ras_k$(), startAngle, sweepAngle, forceMoveTo);
     return this;
   };
-  protoOf(Path).tangentArcTo_gfirwa_k$ = function (x1, y1, x2, y2, radius) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).tangentArcTo_bcyl3k_k$ = function (x1, y1, x2, y2, radius) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nTangentArcTo(this.get__ptr_wohp4o_k$(), x1, y1, x2, y2, radius);
     return this;
   };
-  protoOf(Path).tangentArcTo_7e9086_k$ = function (p1, p2, radius) {
-    return this.tangentArcTo_gfirwa_k$(p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), p2.get_x_1mhr67_k$(), p2.get_y_1mhr68_k$(), radius);
+  protoOf(Path).tangentArcTo_8wu6a6_k$ = function (p1, p2, radius) {
+    return this.tangentArcTo_bcyl3k_k$(p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), p2.get_x_1mhr67_k$(), p2.get_y_1mhr68_k$(), radius);
   };
-  protoOf(Path).ellipticalArcTo_4b22fb_k$ = function (rx, ry, xAxisRotate, arc, direction, x, y) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).ellipticalArcTo_970dku_k$ = function (rx, ry, xAxisRotate, arc, direction, x, y) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nEllipticalArcTo(this.get__ptr_wohp4o_k$(), rx, ry, xAxisRotate, arc.get_ordinal_ip24qg_k$(), direction.get_ordinal_ip24qg_k$(), x, y);
     return this;
   };
-  protoOf(Path).ellipticalArcTo_k2213b_k$ = function (r, xAxisRotate, arc, direction, xy) {
-    return this.ellipticalArcTo_4b22fb_k$(r.get_x_1mhr67_k$(), r.get_y_1mhr68_k$(), xAxisRotate, arc, direction, xy.get_x_1mhr67_k$(), xy.get_y_1mhr68_k$());
+  protoOf(Path).ellipticalArcTo_p96bvm_k$ = function (r, xAxisRotate, arc, direction, xy) {
+    return this.ellipticalArcTo_970dku_k$(r.get_x_1mhr67_k$(), r.get_y_1mhr68_k$(), xAxisRotate, arc, direction, xy.get_x_1mhr67_k$(), xy.get_y_1mhr68_k$());
   };
-  protoOf(Path).rEllipticalArcTo_gk51ev_k$ = function (rx, ry, xAxisRotate, arc, direction, dx, dy) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).rEllipticalArcTo_ce2xps_k$ = function (rx, ry, xAxisRotate, arc, direction, dx, dy) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nREllipticalArcTo(this.get__ptr_wohp4o_k$(), rx, ry, xAxisRotate, arc.get_ordinal_ip24qg_k$(), direction.get_ordinal_ip24qg_k$(), dx, dy);
     return this;
   };
   protoOf(Path).closePath_7zbz5v_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nClosePath(this.get__ptr_wohp4o_k$());
     return this;
   };
   protoOf(Path).get_isRect_ew59h3_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_47();
-      tmp = tmp_0.fromInteropPointerNullable_oyojp1_k$(Path$_get_isRect_$lambda_r4x835(this));
+      tmp = tmp_0.fromInteropPointerNullable_rzwb3l_k$(Path$_get_isRect_$lambda_r4x835(this));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Path).addRect_6uo2l2_k$ = function (rect, dir, start) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).addRect_bv7tm2_k$ = function (rect, dir, start) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nAddRect(this.get__ptr_wohp4o_k$(), rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), dir.get_ordinal_ip24qg_k$(), start);
     return this;
   };
-  protoOf(Path).addRect$default_4sb546_k$ = function (rect, dir, start, $super) {
+  protoOf(Path).addRect$default_mv5gnm_k$ = function (rect, dir, start, $super) {
     dir = dir === VOID ? PathDirection_CLOCKWISE_getInstance() : dir;
     start = start === VOID ? 0 : start;
-    return $super === VOID ? this.addRect_6uo2l2_k$(rect, dir, start) : $super.addRect_6uo2l2_k$.call(this, rect, dir, start);
+    return $super === VOID ? this.addRect_bv7tm2_k$(rect, dir, start) : $super.addRect_bv7tm2_k$.call(this, rect, dir, start);
   };
-  protoOf(Path).addOval_xux9w8_k$ = function (oval, dir, start) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).addOval_xujeh0_k$ = function (oval, dir, start) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nAddOval(this.get__ptr_wohp4o_k$(), oval.get_left_woprgw_k$(), oval.get_top_18ivbo_k$(), oval.get_right_ixz7xv_k$(), oval.get_bottom_bj8ras_k$(), dir.get_ordinal_ip24qg_k$(), start);
     return this;
   };
-  protoOf(Path).addOval$default_8xdsmk_k$ = function (oval, dir, start, $super) {
+  protoOf(Path).addOval$default_akalvk_k$ = function (oval, dir, start, $super) {
     dir = dir === VOID ? PathDirection_CLOCKWISE_getInstance() : dir;
     start = start === VOID ? 1 : start;
-    return $super === VOID ? this.addOval_xux9w8_k$(oval, dir, start) : $super.addOval_xux9w8_k$.call(this, oval, dir, start);
+    return $super === VOID ? this.addOval_xujeh0_k$(oval, dir, start) : $super.addOval_xujeh0_k$.call(this, oval, dir, start);
   };
-  protoOf(Path).addCircle_6ee1b4_k$ = function (x, y, radius, dir) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).addCircle_v04k2t_k$ = function (x, y, radius, dir) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nAddCircle(this.get__ptr_wohp4o_k$(), x, y, radius, dir.get_ordinal_ip24qg_k$());
     return this;
   };
-  protoOf(Path).addCircle$default_ypx22j_k$ = function (x, y, radius, dir, $super) {
+  protoOf(Path).addCircle$default_1ec06o_k$ = function (x, y, radius, dir, $super) {
     dir = dir === VOID ? PathDirection_CLOCKWISE_getInstance() : dir;
-    return $super === VOID ? this.addCircle_6ee1b4_k$(x, y, radius, dir) : $super.addCircle_6ee1b4_k$.call(this, x, y, radius, dir);
+    return $super === VOID ? this.addCircle_v04k2t_k$(x, y, radius, dir) : $super.addCircle_v04k2t_k$.call(this, x, y, radius, dir);
   };
-  protoOf(Path).addArc_vnodq_k$ = function (oval, startAngle, sweepAngle) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).addArc_ab3w7m_k$ = function (oval, startAngle, sweepAngle) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nAddArc(this.get__ptr_wohp4o_k$(), oval.get_left_woprgw_k$(), oval.get_top_18ivbo_k$(), oval.get_right_ixz7xv_k$(), oval.get_bottom_bj8ras_k$(), startAngle, sweepAngle);
     return this;
   };
-  protoOf(Path).addRRect_dvxsu0_k$ = function (rrect, dir, start) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).addRRect_4yvulw_k$ = function (rrect, dir, start) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_Path__1nAddRRect(this.get__ptr_wohp4o_k$(), rrect.get_left_woprgw_k$(), rrect.get_top_18ivbo_k$(), rrect.get_right_ixz7xv_k$(), rrect.get_bottom_bj8ras_k$(), tmp0_anonymous.toInterop_sfommq_k$(rrect.get_radii_ixu1u4_k$()), rrect.get_radii_ixu1u4_k$().length, dir.get_ordinal_ip24qg_k$(), start);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_Path__1nAddRRect(this.get__ptr_wohp4o_k$(), rrect.get_left_woprgw_k$(), rrect.get_top_18ivbo_k$(), rrect.get_right_ixz7xv_k$(), rrect.get_bottom_bj8ras_k$(), $this$interopScope.toInterop_uum1m9_k$(rrect.get_radii_ixu1u4_k$()), rrect.get_radii_ixu1u4_k$().length, dir.get_ordinal_ip24qg_k$(), start);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(Path).addRRect$default_w9fmui_k$ = function (rrect, dir, start, $super) {
+  protoOf(Path).addRRect$default_20pqkw_k$ = function (rrect, dir, start, $super) {
     dir = dir === VOID ? PathDirection_CLOCKWISE_getInstance() : dir;
     start = start === VOID ? 6 : start;
-    return $super === VOID ? this.addRRect_dvxsu0_k$(rrect, dir, start) : $super.addRRect_dvxsu0_k$.call(this, rrect, dir, start);
+    return $super === VOID ? this.addRRect_4yvulw_k$(rrect, dir, start) : $super.addRRect_4yvulw_k$.call(this, rrect, dir, start);
   };
-  protoOf(Path).addPoly_3mwwni_k$ = function (pts, close) {
+  protoOf(Path).addPoly_f30zvx_k$ = function (pts, close) {
     var flat = new Float32Array(imul(pts.length, 2));
     var inductionVariable = 0;
     var last = pts.length - 1 | 0;
@@ -10989,9 +10917,9 @@
         flat[imul(i, 2) + 1 | 0] = pts[i].get_y_1mhr68_k$();
       }
        while (inductionVariable <= last);
-    return this.addPoly_rmtl5u_k$(flat, close);
+    return this.addPoly_8e99p6_k$(flat, close);
   };
-  protoOf(Path).addPoly_rmtl5u_k$ = function (pts, close) {
+  protoOf(Path).addPoly_8e99p6_k$ = function (pts, close) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!((pts.length % 2 | 0) === 0)) {
@@ -10999,29 +10927,29 @@
       var message = 'Expected even amount of pts, got ' + pts.length;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_Path__1nAddPoly(this.get__ptr_wohp4o_k$(), tmp1_anonymous.toInterop_sfommq_k$(pts), pts.length / 2 | 0, close);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_Path__1nAddPoly(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_uum1m9_k$(pts), pts.length / 2 | 0, close);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(Path).addPath_ox147x_k$ = function (src, extend) {
+  protoOf(Path).addPath_qsu6b0_k$ = function (src, extend) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Path__1nAddPath(this.get__ptr_wohp4o_k$(), getPtr(src), extend);
       tmp = this;
     }finally {
@@ -11030,14 +10958,14 @@
     }
     return tmp;
   };
-  protoOf(Path).addPath$default_mieeda_k$ = function (src, extend, $super) {
+  protoOf(Path).addPath$default_4mip2b_k$ = function (src, extend, $super) {
     extend = extend === VOID ? false : extend;
-    return $super === VOID ? this.addPath_ox147x_k$(src, extend) : $super.addPath_ox147x_k$.call(this, src, extend);
+    return $super === VOID ? this.addPath_qsu6b0_k$(src, extend) : $super.addPath_qsu6b0_k$.call(this, src, extend);
   };
-  protoOf(Path).addPath_8z07fh_k$ = function (src, dx, dy, extend) {
+  protoOf(Path).addPath_knkmr0_k$ = function (src, dx, dy, extend) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Path__1nAddPathOffset(this.get__ptr_wohp4o_k$(), getPtr(src), dx, dy, extend);
       tmp = this;
     }finally {
@@ -11046,27 +10974,27 @@
     }
     return tmp;
   };
-  protoOf(Path).addPath$default_lxy9z6_k$ = function (src, dx, dy, extend, $super) {
+  protoOf(Path).addPath$default_qvsmxp_k$ = function (src, dx, dy, extend, $super) {
     extend = extend === VOID ? false : extend;
-    return $super === VOID ? this.addPath_8z07fh_k$(src, dx, dy, extend) : $super.addPath_8z07fh_k$.call(this, src, dx, dy, extend);
+    return $super === VOID ? this.addPath_knkmr0_k$(src, dx, dy, extend) : $super.addPath_knkmr0_k$.call(this, src, dx, dy, extend);
   };
-  protoOf(Path).addPath_foopol_k$ = function (src, matrix, extend) {
+  protoOf(Path).addPath_ohturs_k$ = function (src, matrix, extend) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_Path__1nAddPathTransform(this.get__ptr_wohp4o_k$(), getPtr(src), tmp0_anonymous.toInterop_sfommq_k$(matrix.get_mat_18j0uh_k$()), extend);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_Path__1nAddPathTransform(this.get__ptr_wohp4o_k$(), getPtr(src), $this$interopScope.toInterop_uum1m9_k$(matrix.get_mat_18j0uh_k$()), extend);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -11077,14 +11005,14 @@
     }
     return tmp;
   };
-  protoOf(Path).addPath$default_5miwgw_k$ = function (src, matrix, extend, $super) {
+  protoOf(Path).addPath$default_odujul_k$ = function (src, matrix, extend, $super) {
     extend = extend === VOID ? false : extend;
-    return $super === VOID ? this.addPath_foopol_k$(src, matrix, extend) : $super.addPath_foopol_k$.call(this, src, matrix, extend);
+    return $super === VOID ? this.addPath_ohturs_k$(src, matrix, extend) : $super.addPath_ohturs_k$.call(this, src, matrix, extend);
   };
-  protoOf(Path).reverseAddPath_7il153_k$ = function (src) {
+  protoOf(Path).reverseAddPath_j2peon_k$ = function (src) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Path__1nReverseAddPath(this.get__ptr_wohp4o_k$(), getPtr(src));
       tmp = this;
     }finally {
@@ -11093,10 +11021,10 @@
     }
     return tmp;
   };
-  protoOf(Path).offset_po8odm_k$ = function (dx, dy, dst) {
+  protoOf(Path).offset_1bpnju_k$ = function (dx, dy, dst) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Path__1nOffset(this.get__ptr_wohp4o_k$(), dx, dy, getPtr(dst));
       tmp = this;
     }finally {
@@ -11105,30 +11033,30 @@
     }
     return tmp;
   };
-  protoOf(Path).offset$default_be5gob_k$ = function (dx, dy, dst, $super) {
+  protoOf(Path).offset$default_5tue8h_k$ = function (dx, dy, dst, $super) {
     dst = dst === VOID ? null : dst;
-    return $super === VOID ? this.offset_po8odm_k$(dx, dy, dst) : $super.offset_po8odm_k$.call(this, dx, dy, dst);
+    return $super === VOID ? this.offset_1bpnju_k$(dx, dy, dst) : $super.offset_1bpnju_k$.call(this, dx, dy, dst);
   };
-  protoOf(Path).transform_i40e40_k$ = function (matrix, applyPerspectiveClip) {
-    return this.transform_55d8xl_k$(matrix, null, applyPerspectiveClip);
+  protoOf(Path).transform_y5snp1_k$ = function (matrix, applyPerspectiveClip) {
+    return this.transform_hz2bc_k$(matrix, null, applyPerspectiveClip);
   };
-  protoOf(Path).transform_55d8xl_k$ = function (matrix, dst, applyPerspectiveClip) {
+  protoOf(Path).transform_hz2bc_k$ = function (matrix, dst, applyPerspectiveClip) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_Path__1nTransform(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_sfommq_k$(matrix.get_mat_18j0uh_k$()), getPtr(dst), applyPerspectiveClip);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_Path__1nTransform(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_uum1m9_k$(matrix.get_mat_18j0uh_k$()), getPtr(dst), applyPerspectiveClip);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -11139,34 +11067,34 @@
     }
     return tmp;
   };
-  protoOf(Path).transform$default_2lgwdr_k$ = function (matrix, dst, applyPerspectiveClip, $super) {
+  protoOf(Path).transform$default_8dct7o_k$ = function (matrix, dst, applyPerspectiveClip, $super) {
     dst = dst === VOID ? null : dst;
     applyPerspectiveClip = applyPerspectiveClip === VOID ? true : applyPerspectiveClip;
-    return $super === VOID ? this.transform_55d8xl_k$(matrix, dst, applyPerspectiveClip) : $super.transform_55d8xl_k$.call(this, matrix, dst, applyPerspectiveClip);
+    return $super === VOID ? this.transform_hz2bc_k$(matrix, dst, applyPerspectiveClip) : $super.transform_hz2bc_k$.call(this, matrix, dst, applyPerspectiveClip);
   };
-  protoOf(Path).set_lastPt_t8yxqj_k$ = function (value) {
-    this.setLastPt_nsj7r0_k$(value.get_x_1mhr67_k$(), value.get_y_1mhr68_k$());
+  protoOf(Path).set_lastPt_6y8w7q_k$ = function (value) {
+    this.setLastPt_3j63i4_k$(value.get_x_1mhr67_k$(), value.get_y_1mhr68_k$());
   };
   protoOf(Path).get_lastPt_g1z77n_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_44();
-      tmp = tmp_0.fromInteropPointer_26ocmq_k$(Path$_get_lastPt_$lambda_5o3kd7(this));
+      tmp = tmp_0.fromInteropPointer_2qty6v_k$(Path$_get_lastPt_$lambda_5o3kd7(this));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Path).setLastPt_nsj7r0_k$ = function (x, y) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Path).setLastPt_3j63i4_k$ = function (x, y) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nSetLastPt(this.get__ptr_wohp4o_k$(), x, y);
     return this;
   };
   protoOf(Path).get_segmentMasks_d3onvh_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Path__1nGetSegmentMasks(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -11174,38 +11102,38 @@
     return tmp;
   };
   protoOf(Path).iterator_jk1svi_k$ = function () {
-    return this.iterator_q901e4_k$(false);
+    return this.iterator_xssagn_k$(false);
   };
-  protoOf(Path).iterator_q901e4_k$ = function (forceClose) {
-    return Companion_getInstance_39().make_woa6sr_k$(this, forceClose);
+  protoOf(Path).iterator_xssagn_k$ = function (forceClose) {
+    return Companion_getInstance_39().make_86hh5o_k$(this, forceClose);
   };
-  protoOf(Path).contains_w2jof_k$ = function (x, y) {
+  protoOf(Path).contains_wtyech_k$ = function (x, y) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Path__1nContains(this.get__ptr_wohp4o_k$(), x, y);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Path).contains_bd7cc4_k$ = function (p) {
-    return this.contains_w2jof_k$(p.get_x_1mhr67_k$(), p.get_y_1mhr68_k$());
+  protoOf(Path).contains_tungdu_k$ = function (p) {
+    return this.contains_wtyech_k$(p.get_x_1mhr67_k$(), p.get_y_1mhr68_k$());
   };
   protoOf(Path).dump_1uc50_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nDump(this.get__ptr_wohp4o_k$());
     return this;
   };
   protoOf(Path).dumpHex_x8jo1z_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_Path__1nDumpHex(this.get__ptr_wohp4o_k$());
     return this;
   };
   protoOf(Path).serializeToBytes_97u91s_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -11213,15 +11141,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Path.serializeToBytes.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = this.get__ptr_wohp4o_k$();
-          tmp$ret$1 = org_jetbrains_skia_Path__1nSerializeToBytes(tmp_0, tmp0_anonymous.toInterop_k4qgbi_k$((null == null ? true : isByteArray(null)) ? null : THROW_CCE()));
+          tmp$ret$1 = org_jetbrains_skia_Path__1nSerializeToBytes(tmp_0, $this$interopScope.toInterop_h7cpet_k$((null == null ? true : isByteArray(null)) ? null : THROW_CCE()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -11230,28 +11158,28 @@
         throw Error_init_$Create$('Path is too big');
       }
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp1_withResult = new Int8Array(size);
+      var result = new Int8Array(size);
       $l$block_0: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0_0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0_0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous_0 = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous_0.toInteropForResult_w0sqdc_k$(tmp1_withResult);
+          var $this$interopScope_0 = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope_0.toInteropForResult_toi1ab_k$(result);
           // Inline function 'org.jetbrains.skia.Path.serializeToBytes.<anonymous>' call
           org_jetbrains_skia_Path__1nSerializeToBytes(this.get__ptr_wohp4o_k$(), handle);
-          tmp0_anonymous_0.fromInterop_mlzk42_k$(handle, tmp1_withResult);
+          $this$interopScope_0.fromInterop_40e3wn_k$(handle, result);
           break $l$block_0;
         }finally {
           var tmp1_0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1_0 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = tmp1_withResult;
+      tmp = result;
     }finally {
       reachabilityBarrier(this);
     }
@@ -11260,7 +11188,7 @@
   protoOf(Path).get_generationId_x1e17g_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Path__1nGetGenerationId(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -11270,7 +11198,7 @@
   protoOf(Path).get_isValid_zh4f7b_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Path__1nIsValid(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -11290,7 +11218,7 @@
         return PathDirection_COUNTER_CLOCKWISE_getInstance();
       default:
         PathDirection_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -11329,7 +11257,7 @@
         return Style_MORPH_getInstance();
       default:
         Style_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -11344,22 +11272,22 @@
   }
   function Companion_36() {
     Companion_instance_36 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_36).makePath1D_ivleto_k$ = function (path, advance, phase, style) {
+  protoOf(Companion_36).makePath1D_ly4j3w_k$ = function (path, advance, phase, style) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new PathEffect(org_jetbrains_skia_PathEffect__1nMakePath1D(getPtr(path), advance, phase, style.get_ordinal_ip24qg_k$()));
     }finally {
       reachabilityBarrier(path);
     }
     return tmp;
   };
-  protoOf(Companion_36).makePath2D_suh77f_k$ = function (matrix, path) {
+  protoOf(Companion_36).makePath2D_1p21bj_k$ = function (matrix, path) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -11367,14 +11295,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makePath2D.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$1 = org_jetbrains_skia_PathEffect__1nMakePath2D(tmp0_anonymous.toInterop_sfommq_k$(matrix.get_mat_18j0uh_k$()), getPtr(path));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$1 = org_jetbrains_skia_PathEffect__1nMakePath2D($this$interopScope.toInterop_uum1m9_k$(matrix.get_mat_18j0uh_k$()), getPtr(path));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -11384,8 +11312,8 @@
     }
     return tmp;
   };
-  protoOf(Companion_36).makeLine2D_l9srzs_k$ = function (width, matrix) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_36).makeLine2D_u2e2w2_k$ = function (width, matrix) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$1;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -11393,25 +11321,25 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeLine2D.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = org_jetbrains_skia_PathEffect__1nMakeLine2D(width, tmp0_anonymous.toInterop_sfommq_k$(matrix.get_mat_18j0uh_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = org_jetbrains_skia_PathEffect__1nMakeLine2D(width, $this$interopScope.toInterop_uum1m9_k$(matrix.get_mat_18j0uh_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return new PathEffect(tmp$ret$1);
   };
-  protoOf(Companion_36).makeCorner_nvvp4b_k$ = function (radius) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_36).makeCorner_cq39e3_k$ = function (radius) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new PathEffect(org_jetbrains_skia_PathEffect__1nMakeCorner(radius));
   };
-  protoOf(Companion_36).makeDash_l6ju8t_k$ = function (intervals, phase) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_36).makeDash_9suxds_k$ = function (intervals, phase) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$1;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -11419,21 +11347,21 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeDash.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = org_jetbrains_skia_PathEffect__1nMakeDash(tmp0_anonymous.toInterop_sfommq_k$(intervals), intervals.length, phase);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = org_jetbrains_skia_PathEffect__1nMakeDash($this$interopScope.toInterop_uum1m9_k$(intervals), intervals.length, phase);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return new PathEffect(tmp$ret$1);
   };
-  protoOf(Companion_36).makeDiscrete_r9h4km_k$ = function (segLength, dev, seed) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_36).makeDiscrete_1rigy7_k$ = function (segLength, dev, seed) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new PathEffect(org_jetbrains_skia_PathEffect__1nMakeDiscrete(segLength, dev, seed));
   };
   var Companion_instance_36;
@@ -11461,10 +11389,10 @@
     Companion_getInstance_37();
     RefCnt_init_$Init$(ptr, this);
   }
-  protoOf(PathEffect).makeSum_6do50v_k$ = function (second) {
+  protoOf(PathEffect).makeSum_am4rha_k$ = function (second) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new PathEffect(org_jetbrains_skia_PathEffect__1nMakeSum(this.get__ptr_wohp4o_k$(), getPtr(second)));
     }finally {
       reachabilityBarrier(this);
@@ -11472,10 +11400,10 @@
     }
     return tmp;
   };
-  protoOf(PathEffect).makeCompose_8fhb2g_k$ = function (inner) {
+  protoOf(PathEffect).makeCompose_dsdae3_k$ = function (inner) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new PathEffect(org_jetbrains_skia_PathEffect__1nMakeCompose(this.get__ptr_wohp4o_k$(), getPtr(inner)));
     }finally {
       reachabilityBarrier(this);
@@ -11496,7 +11424,7 @@
         return PathEllipseArc_LARGER_getInstance();
       default:
         PathEllipseArc_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -11538,7 +11466,7 @@
         return PathFillMode_INVERSE_EVEN_ODD_getInstance();
       default:
         PathFillMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -11597,7 +11525,7 @@
   }
   function Companion_37() {
     Companion_instance_37 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_37;
   function Companion_getInstance_38() {
@@ -11638,10 +11566,10 @@
     Companion_getInstance_38();
     Managed.call(this, ptr, _FinalizerHolder_getInstance_10().PTR_1);
   }
-  protoOf(PathMeasure).setPath_l64k9w_k$ = function (path, forceClosed) {
+  protoOf(PathMeasure).setPath_aldcej_k$ = function (path, forceClosed) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_PathMeasure__1nSetPath(this.get__ptr_wohp4o_k$(), getPtr(path), forceClosed);
       tmp = this;
     }finally {
@@ -11653,19 +11581,19 @@
   protoOf(PathMeasure).get_length_g42xv3_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_PathMeasure__1nGetLength(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(PathMeasure).getPosition_jj2zsf_k$ = function (distance) {
+  protoOf(PathMeasure).getPosition_vh9xfr_k$ = function (distance) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withNullableResult' call
-      var tmp0_withNullableResult = new Float32Array(2);
+      var result = new Float32Array(2);
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -11673,14 +11601,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withNullableResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withNullableResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.PathMeasure.getPosition.<anonymous>' call
           var blockResult = org_jetbrains_skia_PathMeasure__1nGetPosition(this.get__ptr_wohp4o_k$(), distance, handle);
           var tmp_0;
           if (blockResult) {
-            tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withNullableResult);
-            tmp_0 = tmp0_withNullableResult;
+            $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
+            tmp_0 = result;
           } else {
             tmp_0 = null;
           }
@@ -11690,7 +11618,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -11709,12 +11637,12 @@
     }
     return tmp;
   };
-  protoOf(PathMeasure).getTangent_qwbgld_k$ = function (distance) {
+  protoOf(PathMeasure).getTangent_ccyi2f_k$ = function (distance) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withNullableResult' call
-      var tmp0_withNullableResult = new Float32Array(2);
+      var result = new Float32Array(2);
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -11722,14 +11650,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withNullableResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withNullableResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.PathMeasure.getTangent.<anonymous>' call
           var blockResult = org_jetbrains_skia_PathMeasure__1nGetTangent(this.get__ptr_wohp4o_k$(), distance, handle);
           var tmp_0;
           if (blockResult) {
-            tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withNullableResult);
-            tmp_0 = tmp0_withNullableResult;
+            $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
+            tmp_0 = result;
           } else {
             tmp_0 = null;
           }
@@ -11739,7 +11667,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -11758,12 +11686,12 @@
     }
     return tmp;
   };
-  protoOf(PathMeasure).getRSXform_s48kh5_k$ = function (distance) {
+  protoOf(PathMeasure).getRSXform_xji6lv_k$ = function (distance) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withNullableResult' call
-      var tmp0_withNullableResult = new Float32Array(4);
+      var result = new Float32Array(4);
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -11771,14 +11699,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withNullableResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withNullableResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.PathMeasure.getRSXform.<anonymous>' call
           var blockResult = org_jetbrains_skia_PathMeasure__1nGetRSXform(this.get__ptr_wohp4o_k$(), distance, handle);
           var tmp_0;
           if (blockResult) {
-            tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withNullableResult);
-            tmp_0 = tmp0_withNullableResult;
+            $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
+            tmp_0 = result;
           } else {
             tmp_0 = null;
           }
@@ -11788,7 +11716,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -11807,12 +11735,12 @@
     }
     return tmp;
   };
-  protoOf(PathMeasure).getMatrix_x9rgmh_k$ = function (distance, getPosition, getTangent) {
+  protoOf(PathMeasure).getMatrix_n25hb_k$ = function (distance, getPosition, getTangent) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withNullableResult' call
-      var tmp0_withNullableResult = new Float32Array(9);
+      var result = new Float32Array(9);
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -11820,14 +11748,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withNullableResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withNullableResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.PathMeasure.getMatrix.<anonymous>' call
           var blockResult = org_jetbrains_skia_PathMeasure__1nGetMatrix(this.get__ptr_wohp4o_k$(), distance, getPosition, getTangent, handle);
           var tmp_0;
           if (blockResult) {
-            tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withNullableResult);
-            tmp_0 = tmp0_withNullableResult;
+            $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
+            tmp_0 = result;
           } else {
             tmp_0 = null;
           }
@@ -11837,7 +11765,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -11856,10 +11784,10 @@
     }
     return tmp;
   };
-  protoOf(PathMeasure).getSegment_jdt43f_k$ = function (startD, endD, dst, startWithMoveTo) {
+  protoOf(PathMeasure).getSegment_ahsiby_k$ = function (startD, endD, dst, startWithMoveTo) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_PathMeasure__1nGetSegment(this.get__ptr_wohp4o_k$(), startD, endD, getPtr(dst), startWithMoveTo);
     }finally {
       reachabilityBarrier(this);
@@ -11870,7 +11798,7 @@
   protoOf(PathMeasure).get_isClosed_rx8ttr_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_PathMeasure__1nIsClosed(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -11880,7 +11808,7 @@
   protoOf(PathMeasure).nextContour_wxqoih_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_PathMeasure__1nNextContour(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -11888,12 +11816,12 @@
     return tmp;
   };
   function makePath(path, forceClosed, resScale) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_PathMeasure__1nMakePath(getPtr(path), forceClosed, resScale);
     }finally {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       reachabilityBarrier(path);
     }
     return tmp;
@@ -11920,7 +11848,7 @@
         return PathOp_REVERSE_DIFFERENCE_getInstance();
       default:
         PathOp_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -12083,9 +12011,9 @@
   }
   function Companion_38() {
     Companion_instance_38 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_38).make_woa6sr_k$ = function (path, forceClose) {
+  protoOf(Companion_38).make_86hh5o_k$ = function (path, forceClose) {
     var tmp;
     try {
       var i = new PathSegmentIterator(path, org_jetbrains_skia_PathSegmentIterator__1nMake(getPtr(path), forceClose));
@@ -12117,40 +12045,40 @@
   }
   function nextSegment($this) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Int32Array(10);
+    var result = new Int32Array(10);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
         // Inline function 'org.jetbrains.skia.PathSegmentIterator.nextSegment.<anonymous>' call
         org_jetbrains_skia_PathSegmentIterator__1nNext($this.get__ptr_wohp4o_k$(), handle);
-        tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+        $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    return pathSegmentFromIntArray(tmp0_withResult);
+    return pathSegmentFromIntArray(result);
   }
   function PathSegmentIterator(_path, ptr) {
     Companion_getInstance_39();
     Managed.call(this, ptr, org_jetbrains_skia_PathSegmentIterator__1nGetFinalizer());
     this._path_1 = _path;
     this._nextSegment_1 = null;
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
   }
   protoOf(PathSegmentIterator).get__path_innhej_k$ = function () {
     return this._path_1;
   };
-  protoOf(PathSegmentIterator).set__nextSegment_s2yb4r_k$ = function (_set____db54di) {
+  protoOf(PathSegmentIterator).set__nextSegment_dinc_k$ = function (_set____db54di) {
     this._nextSegment_1 = _set____db54di;
   };
   protoOf(PathSegmentIterator).get__nextSegment_lry0mu_k$ = function () {
@@ -12174,9 +12102,10 @@
     var tmp0_safe_receiver = this._nextSegment_1;
     return !equals(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_verb_wow5m0_k$(), PathVerb_DONE_getInstance());
   };
-  protoOf(PathSegmentIterator).remove_le47v1_k$ = function () {
+  protoOf(PathSegmentIterator).remove_ldkf9o_k$ = function () {
     // Inline function 'kotlin.TODO' call
-    throw new NotImplementedError('An operation is not implemented: Not yet implemented');
+    var reason = 'Not yet implemented';
+    throw new NotImplementedError('An operation is not implemented: ' + reason);
   };
   function pathSegmentFromIntArray(points) {
     var context = last(points);
@@ -12191,155 +12120,150 @@
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp1_fromBits = points[0];
-        var tmp_0 = floatFromBits(tmp1_fromBits);
-        var tmp$ret$1;
+        var bits = points[0];
+        var tmp_0 = floatFromBits(bits);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp3_fromBits = points[1];
-        tmp$ret$1 = floatFromBits(tmp3_fromBits);
+        var bits_0 = points[1];
+        var tmp$ret$1 = floatFromBits(bits_0);
         tmp = PathSegment_init_$Create$(verb, tmp_0, tmp$ret$1, isClosed);
         break;
       case 1:
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp5_fromBits = points[0];
-        var tmp_1 = floatFromBits(tmp5_fromBits);
+        var bits_1 = points[0];
+        var tmp_1 = floatFromBits(bits_1);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp7_fromBits = points[1];
-        var tmp_2 = floatFromBits(tmp7_fromBits);
+        var bits_2 = points[1];
+        var tmp_2 = floatFromBits(bits_2);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp9_fromBits = points[2];
-        var tmp_3 = floatFromBits(tmp9_fromBits);
-        var tmp$ret$5;
+        var bits_3 = points[2];
+        var tmp_3 = floatFromBits(bits_3);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp11_fromBits = points[3];
-        tmp$ret$5 = floatFromBits(tmp11_fromBits);
+        var bits_4 = points[3];
+        var tmp$ret$5 = floatFromBits(bits_4);
         tmp = PathSegment_init_$Create$_0(tmp_1, tmp_2, tmp_3, tmp$ret$5, !(isClosedLineBit === 0), isClosed);
         break;
       case 2:
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp13_fromBits = points[0];
-        var tmp_4 = floatFromBits(tmp13_fromBits);
+        var bits_5 = points[0];
+        var tmp_4 = floatFromBits(bits_5);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp15_fromBits = points[1];
-        var tmp_5 = floatFromBits(tmp15_fromBits);
+        var bits_6 = points[1];
+        var tmp_5 = floatFromBits(bits_6);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp17_fromBits = points[2];
-        var tmp_6 = floatFromBits(tmp17_fromBits);
+        var bits_7 = points[2];
+        var tmp_6 = floatFromBits(bits_7);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp19_fromBits = points[3];
-        var tmp_7 = floatFromBits(tmp19_fromBits);
+        var bits_8 = points[3];
+        var tmp_7 = floatFromBits(bits_8);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp21_fromBits = points[4];
-        var tmp_8 = floatFromBits(tmp21_fromBits);
-        var tmp$ret$11;
+        var bits_9 = points[4];
+        var tmp_8 = floatFromBits(bits_9);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp23_fromBits = points[5];
-        tmp$ret$11 = floatFromBits(tmp23_fromBits);
+        var bits_10 = points[5];
+        var tmp$ret$11 = floatFromBits(bits_10);
         tmp = PathSegment_init_$Create$_1(tmp_4, tmp_5, tmp_6, tmp_7, tmp_8, tmp$ret$11, isClosed);
         break;
       case 3:
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp25_fromBits = points[0];
-        var tmp_9 = floatFromBits(tmp25_fromBits);
+        var bits_11 = points[0];
+        var tmp_9 = floatFromBits(bits_11);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp27_fromBits = points[1];
-        var tmp_10 = floatFromBits(tmp27_fromBits);
+        var bits_12 = points[1];
+        var tmp_10 = floatFromBits(bits_12);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp29_fromBits = points[2];
-        var tmp_11 = floatFromBits(tmp29_fromBits);
+        var bits_13 = points[2];
+        var tmp_11 = floatFromBits(bits_13);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp31_fromBits = points[3];
-        var tmp_12 = floatFromBits(tmp31_fromBits);
+        var bits_14 = points[3];
+        var tmp_12 = floatFromBits(bits_14);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp33_fromBits = points[4];
-        var tmp_13 = floatFromBits(tmp33_fromBits);
+        var bits_15 = points[4];
+        var tmp_13 = floatFromBits(bits_15);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp35_fromBits = points[5];
-        var tmp_14 = floatFromBits(tmp35_fromBits);
-        var tmp$ret$18;
+        var bits_16 = points[5];
+        var tmp_14 = floatFromBits(bits_16);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp37_fromBits = points[8];
-        tmp$ret$18 = floatFromBits(tmp37_fromBits);
+        var bits_17 = points[8];
+        var tmp$ret$18 = floatFromBits(bits_17);
         tmp = PathSegment_init_$Create$_2(tmp_9, tmp_10, tmp_11, tmp_12, tmp_13, tmp_14, tmp$ret$18, isClosed);
         break;
       case 4:
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp39_fromBits = points[0];
-        var tmp_15 = floatFromBits(tmp39_fromBits);
+        var bits_18 = points[0];
+        var tmp_15 = floatFromBits(bits_18);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp41_fromBits = points[1];
-        var tmp_16 = floatFromBits(tmp41_fromBits);
+        var bits_19 = points[1];
+        var tmp_16 = floatFromBits(bits_19);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp43_fromBits = points[2];
-        var tmp_17 = floatFromBits(tmp43_fromBits);
+        var bits_20 = points[2];
+        var tmp_17 = floatFromBits(bits_20);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp45_fromBits = points[3];
-        var tmp_18 = floatFromBits(tmp45_fromBits);
+        var bits_21 = points[3];
+        var tmp_18 = floatFromBits(bits_21);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp47_fromBits = points[4];
-        var tmp_19 = floatFromBits(tmp47_fromBits);
+        var bits_22 = points[4];
+        var tmp_19 = floatFromBits(bits_22);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp49_fromBits = points[5];
-        var tmp_20 = floatFromBits(tmp49_fromBits);
+        var bits_23 = points[5];
+        var tmp_20 = floatFromBits(bits_23);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp51_fromBits = points[6];
-        var tmp_21 = floatFromBits(tmp51_fromBits);
-        var tmp$ret$26;
+        var bits_24 = points[6];
+        var tmp_21 = floatFromBits(bits_24);
         // Inline function 'kotlin.fromBits' call
 
         FloatCompanionObject_getInstance();
-        var tmp53_fromBits = points[7];
-        tmp$ret$26 = floatFromBits(tmp53_fromBits);
+        var bits_25 = points[7];
+        var tmp$ret$26 = floatFromBits(bits_25);
         tmp = PathSegment_init_$Create$_3(tmp_15, tmp_16, tmp_17, tmp_18, tmp_19, tmp_20, tmp_21, tmp$ret$26, isClosed);
         break;
       case 6:
@@ -12379,7 +12303,7 @@
         return PathVerb_DONE_getInstance();
       default:
         PathVerb_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -12429,12 +12353,12 @@
   }
   function Companion_39() {
     Companion_instance_39 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_39).makeFromData_65gxva_k$ = function (data) {
+  protoOf(Companion_39).makeFromData_68bs4e_k$ = function (data) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Picture__1nMakeFromData(getPtr(data));
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new Picture(ptr);
     }finally {
@@ -12442,8 +12366,8 @@
     }
     return tmp;
   };
-  protoOf(Companion_39).makePlaceholder_rm0e62_k$ = function (cull) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_39).makePlaceholder_pn8tsy_k$ = function (cull) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new Picture(org_jetbrains_skia_Picture__1nMakePlaceholder(cull.get_left_woprgw_k$(), cull.get_top_18ivbo_k$(), cull.get_right_ixz7xv_k$(), cull.get_bottom_bj8ras_k$()));
   };
   var Companion_instance_39;
@@ -12462,23 +12386,23 @@
     Companion_getInstance_40();
     RefCnt_init_$Init$(ptr, this);
   }
-  protoOf(Picture).playback_ybx0lx_k$ = function (canvas, abort) {
+  protoOf(Picture).playback_cnuskt_k$ = function (canvas, abort) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_Picture__1nPlayback(this.get__ptr_wohp4o_k$(), getPtr(canvas), tmp0_anonymous.booleanCallback_2dimjt_k$(abort));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_Picture__1nPlayback(this.get__ptr_wohp4o_k$(), getPtr(canvas), $this$interopScope.booleanCallback_o0l8jn_k$(abort));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -12489,16 +12413,16 @@
     }
     return tmp;
   };
-  protoOf(Picture).playback$default_cibrld_k$ = function (canvas, abort, $super) {
+  protoOf(Picture).playback$default_qqwb36_k$ = function (canvas, abort, $super) {
     abort = abort === VOID ? null : abort;
-    return $super === VOID ? this.playback_ybx0lx_k$(canvas, abort) : $super.playback_ybx0lx_k$.call(this, canvas, abort);
+    return $super === VOID ? this.playback_cnuskt_k$(canvas, abort) : $super.playback_cnuskt_k$.call(this, canvas, abort);
   };
   protoOf(Picture).get_cullRect_p89ozl_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_47();
-      tmp = tmp_0.fromInteropPointer_26ocmq_k$(Picture$_get_cullRect_$lambda_wn0agg(this));
+      tmp = tmp_0.fromInteropPointer_2qty6v_k$(Picture$_get_cullRect_$lambda_wn0agg(this));
     }finally {
       reachabilityBarrier(this);
     }
@@ -12507,7 +12431,7 @@
   protoOf(Picture).get_uniqueId_ycv0d1_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Picture__1nGetUniqueId(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -12517,7 +12441,7 @@
   protoOf(Picture).serializeToData_6ks2it_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Data(org_jetbrains_skia_Picture__1nSerializeToData(this.get__ptr_wohp4o_k$()));
     }finally {
       reachabilityBarrier(this);
@@ -12527,7 +12451,7 @@
   protoOf(Picture).get_approximateOpCount_3hzat9_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Picture__1nGetApproximateOpCount(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -12537,17 +12461,17 @@
   protoOf(Picture).get_approximateBytesUsed_bonctf_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Picture__1nGetApproximateBytesUsed(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Picture).makeShader_a2bepg_k$ = function (tmx, tmy, mode, localMatrix, tileRect) {
+  protoOf(Picture).makeShader_bftdf8_k$ = function (tmx, tmy, mode, localMatrix, tileRect) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var arr = localMatrix == null ? null : localMatrix.get_mat_18j0uh_k$();
       var tmp$ret$1;
       $l$block: {
@@ -12556,12 +12480,12 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Picture.makeShader.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = this.get__ptr_wohp4o_k$();
           var tmp_1 = tmx.get_ordinal_ip24qg_k$();
           var tmp_2 = tmy.get_ordinal_ip24qg_k$();
           var tmp_3 = mode.get_ordinal_ip24qg_k$();
-          var tmp_4 = tmp0_anonymous.toInterop_sfommq_k$(arr);
+          var tmp_4 = $this$interopScope.toInterop_uum1m9_k$(arr);
           var tmp_5 = !(tileRect == null);
           var tmp1_elvis_lhs = tileRect == null ? null : tileRect.get_left_woprgw_k$();
           var tmp_6 = tmp1_elvis_lhs == null ? 0.0 : tmp1_elvis_lhs;
@@ -12576,7 +12500,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -12586,14 +12510,14 @@
     }
     return tmp;
   };
-  protoOf(Picture).makeShader$default_7nwtnz_k$ = function (tmx, tmy, mode, localMatrix, tileRect, $super) {
+  protoOf(Picture).makeShader$default_tocgta_k$ = function (tmx, tmy, mode, localMatrix, tileRect, $super) {
     localMatrix = localMatrix === VOID ? null : localMatrix;
     tileRect = tileRect === VOID ? null : tileRect;
-    return $super === VOID ? this.makeShader_a2bepg_k$(tmx, tmy, mode, localMatrix, tileRect) : $super.makeShader_a2bepg_k$.call(this, tmx, tmy, mode, localMatrix, tileRect);
+    return $super === VOID ? this.makeShader_bftdf8_k$(tmx, tmy, mode, localMatrix, tileRect) : $super.makeShader_bftdf8_k$.call(this, tmx, tmy, mode, localMatrix, tileRect);
   };
   function Companion_40() {
     Companion_instance_40 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_40;
   function Companion_getInstance_41() {
@@ -12603,7 +12527,7 @@
   }
   function PictureRecorder_init_$Init$($this) {
     PictureRecorder.call($this, org_jetbrains_skia_PictureRecorder__1nMake());
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return $this;
   }
   function PictureRecorder_init_$Create$() {
@@ -12626,10 +12550,10 @@
     Companion_getInstance_41();
     Managed.call(this, ptr, _FinalizerHolder_getInstance_12().PTR_1);
   }
-  protoOf(PictureRecorder).beginRecording_rcjeuh_k$ = function (bounds) {
+  protoOf(PictureRecorder).beginRecording_8ffhcr_k$ = function (bounds) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Canvas(org_jetbrains_skia_PictureRecorder__1nBeginRecording(this.get__ptr_wohp4o_k$(), bounds.get_left_woprgw_k$(), bounds.get_top_18ivbo_k$(), bounds.get_right_ixz7xv_k$(), bounds.get_bottom_bj8ras_k$()), false, this);
     }finally {
       reachabilityBarrier(this);
@@ -12639,7 +12563,7 @@
   protoOf(PictureRecorder).get_recordingCanvas_db77b4_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_PictureRecorder__1nGetRecordingCanvas(this.get__ptr_wohp4o_k$());
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new Canvas(ptr, false, this);
     }finally {
@@ -12650,17 +12574,17 @@
   protoOf(PictureRecorder).finishRecordingAsPicture_98rgby_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Picture(org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPicture(this.get__ptr_wohp4o_k$()));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(PictureRecorder).finishRecordingAsPicture_dhzy1b_k$ = function (cull) {
+  protoOf(PictureRecorder).finishRecordingAsPicture_ar6kp7_k$ = function (cull) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Picture(org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPictureWithCull(this.get__ptr_wohp4o_k$(), cull.get_left_woprgw_k$(), cull.get_top_18ivbo_k$(), cull.get_right_ixz7xv_k$(), cull.get_bottom_bj8ras_k$()));
     }finally {
       reachabilityBarrier(this);
@@ -12689,7 +12613,7 @@
         return PixelGeometry_BGR_V_getInstance();
       default:
         PixelGeometry_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -12729,7 +12653,7 @@
   }
   function Companion_41() {
     Companion_instance_41 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_41;
   function Companion_getInstance_42() {
@@ -12744,7 +12668,7 @@
   protoOf(PixelRef).get_width_j0q4yl_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_PixelRef__1nGetWidth(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -12754,7 +12678,7 @@
   protoOf(PixelRef).get_height_e7t92o_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_PixelRef__1nGetHeight(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -12764,7 +12688,7 @@
   protoOf(PixelRef).get_rowBytes_viqv7q_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_PixelRef__1nGetRowBytes(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -12774,7 +12698,7 @@
   protoOf(PixelRef).get_generationId_x1e17g_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_PixelRef__1nGetGenerationId(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -12782,14 +12706,14 @@
     return tmp;
   };
   protoOf(PixelRef).notifyPixelsChanged_97ppqa_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_PixelRef__1nNotifyPixelsChanged(this.get__ptr_wohp4o_k$());
     return this;
   };
   protoOf(PixelRef).get_isImmutable_b8i701_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_PixelRef__1nIsImmutable(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -12797,7 +12721,7 @@
     return tmp;
   };
   protoOf(PixelRef).setImmutable_j5sn28_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_PixelRef__1nSetImmutable(this.get__ptr_wohp4o_k$());
     return this;
   };
@@ -12818,7 +12742,7 @@
   }
   function Pixmap_init_$Init$($this) {
     Pixmap.call($this, org_jetbrains_skia_Pixmap__1nMakeNull(), true);
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return $this;
   }
   function Pixmap_init_$Create$() {
@@ -12840,10 +12764,10 @@
   function Companion_42() {
     Companion_instance_42 = this;
   }
-  protoOf(Companion_42).make_v2uisc_k$ = function (info, buffer, rowBytes) {
-    return this.make_1hlhv7_k$(info, buffer.writableData_rh05g6_k$(), rowBytes, buffer);
+  protoOf(Companion_42).make_byytax_k$ = function (info, buffer, rowBytes) {
+    return this.make_rofvts_k$(info, buffer.writableData_rh05g6_k$(), rowBytes, buffer);
   };
-  protoOf(Companion_42).make_1hlhv7_k$ = function (info, addr, rowBytes, underlyingMemoryOwner) {
+  protoOf(Companion_42).make_rofvts_k$ = function (info, addr, rowBytes, underlyingMemoryOwner) {
     var tmp;
     try {
       var ptr = org_jetbrains_skia_Pixmap__1nMake(info.get_width_j0q4yl_k$(), info.get_height_e7t92o_k$(), info.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$(), info.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$(), getPtr(info.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$()), addr, rowBytes);
@@ -12855,19 +12779,19 @@
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
       // Inline function 'kotlin.also' call
-      var tmp1_also = new Pixmap(ptr, true);
+      var this_0 = new Pixmap(ptr, true);
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'org.jetbrains.skia.Companion.make.<anonymous>' call
-      tmp1_also.underlyingMemoryOwner_1 = underlyingMemoryOwner;
-      tmp = tmp1_also;
+      this_0.underlyingMemoryOwner_1 = underlyingMemoryOwner;
+      tmp = this_0;
     }finally {
       reachabilityBarrier(info.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$());
     }
     return tmp;
   };
-  protoOf(Companion_42).make$default_jnxj4x_k$ = function (info, addr, rowBytes, underlyingMemoryOwner, $super) {
+  protoOf(Companion_42).make$default_3qv7q5_k$ = function (info, addr, rowBytes, underlyingMemoryOwner, $super) {
     underlyingMemoryOwner = underlyingMemoryOwner === VOID ? null : underlyingMemoryOwner;
-    return $super === VOID ? this.make_1hlhv7_k$(info, addr, rowBytes, underlyingMemoryOwner) : $super.make_1hlhv7_k$.call(this, info, addr, rowBytes, underlyingMemoryOwner);
+    return $super === VOID ? this.make_rofvts_k$(info, addr, rowBytes, underlyingMemoryOwner) : $super.make_rofvts_k$.call(this, info, addr, rowBytes, underlyingMemoryOwner);
   };
   var Companion_instance_42;
   function Companion_getInstance_43() {
@@ -12890,49 +12814,46 @@
     this._imageInfo_1 = null;
     this._imageInfoLock_1 = Unit_getInstance();
   }
-  protoOf(Pixmap).reset_5tn5dq_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Pixmap).reset_5u6xz3_k$ = function () {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     // Inline function 'org.jetbrains.skiko.maybeSynchronized' call
-    this._imageInfoLock_1;
     this._imageInfo_1 = null;
     org_jetbrains_skia_Pixmap__1nReset(this.get__ptr_wohp4o_k$());
     this.underlyingMemoryOwner_1 = null;
     reachabilityBarrier(this);
   };
-  protoOf(Pixmap).reset_lj1qkd_k$ = function (info, addr, rowBytes, underlyingMemoryOwner) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Pixmap).reset_2psgxd_k$ = function (info, addr, rowBytes, underlyingMemoryOwner) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     // Inline function 'org.jetbrains.skiko.maybeSynchronized' call
-    this._imageInfoLock_1;
     this._imageInfo_1 = null;
     org_jetbrains_skia_Pixmap__1nResetWithInfo(this.get__ptr_wohp4o_k$(), info.get_width_j0q4yl_k$(), info.get_height_e7t92o_k$(), info.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$(), info.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$(), getPtr(info.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$()), addr, rowBytes);
     this.underlyingMemoryOwner_1 = underlyingMemoryOwner;
     reachabilityBarrier(this);
     reachabilityBarrier(info.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$());
   };
-  protoOf(Pixmap).reset$default_6zbhga_k$ = function (info, addr, rowBytes, underlyingMemoryOwner, $super) {
+  protoOf(Pixmap).reset$default_ugy6f8_k$ = function (info, addr, rowBytes, underlyingMemoryOwner, $super) {
     underlyingMemoryOwner = underlyingMemoryOwner === VOID ? null : underlyingMemoryOwner;
     var tmp;
     if ($super === VOID) {
-      this.reset_lj1qkd_k$(info, addr, rowBytes, underlyingMemoryOwner);
+      this.reset_2psgxd_k$(info, addr, rowBytes, underlyingMemoryOwner);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.reset_lj1qkd_k$.call(this, info, addr, rowBytes, underlyingMemoryOwner);
+      tmp = $super.reset_2psgxd_k$.call(this, info, addr, rowBytes, underlyingMemoryOwner);
     }
     return tmp;
   };
-  protoOf(Pixmap).reset_ixnbys_k$ = function (info, buffer, rowBytes) {
-    this.reset_lj1qkd_k$(info, buffer.writableData_rh05g6_k$(), rowBytes, buffer);
+  protoOf(Pixmap).reset_3ir8ru_k$ = function (info, buffer, rowBytes) {
+    this.reset_2psgxd_k$(info, buffer.writableData_rh05g6_k$(), rowBytes, buffer);
   };
-  protoOf(Pixmap).setColorSpace_q7rkp5_k$ = function (colorSpace) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Pixmap).setColorSpace_w5s5wy_k$ = function (colorSpace) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     // Inline function 'org.jetbrains.skiko.maybeSynchronized' call
-    this._imageInfoLock_1;
     this._imageInfo_1 = null;
     org_jetbrains_skia_Pixmap__1nSetColorSpace(this.get__ptr_wohp4o_k$(), getPtr(colorSpace));
     reachabilityBarrier(this);
     reachabilityBarrier(colorSpace);
   };
-  protoOf(Pixmap).extractSubset_cq74e_k$ = function (subsetPtr, area) {
+  protoOf(Pixmap).extractSubset_dqe4dj_k$ = function (subsetPtr, area) {
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nExtractSubset(this.get__ptr_wohp4o_k$(), subsetPtr, area.get_left_woprgw_k$(), area.get_top_18ivbo_k$(), area.get_right_ixz7xv_k$(), area.get_bottom_bj8ras_k$());
@@ -12941,21 +12862,20 @@
     }
     return tmp;
   };
-  protoOf(Pixmap).extractSubset_q926hf_k$ = function (subset, area) {
-    return this.extractSubset_cq74e_k$(subset.get__ptr_wohp4o_k$(), area);
+  protoOf(Pixmap).extractSubset_uaesb9_k$ = function (subset, area) {
+    return this.extractSubset_dqe4dj_k$(subset.get__ptr_wohp4o_k$(), area);
   };
   protoOf(Pixmap).get_info_woo16f_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       // Inline function 'org.jetbrains.skiko.maybeSynchronized' call
-      this._imageInfoLock_1;
       // Inline function 'org.jetbrains.skia.Pixmap.<get-info>.<anonymous>' call
       if (this._imageInfo_1 == null) {
         var tmp_0 = this;
         var tmp_1 = Companion_getInstance_29();
         var tmp_2 = this.get__ptr_wohp4o_k$();
-        tmp_0._imageInfo_1 = tmp_1.createUsing_l3ixsh_k$(tmp_2, _nGetInfo$ref());
+        tmp_0._imageInfo_1 = tmp_1.createUsing_vjf7w1_k$(tmp_2, _nGetInfo$ref());
       }
       tmp = ensureNotNull(this._imageInfo_1);
     }finally {
@@ -12964,7 +12884,7 @@
     return tmp;
   };
   protoOf(Pixmap).get_rowBytes_viqv7q_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nGetRowBytes(this.get__ptr_wohp4o_k$());
@@ -12974,7 +12894,7 @@
     return tmp;
   };
   protoOf(Pixmap).get_addr_woiptm_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nGetAddr(this.get__ptr_wohp4o_k$());
@@ -12984,7 +12904,7 @@
     return tmp;
   };
   protoOf(Pixmap).get_rowBytesAsPixels_1cm8m1_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nGetRowBytesAsPixels(this.get__ptr_wohp4o_k$());
@@ -12994,7 +12914,7 @@
     return tmp;
   };
   protoOf(Pixmap).computeByteSize_txd6dc_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nComputeByteSize(this.get__ptr_wohp4o_k$());
@@ -13004,7 +12924,7 @@
     return tmp;
   };
   protoOf(Pixmap).computeIsOpaque_fs8hxa_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nComputeIsOpaque(this.get__ptr_wohp4o_k$());
@@ -13013,8 +12933,8 @@
     }
     return tmp;
   };
-  protoOf(Pixmap).getColor_shsq7n_k$ = function (x, y) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Pixmap).getColor_m56hoz_k$ = function (x, y) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nGetColor(this.get__ptr_wohp4o_k$(), x, y);
@@ -13023,8 +12943,8 @@
     }
     return tmp;
   };
-  protoOf(Pixmap).getAlphaF_2t33b2_k$ = function (x, y) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Pixmap).getAlphaF_16fs4e_k$ = function (x, y) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nGetAlphaF(this.get__ptr_wohp4o_k$(), x, y);
@@ -13033,8 +12953,8 @@
     }
     return tmp;
   };
-  protoOf(Pixmap).getAddr_fkcayv_k$ = function (x, y) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Pixmap).getAddr_x9bsnt_k$ = function (x, y) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nGetAddrAt(this.get__ptr_wohp4o_k$(), x, y);
@@ -13043,8 +12963,8 @@
     }
     return tmp;
   };
-  protoOf(Pixmap).readPixels_xhbquh_k$ = function (info, addr, rowBytes) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Pixmap).readPixels_javj15_k$ = function (info, addr, rowBytes) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nReadPixels(this.get__ptr_wohp4o_k$(), info.get_width_j0q4yl_k$(), info.get_height_e7t92o_k$(), info.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$(), info.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$(), getPtr(info.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$()), addr, rowBytes);
@@ -13054,8 +12974,8 @@
     }
     return tmp;
   };
-  protoOf(Pixmap).readPixels_oa1pop_k$ = function (info, addr, rowBytes, srcX, srcY) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Pixmap).readPixels_m0ekwp_k$ = function (info, addr, rowBytes, srcX, srcY) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nReadPixelsFromPoint(this.get__ptr_wohp4o_k$(), info.get_width_j0q4yl_k$(), info.get_height_e7t92o_k$(), info.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$(), info.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$(), getPtr(info.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$()), addr, rowBytes, srcX, srcY);
@@ -13065,12 +12985,11 @@
     }
     return tmp;
   };
-  protoOf(Pixmap).readPixels_8i7c4e_k$ = function (pixmap) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Pixmap).readPixels_gv66ve_k$ = function (pixmap) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       // Inline function 'org.jetbrains.skiko.maybeSynchronized' call
-      this._imageInfoLock_1;
       // Inline function 'org.jetbrains.skia.Pixmap.readPixels.<anonymous>' call
       this._imageInfo_1 = null;
       tmp = org_jetbrains_skia_Pixmap__1nReadPixelsToPixmap(this.get__ptr_wohp4o_k$(), getPtr(pixmap));
@@ -13080,12 +12999,11 @@
     }
     return tmp;
   };
-  protoOf(Pixmap).readPixels_wr5bj1_k$ = function (pixmap, srcX, srcY) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Pixmap).readPixels_iu4cvx_k$ = function (pixmap, srcX, srcY) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       // Inline function 'org.jetbrains.skiko.maybeSynchronized' call
-      pixmap._imageInfoLock_1;
       // Inline function 'org.jetbrains.skia.Pixmap.readPixels.<anonymous>' call
       pixmap._imageInfo_1 = null;
       tmp = org_jetbrains_skia_Pixmap__1nReadPixelsToPixmapFromPoint(this.get__ptr_wohp4o_k$(), getPtr(pixmap), srcX, srcY);
@@ -13095,8 +13013,8 @@
     }
     return tmp;
   };
-  protoOf(Pixmap).scalePixels_9v43h1_k$ = function (dstPixmap, samplingMode) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Pixmap).scalePixels_vlw5x5_k$ = function (dstPixmap, samplingMode) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nScalePixels(this.get__ptr_wohp4o_k$(), getPtr(dstPixmap), samplingMode._packedInt1_kbgj89_k$(), samplingMode._packedInt2_kbgj8a_k$());
@@ -13106,8 +13024,8 @@
     }
     return tmp;
   };
-  protoOf(Pixmap).erase_xl32at_k$ = function (color) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Pixmap).erase_n4yeia_k$ = function (color) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nErase(this.get__ptr_wohp4o_k$(), color);
@@ -13116,8 +13034,8 @@
     }
     return tmp;
   };
-  protoOf(Pixmap).erase_knq7hn_k$ = function (color, subset) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Pixmap).erase_g6n8ws_k$ = function (color, subset) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_Pixmap__1nEraseSubset(this.get__ptr_wohp4o_k$(), color, subset.get_left_woprgw_k$(), subset.get_top_18ivbo_k$(), subset.get_right_ixz7xv_k$(), subset.get_bottom_bj8ras_k$());
@@ -13129,7 +13047,7 @@
   protoOf(Pixmap).get_buffer_bmaafd_k$ = function () {
     var tmp = this.underlyingMemoryOwner_1;
     var tmp0_elvis_lhs = tmp instanceof Data ? tmp : null;
-    return tmp0_elvis_lhs == null ? Companion_getInstance_9().makeWithoutCopy_41qo03_k$(this.get_addr_woiptm_k$(), this.computeByteSize_txd6dc_k$(), this) : tmp0_elvis_lhs;
+    return tmp0_elvis_lhs == null ? Companion_getInstance_9().makeWithoutCopy_pf98no_k$(this.get_addr_woiptm_k$(), this.computeByteSize_txd6dc_k$(), this) : tmp0_elvis_lhs;
   };
   function Companion_43() {
     Companion_instance_43 = this;
@@ -13138,7 +13056,7 @@
   protoOf(Companion_43).get_ZERO_wodlgx_k$ = function () {
     return this.ZERO_1;
   };
-  protoOf(Companion_43).flattenArray_cu5v13_k$ = function (pts) {
+  protoOf(Companion_43).flattenArray_n7c6vn_k$ = function (pts) {
     if (pts == null)
       return null;
     var arr = new Float32Array(imul(pts.length, 2));
@@ -13154,7 +13072,7 @@
        while (inductionVariable <= last);
     return arr;
   };
-  protoOf(Companion_43).fromArray_mv0cd7_k$ = function (pts) {
+  protoOf(Companion_43).fromArray_3oemf6_k$ = function (pts) {
     if (pts == null)
       return null;
     // Inline function 'kotlin.require' call
@@ -13165,8 +13083,8 @@
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     // Inline function 'kotlin.arrayOfNulls' call
-    var tmp1_arrayOfNulls = pts.length / 2 | 0;
-    var arr = fillArrayVal(Array(tmp1_arrayOfNulls), null);
+    var size = pts.length / 2 | 0;
+    var arr = fillArrayVal(Array(size), null);
     var inductionVariable = 0;
     var last = pts.length / 2 | 0;
     if (inductionVariable < last)
@@ -13178,30 +13096,30 @@
        while (inductionVariable < last);
     return arr;
   };
-  protoOf(Companion_43).fromInteropPointer_26ocmq_k$ = function (block) {
+  protoOf(Companion_43).fromInteropPointer_2qty6v_k$ = function (block) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Float32Array(2);
+    var result = new Float32Array(2);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    var result = tmp0_withResult;
-    return new Point(result[0], result[1]);
+    var result_0 = result;
+    return new Point(result_0[0], result_0[1]);
   };
   var Companion_instance_43;
   function Companion_getInstance_44() {
@@ -13220,20 +13138,20 @@
   protoOf(Point).get_y_1mhr68_k$ = function () {
     return this.y_1;
   };
-  protoOf(Point).offset_tlr1pp_k$ = function (dx, dy) {
+  protoOf(Point).offset_dxmngz_k$ = function (dx, dy) {
     return new Point(this.x_1 + dx, this.y_1 + dy);
   };
-  protoOf(Point).offset_lp18zk_k$ = function (vec) {
-    return this.offset_tlr1pp_k$(vec.x_1, vec.y_1);
+  protoOf(Point).offset_obaapu_k$ = function (vec) {
+    return this.offset_dxmngz_k$(vec.x_1, vec.y_1);
   };
-  protoOf(Point).scale_cda02s_k$ = function (scale) {
-    return this.scale_6iftdi_k$(scale, scale);
+  protoOf(Point).scale_n1f8ya_k$ = function (scale) {
+    return this.scale_ln7xze_k$(scale, scale);
   };
-  protoOf(Point).scale_6iftdi_k$ = function (sx, sy) {
+  protoOf(Point).scale_ln7xze_k$ = function (sx, sy) {
     return new Point(this.x_1 * sx, this.y_1 * sy);
   };
   protoOf(Point).get_isEmpty_zauvru_k$ = function () {
-    return this.x_1 <= 0 ? true : this.y_1 <= 0;
+    return this.x_1 <= 0.0 ? true : this.y_1 <= 0.0;
   };
   protoOf(Point).equals = function (other) {
     if (other === this)
@@ -13299,143 +13217,128 @@
   function Companion_44() {
     Companion_instance_44 = this;
   }
-  protoOf(Companion_44).makeLTRB_gu57qw_k$ = function (l, t, r, b, radius) {
-    var tmp$ret$0;
+  protoOf(Companion_44).makeLTRB_nd4cmm_k$ = function (l, t, r, b, radius) {
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([radius]);
+    var tmp$ret$0 = new Float32Array([radius]);
     return new RRect(l, t, r, b, tmp$ret$0);
   };
-  protoOf(Companion_44).makeLTRB_o5673a_k$ = function (l, t, r, b, xRad, yRad) {
-    var tmp$ret$0;
+  protoOf(Companion_44).makeLTRB_qlrzkq_k$ = function (l, t, r, b, xRad, yRad) {
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([xRad, yRad]);
+    var tmp$ret$0 = new Float32Array([xRad, yRad]);
     return new RRect(l, t, r, b, tmp$ret$0);
   };
-  protoOf(Companion_44).makeLTRB_r5q55y_k$ = function (l, t, r, b, tlRad, trRad, brRad, blRad) {
-    var tmp$ret$0;
+  protoOf(Companion_44).makeLTRB_xirmw6_k$ = function (l, t, r, b, tlRad, trRad, brRad, blRad) {
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([tlRad, trRad, brRad, blRad]);
+    var tmp$ret$0 = new Float32Array([tlRad, trRad, brRad, blRad]);
     return new RRect(l, t, r, b, tmp$ret$0);
   };
-  protoOf(Companion_44).makeNinePatchLTRB_34kheo_k$ = function (l, t, r, b, lRad, tRad, rRad, bRad) {
-    var tmp$ret$0;
+  protoOf(Companion_44).makeNinePatchLTRB_9odfz4_k$ = function (l, t, r, b, lRad, tRad, rRad, bRad) {
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([lRad, tRad, rRad, tRad, rRad, bRad, lRad, bRad]);
+    var tmp$ret$0 = new Float32Array([lRad, tRad, rRad, tRad, rRad, bRad, lRad, bRad]);
     return new RRect(l, t, r, b, tmp$ret$0);
   };
-  protoOf(Companion_44).makeComplexLTRB_r9qn2z_k$ = function (l, t, r, b, radii) {
+  protoOf(Companion_44).makeComplexLTRB_n5v03i_k$ = function (l, t, r, b, radii) {
     return new RRect(l, t, r, b, radii);
   };
-  protoOf(Companion_44).makeOvalLTRB_2jsrjc_k$ = function (l, t, r, b) {
-    var tmp$ret$2;
+  protoOf(Companion_44).makeOvalLTRB_5f3jl4_k$ = function (l, t, r, b) {
     // Inline function 'kotlin.floatArrayOf' call
     // Inline function 'kotlin.math.abs' call
-    var tmp0_abs = r - l;
-    var tmp = Math.abs(tmp0_abs) / 2.0;
-    var tmp$ret$1;
+    var x = r - l;
+    var tmp = Math.abs(x) / 2.0;
     // Inline function 'kotlin.math.abs' call
-    var tmp1_abs = b - t;
-    tmp$ret$1 = Math.abs(tmp1_abs);
-    tmp$ret$2 = new Float32Array([tmp, tmp$ret$1 / 2.0]);
+    var x_0 = b - t;
+    var tmp$ret$1 = Math.abs(x_0);
+    var tmp$ret$2 = new Float32Array([tmp, tmp$ret$1 / 2.0]);
     return new RRect(l, t, r, b, tmp$ret$2);
   };
-  protoOf(Companion_44).makePillLTRB_dt8l8f_k$ = function (l, t, r, b) {
-    var tmp$ret$3;
+  protoOf(Companion_44).makePillLTRB_42gzjz_k$ = function (l, t, r, b) {
     // Inline function 'kotlin.floatArrayOf' call
-    var tmp$ret$2;
     // Inline function 'kotlin.comparisons.minOf' call
     // Inline function 'kotlin.math.abs' call
-    var tmp0_abs = r - l;
-    var tmp2_minOf = Math.abs(tmp0_abs);
+    var x = r - l;
+    var a = Math.abs(x);
     // Inline function 'kotlin.math.abs' call
-    var tmp1_abs = t - b;
-    var tmp3_minOf = Math.abs(tmp1_abs);
-    tmp$ret$2 = Math.min(tmp2_minOf, tmp3_minOf);
-    tmp$ret$3 = new Float32Array([tmp$ret$2 / 2.0]);
+    var x_0 = t - b;
+    var b_0 = Math.abs(x_0);
+    var tmp$ret$2 = Math.min(a, b_0);
+    var tmp$ret$3 = new Float32Array([tmp$ret$2 / 2.0]);
     return new RRect(l, t, r, b, tmp$ret$3);
   };
-  protoOf(Companion_44).makeXYWH_6bxfrm_k$ = function (l, t, w, h, radius) {
+  protoOf(Companion_44).makeXYWH_b3h0co_k$ = function (l, t, w, h, radius) {
     var tmp = l + w;
     var tmp_0 = t + h;
-    var tmp$ret$0;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([radius]);
+    var tmp$ret$0 = new Float32Array([radius]);
     return new RRect(l, t, tmp, tmp_0, tmp$ret$0);
   };
-  protoOf(Companion_44).makeXYWH_tixolc_k$ = function (l, t, w, h, xRad, yRad) {
+  protoOf(Companion_44).makeXYWH_6xtrb4_k$ = function (l, t, w, h, xRad, yRad) {
     var tmp = l + w;
     var tmp_0 = t + h;
-    var tmp$ret$0;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([xRad, yRad]);
+    var tmp$ret$0 = new Float32Array([xRad, yRad]);
     return new RRect(l, t, tmp, tmp_0, tmp$ret$0);
   };
-  protoOf(Companion_44).makeXYWH_71d11c_k$ = function (l, t, w, h, tlRad, trRad, brRad, blRad) {
+  protoOf(Companion_44).makeXYWH_dzsdxc_k$ = function (l, t, w, h, tlRad, trRad, brRad, blRad) {
     var tmp = l + w;
     var tmp_0 = t + h;
-    var tmp$ret$0;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([tlRad, trRad, brRad, blRad]);
+    var tmp$ret$0 = new Float32Array([tlRad, trRad, brRad, blRad]);
     return new RRect(l, t, tmp, tmp_0, tmp$ret$0);
   };
-  protoOf(Companion_44).makeNinePatchXYWH_gzsmpy_k$ = function (l, t, w, h, lRad, tRad, rRad, bRad) {
+  protoOf(Companion_44).makeNinePatchXYWH_9ulszq_k$ = function (l, t, w, h, lRad, tRad, rRad, bRad) {
     var tmp = l + w;
     var tmp_0 = t + h;
-    var tmp$ret$0;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([lRad, tRad, rRad, tRad, rRad, bRad, lRad, bRad]);
+    var tmp$ret$0 = new Float32Array([lRad, tRad, rRad, tRad, rRad, bRad, lRad, bRad]);
     return new RRect(l, t, tmp, tmp_0, tmp$ret$0);
   };
-  protoOf(Companion_44).makeComplexXYWH_rjm4n5_k$ = function (l, t, w, h, radii) {
+  protoOf(Companion_44).makeComplexXYWH_ymo8tg_k$ = function (l, t, w, h, radii) {
     return new RRect(l, t, l + w, t + h, radii);
   };
-  protoOf(Companion_44).makeOvalXYWH_oztoy6_k$ = function (l, t, w, h) {
+  protoOf(Companion_44).makeOvalXYWH_l9nmry_k$ = function (l, t, w, h) {
     var tmp = l + w;
     var tmp_0 = t + h;
-    var tmp$ret$0;
     // Inline function 'kotlin.floatArrayOf' call
-    tmp$ret$0 = new Float32Array([w / 2.0, h / 2.0]);
+    var tmp$ret$0 = new Float32Array([w / 2.0, h / 2.0]);
     return new RRect(l, t, tmp, tmp_0, tmp$ret$0);
   };
-  protoOf(Companion_44).makePillXYWH_8msc6f_k$ = function (l, t, w, h) {
+  protoOf(Companion_44).makePillXYWH_bs33mv_k$ = function (l, t, w, h) {
     var tmp = l + w;
     var tmp_0 = t + h;
-    var tmp$ret$1;
     // Inline function 'kotlin.floatArrayOf' call
-    var tmp$ret$0;
     // Inline function 'kotlin.comparisons.minOf' call
-    tmp$ret$0 = Math.min(w, h);
-    tmp$ret$1 = new Float32Array([tmp$ret$0 / 2.0]);
+    var tmp$ret$0 = Math.min(w, h);
+    var tmp$ret$1 = new Float32Array([tmp$ret$0 / 2.0]);
     return new RRect(l, t, tmp, tmp_0, tmp$ret$1);
   };
-  protoOf(Companion_44).fromInteropPointer_26ocmq_k$ = function (block) {
+  protoOf(Companion_44).fromInteropPointer_2qty6v_k$ = function (block) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Float32Array(12);
+    var result = new Float32Array(12);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    var result = tmp0_withResult;
-    return new RRect(result[0], result[1], result[2], result[3], copyOfRange(result, 4, 12));
+    var result_0 = result;
+    return new RRect(result_0[0], result_0[1], result_0[2], result_0[3], copyOfRange(result_0, 4, 12));
   };
-  protoOf(Companion_44).fromInteropPointerNullable_oyojp1_k$ = function (block) {
+  protoOf(Companion_44).fromInteropPointerNullable_rzwb3l_k$ = function (block) {
     var result = {_v: true};
-    var rect = this.fromInteropPointer_26ocmq_k$(RRect$Companion$fromInteropPointerNullable$lambda(result, block));
+    var rect = this.fromInteropPointer_2qty6v_k$(RRect$Companion$fromInteropPointerNullable$lambda(result, block));
     var tmp;
     if (result._v) {
       tmp = rect;
@@ -13458,7 +13361,7 @@
   protoOf(RRect).get_radii_ixu1u4_k$ = function () {
     return this.radii_1;
   };
-  protoOf(RRect).inflate_f59jyf_k$ = function (spread) {
+  protoOf(RRect).inflate_rvluy7_k$ = function (spread) {
     var becomesRect = true;
     var inductionVariable = 0;
     var last = this.radii_1.length - 1 | 0;
@@ -13466,7 +13369,7 @@
       $l$loop: do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        if (this.radii_1[i] + spread >= 0) {
+        if (this.radii_1[i] + spread >= 0.0) {
           becomesRect = false;
           break $l$loop;
         }
@@ -13478,15 +13381,14 @@
       var tmp_1 = this.get_left_woprgw_k$() - spread;
       var tmp_2 = this.get_top_18ivbo_k$() - spread;
       // Inline function 'kotlin.comparisons.maxOf' call
-      var tmp0_maxOf = this.get_left_woprgw_k$() - spread;
-      var tmp1_maxOf = this.get_right_ixz7xv_k$() + spread;
-      var tmp_3 = Math.max(tmp0_maxOf, tmp1_maxOf);
-      var tmp$ret$1;
+      var a = this.get_left_woprgw_k$() - spread;
+      var b = this.get_right_ixz7xv_k$() + spread;
+      var tmp_3 = Math.max(a, b);
       // Inline function 'kotlin.comparisons.maxOf' call
-      var tmp2_maxOf = this.get_top_18ivbo_k$() - spread;
-      var tmp3_maxOf = this.get_bottom_bj8ras_k$() + spread;
-      tmp$ret$1 = Math.max(tmp2_maxOf, tmp3_maxOf);
-      tmp = tmp_0.makeLTRB_ax757q_k$(tmp_1, tmp_2, tmp_3, tmp$ret$1);
+      var a_0 = this.get_top_18ivbo_k$() - spread;
+      var b_0 = this.get_bottom_bj8ras_k$() + spread;
+      var tmp$ret$1 = Math.max(a_0, b_0);
+      tmp = tmp_0.makeLTRB_2wvuxm_k$(tmp_1, tmp_2, tmp_3, tmp$ret$1);
     } else {
       // Inline function 'kotlin.collections.copyOf' call
       // Inline function 'kotlin.js.asDynamic' call
@@ -13498,21 +13400,20 @@
           var i_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'kotlin.comparisons.maxOf' call
-          var tmp5_maxOf = radii[i_0] + spread;
-          radii[i_0] = Math.max(0.0, tmp5_maxOf);
+          var b_1 = radii[i_0] + spread;
+          radii[i_0] = Math.max(0.0, b_1);
         }
          while (inductionVariable_0 <= last_0);
       var tmp_4 = this.get_left_woprgw_k$() - spread;
       var tmp_5 = this.get_top_18ivbo_k$() - spread;
       // Inline function 'kotlin.comparisons.maxOf' call
-      var tmp6_maxOf = this.get_left_woprgw_k$() - spread;
-      var tmp7_maxOf = this.get_right_ixz7xv_k$() + spread;
-      var tmp_6 = Math.max(tmp6_maxOf, tmp7_maxOf);
-      var tmp$ret$6;
+      var a_1 = this.get_left_woprgw_k$() - spread;
+      var b_2 = this.get_right_ixz7xv_k$() + spread;
+      var tmp_6 = Math.max(a_1, b_2);
       // Inline function 'kotlin.comparisons.maxOf' call
-      var tmp8_maxOf = this.get_top_18ivbo_k$() - spread;
-      var tmp9_maxOf = this.get_bottom_bj8ras_k$() + spread;
-      tmp$ret$6 = Math.max(tmp8_maxOf, tmp9_maxOf);
+      var a_2 = this.get_top_18ivbo_k$() - spread;
+      var b_3 = this.get_bottom_bj8ras_k$() + spread;
+      var tmp$ret$6 = Math.max(a_2, b_3);
       tmp = new RRect(tmp_4, tmp_5, tmp_6, tmp$ret$6, radii);
     }
     return tmp;
@@ -13597,7 +13498,7 @@
   function Companion_45() {
     Companion_instance_45 = this;
   }
-  protoOf(Companion_45).makeFromRadians_gxotay_k$ = function (scale, radians, tx, ty, ax, ay) {
+  protoOf(Companion_45).makeFromRadians_tue7dy_k$ = function (scale, radians, tx, ty, ax, ay) {
     // Inline function 'kotlin.math.sin' call
     var s = Math.sin(radians) * scale;
     // Inline function 'kotlin.math.cos' call
@@ -13663,7 +13564,7 @@
   function Companion_46() {
     Companion_instance_46 = this;
   }
-  protoOf(Companion_46).makeLTRB_ax757q_k$ = function (l, t, r, b) {
+  protoOf(Companion_46).makeLTRB_2wvuxm_k$ = function (l, t, r, b) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(l <= r)) {
@@ -13680,117 +13581,116 @@
     }
     return new Rect(l, t, r, b);
   };
-  protoOf(Companion_46).makeWH_b3ckap_k$ = function (w, h) {
+  protoOf(Companion_46).makeWH_nov667_k$ = function (w, h) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(w >= 0)) {
+    if (!(w >= 0.0)) {
       // Inline function 'org.jetbrains.skia.Companion.makeWH.<anonymous>' call
       var message = 'Rect::makeWH expected w >= 0, got: ' + w;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(h >= 0)) {
+    if (!(h >= 0.0)) {
       // Inline function 'org.jetbrains.skia.Companion.makeWH.<anonymous>' call
       var message_0 = 'Rect::makeWH expected h >= 0, got: ' + h;
       throw IllegalArgumentException_init_$Create$(toString(message_0));
     }
     return new Rect(0.0, 0.0, w, h);
   };
-  protoOf(Companion_46).makeWH_l3jd2k_k$ = function (size) {
-    return this.makeWH_b3ckap_k$(size.get_x_1mhr67_k$(), size.get_y_1mhr68_k$());
+  protoOf(Companion_46).makeWH_w7wyhe_k$ = function (size) {
+    return this.makeWH_nov667_k$(size.get_x_1mhr67_k$(), size.get_y_1mhr68_k$());
   };
-  protoOf(Companion_46).makeXYWH_bits74_k$ = function (l, t, w, h) {
+  protoOf(Companion_46).makeXYWH_irfy4g_k$ = function (l, t, w, h) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(w >= 0)) {
+    if (!(w >= 0.0)) {
       // Inline function 'org.jetbrains.skia.Companion.makeXYWH.<anonymous>' call
       var message = 'Rect::makeXYWH expected w >= 0, got: ' + w;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(h >= 0)) {
+    if (!(h >= 0.0)) {
       // Inline function 'org.jetbrains.skia.Companion.makeXYWH.<anonymous>' call
       var message_0 = 'Rect::makeXYWH expected h >= 0, got: ' + h;
       throw IllegalArgumentException_init_$Create$(toString(message_0));
     }
     return new Rect(l, t, l + w, t + h);
   };
-  protoOf(Companion_46).fromInteropPointer_26ocmq_k$ = function (block) {
+  protoOf(Companion_46).fromInteropPointer_2qty6v_k$ = function (block) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Float32Array(4);
+    var result = new Float32Array(4);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    var result = tmp0_withResult;
-    return new Rect(result[0], result[1], result[2], result[3]);
+    var result_0 = result;
+    return new Rect(result_0[0], result_0[1], result_0[2], result_0[3]);
   };
-  protoOf(Companion_46).fromInteropPointer_ofa1ol_k$ = function (size, block) {
+  protoOf(Companion_46).fromInteropPointer_n7oap9_k$ = function (size, block) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Float32Array(size);
+    var result = new Float32Array(size);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    var result = tmp0_withResult;
+    var result_0 = result;
     // Inline function 'kotlin.collections.toTypedArray' call
     // Inline function 'kotlin.collections.map' call
-    var tmp1_map = chunked(toList_0(result), 4);
+    var this_0 = chunked(toList_0(result_0), 4);
     // Inline function 'kotlin.collections.mapTo' call
-    var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp1_map, 10));
-    var tmp0_iterator = tmp1_map.iterator_jk1svi_k$();
+    var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+    var tmp0_iterator = this_0.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var item = tmp0_iterator.next_20eer_k$();
-      var tmp$ret$7;
       // Inline function 'org.jetbrains.skia.Companion.fromInteropPointer.<anonymous>' call
       // Inline function 'kotlin.collections.component1' call
-      var left = item.get_fkrdnv_k$(0);
+      var left = item.get_c1px32_k$(0);
       // Inline function 'kotlin.collections.component2' call
-      var top = item.get_fkrdnv_k$(1);
+      var top = item.get_c1px32_k$(1);
       // Inline function 'kotlin.collections.component3' call
-      var right = item.get_fkrdnv_k$(2);
+      var right = item.get_c1px32_k$(2);
       // Inline function 'kotlin.collections.component4' call
-      var bottom = item.get_fkrdnv_k$(3);
-      tmp$ret$7 = new Rect(left, right, top, bottom);
-      tmp0_mapTo.add_1j60pz_k$(tmp$ret$7);
+      var bottom = item.get_c1px32_k$(3);
+      var tmp$ret$7 = new Rect(left, right, top, bottom);
+      destination.add_utx5q5_k$(tmp$ret$7);
     }
-    return copyToArray(tmp0_mapTo);
+    return copyToArray(destination);
   };
-  protoOf(Companion_46).fromInteropPointerNullable_oyojp1_k$ = function (block) {
+  protoOf(Companion_46).fromInteropPointerNullable_rzwb3l_k$ = function (block) {
     var result = {_v: true};
-    var rect = this.fromInteropPointer_26ocmq_k$(Rect$Companion$fromInteropPointerNullable$lambda(result, block));
+    var rect = this.fromInteropPointer_2qty6v_k$(Rect$Companion$fromInteropPointerNullable$lambda(result, block));
     var tmp;
     if (result._v) {
       tmp = rect;
@@ -13830,77 +13730,74 @@
   protoOf(Rect).get_height_e7t92o_k$ = function () {
     return this.bottom_1 - this.top_1;
   };
-  protoOf(Rect).intersect_wmyi80_k$ = function (other) {
+  protoOf(Rect).intersect_s861ek_k$ = function (other) {
     var tmp;
     if (((this.right_1 <= other.left_1 ? true : other.right_1 <= this.left_1) ? true : this.bottom_1 <= other.top_1) ? true : other.bottom_1 <= this.top_1) {
       tmp = null;
     } else {
       // Inline function 'kotlin.comparisons.maxOf' call
-      var tmp0_maxOf = this.left_1;
-      var tmp1_maxOf = other.left_1;
-      var tmp_0 = Math.max(tmp0_maxOf, tmp1_maxOf);
+      var a = this.left_1;
+      var b = other.left_1;
+      var tmp_0 = Math.max(a, b);
       // Inline function 'kotlin.comparisons.maxOf' call
-      var tmp2_maxOf = this.top_1;
-      var tmp3_maxOf = other.top_1;
-      var tmp_1 = Math.max(tmp2_maxOf, tmp3_maxOf);
+      var a_0 = this.top_1;
+      var b_0 = other.top_1;
+      var tmp_1 = Math.max(a_0, b_0);
       // Inline function 'kotlin.comparisons.minOf' call
-      var tmp4_minOf = this.right_1;
-      var tmp5_minOf = other.right_1;
-      var tmp_2 = Math.min(tmp4_minOf, tmp5_minOf);
-      var tmp$ret$3;
+      var a_1 = this.right_1;
+      var b_1 = other.right_1;
+      var tmp_2 = Math.min(a_1, b_1);
       // Inline function 'kotlin.comparisons.minOf' call
-      var tmp6_minOf = this.bottom_1;
-      var tmp7_minOf = other.bottom_1;
-      tmp$ret$3 = Math.min(tmp6_minOf, tmp7_minOf);
+      var a_2 = this.bottom_1;
+      var b_2 = other.bottom_1;
+      var tmp$ret$3 = Math.min(a_2, b_2);
       tmp = new Rect(tmp_0, tmp_1, tmp_2, tmp$ret$3);
     }
     return tmp;
   };
-  protoOf(Rect).scale_cda02s_k$ = function (scale) {
-    return this.scale_6iftdi_k$(scale, scale);
+  protoOf(Rect).scale_n1f8ya_k$ = function (scale) {
+    return this.scale_ln7xze_k$(scale, scale);
   };
-  protoOf(Rect).scale_6iftdi_k$ = function (sx, sy) {
+  protoOf(Rect).scale_ln7xze_k$ = function (sx, sy) {
     return new Rect(this.left_1 * sx, this.top_1 * sy, this.right_1 * sx, this.bottom_1 * sy);
   };
-  protoOf(Rect).offset_tlr1pp_k$ = function (dx, dy) {
+  protoOf(Rect).offset_dxmngz_k$ = function (dx, dy) {
     return new Rect(this.left_1 + dx, this.top_1 + dy, this.right_1 + dx, this.bottom_1 + dy);
   };
-  protoOf(Rect).offset_lp18zk_k$ = function (vec) {
-    return this.offset_tlr1pp_k$(vec.get_x_1mhr67_k$(), vec.get_y_1mhr68_k$());
+  protoOf(Rect).offset_obaapu_k$ = function (vec) {
+    return this.offset_dxmngz_k$(vec.get_x_1mhr67_k$(), vec.get_y_1mhr68_k$());
   };
   protoOf(Rect).toIRect_jg4w5q_k$ = function () {
     return new IRect(numberToInt(this.left_1), numberToInt(this.top_1), numberToInt(this.right_1), numberToInt(this.bottom_1));
   };
-  protoOf(Rect).inflate_f59jyf_k$ = function (spread) {
+  protoOf(Rect).inflate_rvluy7_k$ = function (spread) {
     var tmp;
-    if (spread <= 0) {
+    if (spread <= 0.0) {
       var tmp_0 = Companion_getInstance_47();
       var tmp_1 = this.left_1 - spread;
       var tmp_2 = this.top_1 - spread;
       // Inline function 'kotlin.comparisons.maxOf' call
-      var tmp0_maxOf = this.left_1 - spread;
-      var tmp1_maxOf = this.right_1 + spread;
-      var tmp_3 = Math.max(tmp0_maxOf, tmp1_maxOf);
-      var tmp$ret$1;
+      var a = this.left_1 - spread;
+      var b = this.right_1 + spread;
+      var tmp_3 = Math.max(a, b);
       // Inline function 'kotlin.comparisons.maxOf' call
-      var tmp2_maxOf = this.top_1 - spread;
-      var tmp3_maxOf = this.bottom_1 + spread;
-      tmp$ret$1 = Math.max(tmp2_maxOf, tmp3_maxOf);
-      tmp = tmp_0.makeLTRB_ax757q_k$(tmp_1, tmp_2, tmp_3, tmp$ret$1);
+      var a_0 = this.top_1 - spread;
+      var b_0 = this.bottom_1 + spread;
+      var tmp$ret$1 = Math.max(a_0, b_0);
+      tmp = tmp_0.makeLTRB_2wvuxm_k$(tmp_1, tmp_2, tmp_3, tmp$ret$1);
     } else {
       var tmp_4 = Companion_getInstance_45();
       var tmp_5 = this.left_1 - spread;
       var tmp_6 = this.top_1 - spread;
       // Inline function 'kotlin.comparisons.maxOf' call
-      var tmp4_maxOf = this.left_1 - spread;
-      var tmp5_maxOf = this.right_1 + spread;
-      var tmp_7 = Math.max(tmp4_maxOf, tmp5_maxOf);
-      var tmp$ret$3;
+      var a_1 = this.left_1 - spread;
+      var b_1 = this.right_1 + spread;
+      var tmp_7 = Math.max(a_1, b_1);
       // Inline function 'kotlin.comparisons.maxOf' call
-      var tmp6_maxOf = this.top_1 - spread;
-      var tmp7_maxOf = this.bottom_1 + spread;
-      tmp$ret$3 = Math.max(tmp6_maxOf, tmp7_maxOf);
-      tmp = tmp_4.makeLTRB_gu57qw_k$(tmp_5, tmp_6, tmp_7, tmp$ret$3, spread);
+      var a_2 = this.top_1 - spread;
+      var b_2 = this.bottom_1 + spread;
+      var tmp$ret$3 = Math.max(a_2, b_2);
+      tmp = tmp_4.makeLTRB_nd4cmm_k$(tmp_5, tmp_6, tmp_7, tmp$ret$3, spread);
     }
     return tmp;
   };
@@ -13975,7 +13872,7 @@
         return Op_REPLACE_getInstance();
       default:
         Op_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -13994,7 +13891,7 @@
   }
   function Companion_48() {
     Companion_instance_48 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_48;
   function Companion_getInstance_49() {
@@ -14045,12 +13942,12 @@
   function Region() {
     Companion_getInstance_49();
     Managed.call(this, org_jetbrains_skia_Region__1nMake(), _FinalizerHolder_getInstance_14().PTR_1);
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
   }
-  protoOf(Region).set_nvw4vo_k$ = function (r) {
+  protoOf(Region).set_8immr8_k$ = function (r) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nSet(this.get__ptr_wohp4o_k$(), getPtr(r));
     }finally {
       reachabilityBarrier(this);
@@ -14061,7 +13958,7 @@
   protoOf(Region).get_isEmpty_zauvru_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nIsEmpty(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -14071,7 +13968,7 @@
   protoOf(Region).get_isRect_ew59h3_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nIsRect(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -14081,7 +13978,7 @@
   protoOf(Region).get_isComplex_en8j99_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nIsComplex(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -14091,30 +13988,30 @@
   protoOf(Region).get_bounds_bj99ku_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Int32Array(4);
+      var result = new Int32Array(4);
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
           // Inline function 'org.jetbrains.skia.Region.<get-bounds>.<anonymous>' call
           org_jetbrains_skia_Region__1nGetBounds(this.get__ptr_wohp4o_k$(), handle);
-          tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      var ltrb = tmp0_withResult;
+      var ltrb = result;
       tmp = new IRect(ltrb[0], ltrb[1], ltrb[2], ltrb[3]);
     }finally {
       reachabilityBarrier(this);
@@ -14124,17 +14021,17 @@
   protoOf(Region).computeRegionComplexity_n8wihj_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nComputeRegionComplexity(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Region).getBoundaryPath_j3wnmw_k$ = function (p) {
+  protoOf(Region).getBoundaryPath_nuij54_k$ = function (p) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nGetBoundaryPath(this.get__ptr_wohp4o_k$(), getPtr(p));
     }finally {
       reachabilityBarrier(this);
@@ -14145,24 +14042,24 @@
   protoOf(Region).setEmpty_n0dedn_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nSetEmpty(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Region).setRect_hi6luy_k$ = function (rect) {
+  protoOf(Region).setRect_3ad4m0_k$ = function (rect) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nSetRect(this.get__ptr_wohp4o_k$(), rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Region).setRects_wra5f3_k$ = function (rects) {
+  protoOf(Region).setRects_v9ociz_k$ = function (rects) {
     var tmp;
     try {
       var arr = new Int32Array(imul(rects.length, 4));
@@ -14178,7 +14075,7 @@
           arr[imul(i, 4) + 3 | 0] = rects[i].get_bottom_bj8ras_k$();
         }
          while (inductionVariable <= last);
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -14186,14 +14083,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Region.setRects.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$1 = org_jetbrains_skia_Region__1nSetRects(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_o3s7q3_k$(arr), rects.length);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$1 = org_jetbrains_skia_Region__1nSetRects(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_i7skn2_k$(arr), rects.length);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -14203,10 +14100,10 @@
     }
     return tmp;
   };
-  protoOf(Region).setRegion_vrr8aw_k$ = function (r) {
+  protoOf(Region).setRegion_ml0mu8_k$ = function (r) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nSetRegion(this.get__ptr_wohp4o_k$(), getPtr(r));
     }finally {
       reachabilityBarrier(this);
@@ -14214,10 +14111,10 @@
     }
     return tmp;
   };
-  protoOf(Region).setPath_59sdrc_k$ = function (path, clip) {
+  protoOf(Region).setPath_tbr2kk_k$ = function (path, clip) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nSetPath(this.get__ptr_wohp4o_k$(), getPtr(path), getPtr(clip));
     }finally {
       reachabilityBarrier(this);
@@ -14226,20 +14123,20 @@
     }
     return tmp;
   };
-  protoOf(Region).intersects_m4flss_k$ = function (rect) {
+  protoOf(Region).intersects_w7cpye_k$ = function (rect) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nIntersectsIRect(this.get__ptr_wohp4o_k$(), rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Region).intersects_l6b67u_k$ = function (r) {
+  protoOf(Region).intersects_6kz1pa_k$ = function (r) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nIntersectsRegion(this.get__ptr_wohp4o_k$(), getPtr(r));
     }finally {
       reachabilityBarrier(this);
@@ -14247,30 +14144,30 @@
     }
     return tmp;
   };
-  protoOf(Region).contains_d2a4an_k$ = function (x, y) {
+  protoOf(Region).contains_ntjdb5_k$ = function (x, y) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nContainsIPoint(this.get__ptr_wohp4o_k$(), x, y);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Region).contains_b8u6c1_k$ = function (rect) {
+  protoOf(Region).contains_wbfbgx_k$ = function (rect) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nContainsIRect(this.get__ptr_wohp4o_k$(), rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Region).contains_9ategf_k$ = function (r) {
+  protoOf(Region).contains_azbk15_k$ = function (r) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nContainsRegion(this.get__ptr_wohp4o_k$(), getPtr(r));
     }finally {
       reachabilityBarrier(this);
@@ -14278,30 +14175,30 @@
     }
     return tmp;
   };
-  protoOf(Region).quickContains_qaihic_k$ = function (rect) {
+  protoOf(Region).quickContains_bpk6g2_k$ = function (rect) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nQuickContains(this.get__ptr_wohp4o_k$(), rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Region).quickReject_n22xyc_k$ = function (rect) {
+  protoOf(Region).quickReject_mkqnky_k$ = function (rect) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nQuickRejectIRect(this.get__ptr_wohp4o_k$(), rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Region).quickReject_40635q_k$ = function (r) {
+  protoOf(Region).quickReject_6iv9pm_k$ = function (r) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nQuickRejectRegion(this.get__ptr_wohp4o_k$(), getPtr(r));
     }finally {
       reachabilityBarrier(this);
@@ -14309,28 +14206,28 @@
     }
     return tmp;
   };
-  protoOf(Region).translate_jc2psz_k$ = function (dx, dy) {
+  protoOf(Region).translate_8uwxz6_k$ = function (dx, dy) {
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Region__1nTranslate(this.get__ptr_wohp4o_k$(), dx, dy);
     }finally {
       reachabilityBarrier(this);
     }
   };
-  protoOf(Region).op_o3ssb7_k$ = function (rect, op) {
+  protoOf(Region).op_blhm49_k$ = function (rect, op) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nOpIRect(this.get__ptr_wohp4o_k$(), rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), op.get_ordinal_ip24qg_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Region).op_1xjred_k$ = function (r, op) {
+  protoOf(Region).op_adyudl_k$ = function (r, op) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nOpRegion(this.get__ptr_wohp4o_k$(), getPtr(r), op.get_ordinal_ip24qg_k$());
     }finally {
       reachabilityBarrier(this);
@@ -14338,10 +14235,10 @@
     }
     return tmp;
   };
-  protoOf(Region).op_7f6acj_k$ = function (rect, r, op) {
+  protoOf(Region).op_rhb8bt_k$ = function (rect, r, op) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nOpIRectRegion(this.get__ptr_wohp4o_k$(), rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), getPtr(r), op.get_ordinal_ip24qg_k$());
     }finally {
       reachabilityBarrier(this);
@@ -14349,10 +14246,10 @@
     }
     return tmp;
   };
-  protoOf(Region).op_b8q081_k$ = function (r, rect, op) {
+  protoOf(Region).op_g0o6yj_k$ = function (r, rect, op) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nOpRegionIRect(this.get__ptr_wohp4o_k$(), getPtr(r), rect.get_left_woprgw_k$(), rect.get_top_18ivbo_k$(), rect.get_right_ixz7xv_k$(), rect.get_bottom_bj8ras_k$(), op.get_ordinal_ip24qg_k$());
     }finally {
       reachabilityBarrier(this);
@@ -14360,10 +14257,10 @@
     }
     return tmp;
   };
-  protoOf(Region).op_ek9pj3_k$ = function (a, b, op) {
+  protoOf(Region).op_nhz0wl_k$ = function (a, b, op) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Region__1nOpRegionRegion(this.get__ptr_wohp4o_k$(), getPtr(a), getPtr(b), op.get_ordinal_ip24qg_k$());
     }finally {
       reachabilityBarrier(this);
@@ -14374,10 +14271,10 @@
   };
   function Companion_49() {
     Companion_instance_49 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_49).makeForShader_vcfkap_k$ = function (sksl) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_49).makeForShader_1a5ikm_k$ = function (sksl) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$1;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -14385,21 +14282,21 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeForShader.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = makeFromResultPtr(Companion_getInstance_50(), org_jetbrains_skia_RuntimeEffect__1nMakeForShader(tmp0_anonymous.toInterop_tozece_k$(sksl)));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = makeFromResultPtr(Companion_getInstance_50(), org_jetbrains_skia_RuntimeEffect__1nMakeForShader($this$interopScope.toInterop_ok8jph_k$(sksl)));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return tmp$ret$1;
   };
-  protoOf(Companion_49).makeForColorFilter_e4e3jz_k$ = function (sksl) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_49).makeForColorFilter_gzto6y_k$ = function (sksl) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$1;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -14407,14 +14304,14 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeForColorFilter.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = makeFromResultPtr(Companion_getInstance_50(), org_jetbrains_skia_RuntimeEffect__1nMakeForColorFilter(tmp0_anonymous.toInterop_tozece_k$(sksl)));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = makeFromResultPtr(Companion_getInstance_50(), org_jetbrains_skia_RuntimeEffect__1nMakeForColorFilter($this$interopScope.toInterop_ok8jph_k$(sksl)));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -14430,8 +14327,8 @@
     Companion_getInstance_50();
     RefCnt_init_$Init$(ptr, this);
   }
-  protoOf(RuntimeEffect).makeShader_n0f8ws_k$ = function (uniforms, children, localMatrix) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeEffect).makeShader_i2wb28_k$ = function (uniforms, children, localMatrix) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp1_elvis_lhs = children == null ? null : children.length;
     var childCount = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
     var childrenPtrs = new NativePointerArray(childCount);
@@ -14440,7 +14337,7 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        childrenPtrs.set_10zwtt_k$(i, getPtr(ensureNotNull(children)[i]));
+        childrenPtrs.set_g707pu_k$(i, getPtr(ensureNotNull(children)[i]));
       }
        while (inductionVariable < childCount);
     var matrix = localMatrix == null ? null : localMatrix.get_mat_18j0uh_k$();
@@ -14453,14 +14350,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.RuntimeEffect.makeShader.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$1 = new Shader(org_jetbrains_skia_RuntimeEffect__1nMakeShader(this.get__ptr_wohp4o_k$(), getPtr(uniforms), tmp0_anonymous.toInterop_se1a9v_k$(childrenPtrs), childCount, tmp0_anonymous.toInterop_sfommq_k$(matrix)));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$1 = new Shader(org_jetbrains_skia_RuntimeEffect__1nMakeShader(this.get__ptr_wohp4o_k$(), getPtr(uniforms), $this$interopScope.toInterop_1ghudk_k$(childrenPtrs), childCount, $this$interopScope.toInterop_uum1m9_k$(matrix)));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -14474,7 +14371,7 @@
   };
   function Companion_50() {
     Companion_instance_50 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_50;
   function Companion_getInstance_51() {
@@ -14484,7 +14381,7 @@
   }
   function RuntimeShaderBuilder_init_$Init$(effect, $this) {
     RuntimeShaderBuilder.call($this, org_jetbrains_skia_RuntimeShaderBuilder__1nMakeFromRuntimeEffect(effect.get__ptr_wohp4o_k$()));
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     reachabilityBarrier(effect);
     return $this;
   }
@@ -14508,231 +14405,231 @@
     Companion_getInstance_51();
     Managed.call(this, ptr, _FinalizerHolder_getInstance_15().PTR_1);
   }
-  protoOf(RuntimeShaderBuilder).uniform_r0jm8t_k$ = function (name, value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).uniform_ylabge_k$ = function (name, value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(name), value);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(name), value);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
   };
-  protoOf(RuntimeShaderBuilder).uniform_qp4yte_k$ = function (name, value1, value2) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).uniform_mzdtsa_k$ = function (name, value1, value2) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt2(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(name), value1, value2);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt2(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(name), value1, value2);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
   };
-  protoOf(RuntimeShaderBuilder).uniform_cntwsd_k$ = function (name, value1, value2, value3) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).uniform_t6n7m_k$ = function (name, value1, value2, value3) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt3(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(name), value1, value2, value3);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt3(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(name), value1, value2, value3);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
   };
-  protoOf(RuntimeShaderBuilder).uniform_lmy9nm_k$ = function (name, value1, value2, value3, value4) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).uniform_9dj4om_k$ = function (name, value1, value2, value3, value4) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt4(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(name), value1, value2, value3, value4);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt4(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(name), value1, value2, value3, value4);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
   };
-  protoOf(RuntimeShaderBuilder).uniform_ki9gxi_k$ = function (name, value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).uniform_4i38v6_k$ = function (name, value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(name), value);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(name), value);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
   };
-  protoOf(RuntimeShaderBuilder).uniform_x3pwwu_k$ = function (name, value1, value2) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).uniform_tq9kom_k$ = function (name, value1, value2) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat2(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(name), value1, value2);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat2(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(name), value1, value2);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
   };
-  protoOf(RuntimeShaderBuilder).uniform_ekq8dy_k$ = function (name, value1, value2, value3) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).uniform_ummoda_k$ = function (name, value1, value2, value3) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat3(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(name), value1, value2, value3);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat3(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(name), value1, value2, value3);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
   };
-  protoOf(RuntimeShaderBuilder).uniform_9h619a_k$ = function (name, value1, value2, value3, value4) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).uniform_vs6anq_k$ = function (name, value1, value2, value3, value4) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat4(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(name), value1, value2, value3, value4);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat4(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(name), value1, value2, value3, value4);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
   };
-  protoOf(RuntimeShaderBuilder).uniform_aksl9c_k$ = function (name, value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).uniform_fcxzk_k$ = function (name, value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix22(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(name), tmp0_anonymous.toInterop_sfommq_k$(value.get_mat_18j0uh_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix22(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(name), $this$interopScope.toInterop_uum1m9_k$(value.get_mat_18j0uh_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
   };
-  protoOf(RuntimeShaderBuilder).uniform_ggvzr4_k$ = function (name, value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).uniform_7ocmpc_k$ = function (name, value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix33(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(name), tmp0_anonymous.toInterop_sfommq_k$(value.get_mat_18j0uh_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix33(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(name), $this$interopScope.toInterop_uum1m9_k$(value.get_mat_18j0uh_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
   };
-  protoOf(RuntimeShaderBuilder).uniform_mcze8w_k$ = function (name, value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).uniform_excbf4_k$ = function (name, value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix44(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(name), tmp0_anonymous.toInterop_sfommq_k$(value.get_mat_18j0uh_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix44(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(name), $this$interopScope.toInterop_uum1m9_k$(value.get_mat_18j0uh_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
   };
-  protoOf(RuntimeShaderBuilder).child_22zm0c_k$ = function (name, shader) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).child_1yesjl_k$ = function (name, shader) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_RuntimeShaderBuilder__1nChildShader(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(name), getPtr(shader));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_RuntimeShaderBuilder__1nChildShader(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(name), getPtr(shader));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -14741,22 +14638,22 @@
       reachabilityBarrier(shader);
     }
   };
-  protoOf(RuntimeShaderBuilder).child_mriiwe_k$ = function (name, colorFilter) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).child_to5z4z_k$ = function (name, colorFilter) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_RuntimeShaderBuilder__1nChildColorFilter(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(name), getPtr(colorFilter));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_RuntimeShaderBuilder__1nChildColorFilter(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(name), getPtr(colorFilter));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -14765,8 +14662,8 @@
       reachabilityBarrier(colorFilter);
     }
   };
-  protoOf(RuntimeShaderBuilder).makeShader_xyzlfy_k$ = function (localMatrix) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(RuntimeShaderBuilder).makeShader_q54znw_k$ = function (localMatrix) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       var tmp$ret$1;
@@ -14776,15 +14673,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.RuntimeShaderBuilder.makeShader.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = this.get__ptr_wohp4o_k$();
-          tmp$ret$1 = new Shader(org_jetbrains_skia_RuntimeShaderBuilder__1nMakeShader(tmp_0, tmp0_anonymous.toInterop_sfommq_k$(localMatrix == null ? null : localMatrix.get_mat_18j0uh_k$())));
+          tmp$ret$1 = new Shader(org_jetbrains_skia_RuntimeShaderBuilder__1nMakeShader(tmp_0, $this$interopScope.toInterop_uum1m9_k$(localMatrix == null ? null : localMatrix.get_mat_18j0uh_k$())));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -14794,9 +14691,9 @@
     }
     return tmp;
   };
-  protoOf(RuntimeShaderBuilder).makeShader$default_2vl82e_k$ = function (localMatrix, $super) {
+  protoOf(RuntimeShaderBuilder).makeShader$default_m7earm_k$ = function (localMatrix, $super) {
     localMatrix = localMatrix === VOID ? null : localMatrix;
-    return $super === VOID ? this.makeShader_xyzlfy_k$(localMatrix) : $super.makeShader_xyzlfy_k$.call(this, localMatrix);
+    return $super === VOID ? this.makeShader_q54znw_k$(localMatrix) : $super.makeShader_q54znw_k$.call(this, localMatrix);
   };
   function Companion_51() {
     Companion_instance_51 = this;
@@ -14827,18 +14724,18 @@
   }
   function Companion_52() {
     Companion_instance_52 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_52).makeLinearGradient_mhb7uj_k$ = function (p0, p1, colors) {
-    return this.makeLinearGradient$default_ydt5ou_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), colors);
+  protoOf(Companion_52).makeLinearGradient_jguod2_k$ = function (p0, p1, colors) {
+    return this.makeLinearGradient$default_lqtcyn_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), colors);
   };
-  protoOf(Companion_52).makeLinearGradient_p63w9_k$ = function (p0, p1, colors, positions) {
-    return this.makeLinearGradient$default_ydt5ou_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), colors, positions);
+  protoOf(Companion_52).makeLinearGradient_c7fdp5_k$ = function (p0, p1, colors, positions) {
+    return this.makeLinearGradient$default_lqtcyn_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), colors, positions);
   };
-  protoOf(Companion_52).makeLinearGradient_nv719n_k$ = function (p0, p1, colors, positions, style) {
-    return this.makeLinearGradient_p3pmrv_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), colors, positions, style);
+  protoOf(Companion_52).makeLinearGradient_nzvn6x_k$ = function (p0, p1, colors, positions, style) {
+    return this.makeLinearGradient_gatnrf_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), colors, positions, style);
   };
-  protoOf(Companion_52).makeLinearGradient_p3pmrv_k$ = function (x0, y0, x1, y1, colors, positions, style) {
+  protoOf(Companion_52).makeLinearGradient_gatnrf_k$ = function (x0, y0, x1, y1, colors, positions, style) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(positions == null ? true : colors.length === positions.length)) {
@@ -14846,7 +14743,7 @@
       var message = 'colors.length ' + colors.length + '!= positions.length ' + ensureNotNull(positions).length;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$2;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -14854,28 +14751,28 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeLinearGradient.<anonymous>' call
-        var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeLinearGradient(x0, y0, x1, y1, tmp1_anonymous.toInterop_o3s7q3_k$(colors), tmp1_anonymous.toInterop_sfommq_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), tmp1_anonymous.toInterop_sfommq_k$(style._getMatrixArray_7p1jwh_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeLinearGradient(x0, y0, x1, y1, $this$interopScope.toInterop_i7skn2_k$(colors), $this$interopScope.toInterop_uum1m9_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), $this$interopScope.toInterop_uum1m9_k$(style._getMatrixArray_7p1jwh_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return new Shader(tmp$ret$2);
   };
-  protoOf(Companion_52).makeLinearGradient$default_ydt5ou_k$ = function (x0, y0, x1, y1, colors, positions, style, $super) {
+  protoOf(Companion_52).makeLinearGradient$default_lqtcyn_k$ = function (x0, y0, x1, y1, colors, positions, style, $super) {
     positions = positions === VOID ? null : positions;
     style = style === VOID ? Companion_getInstance_22().get_DEFAULT_wccqmg_k$() : style;
-    return $super === VOID ? this.makeLinearGradient_p3pmrv_k$(x0, y0, x1, y1, colors, positions, style) : $super.makeLinearGradient_p3pmrv_k$.call(this, x0, y0, x1, y1, colors, positions, style);
+    return $super === VOID ? this.makeLinearGradient_gatnrf_k$(x0, y0, x1, y1, colors, positions, style) : $super.makeLinearGradient_gatnrf_k$.call(this, x0, y0, x1, y1, colors, positions, style);
   };
-  protoOf(Companion_52).makeLinearGradient_z7xate_k$ = function (p0, p1, colors, cs, positions, style) {
-    return this.makeLinearGradient_ub0va6_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), colors, cs, positions, style);
+  protoOf(Companion_52).makeLinearGradient_30fwn7_k$ = function (p0, p1, colors, cs, positions, style) {
+    return this.makeLinearGradient_vcgx41_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), colors, cs, positions, style);
   };
-  protoOf(Companion_52).makeLinearGradient_ub0va6_k$ = function (x0, y0, x1, y1, colors, cs, positions, style) {
+  protoOf(Companion_52).makeLinearGradient_vcgx41_k$ = function (x0, y0, x1, y1, colors, cs, positions, style) {
     var tmp;
     try {
       // Inline function 'kotlin.require' call
@@ -14885,7 +14782,7 @@
         var message = 'colors.length ' + colors.length + '!= positions.length ' + ensureNotNull(positions).length;
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -14893,14 +14790,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeLinearGradient.<anonymous>' call
-          var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeLinearGradientCS(x0, y0, x1, y1, tmp1_anonymous.toInterop_sfommq_k$(Companion_getInstance_4().flattenArray_9fsag1_k$(colors)), getPtr(cs), tmp1_anonymous.toInterop_sfommq_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), tmp1_anonymous.toInterop_sfommq_k$(style._getMatrixArray_7p1jwh_k$()));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeLinearGradientCS(x0, y0, x1, y1, $this$interopScope.toInterop_uum1m9_k$(Companion_getInstance_4().flattenArray_qrwamz_k$(colors)), getPtr(cs), $this$interopScope.toInterop_uum1m9_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), $this$interopScope.toInterop_uum1m9_k$(style._getMatrixArray_7p1jwh_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -14910,16 +14807,16 @@
     }
     return tmp;
   };
-  protoOf(Companion_52).makeRadialGradient_f2sm7k_k$ = function (center, r, colors) {
-    return this.makeRadialGradient$default_ogo01u_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), r, colors);
+  protoOf(Companion_52).makeRadialGradient_7zhkm9_k$ = function (center, r, colors) {
+    return this.makeRadialGradient$default_cahjdr_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), r, colors);
   };
-  protoOf(Companion_52).makeRadialGradient_je3p3w_k$ = function (center, r, colors, positions) {
-    return this.makeRadialGradient$default_ogo01u_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), r, colors, positions);
+  protoOf(Companion_52).makeRadialGradient_21kxou_k$ = function (center, r, colors, positions) {
+    return this.makeRadialGradient$default_cahjdr_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), r, colors, positions);
   };
-  protoOf(Companion_52).makeRadialGradient_o06ly8_k$ = function (center, r, colors, positions, style) {
-    return this.makeRadialGradient_gn4elj_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), r, colors, positions, style);
+  protoOf(Companion_52).makeRadialGradient_eicsek_k$ = function (center, r, colors, positions, style) {
+    return this.makeRadialGradient_ai7hst_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), r, colors, positions, style);
   };
-  protoOf(Companion_52).makeRadialGradient_gn4elj_k$ = function (x, y, r, colors, positions, style) {
+  protoOf(Companion_52).makeRadialGradient_ai7hst_k$ = function (x, y, r, colors, positions, style) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(positions == null ? true : colors.length === positions.length)) {
@@ -14927,7 +14824,7 @@
       var message = 'colors.length ' + colors.length + '!= positions.length ' + ensureNotNull(positions).length;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$2;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -14935,28 +14832,28 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeRadialGradient.<anonymous>' call
-        var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeRadialGradient(x, y, r, tmp1_anonymous.toInterop_o3s7q3_k$(colors), tmp1_anonymous.toInterop_sfommq_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), tmp1_anonymous.toInterop_sfommq_k$(style._getMatrixArray_7p1jwh_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeRadialGradient(x, y, r, $this$interopScope.toInterop_i7skn2_k$(colors), $this$interopScope.toInterop_uum1m9_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), $this$interopScope.toInterop_uum1m9_k$(style._getMatrixArray_7p1jwh_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return new Shader(tmp$ret$2);
   };
-  protoOf(Companion_52).makeRadialGradient$default_ogo01u_k$ = function (x, y, r, colors, positions, style, $super) {
+  protoOf(Companion_52).makeRadialGradient$default_cahjdr_k$ = function (x, y, r, colors, positions, style, $super) {
     positions = positions === VOID ? null : positions;
     style = style === VOID ? Companion_getInstance_22().get_DEFAULT_wccqmg_k$() : style;
-    return $super === VOID ? this.makeRadialGradient_gn4elj_k$(x, y, r, colors, positions, style) : $super.makeRadialGradient_gn4elj_k$.call(this, x, y, r, colors, positions, style);
+    return $super === VOID ? this.makeRadialGradient_ai7hst_k$(x, y, r, colors, positions, style) : $super.makeRadialGradient_ai7hst_k$.call(this, x, y, r, colors, positions, style);
   };
-  protoOf(Companion_52).makeRadialGradient_xifecz_k$ = function (center, r, colors, cs, positions, style) {
-    return this.makeRadialGradient_1wff8s_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), r, colors, cs, positions, style);
+  protoOf(Companion_52).makeRadialGradient_78s554_k$ = function (center, r, colors, cs, positions, style) {
+    return this.makeRadialGradient_69f0uh_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), r, colors, cs, positions, style);
   };
-  protoOf(Companion_52).makeRadialGradient_1wff8s_k$ = function (x, y, r, colors, cs, positions, style) {
+  protoOf(Companion_52).makeRadialGradient_69f0uh_k$ = function (x, y, r, colors, cs, positions, style) {
     var tmp;
     try {
       // Inline function 'kotlin.require' call
@@ -14966,7 +14863,7 @@
         var message = 'colors.length ' + colors.length + '!= positions.length ' + ensureNotNull(positions).length;
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -14974,14 +14871,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeRadialGradient.<anonymous>' call
-          var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeRadialGradientCS(x, y, r, tmp1_anonymous.toInterop_sfommq_k$(Companion_getInstance_4().flattenArray_9fsag1_k$(colors)), getPtr(cs), tmp1_anonymous.toInterop_sfommq_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), tmp1_anonymous.toInterop_sfommq_k$(style._getMatrixArray_7p1jwh_k$()));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeRadialGradientCS(x, y, r, $this$interopScope.toInterop_uum1m9_k$(Companion_getInstance_4().flattenArray_qrwamz_k$(colors)), getPtr(cs), $this$interopScope.toInterop_uum1m9_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), $this$interopScope.toInterop_uum1m9_k$(style._getMatrixArray_7p1jwh_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -14991,16 +14888,16 @@
     }
     return tmp;
   };
-  protoOf(Companion_52).makeTwoPointConicalGradient_s44g9f_k$ = function (p0, r0, p1, r1, colors) {
-    return this.makeTwoPointConicalGradient$default_r8fxe8_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), r0, p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), r1, colors);
+  protoOf(Companion_52).makeTwoPointConicalGradient_opmp7e_k$ = function (p0, r0, p1, r1, colors) {
+    return this.makeTwoPointConicalGradient$default_levdlp_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), r0, p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), r1, colors);
   };
-  protoOf(Companion_52).makeTwoPointConicalGradient_x72s9r_k$ = function (p0, r0, p1, r1, colors, positions) {
-    return this.makeTwoPointConicalGradient$default_r8fxe8_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), r0, p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), r1, colors, positions);
+  protoOf(Companion_52).makeTwoPointConicalGradient_s0tgph_k$ = function (p0, r0, p1, r1, colors, positions) {
+    return this.makeTwoPointConicalGradient$default_levdlp_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), r0, p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), r1, colors, positions);
   };
-  protoOf(Companion_52).makeTwoPointConicalGradient_k15wjh_k$ = function (p0, r0, p1, r1, colors, positions, style) {
-    return this.makeTwoPointConicalGradient_vpzcz7_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), r0, p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), r1, colors, positions, style);
+  protoOf(Companion_52).makeTwoPointConicalGradient_1nw8z1_k$ = function (p0, r0, p1, r1, colors, positions, style) {
+    return this.makeTwoPointConicalGradient_ycg16b_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), r0, p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), r1, colors, positions, style);
   };
-  protoOf(Companion_52).makeTwoPointConicalGradient_vpzcz7_k$ = function (x0, y0, r0, x1, y1, r1, colors, positions, style) {
+  protoOf(Companion_52).makeTwoPointConicalGradient_ycg16b_k$ = function (x0, y0, r0, x1, y1, r1, colors, positions, style) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(positions == null ? true : colors.length === positions.length)) {
@@ -15008,7 +14905,7 @@
       var message = 'colors.length ' + colors.length + '!= positions.length ' + ensureNotNull(positions).length;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$2;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -15016,28 +14913,28 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeTwoPointConicalGradient.<anonymous>' call
-        var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradient(x0, y0, r0, x1, y1, r1, tmp1_anonymous.toInterop_o3s7q3_k$(colors), tmp1_anonymous.toInterop_sfommq_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), tmp1_anonymous.toInterop_sfommq_k$(style._getMatrixArray_7p1jwh_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradient(x0, y0, r0, x1, y1, r1, $this$interopScope.toInterop_i7skn2_k$(colors), $this$interopScope.toInterop_uum1m9_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), $this$interopScope.toInterop_uum1m9_k$(style._getMatrixArray_7p1jwh_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return new Shader(tmp$ret$2);
   };
-  protoOf(Companion_52).makeTwoPointConicalGradient$default_r8fxe8_k$ = function (x0, y0, r0, x1, y1, r1, colors, positions, style, $super) {
+  protoOf(Companion_52).makeTwoPointConicalGradient$default_levdlp_k$ = function (x0, y0, r0, x1, y1, r1, colors, positions, style, $super) {
     positions = positions === VOID ? null : positions;
     style = style === VOID ? Companion_getInstance_22().get_DEFAULT_wccqmg_k$() : style;
-    return $super === VOID ? this.makeTwoPointConicalGradient_vpzcz7_k$(x0, y0, r0, x1, y1, r1, colors, positions, style) : $super.makeTwoPointConicalGradient_vpzcz7_k$.call(this, x0, y0, r0, x1, y1, r1, colors, positions, style);
+    return $super === VOID ? this.makeTwoPointConicalGradient_ycg16b_k$(x0, y0, r0, x1, y1, r1, colors, positions, style) : $super.makeTwoPointConicalGradient_ycg16b_k$.call(this, x0, y0, r0, x1, y1, r1, colors, positions, style);
   };
-  protoOf(Companion_52).makeTwoPointConicalGradient_ugi47q_k$ = function (p0, r0, p1, r1, colors, cs, positions, style) {
-    return this.makeTwoPointConicalGradient_t0kdcw_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), r0, p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), r1, colors, cs, positions, style);
+  protoOf(Companion_52).makeTwoPointConicalGradient_khj4xr_k$ = function (p0, r0, p1, r1, colors, cs, positions, style) {
+    return this.makeTwoPointConicalGradient_ui7xsx_k$(p0.get_x_1mhr67_k$(), p0.get_y_1mhr68_k$(), r0, p1.get_x_1mhr67_k$(), p1.get_y_1mhr68_k$(), r1, colors, cs, positions, style);
   };
-  protoOf(Companion_52).makeTwoPointConicalGradient_t0kdcw_k$ = function (x0, y0, r0, x1, y1, r1, colors, cs, positions, style) {
+  protoOf(Companion_52).makeTwoPointConicalGradient_ui7xsx_k$ = function (x0, y0, r0, x1, y1, r1, colors, cs, positions, style) {
     var tmp;
     try {
       // Inline function 'kotlin.require' call
@@ -15047,7 +14944,7 @@
         var message = 'colors.length ' + colors.length + '!= positions.length ' + ensureNotNull(positions).length;
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -15055,14 +14952,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeTwoPointConicalGradient.<anonymous>' call
-          var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradientCS(x0, y0, r0, x1, y1, r1, tmp1_anonymous.toInterop_sfommq_k$(Companion_getInstance_4().flattenArray_9fsag1_k$(colors)), getPtr(cs), tmp1_anonymous.toInterop_sfommq_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), tmp1_anonymous.toInterop_sfommq_k$(style._getMatrixArray_7p1jwh_k$()));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradientCS(x0, y0, r0, x1, y1, r1, $this$interopScope.toInterop_uum1m9_k$(Companion_getInstance_4().flattenArray_qrwamz_k$(colors)), getPtr(cs), $this$interopScope.toInterop_uum1m9_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), $this$interopScope.toInterop_uum1m9_k$(style._getMatrixArray_7p1jwh_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -15072,28 +14969,28 @@
     }
     return tmp;
   };
-  protoOf(Companion_52).makeSweepGradient_bykgt_k$ = function (center, colors) {
-    return this.makeSweepGradient_y9qbye_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), colors);
+  protoOf(Companion_52).makeSweepGradient_4vf01a_k$ = function (center, colors) {
+    return this.makeSweepGradient_zab343_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), colors);
   };
-  protoOf(Companion_52).makeSweepGradient_y9qbye_k$ = function (x, y, colors) {
-    return this.makeSweepGradient_hb26pi_k$(x, y, 0.0, 360.0, colors, null, Companion_getInstance_22().get_DEFAULT_wccqmg_k$());
+  protoOf(Companion_52).makeSweepGradient_zab343_k$ = function (x, y, colors) {
+    return this.makeSweepGradient_8uc99m_k$(x, y, 0.0, 360.0, colors, null, Companion_getInstance_22().get_DEFAULT_wccqmg_k$());
   };
-  protoOf(Companion_52).makeSweepGradient_h8ja95_k$ = function (center, colors, positions) {
-    return this.makeSweepGradient_3ha3m6_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), colors, positions);
+  protoOf(Companion_52).makeSweepGradient_f0ioyl_k$ = function (center, colors, positions) {
+    return this.makeSweepGradient_hn03zg_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), colors, positions);
   };
-  protoOf(Companion_52).makeSweepGradient_3ha3m6_k$ = function (x, y, colors, positions) {
-    return this.makeSweepGradient_hb26pi_k$(x, y, 0.0, 360.0, colors, positions, Companion_getInstance_22().get_DEFAULT_wccqmg_k$());
+  protoOf(Companion_52).makeSweepGradient_hn03zg_k$ = function (x, y, colors, positions) {
+    return this.makeSweepGradient_8uc99m_k$(x, y, 0.0, 360.0, colors, positions, Companion_getInstance_22().get_DEFAULT_wccqmg_k$());
   };
-  protoOf(Companion_52).makeSweepGradient_av2oy5_k$ = function (center, colors, positions, style) {
-    return this.makeSweepGradient_b798vq_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), colors, positions, style);
+  protoOf(Companion_52).makeSweepGradient_w7naed_k$ = function (center, colors, positions, style) {
+    return this.makeSweepGradient_th6kd2_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), colors, positions, style);
   };
-  protoOf(Companion_52).makeSweepGradient_b798vq_k$ = function (x, y, colors, positions, style) {
-    return this.makeSweepGradient_hb26pi_k$(x, y, 0.0, 360.0, colors, positions, style);
+  protoOf(Companion_52).makeSweepGradient_th6kd2_k$ = function (x, y, colors, positions, style) {
+    return this.makeSweepGradient_8uc99m_k$(x, y, 0.0, 360.0, colors, positions, style);
   };
-  protoOf(Companion_52).makeSweepGradient_fd47kd_k$ = function (center, startAngle, endAngle, colors, positions, style) {
-    return this.makeSweepGradient_hb26pi_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), startAngle, endAngle, colors, positions, style);
+  protoOf(Companion_52).makeSweepGradient_aw0lzv_k$ = function (center, startAngle, endAngle, colors, positions, style) {
+    return this.makeSweepGradient_8uc99m_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), startAngle, endAngle, colors, positions, style);
   };
-  protoOf(Companion_52).makeSweepGradient_hb26pi_k$ = function (x, y, startAngle, endAngle, colors, positions, style) {
+  protoOf(Companion_52).makeSweepGradient_8uc99m_k$ = function (x, y, startAngle, endAngle, colors, positions, style) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(positions == null ? true : colors.length === positions.length)) {
@@ -15101,7 +14998,7 @@
       var message = 'colors.length ' + colors.length + '!= positions.length ' + ensureNotNull(positions).length;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$2;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -15109,23 +15006,23 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeSweepGradient.<anonymous>' call
-        var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeSweepGradient(x, y, startAngle, endAngle, tmp1_anonymous.toInterop_o3s7q3_k$(colors), tmp1_anonymous.toInterop_sfommq_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), tmp1_anonymous.toInterop_sfommq_k$(style._getMatrixArray_7p1jwh_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeSweepGradient(x, y, startAngle, endAngle, $this$interopScope.toInterop_i7skn2_k$(colors), $this$interopScope.toInterop_uum1m9_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), $this$interopScope.toInterop_uum1m9_k$(style._getMatrixArray_7p1jwh_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return new Shader(tmp$ret$2);
   };
-  protoOf(Companion_52).makeSweepGradient_3c62n4_k$ = function (center, startAngle, endAngle, colors, cs, positions, style) {
-    return this.makeSweepGradient_bcq6h5_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), startAngle, endAngle, colors, cs, positions, style);
+  protoOf(Companion_52).makeSweepGradient_vi2nbb_k$ = function (center, startAngle, endAngle, colors, cs, positions, style) {
+    return this.makeSweepGradient_gktxpm_k$(center.get_x_1mhr67_k$(), center.get_y_1mhr68_k$(), startAngle, endAngle, colors, cs, positions, style);
   };
-  protoOf(Companion_52).makeSweepGradient_bcq6h5_k$ = function (x, y, startAngle, endAngle, colors, cs, positions, style) {
+  protoOf(Companion_52).makeSweepGradient_gktxpm_k$ = function (x, y, startAngle, endAngle, colors, cs, positions, style) {
     var tmp;
     try {
       // Inline function 'kotlin.require' call
@@ -15135,7 +15032,7 @@
         var message = 'colors.length ' + colors.length + '!= positions.length ' + ensureNotNull(positions).length;
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -15143,14 +15040,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeSweepGradient.<anonymous>' call
-          var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeSweepGradientCS(x, y, startAngle, endAngle, tmp1_anonymous.toInterop_sfommq_k$(Companion_getInstance_4().flattenArray_9fsag1_k$(colors)), getPtr(cs), tmp1_anonymous.toInterop_sfommq_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), tmp1_anonymous.toInterop_sfommq_k$(style._getMatrixArray_7p1jwh_k$()));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$2 = org_jetbrains_skia_Shader__1nMakeSweepGradientCS(x, y, startAngle, endAngle, $this$interopScope.toInterop_uum1m9_k$(Companion_getInstance_4().flattenArray_qrwamz_k$(colors)), getPtr(cs), $this$interopScope.toInterop_uum1m9_k$(positions), colors.length, style.get_tileMode_4e76t6_k$().get_ordinal_ip24qg_k$(), style._getFlags_xsuxps_k$(), $this$interopScope.toInterop_uum1m9_k$(style._getMatrixArray_7p1jwh_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -15161,27 +15058,27 @@
     return tmp;
   };
   protoOf(Companion_52).makeEmpty_kjipdr_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new Shader(org_jetbrains_skia_Shader__1nMakeEmpty());
   };
-  protoOf(Companion_52).makeColor_tyii18_k$ = function (color) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_52).makeColor_yae4rn_k$ = function (color) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new Shader(org_jetbrains_skia_Shader__1nMakeColor(color));
   };
-  protoOf(Companion_52).makeColor_wt5h38_k$ = function (color, space) {
+  protoOf(Companion_52).makeColor_jnjzug_k$ = function (color, space) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Shader(org_jetbrains_skia_Shader__1nMakeColorCS(color.get_r_1mhr61_k$(), color.get_g_1mhr5q_k$(), color.get_b_1mhr5l_k$(), color.get_a_1mhr5k_k$(), getPtr(space)));
     }finally {
       reachabilityBarrier(space);
     }
     return tmp;
   };
-  protoOf(Companion_52).makeBlend_qe4er8_k$ = function (mode, dst, src) {
+  protoOf(Companion_52).makeBlend_n95y0n_k$ = function (mode, dst, src) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Shader(org_jetbrains_skia_Shader__1nMakeBlend(mode.get_ordinal_ip24qg_k$(), getPtr(dst), getPtr(src)));
     }finally {
       reachabilityBarrier(dst);
@@ -15189,10 +15086,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_52).makeFractalNoise_jh27dj_k$ = function (baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize) {
+  protoOf(Companion_52).makeFractalNoise_or6pg_k$ = function (baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -15207,7 +15104,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -15217,14 +15114,14 @@
     }
     return tmp;
   };
-  protoOf(Companion_52).makeFractalNoise$default_qqofcz_k$ = function (baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize, $super) {
+  protoOf(Companion_52).makeFractalNoise$default_1wp4xl_k$ = function (baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize, $super) {
     tileSize = tileSize === VOID ? Companion_getInstance_26().makeEmpty_kjipdr_k$() : tileSize;
-    return $super === VOID ? this.makeFractalNoise_jh27dj_k$(baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize) : $super.makeFractalNoise_jh27dj_k$.call(this, baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize);
+    return $super === VOID ? this.makeFractalNoise_or6pg_k$(baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize) : $super.makeFractalNoise_or6pg_k$.call(this, baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize);
   };
-  protoOf(Companion_52).makeTurbulence_x6npmp_k$ = function (baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize) {
+  protoOf(Companion_52).makeTurbulence_jxg3w6_k$ = function (baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -15239,7 +15136,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -15249,9 +15146,9 @@
     }
     return tmp;
   };
-  protoOf(Companion_52).makeTurbulence$default_oky7cd_k$ = function (baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize, $super) {
+  protoOf(Companion_52).makeTurbulence$default_tcphjj_k$ = function (baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize, $super) {
     tileSize = tileSize === VOID ? Companion_getInstance_26().makeEmpty_kjipdr_k$() : tileSize;
-    return $super === VOID ? this.makeTurbulence_x6npmp_k$(baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize) : $super.makeTurbulence_x6npmp_k$.call(this, baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize);
+    return $super === VOID ? this.makeTurbulence_jxg3w6_k$(baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize) : $super.makeTurbulence_jxg3w6_k$.call(this, baseFrequencyX, baseFrequencyY, numOctaves, seed, tileSize);
   };
   var Companion_instance_52;
   function Companion_getInstance_53() {
@@ -15263,7 +15160,7 @@
     Companion_getInstance_53();
     RefCnt_init_$Init$(ptr, this);
   }
-  protoOf(Shader).makeWithColorFilter_lmpyjc_k$ = function (f) {
+  protoOf(Shader).makeWithColorFilter_czdh5l_k$ = function (f) {
     var tmp;
     try {
       tmp = new Shader(org_jetbrains_skia_Shader__1nMakeWithColorFilter(this.get__ptr_wohp4o_k$(), getPtr(f)));
@@ -15275,10 +15172,10 @@
   };
   function ShadowUtils() {
     ShadowUtils_instance = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(ShadowUtils).drawShadow_dh32ua_k$ = function (canvas, path, zPlaneParams, lightPos, lightRadius, ambientColor, spotColor, transparentOccluder, geometricOnly) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(ShadowUtils).drawShadow_xq8ad3_k$ = function (canvas, path, zPlaneParams, lightPos, lightRadius, ambientColor, spotColor, transparentOccluder, geometricOnly) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var flags = 0;
     if (transparentOccluder)
       flags = flags | 1;
@@ -15291,12 +15188,12 @@
       reachabilityBarrier(path);
     }
   };
-  protoOf(ShadowUtils).computeTonalAmbientColor_ua8bua_k$ = function (ambientColor, spotColor) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(ShadowUtils).computeTonalAmbientColor_btprpu_k$ = function (ambientColor, spotColor) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return org_jetbrains_skia_ShadowUtils__1nComputeTonalAmbientColor(ambientColor, spotColor);
   };
-  protoOf(ShadowUtils).computeTonalSpotColor_jf3jqe_k$ = function (ambientColor, spotColor) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(ShadowUtils).computeTonalSpotColor_wns0ee_k$ = function (ambientColor, spotColor) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return org_jetbrains_skia_ShadowUtils__1nComputeTonalSpotColor(ambientColor, spotColor);
   };
   var ShadowUtils_instance;
@@ -15316,7 +15213,7 @@
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.dispose_3n44we_k$();
+        tmp0_safe_receiver.dispose_3nnxhr_k$();
       }
     }
     return tmp;
@@ -15331,10 +15228,10 @@
     this.ptr_1 = ptr;
     this.disposePtr_1 = disposePtr;
   }
-  protoOf(ArrayDecoder).dispose_3n44we_k$ = function () {
+  protoOf(ArrayDecoder).dispose_3nnxhr_k$ = function () {
     org_jetbrains_skia_StdVectorDecoder__1nDisposeArray(this.ptr_1, this.disposePtr_1);
   };
-  protoOf(ArrayDecoder).release_ywerve_k$ = function (index) {
+  protoOf(ArrayDecoder).release_fo34vl_k$ = function (index) {
     return org_jetbrains_skia_StdVectorDecoder__1nReleaseElement(this.ptr_1, index);
   };
   protoOf(ArrayDecoder).get_size_woubt6_k$ = function () {
@@ -15342,18 +15239,18 @@
   };
   function Companion_53() {
     Companion_instance_53 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_53).makeRasterDirect_wwio9e_k$ = function (pixmap) {
-    return this.makeRasterDirect_kim0q7_k$(pixmap, null);
+  protoOf(Companion_53).makeRasterDirect_bdhbjo_k$ = function (pixmap) {
+    return this.makeRasterDirect_otzn8p_k$(pixmap, null);
   };
-  protoOf(Companion_53).makeRasterDirect_osgj6g_k$ = function (imageInfo, pixelsPtr, rowBytes) {
-    return this.makeRasterDirect_gzbyhl_k$(imageInfo, pixelsPtr, rowBytes, null);
+  protoOf(Companion_53).makeRasterDirect_2uedl6_k$ = function (imageInfo, pixelsPtr, rowBytes) {
+    return this.makeRasterDirect_aesxf1_k$(imageInfo, pixelsPtr, rowBytes, null);
   };
-  protoOf(Companion_53).makeRasterDirect_kim0q7_k$ = function (pixmap, surfaceProps) {
+  protoOf(Companion_53).makeRasterDirect_otzn8p_k$ = function (pixmap, surfaceProps) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -15361,15 +15258,15 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeRasterDirect.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(pixmap);
-          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeRasterDirectWithPixmap(tmp_0, tmp0_anonymous.toInterop_o3s7q3_k$(surfaceProps == null ? null : surfaceProps.packToIntArray_17vj5u_k$()));
+          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeRasterDirectWithPixmap(tmp_0, $this$interopScope.toInterop_i7skn2_k$(surfaceProps == null ? null : surfaceProps.packToIntArray_17vj5u_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -15387,10 +15284,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_53).makeRasterDirect_gzbyhl_k$ = function (imageInfo, pixelsPtr, rowBytes, surfaceProps) {
+  protoOf(Companion_53).makeRasterDirect_aesxf1_k$ = function (imageInfo, pixelsPtr, rowBytes, surfaceProps) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -15398,19 +15295,19 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeRasterDirect.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = imageInfo.get_width_j0q4yl_k$();
           var tmp_1 = imageInfo.get_height_e7t92o_k$();
           var tmp_2 = imageInfo.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$();
           var tmp_3 = imageInfo.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$();
           var tmp_4 = getPtr(imageInfo.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$());
-          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeRasterDirect(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, pixelsPtr, rowBytes, tmp0_anonymous.toInterop_o3s7q3_k$(surfaceProps == null ? null : surfaceProps.packToIntArray_17vj5u_k$()));
+          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeRasterDirect(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, pixelsPtr, rowBytes, $this$interopScope.toInterop_i7skn2_k$(surfaceProps == null ? null : surfaceProps.packToIntArray_17vj5u_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -15428,16 +15325,16 @@
     }
     return tmp;
   };
-  protoOf(Companion_53).makeRaster_mjf36p_k$ = function (imageInfo) {
-    return this.makeRaster_lmi5s1_k$(imageInfo, imageInfo.get_minRowBytes_yg2hc6_k$(), null);
+  protoOf(Companion_53).makeRaster_nbsuf3_k$ = function (imageInfo) {
+    return this.makeRaster_40pg12_k$(imageInfo, imageInfo.get_minRowBytes_yg2hc6_k$(), null);
   };
-  protoOf(Companion_53).makeRaster_xu0v40_k$ = function (imageInfo, rowBytes) {
-    return this.makeRaster_lmi5s1_k$(imageInfo, rowBytes, null);
+  protoOf(Companion_53).makeRaster_hu6fjr_k$ = function (imageInfo, rowBytes) {
+    return this.makeRaster_40pg12_k$(imageInfo, rowBytes, null);
   };
-  protoOf(Companion_53).makeRaster_lmi5s1_k$ = function (imageInfo, rowBytes, surfaceProps) {
+  protoOf(Companion_53).makeRaster_40pg12_k$ = function (imageInfo, rowBytes, surfaceProps) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -15445,19 +15342,19 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeRaster.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = imageInfo.get_width_j0q4yl_k$();
           var tmp_1 = imageInfo.get_height_e7t92o_k$();
           var tmp_2 = imageInfo.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$();
           var tmp_3 = imageInfo.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$();
           var tmp_4 = getPtr(imageInfo.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$());
-          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeRaster(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, rowBytes, tmp0_anonymous.toInterop_o3s7q3_k$(surfaceProps == null ? null : surfaceProps.packToIntArray_17vj5u_k$()));
+          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeRaster(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, rowBytes, $this$interopScope.toInterop_i7skn2_k$(surfaceProps == null ? null : surfaceProps.packToIntArray_17vj5u_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -15475,10 +15372,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_53).makeFromBackendRenderTarget_z179nc_k$ = function (context, rt, origin, colorFormat, colorSpace, surfaceProps) {
+  protoOf(Companion_53).makeFromBackendRenderTarget_o7ys7b_k$ = function (context, rt, origin, colorFormat, colorSpace, surfaceProps) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -15486,19 +15383,19 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeFromBackendRenderTarget.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(context);
           var tmp_1 = getPtr(rt);
           var tmp_2 = origin.get_ordinal_ip24qg_k$();
           var tmp_3 = colorFormat.get_ordinal_ip24qg_k$();
           var tmp_4 = getPtr(colorSpace);
-          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeFromBackendRenderTarget(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp0_anonymous.toInterop_o3s7q3_k$(surfaceProps == null ? null : surfaceProps.packToIntArray_17vj5u_k$()));
+          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeFromBackendRenderTarget(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, $this$interopScope.toInterop_i7skn2_k$(surfaceProps == null ? null : surfaceProps.packToIntArray_17vj5u_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -15511,14 +15408,14 @@
     }
     return tmp;
   };
-  protoOf(Companion_53).makeFromBackendRenderTarget$default_bhcjbw_k$ = function (context, rt, origin, colorFormat, colorSpace, surfaceProps, $super) {
+  protoOf(Companion_53).makeFromBackendRenderTarget$default_41g912_k$ = function (context, rt, origin, colorFormat, colorSpace, surfaceProps, $super) {
     surfaceProps = surfaceProps === VOID ? null : surfaceProps;
-    return $super === VOID ? this.makeFromBackendRenderTarget_z179nc_k$(context, rt, origin, colorFormat, colorSpace, surfaceProps) : $super.makeFromBackendRenderTarget_z179nc_k$.call(this, context, rt, origin, colorFormat, colorSpace, surfaceProps);
+    return $super === VOID ? this.makeFromBackendRenderTarget_o7ys7b_k$(context, rt, origin, colorFormat, colorSpace, surfaceProps) : $super.makeFromBackendRenderTarget_o7ys7b_k$.call(this, context, rt, origin, colorFormat, colorSpace, surfaceProps);
   };
-  protoOf(Companion_53).makeFromMTKView_jsn8ou_k$ = function (context, mtkViewPtr, origin, sampleCount, colorFormat, colorSpace, surfaceProps) {
+  protoOf(Companion_53).makeFromMTKView_x7szwl_k$ = function (context, mtkViewPtr, origin, sampleCount, colorFormat, colorSpace, surfaceProps) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -15526,18 +15423,18 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeFromMTKView.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(context);
           var tmp_1 = origin.get_ordinal_ip24qg_k$();
           var tmp_2 = colorFormat.get_ordinal_ip24qg_k$();
           var tmp_3 = getPtr(colorSpace);
-          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeFromMTKView(tmp_0, mtkViewPtr, tmp_1, sampleCount, tmp_2, tmp_3, tmp0_anonymous.toInterop_o3s7q3_k$(surfaceProps == null ? null : surfaceProps.packToIntArray_17vj5u_k$()));
+          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeFromMTKView(tmp_0, mtkViewPtr, tmp_1, sampleCount, tmp_2, tmp_3, $this$interopScope.toInterop_i7skn2_k$(surfaceProps == null ? null : surfaceProps.packToIntArray_17vj5u_k$()));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -15556,8 +15453,8 @@
     }
     return tmp;
   };
-  protoOf(Companion_53).makeRasterN32Premul_l409fh_k$ = function (width, height) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_53).makeRasterN32Premul_bcax9f_k$ = function (width, height) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var ptr = org_jetbrains_skia_Surface__1nMakeRasterN32Premul(width, height);
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
@@ -15568,19 +15465,19 @@
     }
     return Surface_init_$Create$(ptr);
   };
-  protoOf(Companion_53).makeRenderTarget_p8rayu_k$ = function (context, budgeted, imageInfo) {
-    return this.makeRenderTarget_x3ghd6_k$(context, budgeted, imageInfo, 0, SurfaceOrigin_BOTTOM_LEFT_getInstance(), null, false);
+  protoOf(Companion_53).makeRenderTarget_f3q2te_k$ = function (context, budgeted, imageInfo) {
+    return this.makeRenderTarget_cqsx4k_k$(context, budgeted, imageInfo, 0, SurfaceOrigin_BOTTOM_LEFT_getInstance(), null, false);
   };
-  protoOf(Companion_53).makeRenderTarget_2ahb8_k$ = function (context, budgeted, imageInfo, sampleCount, surfaceProps) {
-    return this.makeRenderTarget_x3ghd6_k$(context, budgeted, imageInfo, sampleCount, SurfaceOrigin_BOTTOM_LEFT_getInstance(), surfaceProps, false);
+  protoOf(Companion_53).makeRenderTarget_resbt3_k$ = function (context, budgeted, imageInfo, sampleCount, surfaceProps) {
+    return this.makeRenderTarget_cqsx4k_k$(context, budgeted, imageInfo, sampleCount, SurfaceOrigin_BOTTOM_LEFT_getInstance(), surfaceProps, false);
   };
-  protoOf(Companion_53).makeRenderTarget_qx9c9o_k$ = function (context, budgeted, imageInfo, sampleCount, origin, surfaceProps) {
-    return this.makeRenderTarget_x3ghd6_k$(context, budgeted, imageInfo, sampleCount, origin, surfaceProps, false);
+  protoOf(Companion_53).makeRenderTarget_cektc7_k$ = function (context, budgeted, imageInfo, sampleCount, origin, surfaceProps) {
+    return this.makeRenderTarget_cqsx4k_k$(context, budgeted, imageInfo, sampleCount, origin, surfaceProps, false);
   };
-  protoOf(Companion_53).makeRenderTarget_x3ghd6_k$ = function (context, budgeted, imageInfo, sampleCount, origin, surfaceProps, shouldCreateWithMips) {
+  protoOf(Companion_53).makeRenderTarget_cqsx4k_k$ = function (context, budgeted, imageInfo, sampleCount, origin, surfaceProps, shouldCreateWithMips) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -15588,7 +15485,7 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeRenderTarget.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp_0 = getPtr(context);
           var tmp_1 = imageInfo.get_width_j0q4yl_k$();
           var tmp_2 = imageInfo.get_height_e7t92o_k$();
@@ -15596,13 +15493,13 @@
           var tmp_4 = imageInfo.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$();
           var tmp_5 = getPtr(imageInfo.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$());
           var tmp_6 = origin.get_ordinal_ip24qg_k$();
-          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeRenderTarget(tmp_0, budgeted, tmp_1, tmp_2, tmp_3, tmp_4, tmp_5, sampleCount, tmp_6, tmp0_anonymous.toInterop_o3s7q3_k$(surfaceProps == null ? null : surfaceProps.packToIntArray_17vj5u_k$()), shouldCreateWithMips);
+          tmp$ret$1 = org_jetbrains_skia_Surface__1nMakeRenderTarget(tmp_0, budgeted, tmp_1, tmp_2, tmp_3, tmp_4, tmp_5, sampleCount, tmp_6, $this$interopScope.toInterop_i7skn2_k$(surfaceProps == null ? null : surfaceProps.packToIntArray_17vj5u_k$()), shouldCreateWithMips);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -15621,8 +15518,8 @@
     }
     return tmp;
   };
-  protoOf(Companion_53).makeNull_bxa0uj_k$ = function (width, height) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_53).makeNull_esuckr_k$ = function (width, height) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var ptr = org_jetbrains_skia_Surface__1nMakeNull(width, height);
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
@@ -15686,7 +15583,7 @@
   protoOf(Surface).get_width_j0q4yl_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Surface__1nGetWidth(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -15696,7 +15593,7 @@
   protoOf(Surface).get_height_e7t92o_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Surface__1nGetHeight(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -15708,7 +15605,7 @@
     try {
       var tmp_0 = Companion_getInstance_29();
       var tmp_1 = this.get__ptr_wohp4o_k$();
-      tmp = tmp_0.createUsing_l3ixsh_k$(tmp_1, Surface_nGetImageInfo$ref());
+      tmp = tmp_0.createUsing_vjf7w1_k$(tmp_1, Surface_nGetImageInfo$ref());
     }finally {
       reachabilityBarrier(this);
     }
@@ -15717,16 +15614,16 @@
   protoOf(Surface).get_generationId_x1e17g_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Surface__1nGenerationId(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Surface).notifyContentWillChange_qcljvw_k$ = function (mode) {
+  protoOf(Surface).notifyContentWillChange_q0ixx2_k$ = function (mode) {
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Surface__1nNotifyContentWillChange(this.get__ptr_wohp4o_k$(), mode.get_ordinal_ip24qg_k$());
     }finally {
       reachabilityBarrier(this);
@@ -15735,7 +15632,7 @@
   protoOf(Surface).get_recordingContext_6wvik9_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Surface__1nGetRecordingContext(this.get__ptr_wohp4o_k$());
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new DirectContext(ptr);
     }finally {
@@ -15746,7 +15643,7 @@
   protoOf(Surface).get_canvas_bshgm9_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Surface__1nGetCanvas(this.get__ptr_wohp4o_k$());
       var tmp_0;
       if (ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$()) {
@@ -15760,10 +15657,10 @@
     }
     return tmp;
   };
-  protoOf(Surface).makeSurface_tuqlbn_k$ = function (imageInfo) {
+  protoOf(Surface).makeSurface_1964ob_k$ = function (imageInfo) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Surface__1nMakeSurfaceI(this.get__ptr_wohp4o_k$(), imageInfo.get_width_j0q4yl_k$(), imageInfo.get_height_e7t92o_k$(), imageInfo.get_colorInfo_tre0vs_k$().get_colorType_tr6rn0_k$().get_ordinal_ip24qg_k$(), imageInfo.get_colorInfo_tre0vs_k$().get_alphaType_1awv75_k$().get_ordinal_ip24qg_k$(), getPtr(imageInfo.get_colorInfo_tre0vs_k$().get_colorSpace_yx2b0_k$()));
       tmp = Surface_init_$Create$(ptr);
     }finally {
@@ -15772,10 +15669,10 @@
     }
     return tmp;
   };
-  protoOf(Surface).makeSurface_hpn7y9_k$ = function (width, height) {
+  protoOf(Surface).makeSurface_ov9xsx_k$ = function (width, height) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Surface__1nMakeSurface(this.get__ptr_wohp4o_k$(), width, height);
       tmp = Surface_init_$Create$(ptr);
     }finally {
@@ -15786,29 +15683,29 @@
   protoOf(Surface).makeImageSnapshot_3ua8s1_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Image(org_jetbrains_skia_Surface__1nMakeImageSnapshot(this.get__ptr_wohp4o_k$()));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Surface).makeImageSnapshot_lq7gu9_k$ = function (area) {
+  protoOf(Surface).makeImageSnapshot_kwlrxf_k$ = function (area) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Image(org_jetbrains_skia_Surface__1nMakeImageSnapshotR(this.get__ptr_wohp4o_k$(), area.get_left_woprgw_k$(), area.get_top_18ivbo_k$(), area.get_right_ixz7xv_k$(), area.get_bottom_bj8ras_k$()));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Surface).draw_diihkj_k$ = function (canvas, x, y, paint) {
-    this.draw_mpxfty_k$(canvas, x, y, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), paint);
+  protoOf(Surface).draw_xaujge_k$ = function (canvas, x, y, paint) {
+    this.draw_xp7dz1_k$(canvas, x, y, Companion_getInstance_52().get_DEFAULT_wccqmg_k$(), paint);
   };
-  protoOf(Surface).draw_mpxfty_k$ = function (canvas, x, y, samplingMode, paint) {
+  protoOf(Surface).draw_xp7dz1_k$ = function (canvas, x, y, samplingMode, paint) {
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Surface__1nDraw(this.get__ptr_wohp4o_k$(), getPtr(canvas), x, y, samplingMode._packedInt1_kbgj89_k$(), samplingMode._packedInt2_kbgj8a_k$(), getPtr(paint));
     }finally {
       reachabilityBarrier(this);
@@ -15816,10 +15713,10 @@
       reachabilityBarrier(paint);
     }
   };
-  protoOf(Surface).peekPixels_trx73y_k$ = function (pixmap) {
+  protoOf(Surface).peekPixels_w3ubbc_k$ = function (pixmap) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Surface__1nPeekPixels(this.get__ptr_wohp4o_k$(), getPtr(pixmap));
     }finally {
       reachabilityBarrier(this);
@@ -15827,10 +15724,10 @@
     }
     return tmp;
   };
-  protoOf(Surface).readPixels_rcmuda_k$ = function (pixmap, srcX, srcY) {
+  protoOf(Surface).readPixels_hfka16_k$ = function (pixmap, srcX, srcY) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Surface__1nReadPixelsToPixmap(this.get__ptr_wohp4o_k$(), getPtr(pixmap), srcX, srcY);
     }finally {
       reachabilityBarrier(this);
@@ -15838,10 +15735,10 @@
     }
     return tmp;
   };
-  protoOf(Surface).readPixels_wokfcg_k$ = function (bitmap, srcX, srcY) {
+  protoOf(Surface).readPixels_75wq7r_k$ = function (bitmap, srcX, srcY) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Surface__1nReadPixels(this.get__ptr_wohp4o_k$(), getPtr(bitmap), srcX, srcY);
     }finally {
       reachabilityBarrier(this);
@@ -15849,43 +15746,43 @@
     }
     return tmp;
   };
-  protoOf(Surface).writePixels_lhopo8_k$ = function (pixmap, x, y) {
+  protoOf(Surface).writePixels_xf2cnl_k$ = function (pixmap, x, y) {
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Surface__1nWritePixelsFromPixmap(this.get__ptr_wohp4o_k$(), getPtr(pixmap), x, y);
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(pixmap);
     }
   };
-  protoOf(Surface).writePixels_o7pqtm_k$ = function (bitmap, x, y) {
+  protoOf(Surface).writePixels_r7efjy_k$ = function (bitmap, x, y) {
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Surface__1nWritePixels(this.get__ptr_wohp4o_k$(), getPtr(bitmap), x, y);
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(bitmap);
     }
   };
-  protoOf(Surface).flushAndSubmit_x6ekey_k$ = function () {
+  protoOf(Surface).flushAndSubmit_x6yd0b_k$ = function () {
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Surface__1nFlushAndSubmit(this.get__ptr_wohp4o_k$(), false);
     }finally {
       reachabilityBarrier(this);
     }
   };
-  protoOf(Surface).flushAndSubmit_t2g9r2_k$ = function (syncCpu) {
+  protoOf(Surface).flushAndSubmit_auegae_k$ = function (syncCpu) {
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Surface__1nFlushAndSubmit(this.get__ptr_wohp4o_k$(), syncCpu);
     }finally {
       reachabilityBarrier(this);
     }
   };
-  protoOf(Surface).flush_sgqoqb_k$ = function () {
+  protoOf(Surface).flush_shahbo_k$ = function () {
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_Surface__1nFlush(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -15894,7 +15791,7 @@
   protoOf(Surface).get_isUnique_yk2avw_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Surface__1nUnique(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -15968,7 +15865,7 @@
         return SurfaceColorFormat_R16G16B16A16_UNORM_getInstance();
       default:
         SurfaceColorFormat_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -16089,7 +15986,7 @@
         return SurfaceOrigin_BOTTOM_LEFT_getInstance();
       default:
         SurfaceOrigin_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -16156,10 +16053,10 @@
   protoOf(SurfaceProps).toString = function () {
     return 'SurfaceProps(_deviceIndependentFonts=' + this.isDeviceIndependentFonts_1 + ', _pixelGeometry=' + this.pixelGeometry_1 + ')';
   };
-  protoOf(SurfaceProps).withDeviceIndependentFonts_e6h7uc_k$ = function (_deviceIndependentFonts) {
+  protoOf(SurfaceProps).withDeviceIndependentFonts_28pn8f_k$ = function (_deviceIndependentFonts) {
     return this.isDeviceIndependentFonts_1 === _deviceIndependentFonts ? this : new SurfaceProps(_deviceIndependentFonts, this.pixelGeometry_1);
   };
-  protoOf(SurfaceProps).withPixelGeometry_45l3nb_k$ = function (_pixelGeometry) {
+  protoOf(SurfaceProps).withPixelGeometry_j9bcme_k$ = function (_pixelGeometry) {
     return this.pixelGeometry_1.equals(_pixelGeometry) ? this : new SurfaceProps(this.isDeviceIndependentFonts_1, _pixelGeometry);
   };
   protoOf(SurfaceProps).packToIntArray_17vj5u_k$ = function () {
@@ -16194,13 +16091,13 @@
   protoOf(Run).component2_7eebsb_k$ = function () {
     return this.glyphs_1;
   };
-  protoOf(Run).copy_wxrqfg_k$ = function (typeface, glyphs) {
+  protoOf(Run).copy_npaj1q_k$ = function (typeface, glyphs) {
     return new Run(typeface, glyphs);
   };
-  protoOf(Run).copy$default_diwu6k_k$ = function (typeface, glyphs, $super) {
+  protoOf(Run).copy$default_j76h0y_k$ = function (typeface, glyphs, $super) {
     typeface = typeface === VOID ? this.typeface_1 : typeface;
     glyphs = glyphs === VOID ? this.glyphs_1 : glyphs;
-    return $super === VOID ? this.copy_wxrqfg_k$(typeface, glyphs) : $super.copy_wxrqfg_k$.call(this, typeface, glyphs);
+    return $super === VOID ? this.copy_npaj1q_k$(typeface, glyphs) : $super.copy_npaj1q_k$.call(this, typeface, glyphs);
   };
   protoOf(Run).toString = function () {
     return 'Run(typeface=' + this.typeface_1 + ', glyphs=' + toString(this.glyphs_1) + ')';
@@ -16220,9 +16117,9 @@
   }
   function Companion_54() {
     Companion_instance_54 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_54).makeFromPosH_qag1vd_k$ = function (glyphs, xpos, ypos, font) {
+  protoOf(Companion_54).makeFromPosH_an9l3j_k$ = function (glyphs, xpos, ypos, font) {
     var tmp;
     try {
       // Inline function 'kotlin.require' call
@@ -16232,7 +16129,7 @@
         var message = 'glyphs.length ' + glyphs.length + ' != xpos.length ' + xpos.length;
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -16240,14 +16137,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeFromPosH.<anonymous>' call
-          var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$2 = org_jetbrains_skia_TextBlob__1nMakeFromPosH(tmp1_anonymous.toInterop_30wotu_k$(glyphs), glyphs.length, tmp1_anonymous.toInterop_sfommq_k$(xpos), ypos, getPtr(font));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$2 = org_jetbrains_skia_TextBlob__1nMakeFromPosH($this$interopScope.toInterop_jg6tf3_k$(glyphs), glyphs.length, $this$interopScope.toInterop_uum1m9_k$(xpos), ypos, getPtr(font));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -16258,7 +16155,7 @@
     }
     return tmp;
   };
-  protoOf(Companion_54).makeFromPos_agr10f_k$ = function (glyphs, pos, font) {
+  protoOf(Companion_54).makeFromPos_wrki1g_k$ = function (glyphs, pos, font) {
     var tmp;
     try {
       // Inline function 'kotlin.require' call
@@ -16279,7 +16176,7 @@
           floatPos[imul(i, 2) + 1 | 0] = pos[i].get_y_1mhr68_k$();
         }
          while (inductionVariable <= last);
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -16287,14 +16184,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeFromPos.<anonymous>' call
-          var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$2 = org_jetbrains_skia_TextBlob__1nMakeFromPos(tmp1_anonymous.toInterop_30wotu_k$(glyphs), glyphs.length, tmp1_anonymous.toInterop_sfommq_k$(floatPos), getPtr(font));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$2 = org_jetbrains_skia_TextBlob__1nMakeFromPos($this$interopScope.toInterop_jg6tf3_k$(glyphs), glyphs.length, $this$interopScope.toInterop_uum1m9_k$(floatPos), getPtr(font));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -16305,7 +16202,7 @@
     }
     return tmp;
   };
-  protoOf(Companion_54).makeFromRSXform_9rnq31_k$ = function (glyphs, xform, font) {
+  protoOf(Companion_54).makeFromRSXform_ktsrw0_k$ = function (glyphs, xform, font) {
     var tmp;
     try {
       // Inline function 'kotlin.require' call
@@ -16328,7 +16225,7 @@
           floatXform[imul(i, 4) + 3 | 0] = xform[i].get_ty_kntnn6_k$();
         }
          while (inductionVariable <= last);
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -16336,14 +16233,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Companion.makeFromRSXform.<anonymous>' call
-          var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$2 = org_jetbrains_skia_TextBlob__1nMakeFromRSXform(tmp1_anonymous.toInterop_30wotu_k$(glyphs), glyphs.length, tmp1_anonymous.toInterop_sfommq_k$(floatXform), getPtr(font));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$2 = org_jetbrains_skia_TextBlob__1nMakeFromRSXform($this$interopScope.toInterop_jg6tf3_k$(glyphs), glyphs.length, $this$interopScope.toInterop_uum1m9_k$(floatXform), getPtr(font));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -16354,10 +16251,10 @@
     }
     return tmp;
   };
-  protoOf(Companion_54).makeFromData_65gxva_k$ = function (data) {
+  protoOf(Companion_54).makeFromData_68bs4e_k$ = function (data) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_TextBlob__1nMakeFromData(getPtr(data));
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new TextBlob(ptr);
     }finally {
@@ -16392,7 +16289,7 @@
     return this.textBlob_1;
   };
   protoOf(TextBlobIter).hasNext_bitz1p_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       return org_jetbrains_skia_TextBlob_Iter__1nHasNext(this.get__ptr_wohp4o_k$());
     }finally {
@@ -16400,33 +16297,33 @@
     }
   };
   protoOf(TextBlobIter).next_20eer_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       var typeface = new Typeface(org_jetbrains_skia_TextBlob_Iter__1nGetTypeface(this.get__ptr_wohp4o_k$()));
       var glyphCount = org_jetbrains_skia_TextBlob_Iter__1nGetGlyphCount(this.get__ptr_wohp4o_k$());
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Int16Array(glyphCount);
+      var result = new Int16Array(glyphCount);
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_jyz6vk_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_c5u4tv_k$(result);
           // Inline function 'org.jetbrains.skia.TextBlobIter.next.<anonymous>' call
           org_jetbrains_skia_TextBlob_Iter__1nGetGlyphs(this.get__ptr_wohp4o_k$(), handle, glyphCount);
-          tmp0_anonymous.fromInterop_fargm_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_awvpm7_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      var glyphs = tmp0_withResult;
+      var glyphs = result;
       org_jetbrains_skia_TextBlob_Iter__1nFetch(this.get__ptr_wohp4o_k$());
       return new Run(typeface, glyphs);
     }finally {
@@ -16456,9 +16353,9 @@
   protoOf(TextBlob).get_bounds_bj99ku_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_47();
-      tmp = tmp_0.fromInteropPointer_26ocmq_k$(TextBlob$_get_bounds_$lambda_i7cufv(this));
+      tmp = tmp_0.fromInteropPointer_2qty6v_k$(TextBlob$_get_bounds_$lambda_i7cufv(this));
     }finally {
       reachabilityBarrier(this);
     }
@@ -16467,43 +16364,43 @@
   protoOf(TextBlob).get_uniqueId_ycv0d1_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_TextBlob__1nGetUniqueId(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextBlob).getIntercepts_dx1aef_k$ = function (lowerBound, upperBound) {
-    return this.getIntercepts_8ivqkl_k$(lowerBound, upperBound, null);
+  protoOf(TextBlob).getIntercepts_ftg7t_k$ = function (lowerBound, upperBound) {
+    return this.getIntercepts_m53fn9_k$(lowerBound, upperBound, null);
   };
-  protoOf(TextBlob).getIntercepts_8ivqkl_k$ = function (lowerBound, upperBound, paint) {
+  protoOf(TextBlob).getIntercepts_m53fn9_k$ = function (lowerBound, upperBound, paint) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Float32Array(org_jetbrains_skia_TextBlob__1nGetInterceptsLength(this.get__ptr_wohp4o_k$(), lowerBound, upperBound, getPtr(paint)));
+      var result = new Float32Array(org_jetbrains_skia_TextBlob__1nGetInterceptsLength(this.get__ptr_wohp4o_k$(), lowerBound, upperBound, getPtr(paint)));
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.TextBlob.getIntercepts.<anonymous>' call
           org_jetbrains_skia_TextBlob__1nGetIntercepts(this.get__ptr_wohp4o_k$(), lowerBound, upperBound, getPtr(paint), handle);
-          tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = tmp0_withResult;
+      tmp = result;
     }finally {
       reachabilityBarrier(this);
       reachabilityBarrier(paint);
@@ -16513,7 +16410,7 @@
   protoOf(TextBlob).serializeToData_6ks2it_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Data(org_jetbrains_skia_TextBlob__1nSerializeToData(this.get__ptr_wohp4o_k$()));
     }finally {
       reachabilityBarrier(this);
@@ -16523,30 +16420,30 @@
   protoOf(TextBlob).get_glyphs_duwlao_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Int16Array(this.get_glyphsLength_ec2622_k$());
+      var result = new Int16Array(this.get_glyphsLength_ec2622_k$());
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_jyz6vk_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_c5u4tv_k$(result);
           // Inline function 'org.jetbrains.skia.TextBlob.<get-glyphs>.<anonymous>' call
           org_jetbrains_skia_TextBlob__1nGetGlyphs(this.get__ptr_wohp4o_k$(), handle);
-          tmp0_anonymous.fromInterop_fargm_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_awvpm7_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = tmp0_withResult;
+      tmp = result;
     }finally {
       reachabilityBarrier(this);
     }
@@ -16555,7 +16452,7 @@
   protoOf(TextBlob).get_glyphsLength_ec2622_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_TextBlob__1nGetGlyphsLength(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -16565,30 +16462,30 @@
   protoOf(TextBlob).get_positions_ya7scf_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Float32Array(org_jetbrains_skia_TextBlob__1nGetPositionsLength(this.get__ptr_wohp4o_k$()));
+      var result = new Float32Array(org_jetbrains_skia_TextBlob__1nGetPositionsLength(this.get__ptr_wohp4o_k$()));
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.TextBlob.<get-positions>.<anonymous>' call
           org_jetbrains_skia_TextBlob__1nGetPositions(this.get__ptr_wohp4o_k$(), handle);
-          tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = tmp0_withResult;
+      tmp = result;
     }finally {
       reachabilityBarrier(this);
     }
@@ -16597,22 +16494,22 @@
   protoOf(TextBlob).get_clusters_avr9fi_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.withNullableResult' call
-        var tmp0_withNullableResult = new Int32Array(org_jetbrains_skia_TextBlob__1nGetClustersLength(this.get__ptr_wohp4o_k$()));
+        var result = new Int32Array(org_jetbrains_skia_TextBlob__1nGetClustersLength(this.get__ptr_wohp4o_k$()));
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withNullableResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
           var tmp_0;
           // Inline function 'org.jetbrains.skia.TextBlob.<get-clusters>.<anonymous>' call
           if (org_jetbrains_skia_TextBlob__1nGetClusters(this.get__ptr_wohp4o_k$(), handle)) {
-            tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withNullableResult);
-            tmp_0 = tmp0_withNullableResult;
+            $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
+            tmp_0 = result;
           } else {
             tmp_0 = null;
           }
@@ -16622,7 +16519,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -16641,9 +16538,9 @@
   protoOf(TextBlob).get_tightBounds_akosga_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_47();
-      var tmp0_elvis_lhs = tmp_0.fromInteropPointerNullable_oyojp1_k$(TextBlob$_get_tightBounds_$lambda_5628hz(this));
+      var tmp0_elvis_lhs = tmp_0.fromInteropPointerNullable_rzwb3l_k$(TextBlob$_get_tightBounds_$lambda_5628hz(this));
       var tmp_1;
       if (tmp0_elvis_lhs == null) {
         throw IllegalArgumentException_init_$Create$_0();
@@ -16659,9 +16556,9 @@
   protoOf(TextBlob).get_blockBounds_kek27t_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_47();
-      var tmp0_elvis_lhs = tmp_0.fromInteropPointerNullable_oyojp1_k$(TextBlob$_get_blockBounds_$lambda_94ls22(this));
+      var tmp0_elvis_lhs = tmp_0.fromInteropPointerNullable_rzwb3l_k$(TextBlob$_get_blockBounds_$lambda_94ls22(this));
       var tmp_1;
       if (tmp0_elvis_lhs == null) {
         throw IllegalArgumentException_init_$Create$_0();
@@ -16677,9 +16574,9 @@
   protoOf(TextBlob).get_firstBaseline_s5430_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withNullableResult' call
-      var tmp0_withNullableResult = new Float32Array(1);
+      var result = new Float32Array(1);
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -16687,14 +16584,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withNullableResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withNullableResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.TextBlob.<get-firstBaseline>.<anonymous>' call
           var blockResult = org_jetbrains_skia_TextBlob__1nGetFirstBaseline(this.get__ptr_wohp4o_k$(), handle);
           var tmp_0;
           if (blockResult) {
-            tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withNullableResult);
-            tmp_0 = tmp0_withNullableResult;
+            $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
+            tmp_0 = result;
           } else {
             tmp_0 = null;
           }
@@ -16704,7 +16601,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -16724,9 +16621,9 @@
   protoOf(TextBlob).get_lastBaseline_inuptw_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withNullableResult' call
-      var tmp0_withNullableResult = new Float32Array(1);
+      var result = new Float32Array(1);
       var tmp$ret$2;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -16734,14 +16631,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withNullableResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withNullableResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.TextBlob.<get-lastBaseline>.<anonymous>' call
           var blockResult = org_jetbrains_skia_TextBlob__1nGetLastBaseline(this.get__ptr_wohp4o_k$(), handle);
           var tmp_0;
           if (blockResult) {
-            tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withNullableResult);
-            tmp_0 = tmp0_withNullableResult;
+            $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
+            tmp_0 = result;
           } else {
             tmp_0 = null;
           }
@@ -16751,7 +16648,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -16773,20 +16670,20 @@
   };
   function Companion_55() {
     Companion_instance_55 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
-  protoOf(Companion_55).make_855hdt_k$ = function (text, font) {
-    return this.make_f2atpc_k$(text, font, Companion_getInstance_76().get_DEFAULT_wccqmg_k$());
+  protoOf(Companion_55).make_35acrw_k$ = function (text, font) {
+    return this.make_dl7d9q_k$(text, font, Companion_getInstance_76().get_DEFAULT_wccqmg_k$());
   };
-  protoOf(Companion_55).make_f2atpc_k$ = function (text, font, opts) {
+  protoOf(Companion_55).make_dl7d9q_k$ = function (text, font, opts) {
     // Inline function 'org.jetbrains.skia.impl.use' call
-    var tmp0_use = Companion_getInstance_75().makeShapeDontWrapOrReorder_8z25ai_k$();
+    var this_0 = Companion_getInstance_75().makeShapeDontWrapOrReorder_8z25ai_k$();
     var tmp;
     try {
       // Inline function 'org.jetbrains.skia.Companion.make.<anonymous>' call
-      tmp = tmp0_use.shapeLine_jhrhlk_k$(text, font, ensureNotNull(opts));
+      tmp = this_0.shapeLine_obeq7i_k$(text, font, ensureNotNull(opts));
     }finally {
-      tmp0_use.close_ymq55z_k$();
+      this_0.close_yn9xrc_k$();
     }
     return tmp;
   };
@@ -16814,7 +16711,7 @@
     Managed.call(this, ptr, _FinalizerHolder_getInstance_17().PTR_1);
   }
   protoOf(TextLine).get_ascent_b435cz_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_TextLine__1nGetAscent(this.get__ptr_wohp4o_k$());
@@ -16824,7 +16721,7 @@
     return tmp;
   };
   protoOf(TextLine).get_capHeight_wysicw_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_TextLine__1nGetCapHeight(this.get__ptr_wohp4o_k$());
@@ -16834,7 +16731,7 @@
     return tmp;
   };
   protoOf(TextLine).get_xHeight_mi1wba_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_TextLine__1nGetXHeight(this.get__ptr_wohp4o_k$());
@@ -16844,7 +16741,7 @@
     return tmp;
   };
   protoOf(TextLine).get_descent_r0gq8h_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_TextLine__1nGetDescent(this.get__ptr_wohp4o_k$());
@@ -16854,7 +16751,7 @@
     return tmp;
   };
   protoOf(TextLine).get_leading_23jbbx_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_TextLine__1nGetLeading(this.get__ptr_wohp4o_k$());
@@ -16864,7 +16761,7 @@
     return tmp;
   };
   protoOf(TextLine).get_width_j0q4yl_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_TextLine__1nGetWidth(this.get__ptr_wohp4o_k$());
@@ -16874,7 +16771,7 @@
     return tmp;
   };
   protoOf(TextLine).get_height_e7t92o_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_TextLine__1nGetHeight(this.get__ptr_wohp4o_k$());
@@ -16884,7 +16781,7 @@
     return tmp;
   };
   protoOf(TextLine).get_textBlob_mmbepf_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       var res = org_jetbrains_skia_TextLine__1nGetTextBlob(this.get__ptr_wohp4o_k$());
@@ -16895,40 +16792,40 @@
     return tmp;
   };
   protoOf(TextLine).get_glyphs_duwlao_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       var length = this.get_glyphsLength_ec2622_k$();
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Int16Array(length);
+      var result = new Int16Array(length);
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_jyz6vk_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_c5u4tv_k$(result);
           // Inline function 'org.jetbrains.skia.TextLine.<get-glyphs>.<anonymous>' call
           org_jetbrains_skia_TextLine__1nGetGlyphs(this.get__ptr_wohp4o_k$(), handle, length);
-          tmp0_anonymous.fromInterop_fargm_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_awvpm7_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = tmp0_withResult;
+      tmp = result;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
   protoOf(TextLine).get_glyphsLength_ec2622_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_TextLine__1nGetGlyphsLength(this.get__ptr_wohp4o_k$());
@@ -16938,175 +16835,175 @@
     return tmp;
   };
   protoOf(TextLine).get_positions_ya7scf_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Float32Array(imul(this.get_glyphsLength_ec2622_k$(), 2));
+      var result = new Float32Array(imul(this.get_glyphsLength_ec2622_k$(), 2));
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.TextLine.<get-positions>.<anonymous>' call
           org_jetbrains_skia_TextLine__1nGetPositions(this.get__ptr_wohp4o_k$(), handle);
-          tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = tmp0_withResult;
+      tmp = result;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
   protoOf(TextLine).get_runPositions_qaj5go_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Float32Array(org_jetbrains_skia_TextLine__1nGetRunPositionsCount(this.get__ptr_wohp4o_k$()));
+      var result = new Float32Array(org_jetbrains_skia_TextLine__1nGetRunPositionsCount(this.get__ptr_wohp4o_k$()));
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.TextLine.<get-runPositions>.<anonymous>' call
           org_jetbrains_skia_TextLine__1nGetRunPositions(this.get__ptr_wohp4o_k$(), handle);
-          tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = tmp0_withResult;
+      tmp = result;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
   protoOf(TextLine).get_breakPositions_urk158_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Float32Array(org_jetbrains_skia_TextLine__1nGetBreakPositionsCount(this.get__ptr_wohp4o_k$()));
+      var result = new Float32Array(org_jetbrains_skia_TextLine__1nGetBreakPositionsCount(this.get__ptr_wohp4o_k$()));
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.TextLine.<get-breakPositions>.<anonymous>' call
           org_jetbrains_skia_TextLine__1nGetBreakPositions(this.get__ptr_wohp4o_k$(), handle);
-          tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = tmp0_withResult;
+      tmp = result;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
   protoOf(TextLine).get_breakOffsets_mit1fu_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Int32Array(org_jetbrains_skia_TextLine__1nGetBreakOffsetsCount(this.get__ptr_wohp4o_k$()));
+      var result = new Int32Array(org_jetbrains_skia_TextLine__1nGetBreakOffsetsCount(this.get__ptr_wohp4o_k$()));
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
           // Inline function 'org.jetbrains.skia.TextLine.<get-breakOffsets>.<anonymous>' call
           org_jetbrains_skia_TextLine__1nGetBreakOffsets(this.get__ptr_wohp4o_k$(), handle);
-          tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      tmp = tmp0_withResult;
+      tmp = result;
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextLine).getOffsetAtCoord_1rk5at_k$ = function (x) {
+  protoOf(TextLine).getOffsetAtCoord_wppzvl_k$ = function (x) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_TextLine__1nGetOffsetAtCoord(this.get__ptr_wohp4o_k$(), x);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextLine).getLeftOffsetAtCoord_mprb9g_k$ = function (x) {
+  protoOf(TextLine).getLeftOffsetAtCoord_21zc1m_k$ = function (x) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_TextLine__1nGetLeftOffsetAtCoord(this.get__ptr_wohp4o_k$(), x);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextLine).getCoordAtOffset_74crok_k$ = function (offset) {
+  protoOf(TextLine).getCoordAtOffset_yqenjn_k$ = function (offset) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_TextLine__1nGetCoordAtOffset(this.get__ptr_wohp4o_k$(), offset);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextLine).getIntercepts_dx1aef_k$ = function (lowerBound, upperBound) {
-    return this.getIntercepts_8ivqkl_k$(lowerBound, upperBound, null);
+  protoOf(TextLine).getIntercepts_ftg7t_k$ = function (lowerBound, upperBound) {
+    return this.getIntercepts_m53fn9_k$(lowerBound, upperBound, null);
   };
-  protoOf(TextLine).getIntercepts_8ivqkl_k$ = function (lowerBound, upperBound, paint) {
+  protoOf(TextLine).getIntercepts_m53fn9_k$ = function (lowerBound, upperBound, paint) {
     try {
       // Inline function 'org.jetbrains.skia.impl.use' call
-      var tmp0_use = ensureNotNull(this.get_textBlob_mmbepf_k$());
+      var this_0 = ensureNotNull(this.get_textBlob_mmbepf_k$());
       var tmp;
       try {
-        return tmp0_use.getIntercepts_8ivqkl_k$(lowerBound, upperBound, paint);
+        return this_0.getIntercepts_m53fn9_k$(lowerBound, upperBound, paint);
       }finally {
-        tmp0_use.close_ymq55z_k$();
+        this_0.close_yn9xrc_k$();
       }
     }finally {
       reachabilityBarrier(this);
@@ -17115,14 +17012,14 @@
   };
   function Companion_56() {
     Companion_instance_56 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   protoOf(Companion_56).makeDefault_o5l1fx_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new Typeface(org_jetbrains_skia_Typeface__1nMakeDefault());
   };
-  protoOf(Companion_56).makeFromName_merbzs_k$ = function (name, style) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Companion_56).makeFromName_qvvozr_k$ = function (name, style) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp$ret$1;
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -17130,23 +17027,23 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.Companion.makeFromName.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        tmp$ret$1 = new Typeface(org_jetbrains_skia_Typeface__1nMakeFromName(tmp0_anonymous.toInterop_tozece_k$(name), style.get__value_a7m5q3_k$()));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        tmp$ret$1 = new Typeface(org_jetbrains_skia_Typeface__1nMakeFromName($this$interopScope.toInterop_ok8jph_k$(name), style.get__value_a7m5q3_k$()));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return tmp$ret$1;
   };
-  protoOf(Companion_56).makeFromData_fzcgi0_k$ = function (data, index) {
+  protoOf(Companion_56).makeFromData_4x66rt_k$ = function (data, index) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_Typeface__1nMakeFromData(getPtr(data), index);
       // Inline function 'kotlin.require' call
       // Inline function 'kotlin.contracts.contract' call
@@ -17161,9 +17058,9 @@
     }
     return tmp;
   };
-  protoOf(Companion_56).makeFromData$default_20w6fo_k$ = function (data, index, $super) {
+  protoOf(Companion_56).makeFromData$default_spx7a0_k$ = function (data, index, $super) {
     index = index === VOID ? 0 : index;
-    return $super === VOID ? this.makeFromData_fzcgi0_k$(data, index) : $super.makeFromData_fzcgi0_k$.call(this, data, index);
+    return $super === VOID ? this.makeFromData_4x66rt_k$(data, index) : $super.makeFromData_4x66rt_k$.call(this, data, index);
   };
   var Companion_instance_56;
   function Companion_getInstance_57() {
@@ -17184,7 +17081,7 @@
   protoOf(Typeface).get_fontStyle_h4vaiv_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = FontStyle_init_$Create$_0(org_jetbrains_skia_Typeface__1nGetFontStyle(this.get__ptr_wohp4o_k$()));
     }finally {
       reachabilityBarrier(this);
@@ -17200,7 +17097,7 @@
   protoOf(Typeface).get_isFixedPitch_2kf2yp_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Typeface__1nIsFixedPitch(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -17210,58 +17107,52 @@
   protoOf(Typeface).get_variations_8uga4p_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var count = org_jetbrains_skia_Typeface__1nGetVariationsCount(this.get__ptr_wohp4o_k$());
       var tmp_0;
       if (count > 0) {
         // Inline function 'org.jetbrains.skia.impl.withResult' call
-        var tmp0_withResult = new Int32Array(imul(count, 2));
+        var result = new Int32Array(imul(count, 2));
         $l$block: {
           // Inline function 'org.jetbrains.skia.impl.interopScope' call
           try {
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-            var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-            var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
+            var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
             // Inline function 'org.jetbrains.skia.Typeface.<get-variations>.<anonymous>' call
             org_jetbrains_skia_Typeface__1nGetVariations(this.get__ptr_wohp4o_k$(), handle, count);
-            tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+            $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
-        var variationsData = tmp0_withResult;
+        var variationsData = result;
         // Inline function 'kotlin.collections.toTypedArray' call
         // Inline function 'kotlin.collections.map' call
-        var tmp1_map = until(0, count);
+        var this_0 = until(0, count);
         // Inline function 'kotlin.collections.mapTo' call
-        var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp1_map, 10));
-        var inductionVariable = tmp1_map.get_first_irdx8n_k$();
-        var last = tmp1_map.get_last_wopotb_k$();
-        if (inductionVariable <= last)
-          do {
-            var item = inductionVariable;
-            inductionVariable = inductionVariable + 1 | 0;
-            var tmp$ret$4;
-            // Inline function 'org.jetbrains.skia.Typeface.<get-variations>.<anonymous>' call
-            var j = imul(2, item);
-            var tmp_1 = variationsData[j];
-            var tmp$ret$3;
-            // Inline function 'kotlin.fromBits' call
-            FloatCompanionObject_getInstance();
-            var tmp1_fromBits = variationsData[j + 1 | 0];
-            tmp$ret$3 = floatFromBits(tmp1_fromBits);
-            tmp$ret$4 = new FontVariation(tmp_1, tmp$ret$3);
-            tmp0_mapTo.add_1j60pz_k$(tmp$ret$4);
-          }
-           while (!(item === last));
-        tmp_0 = copyToArray(tmp0_mapTo);
+        var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+        var tmp0_iterator = this_0.iterator_jk1svi_k$();
+        while (tmp0_iterator.hasNext_bitz1p_k$()) {
+          var item = tmp0_iterator.next_20eer_k$();
+          // Inline function 'org.jetbrains.skia.Typeface.<get-variations>.<anonymous>' call
+          var j = imul(2, item);
+          var tmp_1 = variationsData[j];
+          // Inline function 'kotlin.fromBits' call
+          FloatCompanionObject_getInstance();
+          var bits = variationsData[j + 1 | 0];
+          var tmp$ret$3 = floatFromBits(bits);
+          var tmp$ret$4 = new FontVariation(tmp_1, tmp$ret$3);
+          destination.add_utx5q5_k$(tmp$ret$4);
+        }
+        tmp_0 = copyToArray(destination);
       } else {
         tmp_0 = null;
       }
@@ -17274,68 +17165,62 @@
   protoOf(Typeface).get_variationAxes_3em8j3_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var axisCount = org_jetbrains_skia_Typeface__1nGetVariationAxesCount(this.get__ptr_wohp4o_k$());
       var tmp_0;
       if (axisCount <= 0) {
         tmp_0 = null;
       } else {
         // Inline function 'org.jetbrains.skia.impl.withResult' call
-        var tmp0_withResult = new Int32Array(imul(axisCount, 5));
+        var result = new Int32Array(imul(axisCount, 5));
         $l$block: {
           // Inline function 'org.jetbrains.skia.impl.interopScope' call
           try {
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-            var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-            var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
+            var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
             // Inline function 'org.jetbrains.skia.Typeface.<get-variationAxes>.<anonymous>' call
             org_jetbrains_skia_Typeface__1nGetVariationAxes(this.get__ptr_wohp4o_k$(), handle, axisCount);
-            tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+            $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
-        var axisData = tmp0_withResult;
+        var axisData = result;
         // Inline function 'kotlin.collections.toTypedArray' call
         // Inline function 'kotlin.collections.map' call
-        var tmp1_map = until(0, axisCount);
+        var this_0 = until(0, axisCount);
         // Inline function 'kotlin.collections.mapTo' call
-        var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp1_map, 10));
-        var inductionVariable = tmp1_map.get_first_irdx8n_k$();
-        var last = tmp1_map.get_last_wopotb_k$();
-        if (inductionVariable <= last)
-          do {
-            var item = inductionVariable;
-            inductionVariable = inductionVariable + 1 | 0;
-            var tmp$ret$6;
-            // Inline function 'org.jetbrains.skia.Typeface.<get-variationAxes>.<anonymous>' call
-            var j = imul(5, item);
-            var tmp_1 = axisData[j];
-            // Inline function 'kotlin.fromBits' call
-            FloatCompanionObject_getInstance();
-            var tmp1_fromBits = axisData[j + 1 | 0];
-            var tmp_2 = floatFromBits(tmp1_fromBits);
-            // Inline function 'kotlin.fromBits' call
-            FloatCompanionObject_getInstance();
-            var tmp3_fromBits = axisData[j + 2 | 0];
-            var tmp_3 = floatFromBits(tmp3_fromBits);
-            var tmp$ret$5;
-            // Inline function 'kotlin.fromBits' call
-            FloatCompanionObject_getInstance();
-            var tmp5_fromBits = axisData[j + 3 | 0];
-            tmp$ret$5 = floatFromBits(tmp5_fromBits);
-            tmp$ret$6 = new FontVariationAxis(tmp_1, tmp_2, tmp_3, tmp$ret$5, !(axisData[j + 4 | 0] === 0));
-            tmp0_mapTo.add_1j60pz_k$(tmp$ret$6);
-          }
-           while (!(item === last));
-        tmp_0 = copyToArray(tmp0_mapTo);
+        var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+        var tmp0_iterator = this_0.iterator_jk1svi_k$();
+        while (tmp0_iterator.hasNext_bitz1p_k$()) {
+          var item = tmp0_iterator.next_20eer_k$();
+          // Inline function 'org.jetbrains.skia.Typeface.<get-variationAxes>.<anonymous>' call
+          var j = imul(5, item);
+          var tmp_1 = axisData[j];
+          // Inline function 'kotlin.fromBits' call
+          FloatCompanionObject_getInstance();
+          var bits = axisData[j + 1 | 0];
+          var tmp_2 = floatFromBits(bits);
+          // Inline function 'kotlin.fromBits' call
+          FloatCompanionObject_getInstance();
+          var bits_0 = axisData[j + 2 | 0];
+          var tmp_3 = floatFromBits(bits_0);
+          // Inline function 'kotlin.fromBits' call
+          FloatCompanionObject_getInstance();
+          var bits_1 = axisData[j + 3 | 0];
+          var tmp$ret$5 = floatFromBits(bits_1);
+          var tmp$ret$6 = new FontVariationAxis(tmp_1, tmp_2, tmp_3, tmp$ret$5, !(axisData[j + 4 | 0] === 0));
+          destination.add_utx5q5_k$(tmp$ret$6);
+        }
+        tmp_0 = copyToArray(destination);
       }
       tmp = tmp_0;
     }finally {
@@ -17346,14 +17231,14 @@
   protoOf(Typeface).get_uniqueId_ycv0d1_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Typeface__1nGetUniqueId(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Typeface).nativeEquals_jj5rbn_k$ = function (other) {
+  protoOf(Typeface).nativeEquals_mxr6i0_k$ = function (other) {
     var tmp;
     try {
       tmp = org_jetbrains_skia_Typeface__1nEquals(this.get__ptr_wohp4o_k$(), getPtr(other));
@@ -17363,32 +17248,31 @@
     }
     return tmp;
   };
-  protoOf(Typeface).makeClone_5ven60_k$ = function (variation) {
-    var tmp$ret$2;
+  protoOf(Typeface).makeClone_adoj06_k$ = function (variation) {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp$ret$2 = [variation];
-    return this.makeClone_lup2t_k$(tmp$ret$2, 0);
+    var tmp$ret$2 = [variation];
+    return this.makeClone_6dxzh2_k$(tmp$ret$2, 0);
   };
-  protoOf(Typeface).makeClone_lup2t_k$ = function (variations, collectionIndex) {
+  protoOf(Typeface).makeClone_6dxzh2_k$ = function (variations, collectionIndex) {
     var tmp;
     try {
       if (variations.length === 0)
         return this;
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'kotlin.collections.flatMap' call
-      var tmp0_flatMap = asList(variations);
       // Inline function 'kotlin.collections.flatMapTo' call
-      var tmp0_flatMapTo = ArrayList_init_$Create$_0();
-      var tmp0_iterator = tmp0_flatMap.iterator_jk1svi_k$();
+      var this_0 = asList(variations);
+      var destination = ArrayList_init_$Create$_0();
+      var tmp0_iterator = this_0.iterator_jk1svi_k$();
       while (tmp0_iterator.hasNext_bitz1p_k$()) {
         var element = tmp0_iterator.next_20eer_k$();
         // Inline function 'org.jetbrains.skia.Typeface.makeClone.<anonymous>' call
         var list = listOf([element.get__tag_wohrms_k$(), toRawBits(element.get_value_j01efc_k$())]);
-        addAll(tmp0_flatMapTo, list);
+        addAll(destination, list);
       }
-      var variationsData = toIntArray(tmp0_flatMapTo);
+      var variationsData = toIntArray(destination);
       var tmp$ret$4;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -17396,14 +17280,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.Typeface.makeClone.<anonymous>' call
-          var tmp1_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$4 = org_jetbrains_skia_Typeface__1nMakeClone(this.get__ptr_wohp4o_k$(), tmp1_anonymous.toInterop_o3s7q3_k$(variationsData), imul(2, variations.length), collectionIndex);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$4 = org_jetbrains_skia_Typeface__1nMakeClone(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_i7skn2_k$(variationsData), imul(2, variations.length), collectionIndex);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -17421,17 +17305,17 @@
     }
     return tmp;
   };
-  protoOf(Typeface).makeClone$default_cngw0c_k$ = function (variations, collectionIndex, $super) {
+  protoOf(Typeface).makeClone$default_6gmwks_k$ = function (variations, collectionIndex, $super) {
     collectionIndex = collectionIndex === VOID ? 0 : collectionIndex;
-    return $super === VOID ? this.makeClone_lup2t_k$(variations, collectionIndex) : $super.makeClone_lup2t_k$.call(this, variations, collectionIndex);
+    return $super === VOID ? this.makeClone_6dxzh2_k$(variations, collectionIndex) : $super.makeClone_6dxzh2_k$.call(this, variations, collectionIndex);
   };
-  protoOf(Typeface).getStringGlyphs_io1x5f_k$ = function (s) {
-    return this.getUTF32Glyphs_ffduj4_k$(intCodePoints(s));
+  protoOf(Typeface).getStringGlyphs_iwygok_k$ = function (s) {
+    return this.getUTF32Glyphs_wjpetp_k$(intCodePoints(s));
   };
-  protoOf(Typeface).getUTF32Glyphs_ffduj4_k$ = function (uni) {
+  protoOf(Typeface).getUTF32Glyphs_wjpetp_k$ = function (uni) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0;
       if (!(uni == null)) {
         $l$block_0: {
@@ -17442,24 +17326,24 @@
             // Inline function 'org.jetbrains.skia.Typeface.getUTF32Glyphs.<anonymous>' call
             _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
             // Inline function 'org.jetbrains.skia.impl.withResult' call
-            var tmp0_withResult = new Int16Array(uni.length);
+            var result = new Int16Array(uni.length);
             $l$block: {
               // Inline function 'org.jetbrains.skia.impl.interopScope' call
               try {
                 var tmp0_0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
                 _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0_0 + 1 | 0);
                 // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-                var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-                var handle = tmp0_anonymous.toInteropForResult_jyz6vk_k$(tmp0_withResult);
+                var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+                var handle = $this$interopScope.toInteropForResult_c5u4tv_k$(result);
                 // Inline function 'org.jetbrains.skia.Typeface.getUTF32Glyphs.<anonymous>.<anonymous>' call
-                org_jetbrains_skia_Typeface__1nGetUTF32Glyphs(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_o3s7q3_k$(uni), uni.length, handle);
-                tmp0_anonymous.fromInterop_fargm_k$(handle, tmp0_withResult);
+                org_jetbrains_skia_Typeface__1nGetUTF32Glyphs(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_i7skn2_k$(uni), uni.length, handle);
+                $this$interopScope.fromInterop_awvpm7_k$(handle, result);
                 break $l$block;
               }finally {
                 var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
                 _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
                 if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-                  _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+                  _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
                 }
               }
             }
@@ -17468,11 +17352,11 @@
             var tmp1_0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1_0 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
-        tmp_0 = tmp0_withResult;
+        tmp_0 = result;
       } else {
         // Inline function 'kotlin.shortArrayOf' call
         tmp_0 = new Int16Array([]);
@@ -17483,10 +17367,10 @@
     }
     return tmp;
   };
-  protoOf(Typeface).getUTF32Glyph_tkgzd1_k$ = function (unichar) {
+  protoOf(Typeface).getUTF32Glyph_sauiec_k$ = function (unichar) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Typeface__1nGetUTF32Glyph(this.get__ptr_wohp4o_k$(), unichar);
     }finally {
       reachabilityBarrier(this);
@@ -17496,7 +17380,7 @@
   protoOf(Typeface).get_glyphsCount_2vwgkh_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Typeface__1nGetGlyphsCount(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -17506,7 +17390,7 @@
   protoOf(Typeface).get_tablesCount_wnl2dd_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Typeface__1nGetTablesCount(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -17516,46 +17400,45 @@
   protoOf(Typeface).get_tableTags_odeheq_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var count = org_jetbrains_skia_Typeface__1nGetTableTagsCount(this.get__ptr_wohp4o_k$());
       var tmp_0;
       if (count > 0) {
         // Inline function 'kotlin.collections.toTypedArray' call
         // Inline function 'kotlin.collections.map' call
         // Inline function 'org.jetbrains.skia.impl.withResult' call
-        var tmp0_withResult = new Int32Array(count);
+        var result = new Int32Array(count);
         $l$block: {
           // Inline function 'org.jetbrains.skia.impl.interopScope' call
           try {
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-            var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-            var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
+            var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
             // Inline function 'org.jetbrains.skia.Typeface.<get-tableTags>.<anonymous>' call
             org_jetbrains_skia_Typeface__1nGetTableTags(this.get__ptr_wohp4o_k$(), handle, count);
-            tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+            $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
-        var tmp1_map = toList_1(tmp0_withResult);
+        var this_0 = toList_1(result);
         // Inline function 'kotlin.collections.mapTo' call
-        var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp1_map, 10));
-        var tmp0_iterator = tmp1_map.iterator_jk1svi_k$();
+        var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+        var tmp0_iterator = this_0.iterator_jk1svi_k$();
         while (tmp0_iterator.hasNext_bitz1p_k$()) {
           var item = tmp0_iterator.next_20eer_k$();
-          var tmp$ret$3;
           // Inline function 'org.jetbrains.skia.Typeface.<get-tableTags>.<anonymous>' call
-          tmp$ret$3 = Companion_getInstance_21().toString_flfcob_k$(item);
-          tmp0_mapTo.add_1j60pz_k$(tmp$ret$3);
+          var tmp$ret$3 = Companion_getInstance_21().toString_w4mr8s_k$(item);
+          destination.add_utx5q5_k$(tmp$ret$3);
         }
-        tmp_0 = copyToArray(tmp0_mapTo);
+        tmp_0 = copyToArray(destination);
       } else {
         // Inline function 'kotlin.emptyArray' call
         tmp_0 = [];
@@ -17566,21 +17449,21 @@
     }
     return tmp;
   };
-  protoOf(Typeface).getTableSize_hdj5xk_k$ = function (tag) {
+  protoOf(Typeface).getTableSize_loqg67_k$ = function (tag) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
-      tmp = org_jetbrains_skia_Typeface__1nGetTableSize(this.get__ptr_wohp4o_k$(), Companion_getInstance_21().fromString_2a1yvu_k$(tag));
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
+      tmp = org_jetbrains_skia_Typeface__1nGetTableSize(this.get__ptr_wohp4o_k$(), Companion_getInstance_21().fromString_g5hge7_k$(tag));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Typeface).getTableData_1uni8x_k$ = function (tag) {
+  protoOf(Typeface).getTableData_z27rfs_k$ = function (tag) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
-      var ptr = org_jetbrains_skia_Typeface__1nGetTableData(this.get__ptr_wohp4o_k$(), Companion_getInstance_21().fromString_2a1yvu_k$(tag));
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
+      var ptr = org_jetbrains_skia_Typeface__1nGetTableData(this.get__ptr_wohp4o_k$(), Companion_getInstance_21().fromString_g5hge7_k$(tag));
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new Data(ptr);
     }finally {
       reachabilityBarrier(this);
@@ -17590,17 +17473,17 @@
   protoOf(Typeface).get_unitsPerEm_uqhaf3_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_Typeface__1nGetUnitsPerEm(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Typeface).getKerningPairAdjustments_8vrltq_k$ = function (glyphs) {
+  protoOf(Typeface).getKerningPairAdjustments_lthlyz_k$ = function (glyphs) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0;
       if (!(glyphs == null)) {
         var tmp_1;
@@ -17608,18 +17491,18 @@
           var tmp$ret$1;
           $l$block: {
             // Inline function 'org.jetbrains.skia.impl.withNullableResult' call
-            var tmp0_withNullableResult = new Int32Array(glyphs.length);
+            var result = new Int32Array(glyphs.length);
             // Inline function 'org.jetbrains.skia.impl.interopScope' call
             try {
               var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
               _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-              var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-              var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withNullableResult);
+              var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+              var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
               var tmp_2;
               // Inline function 'org.jetbrains.skia.Typeface.getKerningPairAdjustments.<anonymous>' call
-              if (org_jetbrains_skia_Typeface__1nGetKerningPairAdjustments(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_30wotu_k$(glyphs), glyphs.length, handle)) {
-                tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withNullableResult);
-                tmp_2 = tmp0_withNullableResult;
+              if (org_jetbrains_skia_Typeface__1nGetKerningPairAdjustments(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_jg6tf3_k$(glyphs), glyphs.length, handle)) {
+                $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
+                tmp_2 = result;
               } else {
                 tmp_2 = null;
               }
@@ -17629,7 +17512,7 @@
               var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
               _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
               if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-                _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+                _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
               }
             }
           }
@@ -17650,7 +17533,7 @@
   protoOf(Typeface).get_familyNames_2vvpd1_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.arrayDecoderScope' call
       var arrayDecoder = null;
       var tmp_0;
@@ -17658,56 +17541,51 @@
         // Inline function 'org.jetbrains.skia.Typeface.<get-familyNames>.<anonymous>' call
         arrayDecoder = new ArrayDecoder(org_jetbrains_skia_Typeface__1nGetFamilyNames(this.get__ptr_wohp4o_k$()), org_jetbrains_skia_ManagedString__1nGetFinalizer());
         // Inline function 'org.jetbrains.skia.Typeface.<get-familyNames>.<anonymous>' call
-        var tmp0_anonymous = arrayDecoder;
-        var size = tmp0_anonymous.get_size_woubt6_k$();
+        var arrayDecoder_0 = arrayDecoder;
+        var size = arrayDecoder_0.get_size_woubt6_k$();
         // Inline function 'kotlin.collections.toTypedArray' call
         // Inline function 'kotlin.collections.map' call
-        var tmp0_map = until(0, size / 2 | 0);
+        var this_0 = until(0, size / 2 | 0);
         // Inline function 'kotlin.collections.mapTo' call
-        var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp0_map, 10));
-        var inductionVariable = tmp0_map.get_first_irdx8n_k$();
-        var last = tmp0_map.get_last_wopotb_k$();
-        if (inductionVariable <= last)
-          do {
-            var item = inductionVariable;
-            inductionVariable = inductionVariable + 1 | 0;
-            var tmp$ret$7;
-            // Inline function 'org.jetbrains.skia.Typeface.<get-familyNames>.<anonymous>.<anonymous>' call
-            // Inline function 'org.jetbrains.skia.impl.withStringResult' call
-            var tmp0_withStringResult = tmp0_anonymous.release_ywerve_k$(imul(2, item));
-            // Inline function 'org.jetbrains.skia.impl.use' call
-            var tmp0_use = new ManagedString(tmp0_withStringResult);
-            var tmp_1;
-            try {
-              // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
-              tmp_1 = tmp0_use.toString();
-            }finally {
-              tmp0_use.close_ymq55z_k$();
-            }
-            var name = tmp_1;
-            // Inline function 'org.jetbrains.skia.impl.withStringResult' call
-            var tmp1_withStringResult = tmp0_anonymous.release_ywerve_k$(imul(2, item) + 1 | 0);
-            // Inline function 'org.jetbrains.skia.impl.use' call
-            var tmp0_use_0 = new ManagedString(tmp1_withStringResult);
-            var tmp_2;
-            try {
-              // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
-              tmp_2 = tmp0_use_0.toString();
-            }finally {
-              tmp0_use_0.close_ymq55z_k$();
-            }
-            var language = tmp_2;
-            tmp$ret$7 = new FontFamilyName(name, language);
-            tmp0_mapTo.add_1j60pz_k$(tmp$ret$7);
+        var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+        var tmp0_iterator = this_0.iterator_jk1svi_k$();
+        while (tmp0_iterator.hasNext_bitz1p_k$()) {
+          var item = tmp0_iterator.next_20eer_k$();
+          // Inline function 'org.jetbrains.skia.Typeface.<get-familyNames>.<anonymous>.<anonymous>' call
+          // Inline function 'org.jetbrains.skia.impl.withStringResult' call
+          var pointer = arrayDecoder_0.release_fo34vl_k$(imul(2, item));
+          // Inline function 'org.jetbrains.skia.impl.use' call
+          var this_1 = new ManagedString(pointer);
+          var tmp_1;
+          try {
+            // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
+            tmp_1 = this_1.toString();
+          }finally {
+            this_1.close_yn9xrc_k$();
           }
-           while (!(item === last));
-        tmp_0 = copyToArray(tmp0_mapTo);
+          var name = tmp_1;
+          // Inline function 'org.jetbrains.skia.impl.withStringResult' call
+          var pointer_0 = arrayDecoder_0.release_fo34vl_k$(imul(2, item) + 1 | 0);
+          // Inline function 'org.jetbrains.skia.impl.use' call
+          var this_2 = new ManagedString(pointer_0);
+          var tmp_2;
+          try {
+            // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
+            tmp_2 = this_2.toString();
+          }finally {
+            this_2.close_yn9xrc_k$();
+          }
+          var language = tmp_2;
+          var tmp$ret$7 = new FontFamilyName(name, language);
+          destination.add_utx5q5_k$(tmp$ret$7);
+        }
+        tmp_0 = copyToArray(destination);
       }finally {
         var tmp0_safe_receiver = arrayDecoder;
         if (tmp0_safe_receiver == null)
           null;
         else {
-          tmp0_safe_receiver.dispose_3n44we_k$();
+          tmp0_safe_receiver.dispose_3nnxhr_k$();
         }
       }
       tmp = tmp_0;
@@ -17719,19 +17597,18 @@
   protoOf(Typeface).get_familyName_6ytaaw_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withStringResult' call
       // Inline function 'org.jetbrains.skia.impl.use' call
-      var tmp$ret$0;
       // Inline function 'org.jetbrains.skia.Typeface.<get-familyName>.<anonymous>' call
-      tmp$ret$0 = org_jetbrains_skia_Typeface__1nGetFamilyName(this.get__ptr_wohp4o_k$());
-      var tmp0_use = new ManagedString(tmp$ret$0);
+      var tmp$ret$0 = org_jetbrains_skia_Typeface__1nGetFamilyName(this.get__ptr_wohp4o_k$());
+      var this_0 = new ManagedString(tmp$ret$0);
       var tmp_0;
       try {
         // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
-        tmp_0 = tmp0_use.toString();
+        tmp_0 = this_0.toString();
       }finally {
-        tmp0_use.close_ymq55z_k$();
+        this_0.close_yn9xrc_k$();
       }
       tmp = tmp_0;
     }finally {
@@ -17742,9 +17619,9 @@
   protoOf(Typeface).get_bounds_bj99ku_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_47();
-      tmp = tmp_0.fromInteropPointer_26ocmq_k$(Typeface$_get_bounds_$lambda_1n9k94(this));
+      tmp = tmp_0.fromInteropPointer_2qty6v_k$(Typeface$_get_bounds_$lambda_1n9k94(this));
     }finally {
       reachabilityBarrier(this);
     }
@@ -17755,7 +17632,7 @@
   };
   function Companion_57() {
     Companion_instance_57 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_57;
   function Companion_getInstance_58() {
@@ -17796,7 +17673,7 @@
         return VertexMode_TRIANGLE_FAN_getInstance();
       default:
         VertexMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -17826,7 +17703,7 @@
   }
   function CharDirection() {
     CharDirection_instance = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
     this.LEFT_TO_RIGHT_1 = 0;
     this.RIGHT_TO_LEFT_1 = 1;
     this.EUROPEAN_NUMBER_1 = 2;
@@ -17920,7 +17797,7 @@
   protoOf(CharDirection).get_POP_DIRECTIONAL_ISOLATE_hxcyqp_k$ = function () {
     return this.POP_DIRECTIONAL_ISOLATE_1;
   };
-  protoOf(CharDirection).of_h0dvii_k$ = function (codePoint) {
+  protoOf(CharDirection).of_xanmn3_k$ = function (codePoint) {
     return org_jetbrains_skia_icu_Unicode_charDirection(codePoint);
   };
   var CharDirection_instance;
@@ -17934,7 +17811,7 @@
     try {
       tmp = block(_this__u8e3s4);
     }finally {
-      _this__u8e3s4.close_ymq55z_k$();
+      _this__u8e3s4.close_yn9xrc_k$();
     }
     return tmp;
   }
@@ -17947,16 +17824,16 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(result);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_2qtlsq_k$(handle, result);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -17973,16 +17850,16 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_w0sqdc_k$(result);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_mlzk42_k$(handle, result);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_toi1ab_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_40e3wn_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -17995,16 +17872,16 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(result);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_26ac9l_k$(handle, result);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -18012,25 +17889,25 @@
   }
   function withStringResult(pointer) {
     // Inline function 'org.jetbrains.skia.impl.use' call
-    var tmp0_use = new ManagedString(pointer);
+    var this_0 = new ManagedString(pointer);
     var tmp;
     try {
       // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
-      tmp = tmp0_use.toString();
+      tmp = this_0.toString();
     }finally {
-      tmp0_use.close_ymq55z_k$();
+      this_0.close_yn9xrc_k$();
     }
     return tmp;
   }
   function withStringResult_0(block) {
     // Inline function 'org.jetbrains.skia.impl.use' call
-    var tmp0_use = new ManagedString(block());
+    var this_0 = new ManagedString(block());
     var tmp;
     try {
       // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
-      tmp = tmp0_use.toString();
+      tmp = this_0.toString();
     }finally {
-      tmp0_use.close_ymq55z_k$();
+      this_0.close_yn9xrc_k$();
     }
     return tmp;
   }
@@ -18041,16 +17918,16 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_jyz6vk_k$(result);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_fargm_k$(handle, result);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_c5u4tv_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_awvpm7_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -18061,11 +17938,11 @@
     try {
       var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
       _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-      var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-      var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(result);
+      var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+      var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
       var tmp;
-      if (block(tmp0_anonymous, handle)) {
-        tmp0_anonymous.fromInterop_26ac9l_k$(handle, result);
+      if (block($this$interopScope, handle)) {
+        $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
         tmp = result;
       } else {
         tmp = null;
@@ -18075,7 +17952,7 @@
       var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
       _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
       if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-        _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+        _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
       }
     }
   }
@@ -18087,12 +17964,12 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withNullableResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(result);
-        var blockResult = block(tmp0_anonymous, handle);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
+        var blockResult = block($this$interopScope, handle);
         var tmp;
         if (blockResult) {
-          tmp0_anonymous.fromInterop_2qtlsq_k$(handle, result);
+          $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
           tmp = result;
         } else {
           tmp = null;
@@ -18103,7 +17980,7 @@
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -18116,16 +17993,16 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_7cceht_k$(result);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_pg4kur_k$(handle, result);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_nw6uau_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_phusho_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -18148,7 +18025,7 @@
         return Affinity_DOWNSTREAM_getInstance();
       default:
         Affinity_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -18196,7 +18073,7 @@
         return Alignment_END_getInstance();
       default:
         Alignment_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -18252,7 +18129,7 @@
         return BaselineMode_IDEOGRAPHIC_getInstance();
       default:
         BaselineMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -18297,7 +18174,7 @@
         return DecorationLineStyle_WAVY_getInstance();
       default:
         DecorationLineStyle_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -18435,50 +18312,50 @@
   protoOf(DecorationStyle).toString = function () {
     return 'DecorationStyle(_underline=' + this._underline_1 + ', _overline=' + this._overline_1 + ', _lineThrough=' + this._lineThrough_1 + ', _gaps=' + this._gaps_1 + ', _color=' + this.color_1 + ', _lineStyle=' + this.get_lineStyle_ldebnw_k$() + ', _thicknessMultiplier=' + this.thicknessMultiplier_1 + ')';
   };
-  protoOf(DecorationStyle).withUnderline_lktv70_k$ = function (_underline) {
+  protoOf(DecorationStyle).withUnderline_rq7lj3_k$ = function (_underline) {
     return this._underline_1 === _underline ? this : new DecorationStyle(_underline, this._overline_1, this._lineThrough_1, this._gaps_1, this.color_1, this._lineStyle_1, this.thicknessMultiplier_1);
   };
-  protoOf(DecorationStyle).withOverline_d0tln0_k$ = function (_overline) {
+  protoOf(DecorationStyle).withOverline_dxcw53_k$ = function (_overline) {
     return this._overline_1 === _overline ? this : new DecorationStyle(this._underline_1, _overline, this._lineThrough_1, this._gaps_1, this.color_1, this._lineStyle_1, this.thicknessMultiplier_1);
   };
-  protoOf(DecorationStyle).withLineThrough_4b4cs1_k$ = function (_lineThrough) {
+  protoOf(DecorationStyle).withLineThrough_nox3zu_k$ = function (_lineThrough) {
     return this._lineThrough_1 === _lineThrough ? this : new DecorationStyle(this._underline_1, this._overline_1, _lineThrough, this._gaps_1, this.color_1, this._lineStyle_1, this.thicknessMultiplier_1);
   };
-  protoOf(DecorationStyle).withGaps_3yzq8n_k$ = function (_gaps) {
+  protoOf(DecorationStyle).withGaps_ob5f42_k$ = function (_gaps) {
     return this._gaps_1 === _gaps ? this : new DecorationStyle(this._underline_1, this._overline_1, this._lineThrough_1, _gaps, this.color_1, this._lineStyle_1, this.thicknessMultiplier_1);
   };
-  protoOf(DecorationStyle).withColor_hjwdi4_k$ = function (_color) {
+  protoOf(DecorationStyle).withColor_ud15rv_k$ = function (_color) {
     return this.color_1 === _color ? this : new DecorationStyle(this._underline_1, this._overline_1, this._lineThrough_1, this._gaps_1, _color, this._lineStyle_1, this.thicknessMultiplier_1);
   };
-  protoOf(DecorationStyle).withLineStyle_83j2c9_k$ = function (_lineStyle) {
+  protoOf(DecorationStyle).withLineStyle_fczwvp_k$ = function (_lineStyle) {
     return this._lineStyle_1 === _lineStyle ? this : new DecorationStyle(this._underline_1, this._overline_1, this._lineThrough_1, this._gaps_1, this.color_1, _lineStyle, this.thicknessMultiplier_1);
   };
-  protoOf(DecorationStyle).withThicknessMultiplier_ixhb4v_k$ = function (_thicknessMultiplier) {
+  protoOf(DecorationStyle).withThicknessMultiplier_al4mfr_k$ = function (_thicknessMultiplier) {
     return this.thicknessMultiplier_1 === _thicknessMultiplier ? this : new DecorationStyle(this._underline_1, this._overline_1, this._lineThrough_1, this._gaps_1, this.color_1, this._lineStyle_1, _thicknessMultiplier);
   };
   function fromInteropPointer_1(_this__u8e3s4, block) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Int32Array(4);
+    var result = new Int32Array(4);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    return fromRawData_0(_this__u8e3s4, tmp0_withResult);
+    return fromRawData_0(_this__u8e3s4, result);
   }
   function fromRawData_0(_this__u8e3s4, rawData) {
     var decorationStyleFlags = rawData[0];
@@ -18488,11 +18365,10 @@
     var tmp_2 = (decorationStyleFlags >> 3 & 1) === 1;
     var tmp_3 = rawData[1];
     var tmp_4 = rawData[2];
-    var tmp$ret$0;
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp1_fromBits = rawData[3];
-    tmp$ret$0 = floatFromBits(tmp1_fromBits);
+    var bits = rawData[3];
+    var tmp$ret$0 = floatFromBits(bits);
     return DecorationStyle_init_$Create$(tmp, tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp$ret$0);
   }
   var Direction_RTL_instance;
@@ -18508,7 +18384,7 @@
         return Direction_LTR_getInstance();
       default:
         Direction_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -18533,7 +18409,7 @@
   }
   function Companion_59() {
     Companion_instance_59 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_59;
   function Companion_getInstance_60() {
@@ -18543,7 +18419,7 @@
   }
   function FontCollection_init_$Init$($this) {
     FontCollection.call($this, org_jetbrains_skia_paragraph_FontCollection__1nMake());
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return $this;
   }
   function FontCollection_init_$Create$() {
@@ -18556,17 +18432,17 @@
   protoOf(FontCollection).get_fontManagersCount_ns6lin_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_FontCollection__1nGetFontManagersCount(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(FontCollection).setAssetFontManager_nxzdib_k$ = function (fontMgr) {
+  protoOf(FontCollection).setAssetFontManager_9z4eus_k$ = function (fontMgr) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_FontCollection__1nSetAssetFontManager(this.get__ptr_wohp4o_k$(), getPtr(fontMgr), Companion_getInstance_81().get_NullPointer_8qbg7n_k$());
       tmp = this;
     }finally {
@@ -18575,10 +18451,10 @@
     }
     return tmp;
   };
-  protoOf(FontCollection).setDynamicFontManager_8836oc_k$ = function (fontMgr) {
+  protoOf(FontCollection).setDynamicFontManager_d1lumz_k$ = function (fontMgr) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_FontCollection__1nSetDynamicFontManager(this.get__ptr_wohp4o_k$(), getPtr(fontMgr), Companion_getInstance_81().get_NullPointer_8qbg7n_k$());
       tmp = this;
     }finally {
@@ -18587,10 +18463,10 @@
     }
     return tmp;
   };
-  protoOf(FontCollection).setTestFontManager_9eby5_k$ = function (fontMgr) {
+  protoOf(FontCollection).setTestFontManager_9e1036_k$ = function (fontMgr) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_FontCollection__1nSetTestFontManager(this.get__ptr_wohp4o_k$(), getPtr(fontMgr), Companion_getInstance_81().get_NullPointer_8qbg7n_k$());
       tmp = this;
     }finally {
@@ -18599,26 +18475,26 @@
     }
     return tmp;
   };
-  protoOf(FontCollection).setDefaultFontManager_qraotu_k$ = function (fontMgr) {
-    return this.setDefaultFontManager_pwsnbm_k$(fontMgr, null);
+  protoOf(FontCollection).setDefaultFontManager_gweqxp_k$ = function (fontMgr) {
+    return this.setDefaultFontManager_ds6cba_k$(fontMgr, null);
   };
-  protoOf(FontCollection).setDefaultFontManager_pwsnbm_k$ = function (fontMgr, defaultFamilyName) {
+  protoOf(FontCollection).setDefaultFontManager_ds6cba_k$ = function (fontMgr, defaultFamilyName) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_paragraph_FontCollection__1nSetDefaultFontManager(this.get__ptr_wohp4o_k$(), getPtr(fontMgr), tmp0_anonymous.toInterop_tozece_k$(defaultFamilyName));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_paragraph_FontCollection__1nSetDefaultFontManager(this.get__ptr_wohp4o_k$(), getPtr(fontMgr), $this$interopScope.toInterop_ok8jph_k$(defaultFamilyName));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -18632,7 +18508,7 @@
   protoOf(FontCollection).get_fallbackManager_kkmum6_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_paragraph_FontCollection__1nGetFallbackManager(this.get__ptr_wohp4o_k$());
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : FontMgr_init_$Create$(ptr);
     }finally {
@@ -18640,10 +18516,10 @@
     }
     return tmp;
   };
-  protoOf(FontCollection).findTypefaces_6egsg0_k$ = function (familyNames, style) {
+  protoOf(FontCollection).findTypefaces_448rqd_k$ = function (familyNames, style) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.arrayDecoderScope' call
       var arrayDecoder = null;
       var tmp_0;
@@ -18656,9 +18532,9 @@
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.paragraph.FontCollection.findTypefaces.<anonymous>.<anonymous>' call
-            var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
             var tmp_1 = this.get__ptr_wohp4o_k$();
-            var tmp_2 = tmp0_anonymous.toInterop_59fj22_k$(familyNames);
+            var tmp_2 = $this$interopScope.toInterop_2ejn5p_k$(familyNames);
             var tmp1_elvis_lhs = familyNames == null ? null : familyNames.length;
             tmp$ret$1 = org_jetbrains_skia_paragraph_FontCollection__1nFindTypefaces(tmp_1, tmp_2, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, style.get__value_a7m5q3_k$());
             break $l$block;
@@ -18666,37 +18542,32 @@
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
         arrayDecoder = new ArrayDecoder(tmp$ret$1, org_jetbrains_skia_impl_RefCnt__getFinalizer());
         // Inline function 'org.jetbrains.skia.paragraph.FontCollection.findTypefaces.<anonymous>' call
-        var tmp0_anonymous_0 = arrayDecoder;
+        var arrayDecoder_0 = arrayDecoder;
         // Inline function 'kotlin.collections.toTypedArray' call
         // Inline function 'kotlin.collections.map' call
-        var tmp0_map = until(0, tmp0_anonymous_0.get_size_woubt6_k$());
+        var this_0 = until(0, arrayDecoder_0.get_size_woubt6_k$());
         // Inline function 'kotlin.collections.mapTo' call
-        var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp0_map, 10));
-        var inductionVariable = tmp0_map.get_first_irdx8n_k$();
-        var last = tmp0_map.get_last_wopotb_k$();
-        if (inductionVariable <= last)
-          do {
-            var item = inductionVariable;
-            inductionVariable = inductionVariable + 1 | 0;
-            var tmp$ret$3;
-            // Inline function 'org.jetbrains.skia.paragraph.FontCollection.findTypefaces.<anonymous>.<anonymous>' call
-            tmp$ret$3 = new Typeface(tmp0_anonymous_0.release_ywerve_k$(item));
-            tmp0_mapTo.add_1j60pz_k$(tmp$ret$3);
-          }
-           while (!(item === last));
-        tmp_0 = copyToArray(tmp0_mapTo);
+        var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+        var tmp0_iterator = this_0.iterator_jk1svi_k$();
+        while (tmp0_iterator.hasNext_bitz1p_k$()) {
+          var item = tmp0_iterator.next_20eer_k$();
+          // Inline function 'org.jetbrains.skia.paragraph.FontCollection.findTypefaces.<anonymous>.<anonymous>' call
+          var tmp$ret$3 = new Typeface(arrayDecoder_0.release_fo34vl_k$(item));
+          destination.add_utx5q5_k$(tmp$ret$3);
+        }
+        tmp_0 = copyToArray(destination);
       }finally {
         var tmp0_safe_receiver = arrayDecoder;
         if (tmp0_safe_receiver == null)
           null;
         else {
-          tmp0_safe_receiver.dispose_3n44we_k$();
+          tmp0_safe_receiver.dispose_3nnxhr_k$();
         }
       }
       tmp = tmp_0;
@@ -18705,10 +18576,10 @@
     }
     return tmp;
   };
-  protoOf(FontCollection).defaultFallback_r8t3s7_k$ = function (unicode, style, locale) {
+  protoOf(FontCollection).defaultFallback_cwm3d7_k$ = function (unicode, style, locale) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp$ret$1;
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
@@ -18716,14 +18587,14 @@
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.paragraph.FontCollection.defaultFallback.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          tmp$ret$1 = org_jetbrains_skia_paragraph_FontCollection__1nDefaultFallbackChar(this.get__ptr_wohp4o_k$(), unicode, style.get__value_a7m5q3_k$(), tmp0_anonymous.toInterop_tozece_k$(locale));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          tmp$ret$1 = org_jetbrains_skia_paragraph_FontCollection__1nDefaultFallbackChar(this.get__ptr_wohp4o_k$(), unicode, style.get__value_a7m5q3_k$(), $this$interopScope.toInterop_ok8jph_k$(locale));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -18737,7 +18608,7 @@
   protoOf(FontCollection).defaultFallback_pe9zul_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_paragraph_FontCollection__1nDefaultFallback(this.get__ptr_wohp4o_k$());
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new Typeface(ptr);
     }finally {
@@ -18745,15 +18616,15 @@
     }
     return tmp;
   };
-  protoOf(FontCollection).setEnableFallback_r8r2dv_k$ = function (value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(FontCollection).setEnableFallback_j70bgi_k$ = function (value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_FontCollection__1nSetEnableFallback(this.get__ptr_wohp4o_k$(), value);
     return this;
   };
   protoOf(FontCollection).get_paragraphCache_1ypj25_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new ParagraphCache(this, org_jetbrains_skia_paragraph_FontCollection__1nGetParagraphCache(this.get__ptr_wohp4o_k$()));
     }finally {
       reachabilityBarrier(this);
@@ -18783,14 +18654,14 @@
   protoOf(FontRastrSettings).component3_7eebsa_k$ = function () {
     return this.subpixel_1;
   };
-  protoOf(FontRastrSettings).copy_mvcwey_k$ = function (edging, hinting, subpixel) {
+  protoOf(FontRastrSettings).copy_afs7km_k$ = function (edging, hinting, subpixel) {
     return new FontRastrSettings(edging, hinting, subpixel);
   };
-  protoOf(FontRastrSettings).copy$default_o1ehfm_k$ = function (edging, hinting, subpixel, $super) {
+  protoOf(FontRastrSettings).copy$default_1vdn9h_k$ = function (edging, hinting, subpixel, $super) {
     edging = edging === VOID ? this.edging_1 : edging;
     hinting = hinting === VOID ? this.hinting_1 : hinting;
     subpixel = subpixel === VOID ? this.subpixel_1 : subpixel;
-    return $super === VOID ? this.copy_mvcwey_k$(edging, hinting, subpixel) : $super.copy_mvcwey_k$.call(this, edging, hinting, subpixel);
+    return $super === VOID ? this.copy_afs7km_k$(edging, hinting, subpixel) : $super.copy_afs7km_k$.call(this, edging, hinting, subpixel);
   };
   protoOf(FontRastrSettings).toString = function () {
     return 'FontRastrSettings(edging=' + this.edging_1 + ', hinting=' + this.hinting_1 + ', subpixel=' + this.subpixel_1 + ')';
@@ -18798,7 +18669,7 @@
   protoOf(FontRastrSettings).hashCode = function () {
     var result = this.edging_1.hashCode();
     result = imul(result, 31) + this.hinting_1.hashCode() | 0;
-    result = imul(result, 31) + (this.subpixel_1 | 0) | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.subpixel_1) | 0;
     return result;
   };
   protoOf(FontRastrSettings).equals = function (other) {
@@ -18834,7 +18705,7 @@
         return HeightMode_DISABLE_ALL_getInstance();
       default:
         HeightMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -18870,13 +18741,13 @@
   function Companion_60() {
     Companion_instance_60 = this;
   }
-  protoOf(Companion_60).getArraySize_1htf43_k$ = function (array) {
+  protoOf(Companion_60).getArraySize_2xuquk_k$ = function (array) {
     return org_jetbrains_skia_paragraph_LineMetrics__1nGetArraySize(array);
   };
-  protoOf(Companion_60).disposeArray_dwhlai_k$ = function (array) {
+  protoOf(Companion_60).disposeArray_hrrl5a_k$ = function (array) {
     return org_jetbrains_skia_paragraph_LineMetrics__1nDisposeArray(array);
   };
-  protoOf(Companion_60).getArrayElement_2nhq49_k$ = function (array, index) {
+  protoOf(Companion_60).getArrayElement_o9x1bb_k$ = function (array, index) {
     var intArray = new Int32Array(6);
     var doubleArray = new Float64Array(7);
     $l$block: {
@@ -18884,14 +18755,14 @@
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_paragraph_LineMetrics__1nGetArrayElement(array, index, tmp0_anonymous.toInterop_o3s7q3_k$(intArray), tmp0_anonymous.toInterop_ivm5nr_k$(doubleArray));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_paragraph_LineMetrics__1nGetArrayElement(array, index, $this$interopScope.toInterop_i7skn2_k$(intArray), $this$interopScope.toInterop_5vegas_k$(doubleArray));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -19018,7 +18889,7 @@
   };
   function Companion_61() {
     Companion_instance_61 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_61;
   function Companion_getInstance_62() {
@@ -19033,7 +18904,7 @@
     return $this._text_1;
   }
   function toIRange($this, p) {
-    return new IRange(p.ushr_rr8rvr_k$(32).toInt_1tsl84_k$(), p.and_jhajnj_k$(new Long(-1, -1)).toInt_1tsl84_k$());
+    return new IRange(p.ushr_z7nmq8_k$(32).toInt_1tsl84_k$(), p.and_4spn93_k$(new Long(-1, -1)).toInt_1tsl84_k$());
   }
   function _FinalizerHolder_19() {
     _FinalizerHolder_instance_19 = this;
@@ -19057,20 +18928,20 @@
   function Paragraph(ptr, text) {
     Companion_getInstance_62();
     Managed.call(this, ptr, _FinalizerHolder_getInstance_19().PTR_1);
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     this._text_1 = text;
   }
-  protoOf(Paragraph).close_ymq55z_k$ = function () {
+  protoOf(Paragraph).close_yn9xrc_k$ = function () {
     if (!(this._text_1 == null)) {
-      ensureNotNull(this._text_1).close_ymq55z_k$();
+      ensureNotNull(this._text_1).close_yn9xrc_k$();
       this._text_1 = null;
     }
-    protoOf(Managed).close_ymq55z_k$.call(this);
+    protoOf(Managed).close_yn9xrc_k$.call(this);
   };
   protoOf(Paragraph).get_maxWidth_p6k67p_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetMaxWidth(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -19080,7 +18951,7 @@
   protoOf(Paragraph).get_height_e7t92o_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetHeight(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -19090,7 +18961,7 @@
   protoOf(Paragraph).get_minIntrinsicWidth_lmc1rq_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetMinIntrinsicWidth(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -19100,7 +18971,7 @@
   protoOf(Paragraph).get_maxIntrinsicWidth_b4gk2k_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetMaxIntrinsicWidth(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -19110,7 +18981,7 @@
   protoOf(Paragraph).get_alphabeticBaseline_rczsqt_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetAlphabeticBaseline(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -19120,7 +18991,7 @@
   protoOf(Paragraph).get_ideographicBaseline_xeqlhb_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetIdeographicBaseline(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -19130,7 +19001,7 @@
   protoOf(Paragraph).get_longestLine_6xrodx_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetLongestLine(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -19140,22 +19011,22 @@
   protoOf(Paragraph).didExceedMaxLines_51frgy_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_Paragraph__1nDidExceedMaxLines(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paragraph).layout_foik1o_k$ = function (width) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Paragraph).layout_x0f0tu_k$ = function (width) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_Paragraph__1nLayout(this.get__ptr_wohp4o_k$(), width);
     return this;
   };
-  protoOf(Paragraph).paint_86qq3w_k$ = function (canvas, x, y) {
+  protoOf(Paragraph).paint_utwq50_k$ = function (canvas, x, y) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_Paragraph__1nPaint(this.get__ptr_wohp4o_k$(), getPtr(canvas), x, y);
       tmp = this;
     }finally {
@@ -19164,37 +19035,37 @@
     }
     return tmp;
   };
-  protoOf(Paragraph).getRectsForRange_8yx14g_k$ = function (start, end, rectHeightMode, rectWidthMode) {
+  protoOf(Paragraph).getRectsForRange_leji5d_k$ = function (start, end, rectHeightMode, rectWidthMode) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.paragraph.Paragraph.getRectsForRange.<anonymous>' call
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           // Inline function 'org.jetbrains.skia.impl.InteropScope.fromInterop' call
-          var tmp0_fromInterop = org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForRange(this.get__ptr_wohp4o_k$(), start, end, rectHeightMode.get_ordinal_ip24qg_k$(), rectWidthMode.get_ordinal_ip24qg_k$());
-          var tmp1_fromInterop = Companion_getInstance_68();
-          var size = tmp1_fromInterop.getArraySize_1htf43_k$(tmp0_fromInterop);
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var this_0 = org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForRange(this.get__ptr_wohp4o_k$(), start, end, rectHeightMode.get_ordinal_ip24qg_k$(), rectWidthMode.get_ordinal_ip24qg_k$());
+          var decoder = Companion_getInstance_68();
+          var size = decoder.getArraySize_2xuquk_k$(this_0);
           var tmp_0 = 0;
           // Inline function 'kotlin.arrayOfNulls' call
           var tmp_1 = fillArrayVal(Array(size), null);
           while (tmp_0 < size) {
             var tmp_2 = tmp_0;
-            tmp_1[tmp_2] = tmp1_fromInterop.getArrayElement_2nhq49_k$(tmp0_fromInterop, tmp_2);
+            tmp_1[tmp_2] = decoder.getArrayElement_o9x1bb_k$(this_0, tmp_2);
             tmp_0 = tmp_0 + 1 | 0;
           }
           var result = tmp_1;
-          tmp1_fromInterop.disposeArray_dwhlai_k$(tmp0_fromInterop);
+          decoder.disposeArray_hrrl5a_k$(this_0);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -19207,34 +19078,34 @@
   protoOf(Paragraph).get_rectsForPlaceholders_vi296l_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.paragraph.Paragraph.<get-rectsForPlaceholders>.<anonymous>' call
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           // Inline function 'org.jetbrains.skia.impl.InteropScope.fromInterop' call
-          var tmp0_fromInterop = org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForPlaceholders(this.get__ptr_wohp4o_k$());
-          var tmp1_fromInterop = Companion_getInstance_68();
-          var size = tmp1_fromInterop.getArraySize_1htf43_k$(tmp0_fromInterop);
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var this_0 = org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForPlaceholders(this.get__ptr_wohp4o_k$());
+          var decoder = Companion_getInstance_68();
+          var size = decoder.getArraySize_2xuquk_k$(this_0);
           var tmp_0 = 0;
           // Inline function 'kotlin.arrayOfNulls' call
           var tmp_1 = fillArrayVal(Array(size), null);
           while (tmp_0 < size) {
             var tmp_2 = tmp_0;
-            tmp_1[tmp_2] = tmp1_fromInterop.getArrayElement_2nhq49_k$(tmp0_fromInterop, tmp_2);
+            tmp_1[tmp_2] = decoder.getArrayElement_o9x1bb_k$(this_0, tmp_2);
             tmp_0 = tmp_0 + 1 | 0;
           }
           var result = tmp_1;
-          tmp1_fromInterop.disposeArray_dwhlai_k$(tmp0_fromInterop);
+          decoder.disposeArray_hrrl5a_k$(this_0);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -19244,10 +19115,10 @@
     }
     return tmp;
   };
-  protoOf(Paragraph).getGlyphPositionAtCoordinate_iqdtii_k$ = function (dx, dy) {
+  protoOf(Paragraph).getGlyphPositionAtCoordinate_djajfu_k$ = function (dx, dy) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var res = org_jetbrains_skia_paragraph_Paragraph__1nGetGlyphPositionAtCoordinate(this.get__ptr_wohp4o_k$(), dx, dy);
       tmp = res >= 0 ? new PositionWithAffinity(res, Affinity_DOWNSTREAM_getInstance()) : new PositionWithAffinity((-res | 0) - 1 | 0, Affinity_UPSTREAM_getInstance());
     }finally {
@@ -19255,10 +19126,10 @@
     }
     return tmp;
   };
-  protoOf(Paragraph).getWordBoundary_3s8nhz_k$ = function (offset) {
+  protoOf(Paragraph).getWordBoundary_w7r0s2_k$ = function (offset) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_24();
       tmp = fromInteropPointer_0(tmp_0, Paragraph$getWordBoundary$lambda(this, offset));
     }finally {
@@ -19276,34 +19147,34 @@
         // Inline function 'kotlin.js.asDynamic' call
         tmp_0 = [];
       } else {
-        Stats_getInstance().onNativeCall_s1vbwj_k$();
+        Stats_getInstance().onNativeCall_s2f4hw_k$();
         $l$block: {
           // Inline function 'org.jetbrains.skia.impl.interopScope' call
           try {
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.paragraph.Paragraph.<get-lineMetrics>.<anonymous>' call
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
             // Inline function 'org.jetbrains.skia.impl.InteropScope.fromInterop' call
-            var tmp0_fromInterop = org_jetbrains_skia_paragraph_Paragraph__1nGetLineMetrics(this.get__ptr_wohp4o_k$(), getPtr(this._text_1));
-            var tmp1_fromInterop = Companion_getInstance_61();
-            var size = tmp1_fromInterop.getArraySize_1htf43_k$(tmp0_fromInterop);
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var this_0 = org_jetbrains_skia_paragraph_Paragraph__1nGetLineMetrics(this.get__ptr_wohp4o_k$(), getPtr(this._text_1));
+            var decoder = Companion_getInstance_61();
+            var size = decoder.getArraySize_2xuquk_k$(this_0);
             var tmp_1 = 0;
             // Inline function 'kotlin.arrayOfNulls' call
             var tmp_2 = fillArrayVal(Array(size), null);
             while (tmp_1 < size) {
               var tmp_3 = tmp_1;
-              tmp_2[tmp_3] = tmp1_fromInterop.getArrayElement_2nhq49_k$(tmp0_fromInterop, tmp_3);
+              tmp_2[tmp_3] = decoder.getArrayElement_o9x1bb_k$(this_0, tmp_3);
               tmp_1 = tmp_1 + 1 | 0;
             }
             var result = tmp_2;
-            tmp1_fromInterop.disposeArray_dwhlai_k$(tmp0_fromInterop);
+            decoder.disposeArray_hrrl5a_k$(this_0);
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
@@ -19319,7 +19190,7 @@
   protoOf(Paragraph).get_lineNumber_pm7qca_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetLineNumber(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -19327,30 +19198,30 @@
     return tmp;
   };
   protoOf(Paragraph).markDirty_fy9zp7_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_Paragraph__1nMarkDirty(this.get__ptr_wohp4o_k$());
     return this;
   };
   protoOf(Paragraph).get_unresolvedGlyphsCount_7nqlf6_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_Paragraph__1nGetUnresolvedGlyphsCount(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(Paragraph).updateAlignment_1peqi4_k$ = function (alignment) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Paragraph).updateAlignment_w9xlhq_k$ = function (alignment) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_Paragraph__1nUpdateAlignment(this.get__ptr_wohp4o_k$(), alignment.get_ordinal_ip24qg_k$());
     return this;
   };
-  protoOf(Paragraph).updateFontSize_xndxwr_k$ = function (from, to, size) {
+  protoOf(Paragraph).updateFontSize_a7pe0x_k$ = function (from, to, size) {
     var tmp;
     try {
       if (!(this._text_1 == null)) {
-        Stats_getInstance().onNativeCall_s1vbwj_k$();
+        Stats_getInstance().onNativeCall_s2f4hw_k$();
         org_jetbrains_skia_paragraph_Paragraph__1nUpdateFontSize(this.get__ptr_wohp4o_k$(), from, to, size, getPtr(this._text_1));
       }
       tmp = this;
@@ -19360,11 +19231,11 @@
     }
     return tmp;
   };
-  protoOf(Paragraph).updateForegroundPaint_a7l9ow_k$ = function (from, to, paint) {
+  protoOf(Paragraph).updateForegroundPaint_3gdzpm_k$ = function (from, to, paint) {
     var tmp;
     try {
       if (!(this._text_1 == null)) {
-        Stats_getInstance().onNativeCall_s1vbwj_k$();
+        Stats_getInstance().onNativeCall_s2f4hw_k$();
         org_jetbrains_skia_paragraph_Paragraph__1nUpdateForegroundPaint(this.get__ptr_wohp4o_k$(), from, to, getPtr(paint), getPtr(this._text_1));
       }
       tmp = this;
@@ -19375,11 +19246,11 @@
     }
     return tmp;
   };
-  protoOf(Paragraph).updateBackgroundPaint_vq4479_k$ = function (from, to, paint) {
+  protoOf(Paragraph).updateBackgroundPaint_qarr3f_k$ = function (from, to, paint) {
     var tmp;
     try {
       if (!(this._text_1 == null)) {
-        Stats_getInstance().onNativeCall_s1vbwj_k$();
+        Stats_getInstance().onNativeCall_s2f4hw_k$();
         org_jetbrains_skia_paragraph_Paragraph__1nUpdateBackgroundPaint(this.get__ptr_wohp4o_k$(), from, to, getPtr(paint), getPtr(this._text_1));
       }
       tmp = this;
@@ -19401,7 +19272,7 @@
   };
   function Companion_62() {
     Companion_instance_62 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_62;
   function Companion_getInstance_63() {
@@ -19433,10 +19304,10 @@
     Managed.call(this, makeParagraphBuilder(style, fc), _FinalizerHolder_getInstance_20().PTR_1);
     this._text_1 = null;
   }
-  protoOf(ParagraphBuilder).pushStyle_ypbmq9_k$ = function (style) {
+  protoOf(ParagraphBuilder).pushStyle_psv2ye_k$ = function (style) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphBuilder__1nPushStyle(this.get__ptr_wohp4o_k$(), getPtr(style));
       tmp = this;
     }finally {
@@ -19445,7 +19316,7 @@
     return tmp;
   };
   protoOf(ParagraphBuilder).popStyle_am01k0_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       org_jetbrains_skia_paragraph_ParagraphBuilder__1nPopStyle(this.get__ptr_wohp4o_k$(), Companion_getInstance_81().get_NullPointer_8qbg7n_k$());
     }finally {
@@ -19453,22 +19324,22 @@
     }
     return this;
   };
-  protoOf(ParagraphBuilder).addText_jamnxp_k$ = function (text) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(ParagraphBuilder).addText_gwm184_k$ = function (text) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     try {
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddText(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(text));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddText(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(text));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -19478,19 +19349,19 @@
     if (this._text_1 == null)
       this._text_1 = ManagedString_init_$Create$(text);
     else {
-      ensureNotNull(this._text_1).append_zar6u1_k$(text);
+      ensureNotNull(this._text_1).append_bgzq5c_k$(text);
     }
     return this;
   };
-  protoOf(ParagraphBuilder).addPlaceholder_xmxrm5_k$ = function (style) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(ParagraphBuilder).addPlaceholder_rs6avq_k$ = function (style) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddPlaceholder(this.get__ptr_wohp4o_k$(), style.get_width_j0q4yl_k$(), style.get_height_e7t92o_k$(), style.get_alignment_xa1jnq_k$().get_ordinal_ip24qg_k$(), style.get_baselineMode_4h6ucv_k$().get_ordinal_ip24qg_k$(), style.get_baseline_arnwum_k$());
     return this;
   };
   protoOf(ParagraphBuilder).build_1k0s4u_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var paragraph = new Paragraph(org_jetbrains_skia_paragraph_ParagraphBuilder__1nBuild(this.get__ptr_wohp4o_k$()), this._text_1);
       this._text_1 = null;
       tmp = paragraph;
@@ -19500,7 +19371,7 @@
     return tmp;
   };
   function makeParagraphBuilder(style, fc) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_paragraph_ParagraphBuilder__1nMake(getPtr(style), getPtr(fc));
@@ -19512,7 +19383,7 @@
   }
   function Companion_63() {
     Companion_instance_63 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_63;
   function Companion_getInstance_64() {
@@ -19525,29 +19396,29 @@
     Native.call(this, ptr);
     this._owner_1 = owner;
   }
-  protoOf(ParagraphCache).abandon_istwpo_k$ = function () {
+  protoOf(ParagraphCache).abandon_isa44b_k$ = function () {
     try {
-      this._validate_a41l44_k$();
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      this._validate_a4ldph_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphCache__1nAbandon(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
   };
-  protoOf(ParagraphCache).reset_5tn5dq_k$ = function () {
+  protoOf(ParagraphCache).reset_5u6xz3_k$ = function () {
     try {
-      this._validate_a41l44_k$();
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      this._validate_a4ldph_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphCache__1nReset(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
   };
-  protoOf(ParagraphCache).updateParagraph_ey6uml_k$ = function (paragraph) {
+  protoOf(ParagraphCache).updateParagraph_k1hame_k$ = function (paragraph) {
     var tmp;
     try {
-      this._validate_a41l44_k$();
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      this._validate_a4ldph_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_ParagraphCache__1nUpdateParagraph(this.get__ptr_wohp4o_k$(), getPtr(paragraph));
     }finally {
       reachabilityBarrier(this);
@@ -19555,11 +19426,11 @@
     }
     return tmp;
   };
-  protoOf(ParagraphCache).findParagraph_yn496r_k$ = function (paragraph) {
+  protoOf(ParagraphCache).findParagraph_moa9sa_k$ = function (paragraph) {
     var tmp;
     try {
-      this._validate_a41l44_k$();
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      this._validate_a4ldph_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_ParagraphCache__1nFindParagraph(this.get__ptr_wohp4o_k$(), getPtr(paragraph));
     }finally {
       reachabilityBarrier(this);
@@ -19567,19 +19438,19 @@
     }
     return tmp;
   };
-  protoOf(ParagraphCache).printStatistics_v1z3a7_k$ = function () {
+  protoOf(ParagraphCache).printStatistics_v2ivvk_k$ = function () {
     try {
-      this._validate_a41l44_k$();
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      this._validate_a4ldph_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphCache__1nPrintStatistics(this.get__ptr_wohp4o_k$(), Companion_getInstance_81().get_NullPointer_8qbg7n_k$());
     }finally {
       reachabilityBarrier(this);
     }
   };
-  protoOf(ParagraphCache).setEnabled_2s7jau_k$ = function (value) {
+  protoOf(ParagraphCache).setEnabled_3habzq_k$ = function (value) {
     try {
-      this._validate_a41l44_k$();
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      this._validate_a4ldph_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphCache__1nSetEnabled(this.get__ptr_wohp4o_k$(), value);
     }finally {
       reachabilityBarrier(this);
@@ -19588,8 +19459,8 @@
   protoOf(ParagraphCache).get_count_ipufhi_k$ = function () {
     var tmp;
     try {
-      this._validate_a41l44_k$();
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      this._validate_a4ldph_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_ParagraphCache__1nGetCount(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -19599,7 +19470,7 @@
   protoOf(ParagraphCache).get__owner_a45oe5_k$ = function () {
     return this._owner_1;
   };
-  protoOf(ParagraphCache)._validate_a41l44_k$ = function () {
+  protoOf(ParagraphCache)._validate_a4ldph_k$ = function () {
     try {
       // Inline function 'kotlin.check' call
       // Inline function 'kotlin.contracts.contract' call
@@ -19614,7 +19485,7 @@
   };
   function Companion_64() {
     Companion_instance_64 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_64;
   function Companion_getInstance_65() {
@@ -19638,12 +19509,12 @@
   function ParagraphStyle() {
     Companion_getInstance_65();
     Managed.call(this, org_jetbrains_skia_paragraph_ParagraphStyle__1nMake(), _FinalizerHolder_getInstance_21().PTR_1);
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
   }
-  protoOf(ParagraphStyle).nativeEquals_jj5rbn_k$ = function (other) {
+  protoOf(ParagraphStyle).nativeEquals_mxr6i0_k$ = function (other) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_ParagraphStyle__1nEquals(this.get__ptr_wohp4o_k$(), getPtr(other));
     }finally {
       reachabilityBarrier(this);
@@ -19651,10 +19522,10 @@
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).set_strutStyle_yeqgid_k$ = function (value) {
+  protoOf(ParagraphStyle).set_strutStyle_4sjo5p_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphStyle__1nSetStrutStyle(this.get__ptr_wohp4o_k$(), getPtr(value));
       tmp = Unit_getInstance();
     }finally {
@@ -19666,17 +19537,17 @@
   protoOf(ParagraphStyle).get_strutStyle_9kfpti_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new StrutStyle(org_jetbrains_skia_paragraph_ParagraphStyle__1nGetStrutStyle(this.get__ptr_wohp4o_k$()));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).set_textStyle_dpq9o1_k$ = function (value) {
+  protoOf(ParagraphStyle).set_textStyle_unmu3t_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphStyle__1nSetTextStyle(this.get__ptr_wohp4o_k$(), getPtr(value));
       tmp = Unit_getInstance();
     }finally {
@@ -19688,17 +19559,17 @@
   protoOf(ParagraphStyle).get_textStyle_8tt25h_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new TextStyle(org_jetbrains_skia_paragraph_ParagraphStyle__1nGetTextStyle(this.get__ptr_wohp4o_k$()));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).set_direction_yz5smn_k$ = function (value) {
+  protoOf(ParagraphStyle).set_direction_nipmfu_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphStyle__1nSetDirection(this.get__ptr_wohp4o_k$(), value.get_ordinal_ip24qg_k$());
       tmp = Unit_getInstance();
     }finally {
@@ -19709,17 +19580,17 @@
   protoOf(ParagraphStyle).get_direction_7ekune_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = values_33()[org_jetbrains_skia_paragraph_ParagraphStyle__1nGetDirection(this.get__ptr_wohp4o_k$())];
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).set_alignment_vl4ggh_k$ = function (value) {
+  protoOf(ParagraphStyle).set_alignment_z9alxm_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphStyle__1nSetAlignment(this.get__ptr_wohp4o_k$(), value.get_ordinal_ip24qg_k$());
       tmp = Unit_getInstance();
     }finally {
@@ -19730,17 +19601,17 @@
   protoOf(ParagraphStyle).get_alignment_xa1jnq_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = values_30()[org_jetbrains_skia_paragraph_ParagraphStyle__1nGetAlignment(this.get__ptr_wohp4o_k$())];
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).set_maxLinesCount_1kfq07_k$ = function (value) {
+  protoOf(ParagraphStyle).set_maxLinesCount_v5fbw1_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphStyle__1nSetMaxLinesCount(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -19751,30 +19622,30 @@
   protoOf(ParagraphStyle).get_maxLinesCount_9ahh79_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_ParagraphStyle__1nGetMaxLinesCount(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).set_ellipsis_b72e69_k$ = function (value) {
+  protoOf(ParagraphStyle).set_ellipsis_7c9ky1_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_paragraph_ParagraphStyle__1nSetEllipsis(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(value));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_paragraph_ParagraphStyle__1nSetEllipsis(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(value));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -19787,7 +19658,7 @@
   protoOf(ParagraphStyle).get_ellipsis_sol6jq_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ellipsis = org_jetbrains_skia_paragraph_ParagraphStyle__1nGetEllipsis(this.get__ptr_wohp4o_k$());
       var tmp_0;
       if (ellipsis === Companion_getInstance_81().get_NullPointer_8qbg7n_k$()) {
@@ -19796,13 +19667,13 @@
         // Inline function 'org.jetbrains.skia.impl.withStringResult' call
         // Inline function 'org.jetbrains.skia.impl.use' call
         // Inline function 'org.jetbrains.skia.paragraph.ParagraphStyle.<get-ellipsis>.<anonymous>' call
-        var tmp0_use = new ManagedString(ellipsis);
+        var this_0 = new ManagedString(ellipsis);
         var tmp_1;
         try {
           // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
-          tmp_1 = tmp0_use.toString();
+          tmp_1 = this_0.toString();
         }finally {
-          tmp0_use.close_ymq55z_k$();
+          this_0.close_yn9xrc_k$();
         }
         tmp_0 = tmp_1;
       }
@@ -19812,10 +19683,10 @@
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).set_height_nuysnb_k$ = function (value) {
+  protoOf(ParagraphStyle).set_height_w1sw3g_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphStyle__1nSetHeight(this.get__ptr_wohp4o_k$(), value);
       tmp = Unit_getInstance();
     }finally {
@@ -19826,17 +19697,17 @@
   protoOf(ParagraphStyle).get_height_e7t92o_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_ParagraphStyle__1nGetHeight(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).set_heightMode_9x0qpv_k$ = function (value) {
+  protoOf(ParagraphStyle).set_heightMode_w43b63_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphStyle__1nSetHeightMode(this.get__ptr_wohp4o_k$(), value.get_ordinal_ip24qg_k$());
       tmp = Unit_getInstance();
     }finally {
@@ -19847,7 +19718,7 @@
   protoOf(ParagraphStyle).get_heightMode_4gymsz_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = values_34()[org_jetbrains_skia_paragraph_ParagraphStyle__1nGetHeightMode(this.get__ptr_wohp4o_k$())];
     }finally {
       reachabilityBarrier(this);
@@ -19857,7 +19728,7 @@
   protoOf(ParagraphStyle).get_effectiveAlignment_a14ccb_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = values_30()[org_jetbrains_skia_paragraph_ParagraphStyle__1nGetEffectiveAlignment(this.get__ptr_wohp4o_k$())];
     }finally {
       reachabilityBarrier(this);
@@ -19867,7 +19738,7 @@
   protoOf(ParagraphStyle).get_isHintingEnabled_4jdheh_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_ParagraphStyle__1nIsHintingEnabled(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -19875,14 +19746,14 @@
     return tmp;
   };
   protoOf(ParagraphStyle).disableHinting_tq9mh9_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_ParagraphStyle__1nDisableHinting(this.get__ptr_wohp4o_k$());
     return this;
   };
-  protoOf(ParagraphStyle).set_fontRastrSettings_hxcq9_k$ = function (value) {
+  protoOf(ParagraphStyle).set_fontRastrSettings_84513n_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphStyle__1nSetFontRastrSettings(this.get__ptr_wohp4o_k$(), value.get_edging_cs3cxv_k$().get_ordinal_ip24qg_k$(), value.get_hinting_gio9hu_k$().get_ordinal_ip24qg_k$(), value.get_subpixel_537le7_k$());
       tmp = Unit_getInstance();
     }finally {
@@ -19893,11 +19764,11 @@
   protoOf(ParagraphStyle).get_fontRastrSettings_h1lm8j_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var edging = values_9()[org_jetbrains_skia_paragraph_ParagraphStyle__1nGetEdging(this.get__ptr_wohp4o_k$())];
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var hinting = values_10()[org_jetbrains_skia_paragraph_ParagraphStyle__1nGetHinting(this.get__ptr_wohp4o_k$())];
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var subpixel = !!org_jetbrains_skia_paragraph_ParagraphStyle__1nGetSubpixel(this.get__ptr_wohp4o_k$());
       tmp = new FontRastrSettings(edging, hinting, subpixel);
     }finally {
@@ -19905,10 +19776,10 @@
     }
     return tmp;
   };
-  protoOf(ParagraphStyle).set_textIndent_76en2z_k$ = function (value) {
+  protoOf(ParagraphStyle).set_textIndent_g4aksn_k$ = function (value) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_ParagraphStyle__1nSetTextIndent(this.get__ptr_wohp4o_k$(), value.get_firstLine_apktuj_k$(), value.get_restLine_xn4q7l_k$());
       tmp = Unit_getInstance();
     }finally {
@@ -19919,30 +19790,30 @@
   protoOf(ParagraphStyle).get_textIndent_5mau2q_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Float32Array(2);
+      var result = new Float32Array(2);
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
           // Inline function 'org.jetbrains.skia.paragraph.ParagraphStyle.<get-textIndent>.<anonymous>' call
           org_jetbrains_skia_paragraph_ParagraphStyle__1nGetTextIndent(this.get__ptr_wohp4o_k$(), handle);
-          tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      var indents = tmp0_withResult;
+      var indents = result;
       tmp = new TextIndent(indents[0], indents[1]);
     }finally {
       reachabilityBarrier(this);
@@ -19974,7 +19845,7 @@
         return PlaceholderAlignment_MIDDLE_getInstance();
       default:
         PlaceholderAlignment_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -20130,7 +20001,7 @@
         return RectHeightMode_STRUT_getInstance();
       default:
         RectHeightMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -20186,7 +20057,7 @@
         return RectWidthMode_MAX_getInstance();
       default:
         RectWidthMode_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -20267,85 +20138,83 @@
     result = imul(result, PRIME) + toBits(this.offsetX_1) | 0;
     result = imul(result, PRIME) + toBits(this.offsetY_1) | 0;
     var blurSigma = toBits_0(this.blurSigma_1);
-    result = imul(result, PRIME) + blurSigma.ushr_rr8rvr_k$(32).xor_jjua9n_k$(blurSigma).toInt_1tsl84_k$() | 0;
+    result = imul(result, PRIME) + blurSigma.ushr_z7nmq8_k$(32).xor_qzz94j_k$(blurSigma).toInt_1tsl84_k$() | 0;
     return result;
   };
   protoOf(Shadow).toString = function () {
     return 'Shadow(_color=' + this.color_1 + ', _offsetX=' + this.offsetX_1 + ', _offsetY=' + this.offsetY_1 + ', _blurSigma=' + this.blurSigma_1 + ')';
   };
-  protoOf(Shadow).withColor_hjwdi4_k$ = function (_color) {
+  protoOf(Shadow).withColor_ud15rv_k$ = function (_color) {
     return this.color_1 === _color ? this : new Shadow(_color, this.offsetX_1, this.offsetY_1, this.blurSigma_1);
   };
-  protoOf(Shadow).withOffsetX_c0fbnz_k$ = function (_offsetX) {
+  protoOf(Shadow).withOffsetX_pmsztz_k$ = function (_offsetX) {
     return this.offsetX_1 === _offsetX ? this : new Shadow(this.color_1, _offsetX, this.offsetY_1, this.blurSigma_1);
   };
-  protoOf(Shadow).withOffsetY_3nfg4u_k$ = function (_offsetY) {
+  protoOf(Shadow).withOffsetY_nyq3ns_k$ = function (_offsetY) {
     return this.offsetY_1 === _offsetY ? this : new Shadow(this.color_1, this.offsetX_1, _offsetY, this.blurSigma_1);
   };
-  protoOf(Shadow).withBlurSigma_864eon_k$ = function (_blurSigma) {
+  protoOf(Shadow).withBlurSigma_gyyjzi_k$ = function (_blurSigma) {
     return this.blurSigma_1 === _blurSigma ? this : new Shadow(this.color_1, this.offsetX_1, this.offsetY_1, _blurSigma);
   };
   function fromInteropPointer_2(_this__u8e3s4, shadowsCount, block) {
     // Inline function 'kotlin.collections.toTypedArray' call
     // Inline function 'kotlin.collections.map' call
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Int32Array(imul(shadowsCount, 5));
+    var result = new Int32Array(imul(shadowsCount, 5));
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
-        block(tmp0_anonymous, handle);
-        tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
+        block($this$interopScope, handle);
+        $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    var tmp1_map = chunked(toList_1(tmp0_withResult), 5);
+    var this_0 = chunked(toList_1(result), 5);
     // Inline function 'kotlin.collections.mapTo' call
-    var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp1_map, 10));
-    var tmp0_iterator = tmp1_map.iterator_jk1svi_k$();
+    var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+    var tmp0_iterator = this_0.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var item = tmp0_iterator.next_20eer_k$();
-      var tmp$ret$11;
       // Inline function 'org.jetbrains.skia.paragraph.fromInteropPointer.<anonymous>' call
       // Inline function 'kotlin.collections.component1' call
-      var color = item.get_fkrdnv_k$(0);
+      var color = item.get_c1px32_k$(0);
       // Inline function 'kotlin.collections.component2' call
-      var offsetX = item.get_fkrdnv_k$(1);
+      var offsetX = item.get_c1px32_k$(1);
       // Inline function 'kotlin.collections.component3' call
-      var offsetY = item.get_fkrdnv_k$(2);
+      var offsetY = item.get_c1px32_k$(2);
       // Inline function 'kotlin.collections.component4' call
-      var blurSigmaA = item.get_fkrdnv_k$(3);
+      var blurSigmaA = item.get_c1px32_k$(3);
       // Inline function 'kotlin.collections.component5' call
-      var blurSigmaB = item.get_fkrdnv_k$(4);
-      var blurSigma = toLong(blurSigmaA).shl_po5ip6_k$(32).or_s401rn_k$(toLong(blurSigmaB).and_jhajnj_k$(new Long(-1, 0)));
+      var blurSigmaB = item.get_c1px32_k$(4);
+      var blurSigma = toLong(blurSigmaA).shl_bg8if3_k$(32).or_v7fvkl_k$(toLong(blurSigmaB).and_4spn93_k$(new Long(-1, 0)));
       // Inline function 'kotlin.fromBits' call
       FloatCompanionObject_getInstance();
       var tmp = floatFromBits(offsetX);
       // Inline function 'kotlin.fromBits' call
       FloatCompanionObject_getInstance();
       var tmp_0 = floatFromBits(offsetY);
-      var tmp$ret$10;
       // Inline function 'kotlin.fromBits' call
       DoubleCompanionObject_getInstance();
-      tmp$ret$10 = doubleFromBits(blurSigma);
-      tmp$ret$11 = new Shadow(color, tmp, tmp_0, tmp$ret$10);
-      tmp0_mapTo.add_1j60pz_k$(tmp$ret$11);
+      var tmp$ret$10 = doubleFromBits(blurSigma);
+      var tmp$ret$11 = new Shadow(color, tmp, tmp_0, tmp$ret$10);
+      destination.add_utx5q5_k$(tmp$ret$11);
     }
-    return copyToArray(tmp0_mapTo);
+    return copyToArray(destination);
   }
   function Companion_66() {
     Companion_instance_66 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_66;
   function Companion_getInstance_67() {
@@ -20355,7 +20224,7 @@
   }
   function StrutStyle_init_$Init$($this) {
     StrutStyle.call($this, org_jetbrains_skia_paragraph_StrutStyle__1nMake());
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return $this;
   }
   function StrutStyle_init_$Create$() {
@@ -20378,10 +20247,10 @@
     Companion_getInstance_67();
     Managed.call(this, ptr, _FinalizerHolder_getInstance_22().PTR_1);
   }
-  protoOf(StrutStyle).nativeEquals_jj5rbn_k$ = function (other) {
+  protoOf(StrutStyle).nativeEquals_mxr6i0_k$ = function (other) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_StrutStyle__1nEquals(this.get__ptr_wohp4o_k$(), getPtr(other));
     }finally {
       reachabilityBarrier(this);
@@ -20392,7 +20261,7 @@
   protoOf(StrutStyle).get_fontFamilies_2olayi_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.arrayDecoderScope' call
       var arrayDecoder = null;
       var tmp_0;
@@ -20400,40 +20269,36 @@
         // Inline function 'org.jetbrains.skia.paragraph.StrutStyle.<get-fontFamilies>.<anonymous>' call
         arrayDecoder = new ArrayDecoder(org_jetbrains_skia_paragraph_StrutStyle__1nGetFontFamilies(this.get__ptr_wohp4o_k$()), org_jetbrains_skia_ManagedString__1nGetFinalizer());
         // Inline function 'org.jetbrains.skia.paragraph.StrutStyle.<get-fontFamilies>.<anonymous>' call
-        var tmp0_anonymous = arrayDecoder;
+        var arrayDecoder_0 = arrayDecoder;
         // Inline function 'kotlin.collections.toTypedArray' call
         // Inline function 'kotlin.collections.map' call
-        var tmp0_map = until(0, tmp0_anonymous.get_size_woubt6_k$());
+        var this_0 = until(0, arrayDecoder_0.get_size_woubt6_k$());
         // Inline function 'kotlin.collections.mapTo' call
-        var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp0_map, 10));
-        var inductionVariable = tmp0_map.get_first_irdx8n_k$();
-        var last = tmp0_map.get_last_wopotb_k$();
-        if (inductionVariable <= last)
-          do {
-            var item = inductionVariable;
-            inductionVariable = inductionVariable + 1 | 0;
-            // Inline function 'org.jetbrains.skia.paragraph.StrutStyle.<get-fontFamilies>.<anonymous>.<anonymous>' call
-            // Inline function 'org.jetbrains.skia.impl.withStringResult' call
-            var tmp0_withStringResult = tmp0_anonymous.release_ywerve_k$(item);
-            // Inline function 'org.jetbrains.skia.impl.use' call
-            var tmp0_use = new ManagedString(tmp0_withStringResult);
-            var tmp_1;
-            try {
-              // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
-              tmp_1 = tmp0_use.toString();
-            }finally {
-              tmp0_use.close_ymq55z_k$();
-            }
-            tmp0_mapTo.add_1j60pz_k$(tmp_1);
+        var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+        var tmp0_iterator = this_0.iterator_jk1svi_k$();
+        while (tmp0_iterator.hasNext_bitz1p_k$()) {
+          var item = tmp0_iterator.next_20eer_k$();
+          // Inline function 'org.jetbrains.skia.paragraph.StrutStyle.<get-fontFamilies>.<anonymous>.<anonymous>' call
+          // Inline function 'org.jetbrains.skia.impl.withStringResult' call
+          var pointer = arrayDecoder_0.release_fo34vl_k$(item);
+          // Inline function 'org.jetbrains.skia.impl.use' call
+          var this_1 = new ManagedString(pointer);
+          var tmp_1;
+          try {
+            // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
+            tmp_1 = this_1.toString();
+          }finally {
+            this_1.close_yn9xrc_k$();
           }
-           while (!(item === last));
-        tmp_0 = copyToArray(tmp0_mapTo);
+          destination.add_utx5q5_k$(tmp_1);
+        }
+        tmp_0 = copyToArray(destination);
       }finally {
         var tmp0_safe_receiver = arrayDecoder;
         if (tmp0_safe_receiver == null)
           null;
         else {
-          tmp0_safe_receiver.dispose_3n44we_k$();
+          tmp0_safe_receiver.dispose_3nnxhr_k$();
         }
       }
       tmp = tmp_0;
@@ -20442,195 +20307,195 @@
     }
     return tmp;
   };
-  protoOf(StrutStyle).setFontFamilies_g3p3fo_k$ = function (families) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(StrutStyle).setFontFamilies_krn7hd_k$ = function (families) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_paragraph_StrutStyle__1nSetFontFamilies(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_59fj22_k$(families), families.length);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_paragraph_StrutStyle__1nSetFontFamilies(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_2ejn5p_k$(families), families.length);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(StrutStyle).set_fontStyle_v4cfyn_k$ = function (value) {
-    this.setFontStyle_nq325h_k$(value);
+  protoOf(StrutStyle).set_fontStyle_vxzafm_k$ = function (value) {
+    this.setFontStyle_jsp60t_k$(value);
   };
   protoOf(StrutStyle).get_fontStyle_h4vaiv_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Int32Array(3);
+      var result = new Int32Array(3);
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
           // Inline function 'org.jetbrains.skia.paragraph.StrutStyle.<get-fontStyle>.<anonymous>' call
           org_jetbrains_skia_paragraph_StrutStyle__1nGetFontStyle(this.get__ptr_wohp4o_k$(), handle);
-          tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
-      var fontStyleData = tmp0_withResult;
+      var fontStyleData = result;
       tmp = FontStyle_init_$Create$(fontStyleData[0], fontStyleData[1], values_11()[fontStyleData[2]]);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(StrutStyle).setFontStyle_nq325h_k$ = function (style) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(StrutStyle).setFontStyle_jsp60t_k$ = function (style) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_StrutStyle__1nSetFontStyle(this.get__ptr_wohp4o_k$(), style.get__value_a7m5q3_k$());
     return this;
   };
-  protoOf(StrutStyle).set_fontSize_ucdk6o_k$ = function (value) {
-    this.setFontSize_w539s4_k$(value);
+  protoOf(StrutStyle).set_fontSize_ywm6aj_k$ = function (value) {
+    this.setFontSize_38bvay_k$(value);
   };
   protoOf(StrutStyle).get_fontSize_pr9n47_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_StrutStyle__1nGetFontSize(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(StrutStyle).setFontSize_w539s4_k$ = function (value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(StrutStyle).setFontSize_38bvay_k$ = function (value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_StrutStyle__1nSetFontSize(this.get__ptr_wohp4o_k$(), value);
     return this;
   };
-  protoOf(StrutStyle).set_height_nuysnb_k$ = function (value) {
-    this.setHeight_q0jg63_k$(value);
+  protoOf(StrutStyle).set_height_w1sw3g_k$ = function (value) {
+    this.setHeight_o514fj_k$(value);
   };
   protoOf(StrutStyle).get_height_e7t92o_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_StrutStyle__1nGetHeight(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(StrutStyle).setHeight_q0jg63_k$ = function (value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(StrutStyle).setHeight_o514fj_k$ = function (value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_StrutStyle__1nSetHeight(this.get__ptr_wohp4o_k$(), value);
     return this;
   };
-  protoOf(StrutStyle).set_leading_l848vg_k$ = function (value) {
-    this.setLeading_ebhbfu_k$(value);
+  protoOf(StrutStyle).set_leading_h1xskf_k$ = function (value) {
+    this.setLeading_g3rl8s_k$(value);
   };
   protoOf(StrutStyle).get_leading_23jbbx_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_StrutStyle__1nGetLeading(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(StrutStyle).setLeading_ebhbfu_k$ = function (value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(StrutStyle).setLeading_g3rl8s_k$ = function (value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_StrutStyle__1nSetLeading(this.get__ptr_wohp4o_k$(), value);
     return this;
   };
-  protoOf(StrutStyle).set_isEnabled_65t46p_k$ = function (value) {
-    this.setEnabled_71hcth_k$(value);
+  protoOf(StrutStyle).set_isEnabled_abraij_k$ = function (value) {
+    this.setEnabled_2yw92y_k$(value);
   };
   protoOf(StrutStyle).get_isEnabled_roz1ma_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_StrutStyle__1nIsEnabled(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(StrutStyle).setEnabled_71hcth_k$ = function (value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(StrutStyle).setEnabled_2yw92y_k$ = function (value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_StrutStyle__1nSetEnabled(this.get__ptr_wohp4o_k$(), value);
     return this;
   };
-  protoOf(StrutStyle).set_isHeightForced_di6noi_k$ = function (value) {
-    this.setHeightForced_9xi00o_k$(value);
+  protoOf(StrutStyle).set_isHeightForced_gn0yry_k$ = function (value) {
+    this.setHeightForced_6scprx_k$(value);
   };
   protoOf(StrutStyle).get_isHeightForced_n6afgt_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightForced(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(StrutStyle).setHeightForced_9xi00o_k$ = function (value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(StrutStyle).setHeightForced_6scprx_k$ = function (value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightForced(this.get__ptr_wohp4o_k$(), value);
     return this;
   };
-  protoOf(StrutStyle).set_isHeightOverridden_tb0fyx_k$ = function (value) {
-    this.setHeightOverridden_1i817n_k$(value);
+  protoOf(StrutStyle).set_isHeightOverridden_52ioib_k$ = function (value) {
+    this.setHeightOverridden_r4bq88_k$(value);
   };
   protoOf(StrutStyle).get_isHeightOverridden_qmvgge_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightOverridden(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(StrutStyle).setHeightOverridden_1i817n_k$ = function (value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(StrutStyle).setHeightOverridden_r4bq88_k$ = function (value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightOverridden(this.get__ptr_wohp4o_k$(), value);
     return this;
   };
-  protoOf(StrutStyle).set_isHalfLeading_kawj3x_k$ = function (value) {
-    this.setHalfLeading_yb30c7_k$(value);
+  protoOf(StrutStyle).set_isHalfLeading_cjht1z_k$ = function (value) {
+    this.setHalfLeading_10vvhw_k$(value);
   };
   protoOf(StrutStyle).get_isHalfLeading_333yxs_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_StrutStyle__1nIsHalfLeading(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(StrutStyle).setHalfLeading_yb30c7_k$ = function (value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(StrutStyle).setHalfLeading_10vvhw_k$ = function (value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_StrutStyle__1nSetHalfLeading(this.get__ptr_wohp4o_k$(), value);
     return this;
   };
   function TextBox_init_$Init$(l, t, r, b, direction, $this) {
-    TextBox.call($this, Companion_getInstance_47().makeLTRB_ax757q_k$(l, t, r, b), values_33()[direction]);
+    TextBox.call($this, Companion_getInstance_47().makeLTRB_2wvuxm_k$(l, t, r, b), values_33()[direction]);
     return $this;
   }
   function TextBox_init_$Create$(l, t, r, b, direction) {
@@ -20639,7 +20504,7 @@
   function Companion_67() {
     Companion_instance_67 = this;
   }
-  protoOf(Companion_67).getArrayElement_2nhq49_k$ = function (array, index) {
+  protoOf(Companion_67).getArrayElement_o9x1bb_k$ = function (array, index) {
     var rect = new Float32Array(4);
     var direction = new Int32Array(1);
     $l$block: {
@@ -20647,27 +20512,27 @@
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var rectPtr = tmp0_anonymous.toInterop_sfommq_k$(rect);
-        var directionPtr = tmp0_anonymous.toInterop_o3s7q3_k$(direction);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var rectPtr = $this$interopScope.toInterop_uum1m9_k$(rect);
+        var directionPtr = $this$interopScope.toInterop_i7skn2_k$(direction);
         org_jetbrains_skia_paragraph_TextBox__1nGetArrayElement(array, index, rectPtr, directionPtr);
-        tmp0_anonymous.fromInterop_2qtlsq_k$(rectPtr, rect);
-        tmp0_anonymous.fromInterop_26ac9l_k$(directionPtr, direction);
+        $this$interopScope.fromInterop_s0mjrj_k$(rectPtr, rect);
+        $this$interopScope.fromInterop_1rw4p0_k$(directionPtr, direction);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return TextBox_init_$Create$(rect[0], rect[1], rect[2], rect[3], direction[0]);
   };
-  protoOf(Companion_67).getArraySize_1htf43_k$ = function (array) {
+  protoOf(Companion_67).getArraySize_2xuquk_k$ = function (array) {
     return org_jetbrains_skia_paragraph_TextBox__1nGetArraySize(array);
   };
-  protoOf(Companion_67).disposeArray_dwhlai_k$ = function (array) {
+  protoOf(Companion_67).disposeArray_hrrl5a_k$ = function (array) {
     return org_jetbrains_skia_paragraph_TextBox__1nDisposeArray(array);
   };
   var Companion_instance_67;
@@ -20715,13 +20580,13 @@
     this.firstLine_1 = firstLine;
     this.restLine_1 = restLine;
   }
-  protoOf(TextIndent).set_firstLine_o0xstm_k$ = function (_set____db54di) {
+  protoOf(TextIndent).set_firstLine_hw17vl_k$ = function (_set____db54di) {
     this.firstLine_1 = _set____db54di;
   };
   protoOf(TextIndent).get_firstLine_apktuj_k$ = function () {
     return this.firstLine_1;
   };
-  protoOf(TextIndent).set_restLine_wm30x4_k$ = function (_set____db54di) {
+  protoOf(TextIndent).set_restLine_nij53x_k$ = function (_set____db54di) {
     this.restLine_1 = _set____db54di;
   };
   protoOf(TextIndent).get_restLine_xn4q7l_k$ = function () {
@@ -20733,13 +20598,13 @@
   protoOf(TextIndent).component2_7eebsb_k$ = function () {
     return this.restLine_1;
   };
-  protoOf(TextIndent).copy_138fzp_k$ = function (firstLine, restLine) {
+  protoOf(TextIndent).copy_4tzoad_k$ = function (firstLine, restLine) {
     return new TextIndent(firstLine, restLine);
   };
-  protoOf(TextIndent).copy$default_eyfbsb_k$ = function (firstLine, restLine, $super) {
+  protoOf(TextIndent).copy$default_m2pc5i_k$ = function (firstLine, restLine, $super) {
     firstLine = firstLine === VOID ? this.firstLine_1 : firstLine;
     restLine = restLine === VOID ? this.restLine_1 : restLine;
-    return $super === VOID ? this.copy_138fzp_k$(firstLine, restLine) : $super.copy_138fzp_k$.call(this, firstLine, restLine);
+    return $super === VOID ? this.copy_4tzoad_k$(firstLine, restLine) : $super.copy_4tzoad_k$.call(this, firstLine, restLine);
   };
   protoOf(TextIndent).toString = function () {
     return 'TextIndent(firstLine=' + this.firstLine_1 + ', restLine=' + this.restLine_1 + ')';
@@ -20763,7 +20628,7 @@
   };
   function Companion_68() {
     Companion_instance_68 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_68;
   function Companion_getInstance_69() {
@@ -20773,7 +20638,7 @@
   }
   function TextStyle_init_$Init$($this) {
     TextStyle.call($this, org_jetbrains_skia_paragraph_TextStyle__1nMake());
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return $this;
   }
   function TextStyle_init_$Create$() {
@@ -20814,10 +20679,10 @@
     Companion_getInstance_69();
     Managed.call(this, ptr, _FinalizerHolder_getInstance_23().PTR_1);
   }
-  protoOf(TextStyle).nativeEquals_jj5rbn_k$ = function (other) {
+  protoOf(TextStyle).nativeEquals_mxr6i0_k$ = function (other) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_TextStyle__1nEquals(this.get__ptr_wohp4o_k$(), getPtr(other));
     }finally {
       reachabilityBarrier(this);
@@ -20825,10 +20690,10 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).equals_3dg5po_k$ = function (attribute, other) {
+  protoOf(TextStyle).equals_rqztne_k$ = function (attribute, other) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_TextStyle__1nAttributeEquals(this.get__ptr_wohp4o_k$(), attribute.get_ordinal_ip24qg_k$(), getPtr(other));
     }finally {
       reachabilityBarrier(this);
@@ -20836,31 +20701,31 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).set_color_n2ch1y_k$ = function (value) {
-    this.setColor_qspiyo_k$(value);
+  protoOf(TextStyle).set_color_7ztbpe_k$ = function (value) {
+    this.setColor_hp6yon_k$(value);
   };
   protoOf(TextStyle).get_color_ipu8u2_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_TextStyle__1nGetColor(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextStyle).setColor_qspiyo_k$ = function (color) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).setColor_hp6yon_k$ = function (color) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_TextStyle__1nSetColor(this.get__ptr_wohp4o_k$(), color);
     return this;
   };
-  protoOf(TextStyle).set_foreground_yky9kj_k$ = function (value) {
-    this.setForeground_ndqn1f_k$(value);
+  protoOf(TextStyle).set_foreground_im42hg_k$ = function (value) {
+    this.setForeground_q7otlj_k$(value);
   };
   protoOf(TextStyle).get_foreground_cn8q8c_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_paragraph_TextStyle__1nGetForeground(this.get__ptr_wohp4o_k$());
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : Paint_init_$Create$(ptr, true);
     }finally {
@@ -20868,10 +20733,10 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).setForeground_ndqn1f_k$ = function (paint) {
+  protoOf(TextStyle).setForeground_q7otlj_k$ = function (paint) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_TextStyle__1nSetForeground(this.get__ptr_wohp4o_k$(), getPtr(paint));
       tmp = this;
     }finally {
@@ -20880,13 +20745,13 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).set_background_4t8lag_k$ = function (value) {
-    this.setBackground_i7hjke_k$(value);
+  protoOf(TextStyle).set_background_zaucsh_k$ = function (value) {
+    this.setBackground_ge26cs_k$(value);
   };
   protoOf(TextStyle).get_background_stpfw7_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_paragraph_TextStyle__1nGetBackground(this.get__ptr_wohp4o_k$());
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : Paint_init_$Create$(ptr, true);
     }finally {
@@ -20894,10 +20759,10 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).setBackground_i7hjke_k$ = function (paint) {
+  protoOf(TextStyle).setBackground_ge26cs_k$ = function (paint) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_TextStyle__1nSetBackground(this.get__ptr_wohp4o_k$(), getPtr(paint));
       tmp = this;
     }finally {
@@ -20906,13 +20771,13 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).set_decorationStyle_ju3chb_k$ = function (value) {
-    this.setDecorationStyle_xazgu3_k$(value);
+  protoOf(TextStyle).set_decorationStyle_6iapf7_k$ = function (value) {
+    this.setDecorationStyle_obsxr6_k$(value);
   };
   protoOf(TextStyle).get_decorationStyle_m2f5l4_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_59();
       tmp = fromInteropPointer_1(tmp_0, TextStyle$_get_decorationStyle_$lambda_66biud(this));
     }finally {
@@ -20920,33 +20785,33 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).setDecorationStyle_xazgu3_k$ = function (d) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).setDecorationStyle_obsxr6_k$ = function (d) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_TextStyle__1nSetDecorationStyle(this.get__ptr_wohp4o_k$(), d.get__underline_98yzti_k$(), d.get__overline_irurni_k$(), d.get__lineThrough_lgqf5x_k$(), d.get__gaps_inhqfn_k$(), d.get_color_ipu8u2_k$(), d.get__lineStyle_3niqqh_k$().get_ordinal_ip24qg_k$(), d.get_thicknessMultiplier_gmd0k4_k$());
     return this;
   };
-  protoOf(TextStyle).set_fontStyle_v4cfyn_k$ = function (value) {
-    this.setFontStyle_nq325h_k$(value);
+  protoOf(TextStyle).set_fontStyle_vxzafm_k$ = function (value) {
+    this.setFontStyle_jsp60t_k$(value);
   };
   protoOf(TextStyle).get_fontStyle_h4vaiv_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = FontStyle_init_$Create$_0(org_jetbrains_skia_paragraph_TextStyle__1nGetFontStyle(this.get__ptr_wohp4o_k$()));
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextStyle).setFontStyle_nq325h_k$ = function (s) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).setFontStyle_jsp60t_k$ = function (s) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_TextStyle__1nSetFontStyle(this.get__ptr_wohp4o_k$(), s.get__value_a7m5q3_k$());
     return this;
   };
   protoOf(TextStyle).get_shadows_z8c8ru_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_66();
       var tmp_1 = org_jetbrains_skia_paragraph_TextStyle__1nGetShadowsCount(this.get__ptr_wohp4o_k$());
       tmp = fromInteropPointer_2(tmp_0, tmp_1, TextStyle$_get_shadows_$lambda_y7qsel(this));
@@ -20955,122 +20820,122 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).addShadow_rsdpq6_k$ = function (s) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).addShadow_pe2457_k$ = function (s) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_TextStyle__1nAddShadow(this.get__ptr_wohp4o_k$(), s.get_color_ipu8u2_k$(), s.get_offsetX_ocbsn8_k$(), s.get_offsetY_ocbsn7_k$(), s.get_blurSigma_ob1dwr_k$());
     return this;
   };
-  protoOf(TextStyle).addShadows_kpfd17_k$ = function (shadows) {
+  protoOf(TextStyle).addShadows_ljdo2q_k$ = function (shadows) {
     var inductionVariable = 0;
     var last = shadows.length;
     while (inductionVariable < last) {
       var s = shadows[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      this.addShadow_rsdpq6_k$(s);
+      this.addShadow_pe2457_k$(s);
     }
     return this;
   };
   protoOf(TextStyle).clearShadows_xklvt2_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_TextStyle__1nClearShadows(this.get__ptr_wohp4o_k$());
     return this;
   };
   protoOf(TextStyle).get_fontFeatures_f59erv_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var size = org_jetbrains_skia_paragraph_TextStyle__1nGetFontFeaturesSize(this.get__ptr_wohp4o_k$());
       // Inline function 'kotlin.let' call
       // Inline function 'org.jetbrains.skia.impl.withResult' call
-      var tmp0_withResult = new Int32Array(imul(size, 2));
+      var result = new Int32Array(imul(size, 2));
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
           // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
           // Inline function 'org.jetbrains.skia.paragraph.TextStyle.<get-fontFeatures>.<anonymous>' call
           org_jetbrains_skia_paragraph_TextStyle__1nGetFontFeatures(this.get__ptr_wohp4o_k$(), handle);
-          tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+          $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'org.jetbrains.skia.paragraph.TextStyle.<get-fontFeatures>.<anonymous>' call
-      tmp = Companion_getInstance_13().fromInteropEncodedBy2Ints_s3a2ik_k$(tmp0_withResult);
+      tmp = Companion_getInstance_13().fromInteropEncodedBy2Ints_rkgp1j_k$(result);
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextStyle).addFontFeature_qjlq9w_k$ = function (f) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).addFontFeature_7exvm_k$ = function (f) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_paragraph_TextStyle__1nAddFontFeature(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(f.get_tag_18ivnz_k$()), f.get_value_j01efc_k$());
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_paragraph_TextStyle__1nAddFontFeature(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(f.get_tag_18ivnz_k$()), f.get_value_j01efc_k$());
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(TextStyle).addFontFeatures_3au7u3_k$ = function (FontFeatures) {
+  protoOf(TextStyle).addFontFeatures_lx2w9d_k$ = function (FontFeatures) {
     var inductionVariable = 0;
     var last = FontFeatures.length;
     while (inductionVariable < last) {
       var s = FontFeatures[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      this.addFontFeature_qjlq9w_k$(s);
+      this.addFontFeature_7exvm_k$(s);
     }
     return this;
   };
   protoOf(TextStyle).clearFontFeatures_pt1v2x_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_TextStyle__1nClearFontFeatures(this.get__ptr_wohp4o_k$());
     return this;
   };
-  protoOf(TextStyle).set_fontSize_ucdk6o_k$ = function (value) {
-    this.setFontSize_w539s4_k$(value);
+  protoOf(TextStyle).set_fontSize_ywm6aj_k$ = function (value) {
+    this.setFontSize_38bvay_k$(value);
   };
   protoOf(TextStyle).get_fontSize_pr9n47_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_TextStyle__1nGetFontSize(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextStyle).setFontSize_w539s4_k$ = function (size) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).setFontSize_38bvay_k$ = function (size) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_TextStyle__1nSetFontSize(this.get__ptr_wohp4o_k$(), size);
     return this;
   };
-  protoOf(TextStyle).set_fontFamilies_tfym8e_k$ = function (value) {
-    this.setFontFamilies_vxfwvp_k$(value);
+  protoOf(TextStyle).set_fontFamilies_1qji0k_k$ = function (value) {
+    this.setFontFamilies_u7b6qa_k$(value);
   };
   protoOf(TextStyle).get_fontFamilies_2olayi_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'kotlin.collections.toTypedArray' call
       // Inline function 'org.jetbrains.skia.arrayDecoderScope' call
       var arrayDecoder = null;
@@ -21079,39 +20944,35 @@
         // Inline function 'org.jetbrains.skia.paragraph.TextStyle.<get-fontFamilies>.<anonymous>' call
         arrayDecoder = new ArrayDecoder(org_jetbrains_skia_paragraph_TextStyle__1nGetFontFamilies(this.get__ptr_wohp4o_k$()), org_jetbrains_skia_ManagedString__1nGetFinalizer());
         // Inline function 'org.jetbrains.skia.paragraph.TextStyle.<get-fontFamilies>.<anonymous>' call
-        var tmp0_anonymous = arrayDecoder;
+        var arrayDecoder_0 = arrayDecoder;
         // Inline function 'kotlin.collections.map' call
-        var tmp0_map = until(0, tmp0_anonymous.get_size_woubt6_k$());
+        var this_0 = until(0, arrayDecoder_0.get_size_woubt6_k$());
         // Inline function 'kotlin.collections.mapTo' call
-        var tmp0_mapTo = ArrayList_init_$Create$(collectionSizeOrDefault(tmp0_map, 10));
-        var inductionVariable = tmp0_map.get_first_irdx8n_k$();
-        var last = tmp0_map.get_last_wopotb_k$();
-        if (inductionVariable <= last)
-          do {
-            var item = inductionVariable;
-            inductionVariable = inductionVariable + 1 | 0;
-            // Inline function 'org.jetbrains.skia.paragraph.TextStyle.<get-fontFamilies>.<anonymous>.<anonymous>' call
-            // Inline function 'org.jetbrains.skia.impl.withStringResult' call
-            var tmp0_withStringResult = tmp0_anonymous.release_ywerve_k$(item);
-            // Inline function 'org.jetbrains.skia.impl.use' call
-            var tmp0_use = new ManagedString(tmp0_withStringResult);
-            var tmp_1;
-            try {
-              // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
-              tmp_1 = tmp0_use.toString();
-            }finally {
-              tmp0_use.close_ymq55z_k$();
-            }
-            tmp0_mapTo.add_1j60pz_k$(tmp_1);
+        var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+        var tmp0_iterator = this_0.iterator_jk1svi_k$();
+        while (tmp0_iterator.hasNext_bitz1p_k$()) {
+          var item = tmp0_iterator.next_20eer_k$();
+          // Inline function 'org.jetbrains.skia.paragraph.TextStyle.<get-fontFamilies>.<anonymous>.<anonymous>' call
+          // Inline function 'org.jetbrains.skia.impl.withStringResult' call
+          var pointer = arrayDecoder_0.release_fo34vl_k$(item);
+          // Inline function 'org.jetbrains.skia.impl.use' call
+          var this_1 = new ManagedString(pointer);
+          var tmp_1;
+          try {
+            // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
+            tmp_1 = this_1.toString();
+          }finally {
+            this_1.close_yn9xrc_k$();
           }
-           while (!(item === last));
-        tmp_0 = tmp0_mapTo;
+          destination.add_utx5q5_k$(tmp_1);
+        }
+        tmp_0 = destination;
       }finally {
         var tmp0_safe_receiver = arrayDecoder;
         if (tmp0_safe_receiver == null)
           null;
         else {
-          tmp0_safe_receiver.dispose_3n44we_k$();
+          tmp0_safe_receiver.dispose_3nnxhr_k$();
         }
       }
       tmp = copyToArray(tmp_0);
@@ -21120,24 +20981,23 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).setFontFamily_w9igrw_k$ = function (family) {
-    var tmp$ret$2;
+  protoOf(TextStyle).setFontFamily_q5xum3_k$ = function (family) {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp$ret$2 = [family];
-    return this.setFontFamilies_vxfwvp_k$(tmp$ret$2);
+    var tmp$ret$2 = [family];
+    return this.setFontFamilies_u7b6qa_k$(tmp$ret$2);
   };
-  protoOf(TextStyle).setFontFamilies_vxfwvp_k$ = function (families) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).setFontFamilies_u7b6qa_k$ = function (families) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
         var tmp = this.get__ptr_wohp4o_k$();
-        var tmp_0 = tmp0_anonymous.toInterop_59fj22_k$(families);
+        var tmp_0 = $this$interopScope.toInterop_2ejn5p_k$(families);
         var tmp1_elvis_lhs = families == null ? null : families.length;
         org_jetbrains_skia_paragraph_TextStyle__1nSetFontFamilies(tmp, tmp_0, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs);
         break $l$block;
@@ -21145,19 +21005,19 @@
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(TextStyle).set_height_qae0f0_k$ = function (value) {
-    this.setHeight_p4ibgm_k$(value);
+  protoOf(TextStyle).set_height_rov7zj_k$ = function (value) {
+    this.setHeight_4xoohw_k$(value);
   };
   protoOf(TextStyle).get_height_e7t92o_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var height = org_jetbrains_skia_paragraph_TextStyle__1nGetHeight(this.get__ptr_wohp4o_k$());
       tmp = isNaN_0(height) ? null : height;
     }finally {
@@ -21165,8 +21025,8 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).setHeight_p4ibgm_k$ = function (height) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).setHeight_4xoohw_k$ = function (height) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     if (height == null) {
       org_jetbrains_skia_paragraph_TextStyle__1nSetHeight(this.get__ptr_wohp4o_k$(), false, 0.0);
     } else {
@@ -21174,85 +21034,85 @@
     }
     return this;
   };
-  protoOf(TextStyle).set_isHalfLeading_kawj3x_k$ = function (value) {
-    this.setHalfLeading_yb30c7_k$(value);
+  protoOf(TextStyle).set_isHalfLeading_cjht1z_k$ = function (value) {
+    this.setHalfLeading_10vvhw_k$(value);
   };
   protoOf(TextStyle).get_isHalfLeading_333yxs_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_TextStyle__1nGetHalfLeading(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextStyle).setHalfLeading_yb30c7_k$ = function (value) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).setHalfLeading_10vvhw_k$ = function (value) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_TextStyle__1nSetHalfLeading(this.get__ptr_wohp4o_k$(), value);
     return this;
   };
-  protoOf(TextStyle).set_letterSpacing_xkr43h_k$ = function (value) {
-    this.setLetterSpacing_mqhl4d_k$(value);
+  protoOf(TextStyle).set_letterSpacing_k6mf0o_k$ = function (value) {
+    this.setLetterSpacing_ezn9gd_k$(value);
   };
   protoOf(TextStyle).get_letterSpacing_xp4v84_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_TextStyle__1nGetLetterSpacing(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextStyle).setLetterSpacing_mqhl4d_k$ = function (letterSpacing) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).setLetterSpacing_ezn9gd_k$ = function (letterSpacing) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_TextStyle__1nSetLetterSpacing(this.get__ptr_wohp4o_k$(), letterSpacing);
     return this;
   };
-  protoOf(TextStyle).set_baselineShift_ci5bwd_k$ = function (value) {
-    this.setBaselineShift_xnvprh_k$(value);
+  protoOf(TextStyle).set_baselineShift_pi9thk_k$ = function (value) {
+    this.setBaselineShift_3y3bz7_k$(value);
   };
   protoOf(TextStyle).get_baselineShift_3cidck_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_TextStyle__1nGetBaselineShift(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextStyle).setBaselineShift_xnvprh_k$ = function (baselineShift) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).setBaselineShift_3y3bz7_k$ = function (baselineShift) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_TextStyle__1nSetBaselineShift(this.get__ptr_wohp4o_k$(), baselineShift);
     return this;
   };
-  protoOf(TextStyle).set_wordSpacing_o2ixy7_k$ = function (value) {
-    this.setWordSpacing_2up70p_k$(value);
+  protoOf(TextStyle).set_wordSpacing_4zhr9w_k$ = function (value) {
+    this.setWordSpacing_t4mvwf_k$(value);
   };
   protoOf(TextStyle).get_wordSpacing_ak2jyo_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_TextStyle__1nGetWordSpacing(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextStyle).setWordSpacing_2up70p_k$ = function (wordSpacing) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).setWordSpacing_t4mvwf_k$ = function (wordSpacing) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_TextStyle__1nSetWordSpacing(this.get__ptr_wohp4o_k$(), wordSpacing);
     return this;
   };
-  protoOf(TextStyle).set_typeface_u7j3gm_k$ = function (value) {
-    this.setTypeface_opvtde_k$(value);
+  protoOf(TextStyle).set_typeface_94v5d2_k$ = function (value) {
+    this.setTypeface_25b4vv_k$(value);
   };
   protoOf(TextStyle).get_typeface_s1tqao_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var ptr = org_jetbrains_skia_paragraph_TextStyle__1nGetTypeface(this.get__ptr_wohp4o_k$());
       tmp = ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$() ? null : new Typeface(ptr);
     }finally {
@@ -21260,10 +21120,10 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).setTypeface_opvtde_k$ = function (typeface) {
+  protoOf(TextStyle).setTypeface_25b4vv_k$ = function (typeface) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       org_jetbrains_skia_paragraph_TextStyle__1nSetTypeface(this.get__ptr_wohp4o_k$(), getPtr(typeface));
       tmp = this;
     }finally {
@@ -21272,25 +21132,24 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).set_locale_ood4p1_k$ = function (value) {
-    this.setLocale_pv3ji4_k$(value);
+  protoOf(TextStyle).set_locale_w9f5al_k$ = function (value) {
+    this.setLocale_f10lhx_k$(value);
   };
   protoOf(TextStyle).get_locale_g9dqar_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.withStringResult' call
       // Inline function 'org.jetbrains.skia.impl.use' call
-      var tmp$ret$0;
       // Inline function 'org.jetbrains.skia.paragraph.TextStyle.<get-locale>.<anonymous>' call
-      tmp$ret$0 = org_jetbrains_skia_paragraph_TextStyle__1nGetLocale(this.get__ptr_wohp4o_k$());
-      var tmp0_use = new ManagedString(tmp$ret$0);
+      var tmp$ret$0 = org_jetbrains_skia_paragraph_TextStyle__1nGetLocale(this.get__ptr_wohp4o_k$());
+      var this_0 = new ManagedString(tmp$ret$0);
       var tmp_0;
       try {
         // Inline function 'org.jetbrains.skia.impl.withStringResult.<anonymous>' call
-        tmp_0 = tmp0_use.toString();
+        tmp_0 = this_0.toString();
       }finally {
-        tmp0_use.close_ymq55z_k$();
+        this_0.close_yn9xrc_k$();
       }
       tmp = tmp_0;
     }finally {
@@ -21298,48 +21157,48 @@
     }
     return tmp;
   };
-  protoOf(TextStyle).setLocale_pv3ji4_k$ = function (locale) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).setLocale_f10lhx_k$ = function (locale) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        org_jetbrains_skia_paragraph_TextStyle__1nSetLocale(this.get__ptr_wohp4o_k$(), tmp0_anonymous.toInterop_tozece_k$(locale));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        org_jetbrains_skia_paragraph_TextStyle__1nSetLocale(this.get__ptr_wohp4o_k$(), $this$interopScope.toInterop_ok8jph_k$(locale));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
     return this;
   };
-  protoOf(TextStyle).set_baselineMode_odkkhz_k$ = function (value) {
-    this.setBaselineMode_j7a2up_k$(value);
+  protoOf(TextStyle).set_baselineMode_mbrvw1_k$ = function (value) {
+    this.setBaselineMode_yl482k_k$(value);
   };
   protoOf(TextStyle).get_baselineMode_4h6ucv_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = values_31()[org_jetbrains_skia_paragraph_TextStyle__1nGetBaselineMode(this.get__ptr_wohp4o_k$())];
     }finally {
       reachabilityBarrier(this);
     }
     return tmp;
   };
-  protoOf(TextStyle).setBaselineMode_j7a2up_k$ = function (baseline) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(TextStyle).setBaselineMode_yl482k_k$ = function (baseline) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_TextStyle__1nSetBaselineMode(this.get__ptr_wohp4o_k$(), baseline.get_ordinal_ip24qg_k$());
     return this;
   };
   protoOf(TextStyle).get_fontMetrics_c0s645_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       var tmp_0 = Companion_getInstance_14();
       tmp = fromInteropPointer(tmp_0, TextStyle$_get_fontMetrics_$lambda_9osnwy(this));
     }finally {
@@ -21350,7 +21209,7 @@
   protoOf(TextStyle).get_isPlaceholder_en29fk_k$ = function () {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = org_jetbrains_skia_paragraph_TextStyle__1nIsPlaceholder(this.get__ptr_wohp4o_k$());
     }finally {
       reachabilityBarrier(this);
@@ -21358,7 +21217,7 @@
     return tmp;
   };
   protoOf(TextStyle).setPlaceholder_tzv4nj_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     org_jetbrains_skia_paragraph_TextStyle__1nSetPlaceholder(this.get__ptr_wohp4o_k$());
     return this;
   };
@@ -21399,7 +21258,7 @@
         return TextStyleAttribute_FONT_EXACT_getInstance();
       default:
         TextStyleAttribute_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -21464,7 +21323,7 @@
   }
   function Companion_69() {
     Companion_instance_69 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_69;
   function Companion_getInstance_70() {
@@ -21475,25 +21334,25 @@
   function TypefaceFontProvider() {
     Companion_getInstance_70();
     FontMgr_init_$Init$(org_jetbrains_skia_paragraph_TypefaceFontProvider__1nMake(), this);
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
   }
-  protoOf(TypefaceFontProvider).registerTypeface_apdxu9_k$ = function (typeface, alias) {
+  protoOf(TypefaceFontProvider).registerTypeface_y1keh7_k$ = function (typeface, alias) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       $l$block: {
         // Inline function 'org.jetbrains.skia.impl.interopScope' call
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-          org_jetbrains_skia_paragraph_TypefaceFontProvider__1nRegisterTypeface(this.get__ptr_wohp4o_k$(), getPtr(typeface), tmp0_anonymous.toInterop_tozece_k$(alias));
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          org_jetbrains_skia_paragraph_TypefaceFontProvider__1nRegisterTypeface(this.get__ptr_wohp4o_k$(), getPtr(typeface), $this$interopScope.toInterop_ok8jph_k$(alias));
           break $l$block;
         }finally {
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -21504,9 +21363,9 @@
     }
     return tmp;
   };
-  protoOf(TypefaceFontProvider).registerTypeface$default_ldd90o_k$ = function (typeface, alias, $super) {
+  protoOf(TypefaceFontProvider).registerTypeface$default_ugxiks_k$ = function (typeface, alias, $super) {
     alias = alias === VOID ? null : alias;
-    return $super === VOID ? this.registerTypeface_apdxu9_k$(typeface, alias) : $super.registerTypeface_apdxu9_k$.call(this, typeface, alias);
+    return $super === VOID ? this.registerTypeface_y1keh7_k$(typeface, alias) : $super.registerTypeface_y1keh7_k$.call(this, typeface, alias);
   };
   function BidiRun(end, level) {
     this.end_1 = end;
@@ -21539,7 +21398,7 @@
   };
   function Companion_70() {
     Companion_instance_70 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_70;
   function Companion_getInstance_71() {
@@ -21583,12 +21442,13 @@
     }
     return tmp;
   };
-  protoOf(FontMgrRunIterator).remove_le47v1_k$ = function () {
+  protoOf(FontMgrRunIterator).remove_ldkf9o_k$ = function () {
     // Inline function 'kotlin.TODO' call
-    throw new NotImplementedError('An operation is not implemented: Not yet implemented');
+    var reason = 'Not yet implemented';
+    throw new NotImplementedError('An operation is not implemented: ' + reason);
   };
   function makeHbIcuScriptRunIterator(text, font, opts) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_shaper_FontMgrRunIterator__1nMake(getPtr(text), getPtr(font), getPtr(opts.get_fontMgr_9zv5i8_k$()), opts._booleanPropsToInt_ers7fx_k$());
@@ -21639,7 +21499,7 @@
   };
   function Companion_71() {
     Companion_instance_71 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_71;
   function Companion_getInstance_72() {
@@ -21668,12 +21528,13 @@
     }
     return tmp;
   };
-  protoOf(HbIcuScriptRunIterator).remove_le47v1_k$ = function () {
+  protoOf(HbIcuScriptRunIterator).remove_ldkf9o_k$ = function () {
     // Inline function 'kotlin.TODO' call
-    throw new NotImplementedError('An operation is not implemented: Not yet implemented');
+    var reason = 'Not yet implemented';
+    throw new NotImplementedError('An operation is not implemented: ' + reason);
   };
   function makeHbIcuScriptRunIterator_0(text) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_shaper_HbIcuScriptRunIterator__1nMake(getPtr(text));
@@ -21684,7 +21545,7 @@
   }
   function Companion_72() {
     Companion_instance_72 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_72;
   function Companion_getInstance_73() {
@@ -21713,12 +21574,13 @@
     }
     return tmp;
   };
-  protoOf(IcuBidiRunIterator).remove_le47v1_k$ = function () {
+  protoOf(IcuBidiRunIterator).remove_ldkf9o_k$ = function () {
     // Inline function 'kotlin.TODO' call
-    throw new NotImplementedError('An operation is not implemented: Not yet implemented');
+    var reason = 'Not yet implemented';
+    throw new NotImplementedError('An operation is not implemented: ' + reason);
   };
   function makeIcuBidiRunIterator(text, bidiLevel) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var tmp;
     try {
       tmp = org_jetbrains_skia_shaper_IcuBidiRunIterator__1nMake(getPtr(text), bidiLevel);
@@ -21758,7 +21620,7 @@
   };
   function Companion_73() {
     Companion_instance_73 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   var Companion_instance_73;
   function Companion_getInstance_74() {
@@ -21787,13 +21649,13 @@
   protoOf(ManagedRunIterator).get__text_inq4f7_k$ = function () {
     return this._text_1;
   };
-  protoOf(ManagedRunIterator).close_ymq55z_k$ = function () {
-    protoOf(Managed).close_ymq55z_k$.call(this);
+  protoOf(ManagedRunIterator).close_yn9xrc_k$ = function () {
+    protoOf(Managed).close_yn9xrc_k$.call(this);
     var tmp0_safe_receiver = this._text_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.close_ymq55z_k$();
+      tmp0_safe_receiver.close_yn9xrc_k$();
     }
   };
   protoOf(ManagedRunIterator)._getEndOfCurrentRun_ekavtf_k$ = function () {
@@ -21826,7 +21688,7 @@
     this.rangeBegin_1 = rangeBegin;
     this.rangeSize_1 = rangeSize;
   }
-  protoOf(RunInfo).set__fontPtr_l2sx9v_k$ = function (_set____db54di) {
+  protoOf(RunInfo).set__fontPtr_z2z779_k$ = function (_set____db54di) {
     this._fontPtr_1 = _set____db54di;
   };
   protoOf(RunInfo).get__fontPtr_42btxz_k$ = function () {
@@ -21864,9 +21726,9 @@
       var message = 'getFont() is only valid inside RunHandler callbacks';
       throw IllegalStateException_init_$Create$(toString(message));
     }
-    return Companion_getInstance_12().makeClone_lsflv2_k$(this._fontPtr_1);
+    return Companion_getInstance_12().makeClone_j6bnh3_k$(this._fontPtr_1);
   };
-  protoOf(RunInfo).setFontPtr_vltxtw_k$ = function (_fontPtr) {
+  protoOf(RunInfo).setFontPtr_3l4zff_k$ = function (_fontPtr) {
     this._fontPtr_1 = _fontPtr;
     return this;
   };
@@ -21903,7 +21765,7 @@
     return 'RunInfo(_fontPtr=' + this._fontPtr_1 + ', _bidiLevel=' + this.bidiLevel_1 + ', _advanceX=' + this.advanceX_1 + ', _advanceY=' + this.advanceY_1 + ', _glyphCount=' + this.glyphCount_1 + ', _rangeBegin=' + this.rangeBegin_1 + ', _rangeSize=' + this.rangeSize_1 + ')';
   };
   function ScriptRun_init_$Init$(end, script, $this) {
-    ScriptRun.call($this, end, Companion_getInstance_21().fromString_2a1yvu_k$(script));
+    ScriptRun.call($this, end, Companion_getInstance_21().fromString_g5hge7_k$(script));
     return $this;
   }
   function ScriptRun_init_$Create$(end, script) {
@@ -21920,7 +21782,7 @@
     return this.scriptTag_1;
   };
   protoOf(ScriptRun).get_script_jedas4_k$ = function () {
-    return Companion_getInstance_21().toString_flfcob_k$(this.scriptTag_1);
+    return Companion_getInstance_21().toString_w4mr8s_k$(this.scriptTag_1);
   };
   protoOf(ScriptRun).equals = function (other) {
     if (other === this)
@@ -21943,19 +21805,19 @@
   };
   function Companion_74() {
     Companion_instance_74 = this;
-    Companion_getInstance_79().staticLoad_svq3vn_k$();
+    Companion_getInstance_79().staticLoad_sw9wh0_k$();
   }
   protoOf(Companion_74).makePrimitive_8j41ax_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return new Shaper(org_jetbrains_skia_shaper_Shaper__1nMakePrimitive());
   };
   protoOf(Companion_74).makeShaperDrivenWrapper_qp7csw_k$ = function () {
-    return this.makeShaperDrivenWrapper_ckwd25_k$(null);
+    return this.makeShaperDrivenWrapper_bigtfw_k$(null);
   };
-  protoOf(Companion_74).makeShaperDrivenWrapper_ckwd25_k$ = function (fontMgr) {
+  protoOf(Companion_74).makeShaperDrivenWrapper_bigtfw_k$ = function (fontMgr) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Shaper(org_jetbrains_skia_shaper_Shaper__1nMakeShaperDrivenWrapper(getPtr(fontMgr)));
     }finally {
       reachabilityBarrier(fontMgr);
@@ -21963,12 +21825,12 @@
     return tmp;
   };
   protoOf(Companion_74).makeShapeThenWrap_28qre_k$ = function () {
-    return this.makeShapeThenWrap_s09tcd_k$(null);
+    return this.makeShapeThenWrap_jrc2zi_k$(null);
   };
-  protoOf(Companion_74).makeShapeThenWrap_s09tcd_k$ = function (fontMgr) {
+  protoOf(Companion_74).makeShapeThenWrap_jrc2zi_k$ = function (fontMgr) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Shaper(org_jetbrains_skia_shaper_Shaper__1nMakeShapeThenWrap(getPtr(fontMgr)));
     }finally {
       reachabilityBarrier(fontMgr);
@@ -21976,12 +21838,12 @@
     return tmp;
   };
   protoOf(Companion_74).makeShapeDontWrapOrReorder_8z25ai_k$ = function () {
-    return this.makeShapeDontWrapOrReorder_fjo61p_k$(null);
+    return this.makeShapeDontWrapOrReorder_4jkdq_k$(null);
   };
-  protoOf(Companion_74).makeShapeDontWrapOrReorder_fjo61p_k$ = function (fontMgr) {
+  protoOf(Companion_74).makeShapeDontWrapOrReorder_4jkdq_k$ = function (fontMgr) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Shaper(org_jetbrains_skia_shaper_Shaper__1nMakeShapeDontWrapOrReorder(getPtr(fontMgr)));
     }finally {
       reachabilityBarrier(fontMgr);
@@ -21989,19 +21851,19 @@
     return tmp;
   };
   protoOf(Companion_74).makeCoreText_e5e1ru_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     var ptr = org_jetbrains_skia_shaper_Shaper__1nMakeCoreText();
     if (ptr === Companion_getInstance_81().get_NullPointer_8qbg7n_k$())
       throw UnsupportedOperationException_init_$Create$('CoreText not available');
     return new Shaper(ptr);
   };
   protoOf(Companion_74).make_1zo4u_k$ = function () {
-    return this.make_4rvjcv_k$(null);
+    return this.make_4ufeaa_k$(null);
   };
-  protoOf(Companion_74).make_4rvjcv_k$ = function (fontMgr) {
+  protoOf(Companion_74).make_4ufeaa_k$ = function (fontMgr) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       tmp = new Shaper(org_jetbrains_skia_shaper_Shaper__1nMake(getPtr(fontMgr)));
     }finally {
       reachabilityBarrier(fontMgr);
@@ -22031,21 +21893,21 @@
     Companion_getInstance_75();
     Managed.call(this, ptr, _FinalizerHolder_getInstance_25().PTR_1);
   }
-  protoOf(Shaper).shape_awe5d8_k$ = function (text, font) {
-    return this.shape_lhjxx5_k$(text, font, Companion_getInstance_76().get_DEFAULT_wccqmg_k$(), FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$(), Companion_getInstance_44().get_ZERO_wodlgx_k$());
+  protoOf(Shaper).shape_8wojcl_k$ = function (text, font) {
+    return this.shape_cpcgx1_k$(text, font, Companion_getInstance_76().get_DEFAULT_wccqmg_k$(), FloatCompanionObject_getInstance().get_POSITIVE_INFINITY_yq30fv_k$(), Companion_getInstance_44().get_ZERO_wodlgx_k$());
   };
-  protoOf(Shaper).shape_kjiwua_k$ = function (text, font, width) {
-    return this.shape_lhjxx5_k$(text, font, Companion_getInstance_76().get_DEFAULT_wccqmg_k$(), width, Companion_getInstance_44().get_ZERO_wodlgx_k$());
+  protoOf(Shaper).shape_yu4jub_k$ = function (text, font, width) {
+    return this.shape_cpcgx1_k$(text, font, Companion_getInstance_76().get_DEFAULT_wccqmg_k$(), width, Companion_getInstance_44().get_ZERO_wodlgx_k$());
   };
-  protoOf(Shaper).shape_442psf_k$ = function (text, font, width, offset) {
-    return this.shape_lhjxx5_k$(text, font, Companion_getInstance_76().get_DEFAULT_wccqmg_k$(), width, offset);
+  protoOf(Shaper).shape_nbntqc_k$ = function (text, font, width, offset) {
+    return this.shape_cpcgx1_k$(text, font, Companion_getInstance_76().get_DEFAULT_wccqmg_k$(), width, offset);
   };
-  protoOf(Shaper).shape_lhjxx5_k$ = function (text, font, opts, width, offset) {
+  protoOf(Shaper).shape_cpcgx1_k$ = function (text, font, opts, width, offset) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.use' call
-      var tmp0_use = ManagedString_init_$Create$(text);
+      var this_0 = ManagedString_init_$Create$(text);
       var tmp_0;
       try {
         // Inline function 'org.jetbrains.skia.shaper.Shaper.shape.<anonymous>' call
@@ -22056,25 +21918,25 @@
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.shaper.Shaper.shape.<anonymous>.<anonymous>' call
-            var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
             var tmp_1 = this.get__ptr_wohp4o_k$();
-            var tmp_2 = tmp0_use.get__ptr_wohp4o_k$();
+            var tmp_2 = this_0.get__ptr_wohp4o_k$();
             var tmp_3 = getPtr(font);
             var tmp0_safe_receiver = opts.get_features_yf4h6u_k$();
             var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.length;
-            tmp$ret$1 = org_jetbrains_skia_shaper_Shaper__1nShapeBlob(tmp_1, tmp_2, tmp_3, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, Companion_getInstance_13().arrayOfFontFeaturesToInterop_ryvw2p_k$(tmp0_anonymous, opts.get_features_yf4h6u_k$()), opts._booleanPropsToInt_ers7fx_k$(), width, offset.get_x_1mhr67_k$(), offset.get_y_1mhr68_k$());
+            tmp$ret$1 = org_jetbrains_skia_shaper_Shaper__1nShapeBlob(tmp_1, tmp_2, tmp_3, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, Companion_getInstance_13().arrayOfFontFeaturesToInterop_2tlmgk_k$($this$interopScope, opts.get_features_yf4h6u_k$()), opts._booleanPropsToInt_ers7fx_k$(), width, offset.get_x_1mhr67_k$(), offset.get_y_1mhr68_k$());
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
         tmp_0 = tmp$ret$1;
       }finally {
-        tmp0_use.close_ymq55z_k$();
+        this_0.close_yn9xrc_k$();
       }
       var ptr = tmp_0;
       tmp = Companion_getInstance_81().get_NullPointer_8qbg7n_k$() === ptr ? null : new TextBlob(ptr);
@@ -22084,62 +21946,62 @@
     }
     return tmp;
   };
-  protoOf(Shaper).shape_argc1x_k$ = function (text, font, opts, width, runHandler) {
+  protoOf(Shaper).shape_uu8jv6_k$ = function (text, font, opts, width, runHandler) {
     // Inline function 'org.jetbrains.skia.impl.use' call
-    var tmp0_use = ManagedString_init_$Create$(text);
+    var this_0 = ManagedString_init_$Create$(text);
     var tmp;
     try {
       // Inline function 'org.jetbrains.skia.shaper.Shaper.shape.<anonymous>' call
       // Inline function 'org.jetbrains.skia.impl.use' call
-      var tmp0_use_0 = new FontMgrRunIterator(tmp0_use, false, font, opts);
+      var this_1 = new FontMgrRunIterator(this_0, false, font, opts);
       var tmp_0;
       try {
         // Inline function 'org.jetbrains.skia.shaper.Shaper.shape.<anonymous>.<anonymous>' call
         // Inline function 'org.jetbrains.skia.impl.use' call
-        var tmp0_use_1 = new IcuBidiRunIterator(tmp0_use, false, opts.get_isLeftToRight_7rnjjb_k$() ? -2 : -1);
+        var this_2 = new IcuBidiRunIterator(this_0, false, opts.get_isLeftToRight_7rnjjb_k$() ? -2 : -1);
         var tmp_1;
         try {
           // Inline function 'org.jetbrains.skia.shaper.Shaper.shape.<anonymous>.<anonymous>.<anonymous>' call
           // Inline function 'org.jetbrains.skia.impl.use' call
-          var tmp0_use_2 = new HbIcuScriptRunIterator(tmp0_use, false);
+          var this_3 = new HbIcuScriptRunIterator(this_0, false);
           var tmp_2;
           try {
             var langIter = new TrivialLanguageRunIterator(text, defaultLanguageTag());
-            return this.shape_dzlb2j_k$(tmp0_use, tmp0_use_0, tmp0_use_1, tmp0_use_2, langIter, opts, width, runHandler);
+            return this.shape_xdhkad_k$(this_0, this_1, this_2, this_3, langIter, opts, width, runHandler);
           }finally {
-            tmp0_use_2.close_ymq55z_k$();
+            this_3.close_yn9xrc_k$();
           }
         }finally {
-          tmp0_use_1.close_ymq55z_k$();
+          this_2.close_yn9xrc_k$();
         }
       }finally {
-        tmp0_use_0.close_ymq55z_k$();
+        this_1.close_yn9xrc_k$();
       }
     }finally {
-      tmp0_use.close_ymq55z_k$();
+      this_0.close_yn9xrc_k$();
     }
   };
-  protoOf(Shaper).shape_llxbrb_k$ = function (text, fontIter, bidiIter, scriptIter, langIter, opts, width, runHandler) {
+  protoOf(Shaper).shape_ozbeie_k$ = function (text, fontIter, bidiIter, scriptIter, langIter, opts, width, runHandler) {
     // Inline function 'org.jetbrains.skia.impl.use' call
-    var tmp0_use = ManagedString_init_$Create$(text);
+    var this_0 = ManagedString_init_$Create$(text);
     var tmp;
     try {
-      return this.shape_dzlb2j_k$(tmp0_use, fontIter, bidiIter, scriptIter, langIter, opts, width, runHandler);
+      return this.shape_xdhkad_k$(this_0, fontIter, bidiIter, scriptIter, langIter, opts, width, runHandler);
     }finally {
-      tmp0_use.close_ymq55z_k$();
+      this_0.close_yn9xrc_k$();
     }
   };
-  protoOf(Shaper).shape_dzlb2j_k$ = function (textUtf8, fontIter, bidiIter, scriptIter, langIter, opts, width, runHandler) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+  protoOf(Shaper).shape_xdhkad_k$ = function (textUtf8, fontIter, bidiIter, scriptIter, langIter, opts, width, runHandler) {
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     doShape(this, textUtf8, fontIter, bidiIter, scriptIter, langIter, opts, width, runHandler);
     return this;
   };
-  protoOf(Shaper).shapeLine_jhrhlk_k$ = function (text, font, opts) {
+  protoOf(Shaper).shapeLine_obeq7i_k$ = function (text, font, opts) {
     var tmp;
     try {
-      Stats_getInstance().onNativeCall_s1vbwj_k$();
+      Stats_getInstance().onNativeCall_s2f4hw_k$();
       // Inline function 'org.jetbrains.skia.impl.use' call
-      var tmp0_use = ManagedString_init_$Create$(text);
+      var this_0 = ManagedString_init_$Create$(text);
       var tmp_0;
       try {
         // Inline function 'org.jetbrains.skia.shaper.Shaper.shapeLine.<anonymous>' call
@@ -22150,25 +22012,25 @@
             var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
             // Inline function 'org.jetbrains.skia.shaper.Shaper.shapeLine.<anonymous>.<anonymous>' call
-            var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+            var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
             var tmp_1 = this.get__ptr_wohp4o_k$();
-            var tmp_2 = tmp0_use.get__ptr_wohp4o_k$();
+            var tmp_2 = this_0.get__ptr_wohp4o_k$();
             var tmp_3 = getPtr(font);
             var tmp0_safe_receiver = opts.get_features_yf4h6u_k$();
             var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.length;
-            tmp$ret$1 = new TextLine(org_jetbrains_skia_shaper_Shaper__1nShapeLine(tmp_1, tmp_2, tmp_3, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, Companion_getInstance_13().arrayOfFontFeaturesToInterop_ryvw2p_k$(tmp0_anonymous, opts.get_features_yf4h6u_k$()), opts._booleanPropsToInt_ers7fx_k$()));
+            tmp$ret$1 = new TextLine(org_jetbrains_skia_shaper_Shaper__1nShapeLine(tmp_1, tmp_2, tmp_3, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, Companion_getInstance_13().arrayOfFontFeaturesToInterop_2tlmgk_k$($this$interopScope, opts.get_features_yf4h6u_k$()), opts._booleanPropsToInt_ers7fx_k$()));
             break $l$block;
           }finally {
             var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
             _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
             if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+              _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
             }
           }
         }
         tmp_0 = tmp$ret$1;
       }finally {
-        tmp0_use.close_ymq55z_k$();
+        this_0.close_yn9xrc_k$();
       }
       tmp = tmp_0;
     }finally {
@@ -22177,8 +22039,8 @@
     }
     return tmp;
   };
-  protoOf(Shaper).shapeLine_c00614_k$ = function (text, font) {
-    return this.shapeLine_jhrhlk_k$(text, font, Companion_getInstance_76().get_DEFAULT_wccqmg_k$());
+  protoOf(Shaper).shapeLine_hb87ot_k$ = function (text, font) {
+    return this.shapeLine_obeq7i_k$(text, font, Companion_getInstance_76().get_DEFAULT_wccqmg_k$());
   };
   function Companion_75() {
     Companion_instance_75 = this;
@@ -22226,15 +22088,15 @@
       i = i | 1;
     return i;
   };
-  protoOf(ShapingOptions).withFeatures_cczxhq_k$ = function (features) {
+  protoOf(ShapingOptions).withFeatures_ctr5yi_k$ = function (features) {
     return new ShapingOptions(this.fontMgr_1, features, this.isLeftToRight_1, this.isApproximateSpaces_1, this.isApproximatePunctuation_1);
   };
-  protoOf(ShapingOptions).withFeatures_vfmlst_k$ = function (featuresString) {
+  protoOf(ShapingOptions).withFeatures_xczcv8_k$ = function (featuresString) {
     var tmp;
     if (featuresString == null) {
-      tmp = this.withFeatures_cczxhq_k$((null == null ? true : isArray(null)) ? null : THROW_CCE());
+      tmp = this.withFeatures_ctr5yi_k$((null == null ? true : isArray(null)) ? null : THROW_CCE());
     } else {
-      tmp = this.withFeatures_cczxhq_k$(Companion_getInstance_13().parse_4mmrzm_k$(featuresString));
+      tmp = this.withFeatures_ctr5yi_k$(Companion_getInstance_13().parse_pc1q8p_k$(featuresString));
     }
     return tmp;
   };
@@ -22270,16 +22132,16 @@
   protoOf(ShapingOptions).toString = function () {
     return 'ShapingOptions(_fontMgr=' + this.fontMgr_1 + ', _features=' + contentDeepToString(this.features_1) + ', _leftToRight=' + this.isLeftToRight_1 + ', _approximateSpaces=' + this.isApproximateSpaces_1 + ', _approximatePunctuation=' + this.isApproximatePunctuation_1 + ')';
   };
-  protoOf(ShapingOptions).withFontMgr_ku0pyu_k$ = function (_fontMgr) {
+  protoOf(ShapingOptions).withFontMgr_1w9nvd_k$ = function (_fontMgr) {
     return this.fontMgr_1 === _fontMgr ? this : new ShapingOptions(_fontMgr, this.features_1, this.isLeftToRight_1, this.isApproximateSpaces_1, this.isApproximatePunctuation_1);
   };
-  protoOf(ShapingOptions).withLeftToRight_3weccm_k$ = function (_leftToRight) {
+  protoOf(ShapingOptions).withLeftToRight_yp0yof_k$ = function (_leftToRight) {
     return this.isLeftToRight_1 === _leftToRight ? this : new ShapingOptions(this.fontMgr_1, this.features_1, _leftToRight, this.isApproximateSpaces_1, this.isApproximatePunctuation_1);
   };
-  protoOf(ShapingOptions).withApproximateSpaces_53uoo1_k$ = function (_approximateSpaces) {
+  protoOf(ShapingOptions).withApproximateSpaces_9ggp8q_k$ = function (_approximateSpaces) {
     return this.isApproximateSpaces_1 === _approximateSpaces ? this : new ShapingOptions(this.fontMgr_1, this.features_1, this.isLeftToRight_1, _approximateSpaces, this.isApproximatePunctuation_1);
   };
-  protoOf(ShapingOptions).withApproximatePunctuation_2t1p66_k$ = function (_approximatePunctuation) {
+  protoOf(ShapingOptions).withApproximatePunctuation_cdl3hj_k$ = function (_approximatePunctuation) {
     return this.isApproximatePunctuation_1 === _approximatePunctuation ? this : new ShapingOptions(this.fontMgr_1, this.features_1, this.isLeftToRight_1, this.isApproximateSpaces_1, _approximatePunctuation);
   };
   function TrivialLanguageRunIterator(text, language) {
@@ -22293,7 +22155,7 @@
   protoOf(TrivialLanguageRunIterator).get__language_go9wj6_k$ = function () {
     return this._language_1;
   };
-  protoOf(TrivialLanguageRunIterator).set__atEnd_2mzm6b_k$ = function (_set____db54di) {
+  protoOf(TrivialLanguageRunIterator).set__atEnd_bu0cy9_k$ = function (_set____db54di) {
     this._atEnd_1 = _set____db54di;
   };
   protoOf(TrivialLanguageRunIterator).get__atEnd_9wdsxe_k$ = function () {
@@ -22306,9 +22168,10 @@
   protoOf(TrivialLanguageRunIterator).hasNext_bitz1p_k$ = function () {
     return !this._atEnd_1;
   };
-  protoOf(TrivialLanguageRunIterator).remove_le47v1_k$ = function () {
+  protoOf(TrivialLanguageRunIterator).remove_ldkf9o_k$ = function () {
     // Inline function 'kotlin.TODO' call
-    throw new NotImplementedError('An operation is not implemented: Not yet implemented');
+    var reason = 'Not yet implemented';
+    throw new NotImplementedError('An operation is not implemented: ' + reason);
   };
   function SkikoKeyboardEvent(key, modifiers, kind, timestamp, platform) {
     modifiers = modifiers === VOID ? Companion_getInstance_77().EMPTY_1 : modifiers;
@@ -22322,7 +22185,7 @@
   protoOf(SkikoKeyboardEvent).get_key_18j28a_k$ = function () {
     return this.key_1;
   };
-  protoOf(SkikoKeyboardEvent).get_modifiers_qtn48z_k$ = function () {
+  protoOf(SkikoKeyboardEvent).get_modifiers_tf2p2_k$ = function () {
     return this.modifiers_1;
   };
   protoOf(SkikoKeyboardEvent).get_kind_wop7ml_k$ = function () {
@@ -22337,7 +22200,7 @@
   protoOf(SkikoKeyboardEvent).component1_7eebsc_k$ = function () {
     return this.key_1;
   };
-  protoOf(SkikoKeyboardEvent).component2_mni6o1_k$ = function () {
+  protoOf(SkikoKeyboardEvent).component2_3cpuvw_k$ = function () {
     return this.modifiers_1;
   };
   protoOf(SkikoKeyboardEvent).component3_7eebsa_k$ = function () {
@@ -22349,19 +22212,19 @@
   protoOf(SkikoKeyboardEvent).component5_7eebs8_k$ = function () {
     return this.platform_1;
   };
-  protoOf(SkikoKeyboardEvent).copy_3uw6gv_k$ = function (key, modifiers, kind, timestamp, platform) {
+  protoOf(SkikoKeyboardEvent).copy_ui9cdl_k$ = function (key, modifiers, kind, timestamp, platform) {
     return new SkikoKeyboardEvent(key, modifiers, kind, timestamp, platform);
   };
-  protoOf(SkikoKeyboardEvent).copy$default_10nk3o_k$ = function (key, modifiers, kind, timestamp, platform, $super) {
+  protoOf(SkikoKeyboardEvent).copy$default_98in6q_k$ = function (key, modifiers, kind, timestamp, platform, $super) {
     key = key === VOID ? this.key_1 : key;
     modifiers = modifiers === VOID ? this.modifiers_1 : modifiers;
     kind = kind === VOID ? this.kind_1 : kind;
     timestamp = timestamp === VOID ? this.timestamp_1 : timestamp;
     platform = platform === VOID ? this.platform_1 : platform;
-    return $super === VOID ? this.copy_3uw6gv_k$(key, modifiers, kind, timestamp, platform) : $super.copy_3uw6gv_k$.call(this, key, new SkikoInputModifiers(modifiers), kind, timestamp, platform);
+    return $super === VOID ? this.copy_ui9cdl_k$(key, modifiers, kind, timestamp, platform) : $super.copy_ui9cdl_k$.call(this, key, new SkikoInputModifiers(modifiers), kind, timestamp, platform);
   };
   protoOf(SkikoKeyboardEvent).toString = function () {
-    return 'SkikoKeyboardEvent(key=' + this.key_1 + ', modifiers=' + new SkikoInputModifiers(this.modifiers_1) + ', kind=' + this.kind_1 + ', timestamp=' + toString(this.timestamp_1) + ', platform=' + this.platform_1 + ')';
+    return 'SkikoKeyboardEvent(key=' + this.key_1 + ', modifiers=' + new SkikoInputModifiers(this.modifiers_1) + ', kind=' + this.kind_1 + ', timestamp=' + this.timestamp_1.toString() + ', platform=' + this.platform_1 + ')';
   };
   protoOf(SkikoKeyboardEvent).hashCode = function () {
     var result = this.key_1.hashCode();
@@ -22403,19 +22266,19 @@
     this.ALT_1 = _SkikoInputModifiers___init__impl__z8g2zy(4);
     this.SHIFT_1 = _SkikoInputModifiers___init__impl__z8g2zy(8);
   }
-  protoOf(Companion_76).get_EMPTY_3cyob6_k$ = function () {
+  protoOf(Companion_76).get_EMPTY_mn9d8r_k$ = function () {
     return this.EMPTY_1;
   };
-  protoOf(Companion_76).get_META_gtfryg_k$ = function () {
+  protoOf(Companion_76).get_META_96s9lh_k$ = function () {
     return this.META_1;
   };
-  protoOf(Companion_76).get_CONTROL_3a418i_k$ = function () {
+  protoOf(Companion_76).get_CONTROL_mq40bf_k$ = function () {
     return this.CONTROL_1;
   };
-  protoOf(Companion_76).get_ALT_vkn4om_k$ = function () {
+  protoOf(Companion_76).get_ALT_5kf34p_k$ = function () {
     return this.ALT_1;
   };
-  protoOf(Companion_76).get_SHIFT_u3671f_k$ = function () {
+  protoOf(Companion_76).get_SHIFT_exptds_k$ = function () {
     return this.SHIFT_1;
   };
   var Companion_instance_76;
@@ -22433,22 +22296,22 @@
   function SkikoInputModifiers__toString_impl_86hiai($this) {
     // Inline function 'kotlin.apply' call
     // Inline function 'kotlin.collections.mutableListOf' call
-    var tmp0_apply = ArrayList_init_$Create$_0();
+    var this_0 = ArrayList_init_$Create$_0();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'org.jetbrains.skiko.SkikoInputModifiers.toString.<anonymous>' call
     if (SkikoInputModifiers__has_impl_qg30o6($this, Companion_getInstance_77().META_1)) {
-      tmp0_apply.add_1j60pz_k$('META');
+      this_0.add_utx5q5_k$('META');
     }
     if (SkikoInputModifiers__has_impl_qg30o6($this, Companion_getInstance_77().CONTROL_1)) {
-      tmp0_apply.add_1j60pz_k$('CONTROL');
+      this_0.add_utx5q5_k$('CONTROL');
     }
     if (SkikoInputModifiers__has_impl_qg30o6($this, Companion_getInstance_77().ALT_1)) {
-      tmp0_apply.add_1j60pz_k$('ALT');
+      this_0.add_utx5q5_k$('ALT');
     }
     if (SkikoInputModifiers__has_impl_qg30o6($this, Companion_getInstance_77().SHIFT_1)) {
-      tmp0_apply.add_1j60pz_k$('SHIFT');
+      this_0.add_utx5q5_k$('SHIFT');
     }
-    var result = tmp0_apply;
+    var result = this_0;
     return !result.isEmpty_y1axqb_k$() ? toString(result) : '';
   }
   function SkikoInputModifiers__hashCode_impl_dkoeid($this) {
@@ -22493,7 +22356,7 @@
         return SkikoKeyboardEventKind_TYPE_getInstance();
       default:
         SkikoKeyboardEventKind_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -22524,7 +22387,7 @@
   protoOf(SkikoInputEvent).get_key_18j28a_k$ = function () {
     return this.key_1;
   };
-  protoOf(SkikoInputEvent).get_modifiers_qtn48z_k$ = function () {
+  protoOf(SkikoInputEvent).get_modifiers_tf2p2_k$ = function () {
     return this.modifiers_1;
   };
   protoOf(SkikoInputEvent).get_kind_wop7ml_k$ = function () {
@@ -22539,7 +22402,7 @@
   protoOf(SkikoInputEvent).component2_7eebsb_k$ = function () {
     return this.key_1;
   };
-  protoOf(SkikoInputEvent).component3_k913k0_k$ = function () {
+  protoOf(SkikoInputEvent).component3_oruwv7_k$ = function () {
     return this.modifiers_1;
   };
   protoOf(SkikoInputEvent).component4_7eebs9_k$ = function () {
@@ -22548,16 +22411,16 @@
   protoOf(SkikoInputEvent).component5_7eebs8_k$ = function () {
     return this.platform_1;
   };
-  protoOf(SkikoInputEvent).copy_nhvems_k$ = function (input, key, modifiers, kind, platform) {
+  protoOf(SkikoInputEvent).copy_sz9e5v_k$ = function (input, key, modifiers, kind, platform) {
     return new SkikoInputEvent(input, key, modifiers, kind, platform);
   };
-  protoOf(SkikoInputEvent).copy$default_kp6fpy_k$ = function (input, key, modifiers, kind, platform, $super) {
+  protoOf(SkikoInputEvent).copy$default_c6pxb5_k$ = function (input, key, modifiers, kind, platform, $super) {
     input = input === VOID ? this.input_1 : input;
     key = key === VOID ? this.key_1 : key;
     modifiers = modifiers === VOID ? this.modifiers_1 : modifiers;
     kind = kind === VOID ? this.kind_1 : kind;
     platform = platform === VOID ? this.platform_1 : platform;
-    return $super === VOID ? this.copy_nhvems_k$(input, key, modifiers, kind, platform) : $super.copy_nhvems_k$.call(this, input, key, new SkikoInputModifiers(modifiers), kind, platform);
+    return $super === VOID ? this.copy_sz9e5v_k$(input, key, modifiers, kind, platform) : $super.copy_sz9e5v_k$.call(this, input, key, new SkikoInputModifiers(modifiers), kind, platform);
   };
   protoOf(SkikoInputEvent).toString = function () {
     return 'SkikoInputEvent(input=' + this.input_1 + ', key=' + this.key_1 + ', modifiers=' + new SkikoInputModifiers(this.modifiers_1) + ', kind=' + this.kind_1 + ', platform=' + this.platform_1 + ')';
@@ -22624,13 +22487,13 @@
   protoOf(SkikoPointerEvent).get_deltaY_cboxwq_k$ = function () {
     return this.deltaY_1;
   };
-  protoOf(SkikoPointerEvent).get_pressedButtons_y11sn8_k$ = function () {
+  protoOf(SkikoPointerEvent).get_pressedButtons_yo0unb_k$ = function () {
     return this.pressedButtons_1;
   };
-  protoOf(SkikoPointerEvent).get_button_spgz73_k$ = function () {
+  protoOf(SkikoPointerEvent).get_button_s2hx70_k$ = function () {
     return this.button_1;
   };
-  protoOf(SkikoPointerEvent).get_modifiers_qtn48z_k$ = function () {
+  protoOf(SkikoPointerEvent).get_modifiers_tf2p2_k$ = function () {
     return this.modifiers_1;
   };
   protoOf(SkikoPointerEvent).get_timestamp_9fccx9_k$ = function () {
@@ -22657,13 +22520,13 @@
   protoOf(SkikoPointerEvent).component5_7eebs8_k$ = function () {
     return this.deltaY_1;
   };
-  protoOf(SkikoPointerEvent).component6_u3uaib_k$ = function () {
+  protoOf(SkikoPointerEvent).component6_uqtcie_k$ = function () {
     return this.pressedButtons_1;
   };
-  protoOf(SkikoPointerEvent).component7_xi4mxa_k$ = function () {
+  protoOf(SkikoPointerEvent).component7_wv5kx7_k$ = function () {
     return this.button_1;
   };
-  protoOf(SkikoPointerEvent).component8_lodcqt_k$ = function () {
+  protoOf(SkikoPointerEvent).component8_ncinoe_k$ = function () {
     return this.modifiers_1;
   };
   protoOf(SkikoPointerEvent).component9_7eebs4_k$ = function () {
@@ -22675,10 +22538,10 @@
   protoOf(SkikoPointerEvent).component11_gazzfn_k$ = function () {
     return this.platform_1;
   };
-  protoOf(SkikoPointerEvent).copy_6x1v8r_k$ = function (x, y, kind, deltaX, deltaY, pressedButtons, button, modifiers, timestamp, pointers, platform) {
+  protoOf(SkikoPointerEvent).copy_96xi4t_k$ = function (x, y, kind, deltaX, deltaY, pressedButtons, button, modifiers, timestamp, pointers, platform) {
     return new SkikoPointerEvent(x, y, kind, deltaX, deltaY, pressedButtons, button, modifiers, timestamp, pointers, platform);
   };
-  protoOf(SkikoPointerEvent).copy$default_vwuvum_k$ = function (x, y, kind, deltaX, deltaY, pressedButtons, button, modifiers, timestamp, pointers, platform, $super) {
+  protoOf(SkikoPointerEvent).copy$default_5yski8_k$ = function (x, y, kind, deltaX, deltaY, pressedButtons, button, modifiers, timestamp, pointers, platform, $super) {
     x = x === VOID ? this.x_1 : x;
     y = y === VOID ? this.y_1 : y;
     kind = kind === VOID ? this.kind_1 : kind;
@@ -22690,10 +22553,10 @@
     timestamp = timestamp === VOID ? this.timestamp_1 : timestamp;
     pointers = pointers === VOID ? this.pointers_1 : pointers;
     platform = platform === VOID ? this.platform_1 : platform;
-    return $super === VOID ? this.copy_6x1v8r_k$(x, y, kind, deltaX, deltaY, pressedButtons, button, modifiers, timestamp, pointers, platform) : $super.copy_6x1v8r_k$.call(this, x, y, kind, deltaX, deltaY, new SkikoMouseButtons(pressedButtons), new SkikoMouseButtons(button), new SkikoInputModifiers(modifiers), timestamp, pointers, platform);
+    return $super === VOID ? this.copy_96xi4t_k$(x, y, kind, deltaX, deltaY, pressedButtons, button, modifiers, timestamp, pointers, platform) : $super.copy_96xi4t_k$.call(this, x, y, kind, deltaX, deltaY, new SkikoMouseButtons(pressedButtons), new SkikoMouseButtons(button), new SkikoInputModifiers(modifiers), timestamp, pointers, platform);
   };
   protoOf(SkikoPointerEvent).toString = function () {
-    return 'SkikoPointerEvent(x=' + this.x_1 + ', y=' + this.y_1 + ', kind=' + this.kind_1 + ', deltaX=' + this.deltaX_1 + ', deltaY=' + this.deltaY_1 + ', pressedButtons=' + new SkikoMouseButtons(this.pressedButtons_1) + ', button=' + new SkikoMouseButtons(this.button_1) + ', modifiers=' + new SkikoInputModifiers(this.modifiers_1) + ', timestamp=' + toString(this.timestamp_1) + ', pointers=' + this.pointers_1 + ', platform=' + this.platform_1 + ')';
+    return 'SkikoPointerEvent(x=' + this.x_1 + ', y=' + this.y_1 + ', kind=' + this.kind_1 + ', deltaX=' + this.deltaX_1 + ', deltaY=' + this.deltaY_1 + ', pressedButtons=' + new SkikoMouseButtons(this.pressedButtons_1) + ', button=' + new SkikoMouseButtons(this.button_1) + ', modifiers=' + new SkikoInputModifiers(this.modifiers_1) + ', timestamp=' + this.timestamp_1.toString() + ', pointers=' + this.pointers_1 + ', platform=' + this.platform_1 + ')';
   };
   protoOf(SkikoPointerEvent).hashCode = function () {
     var result = getNumberHashCode(this.x_1);
@@ -22770,7 +22633,7 @@
         return SkikoPointerEventKind_EXIT_getInstance();
       default:
         SkikoPointerEventKind_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -22837,26 +22700,26 @@
   protoOf(SkikoPointer).component6_7eebs7_k$ = function () {
     return this.pressure_1;
   };
-  protoOf(SkikoPointer).copy_g4yu2_k$ = function (id, x, y, pressed, device, pressure) {
+  protoOf(SkikoPointer).copy_c01k56_k$ = function (id, x, y, pressed, device, pressure) {
     return new SkikoPointer(id, x, y, pressed, device, pressure);
   };
-  protoOf(SkikoPointer).copy$default_f6qyzy_k$ = function (id, x, y, pressed, device, pressure, $super) {
+  protoOf(SkikoPointer).copy$default_hqa7ou_k$ = function (id, x, y, pressed, device, pressure, $super) {
     id = id === VOID ? this.id_1 : id;
     x = x === VOID ? this.x_1 : x;
     y = y === VOID ? this.y_1 : y;
     pressed = pressed === VOID ? this.pressed_1 : pressed;
     device = device === VOID ? this.device_1 : device;
     pressure = pressure === VOID ? this.pressure_1 : pressure;
-    return $super === VOID ? this.copy_g4yu2_k$(id, x, y, pressed, device, pressure) : $super.copy_g4yu2_k$.call(this, id, x, y, pressed, device, pressure);
+    return $super === VOID ? this.copy_c01k56_k$(id, x, y, pressed, device, pressure) : $super.copy_c01k56_k$.call(this, id, x, y, pressed, device, pressure);
   };
   protoOf(SkikoPointer).toString = function () {
-    return 'SkikoPointer(id=' + toString(this.id_1) + ', x=' + this.x_1 + ', y=' + this.y_1 + ', pressed=' + this.pressed_1 + ', device=' + this.device_1 + ', pressure=' + this.pressure_1 + ')';
+    return 'SkikoPointer(id=' + this.id_1.toString() + ', x=' + this.x_1 + ', y=' + this.y_1 + ', pressed=' + this.pressed_1 + ', device=' + this.device_1 + ', pressure=' + this.pressure_1 + ')';
   };
   protoOf(SkikoPointer).hashCode = function () {
     var result = this.id_1.hashCode();
     result = imul(result, 31) + getNumberHashCode(this.x_1) | 0;
     result = imul(result, 31) + getNumberHashCode(this.y_1) | 0;
-    result = imul(result, 31) + (this.pressed_1 | 0) | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.pressed_1) | 0;
     result = imul(result, 31) + this.device_1.hashCode() | 0;
     result = imul(result, 31) + getNumberHashCode(this.pressure_1) | 0;
     return result;
@@ -22897,7 +22760,7 @@
         return SkikoPointerDevice_TOUCH_getInstance();
       default:
         SkikoPointerDevice_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -22934,40 +22797,40 @@
     this.BUTTON_7__1 = _SkikoMouseButtons___init__impl__kylsco(64);
     this.BUTTON_8__1 = _SkikoMouseButtons___init__impl__kylsco(128);
   }
-  protoOf(Companion_77).get_NONE_jdr75h_k$ = function () {
+  protoOf(Companion_77).get_NONE_iqs55e_k$ = function () {
     return this.NONE_1;
   };
-  protoOf(Companion_77).get_LEFT_8wi70k_k$ = function () {
+  protoOf(Companion_77).get_LEFT_89j50h_k$ = function () {
     return this.LEFT_1;
   };
-  protoOf(Companion_77).get_RIGHT_gu1qyv_k$ = function () {
+  protoOf(Companion_77).get_RIGHT_g72oys_k$ = function () {
     return this.RIGHT_1;
   };
-  protoOf(Companion_77).get_MIDDLE_nzwa1e_k$ = function () {
+  protoOf(Companion_77).get_MIDDLE_ncx81b_k$ = function () {
     return this.MIDDLE_1;
   };
-  protoOf(Companion_77).get_BUTTON_1_mmu0td_k$ = function () {
+  protoOf(Companion_77).get_BUTTON_1_lzuyta_k$ = function () {
     return this.BUTTON_1__1;
   };
-  protoOf(Companion_77).get_BUTTON_2_f7ow9u_k$ = function () {
+  protoOf(Companion_77).get_BUTTON_2_ekpu9r_k$ = function () {
     return this.BUTTON_2__1;
   };
-  protoOf(Companion_77).get_BUTTON_3_7sjrqb_k$ = function () {
+  protoOf(Companion_77).get_BUTTON_3_75kpq8_k$ = function () {
     return this.BUTTON_3__1;
   };
-  protoOf(Companion_77).get_BUTTON_4_den6s_k$ = function () {
+  protoOf(Companion_77).get_BUTTON_4_9ketb_k$ = function () {
     return this.BUTTON_4__1;
   };
-  protoOf(Companion_77).get_BUTTON_5_71qhcr_k$ = function () {
+  protoOf(Companion_77).get_BUTTON_5_7opjcu_k$ = function () {
     return this.BUTTON_5__1;
   };
-  protoOf(Companion_77).get_BUTTON_6_egvlwa_k$ = function () {
+  protoOf(Companion_77).get_BUTTON_6_f3unwd_k$ = function () {
     return this.BUTTON_6__1;
   };
-  protoOf(Companion_77).get_BUTTON_7_lw0qft_k$ = function () {
+  protoOf(Companion_77).get_BUTTON_7_mizsfw_k$ = function () {
     return this.BUTTON_7__1;
   };
-  protoOf(Companion_77).get_BUTTON_8_tb5uzc_k$ = function () {
+  protoOf(Companion_77).get_BUTTON_8_ty4wzf_k$ = function () {
     return this.BUTTON_8__1;
   };
   var Companion_instance_77;
@@ -22985,34 +22848,34 @@
   function SkikoMouseButtons__toString_impl_e77028($this) {
     // Inline function 'kotlin.apply' call
     // Inline function 'kotlin.collections.mutableListOf' call
-    var tmp0_apply = ArrayList_init_$Create$_0();
+    var this_0 = ArrayList_init_$Create$_0();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'org.jetbrains.skiko.SkikoMouseButtons.toString.<anonymous>' call
     if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_78().LEFT_1)) {
-      tmp0_apply.add_1j60pz_k$('LEFT');
+      this_0.add_utx5q5_k$('LEFT');
     }
     if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_78().RIGHT_1)) {
-      tmp0_apply.add_1j60pz_k$('RIGHT');
+      this_0.add_utx5q5_k$('RIGHT');
     }
     if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_78().MIDDLE_1)) {
-      tmp0_apply.add_1j60pz_k$('MIDDLE');
+      this_0.add_utx5q5_k$('MIDDLE');
     }
     if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_78().BUTTON_4__1)) {
-      tmp0_apply.add_1j60pz_k$('BUTTON_4');
+      this_0.add_utx5q5_k$('BUTTON_4');
     }
     if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_78().BUTTON_5__1)) {
-      tmp0_apply.add_1j60pz_k$('BUTTON_5');
+      this_0.add_utx5q5_k$('BUTTON_5');
     }
     if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_78().BUTTON_6__1)) {
-      tmp0_apply.add_1j60pz_k$('BUTTON_6');
+      this_0.add_utx5q5_k$('BUTTON_6');
     }
     if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_78().BUTTON_7__1)) {
-      tmp0_apply.add_1j60pz_k$('BUTTON_7');
+      this_0.add_utx5q5_k$('BUTTON_7');
     }
     if (SkikoMouseButtons__has_impl_481exw($this, Companion_getInstance_78().BUTTON_8__1)) {
-      tmp0_apply.add_1j60pz_k$('BUTTON_8');
+      this_0.add_utx5q5_k$('BUTTON_8');
     }
-    var result = tmp0_apply;
+    var result = this_0;
     return !result.isEmpty_y1axqb_k$() ? toString(result) : '';
   }
   function SkikoMouseButtons__hashCode_impl_7jywqn($this) {
@@ -23109,10 +22972,10 @@
   protoOf(SkikoGestureEvent).component9_7eebs4_k$ = function () {
     return this.platform_1;
   };
-  protoOf(SkikoGestureEvent).copy_fu5wxz_k$ = function (x, y, velocity, direction, rotation, scale, kind, state, platform) {
+  protoOf(SkikoGestureEvent).copy_lpegz2_k$ = function (x, y, velocity, direction, rotation, scale, kind, state, platform) {
     return new SkikoGestureEvent(x, y, velocity, direction, rotation, scale, kind, state, platform);
   };
-  protoOf(SkikoGestureEvent).copy$default_8xndkk_k$ = function (x, y, velocity, direction, rotation, scale, kind, state, platform, $super) {
+  protoOf(SkikoGestureEvent).copy$default_vrstcj_k$ = function (x, y, velocity, direction, rotation, scale, kind, state, platform, $super) {
     x = x === VOID ? this.x_1 : x;
     y = y === VOID ? this.y_1 : y;
     velocity = velocity === VOID ? this.velocity_1 : velocity;
@@ -23122,7 +22985,7 @@
     kind = kind === VOID ? this.kind_1 : kind;
     state = state === VOID ? this.state_1 : state;
     platform = platform === VOID ? this.platform_1 : platform;
-    return $super === VOID ? this.copy_fu5wxz_k$(x, y, velocity, direction, rotation, scale, kind, state, platform) : $super.copy_fu5wxz_k$.call(this, x, y, velocity, direction, rotation, scale, kind, state, platform);
+    return $super === VOID ? this.copy_lpegz2_k$(x, y, velocity, direction, rotation, scale, kind, state, platform) : $super.copy_lpegz2_k$.call(this, x, y, velocity, direction, rotation, scale, kind, state, platform);
   };
   protoOf(SkikoGestureEvent).toString = function () {
     return 'SkikoGestureEvent(x=' + this.x_1 + ', y=' + this.y_1 + ', velocity=' + this.velocity_1 + ', direction=' + this.direction_1 + ', rotation=' + this.rotation_1 + ', scale=' + this.scale_1 + ', kind=' + this.kind_1 + ', state=' + this.state_1 + ', platform=' + toString_0(this.platform_1) + ')';
@@ -23187,7 +23050,7 @@
         return SkikoGestureEventDirection_RIGHT_getInstance();
       default:
         SkikoGestureEventDirection_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -23236,7 +23099,7 @@
         return SkikoGestureEventKind_SWIPE_getInstance();
       default:
         SkikoGestureEventKind_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -23279,7 +23142,7 @@
         return SkikoGestureEventState_ENDED_getInstance();
       default:
         SkikoGestureEventState_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -23460,7 +23323,7 @@
         return GraphicsApi_WEBGL_getInstance();
       default:
         GraphicsApi_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -23541,7 +23404,7 @@
         return OS_Unknown_getInstance();
       default:
         OS_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -23596,7 +23459,7 @@
         return Arch_Unknown_getInstance();
       default:
         Arch_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -23668,7 +23531,7 @@
   }
   function ClipboardManager() {
   }
-  protoOf(ClipboardManager).setText_c4hyvx_k$ = function (text) {
+  protoOf(ClipboardManager).setText_kc4w4b_k$ = function (text) {
     return ClipboardManager_setText(text);
   };
   protoOf(ClipboardManager).getText_18q731_k$ = function () {
@@ -23679,7 +23542,7 @@
   };
   function URIManager() {
   }
-  protoOf(URIManager).openUri_60s8fk_k$ = function (uri) {
+  protoOf(URIManager).openUri_9c5wa0_k$ = function (uri) {
     return URIHandler_openUri(uri);
   };
   function RenderException(message, cause) {
@@ -23706,7 +23569,7 @@
         return SystemTheme_UNKNOWN_getInstance();
       default:
         SystemTheme_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -23737,8 +23600,9 @@
   function get_LANG() {
     _init_properties_Actuals_js_kt__v403ki();
     // Inline function 'kotlin.getValue' call
+    var this_0 = LANG$delegate;
     LANG$factory();
-    return LANG$delegate.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   }
   var LANG$delegate;
   function _get__regex__3whdml($this) {
@@ -23747,12 +23611,12 @@
   function Pattern(regex) {
     this._regex_1 = Regex_init_$Create$(regex);
   }
-  protoOf(Pattern).split_9mawzl_k$ = function (input) {
+  protoOf(Pattern).split_w9zaf1_k$ = function (input) {
     // Inline function 'kotlin.collections.toTypedArray' call
-    var tmp0_toTypedArray = this._regex_1.split$default_5wgeun_k$(input);
-    return copyToArray(tmp0_toTypedArray);
+    var this_0 = this._regex_1.split$default_op2g7v_k$(input);
+    return copyToArray(this_0);
   };
-  protoOf(Pattern).matcher_ndh313_k$ = function (input) {
+  protoOf(Pattern).matcher_mwr1qt_k$ = function (input) {
     return new Matcher(this._regex_1, input);
   };
   function compilePattern(regex) {
@@ -23767,22 +23631,24 @@
   }
   function _get_matches__uyk9mq($this) {
     // Inline function 'kotlin.getValue' call
+    var this_0 = $this.matches$delegate_1;
     matches$factory();
-    return $this.matches$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   }
   function _get_groups__sds409($this) {
     // Inline function 'kotlin.getValue' call
+    var this_0 = $this.groups$delegate_1;
     groups$factory();
-    return $this.groups$delegate_1.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   }
   function Matcher$matches$delegate$lambda(this$0) {
     return function () {
-      return this$0.regex_1.matches_qvb2fs_k$(this$0.input_1);
+      return this$0.regex_1.matches_evli6i_k$(this$0.input_1);
     };
   }
   function Matcher$groups$delegate$lambda(this$0) {
     return function () {
-      var tmp0_safe_receiver = this$0.regex_1.matchEntire_9c62aj_k$(this$0.input_1);
+      var tmp0_safe_receiver = this$0.regex_1.matchEntire_6100vb_k$(this$0.input_1);
       return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_groups_dy12vx_k$();
     };
   }
@@ -23794,9 +23660,9 @@
     var tmp_0 = this;
     tmp_0.groups$delegate_1 = lazy(Matcher$groups$delegate$lambda(this));
   }
-  protoOf(Matcher).group_bopy3i_k$ = function (ix) {
+  protoOf(Matcher).group_u7j3zt_k$ = function (ix) {
     var tmp0_safe_receiver = _get_groups__sds409(this);
-    var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_fkrdnv_k$(ix);
+    var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_c1px32_k$(ix);
     return tmp1_safe_receiver == null ? null : tmp1_safe_receiver.get_value_j01efc_k$();
   };
   protoOf(Matcher).matches_dwml9v_k$ = function () {
@@ -23810,8 +23676,8 @@
     while (tmp < tmp_0) {
       var tmp_2 = tmp;
       // Inline function 'kotlin.code' call
-      var tmp0_get_code_gknlva = charSequenceGet(_this__u8e3s4, tmp_2);
-      tmp_1[tmp_2] = Char__toInt_impl_vasixd(tmp0_get_code_gknlva);
+      var this_0 = charSequenceGet(_this__u8e3s4, tmp_2);
+      tmp_1[tmp_2] = Char__toInt_impl_vasixd(this_0);
       tmp = tmp + 1 | 0;
     }
     return tmp_1;
@@ -23867,7 +23733,7 @@
   function Companion_78() {
     Companion_instance_78 = this;
   }
-  protoOf(Companion_78).staticLoad_svq3vn_k$ = function () {
+  protoOf(Companion_78).staticLoad_sw9wh0_k$ = function () {
   };
   var Companion_instance_78;
   function Companion_getInstance_79() {
@@ -23896,7 +23762,7 @@
     this.finalizer_1 = finalizer;
     this.obj_1 = obj;
   }
-  protoOf(FinalizationThunk).clean_x9dd6g_k$ = function () {
+  protoOf(FinalizationThunk).clean_x9x5rt_k$ = function () {
     if (!(this.obj_1 === 0)) {
       org_jetbrains_skia_impl_Managed__invokeFinalizer(this.finalizer_1, this.obj_1);
     }
@@ -23932,16 +23798,16 @@
       this.cleaner_1 = thunk;
     }
   }
-  protoOf(Managed).close_ymq55z_k$ = function () {
+  protoOf(Managed).close_yn9xrc_k$ = function () {
     if (Companion_getInstance_81().get_NullPointer_8qbg7n_k$() === this.get__ptr_wohp4o_k$())
       throw RuntimeException_init_$Create$('Object already closed: ' + getKClassFromExpression(this).get_simpleName_r6f8py_k$() + ', _ptr=' + this.get__ptr_wohp4o_k$());
     else if (null == this.cleaner_1)
       throw RuntimeException_init_$Create$("Object is not managed, can't close(): " + getKClassFromExpression(this).get_simpleName_r6f8py_k$() + ', _ptr=' + this.get__ptr_wohp4o_k$());
     else {
       unregister(this);
-      ensureNotNull(this.cleaner_1).clean_x9dd6g_k$();
+      ensureNotNull(this.cleaner_1).clean_x9x5rt_k$();
       this.cleaner_1 = null;
-      this.set__ptr_egkthg_k$(0);
+      this.set__ptr_v5yjvg_k$(0);
     }
   };
   protoOf(Managed).get_isClosed_rx8ttr_k$ = function () {
@@ -23958,7 +23824,7 @@
   function registry$lambda(it) {
     _init_properties_Managed_js_kt__4ok5rc();
     var thunk = it instanceof FinalizationThunk ? it : THROW_CCE();
-    thunk.clean_x9dd6g_k$();
+    thunk.clean_x9x5rt_k$();
     return Unit_getInstance();
   }
   var properties_initialized_Managed_js_kt_llxy4m;
@@ -24003,7 +23869,7 @@
     }
     if (tmp_0) {
       var data = _malloc(array.length);
-      $this.elements_1.add_1j60pz_k$(data);
+      $this.elements_1.add_utx5q5_k$(data);
       if (copyArrayToWasm) {
         toWasm(data, array);
       }
@@ -24025,7 +23891,7 @@
     }
     if (tmp_0) {
       var data = _malloc(imul(array.length, 2));
-      $this.elements_1.add_1j60pz_k$(data);
+      $this.elements_1.add_utx5q5_k$(data);
       if (copyArrayToWasm) {
         toWasm_0(data, array);
       }
@@ -24047,7 +23913,7 @@
     }
     if (tmp_0) {
       var data = _malloc(imul(array.length, 4));
-      $this.elements_1.add_1j60pz_k$(data);
+      $this.elements_1.add_utx5q5_k$(data);
       if (copyArrayToWasm) {
         toWasm_1(data, array);
       }
@@ -24069,7 +23935,7 @@
     }
     if (tmp_0) {
       var data = _malloc(imul(array.length, 4));
-      $this.elements_1.add_1j60pz_k$(data);
+      $this.elements_1.add_utx5q5_k$(data);
       if (copyArrayToWasm) {
         toWasm_2(data, array);
       }
@@ -24091,7 +23957,7 @@
     }
     if (tmp_0) {
       var data = _malloc(imul(array.length, 8));
-      $this.elements_1.add_1j60pz_k$(data);
+      $this.elements_1.add_utx5q5_k$(data);
       if (copyArrayToWasm) {
         toWasm_3(data, array);
       }
@@ -24105,7 +23971,7 @@
     var tmp;
     if (!(array == null) ? array.get_size_woubt6_k$() > 0 : false) {
       var data = _malloc(imul(array.get_size_woubt6_k$(), 4));
-      $this.elements_1.add_1j60pz_k$(data);
+      $this.elements_1.add_utx5q5_k$(data);
       if (copyArrayToWasm) {
         toWasm_1(data, array.backing_1);
       }
@@ -24173,81 +24039,83 @@
     tmp.elements_1 = ArrayList_init_$Create$_0();
     this.callbacksInitialized_1 = false;
   }
-  protoOf(InteropScope).toInterop_tozece_k$ = function (string) {
+  protoOf(InteropScope).toInterop_ok8jph_k$ = function (string) {
     var tmp;
     if (!(string == null)) {
       var data = _malloc(imul(string.length, 4));
       stringToUTF8(string, data, imul(string.length, 4));
-      this.elements_1.add_1j60pz_k$(data);
+      this.elements_1.add_utx5q5_k$(data);
       tmp = data;
     } else {
       tmp = 0;
     }
     return tmp;
   };
-  protoOf(InteropScope).toInterop_k4qgbi_k$ = function (array) {
+  protoOf(InteropScope).toInterop_h7cpet_k$ = function (array) {
     return toInterop(this, array, true);
   };
-  protoOf(InteropScope).toInteropForResult_w0sqdc_k$ = function (array) {
+  protoOf(InteropScope).toInteropForResult_toi1ab_k$ = function (array) {
     return toInterop(this, array, false);
   };
-  protoOf(InteropScope).fromInterop_fargm_k$ = function (_this__u8e3s4, result) {
+  protoOf(InteropScope).fromInterop_awvpm7_k$ = function (_this__u8e3s4, result) {
     fromWasm(_this__u8e3s4, result);
   };
-  protoOf(InteropScope).toInterop_30wotu_k$ = function (array) {
+  protoOf(InteropScope).toInterop_jg6tf3_k$ = function (array) {
     return toInterop_0(this, array, true);
   };
-  protoOf(InteropScope).toInteropForResult_jyz6vk_k$ = function (array) {
+  protoOf(InteropScope).toInteropForResult_c5u4tv_k$ = function (array) {
     return toInterop_0(this, array, false);
   };
-  protoOf(InteropScope).fromInterop_26ac9l_k$ = function (_this__u8e3s4, result) {
+  protoOf(InteropScope).fromInterop_1rw4p0_k$ = function (_this__u8e3s4, result) {
     fromWasm_0(_this__u8e3s4, result);
   };
-  protoOf(InteropScope).toInterop_o3s7q3_k$ = function (array) {
+  protoOf(InteropScope).toInterop_i7skn2_k$ = function (array) {
     return toInterop_1(this, array, true);
   };
-  protoOf(InteropScope).toInteropForResult_7gg69p_k$ = function (array) {
+  protoOf(InteropScope).toInteropForResult_adrhc_k$ = function (array) {
     return toInterop_1(this, array, false);
   };
-  protoOf(InteropScope).fromInterop_3jv7mq_k$ = function (_this__u8e3s4, result) {
+  protoOf(InteropScope).fromInterop_99m56j_k$ = function (_this__u8e3s4, result) {
     // Inline function 'kotlin.TODO' call
-    throw new NotImplementedError('An operation is not implemented: implement wasm fromInterop(LongArray)');
+    var reason = 'implement wasm fromInterop(LongArray)';
+    throw new NotImplementedError('An operation is not implemented: ' + reason);
   };
-  protoOf(InteropScope).toInterop_womfm_k$ = function (array) {
+  protoOf(InteropScope).toInterop_sivzjl_k$ = function (array) {
     // Inline function 'kotlin.TODO' call
-    throw new NotImplementedError('An operation is not implemented: implement wasm toInterop(LongArray)');
+    var reason = 'implement wasm toInterop(LongArray)';
+    throw new NotImplementedError('An operation is not implemented: ' + reason);
   };
-  protoOf(InteropScope).fromInterop_2qtlsq_k$ = function (_this__u8e3s4, result) {
+  protoOf(InteropScope).fromInterop_s0mjrj_k$ = function (_this__u8e3s4, result) {
     fromWasm_1(_this__u8e3s4, result);
   };
-  protoOf(InteropScope).toInterop_sfommq_k$ = function (array) {
+  protoOf(InteropScope).toInterop_uum1m9_k$ = function (array) {
     return toInterop_2(this, array, true);
   };
-  protoOf(InteropScope).toInteropForResult_pncxao_k$ = function (array) {
+  protoOf(InteropScope).toInteropForResult_8kh23x_k$ = function (array) {
     return toInterop_2(this, array, false);
   };
-  protoOf(InteropScope).fromInterop_t5r7yv_k$ = function (_this__u8e3s4, result) {
+  protoOf(InteropScope).fromInterop_zi7geo_k$ = function (_this__u8e3s4, result) {
     fromWasm_2(_this__u8e3s4, result);
   };
-  protoOf(InteropScope).toInterop_ivm5nr_k$ = function (array) {
+  protoOf(InteropScope).toInterop_5vegas_k$ = function (array) {
     return toInterop_3(this, array, true);
   };
-  protoOf(InteropScope).toInteropForResult_o14qnr_k$ = function (array) {
+  protoOf(InteropScope).toInteropForResult_kc5q92_k$ = function (array) {
     return toInterop_3(this, array, false);
   };
-  protoOf(InteropScope).fromInterop_mlzk42_k$ = function (_this__u8e3s4, result) {
+  protoOf(InteropScope).fromInterop_40e3wn_k$ = function (_this__u8e3s4, result) {
     fromWasm_3(_this__u8e3s4, result);
   };
-  protoOf(InteropScope).toInterop_se1a9v_k$ = function (array) {
+  protoOf(InteropScope).toInterop_1ghudk_k$ = function (array) {
     return toInterop_4(this, array, true);
   };
-  protoOf(InteropScope).toInteropForResult_7cceht_k$ = function (array) {
+  protoOf(InteropScope).toInteropForResult_nw6uau_k$ = function (array) {
     return toInterop_4(this, array, false);
   };
-  protoOf(InteropScope).fromInterop_pg4kur_k$ = function (_this__u8e3s4, result) {
+  protoOf(InteropScope).fromInterop_phusho_k$ = function (_this__u8e3s4, result) {
     return fromWasm_0(_this__u8e3s4, result.backing_1);
   };
-  protoOf(InteropScope).toInterop_59fj22_k$ = function (stringArray) {
+  protoOf(InteropScope).toInterop_2ejn5p_k$ = function (stringArray) {
     var tmp;
     var tmp_0;
     if (!(stringArray == null)) {
@@ -24260,42 +24128,44 @@
     if (tmp_0) {
       // Inline function 'kotlin.collections.map' call
       // Inline function 'kotlin.collections.mapTo' call
-      var tmp0_mapTo = ArrayList_init_$Create$(stringArray.length);
-      var tmp0_iterator = arrayIterator(stringArray);
-      while (tmp0_iterator.hasNext_bitz1p_k$()) {
-        var item = tmp0_iterator.next_20eer_k$();
-        var tmp$ret$2;
+      var destination = ArrayList_init_$Create$(stringArray.length);
+      var inductionVariable = 0;
+      var last = stringArray.length;
+      while (inductionVariable < last) {
+        var item = stringArray[inductionVariable];
+        inductionVariable = inductionVariable + 1 | 0;
         // Inline function 'org.jetbrains.skia.impl.InteropScope.toInterop.<anonymous>' call
-        tmp$ret$2 = this.toInterop_tozece_k$(item);
-        tmp0_mapTo.add_1j60pz_k$(tmp$ret$2);
+        var tmp$ret$2 = this.toInterop_ok8jph_k$(item);
+        destination.add_utx5q5_k$(tmp$ret$2);
       }
-      var ptrs = toIntArray(tmp0_mapTo);
-      tmp = this.toInterop_o3s7q3_k$(ptrs);
+      var ptrs = toIntArray(destination);
+      tmp = this.toInterop_i7skn2_k$(ptrs);
     } else {
       tmp = 0;
     }
     return tmp;
   };
-  protoOf(InteropScope).fromInteropNativePointerArray_2rpenn_k$ = function (_this__u8e3s4) {
+  protoOf(InteropScope).fromInteropNativePointerArray_axg8bg_k$ = function (_this__u8e3s4) {
     // Inline function 'kotlin.TODO' call
-    throw new NotImplementedError('An operation is not implemented: implement wasm fromInteropNativePointerArray');
+    var reason = 'implement wasm fromInteropNativePointerArray';
+    throw new NotImplementedError('An operation is not implemented: ' + reason);
   };
-  protoOf(InteropScope).toInteropForArraysOfPointers_3v1rz7_k$ = function (interopPointers) {
-    return this.toInterop_o3s7q3_k$(toIntArray_0(interopPointers));
+  protoOf(InteropScope).toInteropForArraysOfPointers_hg281y_k$ = function (interopPointers) {
+    return this.toInterop_i7skn2_k$(toIntArray_0(interopPointers));
   };
-  protoOf(InteropScope).booleanCallback_2dimjt_k$ = function (callback) {
+  protoOf(InteropScope).booleanCallback_o0l8jn_k$ = function (callback) {
     return callbackImpl(this, callback);
   };
-  protoOf(InteropScope).intCallback_chjop5_k$ = function (callback) {
+  protoOf(InteropScope).intCallback_j98vrx_k$ = function (callback) {
     return callbackImpl(this, callback);
   };
-  protoOf(InteropScope).nativePointerCallback_2qr64g_k$ = function (callback) {
+  protoOf(InteropScope).nativePointerCallback_qmpvgm_k$ = function (callback) {
     return callbackImpl(this, callback);
   };
-  protoOf(InteropScope).interopPointerCallback_st23om_k$ = function (callback) {
+  protoOf(InteropScope).interopPointerCallback_wj3p64_k$ = function (callback) {
     return callbackImpl(this, callback);
   };
-  protoOf(InteropScope).callback_p8h99t_k$ = function (callback) {
+  protoOf(InteropScope).callback_5j7rne_k$ = function (callback) {
     if (callback == null) {
       return 0;
     }
@@ -24306,22 +24176,22 @@
     }
     return _registerCallback(InteropScope$callback$lambda(callback), null, false);
   };
-  protoOf(InteropScope).virtual_e67oae_k$ = function (method) {
+  protoOf(InteropScope).virtual_41wz7n_k$ = function (method) {
     return _registerCallback(InteropScope$virtual$lambda(method), null, true);
   };
-  protoOf(InteropScope).virtualBoolean_el6it0_k$ = function (method) {
+  protoOf(InteropScope).virtualBoolean_rsq0lo_k$ = function (method) {
     return virtualImpl(this, method);
   };
-  protoOf(InteropScope).virtualInt_9p0ezq_k$ = function (method) {
+  protoOf(InteropScope).virtualInt_lh3blu_k$ = function (method) {
     return virtualImpl(this, method);
   };
-  protoOf(InteropScope).virtualNativePointer_he8gnj_k$ = function (method) {
+  protoOf(InteropScope).virtualNativePointer_dx1gu1_k$ = function (method) {
     return virtualImpl(this, method);
   };
-  protoOf(InteropScope).virtualInteropPointer_eqo8sh_k$ = function (method) {
+  protoOf(InteropScope).virtualInteropPointer_tzqwqx_k$ = function (method) {
     return virtualImpl(this, method);
   };
-  protoOf(InteropScope).release_wtm6d2_k$ = function () {
+  protoOf(InteropScope).release_wu5yyf_k$ = function () {
     // Inline function 'kotlin.collections.forEach' call
     var tmp0_iterator = this.elements_1.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
@@ -24329,7 +24199,7 @@
       // Inline function 'org.jetbrains.skia.impl.InteropScope.release.<anonymous>' call
       _free(element);
     }
-    this.elements_1.clear_j9y8zo_k$();
+    this.elements_1.clear_j9egeb_k$();
     // Inline function 'org.jetbrains.skia.impl.InteropScope.releaseCallbacks' call
     if (this.callbacksInitialized_1) {
       _releaseLocalCallbackScope$accessor$wmqves();
@@ -24388,21 +24258,21 @@
   function Companion_79() {
     Companion_instance_79 = this;
   }
-  protoOf(Companion_79).fromIntArray_9mu1jg_k$ = function (intArray) {
+  protoOf(Companion_79).fromIntArray_giq9u1_k$ = function (intArray) {
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = new NativePointerArray(intArray.length);
+    var this_0 = new NativePointerArray(intArray.length);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'org.jetbrains.skia.impl.Companion.fromIntArray.<anonymous>' call
     // Inline function 'kotlin.collections.copyInto' call
-    var tmp0_copyInto = tmp0_apply.backing_1;
-    var tmp1_copyInto = intArray.length;
+    var destination = this_0.backing_1;
+    var endIndex = intArray.length;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp = intArray;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    arrayCopy(tmp, tmp0_copyInto, 0, 0, tmp1_copyInto);
-    return tmp0_apply;
+    arrayCopy(tmp, destination, 0, 0, endIndex);
+    return this_0;
   };
   var Companion_instance_79;
   function Companion_getInstance_80() {
@@ -24417,10 +24287,10 @@
   protoOf(NativePointerArray).get_backing_4h5ufi_k$ = function () {
     return this.backing_1;
   };
-  protoOf(NativePointerArray).get_fkrdnv_k$ = function (index) {
+  protoOf(NativePointerArray).get_c1px32_k$ = function (index) {
     return this.backing_1[index];
   };
-  protoOf(NativePointerArray).set_10zwtt_k$ = function (index, value) {
+  protoOf(NativePointerArray).set_g707pu_k$ = function (index, value) {
     this.backing_1[index] = value;
   };
   protoOf(NativePointerArray).get_size_woubt6_k$ = function () {
@@ -24429,7 +24299,7 @@
   function CallbackData(value) {
     this.value = value;
   }
-  protoOf(CallbackData).set_value_89wlwl_k$ = function (_set____db54di) {
+  protoOf(CallbackData).set_value_usdbpe_k$ = function (_set____db54di) {
     this.value = _set____db54di;
   };
   protoOf(CallbackData).get_value_j01efc_k$ = function () {
@@ -24445,7 +24315,7 @@
       var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_1();
       _set_interopScopeCounter_$accessor$wmqves_ygusxq_0(tmp1 - 1 | 0);
       if (_get_interopScopeCounter_$accessor$wmqves_umgosu_1() === 0) {
-        _get_INTEROP_SCOPE_$accessor$wmqves_peku9r_0().release_wtm6d2_k$();
+        _get_INTEROP_SCOPE_$accessor$wmqves_peku9r_0().release_wu5yyf_k$();
       }
     }
   }
@@ -24467,7 +24337,7 @@
       throw RuntimeException_init_$Create$("Can't wrap nullptr");
     this._ptr_1 = ptr;
   }
-  protoOf(Native).set__ptr_egkthg_k$ = function (_set____db54di) {
+  protoOf(Native).set__ptr_v5yjvg_k$ = function (_set____db54di) {
     this._ptr_1 = _set____db54di;
   };
   protoOf(Native).get__ptr_wohp4o_k$ = function () {
@@ -24480,12 +24350,12 @@
       return false;
     if (!(other instanceof Native))
       return false;
-    return this._ptr_1 === other._ptr_1 ? true : this.nativeEquals_jj5rbn_k$(other);
+    return this._ptr_1 === other._ptr_1 ? true : this.nativeEquals_mxr6i0_k$(other);
   };
   protoOf(Native).hashCode = function () {
     return this._ptr_1;
   };
-  protoOf(Native).nativeEquals_jj5rbn_k$ = function (other) {
+  protoOf(Native).nativeEquals_mxr6i0_k$ = function (other) {
     return false;
   };
   protoOf(Native).toString = function () {
@@ -24555,15 +24425,15 @@
     return RefCnt_init_$Init$_0(ptr, allowClose, objectCreate(protoOf(RefCnt)));
   }
   protoOf(RefCnt).get_refCount_qr8bgl_k$ = function () {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     return org_jetbrains_skia_impl_RefCnt__getRefCount(this.get__ptr_wohp4o_k$());
   };
   protoOf(RefCnt).toString = function () {
     var s = protoOf(Managed).toString.call(this);
     // Inline function 'kotlin.text.substring' call
-    var tmp0_substring = s.length - 1 | 0;
+    var endIndex = s.length - 1 | 0;
     // Inline function 'kotlin.js.asDynamic' call
-    return s.substring(0, tmp0_substring) + ', refCount=' + this.get_refCount_qr8bgl_k$() + ')';
+    return s.substring(0, endIndex) + ', refCount=' + this.get_refCount_qr8bgl_k$() + ')';
   };
   function RefCnt() {
   }
@@ -24583,11 +24453,11 @@
   function Stats() {
     Stats_instance = this;
   }
-  protoOf(Stats).onNativeCall_s1vbwj_k$ = function () {
+  protoOf(Stats).onNativeCall_s2f4hw_k$ = function () {
   };
-  protoOf(Stats).onAllocated_6gj8iy_k$ = function (className) {
+  protoOf(Stats).onAllocated_1imjgi_k$ = function (className) {
   };
-  protoOf(Stats).onDeallocated_4sd5mz_k$ = function (className) {
+  protoOf(Stats).onDeallocated_sqg24d_k$ = function (className) {
   };
   var Stats_instance;
   function Stats_getInstance() {
@@ -24606,9 +24476,9 @@
   }
   function ClipboardManager_hasText() {
     // Inline function 'kotlin.text.isNullOrEmpty' call
-    var tmp0_isNullOrEmpty = ClipboardManager_getText();
+    var this_0 = ClipboardManager_getText();
     // Inline function 'kotlin.contracts.contract' call
-    return !(tmp0_isNullOrEmpty == null ? true : charSequenceLength(tmp0_isNullOrEmpty) === 0);
+    return !(this_0 == null ? true : charSequenceLength(this_0) === 0);
   }
   function URIHandler_openUri(uri) {
     window.open(uri, '_blank');
@@ -24642,14 +24512,14 @@
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.close_ymq55z_k$();
+      tmp0_safe_receiver.close_yn9xrc_k$();
     }
     $this.surface_1 = null;
     var tmp1_safe_receiver = $this.renderTarget_1;
     if (tmp1_safe_receiver == null)
       null;
     else {
-      tmp1_safe_receiver.close_ymq55z_k$();
+      tmp1_safe_receiver.close_yn9xrc_k$();
     }
     $this.renderTarget_1 = null;
   }
@@ -24667,18 +24537,18 @@
       if (tmp0_safe_receiver == null)
         null;
       else
-        tmp0_safe_receiver.clear_dlzalo_k$(Color_getInstance().get_WHITE_iij2lc_k$());
+        tmp0_safe_receiver.clear_yx1ndh_k$(Color_getInstance().get_WHITE_iij2lc_k$());
       var tmp1_safe_receiver = this$0.canvas_1;
       if (tmp1_safe_receiver == null)
         null;
       else
         tmp1_safe_receiver.resetMatrix_fwo0sw_k$();
-      this$0.drawFrame_i2r6d3_k$(timestamp);
+      this$0.drawFrame_6isa8d_k$(timestamp);
       var tmp2_safe_receiver = this$0.surface_1;
       if (tmp2_safe_receiver == null)
         null;
       else {
-        tmp2_safe_receiver.flushAndSubmit_x6ekey_k$();
+        tmp2_safe_receiver.flushAndSubmit_x6yd0b_k$();
       }
       this$0.context_1.flush_1m2gp0_k$();
       return Unit_getInstance();
@@ -24706,13 +24576,13 @@
   protoOf(CanvasRenderer).get_height_e7t92o_k$ = function () {
     return this.htmlCanvas_1.height;
   };
-  protoOf(CanvasRenderer).initCanvas_90xk0s_k$ = function (desiredWidth, desiredHeight, scale, pixelGeometry) {
+  protoOf(CanvasRenderer).initCanvas_32wczw_k$ = function (desiredWidth, desiredHeight, scale, pixelGeometry) {
     disposeCanvas(this);
     this.htmlCanvas_1.width = numberToInt(desiredWidth * scale);
     this.htmlCanvas_1.height = numberToInt(desiredHeight * scale);
-    this.renderTarget_1 = Companion_getInstance_0().makeGL_xor92r_k$(this.get_width_j0q4yl_k$(), this.get_height_e7t92o_k$(), 1, 8, 0, 32856);
+    this.renderTarget_1 = Companion_getInstance_0().makeGL_j2f0k3_k$(this.get_width_j0q4yl_k$(), this.get_height_e7t92o_k$(), 1, 8, 0, 32856);
     var tmp = this;
-    var tmp0_elvis_lhs = Companion_getInstance_54().makeFromBackendRenderTarget_z179nc_k$(this.context_1, ensureNotNull(this.renderTarget_1), SurfaceOrigin_BOTTOM_LEFT_getInstance(), SurfaceColorFormat_RGBA_8888_getInstance(), Companion_getInstance_7().get_sRGB_wottib_k$(), new SurfaceProps(VOID, pixelGeometry));
+    var tmp0_elvis_lhs = Companion_getInstance_54().makeFromBackendRenderTarget_o7ys7b_k$(this.context_1, ensureNotNull(this.renderTarget_1), SurfaceOrigin_BOTTOM_LEFT_getInstance(), SurfaceColorFormat_RGBA_8888_getInstance(), Companion_getInstance_7().get_sRGB_wottib_k$(), new SurfaceProps(VOID, pixelGeometry));
     var tmp_0;
     if (tmp0_elvis_lhs == null) {
       throw new RenderException('Cannot create surface');
@@ -24722,7 +24592,7 @@
     tmp.surface_1 = tmp_0;
     this.canvas_1 = ensureNotNull(this.surface_1).get_canvas_bshgm9_k$();
   };
-  protoOf(CanvasRenderer).needRedraw_3ktdcs_k$ = function () {
+  protoOf(CanvasRenderer).needRedraw_3ld5y5_k$ = function () {
     if (this.redrawScheduled_1) {
       return Unit_getInstance();
     }
@@ -24772,7 +24642,7 @@
     var tmp2_deltaX = event.deltaX;
     var tmp3_deltaY = event.deltaY;
     var tmp4_pressedButtons = _SkikoMouseButtons___init__impl__kylsco(get_buttonsFlags());
-    var tmp5_button = Companion_getInstance_78().get_NONE_jdr75h_k$();
+    var tmp5_button = Companion_getInstance_78().get_NONE_iqs55e_k$();
     var tmp6_modifiers = toSkikoModifiers(event);
     var tmp7_kind = SkikoPointerEventKind_SCROLL_getInstance();
     var tmp8_timestamp = numberToLong(event.timeStamp);
@@ -24780,12 +24650,12 @@
   }
   function toSkikoEvent_0(event, kind) {
     _init_properties_Convertors_js_kt__upzh8o();
-    return new SkikoKeyboardEvent(Companion_getInstance_82().valueOf_4h9gkn_k$(toSkikoKey(event)), toSkikoModifiers_0(event), kind, numberToLong(event.timeStamp), event);
+    return new SkikoKeyboardEvent(Companion_getInstance_82().valueOf_t43jdc_k$(toSkikoKey(event)), toSkikoModifiers_0(event), kind, numberToLong(event.timeStamp), event);
   }
   function toSkikoTypeEvent(character, event) {
     _init_properties_Convertors_js_kt__upzh8o();
     var tmp;
-    if (get_SPECIAL_KEYS().contains_2ehdt1_k$(character)) {
+    if (get_SPECIAL_KEYS().contains_aljjnj_k$(character)) {
       tmp = null;
     } else {
       var input;
@@ -24800,8 +24670,8 @@
           input = character;
           break;
       }
-      var key = !(event == null) ? Companion_getInstance_82().valueOf_4h9gkn_k$(event.keyCode) : SkikoKey_KEY_UNKNOWN_getInstance();
-      var modifiers = !(event == null) ? toSkikoModifiers_0(event) : Companion_getInstance_77().get_EMPTY_3cyob6_k$();
+      var key = !(event == null) ? Companion_getInstance_82().valueOf_t43jdc_k$(event.keyCode) : SkikoKey_KEY_UNKNOWN_getInstance();
+      var modifiers = !(event == null) ? toSkikoModifiers_0(event) : Companion_getInstance_77().get_EMPTY_mn9d8r_k$();
       tmp = new SkikoInputEvent(input, key, modifiers, SkikoKeyboardEventKind_TYPE_getInstance(), event);
     }
     return tmp;
@@ -24824,16 +24694,16 @@
     _init_properties_Convertors_js_kt__upzh8o();
     var result = 0;
     if (event.altKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_ALT_vkn4om_k$());
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_ALT_5kf34p_k$());
     }
     if (event.shiftKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_SHIFT_u3671f_k$());
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_SHIFT_exptds_k$());
     }
     if (event.ctrlKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_CONTROL_3a418i_k$());
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_CONTROL_mq40bf_k$());
     }
     if (event.metaKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_META_gtfryg_k$());
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_META_96s9lh_k$());
     }
     return _SkikoInputModifiers___init__impl__z8g2zy(result);
   }
@@ -24851,16 +24721,16 @@
     _init_properties_Convertors_js_kt__upzh8o();
     var result = 0;
     if (event.altKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_ALT_vkn4om_k$());
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_ALT_5kf34p_k$());
     }
     if (event.shiftKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_SHIFT_u3671f_k$());
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_SHIFT_exptds_k$());
     }
     if (event.ctrlKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_CONTROL_3a418i_k$());
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_CONTROL_mq40bf_k$());
     }
     if (event.metaKey) {
-      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_META_gtfryg_k$());
+      result = result | _SkikoInputModifiers___get_value__impl__13eq4a(Companion_getInstance_77().get_META_96s9lh_k$());
     }
     return _SkikoInputModifiers___init__impl__z8g2zy(result);
   }
@@ -24868,15 +24738,15 @@
     _init_properties_Convertors_js_kt__upzh8o();
     switch (button) {
       case 0:
-        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_78().get_LEFT_8wi70k_k$());
+        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_78().get_LEFT_89j50h_k$());
       case 1:
-        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_78().get_MIDDLE_nzwa1e_k$());
+        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_78().get_MIDDLE_ncx81b_k$());
       case 2:
-        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_78().get_RIGHT_gu1qyv_k$());
+        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_78().get_RIGHT_g72oys_k$());
       case 3:
-        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_78().get_BUTTON_4_den6s_k$());
+        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_78().get_BUTTON_4_9ketb_k$());
       case 4:
-        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_78().get_BUTTON_5_71qhcr_k$());
+        return _SkikoMouseButtons___get_value__impl__ltkvwc(Companion_getInstance_78().get_BUTTON_5_7opjcu_k$());
       default:
         return 0;
     }
@@ -24902,20 +24772,21 @@
   function get_hostId() {
     _init_properties_OsArch_js_kt__jkqwph();
     // Inline function 'kotlin.getValue' call
+    var this_0 = hostId$delegate;
     hostId$factory();
-    return hostId$delegate.get_value_j01efc_k$();
+    return this_0.get_value_j01efc_k$();
   }
   var hostId$delegate;
   function detectHostOs() {
     _init_properties_OsArch_js_kt__jkqwph();
     // Inline function 'kotlin.takeIf' call
-    var tmp0_takeIf = getNavigatorInfo();
+    var this_0 = getNavigatorInfo();
     // Inline function 'kotlin.contracts.contract' call
     var tmp;
     // Inline function 'org.jetbrains.skiko.detectHostOs.<anonymous>' call
     // Inline function 'kotlin.text.isNotEmpty' call
-    if (charSequenceLength(tmp0_takeIf) > 0) {
-      tmp = tmp0_takeIf;
+    if (charSequenceLength(this_0) > 0) {
+      tmp = this_0;
     } else {
       tmp = null;
     }
@@ -24988,7 +24859,7 @@
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.initCanvas_90xk0s_k$($this.desiredWidth_1, $this.desiredHeight_1, $this.get_contentScale_i3wrkq_k$(), $this.get_pixelGeometry_ohm51t_k$());
+      tmp0_safe_receiver.initCanvas_32wczw_k$($this.desiredWidth_1, $this.desiredHeight_1, $this.get_contentScale_i3wrkq_k$(), $this.get_pixelGeometry_ohm51t_k$());
     }
     var tmp = window.matchMedia('(resolution: ' + $this.get_contentScale_i3wrkq_k$() + 'dppx)');
     tmp.addEventListener('change', SkiaLayer$setOnChangeScaleNotifier$lambda($this), true);
@@ -25002,52 +24873,46 @@
     this.this$0__1 = this$0;
     CanvasRenderer.call(this, $htmlCanvas);
   }
-  protoOf(SkiaLayer$attachTo$1).drawFrame_i2r6d3_k$ = function (currentTimestamp) {
+  protoOf(SkiaLayer$attachTo$1).drawFrame_6isa8d_k$ = function (currentTimestamp) {
     var currentNanos = currentTimestamp * 1000000;
     var tmp0_safe_receiver = this.this$0__1.skikoView_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.onRender_fiinz1_k$(ensureNotNull(this.get_canvas_bshgm9_k$()), this.get_width_j0q4yl_k$(), this.get_height_e7t92o_k$(), numberToLong(currentNanos));
+      tmp0_safe_receiver.onRender_pm1as2_k$(ensureNotNull(this.get_canvas_bshgm9_k$()), this.get_width_j0q4yl_k$(), this.get_height_e7t92o_k$(), numberToLong(currentNanos));
     }
   };
   function SkiaLayer$attachTo$lambda(this$0) {
     return function (event) {
-      if (event instanceof MouseEvent)
-        event;
-      else
+      if (!(event instanceof MouseEvent))
         THROW_CCE();
       this$0.isPointerPressed_1 = true;
       var tmp0_safe_receiver = this$0.skikoView_1;
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.onPointerEvent_hdklrx_k$(toSkikoEvent(event, SkikoPointerEventKind_DOWN_getInstance()));
+        tmp0_safe_receiver.onPointerEvent_7k9zxa_k$(toSkikoEvent(event, SkikoPointerEventKind_DOWN_getInstance()));
       }
       return Unit_getInstance();
     };
   }
   function SkiaLayer$attachTo$lambda_0(this$0) {
     return function (event) {
-      if (event instanceof MouseEvent)
-        event;
-      else
+      if (!(event instanceof MouseEvent))
         THROW_CCE();
       this$0.isPointerPressed_1 = false;
       var tmp0_safe_receiver = this$0.skikoView_1;
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.onPointerEvent_hdklrx_k$(toSkikoEvent(event, SkikoPointerEventKind_UP_getInstance()));
+        tmp0_safe_receiver.onPointerEvent_7k9zxa_k$(toSkikoEvent(event, SkikoPointerEventKind_UP_getInstance()));
       }
       return Unit_getInstance();
     };
   }
   function SkiaLayer$attachTo$lambda_1(this$0) {
     return function (event) {
-      if (event instanceof MouseEvent)
-        event;
-      else
+      if (!(event instanceof MouseEvent))
         THROW_CCE();
       var tmp;
       if (this$0.isPointerPressed_1) {
@@ -25055,7 +24920,7 @@
         if (tmp0_safe_receiver == null)
           null;
         else {
-          tmp0_safe_receiver.onPointerEvent_hdklrx_k$(toSkikoDragEvent(event));
+          tmp0_safe_receiver.onPointerEvent_7k9zxa_k$(toSkikoDragEvent(event));
         }
         tmp = Unit_getInstance();
       } else {
@@ -25063,7 +24928,7 @@
         if (tmp1_safe_receiver == null)
           null;
         else {
-          tmp1_safe_receiver.onPointerEvent_hdklrx_k$(toSkikoEvent(event, SkikoPointerEventKind_MOVE_getInstance()));
+          tmp1_safe_receiver.onPointerEvent_7k9zxa_k$(toSkikoEvent(event, SkikoPointerEventKind_MOVE_getInstance()));
         }
         tmp = Unit_getInstance();
       }
@@ -25072,15 +24937,13 @@
   }
   function SkiaLayer$attachTo$lambda_2(this$0) {
     return function (event) {
-      if (event instanceof WheelEvent)
-        event;
-      else
+      if (!(event instanceof WheelEvent))
         THROW_CCE();
       var tmp0_safe_receiver = this$0.skikoView_1;
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.onPointerEvent_hdklrx_k$(toSkikoScrollEvent(event));
+        tmp0_safe_receiver.onPointerEvent_7k9zxa_k$(toSkikoScrollEvent(event));
       }
       return Unit_getInstance();
     };
@@ -25091,21 +24954,18 @@
   }
   function SkiaLayer$attachTo$lambda_4(this$0) {
     return function (event) {
-      if (event instanceof KeyboardEvent)
-        event;
-      else
+      if (!(event instanceof KeyboardEvent))
         THROW_CCE();
       var tmp0_safe_receiver = this$0.skikoView_1;
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.onKeyboardEvent_xlk5eb_k$(toSkikoEvent_0(event, SkikoKeyboardEventKind_DOWN_getInstance()));
+        tmp0_safe_receiver.onKeyboardEvent_ybqkt0_k$(toSkikoEvent_0(event, SkikoKeyboardEventKind_DOWN_getInstance()));
       }
       var tmp1_safe_receiver = toSkikoTypeEvent(event.key, event);
       if (tmp1_safe_receiver == null)
         null;
       else {
-        var tmp$ret$0;
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         var tmp0_safe_receiver_0 = this$0.skikoView_1;
@@ -25113,24 +24973,21 @@
         if (tmp1_safe_receiver_0 == null)
           null;
         else {
-          tmp1_safe_receiver_0.onInputEvent_qf5f6f_k$(tmp1_safe_receiver);
+          tmp1_safe_receiver_0.onInputEvent_bxzsu4_k$(tmp1_safe_receiver);
         }
-        tmp$ret$0 = Unit_getInstance();
       }
       return Unit_getInstance();
     };
   }
   function SkiaLayer$attachTo$lambda_5(this$0) {
     return function (event) {
-      if (event instanceof KeyboardEvent)
-        event;
-      else
+      if (!(event instanceof KeyboardEvent))
         THROW_CCE();
       var tmp0_safe_receiver = this$0.skikoView_1;
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.onKeyboardEvent_xlk5eb_k$(toSkikoEvent_0(event, SkikoKeyboardEventKind_UP_getInstance()));
+        tmp0_safe_receiver.onKeyboardEvent_ybqkt0_k$(toSkikoEvent_0(event, SkikoKeyboardEventKind_UP_getInstance()));
       }
       return Unit_getInstance();
     };
@@ -25150,7 +25007,7 @@
     this.desiredHeight_1 = 0;
     this.htmlCanvas_1 = null;
   }
-  protoOf(SkiaLayer).set_renderApi_s8qgnf_k$ = function (_set____db54di) {
+  protoOf(SkiaLayer).set_renderApi_2n99ed_k$ = function (_set____db54di) {
     this.renderApi_1 = _set____db54di;
   };
   protoOf(SkiaLayer).get_renderApi_w3bvut_k$ = function () {
@@ -25159,43 +25016,43 @@
   protoOf(SkiaLayer).get_contentScale_i3wrkq_k$ = function () {
     return window.devicePixelRatio;
   };
-  protoOf(SkiaLayer).set_fullscreen_c0evqp_k$ = function (value) {
+  protoOf(SkiaLayer).set_fullscreen_yktwwz_k$ = function (value) {
     if (value)
       throw Exception_init_$Create$('Fullscreen is not supported!');
   };
   protoOf(SkiaLayer).get_fullscreen_icpynw_k$ = function () {
     return false;
   };
-  protoOf(SkiaLayer).set_transparency_degczw_k$ = function (value) {
+  protoOf(SkiaLayer).set_transparency_wrl4yo_k$ = function (value) {
     if (value)
       throw Exception_init_$Create$('Transparency is not supported!');
   };
   protoOf(SkiaLayer).get_transparency_s2rgin_k$ = function () {
     return false;
   };
-  protoOf(SkiaLayer).needRedraw_3ktdcs_k$ = function () {
+  protoOf(SkiaLayer).needRedraw_3ld5y5_k$ = function () {
     var tmp0_safe_receiver = this.state_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.needRedraw_3ktdcs_k$();
+      tmp0_safe_receiver.needRedraw_3ld5y5_k$();
     }
   };
-  protoOf(SkiaLayer).set_skikoView_9g8d81_k$ = function (_set____db54di) {
+  protoOf(SkiaLayer).set_skikoView_x4ivjm_k$ = function (_set____db54di) {
     this.skikoView_1 = _set____db54di;
   };
   protoOf(SkiaLayer).get_skikoView_u0gawf_k$ = function () {
     return this.skikoView_1;
   };
-  protoOf(SkiaLayer).attachTo_62vtot_k$ = function (container) {
-    this.attachTo_4txz1o_k$(container instanceof HTMLCanvasElement ? container : THROW_CCE(), false);
+  protoOf(SkiaLayer).attachTo_63fma6_k$ = function (container) {
+    this.attachTo_2l9wtz_k$(container instanceof HTMLCanvasElement ? container : THROW_CCE(), false);
   };
-  protoOf(SkiaLayer).detach_fasf5q_k$ = function () {
+  protoOf(SkiaLayer).detach_fa8mkd_k$ = function () {
   };
   protoOf(SkiaLayer).get_component_emy20c_k$ = function () {
     return this.htmlCanvas_1;
   };
-  protoOf(SkiaLayer).attachTo_4txz1o_k$ = function (htmlCanvas, autoDetach) {
+  protoOf(SkiaLayer).attachTo_2l9wtz_k$ = function (htmlCanvas, autoDetach) {
     this.htmlCanvas_1 = htmlCanvas;
     this.desiredWidth_1 = htmlCanvas.width;
     this.desiredHeight_1 = htmlCanvas.height;
@@ -25204,11 +25061,11 @@
     setOnChangeScaleNotifier(this);
     var tmp = this;
     // Inline function 'kotlin.apply' call
-    var tmp0_apply = new SkiaLayer$attachTo$1(htmlCanvas, this);
+    var this_0 = new SkiaLayer$attachTo$1(htmlCanvas, this);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'org.jetbrains.skiko.SkiaLayer.attachTo.<anonymous>' call
-    tmp0_apply.initCanvas_90xk0s_k$(this.desiredWidth_1, this.desiredHeight_1, this.get_contentScale_i3wrkq_k$(), this.get_pixelGeometry_ohm51t_k$());
-    tmp.state_1 = tmp0_apply;
+    this_0.initCanvas_32wczw_k$(this.desiredWidth_1, this.desiredHeight_1, this.get_contentScale_i3wrkq_k$(), this.get_pixelGeometry_ohm51t_k$());
+    tmp.state_1 = this_0;
     htmlCanvas.addEventListener('mousedown', SkiaLayer$attachTo$lambda(this));
     htmlCanvas.addEventListener('mouseup', SkiaLayer$attachTo$lambda_0(this));
     htmlCanvas.addEventListener('mousemove', SkiaLayer$attachTo$lambda_1(this));
@@ -25217,23 +25074,23 @@
     htmlCanvas.addEventListener('keydown', SkiaLayer$attachTo$lambda_4(this));
     htmlCanvas.addEventListener('keyup', SkiaLayer$attachTo$lambda_5(this));
   };
-  protoOf(SkiaLayer).attachTo$default_j17uco_k$ = function (htmlCanvas, autoDetach, $super) {
+  protoOf(SkiaLayer).attachTo$default_3nmc43_k$ = function (htmlCanvas, autoDetach, $super) {
     autoDetach = autoDetach === VOID ? true : autoDetach;
     var tmp;
     if ($super === VOID) {
-      this.attachTo_4txz1o_k$(htmlCanvas, autoDetach);
+      this.attachTo_2l9wtz_k$(htmlCanvas, autoDetach);
       tmp = Unit_getInstance();
     } else {
-      tmp = $super.attachTo_4txz1o_k$.call(this, htmlCanvas, autoDetach);
+      tmp = $super.attachTo_2l9wtz_k$.call(this, htmlCanvas, autoDetach);
     }
     return tmp;
   };
-  protoOf(SkiaLayer).draw_8ocwy0_k$ = function (canvas) {
+  protoOf(SkiaLayer).draw_uyhr5d_k$ = function (canvas) {
     var tmp0_safe_receiver = this.skikoView_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.onRender_fiinz1_k$(canvas, ensureNotNull(this.state_1).get_width_j0q4yl_k$(), ensureNotNull(this.state_1).get_height_e7t92o_k$(), currentNanoTime());
+      tmp0_safe_receiver.onRender_pm1as2_k$(canvas, ensureNotNull(this.state_1).get_width_j0q4yl_k$(), ensureNotNull(this.state_1).get_height_e7t92o_k$(), currentNanoTime());
     }
   };
   protoOf(SkiaLayer).get_pixelGeometry_ohm51t_k$ = function () {
@@ -25242,7 +25099,7 @@
   function Empty() {
     Empty_instance = this;
   }
-  protoOf(Empty).onInputEvent_qf5f6f_k$ = function (event) {
+  protoOf(Empty).onInputEvent_bxzsu4_k$ = function (event) {
     return Unit_getInstance();
   };
   var Empty_instance;
@@ -25361,7 +25218,7 @@
   function Companion_81() {
     Companion_instance_81 = this;
   }
-  protoOf(Companion_81).valueOf_4h9gkn_k$ = function (platformKeyCode) {
+  protoOf(Companion_81).valueOf_t43jdc_k$ = function (platformKeyCode) {
     var tmp$ret$1;
     $l$block: {
       // Inline function 'kotlin.collections.firstOrNull' call
@@ -25606,7 +25463,7 @@
         return SkikoKey_KEY_NUMPAD_DECIMAL_getInstance();
       default:
         SkikoKey_initEntries();
-        THROW_ISE();
+        THROW_IAE('No enum constant value.');
         break;
     }
   }
@@ -26320,29 +26177,29 @@
     return this.majorVersion_1;
   };
   function doInit(_this__u8e3s4, ptr) {
-    Stats_getInstance().onNativeCall_s1vbwj_k$();
+    Stats_getInstance().onNativeCall_s2f4hw_k$();
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var onDrawCallback = tmp0_anonymous.virtual_e67oae_k$(doInit$lambda(_this__u8e3s4, tmp0_anonymous));
-        var onGetBoundsCallback = tmp0_anonymous.virtual_e67oae_k$(doInit$lambda_0(_this__u8e3s4));
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var onDrawCallback = $this$interopScope.virtual_41wz7n_k$(doInit$lambda(_this__u8e3s4, $this$interopScope));
+        var onGetBoundsCallback = $this$interopScope.virtual_41wz7n_k$(doInit$lambda_0(_this__u8e3s4));
         org_jetbrains_skia_Drawable__1nInit(_this__u8e3s4.get__ptr_wohp4o_k$(), onGetBoundsCallback, onDrawCallback);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
   }
-  function doInit$lambda($this_doInit, $tmp0_anonymous) {
+  function doInit$lambda($this_doInit, $$this$interopScope) {
     return function () {
-      $this_doInit.onDraw_fu3je2_k$(new Canvas(org_jetbrains_skia_Drawable__1nGetOnDrawCanvas($this_doInit.get__ptr_wohp4o_k$()), false, $tmp0_anonymous));
+      $this_doInit.onDraw_nrst1d_k$(new Canvas(org_jetbrains_skia_Drawable__1nGetOnDrawCanvas($this_doInit.get__ptr_wohp4o_k$()), false, $$this$interopScope));
       return Unit_getInstance();
     };
   }
@@ -26380,7 +26237,7 @@
         try {
           var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-          var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+          var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
           var tmp = _this__u8e3s4.get__ptr_wohp4o_k$();
           var tmp_0 = getPtr(textUtf8);
           var tmp_1 = getPtr(managedFontIter);
@@ -26394,7 +26251,7 @@
           var tmp0_safe_receiver = opts.get_features_yf4h6u_k$();
           var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.length;
           var tmp_9 = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
-          var tmp_10 = Companion_getInstance_13().arrayOfFontFeaturesToInterop_ryvw2p_k$(tmp0_anonymous, opts.get_features_yf4h6u_k$());
+          var tmp_10 = Companion_getInstance_13().arrayOfFontFeaturesToInterop_2tlmgk_k$($this$interopScope, opts.get_features_yf4h6u_k$());
           var tmp_11 = opts._booleanPropsToInt_ers7fx_k$();
           var tmp_12 = getPtr(managedRunHandler);
           org_jetbrains_skia_shaper_Shaper__1nShape(tmp, tmp_0, tmp_2, tmp_4, tmp_6, tmp_8, tmp_9, tmp_10, tmp_11, width, typeof tmp_12 === 'number' ? tmp_12 : THROW_CCE());
@@ -26403,7 +26260,7 @@
           var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
           _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
           if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+            _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
           }
         }
       }
@@ -26421,7 +26278,7 @@
     if (iter instanceof ManagedRunIterator) {
       tmp = iter;
     } else {
-      tmp = Companion_getInstance_83().fromIterator_fd80ig_k$(iter, text);
+      tmp = Companion_getInstance_83().fromIterator_9oq519_k$(iter, text);
     }
     return tmp;
   }
@@ -26430,7 +26287,7 @@
     if (iter instanceof ManagedRunIterator) {
       tmp = iter;
     } else {
-      tmp = Companion_getInstance_83().fromIterator_nlq9gl_k$(iter, text);
+      tmp = Companion_getInstance_83().fromIterator_hhtbmi_k$(iter, text);
     }
     return tmp;
   }
@@ -26439,7 +26296,7 @@
     if (iter instanceof ManagedRunIterator) {
       tmp = iter;
     } else {
-      tmp = Companion_getInstance_83().fromIterator_jm2t5o_k$(iter, text);
+      tmp = Companion_getInstance_83().fromIterator_b66haf_k$(iter, text);
     }
     return tmp;
   }
@@ -26448,85 +26305,85 @@
     if (iter instanceof ManagedRunIterator) {
       tmp = iter;
     } else {
-      tmp = Companion_getInstance_83().fromIterator_dw4fv3_k$(iter, text);
+      tmp = Companion_getInstance_83().fromIterator_vgy0pm_k$(iter, text);
     }
     return tmp;
   }
   function getGlyphs($this, count) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Int16Array(count);
+    var result = new Int16Array(count);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_jyz6vk_k$(tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_c5u4tv_k$(result);
         // Inline function 'org.jetbrains.skia.shaper.RunHandlerImpl.getGlyphs.<anonymous>' call
         org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetGlyphs($this.get__ptr_wohp4o_k$(), handle);
-        tmp0_anonymous.fromInterop_fargm_k$(handle, tmp0_withResult);
+        $this$interopScope.fromInterop_awvpm7_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    return tmp0_withResult;
+    return result;
   }
   function getClusters($this, count) {
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Int32Array(count);
+    var result = new Int32Array(count);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
         // Inline function 'org.jetbrains.skia.shaper.RunHandlerImpl.getClusters.<anonymous>' call
         org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetClusters($this.get__ptr_wohp4o_k$(), handle);
-        tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+        $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    return tmp0_withResult;
+    return result;
   }
   function getPositions($this, count) {
     var tmp = Companion_getInstance_44();
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Float32Array(imul(count, 2));
+    var result = new Float32Array(imul(count, 2));
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_pncxao_k$(tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_8kh23x_k$(result);
         // Inline function 'org.jetbrains.skia.shaper.RunHandlerImpl.getPositions.<anonymous>' call
         org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetPositions($this.get__ptr_wohp4o_k$(), handle);
-        tmp0_anonymous.fromInterop_2qtlsq_k$(handle, tmp0_withResult);
+        $this$interopScope.fromInterop_s0mjrj_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    return tmp.fromArray_mv0cd7_k$(tmp0_withResult);
+    return tmp.fromArray_3oemf6_k$(result);
   }
   function setOffset($this, point) {
     org_jetbrains_skia_shaper_Shaper_RunHandler_1nSetOffset($this.get__ptr_wohp4o_k$(), point.get_x_1mhr67_k$(), point.get_y_1mhr68_k$());
@@ -26534,39 +26391,38 @@
   function _get_runInfo__mpn2y0($this) {
     var fontPtr = Companion_getInstance_81().get_NullPointer_8qbg7n_k$();
     // Inline function 'org.jetbrains.skia.impl.withResult' call
-    var tmp0_withResult = new Int32Array(6);
+    var result = new Int32Array(6);
     $l$block: {
       // Inline function 'org.jetbrains.skia.impl.interopScope' call
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.impl.withResult.<anonymous>' call
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
-        var handle = tmp0_anonymous.toInteropForResult_7gg69p_k$(tmp0_withResult);
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var handle = $this$interopScope.toInteropForResult_adrhc_k$(result);
         // Inline function 'org.jetbrains.skia.shaper.RunHandlerImpl.<get-runInfo>.<anonymous>' call
         fontPtr = org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetRunInfo($this.get__ptr_wohp4o_k$(), handle);
-        tmp0_anonymous.fromInterop_26ac9l_k$(handle, tmp0_withResult);
+        $this$interopScope.fromInterop_1rw4p0_k$(handle, result);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
-    var repr = tmp0_withResult;
+    var repr = result;
     var tmp = fontPtr;
     var tmp_0 = repr[0];
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp2_fromBits = repr[1];
-    var tmp_1 = floatFromBits(tmp2_fromBits);
-    var tmp$ret$4;
+    var bits = repr[1];
+    var tmp_1 = floatFromBits(bits);
     // Inline function 'kotlin.fromBits' call
     FloatCompanionObject_getInstance();
-    var tmp4_fromBits = repr[2];
-    tmp$ret$4 = floatFromBits(tmp4_fromBits);
+    var bits_0 = repr[2];
+    var tmp$ret$4 = floatFromBits(bits_0);
     return new RunInfo(tmp, tmp_0, tmp_1, tmp$ret$4, repr[3], repr[4], repr[5]);
   }
   function _FinalizerHolder_27() {
@@ -26584,19 +26440,19 @@
   }
   function RunHandlerImpl$lambda(this$0) {
     return function () {
-      this$0.runHandler_1.beginLine_xcvsoc_k$();
+      this$0.runHandler_1.beginLine_xdfl9p_k$();
       return Unit_getInstance();
     };
   }
   function RunHandlerImpl$lambda_0(this$0) {
     return function () {
-      this$0.runHandler_1.commitRunInfo_2iocdr_k$();
+      this$0.runHandler_1.commitRunInfo_2i4jse_k$();
       return Unit_getInstance();
     };
   }
   function RunHandlerImpl$lambda_1(this$0) {
     return function () {
-      this$0.runHandler_1.commitLine_dqa0li_k$();
+      this$0.runHandler_1.commitLine_dpq805_k$();
       return Unit_getInstance();
     };
   }
@@ -26606,27 +26462,25 @@
       var glyphs = getGlyphs($impl, info.get_glyphCount_z69tmc_k$());
       var clusters = getClusters($impl, info.get_glyphCount_z69tmc_k$());
       var positions = getPositions($impl, info.get_glyphCount_z69tmc_k$());
-      this$0.runHandler_1.commitRun_j12emb_k$(info, glyphs, positions, clusters);
+      this$0.runHandler_1.commitRun_bi0627_k$(info, glyphs, positions, clusters);
       return Unit_getInstance();
     };
   }
   function RunHandlerImpl$lambda_3(this$0, $impl) {
     return function () {
-      this$0.runHandler_1.runInfo_7cohvo_k$(_get_runInfo__mpn2y0($impl));
+      this$0.runHandler_1.runInfo_avwj50_k$(_get_runInfo__mpn2y0($impl));
       return Unit_getInstance();
     };
   }
   function RunHandlerImpl$lambda_4(this$0, $impl) {
     return function () {
-      var tmp0_safe_receiver = this$0.runHandler_1.runOffset_daaxko_k$(_get_runInfo__mpn2y0($impl));
+      var tmp0_safe_receiver = this$0.runHandler_1.runOffset_m27k7t_k$(_get_runInfo__mpn2y0($impl));
       if (tmp0_safe_receiver == null)
         null;
       else {
-        var tmp$ret$0;
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         setOffset($impl, tmp0_safe_receiver);
-        tmp$ret$0 = Unit_getInstance();
       }
       return Unit_getInstance();
     };
@@ -26640,21 +26494,21 @@
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
         var tmp0_ptr = this.get__ptr_wohp4o_k$();
-        var tmp1_onBeginLine = tmp0_anonymous.virtual_e67oae_k$(RunHandlerImpl$lambda(this));
-        var tmp2_onCommitRunInfo = tmp0_anonymous.virtual_e67oae_k$(RunHandlerImpl$lambda_0(this));
-        var tmp3_onCommitLine = tmp0_anonymous.virtual_e67oae_k$(RunHandlerImpl$lambda_1(this));
-        var tmp4_onCommitRun = tmp0_anonymous.virtual_e67oae_k$(RunHandlerImpl$lambda_2(impl, this));
-        var tmp5_onRunInfo = tmp0_anonymous.virtual_e67oae_k$(RunHandlerImpl$lambda_3(this, impl));
-        var tmp6_onRunOffset = tmp0_anonymous.virtual_e67oae_k$(RunHandlerImpl$lambda_4(this, impl));
+        var tmp1_onBeginLine = $this$interopScope.virtual_41wz7n_k$(RunHandlerImpl$lambda(this));
+        var tmp2_onCommitRunInfo = $this$interopScope.virtual_41wz7n_k$(RunHandlerImpl$lambda_0(this));
+        var tmp3_onCommitLine = $this$interopScope.virtual_41wz7n_k$(RunHandlerImpl$lambda_1(this));
+        var tmp4_onCommitRun = $this$interopScope.virtual_41wz7n_k$(RunHandlerImpl$lambda_2(impl, this));
+        var tmp5_onRunInfo = $this$interopScope.virtual_41wz7n_k$(RunHandlerImpl$lambda_3(this, impl));
+        var tmp6_onRunOffset = $this$interopScope.virtual_41wz7n_k$(RunHandlerImpl$lambda_4(this, impl));
         org_jetbrains_skia_shaper_Shaper_RunHandler_1nInit(tmp0_ptr, tmp1_onBeginLine, tmp5_onRunInfo, tmp2_onCommitRunInfo, tmp6_onRunOffset, tmp4_onCommitRun, tmp3_onCommitLine);
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -26678,16 +26532,16 @@
   function Companion_82() {
     Companion_instance_82 = this;
   }
-  protoOf(Companion_82).fromIterator_nlq9gl_k$ = function (iterator, text) {
+  protoOf(Companion_82).fromIterator_hhtbmi_k$ = function (iterator, text) {
     return new IteratorBasedBidiRunIterator(org_jetbrains_skia_shaper_Shaper_RunIterator_1nCreateRunIterator(2, getPtr(text)), iterator);
   };
-  protoOf(Companion_82).fromIterator_fd80ig_k$ = function (iterator, text) {
+  protoOf(Companion_82).fromIterator_9oq519_k$ = function (iterator, text) {
     return new IteratorBasedFontRunIterator(org_jetbrains_skia_shaper_Shaper_RunIterator_1nCreateRunIterator(1, getPtr(text)), iterator);
   };
-  protoOf(Companion_82).fromIterator_jm2t5o_k$ = function (iterator, text) {
+  protoOf(Companion_82).fromIterator_b66haf_k$ = function (iterator, text) {
     return new IteratorBasedScriptRunIterator(org_jetbrains_skia_shaper_Shaper_RunIterator_1nCreateRunIterator(3, getPtr(text)), iterator);
   };
-  protoOf(Companion_82).fromIterator_dw4fv3_k$ = function (iterator, text) {
+  protoOf(Companion_82).fromIterator_vgy0pm_k$ = function (iterator, text) {
     return new IteratorBasedLanguageRunIterator(org_jetbrains_skia_shaper_Shaper_RunIterator_1nCreateRunIterator(4, getPtr(text)), iterator);
   };
   var Companion_instance_82;
@@ -26698,7 +26552,7 @@
   }
   function RunIteratorBase$lambda(this$0) {
     return function () {
-      this$0.consume_spbz2t_k$();
+      this$0.consume_sos6hg_k$();
       return Unit_getInstance();
     };
   }
@@ -26720,17 +26574,17 @@
       try {
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
-        var tmp0_anonymous = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
+        var $this$interopScope = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r();
         var tmp = this.get__ptr_wohp4o_k$();
-        var tmp_0 = tmp0_anonymous.virtual_e67oae_k$(RunIteratorBase$lambda(this));
-        var tmp_1 = tmp0_anonymous.virtualInt_9p0ezq_k$(RunIteratorBase$lambda_0(this));
-        org_jetbrains_skia_shaper_Shaper_RunIterator_1nInitRunIterator(tmp, type, tmp_0, tmp_1, tmp0_anonymous.virtualBoolean_el6it0_k$(RunIteratorBase$lambda_1(this)), this.getOnCurrentCallback_loewpd_k$(tmp0_anonymous));
+        var tmp_0 = $this$interopScope.virtual_41wz7n_k$(RunIteratorBase$lambda(this));
+        var tmp_1 = $this$interopScope.virtualInt_lh3blu_k$(RunIteratorBase$lambda_0(this));
+        org_jetbrains_skia_shaper_Shaper_RunIterator_1nInitRunIterator(tmp, type, tmp_0, tmp_1, $this$interopScope.virtualBoolean_rsq0lo_k$(RunIteratorBase$lambda_1(this)), this.getOnCurrentCallback_dcg8cw_k$($this$interopScope));
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -26752,7 +26606,7 @@
   protoOf(IteratorBasedBidiRunIterator).currentLevel_nzuh6z_k$ = function () {
     return this.current_1;
   };
-  protoOf(IteratorBasedBidiRunIterator).consume_spbz2t_k$ = function () {
+  protoOf(IteratorBasedBidiRunIterator).consume_sos6hg_k$ = function () {
     this.current_1 = this.iterator_1.next_20eer_k$();
   };
   protoOf(IteratorBasedBidiRunIterator).endOfCurrentRun_tps7wc_k$ = function () {
@@ -26784,7 +26638,7 @@
   protoOf(IteratorBasedFontRunIterator).currentFont_9xpqw8_k$ = function () {
     return this.current_1;
   };
-  protoOf(IteratorBasedFontRunIterator).consume_spbz2t_k$ = function () {
+  protoOf(IteratorBasedFontRunIterator).consume_sos6hg_k$ = function () {
     this.current_1 = this.iterator_1.next_20eer_k$();
   };
   protoOf(IteratorBasedFontRunIterator).endOfCurrentRun_tps7wc_k$ = function () {
@@ -26816,7 +26670,7 @@
   protoOf(IteratorBasedScriptRunIterator).currentScript_y6uhy4_k$ = function () {
     return this.current_1;
   };
-  protoOf(IteratorBasedScriptRunIterator).consume_spbz2t_k$ = function () {
+  protoOf(IteratorBasedScriptRunIterator).consume_sos6hg_k$ = function () {
     this.current_1 = this.iterator_1.next_20eer_k$();
   };
   protoOf(IteratorBasedScriptRunIterator).endOfCurrentRun_tps7wc_k$ = function () {
@@ -26851,12 +26705,12 @@
   }
   function langToInterop($this) {
     if (!($this.interopScope_1 == null)) {
-      ensureNotNull($this.interopScope_1).release_wtm6d2_k$();
+      ensureNotNull($this.interopScope_1).release_wu5yyf_k$();
     }
     $this.interopScope_1 = new InteropScope();
     var tmp = ensureNotNull($this.interopScope_1);
     var tmp0_safe_receiver = $this.currentLanguage_akzdo1_k$();
-    return tmp.toInterop_tozece_k$(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_language_cjhhk1_k$());
+    return tmp.toInterop_ok8jph_k$(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_language_cjhhk1_k$());
   }
   function IteratorBasedLanguageRunIterator(ptr, iterator) {
     LanguageRunIterator.call(this, ptr);
@@ -26871,13 +26725,13 @@
         var tmp0 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp0 + 1 | 0);
         // Inline function 'org.jetbrains.skia.shaper.IteratorBasedLanguageRunIterator.currentInterop.<anonymous>' call
-        tmp$ret$1 = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().toInterop_k4qgbi_k$((null == null ? true : isByteArray(null)) ? null : THROW_CCE());
+        tmp$ret$1 = _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().toInterop_h7cpet_k$((null == null ? true : isByteArray(null)) ? null : THROW_CCE());
         break $l$block;
       }finally {
         var tmp1 = _get_interopScopeCounter_$accessor$wmqves_umgosu_0();
         _set_interopScopeCounter_$accessor$wmqves_ygusxq(tmp1 - 1 | 0);
         if (_get_interopScopeCounter_$accessor$wmqves_umgosu_0() === 0) {
-          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wtm6d2_k$();
+          _get_INTEROP_SCOPE_$accessor$wmqves_peku9r().release_wu5yyf_k$();
         }
       }
     }
@@ -26900,7 +26754,7 @@
   protoOf(IteratorBasedLanguageRunIterator).atEnd_1jflwo_k$ = function () {
     return !this.iterator_1.hasNext_bitz1p_k$();
   };
-  protoOf(IteratorBasedLanguageRunIterator).consume_spbz2t_k$ = function () {
+  protoOf(IteratorBasedLanguageRunIterator).consume_sos6hg_k$ = function () {
     this.current_1 = this.iterator_1.next_20eer_k$();
     this.currentInterop_1 = langToInterop(this);
   };
@@ -26918,8 +26772,8 @@
   function BiDiRunIterator(ptr) {
     RunIteratorBase.call(this, 2, ptr);
   }
-  protoOf(BiDiRunIterator).getOnCurrentCallback_loewpd_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4.virtualInt_9p0ezq_k$(BiDiRunIterator$getOnCurrentCallback$lambda(this));
+  protoOf(BiDiRunIterator).getOnCurrentCallback_dcg8cw_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4.virtualInt_lh3blu_k$(BiDiRunIterator$getOnCurrentCallback$lambda(this));
   };
   function FontRunIterator$getOnCurrentCallback$lambda(this$0) {
     return function () {
@@ -26930,8 +26784,8 @@
   function FontRunIterator(ptr) {
     RunIteratorBase.call(this, 1, ptr);
   }
-  protoOf(FontRunIterator).getOnCurrentCallback_loewpd_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4.virtualNativePointer_he8gnj_k$(FontRunIterator$getOnCurrentCallback$lambda(this));
+  protoOf(FontRunIterator).getOnCurrentCallback_dcg8cw_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4.virtualNativePointer_dx1gu1_k$(FontRunIterator$getOnCurrentCallback$lambda(this));
   };
   function ScriptRunIterator$getOnCurrentCallback$lambda(this$0) {
     return function () {
@@ -26943,8 +26797,8 @@
   function ScriptRunIterator(ptr) {
     RunIteratorBase.call(this, 3, ptr);
   }
-  protoOf(ScriptRunIterator).getOnCurrentCallback_loewpd_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4.virtualInt_9p0ezq_k$(ScriptRunIterator$getOnCurrentCallback$lambda(this));
+  protoOf(ScriptRunIterator).getOnCurrentCallback_dcg8cw_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4.virtualInt_lh3blu_k$(ScriptRunIterator$getOnCurrentCallback$lambda(this));
   };
   function LanguageRunIterator$getOnCurrentCallback$lambda(this$0) {
     return function () {
@@ -26954,8 +26808,8 @@
   function LanguageRunIterator(ptr) {
     RunIteratorBase.call(this, 4, ptr);
   }
-  protoOf(LanguageRunIterator).getOnCurrentCallback_loewpd_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4.virtualInteropPointer_eqo8sh_k$(LanguageRunIterator$getOnCurrentCallback$lambda(this));
+  protoOf(LanguageRunIterator).getOnCurrentCallback_dcg8cw_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4.virtualInteropPointer_tzqwqx_k$(LanguageRunIterator$getOnCurrentCallback$lambda(this));
   };
   //region block: post-declaration
   protoOf(Bitmap).get_width_j0q4yl_k$ = get_width;
@@ -26980,40 +26834,40 @@
   protoOf(Image).get_isOpaque_xnqi0k_k$ = get_isOpaque;
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'alpha', function () {
     return this.get_alpha_iooth1_k$();
-  }, VOID);
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'depth', function () {
     return this.get_depth_iq7qmy_k$();
-  }, VOID);
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'stencil', function () {
     return this.get_stencil_u1v1gt_k$();
-  }, VOID);
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'antialias', function () {
     return this.get_antialias_qiua9n_k$();
-  }, VOID);
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'premultipliedAlpha', function () {
     return this.get_premultipliedAlpha_wtnhn3_k$();
-  }, VOID);
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'preserveDrawingBuffer', function () {
     return this.get_preserveDrawingBuffer_j5f55_k$();
-  }, VOID);
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'preferLowPowerToHighPerformance', function () {
     return this.get_preferLowPowerToHighPerformance_pj5q15_k$();
-  }, VOID);
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'failIfMajorPerformanceCaveat', function () {
     return this.get_failIfMajorPerformanceCaveat_r673ff_k$();
-  }, VOID);
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'enableExtensionsByDefault', function () {
     return this.get_enableExtensionsByDefault_ctowzu_k$();
-  }, VOID);
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'explicitSwapControl', function () {
     return this.get_explicitSwapControl_6lmrcj_k$();
-  }, VOID);
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'renderViaOffscreenBackBuffer', function () {
     return this.get_renderViaOffscreenBackBuffer_bez6vn_k$();
-  }, VOID);
+  });
   defineProp(protoOf(createWebGLContext$contextAttributes$1), 'majorVersion', function () {
     return this.get_majorVersion_5hr654_k$();
-  }, VOID);
+  });
   //endregion
   //region block: init
   onContentScaleChanged = null;
